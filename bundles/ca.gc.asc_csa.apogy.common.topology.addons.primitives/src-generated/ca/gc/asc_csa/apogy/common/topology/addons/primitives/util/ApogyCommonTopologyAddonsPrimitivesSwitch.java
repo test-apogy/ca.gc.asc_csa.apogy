@@ -165,8 +165,8 @@ public class ApogyCommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyCommonTopologyAddonsPrimitivesPackage.APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE: {
-				ApogyCommonTopologyAddonsPrimitivesFacade apogy__CommonTopologyAddonsPrimitivesFacade = (ApogyCommonTopologyAddonsPrimitivesFacade)theEObject;
-				T result = caseApogyCommonTopologyAddonsPrimitivesFacade(apogy__CommonTopologyAddonsPrimitivesFacade);
+				ApogyCommonTopologyAddonsPrimitivesFacade apogyCommonTopologyAddonsPrimitivesFacade = (ApogyCommonTopologyAddonsPrimitivesFacade)theEObject;
+				T result = caseApogyCommonTopologyAddonsPrimitivesFacade(apogyCommonTopologyAddonsPrimitivesFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

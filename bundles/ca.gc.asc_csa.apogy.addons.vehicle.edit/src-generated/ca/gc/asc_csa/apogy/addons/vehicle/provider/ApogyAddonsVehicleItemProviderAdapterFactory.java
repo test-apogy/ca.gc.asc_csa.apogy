@@ -303,7 +303,7 @@ public class ApogyAddonsVehicleItemProviderAdapterFactory extends ApogyAddonsVeh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyAddonsVehicleFacadeItemProvider apogy__AddonsVehicleFacadeItemProvider;
+	protected ApogyAddonsVehicleFacadeItemProvider apogyAddonsVehicleFacadeItemProvider;
 
 		/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade}.
@@ -313,11 +313,11 @@ public class ApogyAddonsVehicleItemProviderAdapterFactory extends ApogyAddonsVeh
 	 */
 	@Override
 	public Adapter createApogyAddonsVehicleFacadeAdapter() {
-		if (apogy__AddonsVehicleFacadeItemProvider == null) {
-			apogy__AddonsVehicleFacadeItemProvider = new ApogyAddonsVehicleFacadeItemProvider(this);
+		if (apogyAddonsVehicleFacadeItemProvider == null) {
+			apogyAddonsVehicleFacadeItemProvider = new ApogyAddonsVehicleFacadeItemProvider(this);
 		}
 
-		return apogy__AddonsVehicleFacadeItemProvider;
+		return apogyAddonsVehicleFacadeItemProvider;
 	}
 
 		/**
@@ -583,7 +583,7 @@ public class ApogyAddonsVehicleItemProviderAdapterFactory extends ApogyAddonsVeh
 		if (wheelContactProviderItemProvider != null) wheelContactProviderItemProvider.dispose();
 		if (landerSphericalFootItemProvider != null) landerSphericalFootItemProvider.dispose();
 		if (landerSphericalFootContactProviderItemProvider != null) landerSphericalFootContactProviderItemProvider.dispose();
-		if (apogy__AddonsVehicleFacadeItemProvider != null) apogy__AddonsVehicleFacadeItemProvider.dispose();
+		if (apogyAddonsVehicleFacadeItemProvider != null) apogyAddonsVehicleFacadeItemProvider.dispose();
 		if (wheelVehicleUtilitiesItemProvider != null) wheelVehicleUtilitiesItemProvider.dispose();
 		if (meshExtent2DItemProvider != null) meshExtent2DItemProvider.dispose();
 		if (pathPlannerToolItemProvider != null) pathPlannerToolItemProvider.dispose();

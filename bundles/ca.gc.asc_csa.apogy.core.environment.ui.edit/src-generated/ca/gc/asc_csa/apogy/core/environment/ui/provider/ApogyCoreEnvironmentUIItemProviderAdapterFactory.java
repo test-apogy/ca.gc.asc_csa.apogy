@@ -267,12 +267,12 @@ public class ApogyCoreEnvironmentUIItemProviderAdapterFactory extends ApogyCoreE
 		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ApogyCoreEnvironmentUIFacadeItemProvider apogy__CoreEnvironmentUIFacadeItemProvider;
+	protected ApogyCoreEnvironmentUIFacadeItemProvider apogyCoreEnvironmentUIFacadeItemProvider;
 
-  /**
+		/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -280,11 +280,11 @@ public class ApogyCoreEnvironmentUIItemProviderAdapterFactory extends ApogyCoreE
 	 */
 	@Override
 	public Adapter createApogyCoreEnvironmentUIFacadeAdapter() {
-		if (apogy__CoreEnvironmentUIFacadeItemProvider == null) {
-			apogy__CoreEnvironmentUIFacadeItemProvider = new ApogyCoreEnvironmentUIFacadeItemProvider(this);
+		if (apogyCoreEnvironmentUIFacadeItemProvider == null) {
+			apogyCoreEnvironmentUIFacadeItemProvider = new ApogyCoreEnvironmentUIFacadeItemProvider(this);
 		}
 
-		return apogy__CoreEnvironmentUIFacadeItemProvider;
+		return apogyCoreEnvironmentUIFacadeItemProvider;
 	}
 
 		/**
@@ -647,7 +647,7 @@ public class ApogyCoreEnvironmentUIItemProviderAdapterFactory extends ApogyCoreE
 		if (moonPresentationItemProvider != null) moonPresentationItemProvider.dispose();
 		if (featureOfInterestNodePresentationItemProvider != null) featureOfInterestNodePresentationItemProvider.dispose();
 		if (environmentUIUtilitiesItemProvider != null) environmentUIUtilitiesItemProvider.dispose();
-		if (apogy__CoreEnvironmentUIFacadeItemProvider != null) apogy__CoreEnvironmentUIFacadeItemProvider.dispose();
+		if (apogyCoreEnvironmentUIFacadeItemProvider != null) apogyCoreEnvironmentUIFacadeItemProvider.dispose();
 		if (mapViewConfigurationListItemProvider != null) mapViewConfigurationListItemProvider.dispose();
 		if (mapViewConfigurationItemProvider != null) mapViewConfigurationItemProvider.dispose();
 		if (mapRulerItemProvider != null) mapRulerItemProvider.dispose();

@@ -26,7 +26,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreInvocatorUIFacadeEClass = null;
+	private EClass apogyCoreInvocatorUIFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,7 +105,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EClass getApogyCoreInvocatorUIFacade() {
-		return apogy__CoreInvocatorUIFacadeEClass;
+		return apogyCoreInvocatorUIFacadeEClass;
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorUIFacade__CopyInitializationData__Context_Context() {
-		return apogy__CoreInvocatorUIFacadeEClass.getEOperations().get(0);
+		return apogyCoreInvocatorUIFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand() {
-		return apogy__CoreInvocatorUIFacadeEClass.getEOperations().get(1);
+		return apogyCoreInvocatorUIFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -163,9 +163,9 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CoreInvocatorUIFacadeEClass = createEClass(APOGY_CORE_INVOCATOR_UI_FACADE);
-		createEOperation(apogy__CoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT);
-		createEOperation(apogy__CoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND);
+		apogyCoreInvocatorUIFacadeEClass = createEClass(APOGY_CORE_INVOCATOR_UI_FACADE);
+		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT);
+		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND);
 
 		// Create data types
 		compoundCommandEDataType = createEDataType(COMPOUND_COMMAND);
@@ -205,7 +205,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CoreInvocatorUIFacadeEClass, ApogyCoreInvocatorUIFacade.class, "ApogyCoreInvocatorUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreInvocatorUIFacadeEClass, ApogyCoreInvocatorUIFacade.class, "ApogyCoreInvocatorUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCoreInvocatorUIFacade__CopyInitializationData__Context_Context(), null, "copyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreInvocatorPackage.getContext(), "source", 0, 1, !IS_UNIQUE, IS_ORDERED);

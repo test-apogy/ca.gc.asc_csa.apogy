@@ -120,7 +120,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreEnvironmentUIFacadeEClass = null;
+	private EClass apogyCoreEnvironmentUIFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -598,7 +598,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EClass getApogyCoreEnvironmentUIFacade() {
-		return apogy__CoreEnvironmentUIFacadeEClass;
+		return apogyCoreEnvironmentUIFacadeEClass;
 	}
 
 		/**
@@ -607,7 +607,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration() {
-		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(0);
+		return apogyCoreEnvironmentUIFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -616,7 +616,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int() {
-		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(1);
+		return apogyCoreEnvironmentUIFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -625,7 +625,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries() {
-		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(2);
+		return apogyCoreEnvironmentUIFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -634,7 +634,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration() {
-		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(3);
+		return apogyCoreEnvironmentUIFacadeEClass.getEOperations().get(3);
 	}
 
 		/**
@@ -643,7 +643,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String() {
-		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(4);
+		return apogyCoreEnvironmentUIFacadeEClass.getEOperations().get(4);
 	}
 
 		/**
@@ -652,7 +652,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfigurationList() {
-		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(5);
+		return apogyCoreEnvironmentUIFacadeEClass.getEOperations().get(5);
 	}
 
 		/**
@@ -661,7 +661,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession() {
-		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(6);
+		return apogyCoreEnvironmentUIFacadeEClass.getEOperations().get(6);
 	}
 
 		/**
@@ -1393,14 +1393,14 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE);
 		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE);
 
-		apogy__CoreEnvironmentUIFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_UI_FACADE);
-		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION);
-		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT);
-		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES);
-		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION);
-		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING);
-		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST);
-		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION);
+		apogyCoreEnvironmentUIFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_UI_FACADE);
+		createEOperation(apogyCoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION);
+		createEOperation(apogyCoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT);
+		createEOperation(apogyCoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES);
+		createEOperation(apogyCoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION);
+		createEOperation(apogyCoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING);
+		createEOperation(apogyCoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST);
+		createEOperation(apogyCoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION);
 
 		mapViewConfigurationListEClass = createEClass(MAP_VIEW_CONFIGURATION_LIST);
 		createEReference(mapViewConfigurationListEClass, MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
@@ -1599,7 +1599,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		op = initEOperation(getEnvironmentUIUtilities__GetSkyColor__double(), this.getColor3f(), "getSkyColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(apogy__CoreEnvironmentUIFacadeEClass, ApogyCoreEnvironmentUIFacade.class, "ApogyCoreEnvironmentUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreEnvironmentUIFacadeEClass, ApogyCoreEnvironmentUIFacade.class, "ApogyCoreEnvironmentUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyCoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), null, "getVisibleRectangularRegionProvider", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMapViewConfiguration(), "mapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);

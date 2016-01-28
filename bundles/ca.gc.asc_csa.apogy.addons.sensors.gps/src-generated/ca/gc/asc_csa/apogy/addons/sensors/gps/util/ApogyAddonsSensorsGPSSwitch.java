@@ -135,8 +135,8 @@ public class ApogyAddonsSensorsGPSSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyAddonsSensorsGPSPackage.APOGY_ADDONS_SENSORS_GPS_FACADE: {
-				ApogyAddonsSensorsGPSFacade apogy__AddonsSensorsGPSFacade = (ApogyAddonsSensorsGPSFacade)theEObject;
-				T result = caseApogyAddonsSensorsGPSFacade(apogy__AddonsSensorsGPSFacade);
+				ApogyAddonsSensorsGPSFacade apogyAddonsSensorsGPSFacade = (ApogyAddonsSensorsGPSFacade)theEObject;
+				T result = caseApogyAddonsSensorsGPSFacade(apogyAddonsSensorsGPSFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

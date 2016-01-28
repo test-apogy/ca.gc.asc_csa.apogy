@@ -74,8 +74,8 @@ public class ApogyCoreProgramsControllersSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE: {
-				ApogyCoreProgramsControllersFacade apogy__CoreProgramsControllersFacade = (ApogyCoreProgramsControllersFacade)theEObject;
-				T result = caseApogyCoreProgramsControllersFacade(apogy__CoreProgramsControllersFacade);
+				ApogyCoreProgramsControllersFacade apogyCoreProgramsControllersFacade = (ApogyCoreProgramsControllersFacade)theEObject;
+				T result = caseApogyCoreProgramsControllersFacade(apogyCoreProgramsControllersFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -406,7 +406,7 @@ public class ApogyAddonsSensorsRangeItemProviderAdapterFactory extends ApogyAddo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyAddonsSensorsRangeFacadeItemProvider apogy__AddonsSensorsRangeFacadeItemProvider;
+	protected ApogyAddonsSensorsRangeFacadeItemProvider apogyAddonsSensorsRangeFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFacade}.
@@ -416,11 +416,11 @@ public class ApogyAddonsSensorsRangeItemProviderAdapterFactory extends ApogyAddo
 	 */
 	@Override
 	public Adapter createApogyAddonsSensorsRangeFacadeAdapter() {
-		if (apogy__AddonsSensorsRangeFacadeItemProvider == null) {
-			apogy__AddonsSensorsRangeFacadeItemProvider = new ApogyAddonsSensorsRangeFacadeItemProvider(this);
+		if (apogyAddonsSensorsRangeFacadeItemProvider == null) {
+			apogyAddonsSensorsRangeFacadeItemProvider = new ApogyAddonsSensorsRangeFacadeItemProvider(this);
 		}
 
-		return apogy__AddonsSensorsRangeFacadeItemProvider;
+		return apogyAddonsSensorsRangeFacadeItemProvider;
 	}
 
 	/**
@@ -562,7 +562,7 @@ public class ApogyAddonsSensorsRangeItemProviderAdapterFactory extends ApogyAddo
 		if (simpleRasterScanRangeScannerItemProvider != null) simpleRasterScanRangeScannerItemProvider.dispose();
 		if (simpleRasterScanRangeScannerSimulatorItemProvider != null) simpleRasterScanRangeScannerSimulatorItemProvider.dispose();
 		if (rasterScanDataItemProvider != null) rasterScanDataItemProvider.dispose();
-		if (apogy__AddonsSensorsRangeFacadeItemProvider != null) apogy__AddonsSensorsRangeFacadeItemProvider.dispose();
+		if (apogyAddonsSensorsRangeFacadeItemProvider != null) apogyAddonsSensorsRangeFacadeItemProvider.dispose();
 	}
 
 	/**

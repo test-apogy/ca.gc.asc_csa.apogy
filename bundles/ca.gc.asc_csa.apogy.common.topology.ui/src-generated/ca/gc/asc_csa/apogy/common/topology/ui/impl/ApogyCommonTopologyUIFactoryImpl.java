@@ -243,8 +243,8 @@ public class ApogyCommonTopologyUIFactoryImpl extends EFactoryImpl implements Ap
 	 * @generated
 	 */
 	public ApogyCommonTopologyUIFacade createApogyCommonTopologyUIFacade() {
-		ApogyCommonTopologyUIFacadeImpl apogy__CommonTopologyUIFacade = new ApogyCommonTopologyUIFacadeImpl();
-		return apogy__CommonTopologyUIFacade;
+		ApogyCommonTopologyUIFacadeImpl apogyCommonTopologyUIFacade = new ApogyCommonTopologyUIFacadeImpl();
+		return apogyCommonTopologyUIFacade;
 	}
 
 	/**

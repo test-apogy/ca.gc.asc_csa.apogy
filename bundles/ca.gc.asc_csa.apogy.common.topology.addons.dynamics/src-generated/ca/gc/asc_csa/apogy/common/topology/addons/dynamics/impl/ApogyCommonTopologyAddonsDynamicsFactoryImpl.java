@@ -299,8 +299,8 @@ public class ApogyCommonTopologyAddonsDynamicsFactoryImpl extends EFactoryImpl i
 	 * @generated
 	 */
 	public ApogyCommonTopologyAddonsDynamicsFacade createApogyCommonTopologyAddonsDynamicsFacade() {
-		ApogyCommonTopologyAddonsDynamicsFacadeImpl apogy__CommonTopologyAddonsDynamicsFacade = new ApogyCommonTopologyAddonsDynamicsFacadeImpl();
-		return apogy__CommonTopologyAddonsDynamicsFacade;
+		ApogyCommonTopologyAddonsDynamicsFacadeImpl apogyCommonTopologyAddonsDynamicsFacade = new ApogyCommonTopologyAddonsDynamicsFacadeImpl();
+		return apogyCommonTopologyAddonsDynamicsFacade;
 	}
 
 	/**

@@ -99,7 +99,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreInvocatorFacadeEClass = null;
+	private EClass apogyCoreInvocatorFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -656,7 +656,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EClass getApogyCoreInvocatorFacade() {
-		return apogy__CoreInvocatorFacadeEClass;
+		return apogyCoreInvocatorFacadeEClass;
 	}
 
 		/**
@@ -665,7 +665,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EAttribute getApogyCoreInvocatorFacade_InitVariableInstancesDate() {
-		return (EAttribute)apogy__CoreInvocatorFacadeEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)apogyCoreInvocatorFacadeEClass.getEStructuralFeatures().get(0);
 	}
 
 		/**
@@ -674,7 +674,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EReference getApogyCoreInvocatorFacade_ActiveInvocatorSession() {
-		return (EReference)apogy__CoreInvocatorFacadeEClass.getEStructuralFeatures().get(1);
+		return (EReference)apogyCoreInvocatorFacadeEClass.getEStructuralFeatures().get(1);
 	}
 
 		/**
@@ -683,7 +683,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__Exec__OperationCall() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(0);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -692,7 +692,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__Exec__OperationCall_boolean() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(1);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -701,7 +701,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__Exec__OperationCallsList() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(2);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -710,7 +710,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__CreateAbstractResultValue__Object() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(3);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(3);
 	}
 
 		/**
@@ -719,7 +719,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__ResolveWatch__AbstractFeatureNode() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(4);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(4);
 	}
 
 		/**
@@ -728,7 +728,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(5);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(5);
 	}
 
 		/**
@@ -737,7 +737,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetValue__AbstractFeatureNode() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(6);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(6);
 	}
 
 		/**
@@ -746,7 +746,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetInstance__Variable() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(7);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(7);
 	}
 
 		/**
@@ -755,7 +755,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetInstanceClass__Variable() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(8);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(8);
 	}
 
 		/**
@@ -764,7 +764,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(9);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(9);
 	}
 
 		/**
@@ -773,7 +773,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetInstance__VariableFeatureReference() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(10);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(10);
 	}
 
 		/**
@@ -782,7 +782,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(11);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(11);
 	}
 
 		/**
@@ -791,7 +791,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(12);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(12);
 	}
 
 		/**
@@ -800,7 +800,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetInstanceClass__VariableFeatureReference() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(13);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(13);
 	}
 
 		/**
@@ -809,7 +809,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(14);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(14);
 	}
 
 		/**
@@ -818,7 +818,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__OperationCall() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(15);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(15);
 	}
 
 		/**
@@ -827,7 +827,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(16);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(16);
 	}
 
 		/**
@@ -836,7 +836,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Variable() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(17);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(17);
 	}
 
 		/**
@@ -845,7 +845,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetVariableByName__InvocatorSession_String() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(18);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(18);
 	}
 
 		/**
@@ -854,7 +854,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__CreateTypeMemberReferences__TypeMember() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(19);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(19);
 	}
 
 		/**
@@ -863,7 +863,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Environment_String() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(20);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(20);
 	}
 
 		/**
@@ -872,7 +872,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(21);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(21);
 	}
 
 		/**
@@ -881,7 +881,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(22);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(22);
 	}
 
 		/**
@@ -890,7 +890,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__CreateTypeMemberImplementations__Type() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(23);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(23);
 	}
 
 		/**
@@ -899,7 +899,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__InitVariableInstances__Environment() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(24);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(24);
 	}
 
 		/**
@@ -908,7 +908,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__DisposeVariableInstances__Environment() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(25);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(25);
 	}
 
 		/**
@@ -917,7 +917,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(26);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(26);
 	}
 
 		/**
@@ -926,7 +926,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Environment() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(27);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(27);
 	}
 
 		/**
@@ -935,7 +935,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Environment() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(28);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(28);
 	}
 
 		/**
@@ -944,7 +944,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Variable() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(29);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(29);
 	}
 
 		/**
@@ -953,7 +953,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Variable() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(30);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(30);
 	}
 
 		/**
@@ -962,7 +962,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(31);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(31);
 	}
 
 		/**
@@ -971,7 +971,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetAllTypes__Environment() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(32);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(32);
 	}
 
 		/**
@@ -980,7 +980,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__AddVariableListener__IVariableListener() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(33);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(33);
 	}
 
 		/**
@@ -989,7 +989,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__RemoveVariableListener__IVariableListener() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(34);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(34);
 	}
 
 		/**
@@ -998,7 +998,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType() {
-		return apogy__CoreInvocatorFacadeEClass.getEOperations().get(35);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(35);
 	}
 
 		/**
@@ -3173,45 +3173,45 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CoreInvocatorFacadeEClass = createEClass(APOGY_CORE_INVOCATOR_FACADE);
-		createEAttribute(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE);
-		createEReference(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER);
-		createEOperation(apogy__CoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE);
+		apogyCoreInvocatorFacadeEClass = createEClass(APOGY_CORE_INVOCATOR_FACADE);
+		createEAttribute(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE);
+		createEReference(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3596,7 +3596,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		operationCallResultsListTimeSourceEClass.getESuperTypes().add(theApogyCommonEMFPackage.getCollectionTimedTimeSource());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CoreInvocatorFacadeEClass, ApogyCoreInvocatorFacade.class, "ApogyCoreInvocatorFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreInvocatorFacadeEClass, ApogyCoreInvocatorFacade.class, "ApogyCoreInvocatorFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getApogyCoreInvocatorFacade_InitVariableInstancesDate(), theEcorePackage.getEDate(), "initVariableInstancesDate", null, 0, 1, ApogyCoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyCoreInvocatorFacade_ActiveInvocatorSession(), this.getInvocatorSession(), null, "activeInvocatorSession", null, 0, 1, ApogyCoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

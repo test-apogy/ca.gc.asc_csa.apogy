@@ -196,8 +196,8 @@ public class ApogyAddonsSensorsPoseSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyAddonsSensorsPosePackage.APOGY_ADDONS_SENSORS_POSE_FACADE: {
-				ApogyAddonsSensorsPoseFacade apogy__AddonsSensorsPoseFacade = (ApogyAddonsSensorsPoseFacade)theEObject;
-				T result = caseApogyAddonsSensorsPoseFacade(apogy__AddonsSensorsPoseFacade);
+				ApogyAddonsSensorsPoseFacade apogyAddonsSensorsPoseFacade = (ApogyAddonsSensorsPoseFacade)theEObject;
+				T result = caseApogyAddonsSensorsPoseFacade(apogyAddonsSensorsPoseFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

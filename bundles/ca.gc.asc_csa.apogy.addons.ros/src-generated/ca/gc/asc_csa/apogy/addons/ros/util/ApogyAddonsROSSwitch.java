@@ -118,8 +118,8 @@ public class ApogyAddonsROSSwitch<T1> extends Switch<T1> {
 				return result;
 			}
 			case ApogyAddonsROSPackage.APOGY_ADDONS_ROS_FACADE: {
-				ApogyAddonsROSFacade apogy__AddonsROSFacade = (ApogyAddonsROSFacade)theEObject;
-				T1 result = caseApogyAddonsROSFacade(apogy__AddonsROSFacade);
+				ApogyAddonsROSFacade apogyAddonsROSFacade = (ApogyAddonsROSFacade)theEObject;
+				T1 result = caseApogyAddonsROSFacade(apogyAddonsROSFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

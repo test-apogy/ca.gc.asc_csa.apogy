@@ -258,14 +258,6 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ApogyCommonTopologyBindingsFacadeItemProvider apogy__CommonTopologyBindingsFacadeItemProvider;
-
-	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -273,11 +265,11 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 	 */
 	@Override
 	public Adapter createApogyCommonTopologyBindingsFacadeAdapter() {
-		if (apogy__CommonTopologyBindingsFacadeItemProvider == null) {
-			apogy__CommonTopologyBindingsFacadeItemProvider = new ApogyCommonTopologyBindingsFacadeItemProvider(this);
+		if (apogyCommonTopologyBindingsFacadeItemProvider == null) {
+			apogyCommonTopologyBindingsFacadeItemProvider = new ApogyCommonTopologyBindingsFacadeItemProvider(this);
 		}
 
-		return apogy__CommonTopologyBindingsFacadeItemProvider;
+		return apogyCommonTopologyBindingsFacadeItemProvider;
 	}
 
 	/**
@@ -302,6 +294,14 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 
 		return bindingsSetItemProvider;
 	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ApogyCommonTopologyBindingsFacadeItemProvider apogyCommonTopologyBindingsFacadeItemProvider;
 
 	/**
 	 * This returns the root adapter factory that contains this factory.
@@ -437,7 +437,7 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 		if (bindingsListItemProvider != null) bindingsListItemProvider.dispose();
 		if (featureRootsListItemProvider != null) featureRootsListItemProvider.dispose();
 		if (bindingsSetItemProvider != null) bindingsSetItemProvider.dispose();
-		if (apogy__CommonTopologyBindingsFacadeItemProvider != null) apogy__CommonTopologyBindingsFacadeItemProvider.dispose();
+		if (apogyCommonTopologyBindingsFacadeItemProvider != null) apogyCommonTopologyBindingsFacadeItemProvider.dispose();
 	}
 
 	/**

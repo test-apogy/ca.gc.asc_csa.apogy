@@ -174,7 +174,7 @@ public class ApogyAddonsMobilityPathplannersItemProviderAdapterFactory extends A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyAddonsMobilityPathplannersFacadeItemProvider apogy__AddonsMobilityPathplannersFacadeItemProvider;
+	protected ApogyAddonsMobilityPathplannersFacadeItemProvider apogyAddonsMobilityPathplannersFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade}.
@@ -184,11 +184,11 @@ public class ApogyAddonsMobilityPathplannersItemProviderAdapterFactory extends A
 	 */
 	@Override
 	public Adapter createApogyAddonsMobilityPathplannersFacadeAdapter() {
-		if (apogy__AddonsMobilityPathplannersFacadeItemProvider == null) {
-			apogy__AddonsMobilityPathplannersFacadeItemProvider = new ApogyAddonsMobilityPathplannersFacadeItemProvider(this);
+		if (apogyAddonsMobilityPathplannersFacadeItemProvider == null) {
+			apogyAddonsMobilityPathplannersFacadeItemProvider = new ApogyAddonsMobilityPathplannersFacadeItemProvider(this);
 		}
 
-		return apogy__AddonsMobilityPathplannersFacadeItemProvider;
+		return apogyAddonsMobilityPathplannersFacadeItemProvider;
 	}
 
 	/**
@@ -329,7 +329,7 @@ public class ApogyAddonsMobilityPathplannersItemProviderAdapterFactory extends A
 		if (wayPointPathPlannerItemProvider != null) wayPointPathPlannerItemProvider.dispose();
 		if (meshWayPointPathPlannerItemProvider != null) meshWayPointPathPlannerItemProvider.dispose();
 		if (circularExclusionZoneItemProvider != null) circularExclusionZoneItemProvider.dispose();
-		if (apogy__AddonsMobilityPathplannersFacadeItemProvider != null) apogy__AddonsMobilityPathplannersFacadeItemProvider.dispose();
+		if (apogyAddonsMobilityPathplannersFacadeItemProvider != null) apogyAddonsMobilityPathplannersFacadeItemProvider.dispose();
 	}
 
 	/**

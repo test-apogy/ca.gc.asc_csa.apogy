@@ -164,7 +164,7 @@ public class ApogyCoreTopologyFacadeImpl extends MinimalEObjectImpl.Container im
 				return getVariableOriginNode((Variable)arguments.get(0));
 			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION:
 				return getAbstractTypeImplementationOriginNode((AbstractTypeImplementation)arguments.get(0));
-			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE___CREATE_APOGY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT:
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE___CREATE_APOGY_ENVIRONMENT_NODE__APOGYENVIRONMENT:
 				return createApogyEnvironmentNode((ApogyEnvironment)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

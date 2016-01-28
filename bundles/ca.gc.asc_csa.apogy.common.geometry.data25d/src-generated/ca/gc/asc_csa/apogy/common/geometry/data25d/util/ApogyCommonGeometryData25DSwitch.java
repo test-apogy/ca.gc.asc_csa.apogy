@@ -126,8 +126,8 @@ public class ApogyCommonGeometryData25DSwitch<T1> extends Switch<T1> {
 				return result;
 			}
 			case ApogyCommonGeometryData25DPackage.APOGY_COMMON_GEOMETRY_DATA25_DFACADE: {
-				ApogyCommonGeometryData25DFacade apogy__CommonGeometryData25DFacade = (ApogyCommonGeometryData25DFacade)theEObject;
-				T1 result = caseApogyCommonGeometryData25DFacade(apogy__CommonGeometryData25DFacade);
+				ApogyCommonGeometryData25DFacade apogyCommonGeometryData25DFacade = (ApogyCommonGeometryData25DFacade)theEObject;
+				T1 result = caseApogyCommonGeometryData25DFacade(apogyCommonGeometryData25DFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

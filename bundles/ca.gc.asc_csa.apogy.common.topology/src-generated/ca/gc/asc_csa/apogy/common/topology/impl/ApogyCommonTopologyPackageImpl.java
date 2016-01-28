@@ -161,7 +161,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonTopologyFacadeEClass = null;
+	private EClass apogyCommonTopologyFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -578,7 +578,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EClass getApogyCommonTopologyFacade() {
-		return apogy__CommonTopologyFacadeEClass;
+		return apogyCommonTopologyFacadeEClass;
 	}
 
 	/**
@@ -587,7 +587,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateLink__Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(0);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -596,7 +596,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateContentNode__Object() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(1);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -605,7 +605,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateReferencedContentNode__Object() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(2);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -614,7 +614,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateAggregateContentNode__Object() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(3);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -623,7 +623,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreatePositionNode__double_double_double() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(4);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -632,7 +632,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateRotationNodeXYZ__double_double_double() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(5);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -641,7 +641,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateRotationNodeYZX__double_double_double() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(6);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -650,7 +650,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateRotationNodeZYX__double_double_double() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(7);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -659,7 +659,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(8);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -668,7 +668,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(9);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -677,7 +677,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(10);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -686,7 +686,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreateTransformNode__Matrix4d() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(11);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -695,7 +695,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__CreatePickAndPlaceNode__Matrix4d() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(12);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(12);
 	}
 
 	/**
@@ -704,7 +704,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__ExpressNodeInRootFrame__Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(13);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(13);
 	}
 
 	/**
@@ -713,7 +713,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__ExpressRootInNodeFrame__Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(14);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(14);
 	}
 
 	/**
@@ -722,7 +722,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__ExpressInFrame__Node_Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(15);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(15);
 	}
 
 	/**
@@ -731,7 +731,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__FindNodesByDescription__String_Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(16);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(16);
 	}
 
 	/**
@@ -740,7 +740,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__FindNodesByID__String_Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(17);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(17);
 	}
 
 	/**
@@ -749,7 +749,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__FindNodesByType__EClass_Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(18);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(18);
 	}
 
 	/**
@@ -758,7 +758,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__FindRoot__Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(19);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(19);
 	}
 
 	/**
@@ -767,7 +767,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__GetEuclideanDistance__Node_Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(20);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(20);
 	}
 
 	/**
@@ -776,7 +776,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__GetGeodesicDistance__Node_Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(21);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(21);
 	}
 
 	/**
@@ -785,7 +785,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyFacade__PrintTopology__Node() {
-		return apogy__CommonTopologyFacadeEClass.getEOperations().get(22);
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(22);
 	}
 
 	/**
@@ -895,30 +895,30 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 
 		pickAndPlaceNodeEClass = createEClass(PICK_AND_PLACE_NODE);
 
-		apogy__CommonTopologyFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_FACADE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_LINK__NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE);
-		createEOperation(apogy__CommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE);
+		apogyCommonTopologyFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_FACADE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_LINK__NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE);
 
 		// Create data types
 		matrix4dEDataType = createEDataType(MATRIX4D);
@@ -1044,7 +1044,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 
 		initEClass(pickAndPlaceNodeEClass, PickAndPlaceNode.class, "PickAndPlaceNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(apogy__CommonTopologyFacadeEClass, ApogyCommonTopologyFacade.class, "ApogyCommonTopologyFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonTopologyFacadeEClass, ApogyCommonTopologyFacade.class, "ApogyCommonTopologyFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyCommonTopologyFacade__CreateLink__Node(), this.getLink(), "createLink", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);

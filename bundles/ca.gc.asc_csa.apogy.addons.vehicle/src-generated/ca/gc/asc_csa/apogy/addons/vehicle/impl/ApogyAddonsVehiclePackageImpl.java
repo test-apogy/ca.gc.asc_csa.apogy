@@ -135,7 +135,7 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__AddonsVehicleFacadeEClass = null;
+	private EClass apogyAddonsVehicleFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -695,7 +695,7 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EClass getApogyAddonsVehicleFacade() {
-		return apogy__AddonsVehicleFacadeEClass;
+		return apogyAddonsVehicleFacadeEClass;
 	}
 
 		/**
@@ -1169,7 +1169,7 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 
 		landerSphericalFootContactProviderEClass = createEClass(LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER);
 
-		apogy__AddonsVehicleFacadeEClass = createEClass(APOGY_ADDONS_VEHICLE_FACADE);
+		apogyAddonsVehicleFacadeEClass = createEClass(APOGY_ADDONS_VEHICLE_FACADE);
 
 		wheelVehicleUtilitiesEClass = createEClass(WHEEL_VEHICLE_UTILITIES);
 		createEOperation(wheelVehicleUtilitiesEClass, WHEEL_VEHICLE_UTILITIES___GET_WHEEL_CENTER_POINT__DOUBLE_DOUBLE_SEGMENT2D);
@@ -1344,7 +1344,7 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 
 		initEClass(landerSphericalFootContactProviderEClass, LanderSphericalFootContactProvider.class, "LanderSphericalFootContactProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(apogy__AddonsVehicleFacadeEClass, ApogyAddonsVehicleFacade.class, "ApogyAddonsVehicleFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyAddonsVehicleFacadeEClass, ApogyAddonsVehicleFacade.class, "ApogyAddonsVehicleFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(wheelVehicleUtilitiesEClass, WheelVehicleUtilities.class, "WheelVehicleUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

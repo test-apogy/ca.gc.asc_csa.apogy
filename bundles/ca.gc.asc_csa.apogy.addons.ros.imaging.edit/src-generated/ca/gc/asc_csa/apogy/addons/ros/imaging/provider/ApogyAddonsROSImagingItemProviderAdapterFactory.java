@@ -95,7 +95,7 @@ public class ApogyAddonsROSImagingItemProviderAdapterFactory extends ApogyAddons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyAddonsROSImagingFacadeItemProvider apogy__AddonsROSImagingFacadeItemProvider;
+	protected ApogyAddonsROSImagingFacadeItemProvider apogyAddonsROSImagingFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade}.
@@ -105,11 +105,11 @@ public class ApogyAddonsROSImagingItemProviderAdapterFactory extends ApogyAddons
 	 */
 	@Override
 	public Adapter createApogyAddonsROSImagingFacadeAdapter() {
-		if (apogy__AddonsROSImagingFacadeItemProvider == null) {
-			apogy__AddonsROSImagingFacadeItemProvider = new ApogyAddonsROSImagingFacadeItemProvider(this);
+		if (apogyAddonsROSImagingFacadeItemProvider == null) {
+			apogyAddonsROSImagingFacadeItemProvider = new ApogyAddonsROSImagingFacadeItemProvider(this);
 		}
 
-		return apogy__AddonsROSImagingFacadeItemProvider;
+		return apogyAddonsROSImagingFacadeItemProvider;
 	}
 
 	/**
@@ -238,7 +238,7 @@ public class ApogyAddonsROSImagingItemProviderAdapterFactory extends ApogyAddons
 	 * @generated
 	 */
 	public void dispose() {
-		if (apogy__AddonsROSImagingFacadeItemProvider != null) apogy__AddonsROSImagingFacadeItemProvider.dispose();
+		if (apogyAddonsROSImagingFacadeItemProvider != null) apogyAddonsROSImagingFacadeItemProvider.dispose();
 	}
 
 }

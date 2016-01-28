@@ -59,7 +59,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonMathFacadeEClass = null;
+	private EClass apogyCommonMathFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -491,7 +491,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EClass getApogyCommonMathFacade() {
-		return apogy__CommonMathFacadeEClass;
+		return apogyCommonMathFacadeEClass;
 	}
 
 	/**
@@ -500,7 +500,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EOperation getApogyCommonMathFacade__CreateMatrix4x4__Matrix4d() {
-		return apogy__CommonMathFacadeEClass.getEOperations().get(0);
+		return apogyCommonMathFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -509,7 +509,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EOperation getApogyCommonMathFacade__CreateMatrix3x3__Matrix3d() {
-		return apogy__CommonMathFacadeEClass.getEOperations().get(1);
+		return apogyCommonMathFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -518,7 +518,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EOperation getApogyCommonMathFacade__CreateTuple3d__Tuple3d() {
-		return apogy__CommonMathFacadeEClass.getEOperations().get(2);
+		return apogyCommonMathFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -527,7 +527,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EOperation getApogyCommonMathFacade__CreateTuple3d__double_double_double() {
-		return apogy__CommonMathFacadeEClass.getEOperations().get(3);
+		return apogyCommonMathFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -536,7 +536,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EOperation getApogyCommonMathFacade__CreatePolynomial__double() {
-		return apogy__CommonMathFacadeEClass.getEOperations().get(4);
+		return apogyCommonMathFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -545,7 +545,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EOperation getApogyCommonMathFacade__CreateIdentityMatrix4x4() {
-		return apogy__CommonMathFacadeEClass.getEOperations().get(5);
+		return apogyCommonMathFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -554,7 +554,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EOperation getApogyCommonMathFacade__CreateIdentityMatrix3x3() {
-		return apogy__CommonMathFacadeEClass.getEOperations().get(6);
+		return apogyCommonMathFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -563,7 +563,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EOperation getApogyCommonMathFacade__ExtractPosition__Matrix4x4() {
-		return apogy__CommonMathFacadeEClass.getEOperations().get(7);
+		return apogyCommonMathFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -572,7 +572,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 	 * @generated
 	 */
 	public EOperation getApogyCommonMathFacade__ExtractOrientation__Matrix4x4() {
-		return apogy__CommonMathFacadeEClass.getEOperations().get(8);
+		return apogyCommonMathFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -726,16 +726,16 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 		createEAttribute(polynomialEClass, POLYNOMIAL__REAL_ROOTS);
 		createEAttribute(polynomialEClass, POLYNOMIAL__IMAGINARY_ROOTS);
 
-		apogy__CommonMathFacadeEClass = createEClass(APOGY_COMMON_MATH_FACADE);
-		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D);
-		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D);
-		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D);
-		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE);
-		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4);
-		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3);
-		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4);
-		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4);
+		apogyCommonMathFacadeEClass = createEClass(APOGY_COMMON_MATH_FACADE);
+		createEOperation(apogyCommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D);
+		createEOperation(apogyCommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D);
+		createEOperation(apogyCommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D);
+		createEOperation(apogyCommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE);
+		createEOperation(apogyCommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4);
+		createEOperation(apogyCommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3);
+		createEOperation(apogyCommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4);
+		createEOperation(apogyCommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4);
 
 		mathIOEClass = createEClass(MATH_IO);
 		createEOperation(mathIOEClass, MATH_IO___READ_TR_MATRIX__STRING);
@@ -828,7 +828,7 @@ public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCom
 		initEAttribute(getPolynomial_RealRoots(), this.getEDoubleArray(), "realRoots", null, 0, 1, Polynomial.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPolynomial_ImaginaryRoots(), this.getEDoubleArray(), "imaginaryRoots", null, 0, 1, Polynomial.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__CommonMathFacadeEClass, ApogyCommonMathFacade.class, "ApogyCommonMathFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonMathFacadeEClass, ApogyCommonMathFacade.class, "ApogyCommonMathFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCommonMathFacade__CreateMatrix4x4__Matrix4d(), this.getMatrix4x4(), "createMatrix4x4", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);

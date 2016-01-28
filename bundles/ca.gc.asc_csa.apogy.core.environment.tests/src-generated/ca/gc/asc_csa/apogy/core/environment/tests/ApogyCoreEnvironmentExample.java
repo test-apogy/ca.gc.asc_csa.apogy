@@ -60,7 +60,7 @@ public class ApogyCoreEnvironmentExample {
 		if (args.length == 0) {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.apogy__coreenvironment"));
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.apogycoreenvironment"));
 				EarthSurfaceWorksite root = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
 				resource.getContents().add(root);
 				resource.save(System.out, null);

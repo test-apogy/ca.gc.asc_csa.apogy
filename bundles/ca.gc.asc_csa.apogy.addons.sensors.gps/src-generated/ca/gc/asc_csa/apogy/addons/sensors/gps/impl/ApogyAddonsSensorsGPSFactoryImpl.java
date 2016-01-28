@@ -174,8 +174,8 @@ public class ApogyAddonsSensorsGPSFactoryImpl extends EFactoryImpl implements Ap
 	 * @generated
 	 */
 	public ApogyAddonsSensorsGPSFacade createApogyAddonsSensorsGPSFacade() {
-		ApogyAddonsSensorsGPSFacadeImpl apogy__AddonsSensorsGPSFacade = new ApogyAddonsSensorsGPSFacadeImpl();
-		return apogy__AddonsSensorsGPSFacade;
+		ApogyAddonsSensorsGPSFacadeImpl apogyAddonsSensorsGPSFacade = new ApogyAddonsSensorsGPSFacadeImpl();
+		return apogyAddonsSensorsGPSFacade;
 	}
 
 	/**

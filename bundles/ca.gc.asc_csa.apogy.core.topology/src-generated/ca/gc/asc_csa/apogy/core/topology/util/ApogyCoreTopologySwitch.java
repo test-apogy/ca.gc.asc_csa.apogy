@@ -101,8 +101,8 @@ public class ApogyCoreTopologySwitch<T> extends Switch<T>
 				return result;
 			}
 			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: {
-				ApogyCoreTopologyFacade apogy__CoreTopologyFacade = (ApogyCoreTopologyFacade)theEObject;
-				T result = caseApogyCoreTopologyFacade(apogy__CoreTopologyFacade);
+				ApogyCoreTopologyFacade apogyCoreTopologyFacade = (ApogyCoreTopologyFacade)theEObject;
+				T result = caseApogyCoreTopologyFacade(apogyCoreTopologyFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -99,8 +99,8 @@ public class ApogyCommonMathSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE: {
-				ApogyCommonMathFacade apogy__CommonMathFacade = (ApogyCommonMathFacade)theEObject;
-				T result = caseApogyCommonMathFacade(apogy__CommonMathFacade);
+				ApogyCommonMathFacade apogyCommonMathFacade = (ApogyCommonMathFacade)theEObject;
+				T result = caseApogyCommonMathFacade(apogyCommonMathFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

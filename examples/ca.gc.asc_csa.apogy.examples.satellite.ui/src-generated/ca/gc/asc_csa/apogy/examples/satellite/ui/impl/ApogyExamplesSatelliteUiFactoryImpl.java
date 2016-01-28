@@ -69,8 +69,8 @@ public class ApogyExamplesSatelliteUiFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	public ApogyExamplesSatelliteUiFacade createApogyExamplesSatelliteUiFacade() {
-		ApogyExamplesSatelliteUiFacadeImpl apogy__ExamplesSatelliteUiFacade = new ApogyExamplesSatelliteUiFacadeImpl();
-		return apogy__ExamplesSatelliteUiFacade;
+		ApogyExamplesSatelliteUiFacadeImpl apogyExamplesSatelliteUiFacade = new ApogyExamplesSatelliteUiFacadeImpl();
+		return apogyExamplesSatelliteUiFacade;
 	}
 
 	/**

@@ -77,7 +77,7 @@ public class ApogyCommonEMFUIItemProviderAdapterFactory extends ApogyCommonEMFUI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCommonEMFUIFacadeItemProvider apogy__CommonEMFUIFacadeItemProvider;
+	protected ApogyCommonEMFUIFacadeItemProvider apogyCommonEMFUIFacadeItemProvider;
 
 		/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade}.
@@ -87,11 +87,11 @@ public class ApogyCommonEMFUIItemProviderAdapterFactory extends ApogyCommonEMFUI
 	 */
 	@Override
 	public Adapter createApogyCommonEMFUIFacadeAdapter() {
-		if (apogy__CommonEMFUIFacadeItemProvider == null) {
-			apogy__CommonEMFUIFacadeItemProvider = new ApogyCommonEMFUIFacadeItemProvider(this);
+		if (apogyCommonEMFUIFacadeItemProvider == null) {
+			apogyCommonEMFUIFacadeItemProvider = new ApogyCommonEMFUIFacadeItemProvider(this);
 		}
 
-		return apogy__CommonEMFUIFacadeItemProvider;
+		return apogyCommonEMFUIFacadeItemProvider;
 	}
 
 		/**
@@ -202,7 +202,7 @@ public class ApogyCommonEMFUIItemProviderAdapterFactory extends ApogyCommonEMFUI
 	 */
   public void dispose()
   {
-		if (apogy__CommonEMFUIFacadeItemProvider != null) apogy__CommonEMFUIFacadeItemProvider.dispose();
+		if (apogyCommonEMFUIFacadeItemProvider != null) apogyCommonEMFUIFacadeItemProvider.dispose();
 	}
 
 }

@@ -33,7 +33,7 @@ public class ApogyAddonsROSImagingPackageImpl extends EPackageImpl implements Ap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__AddonsROSImagingFacadeEClass = null;
+	private EClass apogyAddonsROSImagingFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,7 +126,7 @@ public class ApogyAddonsROSImagingPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EClass getApogyAddonsROSImagingFacade() {
-		return apogy__AddonsROSImagingFacadeEClass;
+		return apogyAddonsROSImagingFacadeEClass;
 	}
 
 	/**
@@ -135,7 +135,7 @@ public class ApogyAddonsROSImagingPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsROSImagingFacade__ConvertToEImage__Image() {
-		return apogy__AddonsROSImagingFacadeEClass.getEOperations().get(0);
+		return apogyAddonsROSImagingFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class ApogyAddonsROSImagingPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsROSImagingFacade__ConvertToEImage__CompressedImage() {
-		return apogy__AddonsROSImagingFacadeEClass.getEOperations().get(1);
+		return apogyAddonsROSImagingFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class ApogyAddonsROSImagingPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsROSImagingFacade__ConvertToCompressedImage__EImage_ConnectedNode() {
-		return apogy__AddonsROSImagingFacadeEClass.getEOperations().get(2);
+		return apogyAddonsROSImagingFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class ApogyAddonsROSImagingPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsROSImagingFacade__ConvertToCompressedImage__ImageData_ConnectedNode() {
-		return apogy__AddonsROSImagingFacadeEClass.getEOperations().get(3);
+		return apogyAddonsROSImagingFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -220,11 +220,11 @@ public class ApogyAddonsROSImagingPackageImpl extends EPackageImpl implements Ap
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__AddonsROSImagingFacadeEClass = createEClass(APOGY_ADDONS_ROS_IMAGING_FACADE);
-		createEOperation(apogy__AddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE);
-		createEOperation(apogy__AddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE);
-		createEOperation(apogy__AddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE);
-		createEOperation(apogy__AddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE);
+		apogyAddonsROSImagingFacadeEClass = createEClass(APOGY_ADDONS_ROS_IMAGING_FACADE);
+		createEOperation(apogyAddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE);
+		createEOperation(apogyAddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE);
+		createEOperation(apogyAddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE);
+		createEOperation(apogyAddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE);
 
 		// Create data types
 		imageEDataType = createEDataType(IMAGE);
@@ -265,7 +265,7 @@ public class ApogyAddonsROSImagingPackageImpl extends EPackageImpl implements Ap
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__AddonsROSImagingFacadeEClass, ApogyAddonsROSImagingFacade.class, "ApogyAddonsROSImagingFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyAddonsROSImagingFacadeEClass, ApogyAddonsROSImagingFacade.class, "ApogyAddonsROSImagingFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyAddonsROSImagingFacade__ConvertToEImage__Image(), theApogyCommonImagesPackage.getEImage(), "convertToEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getImage(), "rosImage", 0, 1, !IS_UNIQUE, IS_ORDERED);

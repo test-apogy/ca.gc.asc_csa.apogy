@@ -258,8 +258,8 @@ public class ApogyCoreEnvironmentUIFactoryImpl extends EFactoryImpl implements A
 	 * @generated
 	 */
 	public ApogyCoreEnvironmentUIFacade createApogyCoreEnvironmentUIFacade() {
-		ApogyCoreEnvironmentUIFacadeImpl apogy__CoreEnvironmentUIFacade = new ApogyCoreEnvironmentUIFacadeImpl();
-		return apogy__CoreEnvironmentUIFacade;
+		ApogyCoreEnvironmentUIFacadeImpl apogyCoreEnvironmentUIFacade = new ApogyCoreEnvironmentUIFacadeImpl();
+		return apogyCoreEnvironmentUIFacade;
 	}
 
 		/**

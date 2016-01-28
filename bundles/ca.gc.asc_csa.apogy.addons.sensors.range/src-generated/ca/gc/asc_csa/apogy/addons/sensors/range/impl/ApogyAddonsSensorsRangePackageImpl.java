@@ -151,7 +151,7 @@ public class ApogyAddonsSensorsRangePackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__AddonsSensorsRangeFacadeEClass = null;
+	private EClass apogyAddonsSensorsRangeFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -650,7 +650,7 @@ public class ApogyAddonsSensorsRangePackageImpl extends EPackageImpl implements 
 	 * @generated
 	 */
 	public EClass getApogyAddonsSensorsRangeFacade() {
-		return apogy__AddonsSensorsRangeFacadeEClass;
+		return apogyAddonsSensorsRangeFacadeEClass;
 	}
 
 	/**
@@ -659,7 +659,7 @@ public class ApogyAddonsSensorsRangePackageImpl extends EPackageImpl implements 
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int() {
-		return apogy__AddonsSensorsRangeFacadeEClass.getEOperations().get(0);
+		return apogyAddonsSensorsRangeFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -668,7 +668,7 @@ public class ApogyAddonsSensorsRangePackageImpl extends EPackageImpl implements 
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings() {
-		return apogy__AddonsSensorsRangeFacadeEClass.getEOperations().get(1);
+		return apogyAddonsSensorsRangeFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -793,9 +793,9 @@ public class ApogyAddonsSensorsRangePackageImpl extends EPackageImpl implements 
 		createEReference(rasterScanDataEClass, RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS);
 		createEReference(rasterScanDataEClass, RASTER_SCAN_DATA__SCAN_DATA);
 
-		apogy__AddonsSensorsRangeFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_RANGE_FACADE);
-		createEOperation(apogy__AddonsSensorsRangeFacadeEClass, APOGY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT);
-		createEOperation(apogy__AddonsSensorsRangeFacadeEClass, APOGY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS);
+		apogyAddonsSensorsRangeFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_RANGE_FACADE);
+		createEOperation(apogyAddonsSensorsRangeFacadeEClass, APOGY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT);
+		createEOperation(apogyAddonsSensorsRangeFacadeEClass, APOGY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
@@ -967,7 +967,7 @@ public class ApogyAddonsSensorsRangePackageImpl extends EPackageImpl implements 
 		initEReference(getRasterScanData_RasterScanSettings(), this.getRasterScanSettings(), null, "rasterScanSettings", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRasterScanData_ScanData(), theApogyCommonGeometryData25DPackage.getVolumetricCoordinatesSet25D(), null, "scanData", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__AddonsSensorsRangeFacadeEClass, ApogyAddonsSensorsRangeFacade.class, "ApogyAddonsSensorsRangeFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyAddonsSensorsRangeFacadeEClass, ApogyAddonsSensorsRangeFacade.class, "ApogyAddonsSensorsRangeFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyAddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int(), this.getRasterScanSettings(), "createRasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);

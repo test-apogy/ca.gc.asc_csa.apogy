@@ -187,7 +187,7 @@ public class ApogyCommonGeometryData3DLASItemProviderAdapterFactory extends Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCommonGeometryData3DLASFacadeItemProvider apogy__CommonGeometryData3DLASFacadeItemProvider;
+	protected ApogyCommonGeometryData3DLASFacadeItemProvider apogyCommonGeometryData3DLASFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade}.
@@ -197,11 +197,11 @@ public class ApogyCommonGeometryData3DLASItemProviderAdapterFactory extends Apog
 	 */
 	@Override
 	public Adapter createApogyCommonGeometryData3DLASFacadeAdapter() {
-		if (apogy__CommonGeometryData3DLASFacadeItemProvider == null) {
-			apogy__CommonGeometryData3DLASFacadeItemProvider = new ApogyCommonGeometryData3DLASFacadeItemProvider(this);
+		if (apogyCommonGeometryData3DLASFacadeItemProvider == null) {
+			apogyCommonGeometryData3DLASFacadeItemProvider = new ApogyCommonGeometryData3DLASFacadeItemProvider(this);
 		}
 
-		return apogy__CommonGeometryData3DLASFacadeItemProvider;
+		return apogyCommonGeometryData3DLASFacadeItemProvider;
 	}
 
 	/**
@@ -357,7 +357,7 @@ public class ApogyCommonGeometryData3DLASItemProviderAdapterFactory extends Apog
 		if (variableLengthRecordItemProvider != null) variableLengthRecordItemProvider.dispose();
 		if (lasReaderItemProvider != null) lasReaderItemProvider.dispose();
 		if (lasPointItemProvider != null) lasPointItemProvider.dispose();
-		if (apogy__CommonGeometryData3DLASFacadeItemProvider != null) apogy__CommonGeometryData3DLASFacadeItemProvider.dispose();
+		if (apogyCommonGeometryData3DLASFacadeItemProvider != null) apogyCommonGeometryData3DLASFacadeItemProvider.dispose();
 		if (lasWriterItemProvider != null) lasWriterItemProvider.dispose();
 	}
 

@@ -138,8 +138,8 @@ public class ApogyCommonTopologyBindingsSwitch<T> extends Switch<T>
 				return result;
 			}
 			case ApogyCommonTopologyBindingsPackage.APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE: {
-				ApogyCommonTopologyBindingsFacade apogy__CommonTopologyBindingsFacade = (ApogyCommonTopologyBindingsFacade)theEObject;
-				T result = caseApogyCommonTopologyBindingsFacade(apogy__CommonTopologyBindingsFacade);
+				ApogyCommonTopologyBindingsFacade apogyCommonTopologyBindingsFacade = (ApogyCommonTopologyBindingsFacade)theEObject;
+				T result = caseApogyCommonTopologyBindingsFacade(apogyCommonTopologyBindingsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

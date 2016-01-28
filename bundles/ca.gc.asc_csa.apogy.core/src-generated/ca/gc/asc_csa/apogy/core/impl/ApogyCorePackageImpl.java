@@ -66,7 +66,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreFacadeEClass = null;
+	private EClass apogyCoreFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -356,7 +356,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EClass getApogyCoreFacade() {
-		return apogy__CoreFacadeEClass;
+		return apogyCoreFacadeEClass;
 	}
 
 	/**
@@ -365,7 +365,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyCoreFacade__ComputeAbsolutePoseMatrix__ApogySystem_Matrix4x4() {
-		return apogy__CoreFacadeEClass.getEOperations().get(0);
+		return apogyCoreFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -374,7 +374,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyCoreFacade__CreateResultNode__PositionedResult() {
-		return apogy__CoreFacadeEClass.getEOperations().get(1);
+		return apogyCoreFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -383,7 +383,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyCoreFacade__CreateApogySession__boolean_boolean_boolean_boolean() {
-		return apogy__CoreFacadeEClass.getEOperations().get(2);
+		return apogyCoreFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -392,7 +392,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyCoreFacade__GetApogySystem__Environment_String() {
-		return apogy__CoreFacadeEClass.getEOperations().get(3);
+		return apogyCoreFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -401,7 +401,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyCoreFacade__LoadFeatureOfInterestFromFile__String() {
-		return apogy__CoreFacadeEClass.getEOperations().get(4);
+		return apogyCoreFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -410,7 +410,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyCoreFacade__SaveFeatureOfInterestToFile__String_List() {
-		return apogy__CoreFacadeEClass.getEOperations().get(5);
+		return apogyCoreFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1166,13 +1166,13 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CoreFacadeEClass = createEClass(APOGY_CORE_FACADE);
-		createEOperation(apogy__CoreFacadeEClass, APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4);
-		createEOperation(apogy__CoreFacadeEClass, APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT);
-		createEOperation(apogy__CoreFacadeEClass, APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN);
-		createEOperation(apogy__CoreFacadeEClass, APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING);
-		createEOperation(apogy__CoreFacadeEClass, APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING);
-		createEOperation(apogy__CoreFacadeEClass, APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST);
+		apogyCoreFacadeEClass = createEClass(APOGY_CORE_FACADE);
+		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__APOGYSYSTEM_MATRIX4X4);
+		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT);
+		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN);
+		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING);
+		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING);
+		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST);
 
 		apogyEnvironmentEClass = createEClass(APOGY_ENVIRONMENT);
 		createEReference(apogyEnvironmentEClass, APOGY_ENVIRONMENT__WORKSITES_LIST);
@@ -1367,7 +1367,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 		featureOfInterestListNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CoreFacadeEClass, ApogyCoreFacade.class, "ApogyCoreFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreFacadeEClass, ApogyCoreFacade.class, "ApogyCoreFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCoreFacade__ComputeAbsolutePoseMatrix__ApogySystem_Matrix4x4(), theApogyCommonMathPackage.getMatrix4x4(), "computeAbsolutePoseMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getApogySystem(), "apogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);

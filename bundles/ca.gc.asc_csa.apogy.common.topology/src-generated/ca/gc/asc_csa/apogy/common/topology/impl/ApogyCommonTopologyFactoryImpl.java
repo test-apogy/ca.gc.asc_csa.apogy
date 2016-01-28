@@ -261,8 +261,8 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 	 * @generated
 	 */
 	public ApogyCommonTopologyFacade createApogyCommonTopologyFacade() {
-		ApogyCommonTopologyFacadeImpl apogy__CommonTopologyFacade = new ApogyCommonTopologyFacadeImpl();
-		return apogy__CommonTopologyFacade;
+		ApogyCommonTopologyFacadeImpl apogyCommonTopologyFacade = new ApogyCommonTopologyFacadeImpl();
+		return apogyCommonTopologyFacade;
 	}
 
 	/**

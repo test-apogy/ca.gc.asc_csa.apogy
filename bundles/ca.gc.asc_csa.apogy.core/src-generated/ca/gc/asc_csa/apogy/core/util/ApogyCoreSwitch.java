@@ -110,8 +110,8 @@ public class ApogyCoreSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case ApogyCorePackage.APOGY_CORE_FACADE: {
-				ApogyCoreFacade apogy__CoreFacade = (ApogyCoreFacade)theEObject;
-				T result = caseApogyCoreFacade(apogy__CoreFacade);
+				ApogyCoreFacade apogyCoreFacade = (ApogyCoreFacade)theEObject;
+				T result = caseApogyCoreFacade(apogyCoreFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

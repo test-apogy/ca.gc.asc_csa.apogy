@@ -162,8 +162,8 @@ public class ApogyCoreInvocatorActionBarContributor
   @Override
   public void contributeToToolBar(IToolBarManager toolBarManager)
   {
-		toolBarManager.add(new Separator("apogy__coreinvocator-settings"));
-		toolBarManager.add(new Separator("apogy__coreinvocator-additions"));
+		toolBarManager.add(new Separator("apogycoreinvocator-settings"));
+		toolBarManager.add(new Separator("apogycoreinvocator-additions"));
 	}
 
   /**

@@ -67,7 +67,7 @@ public class ApogyAddonsMobilityPathplannersPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__AddonsMobilityPathplannersFacadeEClass = null;
+	private EClass apogyAddonsMobilityPathplannersFacadeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -248,7 +248,7 @@ public class ApogyAddonsMobilityPathplannersPackageImpl extends EPackageImpl imp
 	 * @generated
 	 */
 	public EClass getApogyAddonsMobilityPathplannersFacade() {
-		return apogy__AddonsMobilityPathplannersFacadeEClass;
+		return apogyAddonsMobilityPathplannersFacadeEClass;
 	}
 
 	/**
@@ -257,7 +257,7 @@ public class ApogyAddonsMobilityPathplannersPackageImpl extends EPackageImpl imp
 	 * @generated
 	 */
 	public EOperation getApogyAddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode() {
-		return apogy__AddonsMobilityPathplannersFacadeEClass.getEOperations().get(0);
+		return apogyAddonsMobilityPathplannersFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -304,8 +304,8 @@ public class ApogyAddonsMobilityPathplannersPackageImpl extends EPackageImpl imp
 		createEAttribute(circularExclusionZoneEClass, CIRCULAR_EXCLUSION_ZONE__RADIUS);
 		createEAttribute(circularExclusionZoneEClass, CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE);
 
-		apogy__AddonsMobilityPathplannersFacadeEClass = createEClass(APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE);
-		createEOperation(apogy__AddonsMobilityPathplannersFacadeEClass, APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE);
+		apogyAddonsMobilityPathplannersFacadeEClass = createEClass(APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE);
+		createEOperation(apogyAddonsMobilityPathplannersFacadeEClass, APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE);
 	}
 
 	/**
@@ -399,7 +399,7 @@ public class ApogyAddonsMobilityPathplannersPackageImpl extends EPackageImpl imp
 		initEAttribute(getCircularExclusionZone_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCircularExclusionZone_InvertSamplingShape(), theEcorePackage.getEBoolean(), "invertSamplingShape", null, 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__AddonsMobilityPathplannersFacadeEClass, ApogyAddonsMobilityPathplannersFacade.class, "ApogyAddonsMobilityPathplannersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyAddonsMobilityPathplannersFacadeEClass, ApogyAddonsMobilityPathplannersFacade.class, "ApogyAddonsMobilityPathplannersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyAddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode(), this.getCircularExclusionZone(), "createCircularExclusionZone", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);

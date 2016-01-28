@@ -110,8 +110,8 @@ public class ApogyCommonEMFUIFactoryImpl extends EFactoryImpl implements ApogyCo
 	 * @generated
 	 */
 	public ApogyCommonEMFUIFacade createApogyCommonEMFUIFacade() {
-		ApogyCommonEMFUIFacadeImpl apogy__CommonEMFUIFacade = new ApogyCommonEMFUIFacadeImpl();
-		return apogy__CommonEMFUIFacade;
+		ApogyCommonEMFUIFacadeImpl apogyCommonEMFUIFacade = new ApogyCommonEMFUIFacadeImpl();
+		return apogyCommonEMFUIFacade;
 	}
 
 		/**

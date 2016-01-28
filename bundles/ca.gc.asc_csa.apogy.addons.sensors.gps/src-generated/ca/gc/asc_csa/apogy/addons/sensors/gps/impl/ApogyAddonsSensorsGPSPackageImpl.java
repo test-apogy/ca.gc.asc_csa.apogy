@@ -92,7 +92,7 @@ public class ApogyAddonsSensorsGPSPackageImpl extends EPackageImpl implements Ap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__AddonsSensorsGPSFacadeEClass = null;
+	private EClass apogyAddonsSensorsGPSFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -610,7 +610,7 @@ public class ApogyAddonsSensorsGPSPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EClass getApogyAddonsSensorsGPSFacade() {
-		return apogy__AddonsSensorsGPSFacadeEClass;
+		return apogyAddonsSensorsGPSFacadeEClass;
 	}
 
 	/**
@@ -619,7 +619,7 @@ public class ApogyAddonsSensorsGPSPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double() {
-		return apogy__AddonsSensorsGPSFacadeEClass.getEOperations().get(0);
+		return apogyAddonsSensorsGPSFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -628,7 +628,7 @@ public class ApogyAddonsSensorsGPSPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsGPSFacade__CreateMarkedGPS__PositionMarker() {
-		return apogy__AddonsSensorsGPSFacadeEClass.getEOperations().get(1);
+		return apogyAddonsSensorsGPSFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -773,9 +773,9 @@ public class ApogyAddonsSensorsGPSPackageImpl extends EPackageImpl implements Ap
 		createEOperation(gpsRepositoryEClass, GPS_REPOSITORY___SCAN_FOR_DEVICES);
 		createEOperation(gpsRepositoryEClass, GPS_REPOSITORY___GET_GPS_BY_ID__STRING);
 
-		apogy__AddonsSensorsGPSFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_GPS_FACADE);
-		createEOperation(apogy__AddonsSensorsGPSFacadeEClass, APOGY_ADDONS_SENSORS_GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE);
-		createEOperation(apogy__AddonsSensorsGPSFacadeEClass, APOGY_ADDONS_SENSORS_GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER);
+		apogyAddonsSensorsGPSFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_GPS_FACADE);
+		createEOperation(apogyAddonsSensorsGPSFacadeEClass, APOGY_ADDONS_SENSORS_GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE);
+		createEOperation(apogyAddonsSensorsGPSFacadeEClass, APOGY_ADDONS_SENSORS_GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER);
 
 		// Create enums
 		gpsStatusEEnum = createEEnum(GPS_STATUS);
@@ -890,7 +890,7 @@ public class ApogyAddonsSensorsGPSPackageImpl extends EPackageImpl implements Ap
 		op = initEOperation(getGPSRepository__GetGPSById__String(), this.getGPS(), "getGPSById", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "gpsId", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(apogy__AddonsSensorsGPSFacadeEClass, ApogyAddonsSensorsGPSFacade.class, "ApogyAddonsSensorsGPSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyAddonsSensorsGPSFacadeEClass, ApogyAddonsSensorsGPSFacade.class, "ApogyAddonsSensorsGPSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyAddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double(), this.getGPSPoseSensor(), "createGPSPoseSensor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "originLatitude", 0, 1, !IS_UNIQUE, IS_ORDERED);

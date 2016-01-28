@@ -134,8 +134,8 @@ public class ApogyCommonTopologyUISwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyCommonTopologyUIPackage.APOGY_COMMON_TOPOLOGY_UI_FACADE: {
-				ApogyCommonTopologyUIFacade apogy__CommonTopologyUIFacade = (ApogyCommonTopologyUIFacade)theEObject;
-				T result = caseApogyCommonTopologyUIFacade(apogy__CommonTopologyUIFacade);
+				ApogyCommonTopologyUIFacade apogyCommonTopologyUIFacade = (ApogyCommonTopologyUIFacade)theEObject;
+				T result = caseApogyCommonTopologyUIFacade(apogyCommonTopologyUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

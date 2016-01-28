@@ -32,7 +32,7 @@ public class ApogyCommonConvertersUIPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonConvertersUIFacadeEClass = null;
+	private EClass apogyCommonConvertersUIFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,7 +108,7 @@ public class ApogyCommonConvertersUIPackageImpl extends EPackageImpl implements 
 	 * @generated
 	 */
 	public EClass getApogyCommonConvertersUIFacade() {
-		return apogy__CommonConvertersUIFacadeEClass;
+		return apogyCommonConvertersUIFacadeEClass;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class ApogyCommonConvertersUIPackageImpl extends EPackageImpl implements 
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersUIFacade__Convert__ISelection_Class() {
-		return apogy__CommonConvertersUIFacadeEClass.getEOperations().get(0);
+		return apogyCommonConvertersUIFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -157,8 +157,8 @@ public class ApogyCommonConvertersUIPackageImpl extends EPackageImpl implements 
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CommonConvertersUIFacadeEClass = createEClass(APOGY_COMMON_CONVERTERS_UI_FACADE);
-		createEOperation(apogy__CommonConvertersUIFacadeEClass, APOGY_COMMON_CONVERTERS_UI_FACADE___CONVERT__ISELECTION_CLASS);
+		apogyCommonConvertersUIFacadeEClass = createEClass(APOGY_COMMON_CONVERTERS_UI_FACADE);
+		createEOperation(apogyCommonConvertersUIFacadeEClass, APOGY_COMMON_CONVERTERS_UI_FACADE___CONVERT__ISELECTION_CLASS);
 
 		// Create data types
 		iSelectionEDataType = createEDataType(ISELECTION);
@@ -198,7 +198,7 @@ public class ApogyCommonConvertersUIPackageImpl extends EPackageImpl implements 
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CommonConvertersUIFacadeEClass, ApogyCommonConvertersUIFacade.class, "ApogyCommonConvertersUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonConvertersUIFacadeEClass, ApogyCommonConvertersUIFacade.class, "ApogyCommonConvertersUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCommonConvertersUIFacade__Convert__ISelection_Class(), null, "convert", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getISelection(), "selection", 0, 1, !IS_UNIQUE, IS_ORDERED);

@@ -337,7 +337,7 @@ public class ApogyCommonTopologyAddonsPrimitivesItemProviderAdapterFactory exten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCommonTopologyAddonsPrimitivesFacadeItemProvider apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider;
+	protected ApogyCommonTopologyAddonsPrimitivesFacadeItemProvider apogyCommonTopologyAddonsPrimitivesFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFacade}.
@@ -347,11 +347,11 @@ public class ApogyCommonTopologyAddonsPrimitivesItemProviderAdapterFactory exten
 	 */
 	@Override
 	public Adapter createApogyCommonTopologyAddonsPrimitivesFacadeAdapter() {
-		if (apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider == null) {
-			apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider = new ApogyCommonTopologyAddonsPrimitivesFacadeItemProvider(this);
+		if (apogyCommonTopologyAddonsPrimitivesFacadeItemProvider == null) {
+			apogyCommonTopologyAddonsPrimitivesFacadeItemProvider = new ApogyCommonTopologyAddonsPrimitivesFacadeItemProvider(this);
 		}
 
-		return apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider;
+		return apogyCommonTopologyAddonsPrimitivesFacadeItemProvider;
 	}
 
 	/**
@@ -490,7 +490,7 @@ public class ApogyCommonTopologyAddonsPrimitivesItemProviderAdapterFactory exten
 		if (directionalLightItemProvider != null) directionalLightItemProvider.dispose();
 		if (pointLightItemProvider != null) pointLightItemProvider.dispose();
 		if (spotLightItemProvider != null) spotLightItemProvider.dispose();
-		if (apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider != null) apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider.dispose();
+		if (apogyCommonTopologyAddonsPrimitivesFacadeItemProvider != null) apogyCommonTopologyAddonsPrimitivesFacadeItemProvider.dispose();
 	}
 
 	/**

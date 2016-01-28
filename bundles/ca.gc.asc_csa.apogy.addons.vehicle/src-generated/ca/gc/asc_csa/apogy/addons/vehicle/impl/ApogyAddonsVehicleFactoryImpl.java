@@ -289,8 +289,8 @@ public class ApogyAddonsVehicleFactoryImpl extends EFactoryImpl implements Apogy
 	 * @generated
 	 */
 	public ApogyAddonsVehicleFacade createApogyAddonsVehicleFacade() {
-		ApogyAddonsVehicleFacadeImpl apogy__AddonsVehicleFacade = new ApogyAddonsVehicleFacadeImpl();
-		return apogy__AddonsVehicleFacade;
+		ApogyAddonsVehicleFacadeImpl apogyAddonsVehicleFacade = new ApogyAddonsVehicleFacadeImpl();
+		return apogyAddonsVehicleFacade;
 	}
 
 		/**

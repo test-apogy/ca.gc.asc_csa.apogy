@@ -76,7 +76,7 @@ public class ApogyCoreUIItemProviderAdapterFactory extends ApogyCoreUIAdapterFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreUIFacadeItemProvider apogy__CoreUIFacadeItemProvider;
+	protected ApogyCoreUIFacadeItemProvider apogyCoreUIFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade}.
@@ -86,11 +86,11 @@ public class ApogyCoreUIItemProviderAdapterFactory extends ApogyCoreUIAdapterFac
 	 */
 	@Override
 	public Adapter createApogyCoreUIFacadeAdapter() {
-		if (apogy__CoreUIFacadeItemProvider == null) {
-			apogy__CoreUIFacadeItemProvider = new ApogyCoreUIFacadeItemProvider(this);
+		if (apogyCoreUIFacadeItemProvider == null) {
+			apogyCoreUIFacadeItemProvider = new ApogyCoreUIFacadeItemProvider(this);
 		}
 
-		return apogy__CoreUIFacadeItemProvider;
+		return apogyCoreUIFacadeItemProvider;
 	}
 
 	/**
@@ -307,7 +307,7 @@ public class ApogyCoreUIItemProviderAdapterFactory extends ApogyCoreUIAdapterFac
 	 * @generated
 	 */
 	public void dispose() {
-		if (apogy__CoreUIFacadeItemProvider != null) apogy__CoreUIFacadeItemProvider.dispose();
+		if (apogyCoreUIFacadeItemProvider != null) apogyCoreUIFacadeItemProvider.dispose();
 		if (apogyResourceSettingsItemProvider != null) apogyResourceSettingsItemProvider.dispose();
 		if (newApogyProjectSettingsItemProvider != null) newApogyProjectSettingsItemProvider.dispose();
 		if (newApogySessionSettingsItemProvider != null) newApogySessionSettingsItemProvider.dispose();

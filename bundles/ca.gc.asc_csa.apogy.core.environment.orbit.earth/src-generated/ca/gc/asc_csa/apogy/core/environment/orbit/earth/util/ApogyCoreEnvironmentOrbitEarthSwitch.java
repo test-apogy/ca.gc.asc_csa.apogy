@@ -342,8 +342,8 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE: {
-				ApogyCoreEnvironmentOrbitEarthFacade apogy__CoreEnvironmentOrbitEarthFacade = (ApogyCoreEnvironmentOrbitEarthFacade)theEObject;
-				T result = caseApogyCoreEnvironmentOrbitEarthFacade(apogy__CoreEnvironmentOrbitEarthFacade);
+				ApogyCoreEnvironmentOrbitEarthFacade apogyCoreEnvironmentOrbitEarthFacade = (ApogyCoreEnvironmentOrbitEarthFacade)theEObject;
+				T result = caseApogyCoreEnvironmentOrbitEarthFacade(apogyCoreEnvironmentOrbitEarthFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

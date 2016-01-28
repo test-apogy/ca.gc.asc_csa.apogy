@@ -115,8 +115,8 @@ public class ApogyCommonConvertersFactoryImpl extends EFactoryImpl implements Ap
 	 * @generated
 	 */
 	public ApogyCommonConvertersFacade createApogyCommonConvertersFacade() {
-		ApogyCommonConvertersFacadeImpl apogy__CommonConvertersFacade = new ApogyCommonConvertersFacadeImpl();
-		return apogy__CommonConvertersFacade;
+		ApogyCommonConvertersFacadeImpl apogyCommonConvertersFacade = new ApogyCommonConvertersFacadeImpl();
+		return apogyCommonConvertersFacade;
 	}
 
 	/**

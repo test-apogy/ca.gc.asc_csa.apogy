@@ -183,8 +183,8 @@ public class ApogyCommonGeometryData3DLASFactoryImpl extends EFactoryImpl implem
 	 * @generated
 	 */
 	public ApogyCommonGeometryData3DLASFacade createApogyCommonGeometryData3DLASFacade() {
-		ApogyCommonGeometryData3DLASFacadeImpl apogy__CommonGeometryData3DLASFacade = new ApogyCommonGeometryData3DLASFacadeImpl();
-		return apogy__CommonGeometryData3DLASFacade;
+		ApogyCommonGeometryData3DLASFacadeImpl apogyCommonGeometryData3DLASFacade = new ApogyCommonGeometryData3DLASFacadeImpl();
+		return apogyCommonGeometryData3DLASFacade;
 	}
 
 	/**

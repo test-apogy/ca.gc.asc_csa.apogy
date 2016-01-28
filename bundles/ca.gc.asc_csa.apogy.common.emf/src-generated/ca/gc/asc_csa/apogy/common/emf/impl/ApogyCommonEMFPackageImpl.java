@@ -65,7 +65,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonEMFFacadeEClass = null;
+	private EClass apogyCommonEMFFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -398,7 +398,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EClass getApogyCommonEMFFacade() {
-		return apogy__CommonEMFFacadeEClass;
+		return apogyCommonEMFFacadeEClass;
 	}
 
 		/**
@@ -407,7 +407,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetAllAvailableEClasses() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(0);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -416,7 +416,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetAllSubEClasses__EClass() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(1);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -425,7 +425,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__FilterEClasses__List_EClassFilter() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(2);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -434,7 +434,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__FilterEClasses__List_List() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(3);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(3);
 	}
 
 		/**
@@ -443,7 +443,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetEClass__String() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(4);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(4);
 	}
 
 		/**
@@ -452,7 +452,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__SortAlphabetically__List() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(5);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(5);
 	}
 
 		/**
@@ -461,7 +461,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetAllAvailableEOperations__EClass() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(6);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(6);
 	}
 
 		/**
@@ -470,7 +470,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__SortEOperationsAlphabetically__List() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(7);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(7);
 	}
 
 		/**
@@ -479,7 +479,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetDocumentation__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(8);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(8);
 	}
 
 		/**
@@ -488,7 +488,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetEngineeringUnitsAsString__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(9);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(9);
 	}
 
 		/**
@@ -497,7 +497,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetEngineeringUnits__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(10);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(10);
 	}
 
 		/**
@@ -506,7 +506,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetValueUpdateRate__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(11);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(11);
 	}
 
 		/**
@@ -515,7 +515,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetWarningOCLExpression__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(12);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(12);
 	}
 
 		/**
@@ -524,7 +524,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetAlarmOCLExpression__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(13);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(13);
 	}
 
 		/**
@@ -533,7 +533,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetOutOfRangeOCLExpression__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(14);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(14);
 	}
 
 		/**
@@ -542,7 +542,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetWarningMinValue__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(15);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(15);
 	}
 
 		/**
@@ -551,7 +551,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetWarningMaxValue__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(16);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(16);
 	}
 
 		/**
@@ -560,7 +560,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetAlarmMinValue__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(17);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(17);
 	}
 
 		/**
@@ -569,7 +569,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetAlarmMaxValue__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(18);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(18);
 	}
 
 		/**
@@ -578,7 +578,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetOutOfRangeMinValue__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(19);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(19);
 	}
 
 		/**
@@ -587,7 +587,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetOutOfRangeMaxValue__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(20);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(20);
 	}
 
 		/**
@@ -596,7 +596,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetRange__ETypedElement_Object() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(21);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(21);
 	}
 
 		/**
@@ -605,7 +605,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetFullDescription__ETypedElement() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(22);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(22);
 	}
 
 		/**
@@ -614,7 +614,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetAncestriesString__AbstractFeatureNode() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(23);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(23);
 	}
 
 		/**
@@ -623,7 +623,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetFeatureRoot__AbstractFeatureNode() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(24);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(24);
 	}
 
 		/**
@@ -632,7 +632,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetAncestries__AbstractFeatureNode() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(25);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(25);
 	}
 
 		/**
@@ -641,7 +641,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetDescendants__AbstractFeatureNode() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(26);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(26);
 	}
 
 		/**
@@ -650,7 +650,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetChildEStructuralFeatures__AbstractFeatureNode() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(27);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(27);
 	}
 
 		/**
@@ -659,7 +659,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__Resolve__EObject_AbstractFeatureNode() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(28);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(28);
 	}
 
 		/**
@@ -668,7 +668,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__SetValue__EObject_AbstractFeatureNode_Object() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(29);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(29);
 	}
 
 		/**
@@ -677,7 +677,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__IsResolved__EObject_AbstractFeatureNode() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(30);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(30);
 	}
 
 		/**
@@ -686,7 +686,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetLeaf__ListRootNode() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(31);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(31);
 	}
 
 		/**
@@ -695,7 +695,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetFile__Resource() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(32);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(32);
 	}
 
 		/**
@@ -704,7 +704,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetContent__URI() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(33);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(33);
 	}
 
 		/**
@@ -713,7 +713,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__SortTimed__Collection() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(34);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(34);
 	}
 
 		/**
@@ -722,7 +722,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetTimeSpan__Collection() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(35);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(35);
 	}
 
 		/**
@@ -731,7 +731,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFFacade__GetID__EObject() {
-		return apogy__CommonEMFFacadeEClass.getEOperations().get(36);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(36);
 	}
 
 		/**
@@ -1495,44 +1495,44 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CommonEMFFacadeEClass = createEClass(APOGY_COMMON_EMF_FACADE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_ECLASSES);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALL_SUB_ECLASSES__ECLASS);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_LIST);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ECLASS__STRING);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___SORT_ALPHABETICALLY__LIST);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_LEAF__LISTROOTNODE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_FILE__RESOURCE);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CONTENT__URI);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___SORT_TIMED__COLLECTION);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_TIME_SPAN__COLLECTION);
-		createEOperation(apogy__CommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ID__EOBJECT);
+		apogyCommonEMFFacadeEClass = createEClass(APOGY_COMMON_EMF_FACADE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_ECLASSES);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALL_SUB_ECLASSES__ECLASS);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_LIST);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ECLASS__STRING);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___SORT_ALPHABETICALLY__LIST);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_LEAF__LISTROOTNODE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_FILE__RESOURCE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CONTENT__URI);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___SORT_TIMED__COLLECTION);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_TIME_SPAN__COLLECTION);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ID__EOBJECT);
 
 		eObjectReferenceEClass = createEClass(EOBJECT_REFERENCE);
 		createEReference(eObjectReferenceEClass, EOBJECT_REFERENCE__EOBJECT);
@@ -1697,7 +1697,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		listFeatureNodeEClass.getESuperTypes().add(this.getAbstractFeatureSpecifier());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CommonEMFFacadeEClass, ApogyCommonEMFFacade.class, "ApogyCommonEMFFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonEMFFacadeEClass, ApogyCommonEMFFacade.class, "ApogyCommonEMFFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCommonEMFFacade__GetAllAvailableEClasses(), null, "getAllAvailableEClasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());

@@ -36,7 +36,7 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreProgramsFacadeEClass = null;
+	private EClass apogyCoreProgramsFacadeEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -186,7 +186,7 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 	 * @generated
 	 */
 	public EClass getApogyCoreProgramsFacade() {
-		return apogy__CoreProgramsFacadeEClass;
+		return apogyCoreProgramsFacadeEClass;
 	}
 
 	/**
@@ -195,7 +195,7 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 	 * @generated
 	 */
 	public EReference getApogyCoreProgramsFacade_Session() {
-		return (EReference)apogy__CoreProgramsFacadeEClass.getEStructuralFeatures().get(0);
+		return (EReference)apogyCoreProgramsFacadeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -204,7 +204,7 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 	 * @generated
 	 */
 	public EReference getApogyCoreProgramsFacade_Variables() {
-		return (EReference)apogy__CoreProgramsFacadeEClass.getEStructuralFeatures().get(1);
+		return (EReference)apogyCoreProgramsFacadeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -213,7 +213,7 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 	 * @generated
 	 */
 	public EOperation getApogyCoreProgramsFacade__Exec__OperationCall() {
-		return apogy__CoreProgramsFacadeEClass.getEOperations().get(0);
+		return apogyCoreProgramsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -289,10 +289,10 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_OVER);
 		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN);
 
-		apogy__CoreProgramsFacadeEClass = createEClass(APOGY_CORE_PROGRAMS_FACADE);
-		createEReference(apogy__CoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__SESSION);
-		createEReference(apogy__CoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__VARIABLES);
-		createEOperation(apogy__CoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL);
+		apogyCoreProgramsFacadeEClass = createEClass(APOGY_CORE_PROGRAMS_FACADE);
+		createEReference(apogyCoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__SESSION);
+		createEReference(apogyCoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__VARIABLES);
+		createEOperation(apogyCoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL);
 
 		timeIntervalEClass = createEClass(TIME_INTERVAL);
 		createEAttribute(timeIntervalEClass, TIME_INTERVAL__START_TIME);
@@ -350,7 +350,7 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 
 		initEOperation(getAbstractProgramRuntime__StepReturn(), null, "stepReturn", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(apogy__CoreProgramsFacadeEClass, ApogyCoreProgramsFacade.class, "ApogyCoreProgramsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreProgramsFacadeEClass, ApogyCoreProgramsFacade.class, "ApogyCoreProgramsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApogyCoreProgramsFacade_Session(), theApogyCoreInvocatorPackage.getInvocatorSession(), null, "session", null, 0, 1, ApogyCoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyCoreProgramsFacade_Variables(), theApogyCoreInvocatorPackage.getVariable(), null, "variables", null, 0, -1, ApogyCoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

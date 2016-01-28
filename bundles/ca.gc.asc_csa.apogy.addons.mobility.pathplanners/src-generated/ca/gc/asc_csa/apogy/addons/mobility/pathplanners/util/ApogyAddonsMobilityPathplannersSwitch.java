@@ -117,8 +117,8 @@ public class ApogyAddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 				return result;
 			}
 			case ApogyAddonsMobilityPathplannersPackage.APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE: {
-				ApogyAddonsMobilityPathplannersFacade apogy__AddonsMobilityPathplannersFacade = (ApogyAddonsMobilityPathplannersFacade)theEObject;
-				T1 result = caseApogyAddonsMobilityPathplannersFacade(apogy__AddonsMobilityPathplannersFacade);
+				ApogyAddonsMobilityPathplannersFacade apogyAddonsMobilityPathplannersFacade = (ApogyAddonsMobilityPathplannersFacade)theEObject;
+				T1 result = caseApogyAddonsMobilityPathplannersFacade(apogyAddonsMobilityPathplannersFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

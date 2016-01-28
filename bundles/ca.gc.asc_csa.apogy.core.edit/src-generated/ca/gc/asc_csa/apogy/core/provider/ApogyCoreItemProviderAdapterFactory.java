@@ -103,13 +103,12 @@ public class ApogyCoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all
-	 * {@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade} instances. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreFacadeItemProvider apogy__CoreFacadeItemProvider;
+	protected ApogyCoreFacadeItemProvider apogyCoreFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade}.
@@ -119,11 +118,11 @@ public class ApogyCoreItemProviderAdapterFactory extends
 	 */
 	@Override
 	public Adapter createApogyCoreFacadeAdapter() {
-		if (apogy__CoreFacadeItemProvider == null) {
-			apogy__CoreFacadeItemProvider = new ApogyCoreFacadeItemProvider(this);
+		if (apogyCoreFacadeItemProvider == null) {
+			apogyCoreFacadeItemProvider = new ApogyCoreFacadeItemProvider(this);
 		}
 
-		return apogy__CoreFacadeItemProvider;
+		return apogyCoreFacadeItemProvider;
 	}
 
 	/**
@@ -839,7 +838,7 @@ public class ApogyCoreItemProviderAdapterFactory extends
 	 * @generated
 	 */
 	public void dispose() {
-		if (apogy__CoreFacadeItemProvider != null) apogy__CoreFacadeItemProvider.dispose();
+		if (apogyCoreFacadeItemProvider != null) apogyCoreFacadeItemProvider.dispose();
 		if (apogyEnvironmentItemProvider != null) apogyEnvironmentItemProvider.dispose();
 		if (timeSourcesListItemProvider != null) timeSourcesListItemProvider.dispose();
 		if (apogyTopologyItemProvider != null) apogyTopologyItemProvider.dispose();

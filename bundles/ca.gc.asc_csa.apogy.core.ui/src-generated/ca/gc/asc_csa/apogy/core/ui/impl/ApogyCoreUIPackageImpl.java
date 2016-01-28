@@ -40,7 +40,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreUIFacadeEClass = null;
+	private EClass apogyCoreUIFacadeEClass = null;
 		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -171,7 +171,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EClass getApogyCoreUIFacade() {
-		return apogy__CoreUIFacadeEClass;
+		return apogyCoreUIFacadeEClass;
 	}
 
 		/**
@@ -180,7 +180,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EAttribute getApogyCoreUIFacade_DefaultApogyProjectNamePrefix() {
-		return (EAttribute)apogy__CoreUIFacadeEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)apogyCoreUIFacadeEClass.getEStructuralFeatures().get(0);
 	}
 
 		/**
@@ -189,7 +189,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EAttribute getApogyCoreUIFacade_DefaultApogySessionFilename() {
-		return (EAttribute)apogy__CoreUIFacadeEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)apogyCoreUIFacadeEClass.getEStructuralFeatures().get(1);
 	}
 
 		/**
@@ -198,7 +198,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EAttribute getApogyCoreUIFacade_DefaultApogySessionFilenameExtension() {
-		return (EAttribute)apogy__CoreUIFacadeEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)apogyCoreUIFacadeEClass.getEStructuralFeatures().get(2);
 	}
 
 		/**
@@ -207,7 +207,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EAttribute getApogyCoreUIFacade_DefaultApogySessionFolderName() {
-		return (EAttribute)apogy__CoreUIFacadeEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)apogyCoreUIFacadeEClass.getEStructuralFeatures().get(3);
 	}
 
 		/**
@@ -216,7 +216,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EOperation getApogyCoreUIFacade__CreateApogyProject__NewApogyProjectSettings() {
-		return apogy__CoreUIFacadeEClass.getEOperations().get(0);
+		return apogyCoreUIFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -225,7 +225,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EOperation getApogyCoreUIFacade__CreateApogySessionFolder__NewApogyProjectSettings() {
-		return apogy__CoreUIFacadeEClass.getEOperations().get(1);
+		return apogyCoreUIFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -234,7 +234,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EOperation getApogyCoreUIFacade__CreateApogySession__NewApogySessionSettings() {
-		return apogy__CoreUIFacadeEClass.getEOperations().get(2);
+		return apogyCoreUIFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -243,7 +243,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EOperation getApogyCoreUIFacade__CreateApogySessionFile__IContainer_String_InvocatorSession() {
-		return apogy__CoreUIFacadeEClass.getEOperations().get(3);
+		return apogyCoreUIFacadeEClass.getEOperations().get(3);
 	}
 
 		/**
@@ -252,7 +252,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EOperation getApogyCoreUIFacade__GetApogySessionFile__IContainer_String() {
-		return apogy__CoreUIFacadeEClass.getEOperations().get(4);
+		return apogyCoreUIFacadeEClass.getEOperations().get(4);
 	}
 
 		/**
@@ -261,7 +261,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	public EOperation getApogyCoreUIFacade__CreateApogySystem__NewApogySystemSettings() {
-		return apogy__CoreUIFacadeEClass.getEOperations().get(5);
+		return apogyCoreUIFacadeEClass.getEOperations().get(5);
 	}
 
 		/**
@@ -555,17 +555,17 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CoreUIFacadeEClass = createEClass(APOGY_CORE_UI_FACADE);
-		createEAttribute(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_PROJECT_NAME_PREFIX);
-		createEAttribute(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME);
-		createEAttribute(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME_EXTENSION);
-		createEAttribute(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FOLDER_NAME);
-		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWSYMPHONYPROJECTSETTINGS);
-		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS);
-		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWSYMPHONYSESSIONSETTINGS);
-		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION);
-		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___GET_APOGY_SESSION_FILE__ICONTAINER_STRING);
-		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS);
+		apogyCoreUIFacadeEClass = createEClass(APOGY_CORE_UI_FACADE);
+		createEAttribute(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_PROJECT_NAME_PREFIX);
+		createEAttribute(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME);
+		createEAttribute(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME_EXTENSION);
+		createEAttribute(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FOLDER_NAME);
+		createEOperation(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWAPOGYPROJECTSETTINGS);
+		createEOperation(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWAPOGYPROJECTSETTINGS);
+		createEOperation(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWAPOGYSESSIONSETTINGS);
+		createEOperation(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION);
+		createEOperation(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE___GET_APOGY_SESSION_FILE__ICONTAINER_STRING);
+		createEOperation(apogyCoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWAPOGYSYSTEMSETTINGS);
 
 		apogyResourceSettingsEClass = createEClass(APOGY_RESOURCE_SETTINGS);
 		createEAttribute(apogyResourceSettingsEClass, APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT);
@@ -642,7 +642,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 		resultNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getTransformNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CoreUIFacadeEClass, ApogyCoreUIFacade.class, "ApogyCoreUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreUIFacadeEClass, ApogyCoreUIFacade.class, "ApogyCoreUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getApogyCoreUIFacade_DefaultApogyProjectNamePrefix(), theEcorePackage.getEString(), "defaultApogyProjectNamePrefix", "Project", 0, 1, ApogyCoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApogyCoreUIFacade_DefaultApogySessionFilename(), theEcorePackage.getEString(), "defaultApogySessionFilename", "session", 0, 1, ApogyCoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApogyCoreUIFacade_DefaultApogySessionFilenameExtension(), theEcorePackage.getEString(), "defaultApogySessionFilenameExtension", "sym", 0, 1, ApogyCoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

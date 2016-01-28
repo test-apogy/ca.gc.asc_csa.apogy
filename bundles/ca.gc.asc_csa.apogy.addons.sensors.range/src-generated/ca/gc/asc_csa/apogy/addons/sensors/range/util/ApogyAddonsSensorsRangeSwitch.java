@@ -240,8 +240,8 @@ public class ApogyAddonsSensorsRangeSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyAddonsSensorsRangePackage.APOGY_ADDONS_SENSORS_RANGE_FACADE: {
-				ApogyAddonsSensorsRangeFacade apogy__AddonsSensorsRangeFacade = (ApogyAddonsSensorsRangeFacade)theEObject;
-				T result = caseApogyAddonsSensorsRangeFacade(apogy__AddonsSensorsRangeFacade);
+				ApogyAddonsSensorsRangeFacade apogyAddonsSensorsRangeFacade = (ApogyAddonsSensorsRangeFacade)theEObject;
+				T result = caseApogyAddonsSensorsRangeFacade(apogyAddonsSensorsRangeFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -237,7 +237,7 @@ public class ApogyCommonGeometryData25DItemProviderAdapterFactory extends ApogyC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCommonGeometryData25DFacadeItemProvider apogy__CommonGeometryData25DFacadeItemProvider;
+	protected ApogyCommonGeometryData25DFacadeItemProvider apogyCommonGeometryData25DFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade}.
@@ -247,11 +247,11 @@ public class ApogyCommonGeometryData25DItemProviderAdapterFactory extends ApogyC
 	 */
 	@Override
 	public Adapter createApogyCommonGeometryData25DFacadeAdapter() {
-		if (apogy__CommonGeometryData25DFacadeItemProvider == null) {
-			apogy__CommonGeometryData25DFacadeItemProvider = new ApogyCommonGeometryData25DFacadeItemProvider(this);
+		if (apogyCommonGeometryData25DFacadeItemProvider == null) {
+			apogyCommonGeometryData25DFacadeItemProvider = new ApogyCommonGeometryData25DFacadeItemProvider(this);
 		}
 
-		return apogy__CommonGeometryData25DFacadeItemProvider;
+		return apogyCommonGeometryData25DFacadeItemProvider;
 	}
 
 	/**
@@ -409,7 +409,7 @@ public class ApogyCommonGeometryData25DItemProviderAdapterFactory extends ApogyC
 		if (polygon25DItemProvider != null) polygon25DItemProvider.dispose();
 		if (mesh25DItemProvider != null) mesh25DItemProvider.dispose();
 		if (volumetricMesh25DItemProvider != null) volumetricMesh25DItemProvider.dispose();
-		if (apogy__CommonGeometryData25DFacadeItemProvider != null) apogy__CommonGeometryData25DFacadeItemProvider.dispose();
+		if (apogyCommonGeometryData25DFacadeItemProvider != null) apogyCommonGeometryData25DFacadeItemProvider.dispose();
 		if (data25DIOItemProvider != null) data25DIOItemProvider.dispose();
 	}
 

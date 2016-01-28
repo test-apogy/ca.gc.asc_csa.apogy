@@ -161,8 +161,8 @@ public class ApogyCoreFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	public ApogyCoreFacade createApogyCoreFacade() {
-		ApogyCoreFacadeImpl apogy__CoreFacade = new ApogyCoreFacadeImpl();
-		return apogy__CoreFacade;
+		ApogyCoreFacadeImpl apogyCoreFacade = new ApogyCoreFacadeImpl();
+		return apogyCoreFacade;
 	}
 
 	/**

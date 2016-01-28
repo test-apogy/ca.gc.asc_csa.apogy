@@ -124,7 +124,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonTopologyAddonsPrimitivesFacadeEClass = null;
+	private EClass apogyCommonTopologyAddonsPrimitivesFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -534,7 +534,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EClass getApogyCommonTopologyAddonsPrimitivesFacade() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass;
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass;
 	}
 
 	/**
@@ -543,7 +543,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreateVector__Vector() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(0);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -552,7 +552,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreateVector__Point3d_Point3d() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(1);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -561,7 +561,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreateVector__double_double_double_double() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(2);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -570,7 +570,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(3);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -579,7 +579,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__Tuple3d() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(4);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -588,7 +588,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(5);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -597,7 +597,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(6);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -606,7 +606,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(7);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -615,7 +615,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(8);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -624,7 +624,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(9);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -633,7 +633,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(10);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -642,7 +642,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(11);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -651,7 +651,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(12);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(12);
 	}
 
 	/**
@@ -660,7 +660,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float() {
-		return apogy__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(13);
+		return apogyCommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(13);
 	}
 
 	/**
@@ -756,21 +756,21 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 		createEAttribute(spotLightEClass, SPOT_LIGHT__SPREAD_ANGLE);
 		createEReference(spotLightEClass, SPOT_LIGHT__DIRECTION);
 
-		apogy__CommonTopologyAddonsPrimitivesFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT);
-		createEOperation(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT);
+		apogyCommonTopologyAddonsPrimitivesFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT);
+		createEOperation(apogyCommonTopologyAddonsPrimitivesFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT);
 
 		// Create data types
 		point3dEDataType = createEDataType(POINT3D);
@@ -872,7 +872,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 		initEAttribute(getSpotLight_SpreadAngle(), theEcorePackage.getEFloat(), "spreadAngle", null, 0, 1, SpotLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpotLight_Direction(), theApogyCommonMathPackage.getTuple3d(), null, "direction", null, 0, 1, SpotLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__CommonTopologyAddonsPrimitivesFacadeEClass, ApogyCommonTopologyAddonsPrimitivesFacade.class, "ApogyCommonTopologyAddonsPrimitivesFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonTopologyAddonsPrimitivesFacadeEClass, ApogyCommonTopologyAddonsPrimitivesFacade.class, "ApogyCommonTopologyAddonsPrimitivesFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyCommonTopologyAddonsPrimitivesFacade__CreateVector__Vector(), this.getVector(), "createVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVector(), "vector", 0, 1, !IS_UNIQUE, IS_ORDERED);

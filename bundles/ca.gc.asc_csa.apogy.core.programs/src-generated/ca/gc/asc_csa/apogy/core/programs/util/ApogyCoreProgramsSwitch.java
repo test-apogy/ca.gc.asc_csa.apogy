@@ -72,8 +72,8 @@ public class ApogyCoreProgramsSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE: {
-				ApogyCoreProgramsFacade apogy__CoreProgramsFacade = (ApogyCoreProgramsFacade)theEObject;
-				T result = caseApogyCoreProgramsFacade(apogy__CoreProgramsFacade);
+				ApogyCoreProgramsFacade apogyCoreProgramsFacade = (ApogyCoreProgramsFacade)theEObject;
+				T result = caseApogyCoreProgramsFacade(apogyCoreProgramsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

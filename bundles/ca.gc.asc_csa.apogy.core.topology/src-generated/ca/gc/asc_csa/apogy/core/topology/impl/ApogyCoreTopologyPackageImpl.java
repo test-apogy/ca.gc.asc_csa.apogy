@@ -56,7 +56,7 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreTopologyFacadeEClass = null;
+	private EClass apogyCoreTopologyFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -247,7 +247,7 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 	 * @generated
 	 */
 	public EClass getApogyCoreTopologyFacade() {
-		return apogy__CoreTopologyFacadeEClass;
+		return apogyCoreTopologyFacadeEClass;
 	}
 
 		/**
@@ -256,7 +256,7 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 	 * @generated
 	 */
 	public EOperation getApogyCoreTopologyFacade__GetVariableOriginNode__Variable() {
-		return apogy__CoreTopologyFacadeEClass.getEOperations().get(0);
+		return apogyCoreTopologyFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -265,7 +265,7 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 	 * @generated
 	 */
 	public EOperation getApogyCoreTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation() {
-		return apogy__CoreTopologyFacadeEClass.getEOperations().get(1);
+		return apogyCoreTopologyFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -274,7 +274,7 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 	 * @generated
 	 */
 	public EOperation getApogyCoreTopologyFacade__CreateApogyEnvironmentNode__ApogyEnvironment() {
-		return apogy__CoreTopologyFacadeEClass.getEOperations().get(2);
+		return apogyCoreTopologyFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -330,10 +330,10 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 		apogySystemAPIsNodeEClass = createEClass(APOGY_SYSTEM_AP_IS_NODE);
 		createEReference(apogySystemAPIsNodeEClass, APOGY_SYSTEM_AP_IS_NODE__APOGY_ENVIRONMENT);
 
-		apogy__CoreTopologyFacadeEClass = createEClass(APOGY_CORE_TOPOLOGY_FACADE);
-		createEOperation(apogy__CoreTopologyFacadeEClass, APOGY_CORE_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE);
-		createEOperation(apogy__CoreTopologyFacadeEClass, APOGY_CORE_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION);
-		createEOperation(apogy__CoreTopologyFacadeEClass, APOGY_CORE_TOPOLOGY_FACADE___CREATE_APOGY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT);
+		apogyCoreTopologyFacadeEClass = createEClass(APOGY_CORE_TOPOLOGY_FACADE);
+		createEOperation(apogyCoreTopologyFacadeEClass, APOGY_CORE_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE);
+		createEOperation(apogyCoreTopologyFacadeEClass, APOGY_CORE_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION);
+		createEOperation(apogyCoreTopologyFacadeEClass, APOGY_CORE_TOPOLOGY_FACADE___CREATE_APOGY_ENVIRONMENT_NODE__APOGYENVIRONMENT);
 
 		// Create data types
 		sortedSetEDataType = createEDataType(SORTED_SET);
@@ -394,7 +394,7 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 		initEClass(apogySystemAPIsNodeEClass, ApogySystemAPIsNode.class, "ApogySystemAPIsNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApogySystemAPIsNode_ApogyEnvironment(), theApogyCorePackage.getApogyEnvironment(), null, "apogyEnvironment", null, 0, 1, ApogySystemAPIsNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__CoreTopologyFacadeEClass, ApogyCoreTopologyFacade.class, "ApogyCoreTopologyFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreTopologyFacadeEClass, ApogyCoreTopologyFacade.class, "ApogyCoreTopologyFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCoreTopologyFacade__GetVariableOriginNode__Variable(), theApogyCommonTopologyPackage.getNode(), "getVariableOriginNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreInvocatorPackage.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);

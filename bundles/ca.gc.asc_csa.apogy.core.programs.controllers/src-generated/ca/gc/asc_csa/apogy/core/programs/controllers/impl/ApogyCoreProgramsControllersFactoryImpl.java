@@ -129,8 +129,8 @@ public class ApogyCoreProgramsControllersFactoryImpl extends EFactoryImpl implem
 	 * @generated
 	 */
 	public ApogyCoreProgramsControllersFacade createApogyCoreProgramsControllersFacade() {
-		ApogyCoreProgramsControllersFacadeImpl apogy__CoreProgramsControllersFacade = new ApogyCoreProgramsControllersFacadeImpl();
-		return apogy__CoreProgramsControllersFacade;
+		ApogyCoreProgramsControllersFacadeImpl apogyCoreProgramsControllersFacade = new ApogyCoreProgramsControllersFacadeImpl();
+		return apogyCoreProgramsControllersFacade;
 	}
 
 		/**

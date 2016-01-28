@@ -112,7 +112,7 @@ public class ApogyCommonTopologyUIPackageImpl extends EPackageImpl implements Ap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonTopologyUIFacadeEClass = null;
+	private EClass apogyCommonTopologyUIFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -699,7 +699,7 @@ public class ApogyCommonTopologyUIPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EClass getApogyCommonTopologyUIFacade() {
-		return apogy__CommonTopologyUIFacadeEClass;
+		return apogyCommonTopologyUIFacadeEClass;
 	}
 
 	/**
@@ -708,7 +708,7 @@ public class ApogyCommonTopologyUIPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyUIFacade__CreateGraphicsContext__Node() {
-		return apogy__CommonTopologyUIFacadeEClass.getEOperations().get(0);
+		return apogyCommonTopologyUIFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -717,7 +717,7 @@ public class ApogyCommonTopologyUIPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d() {
-		return apogy__CommonTopologyUIFacadeEClass.getEOperations().get(1);
+		return apogyCommonTopologyUIFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -726,7 +726,7 @@ public class ApogyCommonTopologyUIPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d() {
-		return apogy__CommonTopologyUIFacadeEClass.getEOperations().get(2);
+		return apogyCommonTopologyUIFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -735,7 +735,7 @@ public class ApogyCommonTopologyUIPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f() {
-		return apogy__CommonTopologyUIFacadeEClass.getEOperations().get(3);
+		return apogyCommonTopologyUIFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -898,11 +898,11 @@ public class ApogyCommonTopologyUIPackageImpl extends EPackageImpl implements Ap
 		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__AXIS_LENGTH);
 		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__PRESENTATION_MODE);
 
-		apogy__CommonTopologyUIFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_UI_FACADE);
-		createEOperation(apogy__CommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE);
-		createEOperation(apogy__CommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D);
-		createEOperation(apogy__CommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F);
+		apogyCommonTopologyUIFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_UI_FACADE);
+		createEOperation(apogyCommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE);
+		createEOperation(apogyCommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D);
+		createEOperation(apogyCommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F);
 
 		// Create enums
 		shadowModeEEnum = createEEnum(SHADOW_MODE);
@@ -1031,7 +1031,7 @@ public class ApogyCommonTopologyUIPackageImpl extends EPackageImpl implements Ap
 		initEAttribute(getURLNodePresentation_AxisLength(), theEcorePackage.getEDouble(), "axisLength", "1.0", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getURLNodePresentation_PresentationMode(), this.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__CommonTopologyUIFacadeEClass, ApogyCommonTopologyUIFacade.class, "ApogyCommonTopologyUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonTopologyUIFacadeEClass, ApogyCommonTopologyUIFacade.class, "ApogyCommonTopologyUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyCommonTopologyUIFacade__CreateGraphicsContext__Node(), this.getGraphicsContext(), "createGraphicsContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);

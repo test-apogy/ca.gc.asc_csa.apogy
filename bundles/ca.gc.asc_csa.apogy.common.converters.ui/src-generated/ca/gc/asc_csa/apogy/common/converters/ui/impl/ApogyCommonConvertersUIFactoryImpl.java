@@ -102,8 +102,8 @@ public class ApogyCommonConvertersUIFactoryImpl extends EFactoryImpl implements 
 	 * @generated
 	 */
 	public ApogyCommonConvertersUIFacade createApogyCommonConvertersUIFacade() {
-		ApogyCommonConvertersUIFacadeImpl apogy__CommonConvertersUIFacade = new ApogyCommonConvertersUIFacadeImpl();
-		return apogy__CommonConvertersUIFacade;
+		ApogyCommonConvertersUIFacadeImpl apogyCommonConvertersUIFacade = new ApogyCommonConvertersUIFacadeImpl();
+		return apogyCommonConvertersUIFacade;
 	}
 
 	/**

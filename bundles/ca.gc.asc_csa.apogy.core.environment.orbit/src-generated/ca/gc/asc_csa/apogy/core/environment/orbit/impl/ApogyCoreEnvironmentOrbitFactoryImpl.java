@@ -180,8 +180,8 @@ public class ApogyCoreEnvironmentOrbitFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
 	public ApogyCoreEnvironmentOrbitFacade createApogyCoreEnvironmentOrbitFacade() {
-		ApogyCoreEnvironmentOrbitFacadeImpl apogy__CoreEnvironmentOrbitFacade = new ApogyCoreEnvironmentOrbitFacadeImpl();
-		return apogy__CoreEnvironmentOrbitFacade;
+		ApogyCoreEnvironmentOrbitFacadeImpl apogyCoreEnvironmentOrbitFacade = new ApogyCoreEnvironmentOrbitFacadeImpl();
+		return apogyCoreEnvironmentOrbitFacade;
 	}
 
 	/**

@@ -110,14 +110,6 @@ public class ApogyCommonMathItemProviderAdapterFactory extends ApogyCommonMathAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ApogyCommonMathFacadeItemProvider apogy__CommonMathFacadeItemProvider;
-
-	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -125,11 +117,11 @@ public class ApogyCommonMathItemProviderAdapterFactory extends ApogyCommonMathAd
 	 */
 	@Override
 	public Adapter createApogyCommonMathFacadeAdapter() {
-		if (apogy__CommonMathFacadeItemProvider == null) {
-			apogy__CommonMathFacadeItemProvider = new ApogyCommonMathFacadeItemProvider(this);
+		if (apogyCommonMathFacadeItemProvider == null) {
+			apogyCommonMathFacadeItemProvider = new ApogyCommonMathFacadeItemProvider(this);
 		}
 
-		return apogy__CommonMathFacadeItemProvider;
+		return apogyCommonMathFacadeItemProvider;
 	}
 
 	/**
@@ -200,6 +192,14 @@ public class ApogyCommonMathItemProviderAdapterFactory extends ApogyCommonMathAd
 
 		return polynomialItemProvider;
 	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ApogyCommonMathFacadeItemProvider apogyCommonMathFacadeItemProvider;
 
 	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.math.MathIO} instances.
@@ -354,7 +354,7 @@ public class ApogyCommonMathItemProviderAdapterFactory extends ApogyCommonMathAd
 		if (matrix3x3ItemProvider != null) matrix3x3ItemProvider.dispose();
 		if (matrix4x4ItemProvider != null) matrix4x4ItemProvider.dispose();
 		if (polynomialItemProvider != null) polynomialItemProvider.dispose();
-		if (apogy__CommonMathFacadeItemProvider != null) apogy__CommonMathFacadeItemProvider.dispose();
+		if (apogyCommonMathFacadeItemProvider != null) apogyCommonMathFacadeItemProvider.dispose();
 		if (mathIOItemProvider != null) mathIOItemProvider.dispose();
 	}
 

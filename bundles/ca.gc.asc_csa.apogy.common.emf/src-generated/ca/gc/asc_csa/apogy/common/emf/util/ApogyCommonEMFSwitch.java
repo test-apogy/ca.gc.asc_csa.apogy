@@ -69,8 +69,8 @@ public class ApogyCommonEMFSwitch<T> extends Switch<T>
   {
 		switch (classifierID) {
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE: {
-				ApogyCommonEMFFacade apogy__CommonEMFFacade = (ApogyCommonEMFFacade)theEObject;
-				T result = caseApogyCommonEMFFacade(apogy__CommonEMFFacade);
+				ApogyCommonEMFFacade apogyCommonEMFFacade = (ApogyCommonEMFFacade)theEObject;
+				T result = caseApogyCommonEMFFacade(apogyCommonEMFFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

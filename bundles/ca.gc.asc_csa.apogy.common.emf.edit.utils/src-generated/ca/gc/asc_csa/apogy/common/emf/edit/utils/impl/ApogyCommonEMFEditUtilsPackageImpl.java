@@ -27,7 +27,7 @@ public class ApogyCommonEMFEditUtilsPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonEMFEditUtilsFacadeEClass = null;
+	private EClass apogyCommonEMFEditUtilsFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -108,7 +108,7 @@ public class ApogyCommonEMFEditUtilsPackageImpl extends EPackageImpl implements 
 	 * @generated
 	 */
 	public EClass getApogyCommonEMFEditUtilsFacade() {
-		return apogy__CommonEMFEditUtilsFacadeEClass;
+		return apogyCommonEMFEditUtilsFacadeEClass;
 	}
 
 		/**
@@ -117,7 +117,7 @@ public class ApogyCommonEMFEditUtilsPackageImpl extends EPackageImpl implements 
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFEditUtilsFacade__GetText__Object() {
-		return apogy__CommonEMFEditUtilsFacadeEClass.getEOperations().get(0);
+		return apogyCommonEMFEditUtilsFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -126,7 +126,7 @@ public class ApogyCommonEMFEditUtilsPackageImpl extends EPackageImpl implements 
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object() {
-		return apogy__CommonEMFEditUtilsFacadeEClass.getEOperations().get(1);
+		return apogyCommonEMFEditUtilsFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -168,9 +168,9 @@ public class ApogyCommonEMFEditUtilsPackageImpl extends EPackageImpl implements 
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CommonEMFEditUtilsFacadeEClass = createEClass(APOGY_COMMON_EMF_EDIT_UTILS_FACADE);
-		createEOperation(apogy__CommonEMFEditUtilsFacadeEClass, APOGY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT);
-		createEOperation(apogy__CommonEMFEditUtilsFacadeEClass, APOGY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT);
+		apogyCommonEMFEditUtilsFacadeEClass = createEClass(APOGY_COMMON_EMF_EDIT_UTILS_FACADE);
+		createEOperation(apogyCommonEMFEditUtilsFacadeEClass, APOGY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT);
+		createEOperation(apogyCommonEMFEditUtilsFacadeEClass, APOGY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT);
 
 		// Create data types
 		collectionObjectEDataType = createEDataType(COLLECTION_OBJECT);
@@ -210,7 +210,7 @@ public class ApogyCommonEMFEditUtilsPackageImpl extends EPackageImpl implements 
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CommonEMFEditUtilsFacadeEClass, ApogyCommonEMFEditUtilsFacade.class, "ApogyCommonEMFEditUtilsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonEMFEditUtilsFacadeEClass, ApogyCommonEMFEditUtilsFacade.class, "ApogyCommonEMFEditUtilsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCommonEMFEditUtilsFacade__GetText__Object(), theEcorePackage.getEString(), "getText", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "object", 0, 1, !IS_UNIQUE, IS_ORDERED);

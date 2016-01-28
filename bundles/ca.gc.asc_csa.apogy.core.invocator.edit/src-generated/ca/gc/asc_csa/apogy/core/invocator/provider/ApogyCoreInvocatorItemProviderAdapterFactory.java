@@ -91,7 +91,7 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreInvocatorFacadeItemProvider apogy__CoreInvocatorFacadeItemProvider;
+	protected ApogyCoreInvocatorFacadeItemProvider apogyCoreInvocatorFacadeItemProvider;
 
 		/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade}.
@@ -101,11 +101,11 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	 */
 	@Override
 	public Adapter createApogyCoreInvocatorFacadeAdapter() {
-		if (apogy__CoreInvocatorFacadeItemProvider == null) {
-			apogy__CoreInvocatorFacadeItemProvider = new ApogyCoreInvocatorFacadeItemProvider(this);
+		if (apogyCoreInvocatorFacadeItemProvider == null) {
+			apogyCoreInvocatorFacadeItemProvider = new ApogyCoreInvocatorFacadeItemProvider(this);
 		}
 
-		return apogy__CoreInvocatorFacadeItemProvider;
+		return apogyCoreInvocatorFacadeItemProvider;
 	}
 
 		/**
@@ -1395,7 +1395,7 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	 */
   public void dispose()
   {
-		if (apogy__CoreInvocatorFacadeItemProvider != null) apogy__CoreInvocatorFacadeItemProvider.dispose();
+		if (apogyCoreInvocatorFacadeItemProvider != null) apogyCoreInvocatorFacadeItemProvider.dispose();
 		if (invocatorSessionItemProvider != null) invocatorSessionItemProvider.dispose();
 		if (environmentItemProvider != null) environmentItemProvider.dispose();
 		if (dataProductsListsContainerItemProvider != null) dataProductsListsContainerItemProvider.dispose();

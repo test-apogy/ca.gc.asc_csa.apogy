@@ -130,8 +130,8 @@ public class ApogyAddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 				return result;
 			}
 			case ApogyAddonsSensorsFOVPackage.APOGY_ADDONS_SENSORS_FOV_FACADE: {
-				ApogyAddonsSensorsFOVFacade apogy__AddonsSensorsFOVFacade = (ApogyAddonsSensorsFOVFacade)theEObject;
-				T1 result = caseApogyAddonsSensorsFOVFacade(apogy__AddonsSensorsFOVFacade);
+				ApogyAddonsSensorsFOVFacade apogyAddonsSensorsFOVFacade = (ApogyAddonsSensorsFOVFacade)theEObject;
+				T1 result = caseApogyAddonsSensorsFOVFacade(apogyAddonsSensorsFOVFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -70,8 +70,8 @@ public class ApogyCommonEMFUISwitch<T> extends Switch<T>
   {
 		switch (classifierID) {
 			case ApogyCommonEMFUIPackage.APOGY_COMMON_EMFUI_FACADE: {
-				ApogyCommonEMFUIFacade apogy__CommonEMFUIFacade = (ApogyCommonEMFUIFacade)theEObject;
-				T result = caseApogyCommonEMFUIFacade(apogy__CommonEMFUIFacade);
+				ApogyCommonEMFUIFacade apogyCommonEMFUIFacade = (ApogyCommonEMFUIFacade)theEObject;
+				T result = caseApogyCommonEMFUIFacade(apogyCommonEMFUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

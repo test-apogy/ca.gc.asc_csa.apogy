@@ -256,7 +256,7 @@ public class ApogyAddonsROSItemProviderAdapterFactory extends ApogyAddonsROSAdap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyAddonsROSFacadeItemProvider apogy__AddonsROSFacadeItemProvider;
+	protected ApogyAddonsROSFacadeItemProvider apogyAddonsROSFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade}.
@@ -266,11 +266,11 @@ public class ApogyAddonsROSItemProviderAdapterFactory extends ApogyAddonsROSAdap
 	 */
 	@Override
 	public Adapter createApogyAddonsROSFacadeAdapter() {
-		if (apogy__AddonsROSFacadeItemProvider == null) {
-			apogy__AddonsROSFacadeItemProvider = new ApogyAddonsROSFacadeItemProvider(this);
+		if (apogyAddonsROSFacadeItemProvider == null) {
+			apogyAddonsROSFacadeItemProvider = new ApogyAddonsROSFacadeItemProvider(this);
 		}
 
-		return apogy__AddonsROSFacadeItemProvider;
+		return apogyAddonsROSFacadeItemProvider;
 	}
 
 	/**
@@ -406,7 +406,7 @@ public class ApogyAddonsROSItemProviderAdapterFactory extends ApogyAddonsROSAdap
 		if (rosServiceItemProvider != null) rosServiceItemProvider.dispose();
 		if (rosTopicLauncherItemProvider != null) rosTopicLauncherItemProvider.dispose();
 		if (rosListenerItemProvider != null) rosListenerItemProvider.dispose();
-		if (apogy__AddonsROSFacadeItemProvider != null) apogy__AddonsROSFacadeItemProvider.dispose();
+		if (apogyAddonsROSFacadeItemProvider != null) apogyAddonsROSFacadeItemProvider.dispose();
 	}
 
 }

@@ -94,7 +94,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__AddonsSensorsFOVFacadeEClass = null;
+	private EClass apogyAddonsSensorsFOVFacadeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -419,7 +419,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EClass getApogyAddonsSensorsFOVFacade() {
-		return apogy__AddonsSensorsFOVFacadeEClass;
+		return apogyAddonsSensorsFOVFacadeEClass;
 	}
 
 	/**
@@ -428,7 +428,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateDistanceRange__double_double() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(0);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -437,7 +437,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(1);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -446,7 +446,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateAngularSpan__double_double() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(2);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -455,7 +455,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(3);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -464,7 +464,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(4);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -473,7 +473,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(5);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -482,7 +482,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(6);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -491,7 +491,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(7);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -500,7 +500,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(8);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -509,7 +509,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView() {
-		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(9);
+		return apogyAddonsSensorsFOVFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -575,17 +575,17 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 		createEReference(rectangularFrustrumFieldOfViewSamplingShapeEClass, RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM);
 		createEReference(rectangularFrustrumFieldOfViewSamplingShapeEClass, RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW);
 
-		apogy__AddonsSensorsFOVFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_FOV_FACADE);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW);
+		apogyAddonsSensorsFOVFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_FOV_FACADE);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyAddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW);
 	}
 
 	/**
@@ -681,7 +681,7 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 		initEReference(getRectangularFrustrumFieldOfViewSamplingShape_Transform(), theApogyCommonMathPackage.getMatrix4x4(), null, "transform", null, 0, 1, RectangularFrustrumFieldOfViewSamplingShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRectangularFrustrumFieldOfViewSamplingShape_RectangularFrustrumFieldOfView(), this.getRectangularFrustrumFieldOfView(), null, "rectangularFrustrumFieldOfView", null, 0, 1, RectangularFrustrumFieldOfViewSamplingShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__AddonsSensorsFOVFacadeEClass, ApogyAddonsSensorsFOVFacade.class, "ApogyAddonsSensorsFOVFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyAddonsSensorsFOVFacadeEClass, ApogyAddonsSensorsFOVFacade.class, "ApogyAddonsSensorsFOVFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateDistanceRange__double_double(), this.getDistanceRange(), "createDistanceRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);

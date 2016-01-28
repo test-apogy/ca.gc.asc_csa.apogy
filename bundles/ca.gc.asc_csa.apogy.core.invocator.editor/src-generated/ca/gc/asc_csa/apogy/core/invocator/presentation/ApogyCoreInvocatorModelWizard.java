@@ -93,7 +93,7 @@ public class ApogyCoreInvocatorModelWizard extends Wizard implements INewWizard
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreInvocatorPackage apogy__CoreInvocatorPackage = ApogyCoreInvocatorPackage.eINSTANCE;
+	protected ApogyCoreInvocatorPackage apogyCoreInvocatorPackage = ApogyCoreInvocatorPackage.eINSTANCE;
 
 		/**
 	 * This caches an instance of the model factory.
@@ -101,7 +101,7 @@ public class ApogyCoreInvocatorModelWizard extends Wizard implements INewWizard
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreInvocatorFactory apogy__CoreInvocatorFactory = apogy__CoreInvocatorPackage.getApogyCoreInvocatorFactory();
+	protected ApogyCoreInvocatorFactory apogyCoreInvocatorFactory = apogyCoreInvocatorPackage.getApogyCoreInvocatorFactory();
 
 		/**
 	 * This is the file creation page.
@@ -167,7 +167,7 @@ public class ApogyCoreInvocatorModelWizard extends Wizard implements INewWizard
   {
 		if (initialObjectNames == null) {
 			initialObjectNames = new ArrayList<String>();
-			for (EClassifier eClassifier : apogy__CoreInvocatorPackage.getEClassifiers()) {
+			for (EClassifier eClassifier : apogyCoreInvocatorPackage.getEClassifiers()) {
 				if (eClassifier instanceof EClass) {
 					EClass eClass = (EClass)eClassifier;
 					if (!eClass.isAbstract()) {
@@ -188,8 +188,8 @@ public class ApogyCoreInvocatorModelWizard extends Wizard implements INewWizard
 	 */
   protected EObject createInitialModel()
   {
-		EClass eClass = (EClass)apogy__CoreInvocatorPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
-		EObject rootObject = apogy__CoreInvocatorFactory.create(eClass);
+		EClass eClass = (EClass)apogyCoreInvocatorPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+		EObject rootObject = apogyCoreInvocatorFactory.create(eClass);
 		return rootObject;
 	}
 

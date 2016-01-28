@@ -390,14 +390,14 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass positionMarkerEClass = null;
+	private EClass apogyCommonGeometryData3DFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonGeometryData3DFacadeEClass = null;
+	private EClass positionMarkerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1593,7 +1593,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EClass getApogyCommonGeometryData3DFacade() {
-		return apogy__CommonGeometryData3DFacadeEClass;
+		return apogyCommonGeometryData3DFacadeEClass;
 	}
 
 	/**
@@ -1602,7 +1602,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(0);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1611,7 +1611,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(1);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1620,7 +1620,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(2);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -1629,7 +1629,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(3);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -1638,7 +1638,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreatePose__Pose() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(4);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1647,7 +1647,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(5);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1656,7 +1656,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(6);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -1665,7 +1665,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(7);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -1674,7 +1674,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(8);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -1683,7 +1683,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(9);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -1692,7 +1692,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(10);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -1701,7 +1701,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(11);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -1710,7 +1710,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(12);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(12);
 	}
 
 	/**
@@ -1719,7 +1719,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(13);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(13);
 	}
 
 	/**
@@ -1728,7 +1728,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(14);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(14);
 	}
 
 	/**
@@ -1737,7 +1737,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__List() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(15);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(15);
 	}
 
 	/**
@@ -1746,7 +1746,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(16);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(16);
 	}
 
 	/**
@@ -1755,7 +1755,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(17);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(17);
 	}
 
 	/**
@@ -1764,7 +1764,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__List_Matrix4d() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(18);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(18);
 	}
 
 	/**
@@ -1773,7 +1773,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(19);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(19);
 	}
 
 	/**
@@ -1782,7 +1782,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(20);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(20);
 	}
 
 	/**
@@ -1791,7 +1791,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(21);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(21);
 	}
 
 	/**
@@ -1800,7 +1800,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(22);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(22);
 	}
 
 	/**
@@ -1809,7 +1809,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DFacade__ConcatenateTriangularMeshes__List() {
-		return apogy__CommonGeometryData3DFacadeEClass.getEOperations().get(23);
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(23);
 	}
 
 	/**
@@ -2368,31 +2368,31 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__ELIST);
 		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__LIST);
 
-		apogy__CommonGeometryData3DFacadeEClass = createEClass(APOGY_COMMON_GEOMETRY_DATA3_DFACADE);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE);
-		createEOperation(apogy__CommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST);
+		apogyCommonGeometryData3DFacadeEClass = createEClass(APOGY_COMMON_GEOMETRY_DATA3_DFACADE);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST);
 
 		data3DIOEClass = createEClass(DATA3_DIO);
 		createEOperation(data3DIOEClass, DATA3_DIO___LOAD_TRIANGULAR_MESH__STRING);
@@ -2889,7 +2889,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		addEParameter(op, g1, "markerPositionsToTrack", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		initEClass(apogy__CommonGeometryData3DFacadeEClass, ApogyCommonGeometryData3DFacade.class, "ApogyCommonGeometryData3DFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonGeometryData3DFacadeEClass, ApogyCommonGeometryData3DFacade.class, "ApogyCommonGeometryData3DFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double(), this.getCartesianPositionCoordinates(), "createCartesianPositionCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);

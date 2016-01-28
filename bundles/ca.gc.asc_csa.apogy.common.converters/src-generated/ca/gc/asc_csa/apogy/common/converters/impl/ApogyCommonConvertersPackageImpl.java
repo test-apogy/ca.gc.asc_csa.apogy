@@ -32,7 +32,7 @@ public class ApogyCommonConvertersPackageImpl extends EPackageImpl implements Ap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonConvertersFacadeEClass = null;
+	private EClass apogyCommonConvertersFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,7 +143,7 @@ public class ApogyCommonConvertersPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EClass getApogyCommonConvertersFacade() {
-		return apogy__CommonConvertersFacadeEClass;
+		return apogyCommonConvertersFacadeEClass;
 	}
 
 	/**
@@ -152,7 +152,7 @@ public class ApogyCommonConvertersPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersFacade__Convert__Object_Class() {
-		return apogy__CommonConvertersFacadeEClass.getEOperations().get(0);
+		return apogyCommonConvertersFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -161,7 +161,7 @@ public class ApogyCommonConvertersPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersFacade__GetAllRegisteredConverters() {
-		return apogy__CommonConvertersFacadeEClass.getEOperations().get(1);
+		return apogyCommonConvertersFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -170,7 +170,7 @@ public class ApogyCommonConvertersPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersFacade__GetGraph() {
-		return apogy__CommonConvertersFacadeEClass.getEOperations().get(2);
+		return apogyCommonConvertersFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -228,10 +228,10 @@ public class ApogyCommonConvertersPackageImpl extends EPackageImpl implements Ap
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CommonConvertersFacadeEClass = createEClass(APOGY_COMMON_CONVERTERS_FACADE);
-		createEOperation(apogy__CommonConvertersFacadeEClass, APOGY_COMMON_CONVERTERS_FACADE___CONVERT__OBJECT_CLASS);
-		createEOperation(apogy__CommonConvertersFacadeEClass, APOGY_COMMON_CONVERTERS_FACADE___GET_ALL_REGISTERED_CONVERTERS);
-		createEOperation(apogy__CommonConvertersFacadeEClass, APOGY_COMMON_CONVERTERS_FACADE___GET_GRAPH);
+		apogyCommonConvertersFacadeEClass = createEClass(APOGY_COMMON_CONVERTERS_FACADE);
+		createEOperation(apogyCommonConvertersFacadeEClass, APOGY_COMMON_CONVERTERS_FACADE___CONVERT__OBJECT_CLASS);
+		createEOperation(apogyCommonConvertersFacadeEClass, APOGY_COMMON_CONVERTERS_FACADE___GET_ALL_REGISTERED_CONVERTERS);
+		createEOperation(apogyCommonConvertersFacadeEClass, APOGY_COMMON_CONVERTERS_FACADE___GET_GRAPH);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
@@ -277,7 +277,7 @@ public class ApogyCommonConvertersPackageImpl extends EPackageImpl implements Ap
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CommonConvertersFacadeEClass, ApogyCommonConvertersFacade.class, "ApogyCommonConvertersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonConvertersFacadeEClass, ApogyCommonConvertersFacade.class, "ApogyCommonConvertersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCommonConvertersFacade__Convert__Object_Class(), theEcorePackage.getEJavaObject(), "convert", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "input", 0, 1, !IS_UNIQUE, IS_ORDERED);

@@ -260,8 +260,8 @@ public class ApogyAddonsSensorsRangeFactoryImpl extends EFactoryImpl implements 
 	 * @generated
 	 */
 	public ApogyAddonsSensorsRangeFacade createApogyAddonsSensorsRangeFacade() {
-		ApogyAddonsSensorsRangeFacadeImpl apogy__AddonsSensorsRangeFacade = new ApogyAddonsSensorsRangeFacadeImpl();
-		return apogy__AddonsSensorsRangeFacade;
+		ApogyAddonsSensorsRangeFacadeImpl apogyAddonsSensorsRangeFacade = new ApogyAddonsSensorsRangeFacadeImpl();
+		return apogyAddonsSensorsRangeFacade;
 	}
 
 	/**

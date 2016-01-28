@@ -29,7 +29,7 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonEMFUIFacadeEClass = null;
+	private EClass apogyCommonEMFUIFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -117,7 +117,7 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 	 * @generated
 	 */
 	public EClass getApogyCommonEMFUIFacade() {
-		return apogy__CommonEMFUIFacadeEClass;
+		return apogyCommonEMFUIFacadeEClass;
 	}
 
 		/**
@@ -126,7 +126,7 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFUIFacade__GetColorForRange__Ranges() {
-		return apogy__CommonEMFUIFacadeEClass.getEOperations().get(0);
+		return apogyCommonEMFUIFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -135,7 +135,7 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 	 * @generated
 	 */
 	public EOperation getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement() {
-		return apogy__CommonEMFUIFacadeEClass.getEOperations().get(1);
+		return apogyCommonEMFUIFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -187,9 +187,9 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CommonEMFUIFacadeEClass = createEClass(APOGY_COMMON_EMFUI_FACADE);
-		createEOperation(apogy__CommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES);
-		createEOperation(apogy__CommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT);
+		apogyCommonEMFUIFacadeEClass = createEClass(APOGY_COMMON_EMFUI_FACADE);
+		createEOperation(apogyCommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES);
+		createEOperation(apogyCommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT);
 
 		// Create data types
 		colorEDataType = createEDataType(COLOR);
@@ -231,7 +231,7 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CommonEMFUIFacadeEClass, ApogyCommonEMFUIFacade.class, "ApogyCommonEMFUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonEMFUIFacadeEClass, ApogyCommonEMFUIFacade.class, "ApogyCommonEMFUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCommonEMFUIFacade__GetColorForRange__Ranges(), this.getColor(), "getColorForRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCommonEMFPackage.getRanges(), "range", 0, 1, !IS_UNIQUE, IS_ORDERED);

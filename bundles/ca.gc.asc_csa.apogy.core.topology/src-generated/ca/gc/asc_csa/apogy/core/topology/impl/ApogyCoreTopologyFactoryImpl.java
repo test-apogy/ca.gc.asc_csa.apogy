@@ -145,8 +145,8 @@ public class ApogyCoreTopologyFactoryImpl extends EFactoryImpl implements ApogyC
 	 * @generated
 	 */
 	public ApogyCoreTopologyFacade createApogyCoreTopologyFacade() {
-		ApogyCoreTopologyFacadeImpl apogy__CoreTopologyFacade = new ApogyCoreTopologyFacadeImpl();
-		return apogy__CoreTopologyFacade;
+		ApogyCoreTopologyFacadeImpl apogyCoreTopologyFacade = new ApogyCoreTopologyFacadeImpl();
+		return apogyCoreTopologyFacade;
 	}
 
 		/**

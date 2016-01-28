@@ -112,7 +112,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__AddonsROSFacadeEClass = null;
+	private EClass apogyAddonsROSFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1148,7 +1148,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * @generated
 	 */
 	public EClass getApogyAddonsROSFacade() {
-		return apogy__AddonsROSFacadeEClass;
+		return apogyAddonsROSFacadeEClass;
 	}
 
 	/**
@@ -1157,7 +1157,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * @generated
 	 */
 	public EOperation getApogyAddonsROSFacade__GetNodeNamePrefix() {
-		return apogy__AddonsROSFacadeEClass.getEOperations().get(0);
+		return apogyAddonsROSFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1166,7 +1166,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * @generated
 	 */
 	public EOperation getApogyAddonsROSFacade__GetROSMasterURI() {
-		return apogy__AddonsROSFacadeEClass.getEOperations().get(1);
+		return apogyAddonsROSFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1175,7 +1175,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * @generated
 	 */
 	public EOperation getApogyAddonsROSFacade__GetROSHostname() {
-		return apogy__AddonsROSFacadeEClass.getEOperations().get(2);
+		return apogyAddonsROSFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -1184,7 +1184,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * @generated
 	 */
 	public EOperation getApogyAddonsROSFacade__GetROSIp() {
-		return apogy__AddonsROSFacadeEClass.getEOperations().get(3);
+		return apogyAddonsROSFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -1437,11 +1437,11 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 		createEOperation(rosListenerEClass, ROS_LISTENER___CONNECT_SUBSCRIBER__CONNECTEDNODE);
 		createEOperation(rosListenerEClass, ROS_LISTENER___STOP);
 
-		apogy__AddonsROSFacadeEClass = createEClass(APOGY_ADDONS_ROS_FACADE);
-		createEOperation(apogy__AddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX);
-		createEOperation(apogy__AddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI);
-		createEOperation(apogy__AddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME);
-		createEOperation(apogy__AddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_ROS_IP);
+		apogyAddonsROSFacadeEClass = createEClass(APOGY_ADDONS_ROS_FACADE);
+		createEOperation(apogyAddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX);
+		createEOperation(apogyAddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI);
+		createEOperation(apogyAddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME);
+		createEOperation(apogyAddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_ROS_IP);
 
 		// Create data types
 		responseLoggerEDataType = createEDataType(RESPONSE_LOGGER);
@@ -1834,7 +1834,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 
 		initEOperation(getROSListener__Stop(), null, "stop", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(apogy__AddonsROSFacadeEClass, ApogyAddonsROSFacade.class, "ApogyAddonsROSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyAddonsROSFacadeEClass, ApogyAddonsROSFacade.class, "ApogyAddonsROSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEOperation(getApogyAddonsROSFacade__GetNodeNamePrefix(), theEcorePackage.getEString(), "getNodeNamePrefix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

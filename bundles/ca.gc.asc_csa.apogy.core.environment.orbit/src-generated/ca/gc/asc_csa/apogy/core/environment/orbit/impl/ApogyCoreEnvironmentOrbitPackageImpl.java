@@ -137,7 +137,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreEnvironmentOrbitFacadeEClass = null;
+	private EClass apogyCoreEnvironmentOrbitFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -574,7 +574,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EClass getApogyCoreEnvironmentOrbitFacade() {
-		return apogy__CoreEnvironmentOrbitFacadeEClass;
+		return apogyCoreEnvironmentOrbitFacadeEClass;
 	}
 
 	/**
@@ -583,7 +583,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel() {
-		return apogy__CoreEnvironmentOrbitFacadeEClass.getEOperations().get(0);
+		return apogyCoreEnvironmentOrbitFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -684,8 +684,8 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		createEReference(orbitModelEClass, ORBIT_MODEL__INITIAL_ORBIT);
 		createEReference(orbitModelEClass, ORBIT_MODEL__PROPAGATOR);
 
-		apogy__CoreEnvironmentOrbitFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_ORBIT_FACADE);
-		createEOperation(apogy__CoreEnvironmentOrbitFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL);
+		apogyCoreEnvironmentOrbitFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_ORBIT_FACADE);
+		createEOperation(apogyCoreEnvironmentOrbitFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
@@ -818,7 +818,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		initEReference(getOrbitModel_InitialOrbit(), this.getOrbit(), null, "initialOrbit", null, 0, 1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOrbitModel_Propagator(), this.getAbstractOrbitPropagator(), null, "propagator", null, 0, 1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__CoreEnvironmentOrbitFacadeEClass, ApogyCoreEnvironmentOrbitFacade.class, "ApogyCoreEnvironmentOrbitFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreEnvironmentOrbitFacadeEClass, ApogyCoreEnvironmentOrbitFacade.class, "ApogyCoreEnvironmentOrbitFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyCoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel(), this.getOrbitModel(), "createOrbitModelCopy", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOrbitModel(), "originalOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1047,7 +1047,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 			 "documentation", "Class that defines an orbit model. An orbit model specifies both initial condition (through the initial Orbit), and\na propagation method (through the AbstractOrbitPropagator)."
 		   });	
 		addAnnotation
-		  (apogy__CoreEnvironmentOrbitFacadeEClass, 
+		  (apogyCoreEnvironmentOrbitFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "A class providing utilities methods for Orbits."

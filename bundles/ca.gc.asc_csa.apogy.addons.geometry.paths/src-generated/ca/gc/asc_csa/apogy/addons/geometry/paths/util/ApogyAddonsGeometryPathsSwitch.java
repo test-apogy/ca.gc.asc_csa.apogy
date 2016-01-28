@@ -161,8 +161,8 @@ public class ApogyAddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				return result;
 			}
 			case ApogyAddonsGeometryPathsPackage.APOGY_ADDONS_GEOMETRY_PATHS_FACADE: {
-				ApogyAddonsGeometryPathsFacade apogy__AddonsGeometryPathsFacade = (ApogyAddonsGeometryPathsFacade)theEObject;
-				T1 result = caseApogyAddonsGeometryPathsFacade(apogy__AddonsGeometryPathsFacade);
+				ApogyAddonsGeometryPathsFacade apogyAddonsGeometryPathsFacade = (ApogyAddonsGeometryPathsFacade)theEObject;
+				T1 result = caseApogyAddonsGeometryPathsFacade(apogyAddonsGeometryPathsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

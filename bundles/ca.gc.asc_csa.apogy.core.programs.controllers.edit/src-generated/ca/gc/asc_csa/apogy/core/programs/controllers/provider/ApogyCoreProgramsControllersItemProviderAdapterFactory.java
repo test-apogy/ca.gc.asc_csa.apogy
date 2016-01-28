@@ -95,6 +95,14 @@ public class ApogyCoreProgramsControllersItemProviderAdapterFactory extends Apog
 	}
 
   /**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ApogyCoreProgramsControllersFacadeItemProvider apogyCoreProgramsControllersFacadeItemProvider;
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -449,14 +457,6 @@ public class ApogyCoreProgramsControllersItemProviderAdapterFactory extends Apog
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade} instances.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected ApogyCoreProgramsControllersFacadeItemProvider apogy__CoreProgramsControllersFacadeItemProvider;
-
-  /**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -464,11 +464,11 @@ public class ApogyCoreProgramsControllersItemProviderAdapterFactory extends Apog
 	 */
 	@Override
 	public Adapter createApogyCoreProgramsControllersFacadeAdapter() {
-		if (apogy__CoreProgramsControllersFacadeItemProvider == null) {
-			apogy__CoreProgramsControllersFacadeItemProvider = new ApogyCoreProgramsControllersFacadeItemProvider(this);
+		if (apogyCoreProgramsControllersFacadeItemProvider == null) {
+			apogyCoreProgramsControllersFacadeItemProvider = new ApogyCoreProgramsControllersFacadeItemProvider(this);
 		}
 
-		return apogy__CoreProgramsControllersFacadeItemProvider;
+		return apogyCoreProgramsControllersFacadeItemProvider;
 	}
 
 		/**
@@ -609,7 +609,7 @@ public class ApogyCoreProgramsControllersItemProviderAdapterFactory extends Apog
 	 */
   public void dispose()
   {
-		if (apogy__CoreProgramsControllersFacadeItemProvider != null) apogy__CoreProgramsControllersFacadeItemProvider.dispose();
+		if (apogyCoreProgramsControllersFacadeItemProvider != null) apogyCoreProgramsControllersFacadeItemProvider.dispose();
 		if (controllersConfigurationItemProvider != null) controllersConfigurationItemProvider.dispose();
 		if (operationCallControllerBindingItemProvider != null) operationCallControllerBindingItemProvider.dispose();
 		if (timeTriggerItemProvider != null) timeTriggerItemProvider.dispose();

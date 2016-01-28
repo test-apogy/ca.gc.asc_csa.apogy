@@ -303,7 +303,7 @@ public class ApogyCommonTopologyUIItemProviderAdapterFactory extends ApogyCommon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCommonTopologyUIFacadeItemProvider apogy__CommonTopologyUIFacadeItemProvider;
+	protected ApogyCommonTopologyUIFacadeItemProvider apogyCommonTopologyUIFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade}.
@@ -313,11 +313,11 @@ public class ApogyCommonTopologyUIItemProviderAdapterFactory extends ApogyCommon
 	 */
 	@Override
 	public Adapter createApogyCommonTopologyUIFacadeAdapter() {
-		if (apogy__CommonTopologyUIFacadeItemProvider == null) {
-			apogy__CommonTopologyUIFacadeItemProvider = new ApogyCommonTopologyUIFacadeItemProvider(this);
+		if (apogyCommonTopologyUIFacadeItemProvider == null) {
+			apogyCommonTopologyUIFacadeItemProvider = new ApogyCommonTopologyUIFacadeItemProvider(this);
 		}
 
-		return apogy__CommonTopologyUIFacadeItemProvider;
+		return apogyCommonTopologyUIFacadeItemProvider;
 	}
 
 	/**
@@ -455,7 +455,7 @@ public class ApogyCommonTopologyUIItemProviderAdapterFactory extends ApogyCommon
 		if (rotationNodePresentationItemProvider != null) rotationNodePresentationItemProvider.dispose();
 		if (positionNodePresentationItemProvider != null) positionNodePresentationItemProvider.dispose();
 		if (urlNodePresentationItemProvider != null) urlNodePresentationItemProvider.dispose();
-		if (apogy__CommonTopologyUIFacadeItemProvider != null) apogy__CommonTopologyUIFacadeItemProvider.dispose();
+		if (apogyCommonTopologyUIFacadeItemProvider != null) apogyCommonTopologyUIFacadeItemProvider.dispose();
 	}
 
 	/**

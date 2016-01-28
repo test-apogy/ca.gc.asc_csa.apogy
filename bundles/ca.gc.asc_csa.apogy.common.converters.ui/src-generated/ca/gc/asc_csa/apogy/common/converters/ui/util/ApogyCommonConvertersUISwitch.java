@@ -68,8 +68,8 @@ public class ApogyCommonConvertersUISwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case ApogyCommonConvertersUIPackage.APOGY_COMMON_CONVERTERS_UI_FACADE: {
-				ApogyCommonConvertersUIFacade apogy__CommonConvertersUIFacade = (ApogyCommonConvertersUIFacade)theEObject;
-				T result = caseApogyCommonConvertersUIFacade(apogy__CommonConvertersUIFacade);
+				ApogyCommonConvertersUIFacade apogyCommonConvertersUIFacade = (ApogyCommonConvertersUIFacade)theEObject;
+				T result = caseApogyCommonConvertersUIFacade(apogyCommonConvertersUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

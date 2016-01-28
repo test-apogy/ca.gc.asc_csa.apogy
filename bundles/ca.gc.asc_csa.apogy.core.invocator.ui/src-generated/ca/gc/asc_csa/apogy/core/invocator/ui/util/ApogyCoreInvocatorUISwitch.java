@@ -65,8 +65,8 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE: {
-				ApogyCoreInvocatorUIFacade apogy__CoreInvocatorUIFacade = (ApogyCoreInvocatorUIFacade)theEObject;
-				T result = caseApogyCoreInvocatorUIFacade(apogy__CoreInvocatorUIFacade);
+				ApogyCoreInvocatorUIFacade apogyCoreInvocatorUIFacade = (ApogyCoreInvocatorUIFacade)theEObject;
+				T result = caseApogyCoreInvocatorUIFacade(apogyCoreInvocatorUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

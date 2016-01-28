@@ -205,8 +205,8 @@ public class ApogyAddonsSensorsPoseFactoryImpl extends EFactoryImpl implements A
 	 * @generated
 	 */
 	public ApogyAddonsSensorsPoseFacade createApogyAddonsSensorsPoseFacade() {
-		ApogyAddonsSensorsPoseFacadeImpl apogy__AddonsSensorsPoseFacade = new ApogyAddonsSensorsPoseFacadeImpl();
-		return apogy__AddonsSensorsPoseFacade;
+		ApogyAddonsSensorsPoseFacadeImpl apogyAddonsSensorsPoseFacade = new ApogyAddonsSensorsPoseFacadeImpl();
+		return apogyAddonsSensorsPoseFacade;
 	}
 
 	/**

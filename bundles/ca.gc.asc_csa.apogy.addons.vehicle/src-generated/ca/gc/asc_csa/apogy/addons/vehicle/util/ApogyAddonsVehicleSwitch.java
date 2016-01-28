@@ -164,8 +164,8 @@ public class ApogyAddonsVehicleSwitch<T> extends Switch<T>
 				return result;
 			}
 			case ApogyAddonsVehiclePackage.APOGY_ADDONS_VEHICLE_FACADE: {
-				ApogyAddonsVehicleFacade apogy__AddonsVehicleFacade = (ApogyAddonsVehicleFacade)theEObject;
-				T result = caseApogyAddonsVehicleFacade(apogy__AddonsVehicleFacade);
+				ApogyAddonsVehicleFacade apogyAddonsVehicleFacade = (ApogyAddonsVehicleFacade)theEObject;
+				T result = caseApogyAddonsVehicleFacade(apogyAddonsVehicleFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

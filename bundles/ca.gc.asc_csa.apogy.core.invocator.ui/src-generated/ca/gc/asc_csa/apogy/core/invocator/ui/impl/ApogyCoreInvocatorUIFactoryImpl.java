@@ -97,8 +97,8 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 	 * @generated
 	 */
 	public ApogyCoreInvocatorUIFacade createApogyCoreInvocatorUIFacade() {
-		ApogyCoreInvocatorUIFacadeImpl apogy__CoreInvocatorUIFacade = new ApogyCoreInvocatorUIFacadeImpl();
-		return apogy__CoreInvocatorUIFacade;
+		ApogyCoreInvocatorUIFacadeImpl apogyCoreInvocatorUIFacade = new ApogyCoreInvocatorUIFacadeImpl();
+		return apogyCoreInvocatorUIFacade;
 	}
 
 	/**

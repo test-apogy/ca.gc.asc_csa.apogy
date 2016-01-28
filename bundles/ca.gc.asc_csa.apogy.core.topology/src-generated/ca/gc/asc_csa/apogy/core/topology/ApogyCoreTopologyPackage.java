@@ -369,7 +369,7 @@ public interface ApogyCoreTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_TOPOLOGY_FACADE___CREATE_APOGY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT = 2;
+	int APOGY_CORE_TOPOLOGY_FACADE___CREATE_APOGY_ENVIRONMENT_NODE__APOGYENVIRONMENT = 2;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -709,7 +709,7 @@ public interface ApogyCoreTopologyPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_TOPOLOGY_FACADE___CREATE_APOGY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT = eINSTANCE.getApogyCoreTopologyFacade__CreateApogyEnvironmentNode__ApogyEnvironment();
+		EOperation APOGY_CORE_TOPOLOGY_FACADE___CREATE_APOGY_ENVIRONMENT_NODE__APOGYENVIRONMENT = eINSTANCE.getApogyCoreTopologyFacade__CreateApogyEnvironmentNode__ApogyEnvironment();
 
 				/**
 		 * The meta object literal for the '<em>Sorted Set</em>' data type.

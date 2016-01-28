@@ -176,8 +176,8 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 	 * @generated
 	 */
 	public ApogyCommonEMFFacade createApogyCommonEMFFacade() {
-		ApogyCommonEMFFacadeImpl apogy__CommonEMFFacade = new ApogyCommonEMFFacadeImpl();
-		return apogy__CommonEMFFacade;
+		ApogyCommonEMFFacadeImpl apogyCommonEMFFacade = new ApogyCommonEMFFacadeImpl();
+		return apogyCommonEMFFacade;
 	}
 
 		/**

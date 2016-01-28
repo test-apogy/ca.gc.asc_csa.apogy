@@ -105,8 +105,8 @@ public class ApogyCommonEMFEditUtilsFactoryImpl extends EFactoryImpl implements 
 	 * @generated
 	 */
 	public ApogyCommonEMFEditUtilsFacade createApogyCommonEMFEditUtilsFacade() {
-		ApogyCommonEMFEditUtilsFacadeImpl apogy__CommonEMFEditUtilsFacade = new ApogyCommonEMFEditUtilsFacadeImpl();
-		return apogy__CommonEMFEditUtilsFacade;
+		ApogyCommonEMFEditUtilsFacadeImpl apogyCommonEMFEditUtilsFacade = new ApogyCommonEMFEditUtilsFacadeImpl();
+		return apogyCommonEMFEditUtilsFacade;
 	}
 
 		/**

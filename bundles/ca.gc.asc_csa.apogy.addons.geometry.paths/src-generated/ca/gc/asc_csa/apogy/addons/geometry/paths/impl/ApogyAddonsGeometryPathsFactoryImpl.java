@@ -183,8 +183,8 @@ public class ApogyAddonsGeometryPathsFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	public ApogyAddonsGeometryPathsFacade createApogyAddonsGeometryPathsFacade() {
-		ApogyAddonsGeometryPathsFacadeImpl apogy__AddonsGeometryPathsFacade = new ApogyAddonsGeometryPathsFacadeImpl();
-		return apogy__AddonsGeometryPathsFacade;
+		ApogyAddonsGeometryPathsFacadeImpl apogyAddonsGeometryPathsFacade = new ApogyAddonsGeometryPathsFacadeImpl();
+		return apogyAddonsGeometryPathsFacade;
 	}
 
 	/**

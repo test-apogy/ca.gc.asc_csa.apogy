@@ -215,7 +215,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonTopologyAddonsDynamicsFacadeEClass = null;
+	private EClass apogyCommonTopologyAddonsDynamicsFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -945,7 +945,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 	 * @generated
 	 */
 	public EClass getApogyCommonTopologyAddonsDynamicsFacade() {
-		return apogy__CommonTopologyAddonsDynamicsFacadeEClass;
+		return apogyCommonTopologyAddonsDynamicsFacadeEClass;
 	}
 
 	/**
@@ -954,7 +954,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node() {
-		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(0);
+		return apogyCommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -963,7 +963,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__FindTotalMass__Node() {
-		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(1);
+		return apogyCommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -972,7 +972,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node() {
-		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(2);
+		return apogyCommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -981,7 +981,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class() {
-		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(3);
+		return apogyCommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -990,7 +990,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class() {
-		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(4);
+		return apogyCommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1235,12 +1235,12 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 		sphereGeometryEClass = createEClass(SPHERE_GEOMETRY);
 		createEAttribute(sphereGeometryEClass, SPHERE_GEOMETRY__RADIUS);
 
-		apogy__CommonTopologyAddonsDynamicsFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE);
-		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE);
-		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE);
-		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE);
-		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS);
-		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS);
+		apogyCommonTopologyAddonsDynamicsFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE);
+		createEOperation(apogyCommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE);
+		createEOperation(apogyCommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE);
+		createEOperation(apogyCommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE);
+		createEOperation(apogyCommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS);
+		createEOperation(apogyCommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS);
 
 		// Create data types
 		setEDataType = createEDataType(SET);
@@ -1402,7 +1402,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 		initEClass(sphereGeometryEClass, SphereGeometry.class, "SphereGeometry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSphereGeometry_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, SphereGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__CommonTopologyAddonsDynamicsFacadeEClass, ApogyCommonTopologyAddonsDynamicsFacade.class, "ApogyCommonTopologyAddonsDynamicsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonTopologyAddonsDynamicsFacadeEClass, ApogyCommonTopologyAddonsDynamicsFacade.class, "ApogyCommonTopologyAddonsDynamicsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node(), theApogyCommonMathPackage.getTuple3d(), "findCenterOfMass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1789,7 +1789,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 			 "documentation", "The sphere geometry is defined by its radius."
 		   });	
 		addAnnotation
-		  (apogy__CommonTopologyAddonsDynamicsFacadeEClass, 
+		  (apogyCommonTopologyAddonsDynamicsFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "Helper class containing a variety of dynamic topology utilities methods."

@@ -1589,7 +1589,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = 9;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = 9;
 
 		/**
 	 * The operation id for the '<em>Get Sun Vector</em>' operation.
@@ -1607,7 +1607,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = 11;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = 11;
 
 		/**
 	 * The operation id for the '<em>Get Moon Vector</em>' operation.
@@ -1625,7 +1625,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 13;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 13;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1634,7 +1634,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 14;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 14;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1643,7 +1643,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT = 15;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_STRING_ENVIRONMENT = 15;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1652,7 +1652,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = 16;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = 16;
 
 		/**
 	 * The operation id for the '<em>Create EImage</em>' operation.
@@ -10632,7 +10632,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment();
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment();
 				/**
 		 * The meta object literal for the '<em><b>Get Sun Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -10646,7 +10646,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetMoonVector__ApogySystem_String_Environment();
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetMoonVector__ApogySystem_String_Environment();
 				/**
 		 * The meta object literal for the '<em><b>Get Moon Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -10660,28 +10660,28 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetVector__Node_ApogySystem_ConnectionPoint_Environment();
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetVector__Node_ApogySystem_ConnectionPoint_Environment();
 				/**
 		 * The meta object literal for the '<em><b>Get Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_ConnectionPoint_Environment();
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_ConnectionPoint_Environment();
 				/**
 		 * The meta object literal for the '<em><b>Get Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_String_Environment();
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_String_Environment();
 				/**
 		 * The meta object literal for the '<em><b>Get Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_String_String_Environment();
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_String_String_Environment();
 				/**
 		 * The meta object literal for the '<em><b>Create EImage</b></em>' operation.
 		 * <!-- begin-user-doc -->

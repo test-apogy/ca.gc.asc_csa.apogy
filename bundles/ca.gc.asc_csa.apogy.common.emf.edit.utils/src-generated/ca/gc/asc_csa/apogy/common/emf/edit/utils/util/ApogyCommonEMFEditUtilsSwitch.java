@@ -70,8 +70,8 @@ public class ApogyCommonEMFEditUtilsSwitch<T> extends Switch<T>
   {
 		switch (classifierID) {
 			case ApogyCommonEMFEditUtilsPackage.APOGY_COMMON_EMF_EDIT_UTILS_FACADE: {
-				ApogyCommonEMFEditUtilsFacade apogy__CommonEMFEditUtilsFacade = (ApogyCommonEMFEditUtilsFacade)theEObject;
-				T result = caseApogyCommonEMFEditUtilsFacade(apogy__CommonEMFEditUtilsFacade);
+				ApogyCommonEMFEditUtilsFacade apogyCommonEMFEditUtilsFacade = (ApogyCommonEMFEditUtilsFacade)theEObject;
+				T result = caseApogyCommonEMFEditUtilsFacade(apogyCommonEMFEditUtilsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

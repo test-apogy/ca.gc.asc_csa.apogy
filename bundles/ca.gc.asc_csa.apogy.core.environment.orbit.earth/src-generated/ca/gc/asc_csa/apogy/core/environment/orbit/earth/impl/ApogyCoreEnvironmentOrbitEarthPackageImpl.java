@@ -279,7 +279,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreEnvironmentOrbitEarthFacadeEClass = null;
+	private EClass apogyCoreEnvironmentOrbitEarthFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1572,7 +1572,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EClass getApogyCoreEnvironmentOrbitEarthFacade() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass;
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass;
 	}
 
 	/**
@@ -1581,7 +1581,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetMu() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(0);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1590,7 +1590,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateAbsoluteDate__Date() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(1);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1599,7 +1599,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateDate__AbsoluteDate() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(2);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -1608,7 +1608,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(3);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -1617,7 +1617,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateOreKitBackedFrame__Frame() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(4);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1626,7 +1626,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(5);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1635,7 +1635,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(6);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -1644,7 +1644,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(7);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -1653,7 +1653,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetRange__SpacecraftState_EarthSurfaceLocation() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(8);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -1662,7 +1662,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateSpacecraftState__Orbit_SpacecraftState() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(9);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -1671,7 +1671,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(10);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -1680,7 +1680,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTimedStampedPVACoordinates__TimeStampedPVCoordinates() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(11);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -1689,7 +1689,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(12);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(12);
 	}
 
 	/**
@@ -1698,7 +1698,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateMatrix3x3__Rotation() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(13);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(13);
 	}
 
 	/**
@@ -1707,7 +1707,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateRotation__Matrix3x3() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(14);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(14);
 	}
 
 	/**
@@ -1716,7 +1716,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__EarthOrbitPropagator() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(15);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(15);
 	}
 
 	/**
@@ -1725,7 +1725,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(16);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(16);
 	}
 
 	/**
@@ -1734,7 +1734,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__KeplerianOrbit() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(17);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(17);
 	}
 
 	/**
@@ -1743,7 +1743,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__CartesianOrbit() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(18);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(18);
 	}
 
 	/**
@@ -1752,7 +1752,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(19);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(19);
 	}
 
 	/**
@@ -1761,7 +1761,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(20);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(20);
 	}
 
 	/**
@@ -1770,7 +1770,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(21);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(21);
 	}
 
 	/**
@@ -1779,7 +1779,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(22);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(22);
 	}
 
 	/**
@@ -1788,7 +1788,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(23);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(23);
 	}
 
 	/**
@@ -1797,7 +1797,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__LoadTLE__String() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(24);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(24);
 	}
 
 	/**
@@ -1806,7 +1806,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE() {
-		return apogy__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(25);
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(25);
 	}
 
 	/**
@@ -2198,33 +2198,33 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEAttribute(spacecraftSwathCorridorEClass, SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE);
 		createEReference(spacecraftSwathCorridorEClass, SPACECRAFT_SWATH_CORRIDOR__CORRIDOR);
 
-		apogy__CoreEnvironmentOrbitEarthFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_MU);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ABSOLUTE_DATE__DATE);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_DATE__ABSOLUTEDATE);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_MATRIX3X3__ROTATION);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ROTATION__MATRIX3X3);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING);
-		createEOperation(apogy__CoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE);
+		apogyCoreEnvironmentOrbitEarthFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_MU);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ABSOLUTE_DATE__DATE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_DATE__ABSOLUTEDATE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_MATRIX3X3__ROTATION);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ROTATION__MATRIX3X3);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE);
 
 		// Create enums
 		ephemerisTypeEEnum = createEEnum(EPHEMERIS_TYPE);
@@ -2517,7 +2517,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEAttribute(getSpacecraftSwathCorridor_RightSwathAngle(), theEcorePackage.getEDouble(), "rightSwathAngle", "0", 0, 1, SpacecraftSwathCorridor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpacecraftSwathCorridor_Corridor(), this.getCorridor(), null, "corridor", null, 0, 1, SpacecraftSwathCorridor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__CoreEnvironmentOrbitEarthFacadeEClass, ApogyCoreEnvironmentOrbitEarthFacade.class, "ApogyCoreEnvironmentOrbitEarthFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreEnvironmentOrbitEarthFacadeEClass, ApogyCoreEnvironmentOrbitEarthFacade.class, "ApogyCoreEnvironmentOrbitEarthFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetMu(), theEcorePackage.getEDouble(), "getMu", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

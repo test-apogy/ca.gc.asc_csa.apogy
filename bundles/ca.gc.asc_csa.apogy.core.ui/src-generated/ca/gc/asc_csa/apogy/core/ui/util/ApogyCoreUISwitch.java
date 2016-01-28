@@ -78,8 +78,8 @@ public class ApogyCoreUISwitch<T> extends Switch<T>
   {
 		switch (classifierID) {
 			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE: {
-				ApogyCoreUIFacade apogy__CoreUIFacade = (ApogyCoreUIFacade)theEObject;
-				T result = caseApogyCoreUIFacade(apogy__CoreUIFacade);
+				ApogyCoreUIFacade apogyCoreUIFacade = (ApogyCoreUIFacade)theEObject;
+				T result = caseApogyCoreUIFacade(apogyCoreUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

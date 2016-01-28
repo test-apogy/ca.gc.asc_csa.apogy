@@ -217,8 +217,8 @@ public class ApogyCommonTopologyAddonsPrimitivesFactoryImpl extends EFactoryImpl
 	 * @generated
 	 */
 	public ApogyCommonTopologyAddonsPrimitivesFacade createApogyCommonTopologyAddonsPrimitivesFacade() {
-		ApogyCommonTopologyAddonsPrimitivesFacadeImpl apogy__CommonTopologyAddonsPrimitivesFacade = new ApogyCommonTopologyAddonsPrimitivesFacadeImpl();
-		return apogy__CommonTopologyAddonsPrimitivesFacade;
+		ApogyCommonTopologyAddonsPrimitivesFacadeImpl apogyCommonTopologyAddonsPrimitivesFacade = new ApogyCommonTopologyAddonsPrimitivesFacadeImpl();
+		return apogyCommonTopologyAddonsPrimitivesFacade;
 	}
 
 	/**

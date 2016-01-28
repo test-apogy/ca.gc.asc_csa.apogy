@@ -314,7 +314,7 @@ public class ApogyAddonsSensorsPoseItemProviderAdapterFactory extends ApogyAddon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyAddonsSensorsPoseFacadeItemProvider apogy__AddonsSensorsPoseFacadeItemProvider;
+	protected ApogyAddonsSensorsPoseFacadeItemProvider apogyAddonsSensorsPoseFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFacade}.
@@ -324,11 +324,11 @@ public class ApogyAddonsSensorsPoseItemProviderAdapterFactory extends ApogyAddon
 	 */
 	@Override
 	public Adapter createApogyAddonsSensorsPoseFacadeAdapter() {
-		if (apogy__AddonsSensorsPoseFacadeItemProvider == null) {
-			apogy__AddonsSensorsPoseFacadeItemProvider = new ApogyAddonsSensorsPoseFacadeItemProvider(this);
+		if (apogyAddonsSensorsPoseFacadeItemProvider == null) {
+			apogyAddonsSensorsPoseFacadeItemProvider = new ApogyAddonsSensorsPoseFacadeItemProvider(this);
 		}
 
-		return apogy__AddonsSensorsPoseFacadeItemProvider;
+		return apogyAddonsSensorsPoseFacadeItemProvider;
 	}
 
 	/**
@@ -466,7 +466,7 @@ public class ApogyAddonsSensorsPoseItemProviderAdapterFactory extends ApogyAddon
 		if (poseSensorItemProvider != null) poseSensorItemProvider.dispose();
 		if (simulatedPoseSensorItemProvider != null) simulatedPoseSensorItemProvider.dispose();
 		if (csvDataLoggerItemProvider != null) csvDataLoggerItemProvider.dispose();
-		if (apogy__AddonsSensorsPoseFacadeItemProvider != null) apogy__AddonsSensorsPoseFacadeItemProvider.dispose();
+		if (apogyAddonsSensorsPoseFacadeItemProvider != null) apogyAddonsSensorsPoseFacadeItemProvider.dispose();
 	}
 
 	/**

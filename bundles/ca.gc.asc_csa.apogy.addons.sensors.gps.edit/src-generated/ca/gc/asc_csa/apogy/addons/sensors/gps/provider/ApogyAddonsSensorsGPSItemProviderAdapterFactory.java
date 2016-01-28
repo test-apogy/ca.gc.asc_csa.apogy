@@ -199,7 +199,7 @@ public class ApogyAddonsSensorsGPSItemProviderAdapterFactory extends ApogyAddons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyAddonsSensorsGPSFacadeItemProvider apogy__AddonsSensorsGPSFacadeItemProvider;
+	protected ApogyAddonsSensorsGPSFacadeItemProvider apogyAddonsSensorsGPSFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSFacade}.
@@ -209,11 +209,11 @@ public class ApogyAddonsSensorsGPSItemProviderAdapterFactory extends ApogyAddons
 	 */
 	@Override
 	public Adapter createApogyAddonsSensorsGPSFacadeAdapter() {
-		if (apogy__AddonsSensorsGPSFacadeItemProvider == null) {
-			apogy__AddonsSensorsGPSFacadeItemProvider = new ApogyAddonsSensorsGPSFacadeItemProvider(this);
+		if (apogyAddonsSensorsGPSFacadeItemProvider == null) {
+			apogyAddonsSensorsGPSFacadeItemProvider = new ApogyAddonsSensorsGPSFacadeItemProvider(this);
 		}
 
-		return apogy__AddonsSensorsGPSFacadeItemProvider;
+		return apogyAddonsSensorsGPSFacadeItemProvider;
 	}
 
 	/**
@@ -346,7 +346,7 @@ public class ApogyAddonsSensorsGPSItemProviderAdapterFactory extends ApogyAddons
 		if (gpsPoseSensorItemProvider != null) gpsPoseSensorItemProvider.dispose();
 		if (gpsItemProvider != null) gpsItemProvider.dispose();
 		if (markedGPSItemProvider != null) markedGPSItemProvider.dispose();
-		if (apogy__AddonsSensorsGPSFacadeItemProvider != null) apogy__AddonsSensorsGPSFacadeItemProvider.dispose();
+		if (apogyAddonsSensorsGPSFacadeItemProvider != null) apogyAddonsSensorsGPSFacadeItemProvider.dispose();
 	}
 
 	/**

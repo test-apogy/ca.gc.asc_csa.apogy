@@ -55,7 +55,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreProgramsControllersFacadeEClass = null;
+	private EClass apogyCoreProgramsControllersFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -284,7 +284,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 	 * @generated
 	 */
 	public EClass getApogyCoreProgramsControllersFacade() {
-		return apogy__CoreProgramsControllersFacadeEClass;
+		return apogyCoreProgramsControllersFacadeEClass;
 	}
 
 		/**
@@ -293,7 +293,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 	 * @generated
 	 */
 	public EOperation getApogyCoreProgramsControllersFacade__CreateValue__EParameter_float() {
-		return apogy__CoreProgramsControllersFacadeEClass.getEOperations().get(0);
+		return apogyCoreProgramsControllersFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -302,7 +302,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 	 * @generated
 	 */
 	public EOperation getApogyCoreProgramsControllersFacade__SortCustomInputConditioningPoint__List() {
-		return apogy__CoreProgramsControllersFacadeEClass.getEOperations().get(1);
+		return apogyCoreProgramsControllersFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -311,7 +311,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 	 * @generated
 	 */
 	public EOperation getApogyCoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double() {
-		return apogy__CoreProgramsControllersFacadeEClass.getEOperations().get(2);
+		return apogyCoreProgramsControllersFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -852,10 +852,10 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CoreProgramsControllersFacadeEClass = createEClass(APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE);
-		createEOperation(apogy__CoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT);
-		createEOperation(apogy__CoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST);
-		createEOperation(apogy__CoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE);
+		apogyCoreProgramsControllersFacadeEClass = createEClass(APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE);
+		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT);
+		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST);
+		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE);
 
 		controllersConfigurationEClass = createEClass(CONTROLLERS_CONFIGURATION);
 		createEAttribute(controllersConfigurationEClass, CONTROLLERS_CONFIGURATION__ACTIVE);
@@ -992,7 +992,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		userDefinedInputConditioningEClass.getESuperTypes().add(this.getAbstractInputConditioning());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CoreProgramsControllersFacadeEClass, ApogyCoreProgramsControllersFacade.class, "ApogyCoreProgramsControllersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreProgramsControllersFacadeEClass, ApogyCoreProgramsControllersFacade.class, "ApogyCoreProgramsControllersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCoreProgramsControllersFacade__CreateValue__EParameter_float(), theEcorePackage.getEJavaObject(), "createValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEParameter(), "eParameter", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1135,7 +1135,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 			 "documentation", " -------------------------------------------------------------------------\n\nDataTypes.\n\n-------------------------------------------------------------------------"
 		   });	
 		addAnnotation
-		  (apogy__CoreProgramsControllersFacadeEClass, 
+		  (apogyCoreProgramsControllersFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", " -------------------------------------------------------------------------\n\nUtilities\n\n-------------------------------------------------------------------------"

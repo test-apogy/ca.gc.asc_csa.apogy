@@ -521,7 +521,7 @@ public class ApogyCommonTopologyAddonsDynamicsItemProviderAdapterFactory extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCommonTopologyAddonsDynamicsFacadeItemProvider apogy__CommonTopologyAddonsDynamicsFacadeItemProvider;
+	protected ApogyCommonTopologyAddonsDynamicsFacadeItemProvider apogyCommonTopologyAddonsDynamicsFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade}.
@@ -531,11 +531,11 @@ public class ApogyCommonTopologyAddonsDynamicsItemProviderAdapterFactory extends
 	 */
 	@Override
 	public Adapter createApogyCommonTopologyAddonsDynamicsFacadeAdapter() {
-		if (apogy__CommonTopologyAddonsDynamicsFacadeItemProvider == null) {
-			apogy__CommonTopologyAddonsDynamicsFacadeItemProvider = new ApogyCommonTopologyAddonsDynamicsFacadeItemProvider(this);
+		if (apogyCommonTopologyAddonsDynamicsFacadeItemProvider == null) {
+			apogyCommonTopologyAddonsDynamicsFacadeItemProvider = new ApogyCommonTopologyAddonsDynamicsFacadeItemProvider(this);
 		}
 
-		return apogy__CommonTopologyAddonsDynamicsFacadeItemProvider;
+		return apogyCommonTopologyAddonsDynamicsFacadeItemProvider;
 	}
 
 	/**
@@ -682,7 +682,7 @@ public class ApogyCommonTopologyAddonsDynamicsItemProviderAdapterFactory extends
 		if (capsuleGeometryItemProvider != null) capsuleGeometryItemProvider.dispose();
 		if (cylinderGeometryItemProvider != null) cylinderGeometryItemProvider.dispose();
 		if (sphereGeometryItemProvider != null) sphereGeometryItemProvider.dispose();
-		if (apogy__CommonTopologyAddonsDynamicsFacadeItemProvider != null) apogy__CommonTopologyAddonsDynamicsFacadeItemProvider.dispose();
+		if (apogyCommonTopologyAddonsDynamicsFacadeItemProvider != null) apogyCommonTopologyAddonsDynamicsFacadeItemProvider.dispose();
 	}
 
 	/**

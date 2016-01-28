@@ -67,8 +67,8 @@ public class ApogyCoreProgramsFactoryImpl extends EFactoryImpl implements ApogyC
 	 * @generated
 	 */
 	public ApogyCoreProgramsFacade createApogyCoreProgramsFacade() {
-		ApogyCoreProgramsFacadeImpl apogy__CoreProgramsFacade = new ApogyCoreProgramsFacadeImpl();
-		return apogy__CoreProgramsFacade;
+		ApogyCoreProgramsFacadeImpl apogyCoreProgramsFacade = new ApogyCoreProgramsFacadeImpl();
+		return apogyCoreProgramsFacade;
 	}
 
 	/**

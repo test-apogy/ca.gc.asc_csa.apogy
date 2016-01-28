@@ -35,7 +35,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonConvertersGraphsFacadeEClass = null;
+	private EClass apogyCommonConvertersGraphsFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,7 +169,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EClass getApogyCommonConvertersGraphsFacade() {
-		return apogy__CommonConvertersGraphsFacadeEClass;
+		return apogyCommonConvertersGraphsFacadeEClass;
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__CreateGraph__List() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(0);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -187,7 +187,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__AddConverters__SimpleDirectedWeightedGraph_List() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(1);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -196,7 +196,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__GenerateTypeCastConverters__SimpleDirectedWeightedGraph() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(2);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -205,7 +205,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__Convert__SimpleDirectedWeightedGraph_Object_Class() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(3);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -214,7 +214,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__FindAllConvertersBetweenVertices__SimpleDirectedWeightedGraph_Class_Class() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(4);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -223,7 +223,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__FindConverter__SimpleDirectedWeightedGraph_Class_Class() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(5);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -232,7 +232,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__GetAllInputTypes__SimpleDirectedWeightedGraph() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(6);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -241,7 +241,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__GetAllOutputTypes__SimpleDirectedWeightedGraph() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(7);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -250,7 +250,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__GetSourceVertex__SimpleDirectedWeightedGraph_Class() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(8);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -259,7 +259,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__GetDestinationVertex__SimpleDirectedWeightedGraph_Class() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(9);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -268,7 +268,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__FindClosestSuperType__List_Class() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(10);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -277,7 +277,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__FindClosestSubType__List_Class() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(11);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -286,7 +286,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__GetAllConverters__SimpleDirectedWeightedGraph() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(12);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(12);
 	}
 
 	/**
@@ -295,7 +295,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__GetAllNonTypeCastConverters__SimpleDirectedWeightedGraph() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(13);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(13);
 	}
 
 	/**
@@ -304,7 +304,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__GetAvailableDestinationTypeMap__SimpleDirectedWeightedGraph() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(14);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(14);
 	}
 
 	/**
@@ -313,7 +313,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonConvertersGraphsFacade__CreateComparator() {
-		return apogy__CommonConvertersGraphsFacadeEClass.getEOperations().get(15);
+		return apogyCommonConvertersGraphsFacadeEClass.getEOperations().get(15);
 	}
 
 	/**
@@ -380,23 +380,23 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__CommonConvertersGraphsFacadeEClass = createEClass(APOGY_COMMON_CONVERTERS_GRAPHS_FACADE);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_GRAPH__LIST);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___ADD_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH_LIST);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GENERATE_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___CONVERT__SIMPLEDIRECTEDWEIGHTEDGRAPH_OBJECT_CLASS);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_ALL_CONVERTERS_BETWEEN_VERTICES__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CONVERTER__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_INPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_OUTPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_SOURCE_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_DESTINATION_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUPER_TYPE__LIST_CLASS);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUB_TYPE__LIST_CLASS);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_NON_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_AVAILABLE_DESTINATION_TYPE_MAP__SIMPLEDIRECTEDWEIGHTEDGRAPH);
-		createEOperation(apogy__CommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_COMPARATOR);
+		apogyCommonConvertersGraphsFacadeEClass = createEClass(APOGY_COMMON_CONVERTERS_GRAPHS_FACADE);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_GRAPH__LIST);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___ADD_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH_LIST);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GENERATE_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___CONVERT__SIMPLEDIRECTEDWEIGHTEDGRAPH_OBJECT_CLASS);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_ALL_CONVERTERS_BETWEEN_VERTICES__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CONVERTER__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_INPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_OUTPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_SOURCE_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_DESTINATION_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUPER_TYPE__LIST_CLASS);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUB_TYPE__LIST_CLASS);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_NON_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_AVAILABLE_DESTINATION_TYPE_MAP__SIMPLEDIRECTEDWEIGHTEDGRAPH);
+		createEOperation(apogyCommonConvertersGraphsFacadeEClass, APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_COMPARATOR);
 
 		// Create data types
 		sortedSetEDataType = createEDataType(SORTED_SET);
@@ -446,7 +446,7 @@ public class ApogyCommonConvertersGraphsPackageImpl extends EPackageImpl impleme
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__CommonConvertersGraphsFacadeEClass, ApogyCommonConvertersGraphsFacade.class, "ApogyCommonConvertersGraphsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonConvertersGraphsFacadeEClass, ApogyCommonConvertersGraphsFacade.class, "ApogyCommonConvertersGraphsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCommonConvertersGraphsFacade__CreateGraph__List(), null, "createGraph", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(theApogyCommonConvertersPackage.getList());

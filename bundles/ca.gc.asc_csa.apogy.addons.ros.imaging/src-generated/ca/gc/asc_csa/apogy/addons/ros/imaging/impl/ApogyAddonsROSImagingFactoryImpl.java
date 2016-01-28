@@ -113,8 +113,8 @@ public class ApogyAddonsROSImagingFactoryImpl extends EFactoryImpl implements Ap
 	 * @generated
 	 */
 	public ApogyAddonsROSImagingFacade createApogyAddonsROSImagingFacade() {
-		ApogyAddonsROSImagingFacadeImpl apogy__AddonsROSImagingFacade = new ApogyAddonsROSImagingFacadeImpl();
-		return apogy__AddonsROSImagingFacade;
+		ApogyAddonsROSImagingFacadeImpl apogyAddonsROSImagingFacade = new ApogyAddonsROSImagingFacadeImpl();
+		return apogyAddonsROSImagingFacade;
 	}
 
 	/**

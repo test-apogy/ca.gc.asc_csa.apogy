@@ -418,8 +418,8 @@ public class ApogyCommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				return result;
 			}
 			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE: {
-				ApogyCommonGeometryData3DFacade apogy__CommonGeometryData3DFacade = (ApogyCommonGeometryData3DFacade)theEObject;
-				T1 result = caseApogyCommonGeometryData3DFacade(apogy__CommonGeometryData3DFacade);
+				ApogyCommonGeometryData3DFacade apogyCommonGeometryData3DFacade = (ApogyCommonGeometryData3DFacade)theEObject;
+				T1 result = caseApogyCommonGeometryData3DFacade(apogyCommonGeometryData3DFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

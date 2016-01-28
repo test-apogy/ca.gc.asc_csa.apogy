@@ -108,7 +108,7 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonTopologyBindingsFacadeEClass = null;
+	private EClass apogyCommonTopologyBindingsFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -554,7 +554,7 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EClass getApogyCommonTopologyBindingsFacade() {
-		return apogy__CommonTopologyBindingsFacadeEClass;
+		return apogyCommonTopologyBindingsFacadeEClass;
 	}
 
 		/**
@@ -563,7 +563,7 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EOperation getApogyCommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map() {
-		return apogy__CommonTopologyBindingsFacadeEClass.getEOperations().get(0);
+		return apogyCommonTopologyBindingsFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -667,8 +667,8 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 		createEOperation(bindingsSetEClass, BINDINGS_SET___BIND);
 		createEOperation(bindingsSetEClass, BINDINGS_SET___UNBIND);
 
-		apogy__CommonTopologyBindingsFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE);
-		createEOperation(apogy__CommonTopologyBindingsFacadeEClass, APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP);
+		apogyCommonTopologyBindingsFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE);
+		createEOperation(apogyCommonTopologyBindingsFacadeEClass, APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP);
 
 		// Create enums
 		axisEEnum = createEEnum(AXIS);
@@ -775,7 +775,7 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 
 		initEOperation(getBindingsSet__Unbind(), null, "unbind", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(apogy__CommonTopologyBindingsFacadeEClass, ApogyCommonTopologyBindingsFacade.class, "ApogyCommonTopologyBindingsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonTopologyBindingsFacadeEClass, ApogyCommonTopologyBindingsFacade.class, "ApogyCommonTopologyBindingsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyCommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map(), this.getAbstractTopologyBinding(), "copy", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAbstractTopologyBinding(), "originalBinding", 0, 1, !IS_UNIQUE, IS_ORDERED);

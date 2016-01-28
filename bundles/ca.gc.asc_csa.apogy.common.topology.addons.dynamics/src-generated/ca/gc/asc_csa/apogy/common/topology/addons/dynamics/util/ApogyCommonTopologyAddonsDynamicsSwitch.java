@@ -238,8 +238,8 @@ public class ApogyCommonTopologyAddonsDynamicsSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyCommonTopologyAddonsDynamicsPackage.APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE: {
-				ApogyCommonTopologyAddonsDynamicsFacade apogy__CommonTopologyAddonsDynamicsFacade = (ApogyCommonTopologyAddonsDynamicsFacade)theEObject;
-				T result = caseApogyCommonTopologyAddonsDynamicsFacade(apogy__CommonTopologyAddonsDynamicsFacade);
+				ApogyCommonTopologyAddonsDynamicsFacade apogyCommonTopologyAddonsDynamicsFacade = (ApogyCommonTopologyAddonsDynamicsFacade)theEObject;
+				T result = caseApogyCommonTopologyAddonsDynamicsFacade(apogyCommonTopologyAddonsDynamicsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

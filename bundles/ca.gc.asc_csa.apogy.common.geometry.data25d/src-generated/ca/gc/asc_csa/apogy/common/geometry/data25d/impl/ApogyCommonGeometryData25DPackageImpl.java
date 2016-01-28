@@ -91,7 +91,7 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonGeometryData25DFacadeEClass = null;
+	private EClass apogyCommonGeometryData25DFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -297,7 +297,7 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	public EClass getApogyCommonGeometryData25DFacade() {
-		return apogy__CommonGeometryData25DFacadeEClass;
+		return apogyCommonGeometryData25DFacadeEClass;
 	}
 
 	/**
@@ -306,7 +306,7 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D() {
-		return apogy__CommonGeometryData25DFacadeEClass.getEOperations().get(0);
+		return apogyCommonGeometryData25DFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -315,7 +315,7 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData25DFacade__CreateCoordinates25D__double_double_double() {
-		return apogy__CommonGeometryData25DFacadeEClass.getEOperations().get(1);
+		return apogyCommonGeometryData25DFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -324,7 +324,7 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D() {
-		return apogy__CommonGeometryData25DFacadeEClass.getEOperations().get(2);
+		return apogyCommonGeometryData25DFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -411,10 +411,10 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 		coordinatesSet25DFilterEClass = createEClass(COORDINATES_SET25_DFILTER);
 		createEOperation(coordinatesSet25DFilterEClass, COORDINATES_SET25_DFILTER___CREATE_COORDINATES_SET25_D);
 
-		apogy__CommonGeometryData25DFacadeEClass = createEClass(APOGY_COMMON_GEOMETRY_DATA25_DFACADE);
-		createEOperation(apogy__CommonGeometryData25DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D);
-		createEOperation(apogy__CommonGeometryData25DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(apogy__CommonGeometryData25DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D);
+		apogyCommonGeometryData25DFacadeEClass = createEClass(APOGY_COMMON_GEOMETRY_DATA25_DFACADE);
+		createEOperation(apogyCommonGeometryData25DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D);
+		createEOperation(apogyCommonGeometryData25DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyCommonGeometryData25DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D);
 
 		data25DIOEClass = createEClass(DATA25_DIO);
 		createEOperation(data25DIOEClass, DATA25_DIO___SAVE_XYZ__VOLUMETRICCOORDINATESSET25D_STRING);
@@ -511,7 +511,7 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 		g1 = createEGenericType(coordinatesSet25DFilterEClass_T);
 		initEOperation(op, g1);
 
-		initEClass(apogy__CommonGeometryData25DFacadeEClass, ApogyCommonGeometryData25DFacade.class, "ApogyCommonGeometryData25DFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonGeometryData25DFacadeEClass, ApogyCommonGeometryData25DFacade.class, "ApogyCommonGeometryData25DFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyCommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D(), this.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates25D(), "coordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);

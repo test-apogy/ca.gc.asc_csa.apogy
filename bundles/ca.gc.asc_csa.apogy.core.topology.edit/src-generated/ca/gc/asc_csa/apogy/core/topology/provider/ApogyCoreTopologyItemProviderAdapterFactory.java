@@ -187,7 +187,7 @@ public class ApogyCoreTopologyItemProviderAdapterFactory extends ApogyCoreTopolo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreTopologyFacadeItemProvider apogy__CoreTopologyFacadeItemProvider;
+	protected ApogyCoreTopologyFacadeItemProvider apogyCoreTopologyFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade}.
@@ -197,11 +197,11 @@ public class ApogyCoreTopologyItemProviderAdapterFactory extends ApogyCoreTopolo
 	 */
 	@Override
 	public Adapter createApogyCoreTopologyFacadeAdapter() {
-		if (apogy__CoreTopologyFacadeItemProvider == null) {
-			apogy__CoreTopologyFacadeItemProvider = new ApogyCoreTopologyFacadeItemProvider(this);
+		if (apogyCoreTopologyFacadeItemProvider == null) {
+			apogyCoreTopologyFacadeItemProvider = new ApogyCoreTopologyFacadeItemProvider(this);
 		}
 
-		return apogy__CoreTopologyFacadeItemProvider;
+		return apogyCoreTopologyFacadeItemProvider;
 	}
 
 	/**
@@ -333,7 +333,7 @@ public class ApogyCoreTopologyItemProviderAdapterFactory extends ApogyCoreTopolo
 		if (systemsTopologyAdapterItemProvider != null) systemsTopologyAdapterItemProvider.dispose();
 		if (apogyEnvironmentNodeItemProvider != null) apogyEnvironmentNodeItemProvider.dispose();
 		if (apogySystemAPIsNodeItemProvider != null) apogySystemAPIsNodeItemProvider.dispose();
-		if (apogy__CoreTopologyFacadeItemProvider != null) apogy__CoreTopologyFacadeItemProvider.dispose();
+		if (apogyCoreTopologyFacadeItemProvider != null) apogyCoreTopologyFacadeItemProvider.dispose();
 	}
 
 	/**

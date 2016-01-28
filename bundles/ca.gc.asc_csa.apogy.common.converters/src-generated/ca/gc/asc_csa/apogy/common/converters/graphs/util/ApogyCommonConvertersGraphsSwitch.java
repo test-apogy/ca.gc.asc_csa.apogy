@@ -68,8 +68,8 @@ public class ApogyCommonConvertersGraphsSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE: {
-				ApogyCommonConvertersGraphsFacade apogy__CommonConvertersGraphsFacade = (ApogyCommonConvertersGraphsFacade)theEObject;
-				T result = caseApogyCommonConvertersGraphsFacade(apogy__CommonConvertersGraphsFacade);
+				ApogyCommonConvertersGraphsFacade apogyCommonConvertersGraphsFacade = (ApogyCommonConvertersGraphsFacade)theEObject;
+				T result = caseApogyCommonConvertersGraphsFacade(apogyCommonConvertersGraphsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

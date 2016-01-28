@@ -28,8 +28,7 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__ExamplesSatelliteUiFacadeEClass = null;
-
+	private EClass apogyExamplesSatelliteUiFacadeEClass = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -100,7 +99,7 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EClass getApogyExamplesSatelliteUiFacade() {
-		return apogy__ExamplesSatelliteUiFacadeEClass;
+		return apogyExamplesSatelliteUiFacadeEClass;
 	}
 
 	/**
@@ -109,7 +108,7 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EAttribute getApogyExamplesSatelliteUiFacade_ConstellationVariableName() {
-		return (EAttribute)apogy__ExamplesSatelliteUiFacadeEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)apogyExamplesSatelliteUiFacadeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -118,7 +117,7 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyExamplesSatelliteUiFacade__GetConstellationVariable() {
-		return apogy__ExamplesSatelliteUiFacadeEClass.getEOperations().get(0);
+		return apogyExamplesSatelliteUiFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -127,7 +126,7 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyExamplesSatelliteUiFacade__GetOperationCallResultsList() {
-		return apogy__ExamplesSatelliteUiFacadeEClass.getEOperations().get(1);
+		return apogyExamplesSatelliteUiFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -158,10 +157,10 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 		isCreated = true;
 
 		// Create classes and their features
-		apogy__ExamplesSatelliteUiFacadeEClass = createEClass(APOGY_EXAMPLES_SATELLITE_UI_FACADE);
-		createEAttribute(apogy__ExamplesSatelliteUiFacadeEClass, APOGY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME);
-		createEOperation(apogy__ExamplesSatelliteUiFacadeEClass, APOGY_EXAMPLES_SATELLITE_UI_FACADE___GET_CONSTELLATION_VARIABLE);
-		createEOperation(apogy__ExamplesSatelliteUiFacadeEClass, APOGY_EXAMPLES_SATELLITE_UI_FACADE___GET_OPERATION_CALL_RESULTS_LIST);
+		apogyExamplesSatelliteUiFacadeEClass = createEClass(APOGY_EXAMPLES_SATELLITE_UI_FACADE);
+		createEAttribute(apogyExamplesSatelliteUiFacadeEClass, APOGY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME);
+		createEOperation(apogyExamplesSatelliteUiFacadeEClass, APOGY_EXAMPLES_SATELLITE_UI_FACADE___GET_CONSTELLATION_VARIABLE);
+		createEOperation(apogyExamplesSatelliteUiFacadeEClass, APOGY_EXAMPLES_SATELLITE_UI_FACADE___GET_OPERATION_CALL_RESULTS_LIST);
 	}
 
 	/**
@@ -198,7 +197,7 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogy__ExamplesSatelliteUiFacadeEClass, ApogyExamplesSatelliteUiFacade.class, "ApogyExamplesSatelliteUiFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyExamplesSatelliteUiFacadeEClass, ApogyExamplesSatelliteUiFacade.class, "ApogyExamplesSatelliteUiFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getApogyExamplesSatelliteUiFacade_ConstellationVariableName(), theEcorePackage.getEString(), "constellationVariableName", "constellation", 0, 1, ApogyExamplesSatelliteUiFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getApogyExamplesSatelliteUiFacade__GetConstellationVariable(), theApogyCoreInvocatorPackage.getVariable(), "getConstellationVariable", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -236,7 +235,7 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.satellite"
 		   });	
 		addAnnotation
-		  (apogy__ExamplesSatelliteUiFacadeEClass, 
+		  (apogyExamplesSatelliteUiFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "Constellation Facade.  This class provides utility methods."

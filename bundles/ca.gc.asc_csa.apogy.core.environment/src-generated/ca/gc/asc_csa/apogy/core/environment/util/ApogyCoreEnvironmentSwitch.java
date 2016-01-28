@@ -283,8 +283,8 @@ public class ApogyCoreEnvironmentSwitch<T> extends Switch<T>
 				return result;
 			}
 			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE: {
-				ApogyCoreEnvironmentFacade apogy__CoreEnvironmentFacade = (ApogyCoreEnvironmentFacade)theEObject;
-				T result = caseApogyCoreEnvironmentFacade(apogy__CoreEnvironmentFacade);
+				ApogyCoreEnvironmentFacade apogyCoreEnvironmentFacade = (ApogyCoreEnvironmentFacade)theEObject;
+				T result = caseApogyCoreEnvironmentFacade(apogyCoreEnvironmentFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

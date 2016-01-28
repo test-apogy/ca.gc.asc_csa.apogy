@@ -71,7 +71,7 @@ public class ApogyCommonGeometryData3DLASPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CommonGeometryData3DLASFacadeEClass = null;
+	private EClass apogyCommonGeometryData3DLASFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -798,7 +798,7 @@ public class ApogyCommonGeometryData3DLASPackageImpl extends EPackageImpl implem
 	 * @generated
 	 */
 	public EClass getApogyCommonGeometryData3DLASFacade() {
-		return apogy__CommonGeometryData3DLASFacadeEClass;
+		return apogyCommonGeometryData3DLASFacadeEClass;
 	}
 
 	/**
@@ -807,7 +807,7 @@ public class ApogyCommonGeometryData3DLASPackageImpl extends EPackageImpl implem
 	 * @generated
 	 */
 	public EOperation getApogyCommonGeometryData3DLASFacade__CreatePoint__int_byte() {
-		return apogy__CommonGeometryData3DLASFacadeEClass.getEOperations().get(0);
+		return apogyCommonGeometryData3DLASFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1105,8 +1105,8 @@ public class ApogyCommonGeometryData3DLASPackageImpl extends EPackageImpl implem
 		createEAttribute(lasPointEClass, LAS_POINT__GREEN);
 		createEAttribute(lasPointEClass, LAS_POINT__BLUE);
 
-		apogy__CommonGeometryData3DLASFacadeEClass = createEClass(APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE);
-		createEOperation(apogy__CommonGeometryData3DLASFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE);
+		apogyCommonGeometryData3DLASFacadeEClass = createEClass(APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE);
+		createEOperation(apogyCommonGeometryData3DLASFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE);
 
 		lasWriterEClass = createEClass(LAS_WRITER);
 		createEAttribute(lasWriterEClass, LAS_WRITER__FILE_NAME);
@@ -1240,7 +1240,7 @@ public class ApogyCommonGeometryData3DLASPackageImpl extends EPackageImpl implem
 		initEAttribute(getLASPoint_Green(), theEcorePackage.getEInt(), "green", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLASPoint_Blue(), theEcorePackage.getEInt(), "blue", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__CommonGeometryData3DLASFacadeEClass, ApogyCommonGeometryData3DLASFacade.class, "ApogyCommonGeometryData3DLASFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCommonGeometryData3DLASFacadeEClass, ApogyCommonGeometryData3DLASFacade.class, "ApogyCommonGeometryData3DLASFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyCommonGeometryData3DLASFacade__CreatePoint__int_byte(), this.getLASPoint(), "createPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "formatID", 0, 1, !IS_UNIQUE, IS_ORDERED);

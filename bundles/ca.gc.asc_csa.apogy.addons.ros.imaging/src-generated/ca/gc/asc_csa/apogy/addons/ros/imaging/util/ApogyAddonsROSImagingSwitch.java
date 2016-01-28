@@ -68,8 +68,8 @@ public class ApogyAddonsROSImagingSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case ApogyAddonsROSImagingPackage.APOGY_ADDONS_ROS_IMAGING_FACADE: {
-				ApogyAddonsROSImagingFacade apogy__AddonsROSImagingFacade = (ApogyAddonsROSImagingFacade)theEObject;
-				T result = caseApogyAddonsROSImagingFacade(apogy__AddonsROSImagingFacade);
+				ApogyAddonsROSImagingFacade apogyAddonsROSImagingFacade = (ApogyAddonsROSImagingFacade)theEObject;
+				T result = caseApogyAddonsROSImagingFacade(apogyAddonsROSImagingFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

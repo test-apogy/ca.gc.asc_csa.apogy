@@ -243,8 +243,8 @@ public class ApogyAddonsROSFactoryImpl extends EFactoryImpl implements ApogyAddo
 	 * @generated
 	 */
 	public ApogyAddonsROSFacade createApogyAddonsROSFacade() {
-		ApogyAddonsROSFacadeImpl apogy__AddonsROSFacade = new ApogyAddonsROSFacadeImpl();
-		return apogy__AddonsROSFacade;
+		ApogyAddonsROSFacadeImpl apogyAddonsROSFacade = new ApogyAddonsROSFacadeImpl();
+		return apogyAddonsROSFacade;
 	}
 
 	/**

@@ -125,8 +125,8 @@ public class ApogyCommonConvertersGraphsFactoryImpl extends EFactoryImpl impleme
 	 * @generated
 	 */
 	public ApogyCommonConvertersGraphsFacade createApogyCommonConvertersGraphsFacade() {
-		ApogyCommonConvertersGraphsFacadeImpl apogy__CommonConvertersGraphsFacade = new ApogyCommonConvertersGraphsFacadeImpl();
-		return apogy__CommonConvertersGraphsFacade;
+		ApogyCommonConvertersGraphsFacadeImpl apogyCommonConvertersGraphsFacade = new ApogyCommonConvertersGraphsFacadeImpl();
+		return apogyCommonConvertersGraphsFacade;
 	}
 
 	/**

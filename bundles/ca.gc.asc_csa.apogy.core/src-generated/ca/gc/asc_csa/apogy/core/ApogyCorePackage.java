@@ -89,7 +89,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4 = 0;
+	int APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__APOGYSYSTEM_MATRIX4X4 = 0;
 
 	/**
 	 * The operation id for the '<em>Create Result Node</em>' operation.
@@ -3332,7 +3332,7 @@ public interface ApogyCorePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4 = eINSTANCE.getApogyCoreFacade__ComputeAbsolutePoseMatrix__ApogySystem_Matrix4x4();
+		EOperation APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__APOGYSYSTEM_MATRIX4X4 = eINSTANCE.getApogyCoreFacade__ComputeAbsolutePoseMatrix__ApogySystem_Matrix4x4();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Result Node</b></em>' operation.

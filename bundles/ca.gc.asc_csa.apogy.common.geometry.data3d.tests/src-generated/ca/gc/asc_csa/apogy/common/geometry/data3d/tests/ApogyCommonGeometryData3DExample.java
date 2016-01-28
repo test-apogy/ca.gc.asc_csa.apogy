@@ -60,7 +60,7 @@ public class ApogyCommonGeometryData3DExample {
 		if (args.length == 0) {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.apogy__commongeometrydata3d"));
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.apogycommongeometrydata3d"));
 				CartesianPolygon root = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
 				resource.getContents().add(root);
 				resource.save(System.out, null);

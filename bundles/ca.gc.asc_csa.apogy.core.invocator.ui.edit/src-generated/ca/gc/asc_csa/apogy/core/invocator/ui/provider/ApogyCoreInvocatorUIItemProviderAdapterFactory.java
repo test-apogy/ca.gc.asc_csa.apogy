@@ -75,7 +75,7 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreInvocatorUIFacadeItemProvider apogy__CoreInvocatorUIFacadeItemProvider;
+	protected ApogyCoreInvocatorUIFacadeItemProvider apogyCoreInvocatorUIFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade}.
@@ -85,11 +85,11 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 	 */
 	@Override
 	public Adapter createApogyCoreInvocatorUIFacadeAdapter() {
-		if (apogy__CoreInvocatorUIFacadeItemProvider == null) {
-			apogy__CoreInvocatorUIFacadeItemProvider = new ApogyCoreInvocatorUIFacadeItemProvider(this);
+		if (apogyCoreInvocatorUIFacadeItemProvider == null) {
+			apogyCoreInvocatorUIFacadeItemProvider = new ApogyCoreInvocatorUIFacadeItemProvider(this);
 		}
 
-		return apogy__CoreInvocatorUIFacadeItemProvider;
+		return apogyCoreInvocatorUIFacadeItemProvider;
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 	 * @generated
 	 */
 	public void dispose() {
-		if (apogy__CoreInvocatorUIFacadeItemProvider != null) apogy__CoreInvocatorUIFacadeItemProvider.dispose();
+		if (apogyCoreInvocatorUIFacadeItemProvider != null) apogyCoreInvocatorUIFacadeItemProvider.dispose();
 	}
 
 }

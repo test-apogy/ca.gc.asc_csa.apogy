@@ -129,8 +129,8 @@ public class ApogyCoreUIFactoryImpl extends EFactoryImpl implements ApogyCoreUIF
 	 * @generated
 	 */
 	public ApogyCoreUIFacade createApogyCoreUIFacade() {
-		ApogyCoreUIFacadeImpl apogy__CoreUIFacade = new ApogyCoreUIFacadeImpl();
-		return apogy__CoreUIFacade;
+		ApogyCoreUIFacadeImpl apogyCoreUIFacade = new ApogyCoreUIFacadeImpl();
+		return apogyCoreUIFacade;
 	}
 
 		/**

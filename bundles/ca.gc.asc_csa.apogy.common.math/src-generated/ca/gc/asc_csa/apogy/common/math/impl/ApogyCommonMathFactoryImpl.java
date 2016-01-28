@@ -169,8 +169,8 @@ public class ApogyCommonMathFactoryImpl extends EFactoryImpl implements ApogyCom
 	 * @generated
 	 */
 	public ApogyCommonMathFacade createApogyCommonMathFacade() {
-		ApogyCommonMathFacadeImpl apogy__CommonMathFacade = new ApogyCommonMathFacadeImpl();
-		return apogy__CommonMathFacade;
+		ApogyCommonMathFacadeImpl apogyCommonMathFacade = new ApogyCommonMathFacadeImpl();
+		return apogyCommonMathFacade;
 	}
 
 	/**

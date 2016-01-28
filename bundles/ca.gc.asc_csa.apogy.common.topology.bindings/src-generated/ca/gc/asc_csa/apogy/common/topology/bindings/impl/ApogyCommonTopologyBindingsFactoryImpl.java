@@ -220,8 +220,8 @@ public class ApogyCommonTopologyBindingsFactoryImpl extends EFactoryImpl impleme
 	 * @generated
 	 */
 	public ApogyCommonTopologyBindingsFacade createApogyCommonTopologyBindingsFacade() {
-		ApogyCommonTopologyBindingsFacadeImpl apogy__CommonTopologyBindingsFacade = new ApogyCommonTopologyBindingsFacadeImpl();
-		return apogy__CommonTopologyBindingsFacade;
+		ApogyCommonTopologyBindingsFacadeImpl apogyCommonTopologyBindingsFacade = new ApogyCommonTopologyBindingsFacadeImpl();
+		return apogyCommonTopologyBindingsFacade;
 	}
 
 		/**

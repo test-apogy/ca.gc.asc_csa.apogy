@@ -661,7 +661,7 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreEnvironmentOrbitEarthFacadeItemProvider apogy__CoreEnvironmentOrbitEarthFacadeItemProvider;
+	protected ApogyCoreEnvironmentOrbitEarthFacadeItemProvider apogyCoreEnvironmentOrbitEarthFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade}.
@@ -671,11 +671,11 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 	 */
 	@Override
 	public Adapter createApogyCoreEnvironmentOrbitEarthFacadeAdapter() {
-		if (apogy__CoreEnvironmentOrbitEarthFacadeItemProvider == null) {
-			apogy__CoreEnvironmentOrbitEarthFacadeItemProvider = new ApogyCoreEnvironmentOrbitEarthFacadeItemProvider(this);
+		if (apogyCoreEnvironmentOrbitEarthFacadeItemProvider == null) {
+			apogyCoreEnvironmentOrbitEarthFacadeItemProvider = new ApogyCoreEnvironmentOrbitEarthFacadeItemProvider(this);
 		}
 
-		return apogy__CoreEnvironmentOrbitEarthFacadeItemProvider;
+		return apogyCoreEnvironmentOrbitEarthFacadeItemProvider;
 	}
 
 	/**
@@ -828,7 +828,7 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 		if (corridorPointItemProvider != null) corridorPointItemProvider.dispose();
 		if (corridorItemProvider != null) corridorItemProvider.dispose();
 		if (spacecraftSwathCorridorItemProvider != null) spacecraftSwathCorridorItemProvider.dispose();
-		if (apogy__CoreEnvironmentOrbitEarthFacadeItemProvider != null) apogy__CoreEnvironmentOrbitEarthFacadeItemProvider.dispose();
+		if (apogyCoreEnvironmentOrbitEarthFacadeItemProvider != null) apogyCoreEnvironmentOrbitEarthFacadeItemProvider.dispose();
 	}
 
 	/**

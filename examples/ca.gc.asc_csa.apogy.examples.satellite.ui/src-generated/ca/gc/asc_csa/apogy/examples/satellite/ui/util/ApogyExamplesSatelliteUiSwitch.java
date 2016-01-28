@@ -68,8 +68,8 @@ public class ApogyExamplesSatelliteUiSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case ApogyExamplesSatelliteUiPackage.APOGY_EXAMPLES_SATELLITE_UI_FACADE: {
-				ApogyExamplesSatelliteUiFacade apogy__ExamplesSatelliteUiFacade = (ApogyExamplesSatelliteUiFacade)theEObject;
-				T result = caseApogyExamplesSatelliteUiFacade(apogy__ExamplesSatelliteUiFacade);
+				ApogyExamplesSatelliteUiFacade apogyExamplesSatelliteUiFacade = (ApogyExamplesSatelliteUiFacade)theEObject;
+				T result = caseApogyExamplesSatelliteUiFacade(apogyExamplesSatelliteUiFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

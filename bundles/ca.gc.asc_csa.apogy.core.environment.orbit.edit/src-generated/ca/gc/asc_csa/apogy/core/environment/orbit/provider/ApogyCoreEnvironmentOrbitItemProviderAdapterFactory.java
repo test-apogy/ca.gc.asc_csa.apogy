@@ -260,7 +260,7 @@ public class ApogyCoreEnvironmentOrbitItemProviderAdapterFactory extends ApogyCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreEnvironmentOrbitFacadeItemProvider apogy__CoreEnvironmentOrbitFacadeItemProvider;
+	protected ApogyCoreEnvironmentOrbitFacadeItemProvider apogyCoreEnvironmentOrbitFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade}.
@@ -270,11 +270,11 @@ public class ApogyCoreEnvironmentOrbitItemProviderAdapterFactory extends ApogyCo
 	 */
 	@Override
 	public Adapter createApogyCoreEnvironmentOrbitFacadeAdapter() {
-		if (apogy__CoreEnvironmentOrbitFacadeItemProvider == null) {
-			apogy__CoreEnvironmentOrbitFacadeItemProvider = new ApogyCoreEnvironmentOrbitFacadeItemProvider(this);
+		if (apogyCoreEnvironmentOrbitFacadeItemProvider == null) {
+			apogyCoreEnvironmentOrbitFacadeItemProvider = new ApogyCoreEnvironmentOrbitFacadeItemProvider(this);
 		}
 
-		return apogy__CoreEnvironmentOrbitFacadeItemProvider;
+		return apogyCoreEnvironmentOrbitFacadeItemProvider;
 	}
 
 	/**
@@ -410,7 +410,7 @@ public class ApogyCoreEnvironmentOrbitItemProviderAdapterFactory extends ApogyCo
 		if (spacecraftAttitudeItemProvider != null) spacecraftAttitudeItemProvider.dispose();
 		if (spacecraftStateItemProvider != null) spacecraftStateItemProvider.dispose();
 		if (orbitModelItemProvider != null) orbitModelItemProvider.dispose();
-		if (apogy__CoreEnvironmentOrbitFacadeItemProvider != null) apogy__CoreEnvironmentOrbitFacadeItemProvider.dispose();
+		if (apogyCoreEnvironmentOrbitFacadeItemProvider != null) apogyCoreEnvironmentOrbitFacadeItemProvider.dispose();
 	}
 
 	/**

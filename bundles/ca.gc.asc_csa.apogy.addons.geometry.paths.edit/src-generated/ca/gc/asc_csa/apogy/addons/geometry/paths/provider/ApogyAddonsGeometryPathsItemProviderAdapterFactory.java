@@ -274,7 +274,7 @@ public class ApogyAddonsGeometryPathsItemProviderAdapterFactory extends ApogyAdd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyAddonsGeometryPathsFacadeItemProvider apogy__AddonsGeometryPathsFacadeItemProvider;
+	protected ApogyAddonsGeometryPathsFacadeItemProvider apogyAddonsGeometryPathsFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFacade}.
@@ -284,11 +284,11 @@ public class ApogyAddonsGeometryPathsItemProviderAdapterFactory extends ApogyAdd
 	 */
 	@Override
 	public Adapter createApogyAddonsGeometryPathsFacadeAdapter() {
-		if (apogy__AddonsGeometryPathsFacadeItemProvider == null) {
-			apogy__AddonsGeometryPathsFacadeItemProvider = new ApogyAddonsGeometryPathsFacadeItemProvider(this);
+		if (apogyAddonsGeometryPathsFacadeItemProvider == null) {
+			apogyAddonsGeometryPathsFacadeItemProvider = new ApogyAddonsGeometryPathsFacadeItemProvider(this);
 		}
 
-		return apogy__AddonsGeometryPathsFacadeItemProvider;
+		return apogyAddonsGeometryPathsFacadeItemProvider;
 	}
 
 	/**
@@ -424,7 +424,7 @@ public class ApogyAddonsGeometryPathsItemProviderAdapterFactory extends ApogyAdd
 		if (segmentWayPointPathInterpolatorItemProvider != null) segmentWayPointPathInterpolatorItemProvider.dispose();
 		if (minimumDistanceFilterItemProvider != null) minimumDistanceFilterItemProvider.dispose();
 		if (uniformDistanceWayPointPathInterpolatorItemProvider != null) uniformDistanceWayPointPathInterpolatorItemProvider.dispose();
-		if (apogy__AddonsGeometryPathsFacadeItemProvider != null) apogy__AddonsGeometryPathsFacadeItemProvider.dispose();
+		if (apogyAddonsGeometryPathsFacadeItemProvider != null) apogyAddonsGeometryPathsFacadeItemProvider.dispose();
 	}
 
 	/**

@@ -658,8 +658,8 @@ public class ApogyCommonGeometryData3DFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
 	public ApogyCommonGeometryData3DFacade createApogyCommonGeometryData3DFacade() {
-		ApogyCommonGeometryData3DFacadeImpl apogy__CommonGeometryData3DFacade = new ApogyCommonGeometryData3DFacadeImpl();
-		return apogy__CommonGeometryData3DFacade;
+		ApogyCommonGeometryData3DFacadeImpl apogyCommonGeometryData3DFacade = new ApogyCommonGeometryData3DFacadeImpl();
+		return apogyCommonGeometryData3DFacade;
 	}
 
 	/**

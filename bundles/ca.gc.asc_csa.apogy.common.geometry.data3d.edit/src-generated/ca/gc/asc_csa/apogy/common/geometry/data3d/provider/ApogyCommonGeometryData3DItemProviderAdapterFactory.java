@@ -1037,6 +1037,14 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ApogyCommonGeometryData3DFacadeItemProvider apogyCommonGeometryData3DFacadeItemProvider;
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1060,14 +1068,6 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ApogyCommonGeometryData3DFacadeItemProvider apogy__CommonGeometryData3DFacadeItemProvider;
-
-	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1075,11 +1075,11 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 	 */
 	@Override
 	public Adapter createApogyCommonGeometryData3DFacadeAdapter() {
-		if (apogy__CommonGeometryData3DFacadeItemProvider == null) {
-			apogy__CommonGeometryData3DFacadeItemProvider = new ApogyCommonGeometryData3DFacadeItemProvider(this);
+		if (apogyCommonGeometryData3DFacadeItemProvider == null) {
+			apogyCommonGeometryData3DFacadeItemProvider = new ApogyCommonGeometryData3DFacadeItemProvider(this);
 		}
 
-		return apogy__CommonGeometryData3DFacadeItemProvider;
+		return apogyCommonGeometryData3DFacadeItemProvider;
 	}
 
 	/**
@@ -1296,7 +1296,7 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 		if (voxelBased3DPointCloudResamplerItemProvider != null) voxelBased3DPointCloudResamplerItemProvider.dispose();
 		if (positionMarkerItemProvider != null) positionMarkerItemProvider.dispose();
 		if (rigidBodyPoseTrackerItemProvider != null) rigidBodyPoseTrackerItemProvider.dispose();
-		if (apogy__CommonGeometryData3DFacadeItemProvider != null) apogy__CommonGeometryData3DFacadeItemProvider.dispose();
+		if (apogyCommonGeometryData3DFacadeItemProvider != null) apogyCommonGeometryData3DFacadeItemProvider.dispose();
 		if (data3DIOItemProvider != null) data3DIOItemProvider.dispose();
 		if (data3DUtilsItemProvider != null) data3DUtilsItemProvider.dispose();
 	}

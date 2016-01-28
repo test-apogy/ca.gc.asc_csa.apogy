@@ -406,8 +406,8 @@ public class ApogyCoreEnvironmentFactoryImpl extends EFactoryImpl implements Apo
 	 * @generated
 	 */
 	public ApogyCoreEnvironmentFacade createApogyCoreEnvironmentFacade() {
-		ApogyCoreEnvironmentFacadeImpl apogy__CoreEnvironmentFacade = new ApogyCoreEnvironmentFacadeImpl();
-		return apogy__CoreEnvironmentFacade;
+		ApogyCoreEnvironmentFacadeImpl apogyCoreEnvironmentFacade = new ApogyCoreEnvironmentFacadeImpl();
+		return apogyCoreEnvironmentFacade;
 	}
 
 		/**

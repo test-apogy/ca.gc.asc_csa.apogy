@@ -406,11 +406,11 @@ public class ApogyCoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWSYMPHONYPROJECTSETTINGS:
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWAPOGYPROJECTSETTINGS:
 				return createApogyProject((NewApogyProjectSettings)arguments.get(0));
-			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS:
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWAPOGYPROJECTSETTINGS:
 				return createApogySessionFolder((NewApogyProjectSettings)arguments.get(0));
-			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWSYMPHONYSESSIONSETTINGS:
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWAPOGYSESSIONSETTINGS:
 				return createApogySession((NewApogySessionSettings)arguments.get(0));
 			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION:
 				try {
@@ -421,7 +421,7 @@ public class ApogyCoreUIFacadeImpl extends MinimalEObjectImpl.Container
 				}
 			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___GET_APOGY_SESSION_FILE__ICONTAINER_STRING:
 				return getApogySessionFile((IContainer)arguments.get(0), (String)arguments.get(1));
-			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS:
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWAPOGYSYSTEMSETTINGS:
 				return createApogySystem((NewApogySystemSettings)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

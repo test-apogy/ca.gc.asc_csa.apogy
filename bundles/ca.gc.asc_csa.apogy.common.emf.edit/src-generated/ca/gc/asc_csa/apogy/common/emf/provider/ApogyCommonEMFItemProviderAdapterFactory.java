@@ -91,7 +91,7 @@ public class ApogyCommonEMFItemProviderAdapterFactory extends ApogyCommonEMFAdap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCommonEMFFacadeItemProvider apogy__CommonEMFFacadeItemProvider;
+	protected ApogyCommonEMFFacadeItemProvider apogyCommonEMFFacadeItemProvider;
 
 		/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade}.
@@ -101,11 +101,11 @@ public class ApogyCommonEMFItemProviderAdapterFactory extends ApogyCommonEMFAdap
 	 */
 	@Override
 	public Adapter createApogyCommonEMFFacadeAdapter() {
-		if (apogy__CommonEMFFacadeItemProvider == null) {
-			apogy__CommonEMFFacadeItemProvider = new ApogyCommonEMFFacadeItemProvider(this);
+		if (apogyCommonEMFFacadeItemProvider == null) {
+			apogyCommonEMFFacadeItemProvider = new ApogyCommonEMFFacadeItemProvider(this);
 		}
 
-		return apogy__CommonEMFFacadeItemProvider;
+		return apogyCommonEMFFacadeItemProvider;
 	}
 
 		/**
@@ -547,7 +547,7 @@ public class ApogyCommonEMFItemProviderAdapterFactory extends ApogyCommonEMFAdap
 	 */
   public void dispose()
   {
-		if (apogy__CommonEMFFacadeItemProvider != null) apogy__CommonEMFFacadeItemProvider.dispose();
+		if (apogyCommonEMFFacadeItemProvider != null) apogyCommonEMFFacadeItemProvider.dispose();
 		if (eObjectReferenceItemProvider != null) eObjectReferenceItemProvider.dispose();
 		if (serverItemProvider != null) serverItemProvider.dispose();
 		if (startableItemProvider != null) startableItemProvider.dispose();

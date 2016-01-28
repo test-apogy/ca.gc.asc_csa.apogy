@@ -119,7 +119,7 @@ public class ApogyAddonsSensorsPosePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__AddonsSensorsPoseFacadeEClass = null;
+	private EClass apogyAddonsSensorsPoseFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -539,7 +539,7 @@ public class ApogyAddonsSensorsPosePackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EClass getApogyAddonsSensorsPoseFacade() {
-		return apogy__AddonsSensorsPoseFacadeEClass;
+		return apogyAddonsSensorsPoseFacadeEClass;
 	}
 
 	/**
@@ -548,7 +548,7 @@ public class ApogyAddonsSensorsPosePackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	public EOperation getApogyAddonsSensorsPoseFacade__CreateCSVDataLogger__String() {
-		return apogy__AddonsSensorsPoseFacadeEClass.getEOperations().get(0);
+		return apogyAddonsSensorsPoseFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -644,8 +644,8 @@ public class ApogyAddonsSensorsPosePackageImpl extends EPackageImpl implements A
 
 		csvDataLoggerEClass = createEClass(CSV_DATA_LOGGER);
 
-		apogy__AddonsSensorsPoseFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_POSE_FACADE);
-		createEOperation(apogy__AddonsSensorsPoseFacadeEClass, APOGY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING);
+		apogyAddonsSensorsPoseFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_POSE_FACADE);
+		createEOperation(apogyAddonsSensorsPoseFacadeEClass, APOGY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING);
 
 		// Create data types
 		exceptionEDataType = createEDataType(EXCEPTION);
@@ -763,7 +763,7 @@ public class ApogyAddonsSensorsPosePackageImpl extends EPackageImpl implements A
 
 		initEClass(csvDataLoggerEClass, CSVDataLogger.class, "CSVDataLogger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(apogy__AddonsSensorsPoseFacadeEClass, ApogyAddonsSensorsPoseFacade.class, "ApogyAddonsSensorsPoseFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyAddonsSensorsPoseFacadeEClass, ApogyAddonsSensorsPoseFacade.class, "ApogyAddonsSensorsPoseFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getApogyAddonsSensorsPoseFacade__CreateCSVDataLogger__String(), this.getCSVDataLogger(), "createCSVDataLogger", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "fileName", 0, 1, !IS_UNIQUE, IS_ORDERED);

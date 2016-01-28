@@ -107,8 +107,8 @@ public class ApogyAddonsMobilityPathplannersFactoryImpl extends EFactoryImpl imp
 	 * @generated
 	 */
 	public ApogyAddonsMobilityPathplannersFacade createApogyAddonsMobilityPathplannersFacade() {
-		ApogyAddonsMobilityPathplannersFacadeImpl apogy__AddonsMobilityPathplannersFacade = new ApogyAddonsMobilityPathplannersFacadeImpl();
-		return apogy__AddonsMobilityPathplannersFacade;
+		ApogyAddonsMobilityPathplannersFacadeImpl apogyAddonsMobilityPathplannersFacade = new ApogyAddonsMobilityPathplannersFacadeImpl();
+		return apogyAddonsMobilityPathplannersFacade;
 	}
 
 	/**

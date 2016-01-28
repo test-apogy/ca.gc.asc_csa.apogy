@@ -123,7 +123,7 @@ public interface ApogyCoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWSYMPHONYPROJECTSETTINGS = 0;
+	int APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWAPOGYPROJECTSETTINGS = 0;
 
 		/**
 	 * The operation id for the '<em>Create Apogy Session Folder</em>' operation.
@@ -132,7 +132,7 @@ public interface ApogyCoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS = 1;
+	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWAPOGYPROJECTSETTINGS = 1;
 
 		/**
 	 * The operation id for the '<em>Create Apogy Session</em>' operation.
@@ -141,7 +141,7 @@ public interface ApogyCoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWSYMPHONYSESSIONSETTINGS = 2;
+	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWAPOGYSESSIONSETTINGS = 2;
 
 		/**
 	 * The operation id for the '<em>Create Apogy Session File</em>' operation.
@@ -168,7 +168,7 @@ public interface ApogyCoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS = 5;
+	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWAPOGYSYSTEMSETTINGS = 5;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1150,7 +1150,7 @@ public interface ApogyCoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogyProject__NewApogyProjectSettings();
+		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWAPOGYPROJECTSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogyProject__NewApogyProjectSettings();
 
 				/**
 		 * The meta object literal for the '<em><b>Create Apogy Session Folder</b></em>' operation.
@@ -1158,7 +1158,7 @@ public interface ApogyCoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogySessionFolder__NewApogyProjectSettings();
+		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWAPOGYPROJECTSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogySessionFolder__NewApogyProjectSettings();
 
 				/**
 		 * The meta object literal for the '<em><b>Create Apogy Session</b></em>' operation.
@@ -1166,7 +1166,7 @@ public interface ApogyCoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWSYMPHONYSESSIONSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogySession__NewApogySessionSettings();
+		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWAPOGYSESSIONSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogySession__NewApogySessionSettings();
 
 				/**
 		 * The meta object literal for the '<em><b>Create Apogy Session File</b></em>' operation.
@@ -1190,7 +1190,7 @@ public interface ApogyCoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogySystem__NewApogySystemSettings();
+		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWAPOGYSYSTEMSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogySystem__NewApogySystemSettings();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyResourceSettingsImpl <em>Apogy Resource Settings</em>}' class.

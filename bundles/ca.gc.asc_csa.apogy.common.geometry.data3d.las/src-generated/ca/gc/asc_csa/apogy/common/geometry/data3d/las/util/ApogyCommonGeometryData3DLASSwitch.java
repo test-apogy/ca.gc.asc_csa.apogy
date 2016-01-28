@@ -92,8 +92,8 @@ public class ApogyCommonGeometryData3DLASSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ApogyCommonGeometryData3DLASPackage.APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE: {
-				ApogyCommonGeometryData3DLASFacade apogy__CommonGeometryData3DLASFacade = (ApogyCommonGeometryData3DLASFacade)theEObject;
-				T result = caseApogyCommonGeometryData3DLASFacade(apogy__CommonGeometryData3DLASFacade);
+				ApogyCommonGeometryData3DLASFacade apogyCommonGeometryData3DLASFacade = (ApogyCommonGeometryData3DLASFacade)theEObject;
+				T result = caseApogyCommonGeometryData3DLASFacade(apogyCommonGeometryData3DLASFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

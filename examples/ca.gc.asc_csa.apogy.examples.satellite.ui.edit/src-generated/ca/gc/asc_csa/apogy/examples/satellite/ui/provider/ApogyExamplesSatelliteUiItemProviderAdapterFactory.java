@@ -93,7 +93,7 @@ public class ApogyExamplesSatelliteUiItemProviderAdapterFactory extends ApogyExa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyExamplesSatelliteUiFacadeItemProvider apogy__ExamplesSatelliteUiFacadeItemProvider;
+	protected ApogyExamplesSatelliteUiFacadeItemProvider apogyExamplesSatelliteUiFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade}.
@@ -103,11 +103,11 @@ public class ApogyExamplesSatelliteUiItemProviderAdapterFactory extends ApogyExa
 	 */
 	@Override
 	public Adapter createApogyExamplesSatelliteUiFacadeAdapter() {
-		if (apogy__ExamplesSatelliteUiFacadeItemProvider == null) {
-			apogy__ExamplesSatelliteUiFacadeItemProvider = new ApogyExamplesSatelliteUiFacadeItemProvider(this);
+		if (apogyExamplesSatelliteUiFacadeItemProvider == null) {
+			apogyExamplesSatelliteUiFacadeItemProvider = new ApogyExamplesSatelliteUiFacadeItemProvider(this);
 		}
 
-		return apogy__ExamplesSatelliteUiFacadeItemProvider;
+		return apogyExamplesSatelliteUiFacadeItemProvider;
 	}
 
 	/**
@@ -236,7 +236,7 @@ public class ApogyExamplesSatelliteUiItemProviderAdapterFactory extends ApogyExa
 	 * @generated
 	 */
 	public void dispose() {
-		if (apogy__ExamplesSatelliteUiFacadeItemProvider != null) apogy__ExamplesSatelliteUiFacadeItemProvider.dispose();
+		if (apogyExamplesSatelliteUiFacadeItemProvider != null) apogyExamplesSatelliteUiFacadeItemProvider.dispose();
 	}
 
 }

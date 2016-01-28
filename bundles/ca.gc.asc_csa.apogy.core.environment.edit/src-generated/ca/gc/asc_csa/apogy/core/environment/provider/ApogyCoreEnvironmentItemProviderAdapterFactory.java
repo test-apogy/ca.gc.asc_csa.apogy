@@ -491,7 +491,7 @@ public class ApogyCoreEnvironmentItemProviderAdapterFactory extends ApogyCoreEnv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreEnvironmentFacadeItemProvider apogy__CoreEnvironmentFacadeItemProvider;
+	protected ApogyCoreEnvironmentFacadeItemProvider apogyCoreEnvironmentFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade}.
@@ -501,11 +501,11 @@ public class ApogyCoreEnvironmentItemProviderAdapterFactory extends ApogyCoreEnv
 	 */
 	@Override
 	public Adapter createApogyCoreEnvironmentFacadeAdapter() {
-		if (apogy__CoreEnvironmentFacadeItemProvider == null) {
-			apogy__CoreEnvironmentFacadeItemProvider = new ApogyCoreEnvironmentFacadeItemProvider(this);
+		if (apogyCoreEnvironmentFacadeItemProvider == null) {
+			apogyCoreEnvironmentFacadeItemProvider = new ApogyCoreEnvironmentFacadeItemProvider(this);
 		}
 
-		return apogy__CoreEnvironmentFacadeItemProvider;
+		return apogyCoreEnvironmentFacadeItemProvider;
 	}
 
 	/**
@@ -1461,7 +1461,7 @@ public class ApogyCoreEnvironmentItemProviderAdapterFactory extends ApogyCoreEnv
 		if (earthItemProvider != null) earthItemProvider.dispose();
 		if (moonItemProvider != null) moonItemProvider.dispose();
 		if (environmentUtilitiesItemProvider != null) environmentUtilitiesItemProvider.dispose();
-		if (apogy__CoreEnvironmentFacadeItemProvider != null) apogy__CoreEnvironmentFacadeItemProvider.dispose();
+		if (apogyCoreEnvironmentFacadeItemProvider != null) apogyCoreEnvironmentFacadeItemProvider.dispose();
 		if (starItemProvider != null) starItemProvider.dispose();
 		if (starFieldItemProvider != null) starFieldItemProvider.dispose();
 		if (astronomyUtilsItemProvider != null) astronomyUtilsItemProvider.dispose();

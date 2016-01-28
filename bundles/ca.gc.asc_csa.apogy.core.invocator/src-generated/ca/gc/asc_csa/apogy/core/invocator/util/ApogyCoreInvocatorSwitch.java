@@ -142,8 +142,8 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
   {
 		switch (classifierID) {
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE: {
-				ApogyCoreInvocatorFacade apogy__CoreInvocatorFacade = (ApogyCoreInvocatorFacade)theEObject;
-				T result = caseApogyCoreInvocatorFacade(apogy__CoreInvocatorFacade);
+				ApogyCoreInvocatorFacade apogyCoreInvocatorFacade = (ApogyCoreInvocatorFacade)theEObject;
+				T result = caseApogyCoreInvocatorFacade(apogyCoreInvocatorFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

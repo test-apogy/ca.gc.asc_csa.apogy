@@ -109,7 +109,7 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__AddonsGeometryPathsFacadeEClass = null;
+	private EClass apogyAddonsGeometryPathsFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -358,7 +358,7 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EClass getApogyAddonsGeometryPathsFacade() {
-		return apogy__AddonsGeometryPathsFacadeEClass;
+		return apogyAddonsGeometryPathsFacadeEClass;
 	}
 
 	/**
@@ -367,7 +367,7 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyAddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath() {
-		return apogy__AddonsGeometryPathsFacadeEClass.getEOperations().get(0);
+		return apogyAddonsGeometryPathsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -376,7 +376,7 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	public EOperation getApogyAddonsGeometryPathsFacade__CreateWayPointPath__List() {
-		return apogy__AddonsGeometryPathsFacadeEClass.getEOperations().get(1);
+		return apogyAddonsGeometryPathsFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -452,9 +452,9 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 		uniformDistanceWayPointPathInterpolatorEClass = createEClass(UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR);
 		createEAttribute(uniformDistanceWayPointPathInterpolatorEClass, UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL);
 
-		apogy__AddonsGeometryPathsFacadeEClass = createEClass(APOGY_ADDONS_GEOMETRY_PATHS_FACADE);
-		createEOperation(apogy__AddonsGeometryPathsFacadeEClass, APOGY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH);
-		createEOperation(apogy__AddonsGeometryPathsFacadeEClass, APOGY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST);
+		apogyAddonsGeometryPathsFacadeEClass = createEClass(APOGY_ADDONS_GEOMETRY_PATHS_FACADE);
+		createEOperation(apogyAddonsGeometryPathsFacadeEClass, APOGY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH);
+		createEOperation(apogyAddonsGeometryPathsFacadeEClass, APOGY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST);
 
 		// Create enums
 		splineEndControlPointGenerationModeEEnum = createEEnum(SPLINE_END_CONTROL_POINT_GENERATION_MODE);
@@ -550,7 +550,7 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 		initEClass(uniformDistanceWayPointPathInterpolatorEClass, UniformDistanceWayPointPathInterpolator.class, "UniformDistanceWayPointPathInterpolator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUniformDistanceWayPointPathInterpolator_DistanceInterval(), theEcorePackage.getEDouble(), "distanceInterval", null, 0, 1, UniformDistanceWayPointPathInterpolator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(apogy__AddonsGeometryPathsFacadeEClass, ApogyAddonsGeometryPathsFacade.class, "ApogyAddonsGeometryPathsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyAddonsGeometryPathsFacadeEClass, ApogyAddonsGeometryPathsFacade.class, "ApogyAddonsGeometryPathsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyAddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getWayPointPath(), "wayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);

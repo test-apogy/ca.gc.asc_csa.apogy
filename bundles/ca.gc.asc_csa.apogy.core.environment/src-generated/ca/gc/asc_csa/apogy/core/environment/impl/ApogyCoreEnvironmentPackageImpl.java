@@ -230,7 +230,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogy__CoreEnvironmentFacadeEClass = null;
+	private EClass apogyCoreEnvironmentFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -1324,7 +1324,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EClass getApogyCoreEnvironmentFacade() {
-		return apogy__CoreEnvironmentFacadeEClass;
+		return apogyCoreEnvironmentFacadeEClass;
 	}
 
 		/**
@@ -1333,7 +1333,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeStars() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(0);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -1342,7 +1342,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(1);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -1351,7 +1351,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(2);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -1360,7 +1360,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(3);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(3);
 	}
 
 		/**
@@ -1369,7 +1369,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetMarsYardGeographicalCoordinates() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(4);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(4);
 	}
 
 		/**
@@ -1378,7 +1378,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__CreateStar__float_double_double() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(5);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(5);
 	}
 
 		/**
@@ -1387,7 +1387,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetMarsYardTransformNode() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(6);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(6);
 	}
 
 		/**
@@ -1396,7 +1396,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(7);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(7);
 	}
 
 		/**
@@ -1405,7 +1405,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeEarthAtmosphere() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(8);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(8);
 	}
 
 		/**
@@ -1414,7 +1414,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(9);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(9);
 	}
 
 		/**
@@ -1423,7 +1423,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__Node_Environment() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(10);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(10);
 	}
 
 		/**
@@ -1432,7 +1432,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetMoonVector__ApogySystem_String_Environment() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(11);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(11);
 	}
 
 		/**
@@ -1441,7 +1441,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetMoonVector__Node_Environment() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(12);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(12);
 	}
 
 		/**
@@ -1450,7 +1450,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetVector__Node_ApogySystem_ConnectionPoint_Environment() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(13);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(13);
 	}
 
 		/**
@@ -1459,7 +1459,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_ConnectionPoint_Environment() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(14);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(14);
 	}
 
 		/**
@@ -1468,7 +1468,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_String_Environment() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(15);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(15);
 	}
 
 		/**
@@ -1477,7 +1477,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_String_String_Environment() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(16);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(16);
 	}
 
 		/**
@@ -1486,7 +1486,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__CreateEImage__List() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(17);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(17);
 	}
 
 		/**
@@ -1495,7 +1495,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(18);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(18);
 	}
 
 		/**
@@ -1504,7 +1504,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetBestResolutionRectangularRegionImage__List() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(19);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(19);
 	}
 
 		/**
@@ -1513,7 +1513,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(20);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(20);
 	}
 
 		/**
@@ -1522,7 +1522,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(21);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(21);
 	}
 
 		/**
@@ -1531,7 +1531,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(22);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(22);
 	}
 
 		/**
@@ -1540,7 +1540,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(23);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(23);
 	}
 
 		/**
@@ -1549,7 +1549,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(24);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(24);
 	}
 
 		/**
@@ -1558,7 +1558,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(25);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(25);
 	}
 
 		/**
@@ -1567,7 +1567,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(26);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(26);
 	}
 
 		/**
@@ -1576,7 +1576,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(27);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(27);
 	}
 
 		/**
@@ -1585,7 +1585,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationImage__List() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(28);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(28);
 	}
 
 		/**
@@ -1594,7 +1594,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetBestResolutionMapLayer__List() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(29);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(29);
 	}
 
 		/**
@@ -1603,7 +1603,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetVisibleImageMapLayerPresentation__List() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(30);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(30);
 	}
 
 		/**
@@ -1612,7 +1612,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	public EOperation getApogyCoreEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh() {
-		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(31);
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(31);
 	}
 
 		/**
@@ -3292,39 +3292,39 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		createEOperation(environmentUtilitiesEClass, ENVIRONMENT_UTILITIES___PARSE_DEG_MIN_SEC__STRING);
 		createEOperation(environmentUtilitiesEClass, ENVIRONMENT_UTILITIES___SORT_BY_MAGNITUDE__LIST);
 
-		apogy__CoreEnvironmentFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_FACADE);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST);
-		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH);
+		apogyCoreEnvironmentFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_FACADE);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_STRING_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_STRING_STRING_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH);
 
 		starEClass = createEClass(STAR);
 		createEAttribute(starEClass, STAR__MAGNITUDE);
@@ -3758,7 +3758,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		initEClass(apogy__CoreEnvironmentFacadeEClass, ApogyCoreEnvironmentFacade.class, "ApogyCoreEnvironmentFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyCoreEnvironmentFacadeEClass, ApogyCoreEnvironmentFacade.class, "ApogyCoreEnvironmentFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEOperation(getApogyCoreEnvironmentFacade__CreateAndInitializeStars(), this.getStarField(), "createAndInitializeStars", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -4609,7 +4609,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 			 "documentation", "Method that sorts a list of stars by magnitude."
 		   });	
 		addAnnotation
-		  (apogy__CoreEnvironmentFacadeEClass, 
+		  (apogyCoreEnvironmentFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "A class providing utilities methods to create fully initialze object."

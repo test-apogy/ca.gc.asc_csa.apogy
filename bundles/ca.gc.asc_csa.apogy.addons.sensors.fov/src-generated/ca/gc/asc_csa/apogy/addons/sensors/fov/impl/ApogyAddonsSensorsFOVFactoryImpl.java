@@ -148,8 +148,8 @@ public class ApogyAddonsSensorsFOVFactoryImpl extends EFactoryImpl implements Ap
 	 * @generated
 	 */
 	public ApogyAddonsSensorsFOVFacade createApogyAddonsSensorsFOVFacade() {
-		ApogyAddonsSensorsFOVFacadeImpl apogy__AddonsSensorsFOVFacade = new ApogyAddonsSensorsFOVFacadeImpl();
-		return apogy__AddonsSensorsFOVFacade;
+		ApogyAddonsSensorsFOVFacadeImpl apogyAddonsSensorsFOVFacade = new ApogyAddonsSensorsFOVFacadeImpl();
+		return apogyAddonsSensorsFOVFacade;
 	}
 
 	/**

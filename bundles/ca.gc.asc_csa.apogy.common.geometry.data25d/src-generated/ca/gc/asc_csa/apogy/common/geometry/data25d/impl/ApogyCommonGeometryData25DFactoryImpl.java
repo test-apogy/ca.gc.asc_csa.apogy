@@ -177,8 +177,8 @@ public class ApogyCommonGeometryData25DFactoryImpl extends EFactoryImpl implemen
 	 * @generated
 	 */
 	public ApogyCommonGeometryData25DFacade createApogyCommonGeometryData25DFacade() {
-		ApogyCommonGeometryData25DFacadeImpl apogy__CommonGeometryData25DFacade = new ApogyCommonGeometryData25DFacadeImpl();
-		return apogy__CommonGeometryData25DFacade;
+		ApogyCommonGeometryData25DFacadeImpl apogyCommonGeometryData25DFacade = new ApogyCommonGeometryData25DFacadeImpl();
+		return apogyCommonGeometryData25DFacade;
 	}
 
 	/**

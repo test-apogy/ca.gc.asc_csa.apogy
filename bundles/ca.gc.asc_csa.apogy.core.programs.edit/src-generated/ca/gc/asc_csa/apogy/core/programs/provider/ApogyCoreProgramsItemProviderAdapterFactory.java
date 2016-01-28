@@ -90,7 +90,7 @@ public class ApogyCoreProgramsItemProviderAdapterFactory extends ApogyCoreProgra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreProgramsFacadeItemProvider apogy__CoreProgramsFacadeItemProvider;
+	protected ApogyCoreProgramsFacadeItemProvider apogyCoreProgramsFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade}.
@@ -100,11 +100,11 @@ public class ApogyCoreProgramsItemProviderAdapterFactory extends ApogyCoreProgra
 	 */
 	@Override
 	public Adapter createApogyCoreProgramsFacadeAdapter() {
-		if (apogy__CoreProgramsFacadeItemProvider == null) {
-			apogy__CoreProgramsFacadeItemProvider = new ApogyCoreProgramsFacadeItemProvider(this);
+		if (apogyCoreProgramsFacadeItemProvider == null) {
+			apogyCoreProgramsFacadeItemProvider = new ApogyCoreProgramsFacadeItemProvider(this);
 		}
 
-		return apogy__CoreProgramsFacadeItemProvider;
+		return apogyCoreProgramsFacadeItemProvider;
 	}
 
 	/**
@@ -256,7 +256,7 @@ public class ApogyCoreProgramsItemProviderAdapterFactory extends ApogyCoreProgra
 	 * @generated
 	 */
 	public void dispose() {
-		if (apogy__CoreProgramsFacadeItemProvider != null) apogy__CoreProgramsFacadeItemProvider.dispose();
+		if (apogyCoreProgramsFacadeItemProvider != null) apogyCoreProgramsFacadeItemProvider.dispose();
 		if (timeIntervalItemProvider != null) timeIntervalItemProvider.dispose();
 	}
 

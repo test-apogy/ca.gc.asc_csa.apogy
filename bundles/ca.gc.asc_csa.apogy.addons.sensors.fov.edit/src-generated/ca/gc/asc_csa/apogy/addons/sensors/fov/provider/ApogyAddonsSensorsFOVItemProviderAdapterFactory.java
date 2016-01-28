@@ -268,7 +268,7 @@ public class ApogyAddonsSensorsFOVItemProviderAdapterFactory extends ApogyAddons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyAddonsSensorsFOVFacadeItemProvider apogy__AddonsSensorsFOVFacadeItemProvider;
+	protected ApogyAddonsSensorsFOVFacadeItemProvider apogyAddonsSensorsFOVFacadeItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade}.
@@ -278,11 +278,11 @@ public class ApogyAddonsSensorsFOVItemProviderAdapterFactory extends ApogyAddons
 	 */
 	@Override
 	public Adapter createApogyAddonsSensorsFOVFacadeAdapter() {
-		if (apogy__AddonsSensorsFOVFacadeItemProvider == null) {
-			apogy__AddonsSensorsFOVFacadeItemProvider = new ApogyAddonsSensorsFOVFacadeItemProvider(this);
+		if (apogyAddonsSensorsFOVFacadeItemProvider == null) {
+			apogyAddonsSensorsFOVFacadeItemProvider = new ApogyAddonsSensorsFOVFacadeItemProvider(this);
 		}
 
-		return apogy__AddonsSensorsFOVFacadeItemProvider;
+		return apogyAddonsSensorsFOVFacadeItemProvider;
 	}
 
 	/**
@@ -418,7 +418,7 @@ public class ApogyAddonsSensorsFOVItemProviderAdapterFactory extends ApogyAddons
 		if (conicalFieldOfViewItemProvider != null) conicalFieldOfViewItemProvider.dispose();
 		if (circularSectorFieldOfViewItemProvider != null) circularSectorFieldOfViewItemProvider.dispose();
 		if (rectangularFrustrumFieldOfViewSamplingShapeItemProvider != null) rectangularFrustrumFieldOfViewSamplingShapeItemProvider.dispose();
-		if (apogy__AddonsSensorsFOVFacadeItemProvider != null) apogy__AddonsSensorsFOVFacadeItemProvider.dispose();
+		if (apogyAddonsSensorsFOVFacadeItemProvider != null) apogyAddonsSensorsFOVFacadeItemProvider.dispose();
 	}
 
 	/**
