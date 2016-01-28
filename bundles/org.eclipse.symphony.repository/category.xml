@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/org.eclipse.symphony.feature_0.5.0.qualifier.jar" id="org.eclipse.symphony.feature" version="0.5.0.qualifier">
-      <category name="org.eclipse.symphony"/>
-   </feature>
-   <category-def name="org.eclipse.symphony" label="Symphony"/>
-</site>
