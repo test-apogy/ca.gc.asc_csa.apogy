@@ -1,0 +1,36 @@
+@GenModel(prefix="ApogyAddonsSensorsFOVUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyAddonsSensorsFOVUI",
+		  complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.fov.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.fov.ui.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui
+
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.common.topology.ui.RGB
+
+class FieldOfViewPresentation extends NodePresentation
+{
+	float transparency
+	MeshPresentationMode presentationMode
+	boolean showOutlineOnly = "true"
+	boolean showProjection = "false"
+	RGB projectionColor
+} 
+
+class CircularSectorFieldOfViewPresentation extends FieldOfViewPresentation
+{
+}
+
+class ConicalFieldOfViewPresentation extends FieldOfViewPresentation
+{
+}
+
+class RectangularFrustrumFieldOfViewPresentation extends FieldOfViewPresentation
+{
+}

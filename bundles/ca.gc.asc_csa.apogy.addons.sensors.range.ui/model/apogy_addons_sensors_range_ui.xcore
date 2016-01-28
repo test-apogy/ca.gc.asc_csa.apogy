@@ -1,0 +1,27 @@
+@GenModel(prefix="ApogyAddonsSensorsRangeUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyAddonsSensorsRangeUI",
+		  complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.range.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.range.ui.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui
+
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
+
+class RasterScanDataPresentation extends NodePresentation
+{
+	MeshPresentationMode fovPresentationMode = "WIREFRAME"
+	boolean fovVisible = "true"
+	boolean dataVisible = "true"
+}
+
+class SimpleSonarPresentation extends NodePresentation
+{
+	boolean detectedRangeVisible = "true"
+}
+

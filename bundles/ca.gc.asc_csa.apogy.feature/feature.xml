@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ca.gc.asc_csa.apogy.feature"
+      label="%featureName"
+      version="0.5.0.qualifier">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="ca.gc.asc_csa.apogy.addons.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="ca.gc.asc_csa.apogy.common.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="ca.gc.asc_csa.apogy.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="ca.gc.asc_csa.apogy.examples.feature"
+         version="0.0.0"/>
+
+</feature>

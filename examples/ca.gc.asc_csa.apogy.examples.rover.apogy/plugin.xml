@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_examples_rover -->
+      <package
+            uri="ca.gc.asc_csa.apogy.examples.rover.apogy"
+            class="ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage"
+            genModel="model/apogy_examples_rover_apogy.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.core.invocator.typeContributor">
+      <Type
+            URI="model/RoverApogySystem.ss">
+      </Type>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
+      <SessionProvider
+            Description="Session showing the use of the Rover example system."
+            Name="Rover Example"
+            URI="sessions/RoverExampleSession.sym">
+      </SessionProvider>
+   </extension>
+
+</plugin>

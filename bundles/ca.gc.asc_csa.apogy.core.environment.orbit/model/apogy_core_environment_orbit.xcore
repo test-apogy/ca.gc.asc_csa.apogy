@@ -1,0 +1,234 @@
+@GenModel(prefix="ApogyCoreEnvironmentOrbit",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyCoreEnvironmentOrbit",
+		  complianceLevel="8.0",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.orbit/src-generated")
+@GenModel(editDirectory= "/ca.gc.asc_csa.apogy.core.environment.orbit.edit/src-generated")
+//@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.core.environment.orbit.tests/src-generated")
+
+package ca.gc.asc_csa.apogy.core.environment.orbit
+
+import org.eclipse.emf.ecore.EDate
+
+import ca.gc.asc_csa.apogy.common.emf.Timed
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Described
+
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3
+
+import ca.gc.asc_csa.apogy.core.AbstractOrbitModel
+
+import ca.gc.asc_csa.apogy.core.environment.Worksite
+
+// Basic Types
+// Basics Types
+type List < T > wraps java.util.List
+type Exception wraps java.lang.Exception
+
+abstract class OrbitWorksite extends Worksite
+{	
+	/*
+	 * The active OrbitModel to use to update the orbit worksite.
+	 */
+	refers AbstractOrbitModel activeOrbitModel
+}
+
+abstract class AbstractFrame extends Named, Described
+{
+		
+}
+
+/*
+ * Defines the triplet of Position, Velocity, Acceleration.
+ */
+class PVACoordinates
+{
+	/*
+	 * The position.
+	 */
+	@GenModel(apogy_units="m")
+	contains Tuple3d[1] position
+	
+	/*
+	 * The velocity.
+	 */
+	@GenModel(apogy_units="m/s")
+	contains Tuple3d[1] velocity
+	
+	/*
+	 * The acceleration.
+	 */
+	@GenModel(apogy_units="m/s²")
+	contains Tuple3d[1] acceleration
+	
+	/*
+	 * The angular velocity (spin) of this point as seen from the origin.
+	 */
+	@GenModel(apogy_units="rad/s")
+	contains Tuple3d[1] angularVelocity
+}
+
+/*
+ * Defines the triplet of Position, Velocity, Acceleration that is time stamped.
+ */
+class TimedStampedPVACoordinates extends PVACoordinates, Timed
+{
+}
+
+/*
+ * This interface represents a PVCoordinates provider.
+ */
+interface PVCoordinatesProviderProvider
+{
+	op TimedStampedPVACoordinates getPVCoordinates(Date date, AbstractFrame frame)
+}
+
+class AngularCoordinates
+{
+	/*
+	 * The rotation expressed as a rotation matrix.
+	 */
+	contains Matrix3x3 rotation
+	
+	/*
+	 * The rotation rates, in rad/s
+	 */
+	contains Tuple3d[1] angularRate
+	
+	/*
+	 * The rotation acceleration, in rad/s²
+	 */
+	contains Tuple3d[1] angularAcceleration
+}
+
+class TimedStampedAngularCoordinates extends AngularCoordinates, Timed
+{
+	
+}
+
+/*
+ * This class represents the rotation between a reference frame and the satellite frame,
+ * as well as the spin of the satellite (axis and rotation rate).
+ */
+class SpacecraftAttitude extends Timed
+{
+	contains TimedStampedAngularCoordinates orientation
+	
+	contains AbstractFrame referenceFrame
+}
+
+/*
+ * This interface represents an attitude provider. 
+ * An attitude provider provides a way to compute an Attitude from an date and position-velocity local provider.
+ */
+interface AttitudeProvider
+{
+	op SpacecraftAttitude getAttitude(PVCoordinatesProviderProvider pvProvider, Date date, AbstractFrame frame)
+}
+
+/*
+ * Defines a space craft state (position, velocity, acceleration and attitude) at one point in time.
+ */
+class SpacecraftState extends Timed
+{
+	/*
+	 * The spacecraft PVA coordinates at the specified time.
+	 */
+	@GenModel(property="Readonly")
+	contains TimedStampedPVACoordinates coordinates
+	
+	/*
+	 * The spacecraft attitude at the specified time.
+	 */
+	@GenModel(property="Readonly")
+	contains TimedStampedAngularCoordinates attitude
+	
+	/*
+	 * The spacecraft orbit at the specified time.
+	 */
+	@GenModel(property="Readonly")
+	contains Orbit orbit
+}
+
+/*
+ * Defines an Orbit. An orbit defines the orbital parameter at a given point in time (orbital parameters can change with time.)
+ */
+abstract class Orbit extends Named, Described, Timed
+{		
+	/*
+	 * The inertial frame used to represent this orbit.
+	 */
+	contains AbstractFrame referenceFrame
+}
+
+
+/*
+ * Defines a class that propagate an initial orbit through time.
+ */
+abstract class AbstractOrbitPropagator extends Named, Described
+{	
+	
+	/*
+	 * The frame in which the orbit is propagated.
+	 */
+	contains AbstractFrame referenceFrame
+	
+	/*
+	 * The attitude provider. Can be used to specify an attitude control law.
+	 */
+	contains AttitudeProvider[0..*] attitudeProvider
+	
+	/*
+	 * The initial orbit to propagate in time. 
+	 */
+	refers Orbit[1] initialOrbit	
+	
+	/*
+	 * Propagate the current orbit to a specified time to get a Spacecraft state.
+	 */
+	op SpacecraftState propagate(EDate targetDate) throws Exception
+	
+	/*
+	 * Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.
+	 * @param timeInterval The time interval to get spacecraft states, in seconds.
+	 */
+	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(apogy_units="s") double timeInterval) throws Exception
+	
+	/*
+	 * Defines the earliest data for which the propagator is valid.
+	 */
+	EDate[1] validFromDate
+	
+	/*
+	 * Defines the latest data for which the propagator is valid.
+	 */
+	EDate[1] validToDate
+	
+	/*
+	 * Returns wether or not a specified date falls within the validity range of the propagator.
+	 */
+	op boolean isDateInValidRange(EDate date)
+}
+
+/*
+ * Class that defines an orbit model. An orbit model specifies both initial condition (through the initial Orbit), and 
+ * a propagation method (through the AbstractOrbitPropagator).
+ */
+class OrbitModel extends AbstractOrbitModel
+{
+	contains Orbit initialOrbit
+	contains AbstractOrbitPropagator propagator
+}
+
+/*
+ * A class providing utilities methods for Orbits.
+ */
+class ApogyCoreEnvironmentOrbitFacade
+{
+	op OrbitModel createOrbitModelCopy(OrbitModel originalOrbitModel)
+}

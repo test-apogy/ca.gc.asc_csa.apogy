@@ -1,0 +1,224 @@
+@GenModel(prefix="ApogyAddonsSensorsGPS",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="ApogyAddonsSensorsGPS",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.gps/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.gps.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.sensors.gps
+
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor
+import ca.gc.asc_csa.apogy.common.emf.Server
+
+type Exception wraps java.lang.Exception
+type IOException wraps java.io.IOException
+type InputStream wraps java.io.InputStream
+type OutputStream wraps java.io.OutputStream
+type Date wraps java.util.Date
+
+enum GPSStatus
+{
+	STOPPED as "STOPPED" = 0
+	RUNNING as "RUNNING" = 1
+	FAILED as "FAILED" = 2
+	RECONNECTING as "RECONNECTING" = 3
+	CONNECTING as "CONNECTING" = 4
+}
+
+enum GPSQuality
+{
+	INVALID as "INVALID" = 0
+	GPS_FIX as "GPS_FIX" = 1
+	DGPS_FIX as "DGPS_FIX" = 2
+	PPS_FIX as "PPS_FIX" = 3
+	RTK as "RTK" = 4
+	FLOAT_RTK as "FLOAT_RTK" = 5
+	ESTIMATED as "ESTIMATED" = 6
+	MANUAL_INPUT as "MANUAL_INPUT" = 7
+	SIMULATION as "SIMULATION" = 8
+}
+
+interface GPSConnection
+{
+	readonly InputStream [1] input
+	
+	readonly OutputStream [1] output
+	
+	/* 
+	 * Resets the connection: closesand opens the connection again.
+	 * Once this method completes, new 'input' and 'output' objects are available.
+	 */
+	op void reset() throws IOException
+}
+
+interface GPSDataInterpreter
+{
+	container GPS gps opposite dataInterpreter
+	
+	/*
+	 * Updates the GPS's value according to interpreted values.
+	 * <ul>
+	 * <li>Reads data from the GPS connexion</li>
+	 * <li>Interprete the data</li>
+	 * <li>Update the GPS's internal values accordingly</li>
+	 * </ul>
+	 */
+	op void updateGPS() throws IOException
+}
+
+class GPSReading
+{
+	double latitude
+	
+	double longitude
+	
+	double elevation
+	
+	GPSQuality quality
+	
+	Date timeStamp
+	
+	int numberOfSatellites
+	
+	double horizontalDilutionPos
+	
+	double meanSeaLevel
+	
+	int checkSum
+}
+
+class GPSPoseSensor extends PoseSensor, Server
+{
+	contains MarkedGPS [1..*] gps
+	
+	/*
+	 * This is the origin frame's latitude.  The default
+	 * value is set to "45.518206644445", which is the
+	 * MET's origin value.
+	 */
+	@GenModel(apogy_units="deg")
+	double originLatitude = "45.518206644445"
+	
+	/*
+	 * This is the origin frame's longitude.  The default
+	 * value is set to "-73.393904468182", which is the
+	 * value which is the MET's origin value.
+	 */
+	@GenModel(apogy_units="deg")
+	double originLongitude = "-73.393904468182"
+	
+	/*
+	 * The angle, in radians, between the Noth East frame (z rotation).
+	 * Default value is "0.5940676", which is the value used for the MET.
+	 */
+	@GenModel(apogy_units="rad")
+	double neAngle = "0.5940676"
+	
+	double originElevation = "33.0985"
+	
+	/*
+	 * While in the initialization stage, maxInitTime is the maximum
+	 * time we can wait for a valid GPS reading. The value is in
+	 * milliseconds and its default value is 10 000 ms (10 seconds).
+	 */
+	long maxInitTime = "10000"
+}
+
+class GPS
+{
+	contains GPSConnection connection
+	
+	contains GPSDataInterpreter dataInterpreter opposite gps
+	
+	/*
+	 * Gets the latest gps reading.  This call is not blocking.
+	 * Returns <code>null</code> if no reading is yet available.
+	 * 
+	 * If the gps's state is 'STOPPED' when this method is called,
+	 * a call to 'start()' is first made.
+	 */
+	contains GPSReading reading
+	
+	GPSStatus status
+	
+	/*
+	 * The desired update rate at which we want to acquire data.
+	 * This can be useful when parsing from a file to simulate the real GPS behavior.
+	 */
+	long updateRate
+	
+	/*
+	 * When the GPS falls into FAILED state, this attribute is set.
+	 */
+	transient Exception lastFailure
+	
+	/*
+	 * Maximum time allowed to reconnect the GPS, in milliseconds.
+	 * After that time, the GPS falls into 'FAILED' state.
+	 */
+	int maxReconnectTime = "10000"
+	
+	/*
+	 * Current speed in knots.
+	 */
+	double speedKnots
+	
+	/*
+	 * Current speed in km/h.
+	 */
+	double speedKmh
+	
+	/*
+	 * Starts the GPS.
+	 * The GPS starts acquiring data.
+	 */
+	op void start()
+	
+	/*
+	 * Stops the acquisition process.
+	 */
+	op void stop()
+	
+	/*
+	 * Resets the GPS:
+	 * <ul>
+	 * <li>lastFailure is set to <code>null</code></li>
+	 * <li>status is set to GPSStatus.STOPPED</li>
+	 * </ul>
+	 */
+	op void reset()
+	
+	/*
+	 * Resets the GPS:
+	 * <ul>
+	 * <li>lastFailure is set to <code>null</code></li>
+	 * <li>status is set to GPSStatus.STOPPED</li>
+	 * </ul>
+	 */
+	op boolean reconnect()
+}
+
+class MarkedGPS extends GPS
+{
+	contains PositionMarker marker
+}
+
+interface GPSRepository
+{
+	refers GPS [0..*] gpsDevices
+	
+	op void scanForDevices()
+	
+	op GPS getGPSById(String gpsId)
+}
+
+class ApogyAddonsSensorsGPSFacade
+{
+	op GPSPoseSensor createGPSPoseSensor(double originLatitude, double originLongitude)
+	
+	op MarkedGPS createMarkedGPS(PositionMarker marker)
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.3.4.2 2015/05/21 15:50:10 pallard Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+   
+      <package
+            uri="ca.gc.asc_csa.apogy.common.geometry.data25d.ui"
+            class="ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage"
+            genModel="model/apogy_common_geometry_data25d_ui.xcore"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesResetCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesResetCommand"
+            name="ResetVariableInstancesCommand">
+      </command>
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesClearCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesClearCommand"
+            name="ResetVariableInstancesCommand">
+      </command>      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ExecuteOperationCallCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ExecuteOperationCallCommand"
+            name="ExecuteOperationCallCommand">
+      </command>
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
+            name="VariableInstancesApplyInitializationDataCommand">
+      </command>
+
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
+            name="VariableInstancesCollectInitializationDataCommand">
+      </command>      
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
+            name="SetActiveInvocatorSessionCommand">
+      </command>            
+      
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesResetCommand"
+               label="Reset Instances"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
+               label="Set As Active Session"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.core.invocator.InvocatorSession">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>         
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesClearCommand"
+               label="Clear Instances"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
+               label="Apply Data"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
+               label="Collect Data"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ExecuteOperationCallCommand"
+               label="Invoke"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                    variable="activeMenuSelection">
+                 <or>
+                    <and>
+                       <count value="1"/>
+                       <iterate
+                          ifEmpty="false"
+                          operator="or">
+                            <instanceof
+                                value="ca.gc.asc_csa.apogy.core.invocator.OperationCall">
+                            </instanceof>
+                       </iterate>
+                    </and>
+                    <and>
+                       <count value="1"/>
+                       <iterate
+                          ifEmpty="false"
+                          operator="or">
+                            <instanceof
+                                value="ca.gc.asc_csa.apogy.core.invocator.OperationCallsList">
+                            </instanceof>
+                       </iterate>
+                    </and>
+                 </or>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.decorators">
+      <decorator
+            adaptable="true"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.decorators.OperationCallResultDecorator"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.decorator1"
+            label="Operation CallResult Decorator"
+            lightweight="true"
+            location="TOP_LEFT"
+            state="true">
+         <enablement>
+            <objectClass
+                  name="ca.gc.asc_csa.apogy.core.invocator.OperationCallResult">
+            </objectClass>
+         </enablement>
+      </decorator>
+      
+      <decorator
+            adaptable="true"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
+            icon="icons/ovr/active_session_7x8.gif"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
+            label="Active Session Decorator"
+            lightweight="true"
+            location="TOP_LEFT"
+            state="true">
+         <enablement>
+            <or>
+               <objectClass
+                     name="ca.gc.asc_csa.apogy.core.invocator.InvocatorSession">
+               </objectClass>
+               <objectClass
+                     name="org.eclipse.core.resources.IResource">
+               </objectClass>
+               <objectClass
+                     name="org.eclipse.emf.ecore.resource.Resource">
+               </objectClass>
+            </or>
+         </enablement>
+      </decorator>
+      
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.OperationCallView"
+            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/OperationCall.gif"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.OperationCallView"
+            name="Operation Call"
+            restorable="true">
+      </view>
+      
+      <view
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.ContextsDefinitionView"
+            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/ContextsList.gif"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.ContextsDefinitionView"
+            name="Contexts"
+            restorable="true">
+      </view>      
+      
+      <view
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.DocumentationView"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.DocumentationView"
+            name="Documentation"
+            restorable="true">
+      </view>      
+      
+      <view
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.InstanceView"
+            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/Instance.gif"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.InstanceView"
+            name="Instance"
+            restorable="true">
+      </view>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertySection
+               afterSection="ca.gc.asc_csa.apogy.common.emf.ui.properties.sections.NamedSection"
+               class="ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
+               id="ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
+               tab="ca.gc.asc_csa.apogy.common.emf.ui.properties.tabs.General">
+            <input
+                  type="ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference">
+            </input>
+         </propertySection>
+         
+         <propertySection
+               afterSection="ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
+               class="ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections.OperationCallSection"
+               id="ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections.OperationCallSection"
+               tab="ca.gc.asc_csa.apogy.common.emf.ui.properties.tabs.General">
+            <input
+                  type="ca.gc.asc_csa.apogy.core.invocator.OperationCall">
+            </input>
+         </propertySection>
+                  
+         <propertySection
+               class="ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections.ContextsDefinitionSection"
+               id="ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections.ContextsDefinitionSection"
+               tab="ca.gc.asc_csa.apogy.core.invocator.ui.propertyTabs.Contexts">
+            <input
+                  type="ca.gc.asc_csa.apogy.core.invocator.Environment">
+            </input>
+            <input
+                  type="ca.gc.asc_csa.apogy.core.invocator.ContextsList">
+            </input>
+         </propertySection>
+         
+         <propertySection
+               class="ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections.DocumentationSection"
+               id="ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections.DocumentationSection"
+               tab="ca.gc.asc_csa.apogy.core.invocator.ui.propertyTabs.Documentation">
+            <input
+                  type="ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation">
+            </input>
+            <input
+                  type="ca.gc.asc_csa.apogy.core.invocator.Variable">
+            </input>
+            <input
+                  type="ca.gc.asc_csa.apogy.core.invocator.Type">
+            </input>
+            <input
+                  type="ca.gc.asc_csa.apogy.core.invocator.TypeMember">
+            </input>
+         </propertySection>
+         
+      </propertySections>
+	</extension>
+
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.asc_csa.apogy.common.emf.ui"
+               id="ca.gc.asc_csa.apogy.core.invocator.ui.properties.tabs.ResultImage"
+               label="Image">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+         
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.asc_csa.apogy.common.emf.ui"
+               id="ca.gc.asc_csa.apogy.core.invocator.ui.propertyTabs.Contexts"
+               label="Contexts">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.asc_csa.apogy.common.emf.ui"
+               id="ca.gc.asc_csa.apogy.core.invocator.ui.propertyTabs.Documentation"
+               label="Documentation">
+         </propertyTab>
+      </propertyTabs>
+   </extension>      
+   
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="ca.gc.asc_csa.apogy.core.ui"
+            name="Apogy">
+      </category>
+      <wizard
+            category="ca.gc.asc_csa.apogy.core.ui"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewOperationCallWizard"
+            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/OperationCall.gif"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewOperationCallWizard"
+            name="New Operation Call"
+            project="false">
+      </wizard>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.converters">
+      <new_element
+            Class="ca.gc.asc_csa.apogy.core.invocator.ui.converters.AbstractResultToReferenceResultValue">
+      </new_element>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <category
+            id="ca.gc.asc_csa.apogy.core.ui"
+            name="Apogy">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <category
+            id="ca.gc.asc_csa.apogy.core.ui"
+            name="Apogy">
+      </category>
+      <wizard
+            category="ca.gc.asc_csa.apogy.core.ui"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.wizards.CopyInitializationDataWizard"
+            icon="icons/apogy_logo_16x16.gif"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.wizards.CopyInitializationDataWizard"
+            name="Apogy Initialization Data">
+         <description>
+            This wizard allows to copy Apogy Initialization Data from a Apogy context to another Apogy context.
+         </description>
+      </wizard>
+   </extension>   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated eclipse_emf_ecore_invocator_ui -->
+      <package
+            uri="ca.gc.asc_csa.apogy.core.invocator.ui"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage"
+            genModel="model/apogy_core_invocator_ui.xcore"/>
+   </extension>
+
+</plugin>

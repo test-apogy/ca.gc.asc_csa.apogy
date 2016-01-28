@@ -1,0 +1,203 @@
+@GenModel(prefix="ApogyCommonGeometryData3DLAS",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="ApogyCommonGeometryData3DLAS",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.las/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.las.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las
+
+import org.eclipse.emf.ecore.EByteArray
+
+type IProgressMonitor wraps org.eclipse.core.runtime.IProgressMonitor
+type CharArray wraps char[]
+type LongArray wraps long[]
+type InputStream wraps java.io.InputStream
+type IOException wraps java.io.IOException
+type OutputStream wraps java.io.OutputStream
+type Exception wraps Exception
+
+class LASHeader
+{
+	String fileSignature
+	
+	int fileSourceID
+	
+	int globalEncoding
+	
+	long projectID_GUID_data_1
+	
+	int projectID_GUID_data_2
+	
+	int projectID_GUID_data_3
+	
+	EByteArray projectID_GUID_data_4
+	
+	int versionMajor
+	
+	int versionMinor
+	
+	String systemIdentifier
+	
+	String generatingSoftware
+	
+	int fileCreationDayOfYear
+	
+	int fileCreationYear
+	
+	int headerSize
+	
+	long offsetToPointData
+	
+	long nVariableLengthRecords
+	
+	int pointDataFormatID
+	
+	int pointDataRecordLength
+	
+	long numberOfPointRecords
+	
+	LongArray numberOfPointsByReturn
+	
+	double xScaleFactor
+	
+	double yScaleFactor
+	
+	double zScaleFactor
+	
+	double xOffset
+	
+	double yOffset
+	
+	double zOffset
+	
+	double maxX
+	
+	double minX
+	
+	double maxY
+	
+	double minY
+	
+	double maxZ
+	
+	double minZ
+	
+	long startOfWaveformDataPacketRecord
+}
+
+class VariableLengthRecord
+{
+	int reserved
+	
+	String userID
+	
+	int recordID
+	
+	int recordLengthAfterHeader
+	
+	String description
+}
+
+class LASReader
+{
+	String file
+	
+	transient InputStream inputStream
+	
+	refers transient VariableLengthRecord[] vlrs
+	
+	transient IProgressMonitor progressMonitor
+	
+	refers transient LASHeader header
+	
+	refers transient LASPoint[] points
+	
+	op void read() throws IOException
+}
+
+class LASPoint
+{
+	long x
+	
+	long y
+	
+	long z
+	
+	int intensity
+	
+	byte returnNumber
+	
+	byte numberOfReturns
+	
+	ScanDirection scanDirection
+	
+	EdgeOfFlightLine edgeOfFlightLine
+	
+	short classification
+	
+	byte scanAngleRank
+	
+	short userData
+	
+	int pointSourceId
+	
+	double gpsTime
+	
+	int red
+	
+	int green
+	
+	int blue
+}
+
+enum ScanDirection
+{
+	NEGATIVE = 0
+	POSITIVE = 1
+}
+
+enum EdgeOfFlightLine
+{
+	END = 1
+	NOT_END = 0
+}
+
+class ApogyCommonGeometryData3DLASFacade
+{
+	op LASPoint createPoint(int formatID , EByteArray data) throws IOException
+}
+
+class LASWriter
+{
+	String fileName
+	
+	transient IProgressMonitor progressMonitor
+	
+	/*
+	 * The LAS point.  The scale 'scaleX', 'scaleY', 'scaleZ' are
+	 * applied to the x, y, z values to obtain the right values.
+	 */
+	refers unordered transient LASPoint[] points
+	
+	double scaleX = "0.01"
+	
+	double scaleY = "0.01"
+	
+	double scaleZ = "0.01"
+	
+	refers readonly transient LASHeader header
+	
+	double xOffset = "0.0"
+	
+	double yOffset = "0.0"
+	
+	double zOffset = "0.0"
+	
+	OutputStream outputStream
+	
+	op void write() throws IOException
+}

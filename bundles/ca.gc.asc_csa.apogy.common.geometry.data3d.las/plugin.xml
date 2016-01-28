@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.apogy.common.geometry.data3d.las"
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage"
+            genModel="model/apogy_common_geometry_data3d_las.xcore"/>
+   </extension>
+
+</plugin>

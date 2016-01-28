@@ -1,0 +1,79 @@
+@GenModel(prefix="ApogyCommonLog",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyCommonLog")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.log/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.log.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.common.log
+
+type Throwable wraps java.lang.Throwable 
+type Bundle wraps org.osgi.framework.Bundle
+type FrameworkLog wraps org.eclipse.osgi.framework.log.FrameworkLog
+
+/** 
+ * Event Severity.
+ * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
+ */
+enum EventSeverity
+{
+	OK = 0,
+	INFO = 1,
+	WARNING = 2,
+	ERROR = 4,
+	CANCEL = 8
+}
+
+/**
+ * This class provides methods to log messages into the OSGI Log Framework.
+ * @see org.eclipse.osgi.framework.log.FrameworkLogEntry  
+ */
+class Logger
+{
+	/**
+	 * Log message.
+	 * @param bundleId Bundle unique identifier.  Refers to the bundle that contains the object that logs the message.
+	 * @param message Log message.
+	 * @param severity Event severity.
+	 * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
+	 */
+	op void log(String bundleId, String message, EventSeverity severity)
+	
+	/**
+	 * Log message.
+	 * @param bundleId Bundle unique identifier.  Refers to the bundle that contains the object that logs the message.
+	 * @param object Reference to the object that logs the message.
+	 * @param message Log message.
+	 * @param severity Event severity.
+	 * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
+	 */	
+	op void log(String bundleId, Object object, String message, EventSeverity severity)
+	
+	/**
+	 * Log message.
+	 * @param bundleId Bundle unique identifier.  Refers to the bundle that contains the object that logs the message.
+	 * @param message Log message.
+	 * @param severity Event severity.
+	 * @param t Reference to the exception context.
+	 * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
+	 */	
+	op void log(String bundleId, String message, EventSeverity severity, Throwable t)
+
+	/**
+	 * Log message.
+	 * @param bundleId Bundle unique identifier.  Refers to the bundle that contains the object that logs the message.
+	 * @param object Reference to the object that logs the message.
+	 * @param message Log message.
+	 * @param severity Event severity.
+	 * @param t Reference to the exception context.
+	 * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
+	 */	
+	op void log(String bundleId, Object object, String message, EventSeverity severity, Throwable t)
+	
+	/**
+	 * Returns the OSGI Framework Log.
+	 * @return Reference to the {@link org.eclipse.osgi.framework.log.FrameworkLog}
+	 */
+	op FrameworkLog getLog()
+}

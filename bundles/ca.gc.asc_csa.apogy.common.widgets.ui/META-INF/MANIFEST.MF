@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.widgets.ui;singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: ca.gc.asc_csa.apogy.common.widgets.ui.Activator
+Bundle-Vendor: %providerName
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: ca.gc.asc_csa.apogy.common.widgets.ui
+Bundle-ClassPath: .

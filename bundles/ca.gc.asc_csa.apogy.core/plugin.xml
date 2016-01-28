@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension-point
+   		id="worksiteProvider"
+   		name="Worksite Provider"
+   		schema="schema/worksiteProvider.exsd">
+   </extension-point>
+   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.core.ApogyCorePackage"
+            genModel="model/apogy_core.xcore"/>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="ss"
+            class="ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorResourceFactoryImpl"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.core.invocator.invocatorDelegate">
+      <element
+            invocatorDelegateClass="ca.gc.asc_csa.apogy.core.invocator.ApogyInvocatorDelegate">
+      </element>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.converters">
+      <new_element
+            Class="ca.gc.asc_csa.apogy.core.converters.ApogyEnvironmentToTimeSourcesListConverter">
+      </new_element>
+   </extension>
+</plugin>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_environment_orbit -->
+      <package
+            uri="ca.gc.asc_csa.apogy.core.environment.orbit"
+            class="ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage"
+            genModel="model/apogy_core_environment_orbit.xcore"/>
+   </extension>
+
+null
+</plugin>

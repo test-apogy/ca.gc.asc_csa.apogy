@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point
+            id="ca.gc.asc_csa.apogy.common.converters"
+            name="Converters"
+            schema="schema/converters.exsd">
+   </extension-point>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_common_converters -->
+      <package
+            uri="ca.gc.asc_csa.apogy.common.converters"
+            class="ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersPackage"
+            genModel="model/apogy_common_converters.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_common_converters_graphs -->
+      <package
+            uri="ca.gc.asc_csa.apogy.common.converters.graphs"
+            class="ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsPackage"
+            genModel="model/apogy_common_converters_graphs.xcore"/>
+   </extension>
+
+</plugin>

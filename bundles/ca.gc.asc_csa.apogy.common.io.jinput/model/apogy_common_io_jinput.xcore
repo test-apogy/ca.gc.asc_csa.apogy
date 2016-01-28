@@ -1,0 +1,91 @@
+@GenModel(prefix="ApogyCommonIOJInput",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="ApogyCommonIOJInput",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.io.jinput/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.io.jinput.edit/src-generated")
+ 
+package ca.gc.asc_csa.apogy.common.io.jinput
+
+type Job wraps org.eclipse.core.runtime.jobs.Job
+type Component wraps net.java.games.input.Component
+type Controller wraps net.java.games.input.Controller
+
+class EController
+{
+	transient boolean lastPollResult
+	readonly String name = ""
+	readonly transient volatile derived int portNumber
+	readonly transient volatile derived String ^type
+	readonly transient volatile derived String portType
+	Controller pojoController
+	contains transient EComponents[1] eComponents opposite eController
+	int controllerCount = "-1"
+	
+	op boolean poll()
+}
+
+class EControllerEnvironment
+{
+	readonly volatile derived boolean supported
+	contains readonly transient EController[] controllers
+	boolean refreshRequested = "true"
+	long pollingCount
+	readonly Job pollingJob
+	boolean pollingProblem
+	op void refresh()
+	op void startPolling()
+	op void stopPolling()
+	
+	op EController resolveController(String controllerName)
+	op EComponent resolveEComponent(String componentName , EController eController)
+	op EComponent resolveEComponent(EComponentQualifier eComponentQualifier)
+}
+
+class EComponent
+{
+	readonly transient volatile derived float deadZone
+	readonly transient volatile derived String identifier
+	readonly transient volatile derived boolean relative
+	readonly transient volatile derived boolean analog
+	readonly transient volatile derived String name
+	Component pojoComponent
+	readonly transient volatile derived float pollData
+	container transient EComponents eComponents opposite components
+}
+
+class EComponents
+{
+	contains readonly transient EComponent[] components opposite eComponents
+	transient String name = ""
+	container transient EController eController opposite eComponents
+}
+
+class EButton extends EComponent
+{
+	
+}
+
+class EAxis extends EComponent
+{
+	
+}
+
+class EKey extends EComponent
+{
+	
+}
+
+class EComponentQualifier
+{
+	String[1] eComponentName
+	String[1] eControllerName
+}
+
+class EVirtualComponent extends EComponent
+{
+	float currentValue
+}

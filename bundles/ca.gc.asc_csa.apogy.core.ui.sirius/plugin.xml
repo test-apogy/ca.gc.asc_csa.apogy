@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="ca.gc.asc_csa.apogy.core.ui.sirius.Activator"
+               id="ca.gc.asc_csa.apogy.core.ui.sirius"
+	       name="apogy_core_ui_sirius">
+    </component>
+  </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction"
+           id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+     </javaActions>
+     <javaActions
+           actionClass="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.DeleteNodeExternalAction"
+           id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.DeleteNodeExternalAction">
+     </javaActions>
+     <javaActions
+           actionClass="ca.gc.asc_csa.apogy.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction"
+           id="ca.gc.asc_csa.apogy.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction">
+     </javaActions>
+  </extension>
+</plugin>

@@ -1,0 +1,24 @@
+@GenModel(prefix="ApogyCommonConvertersUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  operationReflection="true",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyCommonConvertersUI") 
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.converters.ui/src-generated")
+
+package ca.gc.asc_csa.apogy.common.converters.ui
+
+import ca.gc.asc_csa.apogy.common.converters.List
+
+type ISelection wraps org.eclipse.jface.viewers.ISelection
+
+class ApogyCommonConvertersUIFacade
+{
+		/*
+	 * Converts an ISelection to an object of type targetType
+	 * @param selection The ISelection.
+	 * @param targetType The class of the targeted type.
+	 * @return A list of objects of the targeted type, can be empty.
+	 */
+	op List<Object> ^convert(ISelection selection, Class<?> targetType)
+}

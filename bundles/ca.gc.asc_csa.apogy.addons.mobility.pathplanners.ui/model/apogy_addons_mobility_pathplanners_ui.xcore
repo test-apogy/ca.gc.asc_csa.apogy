@@ -1,0 +1,21 @@
+@GenModel(prefix="ApogyAddonsMobilityPathplannersUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyAddonsMobilityPathplannersUI",
+		  complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui
+
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
+
+class CircularExclusionZonePresentation extends NodePresentation
+{
+	float transparency
+	MeshPresentationMode presentationMode = "SURFACE"
+	double height = "10.0"
+}

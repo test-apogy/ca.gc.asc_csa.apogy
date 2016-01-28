@@ -1,0 +1,25 @@
+@GenModel(prefix="ApogyAddonsROSImaging",
+		  modelName="ApogyAddonsROSImaging",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.ros.imaging/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.ros.imaging.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.ros.imaging
+
+import ca.gc.asc_csa.apogy.common.images.EImage
+import ca.gc.asc_csa.apogy.common.images.ImageData
+
+type Image wraps sensor_msgs.Image
+type CompressedImage wraps sensor_msgs.CompressedImage
+type ConnectedNode wraps org.ros.node.ConnectedNode
+
+class ApogyAddonsROSImagingFacade
+{
+	op EImage convertToEImage(Image rosImage)
+	op EImage convertToEImage(CompressedImage compressedImage)
+	op CompressedImage convertToCompressedImage(EImage eImage, ConnectedNode connectedNode)
+	op CompressedImage convertToCompressedImage(ImageData imageData, ConnectedNode connectedNode)
+}

@@ -1,0 +1,43 @@
+@GenModel(prefix="ApogyAddonsMobility",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)",
+	      modelName="ApogyAddonsMobility")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.mobility/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.mobility.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.mobility
+
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+
+class MobilePlatform extends AggregateGroupNode
+{
+	boolean moving
+	
+	MobilePlatformStatus mobilePlatformStatus = "OFF"
+}
+
+class SkidSteeredMobilePlatform extends MobilePlatform
+{
+	double commandedRightWheelsVelocity
+	double actualRightWheelsVelocity
+	
+	double commandedLeftWheelsVelocity
+	double actualLeftWheelsVelocity
+	
+	double commandedAngularVelocity
+	double actualAngularVelocity
+	
+	double commandedTranslationVelocity
+	double actualTranslationVelocity
+	
+	double effectiveSteeringWidth = "0.5"
+}
+
+enum MobilePlatformStatus
+{
+	OFF = 0,
+	READY = 1,
+	BUSY = 2,
+	FAILED = 3
+}

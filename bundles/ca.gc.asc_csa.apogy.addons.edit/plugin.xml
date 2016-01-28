@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated apogy_tools_core -->
+      <factory
+            uri="ca.gc.asc_csa.apogy.addons"
+            class="ca.gc.asc_csa.apogy.addons.provider.ApogyAddonsItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated apogy_addons -->
+      <extender
+            uri="ca.gc.asc_csa.apogy.core.invocator"
+            class="ca.gc.asc_csa.apogy.addons.provider.ApogyAddonsItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.provider.ApogyAddonsItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.addons.provider.ApogyAddonsItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.topology.bindings"
+            class="ca.gc.asc_csa.apogy.addons.provider.ApogyAddonsItemProviderAdapterFactory$ApogyCommonTopologyBindingsChildCreationExtender"/>
+   </extension>
+
+</plugin>

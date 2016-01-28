@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension-point
+           id="invocatorDelegate"
+           name="Invocator Delegate"
+           schema="schema/invocatorDelegate.exsd">
+   </extension-point>
+   
+   <extension-point
+           id="typeContributor"
+           name="TypeContributor"
+           schema="schema/typeContributor.exsd">
+   </extension-point>
+   
+   <extension-point
+           id="sessionProvider"
+           name="SessionProvider"
+           schema="schema/sessionProvider.exsd">
+   </extension-point>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.apogy.core.invocator"
+            class="ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage"
+            genModel="model/apogy_core_invocator.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated eclipse_emf_ecore_invocator -->
+      <parser
+            type="sym"
+            class="ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorResourceFactoryImpl"/>
+   </extension>
+
+   <extension
+   		point="ca.gc.asc_csa.apogy.core.invocator.invocatorDelegate">
+   		<element
+   			invocatorDelegateClass="ca.gc.asc_csa.apogy.core.invocator.delegates.DefaultInvocatorDelegate">
+   		</element>
+   	</extension>
+   
+</plugin>

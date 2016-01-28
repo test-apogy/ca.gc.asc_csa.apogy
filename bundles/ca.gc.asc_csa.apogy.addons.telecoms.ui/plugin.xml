@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.addons.telecoms.ui.views.TelecomStatusMonitorToolView"
+            id="ca.gc.asc_csa.apogy.addons.telecoms.ui.views.TelecomStatusMonitorToolView"
+            name="Telecom Status Monitor View"
+            restorable="true">
+      </view>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_tools_telecoms_ui -->
+      <package
+            uri="ca.gc.asc_csa.apogy.addons.telecoms.ui"
+            class="ca.gc.asc_csa.apogy.addons.telecoms.ui.ApogyAddonsTelecomsUIPackage"
+            genModel="model/apogy_addons_telecoms_ui.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
+      <Class
+            Class="ca.gc.asc_csa.apogy.addons.telecoms.ui.adapters.AbstractAntennaRadiationPatternAdapter">
+      </Class>
+   </extension>
+
+</plugin>

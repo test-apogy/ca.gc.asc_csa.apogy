@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2007.
+
+ $Id: plugin.xml,v 1.4.4.2 2015/05/21 15:50:48 pallard Exp $
+-->
+
+<plugin>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "ca.gc.asc_csa.apogy.common.geometry.data3d" 
+       class = "ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage"
+       genModel = "model/apogy_common_geometry_data3d.xcore" /> 
+  </extension>
+  <extension
+        point="ca.gc.asc_csa.apogy.common.converters">
+     <new_element
+           Class="ca.gc.asc_csa.apogy.common.geometry.data3d.converters.TopoFileToCartesianTriangularMeshConverter">
+     </new_element>
+     <new_element
+           Class="ca.gc.asc_csa.apogy.common.geometry.data3d.converters.TopoIFileToCartesianTriangularMeshConverter">
+     </new_element>
+     <new_element
+           Class="ca.gc.asc_csa.apogy.common.geometry.data3d.converters.URLTRIToCartesianTriangularMeshConverter">
+     </new_element>
+     <new_element
+           Class="ca.gc.asc_csa.apogy.common.geometry.data3d.converters.URLTopoToCartesianTriangularMeshConverter">
+     </new_element>
+  </extension>
+  
+</plugin>

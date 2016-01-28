@@ -1,0 +1,19 @@
+@GenModel(prefix="ApogyCommonGeometryData25DUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyCommonGeometryData25DUI",
+		  complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data25d.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data25d.ui.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.common.geometry.data25d.ui
+
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
+
+class VolumetricCoordinatesSet25DPresentation extends NodePresentation
+{
+ 	refers VolumetricCoordinatesSet25D pointsCloud 
+}

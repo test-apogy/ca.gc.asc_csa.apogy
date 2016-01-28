@@ -1,0 +1,104 @@
+@GenModel(prefix="ApogyExamplesCameraApogy",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
+		  modelName="ApogyExamplesCameraApogy")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.camera.apogy/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.camera.apogy.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.examples.camera.apogy
+
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData
+
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
+
+/*
+ * This class is the Apogy API adapter that is used to
+ * interface the existing basic camera implementations with
+ * Apogy; this provides a series of callback methods that
+ * can be overridden to implement a variety of useful features.
+ */
+class CameraApogySystemApiAdapter extends ApogySystemApiAdapter
+{
+	/*
+	 * For specific implementation details,
+	 * please see {@link ca.gc.asc_csa.apogy.examples.camera.apogy.impl.CameraApogySystemApiAdapterImpl}
+	 */
+}
+
+/*
+ * This class is the data required in order to initialize (or
+ * reinitialize) the basic camera implementations.  This will
+ * be used by the relevant API adapter, which in this case
+ * is {@link CameraApogySystemApiAdapter}. 
+ * @see #CameraApogySystemApiAdapter
+ */
+class CameraData extends ApogyInitializationData
+{
+	/*
+	 * This is the current field of view (FOV) of the camera.
+	 */
+	@GenModel(notify="true",
+			  property="Editable",
+			  propertCategory="Camera")
+	contains RectangularFrustrumFieldOfView[1] fov
+	
+	/*
+	 * This is the current zoom level of the camera. 
+	 */
+	@GenModel(notify="true",
+			  property="Editable",
+			  propertyCategory="Camera")
+	double zoom
+	
+	/*
+	 * This is whether or not the camera is initialized.
+	 */
+	@GenModel(notify="true",
+			  property="Editable",
+			  propertyCategory="Status")
+	boolean initialized = "false"
+}
+
+/*
+ * This class is the Apogy API adapter that is used to
+ * interface the existing PTU camera implementations with
+ * Apogy; this provides a series of callback methods that
+ * can be overridden to implement a variety of useful features.
+ */
+class PTUCameraApogySystemApiAdapter extends ApogySystemApiAdapter
+{	
+	/*
+	 * For specific implementation details,
+	 * please see {@link ca.gc.asc_csa.apogy.examples.camera.apogy.impl.PTUCameraApogySystemApiAdapterImpl}
+	 */
+}
+
+/*
+ * This class is the data required in order to initialize (or
+ * reinitialized) the basic camera implementations.  This will
+ * be used by the relevant API adapter, which in this case
+ * is {@link PTUCameraApogySystenApiAdapter}.
+ * @see #PTUCameraApogySystemApiAdapter
+ */
+class PTUCameraData extends CameraData
+{
+	/*
+	 * This is the current pan angle of the Pan-Tilt Unit (PTU)
+	 * that the camera is mounted on.
+	 */
+	@GenModel(apogy_units="deg",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="PTU Angles")
+	double panAngle
+	
+	/*
+	 * This is the current tilt angle of the Pan-Tilt Unit (PTU)
+	 * that the camera is mounted on.
+	 */
+	@GenModel(apogy_units="deg",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="PTU Angles")
+	double tiltAngle
+}

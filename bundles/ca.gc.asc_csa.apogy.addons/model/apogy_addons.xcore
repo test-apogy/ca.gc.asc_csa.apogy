@@ -1,0 +1,260 @@
+@GenModel(prefix="ApogyAddons",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)",
+		  modelName="ApogyAddons",
+		  complianceLevel="6.0",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons
+
+import ca.gc.asc_csa.apogy.common.emf.Described
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
+import ca.gc.asc_csa.apogy.core.invocator.Variable
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList
+import ca.gc.asc_csa.apogy.core.PoseProvider
+import ca.gc.asc_csa.apogy.common.math.Matrix4d
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+
+type Color3f wraps javax.vecmath.Color3f
+
+type NodeSelection wraps ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection
+
+abstract class AbstractTool extends Named, Described
+{
+}
+
+class SimpleToolList extends AbstractToolsListContainer
+{
+	@GenModel(property="None")	
+	contains SimpleTool[0..*] simpleTools opposite toolList
+}
+
+abstract class SimpleTool extends AbstractTool
+{		
+	refers SimpleToolList toolList opposite simpleTools
+	
+	transient boolean active = "false"
+	
+	@GenModel(property="Readonly")
+	transient boolean disposed = "false"
+	
+	op void dispose()
+}
+
+abstract class Simple3DTool extends SimpleTool
+{		
+	transient boolean visible = "true"		
+
+	/** The root node of the current topology. Set automatically by Apogy after the too is registered.*/
+	refers transient Node rootNode
+	
+	/** Method called upon a user selection in the 3D viewer. Sub-classes should implement. */
+	op void selectionChanged(NodeSelection nodeSelection)
+	
+	
+	//op void selectionChanged(Node node, Tuple3d relativePosition, Tuple3d normal)
+}
+
+/*
+ * An abstract tool that is defined by two points.
+ */
+abstract class AbstractTwoPoints3DTool extends Simple3DTool
+{
+	// FROM NODE		
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="FROM_NODE")
+	refers transient Tuple3d fromAbsolutePosition
+			
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="FROM_NODE")
+	refers transient Tuple3d fromRelativePosition
+	
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="FROM_NODE")	
+	refers transient Node fromNode
+	
+	@GenModel(notify="true", propertyCategory="FROM_NODE")	
+	boolean fromNodeLock = "false"
+				
+	// TO NODE		
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="TO_NODE")
+	refers transient Tuple3d toAbsolutePosition
+	
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="TO_NODE")	
+	refers transient Tuple3d toRelativePosition
+	
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="TO_NODE")	
+	refers transient Node toNode	
+	
+	@GenModel(notify="true", propertyCategory="TO_NODE")	
+	boolean toNodeLock = "false"	
+		
+	@GenModel(notify="true", property="Readonly", apogy_units = "m")	
+	transient double distance = "0"
+		
+	/* Method called when the pose between from and to changes. */
+	op void pointsRelativePoseChanged(Matrix4d newPose)
+}
+
+/*
+ * A 3D tool used to measure distance between two points.
+ */
+class Ruler3DTool extends AbstractTwoPoints3DTool
+{		
+	/* The ruler color. */
+	@GenModel(propertyCategory="RULER_PROPERTIES")
+	Color3f rulerColor = "0.0,1.0,0.0"
+	
+	/* Radius of sphere used as ruler end points. */
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="RULER_PROPERTIES")	
+	double extremitiesRadius = "0.01"
+	
+	// MINOR TICKS
+	
+	/* Minor tick color. */
+	@GenModel(propertyCategory="MINOR_TICKS_PROPERTIES")
+	Color3f minorTickColor = "0.0,1.0,0.0"
+	
+	/* Spacing between minor tick mark.*/
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="MINOR_TICKS_PROPERTIES")	
+	double minorTickSpacing = "0.1"
+	
+	/* Length of the minor tick marks as displayed on the ruler.*/
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="MINOR_TICKS_PROPERTIES")	
+	double minorTickLength = "0.1"
+	
+	// MAJOR TICKS
+	
+	/* Major tick color. */
+	@GenModel(propertyCategory="MAJOR_TICKS_PROPERTIES")
+	Color3f majorTickColor = "0.0,1.0,0.0"
+	
+	/* Spacing between major tick mark.*/
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="MAJOR_TICKS_PROPERTIES")	
+	double majorTickSpacing = "1.0"
+
+	/* Length of the major tick marks as displayed on the ruler.*/
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="MAJOR_TICKS_PROPERTIES")	
+	double majorTickLength = "0.2"
+		
+	/* Topology Node associated with the tool. */
+	@GenModel(notify="true", children="true", property="Readonly", propertyCategory="RULER_PROPERTIES")	
+	refers transient Ruler3dToolNode ruler3dToolNode opposite ruler3DTool
+}
+
+class Ruler3dToolNode extends Node
+{	
+	refers transient Ruler3DTool ruler3DTool opposite ruler3dToolNode	
+}
+
+/*
+ * A 3D tool used to create FeatureOfInterest.
+ */
+class FeatureOfInterestPickingTool extends Simple3DTool
+{
+	/* List of Feature Of Interest where to add Feature Of Interest.*/
+	@GenModel(notify="true", children="false")
+	refers FeatureOfInterestList featureOfInterestList
+	
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="PICKED_NODE")
+	refers transient Tuple3d pickAbsolutePosition
+			
+	@GenModel(notify="true", children="false", propertyCategory="PICKED_NODE")
+	refers transient Tuple3d pickRelativePosition
+	
+	@GenModel(notify="true", children="false", propertyCategory="PICKED_NODE")	
+	refers transient Node pickedNode
+	
+	@GenModel(notify="true", children="false", propertyCategory="PICKED_NODE")
+	refers transient Tuple3d pickAbsoluteNormal
+	
+	@GenModel(notify="true", children="false", propertyCategory="PICKED_NODE")
+	refers transient Tuple3d pickRelativeNormal	
+}
+
+/**
+ * A 3D tool used to show the direction and intensity of the Sun.
+ */
+
+class SunVector3DTool extends AbstractTwoPoints3DTool
+{
+	/* The vector color. */
+	@GenModel(propertyCategory="SUN_VECTOR_PROPERTIES")
+	Color3f vectorColor = "1.0,1.0,0.0"
+		
+	/* Length of the vector. */
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="SUN_VECTOR_PROPERTIES")
+	double vectorLength = "10.0"
+	
+	/* Radius of sphere used as end point to vector. */
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="SUN_VECTOR_PROPERTIES")	
+	double endPointRadius = "0.01"
+	
+	/* The current sun intensity. */
+	@GenModel(notify="true", apogy_units = "W/m*m", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
+	double sunIntensity = "0.0"
+	
+	/* The current day maximum sun intensity. */
+	@GenModel(notify="true", apogy_units = "W/m*m", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
+	double currentDayMaximumSunIntensity = "0.0"
+	
+	/* The current sun intensity. */
+	@GenModel(notify="true", apogy_units = "%", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
+	double currentSunIntensityPercentage = "0.0"
+		
+	/* Topology Node associated with the tool. */
+	@GenModel(notify="true", children="true", property="Readonly", propertyCategory="SUN_VECTOR_PROPERTIES")	
+	refers transient SunVector3DToolNode sunVector3DToolNode opposite sunVector3DTool
+	
+}
+
+class SunVector3DToolNode extends Node
+{	
+	refers transient SunVector3DTool sunVector3DTool opposite sunVector3DToolNode	
+}
+
+
+/**
+ * A 3D tool used to trace the trajectory of a Variable.
+ */
+ 
+ class Trajectory3DTool extends Simple3DTool
+ {
+ 	/** Whether of not the trajectory is traced. */
+ 	@GenModel(propertyCategory="TRAJECTORY_3D_TOOL")
+ 	boolean penDown = "true"
+ 	 	 	
+ 	/* The Apogy System being displayed.*/
+ 	@GenModel(propertyCategory="TRAJECTORY_3D_TOOL")
+	refers Variable[1] variable
+		
+	/** Minimum distance used to trigger a new point being accepted.*/
+	@GenModel(propertyCategory="TRAJECTORY_3D_TOOL", apogy_units="m")
+	double distanceThreshold = "0.01"
+	
+	@GenModel(notify="true", property="Readonly", propertyCategory="TRAJECTORY_3D_TOOL", apogy_units="m")
+	double totalDistance = "0.0"
+	
+	/** The  WayPointPath currently recorded.*/
+	contains WayPointPath[0..*] paths 	
+	
+	/** The pose provide providing pose data. */
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="TRAJECTORY_3D_TOOL")
+	refers transient PoseProvider poseProvider
+	
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="TRAJECTORY_3D_TOOL")
+	refers transient Trajectory3DToolNode trajectory3DToolNode opposite trajectory3DTool
+ }
+ 
+ /**
+  * Node representing the Trajectory3DTool in the topology.
+  */
+ class Trajectory3DToolNode extends AggregateGroupNode
+ {
+ 	refers transient Trajectory3DTool trajectory3DTool opposite trajectory3DToolNode
+ }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_examples_satellite_apogy -->
+      <package
+            uri="ca.gc.asc_csa.apogy.examples.satellite.apogy"
+            class="ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage"
+            genModel="model/apogy_examples_satellite_apogy.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.core.invocator.typeContributor">
+      <Type
+            URI="model/constellation.ss">
+      </Type>
+   </extension>
+
+</plugin>

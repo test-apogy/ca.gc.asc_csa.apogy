@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="ca.gc.asc_csa.apogy.common.geometry.data3d"
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated apogy_common_geometry_data3d -->
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.geometry.data"
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DItemProviderAdapterFactory$ApogyCommonGeometryDataChildCreationExtender"/>
+   </extension>
+
+</plugin>

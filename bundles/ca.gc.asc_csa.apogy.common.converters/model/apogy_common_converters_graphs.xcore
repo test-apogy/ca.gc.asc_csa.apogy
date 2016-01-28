@@ -1,0 +1,158 @@
+@GenModel(prefix="ApogyCommonConvertersGraphs",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  operationReflection="true",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyCommonConvertersGraphs") 
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.converters/src-generated")
+
+package ca.gc.asc_csa.apogy.common.converters.graphs
+
+import ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph
+import ca.gc.asc_csa.apogy.common.converters.IConverter
+import ca.gc.asc_csa.apogy.common.converters.List
+
+type SortedSet<E> wraps java.util.SortedSet
+type Set<E> wraps java.util.Set
+type Comparator<E> wraps java.util.Comparator
+type Map<K, V> wraps java.util.Map
+type ConverterEdge wraps ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge
+type ChainedConverter wraps ca.gc.asc_csa.apogy.common.converters.ChainedConverter
+
+/*
+ * A utility class used to perform a variety of functions
+ */
+class ApogyCommonConvertersGraphsFacade
+{
+	/*
+	 * Creates a converter graph where the vertex are the input and output types and the edges contains the converters.
+	 * @param converters The list of converter to include in the graph.
+	 * @return The converter graph.
+	 */	
+	op SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> createGraph(List<IConverter> converters)
+	
+	/*
+	 * Adds a list of IConverter to an existing graph.
+	 * @param graph The graph to which converters will be added.
+	 * @param converters The list of IConverter to be added to the graph.
+	 */
+	op void addConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+						  List<IConverter> converters)
+	
+	/*
+	 * Generate the list of IConverter between types that can bes type casted and that do not have yet a converter.
+	 * @param graph The graph of the conversion.
+	 * @return A list of IConverter that converts types that are compatible.
+	 */
+	op List<IConverter> generateTypeCastConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	
+	/*
+	 * Converts the input object to an object of the specified outputType.
+	 * @param graph The graph containing the converters.
+	 * @param input The input object.
+	 * @param outputType The output type.
+	 * @return The result of the conversion, null if no conversion was found.
+	 */
+	op Object ^convert(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+					   Object input,
+					   Class<?> outputType)
+	
+	/*
+	 * Return the list of ChainedConverter that could convert from a source to a destination type.
+	 * @param graph The graph containing the converters.
+	 * @param inputType The input type.
+	 * @param outputType The output type.
+	 * @return The list of ChainedConverter. Never null, but can be empty.
+	 */
+	op SortedSet<ChainedConverter> findAllConvertersBetweenVertices(SimpleDirectedWeightedGraph<Class<?>,ConverterEdge> graph,
+																	Class<?> inputType,
+																	Class<?> outputType)
+	
+	/*
+	 * Tries to find a converter between two types by searching a converter graph.
+	 * @param graph The converter graph.
+	 * @param inputType The input type.
+	 * @param outputType The output type.
+	 * @return The Chained converter that convert inputType to outputType, null if none was found.
+	 */
+	op ChainedConverter findConverter(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+									  Class<?> inputType,
+									  Class<?> outputType)
+	
+	/*
+	 * Given a graph, returns the list of all types that can be converted FROM (i.e. types with at least one outgoing converter).
+	 * @param graph The provided graph.
+	 * @return The list of all input types. 
+	 */
+	op Set<Class<?>> getAllInputTypes(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	
+	/*
+	 * Given a graph, returns the list of all types that can be converted TO (i.e. types with at least one ingoing converter).
+	 * @param graph The provided graph.
+	 * @return The list of all output types. 
+	 */
+	op Set<Class<?>> getAllOutputTypes(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	
+	/*
+	 * Return a sorted list (from most specific to least specific) of potential source vertex for a specified input type.
+	 * @param graph The graph of converters.
+	 * @param inputType The input type.
+	 * @return A sorted set of vertex.
+	 */
+	op List<Class<?>> getSourceVertex(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+									  Class<?> inputType)
+	
+	/*
+	 * Return a sorted list (from most specific to least specific) of potential destination vertex for a specified input type.
+	 * @param graph The graph of converters.
+	 * @param inputType The output type.
+	 * @return A sorted set of vertex.
+	 */
+	op List<Class<?>> getDestinationVertex(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+										   Class<?> outputType)
+	
+	/*
+	 * Return the class from a list that is closest to a specified type.
+	 * @param classes The list of class to search.
+	 * @param targetType The specified type.
+	 * @return The closest type, null if none was found.
+	 */
+	op Class<?> findClosestSuperType(List<Class<?>> classes,
+									 Class<?> targetType)
+	
+	/*
+	 * Return the class from a list that is closest to a specified type.
+	 * @param classes The list of class to search.
+	 * @param targetType The specified type.
+	 * @return The closest type, null if none was found.
+	 */
+	op Class<?> findClosestSubType(List<Class<?>> classes,
+								   Class<?> targetType)
+	
+	/*
+	 * Return the list of all converters, including type cast ones, contained in a given graph.
+	 * @param graph The graph.
+	 * @return The list of converters.
+	 */
+	op List<IConverter> getAllConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	
+	/*
+	 * Return the list of all converters, EXCLUDING type cast ones, contained in a given graph.
+	 * @param graph The graph.
+	 * @return The list of converters.
+	 */
+	op List<IConverter> getAllNonTypeCastConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+
+	/*
+	 * Creates a map that maps input types to available destination types.
+	 * @param graph The specified graph.
+	 * @return A map mapping input types to available destination types.
+	 */	
+	op Map<Class<?>, List<Class<?>>> getAvailableDestinationTypeMap(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	
+	/*
+	 * Creates a Comparator of ChainedConverter.
+	 * @return The Comparator.
+	 */
+	op Comparator<ChainedConverter> createComparator()
+}

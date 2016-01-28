@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:51:00 pallard Exp $
+-->
+
+<plugin>
+
+   <extension
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
+      <Class
+            Class="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.adapters.PositionSensorPresentationAdapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.adapters.OrientationSensorPresentationAdapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.adapters.PoseSensorPresentationAdapter">
+      </Class>
+   </extension>   
+    <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.views.PoseSensorView"
+            id="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.views.PoseSensorView"
+            name="Pose Sensor Viewe"
+            restorable="true">
+      </view>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.apogy.addons.sensors.pose.ui"
+            class="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage"
+            genModel="model/apogy_addons_sensors_pose_ui.xcore"/>
+   </extension>
+
+   <extension
+   		 point="org.eclipse.ui.commands">
+   	  <command
+   	  		defaultHandler="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.handlers.ResetPositionCommandHandler"
+   	  		id="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.commands.ResetPositionCommand"
+   	  		name="Reset Position">
+   	  </command>
+   	  <command
+   	  		defaultHandler="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.handlers.ResetOrientationCommandHandler"
+   	  		id="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.commands.ResetOrientationCommand"
+   	  		name="Reset Orientation">
+   	  </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+      	 allPopups="true"
+      	 locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+      	   <command
+      	   		commandId="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.commands.ResetPositionCommand"
+      	   		label="Reset Position"
+      	   		style="push">
+      	   	 <visibleWhen
+      	   	 		checkEnabled="false">
+      	   	 	 <with
+      	   	 	 	  variable="activeMenuSelection">
+      	   	 	 	 <iterate
+      	   	 	 	    ifEmpty="false"
+      	   	 	 	    operator="or">
+      	   	 	 	      <instanceof
+      	   	 	 	          value="ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor">
+      	   	 	 	      </instanceof>
+      	   	 	 	 </iterate>
+      	   	 	 </with>
+      	   	 </visibleWhen>
+      	   </command>
+      	   <command
+      	        commandId="ca.gc.asc_csa.apogy.addons.sensors.pose.ui.commands.ResetOrientationCommand"
+      	        label="Reset Orientation"
+      	        style="push">
+      	      <visibleWhen
+      	             checkEnabled="false">
+      	          <with
+      	               variable="activeMenuSelection">
+      	              <iterate
+      	                 ifEmpty="false"
+      	                 operator="or">
+      	                 <instanceof
+      	                      value="ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor">
+      	                 </instanceof>
+      	              </iterate>
+      	          </with>
+      	      </visibleWhen>
+      	   </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,14 @@
+@GenModel(prefix="ApogyCommonEMFEditUtils",
+	      childCreationExtenders="true",
+	      modelName="ApogyCommonEMFEditUtils")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.emf.edit.utils/src-generated")
+
+package ca.gc.asc_csa.apogy.common.emf.edit.utils
+
+type CollectionObject wraps java.util.Collection<Object>
+
+class ApogyCommonEMFEditUtilsFacade
+{
+	op String getText(Object object)
+	op void removeChildDescriptor(CollectionObject newChildDescriptors, Object feature)
+}

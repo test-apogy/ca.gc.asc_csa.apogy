@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_common_math -->
+      <package
+            uri="ca.gc.asc_csa.apogy.common.math"
+            class="ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage"
+            genModel="model/apogy_common_math.xcore"/>
+   </extension>
+
+</plugin>

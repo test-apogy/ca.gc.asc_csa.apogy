@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.topology.ui.graphicsContextAdapter">
+      <Class
+            Class="ca.gc.asc_csa.apogy.common.geometry.data3d.las.ui.GraphicsContextLasAdapter">
+      </Class>
+   </extension>
+
+</plugin>

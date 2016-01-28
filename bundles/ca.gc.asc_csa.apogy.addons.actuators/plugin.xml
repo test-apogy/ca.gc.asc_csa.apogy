@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2009.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:49:34 pallard Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.apogy.addons.actuators"
+            class="ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage"
+            genModel="model/apogy_addons_actuators.xcore"/>
+   </extension>
+
+</plugin>

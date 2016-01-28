@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmi:id="_2irY0ArOEeW4-_ONWXXiAw" name="">
+  <environment xsi:type="core:ApogyEnvironment" xmi:id="_2irY0QrOEeW4-_ONWXXiAw" name="Camera Example" description="This is an example session, illustrating how to use the camera example" activeContext="_2irY2ArOEeW4-_ONWXXiAw" time="2015-04-08T14:45:33.793-0400" activeWorksite="_2ir_4ArOEeW4-_ONWXXiAw" activeTimeSource="_2ism9QrOEeW4-_ONWXXiAw">
+    <typesList xmi:id="_2irY0grOEeW4-_ONWXXiAw">
+      <localTypes xmi:id="_2irY0wrOEeW4-_ONWXXiAw"/>
+      <registeredTypes xmi:id="_2irY1ArOEeW4-_ONWXXiAw"/>
+    </typesList>
+    <variablesList xmi:id="_2irY1QrOEeW4-_ONWXXiAw">
+      <variables xmi:id="_2irY1grOEeW4-_ONWXXiAw" name="camera">
+        <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.camera.apogy/model/CameraApogySystem.ss#_0AJKoArOEeW4-_ONWXXiAw"/>
+      </variables>
+    </variablesList>
+    <contextsList xmi:id="_2irY1wrOEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:BasicContext" xmi:id="_2irY2ArOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_2ism_grOEeW4-_ONWXXiAw">
+        <variableImplementationsList xmi:id="_2irY2QrOEeW4-_ONWXXiAw">
+          <variableImplementations xmi:id="_2irY2grOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.camera#//CameraSimulated"/>
+          </variableImplementations>
+        </variableImplementationsList>
+      </contexts>
+      <contexts xsi:type="invocator:BasicContext" xmi:id="_2irY2wrOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_2isnAArOEeW4-_ONWXXiAw">
+        <variableImplementationsList xmi:id="_2irY3ArOEeW4-_ONWXXiAw">
+          <variableImplementations xmi:id="_2irY3QrOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.camera#//CameraStub"/>
+          </variableImplementations>
+        </variableImplementationsList>
+      </contexts>
+    </contextsList>
+    <worksitesList xmi:id="_2irY3grOEeW4-_ONWXXiAw">
+      <worksites xsi:type="environment:EarthSurfaceWorksite" xmi:id="_2ir_4ArOEeW4-_ONWXXiAw" name="CSA AT" description="The CSA Default Worksite." time="2015-04-08T14:45:33.793-0400" xAxisAzimuth="3.1311206780778273">
+        <sky xsi:type="environment:EarthSky" xmi:id="_2ir_4QrOEeW4-_ONWXXiAw" time="2015-04-08T14:45:33.793-0400"/>
+        <mapsList xmi:id="_2ir_4wrOEeW4-_ONWXXiAw">
+          <maps xmi:id="_2ir_5ArOEeW4-_ONWXXiAw" name="MarsYard" description="Simple Mars Yard Map.">
+            <transformation xmi:id="_2ism8ArOEeW4-_ONWXXiAw"/>
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_2ism8QrOEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." url="platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
+          </maps>
+        </mapsList>
+        <geographicalCoordinates xmi:id="_2ism8grOEeW4-_ONWXXiAw" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
+      </worksites>
+      <orbitsModels xmi:id="_2ism8wrOEeW4-_ONWXXiAw"/>
+    </worksitesList>
+    <timeSourcesList xmi:id="_2ism9ArOEeW4-_ONWXXiAw">
+      <timeSources xsi:type="emf:CurrentTimeSource" xmi:id="_2ism9QrOEeW4-_ONWXXiAw" time="2015-04-08T14:45:33.793-0400"/>
+    </timeSourcesList>
+  </environment>
+  <programsList xmi:id="_2ism9grOEeW4-_ONWXXiAw">
+    <programs xsi:type="invocator:OperationCallsList" xmi:id="_2ism9wrOEeW4-_ONWXXiAw">
+      <operationCalls xmi:id="_2ism-ArOEeW4-_ONWXXiAw" name="Init" variable="_2irY1grOEeW4-_ONWXXiAw">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/init"/>
+      </operationCalls>
+      <operationCalls xmi:id="_2ism-QrOEeW4-_ONWXXiAw" name="Take Snapshot" variable="_2irY1grOEeW4-_ONWXXiAw">
+        <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//AbstractCamera/takeSnapshot"/>
+      </operationCalls>
+      <operationCalls xmi:id="_2ism-grOEeW4-_ONWXXiAw" name="Change Zoom" variable="_2irY1grOEeW4-_ONWXXiAw">
+        <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
+        <argumentsList xmi:id="_2ism-wrOEeW4-_ONWXXiAw">
+          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_2ism_ArOEeW4-_ONWXXiAw" value="1.0"/>
+        </argumentsList>
+      </operationCalls>
+    </programs>
+  </programsList>
+  <dataProductsListContainer xmi:id="_2ism_QrOEeW4-_ONWXXiAw">
+    <dataProductsList xmi:id="_2ism_grOEeW4-_ONWXXiAw" name="Simulated Data Product Set" description="The list of data products associated with the camera's simulated implementation">
+      <operationCallResultsList xmi:id="_2ism_wrOEeW4-_ONWXXiAw"/>
+    </dataProductsList>
+    <dataProductsList xmi:id="_2isnAArOEeW4-_ONWXXiAw" name="Stub Data Product Set" description="The list of data products associated with the camera's stub implementation">
+      <operationCallResultsList xmi:id="_2isnAQrOEeW4-_ONWXXiAw"/>
+    </dataProductsList>
+  </dataProductsListContainer>
+  <toolsList xmi:id="_2isnAgrOEeW4-_ONWXXiAw"/>
+</invocator:InvocatorSession>

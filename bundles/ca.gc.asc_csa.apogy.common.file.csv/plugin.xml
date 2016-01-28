@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2007.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:49:54 pallard Exp $
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.apogy.common.file.common.csv"
+            class="ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage"
+            genModel="model/apogy_common_file_csv.xcore"/>
+   </extension>
+
+</plugin>

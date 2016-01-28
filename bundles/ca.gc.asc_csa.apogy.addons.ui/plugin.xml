@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_tools_ui -->
+      <package
+            uri="ca.gc.asc_csa.apogy.addons.ui"
+            class="ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage"
+            genModel="model/apogy_addons_ui.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
+      <Class
+            Class="ca.gc.asc_csa.apogy.addons.ui.adapters.Ruler3dToolNodePresentationAdapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.addons.ui.adapters.SunVector3DToolNodePresentationAdapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.addons.ui.adapters.Trajectory3DToolNodePresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.AbstractTwoPoints3DToolLockFromNodeCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleRuler3DToolLockFromNodeCommand"
+            name="Toggle Ruler3D From Node Lock">
+      </command>
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.AbstractTwoPoints3DToolLockToNodeCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleRuler3DToolLockToNodeCommand"
+            name="Toggle Ruler3D To Node Lock">
+      </command>
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimpleToolActiveCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimpleToolActiveCommand"
+            name="Toggle Simple3DTool Active">
+      </command>
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
+            name="Toggle Simple3DTool Visibility">
+      </command>
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
+            name="Toggle Trajectory3DTool Pen">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+         <command
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleRuler3DToolLockFromNodeCommand"
+               label="Toggle From Node Lock"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool">
+                       </instanceof>
+                   </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleRuler3DToolLockToNodeCommand"
+               label="Toggle To Node Lock"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                        <instanceof
+                           value="ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool">
+                        </instanceof>
+                   </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimpleToolActiveCommand"
+               label="Toggle Simple3DTool Active"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.addons.Simple3DTool">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
+               label="Toggle Simple3DTool Visibility"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.addons.Simple3DTool">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
+               label="Toggle Trajectory3DTool Pen"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.addons.Trajectory3DTool">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.asc_csa.apogy.addons.ui.preferences.ApogyToolsUIPreferencesInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.addons.ui.preferences.ApogyToolsUIPreferencesPage"
+            id="ca.gc.asc_csa.apogy.addons.ui.preferences.ApogyToolsUIPreferencesPage"
+            name="Apogy Tools">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="ca.gc.asc_csa.apogy.addons.ui.category"
+            name="Apogy Addons">
+      </category>
+   </extension>
+
+</plugin>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_addons_mobility_pathplanners -->
+      <package
+            uri="ca.gc.asc_csa.apogy.addons.mobility.pathplanners"
+            class="ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage"
+            genModel="model/apogy_addons_mobility_pathplanners.xcore"/>
+   </extension>
+
+</plugin>

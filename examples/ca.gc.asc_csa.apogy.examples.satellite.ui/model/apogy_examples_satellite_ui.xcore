@@ -1,0 +1,37 @@
+@GenModel(prefix="ApogyExamplesSatelliteUi",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)",
+		  modelName="ApogyExamplesSatelliteUi",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.satellite.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.satellite.ui.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.examples.satellite.ui
+
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList
+import ca.gc.asc_csa.apogy.core.invocator.Variable
+
+/*
+ * Constellation Facade.  This class provides utility methods.  
+ */
+ class ApogyExamplesSatelliteUiFacade{
+ 	
+ 	/*
+ 	 * Returns the name of the constellation {@link Variable}.
+ 	 */
+ 	readonly String constellationVariableName = "constellation"
+ 	
+ 	/*
+ 	 * Returns the reference to the Constellation {@link Variable} in the active session.
+ 	 * @return Reference to the Constellation {@link Variable}.
+ 	 */
+ 	op Variable getConstellationVariable()
+ 	
+ 	/*
+ 	 * Returns the reference to the {@link OperationCallResultsList} in the active session that may contain 
+ 	 * constellation data products. 
+ 	 * @return Reference to the {@link OperationCallResultsList}.
+ 	 */ 	
+ 	op OperationCallResultsList getOperationCallResultsList()
+ }

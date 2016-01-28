@@ -1,0 +1,205 @@
+@GenModel(prefix="ApogyAddonsSensorsRange",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="ApogyAddonsSensorsRange",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.range/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.range.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.sensors.range
+
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.common.emf.Timed
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
+import ca.gc.asc_csa.apogy.common.processors.Processor
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.topology.ContentNode
+
+type List<T> wraps java.util.List
+type Point3d wraps javax.vecmath.Point3d
+type Vector3d wraps javax.vecmath.Vector3d
+type Exception wraps java.lang.Exception
+
+class RayData
+{
+	Point3d origin
+	
+	Vector3d direction
+}
+
+class RasterScanSettings extends RectangularFrustrumFieldOfView
+{
+	int verticalResolution
+	
+	int horizontalResolution
+	
+	readonly transient volatile derived int numberOfPoints
+}
+
+class RangeSensor extends Sensor
+{
+	
+}
+
+class ContactSensor extends RangeSensor
+{
+	boolean contacted
+}
+
+class SimpleRangeSensor extends RangeSensor
+{
+	double distanceMeasured
+}
+
+class SimpleSonar extends SimpleRangeSensor
+{
+	/*
+	 * A field of view that is defined by one angle.
+	 */
+	boolean echoDetected
+	
+	op ConicalFieldOfView getFieldOfView()
+}
+
+class LineRangeScanner extends RangeSensor
+{
+	int angularResolution
+	
+	op CircularSectorFieldOfView getFieldOfView()
+}
+
+class SimpleLineRangeScanner extends LineRangeScanner
+{
+	/*
+	 * Method that performs the acquisition of one scan.
+	 * Upon successful completion of the scan acquisition,
+	 * the scanData should be updated with the latest scan
+	 * and the method should return true. If the acquisition
+	 * fails to complete properly, false should be returned.
+	 */
+	op boolean acquireScan()
+}
+
+class RangeScanner<InputType> extends RangeSensor, Processor<InputType, VolumetricCoordinatesSet25D>
+{
+	
+}
+
+abstract class RangeScannerSimulator<InputType> extends RangeScanner<InputType>
+{
+	/*
+	 * The ContentNode where the simulated terrain mesh is found.
+	 * Note that a topology path between this node and the
+	 * RangeScannerSimulator must exist (both the RangeScannerSimulator
+	 * and terrain mesh must be part of the same topology).
+	 */
+	refers ContentNode<CartesianTriangularMesh> meshNode
+	
+	/*
+	 * Flag indicating whether or not noise is to be applied to the
+	 * simulated results. Setting this flag to true will enable the
+	 * calls to the applyOrientationNoise() and applyRangeNoise() methods.
+	 */
+	boolean noiseEnabled
+	
+	/*
+	 * The time (in milliseconds) required by the getCroppedMesh() method.
+	 */
+	long timeCroppingMesh
+	
+	/*
+	 * The time (in milliseconds) required to find the intersection between
+	 * the simulated rays and the terrain mesh.
+	 */
+	long timeFindingIntersections
+	
+	/*
+	 * The time (in milliseconds) required by the getSimulatedRays() method.
+	 */
+	long timeGettingSimulatedRays
+	
+	/*
+	 * Method that takes the mesh node and crops it to get only the part of
+	 * the terrain that falls within the field of view of the sensor. This
+	 * method is abstract and must be overridden.
+	 */
+	op CartesianTriangularMesh getCroppedMesh()
+	
+	/*
+	 * Method that returns the list of Ray Data that will be used to specify
+	 * the position and direction of the simulated laser rays. This method is
+	 * abstract and must be overridden.
+	 */
+	op List<RayData> getSimulatedRays()
+	
+	op void acquireData() throws Exception
+	
+	/*
+	 * Method that applies orientation noise on the original ray data. This
+	 * method is abstract and should be overridden.
+	 */
+	op RayData applyOrientationNoise(RayData rayData)
+	
+	/*
+	 * Method that applies range noise on the actual measured range. This
+	 * method is abstract and should be overridden. 
+	 */
+	op double applyRangeNoise(double range, RayData cleanRayData, RayData noisyRayData)
+	
+	/*
+	 * Method that construct the Coordinates25D from ray data and range.
+	 * This Coordinates25D is then added to the simulated point cloud.
+	 * This method is abstract and should be overridden.
+	 */
+	op Coordinates25D createCoordinates25D(RayData rayData, double range)
+}
+
+class RasterScanRangeSensor extends RangeScanner<RasterScanSettings>, Processor<RasterScanSettings, VolumetricCoordinatesSet25D>
+{
+	op RasterScanSettings getScanSettings()
+}
+
+class SimpleRasterScanRangeScanner extends RasterScanRangeSensor
+{
+	
+}
+
+class SimpleRasterScanRangeScannerSimulator extends RangeScannerSimulator<RasterScanSettings>, SimpleRasterScanRangeScanner
+{
+	double rangeNoiseAmplitude = "0.0"
+	
+	double azimuthNoiseAmplitude = "0.0"
+	
+	double elevationNoiseAmplitude = "0.0"
+	
+	/*
+	 * Enables the detection of the horizon to speed up processing.
+	 * Horizon detection stop the elevation scanning motion when one
+	 * missing return is detected. Note that enabling this feature
+	 * could lead to incomplete results when the terrain includes overhangs.
+	 */
+	boolean horizonDetectionEnabled
+}
+
+class RasterScanData extends AggregateGroupNode, Timed
+{
+	contains RasterScanSettings rasterScanSettings
+	
+	contains VolumetricCoordinatesSet25D scanData
+}
+
+class ApogyAddonsSensorsRangeFacade
+{
+	op RasterScanSettings createRasterScanSettings(double minimumDistance, double maximumDistance,
+		                                           double horizontalFieldOfViewAngle, double verticalFieldOfViewAngle,
+		                                           int horizontalResolution, int verticalResolution)
+
+	op RasterScanSettings createRasterScanSettings(RasterScanSettings rasterScanSettings)
+}

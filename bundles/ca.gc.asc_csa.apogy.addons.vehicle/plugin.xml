@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_tools_vehicle -->
+      <package
+            uri="ca.gc.asc_csa.apogy.addons.vehicle"
+            class="ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage"
+            genModel="model/apogy_addons_vehicle.xcore"/>
+   </extension>
+
+</plugin>

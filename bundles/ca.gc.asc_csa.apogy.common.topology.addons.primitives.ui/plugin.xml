@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.5.2.3.2.1 2015/05/11 14:56:22 pallard Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated topology_primitives_ui -->
+      <package
+            uri="ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui"
+            class="ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage"
+            genModel="model/apogy_common_topology_addons_primitives_ui.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
+      <Class
+            Class="ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.adapters.LabelPresentationAdapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.adapters.SpherePrimitivePresentationAdapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.adapters.VectorPresentationAdapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.adapters.WayPointPresentationAdapter">
+      </Class>
+   </extension>
+
+</plugin>
