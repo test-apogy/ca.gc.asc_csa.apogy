@@ -4,102 +4,120 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	</head>
 	<body>
-		<h1 id="Table_Of_Contents">Table Of Contents</h1>
-		<ol style="list-style: none;">
-			<li>
-				<a href="#Table_Of_Contents">Table Of Contents</a>
-			</li>
-			<li>
-				<a href="#General">General</a>
-				<ol style="list-style: none;">
-					<li>
-						<a href="#3D_Acceleration">3D Acceleration</a>
-					</li>
-				</ol>
-			</li>
-			<li>
-				<a href="#Known_Bugs">Known Bugs</a>
-			</li>
-			<li>
-				<a href="#Symphony_RCP_Installation_.26_Configuration">Symphony RCP Installation &amp; Configuration</a>
-				<ol style="list-style: none;">
-					<li>
-						<a href="#Java_Virtual_Machine">Java Virtual Machine</a>
-					</li>
-					<li>
-						<a href="#Symphony_Rich_Client_Platform_Applications">Symphony Rich Client Platform Applications</a>
-					</li>
-					<li>
-						<a href="#Select_Workspace">Select Workspace</a>
-					</li>
-				</ol>
-			</li>
-			<li>
-				<a href="#Symphony_SDK_Installation_.26_Configuration">Symphony SDK Installation &amp; Configuration</a>
-				<ol style="list-style: none;">
-					<li>
-						<a href="#Eclipse">Eclipse</a>
-					</li>
-					<li>
-						<a href="#Oomph">Oomph</a>
-					</li>
-					<li>
-						<a href="#Install_Eclipse_Features">Install Eclipse Features</a>
-						<ol style="list-style: none;">
-							<li>
-								<a href="#Eclipse_Mars_Packages">Eclipse Mars Packages</a>
-							</li>
-							<li>
-								<a href="#Sirius_Packages">Sirius Packages</a>
-							</li>
-							<li>
-								<a href="#Orbit_Packages">Orbit Packages</a>
-							</li>
-							<li>
-								<a href="#Nebula_Packages">Nebula Packages</a>
-							</li>
-						</ol>
-					</li>
-					<li>
-						<a href="#Install_Symphony">Install Symphony</a>
-						<ol style="list-style: none;">
-							<li>
-								<a href="#Third-Party_Packages">Third-Party Packages</a>
-							</li>
-							<li>
-								<a href="#Symphony_Packages">Symphony Packages</a>
-							</li>
-						</ol>
-					</li>
-					<li>
-						<a href="#Misc">Misc</a>
-						<ol style="list-style: none;">
-							<li>
-								<a href="#ESA_Orekit">ESA Orekit</a>
-							</li>
-							<li>
-								<a href="#NASA_World_Wind">NASA World Wind</a>
-							</li>
-						</ol>
-					</li>
-				</ol>
-			</li>
-		</ol>
-		<h1 id="General">General</h1>
-		<h2 id="3D_Acceleration">3D Acceleration</h2>
-		<p>Symphony makes use of 3D.  It is important to install latest &amp; stable version of graphics card 3D drivers.</p>
-		<h1 id="Known_Bugs">Known Bugs</h1>
-		<ol>
-			<li>export SWT_GTK3=0</li>
-		</ol>
-		<h1 id="Symphony_RCP_Installation_.26_Configuration">Symphony RCP Installation &amp; Configuration</h1>
-		<p>All Symphony RCP applications are based on the same foundation and are packaged the same way.  Symphony RCP applications are self-contained and are packaged in zip format.  Symphony supports the following platform:</p>
+		<h1 id="Overview">Overview</h1>
+		<p>Apogy is based on Eclipse platform (
+			<a href="https://www.eclipse.org">https://www.eclipse.org</a>).  It makes use of 3D so it is important to install latest &amp; stable version of graphics card 3D drivers.  The current guide provide instructions that must be followed carefully.
+		</p>
+		<h2 id="Supported_Platforms">Supported Platforms</h2>
 		<ul>
 			<li>32-bit Windows</li>
 			<li>64-bit Windows</li>
 			<li>32-bit Linux (GTK)</li>
 			<li>64-bit Linux (GTK) </li>
 		</ul>
+		<h1 id="Required_Update_Sites">Required Update Sites</h1>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>URLs</th>
+			</tr>
+			<tr>
+				<td>Apogy OTS</td>
+				<td>Apogy third party library bundles.</td>
+				<td>
+					<a href="ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/">ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Apogy</td>
+				<td>Apogy core, examples, doc bundles.</td>
+				<td>
+					<a href="ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/">ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Sirius</td>
+				<td>DSL Workbenches Designer </td>
+				<td>
+					<a href="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars">http://download.eclipse.org/sirius/updates/releases/3.1.1/mars</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Orbit</td>
+				<td>Official Eclipse bundled third party libraries.</td>
+				<td>
+					<a href="http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/">http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Nebula</td>
+				<td>SWT widgets library.</td>
+				<td>
+					<a href="http://download.eclipse.org/technology/nebula/snapshot">http://download.eclipse.org/technology/nebula/snapshot</a>
+				</td>
+			</tr>
+		</table>
+		<h1 id="Table_Of_Contents">Table Of Contents</h1>
+		<ol style="list-style: none;">
+			<li>
+				<a href="#Overview">Overview</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#Supported_Platforms">Supported Platforms</a>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<a href="#Required_Update_Sites">Required Update Sites</a>
+			</li>
+			<li>
+				<a href="#Table_Of_Contents">Table Of Contents</a>
+			</li>
+			<li>
+				<a href="#Eclipse_SDK">Eclipse SDK</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#Java_Virtual_Machine">Java Virtual Machine</a>
+					</li>
+					<li>
+						<a href="#Oomph">Oomph</a>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<a href="#Eclipse_Features">Eclipse Features</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#Eclipse_Mars_Packages">Eclipse Mars Packages</a>
+					</li>
+					<li>
+						<a href="#Sirius_Packages">Sirius Packages</a>
+					</li>
+					<li>
+						<a href="#Orbit_Packages">Orbit Packages</a>
+					</li>
+					<li>
+						<a href="#Nebula_Packages">Nebula Packages</a>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<a href="#Apogy">Apogy</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#Apogy_Third_Party_Features">Apogy Third Party Features</a>
+					</li>
+					<li>
+						<a href="#Apogy_Features">Apogy Features</a>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<a href="#Known_Issues">Known Issues</a>
+			</li>
+		</ol>
+		<h1 id="Eclipse_SDK">Eclipse SDK</h1>
 		<h2 id="Java_Virtual_Machine">Java Virtual Machine</h2>
 		<ol>
 			<li>Ensure a proper Java Runtime Environment (JRE) is installed on your system (1.8 or higher).  You can download JRE from 
@@ -107,22 +125,6 @@
 			</li>
 			<li>The virtual machine must be accessible in the PATH.  Type the following commands in a system shell to verify the installed java version.<pre>java -version&#10;openjdk version "1.8.0_51"&#10;OpenJDK Runtime Environment (build 1.8.0_51-b16)&#10;OpenJDK 64-Bit Server VM (build 25.51-b03, mixed mode)</pre></li>
 		</ol>
-		<h2 id="Symphony_Rich_Client_Platform_Applications">Symphony Rich Client Platform Applications</h2>
-		<ol>
-			<li>Install Symphony RCP Application<pre>unzip symphony.product-linux.gtk.x86_64.zip</pre></li>
-			<li>Launch Symphony RCP Application<pre>cd symphony&#10;./symphony (Symphony executable)</pre></li>
-		</ol>
-		<h2 id="Select_Workspace">Select Workspace</h2>
-		<ol>
-			<li>The 
-				<b>Workspace Launcher</b> dialog will prompt.  Select the location of the new or the existing workspace.  The workspace will contain the information related to your Symphony session.
-			</li>
-		</ol>
-		<h1 id="Symphony_SDK_Installation_.26_Configuration">Symphony SDK Installation &amp; Configuration</h1>
-		<h2 id="Eclipse">Eclipse</h2>
-		<p>Symphony is based on Eclipse.  The first installation step is the proper installation and configuration of Eclipse.  Eclipse configuration details can be found on 
-			<a href="https://www.eclipse.org">https://www.eclipse.org</a>.
-		</p>
 		<h2 id="Oomph">Oomph</h2>
 		<p>To install Eclipse platform, we highly recommend to use Eclipse Installer also known as Oomph.</p>
 		<ol>
@@ -160,11 +162,11 @@
 				<b>&lt;ECLIPSE_HOME&gt;/eclipse</b>.
 			</li>
 			<li>The 
-				<b>Workspace Launcher</b> dialog will prompt.  Select the location of a new or an existing workspace.  The workspace will contain the information related to your Symphony session.
+				<b>Workspace Launcher</b> dialog will prompt.  Select the location of a new or an existing workspace.  The workspace will contain the information related to your Apogy session.
 			</li>
 		</ol>
-		<h2 id="Install_Eclipse_Features">Install Eclipse Features</h2>
-		<h3 id="Eclipse_Mars_Packages">Eclipse Mars Packages</h3>
+		<h1 id="Eclipse_Features">Eclipse Features</h1>
+		<h2 id="Eclipse_Mars_Packages">Eclipse Mars Packages</h2>
 		<ol>
 			<li>Install the following packages:
 				<ul>
@@ -172,7 +174,7 @@
 				</ul>
 			</li>
 		</ol>
-		<h3 id="Sirius_Packages">Sirius Packages</h3>
+		<h2 id="Sirius_Packages">Sirius Packages</h2>
 		<ol>
 			<li>Add the 
 				<b>Sirius</b> P2 Site 
@@ -185,7 +187,7 @@
 				</ul>
 			</li>
 		</ol>
-		<h3 id="Orbit_Packages">Orbit Packages</h3>
+		<h2 id="Orbit_Packages">Orbit Packages</h2>
 		<ol>
 			<li>Add the 
 				<b>Orbit</b> P2 Site 
@@ -199,7 +201,7 @@
 				</ul>
 			</li>
 		</ol>
-		<h3 id="Nebula_Packages">Nebula Packages</h3>
+		<h2 id="Nebula_Packages">Nebula Packages</h2>
 		<ol>
 			<li>Add the 
 				<b>Nebula</b> P2 Site 
@@ -211,47 +213,35 @@
 				</ul>
 			</li>
 		</ol>
-		<h2 id="Install_Symphony">Install Symphony</h2>
-		<p>Symphony is composed of a series of Eclipse features.  The following steps present the way to install them.</p>
-		<h3 id="Third-Party_Packages">Third-Party Packages</h3>
+		<h1 id="Apogy">Apogy</h1>
+		<p>Apogy is composed of a series of Eclipse features.  The following steps present the way to install them.</p>
+		<h2 id="Apogy_Third_Party_Features">Apogy Third Party Features</h2>
 		<ol>
-			<li>Clone Symphony Third-Party repository <pre>git clone 
-				<a href="https://&lt;user&gt;@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.ots.git">https://&lt;user&gt;@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.ots.git</a></pre>
-			</li>
-			<li>Create a directory to store a backup of pre-compiled Symphony Third-Party Packages.<pre>cd ~; mkdir tmp</pre></li>
-			<li>Make a temporary copy of 
-				<b>symphony_ots_repository</b>.<pre>cp git/org.eclipse.symphony.ots/symphony_ots_repository_0_1.tar.gz ~/tmp</pre>
-			</li>
-			<li>Extract the content <pre>cd ~/tmp; &#10;tar -xvf symphony_ots_repository_0_1.tar.gz</pre></li>
-			<li>Launch the Eclipse executable.<pre>cd &lt;ECLIPSE_HOME&gt;&#10;./eclipse</pre></li>
-			<li>Select the workspace location.</li>
 			<li>Add the 
-				<b>Symphony Third-Party</b> Local P2 Site.
+				<b>Apogy OTS</b> P2 Site 
+				<a href="ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/">ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/</a>.
 			</li>
-			<li>Select and install all the packages.</li>
-		</ol>
-		<h3 id="Symphony_Packages">Symphony Packages</h3>
-		<ol>
-			<li>Clone Symphony repository <pre>git clone 
-				<a href="https://&lt;user&gt;@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git">https://&lt;user&gt;@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git</a></pre>
-			</li>
-		</ol>
-		<h2 id="Misc">Misc</h2>
-		<h3 id="ESA_Orekit">ESA Orekit</h3>
-		<p>Few 
-			<b>org.orekit</b> fixes are not included in the Symphony Third-Party packages.  
-		</p>
-		<ol>
-			<li>Import 
-				<b>org.orekit</b> project into the workspace.
+			<li>Install the following packages:
+				<ul>
+					<li>Apogy Off The Shelves (OTS)</li>
+				</ul>
 			</li>
 		</ol>
-		<h3 id="NASA_World_Wind">NASA World Wind</h3>
-		<p>The current packaging requires few little steps to ensure proper execution of NASA World Wind packages.</p>
+		<h2 id="Apogy_Features">Apogy Features</h2>
 		<ol>
-			<li>Import 
-				<b>gov.nasa.worldwind</b> project into the workspace.
+			<li>Add the 
+				<b>Apogy</b> P2 Site 
+				<a href="ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/">ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/</a>.
 			</li>
+			<li>Install the following packages:
+				<ul>
+					<li>Apogy</li>
+				</ul>
+			</li>
+		</ol>
+		<h1 id="Known_Issues">Known Issues</h1>
+		<ol>
+			<li>export SWT_GTK3=0</li>
 		</ol>
 	</body>
 </html>

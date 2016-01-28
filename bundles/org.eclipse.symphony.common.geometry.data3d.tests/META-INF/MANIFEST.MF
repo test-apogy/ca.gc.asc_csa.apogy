@@ -17,7 +17,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.junit;visibility:=reexport,
- org.vtk;bundle-version="5.4.0"
+ org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.common.geometry.data3d.tests.Activator
