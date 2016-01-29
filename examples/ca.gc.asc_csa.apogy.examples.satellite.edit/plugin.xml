@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated apogy_examples_satellite -->
+      <factory
+            uri="ca.gc.asc_csa.apogy.examples.satellite"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated apogy_examples_satellite -->
+      <extender
+            uri="ca.gc.asc_csa.apogy.core.environment.orbit.earth"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCoreEnvironmentOrbitEarthChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.core.environment"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCoreEnvironmentChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.images"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCommonImagesChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
+   </extension>
+
+</plugin>

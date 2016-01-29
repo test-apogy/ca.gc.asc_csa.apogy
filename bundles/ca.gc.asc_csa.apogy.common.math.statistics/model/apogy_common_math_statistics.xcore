@@ -1,0 +1,23 @@
+@GenModel(prefix="ApogyCommonMathStatistics",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="ApogyCommonMathStatistics",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.math.statistics/src-generated")
+
+package ca.gc.asc_csa.apogy.common.math.statistics
+
+class Population
+{
+	double[] data
+	readonly transient derived double standardDeviation
+	readonly transient derived double average
+	readonly transient derived double sum
+	readonly transient derived double median
+	readonly transient derived double sumSquared
+	readonly transient derived double variance
+	readonly transient volatile derived double min = "0.0"
+	readonly transient volatile derived double max = "0.0"
+}

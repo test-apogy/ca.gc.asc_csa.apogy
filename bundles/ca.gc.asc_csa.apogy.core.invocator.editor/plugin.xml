@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ca.gc.asc_csa.apogy.core.invocator.presentation.ApogyCoreInvocatorModelWizardID"
+            name="%_UI_ApogyCoreInvocatorModelWizard_label"
+            class="ca.gc.asc_csa.apogy.core.invocator.presentation.ApogyCoreInvocatorModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ApogyCoreInvocatorModelFile.gif">
+         <description>%_UI_ApogyCoreInvocatorModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="ca.gc.asc_csa.apogy.core.invocator.presentation.ApogyCoreInvocatorEditorID"
+            name="%_UI_ApogyCoreInvocatorEditor_label"
+            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.ui/icons/apogy_logo_16x16.gif"
+            extensions="ei, ss, sym"
+            class="ca.gc.asc_csa.apogy.core.invocator.presentation.CustomApogyCoreInvocatorEditor"
+            contributorClass="ca.gc.asc_csa.apogy.core.invocator.presentation.ApogyCoreInvocatorActionBarContributor">
+      </editor>
+   </extension>
+
+null
+null</plugin>

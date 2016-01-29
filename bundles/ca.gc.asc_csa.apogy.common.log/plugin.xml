@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated utils_log -->
+      <package
+            uri="ca.gc.asc_csa.apogy.common.log"
+            class="ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage"
+            genModel="model/apogy_common_log.xcore"/>
+   </extension>
+
+</plugin>

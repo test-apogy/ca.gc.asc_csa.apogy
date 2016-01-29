@@ -1,0 +1,151 @@
+@GenModel(prefix="ApogyAddonsSensorsImaging",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)",
+		  modelName="ApogyAddonsSensorsImaging")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.sensors.imaging
+
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
+
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage
+import ca.gc.asc_csa.apogy.common.topology.GroupNode
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Timed
+
+type Color wraps java.awt.Color
+
+abstract class AbstractCamera extends Sensor, Named
+{
+	/** Command the camera to take a snapshot. */
+	op ImageSnapshot takeSnapshot()
+	
+	/** Gets the current field of view of the camera. */
+	op RectangularFrustrumFieldOfView getFieldOfView()
+	
+	/** The last ImageSnapshot acquired.*/
+	@GenModel(children = "true", notify="true", propertyCategory="CAMERA_PROPERTIES")
+	refers transient ImageSnapshot latestImageSnapshot
+}
+
+class ImageSnapshot extends GroupNode, Timed
+{
+	/** The field Of View associated with the image. */
+	contains RectangularFrustrumFieldOfView fieldOfView
+	
+	/** The image */
+	contains AbstractEImage image
+	
+	/*
+	 * Returns the horizontal angular position associated with a specified horizontal pixel position in the image.
+	 * This method should be overridden by sub-classes to take into account camera specific mapping.
+	 * @param horizontalPixelPosition The horizontal pixel position (positive toward the right).
+	 * @return The horizontal angle, in radians.  
+	 */
+	@GenModel(apogy_units = "rad")
+	op double convertToHorizontalAngle(int horizontalPixelPosition)
+	
+	/*
+	 * Returns the vertical angular position associated with a specified vertical pixel position in the image.
+	 * This method should be overridden by sub-classes to take into account camera specific mapping.
+	 * @param verticalPixelPosition The vertical pixel position (positive toward the bottom of the image).
+	 * @return The horizontal angle, in radians.  
+	 */
+	@GenModel(apogy_units = "rad")
+	op double convertToVerticalAngle(int verticalPixelPosition)
+}
+
+class RectifiedImageSnapshot extends ImageSnapshot
+{
+	/** Gets the rectified image. */
+	op AbstractEImage getRectifiedImage()
+}
+
+abstract class Zoomable
+{
+	/*
+	 * Command the camera zoom.
+	 * @param newZoom The commanded zoom.
+	 */
+	op boolean commandZoom(double newZoom)
+	
+	/*
+	 * Returns the minimum zoom value that can be commanded.
+	 * @return The minimum zoom value.
+	 */
+	op double getMinimumZoom()
+	
+	/*
+	 * Returns the maximum zoom value that can be commanded.
+	 * @return The maximum zoom value.
+	 */
+	op double getMaximumZoom()
+	
+	
+	/* The current value of the zoom. */
+	@GenModel(children="false", notify="true", property="Readonly", propertyCategory="ZOOMABLE_PROPERTIES")
+	double currentZoom = "1.0"
+	
+	/* The commanded value of the zoom. */
+	@GenModel(children="false", notify="true", property="Readonly", propertyCategory="ZOOMABLE_PROPERTIES")
+	double commandedZoom = "1.0"
+}
+
+enum AzimuthDirection
+{
+	POSITIVE_TOWARD_LEFT as "Positive Toward Left" = 1,
+	POSITIVE_TOWARD_RIGHT as "Positive Toward Right" = 2
+}
+
+enum ElevationDirection
+{
+	POSITIVE_UP as "Positive Up" = 1,
+	POSITIVE_DOWN as "Positive Down" = 2
+}
+
+class ImagingUtilities
+{
+	/*
+	 * Returns the horizontal angular position associated with a specified horizontal pixel position in the image using a linear relationship for a specified ImageSnapshot.
+	 * @param imageSnapshot The specified ImageSnapshot.
+	 * @param horizontalPixelPosition The horizontal pixel position (positive toward the right).
+	 * @return The horizontal angle, in radians.  
+	 */
+	@GenModel(apogy_units = "rad")
+	op double linearConvertToHorizontalAngle(ImageSnapshot imageSnapshot, int horizontalPixelPosition)
+	
+	/*
+	 * Returns the vertical angular position associated with a specified vertical pixel position in the image using a linear relationship for a specified ImageSnapshot.	  
+	 * @param imageSnapshot The specified ImageSnapshot.
+	 * @param verticalPixelPosition The vertical pixel position (positive toward the bottom of the image).
+	 * @return The horizontal angle, in radians.  
+	 */
+	@GenModel(apogy_units = "rad")
+	op double linearConvertToVerticalAngle(ImageSnapshot imageSnapshot, int verticalPixelPosition)
+		
+		
+	/**
+	 * Creates a transparent overlay showing horizontal and vertical graduated lines over an image to convey elevation and azimuth information.
+	 * @param imageWidth The image width, in pixels.
+	 * @param imageHeight The image height, in pixels.
+	 * @param panAngle PTZ pan angle, in degrees.
+	 * @param tiltAngle PTZ tilt angle, in degrees.
+	 * @param horizontalFOVAngle Horizontal FOV, in degrees.
+	 * @param verticalFOVAngle Vertical FOV, in degrees.
+	 * @param azimuthDirection The azimuth direction.
+	 * @param elevationDirection The elevation direction.
+	 * @param angleInterval The interval, in degrees, for which to display numericals.
+	 * @param fontName The name of the font.
+	 * @param fontSize The size of the font.
+	 * @param positiveColor The color to use for positive values.
+	 * @param negativeColor The color to use for negative values.
+	 * @param lineWidth The width of the line, in pixels.
+	 * @return The image.
+	 */
+	op AbstractEImage getAzimuthElevationOverlay(@GenModel(apogy_units = "pixel") int imageWidth, @GenModel(apogy_units = "pixel") int imageHeight, @GenModel(apogy_units = "deg") double panAngle, @GenModel(apogy_units = "deg") double tiltAngle, @GenModel(apogy_units = "deg") double horizontalFOVAngle, @GenModel(apogy_units = "deg") double verticalFOVAngle, AzimuthDirection azimuthDirection, ElevationDirection elevationDirection, @GenModel(apogy_units = "deg") int angleInterval, String fontName, int fontSize, Color positiveColor, Color negativeColor, int lineWidth)
+}
+

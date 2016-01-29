@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2011
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_common_images -->
+      <package
+            uri="ca.gc.asc_csa.apogy.common.images"
+            class="ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage"
+            genModel="model/apogy_common_images.xcore"/>
+   </extension>
+   
+   <extension
+         point="ca.gc.asc_csa.apogy.common.converters">
+      <new_element
+            Class="ca.gc.asc_csa.apogy.common.images.converters.IFileToImageData">
+      </new_element>
+      <new_element
+            Class="ca.gc.asc_csa.apogy.common.images.converters.ObjectToImageDataConverter">
+      </new_element>
+      <new_element
+            Class="ca.gc.asc_csa.apogy.common.images.converters.EImageToFileConverter">
+      </new_element>
+      <new_element
+            Class="ca.gc.asc_csa.apogy.common.images.converters.ObjectToBufferedImageConverter">
+      </new_element>
+      <new_element
+            Class="ca.gc.asc_csa.apogy.common.images.converters.EObjectToAbstractEImage">
+      </new_element>
+   </extension>
+</plugin>

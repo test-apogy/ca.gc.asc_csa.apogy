@@ -1,0 +1,368 @@
+@GenModel(prefix="ApogyAddonsVehicle",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyAddonsVehicle",
+		  suppressGenModelAnnotations="false") 
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.vehicle/src-generated")
+@GenModel(editDirectory= "/ca.gc.asc_csa.apogy.addons.vehicle.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.vehicle
+
+import ca.gc.asc_csa.apogy.core.invocator.Variable
+import ca.gc.asc_csa.apogy.core.PoseCorrector
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner
+
+
+type Point2d wraps javax.vecmath.Point2d
+type Point3d wraps javax.vecmath.Point3d
+type Vector3d wraps javax.vecmath.Vector3d
+
+type Map<K,V> wraps java.util.Map
+type List<T> wraps java.util.List
+type SortedSet<T> wraps java.util.SortedSet
+type Iterator<T> wraps java.util.Iterator
+
+type Segment2D wraps ca.gc.asc_csa.apogy.addons.vehicle.Segment2D
+type Line3d wraps ca.gc.asc_csa.apogy.addons.vehicle.Line3d
+type Plane wraps ca.gc.asc_csa.apogy.addons.vehicle.Plane
+type TerrainProfile wraps ca.gc.asc_csa.apogy.addons.vehicle.TerrainProfile
+
+type ClosestNeighbourIteratorProvider wraps ca.gc.asc_csa.apogy.addons.vehicle.ClosestNeighbourIteratorProvider
+
+
+/*
+ * Enumeration of available methods use to compute the correction along the Z axis. 
+ */
+enum ZCorrectionMode
+{	
+	AverageContact as "AverageContact" = 0,
+	HighestContact as "HighestContact" = 1,
+	LowestContact as "LowestContact" = 2,
+	NoZCorrection as "No Correction" = 3
+}
+
+/*
+ * Enumeration of available methods use to compute the orientation correction. 
+ */
+enum OrientationCorrectionMode
+{
+	LeastSquarePlaneCorrection as "Least Square Plane" = 0,
+	NoOrientationCorrection as "No Correction" = 1
+}
+
+class VehiclePoseCorrector extends PoseCorrector
+{	
+	/*
+	 * Method that forces re-initialization of the pose corrector meshes contact geometries.
+	 */
+	op void reInitialize()		
+			
+	/* 
+	 * Whether or not the corrector is initializing.
+	 */
+	@GenModel(notify="true", property="Readonly", propertyCategory="INTERNAL_INFO")
+	boolean initializing = "false"
+								
+	/* 
+	 * The list of ContentNode containing the meshes being processed to find contact points.
+	 */
+	@GenModel(children="true", notify="true", propertyCategory="INTERNAL_INFO")
+	refers MeshNodeEntry[0..*] meshes 
+
+	/* 
+	 * The list of physical bodies being processed to find contact points.
+	 */
+	@GenModel(notify="true", property="Readonly", propertyCategory="INTERNAL_INFO")
+	refers PhysicalBody[0..*] contactBodies
+
+	/* 
+	 * The method used to compute the correction along the Z axis.
+	 */
+	@GenModel(notify="true", propertyCategory="SETTINGS_INFO")
+	ZCorrectionMode zCorrectionMode
+	
+	/* 
+	 * The last value of the pose correction along the Z axis.
+	 */
+	@GenModel(notify="true", property="Readonly", propertyCategory="CORRECTION_INFO", apogy_units="m")
+	double zCorrection = "0"
+	
+	/* The method used to correct orientation.
+	 *
+	 */
+	@GenModel(notify="true", propertyCategory="SETTINGS_INFO")
+	OrientationCorrectionMode orientationCorrectionMode
+	
+	/* 
+	 * Orientation Correction.
+	 */
+	@GenModel(notify="true", child = "true", property="Readonly", propertyCategory="CORRECTION_INFO")
+	refers transient Matrix3x3[0..1] orientationCorrection
+	
+	/* Provider of contacts for the VehiclePoseCorrector.*/
+	contains ContactProvider[1] contactProvider opposite vehiclePoseCorrector
+	
+	/* 
+	 * Returns the MeshExtent2D associated with the specified mesh.
+	 * @param mesh The specified mesh.
+	 * @return The MeshExtent2D associated with the mesh or null if none is found.
+	 */
+	op MeshExtent2D getMeshExtent2D(CartesianTriangularMesh mesh)
+	
+	/*
+	 * Returns the ClosestNeighbourIteratorProvider associated with the specified mesh.
+	 * @param mesh The specified mesh.
+	 * @return The ClosestNeighbourIteratorProvider associated with the mesh or null if none is found.
+	 */
+	op ClosestNeighbourIteratorProvider getClosestNeighbourIteratorProvider(CartesianTriangularMesh mesh)
+}
+
+/*
+ * Class representing a Node and CartesianTriangularMesh association.
+ */
+class MeshNodeEntry
+{
+	refers Node node
+	refers CartesianTriangularMesh mesh
+}
+
+abstract class ContactProvider
+{
+	refers VehiclePoseCorrector vehiclePoseCorrector opposite contactProvider
+	
+	op List<PhysicalBody> extractContactBodies()
+	
+	op void updateContactPoints(Matrix4x4 originalPose, Map<PhysicalBody, Point3d> bodyToContactsMap)
+}
+
+// Wheel Vehicle Specific 
+
+/* 
+ * Class that represent a physical wheel used to model Wheel to Mesh contact.
+ */
+class Wheel extends PhysicalBody
+{
+	@GenModel(apogy_units="m")
+	double radius = "0.25"	
+	
+	@GenModel(apogy_units="m")
+	double length = "0.1"
+}
+
+/* 
+ * Class that represents a thruster, including its plume.
+ * The thrust is directed along the +Z axis.
+ */
+class Thruster extends Node
+{
+	/*
+	 * The minimum thrust, in Newtons. Must be positive.
+	 */
+	@GenModel(notify="true", apogy_units="N", propertyCategory="THRUST_INFO")
+	double minimumThrust = "0"
+	
+	/*
+	 * The maximum thrust, in Newtons. Must be positive.
+	 */
+	@GenModel(notify="true", apogy_units="N", propertyCategory="THRUST_INFO")
+	double maximumThrust = "100"
+	
+	/*
+	 * The current thrust, in Newtons. Always between minimumThrust and maximumThrust.
+	 */
+	@GenModel(notify="true", apogy_units="N", propertyCategory="THRUST_INFO")
+	transient double currentThrust
+	
+	/*
+	 * The current thrust level. Between 0.0 and 1.0
+	 */
+	@GenModel(notify="true", property="Readonly", propertyCategory="THRUST_INFO") 
+	transient double thrustLevel = "0.0"
+	
+	/*
+	 * Plume angle, in radians
+	 */
+	@GenModel(apogy_units="rad")
+	double plumeAngle = "0.5"
+}
+
+class ThrusterBinding extends AbstractTopologyBinding
+{
+	refers Thruster thruster
+}
+
+/* 
+ * Enumeration of available model of wheel to Mesh contact.
+ */
+enum WheelContactMode
+{
+	PointWheelContact as "Point Wheel" = 0,
+	CylindricalWheelContact as "Cylindrical Wheel" = 1
+}
+
+class WheelContactProvider extends ContactProvider
+{
+	/* 
+	 * The type of wheel to Mesh contact to use.
+	 */
+	@GenModel(notify="true", propertyCategory="SETTINGS_INFO")
+	WheelContactMode contactMode
+}
+
+
+// Lander Specifics
+
+class LanderSphericalFoot extends PhysicalBody
+{
+	@GenModel(apogy_units="m")
+	double radius = "0.01"	
+}
+
+class LanderSphericalFootContactProvider extends ContactProvider
+{
+	
+}
+
+// Others
+
+class ApogyAddonsVehicleFacade
+{	
+	
+}
+
+class WheelVehicleUtilities
+{
+	/*
+	 * Returns the location of the wheel center that makes the wheel contact the specified segment.
+	 * @param wheelRadius The wheel radius, in meters.
+	 * @param The wheel center x position in the profile coordinates.
+	 * @param segment The specified segment.
+	 * @return The position of the wheel center, null if none is found.
+	 */
+	op Point2d getWheelCenterPoint(double wheelRadius, double wheelCenterX, Segment2D segment)
+	
+	/*
+	 * Returns the location of the wheel center that makes the wheel contact with the specified TerrainProfile.
+	 * @param wheelRadius The wheel radius, in meters.
+	 * @param The wheel center x position in the profile coordinates.
+	 * @param terrainProfile The specified TerrainProfile.
+	 * @return The position of the wheel center, null if none is found.
+	 */
+	op Point2d getWheelCenterPoint(double wheelRadius, double wheelCenterX, TerrainProfile terrainProfile)
+	
+	/*
+	 * Returns the terrain profile for the specified plane cutting through the specified mesh.
+	 * @param mesh The specified mesh.
+	 * @param plane The specified plane.
+	 * @return The set of Segment (sorted by p1.x) of the profile found at the intersection.
+	 */
+	op TerrainProfile findTerrainProfile(CartesianTriangularMesh mesh, Plane plane)
+	
+	/*
+	 * Finds the list of points found at the intersection of the specified plane and line.
+	 * @param plane The specified Plane.
+	 * @param line3d The specified line
+	 * @return The list containing the intersection points. Can be empty if no intersection is found. 
+	 * Can contain 1 point if the line intersect with the plane but does lies in it. Can contain 2 
+	 * points (the segment end points) if the line lies in the plane.
+	 */
+	op List<Point3d> findIntersection(Plane plane, Line3d line3d)
+	
+	/*
+	 * Returns whether or no a specified point falls on a Segment2D
+	 * @param p The specified point.
+	 * @param segment The sepcified Segment2D.
+	 * @return True if the point falls on the segment, false otherwise.
+	 */
+	op boolean isPointOnSegment(Point2d p, Segment2D segment)
+	
+	/*
+	 * Returns the mesh extent of a specified mesh.
+	 * @param mesh The specified mesh.
+	 * @return The associated MeshExtent. 
+	 */
+	op MeshExtent2D findMeshExtent2D(CartesianTriangularMesh mesh)
+	
+	/*
+	 * Returns whether of not a specified point falls within a mesh extents.
+	 * @param point The specified point.
+	 * @param meshExtent The specified mesh extent.
+	 * @return True is the point falls within the meshExtent, false otherwise.
+	 */
+	op boolean isWithin(Point3d point, MeshExtent2D meshExtent)
+	
+	/*
+	 * Returns the normal of the plane that best (least square errors) fits a set of points.
+	 * @param points The list of points.
+	 * @return The normal of the plane that best (least square errors) fits a set of points, null if it is not defined.
+	 * @see D. Gingras, Memoire de maitrise, pp. 73-74.
+	 */
+	op Vector3d findBestFitPlane(List<Point3d> points)
+}
+
+class MeshExtent2D
+{
+	double minimumX = "0"
+	double minimumY = "0"
+	double maximumX = "0"
+	double maximumY = "0"
+}
+
+class PathPlannerTool extends AbstractTwoPoints3DTool
+{
+	@GenModel(notify="true", property="Readonly")
+	transient boolean busy = "false"
+	
+	/*
+	 * Whether or not automatic path planning is enabled. When enabled, chnaging the destination will automatically
+	 * start a replan of the path.
+	 */
+	@GenModel(notify="true", property="Editable")
+	boolean autoPathPlanEnabled = "false"
+
+
+	/*
+	 * Method that plan a path from the variable current location to the specified destination and updates
+	 * the planned path according to the result.
+	 */
+	op boolean planPath()
+	
+	/*
+	 * The mesh layer to use to plan the path.
+	 */
+	refers CartesianTriangularMeshMapLayer meshLayer
+		
+	@GenModel(children="true", notify="true")
+	contains MeshWayPointPathPlanner [0..1] pathPlanner
+	
+	@GenModel(children="true", notify="true", property="Readonly")
+	contains WayPointPath[0..1] plannedPath 	
+	
+	@GenModel(notify="true", children="false", property="None", propertyCategory="TRAJECTORY_3D_TOOL")
+	refers transient PathPlannerToolNode pathPlannerToolNode opposite pathPlannerTool
+}
+
+class PathPlannerToolNode extends AggregateGroupNode
+{
+	refers transient PathPlannerTool pathPlannerTool opposite pathPlannerToolNode
+}
+
+class VehiclePathPlannerTool extends PathPlannerTool
+{
+	/*
+	 *  The Apogy System for which to plan a path.
+	 */
+ 	@GenModel(propertyCategory="TRAJECTORY_3D_TOOL")
+	refers Variable[1] variable
+}

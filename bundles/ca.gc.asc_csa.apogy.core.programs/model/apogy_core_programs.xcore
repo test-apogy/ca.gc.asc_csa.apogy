@@ -1,0 +1,53 @@
+@GenModel(prefix="ApogyCorePrograms",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+		  modelName="ApogyCorePrograms")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.programs/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.programs.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.core.programs
+
+/*
+ * This class defines the main specifications of the Program runtime.  
+ * The intent is to support capabilities similar to the Debug capabilities.
+ * Specialized {@link Program} must provide its own {@link ProgramRuntime}.  
+ */
+import ca.gc.asc_csa.apogy.core.invocator.Program
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
+import ca.gc.asc_csa.apogy.core.invocator.Variable
+import ca.gc.asc_csa.apogy.common.emf.Exception
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall
+
+abstract class AbstractProgramRuntime
+{
+	refers Program program
+	op void resume()
+	op void suspend()
+	op void terminate()	
+	op void stepInto()
+	op void stepOver()
+	op void stepReturn()
+}
+
+/*
+ * The program runtimes must use this to interact with the EMF invocator Singleton.
+ */
+class ApogyCoreProgramsFacade
+{
+	refers transient readonly volatile InvocatorSession session
+	refers transient readonly volatile Variable[0..*] variables	
+	op Object exec(OperationCall operationCall) throws Exception
+}
+
+class TimeInterval
+{
+	long startTime	
+	long endTime	
+ 	
+ 	readonly derived long duration get
+ 	{
+ 		return endTime - startTime
+ 	}
+}

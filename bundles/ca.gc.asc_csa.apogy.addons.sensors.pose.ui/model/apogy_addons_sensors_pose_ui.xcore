@@ -1,0 +1,28 @@
+@GenModel(prefix="ApogyAddonsSensorsPoseUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyAddonsSensorsPoseUI",
+		  complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.pose.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.pose.ui.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui
+
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
+
+class PositionSensorPresentation extends NodePresentation
+{
+	boolean frameVisible = "true"
+}
+
+class OrientationSensorPresentation extends NodePresentation
+{
+	boolean frameVisible = "true"
+}
+
+class PoseSensorPresentation extends NodePresentation
+{
+	boolean frameVisible = "true"
+}

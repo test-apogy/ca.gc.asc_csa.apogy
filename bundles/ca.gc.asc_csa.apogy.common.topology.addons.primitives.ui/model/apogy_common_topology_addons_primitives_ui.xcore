@@ -1,0 +1,35 @@
+@GenModel(prefix="ApogyCommonTopologyAddonsPrimitivesUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyCommonTopologyAddonsPrimitivesUI",
+		  complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.edit/src-generated")
+
+
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui
+
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
+
+class VectorPresentation extends NodePresentation
+{
+	int lineWidth = "1"
+}
+
+class WayPointPresentation extends NodePresentation
+{
+	
+}
+
+class LabelPresentation extends NodePresentation
+{
+	
+}
+
+class SpherePrimitivePresentation extends NodePresentation
+{
+	
+}
+

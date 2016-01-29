@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.topology.ui.views.ApogyEnvironment3DView"
+            icon="icons/eview16/Apogy3DViewer.gif"
+            id="ca.gc.asc_csa.apogy.core.topology.ui.views.Apogy3DView"
+            name="Apogy 3D Viewer"
+            restorable="true">
+      </view>
+      <view
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.topology.ui.views.ApogySystem3DView"
+            icon="icons/eview16/ApogySystem3DViewer.gif"
+            id="ca.gc.asc_csa.apogy.core.topology.ui.views.ApogySystem3DView"
+            name="Apogy System 3D Viewer"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="ca.gc.asc_csa.apogy.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"
+            name="Toggle Variable Topology Visibility">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"
+               label="Toggle Variable Topology Visibility"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                    ifEmpty="false"
+                    operator="or">
+                     <and>
+                        <instanceof
+                              value="ca.gc.asc_csa.apogy.core.invocator.Variable">
+                        </instanceof>
+                        <test
+                              forcePluginActivation="true"
+                              property="ca.gc.asc_csa.apogy.core.ui.instanceOfApogySystem">
+                        </test>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.core.topology.ui.preferences.ApogySystem3DViewerUIPreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.topology.ui.preferences.ApogySystem3DViewerUIPreferencesPage"
+            name="Apogy System 3D View">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="ca.gc.asc_csa.apogy.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommandHandler"
+            commandId="ca.gc.asc_csa.apogy.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand">
+         <enabledWhen>
+            <with
+                 variable="activeMenuSelection">
+               <iterate
+                  ifEmpty="false"
+                  operator="and">
+                    <test
+                         forcePluginActivation="true"
+                         property="ca.gc.asc_csa.apogy.core.ui.instanceOfApogySystem">
+                    </test>
+               </iterate>
+            </with>
+         </enabledWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.asc_csa.apogy.core.topology.ui.preferences.ApogyTopologyUIPreferencesInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

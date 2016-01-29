@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="apogy_core_ui_sirius" version="10.1.0.201507271600">
+  <ownedViewpoints name="ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint" label="ApogySystem Viewpoint" modelFileExtension="ss">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram" label="Topology Diagram" domainClass="ApogySystem">
+      <metamodel href="http://www.eclipse.org/sirius/diagram/1.1.0#/"/>
+      <metamodel href="http://www.eclipse.org/sirius/1.1.0#/"/>
+      <metamodel href="ca.gc.asc_csa.apogy.common.topology#/"/>
+      <metamodel href="ca.gc.asc_csa.apogy.addons.sensors.fov#/"/>
+      <metamodel href="ca.gc.asc_csa.apogy.addons.vehicle#/"/>
+      <metamodel href="ca.gc.asc_csa.apogy.core#/"/>
+      <defaultLayer name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.layer" label="Topology Layer">
+        <nodeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes" label="Group Nodes" deletionDescription="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_node.topology']" labelDirectEdit="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.edit_label.node.id']" domainClass="topology.GroupNode">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="[self.eClass().instanceTypeName.substring(self.eClass().instanceTypeName.lastIndexOf('.')+1).concat(' ').concat(self.nodeId).concat(' (').concat(self.oclAsType(GroupNode).children->size().toString()).concat(')') /]" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(topology::TransformNode) = true/]">
+            <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Transform Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(topology::GroupNode).children->size().toString()).concat(')') /]" sizeComputationExpression="0" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(topology::PositionNode) = true/]">
+            <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Position Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(PositionNode).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(topology::RotationNode) = true/]">
+            <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Rotation Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(RotationNode).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(topology::PickAndPlaceNode) = true/]">
+            <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Pick &amp; Place Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(PickAndPlaceNode).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(topology::AggregateGroupNode) = true/]">
+            <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Aggregate Group Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(AggregateGroupNode).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(vehicle::Wheel) = true/]">
+            <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Wheel Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(Wheel).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(vehicle::LanderSphericalFoot) = true/]">
+            <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Lander Spherical Foot Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(LanderSphericalFoot).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes" label="Leaf Nodes" preconditionExpression="[self.oclIsKindOf(topology::GroupNode) = false/]" deletionDescription="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_node.topology']" labelDirectEdit="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.edit_label.node.id']" domainClass="topology.Node">
+          <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="[self.eClass().instanceTypeName.substring(self.eClass().instanceTypeName.lastIndexOf('.')+1).concat(' ').concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(topology::URLNode) = true/]">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['URL Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(fov::CircularSectorFieldOfView) = true/]">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['Circular Sector FOV Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(fov::ConicalFieldOfView) = true/]">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['Conical FOV Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(fov::RectangularFrustrumFieldOfView) = true/]">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['Rectangular Frustrum FOV Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(vehicle::Thruster) = true/]">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['Thruster Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.topology_root" label="Topology Root" deletionDescription="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_node.topology_root']" domainClass="core.TopologyRoot">
+          <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelExpression="['Topology Root'/]" tooltipExpression="['Topology Root'/]" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.edges.parent_edge" label="(Group Node, Leaf Node) -> Group Node Edges" deletionDescription="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_edge.node_to_node']" sourceMapping="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes'] //@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes']" targetMapping="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes'] //@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes']" targetFinderExpression="feature:parent" reconnections="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.reconnect_edge.source.node_to_node'] //@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.reconnect_edge.target.node_to_node']">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.edges.topology_root" label="(Group Node, Leaf Node) -> Topology Root Edges" preconditionExpression="[target.oclAsType(TopologyRoot).originNode = source/]" deletionDescription="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_edge.node_to_root']" sourceMapping="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes'] //@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes']" targetMapping="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.topology_root']" targetFinderExpression="[TopologyRoot.allInstances()->select(t : TopologyRoot | t.originNode = self)/]" reconnections="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.reconnect_edge.source.node_to_root'] //@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.reconnect_edge.target.node_to_root']">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.sections.any_node_type" label="Any Node Type">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.any" label="Create Any Node" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes'] //@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.any.action_call" label="Create Node" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[null/]"/>
+                <parameters name="NumInsts" value="[0/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.sections.common_group_nodes" label="Common Group Nodes">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.aggregate_group" label="Create Aggregate Group Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.aggregate_group.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[topology::AggregateGroupNode/]"/>
+                <parameters name="NumInsts" value="[topology::AggregateGroupNode.allInstances()->select(n | n.oclIsTypeOf(topology::AggregateGroupNode) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.transform" label="Create Transform Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.transform.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[topology::TransformNode/]"/>
+                <parameters name="NumInsts" value="[topology::TransformNode.allInstances()->select(n | n.oclIsTypeOf(topology::TransformNode) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.position" label="Create Position Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.position.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[topology::PositionNode/]"/>
+                <parameters name="NumInsts" value="[topology::PositionNode.allInstances()->select(n | n.oclIsTypeOf(topology::PositionNode) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.rotation" label="Create Rotation Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.rotation.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[topology::RotationNode/]"/>
+                <parameters name="NumInsts" value="[topology::RotationNode.allInstances()->select(n | n.oclIsTypeOf(topology::RotationNode) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.pick_and_place" label="Create Pick &amp; Place Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.pick_and_place.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[topology::PickAndPlaceNode/]"/>
+                <parameters name="NumInsts" value="[topology::PickAndPlaceNode.allInstances()->select(n | n.oclIsTypeOf(topology::PickAndPlaceNode) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.wheel" label="Create Wheel Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.wheel.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[vehicle::Wheel/]"/>
+                <parameters name="NumInsts" value="[vehicle::Wheel.allInstances()->select(n | n.oclIsTypeOf(vehicle::Wheel) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.lander_foot" label="Create Lander Spherical Foot Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.group_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.lander_foot.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[vehicle::LanderSphericalFoot/]"/>
+                <parameters name="NumInsts" value="[vehicle::LanderSphericalFoot.allInstances()->select(n | n.oclIsTypeOf(vehicle::LanderSphericalFoot) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.sections.common_leaf_nodes" label="Common Leaf Nodes">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.url" label="Create URL Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.url.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[topology::URLNode/]"/>
+                <parameters name="NumInsts" value="[topology::URLNode.allInstances()->select(n | n.oclIsTypeOf(topology::URLNode) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.circular_fov" label="Create Circular Sector FOV Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.circular_fov.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[fov::CircularSectorFieldOfView/]"/>
+                <parameters name="NumInsts" value="[fov::CircularSectorFieldOfView.allInstances()->select(n | n.oclIsTypeOf(fov::CircularSectorFieldOfView) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.conical_fov" label="Create Conical FOV Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.conical_fov.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[fov::ConicalFieldOfView/]"/>
+                <parameters name="NumInsts" value="[fov::ConicalFieldOfView.allInstances()->select(n | n.oclIsTypeOf(fov::ConicalFieldOfView) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.rectangular_fov" label="Create Rectangular Frustrum FOV Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.rectangular_fov.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[fov::RectangularFrustrumFieldOfView/]"/>
+                <parameters name="NumInsts" value="[fov::RectangularFrustrumFieldOfView.allInstances()->select(n | n.oclIsTypeOf(fov::RectangularFrustrumFieldOfView) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.thruster" label="Create Thruster Node" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.topology.nodes.leaf_nodes']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="nodeParent" candidatesExpression="[Sequence(EObject){self.oclAsType(core::ApogySystem).topologyRoot}->addAll(topology::GroupNode.allInstances())/]" tree="true" rootExpression="[self.oclAsType(core::ApogySystem).topologyRoot/]" childrenExpression="[if self.oclIsKindOf(core::TopologyRoot) = true then self.oclAsType(core::TopologyRoot).originNode else if self.oclIsKindOf(topology::GroupNode) = true then self.oclAsType(topology::GroupNode).children else Sequence{} endif endif/]" message="Select the parent for this new node"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.create_node.thruster.action_call" label="Create Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+                <parameters name="ParentNode" value="var:nodeParent"/>
+                <parameters name="TargetClass" value="[vehicle::Thruster/]"/>
+                <parameters name="NumInsts" value="[vehicle::Thruster.allInstances()->select(n | n.oclIsTypeOf(vehicle::Thruster) = true)->size()/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.sections.background_tools" label="Background Tools">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_node.topology" label="Delete Regular Node">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_node.topology.action_call" label="Delete Node" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.DeleteNodeExternalAction">
+                <parameters name="Node" value="[element/]"/>
+                <parameters name="Container" value="[containerView.target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.reconnect_edge.source.node_to_node" label="Node -> Node Edge - Reconnect Source" precondition="[false/]" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]"/>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.reconnect_edge.target.node_to_node" label="Node -> Node Edge - Reconnect Target">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[source &lt;> element and target &lt;> element and target.oclIsKindOf(GroupNode) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Sequence{element})/]"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[source.oclAsType(GroupNode).children->select(n : Node | n &lt;> element)/]"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="[target.oclAsType(Node)/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_node.topology_root" label="Delete Topology Root" precondition="[false/]">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.reconnect_edge.source.node_to_root" label="Node -> Root Edge - Reconnect Source" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[TopologyRoot.allInstances()->asSequence()->at(0)/]">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="originNode" valueExpression="[target/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.reconnect_edge.target.node_to_root" label="Node -> Root Edge - Reconnect Target" precondition="[false/]">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]"/>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.edit_label.node.id" label="Edit Node Id" inputLabelExpression="[view.target.oclAsType(Node).nodeId.toString()/]">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(Node)/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="[arg0/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_edge.node_to_node" label="Delete Node -> Node Edge">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.topology.tools.delete_edge.node_to_root" label="Delete Node -> Root Edge">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.type.diagram" label="Type Diagram" domainClass="ApogySystem" enablePopupBars="true">
+      <metamodel href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+      <metamodel href="ca.gc.asc_csa.apogy.core#/"/>
+      <metamodel href="ca.gc.asc_csa.apogy.core.invocator#/"/>
+      <defaultLayer name="ca.gc.asc_csa.apogy.core.ui.sirius.type.layer" label="Type Layer">
+        <nodeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.type.nodes.apogy_system" label="ApogySystem Node" deletionDescription="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ca.gc.asc_csa.apogy.core.ui.sirius.tools.delete_node.root_sym_sys']" semanticCandidatesExpression="[core::ApogySystem.allInstances()/]" domainClass="core.ApogySystem">
+          <borderedNodeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.type.nodes.bordered.root_connection_point" label="ConnectionPoint" semanticCandidatesExpression="[self.connectionPointsList.connectionPoints/]" domainClass="core.ConnectionPoint">
+            <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Connection Point '.concat(self.name)/]" sizeComputationExpression="[(self.name.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Apogy System '.concat(self.oclAsType(ApogySystem).name)/]" sizeComputationExpression="[(self.name.size()).max(4)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.type.nodes.type_member" label="TypeMember Node" semanticCandidatesExpression="[self.members/]" domainClass="invocator.TypeMember">
+          <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Type Member '.concat(self.name)/]" sizeComputationExpression="[self.name.size()/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.nodes.type_member_apogy_systems" label="TypeMember ApogySystems Node" semanticCandidatesExpression="[invocator::TypeMember.allInstances()->select(t : TypeMember | t.memberType.oclIsKindOf(core::ApogySystem))->collect(t : TypeMember | t.memberType.oclAsType(core::ApogySystem))/]" domainClass="core.ApogySystem">
+          <borderedNodeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.type.nodes.bordered.root_connection_point" label="ConnectionPoint" semanticCandidatesExpression="[self.connectionPointsList.connectionPoints/]" domainClass="core.ConnectionPoint">
+            <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Connection Point '.concat(self.name)/]" sizeComputationExpression="[(self.name.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Apogy System '.concat(self.oclAsType(ApogySystem).name)/]" sizeComputationExpression="[(self.name.size()).max(4)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ca.gc.asc_csa.apogy.core.ui.type.edges.type_member_to_apogy_system" label="TypeMember -> ApogySystem Edge" sourceMapping="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.nodes.type_member']" targetMapping="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.nodes.apogy_system']" targetFinderExpression="[self.eContainer()/]">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ca.gc.asc_csa.apogy.core.ui.sirius.edges.type_member_to_child_apogy_system" label="TypeMember Edge -> Child ApogySystem" sourceMapping="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.nodes.type_member']" targetMapping="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.nodes.type_member_apogy_systems']" targetFinderExpression="[self.memberType/]">
+          <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="ca.gc.asc_csa.apogy.core.ui.sirius.type.sections.create" label="Create">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.type.tools.node_create.connection_point" label="Create Connection Point" nodeMappings="//@ownedViewpoints[name='ca.gc.asc_csa.apogy.core.ui.sirius.viewpoint']/@ownedRepresentations[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.nodes.apogy_system']/@borderedNodeMappings[name='ca.gc.asc_csa.apogy.core.ui.sirius.type.nodes.bordered.root_connection_point']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="symSystem" candidatesExpression="[core::ApogySystem.allInstances()/]" message="Select the apogy system the new connection point should belong to"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="ca.gc.asc_csa.apogy.core.ui.sirius.type.tools.create_node.connection_point.action_call" label="Create Connection Point" forceRefresh="true" id="ca.gc.asc_csa.apogy.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction">
+                <parameters name="ApogySystem" value="var:symSystem"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="ca.gc.asc_csa.apogy.core.ui.sirius.tools.delete_node.root_sym_sys" label="Delete Root Apogy System Node" precondition="[false/]">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,28 @@
+@GenModel(prefix="ApogyCommonTopologyUIViewer",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyCommonTopologyUIViewer",
+		  complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.ui.viewer/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.ui.viewer.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer
+
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection
+
+type ITopologyViewer wraps ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer
+
+class TopologyViewerRegistry
+{
+	boolean verbose = "false"
+	
+	ITopologyViewer[] iTopologyViewers
+
+	refers transient NodeSelection latestNodeSelection
+
+	op void registerITopologyViewer(ITopologyViewer iTopologyViewer)
+
+	op void unRegisterITopologyViewer(ITopologyViewer iTopologyViewer)
+}

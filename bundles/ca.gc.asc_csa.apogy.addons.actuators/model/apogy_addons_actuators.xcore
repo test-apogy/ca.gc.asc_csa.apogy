@@ -1,0 +1,132 @@
+@GenModel(prefix="ApogyAddonsActuators",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)",
+		  modelName="ApogyAddonsActuators",
+		  suppressGenModelAnnotations="false")
+		  
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.actuators/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.actuators.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.actuators
+
+import ca.gc.asc_csa.apogy.common.topology.Node
+
+enum ActuatorStatus
+{	
+	OFF as "Off" = 0,
+	READY as "Ready" = 1,
+	BUSY as "Busy" = 2,
+	FAILED as "Failed" = 3
+}
+
+abstract class AbstractActuator extends Node
+{
+	/** 
+	 * Whether or not the actuator is moving.
+	 */
+	@GenModel(children="false", notify="true", property="Readonly", propertyCategory="ACTUATOR_INFORMATION")	
+	boolean moving = "false"
+	
+	/**
+	 * Current state of the actuator.
+	 */
+	@GenModel(children="false", notify="true", property="Readonly", propertyCategory="ACTUATOR_INFORMATION")	
+	ActuatorStatus actuatorStatus
+}
+
+abstract class PanTiltUnit extends AbstractActuator
+{	
+	/* Current pan angle, in radians. */
+	@GenModel(children="false", notify="true", property="Readonly", propertyCategory="ACTUATOR_INFORMATION", apogy_units="rad")	
+	double currentPanAngle = "0.0"		
+	
+	/* Current tilt angle, in radians. */
+	@GenModel(children="false", notify="true", property="Readonly", propertyCategory="ACTUATOR_INFORMATION", apogy_units="rad")	
+	double currentTiltAngle = "0.0"
+
+	/* Last commanded pan angle, in radians. */
+	@GenModel(children="false", notify="true", property="Readonly", propertyCategory="ACTUATOR_INFORMATION", apogy_units="rad")	
+	double commandedPanAngle = "0.0"
+	
+	/* Last commanded tilt angle, in radians. */
+	@GenModel(children="false", notify="true", property="Readonly", propertyCategory="ACTUATOR_INFORMATION", apogy_units="rad")			
+	double commandedTiltAngle = "0.0"
+
+	/*
+	 * Return the maximum pan angle.
+	 * @return The maximum pan angle,in radians. 
+	 */
+	@GenModel(apogy_units="rad") op double getMaximumPanAngle()
+	
+	/*
+	 * Return the minimum pan angle.
+	 * @return The minimum pan angle,in radians. 
+	 */
+	@GenModel(apogy_units="rad") op double getMinimumPanAngle()
+	
+	/*
+	 * Return the maximum tilt angle.
+	 * @return The maximum tilt angle,in radians. 
+	 */
+	@GenModel(apogy_units="rad") op double getMaximumTiltAngle()
+	
+	/*
+	 * Return the minimum tilt angle.
+	 * @return The minimum tilt angle,in radians. 
+	 */
+	@GenModel(apogy_units="rad") op double getMinimumTiltAngle()
+	
+	/*
+	 * Commands the PTU to move to absolute pan and tilt angle.
+	 * @param panAngle The commanded pan angle, in radians.
+	 * @param tiltAngle The commanded tilt angle, in radians.
+	 * @return True of successful, false otherwise.
+	 */
+	op boolean moveToPanTilt(@GenModel(apogy_units="rad") double panAngle, @GenModel(apogy_units="rad") double tiltAngle)
+	
+	/*
+	 * Commands the PTU to move to absolute pan angle.
+	 * @param panAngle The commanded pan angle, in radians.
+	 * @return True of successful, false otherwise.	 
+	 */
+	op boolean moveToPan(@GenModel(apogy_units="rad") double panAngle)
+	
+	/*
+	 * Commands the PTU to move to absolute tilt angle.
+	 * @param tiltAngle The commanded tilt angle, in radians.
+	 * @return True of successful, false otherwise.
+	 */
+	op boolean moveToTilt(@GenModel(apogy_units="rad") double tiltAngle)
+	
+	/*
+	 * Commands the PTU to move by to relative pan and tilt angle.
+	 * @param panAngleDelta The commanded pan angle delta, in radians.
+	 * @param tiltAngleDelta The commanded tilt angle delta, in radians.
+	 * @return True of successful, false otherwise.
+	 */
+	op boolean moveByPanTilt(@GenModel(apogy_units="rad") double panAngleDelta, @GenModel(apogy_units="rad") double tiltAngleDelta)
+	
+	/*
+	 * Commands the PTU to move by to a relative pan angle.
+	 * @param panAngleDelta The commanded pan angle delta, in radians.
+	 * @return True of successful, false otherwise.	 
+	 */	
+	op boolean moveByPan(@GenModel(apogy_units="rad") double panAngleDelta)
+	
+	/*
+	 * Commands the PTU to move by to a relative tilt angle.
+	 * @param tiltAngleDelta The commanded tilt angle delta, in radians.
+	 * @return True of successful, false otherwise.	 
+	 */	
+	op boolean moveByTilt(@GenModel(apogy_units="rad") double tiltAngleDelta)
+	
+	/*
+	 * Commands the PTU to stop moving.
+	 * @return True of successful, false otherwise.
+	 */
+	op boolean stopMotion()
+}
+
+

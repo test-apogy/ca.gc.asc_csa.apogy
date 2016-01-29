@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.topology.ui.jme3.jme3Adapter">
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.jme3.adapters.EarthSurfaceWorksiteNodeJME3Adapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.jme3.adapters.EarthSkyNodeJME3Adapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.jme3.adapters.StarFieldJME3Adapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.jme3.adapters.FeatureOfInterestNodeJME3Adapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.jme3.adapters.CartesianTriangularMeshMapLayerNodeJME3Adapter">
+      </Class>
+   </extension>
+   <extension
+         point="org.eclipse.equinox.preferences.preferences">
+      <initializer
+            class="ca.gc.asc_csa.apogy.core.environment.ui.jme3.preferences.ApogyEnvironmentUIJME3Initializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.apogy.core.environment.ui.page1"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.jme3.preferences.ApogyEnvironmentUIJME3PreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.jme3.page1"
+            name="Earth Sky">
+      </page>
+   </extension>
+
+</plugin>

@@ -1,0 +1,73 @@
+@GenModel(prefix="ApogyCoreTopology",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyCoreTopology")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.topology/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.topology.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.core.topology
+
+import ca.gc.asc_csa.apogy.core.invocator.Variable
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation
+
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment
+
+import ca.gc.asc_csa.apogy.core.ResultsListNode
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode
+import ca.gc.asc_csa.apogy.common.topology.Node
+
+type SortedSet<T> wraps java.util.SortedSet 
+
+class SystemsTopologyAdapter
+{
+	/*
+	 * The Deployment to monitor.
+	 */
+	refers transient ApogyEnvironment deployment	
+	
+	/*
+	 * The topology representing the Systems found in the Deployment.
+	 */
+	refers transient ReferencedGroupNode systemsGroup	
+}
+
+
+/* -------------------------------------------------------------------------
+ * Specialized Nodes.
+ * ------------------------------------------------------------------------- */ 
+
+/*
+ * A specialized Topology node representing a Deployment.
+ */
+class ApogyEnvironmentNode extends ReferencedGroupNode
+{
+	refers transient ApogyEnvironment apogyEnvironment
+		
+	refers derived transient WorksiteNode[1] worksiteNode
+	
+	refers derived transient readonly ResultsListNode[1] resultsListNode
+		
+	refers derived transient readonly ApogySystemAPIsNode[1] apogySystemAPIsNode
+	
+	op void dispose()
+}
+
+class ApogySystemAPIsNode extends ReferencedGroupNode
+{
+	refers transient ApogyEnvironment apogyEnvironment
+}
+
+/* -------------------------------------------------------------------------
+ * ApogyCoreTopologyFacade
+ * ------------------------------------------------------------------------- */ 
+class ApogyCoreTopologyFacade
+{
+	op Node getVariableOriginNode(Variable variable) 
+		
+	op Node getAbstractTypeImplementationOriginNode(AbstractTypeImplementation abstractTypeImplementation)
+	
+	op ApogyEnvironmentNode createApogyEnvironmentNode(ApogyEnvironment apogyEnvironment) 
+}

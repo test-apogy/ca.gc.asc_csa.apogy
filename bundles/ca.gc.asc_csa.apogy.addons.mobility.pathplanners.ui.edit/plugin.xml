@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:50:43 pallard Exp $
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui"
+            class="ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.provider.ApogyAddonsMobilityPathplannersUIItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated apogy_addons_mobility_pathplanners_ui -->
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.topology.ui"
+            class="ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.provider.ApogyAddonsMobilityPathplannersUIItemProviderAdapterFactory$ApogyCommonTopologyUIChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.provider.ApogyAddonsMobilityPathplannersUIItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_examples_antenna -->
+      <package
+            uri="ca.gc.asc_csa.apogy.examples.antenna.apogy"
+            class="ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage"
+            genModel="model/apogy_examples_antenna_apogy.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.core.invocator.typeContributor">
+      <Type
+            URI="model/PTUDishAntennaApogySystem.ss">
+      </Type>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
+      <SessionProvider
+            Description="Session showing the use of the PTU Dish Antenna example system."
+            Name="PTU Dish Antenna Example"
+            URI="sessions/PTUDishAntennaExampleSession.sym">
+      </SessionProvider>
+   </extension>
+   
+</plugin>

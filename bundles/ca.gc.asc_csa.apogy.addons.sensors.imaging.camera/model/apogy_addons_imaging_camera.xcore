@@ -1,0 +1,523 @@
+@GenModel(prefix="ApogyAddonsSensorsImagingCamera",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyAddonsSensorsImagingCamera",
+		  complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera
+
+import ca.gc.asc_csa.apogy.common.emf.Described
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage
+import ca.gc.asc_csa.apogy.addons.AbstractTool
+
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AzimuthDirection
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ElevationDirection
+
+type Color3f wraps javax.vecmath.Color3f
+type List<T> wraps java.util.List
+
+enum OverlayAlignment
+{	
+	CENTER as "Center" = 1,
+	LOWER_LEFT_CORNER as "Lower Left" = 2,
+	UPPER_LEFT_CORNER as "Upper Left" = 3,
+	LOWER_RIGHT_CORNER as "Lower Right" = 4,
+	UPPER_RIGHT_CORNER as "Upper Right" = 5
+}
+
+class CameraViewUtilities
+{
+	/**
+	 * Return the identifier associated with a given CameraViewConfiguration.
+	 * @param cameraViewConfiguration The given CameraViewConfiguration.
+	 * @return The identifier, null if none is found.
+	 */
+	op String getCameraViewConfigurationIdentifier(CameraViewConfiguration cameraViewConfiguration)
+	
+	/**
+	 * Return the CameraViewConfiguration (in the Active Session) with the specified identifier.
+	 * @param identifier The CameraViewConfiguration identifier.
+	 * @return The CameraViewConfiguration with the specified identifier, null if non is found.
+	 */
+	op CameraViewConfiguration getActiveCameraViewConfiguration(String identifier)
+	
+	/**
+	 * Return the CameraViewConfigurationList in the Active Session.
+	 * @return The CameraViewConfigurationList in the Active Session, null if none is found.
+	 */
+	op CameraViewConfigurationList getActiveCameraViewConfigurationList()	
+}
+
+
+class CameraViewConfigurationList extends AbstractToolsListContainer
+{
+	@GenModel(property="None")	
+	contains CameraViewConfiguration[0..*] cameraViewConfigurations opposite cameraViewConfigurationList
+}
+
+class CameraViewConfiguration extends VariableFeatureReference, AbstractTool
+{			
+	/* The  CameraViewConfiguration containing this CameraViewConfiguration.*/	
+    @GenModel(property="None")
+	refers CameraViewConfigurationList cameraViewConfigurationList opposite cameraViewConfigurations
+	
+	/* The Camera being displayed. */	
+	@GenModel(property="Readonly")
+	refers transient AbstractCamera camera
+	
+	/* Width of the image being displayed. */
+	@GenModel(propertyCategory="IMAGE_DISPLAY_SETTINGS")	
+	int imageWidth = "640"
+	
+	/* Height of the image being displayed. */
+	@GenModel(propertyCategory="IMAGE_DISPLAY_SETTINGS")
+	int imageHeight = "480"
+	
+	/* Number of image received. */
+	transient int imageCount = "0"
+	
+	/* Whether or not to display the rectified image is available. */
+	@GenModel(propertyCategory="IMAGE_DISPLAY_SETTINGS")
+	boolean displayRectifiedImage = "true"
+	
+	/* The list of overlay shown onto the camera image. */	
+	contains CameraOverlayList[1] overlayList opposite cameraViewConfiguration
+	
+	/* The list of tools available for the camera. */
+	contains CameraToolList[1] toolList opposite cameraViewConfiguration
+	
+	/* The list of image filters to apply to the camera image. */
+	contains FilterList[1] filterList opposite cameraViewConfiguration
+	
+	/* Whether or not to automatically save the image received. */
+	@GenModel(propertyCategory="IMAGE_AUTOSAVE_SETTINGS")	
+	boolean imageAutoSaveEnable = "false"
+	
+	/* If auto saving image, Whether or not to save the image with overlays. */
+	@GenModel(propertyCategory="IMAGE_AUTOSAVE_SETTINGS")
+	boolean saveImageWithOverlays = "false"
+	
+	/* Path of the folder where to save images. */
+	@GenModel(propertyCategory="IMAGE_AUTOSAVE_SETTINGS")
+	String imageAutoSaveFolderPath
+	
+	/** Returns the list of all  CameraImageAnnotation.*/
+	op List<CameraImageAnnotation> getCameraImageAnnotations()
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Filters.
+ * 
+ * ------------------------------------------------------------------------- */ 
+
+class FilterList
+{
+	/** The CameraViewConfiguration containing this FilterList.*/
+	@GenModel(property="None")
+	refers CameraViewConfiguration cameraViewConfiguration opposite filterList
+		
+	contains ImageFilter[0..*] imageFilters
+}
+
+abstract class ImageFilter extends Named, Described
+{
+	/* Whether or not the filter is enabled. */
+	@GenModel(propertyCategory="FILTER_SETTING")
+	boolean enabled = "true"
+	
+	op AbstractEImage filter(AbstractCamera camera, AbstractEImage cameraImage)
+	
+	/*
+	 * Method called to dispose of the ImageFilter. This method should be overridden by sub-classes
+	 * to release resources, unregister listeners, etc. 
+	 */
+	op void dispose() 
+}
+
+class GrayScaleFilter extends ImageFilter
+{	
+}
+
+class EdgeFilter extends ImageFilter
+{	
+}
+
+class ContrastAndBrightnessFilter extends ImageFilter
+{
+	@GenModel(propertyCategory="FILTER_SETTING")	
+	double contrast = "1.0"	
+	
+	@GenModel(propertyCategory="FILTER_SETTING")
+	double brightness = "1.0"
+}
+
+class ExposureFilter extends ImageFilter
+{
+	@GenModel(propertyCategory="FILTER_SETTING")	
+	double exposure = "2.5"
+}
+
+class GainFilter extends ImageFilter
+{
+	@GenModel(propertyCategory="FILTER_SETTING")	
+	double gain = "50"
+	
+	@GenModel(propertyCategory="FILTER_SETTING")
+	double bias = "50"
+}
+
+class InvertFilter extends ImageFilter
+{
+}
+
+class RescaleFilter extends ImageFilter
+{
+	@GenModel(propertyCategory="FILTER_SETTING")	
+	double scale = "1.0"
+}
+
+abstract class CameraImageAnnotation extends Named, Described
+{	
+	/* Whether or not the camera image annotation is visible. */
+	boolean visible = "true"		
+	
+	/*
+	 * Method called to dispose of the CameraImageAnnotation. This method should be overridden by sub-classes
+	 * to release resources, unregister listeners, etc. 
+	 */
+	op void dispose()
+}
+
+
+/* -------------------------------------------------------------------------
+ * 
+ * Overlays.
+ * 
+ * ------------------------------------------------------------------------- */ 
+
+class CameraOverlayList
+{
+	/* The  CameraViewConfiguration containing this CameraOverlayList.*/
+	@GenModel(property="None")
+	refers CameraViewConfiguration cameraViewConfiguration opposite overlayList
+	
+	/* The list of overlay shown onto the camera image. */	
+	contains CameraOverlay[0..*] overlays opposite cameraOverlayList
+}
+
+/* An overlay displayed on top of a camera image. */
+abstract class CameraOverlay extends CameraImageAnnotation
+{			
+	/** The  CameraOverlayList containing this CameraOverlay.*/
+	@GenModel(property="None")
+	refers CameraOverlayList cameraOverlayList opposite overlays
+		
+	/* Where the overlay should be shown. */
+	@GenModel(propertyCategory="OVERLAY_POSITION_PROPERTIES")	
+	OverlayAlignment overlayAlignment	
+}
+
+/* 
+ * An overlay that has to be drawn onto a camera image.  
+ * Such overlays are responsible for drawing their representation onto the provided image.
+ */
+abstract class DrawnCameraOverlay extends CameraOverlay
+{
+	/*
+	 * Draws the overlay onto the image provided by the camera. 
+	 * @param camera The camera that provided the image.
+	 * @param cameraImage The image onto which the overlay must be drawn.
+	 * @param overlayAlignment The alignment of the overlay
+	 * @param overlayWidth The width of the overlay.
+	 * @param overlayHeight The height of the overlay.
+	 * @return The camera image with the overlay drawn on top of it.
+	 */
+	op AbstractEImage applyOverlay(AbstractCamera camera, AbstractEImage cameraImage, OverlayAlignment overlayAlignment, int overlayWidth, int overlayHeight)	
+}
+
+abstract class AbstractTextOverlay extends DrawnCameraOverlay
+{
+	/* Name of the font to use.*/
+	@GenModel(propertyCategory="FONT_PROPERTIES")
+	String fontName = "SansSerif"
+		
+	/* The font size. */
+	@GenModel(propertyCategory="FONT_PROPERTIES")
+	int fontSize = "10"
+	
+	/* The minimum distance of text to image left or right edge, in pixel. */
+	@GenModel(propertyCategory="OVERLAY_POSITION_PROPERTIES")	
+	int horizontalOffset = "10"
+	
+	/* The minimum distance of text to image upper or lower edge, in pixel. */
+	@GenModel(propertyCategory="OVERLAY_POSITION_PROPERTIES")	
+	int verticalOffset = "10"
+	
+	/* The text color. */
+	@GenModel(propertyCategory="FONT_PROPERTIES")
+	Color3f textColor = "0.0,1.0,0.0"
+	
+	/* 
+	 * Returns the string that will be displayed in the screen.
+	 * Sub-classes should overload this method.
+	 * @return The string to display.
+	 */
+	op String getDisplayedString()
+}
+
+class EMFFeatureOverlay extends AbstractTextOverlay
+{
+	@GenModel(property="None")
+	contains VariableFeatureReference[1] variableFeatureReference
+	
+	/* The number format to use when displaying a Number. */
+	@GenModel(propertyCategory="FONT_PROPERTIES")
+	String numberFormat = "0.00"
+	
+	/** Attribute used to trigger an overlay update when changes in the VariableFeatureReference are made.*/
+	@GenModel(property="None")
+	long variableFeatureReferenceChangeCount="0"	
+	
+}
+
+/*
+ * An overlay used to display the name of the camera.
+ * 
+ */
+class CameraNameOverlay extends AbstractTextOverlay
+{			
+}
+
+/*
+ * An overlay used to display the number of images.
+ * 
+ */
+class ImageCountOverlay extends AbstractTextOverlay
+{
+	boolean indicatorVisible = "true"			
+}
+
+class ImageFrozenOverlay extends AbstractTextOverlay
+{
+	/**
+	 * Indicates whether or not the image is frozen.
+	 */
+	@GenModel(propertyCategory="FROZEN_PROPERTIES", property="Readonly")
+	boolean frozen = "false"
+	
+	/**
+	 * The expected image update period, in seconds.
+	 */
+	@GenModel(propertyCategory="FROZEN_PROPERTIES", apogy_units="s")
+	double expectedImageUpdatePeriod = "1.0"
+	
+	/**
+	 * The message to display when the image freezes.
+	 */
+	@GenModel(propertyCategory="FROZEN_PROPERTIES")
+	String frozenMessage = "Frozen"
+}
+
+
+/*
+ * An overlay that produces a transparent image that will be superimposed 
+ * on the camera image by the CameraView.
+ */
+abstract class ImageCameraOverlay extends CameraOverlay
+{
+	/*
+	 * Returns the overlay image to superimpose on the camera image.
+	 * @param overlayWidth The width of the overlay.
+	 * @param overlayHeight The height of the overlay.
+	 * @return The image (with transparent background) to be superimposed on the camera image.
+	 */
+	op AbstractEImage getOverlay(AbstractCamera camera, OverlayAlignment overlayAlignment, int overlayWidth, int overlayHeight)	
+}
+
+class URLImageOverlay extends ImageCameraOverlay
+{
+	/*
+	 * The URL to the file containing the image to overlay.
+	 * 
+	 */	
+	String url		
+	
+	/*
+	 * The image resize policy.
+	 * 
+	 */	
+	ImageSizePolicy imageSizePolicy
+	
+	@GenModel(child="true", property="Readonly")
+	refers transient AbstractEImage image		
+}
+
+enum ImageSizePolicy
+{	
+	FIXED_SIZE as "Fixed Size" = 1,
+	ALLOW_RESIZE_VERTICAL as "Allow Resize Vertical" = 2,
+	ALLOW_RESIZE_HORIZONTAL as "Allow Resize Horizontal" = 3,
+	ALLOW_RESIZE_BOTH as "Allow Resize Both" = 4	
+}
+
+
+
+/*
+ * An overlay that displays the Apogy Logo.
+ */
+class ApogyLogoOverlay extends ImageCameraOverlay
+{	
+}
+
+class FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider
+{			
+	@GenModel(propertyCategory="OVERLAY_PROPERTIES")	
+	int lineWidth = "2"
+	
+	@GenModel(propertyCategory="OVERLAY_PROPERTIES")	
+	Color3f positiveValuesColor = "0.0,1.0,0.0"
+
+	@GenModel(propertyCategory="OVERLAY_PROPERTIES")	
+	Color3f negativeValueColor = "1.0,0.0,0.0"
+
+	/* The interval, in degrees, for which to display numericals. */
+	@GenModel(propertyCategory="OVERLAY_PROPERTIES", apogy_units = "deg")	
+	int angleInterval = "5"
+
+	/* Name of the font to use.*/
+	@GenModel(propertyCategory="FONT_PROPERTIES")
+	String fontName = "SansSerif"
+		
+	/* The font size. */
+	@GenModel(propertyCategory="FONT_PROPERTIES")
+	int fontSize = "10"
+	
+	/* The direction of the azimuth. */
+	@GenModel(propertyCategory="DIRECTIONS_PROPERTIES")
+	AzimuthDirection azimuthDirection
+	
+	/* The direction of the elevation. */
+	@GenModel(propertyCategory="DIRECTIONS_PROPERTIES")
+	ElevationDirection elevationDirection
+			
+}
+
+class AzimuthElevationFOVOverlay extends FOVOverlay
+{
+	/**
+	 * Change the azimuth of the center of the image.
+	 * @param azimuth The azimuth of the center of the image, in radians.
+	 */
+	op void changeAzimuth(double azimuth)
+	
+	/**
+	 * Change the elevation of the center of the image.
+	 * @param elevation The elevation of the center of the image, in radians.
+	 */
+	op void changeElevation(double elevation)
+}
+
+class EMFFeatureAzimuthElevationFOVOverlay extends AzimuthElevationFOVOverlay
+{
+	@GenModel(property="None", propertyCategory="FEATURE_CATEGORY")
+	contains AzimuthFeatureReference[1] azimuthFeatureReference
+	
+	@GenModel(property="None", propertyCategory="FEATURE_CATEGORY")
+	contains ElevationFeatureReference[1] elevationFeatureReference	
+}
+
+class AzimuthFeatureReference extends VariableFeatureReference
+{	
+}
+
+class ElevationFeatureReference extends VariableFeatureReference
+{	
+}
+
+class ToolTipTextProvider
+{
+	op String getToolTipText(AbstractCamera camera, ImageSnapshot imageSnapshot, int mouseButton, int x, int y)
+}
+
+abstract class CameraTool extends CameraImageAnnotation
+{
+	@GenModel(property="None")
+	refers CameraToolList cameraToolList opposite tools
+	
+	/*
+	 * Method called when the camera is resolved by the CameraViewConfiguration.
+	 * @param camera The AbstractCamera resolved, can be null.
+	 */
+	op void initializeCamera(AbstractCamera camera)
+	
+	/*
+	 * Method called when a new ImageSnaphot is received.
+	 * @param imageSnapshot The new image snapshot, can be null.
+	 */
+	op void updateImageSnapshot(ImageSnapshot imageSnapshot)
+	
+	/*
+	 * Method called when the tool is no longer needed.
+	 */
+	op void dispose()
+	
+	/*
+	 * Method called when the mouse is moved inside the camera image.
+	 * @param cameraImage The current image being displayed.
+	 * @param x The absolute position x coordinates of the mouse.
+	 * @param y The absolute position y coordinates of the mouse.
+	 */
+	op void mouseMoved(AbstractEImage cameraImage, int mouseButton, int x, int y)
+	
+	/*
+	 * Method called when the user clicks on the image with the mouse.
+	 * @param cameraImage The current image being displayed.
+	 * @param mouseButton The mouse button clicked.
+	 * @param x The absolute position x coordinates of the pixel selected.
+	 * @param y The absolute position y coordinates of the pixel selected.
+	 */
+	op void positionSelected(AbstractEImage cameraImage, int mouseButton, int x, int y)
+	
+}
+
+class CameraToolList
+{
+	/** The CameraViewConfiguration containing this CameraToolList.*/
+	@GenModel(property="None")
+	refers CameraViewConfiguration cameraViewConfiguration opposite toolList
+	
+	/* The list of overlay shown onto the camera image. */	
+	contains CameraTool[0..*] tools	opposite cameraToolList
+}
+
+/**
+ * Tool that projects a ray going from the FOV origin through 
+ * the point selected on the Camera View Image. The ray is made visible as
+ * a line in the 3D topology.
+ */
+class PointerCameraTool extends CameraTool, ToolTipTextProvider, AbsolutePoseProvider
+{		
+ 	@GenModel(property="Readonly", propertyCategory="TOOL_PROPERTIES")
+	refers transient RectangularFrustrumFieldOfView fov
+	
+	@GenModel(propertyCategory="TOOL_PROPERTIES")	
+	Color3f vectorColor = "0.0,1.0,0.0"
+	
+	/*
+	 * The current intersection distance.
+	 */
+	@GenModel(property="Readonly", propertyCategory="TOOL_PROPERTIES", sca_units="m")
+	double intersectionDistance = "0.0"
+}

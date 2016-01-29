@@ -1,0 +1,59 @@
+/**
+ * Canadian Space Agency 2008
+ *
+ * $Id: PolygonSamplingShapeImpl.java,v 1.2.4.2 2015/05/21 15:50:05 pallard Exp $
+ */
+package ca.gc.asc_csa.apogy.common.geometry.data.impl;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Polygon Sampling Shape</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+public abstract class PolygonSamplingShapeImpl<CoordinatesType extends Coordinates, PolygonType extends Polygon<CoordinatesType>> extends EObjectImpl implements PolygonSamplingShape<CoordinatesType, PolygonType>
+{
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PolygonSamplingShapeImpl()
+	{
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass()
+	{
+		return ApogyCommonGeometryDataPackage.Literals.POLYGON_SAMPLING_SHAPE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isPolygonInside(PolygonType polygon)
+	{
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+} //PolygonSamplingShapeImpl

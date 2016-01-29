@@ -1,0 +1,148 @@
+@GenModel(prefix="ApogyExamplesLanderApogy",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
+		  modelName="ApogyExamplesLanderApogy")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.lander.apogy/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.lander.apogy.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.examples.lander.apogy
+
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData
+
+import ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
+
+/*
+ * This class is the specialized Apogy API adapter, used for connecting
+ * the existing lander example, located at
+ * {@link ca.gc.asc_csa.apogy.examples.lander.Lander},
+ * to Apogy; one can override the well-known callback functions to make
+ * Apogy perform a variety of useful functions, including initialization,
+ * disposal and other features. 
+ */
+class LanderApogySystemApiAdapter extends ApogySystemApiAdapter
+{
+	/*
+	 * For specific implementation details,
+	 * please see
+	 * {@link ca.gc.asc_csa.apogy.examples.lander.apogy.impl.LanderApogySystemApiAdapterImpl}
+	 */
+}
+
+/*
+ * This class specifies the initialization data that Apogy
+ * should be interested in when (re)initializing the PTU dish
+ * antenna with the API Adapter (which in this case is
+ * {@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaApogySystemApiAdapter})
+ */
+class LanderData extends ApogyInitializationData
+{
+	/*
+	 * This is whether or not the lander has been initialized.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Status")
+	boolean initialized = "false"
+	
+	/*
+	 * This is whether or not the lander has been disposed.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Status")
+	boolean disposed = "false"
+	
+	/*
+	 * This is whether or not flying is permitted for the
+	 * lander.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Flight")
+	boolean flyingEnabled = "false"
+	
+	/*
+	 * This is the extension position for the lander's
+	 * leg A.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Legs")
+	LanderLegExtension legAExtension
+	
+	/*
+	 * This is the extension position for the lander's
+	 * leg B.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Legs")
+	LanderLegExtension legBExtension 
+	
+	/*
+	 * This is the extension position for the lander's
+	 * leg C.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Legs")
+	LanderLegExtension legCExtension
+	
+	/*
+	 * This is the thrust level (in N) of the lander
+	 */
+	@GenModel(apogy_units="N",
+			  children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Flight")
+	double currThrustLevel = "0.0"
+	
+	/*
+	 * This is the minimum thrust level (in N) of the lander
+	 */
+	@GenModel(apogy_units="N",
+			  children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Flight")
+	double minThrustLevel = "0.0"
+	
+	/*
+	 * This is the maximum thrust level (in N) of the lander
+	 */
+	@GenModel(apogy_units="N",
+			  children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Flight")
+	double maxThrustLevel = "0.0"
+	
+	/*
+	 * This is the angular velocity (in radians / second)
+	 * of the lander in the X direction. 
+	 */
+	 @GenModel(apogy_units="rad/s",
+	 		   children="false",
+	 		   notify="true",
+	 		   property="Editable",
+	 		   propertyCategory="Velocities")
+	 double xAngularVelocity = "0.0"
+	
+	/*
+	 * This is the angular velocity (in radians / second)
+	 * of the lander in the Y direction.
+	 */
+	@GenModel(apogy_units="rad/s",
+			  children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Velocities")
+	double yAngularVelocity = "0.0"
+}

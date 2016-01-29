@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="ca.gc.asc_csa.apogy.examples.ui.category"
+            class="ca.gc.asc_csa.apogy.examples.robotic_arm.ui.views.RoboticArmControlView"
+            id="ca.gc.asc_csa.apogy.examples.robotic_arm.ui.views.RoboticArmControlView"
+            name="Robotic Arm Control View"
+            restorable="true">
+      </view>
+ 
+      <category
+            id="ca.gc.asc_csa.apogy.examples.ui.category"
+            name="Apogy Examples">
+      </category>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.converters">
+      <new_element
+            Class="ca.gc.asc_csa.apogy.examples.robotic_arm.ui.converters.VariableToRoboticArmConverter">
+      </new_element>
+   </extension>
+
+
+</plugin>

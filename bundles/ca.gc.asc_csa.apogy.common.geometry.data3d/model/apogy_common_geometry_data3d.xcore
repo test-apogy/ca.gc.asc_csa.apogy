@@ -1,0 +1,824 @@
+@GenModel(prefix="ApogyCommonGeometryData3D",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="ApogyCommonGeometryData3D",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.edit/src-generated")
+@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.tests/src-generated")
+
+
+package ca.gc.asc_csa.apogy.common.geometry.data3d
+
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler
+
+import ca.gc.asc_csa.apogy.common.processors.Processor
+
+type Vector2d wraps javax.vecmath.Vector2d
+type Vector3d wraps javax.vecmath.Vector3d
+type Point3d wraps javax.vecmath.Point3d
+type Matrix4d wraps javax.vecmath.Matrix4d
+type GVector wraps javax.vecmath.GVector
+type List<T> wraps java.util.List
+type Map<K, V> wraps java.util.Map
+type Set<T> wraps java.util.Set
+type SortedSet<T> wraps java.util.SortedSet
+type Collection<T> wraps java.util.Collection
+type EList<T> wraps org.eclipse.emf.common.util.EList
+type IProgressMonitor wraps org.eclipse.core.runtime.IProgressMonitor
+type OutputStream wraps java.io.OutputStream
+type InputStream wraps java.io.InputStream
+type IOException wraps java.io.IOException
+type Exception wraps java.lang.Exception
+type IllegalArgumentException wraps java.lang.IllegalArgumentException
+type DoubleArrayOfArray wraps double[][]
+type IntArray wraps int[]
+
+/**
+ * Identifies an axis of the Cartesian frame of reference.
+ */
+enum CartesianAxis
+{
+	X as "X" = 0,
+	Y as "Y" = 1,
+	Z as "Z" = 2
+}
+
+/**
+ * Identifies a plane of the Cartesian frame of reference.
+ */
+enum CartesianPlane
+{
+	XY as "XY" = 0,
+	XZ as "XZ" = 1,
+	YZ as "YZ" = 2
+}
+
+/**
+ * A polygon having Cartesian position as its vertices.
+ */
+class CartesianPolygon extends Polygon<CartesianPositionCoordinates>
+{
+	/**
+	 * The surface of the polygon.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m²")
+	transient readonly volatile derived double surface
+	
+	/**
+	 * The normal of the polygon.
+	 */
+	transient readonly volatile derived Vector3d normal
+	
+	/**
+	 * The centroid of the polygon.
+	 */
+	refers readonly transient volatile derived CartesianPositionCoordinates centroid
+}
+
+/**
+ * A Cartesian polygon that has exactly 3 vertices.
+ */
+class CartesianTriangle extends CartesianPolygon
+{
+	
+}
+
+class SphericalPolygon extends Polygon<SphericalCoordinates>
+{
+	
+}
+
+class SphericalTriangle extends SphericalPolygon
+{
+	
+}
+
+/**
+ * A specialization of Coordinates that defines Cartesian coordinates.
+ */
+class CartesianPositionCoordinates extends Coordinates
+{	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double x
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double y
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double z
+	
+	/**
+	 * Returns the position as a Point3d.
+	 */
+	op Point3d asPoint3d()
+}
+
+/**
+ * A specialization of CartesianPositionCoordinates that assigns a color to the position.
+ */
+class ColoredCartesianPositionCoordinates extends CartesianPositionCoordinates
+{
+	/**
+	 * The red component, between 0 and 255.
+	 */
+	byte red
+	
+	/**
+	 * The green component, between 0 and 255.
+	 */
+	byte green
+	
+	/**
+	 * The blue component, between 0 and 255.
+	 */
+	byte blue
+}
+
+/**
+ * A specialization of Coordinates that represent an orientation as 3 Euler angles.
+ */
+class CartesianOrientationCoordinates extends Coordinates
+{
+	@GenModel(notify="true", children="false", apogy_units="rad")
+	double xRotation
+	
+	@GenModel(notify="true", children="false", apogy_units="rad")
+	double yRotation
+	
+	@GenModel(notify="true", children="false", apogy_units="rad")
+	double zRotation
+}
+
+class AbstractCartesianCoordinatesSet<T extends CartesianPositionCoordinates> extends CoordinatesSet<T>
+{
+	/**
+	 * Returns the extent of the point cloud.
+	 */
+	op CartesianCoordinatesSetExtent getExtent()
+}
+
+/**
+ * A set containing CartesianPositionCoordinates. It represent a point cloud.
+ */
+class CartesianCoordinatesSet extends AbstractCartesianCoordinatesSet<CartesianPositionCoordinates>
+{	
+	
+}
+
+/**
+ * A set containing ColoredCartesianPositionCoordinates. It represents a point cloud.
+ */
+class ColoredCoordinatesSet extends AbstractCartesianCoordinatesSet<ColoredCartesianPositionCoordinates>
+{
+		
+}
+
+/**
+ * Class that defines the volumetric extent of a set of cartesian coordinates.
+ */
+class CartesianCoordinatesSetExtent
+{
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double xMin
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double xMax
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double yMin
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double yMax
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double zMin
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double zMax
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	transient readonly volatile derived double xDimension
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	transient readonly volatile derived double yDimension
+	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	transient readonly volatile derived double zDimension
+}
+
+class DigitalElevationMap extends CartesianCoordinatesSet
+{
+	int xDimension
+	
+	int yDimension
+}
+
+class CartesianCoordinatesMesh extends Mesh<CartesianPositionCoordinates, CartesianPolygon>,CartesianCoordinatesSet
+{	
+}
+
+/**
+ * Class representing a set of triangle defining a surface.
+ */
+class CartesianTriangularMesh extends Mesh<CartesianPositionCoordinates, CartesianTriangle>,CartesianCoordinatesSet
+{	
+}
+
+/**
+ * A spherical coordinate.
+ * @see https://en.wikipedia.org/wiki/Spherical_coordinate_system
+ */
+class SphericalCoordinates extends Coordinates
+{
+	/**
+	 * The azimuthal angle (about Z), in radians.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="rad")
+	double phi
+	
+	/**
+	 * The polar angle, in radians.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="rad")
+	double theta
+	
+	/**
+	 * The radius, in meters.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double r
+}
+
+class SphericalCoordinatesSet extends CoordinatesSet<SphericalCoordinates>
+{
+	
+}
+
+class SphericalCoordinatesMesh extends Mesh<SphericalCoordinates, SphericalPolygon>, SphericalCoordinatesSet
+{
+	
+}
+
+class SphericalTriangularMesh extends Mesh<SphericalCoordinates, SphericalTriangle>, SphericalCoordinatesSet
+{
+									  	
+}
+
+/**
+ * Defines a full position and orientation in a Cartesian frame.
+ */
+class Pose extends CartesianPositionCoordinates, CartesianOrientationCoordinates
+{
+	
+}
+
+/**
+ * A spherical sampling shape.
+ */
+class SphereSamplingShape<PolygonType extends CartesianPolygon> extends CoordinatesSamplingShape<CartesianPositionCoordinates>,
+																		PolygonSamplingShape<CartesianPositionCoordinates, PolygonType>
+{
+	/**
+	 * The radius of the sampling sphere, in meters.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double radius = "1.0"
+	
+	/**
+	 * The position of the center of the sphere.
+	 */
+	refers CartesianPositionCoordinates center
+	
+	/**
+	 * Whether or not to include polygon that have a vertex on the boundary.
+	 */
+	boolean includeJustTouching = "true"
+}
+
+/**
+ * A Cube sampling shape.
+ */
+class CubeSamplingShape<PolygonType extends CartesianPolygon> extends CoordinatesSamplingShape<CartesianPositionCoordinates>,
+																	  PolygonSamplingShape<CartesianPositionCoordinates, PolygonType>
+{
+	/**
+	 * The position of the first corner defining the cube (or rectangular prism).
+	 */
+	refers CartesianPositionCoordinates corner1
+	
+	/**
+	 * The position of the second corner defining the cube (or rectangular prism).
+	 */
+	refers CartesianPositionCoordinates corner2
+	
+	/**
+	 * Whether or not to include polygon that have a vertex on the boundary.
+	 */
+	boolean includeJustTouching = "true"
+}
+
+class CartesianCoordinatesSetShapeSampler extends CoordinatesSetShapesSampler<CartesianPositionCoordinates>
+{
+	
+}
+
+class CartesianCoordinatesMeshSampler extends MeshCoordinatesShapesSampler<CartesianPositionCoordinates, CartesianPolygon>
+{
+	
+}
+
+class CartesianCoordinatesMeshPolygonSampler extends MeshPolygonShapesSampler<CartesianPositionCoordinates, CartesianPolygon>
+{
+	
+}
+
+class CartesianTriangularMeshSampler extends MeshCoordinatesShapesSampler<CartesianPositionCoordinates, CartesianTriangle>
+{
+	
+}
+
+class CartesianTriangularMeshPolygonSampler extends MeshPolygonShapesSampler<CartesianPositionCoordinates, CartesianTriangle>
+{
+	
+}
+
+class CartesianPositionCoordinatesMesher extends Processor<CartesianCoordinatesSet, CartesianTriangularMesh>
+{
+	
+}
+
+
+// TODO : this should be a specialization of CartesianCoordinatesSet ?
+class NormalPointCloud
+{
+	List<Point3d> points
+	
+	List<Vector3d> normals
+}
+
+/**
+ * Definition of a class used to find neighbors in a list of CartesianPositionCoordinates.
+ * Specific operation to add/remove points from the list to be searched are defined as opposed to an
+ * attribute to enable sub-classes to easily manage changes in the list of point to search.
+ */
+abstract class PointLocator
+{	
+	/**
+	 * Returns a list of the points currently available for search.
+	 */
+	op List<CartesianPositionCoordinates> getPoints()
+	
+	/**
+	 * Adds one point to the list of point to search.
+	 */	
+	op void addPoint(CartesianPositionCoordinates point)
+	
+	/**
+	 * Adds a list of points to the list of point to search.
+	 */	
+	op void addPoints(List<CartesianPositionCoordinates> points)
+		
+	/**
+	 * Removes one point from the list of point to search.
+	 */
+	op void removePoint(CartesianPositionCoordinates point)
+	
+	/**
+	 * Removes a list of points from the list of point to search.
+	 */
+	op void removePoints(List<CartesianPositionCoordinates> points)
+	
+	/**
+	 * Remove all points from the the list of point to search.
+	 */
+	op void clearPoints()
+	
+	/**
+	 * Returns a specified point closest neighbor.
+	 * @param point The specified point.
+	 * @return The closest neighbor, null if the PointLocator has no points.
+	 */
+	op CartesianPositionCoordinates findClosestPoint(CartesianPositionCoordinates point)
+	
+	/**
+	 * Returns a specified point closest neighbor.
+	 * @param point The specified point.
+	 * @param maximumNumberOfNeighbors The maximum number of neighbors to return.
+	 * @return The closest neighbor, null if the PointLocator has no points.
+	 */
+	op List<CartesianPositionCoordinates> findClosestPoints(CartesianPositionCoordinates point, int maximumNumberOfNeighbors)
+	
+	/**
+	 * Returns a point's neighbor with a given radius.	 
+	 * @param point The specified point.
+	 * @param radius The maximum radius from the point.
+	 * @return The list of neighbor within the radius. Never null, but can be empty.
+	 */
+	op List<CartesianPositionCoordinates> findPointsWithinRadius(CartesianPositionCoordinates point, double radius)	
+}
+
+/**
+ * A PointLocator implemented using a KDTree. This implementation is not thread safe.
+ */
+class KDTreeBasedPointLocator extends PointLocator
+{	
+}
+
+/**
+ * Class that provides an estimate of relative pose between two meshes, assuming the two meshes cover overlapping area of a surface. 
+ */
+class MeshLocalizer
+{
+	/*
+	 * Localize a floating mesh with respect to a fixed mesh.
+	 * The transform returned is the transform between the floating mesh and the origin (i.e. a revised version of the floatingMeshTransformEstimate).
+	 * @param fixedMesh The mesh that is considered fixed.
+	 * @param fixedMeshTransform The transform of the fixed mesh relative to a common reference frame.
+	 * @param floatingMesh The mesh that is considered floating relative to the fixed one.
+	 * @param floatingMeshTransformEstimate An starting estimate of the pose of the floating mesh relative to the common reference frame. 
+	 */
+	op Matrix4d localize(CartesianTriangularMesh fixedMesh, Matrix4d fixedMeshTransform, CartesianTriangularMesh floatingMesh, Matrix4d floatingMeshTransformEstimate) throws Exception
+}
+
+
+/**
+ * Mesher that uses the Quick Hull method to create a mesh from a point cloud. The algorithm is a three dimensional implementation of Quickhull by John E. Lloyd, as
+ * described in Barber, Dobkin, and Huhdanpaa, <ahref=http://citeseer.ist.psu.edu/barber96quickhull.html> ``The Quickhull Algorithm for Convex Hulls''</a> (ACM Transactions on Mathematical Software, Vol. 22, No. 4, December 1996)
+ * This implementation assumes that the meshing plane is XY.
+ */
+class DelaunayMesher extends CartesianPositionCoordinatesMesher
+{	
+	// TODO : Add the meshing plane as an attribute and take it into account in the implementation.
+}
+
+/**
+ * Mesher for a DEM. 
+ */
+class DigitalElevationMapMesher extends Processor<DigitalElevationMap, CartesianTriangularMesh>
+{	
+}
+
+/**
+ * A sampler that resamples a DEM based on a configurable resolution. 
+ */
+class DigitalElevationMapSampler extends Processor<DigitalElevationMap, DigitalElevationMap>
+{
+	/**
+	 * The target resolution of the DEM the sampler will return.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double targetResolution = "1.0"
+}
+
+class TriangularMeshNormalsCalculator extends Processor<CartesianTriangularMesh, CartesianTriangularMesh>
+{	
+}
+
+class TriangularMeshToNormalPointCloud extends Processor<CartesianTriangularMesh, NormalPointCloud>
+{	
+}
+
+/**
+ * Filters out duplicate points from a point cloud.
+ */
+class UniquePointsFilter extends Processor<CartesianCoordinatesSet, CartesianCoordinatesSet>
+{	
+}
+
+/**
+ * Filters a triangular mesh based on the range of the triangle center relative to the origin and 
+ * the length of the longest edge the triangle.
+ */
+class TriangleEdgeLengthTriangularMeshFilter
+{
+	/**
+	 * The minimum range of the center of the triangle with respect to the origin. Triangles with their center closer
+	 * to the origin than this value are filtered out.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double minimumRange
+	
+	/**
+	 * The maximum range of the center of the triangle with respect to the origin. Triangles with their center further
+	 * from the origin than this value are filtered out.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double maximumRange
+
+	/**
+	 * The maximum length of a edge that a triangle can have to pass the filter.
+	 */	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double maximumEdgeLength
+	
+	/**
+	 * Applies the filter to a triangular mesh.
+	 * @param input The input triangular mesh.
+	 * @return A triangular mesh containing only the triangles that passed the filter.
+	 */
+	op CartesianTriangularMesh filter(CartesianTriangularMesh input)
+}
+
+/**
+ * Filters out point that a than a specified distance from any neighbor.
+ */
+class OutlierFilter extends Processor<CartesianCoordinatesSet, CartesianCoordinatesSet>
+{
+	/**
+	 * The maximum distance a point can be from its closest neighbor an not be filtered out.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double maxDistance
+}
+
+/**
+ * TODO : Define the algorithm used.
+ */
+class MeshSmoother extends Processor<CartesianCoordinatesSet, CartesianTriangularMesh>
+{
+	/**
+	 * TODO : Defines what this does.
+	 */
+	int numberOfIterations = "1"
+}
+
+/*
+ * This processor sub-samples a point cloud using a voxel approach based on an implementation of J. Bakambu from MDA. 
+ */
+class VoxelBased3DPointCloudResampler extends Processor<CartesianCoordinatesSet, CartesianCoordinatesSet>
+{	
+	/**
+	 * Voxel resolution along the X axis.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double resolutionX = "0.1"
+	
+	/**
+	 * Voxel resolution along the Y axis.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double resolutionY = "0.1"
+
+	/**
+	 * Voxel resolution along the Z axis.
+	 */	
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double resolutionZ = "0.05"
+	
+	/**
+	 * Minimum number of points per voxel required to have a voxel considered occupied.
+	 */
+	int minimumNumberOfPointPerVoxel = "1"
+	
+	/**
+	 * TODO : Define what this does.
+	 */
+	@GenModel(notify="true", children="false", apogy_units="m")
+	double tileResolution = "5.0"
+}
+
+/**
+ * A Cartesian position with an ID.
+ */
+class PositionMarker extends CartesianPositionCoordinates
+{
+	/**
+	 * The identifier of the position.
+	 */
+	String identifier
+}
+
+/**
+ * TODO
+ */
+class RigidBodyPoseTracker
+{	
+	/**
+	 * The list of position markers for the rigid body at the origin.
+	 */
+	refers readonly derived PositionMarker [0..*] positionMarkersAtOrigin
+
+	/**
+	 * Adds a list of position marker to the one defining the rigid body.
+	 * @param markers The list of position markers.
+	 */
+	op void addPositionMarkers(List<PositionMarker> markers) throws Exception
+	
+	/**
+	 * Removes a list of position marker from the one defining the rigid body.
+	 * @param markers The list of position markers.
+	 */
+	op void removePositionMarkers(List<PositionMarker> markers)
+
+	/**
+	 * This method computes the 3D rigid body transformation between two 3D data sets. First, the rotation matrix is computed using the Singular
+	 * Values Decomposition (SVD) approach. Then, the translation component is computed. Finally, rotation and translation components are packed 
+	 * into an homogenous 4x4 matrix. Note: At least 3 markers are required to solve the 3D pose. If more than 3 markers are specified, the best fit 
+	 * (minimizing the root meaning square error) will be found.
+	 * @param markerPositionsToTrack The list of position of the marker for which to find the body position.
+	 * @return The position of the rigid body.
+	 */
+	op Point3d computeTransformation(EList<PositionMarker> markerPositionsToTrack) throws Exception
+	
+	/**
+	 * Computes the 3D rigid body transformation between the markers defining the rigid body and a new set of the position markers.
+	 * @param markerPositionsToTrack The list of position of the marker for which to find the body pose.
+	 * @return The pose of the rigid body, represented as a 4x4 homogenous matrix.
+	 */
+	op Matrix4d computeTransformation(List<PositionMarker> markerPositionsToTrack) throws Exception
+}
+
+
+class ApogyCommonGeometryData3DFacade
+{	
+	op CartesianPositionCoordinates createCartesianPositionCoordinates(double x, double y, double z)
+	
+	op CartesianOrientationCoordinates createCartesianOrientationCoordinates(double xRotation, double yRotation, double zRotation)
+	
+	op SphericalCoordinates createSphericalCoordinates(double phi, double theta, double r)
+
+	op Pose createPose(double x, double y, double z, double xRotation, double yRotation, double zRotation)
+	
+	op Pose createPose(Pose pose)
+	
+	op Pose createPose(CartesianPositionCoordinates position, CartesianOrientationCoordinates orientation)	
+	
+	op DigitalElevationMap createDigitalElevationMap(CartesianCoordinatesSet coordinatesSet)
+	
+	op CartesianPolygon createCartesianPolygon(CartesianPositionCoordinates v1, CartesianPositionCoordinates v2, CartesianPositionCoordinates v3)
+	
+	op CartesianPositionCoordinates createCartesianPositionCoordinates(CartesianPositionCoordinates coordinates)
+	
+	op CartesianOrientationCoordinates createCartesianOrientationCoordinates(CartesianOrientationCoordinates coordinates)
+	
+	op CartesianCoordinatesMesh createCartesianCoordinatesMesh(CartesianCoordinatesMesh cartesianCoordinatesMesh)
+	
+	op CartesianTriangle createCartesianTriangle(CartesianPositionCoordinates v1, CartesianPositionCoordinates v2, CartesianPositionCoordinates v3)
+	
+	op <T extends CartesianPolygon> CartesianTriangle createCartesianTriangle(T polygon) throws IllegalArgumentException
+	
+	op CartesianCoordinatesMesh createCartesianCoordinatesMesh(List<CartesianPolygon> polygons)
+	
+	op CartesianCoordinatesMesh createCartesianCoordinatesMesh(CartesianTriangularMesh cartesianCoordinatesMesh)
+	
+	op CartesianTriangularMesh createCartesianTriangularMesh(List<CartesianTriangle> polygons)
+	
+	op CartesianTriangularMesh createCartesianTriangularMesh(CartesianTriangularMesh cartesianCoordinatesMesh)
+	
+	op CartesianCoordinatesSet applyTransform(CartesianCoordinatesSet points, Matrix4d trMatrix)
+	
+	op List<CartesianPositionCoordinates> applyTransform(List<CartesianPositionCoordinates> points, Matrix4d trMatrix)
+	
+	op CartesianTriangularMesh createTransformedMesh(CartesianTriangularMesh mesh, Matrix4d trMatrix)
+	
+	op void applyTransform(CartesianTriangularMesh mesh, Matrix4d trMatrix)
+	
+	op NormalPointCloud applyTransform(NormalPointCloud points, Matrix4d trMatrix)
+	
+	/**
+	 * @aparam xyzData The array of n points organize as [0..n][x,y,z].
+	 */
+	op void updateCartesianCoordinatesSet(CartesianCoordinatesSet cartesianCoordinatesSet, DoubleArrayOfArray xyzData)
+	
+	op CartesianTriangularMesh concatenateTriangularMeshes(List<CartesianTriangularMesh> listOfTriangularMeshes)
+}
+
+/**
+ * Class defining methods used to save / load 3D data to / from files.
+ */
+class Data3DIO
+{
+	/**
+	 * Loads a CartesianTriangularMesh from an XMI resource.
+	 * @param file The file path to the resource.
+	 * @return The loaded CartesianTriangularMesh.
+	 */
+	op CartesianTriangularMesh loadTriangularMesh(String file) throws IOException
+	
+	/**
+	 * Loads a CartesianTriangularMesh from an XMI resource.
+	 * @param input The input stream to read the content from.
+	 * @return The loaded CartesianTriangularMesh.
+	 */
+	op CartesianTriangularMesh loadTriangularMesh(InputStream input) throws IOException
+	
+	/**
+	 * Saves a CartesianTriangularMesh as an XMI resource.
+	 * @param mesh The CartesianTriangularMesh to save.
+	 * @param file The destination file path for the resource.
+	 */
+	op void saveTriangularMesh(CartesianTriangularMesh mesh, String file) throws IOException
+	
+	/**
+	 * Saves a CartesianTriangularMesh as an XMI resource.
+	 * @param mesh The CartesianTriangularMesh to save.
+	 * @param output The output stream to write the content.
+	 */
+	op void saveTriangularMesh(CartesianTriangularMesh mesh, OutputStream output) throws IOException
+	
+	/**
+	 * Loads a NormalPointCloud from ASCII files. Two files are required : filePrefix.xyz : contains the points and
+	 * filePrefix.tri : containing the list of triangles.   
+	 * @param filePrefix The file prefix defining both the points and triangles files.
+	 * @return The loaded NormalPointCloud.
+	 */
+	op NormalPointCloud loadTriangularMeshFromASCIIAsNormalPointCloud(String filePrefix) throws IOException
+	
+	/**
+	 * Loads a CartesianTriangularMesh from ASCII files. Two files are required : filePrefix.xyz : contains the points and
+	 * filePrefix.tri : containing the list of triangles.  
+	 * @param filePrefix The file prefix defining both the points and triangles files.
+	 * @return The loaded CartesianTriangularMesh.
+	 */
+	op CartesianTriangularMesh loadTriangularMeshFromASCII(String filePrefix) throws IOException
+	
+	/**
+	 * Saves a CartesianTriangularMesh to ASCII files. Two files are produced : filePrefix.xyz : contains the points and
+	 * filePrefix.tri : containing the list of triangles.  
+	 * @param mesh The CartesianTriangularMesh to save.
+	 * @param filePrefix The file prefix defining both the points and triangles files.	 
+	 */
+	op void saveTriangularMeshAsASCII(CartesianTriangularMesh mesh, String filePrefix) throws IOException
+	
+	/**
+	 * Loads a CartesianCoordinatesSet from an .xyz file. The .xyz can contains 3 column (x,y, z coordinates of the point) or 
+	 * 6 (x,y,z coordinates of the point + the normal vector at the point)
+	 * @param fileName The file path to the file.
+	 * @return The CartesianCoordinatesSet loaded from the file. 
+	 */
+	op CartesianCoordinatesSet loadXYZ(String fileName) throws IOException
+		
+	/**
+	 * Loads a CartesianTriangularMesh from two ASCII files. Two files are required : xyzFileName.xyz : contains the points and
+	 * triFileName.tri : containing the list of triangles.  
+	 * @param triFileName The file path to the file containing the triangles.
+	 * @param xyzFileName The file path to the file containing the points.
+	 * @return The loaded CartesianTriangularMesh.
+	 */
+	op CartesianTriangularMesh loadTriangularMeshFromTriXYZ(String triFileName, String xyzFileName) throws IOException
+	
+	/**
+	 * Saves a CartesianCoordinatesSet to an .xyz formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The file path of the destination.
+	 */
+	op void saveCoordinatesSetToXYZ(CartesianCoordinatesSet coordinatesSet, String file) throws IOException
+	
+	/**
+	 * Saves a CartesianCoordinatesSet to an .xyz formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The output stream to write the content..
+	 */
+	op void saveCoordinatesSetToXYZ(CartesianCoordinatesSet coordinatesSet, OutputStream file) throws IOException
+	
+	/**
+	 * Saves a CartesianCoordinatesSet to an comma separated formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The file path of the destination.
+	 */
+	op void saveCoordinatesSetToCSV(CartesianCoordinatesSet coordinatesSet, String file) throws IOException
+	
+	/**
+	 * Saves a CartesianCoordinatesSet to an comma separated formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The file path of the destination.
+	 */
+	op void saveCoordinatesSetToCSV(CartesianCoordinatesSet coordinatesSet, OutputStream file) throws IOException
+}
+
+class Data3DUtils
+{
+	op EList<Vector3d> computeNormals(CartesianTriangularMesh mesh)
+	
+	/**
+	 * Computes the position of the centroid of a list of CartesianPositionCoordinates.
+	 * @param points The list of CartesianPositionCoordinates.
+	 * @return The centroid position of the list of CartesianPositionCoordinates, null if the list is empty.
+	 */
+	op CartesianPositionCoordinates computeCentroid(List<CartesianPositionCoordinates> points)
+	
+	/**
+	 * Computes the position of the centroid of a CartesianCoordinatesSet.
+	 * @param points The CartesianCoordinatesSet.
+	 * @return The centroide position of the CartesianCoordinatesSet, null if the CartesianCoordinatesSet is empty.
+	 */
+	op CartesianPositionCoordinates computeCentroid(CartesianCoordinatesSet points)
+		
+	
+	op void computeMinMaxValues(Point3d min, Point3d max, CartesianCoordinatesSet data)
+	
+	op double computeCurvatureChange(PointLocator pointLocator, int centerPoint, double radius)
+	
+	op CartesianTriangularMesh extrude(List<CartesianPositionCoordinates> profilePoints, CartesianAxis extrusionAxis, double extrusionWidth, boolean closeMesh)
+}

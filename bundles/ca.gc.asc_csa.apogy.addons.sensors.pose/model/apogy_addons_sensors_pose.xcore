@@ -1,0 +1,117 @@
+@GenModel(prefix="ApogyAddonsSensorsPose",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="ApogyAddonsSensorsPose",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.pose/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.pose.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.sensors.pose
+
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor
+import ca.gc.asc_csa.apogy.common.topology.PositionNode
+import ca.gc.asc_csa.apogy.common.topology.RotationNode
+import ca.gc.asc_csa.apogy.common.topology.TransformNode
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
+
+type Exception wraps java.lang.Exception
+type IOException wraps java.io.IOException
+
+class SelfPlaceSensor extends Sensor
+{
+	
+}
+
+class PositionSensor extends PositionNode, SelfPlaceSensor
+{
+	refers readonly derived transient CartesianPositionCoordinates positionCoordinates
+	
+	op void resetPosition(CartesianPositionCoordinates newPosition) throws Exception
+}
+
+class SimulatedPositionSensor extends PositionSensor
+{
+	double xVelocity
+	
+	double yVelocity
+	
+	double zVelocity
+	
+	double updatePeriod = "1.0"
+}
+
+class OrientationSensor extends RotationNode, SelfPlaceSensor
+{
+	refers readonly derived transient CartesianOrientationCoordinates orientationCoordinates
+	
+	op void resetOrientation(CartesianOrientationCoordinates newOrientation) throws Exception
+	
+	op CartesianOrientationCoordinates extractOrientationFromMatrix(Matrix3x3 matrix)
+}
+
+class InertialMeasurementUnit extends OrientationSensor
+{
+	contains Tuple3d angularVelocity
+	
+	contains Tuple3d linearAcceleration
+}
+
+class SimulatedOrientationSensor extends OrientationSensor
+{
+	double xAngularVelocity
+	
+	double yAngularVelocity
+	
+	double zAngularVelocity
+	
+	double updatePeriod = "1.0"
+}
+
+class PoseSensor extends TransformNode, PositionSensor, OrientationSensor
+{
+	refers readonly derived transient Pose pose
+	
+	contains PoseDataLogger dataLogger
+	
+	op void resetPose(Pose newPose) throws Exception
+}
+
+class SimulatedPoseSensor extends PoseSensor
+{
+	double xVelocity
+	
+	double yVelocity
+	
+	double zVelocity
+	
+	double xAngularVelocity
+	
+	double yAngularVelocity
+	
+	double zAngularVelocity
+	
+	double updatePeriod = "1.0"
+}
+
+abstract class PoseDataLogger
+{
+	String outputFile
+	
+	op void logPose(Pose pose) throws IOException
+}
+
+class CSVDataLogger extends PoseDataLogger
+{
+	
+}
+
+class ApogyAddonsSensorsPoseFacade
+{
+	op CSVDataLogger createCSVDataLogger(String fileName)
+}

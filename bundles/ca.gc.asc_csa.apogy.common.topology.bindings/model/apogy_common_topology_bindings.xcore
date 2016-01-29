@@ -1,0 +1,264 @@
+@GenModel(prefix="ApogyCommonTopologyBindings",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="ApogyCommonTopologyBindings",
+		  complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.bindings/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.bindings.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.common.topology.bindings
+
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EEnumLiteral
+
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.GroupNode
+import ca.gc.asc_csa.apogy.common.topology.RotationNode
+import ca.gc.asc_csa.apogy.common.topology.PositionNode
+
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter
+import ca.gc.asc_csa.apogy.common.topology.TransformNode
+
+type Map<K,V> wraps java.util.Map
+
+/*
+ * Cartesian Axis enumeration.
+ */
+enum Axis
+{	
+	X_AXIS as "X_AXIS" = 0,
+	Y_AXIS as "Y_AXIS" = 1,
+	Z_AXIS as "Z_AXIS" = 2
+	MINUS_X_AXIS as "MINUS_X_AXIS" = 3,
+	MINUS_Y_AXIS as "MINUS_Y_AXIS" = 4,
+	MINUS_Z_AXIS as "MINUS_Z_AXIS" = 5	
+}
+
+/*
+ * Angle Units Enumeration.
+ */
+enum AngleUnits
+{	
+	RADIANS as "RADIANS" = 0,
+	DEGREES as "DEGREES" = 1	
+}
+
+/*
+ * Abstract base class representing a binding relationship between a topology and a feature. 
+ */
+abstract class AbstractTopologyBinding
+{
+	/*
+	 * Whether or not the binding is bound.
+	 */
+	@GenModel(property="Readonly", propertyCategory="INFORMATION")
+	boolean binded
+	
+	/*
+	 * The description of the binding.
+	 */
+	@GenModel(propertyCategory="INFORMATION")
+	String description
+	
+	/*
+	 * The name of the binding.
+	 */
+ 	@GenModel(propertyCategory="INFORMATION")
+	String name
+	
+	/*
+	 * The source object onto which the feature must be resolved.
+	 */
+	@GenModel(property="None", propertyCategory="SOURCE")	
+	refers transient EObject source
+	
+	/*
+	 * The feature the binding is associated with.
+	 */
+	@GenModel(propertyCategory="SOURCE")	
+	refers AbstractFeatureNode featureNode	
+
+	/*
+	 * The adapter used to listens for changes of the feature value.
+	 */
+	@GenModel(property="None")
+	refers transient readonly FeatureNodeAdapter featureNodeAdapter
+
+	/*
+	 * Binds the binding to its feature. If successful, binded will change to true.
+	 */
+	op void bind()
+	
+	/*
+	 * Un-binds the binding from its feature. If successful, binded will change to false.
+	 */
+	op void unbind()
+	
+	/*
+	 * Clones the current Binding. This method must copy this Binding parameters and set
+	 * the Binding copy associated Node(s) to the Node(s) copy(ies) associated with
+	 * this Binding.
+	 * @param originalToCopyNodeMap Maps original Nodes to copied ones.
+	 * @return A copy of this Binding.
+	 */
+	op AbstractTopologyBinding clone(Map<Node, Node> originalToCopyNodeMap)
+}
+
+/*
+ * Binding that binds a RotationNode rotation around one axis to the feature value.
+ */
+class RotationBinding extends AbstractTopologyBinding
+{
+	/*
+	 * The RotationNode that will be updated.
+	 */
+	@GenModel(propertyCategory="DESTINATION")
+	refers RotationNode rotationNode
+	
+	/*
+	 * The axis around which to revolve.
+	 */
+	@GenModel(propertyCategory="DESTINATION")
+	Axis rotationAxis = "X_AXIS"
+	
+	/*
+	 * The angle unit associated with the feature.
+	 */
+	@GenModel(propertyCategory="DESTINATION")
+	AngleUnits rotationUnits = "DEGREES"
+}
+
+/*
+ * Binding that binds a PositionNode translation along one axis to the feature value.
+ */
+class TranslationBinding extends AbstractTopologyBinding
+{
+	/*
+	 * The PositionNode that will be updated.
+	 */	
+	@GenModel(propertyCategory="DESTINATION")
+	refers PositionNode positionNode
+	
+	/*
+	 * The axis along which the translation occurs.
+	 */
+	@GenModel(propertyCategory="DESTINATION")
+	Axis translationAxis = "X_AXIS"	
+}
+
+/*
+ * Binding that binds a TransformNode transform to a feature value.
+ * The feature value must be of type Matrix4x4.
+ */
+class TransformMatrixBinding extends AbstractTopologyBinding
+{
+	/*
+	 * The TransformNode that will be updated.
+	 */
+	@GenModel(propertyCategory="DESTINATION")
+	refers TransformNode transformNode
+}
+
+/*
+ * Binding that attached different sub-topology to a GroupNode based
+ * on the feature value. The feature must be an EEnum.
+ */
+class EnumerationSwitchBinding extends AbstractTopologyBinding
+{
+	/*
+	 * The parent node under which the switch should attached sub-topology.
+	 */
+	@GenModel(propertyCategory="DESTINATION")
+	refers GroupNode[1] parentNode
+	
+	/*
+	 * The list of cases defined for the switch.
+	 */
+	@GenModel(propertyCategory="ENUMERATION")	
+	contains EnumerationCase[1..*] cases 	
+	
+	/*
+	 * The case currently active.
+	 */
+	@GenModel(property="Readonly", propertyCategory="ENUMERATION")	
+	refers transient EnumerationCase[0..1] activeCase
+}
+
+/*
+ * Class that defines Enumeration Case used by the EnumerationSwitchBinding.
+ * Its associates a sub-topology to an enumeration literal value(s).
+ */
+class EnumerationCase
+{
+	/* The enumeration value(s) for this case. */
+	refers EEnumLiteral[1..*] enumerationLiterals
+	
+	/*
+	 * The root of the topology to add to the parent Node
+	 * when this case is activated.
+	 */
+	@GenModel(children="true")
+	contains Node[0..1] topologyRoot		
+}
+
+/*
+ * Defines a list of Bindings.
+ */
+class BindingsList
+{
+	contains AbstractTopologyBinding[0..*] bindings
+}
+
+/*
+ * Defines Feature Roots Lists used to define all the
+ * feature used by the Bindings in a BindingSet.
+ */
+class FeatureRootsList
+{
+	contains TreeRootNode[0..*] featureRoots
+}
+
+/*
+ * Defines a set of bindings. The Binding set can be bound
+ * and unbound as a group.
+ */
+class BindingsSet
+{	
+	/*
+	 * The list of features used in the Bindings definitions.
+	 */
+	contains FeatureRootsList[1] featureRootsList
+	
+	/*
+	 * The list of Bindings.
+	 */
+	contains BindingsList[1] bindingsList
+	
+	/*
+	 * Binds all the Bindings contained in the bindingsList.
+	 */
+	op void bind()
+	
+	/*
+	 * Unbinds all the Bindings contained in the bindingsList.
+	 */
+	op void unbind()	
+}
+
+/*
+ * Utility Binding Facade.
+ */
+class ApogyCommonTopologyBindingsFacade
+{	
+	/*
+	 * Convenience method that copies a Binding.
+	 * @param originalBinding The original binding to copy.
+	 * @param originalToCopyNodeMap Maps original Nodes to copied ones.
+	 * @return The copy of the original Binding.
+	 */
+	op AbstractTopologyBinding copy(AbstractTopologyBinding originalBinding, Map<Node, Node> originalToCopyNodeMap)
+}

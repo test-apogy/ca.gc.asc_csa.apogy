@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_addons_mobility_controllers -->
+      <package
+            uri="ca.gc.asc_csa.apogy.addons.mobility.controllers"
+            class="ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage"
+            genModel="model/apogy_addons_mobility_controllers.xcore"/>
+   </extension>
+
+</plugin>

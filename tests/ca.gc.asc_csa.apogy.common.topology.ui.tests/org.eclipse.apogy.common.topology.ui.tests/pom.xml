@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ca.gc.asc_csa.apogy.common.topology.ui.tests</artifactId>
+	<packaging>eclipse-test-plugin</packaging>
+	<parent>
+		<groupId>ca.gc.asc_csa.apogy</groupId>
+		<artifactId>ca.gc.asc_csa.apogy.parent</artifactId>
+		<version>0.5.0-SNAPSHOT</version>
+		<relativePath>../../packaging/ca.gc.asc_csa.apogy.parent</relativePath>
+	</parent>
+
+<!--
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<useUIHarness>true</useUIHarness>
+					<testSuite>ca.gc.asc_csa.apogy.core.invocator.tests</testSuite>
+					<testClass>ca.gc.asc_csa.apogy.core.invocator.tests.AllTests</testClass>
+			</plugin>
+		</plugins>
+	</build>
+-->
+</project>

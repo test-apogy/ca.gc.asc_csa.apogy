@@ -1,0 +1,31 @@
+@GenModel(prefix="ApogyCoreInvocatorUI",
+		  childCreationExtenders="true",
+		  modelName="ApogyCoreInvocatorUI")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.invocator.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.invocator.ui.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.core.invocator.ui
+
+import ca.gc.asc_csa.apogy.core.invocator.Context
+import ca.gc.asc_csa.apogy.common.emf.Exception
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation
+
+type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
+
+class ApogyCoreInvocatorUIFacade
+{
+	/*  
+	 * Copies the Initialization Data.
+	 * @param source Reference to the source context.
+	 * @param destination Reference to the destination context.
+	 */
+	op void copyInitializationData(Context source, Context destination) throws Exception
+	
+	/*  
+	 * Copies the Initialization Data.
+	 * @param source Reference to the source implementation.
+	 * @param destination Reference to the destination implementation.
+	 * @param command Reference to the stack command.
+	 */	
+	op void copyInitializationData(AbstractTypeImplementation source, AbstractTypeImplementation destination, CompoundCommand command) throws Exception
+}

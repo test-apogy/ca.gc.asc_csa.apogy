@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.2.4.3 2015/05/21 18:08:15 pallard Exp $
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.provider.ApogyAddonsSensorsImagingUIItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated apogy_addons_sensors_imaging_ui -->
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.topology.ui"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.provider.ApogyAddonsSensorsImagingUIItemProviderAdapterFactory$ApogyCommonTopologyUIChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.provider.ApogyAddonsSensorsImagingUIItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
+   </extension>
+
+</plugin>

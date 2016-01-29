@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"
+            icon="icons/CameraView.gif"
+            id="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"
+            name="Apogy Camera View"
+            restorable="true">
+      </view>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_tools_camera -->
+      <package
+            uri="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage"
+            genModel="model/apogy_addons_imaging_camera.xcore"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
+            id="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
+            name="Toggle Image Filter">
+      </command>
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleCameraImageAnnotationVisibilityCommand"
+            id="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleCameraOverlayVisibilityCommand"
+            name="Toggle Camera Image Annotation Visibility">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+         <command
+               commandId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
+               label="Toggle Image Filter"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                    <instanceof
+                          value="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter">
+                    </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleCameraOverlayVisibilityCommand"
+               label="Toggle Visibility"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                      ifEmpty="false"
+                      operator="or">
+                     <instanceof
+                           value="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

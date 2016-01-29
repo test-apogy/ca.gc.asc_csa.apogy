@@ -1,0 +1,90 @@
+@GenModel(prefix="ApogyCommonGeometryData",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="ApogyCommonGeometryData",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.common.geometry.data
+
+import ca.gc.asc_csa.apogy.common.processors.Processor
+
+type List<T> wraps java.util.List
+type Vector3d wraps javax.vecmath.Vector3d
+
+class Coordinates
+{
+	
+}
+
+class CoordinatesSet<T extends Coordinates>
+{
+	contains unordered T[] points
+	transient List < Vector3d > normals
+}
+
+class Polygon<T extends Coordinates>
+{
+	refers local unordered T[] vertices
+}
+
+class Mesh<CoordinatesType extends Coordinates , PolygonType extends Polygon < CoordinatesType >> extends CoordinatesSet < CoordinatesType >
+{
+	contains PolygonType[] polygons
+	op unique PolygonType[] getPolygonNeighbours(PolygonType polygon)
+	op unique CoordinatesType[] getPointNeighbours(CoordinatesType point)
+	op unique PolygonType[] getPolygonsSharingPoint(CoordinatesType point)
+}
+
+interface SamplingShape
+{
+}
+
+interface CoordinatesSamplingShape<T extends Coordinates> extends SamplingShape
+{
+	op boolean isInside(T point)
+}
+
+/**
+ * 
+ */
+interface PolygonSamplingShape<CoordinatesType extends Coordinates , PolygonType extends Polygon < CoordinatesType >> extends SamplingShape
+{
+	// TODO : Should define policies for determining how a polygon is considered inside.
+	
+	op boolean isPolygonInside(PolygonType polygon)
+}
+
+class CoordinatesSetShapesSampler<T extends Coordinates> extends Processor < CoordinatesSet < T > , CoordinatesSet < T > >
+{
+	refers CoordinatesSamplingShape < T >[] coordinatesSamplingShapes
+	ShapeSamplingMode[1] shapeSamplingMode = "UNION"
+}
+
+abstract class MeshCoordinatesShapesSampler<CoordinatesType extends Coordinates , PolygonType extends Polygon < CoordinatesType >> extends Processor < Mesh < CoordinatesType , PolygonType > , Mesh < CoordinatesType , PolygonType > >
+{
+	refers CoordinatesSamplingShape < CoordinatesType >[] coordinatesSamplingShapes
+	ShapeSamplingMode[1] shapeSamplingMode = "UNION"
+	PolygonSamplingMode[1] polygonSamplingMode = "AT_LEAST_ONE_VERTEX"
+}
+
+abstract class MeshPolygonShapesSampler<CoordinatesType extends Coordinates , PolygonType extends Polygon < CoordinatesType >> extends Processor < Mesh < CoordinatesType , PolygonType > , Mesh < CoordinatesType , PolygonType > >
+{
+	refers PolygonSamplingShape < CoordinatesType , PolygonType >[] polygonSamplingShapes
+	ShapeSamplingMode[1] shapeSamplingMode = "UNION"
+}
+
+enum ShapeSamplingMode
+{
+	UNION
+	INTERSECTION = 1
+}
+
+enum PolygonSamplingMode
+{
+	ALL_VERTEX
+	AT_LEAST_ONE_VERTEX = 1
+}

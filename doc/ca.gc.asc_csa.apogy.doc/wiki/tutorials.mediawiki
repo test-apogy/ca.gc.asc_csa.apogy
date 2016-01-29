@@ -1,0 +1,1771 @@
+= Apogy Examples & Tutorials =
+
+== Table Of Contents ==
+__TOC__
+
+== Examples ==
+
+Apogy provides a series of built-in example ''Systems'' to illustrate and highlight its numerous capabilities and features.  These ''Systems'', while fairly basic simulations of their real-world counterparts, show at a high level to design a ''System'' and integrate it into Apogy.  There are a large amount of variety in the examples, which include articulated and composite ''Systems''.  In addition, the examples leverage their respective ''Environment'' to facilitate the simulation.  As suggested in the guidelines, each of the example ''Systems'' have their EMF meta-models separate and distinct from their Apogy (System) plug-ins.  More than anything else, the examples highlight the recommended way to ''apogynize'' any new ''System''.
+
+The following examples are currently available in Apogy:
+
+{| border="1" cellpadding="2"
+! Apogy System
+! Description
+! Plugin
+|-
+| '''''PTUDishAntennaApogySystem'''''
+| A simulated antenna dish mount on a pan-tilt unit (PTU).  Antenna is made to track the Sun based on the '''Worksite'' sky.
+| ''ca.gc.asc_csa.apogy.examples.antenna''
+|-
+| '''''CameraApogySystem'''''
+| A simulated camera.
+| rowspan="2" | ''ca.gc.asc_csa.apogy.examples.camera''
+|-
+| '''''PTUCameraApogySystem'''''
+| A simulated camera mounted on a pan-tilt unit (PTU).
+|-
+| '''''LanderApogySystem'''''
+| A simulated lander.
+| ''ca.gc.asc_csa.apogy.examples.lander''
+|-
+| '''''LidarApogySystem'''''
+| A simulated raster scan Lidar.
+| ''ca.gc.asc_csa.apogy.examples.lidar''
+|-
+| '''''MobilePlatformApogySystem'''''
+| A simulated four-wheeled, skid-steered mobile platform.
+| ''ca.gc.asc_csa.apogy.examples.mobile_platform''
+|-
+| '''''RoboticArmApogySystem'''''
+| A simulated robotic arm with four rotatable joints
+| ''ca.gc.asc_csa.apogy.examples.robotic_arm''
+|-
+| '''''RoverApogySystem'''''
+| A simulated rover, which is a complex ''System'', composed of a ''Mobile Platform'', ''Robotic Arm'' and two ''Camera'' sub-<i>Systems</i>.
+| ''ca.gc.asc_csa.apogy.examples.rover''
+|}
+
+=== Example Specifics === 
+
+Note: It is important to note that while all of the above example ''Systems'' only provide simulations, given Apogy's flexibility, it would be a simple matter to add a real-world implementation for all of them.
+
+==== <i>PTU Dish Antenna</i> ====
+
+This ''System'' refers to a conical antenna which is mounted on top of a pan-tilt unit (PTU).  The antenna has the capability to change the position that it is directed at, by manipulating the PTU's pan and tilt angles.  In fact, the antenna is capable to track and follow the position of the Sun in the sky.  
+
+<!-- TODO! -->
+
+==== <i>Camera</i> ====
+
+This ''System'' refers to a basic camera.  This camera is only capable to changing its zoom level and taking snapshots of the environment.
+
+<!-- TODO! -->
+
+==== <i>PTU Camera</i> ====
+
+This ''System'' refers to a slightly more advanced ''Camera'', which is mounted on top of a pan-tilt unit (PTU).  In addition to the basic capabilities described for the '''Camera''' ''System'', it is also capable of change the direction in which it is facing, by changing its PTU unit's pan and tilt angles appropriately.
+
+<!-- TODO! -->
+
+==== <i>Lander</i> ====
+
+This ''System'' refers to a three-legged lander, with a thruster mounted under the bottom center of it.  The lander's three legs can be extended or retracted individually, allowing a variety of possible configurations. The amount of thrust exerted by the lander's thruster is controllable (within a range) and as such, the lander IS capable of flight; it however, rather tricky to control, especially when dealing with angular velocity.
+
+<!-- TODO! -->
+
+==== <i>Lidar</i> ====
+
+This ''System'' refers to a raster scan Lidar unit.  This ''System'' has a fixed position and is only capable of acquiring Lidar scans. 
+
+<!-- TODO! -->
+
+==== <i>Mobile Platform</i> ====
+
+This ''System'' refers to a four-wheeled, movable platform, upon which other ''Systems'' could be attached.  This ''System'' can control its linear and angular velocities, allowing it to move around the ''Environment''.
+
+<!-- TODO! -->
+
+==== <i>Robotic Arm</i> ====
+
+This ''System'' refers to an articulated robotic arm with four different joints:
+# '''Turret'''
+# '''Shoulder'''
+# '''Elbow'''
+# '''Wrist'''
+By changing the angles of its various joints, it can change its configuration as specified.
+
+<!-- TODO! -->
+
+==== <i>Rover</i> (Complex System) ====
+
+This ''System'' refers to a Composite or ''Complex System'' that contains four different sub-<i>Systems</i>:
+# ''Mobile Platform'' - To facilitate the rover's movement
+# ''Robotic Arm'' - To permit the rover to interact with the environment
+# Arm ''PTU Camera'' - To allow capture of images from the ''Robotic Arm''
+# Center ''PTU Camera'' - To allow capture of images from the center of the ''Mobile Platform''
+The ''Rover'' combines all of these ''Systems'' to leverage all of their capabilities into one multi-purpose ''System''.
+
+<!-- TODO! -->
+
+=== <i>Registered Apogy Projects</i> ===
+
+In order to make it simpler to get started, Apogy provide a '''Registered Apogy Project''' for each of the examples.  The primary component of each of these ''Apogy Projects'' is the '''session.sym''' file; this defines a sample ''Session'' that highlights the various features of that example.  Each of these ''Sessions'' is designed to be fully usable as is; this allowing one to literally use it and see the example in action without having to add or change anything.  In particular, they already have the following specified:
+
+* ''Variable(s)''
+* ''Contexts''
+* ''Worksites''
+* ''Time Sources''
+* ''Programs'' with sample ''Operation Calls''
+* ''Data Product Sets''
+* Any required ''Tools''
+
+These ''Projects'' not only make it easy to use the examples, they are also valuable references when developing and using new ''Systems''.
+
+==== Importing a <i>Apogy Project</i> ==== 
+
+In order to import a ''Registered Apogy Project'', one can simply:
+
+# Right-click on the ''Project Explorer'' and select "''New > Project...''";
+# Select "''Apogy > New Apogy Project''" and click "''Next >''";
+# In the wizard that appears:
+#* Enter the desired name for the new project ;
+#* Check the "'''Import Registered Apogy Project'''" check box;
+#* Click "''Next >''";
+# Select the desired ''Sample Registered Project'' (e.g. '''Mobile Platform Example''' to highlight the usage of the ''MobilePlatformApogySystem'');
+# Click "''Finish''" to complete the import process.
+
+----
+
+== Tutorials ==
+
+The following tutorials provide hands-on training of Apogy.  The goal of the training is to give the first-hand experience of Apogy as both a user and a developer; this will give a far deeper grasp of how best Apogy can be applied in various scenarios. 
+
+=== Simplest Way To Start ===
+
+The examples are a simple way to get started interacting with Apogy and seeing what it can do.  As laid out in the ''Registered Apogy Projects'' section above, it's easy to start using Apogy ''Systems''; by doing so, one can gain a foundation for the material and better understanding for how Apogy and its various components operate.
+
+=== Getting Started Exercises ===
+
+The following user-oriented exercises are geared towards providing a providing familiarity with Apogy ''Sessions''.  By the end of the session, one should be able to:
+
+* set up a complete ''Apogy Environment'';
+* issue commands to a ''System'';
+* work with Composite ''Types'';
+* set up the ''Camera View''
+* set up the ''Map View''
+
+==== Setting Up A <i>Apogy Environment</i> ====
+
+The following exercises are focused on the creating and fully setting up a ''Session'' and in particular, the ''Apogy Environment''.  By the end of this session, one should be able to:
+
+* create a Apogy ''Session''
+* create a ''Worksite''
+* create ''Map Layers''
+* create ''Variables'' & ''Contexts''
+* create ''Data Product Sets''
+
+===== Creating A Apogy <i>Session</i> =====
+
+<ol>
+	<li> Right-click on the ''Project Explorer'' and select "''New > Project...''";</li>
+	<li> Select "''Apogy > New Apogy Project''" and click "''Next >''";</li>
+	<li> In the wizard that appears:</li>
+	<ol type="i">
+		<li> Enter '''ApogyTraining''' for the name of the new project;</li>
+		<ul>
+			<li> Ensure that the "'''Import Registered Apogy Project'''" check box is '''not''' checked;</li>
+		</ul>
+		<li> Click "''Next >''";</li>
+		<li> Uncheck all of the check boxes on the following screen;</li>
+		<li> Enter '''MyFirstSession.sym''' for the name of the new ''Session''.</li>
+		<li> Click "''Finish''";</li>
+	</ol>
+</ol>
+
+===== Creating A <i>Worksite</i> =====
+
+# Under ''Apogy Environment'', create a new ''Worksites'';
+# Under ''Worksites'', create a new ''Earth Surface Worksite'' named '''TrainingSite''';
+# Delete the elements under ''Maps List'';
+# Sets the ''X Axis Azimth'' to '''179.4 degrees''';
+# Select the ''Apogy Environment'' and set its ''Active Worksite'' to '''TrainingSite''';
+# Open the ''Apogy 3D Viewer'' and select the ''Apogy Environment''; 
+
+===== Creating <i>Map Layers</i> =====
+
+<ol>
+	<li> Add a map named '''myMap''' to the ''TrainingSite's Map List'';</li>
+	<li> Add a ''Cartesian Triangular Mesh URL Map Layer'' named '''myDEM''' to ''myMap'' with the following parameters:</li>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 30px;"
+! Parameter
+! Value
+|-
+| ''Url''
+| '''platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri'''
+|}
+
+<ol start="3">
+	<li> Add a ''URL Image Map Layer'' named '''myContours''' to ''myMap'' with the following parameters:</li>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 30px;"
+! Parameter
+! Value
+|-
+| ''Url''
+| '''platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSA-AT-contour-map-black-20cm-per-line.png'''
+|-
+| ''Height (m)''
+| '''120.0'''
+|-
+| ''Width (m)''
+| '''60.0'''
+|}
+
+<ol start="4">
+	<li> Add a ''Feature Of Interest Map Layer'' named '''myFOI''' to ''myMap'';</li>
+	<li> Add a ''Feature Of Interest List'' as a child;</li>
+	<li> Add the following ''Features Of Interest'' to that list:</li>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 30px;"
+! Name
+! Position
+|-
+| Olympus Mons
+| '''33.5, 9.5, 2.6'''
+|-
+| Hill 937
+| '''33.0, 43.0, 0.3'''
+|}
+
+===== Creating <i>Variables</i> & <i>Contexts</i> =====
+
+<ol>
+	<li> In Session ''My First Session'', define a ''Variable'' named '''myRover''' of type ''ApogySystemMobilePlatform''.</li>
+	<li> Create two ''Contexts'':</li>
+	<ol type="i">
+		<li> Context '''Simulated'''</li>
+		<li> Context '''Real'''</li>
+	</ol>
+	<li> Set '''myRover''' to be implemented using '''MobilePlatformStub''' in the ''Simulated'' ''Context'';</li>
+	<li> Set '''myRover''' to be implemented using '''MobilePlatformReal''' in the ''Real'' ''Context'';</li>
+	<li> Set the session's ''activeContext'' to '''Simulated''';</li>
+	<li> Instantiate the '''Variables''' (by using "Apogy > Reset Instances".)</li>
+</ol>
+
+===== Creating <i>Data Products Sets</i> =====
+
+# Set the name of the default ''Data Product Set'' to '''Simulated Data''';
+# Create a new ''Data Product Set'' named '''Real Data''';
+#* Create an ''Operation Call Results List'' under ''Real Data'';
+# Assign '''Simulated Data''' to the ''Simulated'' ''Context'';
+# Assign '''Real Data''' to the ''Real'' ''Context'';
+
+==== Issuing Commands ====
+
+The following exercises deal with issuing commands on a Apogy ''System''. By the end of the session, one should be able to:
+
+* invoke operations on simple ''Systems''
+* use ''Pose Correctors''
+* use ''Operation Call Controller Bindings''
+
+===== Invoking Operations On A Simple <i>System</i> =====
+
+# Under ''Programs'', create an ''Operation Calls'' program called '''myRoverCalls'''
+# Create a call named '''Init''' to operation '''init()''' on ''myRover'';
+# Create a call named '''Move''' to operation '''cmdLinearVelocity'''() on ''myRover'' with ''Parameter'' '''speed''' set to '''0.25''';
+# Create a call named '''Stop''' to operation '''cmdLinearVelocity'''() on ''myRover'' with ''Parameter'' '''speed''' set to '''0.0''';
+# Invoke '''Init''' by selecting it, right clicking and choosing "''Apogy > Invoke''"
+# Invoke '''Move''' ("''Apogy > Invoke''") - the rover should start moving forward;
+# Invoke '''Stop''' ("''Apogy > Invoke''") when you want to stop the rover.
+
+===== Using The <i>Pose Corrector</i> =====
+
+<ol>
+	<li> Create an ''Operation Call'' named '''CommandVel''' to '''cmdVelocities'''(''double'', ''double'') on '''myRover''' with the following ''Parameters'':</li>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 30px;"
+! Parameter
+! Value
+|-
+| ''linearVelocity''
+| '''1.5 (m/s)'''
+|-
+| ''angularVelocity''
+| '''5.0 (deg/s)'''
+|}
+
+<ol start="2">
+	<li> Create an ''Operation Call'' named '''AllStop''' to '''cmdVelocities'''(''double'', ''double'') on '''myRover''' with the following ''Parameters'':</li>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 30px;"
+! Parameter
+! Value
+|-
+| ''linearVelocity''
+| '''0.0 (m/s)'''
+|-
+| ''angularVelocity''
+| '''0.0 (deg/s)'''
+|}
+
+<ol start="3">
+	<li> In the ''Session Editor'', expand the ''Active Context'' (''Simulated'');</li>
+	<li> Expand the ''Variable Implementations'';</li>
+	<li> Expand '''myRover''';</li>
+	<li> Expand the ''API Adapter'' (''MobilePlatformApogySystemApiAdapter'');</li>
+	<li> Right-click on the ''Vehicle Pose Corrector'' and select "''Apogy > Enable / Disable Pose Corrector''";</li>
+	<li> Invoke '''CommandVel''' to move the rover;</li>
+	<li> When ready, invoke '''AllStop''' to stop it.</li>
+</ol>
+
+===== Using <i>Operation Call Controller Bindings</i> =====
+
+The following exercises investigate ''Operation Call Controller Bindings''.  By the end of this session, one should be able to:
+
+* Bind a controller to interact with a ''System'' in a variety of ways
+
+====== Binding A Controller To Move The Rover Around ======
+
+# Open the ''Controllers Status View'';
+# Under ''Programs'', create a ''Controllers Configuration'' named '''myFirstCtrlConfig'''
+# Create an ''Operation Call Controller Binding'' named '''Velocity''' for the '''myRover''' ''Variable'' that binds the '''cmdVelocities'''(''double'', ''double'') operation:
+#* Create a ''TimeTrigger'' to get a periodic call at 10 Hz (every 100 ms)
+# Create the '''linearVelocity''' ''Parameter'' and map it to a joystick input axis;
+<ol>
+	<ol type="a">
+		<li> Add a ''Centered Linear Input Conditioning'' with the following values:</li>
+	</ol>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 70px;"
+! Parameter
+! Value
+|-
+| ''Dead Band''
+| '''0.1'''
+|-
+| ''Maximum''
+| '''-2.0'''
+|-
+| ''Minimum''
+| '''2.0'''
+|}
+
+<ol>
+	<ol type="a" start="2">
+		<li> Create the '''angularVelocity''' ''Parameter'' and map it to a joystick input axis;</li>
+		<ul>
+			<li> Add a ''Centered Linear Input Conditioning'' with the following values:</li>
+		</ul>
+	</ol>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 110px;"
+! Parameter
+! Value
+|-
+| ''Dead Band''
+| '''0.1'''
+|-
+| ''Maximum''
+| '''-0.5'''
+|-
+| ''Minimum''
+| '''0.5'''
+|}
+
+<ol start="5">
+	<li> Activate the '''myFirstCtrlConfig''' and drive your rover around!</li>
+</ol>
+
+====== Binding A Controller To Move The Rover Around, With An Enabled Button ======
+
+<ol>
+	<li> Create another ''Controllers Configuration'' named '''mySecondCtrlConfig'''.</li>
+	<li> Create an ''Operation Call Controller Binding'' named '''Velocity''' for the '''myRover''' ''Variable'' that binds the '''cmdVelocities(''double'', ''double'')''' operation:</li>
+	<ul>
+		<li> Create a ''State Trigger'' to get a periodic call at 10 Hz (every 100 ms) when a given joystick button is pressed (i.e. dead man's switch)</li>
+	</ul>
+	<li> Create the '''angularVelocity''' ''Parameter'' and map it to a joystick input axis;</li>
+	<ol type="a">
+		<li> Add a ''Centered Linear Input Conditioning'' with the following values:</li>
+	</ol>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 70px;"
+! Parameter
+! Value
+|-
+| ''Dead Band''
+| '''0.1'''
+|-
+| ''Maximum''
+| '''-2.0'''
+|-
+| ''Minimum''
+| '''2.0'''
+|}
+
+<ol>
+	<ol type="a" start="2">
+		<li> Create the '''linearVelocity''' ''Parameter'' and map it to a joystick input axis;</li>
+		<ul>
+			<li> Add a ''Centered Linear Input Conditioning'' with the following values:</li>
+		</ul>
+	</ol>
+</ol>
+
+
+{| border="1" cellpadding="2" style="margin-left: 110px;"
+! Parameter
+! Value
+|-
+| ''Dead Band''
+| '''0.1'''
+|-
+| ''Maximum''
+| '''-0.5'''
+|-
+| ''Minimum''
+| '''0.5'''
+|}
+
+<ol start="4">
+	<li> Activate the '''mySecondCtrlConfig''' and drive your rover around. '''''Does it work as expected?'''''</li>
+</ol>
+
+==== Defining & Using A Composite <i>System</i> ====
+
+The following exercises illustrated how to specify and use composite ''Systems''.  By the end of this session, one should be able to:
+
+* define an adhoc composite ''System''
+* invoke operations on a composite ''System'''s ''Type Members'' as well as on the ''Type Member'''s ''Features''
+
+===== The Target Assembly =====
+
+The desired target assembly for this exercise is:
+
+[[File:../resources/tutorials/composite_system_target_assembly.svg]]
+
+This should yield a composite ''System'' that looks like this:
+
+[[File:../resources/tutorials/composite_system_target_assembly_visualized.png|400x400px]]
+
+===== Defining A Composite <i>System</i> =====
+
+<ol>
+	<li> Create a new ''Apogy System'' in ''Local Type'' named '''MyFirstAssembly'''</li>
+	<li> Add three (3) ''Type Members'':</li>
+	<ol type="i">
+		<li> '''rover''' of type ''MobilePlatformApogySystem'';</li>
+		<li> '''camera''' of type ''PTUCameraApogySystem'';</li>
+		<li> '''arm''' of type ''RoboticArmApogySystem''</li>
+	</ol>
+	<li> Add a ''Topology Root'' with a ''Transform Node'' child with its ''Node Id'' set to '''myFirstAssemblyRoot'''</li>
+	<li> Under '''MyFirstAssembly''', create a ''Connection Points List''</li>
+	<li> Under the new ''Connection Points List'', create a ''Connection Point'' named '''ORIGIN''', referring to the '''myFirstAssemblyRoot''' node.</li>
+	<li> Under '''MyFirstAssembly''', create an ''Assembly Links List'';</li>
+	<li> Create a first ''Assembly Link'' named '''AssemblyToRover''':</li>
+	<ol type="i">
+		<li> Set its ''Parent Connection Point'' to '''ORIGIN''';</li>
+		<li> Set its ''Sub System Type Member'' to '''rover''';</li>
+	</ol>
+	<li> Create a second ''Assembly Link'' named '''RoverToCamera''':</li>
+	<ol type="i">
+		<li> Set its ''Parent Type Member'' to '''rover''';</li>
+		<li> Set its ''Parent Connection Point'' to '''MOBILE_PLATFORM_SYM_SYS_CONNECT_MAST_CENTRE_PLATE''';</li>
+		<li> Set its ''Sub System Type Member'' to '''camera''';</li>
+	</ol>
+	<li> Create a third ''Assembly Link'' named '''RoverToArm''':</li>
+	<ol type="i">
+		<li> Set its ''Parent Type Member'' to '''rover''';</li>
+		<li> Set its ''Parent Connection Point'' to '''MOBILE_PLATFORM_SYM_SYS_CONNECT_ARM_MOUNT''';</li>
+		<li> Set its ''Sub System Type Member'' to '''arm''';</li>
+	</ol>
+	<li> Set the ''Pose Provider'' of '''MyFirstAssembly''' to '''rover''';</li>
+	<li> Create a ''Variable'' named '''myAssembly''' of type ''MyFirstAssembly'';</li>
+	<li> In the ''Active Context'', create a new ''Variable Implementation'':</li>
+	<ol type="i">
+		<li> Assign its ''Variable'' to '''myAssembly''';</li>
+		<li> Specify an implementation class for:</li>
+		<ul>
+			<li> '''rover''' -> '''MobilePlatformSimulated'''</li>
+			<li> '''camera''' -> '''PTUCameraSimulated'''</li>
+			<li> '''arm''' -> '''RoboticArmSimulated'''</li>
+		</ul>
+	</ol>	
+	<li> Right click on the ''Apogy Environment'' and select "Apogy > Reset Instances".</li>
+</ol>
+
+===== Invoking <i>Operations</i> on Composite System <i>Type Members</i> =====
+
+# Create an ''Operation Calls'' program called '''myAssemblyCalls''';
+# Create a call named '''Init''' to operation '''init'''() on '''myAssembly:rover'''
+# Create a call named '''Move''' to operation '''cmdLinearVelocity'''(''double'') on '''myAssembly:rover''' with ''Parameter'' '''speed''' set to '''0.25''';
+# Create a call named '''Stop''' to operation '''cmdLinearVelocity'''(''double'') on '''myAssembly:rover''' with ''Parameter'' '''speed''' set to '''0.0''';
+# Invoke '''Init''';
+# Invoke '''Move''' - the assembly should start moving forward;
+# invoke '''Stop''', when you want to stop your assembly.
+
+===== Invoking <i>Operations</i> on a <i>Feature</i> of Composite System <i>Type Members</i> =====
+
+# Create a call named '''Power On''' to operation '''turnOn'''() on '''myAssembly:rover.powerSystem''';
+# Invoke ''Power On''. 
+
+==== Setting Up & Using the <i>Camera View</i> ====
+
+The goal of the following exercises is to understand how the ''Camera View'' operates and learn how to use to it.  By the end of this session, one should be able to:
+
+* configure the ''Camera View''
+* add ''Overlays'' to the ''Camera View''
+
+===== Configuring the <i>Camera View</i> =====
+
+# Create a ''Camera Configurations List'' under ''Tools'';
+# Create a ''Camera Configuration'' named '''myCameraViewConfig''';
+# Set the ''Variable'' and ''Camera'' to refer to the camera of '''myAssembly''' ('''myAssembly:camera''');
+# Open the ''Camera View'' and then select '''myCameraViewConfig''';
+# Create a call named '''AcquireImage''' to operation '''takeSnapshot'''() on '''myAssembly:camera''';
+# Invoke '''acquireImage'''.
+
+===== Adding <i>Overlays</i> =====
+
+<ol>
+	<li> Add an ''EMF Feature Overlay'' to display the current pan angle of the camera on the top left corner of the view:</li>
+	<ol type="i">
+		<li> Create a ''Variable Feature Reference'', set the ''Variable'' to '''myAssembly''';</li>
+		<li> Create a ''Type'' referring to '''camera''';</li>
+		<li> Create a ''Feature'' chain referring to '''currentPanAngle''';</li>
+	</ol>
+	<li> Add a ''Gray Scale Filter'' to '''myCameraViewConfig''';</li>
+	<li> Create a call named '''MoveToPanTilt''' to operation '''moveToPanTilt'''(''double'', ''double'') on '''myAssembly:camera''';</li>
+	<li> Call '''AcquireImage''' on '''camera''' to get the image to update;</li>
+	<li> Call '''MoveToPanTilt''' on '''camera''' to change the camera orientation;</li>
+	<li> Call '''AcquireImage''' again on '''camera''' to get the image to update.</li>
+</ol> 
+
+==== Setting Up & Using The <i>Map View</i> ====
+
+The following exercises demonstrate how the ''Map View'' operates and how it is used.  By the end of this section, one should be able to:
+
+* configure the ''Map View'' to display the ''Environment''
+* display ''Variables'' in the ''Map View'' 
+
+===== Displaying The <i>Environment</i> =====
+
+# Create a ''Map View Configuration List'' under ''Tools'';
+# Create a ''Map View Configuration'' named '''myMapConfig''';
+# Create an ''Image Map Layer Presentation'' referring to '''myContours''';
+# Create a ''Feature Of Interest Map Layer Presentation'' referring to '''myFOI''';
+# Open the ''Map View'' and select '''myMapConfig'''.
+
+===== Displaying The <i>Variables</i> =====
+
+<ol>
+	<li> Create a ''Vehicle Variable Annotation'' referring to '''myRover''';</li>
+	<li> Create a ''Variable Trajectory Annotation'':</li>
+	<ol type="i">
+		<li> Create a ''Default Trajectory Provider'' as its child;</li>
+		<li> Assign its ''Variable'' to '''myRover''';</li>
+		<li> Close the Map View;</li>
+		<li> Open the Map View and select '''myMapConfig'''.</li>
+	</ol>
+</ol>
+
+----
+
+=== Creating & Apogyzing A Pan-Tilt Unit (PTU) Camera <i>System</i> ===
+
+The following exercises go step-by-step through the process of creating a ''System'' for a camera mounted on a pan-tilt unit (PTU).  Through the process of creating the final '''''PTUCamera''''' ''System'', one should learn how to:
+
+* Create the Eclipse Modeling Framework (EMF) Model for the ''System''
+* Create the Apogy plug-in and required specialized subclasses
+* Create the appropriate ''Apogy System Model'' and register it with Apogy 
+* Test the ''System'' throughout the development process 
+
+==== An Overview Of The Desired <i>System</i> ====
+
+The class structure for the ''PTUCamera'''s ''System'' should be as follows:
+
+[[File:../resources/tutorials/ptu_camera_class_hierarchy.svg]]
+
+==== 1. Creating The <i>PTUCamera</i>'s EMF Meta-Model ====
+
+The following exercises go through the process of creating the required EMF meta-model for the new ''PTUCamera'' System.  By the end of this section, one should be able to:
+
+* create the EMF meta-model for a given ''System'';
+* implement / override the required methods in the ''System'''s generated code;
+* test the fully implemented ''System''.
+
+===== i. Creating The <i>PTUCamera</i>'s EMF Model =====
+
+<ol>
+	<li> Create a new ''Xcore Project'' named '''<org_prefix>.ptu''', where ''<org_prefix>'' is replaced by an appropriate prefix for your organization.</li>
+	<li> In the '''/model''' folder, create an Xcore model named '''ptu.xcore'''</li>
+	<li> Copy the following to the start of the empty Xcore model, replacing ''<org_prefix>'' where required:</li>
+</ol>
+
+ 	@GenModel(prefix="PTUCamera",
+ 			   modelName="PTUCamera",
+ 			   childCreationExtenders="true",
+ 			   extensibleProviderFactory="true",
+ 			   multipleEditorPages="false",
+ 			   operationReflection="true",
+ 			   suppressGenModelAnnotations="false")
+ 	@GenModel(modelDirectory="/<org_prefix>.ptu/src-generated")
+ 	@GenModel(editDirectory="/<org_prefix>.ptu.edit/src-generated")
+
+ 	package <org_prefix>.ptu
+
+<ol start="4">
+	<li> Create the class hierarchy shown before (classes in blue);</li>
+	<li> Save the '''ptu.xcore''' file.  This will trigger the code generation in both the '''<org_prefix>.ptu''' and '''<org_prefix>.ptu.edit''' plugins.</li>
+</ol>
+
+===== ii. Implementing the Required Methods =====
+
+<ol>
+	<li> Provide the following implementation for ''<org_prefix>.ptu.impl.CameraImpl'':</li>
+</ol>
+
+ 	// The extent of the zoom capabilities for the camera 
+ 	protected static final ''double'' MIN_ZOOM = 1.0;
+ 	protected static final ''double'' MAX_ZOOM = 10.0;
+ 
+ 	// The appropriate extents of the camera's FOV
+ 	protected static final ''double'' MAX_HORIZ_FOV_DEGREES = 45.0;
+ 	protected static final ''double'' MAX_VERT_FOV_DEGREES = 33.75;
+ 
+ 	// The FOV's default range extents
+ 	protected static final ''double'' FOV_DEF_MIN_RANGE = 0.0;
+ 	protected static final ''double'' FOV_DEF_MAX_RANGE = 10.0;
+ 
+ 	/**
+ 	 * This helper method is used to calculate the horizontal angle (in
+ 	 * radians) of the field of view.  This calculation is based on both
+ 	 * the current zoom level (which is between getMinimumZoom() and
+ 	 * getMaximumZoom(), inclusively) as well as a constant specifying the
+ 	 * FOV's maximum horizontal angle.
+ 	 * 
+ 	 * @return The horizontal field of view angle (in radians)
+ 	 * @see #calculateVerticalFOVangle()
+ 	 * @see #updateFov()
+ 	 */
+ 	protected ''double'' calculateHorizontalFOVAngle()
+ 	{
+ 		// Calculate and return the horizontal FOV angle
+ 		''double'' angle = MAXIMUM_HORIZONTAL_FOV_DEGREES / getCurrentZoom();
+ 		return Math.toRadians(angle);
+ 	}
+
+ 	/**
+ 	 * This helper method is used to calculated the vertical angle (in
+ 	 * radians) of the field of view.  This calculation is based on both
+ 	 * the current zoom level (which is between getMinimumZoom() and
+ 	 * getMaximumZoom(), inclusively) as well as a constant specifying the
+ 	 * maximum vertical angle.
+ 	 * 
+ 	 * @return The vertical field of view angle (in radians)
+ 	 * @see #calculateHorizontalFOVAngle()
+ 	 * @see #updateFov()
+ 	 */
+ 	protected ''double'' calculateVerticalFOVAngle()
+ 	{
+ 		// Calculate and return the vertical FOV angle
+ 		''double'' angle =  MAXIMUM_VERTICAL_FOV_DEGREES / getCurrentZoom();
+ 		return Math.toRadians(angle);
+ 	}
+
+ 	/**
+ 	 * This helper method is used to update the both the horizontal and
+ 	 * vertical angles (in radians) of the rectangular frustrum field of view,
+ 	 * based on the current level of zoom.
+ 	 * 
+ 	 * @see #calculateHorizontalFOVAngle()
+ 	 * @see #calculateVerticalFOVAngle()
+ 	 */
+ 	protected void updateFov()
+ 	{
+ 		// Calculate the new field of view (FOV) angles and
+ 		// update the FOV accordingly.
+ 		getFov().setHorizontalFieldOfViewAngle(calculateHorizontalFOVAngle());
+ 		getFov().setVerticalFieldOfViewAngle(calculateVerticalFOVAngle());
+ 	}
+
+ 	/**
+ 	 * This method is used to the FOV attribute associated with this camera.
+ 	 *
+ 	 * @return The ''RectangularFrustrumFieldOfView'' that corresponds to the camera's FOV attribute
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''RectangularFrustrumFieldOfView'' '''getFov'''() 
+ 	{
+ 		// If there currently is no FOV
+ 		if(fov == null)
+ 		{
+ 			// Create one with certain default parameters
+ 			fov = FOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
+ 			                                                              FOV_DEF_MAXIMUM_RANGE,
+ 			                                                              calculateHorizontalFOVAngle(),
+ 			                                                              calculateVerticalFOVAngle());
+ 			
+ 			// Set it as the camera's FOV
+ 			setFov(fov);
+ 		}
+ 		
+ 		// Return the camera's field of view
+ 		return fov;
+ 	}
+
+ 	/**
+ 	 * This method is used to get the field of view (FOV) associated with
+ 	 * the camera.
+ 	 * 
+ 	 * @return The ''RectangularFrustrumFieldOfView'' that defines the camera's FOV
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''RectangularFrustrumFieldOfView'' '''getFieldOfView'''()
+ 	{
+ 		// Just return the field of view attribute
+ 		return getFov();
+ 	}
+ 	 
+ 	/**
+ 	 * This method is used to get the minimum zoom value for the camera.
+ 	 * 
+ 	 * @return The smallest allowed zoom value for this camera
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMinimumZoom'''()
+ 	{
+ 		// Just return the predefined minimum zoom value
+ 		return MIN_ZOOM;
+ 	}
+ 
+ 	/**
+ 	 * This method is used to get the maximum zoom value for the camera.
+ 	 *
+ 	 * @return The largest allowed zoom value for this camera
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMaximumZoom'''()
+ 	{
+ 		// Just return the predefined maximum zoom value
+ 		return MAX_ZOOM;
+ 	}
+ 
+ 	/**
+ 	 * This method is used to change the current zoom of the camera;
+ 	 * note as this affects the camera's field of view, it also needs
+ 	 * to be appropriately update.
+ 	 * 
+ 	 * @param zoom The camera's commanded zoom factor
+ 	 * @return Whether or not the camera's zoom was updated
+ 	 * '''generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''commandZoom'''(''double'' zoom)
+ 	{
+ 		// Update the camera's commanded zoom factor; that is,
+ 		// the value that it was commanded to change to
+ 		setCommandedZoom(zoom);
+ 	
+ 		// If the commanded zoom value is in the required range
+ 		if ((zoom >= getMinimumZoom()) &&
+ 		    (zoom <= getMaximumZoom())
+ 		{
+ 			// Set the camera's current zoom to that value
+ 			setCurrentZoom(zoom);
+ 			
+ 			// Update the camera's FOV, given the new current zoom factor
+ 			updateFov();
+ 			
+ 			// Indicate that the zoom was updated
+ 			return true;
+ 		}
+ 		// Otherwise, it's not in range
+ 		else
+ 		{
+ 			// Just indicate that the zoom wasn't updated
+ 			return false;
+ 		}
+ 	}
+
+<ol start="2">
+	<li> Provide the following implementation for ''<org_prefix>.ptu.impl.CameraSimulatedImpl'':</li>
+</ol>
+
+ 	/**
+ 	 * This method is used to perform any required
+ 	 * initialization operations before the camera
+ 	 * can be used.
+ 	 *
+ 	 * @return Whether or not the camera was successfully initialized.
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''initialize'''()
+ 	{
+ 		// Just return true
+ 		return true;
+ 	}
+
+ 	/**
+ 	 * This method is used to command the camera to
+ 	 * take an ''ImageSnapshot'' and then return it.
+ 	 *
+ 	 * @return The image snapshot captured by the camera
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''ImageSnapshot'' '''takeSnapshot'''()
+ 	{
+ 		// Create an image snapshot
+ 		''ImageSnapshot'' imageSnapshot = ''ApogyAddonsSensorsImagingPackage''.eINSTANCE.createImageSnapshot();
+ 		
+ 		// Set the time of the snapshot
+ 		imageSnapshot.setTime(new Date());
+ 		
+ 		// Save a copy of the current field of view
+ 		imageSnapshot.setFieldOfView(''ApogyAddonsSensorsFOVFacade''.INSTANCE.createRectangularFrustrumFieldOfView(getFieldOfView()));
+ 		
+ 		// Save the image in the snapshot
+ 		imageSnapshot.setImage(null);
+ 		
+ 		// Update the latest snapshot accordingly
+ 		setLatestImageSnapshot(imageSnapshot);
+ 		
+ 		// Return the generated snapshot
+ 		return imageSnapshot;
+ 	}
+
+<ol start="3">
+	<li> Provide the following implementation for ''<org_prefix>.ptu.impl.PTUCameraSimulatedImpl'':</li>
+</ol>
+
+ 	// The minimum and maximum pan angles (in radians)
+ 	// that the camera's PTU can move to
+ 	protected static final ''double'' MIN_PAN_ANGLE_RAD = ''Math''.toRadians(-170.0);
+ 	protected static final ''double'' MAX_PAN_ANGLE_RAD = ''Math''.toRadians(170.0);
+ 
+ 	// The minimum and maximum tilt angles (in radians)
+ 	// that the camera's PTU can move to
+ 	protected static final ''double'' MIN_TILT_ANGLE_RAD = ''Math''.toRadians(-45.0);
+ 	protected static final ''double'' MAX_TILT_ANGLE_RAD = ''Math''.toRadians(90.0);
+ 
+ 	/**
+ 	 * This method returns the minimum angle (in radians)
+ 	 * that the PTU camera can pan to.
+ 	 * 
+ 	 * @return The PTU camera's minimum pan angle (in radians)
+ 	 * '''generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMinimumPanAngle'''()
+ 	{
+ 		// Just return the predefined min pan angle
+ 		return MIN_PAN_ANGLE_RAD;
+ 	}
+ 	
+ 	/**
+ 	 * This method returns the maximum angle (in radians)
+ 	 * that the PTU camera can pan to.
+ 	 * 
+ 	 * @return The PTU camera's maximum pan angle (in radians)
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMaximumPanAngle'''()
+ 	{
+ 		// Just return the predefined max pan angle
+ 		return MAX_PAN_ANGLE_RAD;
+ 	}
+ 	
+ 	/**
+ 	 * This method returns the minimum angle (in radians)
+ 	 * that the PTU camera can tilt to.
+ 	 * 
+ 	 * @return The PTU camera's minimum tilt angle (in radians)
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMinimumTiltAngle'''()
+ 	{
+ 		// Just return the predefined min tilt angle
+ 		return MIN_TILT_ANGLE_RAD;
+ 	}
+ 	
+ 	/**
+ 	 * This method returns the maximum angle (in radians)
+ 	 * that the PTU camera can tilt to.
+ 	 * 
+ 	 * @return The PTU camera's maximum tilt angle (in radians)
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMaximumTiltAngle'''()
+ 	{
+ 		// Just return the predefined max tilt angle
+ 		return MAX_TILT_ANGLE_RAD;
+ 	}
+ 	
+ 	/**
+ 	 * This general purpose helper function is used to
+ 	 * implement the various pan and tilt functionality.
+ 	 * 
+ 	 * It will check to see if the commanded pan and tilt
+ 	 * angles (in radians) are in range. If this is so, it
+ 	 * will update the current pan and tilt values
+ 	 * appropriately and return true; otherwise, it will
+ 	 * return false
+ 	 
+ 	 * @param pan The commanded (i.e. desired) pan angle (in radians)
+ 	 * @param tilt The commanded (i.e. desired) tilt angle (in radians)
+ 	 * @return Whether or not the pan and tilt could be updated
+ 	 */
+ 	protected ''boolean'' moveTo(''double'' panAngle, ''double'' tiltAngle)
+ 	{
+ 		// Indicate that these are the commanded pan and tilt angles
+ 		setCommandedPanAngle(panAngle);
+ 		setCommandedTiltAngle(tiltAngle);
+ 	
+ 		// If the pan angle is in range
+ 		if ((panAngle >= getMinimumPanAngle()) &&
+ 		    (panAngle <= getMaximumPanAngle()))
+ 		{
+ 			// If the tilt angle is in range
+ 			if ((tiltAngle >= getMinimumTiltAngle()) &&
+ 			    (tiltAngle <= getMaximumTiltAngle()))
+ 			{
+ 				// Both angles are in range, update the current
+ 				// pan and tilt angles appropriately
+ 				setCurrentPanAngle(panAngle);
+ 				setCurrentTiltAngle(tiltAngle);
+ 				
+ 				// Indicate that the angles were updated
+ 				return true;
+ 			}
+ 		}
+ 		
+ 		// At least one of the provided angles aren't in range;
+ 		// indicate that the angles could be updated
+ 		return false;
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded pan angle, which is in
+ 	 * radians.  If it is within range, it will update the current
+ 	 * pan angle accordingly and then return true; otherwise, it
+ 	 * will return false.
+ 	 * 
+ 	 * @param panAngle The commanded (i.e. desired) pan angle (in radians)
+ 	 * @return Whether or not the pan angle can be changed to that value
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	''boolean'' '''moveToPan'''(''double'' panAngle)
+ 	{
+ 		// Just call moveTo() appropriately and return its result
+ 		return moveTo(panAngle, getCurrentTiltAngle());
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded tilt angle, which is in
+ 	 * radians.  If it is within range, it will update the current
+ 	 * tilt angle accordingly and then return true; otherwise, it
+ 	 * will return false.
+ 	 * 
+ 	 * @param tiltAngle The commanded (i.e. desired) tilt angle (in radians)
+ 	 * @return Whether or not the tilt angle can be changed to that value
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	''boolean'' '''moveToTilt'''(''double'' tiltAngle)
+ 	{
+ 		// Just call moveTo() appropriately and return its result
+ 		return moveTo(getCurrentPanAngle(), tiltAngle);
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded pan and tilt angles,
+ 	 * both of which are in radians.  If they are within their
+ 	 * respective ranges, it will will update the current pan
+ 	 * and tilt angles accordingly and then return true;
+ 	 * otherwise, it will return false.
+ 	 *
+ 	 * @param panAngle The commanded (i.e. desired) pan angle (in radians)
+ 	 * @param tiltAngle The commanded (i.e. desired) tilt angle (in radians)
+ 	 * @return Whether or not the pan and tilt angles can be changed to those values
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	''boolean'' '''moveToPanTilt'''(''double'' panAngle, ''double'' tiltAngle)
+ 	{
+ 		// Just call moveTo() appropriately and return its result
+ 		return moveTo(panAngle, tiltAngle);
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded pan angle, which
+ 	 * is the sum of the current pan angle plus the given pan
+ 	 * offset. If the resulting pan angle is within range, it will
+ 	 * update the current pan angle accordingly and then return
+ 	 * true; otherwise, it will return false.
+ 	 * 
+ 	 * @param panAngleOffset The amount (in radians) to change the current pan angle by
+ 	 * @return Whether or not the current pan angle can be changed by that offset
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''moveByPan'''(''double'' panAngleOffset)
+ 	{
+ 		// Calculate the effective commanded pan angle
+ 		''double'' panAngle = getCurrentPanAngle() + panAngleOffset;
+ 		
+ 		// Call moveTo() appropriately and return its result
+ 		return moveTo(panAngle, getCurrentTiltAngle());
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded tilt angle, which
+ 	 * is the sum of the current tilt angle plus the given tilt
+ 	 * offset.  If the resulting tilt angle is within range, it will
+ 	 * update the current tilt angle accordingly and then return
+ 	 * true; otherwise, it will return false.
+ 	 *
+ 	 * @param tiltAngleOffset The amount (in radians) to change the current tilt angle by
+ 	 * @return Whether or not the current tilt angle can be changed by that offset
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''moveByTilt'''(''double'' tiltAngleOffset)
+ 	{
+ 		// Calculate the effective commanded tilt angle
+ 		''double'' tiltAngle = getCurrentTiltAngle() + tiltAngleOffset;
+ 		
+ 		// Call moveTo() appropriately and return its result
+ 		return moveTo(getCurrentPanAngle(), tiltAngle);
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded pan and tilt angles, which
+ 	 * are the sum of the current pan angle plus the given pan offset
+ 	 * and the sum of the current tilt angle plus the given tilt offset,
+ 	 * respectively. If the resulting angles are within their respective
+ 	 * ranges, it will update the angles accordingly and then return true;
+ 	 * otherwise, it will return false.
+ 	 *
+ 	 * @param panAngleOffset The amount (in radians) to change the current pan angle by
+ 	 * @param tiltAngleOffset The amount (in radians) to change the current tilt angle by
+ 	 * @return Whether or not the current pan and tilt angles can be changed by those offsets
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''moveByPanTilt'''(''double'' panAngleOffset, ''double'' tiltAngleOffset)
+ 	{
+ 		// Calculate the effective commanded pan and tilt angles
+ 		''double'' panAngle = getCurrentPanAngle() + panAngleOffset;
+ 		''double'' tiltAngle = getCurrentTiltAngle() + tiltAngleOffset;
+ 	
+ 		// Call moveTo() appropriately and return its result
+ 		return moveTo(panAngle, tiltAngle);
+ 	}
+ 	
+ 	/**
+ 	 * This is used to stop the PTU camera, if it is in the
+ 	 * process of moving to a given set of pan and tilt angles.
+ 	 * 
+ 	 * @return Whether or not the PTU camera's motion was stopped
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''stopMotion'''()
+ 	{
+ 		// Just return true
+ 		return true;
+ 	}
+	
+===== iii. Testing the <i>System</i> =====
+
+# Create a new ''Eclipse Application'' under ''Run Configuration''. Name it '''TEST''';
+# Click ''Run'' to launch another instance of Eclipse with your plugins;
+# In the ''Project Explorer View'', create a new Apogy Project (by clicking on ''New > Other... > Apogy > New Apogy Project'').  Name it '''my_tests''';
+# Create a new Apogy Session named '''MySession.sym''' in the newly create project.
+# In the ''Types'', under ''Local'', create a ''Type'' named '''PTUCamera''';
+# Set the type's ''Interface Class'' to ''<org_prefix>.ptu.PTUCamera'';
+# Under ''Variables'', create a ''Variable'' named '''ptuCamera''' and specify its type as '''PTUCamera''';
+# In the '''Default''' ''Context'', add a ''Variable Implementation'' that maps variable '''ptuCamera''' to a ''<org_prefix>.ptu.SimulatedPTUCamera'' implementation;
+# Select the ''Apogy Environment'' and right-click, selecting ''Apogy > Reset Instances'' to initialize instances;
+# Under ''Programs'', create an ''Operation Call List'' named '''ptuCmd''';
+# Under ''ptuCmd'', create an ''Operation Call'' named '''Init''' referencing '''ptuCamera.initialize'''();
+# Invoke the '''Init''' ''Operation Call'' and verify that the command has been executed;
+# Under ''ptuCmd'', create an ''Operation Call'' named '''MoveTo''' referencing '''ptuCamera.moveToPanTilt'''(''double'', ''double''), with a '''pan''' ''Parameter'' of '''45.0''' degrees and a '''tilt''' ''Parameter'' of '''-30.0''' degrees; 
+# Invoke the '''MoveTo''' ''Operation Call'' and verify that the command has been executed;
+# Under ''ptuCmd'', create an ''Operation Call'' named '''Zoom''' referencing '''ptuCamera.commandZoom'''(''double''), with a '''zoom''' ''Parameter'' of '''2.0''';
+# Invoke the '''Zoom''' ''Operation Call'' and verify that the command has been executed;
+# Under ''ptuCmd'', create an ''Operation Call'' named '''SnapShot''' referencing '''ptuCamera.takeSnapshot'''()
+# Invoke the '''SnapShot''' ''Operation Call'' and verify that the command has been executed.
+
+==== 2. Creating the <i>PTUCamera</i>'s Apogy Plug-in ====
+
+The following exercises focus on creating the Apogy plugin for the new ''PTUCamera'' ''System''.  By the end of this section, one should be able to:
+
+* Create Apogy plug-in projects
+* Develop Apogy EMF meta-model for a ''System''
+* Specialize both ''ApogyInitializationData'' and ''ApogySystemApiAdapter'' classes for a given ''System''
+
+===== i. Creating The <i>PTUCamera</i>'s Plug-in Project =====
+
+<ol>
+	<li> Create a new ''Xcore Project'' named '''<org_prefix>.ptu.apogy''';</li>
+	<li> Rename the '''/src-gen''' folder to '''/src-generated''';</li>
+	<li> Open the '''MANIFEST.MF'''.  Go to the ''Dependencies'' tab;</li>
+	<li> In the ''Required Plug-ins'' section:</li>
+	<ol type="i">
+		<li> Add your ''<org_prefix>.ptu'' plugin to the dependencies;</li>
+		<li> Add the ''ca.gc.asc_csa.apogy.core'' plugin to the dependencies;</li>
+	</ol>
+	<li> Save the '''MANIFEST.MF'''</li>
+</ol>
+
+===== ii. Developing the <i>PTUCamera</i>'s Apogy Xcore (.xcore) model =====
+
+<ol>
+	<li>In the /model folder, create an Xcore model named '''ptu_apogy.xcore'''</li>
+	<li>Copy the following to the start of the empty Xcore model, replacing <org_prefix> where required:</li>
+</ol>
+
+ 	@GenModel(prefix="PTUCameraApogy",
+ 			   modelName="PTUCameraApogy",
+ 			   childCreationExtenders="true",
+ 			   extensibleProviderFactory="true",
+ 			   multipleEditorPages="false",
+ 			   operationReflection="true",
+ 			   suppressGenModelAnnotations="false")
+ 	@GenModel(modelDirectory="/<org_prefix>.ptu.apogy/src-generated")
+ 	@GenModel(editDirectory="/<org_prefix>.ptu.apogy.edit/src-generated")
+ 	
+ 	package <org_prefix>.ptu.apogy
+
+<ol start="3">
+	<li>Save '''ptu_apogy.xcore''' to trigger an initial build for both the ''<org_prefix>.ptu.apogy'' and ''<org_prefix>.ptu.apogy'' plug-ins.</li>
+</ol>
+
+===== iii. Specializing <i>ApogyInitializationData</i> for the <i>PTUCamera</i> =====
+
+<ol>
+	<li> Open the '''ptu_apogy.xcore''' model;</li>
+	<li> Define a new class named '''''PTUCameraApogyInitializationData''''' that extends ''ApogyInitializationData'';</li>
+	<li> Add the required attributes:</li>
+	<ol type="i">required minimum / maximum value
+		<li> ''double'' '''panAngle''';</li>
+		<li> ''double'' '''tiltAngle''';</li>
+		<li> ''double'' '''zoomFactor''' (with a default value of '''1.0''')</li>
+	</ol>
+	<li> Save the '''ptu_apogy.xcore''' model.</li>
+</ol>
+
+===== iv. Specializing <i>ApogySystemApiAdapter</i> for the <i>PTUCamera</i> =====
+
+# Open the '''ptu_apogy.xcore''' model;
+# Define a new class named '''''PTUCameraApogySystemApiAdapter''''' that extends ''ApogySystemApiAdapter''';
+# Save the '''ptu_apogy.xcore''' model;
+# Implement the following methods in ''<org_prefix>.ptu.apogy.impl.PTUCameraApogySystemApiAdapterImpl'' as specified below:
+
+ 	/**
+ 	 * Create a new instance of ''PTUCameraApogyInitializationData'',
+ 	 * which is the relevant subclass of ''ApogyInitializationData''
+ 	 * for the ''PTUCamera'' ''System''.
+ 	 * 
+ 	 * @return The newly created ''PTUCameraApogyInitializationData'' object
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''AbstractInitializationData'' '''createInitializationData'''()
+ 	{
+ 		// Create and return a ''PTUCameraApogyInitializationData'' 
+ 		return PTUCameraFactory.createPTUCameraApogyInitializationData();
+ 	}
+ 
+ 	/**
+ 	 * Sets the attributes of the given ''ApogyInitializationData'' object
+ 	 * to the corresponding values of the ''PTUCamera'' ''System''' instance's
+ 	 * state.  In this case, it simply gets the values of '''pan''', '''tilt'''
+ 	 * and '''zoom''' from the ''System'' instance and stores them in the provided
+ 	 * ''ApogyInitializationData'' object, given that it has the correct type.
+ 	 * 
+ 	 * @param initData The initialization data object that is supposed to collect the state of the ''System''
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public void '''collect'''(''AbstractInitializationData'' initData)
+ 	{
+ 		// Call the superclass' version of the method 
+ 		super.collect(initData);
+ 		
+ 		// If the initialization data object has the correct type
+ 		if (initData instanceof ''PTUCameraApogyInitializationData'')
+ 		{
+ 			// Cast down
+ 			''PTUCameraApogyInitializationData'' ptuCameraInitData = (''PTUCameraApogyInitializationData'') initData;
+ 			''PTUCamera'' ptuCamera = (''PTUCamera'') this.getInstance();
+ 		
+ 			// Store the ''System'' instance's state in the initialization data object
+ 			ptuCameraInitData.setPanAngle(ptuCamera.getPanAngle());
+ 			ptuCameraInitData.setTiltAngle(ptuCamera.getTiltAngle());
+ 			ptuCameraInitData.setZoomFactor(ptuCamera.getCurrentZoom());
+ 		}
+ 	}
+ 
+ 	/**
+ 	 * Applies the values in the provided ''ApogyInitializationData'' to this
+ 	 * ''PTUCamera'' ''System'' instance.  In this case, it will call the appropriate
+ 	 * methods to set the instance's state correctly.
+ 	 *
+ 	 * @param initData The initialization data object that is supposed to apply its state to the given ''System'' instance.
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public void '''apply'''(''AbstractInitializationData'' initData)
+ 	{
+ 		// Call the superclass' version of this method
+ 		super.apply(initData);
+ 		
+ 		// If the initialization data object has the correct type
+ 		if (initData instanceof ''PTUCameraApogyInitializationData'')
+ 		{
+ 			// Cast down
+ 			''PTUCameraApogyInitializationData'' ptuCameraInitData = (''PTUCameraApogyInitializationData'') initData;
+ 			''PTUCamera'' ptuCamera = (''PTUCamera'') this.getInstance();
+ 		
+ 			// Apply the values
+ 			ptuCamera.commandZoom(ptuCameraInitData.getZoomFactor());
+ 			ptuCamera.moveToPanTilt(ptuCameraInitData.getPanAngle(),
+ 									   ptuCameraInitData.getTiltAngle());
+ 		}
+ 	}
+   
+ 	/**
+ 	 * Return a 4x4 matrix, whose components represent the transformation
+ 	 * (e.g. rotations, translations, etc.) from where the given operation
+ 	 * took place to the camera's root topology node; for example, for the
+ 	 * operation ''takeSnapshot''(), this describes the transformation from
+  	 * the camera's lens to its base (e.g. root). If no transformation
+ 	 * occurred, then the identity matrix should be returned; note that this,
+ 	 * in fact, is what is returned by the superclass' version of this method.
+ 	 * 
+ 	 * @param operationCall The operation which took place
+ 	 * @return The transformation from where the operation took place to the PTU camera's root
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''Matrix4x4'' '''createResultMatrix'''(''OperationCall'' operationCall) 
+ 	{
+ 		// If the takeSnapshot() method was called
+ 		if (operationCall.getEOperation().getOperationID() == PTUCameraPackage.CAMERA___TAKE_SNAPSHOT)
+ 		{
+ 			// Extract the camera lens and root nodes
+ 			''Node'' tip = TopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_FOV",
+ 			                                                 getApogySystem().getTopologyRoot().getOriginNode()).get(0);
+ 			''Node'' root = TopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_ROOT",
+ 			                                                  getApogySystem().getTopologyRoot().getOriginNode()).get(0);
+			
+ 			// Determine the series of transformations that have taken place
+ 			''Matrix4d'' matrix4d = TopologyFacade.INSTANCE.expressInFrame(tip,	root);
+			
+ 			// Create a 4x4 Matrix with the transformation and return it
+ 			return MathFacade.INSTANCE.createMatrix4x4(matrix4d);
+ 		}
+ 		// Otherwise, any other operation was called
+ 		else
+ 		{
+ 			// Just return the identity matrix
+ 			return super.createResultMatrix(operationCall);
+ 		}
+ 	}
+
+==== 3. Creating the <i>PTUCamera</i>'s Complete <i>Apogy System</i> Model ====
+
+The following exercises highlight how to create the ''PTUCamera'' System's complete ''Apogy System'' model.  By the end of this section, one should be able to:
+ 
+* Create a ''Apogy System'' model (.ss file)
+* Specify the topology for a new ''Apogy System'' model
+* Create the bindings for a new ''Apogy System'' model
+* Register the new ''Apogy System'' model with Apogy 
+
+===== i. Creating the <i>PTUCamera</i>'s <i>Apogy System</i> Model (.ss file) =====
+
+# Launch the ''Run Configuration'' used for testing ''PTUCamera'' in the previous exercises;
+# In the ''Project Explorer'', right click and then select "''Import...''";
+# In the ''Import'' pop-up, select "''General -> Existing Projects into Workspace''", then click "''Next >''";
+# Select your workspace root directory; the ''Projects'' list will get populated with your plugins. ''De-select'' all of them, except '''<org_prefix>.ptu.apogy''';
+# Click ''Finish''.  You now have a reference to your Apogy plugin in your new Eclipse instance;
+# Create a Apogy System Model named '''MyPTUCameraApogySystem.ss''' in the '''/model''' folder of your '''<org_prefix>.ptu.apogy''' plugin (use the ''New Apogy System'' wizard plugin);
+# Set the name of the Apogy System Model to '''MyPTUCameraApogySystem''';
+# Set the ''Interface Class'' to '''<org_prefix>.ptu.PTUCamera''';
+# Set the ''Type Api Adapter Class'' to '''<org_prefix>.ptu.apogy.PTUCameraApogySystemApiAdapter''';
+# Save the model (*.ss) file.
+
+===== ii. Specifying the Topology for the <i>PTUCamera</i>'s <i>Apogy System</i> Model=====
+
+The following exercises show how to specify the topology for the ''PTUCamera'''s ''Apogy System'' model.  By the end of this section, one should be able to: 
+
+* Understand basic geometry files and how to incorporate them into Apogy
+* Generate a topology to reflect a given target hierarchy
+ 
+====== Target Topology Hierarchy ======
+
+The desired final topology for ''MyPTUCameraApogySystem'' should have be as following: 
+
+[[File:../resources/tutorials/ptu_camera_topology.svg]]
+
+It's important that you set a node's ID / description as soon as it's created; this will make it much easier to both understand and navigate the topology.
+
+====== Target Transformations ======
+
+The desired final transformation for the components of ''MyPTUCameraApogySystem'' should be as follows:
+
+[[File:../resources/tutorials/ptu_camera_transforms.svg]]
+
+Recall that the ''RectangularFrustrumFieldOfView'' component of the ''MyPTUCamera'' ''System''   has following properties:
+
+[[File:../resources/tutorials/rectangular_frustrum_fov.svg]]
+
+Once all of the topology in '''MyPTUCameraApogySystem.ss''' has been fully populated, the result should look like:
+
+[[File:../resources/tutorials/ptu_camera_transforms_result.png]]
+
+====== Creating the Geometry Folder======
+
+# In your '''<org_prefix>.ptu.apogy''' plugin, create a folder named '''/geommodels'''.  This folder will hold the CAD files containing the geometry of your ''System'';
+# Open the '''MANIFEST.MF''' for your '''<org_prefix>.ptu.apogy''' plugin;
+# Go to the ''Build'' tab;
+# In the ''Binary Build'' section, select the '''/geommodels''' folder; this will ensure that it will be included in the binary plugin when installed.
+# Save the '''MANIFEST.MF'''
+
+====== Creating the Geometry Files ======
+
+In Apogy, and 3D computer graphics in general, a common way to specify the geometry of a component is actually by providing two separate files.  The first, the Material file (*.mtl), specifies the various materials (i.e. surfaces) used by a component and their graphical properties (e.g. ambient/diffuse/specular colour, transparency, etc.)  The second, the Object file (*.obj), which can refer to multiple Material files, specifies actual component geometry, including the various object vertices, vertex normals, UV mapping, etc.
+
+As the ''PTUCamera'' ''System'' is comprised of five different components, there needs to be a .obj and .mtl file for each of these elements in order for them to be displayed properly.
+
+In the '''/cadmodels''' folder, add the following ten (10) files with the specified content:
+
+<ol>
+	<li>'''base.mtl''':</li>
+</ol>
+ 
+ 	newmtl Shape
+ 	Ns 900.000000
+ 	Ka 0.000000 0.000000 0.000000
+ 	Kd 0.693600 0.746400 0.800000
+ 	Ks 0.500000 0.500000 0.500000
+ 	Ni 1.000000
+ 	d 1.000000
+ 	illum 2
+
+<ol start="2">
+	<li>'''base.obj''':</li>
+</ol>
+ 
+ 	mtllib base.mtl
+ 	o ShapeBox
+ 	v -0.050000 -0.050000 -0.000000
+ 	v -0.050000 0.050000 0.000000
+ 	v 0.050000 0.050000 0.000000
+ 	v 0.050000 -0.050000 -0.000000
+ 	v -0.050000 -0.050000 0.050000
+ 	v -0.050000 0.050000 0.050000
+ 	v 0.050000 0.050000 0.050000
+ 	v 0.050000 -0.050000 0.050000
+ 	vn -1.000000 -0.000000 0.000000
+ 	vn 0.000000 1.000000 0.000000
+ 	vn 1.000000 0.000000 -0.000000
+ 	vn -0.000000 -1.000000 -0.000000
+ 	vn -0.000000 0.000000 -1.000000
+ 	vn 0.000000 -0.000000 1.000000
+ 	g ShapeBox_ShapeBox_Shape
+ 	usemtl Shape
+ 	s off
+ 	f 5//1 6//1 2//1 1//1
+ 	f 6//2 7//2 3//2 2//2
+ 	f 7//3 8//3 4//3 3//3
+ 	f 8//4 5//4 1//4 4//4
+ 	f 1//5 2//5 3//5 4//5
+ 	f 8//6 7//6 6//6 5//6
+ 	
+<ol start="3">
+	<li>'''pan.mtl''':</li>
+</ol>
+ 	
+ 	newmtl Shape
+ 	Ns 900.000000
+ 	Ka 0.000000 0.000000 0.000000
+ 	Kd 0.800000 0.000000 0.000000
+ 	Ks 0.500000 0.000000 0.000000
+ 	Ni 1.000000
+ 	d 1.000000
+ 	illum 2
+ 	
+<ol start="4">
+	<li>'''pan.obj''':</li>
+</ol>
+ 
+ 	mtllib pan.mtl
+ 	o ShapeBox
+ 	v -0.025000 -0.025000 0.000000
+ 	v -0.025000 0.025000 0.000000
+ 	v 0.025000 0.025000 0.000000
+ 	v 0.025000 -0.025000 -0.000000
+ 	v -0.025000 -0.025000 0.200000
+ 	v -0.025000 0.025000 0.200000
+ 	v 0.025000 0.025000 0.200000
+ 	v 0.025000 -0.025000 0.200000
+ 	vn -1.000000 -0.000000 0.000000
+ 	vn 0.000000 1.000000 0.000000
+ 	vn 1.000000 0.000000 -0.000000
+ 	vn -0.000000 -1.000000 -0.000000
+ 	vn -0.000000 0.000000 -1.000000
+ 	vn 0.000000 -0.000000 1.000000
+ 	g ShapeBox_ShapeBox_Shape
+ 	usemtl Shape
+ 	s off
+ 	f 5//1 6//1 2//1 1//1
+ 	f 6//2 7//2 3//2 2//2
+ 	f 7//3 8//3 4//3 3//3
+ 	f 8//4 5//4 1//4 4//4
+ 	f 1//5 2//5 3//5 4//5
+ 	f 8//6 7//6 6//6 5//6
+ 	
+<ol start="5">
+	<li>'''tilt.mtl''':</li>
+</ol>
+ 	
+ 	newmtl Shape
+ 	Ns 900.000000
+ 	Ka 0.000000 0.000000 0.000000
+ 	Kd 0.000000 0.800000 0.000000
+ 	Ks 0.000000 0.500000 0.000000
+ 	Ni 1.000000
+ 	d 1.000000
+ 	illum 2
+ 
+<ol start="6">
+	<li>'''tilt.obj''':</li>
+</ol>
+ 
+ 	mtllib tilt.mtl
+ 	o ShapeCylinder
+ 	v -0.000000 -0.000000 0.025000
+ 	v 0.050000 0.000000 0.025000
+ 	v -0.000000 0.009567 0.023097
+ 	v 0.050000 0.009567 0.023097
+ 	v -0.000000 0.017678 0.017678
+ 	v 0.050000 0.017678 0.017678
+ 	v -0.000000 0.023097 0.009567
+ 	v 0.050000 0.023097 0.009567
+ 	v -0.000000 0.025000 -0.000000
+ 	v 0.050000 0.025000 0.000000
+ 	v -0.000000 0.023097 -0.009567
+ 	v 0.050000 0.023097 -0.009567
+ 	v 0.000000 0.017678 -0.017678
+ 	v 0.050000 0.017678 -0.017678
+ 	v 0.000000 0.009567 -0.023097
+ 	v 0.050000 0.009567 -0.023097
+ 	v 0.000000 -0.000000 -0.025000
+ 	v 0.050000 0.000000 -0.025000
+ 	v 0.000000 -0.009567 -0.023097
+ 	v 0.050000 -0.009567 -0.023097
+ 	v 0.000000 -0.017678 -0.017678
+ 	v 0.050000 -0.017678 -0.017678
+ 	v 0.000000 -0.023097 -0.009567
+ 	v 0.050000 -0.023097 -0.009567
+ 	v 0.000000 -0.025000 -0.000000
+ 	v 0.050000 -0.025000 0.000000
+ 	v 0.000000 -0.023097 0.009567
+ 	v 0.050000 -0.023097 0.009567
+ 	v -0.000000 -0.017678 0.017678
+ 	v 0.050000 -0.017678 0.017678
+ 	v -0.000000 -0.009567 0.023097
+ 	v 0.050000 -0.009567 0.023097
+ 	vn -0.000000 0.195090 0.980785
+ 	vn -0.000000 0.555570 0.831470
+ 	vn -0.000000 0.831470 0.555570
+ 	vn -0.000000 0.980785 0.195090
+ 	vn -0.000000 0.980785 -0.195090
+ 	vn -0.000000 0.831470 -0.555570
+ 	vn 0.000000 0.555570 -0.831470
+ 	vn 0.000000 0.195090 -0.980785
+ 	vn 0.000000 -0.195090 -0.980785
+ 	vn 0.000000 -0.555570 -0.831470
+ 	vn 0.000000 -0.831469 -0.555571
+ 	vn 0.000000 -0.980785 -0.195090
+ 	vn 0.000000 -0.980785 0.195090
+ 	vn 0.000000 -0.831469 0.555570
+ 	vn 1.000000 0.000000 0.000000
+ 	vn -0.000000 -0.195090 0.980785
+ 	vn -0.000000 -0.555570 0.831470
+ 	vn -1.000000 -0.000000 -0.000000
+ 	g ShapeCylinder_ShapeCylinder_Shape
+ 	usemtl Shape
+ 	s off
+ 	f 1//1 2//1 4//1 3//1
+ 	f 3//2 4//2 6//2 5//2
+ 	f 5//3 6//3 8//3 7//3
+ 	f 7//4 8//4 10//4 9//4
+ 	f 9//5 10//5 12//5 11//5
+ 	f 11//6 12//6 14//6 13//6
+ 	f 13//7 14//7 16//7 15//7
+ 	f 15//8 16//8 18//8 17//8
+ 	f 17//9 18//9 20//9 19//9
+ 	f 19//10 20//10 22//10 21//10
+ 	f 21//11 22//11 24//11 23//11
+ 	f 23//12 24//12 26//12 25//12
+ 	f 25//13 26//13 28//13 27//13
+ 	f 27//14 28//14 30//14 29//14
+ 	f 4//15 2//15 32//15 30//15 28//15 26//15 24//15 22//15 20//15 18//15 16//15 14//15 12//15 10//15 8//15 6//15
+ 	f 31//16 32//16 2//16 1//16
+ 	f 29//17 30//17 32//17 31//17
+ 	f 1//18 3//18 5//18 7//18 9//18 11//18 13//18 15//18 17//18 19//18 21//18 23//18 25//18 27//18 29//18 31//18
+ 
+<ol start="7">
+	<li>'''camera.mtl''':</li>
+</ol>
+ 
+ 	newmtl Shape
+ 	Ns 900.000000
+ 	Ka 0.000000 0.000000 0.000000
+ 	Kd 0.800000 0.800000 0.000000
+ 	Ks 0.500000 0.500000 0.000000
+ 	Ni 1.000000
+ 	d 1.000000
+ 	illum 2
+ 
+<ol start="8">
+	<li>'''camera.obj''':</li>
+</ol>
+
+ 	mtllib camera.mtl
+ 	o ShapeBox
+ 	v -0.000000 -0.050000 -0.150000
+ 	v -0.000000 0.050000 -0.150000
+ 	v 0.100000 0.050000 -0.150000
+ 	v 0.100000 -0.050000 -0.150000
+ 	v 0.000000 -0.050000 0.150000
+ 	v 0.000000 0.050000 0.150000
+ 	v 0.100000 0.050000 0.150000
+ 	v 0.100000 -0.050000 0.150000
+ 	vn -1.000000 0.000000 0.000000
+ 	vn 0.000000 1.000000 0.000000
+ 	vn 1.000000 0.000000 -0.000000
+ 	vn 0.000000 -1.000000 -0.000000
+ 	vn -0.000000 0.000000 -1.000000
+ 	vn 0.000000 -0.000000 1.000000
+ 	g ShapeBox_ShapeBox_Shape
+ 	usemtl Shape
+ 	s off
+ 	f 5//1 6//1 2//1 1//1
+ 	f 6//2 7//2 3//2 2//2
+ 	f 7//3 8//3 4//3 3//3
+ 	f 8//4 5//4 1//4 4//4
+ 	f 1//5 2//5 3//5 4//5
+ 	f 8//6 7//6 6//6 5//6
+ 	
+<ol start="9">
+	<li>'''lens.mtl''':</li>
+</ol>
+ 
+ 	newmtl Shape
+ 	Ns 900.000000
+ 	Ka 0.000000 0.000000 0.000000
+ 	Kd 0.000000 0.800000 0.000000
+ 	Ks 0.000000 0.500000 0.000000
+ 	Ni 1.000000
+ 	d 1.000000
+ 	illum 2
+ 	
+<ol start="10">
+	<li>'''lens.obj''':</li>
+</ol>
+
+ 	mtllib lens.mtl
+ 	o ShapeCylinder
+ 	v -0.000000 -0.020000 0.005000
+ 	v -0.000000 -0.020000 -0.005000
+ 	v 0.007654 -0.018478 0.005000
+ 	v 0.007654 -0.018478 -0.005000
+ 	v 0.014142 -0.014142 0.005000
+ 	v 0.014142 -0.014142 -0.005000
+ 	v 0.018478 -0.007654 0.005000
+ 	v 0.018478 -0.007654 -0.005000
+ 	v 0.020000 -0.000000 0.005000
+ 	v 0.020000 -0.000000 -0.005000
+ 	v 0.018478 0.007654 0.005000
+ 	v 0.018478 0.007654 -0.005000
+ 	v 0.014142 0.014142 0.005000
+ 	v 0.014142 0.014142 -0.005000
+ 	v 0.007654 0.018478 0.005000
+ 	v 0.007654 0.018478 -0.005000
+ 	v 0.000000 0.020000 0.005000
+ 	v 0.000000 0.020000 -0.005000
+ 	v -0.007654 0.018478 0.005000
+ 	v -0.007654 0.018478 -0.005000
+ 	v -0.014142 0.014142 0.005000
+ 	v -0.014142 0.014142 -0.005000
+ 	v -0.018478 0.007654 0.005000
+ 	v -0.018478 0.007654 -0.005000
+ 	v -0.020000 0.000000 0.005000
+ 	v -0.020000 0.000000 -0.005000
+ 	v -0.018478 -0.007654 0.005000
+ 	v -0.018478 -0.007654 -0.005000
+ 	v -0.014142 -0.014142 0.005000
+ 	v -0.014142 -0.014142 -0.005000
+ 	v -0.007654 -0.018478 0.005000
+ 	v -0.007654 -0.018478 -0.005000
+ 	vn 0.195090 -0.980785 0.000000
+ 	vn 0.555570 -0.831470 0.000000
+ 	vn 0.831470 -0.555570 0.000000
+ 	vn 0.980785 -0.195090 0.000000
+ 	vn 0.980785 0.195090 -0.000000
+ 	vn 0.831470 0.555570 -0.000000
+ 	vn 0.555570 0.831470 -0.000000
+ 	vn 0.195091 0.980785 -0.000000
+ 	vn -0.195090 0.980785 -0.000000
+ 	vn -0.555570 0.831470 -0.000000
+ 	vn -0.831469 0.555571 -0.000000
+ 	vn -0.980785 0.195090 -0.000000
+ 	vn -0.980785 -0.195090 0.000000
+ 	vn -0.831469 -0.555570 0.000000
+ 	vn 0.000000 -0.000000 -1.000000
+ 	vn -0.195090 -0.980785 0.000000
+ 	vn -0.555570 -0.831470 0.000000
+ 	vn -0.000000 0.000000 1.000000
+ 	g ShapeCylinder_ShapeCylinder_Shape
+ 	usemtl Shape
+ 	s off
+ 	f 1//1 2//1 4//1 3//1
+ 	f 3//2 4//2 6//2 5//2
+ 	f 5//3 6//3 8//3 7//3
+ 	f 7//4 8//4 10//4 9//4
+ 	f 9//5 10//5 12//5 11//5
+ 	f 11//6 12//6 14//6 13//6
+ 	f 13//7 14//7 16//7 15//7
+ 	f 15//8 16//8 18//8 17//8
+ 	f 17//9 18//9 20//9 19//9
+ 	f 19//10 20//10 22//10 21//10
+ 	f 21//11 22//11 24//11 23//11
+ 	f 23//12 24//12 26//12 25//12
+ 	f 25//13 26//13 28//13 27//13
+ 	f 27//14 28//14 30//14 29//14
+ 	f 4//15 2//15 32//15 30//15 28//15 26//15 24//15 22//15 20//15 18//15 16//15 14//15 12//15 10//15 8//15 6//15
+ 	f 31//16 32//16 2//16 1//16
+ 	f 29//17 30//17 32//17 31//17
+ 	f 1//18 3//18 5//18 7//18 9//18 11//18 13//18 15//18 17//18 19//18 21//18 23//18 25//18 27//18 29//18 31//18
+
+====== Populating the topology ======
+
+# Launch the ''Run Configuration'' used for testing the ''PTUCamera'' in the previous exercises;
+# Open your '''PTUCameraApogySystem.ss''' file with the editor;
+# Open the ''Apogy System 3D Viewer'', then select the ''Apogy System'' in the editor;
+# Under ''Topology Root'', create the topology for the ''PTUCamera'', replicating the structure specified in '''Target Topology Hierarchy''' above;
+# For the relevant transformations in the new hierarchy, update their position and orientation to reflect those specified in the '''Target Transformations''' section above;
+# For the ''URLNodes'' that are providing a link to the geometry file for their parent node, they should have a URL in the following format: ''platform:/plugin/'''''<org_prefix>.ptu.apogy/cadmodels'''''/filename.ext''
+# Save the file.
+
+===== iii. Making the Camera's Bindings =====
+
+====== Defining the <i>Feature Nodes</i> ======
+
+<ol>
+	<li> Open your '''PTUCameraApogySystem.ss''' file with the editor</li> 
+	<li> Under "''Binding Sets -> Feature Roots List''", create a new ''Tree Root Node'', select it and set its ''Source Class'' to '''<org_prefix>.ptu.PTUCamera''';</li>
+	<li> Under the new ''Tree Root Node'', create three new ''Tree Feature Nodes'':</li>
+	<ol type="i">
+		<li> Set the ''Structural Feature'' for the first to '''currentPanAngle''';</li>
+		<li> Set the ''Structural Feature'' for the second to '''currentTiltAngle''';</li>
+		<li> Set the ''Structural Feature'' for the third to '''fov''';</li>
+	</ol>
+	<li> Save the ''Apogy System Model'' (*.ss) file;</li>
+</ol>
+
+====== Making the Bindings themselves ======
+
+<ol>
+	<li> Open your '''PTUCameraApogySystem.ss''' file with the editor</li>
+	<li> Under "''Binding Sets-> Bindings List''", create the following ''Rotation Bindings'':</li>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 30px; text-align:center;"
+! Name
+! Feature Node
+! Rotation Units
+! Rotation Node
+! Rotation Axis
+|-
+| Pan Angle
+| ''currentPanAngle''
+| ''RADIANS''
+| ''PTU_CAMERA_PAN_JOINT''
+| ''Z_AXIS''
+|- 
+| Tilt Angle
+| ''currentTiltAngle''
+| ''RADIANS''
+| ''PTU_CAMERA_TILT_JOINT''
+| ''MINUS_Y_AXIS''
+|}
+
+<ol start="3">
+	<li> Similarly, create the following ''Rectangular Frustrum Field Of View Binding'':</li>
+</ol>
+
+{| border="1" cellpadding="2" style="margin-left: 30px; text-align:center;"
+! Name
+! Feature Node
+! Field Of View (FOV) Node
+|-
+| FOV
+| ''fov''
+| ''PTU_CAMERA_FOV''
+|}
+
+<ol start="4">
+	<li> Save the .ss file</li>
+</ol>
+
+===== iv. Registering the Camera's <i>Apogy System Model</i> =====
+
+# Open the '''MANIFEST.MF''' of your '''<org_prefix>.ptu.apogy''' plugin;
+# In the ''Extensions'' tab, click ''Add...'';
+# Ensure the ''Show only extension points from the required plug-ins'' is '''NOT''' selected;
+# Select the '''ca.gc.asc_csa.apogy.core.invocator.typeContributor''';
+# Click ''Finish'';
+# Select the newly added extension and then click on ''Browse'' for the '''URI''' field;
+# Browse to your Apogy System Model ('''MyPTUCameraApogySystem.ss''') file and then click ''OK'';
+# Save the '''MANIFEST.MF'''
+
+==== 4. Testing the completed PTU Camera in Apogy ====
+
+# Launch the ''Run Configuration'' used for testing the ''PTUCamera'' in the previous exercises;
+# Open '''MySession.sym''';
+# Expand ''Session -> Apogy Environment -> Types -> Registered'': the '''MyPTUCameraApogySystem''' should be present;
+# Open the ''Apogy 3D Viewer'', then select the ''Apogy Environment''; this will make the ''3D Viewer'' display your environment;
+# Under ''Apogy Environment'', create a new ''Worksites'';
+# Under ''Worksites'', create a new ''Earth Surface Worksite'';
+# Set the '''Active Worksite''' of the ''Apogy Environment'' to the new ''Earth Surface Worksite'';
+# Select the '''ptuCamera''' ''Variable'' and set its ''Variable Type'' to ''MyPTUCameraApogySystem'';
+# Reset Instances: Your ''PTUCamera'' should appear in the 3D Viewer;
+# Invoke the ''Operation Calls'' defined in the previous exercises and confirm that the ''System'' responds correctly;
+# Done!
+

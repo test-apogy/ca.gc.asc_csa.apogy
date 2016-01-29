@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:50:26 pallard Exp $
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "ca.gc.asc_csa.apogy.addons.sensors.motion" 
+       class = "ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage"
+       genModel = "model/apogy_addons_sensors_motion.xcore" /> 
+  </extension>
+
+</plugin>
