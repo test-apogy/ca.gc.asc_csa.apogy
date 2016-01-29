@@ -62,10 +62,7 @@ class CommentBlockAdder(object):
 class CommentFactory(object):
     
     @classmethod
-    def getCharacterProvider(cls, extension):
-        
-        print("Type(extension): " + str(type(extension)))
-        
+    def getCharacterProvider(cls, extension):        
         assert isinstance(extension, str)
         
         commentProvider = None
