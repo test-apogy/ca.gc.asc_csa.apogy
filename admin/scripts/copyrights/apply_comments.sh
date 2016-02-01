@@ -13,6 +13,6 @@ do
     mv $tmpFileName $i
 
     $CSCRIPT apply $i $COPYRIGHT > $tmpFileName
-    mv $tmpFile $i
+    mv $tmpFileName $i
 done
 
