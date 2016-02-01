@@ -71,16 +71,13 @@ class Copyright(object):
         with open(fileName) as f:
             inCopyrightBlock = False
             lineNumber = 0
-
-            done = False
             
-            for line in f:
+            for line in f:            
                 if (lineNumber == 0 and 
-                    line.startswith(commentProvider.getBeginCommentString()) and not done):
+                    line.startswith(commentProvider.getBeginCommentString())):
                     inCopyrightBlock = True
-                elif line.startswith(commentProvider.getEndCommentString()) and not done:
+                elif line.startswith(commentProvider.getEndCommentString()):
                     inCopyrightBlock = False
-                    done = True
                 elif not inCopyrightBlock:
                     sys.stdout.write(line)
         
@@ -112,7 +109,8 @@ class CommentFactory(object):
             ext == "H" or
             ext == "HPP" or 
             ext == "HXX" or
-            ext == "JAVA"):
+            ext == "JAVA" or 
+            ext == "XCORE"):
             
             # Cpp file
             commentProvider = CCommentProvider()
@@ -191,7 +189,7 @@ if __name__ == '__main__':
     applyParser.add_argument("copyrightBlock", help="Copyrith Block File")
     
     # Strip parser
-    stripParser = subparsers.add_parser("strip", help="Strips Copyrith Block from File")
+    stripParser = subparsers.add_parser("strip", help="Strips Copyright Block from File")
     stripParser.add_argument("sourceFile", help="Source File to Strip Comments from")  
     
     args = parser.parse_args()    
