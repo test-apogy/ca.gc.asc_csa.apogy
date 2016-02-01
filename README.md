@@ -8,9 +8,9 @@
 
 Description               | URL
 ------------------------- | -------------
-Installation Guide        | [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html)
-Apogy OTS P2 Update Site  | [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest)
-Apogy P2 Update Site  | [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest)
+Installation Guide        | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/installation.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/installation.html)
+Apogy OTS P2 Update Site  | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest)
+Apogy P2 Update Site  | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest)
 
 # More details #
 Teleoperation is supported through flexible hand controller mapping, camera displays with customizable overlays and image filtering, real-time map displays (2D and 3D). **Apogy** maintains rigorously contexts information such as the command and parameter used to generate the plan execution product, timing information and localization. **Apogy** then make use of these informations to provide the overall context of the operations and their products to the engineers and scientists. In the last years, **Apogy** has been used in multiple deployments involving different types of rovers equipped with various sensors and instruments all operated through **Apogy**.
