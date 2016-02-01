@@ -71,13 +71,16 @@ class Copyright(object):
         with open(fileName) as f:
             inCopyrightBlock = False
             lineNumber = 0
+
+            done = False
             
-            for line in f:            
+            for line in f:
                 if (lineNumber == 0 and 
-                    line.startswith(commentProvider.getBeginCommentString())):
+                    line.startswith(commentProvider.getBeginCommentString()) and not done):
                     inCopyrightBlock = True
-                elif line.startswith(commentProvider.getEndCommentString()):
+                elif line.startswith(commentProvider.getEndCommentString()) and not done:
                     inCopyrightBlock = False
+                    done = True
                 elif not inCopyrightBlock:
                     sys.stdout.write(line)
         
