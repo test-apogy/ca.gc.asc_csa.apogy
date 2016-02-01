@@ -101,7 +101,7 @@ class File(object):
         for line in self.__fileContent:            
             upperLine = line.upper()
             if "COPYRIGHT" in upperLine:
-                copyrighted = "CANADIAN" in upperLine                
+                copyrighted = "CANADIAN" not in upperLine                
                 self.__copyright = line
                 break
             
@@ -284,7 +284,7 @@ if __name__ == '__main__':
             parser.print_usage()
             sys.exit(1) 
     else:
-        print("Error, file is copyrighted: " + str(f.getCopyright()))
+        sys.stderr.write("Error, file is copyrighted: " + str(f.getCopyright()) + "\n")
         
     sys.exit(0)
     
