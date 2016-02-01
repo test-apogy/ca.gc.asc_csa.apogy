@@ -15,11 +15,11 @@ Apogy is based on Eclipse platform ([https://www.eclipse.org https://www.eclipse
 |-
 | Apogy OTS
 | Apogy third party library bundles.
-| [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/ ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/]
+| [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/]
 |-
 | Apogy
 | Apogy core, examples, doc bundles.
-| [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/ ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/]
+| [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/]
 |-
 | Sirius
 | DSL Workbenches Designer 
@@ -78,11 +78,11 @@ To install Eclipse platform, we highly recommend to use Eclipse Installer also k
 = Apogy =
 Apogy is composed of a series of Eclipse features.  The following steps present the way to install them.
 == Apogy Third Party Features ==
-# Add the '''Apogy OTS''' P2 Site [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/ ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/].
+# Add the '''Apogy OTS''' P2 Site [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/].
 # Install the following packages:
 #* Apogy Off The Shelves (OTS)
 == Apogy Features ==
-# Add the '''Apogy''' P2 Site [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/ ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/].
+# Add the '''Apogy''' P2 Site [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/].
 # Install the following packages:
 #* Apogy
 = Known Issues =
