@@ -301,7 +301,7 @@ class URLBasedTLEEarthOrbitPropagator extends TLEEarthOrbitPropagator
 }
 
 /* 
- * Defines a Two-Line Elements definition.
+ * Defines a Two-Line Elements orbit and propagation definition.
  * @see http://en.wikipedia.org/wiki/Two-line_element_set
  */
 class TLE 
@@ -310,13 +310,13 @@ class TLE
 	 * The first line of the TLE in text form.
 	 */
 	@GenModel(property="Editable", propertyCategory="TLE_RAW_DATA", notify="true")
-	String line1
+	String[1] line1
 	
 	/*
 	 * The second line of the TLE in text form.
 	 */
 	@GenModel(property="Editable", propertyCategory="TLE_RAW_DATA", notify="true")
-	String line2
+	String[1] line2
 	
 	/*
 	 * The ballistic coefficient.
