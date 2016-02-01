@@ -34,7 +34,7 @@ class Copyright(object):
         
             f.close()
         
-    def apply(self, fileName):
+    def applyHeader(self, fileName):
         
         assert isinstance(fileName, str)
         
@@ -72,14 +72,15 @@ class Copyright(object):
             inCopyrightBlock = False
             lineNumber = 0
             
-            for line in f:            
-                if (lineNumber == 0 and 
+            for line in f:      
+                if (lineNumber == 1 and 
                     line.startswith(commentProvider.getBeginCommentString())):
                     inCopyrightBlock = True
                 elif line.startswith(commentProvider.getEndCommentString()):
                     inCopyrightBlock = False
                 elif not inCopyrightBlock:
                     sys.stdout.write(line)
+                lineNumber += 1
         
     def __extractExtension(self, fileName):
         
@@ -118,15 +119,14 @@ class CommentFactory(object):
                ext == "XML"):
             
             commentProvider = MarkupLanguageCommentProvider()
-        elif (ext == "MF" or ext == "SH" or ext == "PY"):
+        elif (ext == "SH" or ext == "PY"):
                         
             commentProvider = HashTagCommentProvider()
             
         else:
             commentProvider = HashTagCommentProvider()
             
-        return commentProvider
-            
+        return commentProvider  
 
 class CommentCharacterProvider(object):
     
@@ -184,7 +184,7 @@ if __name__ == '__main__':
     subparsers = parser.add_subparsers(help="commands")  
                 
     # Apply parser
-    applyParser = subparsers.add_parser("apply", help="Apply comment block")
+    applyParser = subparsers.add_parser("applyHeader", help="Apply comment block")
     applyParser.add_argument("sourceFile", help="Source File")
     applyParser.add_argument("copyrightBlock", help="Copyrith Block File")
     
@@ -196,7 +196,7 @@ if __name__ == '__main__':
    
     if "copyrightBlock" in args:
         commentAdder = Copyright(args.copyrightBlock)         
-        commentAdder.apply(args.sourceFile)
+        commentAdder.applyHeader(args.sourceFile)
     elif "sourceFile" in args:        
         commentAdder = Copyright()
         commentAdder.strip(args.sourceFile)
