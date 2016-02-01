@@ -15,9 +15,8 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth
 import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.common.emf.Timed
-
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3
 import ca.gc.asc_csa.apogy.core.Updatable
-
 import ca.gc.asc_csa.apogy.core.environment.Earth
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.Moon
@@ -25,15 +24,14 @@ import ca.gc.asc_csa.apogy.core.environment.Sky
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator
 import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider
+import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer
+import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates
-
-
-import ca.gc.asc_csa.apogy.common.math.Matrix3x3
 import org.eclipse.emf.ecore.EDate
 
 
@@ -186,40 +184,43 @@ class KeplerianEarthOrbit extends EarthOrbit
 	/*
 	 * Semi-major axis, in meters
 	 */
-	@GenModel(apogy_units="m")
+	@GenModel(apogy_units="m", propertyCategory="KEPLER_ORBITAL_PARAMETERS")
 	double semiMajorAxis
 	
 	/*
 	 * Eccentricity
 	 */
+	@GenModel(propertyCategory="KEPLER_ORBITAL_PARAMETERS")
 	double eccentricity
 	
 	/*
 	 * Inclination, in radians.
 	 */
-	@GenModel(apogy_units="rad")
+	@GenModel(apogy_units="rad", propertyCategory="KEPLER_ORBITAL_PARAMETERS")
 	double inclination
 	
 	/*
 	 * Argument of perigee, in radians.
 	 */
-	@GenModel(apogy_units="rad")
+	@GenModel(apogy_units="rad", propertyCategory="KEPLER_ORBITAL_PARAMETERS")
 	double perigeeArgument
 	
 	/*
 	 * Right ascension of ascending node, in radians.
 	 */
-	@GenModel(apogy_units="rad")
+	@GenModel(apogy_units="rad", propertyCategory="KEPLER_ORBITAL_PARAMETERS")
 	double rightAscentionOfAscendingNode
 	
 	/*
 	 * Mean anomaly.
 	 */
+	@GenModel(propertyCategory="KEPLER_ORBITAL_PARAMETERS")
 	double meanAnomaly
 	
 	/*
 	 * True anomaly.
 	 */
+	@GenModel(propertyCategory="KEPLER_ORBITAL_PARAMETERS")	 
 	double trueAnomaly
 	
 	/*
@@ -254,7 +255,7 @@ class ConstantElevationMask extends ElevationMask
 /*
  * Defines an Orbit propagator for Earth orbits.
  */
-abstract class EarthOrbitPropagator extends AbstractOrbitPropagator
+abstract class EarthOrbitPropagator extends AbstractOrbitPropagator, InitialOrbitProvider
 {	
 	op OreKitPropagator getOreKitPropagator()
 		
@@ -266,19 +267,34 @@ abstract class EarthOrbitPropagator extends AbstractOrbitPropagator
 	/**
 	 * Returns the list of passes for a given Ground Station (and its Field Of View) during a specified interval.
 	 */	
-	op List<VisibilityPass> getGroundStationPasses(GroundStation groundStation, EDate startDate, EDate endDate) throws Exception	
+	op List<VisibilityPass> getGroundStationPasses(GroundStation groundStation, EDate startDate, EDate endDate) throws Exception
+	
+	/**
+	 * Return the init
+	 */
+	op Orbit getInitialOrbit()	
 }
 
 /*
  * Simple keplerian orbit propagator for Earth orbits.
  */
-class KeplerianEarthOrbitPropagator extends EarthOrbitPropagator
+class KeplerianEarthOrbitPropagator extends EarthOrbitPropagator, InitialOrbitContainer
 {
 	/*
 	 * Gets the underlying OreKit KeplerianPropagator used to do computations.
 	 */
 	@GenModel(notify="true", property="Readonly")
 	op OreKitKeplerianPropagator getOreKitKeplerianPropagator()		
+	
+	/*
+	 * Defines the earliest data for which the propagator is valid.
+	 */
+	EDate[1] validFromDate
+	
+	/*
+	 * Defines the latest data for which the propagator is valid.
+	 */
+	EDate[1] validToDate
 }
 
 class TLEEarthOrbitPropagator extends EarthOrbitPropagator
@@ -289,12 +305,16 @@ class TLEEarthOrbitPropagator extends EarthOrbitPropagator
 	 * The Two-Line Elements used by this propagator.
 	 */
 	contains TLE[1] tle
+		
+	/*
+	 * Defines the earliest data for which the propagator is valid.
+	 */
+	derived readonly transient volatile EDate[1] validFromDate
 	
 	/*
-	 * The orbit as defined at the epoch time. This is what is return as this propagator initial orbit.
+	 * Defines the latest data for which the propagator is valid.
 	 */
-	@GenModel(notify="true", property="Readonly")
-	contains Orbit[0..1] orbitAtEpoch
+	derived readonly transient volatile EDate[1] validToDate
 }
 
 class URLBasedTLEEarthOrbitPropagator extends TLEEarthOrbitPropagator

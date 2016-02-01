@@ -75,7 +75,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_KEPLER_ORBITAL_PARAMETERSPropertyCategory"),
 				 null));
 	}
 
@@ -97,7 +97,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_KEPLER_ORBITAL_PARAMETERSPropertyCategory"),
 				 null));
 	}
 
@@ -119,7 +119,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_KEPLER_ORBITAL_PARAMETERSPropertyCategory"),
 				 null));
 	}
 
@@ -141,7 +141,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_KEPLER_ORBITAL_PARAMETERSPropertyCategory"),
 				 null));
 	}
 
@@ -163,7 +163,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_KEPLER_ORBITAL_PARAMETERSPropertyCategory"),
 				 null));
 	}
 
@@ -185,7 +185,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_KEPLER_ORBITAL_PARAMETERSPropertyCategory"),
 				 null));
 	}
 
@@ -207,7 +207,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_KEPLER_ORBITAL_PARAMETERSPropertyCategory"),
 				 null));
 	}
 

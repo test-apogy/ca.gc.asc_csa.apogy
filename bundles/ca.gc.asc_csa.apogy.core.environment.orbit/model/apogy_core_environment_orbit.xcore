@@ -166,13 +166,29 @@ abstract class Orbit extends Named, Described, Timed
 	contains AbstractFrame referenceFrame
 }
 
+interface ValidityRangeProvider
+{
+	/*
+	 * Defines the earliest date for which the data is valid.
+	 */
+	op 	EDate[1] getFromValidDate()
+	
+	/*
+	 * Defines the latest date for which the data is valid.
+	 */
+	op EDate[1] getToValidDate()
+	
+	/*
+	 * Returns whether or not a specified date falls within the validity range.
+	 */
+	op boolean isDateInValidRange(EDate date)
+}
 
 /*
  * Defines a class that propagate an initial orbit through time.
  */
-abstract class AbstractOrbitPropagator extends Named, Described
-{	
-	
+abstract class AbstractOrbitPropagator extends Named, Described, ValidityRangeProvider
+{		
 	/*
 	 * The frame in which the orbit is propagated.
 	 */
@@ -182,12 +198,7 @@ abstract class AbstractOrbitPropagator extends Named, Described
 	 * The attitude provider. Can be used to specify an attitude control law.
 	 */
 	contains AttitudeProvider[0..*] attitudeProvider
-	
-	/*
-	 * The initial orbit to propagate in time. 
-	 */
-	refers Orbit[1] initialOrbit	
-	
+		
 	/*
 	 * Propagate the current orbit to a specified time to get a Spacecraft state.
 	 */
@@ -197,22 +208,23 @@ abstract class AbstractOrbitPropagator extends Named, Described
 	 * Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.
 	 * @param timeInterval The time interval to get spacecraft states, in seconds.
 	 */
-	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(apogy_units="s") double timeInterval) throws Exception
-	
+	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(apogy_units="s") double timeInterval) throws Exception		
+}
+
+interface InitialOrbitProvider
+{
+	op Orbit getInitialOrbit()
+}
+
+/**
+ * A class containing an initial orbit. Mainly used by some AbstractOrbitPropagator sub-classes.
+ */
+class InitialOrbitContainer extends InitialOrbitProvider
+{
 	/*
-	 * Defines the earliest data for which the propagator is valid.
+	 * The initial orbit to propagate in time. 
 	 */
-	EDate[1] validFromDate
-	
-	/*
-	 * Defines the latest data for which the propagator is valid.
-	 */
-	EDate[1] validToDate
-	
-	/*
-	 * Returns wether or not a specified date falls within the validity range of the propagator.
-	 */
-	op boolean isDateInValidRange(EDate date)
+	refers Orbit[1] startOrbit	
 }
 
 /*

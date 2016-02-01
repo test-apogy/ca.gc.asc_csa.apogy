@@ -3,7 +3,7 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import java.util.Date;
 import org.orekit.propagation.analytical.tle.TLEPropagator;
 
 /**
@@ -16,7 +16,8 @@ import org.orekit.propagation.analytical.tle.TLEPropagator;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getTle <em>Tle</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOrbitAtEpoch <em>Orbit At Epoch</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getValidFromDate <em>Valid From Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLEEarthOrbitPropagator()
@@ -50,30 +51,32 @@ public interface TLEEarthOrbitPropagator extends EarthOrbitPropagator {
 	void setTle(TLE value);
 
 	/**
-	 * Returns the value of the '<em><b>Orbit At Epoch</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Valid From Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The orbit as defined at the epoch time. This is what is return as this propagator initial orbit.
+	 * Defines the earliest data for which the propagator is valid.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Orbit At Epoch</em>' containment reference.
-	 * @see #setOrbitAtEpoch(Orbit)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLEEarthOrbitPropagator_OrbitAtEpoch()
-	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
+	 * @return the value of the '<em>Valid From Date</em>' attribute.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLEEarthOrbitPropagator_ValidFromDate()
+	 * @model unique="false" required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	Orbit getOrbitAtEpoch();
+	Date getValidFromDate();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOrbitAtEpoch <em>Orbit At Epoch</em>}' containment reference.
+	 * Returns the value of the '<em><b>Valid To Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Orbit At Epoch</em>' containment reference.
-	 * @see #getOrbitAtEpoch()
+	 * <!-- begin-model-doc -->
+	 * Defines the latest data for which the propagator is valid.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Valid To Date</em>' attribute.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLEEarthOrbitPropagator_ValidToDate()
+	 * @model unique="false" required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	void setOrbitAtEpoch(Orbit value);
+	Date getValidToDate();
 
 	/**
 	 * <!-- begin-user-doc -->

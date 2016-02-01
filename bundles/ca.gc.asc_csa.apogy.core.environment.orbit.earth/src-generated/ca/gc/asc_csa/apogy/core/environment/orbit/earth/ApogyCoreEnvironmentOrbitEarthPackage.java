@@ -995,33 +995,6 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int EARTH_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER;
 
 	/**
-	 * The feature id for the '<em><b>Initial Orbit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EARTH_ORBIT_PROPAGATOR__INITIAL_ORBIT = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT;
-
-	/**
-	 * The feature id for the '<em><b>Valid From Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Valid To Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE;
-
-	/**
 	 * The number of structural features of the '<em>Earth Orbit Propagator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1029,6 +1002,33 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @ordered
 	 */
 	int EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get From Valid Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE;
+
+	/**
+	 * The operation id for the '<em>Get To Valid Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_ORBIT_PROPAGATOR___GET_TO_VALID_DATE = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___GET_TO_VALID_DATE;
+
+	/**
+	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE;
 
 	/**
 	 * The operation id for the '<em>Propagate</em>' operation.
@@ -1049,22 +1049,13 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int EARTH_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE;
 
 	/**
-	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE;
-
-	/**
 	 * The operation id for the '<em>Get Ore Kit Propagator</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT + 0;
+	int EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Target Passes</em>' operation.
@@ -1073,7 +1064,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT + 1;
+	int EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Ground Station Passes</em>' operation.
@@ -1082,7 +1073,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT + 2;
+	int EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Initial Orbit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Earth Orbit Propagator</em>' class.
@@ -1091,7 +1091,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_PROPAGATOR_OPERATION_COUNT = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT + 3;
+	int EARTH_ORBIT_PROPAGATOR_OPERATION_COUNT = ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.KeplerianEarthOrbitPropagatorImpl <em>Keplerian Earth Orbit Propagator</em>}' class.
@@ -1140,13 +1140,13 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER = EARTH_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER;
 
 	/**
-	 * The feature id for the '<em><b>Initial Orbit</b></em>' reference.
+	 * The feature id for the '<em><b>Start Orbit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR__INITIAL_ORBIT = EARTH_ORBIT_PROPAGATOR__INITIAL_ORBIT;
+	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR__START_ORBIT = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Valid From Date</b></em>' attribute.
@@ -1155,7 +1155,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE = EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE;
+	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Valid To Date</b></em>' attribute.
@@ -1164,7 +1164,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE;
+	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Keplerian Earth Orbit Propagator</em>' class.
@@ -1173,7 +1173,34 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 0;
+	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get From Valid Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE = EARTH_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE;
+
+	/**
+	 * The operation id for the '<em>Get To Valid Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR___GET_TO_VALID_DATE = EARTH_ORBIT_PROPAGATOR___GET_TO_VALID_DATE;
+
+	/**
+	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE;
 
 	/**
 	 * The operation id for the '<em>Propagate</em>' operation.
@@ -1192,15 +1219,6 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @ordered
 	 */
 	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = EARTH_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Ore Kit Propagator</em>' operation.
@@ -1228,6 +1246,15 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @ordered
 	 */
 	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE = EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Get Initial Orbit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEPLERIAN_EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT = EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT;
 
 	/**
 	 * The operation id for the '<em>Get Ore Kit Keplerian Propagator</em>' operation.
@@ -1294,33 +1321,6 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int TLE_EARTH_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER = EARTH_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER;
 
 	/**
-	 * The feature id for the '<em><b>Initial Orbit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR__INITIAL_ORBIT = EARTH_ORBIT_PROPAGATOR__INITIAL_ORBIT;
-
-	/**
-	 * The feature id for the '<em><b>Valid From Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE = EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Valid To Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE;
-
-	/**
 	 * The feature id for the '<em><b>Tle</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1330,13 +1330,22 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int TLE_EARTH_ORBIT_PROPAGATOR__TLE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Orbit At Epoch</b></em>' containment reference.
+	 * The feature id for the '<em><b>Valid From Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 1;
+	int TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Valid To Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>TLE Earth Orbit Propagator</em>' class.
@@ -1345,7 +1354,34 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 2;
+	int TLE_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get From Valid Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE_EARTH_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE = EARTH_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE;
+
+	/**
+	 * The operation id for the '<em>Get To Valid Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE_EARTH_ORBIT_PROPAGATOR___GET_TO_VALID_DATE = EARTH_ORBIT_PROPAGATOR___GET_TO_VALID_DATE;
+
+	/**
+	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE_EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE;
 
 	/**
 	 * The operation id for the '<em>Propagate</em>' operation.
@@ -1364,15 +1400,6 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @ordered
 	 */
 	int TLE_EARTH_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = EARTH_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Ore Kit Propagator</em>' operation.
@@ -1400,6 +1427,15 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @ordered
 	 */
 	int TLE_EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE = EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Get Initial Orbit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE_EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT = EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT;
 
 	/**
 	 * The operation id for the '<em>Get Ore Kit TLE Propagator</em>' operation.
@@ -1466,13 +1502,13 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER = TLE_EARTH_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER;
 
 	/**
-	 * The feature id for the '<em><b>Initial Orbit</b></em>' reference.
+	 * The feature id for the '<em><b>Tle</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__INITIAL_ORBIT = TLE_EARTH_ORBIT_PROPAGATOR__INITIAL_ORBIT;
+	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE = TLE_EARTH_ORBIT_PROPAGATOR__TLE;
 
 	/**
 	 * The feature id for the '<em><b>Valid From Date</b></em>' attribute.
@@ -1493,24 +1529,6 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Tle</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE = TLE_EARTH_ORBIT_PROPAGATOR__TLE;
-
-	/**
-	 * The feature id for the '<em><b>Orbit At Epoch</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH = TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH;
-
-	/**
 	 * The feature id for the '<em><b>Tle URL</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1529,6 +1547,33 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = TLE_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Get From Valid Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE = TLE_EARTH_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE;
+
+	/**
+	 * The operation id for the '<em>Get To Valid Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR___GET_TO_VALID_DATE = TLE_EARTH_ORBIT_PROPAGATOR___GET_TO_VALID_DATE;
+
+	/**
+	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = TLE_EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE;
+
+	/**
 	 * The operation id for the '<em>Propagate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1545,15 +1590,6 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @ordered
 	 */
 	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = TLE_EARTH_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = TLE_EARTH_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Ore Kit Propagator</em>' operation.
@@ -1581,6 +1617,15 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @ordered
 	 */
 	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE = TLE_EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Get Initial Orbit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT = TLE_EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT;
 
 	/**
 	 * The operation id for the '<em>Get Ore Kit TLE Propagator</em>' operation.
@@ -3621,6 +3666,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EOperation getEarthOrbitPropagator__GetGroundStationPasses__GroundStation_Date_Date();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getInitialOrbit() <em>Get Initial Orbit</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Initial Orbit</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getInitialOrbit()
+	 * @generated
+	 */
+	EOperation getEarthOrbitPropagator__GetInitialOrbit();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator <em>Keplerian Earth Orbit Propagator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3629,6 +3684,28 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getKeplerianEarthOrbitPropagator();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator#getValidFromDate <em>Valid From Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valid From Date</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator#getValidFromDate()
+	 * @see #getKeplerianEarthOrbitPropagator()
+	 * @generated
+	 */
+	EAttribute getKeplerianEarthOrbitPropagator_ValidFromDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator#getValidToDate <em>Valid To Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valid To Date</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator#getValidToDate()
+	 * @see #getKeplerianEarthOrbitPropagator()
+	 * @generated
+	 */
+	EAttribute getKeplerianEarthOrbitPropagator_ValidToDate();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator#getOreKitKeplerianPropagator() <em>Get Ore Kit Keplerian Propagator</em>}' operation.
@@ -3662,15 +3739,26 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EReference getTLEEarthOrbitPropagator_Tle();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOrbitAtEpoch <em>Orbit At Epoch</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getValidFromDate <em>Valid From Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Orbit At Epoch</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOrbitAtEpoch()
+	 * @return the meta object for the attribute '<em>Valid From Date</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getValidFromDate()
 	 * @see #getTLEEarthOrbitPropagator()
 	 * @generated
 	 */
-	EReference getTLEEarthOrbitPropagator_OrbitAtEpoch();
+	EAttribute getTLEEarthOrbitPropagator_ValidFromDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getValidToDate <em>Valid To Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valid To Date</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getValidToDate()
+	 * @see #getTLEEarthOrbitPropagator()
+	 * @generated
+	 */
+	EAttribute getTLEEarthOrbitPropagator_ValidToDate();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOreKitTLEPropagator() <em>Get Ore Kit TLE Propagator</em>}' operation.
@@ -5360,6 +5448,14 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		EOperation EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE = eINSTANCE.getEarthOrbitPropagator__GetGroundStationPasses__GroundStation_Date_Date();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Initial Orbit</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT = eINSTANCE.getEarthOrbitPropagator__GetInitialOrbit();
+
+		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.KeplerianEarthOrbitPropagatorImpl <em>Keplerian Earth Orbit Propagator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5368,6 +5464,22 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * @generated
 		 */
 		EClass KEPLERIAN_EARTH_ORBIT_PROPAGATOR = eINSTANCE.getKeplerianEarthOrbitPropagator();
+
+		/**
+		 * The meta object literal for the '<em><b>Valid From Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE = eINSTANCE.getKeplerianEarthOrbitPropagator_ValidFromDate();
+
+		/**
+		 * The meta object literal for the '<em><b>Valid To Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = eINSTANCE.getKeplerianEarthOrbitPropagator_ValidToDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Ore Kit Keplerian Propagator</b></em>' operation.
@@ -5396,12 +5508,20 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		EReference TLE_EARTH_ORBIT_PROPAGATOR__TLE = eINSTANCE.getTLEEarthOrbitPropagator_Tle();
 
 		/**
-		 * The meta object literal for the '<em><b>Orbit At Epoch</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Valid From Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH = eINSTANCE.getTLEEarthOrbitPropagator_OrbitAtEpoch();
+		EAttribute TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE = eINSTANCE.getTLEEarthOrbitPropagator_ValidFromDate();
+
+		/**
+		 * The meta object literal for the '<em><b>Valid To Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = eINSTANCE.getTLEEarthOrbitPropagator_ValidToDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Ore Kit TLE Propagator</b></em>' operation.

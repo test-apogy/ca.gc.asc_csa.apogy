@@ -869,8 +869,35 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getEarthOrbitPropagator__GetInitialOrbit() {
+		return earthOrbitPropagatorEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getKeplerianEarthOrbitPropagator() {
 		return keplerianEarthOrbitPropagatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKeplerianEarthOrbitPropagator_ValidFromDate() {
+		return (EAttribute)keplerianEarthOrbitPropagatorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKeplerianEarthOrbitPropagator_ValidToDate() {
+		return (EAttribute)keplerianEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -905,8 +932,17 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTLEEarthOrbitPropagator_OrbitAtEpoch() {
-		return (EReference)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
+	public EAttribute getTLEEarthOrbitPropagator_ValidFromDate() {
+		return (EAttribute)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTLEEarthOrbitPropagator_ValidToDate() {
+		return (EAttribute)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2112,13 +2148,17 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE);
+		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT);
 
 		keplerianEarthOrbitPropagatorEClass = createEClass(KEPLERIAN_EARTH_ORBIT_PROPAGATOR);
+		createEAttribute(keplerianEarthOrbitPropagatorEClass, KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE);
+		createEAttribute(keplerianEarthOrbitPropagatorEClass, KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE);
 		createEOperation(keplerianEarthOrbitPropagatorEClass, KEPLERIAN_EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_KEPLERIAN_PROPAGATOR);
 
 		tleEarthOrbitPropagatorEClass = createEClass(TLE_EARTH_ORBIT_PROPAGATOR);
 		createEReference(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__TLE);
-		createEReference(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH);
+		createEAttribute(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE);
+		createEAttribute(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE);
 		createEOperation(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_TLE_PROPAGATOR);
 
 		urlBasedTLEEarthOrbitPropagatorEClass = createEClass(URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR);
@@ -2316,7 +2356,9 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		cartesianEarthOrbitEClass.getESuperTypes().add(this.getEarthOrbit());
 		constantElevationMaskEClass.getESuperTypes().add(this.getElevationMask());
 		earthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getAbstractOrbitPropagator());
+		earthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getInitialOrbitProvider());
 		keplerianEarthOrbitPropagatorEClass.getESuperTypes().add(this.getEarthOrbitPropagator());
+		keplerianEarthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getInitialOrbitContainer());
 		tleEarthOrbitPropagatorEClass.getESuperTypes().add(this.getEarthOrbitPropagator());
 		urlBasedTLEEarthOrbitPropagatorEClass.getESuperTypes().add(this.getTLEEarthOrbitPropagator());
 		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
@@ -2419,13 +2461,18 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
+		initEOperation(getEarthOrbitPropagator__GetInitialOrbit(), theApogyCoreEnvironmentOrbitPackage.getOrbit(), "getInitialOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(keplerianEarthOrbitPropagatorEClass, KeplerianEarthOrbitPropagator.class, "KeplerianEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKeplerianEarthOrbitPropagator_ValidFromDate(), theEcorePackage.getEDate(), "validFromDate", null, 1, 1, KeplerianEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKeplerianEarthOrbitPropagator_ValidToDate(), theEcorePackage.getEDate(), "validToDate", null, 1, 1, KeplerianEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getKeplerianEarthOrbitPropagator__GetOreKitKeplerianPropagator(), this.getOreKitKeplerianPropagator(), "getOreKitKeplerianPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tleEarthOrbitPropagatorEClass, TLEEarthOrbitPropagator.class, "TLEEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTLEEarthOrbitPropagator_Tle(), this.getTLE(), null, "tle", null, 1, 1, TLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTLEEarthOrbitPropagator_OrbitAtEpoch(), theApogyCoreEnvironmentOrbitPackage.getOrbit(), null, "orbitAtEpoch", null, 0, 1, TLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTLEEarthOrbitPropagator_ValidFromDate(), theEcorePackage.getEDate(), "validFromDate", null, 1, 1, TLEEarthOrbitPropagator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTLEEarthOrbitPropagator_ValidToDate(), theEcorePackage.getEDate(), "validToDate", null, 1, 1, TLEEarthOrbitPropagator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getTLEEarthOrbitPropagator__GetOreKitTLEPropagator(), this.getOreKitTLEPropagator(), "getOreKitTLEPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -2829,46 +2876,53 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "Semi-major axis, in meters",
-			 "apogy_units", "m"
+			 "apogy_units", "m",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_Eccentricity(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Eccentricity"
+			 "documentation", "Eccentricity",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_Inclination(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Inclination, in radians.",
-			 "apogy_units", "rad"
+			 "apogy_units", "rad",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_PerigeeArgument(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Argument of perigee, in radians.",
-			 "apogy_units", "rad"
+			 "apogy_units", "rad",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_RightAscentionOfAscendingNode(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Right ascension of ascending node, in radians.",
-			 "apogy_units", "rad"
+			 "apogy_units", "rad",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_MeanAnomaly(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Mean anomaly."
+			 "documentation", "Mean anomaly.",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_TrueAnomaly(), 
 		   source, 
 		   new String[] {
-			 "documentation", "True anomaly."
+			 "documentation", "True anomaly.",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getConstantElevationMask_ConstantElevation(), 
@@ -2897,6 +2951,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "documentation", "*\nReturns the list of passes for a given Ground Station (and its Field Of View) during a specified interval."
 		   });	
 		addAnnotation
+		  (getEarthOrbitPropagator__GetInitialOrbit(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the init"
+		   });	
+		addAnnotation
 		  (keplerianEarthOrbitPropagatorEClass, 
 		   source, 
 		   new String[] {
@@ -2911,18 +2971,34 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "property", "Readonly"
 		   });	
 		addAnnotation
+		  (getKeplerianEarthOrbitPropagator_ValidFromDate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines the earliest data for which the propagator is valid."
+		   });	
+		addAnnotation
+		  (getKeplerianEarthOrbitPropagator_ValidToDate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines the latest data for which the propagator is valid."
+		   });	
+		addAnnotation
 		  (getTLEEarthOrbitPropagator_Tle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The Two-Line Elements used by this propagator."
 		   });	
 		addAnnotation
-		  (getTLEEarthOrbitPropagator_OrbitAtEpoch(), 
+		  (getTLEEarthOrbitPropagator_ValidFromDate(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The orbit as defined at the epoch time. This is what is return as this propagator initial orbit.",
-			 "notify", "true",
-			 "property", "Readonly"
+			 "documentation", "Defines the earliest data for which the propagator is valid."
+		   });	
+		addAnnotation
+		  (getTLEEarthOrbitPropagator_ValidToDate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines the latest data for which the propagator is valid."
 		   });	
 		addAnnotation
 		  (getURLBasedTLEEarthOrbitPropagator_TleURL(), 

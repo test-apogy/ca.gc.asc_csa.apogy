@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
@@ -48,29 +49,52 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addOrbitAtEpochPropertyDescriptor(object);
+			addValidFromDatePropertyDescriptor(object);
+			addValidToDatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Orbit At Epoch feature.
+	 * This adds a property descriptor for the Valid From Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOrbitAtEpochPropertyDescriptor(Object object) {
+	protected void addValidFromDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TLEEarthOrbitPropagator_orbitAtEpoch_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TLEEarthOrbitPropagator_orbitAtEpoch_feature", "_UI_TLEEarthOrbitPropagator_type"),
-				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH,
+				 getString("_UI_TLEEarthOrbitPropagator_validFromDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TLEEarthOrbitPropagator_validFromDate_feature", "_UI_TLEEarthOrbitPropagator_type"),
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE,
 				 false,
 				 false,
 				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Valid To Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValidToDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TLEEarthOrbitPropagator_validToDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TLEEarthOrbitPropagator_validToDate_feature", "_UI_TLEEarthOrbitPropagator_type"),
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -88,7 +112,6 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__TLE);
-			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH);
 		}
 		return childrenFeatures;
 	}
@@ -144,8 +167,11 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TLEEarthOrbitPropagator.class)) {
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
-			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -167,16 +193,6 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 			(createChildParameter
 				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__TLE,
 				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLE()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit()));
 	}
 
 }

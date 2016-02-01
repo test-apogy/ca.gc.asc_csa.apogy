@@ -63,9 +63,6 @@ public class AbstractOrbitPropagatorItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addInitialOrbitPropertyDescriptor(object);
-			addValidFromDatePropertyDescriptor(object);
-			addValidToDatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -106,72 +103,6 @@ public class AbstractOrbitPropagatorItemProvider
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
 				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Initial Orbit feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInitialOrbitPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractOrbitPropagator_initialOrbit_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractOrbitPropagator_initialOrbit_feature", "_UI_AbstractOrbitPropagator_type"),
-				 ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Valid From Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addValidFromDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractOrbitPropagator_validFromDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractOrbitPropagator_validFromDate_feature", "_UI_AbstractOrbitPropagator_type"),
-				 ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Valid To Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addValidToDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractOrbitPropagator_validToDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractOrbitPropagator_validToDate_feature", "_UI_AbstractOrbitPropagator_type"),
-				 ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE,
 				 true,
 				 false,
 				 false,
@@ -240,8 +171,6 @@ public class AbstractOrbitPropagatorItemProvider
 		switch (notification.getFeatureID(AbstractOrbitPropagator.class)) {
 			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
 			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
