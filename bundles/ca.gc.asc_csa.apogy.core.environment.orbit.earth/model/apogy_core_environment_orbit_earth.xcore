@@ -289,6 +289,12 @@ class TLEEarthOrbitPropagator extends EarthOrbitPropagator
 	 * The Two-Line Elements used by this propagator.
 	 */
 	contains TLE[1] tle
+	
+	/*
+	 * The orbit as defined at the epoch time. This is what is return as this propagator initial orbit.
+	 */
+	@GenModel(notify="true", property="Readonly")
+	contains Orbit[0..1] orbitAtEpoch
 }
 
 class URLBasedTLEEarthOrbitPropagator extends TLEEarthOrbitPropagator

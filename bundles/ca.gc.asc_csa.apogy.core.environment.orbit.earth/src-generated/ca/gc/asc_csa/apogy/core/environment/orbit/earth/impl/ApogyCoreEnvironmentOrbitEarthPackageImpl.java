@@ -905,6 +905,15 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTLEEarthOrbitPropagator_OrbitAtEpoch() {
+		return (EReference)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getTLEEarthOrbitPropagator__GetOreKitTLEPropagator() {
 		return tleEarthOrbitPropagatorEClass.getEOperations().get(0);
 	}
@@ -2109,6 +2118,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 
 		tleEarthOrbitPropagatorEClass = createEClass(TLE_EARTH_ORBIT_PROPAGATOR);
 		createEReference(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__TLE);
+		createEReference(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH);
 		createEOperation(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_TLE_PROPAGATOR);
 
 		urlBasedTLEEarthOrbitPropagatorEClass = createEClass(URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR);
@@ -2415,6 +2425,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 
 		initEClass(tleEarthOrbitPropagatorEClass, TLEEarthOrbitPropagator.class, "TLEEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTLEEarthOrbitPropagator_Tle(), this.getTLE(), null, "tle", null, 1, 1, TLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTLEEarthOrbitPropagator_OrbitAtEpoch(), theApogyCoreEnvironmentOrbitPackage.getOrbit(), null, "orbitAtEpoch", null, 0, 1, TLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getTLEEarthOrbitPropagator__GetOreKitTLEPropagator(), this.getOreKitTLEPropagator(), "getOreKitTLEPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -2904,6 +2915,14 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "The Two-Line Elements used by this propagator."
+		   });	
+		addAnnotation
+		  (getTLEEarthOrbitPropagator_OrbitAtEpoch(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The orbit as defined at the epoch time. This is what is return as this propagator initial orbit.",
+			 "notify", "true",
+			 "property", "Readonly"
 		   });	
 		addAnnotation
 		  (getURLBasedTLEEarthOrbitPropagator_TleURL(), 
