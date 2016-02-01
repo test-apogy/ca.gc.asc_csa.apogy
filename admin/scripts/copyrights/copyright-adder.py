@@ -196,9 +196,12 @@ if __name__ == '__main__':
     if "copyrightBlock" in args:
         commentAdder = Copyright(args.copyrightBlock)         
         commentAdder.apply(args.sourceFile)
-    elif args.sourceFile:        
+    elif "sourceFile" in args:        
         commentAdder = Copyright()
-        commentAdder.strip(args.sourceFile) 
+        commentAdder.strip(args.sourceFile)
+    else:
+        parser.print_usage()
+        sys.exit(1) 
     
     sys.exit(0)
     
