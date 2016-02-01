@@ -80,7 +80,7 @@ class Copyright(object):
                     inCopyrightBlock = False
                 elif not inCopyrightBlock:
                     sys.stdout.write(line)
-                lineNumber += 1
+                lineNumber += 1   
         
     def __extractExtension(self, fileName):
         
