@@ -60,7 +60,7 @@ public class ApogyCommonGeometryData3DASCExample {
 		if (args.length == 0) {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.apogy__commongeometrydata3dasc"));
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.apogycommongeometrydata3dasc"));
 				ASC3DIO root = ApogyCommonGeometryData3DASCFactory.eINSTANCE.createASC3DIO();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
