@@ -60,7 +60,8 @@ class Copyright(object):
                 
             print(commentProvider.getEndCommentString())
             
-            sys.stdout.write(file[1:])
+            for line in f[1:]:            
+                sys.stdout.write(line)
             
     def strip(self, fileName):
         
