@@ -44,18 +44,23 @@ class Copyright(object):
         # Ge the factory
         commentProvider = CommentFactory.getCharacterProvider(ext)
         
-        # Write copyright header
-        print(commentProvider.getBeginCommentString())
-        for line in self.__commentBlock:                
-            sys.stdout.write(commentProvider.getInCommentString() + " " + line)
-            
-        print(commentProvider.getEndCommentString())
-        
         with open(fileName) as f:
-            for line in f:
-                sys.stdout.write(line)
-                
+            
+            file = f.readlines()
+            
             f.close()
+            
+            sys.stdout.write(file[0])                            
+          
+            # Write copyright header
+            print(commentProvider.getBeginCommentString())
+                     
+            for line in self.__commentBlock:                
+                sys.stdout.write(commentProvider.getInCommentString() + " " + line)
+                
+            print(commentProvider.getEndCommentString())
+            
+            sys.stdout.write(file[1:])
             
     def strip(self, fileName):
         
