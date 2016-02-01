@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 '''
 Created on Jan 25, 2016
 
@@ -7,11 +8,20 @@ Created on Jan 25, 2016
 from abc import ABCMeta, abstractmethod
 import sys
 import re
+import argparse
 
-class CommentBlockAdder(object):
+           
+class Copyright(object):
     
-    def __init__(self, commentBlockFileName):
+    def __init__(self, commentBlockFileName=None):
                     
+        if commentBlockFileName:
+            assert isinstance(commentBlockFileName, str)                
+        
+            # We load the comment block
+            self.__loadCommentBlock(commentBlockFileName)
+
+    def setCommentBlockFileName(self, commentBlockFileName):
         assert isinstance(commentBlockFileName, str)                
         
         # We load the comment block
@@ -24,9 +34,9 @@ class CommentBlockAdder(object):
         
             f.close()
         
-    def applyComment(self, fileName):
+    def apply(self, fileName):
         
-        assert isinstance(fileName,str)
+        assert isinstance(fileName, str)
         
         # Extract extension from file name.
         ext = self.__extractExtension(fileName)
@@ -46,6 +56,30 @@ class CommentBlockAdder(object):
                 sys.stdout.write(line)
                 
             f.close()
+            
+    def strip(self, fileName):
+        
+        assert isinstance(fileName, str)                
+                
+        # Extract extension from file name.
+        ext = self.__extractExtension(fileName)
+        
+        # Ge the factory
+        commentProvider = CommentFactory.getCharacterProvider(ext)        
+        
+        # It is expected that the first line is where the comment block starts
+        with open(fileName) as f:
+            inCopyrightBlock = False
+            lineNumber = 0
+            
+            for line in f:            
+                if (lineNumber == 0 and 
+                    line.startswith(commentProvider.getBeginCommentString())):
+                    inCopyrightBlock = True
+                elif line.startswith(commentProvider.getEndCommentString()):
+                    inCopyrightBlock = False
+                elif not inCopyrightBlock:
+                    sys.stdout.write(line)
         
     def __extractExtension(self, fileName):
         
@@ -79,11 +113,11 @@ class CommentFactory(object):
             
             # Cpp file
             commentProvider = CCommentProvider()
-        elif ( ext == "HTML" or 
+        elif (ext == "HTML" or 
                ext == "XML"):
             
             commentProvider = MarkupLanguageCommentProvider()
-        elif ( ext == "MF" or ext == "SH" or ext == "PY"):
+        elif (ext == "MF" or ext == "SH" or ext == "PY"):
                         
             commentProvider = HashTagCommentProvider()
             
@@ -134,7 +168,7 @@ class HashTagCommentProvider(CommentCharacterProvider):
 class CCommentProvider(CommentCharacterProvider):
     
     def getBeginCommentString(self):
-        return "/**"
+        return "/*"
     
     def getEndCommentString(self):
         return " */"
@@ -144,18 +178,28 @@ class CCommentProvider(CommentCharacterProvider):
 
 if __name__ == '__main__':
     
-    if len(sys.argv) != 3:
-        sys.stderr.write("Synthax: " + sys.argv[0] + " fileName commentFileName\n")
-        sys.exit(1)
+    parser = argparse.ArgumentParser()      
     
-    fileName = sys.argv[1]
+    subparsers = parser.add_subparsers(help="commands")  
+                
+    # Apply parser
+    applyParser = subparsers.add_parser("apply", help="Apply comment block")
+    applyParser.add_argument("sourceFile", help="Source File")
+    applyParser.add_argument("copyrightBlock", help="Copyrith Block File")
     
-    commentBlockFile = sys.argv[2]       
+    # Strip parser
+    stripParser = subparsers.add_parser("strip", help="Strips Copyrith Block from File")
+    stripParser.add_argument("sourceFile", help="Source File to Strip Comments from")  
     
-    commentAdder = CommentBlockAdder(commentBlockFile)
-    
-    commentAdder.applyComment(fileName)
+    args = parser.parse_args()    
+   
+    if "copyrightBlock" in args:
+        commentAdder = Copyright(args.copyrightBlock)         
+        commentAdder.apply(args.sourceFile)
+    elif args.sourceFile:        
+        commentAdder = Copyright()
+        commentAdder.strip(args.sourceFile) 
     
     sys.exit(0)
     
-    pass
+#     pass
