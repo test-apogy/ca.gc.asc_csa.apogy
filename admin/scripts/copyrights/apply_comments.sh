@@ -1,10 +1,18 @@
-#
-# Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
-# All rights reserved. This program and the accompanying materials
-# are made available under the terms of the Eclipse Public License v1.0
-# which accompanies this distribution, and is available at
-# http://www.eclipse.org/legal/epl-v10.html
-# 
-# Contributors:
-#     Canadian Space Agency (CSA) - Initial API and implementation
-#
+#!/bin/bash
+
+CSCRIPT=$(dirname $0)/copyright-adder.py
+COPYRIGHT=$(dirname $0)/../../org.eclipse.symphony.admin/legal/copyrights.txt
+
+echo "CSCRIPT: $CSCRIPT"
+
+# First strip the comments
+for i in $(find . -name \*.java -o -name \*.MF -o -name \*.xml -o -name \*.xcore)
+do
+    tmpFileName=$(tempfile)
+    $CSCRIPT strip $i > $tmpFileName
+    mv $tmpFileName $i
+
+    $CSCRIPT apply $i $COPYRIGHT > $tmpFileName
+    mv $tmpFileName $i
+done
+
