@@ -21,11 +21,16 @@ def extractExtension(fileName):
         
         return ext
     
-class File(object):
+class File(object):        
     
     def __init__(self, fileName):
         self.__fileName = fileName
         self.__ext = None
+        self.__copyright = None
+        with open(self.__fileName) as f:
+            self.__fileContent = f.readlines()
+            
+            f.close()
     
     def setCommentBlockFileName(self, commentBlockFileName):
         assert isinstance(commentBlockFileName, str)                
@@ -43,26 +48,20 @@ class File(object):
     def addHeader(self):                
         
         # Get the factory
-        commentProvider = CommentFactory.getCharacterProvider(self.getExtension())
-        
-        with open(self.__fileName) as f:
+        commentProvider = CommentFactory.getCharacterProvider(self.getExtension())                    
             
-            file = f.readlines()
+        headerInserted = False
             
-            f.close()                    
-            
-            headerInserted = False
-            
-            for line in file:                
-                if not headerInserted and self._canInsertHeader(line):                    
-                    print(commentProvider.getBeginCommentString())
-                    for headerLine in self.__commentBlock:                        
-                        sys.stdout.write(commentProvider.getInCommentString() + " " + headerLine) 
-                    headerInserted = True
-                    print(commentProvider.getEndCommentString())
-                    sys.stdout.write(line)
-                else:                    
-                    sys.stdout.write(line)        
+        for line in self.__fileContent:                
+            if not headerInserted and self._canInsertHeader(line):                    
+                print(commentProvider.getBeginCommentString())
+                for headerLine in self.__commentBlock:                        
+                    sys.stdout.write(commentProvider.getInCommentString() + " " + headerLine) 
+                headerInserted = True
+                print(commentProvider.getEndCommentString())
+                sys.stdout.write(line)
+            else:                    
+                sys.stdout.write(line)        
     
     @abstractmethod
     def _canInsertHeader(self, line):
@@ -80,20 +79,37 @@ class File(object):
         commentProvider = CommentFactory.getCharacterProvider(self.getExtension())        
         
         # It is expected that the first line is where the comment block starts
-        with open(self.__fileName) as f:
-            inCopyrightBlock = False           
-            done = False
+       
+        inCopyrightBlock = False           
+        done = False
+        
+        for line in self.__fileContent:      
+            if (line.startswith(commentProvider.getBeginCommentString()) 
+                and not done):
+                inCopyrightBlock = True
+            elif (line.startswith(commentProvider.getEndCommentString()) 
+                  and not done):
+                inCopyrightBlock = False
+                done = True
+            elif not inCopyrightBlock:
+                sys.stdout.write(line)    
+                
+    def isCopyrighted(self):        
+        
+        copyrighted = False
+        
+        for line in self.__fileContent:            
+            upperLine = line.upper()
+            if "COPYRIGHT" in upperLine:
+                copyrighted = "CANADIAN" in upperLine                
+                self.__copyright = line
+                break
             
-            for line in f:      
-                if (line.startswith(commentProvider.getBeginCommentString()) 
-                    and not done):
-                    inCopyrightBlock = True
-                elif (line.startswith(commentProvider.getEndCommentString()) 
-                      and not done):
-                    inCopyrightBlock = False
-                    done = True
-                elif not inCopyrightBlock:
-                    sys.stdout.write(line)    
+        return copyrighted
+    
+    def getCopyright(self):
+        return self.__copyright
+                
                     
 class CFamilyFile(File):
     
@@ -257,15 +273,19 @@ if __name__ == '__main__':
         
     f = FileFactory.createFile(args.sourceFile)
     
-    if "copyrightBlock" in args:       
-        f.setCommentBlockFileName(args.copyrightBlock)
-        f.addHeader()
-    elif "sourceFile" in args:                
-        f.stripHeader()
-    else:
-        parser.print_usage()
-        sys.exit(1) 
+    if not f.isCopyrighted():
     
+        if "copyrightBlock" in args:    
+            f.setCommentBlockFileName(args.copyrightBlock)
+            f.addHeader()
+        elif "sourceFile" in args:                
+            f.stripHeader()
+        else:
+            parser.print_usage()
+            sys.exit(1) 
+    else:
+        print("Error, file is copyrighted: " + str(f.getCopyright()))
+        
     sys.exit(0)
     
 #     pass
