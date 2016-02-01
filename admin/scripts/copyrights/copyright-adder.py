@@ -184,7 +184,7 @@ if __name__ == '__main__':
     subparsers = parser.add_subparsers(help="commands")  
                 
     # Apply parser
-    applyParser = subparsers.add_parser("applyHeader", help="Apply comment block")
+    applyParser = subparsers.add_parser("apply", help="Apply comment block")
     applyParser.add_argument("sourceFile", help="Source File")
     applyParser.add_argument("copyrightBlock", help="Copyrith Block File")
     
