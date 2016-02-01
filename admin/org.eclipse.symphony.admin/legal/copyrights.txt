@@ -7,5 +7,5 @@ http://www.eclipse.org/legal/epl-v10.html
 Contributors:
     Pierre Allard (Pierre.Allard@canada.ca), 
     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
-    Sebastien Gemme (Sebastien.Gemme@canda.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
     Canadian Space Agency (CSA) - Initial API and implementation
