@@ -149,7 +149,7 @@ class CommentCharacterProvider(object):
 class MarkupLanguageCommentProvider(CommentCharacterProvider):
     
     def getBeginCommentString(self):
-        return "<!-- "
+        return "<!--"
     
     def getEndCommentString(self):
         return "-->"
