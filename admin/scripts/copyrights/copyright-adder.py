@@ -75,18 +75,19 @@ class Copyright(object):
         
         # It is expected that the first line is where the comment block starts
         with open(fileName) as f:
-            inCopyrightBlock = False
-            lineNumber = 0
+            inCopyrightBlock = False           
+            done = False
             
             for line in f:      
-                if (lineNumber == 1 and 
-                    line.startswith(commentProvider.getBeginCommentString())):
+                if (line.startswith(commentProvider.getBeginCommentString()) 
+                    and not done):
                     inCopyrightBlock = True
-                elif line.startswith(commentProvider.getEndCommentString()):
+                elif (line.startswith(commentProvider.getEndCommentString()) 
+                      and not done):
                     inCopyrightBlock = False
+                    done = True
                 elif not inCopyrightBlock:
-                    sys.stdout.write(line)
-                lineNumber += 1   
+                    sys.stdout.write(line)                
         
     def __extractExtension(self, fileName):
         
