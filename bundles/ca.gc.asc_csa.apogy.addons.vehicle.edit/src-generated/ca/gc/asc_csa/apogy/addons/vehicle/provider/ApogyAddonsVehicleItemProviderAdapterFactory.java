@@ -1,7 +1,17 @@
-/**
- * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
- */
 package ca.gc.asc_csa.apogy.addons.vehicle.provider;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,9 +52,7 @@ import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
-import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
@@ -631,51 +639,6 @@ public class ApogyAddonsVehicleItemProviderAdapterFactory extends ApogyAddonsVeh
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
 			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseApogySystemApiAdapter(ApogySystemApiAdapter object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
-						 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseAssemblyLink(AssemblyLink object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 ApogyAddonsVehicleFactory.eINSTANCE.createThruster()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
-
-				return null;
-			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

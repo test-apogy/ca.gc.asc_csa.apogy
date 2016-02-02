@@ -1,9 +1,17 @@
-/**
- * Canadian Space Agency 2007.
- *
- * $Id: ApogyCommonGeometryData25DPackageImpl.java,v 1.8.4.2 2015/05/21 15:51:20 pallard Exp $
- */
 package ca.gc.asc_csa.apogy.common.geometry.data25d.impl;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -562,6 +570,7 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 		  (this, 
 		   source, 
 		   new String[] {
+			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyCommonGeometryData25D",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -572,12 +581,6 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data25d/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data25d.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry"
-		   });	
-		addAnnotation
-		  (coordinates25DEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "Represent 2.5D geometry where u and v are the\nindependent variables and w the dependent variable."
 		   });	
 		addAnnotation
 		  (getCoordinatesSet25D_EnforceUniqueness(), 

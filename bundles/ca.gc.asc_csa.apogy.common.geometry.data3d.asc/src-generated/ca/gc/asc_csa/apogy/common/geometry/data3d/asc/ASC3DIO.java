@@ -1,7 +1,17 @@
-/**
- * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
- */
 package ca.gc.asc_csa.apogy.common.geometry.data3d.asc;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
@@ -11,16 +21,6 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>ASC3DIO</b></em>'.
  * <!-- end-user-doc -->
- *
- * <!-- begin-model-doc -->
- * *
- * This class is used to load DEM from .asc files found on the Utah DEM Repository. Each file covers a large area (20 km X 20 km)
- * and the name of the file is a U.S. National Grid (USNG) identifier. The location of the south-west corner of the tile can be
- * found from  the identifier (see USGN to Geodetic). The data in the file is define however from the north-west corner. Each
- * row in the file is order west to east, and the row are ordered north to south.
- * @see Utah DEM Repository http://mapserv.utah.gov/raster/?cat=5%20Meter%20{DEM}
- * @see USGN to Geodetic http://www.ngs.noaa.gov/cgi-bin/usng_getgp.prl
- * <!-- end-model-doc -->
  *
  *
  * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getASC3DIO()

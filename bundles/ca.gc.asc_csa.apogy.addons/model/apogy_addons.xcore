@@ -1,3 +1,16 @@
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 @GenModel(prefix="ApogyAddons",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
@@ -63,9 +76,6 @@ abstract class Simple3DTool extends SimpleTool
 	//op void selectionChanged(Node node, Tuple3d relativePosition, Tuple3d normal)
 }
 
-/*
- * An abstract tool that is defined by two points.
- */
 abstract class AbstractTwoPoints3DTool extends Simple3DTool
 {
 	// FROM NODE		

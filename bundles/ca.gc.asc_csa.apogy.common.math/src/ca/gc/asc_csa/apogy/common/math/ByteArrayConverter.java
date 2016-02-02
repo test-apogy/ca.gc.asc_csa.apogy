@@ -1,19 +1,18 @@
 package ca.gc.asc_csa.apogy.common.math;
-
-/**
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
  * 
- * @author seb <br>
- *         <br>
- * 
- * 'Creation date: 9-Nov-06 <br>
- * <br>
- * 
- * <br>
- * 
- * 'Description: this class is used to convert byte arrays to types such as:
- * <code>int, long, float, double</code>. The code was taken from <a
- * href="http://www.captain.at/howto-java-convert-binary-data.php">http://www.captain.at/howto-java-convert-binary-data.php</a><br>
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+
 public final class ByteArrayConverter {
 
 	/**

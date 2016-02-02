@@ -1,4 +1,17 @@
 package ca.gc.asc_csa.apogy.common.topology.ui;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.util.Iterator;
 import java.util.List;
@@ -8,49 +21,6 @@ import javax.vecmath.Vector3d;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 
-/**
- * 
- * <dl>
- * <dt>Description:</dt>
- * <dd>this class represents a selection that occured in the topology viewer. A
- * selection is composed of the NodePresentation associated</dd>
- * <dt>Version:</dt>
- * <dd>$Revision: 1.4.2.2 $</dd>
- * <dt>Creation date:</dt>
- * <dd>Jan 6, 2011</dd>
- * </dl>
- * 
- * @author sgemme
- * 
- *         <PRE>
- * 'History: 
- * $Log: TopologyViewerSelection.java,v $
- * Revision 1.4.2.2  2015/02/03 20:01:23  rlarcheveque
- * *** empty log message ***
- *
- * Revision 1.3  2012/03/02 14:54:51  pallard
- * *** empty log message ***
- *
- * Revision 1.2  2011/07/20 15:05:36  mboulanger
- * *** empty log message ***
- *
- * Revision 1.1.4.3  2011/05/16 14:55:35  sgemme
- * ASSIGNED - bug 1212: Multiple Views
- * http://luke.speng.space.gc.ca/bugzilla/show_bug.cgi?id=1212
- *
- * Revision 1.1.4.2  2011/04/27 18:13:07  sgemme
- * ASSIGNED - bug 1212: Multiple Views
- * http://luke.speng.space.gc.ca/bugzilla/show_bug.cgi?id=1212
- * 
- * Revision 1.1.2.3  2011/01/06 15:14:30  sgemme
- * *** empty log message ***
- * 
- * Revision 1.1.2.2  2011/01/06 13:54:46  sgemme
- * *** empty log message ***
- * 
- * </PRE>
- * 
- */
 public class TopologyViewerSelection implements IStructuredSelection {
 
 	/**

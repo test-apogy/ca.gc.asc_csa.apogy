@@ -1,7 +1,17 @@
-/**
- * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
- */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.util.List;
 import java.util.Map;
@@ -2698,6 +2708,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		  (this, 
 		   source, 
 		   new String[] {
+			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyCoreEnvironmentOrbitEarth",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -2709,12 +2720,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.earth/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.earth.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.core.environment.orbit"
-		   });	
-		addAnnotation
-		  (ephemerisTypeEEnum, 
-		   source, 
-		   new String[] {
-			 "documentation", "Ephemeris types defined for Two-Lines Elements"
 		   });	
 		addAnnotation
 		  (oreKitBackedSpacecraftStateEClass, 

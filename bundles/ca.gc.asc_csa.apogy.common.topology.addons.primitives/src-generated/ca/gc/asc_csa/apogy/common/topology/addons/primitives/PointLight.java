@@ -1,7 +1,17 @@
-/**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
- */
 package ca.gc.asc_csa.apogy.common.topology.addons.primitives;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
@@ -9,24 +19,6 @@ import ca.gc.asc_csa.apogy.common.math.Tuple3d;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Point Light</b></em>'.
  * <!-- end-user-doc -->
- *
- * <!-- begin-model-doc -->
- * The PointLight object specifies an attenuated light source at a fixed point in space that radiates light equally in all directions away from the light source. PointLight has the same attributes as a Light node, with the addition of location and attenuation parameters.
- *  * A point light contributes to diffuse and specular reflections, which in turn depend on the orientation and position of a surface. A point light does not contribute to ambient reflections.
- *  * A PointLight is attenuated by multiplying the contribution of the light by an attenuation factor. The attenuation factor causes the the PointLight's brightness to decrease as distance from the light source increases. A PointLight's attenuation factor contains three values:
- * <ul>
- * <li>Constant attenuation</li>
- * <li>Linear attenuation</li>
- * <li>Quadratic attenuation</li>
- * </ul>
- * A PointLight is attenuated by the reciprocal of the sum of:
- * <ul>
- * <li>The constant attenuation factor</li>
- * <li>The Linear attenuation factor times the distance between the light and the vertex being illuminated</li>
- * <li>The quadratic attenuation factor times the square of the distance between the light and the vertex </li>
- * </ul>
- * By default, the constant attenuation value is 1 and the other two values are 0, resulting in no attenuation.
- * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
