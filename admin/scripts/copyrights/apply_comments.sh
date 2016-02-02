@@ -10,9 +10,15 @@ for i in $(find . -name \*.java -o -name \*.xml -o -name \*.xcore ! -type d)
 do
     tmpFileName=$(tempfile)
     $CSCRIPT strip $i > $tmpFileName
-    mv $tmpFileName $i
+    if [ $? -eq 0 ]
+    then
+        mv $tmpFileName $i
 
-    $CSCRIPT apply $i $COPYRIGHT > $tmpFileName
-    mv $tmpFileName $i
+        $CSCRIPT apply $i $COPYRIGHT > $tmpFileName
+        if [ $? -eq 0 ]
+        then
+            mv $tmpFileName $i
+        fi
+    fi
 done
 

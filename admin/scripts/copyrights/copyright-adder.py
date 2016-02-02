@@ -284,7 +284,8 @@ if __name__ == '__main__':
             parser.print_usage()
             sys.exit(1) 
     else:
-        sys.stderr.write("Error, file is copyrighted: " + str(f.getCopyright()) + "\n")
+        sys.stderr.write("Error, file " + args.sourceFile + " is copyrighted: " + str(f.getCopyright()) + "\n")
+        sys.exit(1)
         
     sys.exit(0)
     
