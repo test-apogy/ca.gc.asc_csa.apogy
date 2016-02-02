@@ -100,7 +100,7 @@ class File(object):
         
         for line in self.__fileContent:            
             upperLine = line.upper()
-            if "COPYRIGHT" in upperLine:
+            if "COPYRIGHT" in upperLine and "<COPYRIGHT" not in upperLine:
                 copyrighted = "CANADIAN" not in upperLine                
                 self.__copyright = line
                 break
