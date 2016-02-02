@@ -27,6 +27,9 @@ class File(object):
         self.__fileName = fileName
         self.__ext = None
         self.__copyright = None
+        
+        self.__copyrightRe = re.compile("copyright.*\d{4}")
+        
         with open(self.__fileName) as f:
             self.__fileContent = f.readlines()
             
@@ -100,7 +103,7 @@ class File(object):
         
         for line in self.__fileContent:            
             upperLine = line.upper()
-            if "COPYRIGHT" in upperLine and "<COPYRIGHT" not in upperLine:
+            if self.__copyrightRe.search(upperLine,re.IGNORECASE):            
                 copyrighted = "CANADIAN" not in upperLine                
                 self.__copyright = line
                 break
