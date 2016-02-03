@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>ca.gc.asc_csa.apogy.admin</name>
+=======
+	<name>org.eclipse.symphony.admin</name>
+>>>>>>> branch 'master' of https://rlarcheveque@bitbucket.org/apogy/ca.gc.asc_csa.apogy.git
 	<comment></comment>
 	<projects>
 	</projects>
