@@ -315,17 +315,18 @@
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.edit</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.ui</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.apogy</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.apogy.edit</module>
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.ui</module>
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.worksites.surface</module>
 		
 		<!-- Tests -->
-		<module>../../tests/ca.gc.asc_csa.apogy.common.converters.tests</module>
+		<!-- <module>../../tests/ca.gc.asc_csa.apogy.common.converters.tests</module> -->
 		<!-- <module>../../tests/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests</module> -->
-		<module>../../tests/ca.gc.asc_csa.apogy.common.log.tests</module>
+		<!-- <module>../../tests/ca.gc.asc_csa.apogy.common.log.tests</module>
 		<module>../../tests/ca.gc.asc_csa.apogy.common.topology.ui.tests</module>		
-		<module>../../tests/ca.gc.asc_csa.apogy.core.invocator.tests</module>		
+		<module>../../tests/ca.gc.asc_csa.apogy.core.invocator.tests</module> -->		
 				
 		<!-- Doc -->
 		<module>../../doc/ca.gc.asc_csa.apogy.doc</module>
