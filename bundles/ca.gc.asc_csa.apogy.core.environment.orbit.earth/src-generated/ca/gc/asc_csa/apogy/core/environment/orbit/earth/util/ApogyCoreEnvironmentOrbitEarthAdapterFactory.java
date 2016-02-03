@@ -171,6 +171,10 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 				return createURLBasedTLEEarthOrbitPropagatorAdapter();
 			}
 			@Override
+			public Adapter caseAbstractTLE(AbstractTLE object) {
+				return createAbstractTLEAdapter();
+			}
+			@Override
 			public Adapter caseTLE(TLE object) {
 				return createTLEAdapter();
 			}
@@ -517,6 +521,20 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createURLBasedTLEEarthOrbitPropagatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE <em>Abstract TLE</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE
+	 * @generated
+	 */
+	public Adapter createAbstractTLEAdapter() {
 		return null;
 	}
 

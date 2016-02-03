@@ -343,6 +343,21 @@ public interface ApogyCoreEnvironmentOrbitEarthFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Exports a TLE to a URL.
+	 * @param tle The TLE to export
+	 * @param url The URL as a String.
+	 * @throws An exception if the export fails.
+	 * <!-- end-model-doc -->
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" tleUnique="false" urlUnique="false"
+	 * @generated
+	 */
+	void exportTLE(TLE tle, String url) throws Exception;
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * Create a TLEEarthOrbitPropagator using a TLE.
 	 * @param tle The Two-Line Element defining the propagator.
 	 * @return The TLEEarthOrbitPropagator.

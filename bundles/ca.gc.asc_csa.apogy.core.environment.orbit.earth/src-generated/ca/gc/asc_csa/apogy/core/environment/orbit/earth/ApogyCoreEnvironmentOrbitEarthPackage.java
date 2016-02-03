@@ -1646,32 +1646,14 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR_OPERATION_COUNT = TLE_EARTH_ORBIT_PROPAGATOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEImpl <em>TLE</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.AbstractTLEImpl <em>Abstract TLE</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEImpl
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getTLE()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.AbstractTLEImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getAbstractTLE()
 	 * @generated
 	 */
-	int TLE = 15;
-
-	/**
-	 * The feature id for the '<em><b>Line1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TLE__LINE1 = 0;
-
-	/**
-	 * The feature id for the '<em><b>Line2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TLE__LINE2 = 1;
+	int ABSTRACT_TLE = 15;
 
 	/**
 	 * The feature id for the '<em><b>BStar</b></em>' attribute.
@@ -1680,7 +1662,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__BSTAR = 2;
+	int ABSTRACT_TLE__BSTAR = 0;
 
 	/**
 	 * The feature id for the '<em><b>Epoch</b></em>' attribute.
@@ -1689,7 +1671,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__EPOCH = 3;
+	int ABSTRACT_TLE__EPOCH = 1;
 
 	/**
 	 * The feature id for the '<em><b>Eccentricity</b></em>' attribute.
@@ -1698,7 +1680,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__ECCENTRICITY = 4;
+	int ABSTRACT_TLE__ECCENTRICITY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Element Number</b></em>' attribute.
@@ -1707,7 +1689,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__ELEMENT_NUMBER = 5;
+	int ABSTRACT_TLE__ELEMENT_NUMBER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Ephemeris Type</b></em>' attribute.
@@ -1716,7 +1698,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__EPHEMERIS_TYPE = 6;
+	int ABSTRACT_TLE__EPHEMERIS_TYPE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Inclination</b></em>' attribute.
@@ -1725,7 +1707,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__INCLINATION = 7;
+	int ABSTRACT_TLE__INCLINATION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Mean Anomaly</b></em>' attribute.
@@ -1734,7 +1716,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__MEAN_ANOMALY = 8;
+	int ABSTRACT_TLE__MEAN_ANOMALY = 6;
 
 	/**
 	 * The feature id for the '<em><b>Mean Motion</b></em>' attribute.
@@ -1743,7 +1725,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__MEAN_MOTION = 9;
+	int ABSTRACT_TLE__MEAN_MOTION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Revolution Per Day</b></em>' attribute.
@@ -1752,7 +1734,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__REVOLUTION_PER_DAY = 10;
+	int ABSTRACT_TLE__REVOLUTION_PER_DAY = 8;
 
 	/**
 	 * The feature id for the '<em><b>Mean Motion First Derivative</b></em>' attribute.
@@ -1761,7 +1743,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__MEAN_MOTION_FIRST_DERIVATIVE = 11;
+	int ABSTRACT_TLE__MEAN_MOTION_FIRST_DERIVATIVE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Mean Motion Second Derivative</b></em>' attribute.
@@ -1770,7 +1752,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__MEAN_MOTION_SECOND_DERIVATIVE = 12;
+	int ABSTRACT_TLE__MEAN_MOTION_SECOND_DERIVATIVE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Argument Of Perigee</b></em>' attribute.
@@ -1779,7 +1761,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__ARGUMENT_OF_PERIGEE = 13;
+	int ABSTRACT_TLE__ARGUMENT_OF_PERIGEE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Right Ascention Of Ascending Node</b></em>' attribute.
@@ -1788,7 +1770,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE = 14;
+	int ABSTRACT_TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Revolution Number At Epoch</b></em>' attribute.
@@ -1797,7 +1779,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__REVOLUTION_NUMBER_AT_EPOCH = 15;
+	int ABSTRACT_TLE__REVOLUTION_NUMBER_AT_EPOCH = 13;
 
 	/**
 	 * The feature id for the '<em><b>Satellite Number</b></em>' attribute.
@@ -1806,16 +1788,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE__SATELLITE_NUMBER = 16;
+	int ABSTRACT_TLE__SATELLITE_NUMBER = 14;
 
 	/**
-	 * The number of structural features of the '<em>TLE</em>' class.
+	 * The number of structural features of the '<em>Abstract TLE</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TLE_FEATURE_COUNT = 17;
+	int ABSTRACT_TLE_FEATURE_COUNT = 15;
 
 	/**
 	 * The operation id for the '<em>Get Ore Kit TLE</em>' operation.
@@ -1824,7 +1806,233 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE___GET_ORE_KIT_TLE = 0;
+	int ABSTRACT_TLE___GET_ORE_KIT_TLE = 0;
+
+	/**
+	 * The operation id for the '<em>Get Line1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TLE___GET_LINE1 = 1;
+
+	/**
+	 * The operation id for the '<em>Get Line2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TLE___GET_LINE2 = 2;
+
+	/**
+	 * The number of operations of the '<em>Abstract TLE</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TLE_OPERATION_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEImpl <em>TLE</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getTLE()
+	 * @generated
+	 */
+	int TLE = 16;
+
+	/**
+	 * The feature id for the '<em><b>BStar</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__BSTAR = ABSTRACT_TLE__BSTAR;
+
+	/**
+	 * The feature id for the '<em><b>Epoch</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__EPOCH = ABSTRACT_TLE__EPOCH;
+
+	/**
+	 * The feature id for the '<em><b>Eccentricity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__ECCENTRICITY = ABSTRACT_TLE__ECCENTRICITY;
+
+	/**
+	 * The feature id for the '<em><b>Element Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__ELEMENT_NUMBER = ABSTRACT_TLE__ELEMENT_NUMBER;
+
+	/**
+	 * The feature id for the '<em><b>Ephemeris Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__EPHEMERIS_TYPE = ABSTRACT_TLE__EPHEMERIS_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Inclination</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__INCLINATION = ABSTRACT_TLE__INCLINATION;
+
+	/**
+	 * The feature id for the '<em><b>Mean Anomaly</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__MEAN_ANOMALY = ABSTRACT_TLE__MEAN_ANOMALY;
+
+	/**
+	 * The feature id for the '<em><b>Mean Motion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__MEAN_MOTION = ABSTRACT_TLE__MEAN_MOTION;
+
+	/**
+	 * The feature id for the '<em><b>Revolution Per Day</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__REVOLUTION_PER_DAY = ABSTRACT_TLE__REVOLUTION_PER_DAY;
+
+	/**
+	 * The feature id for the '<em><b>Mean Motion First Derivative</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__MEAN_MOTION_FIRST_DERIVATIVE = ABSTRACT_TLE__MEAN_MOTION_FIRST_DERIVATIVE;
+
+	/**
+	 * The feature id for the '<em><b>Mean Motion Second Derivative</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__MEAN_MOTION_SECOND_DERIVATIVE = ABSTRACT_TLE__MEAN_MOTION_SECOND_DERIVATIVE;
+
+	/**
+	 * The feature id for the '<em><b>Argument Of Perigee</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__ARGUMENT_OF_PERIGEE = ABSTRACT_TLE__ARGUMENT_OF_PERIGEE;
+
+	/**
+	 * The feature id for the '<em><b>Right Ascention Of Ascending Node</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE = ABSTRACT_TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE;
+
+	/**
+	 * The feature id for the '<em><b>Revolution Number At Epoch</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__REVOLUTION_NUMBER_AT_EPOCH = ABSTRACT_TLE__REVOLUTION_NUMBER_AT_EPOCH;
+
+	/**
+	 * The feature id for the '<em><b>Satellite Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__SATELLITE_NUMBER = ABSTRACT_TLE__SATELLITE_NUMBER;
+
+	/**
+	 * The feature id for the '<em><b>First Line</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__FIRST_LINE = ABSTRACT_TLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Second Line</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE__SECOND_LINE = ABSTRACT_TLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>TLE</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE_FEATURE_COUNT = ABSTRACT_TLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Ore Kit TLE</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE___GET_ORE_KIT_TLE = ABSTRACT_TLE___GET_ORE_KIT_TLE;
+
+	/**
+	 * The operation id for the '<em>Get Line1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE___GET_LINE1 = ABSTRACT_TLE___GET_LINE1;
+
+	/**
+	 * The operation id for the '<em>Get Line2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE___GET_LINE2 = ABSTRACT_TLE___GET_LINE2;
 
 	/**
 	 * The number of operations of the '<em>TLE</em>' class.
@@ -1833,7 +2041,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE_OPERATION_COUNT = 1;
+	int TLE_OPERATION_COUNT = ABSTRACT_TLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl <em>Earth Surface Location</em>}' class.
@@ -1843,7 +2051,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getEarthSurfaceLocation()
 	 * @generated
 	 */
-	int EARTH_SURFACE_LOCATION = 16;
+	int EARTH_SURFACE_LOCATION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1898,7 +2106,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getEarthSurfaceLocationList()
 	 * @generated
 	 */
-	int EARTH_SURFACE_LOCATION_LIST = 17;
+	int EARTH_SURFACE_LOCATION_LIST = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1953,7 +2161,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getGroundStationReferencesList()
 	 * @generated
 	 */
-	int GROUND_STATION_REFERENCES_LIST = 18;
+	int GROUND_STATION_REFERENCES_LIST = 19;
 
 	/**
 	 * The feature id for the '<em><b>Ground Stations</b></em>' reference list.
@@ -1990,7 +2198,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getGroundStation()
 	 * @generated
 	 */
-	int GROUND_STATION = 19;
+	int GROUND_STATION = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2063,7 +2271,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getGroundStationList()
 	 * @generated
 	 */
-	int GROUND_STATION_LIST = 20;
+	int GROUND_STATION_LIST = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2118,7 +2326,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getVisibilityPass()
 	 * @generated
 	 */
-	int VISIBILITY_PASS = 21;
+	int VISIBILITY_PASS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Orbit Model</b></em>' reference.
@@ -2200,7 +2408,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getVisibilityPassSpacecraftPositionHistory()
 	 * @generated
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY = 22;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY = 23;
 
 	/**
 	 * The feature id for the '<em><b>Time Interval</b></em>' attribute.
@@ -2282,7 +2490,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getVisibilityPassSpacecraftPosition()
 	 * @generated
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION = 23;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -2364,7 +2572,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getSpacecraftsVisibilitySet()
 	 * @generated
 	 */
-	int SPACECRAFTS_VISIBILITY_SET = 24;
+	int SPACECRAFTS_VISIBILITY_SET = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2500,7 +2708,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getCorridorPoint()
 	 * @generated
 	 */
-	int CORRIDOR_POINT = 25;
+	int CORRIDOR_POINT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -2564,7 +2772,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getCorridor()
 	 * @generated
 	 */
-	int CORRIDOR = 26;
+	int CORRIDOR = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2619,7 +2827,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getSpacecraftSwathCorridor()
 	 * @generated
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR = 27;
+	int SPACECRAFT_SWATH_CORRIDOR = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2764,7 +2972,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getApogyCoreEnvironmentOrbitEarthFacade()
 	 * @generated
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE = 28;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE = 29;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -3001,13 +3209,22 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING = 24;
 
 	/**
+	 * The operation id for the '<em>Export TLE</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_TLE__TLE_STRING = 25;
+
+	/**
 	 * The operation id for the '<em>Create TLE Earth Orbit Propagator</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE = 25;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE = 26;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -3016,7 +3233,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE_OPERATION_COUNT = 26;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE_OPERATION_COUNT = 27;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType <em>Ephemeris Type</em>}' enum.
@@ -3026,7 +3243,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getEphemerisType()
 	 * @generated
 	 */
-	int EPHEMERIS_TYPE = 29;
+	int EPHEMERIS_TYPE = 30;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -3036,7 +3253,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 30;
+	int LIST = 31;
 
 	/**
 	 * The meta object id for the '<em>Map</em>' data type.
@@ -3046,7 +3263,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 31;
+	int MAP = 32;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -3056,7 +3273,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 32;
+	int EXCEPTION = 33;
 
 	/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -3066,7 +3283,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getSortedSet()
 	 * @generated
 	 */
-	int SORTED_SET = 33;
+	int SORTED_SET = 34;
 
 	/**
 	 * The meta object id for the '<em>Rotation</em>' data type.
@@ -3076,7 +3293,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getRotation()
 	 * @generated
 	 */
-	int ROTATION = 34;
+	int ROTATION = 35;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Frame</em>' data type.
@@ -3086,7 +3303,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitFrame()
 	 * @generated
 	 */
-	int ORE_KIT_FRAME = 35;
+	int ORE_KIT_FRAME = 36;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Time Stamped Angular Coordinates</em>' data type.
@@ -3096,7 +3313,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitTimeStampedAngularCoordinates()
 	 * @generated
 	 */
-	int ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES = 36;
+	int ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES = 37;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Time Stamped PV Coordinates</em>' data type.
@@ -3106,7 +3323,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitTimeStampedPVCoordinates()
 	 * @generated
 	 */
-	int ORE_KIT_TIME_STAMPED_PV_COORDINATES = 37;
+	int ORE_KIT_TIME_STAMPED_PV_COORDINATES = 38;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Spacecraft State</em>' data type.
@@ -3116,7 +3333,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitSpacecraftState()
 	 * @generated
 	 */
-	int ORE_KIT_SPACECRAFT_STATE = 38;
+	int ORE_KIT_SPACECRAFT_STATE = 39;
 
 	/**
 	 * The meta object id for the '<em>Absolute Date</em>' data type.
@@ -3126,7 +3343,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getAbsoluteDate()
 	 * @generated
 	 */
-	int ABSOLUTE_DATE = 39;
+	int ABSOLUTE_DATE = 40;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Orbit</em>' data type.
@@ -3136,7 +3353,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitOrbit()
 	 * @generated
 	 */
-	int ORE_KIT_ORBIT = 40;
+	int ORE_KIT_ORBIT = 41;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Keplerian Orbit</em>' data type.
@@ -3146,7 +3363,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitKeplerianOrbit()
 	 * @generated
 	 */
-	int ORE_KIT_KEPLERIAN_ORBIT = 41;
+	int ORE_KIT_KEPLERIAN_ORBIT = 42;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Cartesian Orbit</em>' data type.
@@ -3156,7 +3373,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitCartesianOrbit()
 	 * @generated
 	 */
-	int ORE_KIT_CARTESIAN_ORBIT = 42;
+	int ORE_KIT_CARTESIAN_ORBIT = 43;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Elevation Mask</em>' data type.
@@ -3166,7 +3383,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitElevationMask()
 	 * @generated
 	 */
-	int ORE_KIT_ELEVATION_MASK = 43;
+	int ORE_KIT_ELEVATION_MASK = 44;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Attitude Provider</em>' data type.
@@ -3176,7 +3393,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitAttitudeProvider()
 	 * @generated
 	 */
-	int ORE_KIT_ATTITUDE_PROVIDER = 44;
+	int ORE_KIT_ATTITUDE_PROVIDER = 45;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Propagator</em>' data type.
@@ -3186,7 +3403,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_PROPAGATOR = 45;
+	int ORE_KIT_PROPAGATOR = 46;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit DSST Propagator</em>' data type.
@@ -3196,7 +3413,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitDSSTPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_DSST_PROPAGATOR = 46;
+	int ORE_KIT_DSST_PROPAGATOR = 47;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Eckstein Hechler Propagator</em>' data type.
@@ -3206,7 +3423,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitEcksteinHechlerPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR = 47;
+	int ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR = 48;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Ephemeris Progator</em>' data type.
@@ -3216,7 +3433,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitEphemerisProgator()
 	 * @generated
 	 */
-	int ORE_KIT_EPHEMERIS_PROGATOR = 48;
+	int ORE_KIT_EPHEMERIS_PROGATOR = 49;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Keplerian Propagator</em>' data type.
@@ -3226,7 +3443,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitKeplerianPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_KEPLERIAN_PROPAGATOR = 49;
+	int ORE_KIT_KEPLERIAN_PROPAGATOR = 50;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Numerical Propagator</em>' data type.
@@ -3236,7 +3453,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitNumericalPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_NUMERICAL_PROPAGATOR = 50;
+	int ORE_KIT_NUMERICAL_PROPAGATOR = 51;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit TLE Propagator</em>' data type.
@@ -3246,7 +3463,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitTLEPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_TLE_PROPAGATOR = 51;
+	int ORE_KIT_TLE_PROPAGATOR = 52;
 
 
 	/**
@@ -3257,7 +3474,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitTLE()
 	 * @generated
 	 */
-	int ORE_KIT_TLE = 52;
+	int ORE_KIT_TLE = 53;
 
 
 	/**
@@ -3792,6 +4009,211 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EAttribute getURLBasedTLEEarthOrbitPropagator_TleURL();
 
 	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE <em>Abstract TLE</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract TLE</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE
+	 * @generated
+	 */
+	EClass getAbstractTLE();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getBStar <em>BStar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>BStar</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getBStar()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_BStar();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getEpoch <em>Epoch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Epoch</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getEpoch()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_Epoch();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getEccentricity <em>Eccentricity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Eccentricity</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getEccentricity()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_Eccentricity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getElementNumber <em>Element Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Element Number</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getElementNumber()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_ElementNumber();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getEphemerisType <em>Ephemeris Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ephemeris Type</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getEphemerisType()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_EphemerisType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getInclination <em>Inclination</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Inclination</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getInclination()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_Inclination();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getMeanAnomaly <em>Mean Anomaly</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mean Anomaly</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getMeanAnomaly()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_MeanAnomaly();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getMeanMotion <em>Mean Motion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mean Motion</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getMeanMotion()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_MeanMotion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getRevolutionPerDay <em>Revolution Per Day</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Revolution Per Day</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getRevolutionPerDay()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_RevolutionPerDay();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getMeanMotionFirstDerivative <em>Mean Motion First Derivative</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mean Motion First Derivative</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getMeanMotionFirstDerivative()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_MeanMotionFirstDerivative();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getMeanMotionSecondDerivative <em>Mean Motion Second Derivative</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mean Motion Second Derivative</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getMeanMotionSecondDerivative()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_MeanMotionSecondDerivative();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getArgumentOfPerigee <em>Argument Of Perigee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Argument Of Perigee</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getArgumentOfPerigee()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_ArgumentOfPerigee();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Right Ascention Of Ascending Node</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getRightAscentionOfAscendingNode()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_RightAscentionOfAscendingNode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getRevolutionNumberAtEpoch <em>Revolution Number At Epoch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Revolution Number At Epoch</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getRevolutionNumberAtEpoch()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_RevolutionNumberAtEpoch();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getSatelliteNumber <em>Satellite Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Satellite Number</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getSatelliteNumber()
+	 * @see #getAbstractTLE()
+	 * @generated
+	 */
+	EAttribute getAbstractTLE_SatelliteNumber();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getOreKitTLE() <em>Get Ore Kit TLE</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Ore Kit TLE</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getOreKitTLE()
+	 * @generated
+	 */
+	EOperation getAbstractTLE__GetOreKitTLE();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getLine1() <em>Get Line1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Line1</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getLine1()
+	 * @generated
+	 */
+	EOperation getAbstractTLE__GetLine1();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getLine2() <em>Get Line2</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Line2</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE#getLine2()
+	 * @generated
+	 */
+	EOperation getAbstractTLE__GetLine2();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE <em>TLE</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3802,201 +4224,26 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EClass getTLE();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getLine1 <em>Line1</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getFirstLine <em>First Line</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Line1</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getLine1()
+	 * @return the meta object for the attribute '<em>First Line</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getFirstLine()
 	 * @see #getTLE()
 	 * @generated
 	 */
-	EAttribute getTLE_Line1();
+	EAttribute getTLE_FirstLine();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getLine2 <em>Line2</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getSecondLine <em>Second Line</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Line2</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getLine2()
+	 * @return the meta object for the attribute '<em>Second Line</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getSecondLine()
 	 * @see #getTLE()
 	 * @generated
 	 */
-	EAttribute getTLE_Line2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEphemerisType <em>Ephemeris Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ephemeris Type</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEphemerisType()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_EphemerisType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getInclination <em>Inclination</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Inclination</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getInclination()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_Inclination();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanAnomaly <em>Mean Anomaly</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mean Anomaly</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanAnomaly()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_MeanAnomaly();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotion <em>Mean Motion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mean Motion</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotion()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_MeanMotion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRevolutionPerDay <em>Revolution Per Day</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Revolution Per Day</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRevolutionPerDay()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_RevolutionPerDay();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotionFirstDerivative <em>Mean Motion First Derivative</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mean Motion First Derivative</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotionFirstDerivative()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_MeanMotionFirstDerivative();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotionSecondDerivative <em>Mean Motion Second Derivative</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mean Motion Second Derivative</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotionSecondDerivative()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_MeanMotionSecondDerivative();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getArgumentOfPerigee <em>Argument Of Perigee</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Argument Of Perigee</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getArgumentOfPerigee()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_ArgumentOfPerigee();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Right Ascention Of Ascending Node</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRightAscentionOfAscendingNode()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_RightAscentionOfAscendingNode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRevolutionNumberAtEpoch <em>Revolution Number At Epoch</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Revolution Number At Epoch</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRevolutionNumberAtEpoch()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_RevolutionNumberAtEpoch();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getSatelliteNumber <em>Satellite Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Satellite Number</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getSatelliteNumber()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_SatelliteNumber();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getBStar <em>BStar</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>BStar</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getBStar()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_BStar();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEpoch <em>Epoch</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Epoch</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEpoch()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_Epoch();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEccentricity <em>Eccentricity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Eccentricity</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEccentricity()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_Eccentricity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getElementNumber <em>Element Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Element Number</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getElementNumber()
-	 * @see #getTLE()
-	 * @generated
-	 */
-	EAttribute getTLE_ElementNumber();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getOreKitTLE() <em>Get Ore Kit TLE</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Ore Kit TLE</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getOreKitTLE()
-	 * @generated
-	 */
-	EOperation getTLE__GetOreKitTLE();
+	EAttribute getTLE_SecondLine();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation <em>Earth Surface Location</em>}'.
@@ -4816,6 +5063,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EOperation getApogyCoreEnvironmentOrbitEarthFacade__LoadTLE__String();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#exportTLE(ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE, java.lang.String) <em>Export TLE</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Export TLE</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#exportTLE(ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportTLE__TLE_String();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#createTLEEarthOrbitPropagator(ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE) <em>Create TLE Earth Orbit Propagator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5550,6 +5807,160 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		EAttribute URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL = eINSTANCE.getURLBasedTLEEarthOrbitPropagator_TleURL();
 
 		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.AbstractTLEImpl <em>Abstract TLE</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.AbstractTLEImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getAbstractTLE()
+		 * @generated
+		 */
+		EClass ABSTRACT_TLE = eINSTANCE.getAbstractTLE();
+
+		/**
+		 * The meta object literal for the '<em><b>BStar</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__BSTAR = eINSTANCE.getAbstractTLE_BStar();
+
+		/**
+		 * The meta object literal for the '<em><b>Epoch</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__EPOCH = eINSTANCE.getAbstractTLE_Epoch();
+
+		/**
+		 * The meta object literal for the '<em><b>Eccentricity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__ECCENTRICITY = eINSTANCE.getAbstractTLE_Eccentricity();
+
+		/**
+		 * The meta object literal for the '<em><b>Element Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__ELEMENT_NUMBER = eINSTANCE.getAbstractTLE_ElementNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Ephemeris Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__EPHEMERIS_TYPE = eINSTANCE.getAbstractTLE_EphemerisType();
+
+		/**
+		 * The meta object literal for the '<em><b>Inclination</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__INCLINATION = eINSTANCE.getAbstractTLE_Inclination();
+
+		/**
+		 * The meta object literal for the '<em><b>Mean Anomaly</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__MEAN_ANOMALY = eINSTANCE.getAbstractTLE_MeanAnomaly();
+
+		/**
+		 * The meta object literal for the '<em><b>Mean Motion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__MEAN_MOTION = eINSTANCE.getAbstractTLE_MeanMotion();
+
+		/**
+		 * The meta object literal for the '<em><b>Revolution Per Day</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__REVOLUTION_PER_DAY = eINSTANCE.getAbstractTLE_RevolutionPerDay();
+
+		/**
+		 * The meta object literal for the '<em><b>Mean Motion First Derivative</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__MEAN_MOTION_FIRST_DERIVATIVE = eINSTANCE.getAbstractTLE_MeanMotionFirstDerivative();
+
+		/**
+		 * The meta object literal for the '<em><b>Mean Motion Second Derivative</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__MEAN_MOTION_SECOND_DERIVATIVE = eINSTANCE.getAbstractTLE_MeanMotionSecondDerivative();
+
+		/**
+		 * The meta object literal for the '<em><b>Argument Of Perigee</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__ARGUMENT_OF_PERIGEE = eINSTANCE.getAbstractTLE_ArgumentOfPerigee();
+
+		/**
+		 * The meta object literal for the '<em><b>Right Ascention Of Ascending Node</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE = eINSTANCE.getAbstractTLE_RightAscentionOfAscendingNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Revolution Number At Epoch</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__REVOLUTION_NUMBER_AT_EPOCH = eINSTANCE.getAbstractTLE_RevolutionNumberAtEpoch();
+
+		/**
+		 * The meta object literal for the '<em><b>Satellite Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TLE__SATELLITE_NUMBER = eINSTANCE.getAbstractTLE_SatelliteNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Ore Kit TLE</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_TLE___GET_ORE_KIT_TLE = eINSTANCE.getAbstractTLE__GetOreKitTLE();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Line1</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_TLE___GET_LINE1 = eINSTANCE.getAbstractTLE__GetLine1();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Line2</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_TLE___GET_LINE2 = eINSTANCE.getAbstractTLE__GetLine2();
+
+		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEImpl <em>TLE</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5560,148 +5971,20 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		EClass TLE = eINSTANCE.getTLE();
 
 		/**
-		 * The meta object literal for the '<em><b>Line1</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>First Line</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TLE__LINE1 = eINSTANCE.getTLE_Line1();
+		EAttribute TLE__FIRST_LINE = eINSTANCE.getTLE_FirstLine();
 
 		/**
-		 * The meta object literal for the '<em><b>Line2</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Second Line</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TLE__LINE2 = eINSTANCE.getTLE_Line2();
-
-		/**
-		 * The meta object literal for the '<em><b>Ephemeris Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__EPHEMERIS_TYPE = eINSTANCE.getTLE_EphemerisType();
-
-		/**
-		 * The meta object literal for the '<em><b>Inclination</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__INCLINATION = eINSTANCE.getTLE_Inclination();
-
-		/**
-		 * The meta object literal for the '<em><b>Mean Anomaly</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__MEAN_ANOMALY = eINSTANCE.getTLE_MeanAnomaly();
-
-		/**
-		 * The meta object literal for the '<em><b>Mean Motion</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__MEAN_MOTION = eINSTANCE.getTLE_MeanMotion();
-
-		/**
-		 * The meta object literal for the '<em><b>Revolution Per Day</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__REVOLUTION_PER_DAY = eINSTANCE.getTLE_RevolutionPerDay();
-
-		/**
-		 * The meta object literal for the '<em><b>Mean Motion First Derivative</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__MEAN_MOTION_FIRST_DERIVATIVE = eINSTANCE.getTLE_MeanMotionFirstDerivative();
-
-		/**
-		 * The meta object literal for the '<em><b>Mean Motion Second Derivative</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__MEAN_MOTION_SECOND_DERIVATIVE = eINSTANCE.getTLE_MeanMotionSecondDerivative();
-
-		/**
-		 * The meta object literal for the '<em><b>Argument Of Perigee</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__ARGUMENT_OF_PERIGEE = eINSTANCE.getTLE_ArgumentOfPerigee();
-
-		/**
-		 * The meta object literal for the '<em><b>Right Ascention Of Ascending Node</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE = eINSTANCE.getTLE_RightAscentionOfAscendingNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Revolution Number At Epoch</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__REVOLUTION_NUMBER_AT_EPOCH = eINSTANCE.getTLE_RevolutionNumberAtEpoch();
-
-		/**
-		 * The meta object literal for the '<em><b>Satellite Number</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__SATELLITE_NUMBER = eINSTANCE.getTLE_SatelliteNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>BStar</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__BSTAR = eINSTANCE.getTLE_BStar();
-
-		/**
-		 * The meta object literal for the '<em><b>Epoch</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__EPOCH = eINSTANCE.getTLE_Epoch();
-
-		/**
-		 * The meta object literal for the '<em><b>Eccentricity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__ECCENTRICITY = eINSTANCE.getTLE_Eccentricity();
-
-		/**
-		 * The meta object literal for the '<em><b>Element Number</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TLE__ELEMENT_NUMBER = eINSTANCE.getTLE_ElementNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Ore Kit TLE</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TLE___GET_ORE_KIT_TLE = eINSTANCE.getTLE__GetOreKitTLE();
+		EAttribute TLE__SECOND_LINE = eINSTANCE.getTLE_SecondLine();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl <em>Earth Surface Location</em>}' class.
@@ -6352,6 +6635,14 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING = eINSTANCE.getApogyCoreEnvironmentOrbitEarthFacade__LoadTLE__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Export TLE</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_TLE__TLE_STRING = eINSTANCE.getApogyCoreEnvironmentOrbitEarthFacade__ExportTLE__TLE_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Create TLE Earth Orbit Propagator</b></em>' operation.

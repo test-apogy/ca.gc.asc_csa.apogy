@@ -256,9 +256,16 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreEnvironmentOrbitEarthPackage.ABSTRACT_TLE: {
+				AbstractTLE abstractTLE = (AbstractTLE)theEObject;
+				T result = caseAbstractTLE(abstractTLE);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE: {
 				TLE tle = (TLE)theEObject;
 				T result = caseTLE(tle);
+				if (result == null) result = caseAbstractTLE(tle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -585,6 +592,21 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseURLBasedTLEEarthOrbitPropagator(URLBasedTLEEarthOrbitPropagator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract TLE</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract TLE</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractTLE(AbstractTLE object) {
 		return null;
 	}
 

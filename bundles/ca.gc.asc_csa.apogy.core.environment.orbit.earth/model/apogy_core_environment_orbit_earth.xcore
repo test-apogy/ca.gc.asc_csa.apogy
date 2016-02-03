@@ -326,24 +326,8 @@ class URLBasedTLEEarthOrbitPropagator extends TLEEarthOrbitPropagator
 	String tleURL
 }
 
-/* 
- * Defines a Two-Line Elements orbit and propagation definition.
- * @see http://en.wikipedia.org/wiki/Two-line_element_set
- */
-class TLE 
-{
-	/*
-	 * The first line of the TLE in text form.
-	 */
-	@GenModel(property="Editable", propertyCategory="TLE_RAW_DATA", notify="true")
-	String[1] line1
-	
-	/*
-	 * The second line of the TLE in text form.
-	 */
-	@GenModel(property="Editable", propertyCategory="TLE_RAW_DATA", notify="true")
-	String[1] line2
-	
+abstract class AbstractTLE
+{	
 	/*
 	 * The ballistic coefficient.
 	 */
@@ -438,6 +422,37 @@ class TLE
 	 * Return the OreKit implementation backing this TLE.
 	 */
 	op OreKitTLE getOreKitTLE()	throws Exception
+	
+	/**
+	 * Returns the first line of the TLE.
+	 * @return The first line of the TLE.
+	 */
+	op String getLine1()
+	
+	/**
+	 * Returns the second line of the TLE.
+	 * @return The first line of the TLE.
+	 */
+	op String getLine2()
+}
+
+/* 
+ * Defines a Two-Line Elements orbit and propagation definition.
+ * @see http://en.wikipedia.org/wiki/Two-line_element_set
+ */
+class TLE extends AbstractTLE
+{
+	/*
+	 * The first line of the TLE in text form.
+	 */
+	@GenModel(property="Editable", propertyCategory="TLE_RAW_DATA", notify="true")
+	String[1] firstLine
+	
+	/*
+	 * The second line of the TLE in text form.
+	 */
+	@GenModel(property="Editable", propertyCategory="TLE_RAW_DATA", notify="true")
+	String[1] secondLine
 }
 
 /*
@@ -830,9 +845,17 @@ class ApogyCoreEnvironmentOrbitEarthFacade
 	op TLE loadTLE(String url) throws Exception
 	
 	/*
+	 * Exports a TLE to a URL.
+	 * @param tle The TLE to export
+	 * @param url The URL as a String.
+	 * @throws An exception if the export fails.	 
+	 */
+	op void exportTLE(TLE tle, String url) throws Exception
+	
+	/*
 	 * Create a TLEEarthOrbitPropagator using a TLE.
 	 * @param tle The Two-Line Element defining the propagator.
 	 * @return The TLEEarthOrbitPropagator.
 	 */
-	op TLEEarthOrbitPropagator createTLEEarthOrbitPropagator(TLE tle) throws Exception
+	op TLEEarthOrbitPropagator createTLEEarthOrbitPropagator(TLE tle) throws Exception		
 }
