@@ -1,3 +1,16 @@
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 @GenModel(prefix="ApogyAddonsGeometryPaths",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
@@ -50,11 +63,6 @@ abstract class WayPointPathInterpolator extends Processor<WayPointPath, WayPoint
 	
 }
 
-/*
- * Fits a spline on the specified path using Catmull-Rom and generates an
- * interpolated path using the specified maximum point to point distance.
- * The original waypoints are included in the resulting interpolated path.
- */
 class CatmullRomWayPointPathInterpolator extends WayPointPathInterpolator
 {
 	double tension = "0.5"

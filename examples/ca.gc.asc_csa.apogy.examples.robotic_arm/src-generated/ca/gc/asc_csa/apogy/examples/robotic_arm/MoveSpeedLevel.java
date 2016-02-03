@@ -1,7 +1,17 @@
-/**
- * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
- */
 package ca.gc.asc_csa.apogy.examples.robotic_arm;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,12 +24,6 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Move Speed Level</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * This enumeration is used to indicate the overall possible
- * levels of speed that a robotic arm can move at; as
- * expected, this used by RoboticArm (and its subclasses) when
- * moveTo() is called.
- * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getMoveSpeedLevel()
  * @model
  * @generated

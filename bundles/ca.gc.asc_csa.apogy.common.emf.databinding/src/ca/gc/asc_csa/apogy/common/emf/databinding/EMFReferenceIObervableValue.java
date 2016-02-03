@@ -1,4 +1,17 @@
 package ca.gc.asc_csa.apogy.common.emf.databinding;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import org.eclipse.core.databinding.observable.Diffs;
 import org.eclipse.core.databinding.observable.value.ValueDiff;
@@ -11,12 +24,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
 
-/**
- * IObservableValue for EMFObject. This implementation fires fireValueChange when the feature of the OBject is set and also if
- * any of the direct attributes/reference of the current feature changes.
- * @author pallard
- *
- */
 public class EMFReferenceIObervableValue extends EObjectObservableValue 
 {
 	protected Adapter valueInternalAdapter = null;

@@ -1,4 +1,17 @@
 package ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.util.concurrent.Callable;
 
@@ -38,11 +51,6 @@ import com.jme3.renderer.queue.RenderQueue.Bucket;
 import com.jme3.scene.Geometry;
 import com.jme3.system.AppSettings;
 
-/**
- * Listener that generated event when a mouse pick is detected. 
- * @author pallard
- *
- */
 public abstract class MousePickListener implements ActionListener 
 {
 	public static final String PICK_ENABLED_EVENT = "KeyboardP";

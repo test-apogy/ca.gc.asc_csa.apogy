@@ -1,10 +1,17 @@
-/**
- * <copyright>
- * </copyright>
- *
- * $Id: ApogyCommonTopologyAddonsDynamicsPackageImpl.java,v 1.29.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
- */
 package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.util.Set;
 
@@ -1464,6 +1471,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 		  (this, 
 		   source, 
 		   new String[] {
+			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyCommonTopologyAddonsDynamics",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -1474,12 +1482,6 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.dynamics/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.dynamics.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.topology.addons"
-		   });	
-		addAnnotation
-		  (dynamicSystemPropertiesEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "Base class for Dynamics System that is used as a container for many Dynamic System attributes."
 		   });	
 		addAnnotation
 		  (getDynamicSystemProperties_Constraints(), 

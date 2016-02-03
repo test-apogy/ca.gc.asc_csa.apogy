@@ -1,4 +1,17 @@
 package ca.gc.asc_csa.apogy.common.ui.properties;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import org.eclipse.core.runtime.ListenerList;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -14,17 +27,6 @@ import org.eclipse.ui.part.ViewPart;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
-/**
- * This {@link TabbedPropertySheetPage} allows to bridge with EMF factories.  
- * Use {@link #PROPERTY_CONTRIBUTOR_ID} as contributor id in the definition of the property tabs, 
- * property sections and property contributors extension definition.  
- * To support {@link ExtendedTabbedPropertySheetPage} in your Workbench part, implements the 
- * {@link ITabbedPropertySheetPageContributor} interface and instantiate 
- * {@link ExtendedTabbedPropertySheetPage} in instance of 
- * {@link EditorPart#getAdapter(Class)} or {@link ViewPart#getAdapter(Class)}.
- * @author rlarcheveque
- * @see {@link http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html}
- */
 public class ExtendedTabbedPropertySheetPage extends TabbedPropertySheetPage implements ISelectionProvider {
 
 	private ComposedAdapterFactory adapterFactory;	
