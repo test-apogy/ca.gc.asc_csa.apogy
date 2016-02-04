@@ -1,4 +1,17 @@
 package ca.gc.asc_csa.apogy.common.emf;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.util.List;
 
@@ -6,17 +19,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 
-/**
- * This class is an adapter that listens to an EList attribute of an EObject.
- * When a {@link Notification#ADD}, {@link Notification#ADD_MANY},
- * {@link Notification#REMOVE} or {@link Notification#REMOVE_MANY} event
- * happens, the appropriate method in the supplied {@link ListEventDelegate} is
- * called.
- * 
- * @author sgemme
- * 
- * @param <T>
- */
 public class EListAdapter<T> implements Adapter {
 
 	private ListEventDelegate<T> delegate;

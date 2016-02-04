@@ -1,4 +1,17 @@
 package ca.gc.asc_csa.apogy.common.geometry.data3d.pif.ui.adapters;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,40 +33,6 @@ import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
 import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContextAdapter;
 import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
-/**
- * 
- * <dl>
- * <dt>Description:</dt>
- * <dd>description</dd>
- * <dt>Version:</dt>
- * <dd>$Revision: 1.2.4.2 $</dd>
- * <dt>Creation date:</dt>
- * <dd>Aug 16, 2011</dd>
- * </dl>
- * 
- * @author sgemme
- * 
- *         <pre>
- * 'History: 
- *  $Log: GraphicsContextPifAdapter.java,v $
- *  Revision 1.2.4.2  2015/05/21 15:50:04  pallard
- *  Updated to MRT_0_5 due to update to TOPOLOGY_0_5.
- *
- *  Revision 1.2.2.2  2015/02/05 21:07:56  rlarcheveque
- *  *** empty log message ***
- *
- *  Revision 1.1  2013/02/18 19:17:21  pallard
- *  Moved from topology.
- *
- *  Revision 1.2  2011/08/17 17:29:16  sgemme
- *  *** empty log message ***
- *
- *  Revision 1.1  2011/08/17 17:15:16  sgemme
- *  *** empty log message ***
- *
- * </pre>
- * 
- */
 public class GraphicsContextPifAdapter implements GraphicsContextAdapter {
 
 	public static final String SUPPORTED_EXTENSION = "pf";

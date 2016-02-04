@@ -1,7 +1,17 @@
-/**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
- */
 package ca.gc.asc_csa.apogy.addons.sensors.impl;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -261,6 +271,7 @@ public class ApogyAddonsSensorsPackageImpl extends EPackageImpl implements Apogy
 		  (this, 
 		   source, 
 		   new String[] {
+			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyAddonsSensors",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -271,12 +282,6 @@ public class ApogyAddonsSensorsPackageImpl extends EPackageImpl implements Apogy
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"
-		   });	
-		addAnnotation
-		  (sensorStatusEEnum, 
-		   source, 
-		   new String[] {
-			 "documentation", "Represents the various states that a sensor could be in.\n * Typical status transitions :\n * Power up (nominal) : OFF -> BUSY (initialization) -> READY\nPower up (off-nominal) : OFF -> BUSY (initialization) -> FAILED\n * Data acquition (nominal): READY -> BUSY (Acquisition) -> READY\nData acquition (off-nominal): READY -> BUSY (Acquisition) -> FAILED"
 		   });
 	}
 

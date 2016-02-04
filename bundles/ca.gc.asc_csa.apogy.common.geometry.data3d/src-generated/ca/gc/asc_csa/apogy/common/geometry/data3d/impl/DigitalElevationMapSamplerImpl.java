@@ -1,9 +1,17 @@
-/**
- * Canadian Space Agency 2008.
- *
- * $Id: DigitalElevationMapSamplerImpl.java,v 1.2.4.7 2015/09/23 12:45:14 pallard Exp $
- */
 package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.util.ArrayList;
 import java.util.Iterator;

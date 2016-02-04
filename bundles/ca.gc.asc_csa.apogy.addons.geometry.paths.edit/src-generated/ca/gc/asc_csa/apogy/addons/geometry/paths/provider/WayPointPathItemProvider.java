@@ -1,9 +1,17 @@
-/**
- * Canadian Space Agency 2007.
- *
- * $Id: WayPointPathItemProvider.java,v 1.7.4.3 2015/09/22 19:39:43 rlarcheveque Exp $
- */
 package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 
 import java.text.DecimalFormat;

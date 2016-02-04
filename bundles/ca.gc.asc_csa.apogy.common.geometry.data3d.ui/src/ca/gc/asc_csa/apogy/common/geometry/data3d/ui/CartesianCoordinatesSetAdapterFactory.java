@@ -1,4 +1,17 @@
 package ca.gc.asc_csa.apogy.common.geometry.data3d.ui;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.util.Iterator;
 import java.util.List;
@@ -6,20 +19,6 @@ import java.util.List;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 
-/**
- * <p>
- * <b>Description:</b> the {@link Topology} is the graphical representation of a
- * topology containing different nodes and transformation. The problem is to
- * retrieve a {@link CartesianCoordinatesSet} from these nodes contained in the
- * topology. To solve this problem, the {@link ContentNode}, through the
- * {@link #adapt(ContentNode)} method, is passed to this factory, which find the
- * appropriate provider of {@link CartesianCoordinatesSet} and returns it.
- * </p>
- * Creation date: 2008-07-23
- * 
- * @author sgemme
- * 
- */
 public class CartesianCoordinatesSetAdapterFactory {
 
 	/**

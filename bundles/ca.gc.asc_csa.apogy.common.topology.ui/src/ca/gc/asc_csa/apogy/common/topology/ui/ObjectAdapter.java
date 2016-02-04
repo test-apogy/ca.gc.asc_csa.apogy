@@ -1,16 +1,18 @@
 package ca.gc.asc_csa.apogy.common.topology.ui;
-
-/**
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
  * 
- * Creation date: 2008-08-18
- * 
- * @author sgemme
- * 
- * @param <S>
- *            the class produced by this adapter.
- * @param <T>
- *            the type supported by this adapter.
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+
 public interface ObjectAdapter<S, T, U> {
 
 	/**

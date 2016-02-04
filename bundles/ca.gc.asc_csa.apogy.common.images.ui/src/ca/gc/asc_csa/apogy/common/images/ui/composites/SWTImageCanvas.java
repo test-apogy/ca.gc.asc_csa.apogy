@@ -1,4 +1,17 @@
 package ca.gc.asc_csa.apogy.common.images.ui.composites;
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
 
 import java.awt.geom.AffineTransform;
 
@@ -18,11 +31,6 @@ import org.eclipse.swt.widgets.Canvas;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.ScrollBar;
 
-/**
- * Adaptation of Chengdong Li: cli4@uky.edu SWTImageCanvas. 
- * 
- * @see https://www.eclipse.org/articles/Article-Image-Viewer/Image_viewer.html
- */
 public class SWTImageCanvas extends Canvas {
 
 	/* zooming rates in x and y direction are equal. */
