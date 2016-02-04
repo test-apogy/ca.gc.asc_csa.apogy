@@ -299,6 +299,12 @@ class TLEEarthOrbitPropagator extends EarthOrbitPropagator
 	 * The Two-Line Elements used by this propagator.
 	 */
 	contains TLE[1] tle
+	
+	/*
+	 * The orbit as defined at the epoch time. This is what is return as this propagator initial orbit.
+	 */
+	@GenModel(notify="true", property="Readonly")
+	contains Orbit[0..1] orbitAtEpoch
 }
 
 class URLBasedTLEEarthOrbitPropagator extends TLEEarthOrbitPropagator
@@ -311,7 +317,7 @@ class URLBasedTLEEarthOrbitPropagator extends TLEEarthOrbitPropagator
 }
 
 /* 
- * Defines a Two-Line Elements definition.
+ * Defines a Two-Line Elements orbit and propagation definition.
  * @see http://en.wikipedia.org/wiki/Two-line_element_set
  */
 class TLE 
@@ -320,13 +326,13 @@ class TLE
 	 * The first line of the TLE in text form.
 	 */
 	@GenModel(property="Editable", propertyCategory="TLE_RAW_DATA", notify="true")
-	String line1
+	String[1] line1
 	
 	/*
 	 * The second line of the TLE in text form.
 	 */
 	@GenModel(property="Editable", propertyCategory="TLE_RAW_DATA", notify="true")
-	String line2
+	String[1] line2
 	
 	/*
 	 * The ballistic coefficient.

@@ -22,6 +22,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -57,8 +58,31 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addOrbitAtEpochPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Orbit At Epoch feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOrbitAtEpochPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TLEEarthOrbitPropagator_orbitAtEpoch_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TLEEarthOrbitPropagator_orbitAtEpoch_feature", "_UI_TLEEarthOrbitPropagator_type"),
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -74,6 +98,7 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__TLE);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH);
 		}
 		return childrenFeatures;
 	}
@@ -130,6 +155,7 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 
 		switch (notification.getFeatureID(TLEEarthOrbitPropagator.class)) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -151,6 +177,16 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 			(createChildParameter
 				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__TLE,
 				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLE()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit()));
 	}
 
 }

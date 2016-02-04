@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Defines a Two-Line Elements definition.
+ * Defines a Two-Line Elements orbit and propagation definition.
  * @see http://en.wikipedia.org/wiki/Two-line_element_set
  * <!-- end-model-doc -->
  *
@@ -70,7 +70,7 @@ public interface TLE extends EObject {
 	 * @return the value of the '<em>Line1</em>' attribute.
 	 * @see #setLine1(String)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_Line1()
-	 * @model unique="false"
+	 * @model unique="false" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='TLE_RAW_DATA' notify='true'"
 	 * @generated
 	 */
@@ -100,7 +100,7 @@ public interface TLE extends EObject {
 	 * @return the value of the '<em>Line2</em>' attribute.
 	 * @see #setLine2(String)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_Line2()
-	 * @model unique="false"
+	 * @model unique="false" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='TLE_RAW_DATA' notify='true'"
 	 * @generated
 	 */

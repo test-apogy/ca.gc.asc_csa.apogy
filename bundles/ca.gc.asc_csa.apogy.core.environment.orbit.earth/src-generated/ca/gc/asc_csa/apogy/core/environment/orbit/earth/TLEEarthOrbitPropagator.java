@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import org.orekit.propagation.analytical.tle.TLEPropagator;
 
 /**
@@ -25,6 +26,7 @@ import org.orekit.propagation.analytical.tle.TLEPropagator;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getTle <em>Tle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOrbitAtEpoch <em>Orbit At Epoch</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLEEarthOrbitPropagator()
@@ -56,6 +58,32 @@ public interface TLEEarthOrbitPropagator extends EarthOrbitPropagator {
 	 * @generated
 	 */
 	void setTle(TLE value);
+
+	/**
+	 * Returns the value of the '<em><b>Orbit At Epoch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The orbit as defined at the epoch time. This is what is return as this propagator initial orbit.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Orbit At Epoch</em>' containment reference.
+	 * @see #setOrbitAtEpoch(Orbit)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLEEarthOrbitPropagator_OrbitAtEpoch()
+	 * @model containment="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
+	 * @generated
+	 */
+	Orbit getOrbitAtEpoch();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOrbitAtEpoch <em>Orbit At Epoch</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Orbit At Epoch</em>' containment reference.
+	 * @see #getOrbitAtEpoch()
+	 * @generated
+	 */
+	void setOrbitAtEpoch(Orbit value);
 
 	/**
 	 * <!-- begin-user-doc -->

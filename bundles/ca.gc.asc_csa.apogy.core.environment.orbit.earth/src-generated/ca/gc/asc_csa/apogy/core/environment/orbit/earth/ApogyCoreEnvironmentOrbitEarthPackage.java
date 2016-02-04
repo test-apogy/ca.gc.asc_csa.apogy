@@ -1353,13 +1353,22 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int TLE_EARTH_ORBIT_PROPAGATOR__TLE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Orbit At Epoch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>TLE Earth Orbit Propagator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 1;
+	int TLE_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Propagate</em>' operation.
@@ -1514,6 +1523,15 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @ordered
 	 */
 	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE = TLE_EARTH_ORBIT_PROPAGATOR__TLE;
+
+	/**
+	 * The feature id for the '<em><b>Orbit At Epoch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH = TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH;
 
 	/**
 	 * The feature id for the '<em><b>Tle URL</b></em>' attribute.
@@ -3667,6 +3685,17 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EReference getTLEEarthOrbitPropagator_Tle();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOrbitAtEpoch <em>Orbit At Epoch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Orbit At Epoch</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOrbitAtEpoch()
+	 * @see #getTLEEarthOrbitPropagator()
+	 * @generated
+	 */
+	EReference getTLEEarthOrbitPropagator_OrbitAtEpoch();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getOreKitTLEPropagator() <em>Get Ore Kit TLE Propagator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5388,6 +5417,14 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TLE_EARTH_ORBIT_PROPAGATOR__TLE = eINSTANCE.getTLEEarthOrbitPropagator_Tle();
+
+		/**
+		 * The meta object literal for the '<em><b>Orbit At Epoch</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH = eINSTANCE.getTLEEarthOrbitPropagator_OrbitAtEpoch();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Ore Kit TLE Propagator</b></em>' operation.

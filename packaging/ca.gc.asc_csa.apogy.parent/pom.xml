@@ -44,9 +44,9 @@
 		</repository>
 		
 		<repository>
-			<id>OTS</id>
+			<id>Apogy-OTS</id>
 			<layout>p2</layout>
-			<url>http://liberty.speng.space.gc.ca/eclipse/repository/ca.gc.asc_csa.eclipse.ots/latest/</url>
+			<url>ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest</url>
 		</repository>
 		
 	</repositories>

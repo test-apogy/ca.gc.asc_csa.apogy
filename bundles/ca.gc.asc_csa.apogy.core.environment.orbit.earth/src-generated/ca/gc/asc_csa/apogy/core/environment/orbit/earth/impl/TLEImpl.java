@@ -21,12 +21,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Activator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
 
 /**
@@ -1072,31 +1073,61 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 
 	protected void updateAllAttributes()
 	{
-		try
+		/*
+		 * If both line are set. 
+		 */
+		if((getLine1() != null && getLine1().length() > 0) &&
+		   (getLine2() != null && getLine2().length() > 0))
 		{
-			org.orekit.propagation.analytical.tle.TLE tle = getOreKitTLE();
-			
-			setBStar(tle.getBStar());
-			setEpoch(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(tle.getDate()));
-			setEccentricity(tle.getE());
-			setElementNumber(tle.getElementNumber());
-			setEphemerisType(EphemerisType.get(tle.getEphemerisType()));
-			setInclination(tle.getI());
-			setMeanAnomaly(tle.getMeanAnomaly());
-			setMeanMotion(tle.getMeanMotion());
-			double revPerDay = (tle.getMeanMotion() * 24*60*60) / (2.0*Math.PI);
-			setRevolutionPerDay(revPerDay);
-			setMeanMotionFirstDerivative(tle.getMeanMotionFirstDerivative());
-			setMeanMotionSecondDerivative(tle.getMeanMotionSecondDerivative());
-			setArgumentOfPerigee(tle.getPerigeeArgument());
-			setRightAscentionOfAscendingNode(tle.getRaan());
-			setRevolutionNumberAtEpoch(tle.getRevolutionNumberAtEpoch());
-			setSatelliteNumber(tle.getSatelliteNumber());
+			try
+			{
+				org.orekit.propagation.analytical.tle.TLE tle = getOreKitTLE();
+				
+				// TODO : Perform this in a transaction friendly way.				
+				setBStar(tle.getBStar());
+				setEpoch(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(tle.getDate()));
+				setEccentricity(tle.getE());
+				setElementNumber(tle.getElementNumber());
+				setEphemerisType(EphemerisType.get(tle.getEphemerisType()));
+				setInclination(tle.getI());
+				setMeanAnomaly(tle.getMeanAnomaly());
+				setMeanMotion(tle.getMeanMotion());
+				double revPerDay = (tle.getMeanMotion() * 24*60*60) / (2.0*Math.PI);
+				setRevolutionPerDay(revPerDay);
+				setMeanMotionFirstDerivative(tle.getMeanMotionFirstDerivative());
+				setMeanMotionSecondDerivative(tle.getMeanMotionSecondDerivative());
+				setArgumentOfPerigee(tle.getPerigeeArgument());
+				setRightAscentionOfAscendingNode(tle.getRaan());
+				setRevolutionNumberAtEpoch(tle.getRevolutionNumberAtEpoch());
+				setSatelliteNumber(tle.getSatelliteNumber());
+				
+				return;
+			}
+			catch(Exception e)
+			{
+				Logger.INSTANCE.log(Activator.ID, this, "Failed to parse TLE lines.", EventSeverity.ERROR, e);
+			}
 		}
-		catch(Exception e)
-		{
-			Logger.INSTANCE.log(Activator.ID, this, "Failed to parse TLE lines.", EventSeverity.ERROR, e);
-		}
+		
+		// Invalid TLE lines have been found, sets all parameters to default.
+		// TODO : Perform this in a transaction friendly way.
+				
+		setBStar(BSTAR_EDEFAULT);
+		setEpoch(new Date());
+		setEccentricity(ECCENTRICITY_EDEFAULT);
+		setElementNumber(ELEMENT_NUMBER_EDEFAULT);
+		setEphemerisType(EPHEMERIS_TYPE_EDEFAULT);
+		setInclination(INCLINATION_EDEFAULT);
+		setMeanAnomaly(MEAN_ANOMALY_EDEFAULT);
+		setMeanMotion(MEAN_MOTION_EDEFAULT);
+		
+		setRevolutionPerDay(REVOLUTION_PER_DAY_EDEFAULT);
+		setMeanMotionFirstDerivative(MEAN_MOTION_FIRST_DERIVATIVE_EDEFAULT);
+		setMeanMotionSecondDerivative(MEAN_MOTION_SECOND_DERIVATIVE_EDEFAULT);
+		setArgumentOfPerigee(ARGUMENT_OF_PERIGEE_EDEFAULT);
+		setRightAscentionOfAscendingNode(RIGHT_ASCENTION_OF_ASCENDING_NODE_EDEFAULT);
+		setRevolutionNumberAtEpoch(REVOLUTION_NUMBER_AT_EPOCH_EDEFAULT);
+		setSatelliteNumber(SATELLITE_NUMBER_EDEFAULT);		
 	}
 	
 } //TLEImpl
