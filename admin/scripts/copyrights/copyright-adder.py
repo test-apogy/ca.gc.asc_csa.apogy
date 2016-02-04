@@ -85,17 +85,49 @@ class File(object):
        
         inCopyrightBlock = False           
         done = False
-        
+
+        blockStart = 0
+        blockEnd = 0
+        i = 0
+
         for line in self.__fileContent:      
-            if (line.startswith(commentProvider.getBeginCommentString()) 
+            if (commentProvider.getBeginCommentString() in line
                 and not done):
+                blockStart = i
                 inCopyrightBlock = True
-            elif (line.startswith(commentProvider.getEndCommentString()) 
+            elif (commentProvider.getEndCommentString() in line
                   and not done):
                 inCopyrightBlock = False
                 done = True
-            elif not inCopyrightBlock:
-                sys.stdout.write(line)    
+                blockEnd = i
+            
+            i += 1
+
+        block = ""
+        commentBlock = self.__fileContent[blockStart:blockEnd+1]
+
+        block = block.join(commentBlock)
+
+        if "COPYRIGHT" in block.upper():
+            # Write the beginning
+            s = ""
+            s = s.join(self.__fileContent[0:blockStart])
+
+            sys.stdout.write(s)
+            
+            regex = re.compile("^(.*)" + commentProvider.getBeginCommentString() + ".*" + commentProvider.getEndCommentString() + "(.*)$",re.S | re.M)
+
+            m = regex.match(block)
+            if m:
+               sys.stdout.write(m.group(1) + "\n" + m.group(2))
+
+            s = ""
+            s = s.join(self.__fileContent[blockEnd+1:])
+   
+            sys.stdout.write(s)
+        else:
+            s = ""
+            sys.stdout.write(s.join(self.__fileContent))
                 
     def isCopyrighted(self):        
         
