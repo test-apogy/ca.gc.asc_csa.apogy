@@ -17,12 +17,20 @@
       label="%featureName"
       version="0.5.0.qualifier">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="https://bitbucket.org/apogy/ca.gc.asc_csa.apogy">
+      Apogy is aimed at providing a reusable software framework to quickly created the required operators tools used to plan, validate, execute and monitor integrated operations of physical systems.
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
+   <copyright>
+      Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Pierre Allard (Pierre.Allard@canada.ca), 
+    Regent L&apos;Archeveque (Regent.Larcheveque@canada.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
+    Canadian Space Agency (CSA) - Initial API and implementation
    </copyright>
 
    <license url="https://www.eclipse.org/legal/epl-v10.html">
