@@ -18,7 +18,7 @@
       version="0.5.0.qualifier">
 
    <description url="https://bitbucket.org/apogy/ca.gc.asc_csa.apogy">
-      Apogy is aimed at providing a reusable software framework to quickly created the required operators tools used to plan, validate, execute and monitor integrated operations of physical systems.
+      Apogy is a multi-mission operations and planning software framework. Apogy uses EMF models to define the systems being controlled, the environment in which these systems are operated, the operations being carried out and the corresponding data produced during operations.
    </description>
 
    <copyright>
