@@ -1,0 +1,9 @@
+[customer]
+codename='csa'
+project='apogy'
+
+[build]
+command='mvn package -Dtycho.version=0.24.0 -Declipse.version=mars -Declipse.updates.version=4.5'
+
+[release]
+files=''

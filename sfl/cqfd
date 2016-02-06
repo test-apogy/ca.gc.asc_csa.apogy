@@ -1,0 +1,258 @@
+#!/bin/bash
+#
+# Copyright (C) 2015 Savoir-faire Linux, Inc.
+#
+# Author: mathieu.audat@savoirfairelinux.com
+#
+
+EERROR=1
+ESUCCESS=0
+
+PROGNAME=`basename $0`
+TOPDIR=`cd $(dirname $0)/..; pwd`
+
+## usage() - print usage on stdout
+usage() {
+cat <<EOF
+Usage: $PROGNAME [OPTION ARGUMENT] [COMMAND] [ARGUMENTS]
+
+Options:
+    -b <flavor_name>	Target a specific build flavor.
+
+Commands:
+    init     Initialize project build container
+    run      Run argument(s) inside build container
+    release  Run argument(s) and release software
+    help     Show this help text
+
+    By default, run is assumed, and the run command is the one
+    configured in .sflproject.
+EOF
+}
+
+# cfg_parser() - parse ini-style config files
+# Will parse a ini-style config file, and evaluate it to a bash array.
+#   Ref: http://theoldschooldevops.com/2008/02/09/bash-ini-parser/
+# arg$1: path to ini file
+cfg_parser() {
+	# bash 4.3 and later break compatibility
+	if [ $BASH_VERSINFO -ge 4 -a ${BASH_VERSINFO[1]} -gt 2 ]; then
+		local compat=1
+		shopt -s compat42
+	fi
+
+	ini="$(<$1)"                # read the file
+	ini="${ini//[/\[}"          # escape [
+	ini="${ini//]/\]}"          # escape ]
+	IFS=$'\n' && ini=( ${ini} ) # convert to line-array
+	ini=( ${ini[*]//;*/} )      # remove comments with ;
+	ini=( ${ini[*]/\    =/=} )  # remove tabs before =
+	ini=( ${ini[*]/=\   /=} )   # remove tabs be =
+	ini=( ${ini[*]/\ =\ /=} )   # remove anything with a space around =
+	ini=( ${ini[*]/#\\[/\}$'\n'cfg.section.} ) # set section prefix
+	ini=( ${ini[*]/%\\]/ \(} )  # convert text2function (1)
+	ini=( ${ini[*]/=/=\( } )    # convert item to array
+	ini=( ${ini[*]/%/ \)} )     # close array parenthesis
+	ini=( ${ini[*]/%\\ \)/ \\} ) # the multiline trick
+	ini=( ${ini[*]/%\( \)/\(\) \{} ) # convert text2function (2)
+	ini=( ${ini[*]/%\} \)/\}} ) # remove extra parenthesis
+	ini[0]="" # remove first element
+	ini[${#ini[*]} + 1]='}'    # add the last brace
+	eval "$(echo "${ini[*]}")" # eval the result
+
+	# restore previous bash behaviour
+	[ "$compat" = "1" ] && shopt -u compat42
+}
+
+## die() - exit when an error occured
+# $@ messages and variables shown in the error message
+die() {
+	echo "Fatal: $@" 1>&2
+	exit $EERROR
+}
+
+# docker_build() - Initialize build container
+# $1 docker image name
+docker_build() {
+	docker build -q -t "$1" `dirname $DOCKER_FILE`
+}
+
+# docker_run() - run command in configured container
+# A few implementation details:
+#
+# - The user executing the build commands inside the container is
+#   named 'builder', with the same uid/gid as your user to keep
+#   filesystem permissions in sync.
+#
+# - Your project's source directory is always mapped to ~builder/src/
+#
+# - Your ~/.ssh directory is mapped to ~builder/.ssh to provide access
+#   to the ssh keys (your build may pull authenticated git repos for
+#   example).
+#
+# arg$1: the command string to execute as builder
+#
+docker_run() {
+	[ -z "$JENKINS_URL" ] && local NOJENKINS=1
+
+	if [ -e "$SSH_AUTH_SOCK" ]; then
+		local SOCKDIR=`dirname $SSH_AUTH_SOCK`
+	fi
+
+	# The user may set the CQFD_EXTRA_VOLUMES environment variable
+	# to map custom volumes inside his development container.
+	if [ -n "$CQFD_EXTRA_VOLUMES" ]; then
+		local map EXTRAVOL
+		for map in $CQFD_EXTRA_VOLUMES; do
+			EXTRAVOL+="-v $map "
+		done
+	fi
+
+	docker run --privileged -v "$PROJECT_PATH":/home/builder/src \
+	       -v ~/.ssh:/home/builder/.ssh \
+	       $EXTRAVOL \
+	       ${NOJENKINS:+ -ti} \
+	       ${SOCKDIR:+ -v $SOCKDIR:/home/builder/.sockets} \
+	       $DOCKER_IMG_NAME \
+	       /bin/bash -c "groupadd -og $GROUPS -f builders && \
+	       useradd -s /bin/bash -u $UID -g $GROUPS builder && \
+	       chown $UID:$GROUPS /home/builder && \
+	       su - builder -c \"cd src/ && $1\" 2>&1"
+}
+
+# update_build(): Change the build command according to user's choice.
+# So a generic build command would look like command='make foo' and another
+# flavor would be command='make bar'
+# $1: "flavor" of the build, is a suffix of command.
+update_build() {
+	local build_flavor
+	local p_flavor="$1"
+
+	cfg.section.build
+	for flavor in $flavors; do
+		if [ "$flavor" = "$p_flavor" ]; then
+			build_flavor="$p_flavor"
+			break
+		fi
+	done
+	if [ -z "$build_flavor" ]; then
+		die "no $p_flavor found in flavor list"
+	fi
+
+	cfg.section.flavor_$build_flavor
+	BUILD_CMD=$command
+	RELEASE_FILES=$files
+}
+
+# make_archive(): Create a release package.
+# Note: the --transform option passed to tar allows to move all the
+# specified files at the root of the archive. Therefore, you shouldn't
+# include two files with the same name in the list of files to
+# archive.
+make_archive() {
+	if [ -z "$RELEASE_FILES" ]; then
+		die "No files to archive, check release.files in $SFL_PROJECT"
+	fi
+
+	for file in $RELEASE_FILES; do
+		[ -f $file ] || die "Cannot create release: missing $file"
+	done
+
+	if [ -z "$JOB_NAME" ]; then
+		JOB_NAME="local-build"
+		BUILD_ID="`date --rfc-3339='date'`"
+	fi
+
+	RELEASE_PACKAGE=${JOB_NAME}_${BUILD_ID}.tar.xz
+	XZ_OPT=-9 tar --transform "s/.*\///g" -cJf \
+		$RELEASE_PACKAGE $RELEASE_FILES
+}
+
+
+PROJECT_PATH="${PWD%%/sfl}"
+BUILD_DOCKER=0
+DISTRO_BUILD_PARAM=
+DOCKER_IMG_NAME=""
+BUILD_FLAVORS=
+DOCKER_FILE="$TOPDIR/sfl/docker/Dockerfile"
+SFL_PROJECT="$TOPDIR/.sflproject"
+BUILD_CMD=
+RELEASE_FILES=
+MAKE_ARCHIVE=0
+
+### main ###
+
+# The .sflproject file allows per-project customizations
+if [ -f "$SFL_PROJECT" ]; then
+	IFS="$IFS" cfg_parser "$SFL_PROJECT"
+
+	# Load customer, build and release settings
+	cfg.section.customer
+	CUST_CODENAME="$codename"
+	CUST_PROJECT="$project"
+
+	cfg.section.build
+	BUILD_CMD="$command"
+	BUILD_FLAVORS="$flavors"
+
+	cfg.section.release
+	RELEASE_FILES="$files"
+fi
+
+# This will look like fooinc_reponame
+if [ -n "$CUST_CODENAME" -a -n "$CUST_PROJECT" ]; then
+	DOCKER_IMG_NAME="${CUST_CODENAME}_${CUST_PROJECT}"
+fi
+
+case "$1" in
+help|-h|"--help")
+	usage
+	exit $ESUCCESS
+	;;
+init)
+	# We expect a Dockerfile is always present
+	[ -f "$DOCKER_FILE" ] || die " $DOCKER_FILE not found"
+	[ -n "$DOCKER_IMG_NAME" ] || die "No customer codename set"
+	docker_build $DOCKER_IMG_NAME
+	exit $?
+	;;
+-b)
+	shift
+	update_build "$1"
+	shift
+	;&
+run|release)
+	[ "$1" = "release" ] && MAKE_ARCHIVE=1
+	shift
+	if [ $# -ge 1 -a -n "$BUILD_CMD" ]; then
+		# A flavor has been selected but it is erased by the build
+		# command in the command line
+		echo "WARNING: build flavor ignored because of " \
+			"command line build command"
+		BUILD_CMD="$@"
+	fi
+	;;
+?*)
+	die "Unknown command: $1"
+	;;
+*)
+	# empty or no argument case
+	;;
+esac
+if [ -z "$BUILD_CMD" -a -z "$BUILD_FLAVORS" ]; then
+	die "No build.command nor build.flavors defined in .sflproject !"
+fi
+
+# Run our build command inside the build container
+if [ -n "$BUILD_FLAVORS" -a -z "$BUILD_CMD" ]; then
+	for flavor in $BUILD_FLAVORS; do
+		update_build "$flavor"
+		docker_run "$BUILD_CMD"
+		[ "$MAKE_ARCHIVE" = "1" ] && make_archive
+	done
+else
+	docker_run "$BUILD_CMD"
+	[ "$MAKE_ARCHIVE" = "1" ] && make_archive
+fi
+
+exit $ESUCCESS
