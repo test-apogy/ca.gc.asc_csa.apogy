@@ -17,10 +17,8 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
-import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -30,7 +28,6 @@ import org.orekit.propagation.analytical.tle.TLEPropagator;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
 
@@ -43,14 +40,14 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEEarthOrbitPropagatorImpl#getTle <em>Tle</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEEarthOrbitPropagatorImpl#getOrbitAtEpoch <em>Orbit At Epoch</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEEarthOrbitPropagatorImpl#getValidFromDate <em>Valid From Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEEarthOrbitPropagatorImpl#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implements TLEEarthOrbitPropagator 
 {
-	private Adapter tleAdapter;
 	
 	public static final long TLE_VALIDITY_PERIOD_MS = 24*60*60*1000; 
 	
@@ -65,14 +62,24 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 	protected TLE tle;
 
 	/**
-	 * The cached value of the '{@link #getOrbitAtEpoch() <em>Orbit At Epoch</em>}' containment reference.
+	 * The default value of the '{@link #getValidFromDate() <em>Valid From Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOrbitAtEpoch()
+	 * @see #getValidFromDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected Orbit orbitAtEpoch;
+	protected static final Date VALID_FROM_DATE_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getValidToDate() <em>Valid To Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValidToDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date VALID_TO_DATE_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,49 +112,17 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	public NotificationChain basicSetTle(TLE newTle, NotificationChain msgs) 
 	{
 		TLE oldTle = tle;
 		tle = newTle;
-		if (eNotificationRequired()) 
-		{
+		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE, oldTle, newTle);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		
-		updateTLERelatedAttributes();
-		
 		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public void setTle(TLE newTle) 
-	{
-		// Unregister from previous TLE if applicable
-		if(getTle() != null)
-		{
-			getTle().eAdapters().remove(getTLEAdapter());
-		}
-		
-		// Updates the reference.
-		setTleGen(newTle);
-		
-		updateTLERelatedAttributes();
-		
-		// Register to the new TLE if applicable
-		if(newTle != null)
-		{									
-			newTle.eAdapters().add(getTLEAdapter());
-		}
-		
-		setValidFromDate(null);
-		setValidToDate(null);		
 	}
 	
 	/**
@@ -155,7 +130,7 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTleGen(TLE newTle) {
+	public void setTle(TLE newTle) {
 		if (newTle != tle) {
 			NotificationChain msgs = null;
 			if (tle != null)
@@ -172,46 +147,62 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public Orbit getOrbitAtEpoch() {
-		return orbitAtEpoch;
+	public Date getValidFromDate() 
+	{
+		if(getTle() != null && getTle().getEpoch() != null)
+		{
+			return new Date(getTle().getEpoch().getTime());
+		}
+			
+		return null;
 	}
 
+	@Override
+	public Date getFromValidDate() 
+	{
+		return getValidFromDate();
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public NotificationChain basicSetOrbitAtEpoch(Orbit newOrbitAtEpoch, NotificationChain msgs) {
-		Orbit oldOrbitAtEpoch = orbitAtEpoch;
-		orbitAtEpoch = newOrbitAtEpoch;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH, oldOrbitAtEpoch, newOrbitAtEpoch);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public Date getValidToDate() 
+	{
+		if(getValidFromDate() != null)
+		{
+			return new Date(getValidFromDate().getTime() + TLE_VALIDITY_PERIOD_MS);
 		}
-		return msgs;
+		
+		return null;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOrbitAtEpoch(Orbit newOrbitAtEpoch) {
-		if (newOrbitAtEpoch != orbitAtEpoch) {
-			NotificationChain msgs = null;
-			if (orbitAtEpoch != null)
-				msgs = ((InternalEObject)orbitAtEpoch).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH, null, msgs);
-			if (newOrbitAtEpoch != null)
-				msgs = ((InternalEObject)newOrbitAtEpoch).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH, null, msgs);
-			msgs = basicSetOrbitAtEpoch(newOrbitAtEpoch, msgs);
-			if (msgs != null) msgs.dispatch();
+	
+	@Override
+	public Date getToValidDate() 
+	{
+		return getValidToDate();		
+	}
+	
+	@Override
+	public Orbit getInitialOrbit() 
+	{
+		if(getTle() != null)
+		{
+			try
+			{
+				return ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createKeplerianOrbit(this);
+			}
+			catch(Exception e)
+			{				
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH, newOrbitAtEpoch, newOrbitAtEpoch));
+		
+		return null;
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,8 +237,6 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				return basicSetTle(null, msgs);
-			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH:
-				return basicSetOrbitAtEpoch(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -262,8 +251,10 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				return getTle();
-			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH:
-				return getOrbitAtEpoch();
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE:
+				return getValidFromDate();
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE:
+				return getValidToDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -278,9 +269,6 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				setTle((TLE)newValue);
-				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH:
-				setOrbitAtEpoch((Orbit)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -297,9 +285,6 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				setTle((TLE)null);
 				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH:
-				setOrbitAtEpoch((Orbit)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -314,8 +299,10 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				return tle != null;
-			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH:
-				return orbitAtEpoch != null;
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE:
+				return VALID_FROM_DATE_EDEFAULT == null ? getValidFromDate() != null : !VALID_FROM_DATE_EDEFAULT.equals(getValidFromDate());
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE:
+				return VALID_TO_DATE_EDEFAULT == null ? getValidToDate() != null : !VALID_TO_DATE_EDEFAULT.equals(getValidToDate());
 		}
 		return super.eIsSet(featureID);
 	}
@@ -332,60 +319,5 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 				return getOreKitTLEPropagator();
 		}
 		return super.eInvoke(operationID, arguments);
-	}
-		
-	private void updateTLERelatedAttributes()
-	{
-		if(getTle() != null)
-		{
-			Date newEpoch = getTle().getEpoch();
-			
-			if(newEpoch != null)
-			{
-				
-				// TODO : Perform these in a transaction friendly way.
-				setValidFromDate(new Date(newEpoch.getTime()));
-				setValidToDate(new Date(newEpoch.getTime() + TLE_VALIDITY_PERIOD_MS));
-				
-				try 
-				{
-					KeplerianEarthOrbit keo = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createKeplerianOrbit(TLEEarthOrbitPropagatorImpl.this);
-					setInitialOrbit(keo);
-				} 
-				catch (Exception e) 	
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				return;
-			}
-		}
-		
-		// TODO : Perform these in a transaction friendly way.
-		setValidFromDate(null);
-		setValidToDate(null);
-		setInitialOrbit(null);
-		
-	}
-	
-	protected Adapter getTLEAdapter()
-	{
-		if(tleAdapter == null)
-		{
-			tleAdapter = new AdapterImpl()
-			{
-				@Override
-				public void notifyChanged(Notification msg) 
-				{
-					if(msg.getNotifier() instanceof TLE)
-					{
-						updateTLERelatedAttributes();												
-					}
-				}
-			};
-		}
-		
-		return tleAdapter;
 	}
 } //TLEEarthOrbitPropagatorImpl

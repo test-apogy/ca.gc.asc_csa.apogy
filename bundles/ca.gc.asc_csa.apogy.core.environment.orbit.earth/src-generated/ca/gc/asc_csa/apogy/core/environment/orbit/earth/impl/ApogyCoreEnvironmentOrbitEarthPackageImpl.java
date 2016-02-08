@@ -33,6 +33,7 @@ import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
@@ -192,6 +193,13 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	private EClass urlBasedTLEEarthOrbitPropagatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractTLEEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -879,8 +887,35 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getEarthOrbitPropagator__GetInitialOrbit() {
+		return earthOrbitPropagatorEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getKeplerianEarthOrbitPropagator() {
 		return keplerianEarthOrbitPropagatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKeplerianEarthOrbitPropagator_ValidFromDate() {
+		return (EAttribute)keplerianEarthOrbitPropagatorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKeplerianEarthOrbitPropagator_ValidToDate() {
+		return (EAttribute)keplerianEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -915,8 +950,17 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTLEEarthOrbitPropagator_OrbitAtEpoch() {
-		return (EReference)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
+	public EAttribute getTLEEarthOrbitPropagator_ValidFromDate() {
+		return (EAttribute)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTLEEarthOrbitPropagator_ValidToDate() {
+		return (EAttribute)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -951,6 +995,177 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAbstractTLE() {
+		return abstractTLEEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_BStar() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_Epoch() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_Eccentricity() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_ElementNumber() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_EphemerisType() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_Inclination() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_MeanAnomaly() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_MeanMotion() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_RevolutionPerDay() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_MeanMotionFirstDerivative() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_MeanMotionSecondDerivative() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_ArgumentOfPerigee() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_RightAscentionOfAscendingNode() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_RevolutionNumberAtEpoch() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTLE_SatelliteNumber() {
+		return (EAttribute)abstractTLEEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractTLE__GetOreKitTLE() {
+		return abstractTLEEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractTLE__GetLine1() {
+		return abstractTLEEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractTLE__GetLine2() {
+		return abstractTLEEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTLE() {
 		return tleEClass;
 	}
@@ -960,7 +1175,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTLE_Line1() {
+	public EAttribute getTLE_FirstLine() {
 		return (EAttribute)tleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -969,152 +1184,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTLE_Line2() {
+	public EAttribute getTLE_SecondLine() {
 		return (EAttribute)tleEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_EphemerisType() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_Inclination() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_MeanAnomaly() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_MeanMotion() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_RevolutionPerDay() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_MeanMotionFirstDerivative() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_MeanMotionSecondDerivative() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_ArgumentOfPerigee() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_RightAscentionOfAscendingNode() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_RevolutionNumberAtEpoch() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_SatelliteNumber() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_BStar() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_Epoch() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_Eccentricity() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLE_ElementNumber() {
-		return (EAttribute)tleEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getTLE__GetOreKitTLE() {
-		return tleEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1824,8 +1895,17 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportTLE__TLE_String() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(26);
 	}
 
 	/**
@@ -2122,37 +2202,45 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE);
+		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT);
 
 		keplerianEarthOrbitPropagatorEClass = createEClass(KEPLERIAN_EARTH_ORBIT_PROPAGATOR);
+		createEAttribute(keplerianEarthOrbitPropagatorEClass, KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE);
+		createEAttribute(keplerianEarthOrbitPropagatorEClass, KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE);
 		createEOperation(keplerianEarthOrbitPropagatorEClass, KEPLERIAN_EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_KEPLERIAN_PROPAGATOR);
 
 		tleEarthOrbitPropagatorEClass = createEClass(TLE_EARTH_ORBIT_PROPAGATOR);
 		createEReference(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__TLE);
-		createEReference(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__ORBIT_AT_EPOCH);
+		createEAttribute(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE);
+		createEAttribute(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE);
 		createEOperation(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_TLE_PROPAGATOR);
 
 		urlBasedTLEEarthOrbitPropagatorEClass = createEClass(URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR);
 		createEAttribute(urlBasedTLEEarthOrbitPropagatorEClass, URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL);
 
+		abstractTLEEClass = createEClass(ABSTRACT_TLE);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__BSTAR);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__EPOCH);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__ECCENTRICITY);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__ELEMENT_NUMBER);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__EPHEMERIS_TYPE);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__INCLINATION);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__MEAN_ANOMALY);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__MEAN_MOTION);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__REVOLUTION_PER_DAY);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__MEAN_MOTION_FIRST_DERIVATIVE);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__MEAN_MOTION_SECOND_DERIVATIVE);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__ARGUMENT_OF_PERIGEE);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__REVOLUTION_NUMBER_AT_EPOCH);
+		createEAttribute(abstractTLEEClass, ABSTRACT_TLE__SATELLITE_NUMBER);
+		createEOperation(abstractTLEEClass, ABSTRACT_TLE___GET_ORE_KIT_TLE);
+		createEOperation(abstractTLEEClass, ABSTRACT_TLE___GET_LINE1);
+		createEOperation(abstractTLEEClass, ABSTRACT_TLE___GET_LINE2);
+
 		tleEClass = createEClass(TLE);
-		createEAttribute(tleEClass, TLE__LINE1);
-		createEAttribute(tleEClass, TLE__LINE2);
-		createEAttribute(tleEClass, TLE__BSTAR);
-		createEAttribute(tleEClass, TLE__EPOCH);
-		createEAttribute(tleEClass, TLE__ECCENTRICITY);
-		createEAttribute(tleEClass, TLE__ELEMENT_NUMBER);
-		createEAttribute(tleEClass, TLE__EPHEMERIS_TYPE);
-		createEAttribute(tleEClass, TLE__INCLINATION);
-		createEAttribute(tleEClass, TLE__MEAN_ANOMALY);
-		createEAttribute(tleEClass, TLE__MEAN_MOTION);
-		createEAttribute(tleEClass, TLE__REVOLUTION_PER_DAY);
-		createEAttribute(tleEClass, TLE__MEAN_MOTION_FIRST_DERIVATIVE);
-		createEAttribute(tleEClass, TLE__MEAN_MOTION_SECOND_DERIVATIVE);
-		createEAttribute(tleEClass, TLE__ARGUMENT_OF_PERIGEE);
-		createEAttribute(tleEClass, TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE);
-		createEAttribute(tleEClass, TLE__REVOLUTION_NUMBER_AT_EPOCH);
-		createEAttribute(tleEClass, TLE__SATELLITE_NUMBER);
-		createEOperation(tleEClass, TLE___GET_ORE_KIT_TLE);
+		createEAttribute(tleEClass, TLE__FIRST_LINE);
+		createEAttribute(tleEClass, TLE__SECOND_LINE);
 
 		earthSurfaceLocationEClass = createEClass(EARTH_SURFACE_LOCATION);
 		createEReference(earthSurfaceLocationEClass, EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES);
@@ -2244,6 +2332,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_TLE__TLE_STRING);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE);
 
 		// Create enums
@@ -2326,9 +2415,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		cartesianEarthOrbitEClass.getESuperTypes().add(this.getEarthOrbit());
 		constantElevationMaskEClass.getESuperTypes().add(this.getElevationMask());
 		earthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getAbstractOrbitPropagator());
+		earthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getInitialOrbitProvider());
 		keplerianEarthOrbitPropagatorEClass.getESuperTypes().add(this.getEarthOrbitPropagator());
+		keplerianEarthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getInitialOrbitContainer());
 		tleEarthOrbitPropagatorEClass.getESuperTypes().add(this.getEarthOrbitPropagator());
 		urlBasedTLEEarthOrbitPropagatorEClass.getESuperTypes().add(this.getTLEEarthOrbitPropagator());
+		tleEClass.getESuperTypes().add(this.getAbstractTLE());
 		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		earthSurfaceLocationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
@@ -2429,40 +2521,51 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
+		initEOperation(getEarthOrbitPropagator__GetInitialOrbit(), theApogyCoreEnvironmentOrbitPackage.getOrbit(), "getInitialOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(keplerianEarthOrbitPropagatorEClass, KeplerianEarthOrbitPropagator.class, "KeplerianEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKeplerianEarthOrbitPropagator_ValidFromDate(), theEcorePackage.getEDate(), "validFromDate", null, 1, 1, KeplerianEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKeplerianEarthOrbitPropagator_ValidToDate(), theEcorePackage.getEDate(), "validToDate", null, 1, 1, KeplerianEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getKeplerianEarthOrbitPropagator__GetOreKitKeplerianPropagator(), this.getOreKitKeplerianPropagator(), "getOreKitKeplerianPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tleEarthOrbitPropagatorEClass, TLEEarthOrbitPropagator.class, "TLEEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTLEEarthOrbitPropagator_Tle(), this.getTLE(), null, "tle", null, 1, 1, TLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTLEEarthOrbitPropagator_OrbitAtEpoch(), theApogyCoreEnvironmentOrbitPackage.getOrbit(), null, "orbitAtEpoch", null, 0, 1, TLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTLEEarthOrbitPropagator_ValidFromDate(), theEcorePackage.getEDate(), "validFromDate", null, 1, 1, TLEEarthOrbitPropagator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTLEEarthOrbitPropagator_ValidToDate(), theEcorePackage.getEDate(), "validToDate", null, 1, 1, TLEEarthOrbitPropagator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getTLEEarthOrbitPropagator__GetOreKitTLEPropagator(), this.getOreKitTLEPropagator(), "getOreKitTLEPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(urlBasedTLEEarthOrbitPropagatorEClass, URLBasedTLEEarthOrbitPropagator.class, "URLBasedTLEEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getURLBasedTLEEarthOrbitPropagator_TleURL(), theEcorePackage.getEString(), "tleURL", null, 0, 1, URLBasedTLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tleEClass, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, "TLE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTLE_Line1(), theEcorePackage.getEString(), "line1", null, 1, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_Line2(), theEcorePackage.getEString(), "line2", null, 1, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_BStar(), theEcorePackage.getEDouble(), "bStar", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_Epoch(), theEcorePackage.getEDate(), "epoch", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_Eccentricity(), theEcorePackage.getEDouble(), "eccentricity", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_ElementNumber(), theEcorePackage.getEInt(), "elementNumber", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_EphemerisType(), this.getEphemerisType(), "ephemerisType", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_Inclination(), theEcorePackage.getEDouble(), "inclination", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_MeanAnomaly(), theEcorePackage.getEDouble(), "meanAnomaly", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_MeanMotion(), theEcorePackage.getEDouble(), "meanMotion", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_RevolutionPerDay(), theEcorePackage.getEDouble(), "revolutionPerDay", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_MeanMotionFirstDerivative(), theEcorePackage.getEDouble(), "meanMotionFirstDerivative", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_MeanMotionSecondDerivative(), theEcorePackage.getEDouble(), "meanMotionSecondDerivative", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_ArgumentOfPerigee(), theEcorePackage.getEDouble(), "argumentOfPerigee", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_RightAscentionOfAscendingNode(), theEcorePackage.getEDouble(), "rightAscentionOfAscendingNode", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_RevolutionNumberAtEpoch(), theEcorePackage.getEInt(), "revolutionNumberAtEpoch", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLE_SatelliteNumber(), theEcorePackage.getEInt(), "satelliteNumber", null, 0, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(abstractTLEEClass, AbstractTLE.class, "AbstractTLE", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAbstractTLE_BStar(), theEcorePackage.getEDouble(), "bStar", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_Epoch(), theEcorePackage.getEDate(), "epoch", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_Eccentricity(), theEcorePackage.getEDouble(), "eccentricity", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_ElementNumber(), theEcorePackage.getEInt(), "elementNumber", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_EphemerisType(), this.getEphemerisType(), "ephemerisType", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_Inclination(), theEcorePackage.getEDouble(), "inclination", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_MeanAnomaly(), theEcorePackage.getEDouble(), "meanAnomaly", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_MeanMotion(), theEcorePackage.getEDouble(), "meanMotion", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_RevolutionPerDay(), theEcorePackage.getEDouble(), "revolutionPerDay", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_MeanMotionFirstDerivative(), theEcorePackage.getEDouble(), "meanMotionFirstDerivative", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_MeanMotionSecondDerivative(), theEcorePackage.getEDouble(), "meanMotionSecondDerivative", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_ArgumentOfPerigee(), theEcorePackage.getEDouble(), "argumentOfPerigee", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_RightAscentionOfAscendingNode(), theEcorePackage.getEDouble(), "rightAscentionOfAscendingNode", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_RevolutionNumberAtEpoch(), theEcorePackage.getEInt(), "revolutionNumberAtEpoch", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTLE_SatelliteNumber(), theEcorePackage.getEInt(), "satelliteNumber", null, 0, 1, AbstractTLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTLE__GetOreKitTLE(), this.getOreKitTLE(), "getOreKitTLE", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getAbstractTLE__GetOreKitTLE(), this.getOreKitTLE(), "getOreKitTLE", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
+
+		initEOperation(getAbstractTLE__GetLine1(), theEcorePackage.getEString(), "getLine1", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAbstractTLE__GetLine2(), theEcorePackage.getEString(), "getLine2", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(tleEClass, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, "TLE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTLE_FirstLine(), theEcorePackage.getEString(), "firstLine", null, 1, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTLE_SecondLine(), theEcorePackage.getEString(), "secondLine", null, 1, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthSurfaceLocationEClass, EarthSurfaceLocation.class, "EarthSurfaceLocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEarthSurfaceLocation_GeographicalCoordinates(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "geographicalCoordinates", null, 0, 1, EarthSurfaceLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2661,6 +2764,11 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		addEParameter(op, theEcorePackage.getEString(), "url", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__ExportTLE__TLE_String(), null, "exportTLE", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getTLE(), "tle", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "url", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+
 		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE(), this.getTLEEarthOrbitPropagator(), "createTLEEarthOrbitPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTLE(), "tle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
@@ -2834,46 +2942,53 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "Semi-major axis, in meters",
-			 "apogy_units", "m"
+			 "apogy_units", "m",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_Eccentricity(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Eccentricity"
+			 "documentation", "Eccentricity",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_Inclination(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Inclination, in radians.",
-			 "apogy_units", "rad"
+			 "apogy_units", "rad",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_PerigeeArgument(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Argument of perigee, in radians.",
-			 "apogy_units", "rad"
+			 "apogy_units", "rad",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_RightAscentionOfAscendingNode(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Right ascension of ascending node, in radians.",
-			 "apogy_units", "rad"
+			 "apogy_units", "rad",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_MeanAnomaly(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Mean anomaly."
+			 "documentation", "Mean anomaly.",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_TrueAnomaly(), 
 		   source, 
 		   new String[] {
-			 "documentation", "True anomaly."
+			 "documentation", "True anomaly.",
+			 "propertyCategory", "KEPLER_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
 		  (getConstantElevationMask_ConstantElevation(), 
@@ -2902,6 +3017,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "documentation", "*\nReturns the list of passes for a given Ground Station (and its Field Of View) during a specified interval."
 		   });	
 		addAnnotation
+		  (getEarthOrbitPropagator__GetInitialOrbit(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the init"
+		   });	
+		addAnnotation
 		  (keplerianEarthOrbitPropagatorEClass, 
 		   source, 
 		   new String[] {
@@ -2916,18 +3037,34 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "property", "Readonly"
 		   });	
 		addAnnotation
+		  (getKeplerianEarthOrbitPropagator_ValidFromDate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines the earliest data for which the propagator is valid."
+		   });	
+		addAnnotation
+		  (getKeplerianEarthOrbitPropagator_ValidToDate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines the latest data for which the propagator is valid."
+		   });	
+		addAnnotation
 		  (getTLEEarthOrbitPropagator_Tle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The Two-Line Elements used by this propagator."
 		   });	
 		addAnnotation
-		  (getTLEEarthOrbitPropagator_OrbitAtEpoch(), 
+		  (getTLEEarthOrbitPropagator_ValidFromDate(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The orbit as defined at the epoch time. This is what is return as this propagator initial orbit.",
-			 "notify", "true",
-			 "property", "Readonly"
+			 "documentation", "Defines the earliest data for which the propagator is valid."
+		   });	
+		addAnnotation
+		  (getTLEEarthOrbitPropagator_ValidToDate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines the latest data for which the propagator is valid."
 		   });	
 		addAnnotation
 		  (getURLBasedTLEEarthOrbitPropagator_TleURL(), 
@@ -2939,37 +3076,25 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "notify", "true"
 		   });	
 		addAnnotation
-		  (tleEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "Defines a Two-Line Elements orbit and propagation definition.\n@see http://en.wikipedia.org/wiki/Two-line_element_set"
-		   });	
-		addAnnotation
-		  (getTLE__GetOreKitTLE(), 
+		  (getAbstractTLE__GetOreKitTLE(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the OreKit implementation backing this TLE."
 		   });	
 		addAnnotation
-		  (getTLE_Line1(), 
+		  (getAbstractTLE__GetLine1(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The first line of the TLE in text form.",
-			 "property", "Editable",
-			 "propertyCategory", "TLE_RAW_DATA",
-			 "notify", "true"
+			 "documentation", "*\nReturns the first line of the TLE.\n@return The first line of the TLE."
 		   });	
 		addAnnotation
-		  (getTLE_Line2(), 
+		  (getAbstractTLE__GetLine2(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The second line of the TLE in text form.",
-			 "property", "Editable",
-			 "propertyCategory", "TLE_RAW_DATA",
-			 "notify", "true"
+			 "documentation", "*\nReturns the second line of the TLE.\n@return The first line of the TLE."
 		   });	
 		addAnnotation
-		  (getTLE_BStar(), 
+		  (getAbstractTLE_BStar(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The ballistic coefficient.",
@@ -2978,7 +3103,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_Epoch(), 
+		  (getAbstractTLE_Epoch(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The epoch.",
@@ -2986,7 +3111,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "notify", "true"
 		   });	
 		addAnnotation
-		  (getTLE_Eccentricity(), 
+		  (getAbstractTLE_Eccentricity(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The eccentricity.",
@@ -2995,7 +3120,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_ElementNumber(), 
+		  (getAbstractTLE_ElementNumber(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The element number.",
@@ -3003,7 +3128,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "notify", "true"
 		   });	
 		addAnnotation
-		  (getTLE_EphemerisType(), 
+		  (getAbstractTLE_EphemerisType(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The Ephemeris type.",
@@ -3011,7 +3136,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "notify", "true"
 		   });	
 		addAnnotation
-		  (getTLE_Inclination(), 
+		  (getAbstractTLE_Inclination(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The inclination.",
@@ -3021,7 +3146,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_MeanAnomaly(), 
+		  (getAbstractTLE_MeanAnomaly(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The mean anomaly.",
@@ -3031,7 +3156,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_MeanMotion(), 
+		  (getAbstractTLE_MeanMotion(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The mean motion.",
@@ -3041,7 +3166,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_RevolutionPerDay(), 
+		  (getAbstractTLE_RevolutionPerDay(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The mean motion, expressed as revolution per day.",
@@ -3051,7 +3176,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_MeanMotionFirstDerivative(), 
+		  (getAbstractTLE_MeanMotionFirstDerivative(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The mean motion first derivative.",
@@ -3061,7 +3186,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_MeanMotionSecondDerivative(), 
+		  (getAbstractTLE_MeanMotionSecondDerivative(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The mean motion second derivative.",
@@ -3071,7 +3196,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_ArgumentOfPerigee(), 
+		  (getAbstractTLE_ArgumentOfPerigee(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The argument of perigee.",
@@ -3081,7 +3206,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_RightAscentionOfAscendingNode(), 
+		  (getAbstractTLE_RightAscentionOfAscendingNode(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Right ascension of ascending node, in radians.",
@@ -3090,7 +3215,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_RevolutionNumberAtEpoch(), 
+		  (getAbstractTLE_RevolutionNumberAtEpoch(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The revolution number at epoch.",
@@ -3098,11 +3223,35 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
-		  (getTLE_SatelliteNumber(), 
+		  (getAbstractTLE_SatelliteNumber(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The satellite id number.",
 			 "property", "Readonly"
+		   });	
+		addAnnotation
+		  (tleEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines a Two-Line Elements orbit and propagation definition.\n@see http://en.wikipedia.org/wiki/Two-line_element_set"
+		   });	
+		addAnnotation
+		  (getTLE_FirstLine(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The first line of the TLE in text form.",
+			 "property", "Editable",
+			 "propertyCategory", "TLE_RAW_DATA",
+			 "notify", "true"
+		   });	
+		addAnnotation
+		  (getTLE_SecondLine(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The second line of the TLE in text form.",
+			 "property", "Editable",
+			 "propertyCategory", "TLE_RAW_DATA",
+			 "notify", "true"
 		   });	
 		addAnnotation
 		  (earthSurfaceLocationEClass, 
@@ -3540,6 +3689,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "Loads a TLE from a URL.\n@param url The URL as a String.\n@return The loaded TLE"
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__ExportTLE__TLE_String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Exports a TLE to a URL.\n@param tle The TLE to export\n@param url The URL as a String.\n@throws An exception if the export fails."
 		   });	
 		addAnnotation
 		  (getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE(), 

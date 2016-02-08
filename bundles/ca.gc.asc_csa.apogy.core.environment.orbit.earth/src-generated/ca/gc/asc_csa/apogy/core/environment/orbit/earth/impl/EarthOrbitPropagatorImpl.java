@@ -23,6 +23,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
@@ -403,6 +405,33 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		return passes;
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Orbit getInitialOrbit() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == InitialOrbitProvider.class) {
+			switch (baseOperationID) {
+				case ApogyCoreEnvironmentOrbitPackage.INITIAL_ORBIT_PROVIDER___GET_INITIAL_ORBIT: return ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
 	@Override
 	public SpacecraftState propagate(Date targetDate) throws Exception 
 	{
@@ -457,6 +486,8 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT:
+				return getInitialOrbit();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

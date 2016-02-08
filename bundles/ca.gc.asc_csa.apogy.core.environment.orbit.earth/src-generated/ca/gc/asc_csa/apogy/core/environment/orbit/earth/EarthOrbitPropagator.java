@@ -17,6 +17,8 @@ import java.util.Date;
 import java.util.List;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import org.orekit.propagation.Propagator;
 
 /**
@@ -33,7 +35,7 @@ import org.orekit.propagation.Propagator;
  * @model abstract="true"
  * @generated
  */
-public interface EarthOrbitPropagator extends AbstractOrbitPropagator {
+public interface EarthOrbitPropagator extends AbstractOrbitPropagator, InitialOrbitProvider {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,4 +68,16 @@ public interface EarthOrbitPropagator extends AbstractOrbitPropagator {
 	 * @generated
 	 */
 	List<VisibilityPass> getGroundStationPasses(GroundStation groundStation, Date startDate, Date endDate) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Return the init
+	 * <!-- end-model-doc -->
+	 * @model kind="operation" unique="false"
+	 * @generated
+	 */
+	Orbit getInitialOrbit();
 } // EarthOrbitPropagator

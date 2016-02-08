@@ -163,11 +163,31 @@ public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreEnvironmentOrbitPackage.VALIDITY_RANGE_PROVIDER: {
+				ValidityRangeProvider validityRangeProvider = (ValidityRangeProvider)theEObject;
+				T result = caseValidityRangeProvider(validityRangeProvider);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR: {
 				AbstractOrbitPropagator abstractOrbitPropagator = (AbstractOrbitPropagator)theEObject;
 				T result = caseAbstractOrbitPropagator(abstractOrbitPropagator);
 				if (result == null) result = caseNamed(abstractOrbitPropagator);
 				if (result == null) result = caseDescribed(abstractOrbitPropagator);
+				if (result == null) result = caseValidityRangeProvider(abstractOrbitPropagator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreEnvironmentOrbitPackage.INITIAL_ORBIT_PROVIDER: {
+				InitialOrbitProvider initialOrbitProvider = (InitialOrbitProvider)theEObject;
+				T result = caseInitialOrbitProvider(initialOrbitProvider);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreEnvironmentOrbitPackage.INITIAL_ORBIT_CONTAINER: {
+				InitialOrbitContainer initialOrbitContainer = (InitialOrbitContainer)theEObject;
+				T result = caseInitialOrbitContainer(initialOrbitContainer);
+				if (result == null) result = caseInitialOrbitProvider(initialOrbitContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -356,6 +376,21 @@ public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Validity Range Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Validity Range Provider</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseValidityRangeProvider(ValidityRangeProvider object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Orbit Propagator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -367,6 +402,36 @@ public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractOrbitPropagator(AbstractOrbitPropagator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Initial Orbit Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Initial Orbit Provider</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInitialOrbitProvider(InitialOrbitProvider object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Initial Orbit Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Initial Orbit Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInitialOrbitContainer(InitialOrbitContainer object) {
 		return null;
 	}
 

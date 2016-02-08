@@ -84,8 +84,7 @@ public class ApogyCoreEnvironmentOrbitFacadeImpl extends MinimalEObjectImpl.Cont
 		AbstractOrbitPropagator propagatorCopy = null;
 		if(originalOrbitModel.getPropagator() != null)
 		{
-			propagatorCopy = EcoreUtil.copy(originalOrbitModel.getPropagator());
-			propagatorCopy.setInitialOrbit(initialOrbitCopy);			
+			propagatorCopy = EcoreUtil.copy(originalOrbitModel.getPropagator());				
 		}
 		
 		// Sets the initial orbit and propagator.
