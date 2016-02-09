@@ -228,6 +228,34 @@ class SunVector3DToolNode extends Node
 	refers transient SunVector3DTool sunVector3DTool opposite sunVector3DToolNode	
 }
 
+/**
+ * A 3D tool used to defined a trajectory by piking point in the 3D world.
+ */
+ 
+class TrajectoryPickingTool extends Simple3DTool
+{
+	/** All the  WayPointPath created with this tool.*/
+	contains WayPointPath[1..*] paths
+	
+	/** The WayPointPath to which selected points are to be added. */
+	refers WayPointPath[1] activePath
+	
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="TRAJECTORY_PICKING_TOOL")
+	refers transient TrajectoryPickingToolNode trajectoryPickingToolNode opposite trajectoryPickingTool
+	
+	/**
+	 * Clear all point form the active path. 
+	 */
+	op void clearActivePath()	
+}
+
+/**
+  * Node representing the TrajectoryPickingTool in the topology.
+  */
+class TrajectoryPickingToolNode extends AggregateGroupNode
+{
+	refers transient TrajectoryPickingTool trajectoryPickingTool opposite trajectoryPickingToolNode
+}
 
 /**
  * A 3D tool used to trace the trajectory of a Variable.
