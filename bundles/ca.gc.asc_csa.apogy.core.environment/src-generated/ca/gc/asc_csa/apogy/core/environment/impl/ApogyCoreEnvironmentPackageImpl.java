@@ -4253,6 +4253,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		  (this, 
 		   source, 
 		   new String[] {
+			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyCoreEnvironment",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -4289,12 +4290,6 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 			 "children", "true",
 			 "notify", "true",
 			 "property", "None"
-		   });	
-		addAnnotation
-		  (earthSurfaceWorksiteEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "A specialization of Worksite defining a are or volume at the Earth surface."
 		   });	
 		addAnnotation
 		  (getEarthSurfaceWorksite__ConvertToGeographicCoordinates__Tuple3d(), 

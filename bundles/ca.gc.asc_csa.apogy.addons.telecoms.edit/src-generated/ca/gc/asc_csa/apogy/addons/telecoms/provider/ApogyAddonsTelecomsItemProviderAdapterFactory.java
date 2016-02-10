@@ -46,9 +46,13 @@ import ca.gc.asc_csa.apogy.addons.util.ApogyAddonsSwitch;
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.environment.Map;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
@@ -960,6 +964,157 @@ public class ApogyAddonsTelecomsItemProviderAdapterFactory extends ApogyAddonsTe
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAssemblyLink(AssemblyLink object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return ApogyAddonsTelecomsEditPlugin.INSTANCE;
+		}
+	}
+
+	/**
+	 * A child creation extender for the {@link ApogyCommonTopologyBindingsPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class ApogyCommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends ApogyCommonTopologyBindingsSwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseEnumerationCase(EnumerationCase object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				return null;

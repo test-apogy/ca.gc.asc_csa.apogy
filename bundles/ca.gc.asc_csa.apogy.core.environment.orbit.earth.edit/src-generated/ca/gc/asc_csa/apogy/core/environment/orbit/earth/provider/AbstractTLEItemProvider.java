@@ -415,14 +415,35 @@ public class AbstractTLEItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object) 
+	{
 		AbstractTLE abstractTLE = (AbstractTLE)object;
-		return getString("_UI_AbstractTLE_type") + " " + abstractTLE.getBStar();
+		
+		String prefix = getTextPrefix();		
+		String label = "S/C "; 
+				
+		/* If the Spacecraft ID is defined, add it to the label.*/
+		if(abstractTLE.getSatelliteNumber() > 0)
+		{
+			label += Integer.toString(abstractTLE.getSatelliteNumber());
+		}
+		else
+		{
+			label += "<?>";
+		}
+				
+		return label == null || label.length() == 0 ?
+				prefix :
+				prefix + " " + label;			
 	}
 	
+	protected String getTextPrefix()
+	{
+		return getString("_UI_AbstractTLE_type");
+	}
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

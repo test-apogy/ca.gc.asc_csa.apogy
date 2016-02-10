@@ -101,7 +101,7 @@ public interface ApogyAddonsVehiclePackage extends EPackage
   int VEHICLE_POSE_CORRECTOR = 0;
 
   /**
-	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

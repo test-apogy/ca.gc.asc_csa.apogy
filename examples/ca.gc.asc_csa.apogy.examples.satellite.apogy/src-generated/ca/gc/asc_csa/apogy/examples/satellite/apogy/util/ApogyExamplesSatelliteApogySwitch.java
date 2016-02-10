@@ -25,7 +25,6 @@ import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
-
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.*;
 
 /**
