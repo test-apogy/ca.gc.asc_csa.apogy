@@ -78,7 +78,29 @@
             </visibleWhen>
          </command>         
       </menuContribution>
-   </extension>
-   
+      
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
 
+         <command
+               commandId="ca.gc.asc_csa.examples.satellite.ui.commands.ExportConstellationPlanCommand"
+               label="Export Constellation Plan"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>         
+      </menuContribution>      
+   </extension>
 </plugin>
