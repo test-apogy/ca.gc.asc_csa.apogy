@@ -35,7 +35,7 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractSatelliteCommand()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface AbstractSatelliteCommand extends GeographicCoordinates, Timed {

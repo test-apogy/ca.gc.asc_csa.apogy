@@ -71,16 +71,20 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ApogyExamplesSatellitePackage.DIGIT_UID: return createDigitUID();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST: return createConstellationCommandPlansList();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: return createConstellationCommandPlan();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM: return createConstellationCommandPlanItem();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_REQUEST: return createDefaultConstellationRequest();
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
 			case ApogyExamplesSatellitePackage.SATELLITES_LIST: return createSatellitesList();
 			case ApogyExamplesSatellitePackage.SATELLITE: return createSatellite();
-			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND: return createAbstractSatelliteCommand();
 			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: return createAcquireImageSatelliteCommand();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE: return createOrbitalImage();
+			case ApogyExamplesSatellitePackage.TURN_ON_SATELLITE_COMMAND: return createTurnOnSatelliteCommand();
+			case ApogyExamplesSatellitePackage.TURN_OFF_SATELLITE_COMMAND: return createTurnOffSatelliteCommand();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: return createConstellationDownlinksList();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINK: return createConstellationDownlink();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM: return createOrbitalImageConstellationDownlinkItem();
@@ -137,6 +141,26 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DigitUID createDigitUID() {
+		DigitUIDImpl digitUID = new DigitUIDImpl();
+		return digitUID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationCommandPlansList createConstellationCommandPlansList() {
+		ConstellationCommandPlansListImpl constellationCommandPlansList = new ConstellationCommandPlansListImpl();
+		return constellationCommandPlansList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ConstellationCommandPlan createConstellationCommandPlan() {
 		ConstellationCommandPlanImpl constellationCommandPlan = new ConstellationCommandPlanImpl();
 		return constellationCommandPlan;
@@ -177,6 +201,16 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DefaultConstellationRequest createDefaultConstellationRequest() {
+		DefaultConstellationRequestImpl defaultConstellationRequest = new DefaultConstellationRequestImpl();
+		return defaultConstellationRequest;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ImageConstellationRequest createImageConstellationRequest() {
 		ImageConstellationRequestImpl imageConstellationRequest = new ImageConstellationRequestImpl();
 		return imageConstellationRequest;
@@ -207,16 +241,6 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractSatelliteCommand createAbstractSatelliteCommand() {
-		AbstractSatelliteCommandImpl abstractSatelliteCommand = new AbstractSatelliteCommandImpl();
-		return abstractSatelliteCommand;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public AcquireImageSatelliteCommand createAcquireImageSatelliteCommand() {
 		AcquireImageSatelliteCommandImpl acquireImageSatelliteCommand = new AcquireImageSatelliteCommandImpl();
 		return acquireImageSatelliteCommand;
@@ -230,6 +254,26 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	public OrbitalImage createOrbitalImage() {
 		OrbitalImageImpl orbitalImage = new OrbitalImageImpl();
 		return orbitalImage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TurnOnSatelliteCommand createTurnOnSatelliteCommand() {
+		TurnOnSatelliteCommandImpl turnOnSatelliteCommand = new TurnOnSatelliteCommandImpl();
+		return turnOnSatelliteCommand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TurnOffSatelliteCommand createTurnOffSatelliteCommand() {
+		TurnOffSatelliteCommandImpl turnOffSatelliteCommand = new TurnOffSatelliteCommandImpl();
+		return turnOffSatelliteCommand;
 	}
 
 	/**

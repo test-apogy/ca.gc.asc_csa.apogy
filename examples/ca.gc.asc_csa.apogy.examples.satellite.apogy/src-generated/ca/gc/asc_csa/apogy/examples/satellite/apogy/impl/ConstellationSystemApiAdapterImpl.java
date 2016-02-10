@@ -65,7 +65,10 @@ public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 		data.setConstellationRequestsList(EcoreUtil.copy(constellation.getConstellationRequestsList()));
 		data.setDownlinksLists(EcoreUtil.copy(constellation.getDownlinksLists()));
 		data.setGroundStationsReferencesList(EcoreUtil.copy(constellation.getGroundStationsReferencesList()));
-		data.setSatellitesList(EcoreUtil.copy(constellation.getSatellitesList()));		
+		data.setSatellitesList(EcoreUtil.copy(constellation.getSatellitesList()));
+		
+		// FIXME Remove the following line.
+		data.setConstellationCommandPlansList(EcoreUtil.copy(constellation.getConstellationCommandPlansList()));
 	}
 	
 	@Override
@@ -79,6 +82,9 @@ public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 		constellation.setDownlinksLists(EcoreUtil.copy(data.getDownlinksLists()));
 		constellation.setGroundStationsReferencesList(EcoreUtil.copy(data.getGroundStationsReferencesList()));
 		constellation.setSatellitesList(EcoreUtil.copy(data.getSatellitesList()));		
+		
+		// FIXME Remove the following line.		
+		constellation.setConstellationCommandPlansList(EcoreUtil.copy(data.getConstellationCommandPlansList()));
 	}
 	
 } //ConstellationSystemApiAdapterImpl

@@ -85,6 +85,25 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case ApogyExamplesSatellitePackage.UID: {
+				UID uid = (UID)theEObject;
+				T result = caseUID(uid);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyExamplesSatellitePackage.DIGIT_UID: {
+				DigitUID digitUID = (DigitUID)theEObject;
+				T result = caseDigitUID(digitUID);
+				if (result == null) result = caseUID(digitUID);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST: {
+				ConstellationCommandPlansList constellationCommandPlansList = (ConstellationCommandPlansList)theEObject;
+				T result = caseConstellationCommandPlansList(constellationCommandPlansList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION: {
 				AbstractConstellation abstractConstellation = (AbstractConstellation)theEObject;
 				T result = caseAbstractConstellation(abstractConstellation);
@@ -122,11 +141,19 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_REQUEST: {
+				DefaultConstellationRequest defaultConstellationRequest = (DefaultConstellationRequest)theEObject;
+				T result = caseDefaultConstellationRequest(defaultConstellationRequest);
+				if (result == null) result = caseAbstractConstellationRequest(defaultConstellationRequest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: {
 				ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest)theEObject;
 				T result = caseImageConstellationRequest(imageConstellationRequest);
-				if (result == null) result = caseAbstractConstellationRequest(imageConstellationRequest);
+				if (result == null) result = caseDefaultConstellationRequest(imageConstellationRequest);
 				if (result == null) result = caseGeographicCoordinates(imageConstellationRequest);
+				if (result == null) result = caseAbstractConstellationRequest(imageConstellationRequest);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -168,6 +195,24 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyExamplesSatellitePackage.TURN_ON_SATELLITE_COMMAND: {
+				TurnOnSatelliteCommand turnOnSatelliteCommand = (TurnOnSatelliteCommand)theEObject;
+				T result = caseTurnOnSatelliteCommand(turnOnSatelliteCommand);
+				if (result == null) result = caseAbstractSatelliteCommand(turnOnSatelliteCommand);
+				if (result == null) result = caseGeographicCoordinates(turnOnSatelliteCommand);
+				if (result == null) result = caseTimed(turnOnSatelliteCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyExamplesSatellitePackage.TURN_OFF_SATELLITE_COMMAND: {
+				TurnOffSatelliteCommand turnOffSatelliteCommand = (TurnOffSatelliteCommand)theEObject;
+				T result = caseTurnOffSatelliteCommand(turnOffSatelliteCommand);
+				if (result == null) result = caseAbstractSatelliteCommand(turnOffSatelliteCommand);
+				if (result == null) result = caseGeographicCoordinates(turnOffSatelliteCommand);
+				if (result == null) result = caseTimed(turnOffSatelliteCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: {
 				ConstellationDownlinksList constellationDownlinksList = (ConstellationDownlinksList)theEObject;
 				T result = caseConstellationDownlinksList(constellationDownlinksList);
@@ -203,6 +248,51 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>UID</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>UID</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUID(UID object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Digit UID</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Digit UID</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDigitUID(DigitUID object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constellation Command Plans List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constellation Command Plans List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstellationCommandPlansList(ConstellationCommandPlansList object) {
+		return null;
 	}
 
 	/**
@@ -296,6 +386,21 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Default Constellation Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Default Constellation Request</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDefaultConstellationRequest(DefaultConstellationRequest object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Image Constellation Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -382,6 +487,36 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOrbitalImage(OrbitalImage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Turn On Satellite Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Turn On Satellite Command</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTurnOnSatelliteCommand(TurnOnSatelliteCommand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Turn Off Satellite Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Turn Off Satellite Command</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTurnOffSatelliteCommand(TurnOffSatelliteCommand object) {
 		return null;
 	}
 

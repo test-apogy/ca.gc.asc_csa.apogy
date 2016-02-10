@@ -122,6 +122,52 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.DigitUID} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DigitUIDItemProvider digitUIDItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DigitUID}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDigitUIDAdapter() {
+		if (digitUIDItemProvider == null) {
+			digitUIDItemProvider = new DigitUIDItemProvider(this);
+		}
+
+		return digitUIDItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConstellationCommandPlansListItemProvider constellationCommandPlansListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConstellationCommandPlansListAdapter() {
+		if (constellationCommandPlansListItemProvider == null) {
+			constellationCommandPlansListItemProvider = new ConstellationCommandPlansListItemProvider(this);
+		}
+
+		return constellationCommandPlansListItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -214,6 +260,29 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationRequest} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DefaultConstellationRequestItemProvider defaultConstellationRequestItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationRequest}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDefaultConstellationRequestAdapter() {
+		if (defaultConstellationRequestItemProvider == null) {
+			defaultConstellationRequestItemProvider = new DefaultConstellationRequestItemProvider(this);
+		}
+
+		return defaultConstellationRequestItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -283,29 +352,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AbstractSatelliteCommandItemProvider abstractSatelliteCommandItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAbstractSatelliteCommandAdapter() {
-		if (abstractSatelliteCommandItemProvider == null) {
-			abstractSatelliteCommandItemProvider = new AbstractSatelliteCommandItemProvider(this);
-		}
-
-		return abstractSatelliteCommandItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -349,6 +395,52 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 		}
 
 		return orbitalImageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOnSatelliteCommand} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TurnOnSatelliteCommandItemProvider turnOnSatelliteCommandItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOnSatelliteCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTurnOnSatelliteCommandAdapter() {
+		if (turnOnSatelliteCommandItemProvider == null) {
+			turnOnSatelliteCommandItemProvider = new TurnOnSatelliteCommandItemProvider(this);
+		}
+
+		return turnOnSatelliteCommandItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOffSatelliteCommand} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TurnOffSatelliteCommandItemProvider turnOffSatelliteCommandItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOffSatelliteCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTurnOffSatelliteCommandAdapter() {
+		if (turnOffSatelliteCommandItemProvider == null) {
+			turnOffSatelliteCommandItemProvider = new TurnOffSatelliteCommandItemProvider(this);
+		}
+
+		return turnOffSatelliteCommandItemProvider;
 	}
 
 	/**
@@ -569,16 +661,20 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	 * @generated
 	 */
 	public void dispose() {
+		if (digitUIDItemProvider != null) digitUIDItemProvider.dispose();
+		if (constellationCommandPlansListItemProvider != null) constellationCommandPlansListItemProvider.dispose();
 		if (constellationCommandPlanItemProvider != null) constellationCommandPlanItemProvider.dispose();
 		if (constellationCommandPlanItemItemProvider != null) constellationCommandPlanItemItemProvider.dispose();
 		if (defaultConstellationItemProvider != null) defaultConstellationItemProvider.dispose();
 		if (constellationRequestsListItemProvider != null) constellationRequestsListItemProvider.dispose();
+		if (defaultConstellationRequestItemProvider != null) defaultConstellationRequestItemProvider.dispose();
 		if (imageConstellationRequestItemProvider != null) imageConstellationRequestItemProvider.dispose();
 		if (satellitesListItemProvider != null) satellitesListItemProvider.dispose();
 		if (satelliteItemProvider != null) satelliteItemProvider.dispose();
-		if (abstractSatelliteCommandItemProvider != null) abstractSatelliteCommandItemProvider.dispose();
 		if (acquireImageSatelliteCommandItemProvider != null) acquireImageSatelliteCommandItemProvider.dispose();
 		if (orbitalImageItemProvider != null) orbitalImageItemProvider.dispose();
+		if (turnOnSatelliteCommandItemProvider != null) turnOnSatelliteCommandItemProvider.dispose();
+		if (turnOffSatelliteCommandItemProvider != null) turnOffSatelliteCommandItemProvider.dispose();
 		if (constellationDownlinksListItemProvider != null) constellationDownlinksListItemProvider.dispose();
 		if (constellationDownlinkItemProvider != null) constellationDownlinkItemProvider.dispose();
 		if (orbitalImageConstellationDownlinkItemItemProvider != null) orbitalImageConstellationDownlinkItemItemProvider.dispose();
@@ -640,12 +736,17 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 
 				return null;
 			}
@@ -665,12 +766,17 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -680,12 +786,17 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -695,12 +806,17 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 
 				return null;
 			}
@@ -792,12 +908,17 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 
 				return null;
 			}
@@ -836,12 +957,17 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 
 				return null;
 			}
@@ -1015,6 +1141,16 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDigitUID()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlansList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlan()));
 
 				newChildDescriptors.add
@@ -1035,6 +1171,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationRequest()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
@@ -1050,17 +1191,22 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1095,6 +1241,16 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDigitUID()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlansList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlan()));
 
 				newChildDescriptors.add
@@ -1115,6 +1271,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationRequest()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
@@ -1130,17 +1291,22 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter

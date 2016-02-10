@@ -87,6 +87,18 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	protected ApogyExamplesSatelliteSwitch<Adapter> modelSwitch =
 		new ApogyExamplesSatelliteSwitch<Adapter>() {
 			@Override
+			public Adapter caseUID(UID object) {
+				return createUIDAdapter();
+			}
+			@Override
+			public Adapter caseDigitUID(DigitUID object) {
+				return createDigitUIDAdapter();
+			}
+			@Override
+			public Adapter caseConstellationCommandPlansList(ConstellationCommandPlansList object) {
+				return createConstellationCommandPlansListAdapter();
+			}
+			@Override
 			public Adapter caseAbstractConstellation(AbstractConstellation object) {
 				return createAbstractConstellationAdapter();
 			}
@@ -111,6 +123,10 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractConstellationRequestAdapter();
 			}
 			@Override
+			public Adapter caseDefaultConstellationRequest(DefaultConstellationRequest object) {
+				return createDefaultConstellationRequestAdapter();
+			}
+			@Override
 			public Adapter caseImageConstellationRequest(ImageConstellationRequest object) {
 				return createImageConstellationRequestAdapter();
 			}
@@ -133,6 +149,14 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseOrbitalImage(OrbitalImage object) {
 				return createOrbitalImageAdapter();
+			}
+			@Override
+			public Adapter caseTurnOnSatelliteCommand(TurnOnSatelliteCommand object) {
+				return createTurnOnSatelliteCommandAdapter();
+			}
+			@Override
+			public Adapter caseTurnOffSatelliteCommand(TurnOffSatelliteCommand object) {
+				return createTurnOffSatelliteCommandAdapter();
 			}
 			@Override
 			public Adapter caseConstellationDownlinksList(ConstellationDownlinksList object) {
@@ -197,6 +221,48 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.UID <em>UID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.UID
+	 * @generated
+	 */
+	public Adapter createUIDAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.DigitUID <em>Digit UID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.DigitUID
+	 * @generated
+	 */
+	public Adapter createDigitUIDAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList <em>Constellation Command Plans List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList
+	 * @generated
+	 */
+	public Adapter createConstellationCommandPlansListAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation <em>Abstract Constellation</em>}'.
@@ -283,6 +349,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationRequest <em>Default Constellation Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationRequest
+	 * @generated
+	 */
+	public Adapter createDefaultConstellationRequestAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest <em>Image Constellation Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -363,6 +443,34 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOrbitalImageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.TurnOnSatelliteCommand <em>Turn On Satellite Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.TurnOnSatelliteCommand
+	 * @generated
+	 */
+	public Adapter createTurnOnSatelliteCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.TurnOffSatelliteCommand <em>Turn Off Satellite Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.TurnOffSatelliteCommand
+	 * @generated
+	 */
+	public Adapter createTurnOffSatelliteCommandAdapter() {
 		return null;
 	}
 

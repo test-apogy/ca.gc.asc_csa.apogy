@@ -172,6 +172,15 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getConstellationData_ConstellationCommandPlansList() {
+		return (EReference)constellationDataEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyExamplesSatelliteApogyFactory getApogyExamplesSatelliteApogyFactory() {
 		return (ApogyExamplesSatelliteApogyFactory)getEFactoryInstance();
 	}
@@ -202,6 +211,7 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		createEReference(constellationDataEClass, CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST);
 		createEReference(constellationDataEClass, CONSTELLATION_DATA__DOWNLINKS_LISTS);
 		createEReference(constellationDataEClass, CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST);
+		createEReference(constellationDataEClass, CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST);
 	}
 
 	/**
@@ -248,6 +258,7 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		initEReference(getConstellationData_GroundStationsReferencesList(), theApogyCoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstellationData_DownlinksLists(), theApogyExamplesSatellitePackage.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstellationData_ConstellationRequestsList(), theApogyExamplesSatellitePackage.getConstellationRequestsList(), null, "constellationRequestsList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationData_ConstellationCommandPlansList(), theApogyExamplesSatellitePackage.getConstellationCommandPlansList(), null, "constellationCommandPlansList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -309,6 +320,12 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "documentation", "List of {@link AbstractConstellationRequest}."
+		   });	
+		addAnnotation
+		  (getConstellationData_ConstellationCommandPlansList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "FIXME Remove the following item."
 		   });
 	}
 

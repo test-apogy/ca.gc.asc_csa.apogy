@@ -36,7 +36,7 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
  * @model
  * @generated
  */
-public interface ImageConstellationRequest extends AbstractConstellationRequest, GeographicCoordinates {
+public interface ImageConstellationRequest extends DefaultConstellationRequest, GeographicCoordinates {
 	/**
 	 * Returns the value of the '<em><b>Image</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -40,30 +40,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface AbstractConstellationRequest extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Uid</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
+	 * Returns the value of the '<em><b>Uid</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Request Unique Identifier.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Uid</em>' attribute.
-	 * @see #setUid(long)
+	 * @return the value of the '<em>Uid</em>' containment reference.
+	 * @see #setUid(UID)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationRequest_Uid()
-	 * @model default="0" unique="false"
+	 * @model containment="true"
 	 * @generated
 	 */
-	long getUid();
+	UID getUid();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getUid <em>Uid</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getUid <em>Uid</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Uid</em>' attribute.
+	 * @param value the new value of the '<em>Uid</em>' containment reference.
 	 * @see #getUid()
 	 * @generated
 	 */
-	void setUid(long value);
+	void setUid(UID value);
 
 	/**
 	 * Returns the value of the '<em><b>Order Priority</b></em>' attribute.

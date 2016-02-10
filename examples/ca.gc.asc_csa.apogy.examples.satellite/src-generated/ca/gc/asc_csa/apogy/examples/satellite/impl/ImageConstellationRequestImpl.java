@@ -44,7 +44,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  *
  * @generated
  */
-public class ImageConstellationRequestImpl extends AbstractConstellationRequestImpl implements ImageConstellationRequest {
+public class ImageConstellationRequestImpl extends DefaultConstellationRequestImpl implements ImageConstellationRequest {
 	/**
 	 * The default value of the '{@link #getLongitude() <em>Longitude</em>}' attribute.
 	 * <!-- begin-user-doc -->

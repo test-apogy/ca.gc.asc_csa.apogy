@@ -26,6 +26,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
+import ca.gc.asc_csa.apogy.examples.satellite.UID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
@@ -46,24 +47,14 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  */
 public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImpl.Container implements AbstractConstellationRequest {
 	/**
-	 * The default value of the '{@link #getUid() <em>Uid</em>}' attribute.
+	 * The cached value of the '{@link #getUid() <em>Uid</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getUid()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long UID_EDEFAULT = 0L;
-
-	/**
-	 * The cached value of the '{@link #getUid() <em>Uid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUid()
-	 * @generated
-	 * @ordered
-	 */
-	protected long uid = UID_EDEFAULT;
+	protected UID uid;
 
 	/**
 	 * The default value of the '{@link #getOrderPriority() <em>Order Priority</em>}' attribute.
@@ -139,7 +130,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getUid() {
+	public UID getUid() {
 		return uid;
 	}
 
@@ -148,11 +139,33 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUid(long newUid) {
-		long oldUid = uid;
+	public NotificationChain basicSetUid(UID newUid, NotificationChain msgs) {
+		UID oldUid = uid;
 		uid = newUid;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID, oldUid, uid));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID, oldUid, newUid);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUid(UID newUid) {
+		if (newUid != uid) {
+			NotificationChain msgs = null;
+			if (uid != null)
+				msgs = ((InternalEObject)uid).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID, null, msgs);
+			if (newUid != null)
+				msgs = ((InternalEObject)newUid).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID, null, msgs);
+			msgs = basicSetUid(newUid, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID, newUid, newUid));
 	}
 
 	/**
@@ -264,6 +277,8 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
+				return basicSetUid(null, msgs);
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				return basicSetSatelliteCommand(null, msgs);
 		}
@@ -299,7 +314,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
-				setUid((Long)newValue);
+				setUid((UID)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 				setOrderPriority((ConstellationRequestPriority)newValue);
@@ -323,7 +338,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
-				setUid(UID_EDEFAULT);
+				setUid((UID)null);
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 				setOrderPriority(ORDER_PRIORITY_EDEFAULT);
@@ -347,7 +362,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
-				return uid != UID_EDEFAULT;
+				return uid != null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 				return orderPriority != ORDER_PRIORITY_EDEFAULT;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
@@ -368,9 +383,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (uid: ");
-		result.append(uid);
-		result.append(", orderPriority: ");
+		result.append(" (orderPriority: ");
 		result.append(orderPriority);
 		result.append(", orderStatus: ");
 		result.append(orderStatus);

@@ -301,13 +301,22 @@ public interface ApogyExamplesSatelliteApogyPackage extends EPackage {
 	int CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Constellation Command Plans List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Constellation Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
+	int CONSTELLATION_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Constellation Data</em>' class.
@@ -384,6 +393,17 @@ public interface ApogyExamplesSatelliteApogyPackage extends EPackage {
 	EReference getConstellationData_ConstellationRequestsList();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationCommandPlansList <em>Constellation Command Plans List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Constellation Command Plans List</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationCommandPlansList()
+	 * @see #getConstellationData()
+	 * @generated
+	 */
+	EReference getConstellationData_ConstellationCommandPlansList();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -457,6 +477,14 @@ public interface ApogyExamplesSatelliteApogyPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST = eINSTANCE.getConstellationData_ConstellationRequestsList();
+
+		/**
+		 * The meta object literal for the '<em><b>Constellation Command Plans List</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST = eINSTANCE.getConstellationData_ConstellationCommandPlansList();
 
 	}
 

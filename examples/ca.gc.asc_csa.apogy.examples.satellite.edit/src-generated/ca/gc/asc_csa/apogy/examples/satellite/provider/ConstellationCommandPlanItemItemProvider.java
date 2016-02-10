@@ -187,12 +187,17 @@ public class ConstellationCommandPlanItemItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 	}
 
 	/**

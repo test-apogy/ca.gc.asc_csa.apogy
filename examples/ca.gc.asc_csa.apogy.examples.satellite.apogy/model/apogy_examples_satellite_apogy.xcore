@@ -22,12 +22,13 @@
 
 package ca.gc.asc_csa.apogy.examples.satellite.apogy
 
-import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
-import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList
 
 class ConstellationSystemApiAdapter extends ApogySystemApiAdapter
 {
@@ -66,4 +67,9 @@ class ConstellationData extends ApogyInitializationData
 	 * List of {@link AbstractConstellationRequest}.
 	 */
 	contains ConstellationRequestsList[0..1] constellationRequestsList
+	
+	/*
+	 * FIXME Remove the following item.
+	 */
+	contains ConstellationCommandPlansList[0..1] constellationCommandPlansList
 }

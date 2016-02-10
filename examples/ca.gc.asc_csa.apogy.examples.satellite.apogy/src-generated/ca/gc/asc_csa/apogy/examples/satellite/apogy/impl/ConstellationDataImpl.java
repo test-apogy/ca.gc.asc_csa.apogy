@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
 import ca.gc.asc_csa.apogy.core.impl.ApogyInitializationDataImpl;
-
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
@@ -40,6 +40,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyP
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationDataImpl#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationDataImpl#getDownlinksLists <em>Downlinks Lists</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationDataImpl#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationDataImpl#getConstellationCommandPlansList <em>Constellation Command Plans List</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,6 +84,15 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 	 */
 	protected ConstellationRequestsList constellationRequestsList;
 
+	/**
+	 * The cached value of the '{@link #getConstellationCommandPlansList() <em>Constellation Command Plans List</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConstellationCommandPlansList()
+	 * @generated
+	 * @ordered
+	 */
+	protected ConstellationCommandPlansList constellationCommandPlansList;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -279,6 +289,49 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConstellationCommandPlansList getConstellationCommandPlansList() {
+		return constellationCommandPlansList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConstellationCommandPlansList(ConstellationCommandPlansList newConstellationCommandPlansList, NotificationChain msgs) {
+		ConstellationCommandPlansList oldConstellationCommandPlansList = constellationCommandPlansList;
+		constellationCommandPlansList = newConstellationCommandPlansList;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST, oldConstellationCommandPlansList, newConstellationCommandPlansList);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConstellationCommandPlansList(ConstellationCommandPlansList newConstellationCommandPlansList) {
+		if (newConstellationCommandPlansList != constellationCommandPlansList) {
+			NotificationChain msgs = null;
+			if (constellationCommandPlansList != null)
+				msgs = ((InternalEObject)constellationCommandPlansList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST, null, msgs);
+			if (newConstellationCommandPlansList != null)
+				msgs = ((InternalEObject)newConstellationCommandPlansList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST, null, msgs);
+			msgs = basicSetConstellationCommandPlansList(newConstellationCommandPlansList, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST, newConstellationCommandPlansList, newConstellationCommandPlansList));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -290,6 +343,8 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 				return basicSetDownlinksLists(null, msgs);
 			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
 				return basicSetConstellationRequestsList(null, msgs);
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST:
+				return basicSetConstellationCommandPlansList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -310,6 +365,8 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 				return getDownlinksLists();
 			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
 				return getConstellationRequestsList();
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST:
+				return getConstellationCommandPlansList();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -319,6 +376,7 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -333,6 +391,9 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 				return;
 			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
 				setConstellationRequestsList((ConstellationRequestsList)newValue);
+				return;
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST:
+				setConstellationCommandPlansList((ConstellationCommandPlansList)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -358,6 +419,9 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
 				setConstellationRequestsList((ConstellationRequestsList)null);
 				return;
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST:
+				setConstellationCommandPlansList((ConstellationCommandPlansList)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -378,6 +442,8 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 				return downlinksLists != null;
 			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
 				return constellationRequestsList != null;
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST:
+				return constellationCommandPlansList != null;
 		}
 		return super.eIsSet(featureID);
 	}

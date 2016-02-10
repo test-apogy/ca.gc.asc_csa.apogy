@@ -33,6 +33,24 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	ApogyExamplesSatelliteFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatelliteFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Digit UID</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Digit UID</em>'.
+	 * @generated
+	 */
+	DigitUID createDigitUID();
+
+	/**
+	 * Returns a new object of class '<em>Constellation Command Plans List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constellation Command Plans List</em>'.
+	 * @generated
+	 */
+	ConstellationCommandPlansList createConstellationCommandPlansList();
+
+	/**
 	 * Returns a new object of class '<em>Constellation Command Plan</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,6 +87,15 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	ConstellationRequestsList createConstellationRequestsList();
 
 	/**
+	 * Returns a new object of class '<em>Default Constellation Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Default Constellation Request</em>'.
+	 * @generated
+	 */
+	DefaultConstellationRequest createDefaultConstellationRequest();
+
+	/**
 	 * Returns a new object of class '<em>Image Constellation Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -96,15 +123,6 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	Satellite createSatellite();
 
 	/**
-	 * Returns a new object of class '<em>Abstract Satellite Command</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abstract Satellite Command</em>'.
-	 * @generated
-	 */
-	AbstractSatelliteCommand createAbstractSatelliteCommand();
-
-	/**
 	 * Returns a new object of class '<em>Acquire Image Satellite Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,6 +139,24 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	 * @generated
 	 */
 	OrbitalImage createOrbitalImage();
+
+	/**
+	 * Returns a new object of class '<em>Turn On Satellite Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Turn On Satellite Command</em>'.
+	 * @generated
+	 */
+	TurnOnSatelliteCommand createTurnOnSatelliteCommand();
+
+	/**
+	 * Returns a new object of class '<em>Turn Off Satellite Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Turn Off Satellite Command</em>'.
+	 * @generated
+	 */
+	TurnOffSatelliteCommand createTurnOffSatelliteCommand();
 
 	/**
 	 * Returns a new object of class '<em>Constellation Downlinks List</em>'.

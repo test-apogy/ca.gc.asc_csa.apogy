@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.apogy;
 
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
@@ -40,6 +41,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getDownlinksLists <em>Downlinks Lists</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationCommandPlansList <em>Constellation Command Plans List</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationData()
@@ -147,4 +149,29 @@ public interface ConstellationData extends ApogyInitializationData {
 	 * @generated
 	 */
 	void setConstellationRequestsList(ConstellationRequestsList value);
+
+	/**
+	 * Returns the value of the '<em><b>Constellation Command Plans List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * FIXME Remove the following item.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Constellation Command Plans List</em>' containment reference.
+	 * @see #setConstellationCommandPlansList(ConstellationCommandPlansList)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationData_ConstellationCommandPlansList()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ConstellationCommandPlansList getConstellationCommandPlansList();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationCommandPlansList <em>Constellation Command Plans List</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Constellation Command Plans List</em>' containment reference.
+	 * @see #getConstellationCommandPlansList()
+	 * @generated
+	 */
+	void setConstellationCommandPlansList(ConstellationCommandPlansList value);
 } // ConstellationData

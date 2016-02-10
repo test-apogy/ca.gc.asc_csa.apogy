@@ -75,33 +75,10 @@ public class AbstractConstellationRequestItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUidPropertyDescriptor(object);
 			addOrderPriorityPropertyDescriptor(object);
 			addOrderStatusPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Uid feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUidPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractConstellationRequest_uid_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationRequest_uid_feature", "_UI_AbstractConstellationRequest_type"),
-				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -160,6 +137,7 @@ public class AbstractConstellationRequestItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID);
 			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND);
 		}
 		return childrenFeatures;
@@ -182,12 +160,22 @@ public class AbstractConstellationRequestItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		AbstractConstellationRequest abstractConstellationRequest = (AbstractConstellationRequest)object;
-		return getString("_UI_AbstractConstellationRequest_type") + " " + abstractConstellationRequest.getUid();
+		AbstractConstellationRequest request = (AbstractConstellationRequest) object;
+		
+		String value = getString("_UI_AbstractConstellationRequest_type");
+		
+//		if (request.getUid())
+//		
+//		ConstellationRequestPriority labelValue = ((AbstractConstellationRequest)object).getOrderPriority();
+//		String label = labelValue == null ? null : labelValue.toString();
+//		return getString("_UI_AbstractConstellationRequest_type") + "label == null || label.length() == 0 ?
+//			getString("_UI_AbstractConstellationRequest_type") :
+//			getString("_UI_AbstractConstellationRequest_type") + " " + label;
+		return value;
 	}
 	
 
@@ -203,11 +191,11 @@ public class AbstractConstellationRequestItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractConstellationRequest.class)) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -228,13 +216,23 @@ public class AbstractConstellationRequestItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createDigitUID()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
 				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 	}
 
 	/**

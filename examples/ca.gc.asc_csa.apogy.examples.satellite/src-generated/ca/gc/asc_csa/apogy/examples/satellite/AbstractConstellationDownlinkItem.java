@@ -37,29 +37,28 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface AbstractConstellationDownlinkItem extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Request UID</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
+	 * Returns the value of the '<em><b>Request UID</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Unique {@link AbstractConstellationRequest} identifier.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Request UID</em>' attribute.
-	 * @see #setRequestUID(long)
+	 * @return the value of the '<em>Request UID</em>' containment reference.
+	 * @see #setRequestUID(UID)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationDownlinkItem_RequestUID()
-	 * @model default="0" unique="false"
+	 * @model containment="true"
 	 * @generated
 	 */
-	long getRequestUID();
+	UID getRequestUID();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Request UID</em>' attribute.
+	 * @param value the new value of the '<em>Request UID</em>' containment reference.
 	 * @see #getRequestUID()
 	 * @generated
 	 */
-	void setRequestUID(long value);
+	void setRequestUID(UID value);
 
 } // AbstractConstellationDownlinkItem

@@ -183,12 +183,17 @@ public class OrbitalImageItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 
 		newChildDescriptors.add
 			(createChildParameter

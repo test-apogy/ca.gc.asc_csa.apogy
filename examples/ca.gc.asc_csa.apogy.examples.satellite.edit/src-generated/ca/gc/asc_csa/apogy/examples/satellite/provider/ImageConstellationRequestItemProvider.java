@@ -32,6 +32,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest} object.
@@ -39,7 +40,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ImageConstellationRequestItemProvider extends AbstractConstellationRequestItemProvider {
+public class ImageConstellationRequestItemProvider extends DefaultConstellationRequestItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -183,8 +184,11 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 	 */
 	@Override
 	public String getText(Object object) {
-		ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest)object;
-		return getString("_UI_ImageConstellationRequest_type") + " " + imageConstellationRequest.getUid();
+		ConstellationRequestPriority labelValue = ((ImageConstellationRequest)object).getOrderPriority();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ImageConstellationRequest_type") :
+			getString("_UI_ImageConstellationRequest_type") + " " + label;
 	}
 	
 

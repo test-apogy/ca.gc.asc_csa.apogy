@@ -50,7 +50,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  *
  * @generated
  */
-public class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl implements AbstractSatelliteCommand {
+public abstract class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl implements AbstractSatelliteCommand {
 	/**
 	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->

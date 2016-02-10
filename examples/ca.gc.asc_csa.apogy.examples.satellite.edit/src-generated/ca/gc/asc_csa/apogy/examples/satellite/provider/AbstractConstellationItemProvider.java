@@ -89,6 +89,7 @@ public class AbstractConstellationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__CONSTELLATION_COMMAND_PLANS_LIST);
 			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__SATELLITES_LIST);
 			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST);
 			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS);
@@ -134,6 +135,7 @@ public class AbstractConstellationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractConstellation.class)) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_COMMAND_PLANS_LIST:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
@@ -154,6 +156,11 @@ public class AbstractConstellationItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__CONSTELLATION_COMMAND_PLANS_LIST,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlansList()));
 
 		newChildDescriptors.add
 			(createChildParameter

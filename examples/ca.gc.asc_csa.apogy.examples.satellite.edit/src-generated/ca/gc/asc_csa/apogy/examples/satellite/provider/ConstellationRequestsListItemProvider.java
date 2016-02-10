@@ -163,6 +163,11 @@ public class ConstellationRequestsListItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationRequest()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS,
 				 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 	}
 

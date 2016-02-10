@@ -35,5 +35,50 @@
             class="ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiPackage"
             genModel="model/apogy_examples_satellite_ui.xcore"/>
    </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ExportConstellationPlanCommand"
+            id="ca.gc.asc_csa.examples.satellite.ui.commands.ExportConstellationPlanCommand"
+            name="ExportConstellationPlanCommand">
+      </command>
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationRequestsCommand"
+            id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationRequestsCommand"
+            name="ImportConstellationRequestsCommand">
+      </command>
+      
+   </extension>   
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationRequestsCommand"
+               label="Import Constellation Requests"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>         
+      </menuContribution>
+   </extension>
+   
 
 </plugin>
