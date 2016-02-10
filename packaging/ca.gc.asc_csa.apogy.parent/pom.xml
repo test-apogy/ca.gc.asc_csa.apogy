@@ -314,6 +314,7 @@
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.edit</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.ui</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.ui.edit</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.apogy</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.apogy.edit</module>
 		
