@@ -337,7 +337,6 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 
 		// Initialize simple dependencies
 		ApogyCommonTopologyAddonsDynamicsPackage.eINSTANCE.eClass();
-		ApogyCommonTopologyBindingsPackage.eINSTANCE.eClass();
 		ApogyAddonsPackage.eINSTANCE.eClass();
 		ApogyCoreEnvironmentPackage.eINSTANCE.eClass();
 		ApogyAddonsMobilityPathplannersPackage.eINSTANCE.eClass();

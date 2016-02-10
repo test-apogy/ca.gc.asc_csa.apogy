@@ -23,6 +23,7 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryDa
 import ca.gc.asc_csa.apogy.common.images.provider.ApogyCommonImagesEditPlugin;
 import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
 import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider.ApogyCoreEnvironmentOrbitEarthEditPlugin;
 
@@ -73,8 +74,9 @@ public final class ApogyExamplesSatelliteEditPlugin extends EMFPlugin {
 		     ApogyCoreEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
-		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
 		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		   });

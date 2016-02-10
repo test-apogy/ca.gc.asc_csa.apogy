@@ -37,6 +37,8 @@ import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
 import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
+import ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
@@ -121,6 +123,20 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * @generated
 	 */
 	private EClass sunVector3DToolNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass trajectoryPickingToolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass trajectoryPickingToolNodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -688,6 +704,69 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTrajectoryPickingTool() {
+		return trajectoryPickingToolEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrajectoryPickingTool_Paths() {
+		return (EReference)trajectoryPickingToolEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrajectoryPickingTool_ActivePath() {
+		return (EReference)trajectoryPickingToolEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrajectoryPickingTool_TrajectoryPickingToolNode() {
+		return (EReference)trajectoryPickingToolEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTrajectoryPickingTool__ClearActivePath() {
+		return trajectoryPickingToolEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTrajectoryPickingToolNode() {
+		return trajectoryPickingToolNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrajectoryPickingToolNode_TrajectoryPickingTool() {
+		return (EReference)trajectoryPickingToolNodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTrajectory3DTool() {
 		return trajectory3DToolEClass;
 	}
@@ -881,6 +960,15 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		sunVector3DToolNodeEClass = createEClass(SUN_VECTOR3_DTOOL_NODE);
 		createEReference(sunVector3DToolNodeEClass, SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL);
 
+		trajectoryPickingToolEClass = createEClass(TRAJECTORY_PICKING_TOOL);
+		createEReference(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL__PATHS);
+		createEReference(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL__ACTIVE_PATH);
+		createEReference(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL__TRAJECTORY_PICKING_TOOL_NODE);
+		createEOperation(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL___CLEAR_ACTIVE_PATH);
+
+		trajectoryPickingToolNodeEClass = createEClass(TRAJECTORY_PICKING_TOOL_NODE);
+		createEReference(trajectoryPickingToolNodeEClass, TRAJECTORY_PICKING_TOOL_NODE__TRAJECTORY_PICKING_TOOL);
+
 		trajectory3DToolEClass = createEClass(TRAJECTORY3_DTOOL);
 		createEAttribute(trajectory3DToolEClass, TRAJECTORY3_DTOOL__PEN_DOWN);
 		createEReference(trajectory3DToolEClass, TRAJECTORY3_DTOOL__VARIABLE);
@@ -946,6 +1034,8 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		featureOfInterestPickingToolEClass.getESuperTypes().add(this.getSimple3DTool());
 		sunVector3DToolEClass.getESuperTypes().add(this.getAbstractTwoPoints3DTool());
 		sunVector3DToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
+		trajectoryPickingToolEClass.getESuperTypes().add(this.getSimple3DTool());
+		trajectoryPickingToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 		trajectory3DToolEClass.getESuperTypes().add(this.getSimple3DTool());
 		trajectory3DToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 
@@ -1017,6 +1107,16 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		initEClass(sunVector3DToolNodeEClass, SunVector3DToolNode.class, "SunVector3DToolNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSunVector3DToolNode_SunVector3DTool(), this.getSunVector3DTool(), this.getSunVector3DTool_SunVector3DToolNode(), "sunVector3DTool", null, 0, 1, SunVector3DToolNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(trajectoryPickingToolEClass, TrajectoryPickingTool.class, "TrajectoryPickingTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTrajectoryPickingTool_Paths(), theApogyAddonsGeometryPathsPackage.getWayPointPath(), null, "paths", null, 1, -1, TrajectoryPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrajectoryPickingTool_ActivePath(), theApogyAddonsGeometryPathsPackage.getWayPointPath(), null, "activePath", null, 1, 1, TrajectoryPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrajectoryPickingTool_TrajectoryPickingToolNode(), this.getTrajectoryPickingToolNode(), this.getTrajectoryPickingToolNode_TrajectoryPickingTool(), "trajectoryPickingToolNode", null, 0, 1, TrajectoryPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getTrajectoryPickingTool__ClearActivePath(), null, "clearActivePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(trajectoryPickingToolNodeEClass, TrajectoryPickingToolNode.class, "TrajectoryPickingToolNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTrajectoryPickingToolNode_TrajectoryPickingTool(), this.getTrajectoryPickingTool(), this.getTrajectoryPickingTool_TrajectoryPickingToolNode(), "trajectoryPickingTool", null, 0, 1, TrajectoryPickingToolNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(trajectory3DToolEClass, Trajectory3DTool.class, "Trajectory3DTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTrajectory3DTool_PenDown(), theEcorePackage.getEBoolean(), "penDown", "true", 0, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrajectory3DTool_Variable(), theApogyCoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1053,6 +1153,7 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		  (this, 
 		   source, 
 		   new String[] {
+			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyAddons",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -1088,12 +1189,6 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		   source, 
 		   new String[] {
 			 "documentation", "* The root node of the current topology. Set automatically by Apogy after the too is registered."
-		   });	
-		addAnnotation
-		  (abstractTwoPoints3DToolEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "An abstract tool that is defined by two points."
 		   });	
 		addAnnotation
 		  (getAbstractTwoPoints3DTool__PointsRelativePoseChanged__Matrix4d(), 
@@ -1384,6 +1479,52 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 			 "children", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
+		   });	
+		addAnnotation
+		  (trajectoryPickingToolEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA 3D tool used to define trajectories by piking point in the 3D world.\nThe tool support the creation of multiple path."
+		   });	
+		addAnnotation
+		  (getTrajectoryPickingTool__ClearActivePath(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClears all points from the active path."
+		   });	
+		addAnnotation
+		  (getTrajectoryPickingTool_Paths(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* All the  WayPointPath created with this tool."
+		   });	
+		addAnnotation
+		  (getTrajectoryPickingTool_ActivePath(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The WayPointPath to which selected points are to be added."
+		   });	
+		addAnnotation
+		  (getTrajectoryPickingTool_TrajectoryPickingToolNode(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The node representing the tool in the topology.",
+			 "notify", "true",
+			 "children", "false",
+			 "property", "Readonly",
+			 "propertyCategory", "TRAJECTORY_PICKING_TOOL"
+		   });	
+		addAnnotation
+		  (trajectoryPickingToolNodeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nNode representing the TrajectoryPickingTool in the topology."
+		   });	
+		addAnnotation
+		  (getTrajectoryPickingToolNode_TrajectoryPickingTool(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The  TrajectoryPickingTool associated with this node."
 		   });	
 		addAnnotation
 		  (trajectory3DToolEClass, 

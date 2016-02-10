@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.addons.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.addons.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -191,6 +192,26 @@ public class ApogyAddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL: {
+				TrajectoryPickingTool trajectoryPickingTool = (TrajectoryPickingTool)theEObject;
+				T result = caseTrajectoryPickingTool(trajectoryPickingTool);
+				if (result == null) result = caseSimple3DTool(trajectoryPickingTool);
+				if (result == null) result = caseSimpleTool(trajectoryPickingTool);
+				if (result == null) result = caseAbstractTool(trajectoryPickingTool);
+				if (result == null) result = caseNamed(trajectoryPickingTool);
+				if (result == null) result = caseDescribed(trajectoryPickingTool);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL_NODE: {
+				TrajectoryPickingToolNode trajectoryPickingToolNode = (TrajectoryPickingToolNode)theEObject;
+				T result = caseTrajectoryPickingToolNode(trajectoryPickingToolNode);
+				if (result == null) result = caseAggregateGroupNode(trajectoryPickingToolNode);
+				if (result == null) result = caseGroupNode(trajectoryPickingToolNode);
+				if (result == null) result = caseNode(trajectoryPickingToolNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyAddonsPackage.TRAJECTORY3_DTOOL: {
 				Trajectory3DTool trajectory3DTool = (Trajectory3DTool)theEObject;
 				T result = caseTrajectory3DTool(trajectory3DTool);
@@ -363,6 +384,36 @@ public class ApogyAddonsSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseSunVector3DToolNode(SunVector3DToolNode object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Trajectory Picking Tool</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Trajectory Picking Tool</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrajectoryPickingTool(TrajectoryPickingTool object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Trajectory Picking Tool Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Trajectory Picking Tool Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrajectoryPickingToolNode(TrajectoryPickingToolNode object) {
 		return null;
 	}
 

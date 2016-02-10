@@ -23,10 +23,6 @@ import ca.gc.asc_csa.apogy.common.topology.Node;
  * A representation of the model object '<em><b>Abstract Two Points3 DTool</b></em>'.
  * <!-- end-user-doc -->
  *
- * <!-- begin-model-doc -->
- * An abstract tool that is defined by two points.
- * <!-- end-model-doc -->
- *
  * <p>
  * The following features are supported:
  * </p>
