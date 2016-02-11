@@ -101,7 +101,7 @@ public interface ApogyAddonsVehiclePackage extends EPackage
   int VEHICLE_POSE_CORRECTOR = 0;
 
   /**
-	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1400,6 +1400,15 @@ public interface ApogyAddonsVehiclePackage extends EPackage
 	int PATH_PLANNER_TOOL_FEATURE_COUNT = ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 6;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_PLANNER_TOOL___INITIALISE = ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL___INITIALISE;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1760,6 +1769,15 @@ public interface ApogyAddonsVehiclePackage extends EPackage
 	 * @ordered
 	 */
 	int VEHICLE_PATH_PLANNER_TOOL_FEATURE_COUNT = PATH_PLANNER_TOOL_FEATURE_COUNT + 1;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VEHICLE_PATH_PLANNER_TOOL___INITIALISE = PATH_PLANNER_TOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.

@@ -269,6 +269,7 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		  (this, 
 		   source, 
 		   new String[] {
+			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyExamplesSatelliteApogy",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016",
 			 "modelName", "ApogyExamplesSatelliteApogy",
@@ -278,12 +279,6 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.apogy/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.apogy.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.satellite"
-		   });	
-		addAnnotation
-		  (constellationSystemApiAdapterEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "This class is the specialized Apogy API adapter, used for connecting\nthe existing constellation example, located at\n{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation},\nto Apogy; one can override the well-known callback functions to make\nApogy perform a variety of useful functions, including initialization,\ndisposal and other features."
 		   });	
 		addAnnotation
 		  (constellationDataEClass, 

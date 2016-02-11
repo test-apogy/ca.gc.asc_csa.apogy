@@ -31,6 +31,174 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.URI
 
+/* ------------------------------------------------------------------------------------------
+ * 
+ * DataTypes.
+ * 
+ * ------------------------------------------------------------------------------------------ */ 
+type Exception wraps java.lang.Exception
+type List < T > wraps java.util.List
+type SortedSet < T > wraps java.util.SortedSet 
+type EClassFilter wraps EClassFilter
+type Number wraps java.lang.Number
+type IFile wraps IFile 
+type Resource wraps Resource
+type Unit wraps javax.measure.unit.Unit<?>
+type Collection<T> wraps java.util.Collection
+type EList<EObject> wraps EList
+type URI wraps URI
+type Job wraps org.eclipse.core.runtime.jobs.Job
+
+/* ------------------------------------------------------------------------------------------
+ * 
+ * Facade & Utilities.
+ * 
+ * ------------------------------------------------------------------------------------------ */ 
+
+class ApogyCommonEMFFacade
+{	
+	op List<EClass> getAllAvailableEClasses()
+	
+	/*
+	 * Returns all the sub classes of the specified super class.  The result list contains
+	 * only implementation classes (not abstract). 
+	 * @param superClass Super type of the classes to be found.
+	 * @return List of sub classes.
+	 */
+	op List<EClass> getAllSubEClasses(EClass superClass)	
+	op List<EClass> filterEClasses(List<EClass> eClasses, EClassFilter filter)	
+	op List<EClass> filterEClasses(List<EClass> eClasses, List<EClassFilter> filters)
+	
+	/*
+	 * Returns the {@link EClass} that fits the specified fully qualified name.
+	 * @param str Fully qualified name.
+	 * @return Reference to the class or null there is no match. 
+	 */
+	op EClass getEClass(String str)
+	
+	op SortedSet<EClass> sortAlphabetically(List<EClass> eClasses)
+	op List<EOperation> getAllAvailableEOperations(EClass eClass)
+	op SortedSet<EOperation> sortEOperationsAlphabetically(List<EOperation> eOperations)
+	
+	/*
+	 * Documentation tags utility methods.
+	 */
+	 
+	op String getDocumentation(ETypedElement eTypedElement)
+	op String getEngineeringUnitsAsString(ETypedElement eTypedElement)
+	
+	/*
+	 * Returns the Unit defined for a specified eTypedElement.
+	 * @param eTypedElement The specified ETypedElement.
+	 * @return the Unit, or null if none found.
+	 */
+	op Unit getEngineeringUnits(ETypedElement eTypedElement)
+	
+	op Double getValueUpdateRate(ETypedElement eTypedElement)
+	op String getWarningOCLExpression(ETypedElement eTypedElement)
+	op String getAlarmOCLExpression(ETypedElement eTypedElement)
+	op String getOutOfRangeOCLExpression(ETypedElement eTypedElement)
+	op Number getWarningMinValue(ETypedElement eTypedElement)
+	op Number getWarningMaxValue(ETypedElement eTypedElement)
+	op Number getAlarmMinValue(ETypedElement eTypedElement)
+	op Number getAlarmMaxValue(ETypedElement eTypedElement)
+	op Number getOutOfRangeMinValue(ETypedElement eTypedElement)
+	op Number getOutOfRangeMaxValue(ETypedElement eTypedElement)	
+	op Ranges getRange(ETypedElement eTypedElement, Object value)		
+	op String getFullDescription(ETypedElement eTypedElement)
+	
+	/*
+	 * Feature Tree Methods.
+	 */
+	 
+	/*
+	 * Method that return a string representing the
+	 * ancestors of the specified AbstractFeatureNode.
+	 */
+	op String getAncestriesString(AbstractFeatureNode abstractFeatureNode)
+	
+	/*
+	 * Method that return the root of the tree for a
+	 * specified AbstractFeatureNode.
+	 */
+	op AbstractRootNode getFeatureRoot(AbstractFeatureNode abstractFeatureNode)
+	
+	/*
+	 * Method that return the list of ancestor of a
+	 * specified AbstractFeatureNode, from FeatureRoot to
+	 * (and including) the specified AbstractFeatureNode.
+	 */
+	op List<AbstractFeatureNode> getAncestries(AbstractFeatureNode abstractFeatureNode)
+	
+	/*
+	 * Method that return the list of descendants of a
+	 * specified AbstractFeatureNode, excluding the specified
+	 * AbstractFeatureNode.
+	 */
+	op List<AbstractFeatureNode> getDescendants(AbstractFeatureNode abstractFeatureNode)
+	
+	/*
+	 * Method that return the list of available child
+	 * EStructuralFeature type for a given Node.
+	 */
+	op List<EStructuralFeature> getChildEStructuralFeatures(AbstractFeatureNode abstractFeatureNode)
+	
+	/*
+	 * Method that resolve the value of a FeatureNode
+	 * for a specified source EObjet.
+	 */
+ 	op Object resolve(EObject sourceObject, AbstractFeatureNode abstractFeatureNode) 
+ 	
+ 	op void setValue(EObject sourceObject, AbstractFeatureNode abstractFeatureNode, Object value)
+ 	
+ 	/*
+ 	 * Method that tells whether or not the 
+ 	 * FeatureNode is currently accessible for
+ 	 * the specified source EObject.
+ 	 */
+ 	op boolean isResolved(EObject sourceObject, AbstractFeatureNode abstractFeatureNode)	
+ 	
+ 	op AbstractFeatureListNode getLeaf(ListRootNode listRootNode) 
+ 	
+ 	/* 
+ 	 * Resource Support.
+ 	 */
+ 	 op IFile getFile(Resource resource)
+ 	 
+ 	/* 
+ 	 * Returns the content contained in the resource.
+ 	 * @param uri Resource uri.
+ 	 * @return Reference to the content.
+ 	 */
+	op EList<EObject> getContent(URI uri)
+ 	 
+ 	/*
+ 	 * Timed Support
+ 	 */
+
+	/*
+	 * Returns sorted set of Timed elements.
+	 */
+	op SortedSet<Timed> sortTimed(Collection<Timed> timedCollection)
+ 	 
+ 	/*
+ 	 * Returns the time span of a collection
+ 	 * of Timed elements.
+ 	 */
+ 	@GenModel(apogy_units="s")
+ 	op double getTimeSpan(Collection<Timed> timedCollection) 	 
+ 	 
+ 	/*
+ 	 * Return an EObject unique ID.
+ 	 * @param eObject The EObject.
+ 	 * @return the unique ID, null if none is found.
+ 	 */
+	op String getID(EObject eObject) 	 
+}
+
+/**
+ * Reference to an {@link EObject}.
+ */
 class EObjectReference{	
     @GenModel(children="true")    
 	refers EObject eObject

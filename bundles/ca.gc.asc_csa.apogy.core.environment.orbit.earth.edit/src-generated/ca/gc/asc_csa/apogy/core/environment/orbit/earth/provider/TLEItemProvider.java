@@ -126,14 +126,13 @@ public class TLEItemProvider
 	@Override
 	public String getText(Object object) 
 	{
-		TLE tle = (TLE) object;
-		
-		String label = "S/C " + tle.getSatelliteNumber();
-		return label == null || label.length() == 0 ?
-			getString("_UI_TLE_type") :
-			getString("_UI_TLE_type") + " " + label;
+		return super.getText(object);
 	}
-	
+
+	protected String getTextPrefix()
+	{
+		return getString("_UI_TLE_type");
+	}
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

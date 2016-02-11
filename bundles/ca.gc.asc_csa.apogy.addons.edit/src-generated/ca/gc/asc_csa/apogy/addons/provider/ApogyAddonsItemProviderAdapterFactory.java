@@ -252,6 +252,52 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 	}
 
 		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TrajectoryPickingToolItemProvider trajectoryPickingToolItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTrajectoryPickingToolAdapter() {
+		if (trajectoryPickingToolItemProvider == null) {
+			trajectoryPickingToolItemProvider = new TrajectoryPickingToolItemProvider(this);
+		}
+
+		return trajectoryPickingToolItemProvider;
+	}
+
+		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TrajectoryPickingToolNodeItemProvider trajectoryPickingToolNodeItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTrajectoryPickingToolNodeAdapter() {
+		if (trajectoryPickingToolNodeItemProvider == null) {
+			trajectoryPickingToolNodeItemProvider = new TrajectoryPickingToolNodeItemProvider(this);
+		}
+
+		return trajectoryPickingToolNodeItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -441,6 +487,8 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 		if (featureOfInterestPickingToolItemProvider != null) featureOfInterestPickingToolItemProvider.dispose();
 		if (sunVector3DToolItemProvider != null) sunVector3DToolItemProvider.dispose();
 		if (sunVector3DToolNodeItemProvider != null) sunVector3DToolNodeItemProvider.dispose();
+		if (trajectoryPickingToolItemProvider != null) trajectoryPickingToolItemProvider.dispose();
+		if (trajectoryPickingToolNodeItemProvider != null) trajectoryPickingToolNodeItemProvider.dispose();
 		if (trajectory3DToolItemProvider != null) trajectory3DToolItemProvider.dispose();
 		if (trajectory3DToolNodeItemProvider != null) trajectory3DToolNodeItemProvider.dispose();
 	}
@@ -592,6 +640,11 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 				return null;
@@ -709,6 +762,16 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingTool()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DTool()));
 
 				newChildDescriptors.add
@@ -759,6 +822,16 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingTool()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DTool()));
 
 				newChildDescriptors.add
@@ -785,6 +858,11 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 						 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -886,6 +964,11 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 				return null;
@@ -907,6 +990,11 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 					(createChildParameter
 						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter

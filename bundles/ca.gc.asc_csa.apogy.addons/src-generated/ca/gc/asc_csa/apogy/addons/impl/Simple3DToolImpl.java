@@ -20,11 +20,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.addons.Simple3DTool;
+
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.Simple3DTool;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,7 +98,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	public boolean isVisible() {
 		return visible;
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -261,42 +261,19 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	}
 
 	@Override
-	public void setActive(boolean newActive) 
-	{
-		if(newActive)
-		{
-			ca.gc.asc_csa.apogy.addons.Activator.registerSimple3DTool(this);
-			
-			// Attempts to find the root node of the UNIVERSE for the tool.
-			setRootNode(resolveRootNode());
-		}
-		else
-		{
-			ca.gc.asc_csa.apogy.addons.Activator.unregisterSimple3DTool(this);
-		}
-		super.setActive(newActive);
+	public void initialise() 
+	{		
+		// Registers the tool.
+		ca.gc.asc_csa.apogy.addons.Activator.registerSimple3DTool(this);
 	}
 	
-	private Node resolveRootNode()
-	{
-		Node root = null;
+	@Override
+	public void dispose() 
+	{	
+		// Un-Registers the tool.
+		ca.gc.asc_csa.apogy.addons.Activator.unregisterSimple3DTool(this);
 		
-		try
-		{
-			if(getToolList().getToolsList().getInvocatorSession().getEnvironment() instanceof ApogyEnvironment)
-			{
-				ApogyEnvironment se = (ApogyEnvironment) getToolList().getToolsList().getInvocatorSession().getEnvironment();
-				if(se.getApogyTopology() != null)
-				{
-					root = se.getApogyTopology().getRootNode();
-				}
-			}
-		}
-		catch(Throwable t)
-		{			
-		}
-		
-		return root;
+		super.dispose();
 	}
 	
 } //Simple3DToolImpl

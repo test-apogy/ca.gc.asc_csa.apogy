@@ -88,6 +88,24 @@ public interface ApogyAddonsFactory extends EFactory
 	SunVector3DToolNode createSunVector3DToolNode();
 
 		/**
+	 * Returns a new object of class '<em>Trajectory Picking Tool</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Trajectory Picking Tool</em>'.
+	 * @generated
+	 */
+	TrajectoryPickingTool createTrajectoryPickingTool();
+
+		/**
+	 * Returns a new object of class '<em>Trajectory Picking Tool Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Trajectory Picking Tool Node</em>'.
+	 * @generated
+	 */
+	TrajectoryPickingToolNode createTrajectoryPickingToolNode();
+
+		/**
 	 * Returns a new object of class '<em>Trajectory3 DTool</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
