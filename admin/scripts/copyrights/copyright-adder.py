@@ -86,24 +86,29 @@ class File(object):
         inCopyrightBlock = False           
         done = False
 
-        blockStart = 0
+        blockStart = -1
         blockEnd = 0
         i = 0
 
-        for line in self.__fileContent:      
-            if (commentProvider.getBeginCommentString() in line
-                and not done):
-                blockStart = i
+        for line in self.__fileContent:
+            if inCopyrightBlock:
+                if (commentProvider.getEndCommentString() == commentProvider.getInCommentString()):
+                    if commentProvider.getEndCommentString() not in line:
+                        blockEnd = i-1
+                        inCopyrightBlock = False
+                        break
+                elif commentProvider.getEndCommentString() in line:
+                    blockEnd = i
+                    inCopyrightBlock = False
+                    break
+            elif commentProvider.getBeginCommentString() in line:
                 inCopyrightBlock = True
-            elif (commentProvider.getEndCommentString() in line
-                  and not done):
-                inCopyrightBlock = False
-                done = True
-                blockEnd = i
+                blockStart = i
             
             i += 1
 
         block = ""
+
         commentBlock = self.__fileContent[blockStart:blockEnd+1]
 
         block = block.join(commentBlock)
@@ -115,15 +120,15 @@ class File(object):
 
             sys.stdout.write(s)
             
-            regex = re.compile("^(.*)" + commentProvider.getBeginCommentString() + ".*" + commentProvider.getEndCommentString() + "(.*)$",re.S | re.M)
+            regex = re.compile("^([" + re.escape(commentProvider.getBeginCommentString()) + "]*)" + re.escape(commentProvider.getBeginCommentString()) + ".*" + re.escape(commentProvider.getEndCommentString()) + "(.*)",re.S | re.M)
 
             m = regex.match(block)
             if m:
-               sys.stdout.write(m.group(1) + "\n" + m.group(2))
-
+                sys.stdout.write(m.group(1) + m.group(2).rstrip("\n"))
+                
             s = ""
             s = s.join(self.__fileContent[blockEnd+1:])
-   
+
             sys.stdout.write(s)
         else:
             s = ""
