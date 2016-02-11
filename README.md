@@ -11,5 +11,5 @@ The framework provides basic operational plan editors that allow, through contex
 Description               | URL
 ------------------------- | -------------
 Installation Guide        | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/installation.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/installation.html)
-Apogy OTS P2 Update Site  | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest)
+Apogy OTS P2 Update Site  | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip)
 Apogy P2 Update Site  | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest)
