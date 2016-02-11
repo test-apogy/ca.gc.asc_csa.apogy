@@ -245,13 +245,22 @@ public interface ApogyAddonsPackage extends EPackage
 	int SIMPLE_TOOL_FEATURE_COUNT = ABSTRACT_TOOL_FEATURE_COUNT + 3;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOOL___INITIALISE = ABSTRACT_TOOL_OPERATION_COUNT + 0;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL___DISPOSE = ABSTRACT_TOOL_OPERATION_COUNT + 0;
+	int SIMPLE_TOOL___DISPOSE = ABSTRACT_TOOL_OPERATION_COUNT + 1;
 
 		/**
 	 * The number of operations of the '<em>Simple Tool</em>' class.
@@ -260,7 +269,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_OPERATION_COUNT = ABSTRACT_TOOL_OPERATION_COUNT + 1;
+	int SIMPLE_TOOL_OPERATION_COUNT = ABSTRACT_TOOL_OPERATION_COUNT + 2;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.Simple3DToolImpl <em>Simple3 DTool</em>}' class.
@@ -343,6 +352,15 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @ordered
 	 */
 	int SIMPLE3_DTOOL_FEATURE_COUNT = SIMPLE_TOOL_FEATURE_COUNT + 2;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE3_DTOOL___INITIALISE = SIMPLE_TOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -534,6 +552,15 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @ordered
 	 */
 	int ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 9;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TWO_POINTS3_DTOOL___INITIALISE = SIMPLE3_DTOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -816,6 +843,15 @@ public interface ApogyAddonsPackage extends EPackage
 	int RULER3_DTOOL_FEATURE_COUNT = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 9;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RULER3_DTOOL___INITIALISE = ABSTRACT_TWO_POINTS3_DTOOL___INITIALISE;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1060,6 +1096,15 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @ordered
 	 */
 	int FEATURE_OF_INTEREST_PICKING_TOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 6;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_OF_INTEREST_PICKING_TOOL___INITIALISE = SIMPLE3_DTOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -1315,6 +1360,15 @@ public interface ApogyAddonsPackage extends EPackage
 	int SUN_VECTOR3_DTOOL_FEATURE_COUNT = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 7;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUN_VECTOR3_DTOOL___INITIALISE = ABSTRACT_TWO_POINTS3_DTOOL___INITIALISE;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1531,6 +1585,15 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @ordered
 	 */
 	int TRAJECTORY_PICKING_TOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 3;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL___INITIALISE = SIMPLE3_DTOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -1805,6 +1868,15 @@ public interface ApogyAddonsPackage extends EPackage
 	int TRAJECTORY3_DTOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 7;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY3_DTOOL___INITIALISE = SIMPLE3_DTOOL___INITIALISE;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2017,6 +2089,16 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getSimpleTool_Disposed();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#initialise() <em>Initialise</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Initialise</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleTool#initialise()
+	 * @generated
+	 */
+	EOperation getSimpleTool__Initialise();
 
 		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#dispose() <em>Dispose</em>}' operation.
@@ -2786,6 +2868,13 @@ public interface ApogyAddonsPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute SIMPLE_TOOL__DISPOSED = eINSTANCE.getSimpleTool_Disposed();
+				/**
+		 * The meta object literal for the '<em><b>Initialise</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SIMPLE_TOOL___INITIALISE = eINSTANCE.getSimpleTool__Initialise();
 				/**
 		 * The meta object literal for the '<em><b>Dispose</b></em>' operation.
 		 * <!-- begin-user-doc -->

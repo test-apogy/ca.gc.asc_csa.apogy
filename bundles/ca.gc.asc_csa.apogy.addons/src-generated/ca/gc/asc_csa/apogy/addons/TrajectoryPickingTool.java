@@ -43,6 +43,7 @@ public interface TrajectoryPickingTool extends Simple3DTool {
 	 * @return the value of the '<em>Paths</em>' containment reference list.
 	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getTrajectoryPickingTool_Paths()
 	 * @model containment="true" required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='TRAJECTORY_PICKING_TOOL'"
 	 * @generated
 	 */
 	EList<WayPointPath> getPaths();
@@ -58,6 +59,7 @@ public interface TrajectoryPickingTool extends Simple3DTool {
 	 * @see #setActivePath(WayPointPath)
 	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getTrajectoryPickingTool_ActivePath()
 	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='TRAJECTORY_PICKING_TOOL'"
 	 * @generated
 	 */
 	WayPointPath getActivePath();

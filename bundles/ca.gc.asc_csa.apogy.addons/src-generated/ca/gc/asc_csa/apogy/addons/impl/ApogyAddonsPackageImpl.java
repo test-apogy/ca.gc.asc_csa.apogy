@@ -299,8 +299,17 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSimpleTool__Dispose() {
+	public EOperation getSimpleTool__Initialise() {
 		return simpleToolEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSimpleTool__Dispose() {
+		return simpleToolEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -907,6 +916,7 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		createEReference(simpleToolEClass, SIMPLE_TOOL__TOOL_LIST);
 		createEAttribute(simpleToolEClass, SIMPLE_TOOL__ACTIVE);
 		createEAttribute(simpleToolEClass, SIMPLE_TOOL__DISPOSED);
+		createEOperation(simpleToolEClass, SIMPLE_TOOL___INITIALISE);
 		createEOperation(simpleToolEClass, SIMPLE_TOOL___DISPOSE);
 
 		simple3DToolEClass = createEClass(SIMPLE3_DTOOL);
@@ -1050,10 +1060,12 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		initEAttribute(getSimpleTool_Active(), theEcorePackage.getEBoolean(), "active", "false", 0, 1, SimpleTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSimpleTool_Disposed(), theEcorePackage.getEBoolean(), "disposed", "false", 0, 1, SimpleTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEOperation(getSimpleTool__Initialise(), null, "initialise", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEOperation(getSimpleTool__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(simple3DToolEClass, Simple3DTool.class, "Simple3DTool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSimple3DTool_Visible(), theEcorePackage.getEBoolean(), "visible", "true", 0, 1, Simple3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSimple3DTool_Visible(), theEcorePackage.getEBoolean(), "visible", "true", 0, 1, Simple3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimple3DTool_RootNode(), theApogyCommonTopologyPackage.getNode(), null, "rootNode", null, 0, 1, Simple3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getSimple3DTool__SelectionChanged__NodeSelection(), null, "selectionChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1173,9 +1185,34 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 			 "property", "None"
 		   });	
 		addAnnotation
+		  (getSimpleTool__Initialise(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nMethod called when the tool is added to its toolList."
+		   });	
+		addAnnotation
+		  (getSimpleTool__Dispose(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nMethod called when the tool is remove from its toolList."
+		   });	
+		addAnnotation
+		  (getSimpleTool_ToolList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe SimpleToolList containing the tool."
+		   });	
+		addAnnotation
+		  (getSimpleTool_Active(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nWhether or  not the tool is active."
+		   });	
+		addAnnotation
 		  (getSimpleTool_Disposed(), 
 		   source, 
 		   new String[] {
+			 "documentation", "*\nWhether or  not the tool is disposed.",
 			 "property", "Readonly"
 		   });	
 		addAnnotation
@@ -1185,10 +1222,16 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 			 "documentation", "* Method called upon a user selection in the 3D viewer. Sub-classes should implement."
 		   });	
 		addAnnotation
+		  (getSimple3DTool_Visible(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nWhether or  not the tool is visible."
+		   });	
+		addAnnotation
 		  (getSimple3DTool_RootNode(), 
 		   source, 
 		   new String[] {
-			 "documentation", "* The root node of the current topology. Set automatically by Apogy after the too is registered."
+			 "documentation", "* The root node of the current topology. Is set automatically by Apogy after the tool is registered."
 		   });	
 		addAnnotation
 		  (getAbstractTwoPoints3DTool__PointsRelativePoseChanged__Matrix4d(), 
@@ -1496,13 +1539,17 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		  (getTrajectoryPickingTool_Paths(), 
 		   source, 
 		   new String[] {
-			 "documentation", "* All the  WayPointPath created with this tool."
+			 "documentation", "* All the  WayPointPath created with this tool.",
+			 "notify", "true",
+			 "propertyCategory", "TRAJECTORY_PICKING_TOOL"
 		   });	
 		addAnnotation
 		  (getTrajectoryPickingTool_ActivePath(), 
 		   source, 
 		   new String[] {
-			 "documentation", "* The WayPointPath to which selected points are to be added."
+			 "documentation", "* The WayPointPath to which selected points are to be added.",
+			 "notify", "true",
+			 "propertyCategory", "TRAJECTORY_PICKING_TOOL"
 		   });	
 		addAnnotation
 		  (getTrajectoryPickingTool_TrajectoryPickingToolNode(), 

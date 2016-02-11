@@ -4,22 +4,20 @@
 package ca.gc.asc_csa.apogy.addons.provider;
 
 
-import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
-import ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool;
-
-import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
-
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool} object.
@@ -27,7 +25,10 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TrajectoryPickingToolItemProvider extends Simple3DToolItemProvider {
+public class TrajectoryPickingToolItemProvider extends Simple3DToolItemProvider 
+{
+	private DecimalFormat decimalFormat = new DecimalFormat("0.00");
+	
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -73,7 +74,7 @@ public class TrajectoryPickingToolItemProvider extends Simple3DToolItemProvider 
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_TRAJECTORY_PICKING_TOOLPropertyCategory"),
 				 null));
 	}
 
@@ -144,14 +145,42 @@ public class TrajectoryPickingToolItemProvider extends Simple3DToolItemProvider 
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((TrajectoryPickingTool)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_TrajectoryPickingTool_type") :
-			getString("_UI_TrajectoryPickingTool_type") + " " + label;
+	public String getText(Object object) 
+	{
+		TrajectoryPickingTool trajectoryPickingTool = (TrajectoryPickingTool) object;
+		String label = null;
+		
+		if(trajectoryPickingTool.getName() != null && trajectoryPickingTool.getName().length() > 0)
+		{
+			label = trajectoryPickingTool.getName();
+		}
+		else
+		{
+			label = getString("_UI_TrajectoryPickingTool_type");
+		}
+		
+		// Adds Simple3DTool Text.
+		label += " (";
+		String simpleToolText = getSimple3DToolText(trajectoryPickingTool);
+		if(simpleToolText.length() > 0)
+		{
+			label += simpleToolText + ", ";
+		}	
+		
+		if(trajectoryPickingTool.getActivePath() != null)
+		{
+			String distanceText = decimalFormat.format(trajectoryPickingTool.getActivePath().getLength()) + " m";
+			label += distanceText;
+		}
+		
+		
+		label += ")";
+		
+		
+		return label;						
 	}
 	
 
@@ -167,6 +196,7 @@ public class TrajectoryPickingToolItemProvider extends Simple3DToolItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TrajectoryPickingTool.class)) {
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ACTIVE_PATH:
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__TRAJECTORY_PICKING_TOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

@@ -43,6 +43,10 @@ public interface SimpleTool extends AbstractTool {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The SimpleToolList containing the tool.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tool List</em>' container reference.
 	 * @see #setToolList(SimpleToolList)
 	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimpleTool_ToolList()
@@ -71,6 +75,10 @@ public interface SimpleTool extends AbstractTool {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Whether or  not the tool is active.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
 	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimpleTool_Active()
@@ -98,6 +106,10 @@ public interface SimpleTool extends AbstractTool {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Whether or  not the tool is disposed.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
 	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimpleTool_Disposed()
@@ -120,6 +132,22 @@ public interface SimpleTool extends AbstractTool {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Method called when the tool is added to its toolList.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	void initialise();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Method called when the tool is remove from its toolList.
+	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */

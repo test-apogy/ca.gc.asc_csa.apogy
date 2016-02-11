@@ -33,6 +33,7 @@ Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.topology.addons.primitives,
  ca.gc.asc_csa.apogy.addons.geometry.paths;visibility:=reexport,
  ca.gc.asc_csa.apogy.core.topology.ui;visibility:=reexport,
- ca.gc.asc_csa.apogy.core.environment.ui
+ ca.gc.asc_csa.apogy.core.environment.ui,
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.apogy.addons.Activator

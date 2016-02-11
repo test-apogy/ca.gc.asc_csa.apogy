@@ -3,28 +3,32 @@
  */
 package ca.gc.asc_csa.apogy.addons.impl;
 
-import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
-import ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool;
-import ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode;
-
-import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
+
+import javax.vecmath.Point3d;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import ca.gc.asc_csa.apogy.addons.Activator;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +45,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements TrajectoryPickingTool {
+public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements TrajectoryPickingTool 
+{
 	/**
 	 * The cached value of the '{@link #getPaths() <em>Paths</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -204,12 +209,20 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public void clearActivePath() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void clearActivePath() 
+	{
+		if(getActivePath() != null)
+		{
+			getActivePath().getPoints().clear();
+			
+			Logger.INSTANCE.log(Activator.ID, this, "Active path cleared.", EventSeverity.OK);
+		}
+		else
+		{
+			Logger.INSTANCE.log(Activator.ID, this, "Failed to clear active path : No active path selected!", EventSeverity.ERROR);
+		}
 	}
 
 	/**
@@ -340,5 +353,113 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 		}
 		return super.eInvoke(operationID, arguments);
 	}
+	
+	
+	
+	@Override
+	public void setVisible(boolean newVisible) 
+	{	
+		super.setVisible(newVisible);
+		
+		if(getRootNode() instanceof GroupNode)
+		{
+			GroupNode parent = (GroupNode) getRootNode();
+			
+			// If visible, attach the TrajectoryPickingToolNode to the root.
+			if(newVisible)
+			{
+				if(!parent.getChildren().contains(getTrajectoryPickingToolNode()))
+				{
+					parent.getChildren().add(getTrajectoryPickingToolNode());
+				}
+			}
+			// If not visible, detach the TrajectoryPickingToolNode to the root.
+			else
+			{
+				if(parent.getChildren().contains(getTrajectoryPickingToolNode()))
+				{
+					parent.getChildren().remove(getTrajectoryPickingToolNode());
+				}
+			}
+		}
+		 // Forces the Trajectory3DToolNode to be created.
+		getTrajectoryPickingToolNode();		
+	}
+	
+	@Override
+	public void setRootNode(Node newRootNode) 
+	{			
+		super.setRootNode(newRootNode);
+					
+		TrajectoryPickingToolNode toolNode = getTrajectoryPickingToolNode();
+		
+		System.out.println("ROOT      =========> " + newRootNode);
+		System.out.println("TOOL NODE =========> " + toolNode);
+		
+		if(toolNode != null)
+		{
+			if(newRootNode instanceof GroupNode)
+			{
+				GroupNode parent = (GroupNode) getRootNode();
+				if(isVisible())
+				{
+					parent.getChildren().add(toolNode);
+				}
+				else
+				{
+					parent.getChildren().remove(toolNode);
+				}
+			}				
+		}
+	}
 
+	@Override
+	public void selectionChanged(NodeSelection nodeSelection) 
+	{	
+		// Add selected point to the current path.
+		if(getActivePath() != null)
+		{
+			Point3d point = nodeSelection.getAbsoluteIntersectionPoint();
+			getActivePath().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z));
+			
+			String message = "Point added : (" + point.x + ", " + point.y + ", " + point.z + ")";
+			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.OK);
+		}
+		else
+		{			
+			Logger.INSTANCE.log(Activator.ID, this, "Failed to add point : No active path selected!", EventSeverity.ERROR);
+		}
+	}
+	
+	@Override
+	public void initialise() 
+	{
+		// First, initialize the TrajectoryPickingToolNode.		
+		// TODO Do this in a Transaction friendly way.
+		setTrajectoryPickingToolNode(ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode());	
+		
+		// Then, initialize the rest.
+		super.initialise();
+		
+				
+	}
+	
+	@Override
+	public void dispose() 
+	{
+		// Remove 3DTool Node.
+		if(trajectoryPickingToolNode != null)
+		{
+			if(trajectoryPickingToolNode.getParent() instanceof GroupNode)
+			{
+				GroupNode parent =  (GroupNode) trajectoryPickingToolNode.getParent();			
+				parent.getChildren().remove(trajectoryPickingToolNode);
+			}		
+			
+			setTrajectoryPickingToolNode(null);
+		}
+		
+		super.dispose();
+	}	
+	
 } //TrajectoryPickingToolImpl
