@@ -180,7 +180,7 @@ public interface AbstractConstellation extends EObject {
 	 * @model unique="false"
 	 * @generated
 	 */
-	UID newUID();
+	AbstractUID newUID();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -274,53 +274,5 @@ public interface AbstractConstellation extends EObject {
 	 * @generated
 	 */
 	List<AbstractConstellationRequest> importConstellationRequests(String url);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Adds the specified {@link AbstractConstellationRequest} to the constellation.
-	 * @param request Specifies the request to add to the {@link AbstractConstellation}.
-	 * <!-- end-model-doc -->
-	 * @model requestUnique="false"
-	 * @generated
-	 */
-	void add(AbstractConstellationRequest request);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Adds all the {@link AbstractConstellationRequest} specified in the list to the constellation.
-	 * @param requests Specifies the requests to add to the {@link AbstractConstellation}.
-	 * <!-- end-model-doc -->
-	 * @model requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
-	 * @generated
-	 */
-	void addAll(List<AbstractConstellationRequest> requests);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Removes the specified {@link AbstractConstellationRequest} from the constellation.
-	 * @param request Specifies the request to remove from the {@link AbstractConstellation}.
-	 * <!-- end-model-doc -->
-	 * @model requestUnique="false"
-	 * @generated
-	 */
-	void remove(AbstractConstellationRequest request);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Removes all the {@link AbstractConstellationRequest} specified in the list from the constellation.
-	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
-	 * <!-- end-model-doc -->
-	 * @model requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
-	 * @generated
-	 */
-	void removeAll(List<AbstractConstellationRequest> requests);
 
 } // AbstractConstellation

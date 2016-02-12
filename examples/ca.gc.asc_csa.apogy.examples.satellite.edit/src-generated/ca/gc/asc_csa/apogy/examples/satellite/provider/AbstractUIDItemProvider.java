@@ -1,5 +1,14 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * Contributors:
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
@@ -22,12 +31,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.UID} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractUID} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class UIDItemProvider 
+public class AbstractUIDItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -41,7 +50,7 @@ public class UIDItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UIDItemProvider(AdapterFactory adapterFactory) {
+	public AbstractUIDItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -68,7 +77,7 @@ public class UIDItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_UID_type");
+		return getString("_UI_AbstractUID_type");
 	}
 	
 

@@ -1,17 +1,16 @@
-package ca.gc.asc_csa.apogy.examples.satellite;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
  * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 
@@ -36,7 +35,8 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
  * @model
  * @generated
  */
-public interface ImageConstellationRequest extends DefaultConstellationRequest, GeographicCoordinates {
+public interface ImageConstellationRequest extends AbstractConstellationRequest, GeographicCoordinates {
+
 	/**
 	 * Returns the value of the '<em><b>Image</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -61,5 +61,4 @@ public interface ImageConstellationRequest extends DefaultConstellationRequest, 
 	 * @generated
 	 */
 	void setImage(OrbitalImage value);
-
 } // ImageConstellationRequest

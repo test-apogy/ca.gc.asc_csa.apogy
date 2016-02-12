@@ -23,9 +23,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
-import ca.gc.asc_csa.apogy.examples.satellite.UID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
@@ -52,7 +52,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	 * @generated
 	 * @ordered
 	 */
-	protected UID uid;
+	protected AbstractUID uid;
 
 	/**
 	 * The default value of the '{@link #getOrderPriority() <em>Order Priority</em>}' attribute.
@@ -118,7 +118,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UID getUid() {
+	public AbstractUID getUid() {
 		return uid;
 	}
 
@@ -127,8 +127,8 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetUid(UID newUid, NotificationChain msgs) {
-		UID oldUid = uid;
+	public NotificationChain basicSetUid(AbstractUID newUid, NotificationChain msgs) {
+		AbstractUID oldUid = uid;
 		uid = newUid;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID, oldUid, newUid);
@@ -142,7 +142,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUid(UID newUid) {
+	public void setUid(AbstractUID newUid) {
 		if (newUid != uid) {
 			NotificationChain msgs = null;
 			if (uid != null)
@@ -239,7 +239,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
-				setUid((UID)newValue);
+				setUid((AbstractUID)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 				setOrderPriority((ConstellationRequestPriority)newValue);
@@ -260,7 +260,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
-				setUid((UID)null);
+				setUid((AbstractUID)null);
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 				setOrderPriority(ORDER_PRIORITY_EDEFAULT);

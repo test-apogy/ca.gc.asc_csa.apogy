@@ -71,7 +71,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation">
+                           value="ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList">
                        </instanceof>
                   </iterate>
                </with>

@@ -19,12 +19,10 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -54,6 +52,8 @@ public class AbstractConstellationRequestItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
+	private ComposedAdapterFactory composedAdapterFactory;
+
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -155,6 +155,16 @@ public class AbstractConstellationRequestItemProvider
 		return super.getChildFeature(object, child);
 	}
 
+	/*
+	 * Returns a singleton {@link ComposedAdapterFactory}.
+	 */
+	protected ComposedAdapterFactory getComposedAdapterFactory(){
+		if (composedAdapterFactory == null){
+			composedAdapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+		}
+		return composedAdapterFactory;
+	}
+	
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
@@ -163,20 +173,22 @@ public class AbstractConstellationRequestItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		AbstractConstellationRequest request = (AbstractConstellationRequest) object;
-		
-		String value = getString("_UI_AbstractConstellationRequest_type");
-		
-//		if (request.getUid())
-//		
-//		ConstellationRequestPriority labelValue = ((AbstractConstellationRequest)object).getOrderPriority();
-//		String label = labelValue == null ? null : labelValue.toString();
-//		return getString("_UI_AbstractConstellationRequest_type") + "label == null || label.length() == 0 ?
-//			getString("_UI_AbstractConstellationRequest_type") :
-//			getString("_UI_AbstractConstellationRequest_type") + " " + label;
+		AbstractConstellationRequest request = (AbstractConstellationRequest) object;		
+		String value = "<";
+		if (request.getUid() != null){			
+			IItemLabelProvider labelProvider = (IItemLabelProvider) getComposedAdapterFactory().adapt(request.getUid(), IItemLabelProvider.class);			
+			value = value + labelProvider.getText(request.getUid());
+		}
+		value = value + ">" + getAbstractConstellationRequestTypeName();
 		return value;
 	}
 	
+	/**
+	 * This method must be overriden.
+	 */
+	public String getAbstractConstellationRequestTypeName(){
+		return getString("_UI_AbstractConstellationRequest_type");
+	}
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -215,7 +227,7 @@ public class AbstractConstellationRequestItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createDigitUID()));
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createStringUID()));
 	}
 
 	/**

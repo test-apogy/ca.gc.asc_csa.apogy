@@ -18,12 +18,11 @@ public class ExportConstellationPlanCommand extends AbstractHandler implements I
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
+		AbstractConstellation constellation = (AbstractConstellation) ApogyCoreInvocatorFacade.INSTANCE.getInstance(ApogyExamplesSatelliteUiFacade.INSTANCE.getConstellationVariable());
 		Iterator<?> selections = ((IStructuredSelection) HandlerUtil.getActiveMenuSelection(event)).iterator();
-
+		
 		while (selections.hasNext()) {
 			ConstellationCommandPlan plan = (ConstellationCommandPlan) selections.next();
-
-			AbstractConstellation constellation = (AbstractConstellation) ApogyCoreInvocatorFacade.INSTANCE.getInstance(ApogyExamplesSatelliteUiFacade.INSTANCE.getConstellationVariable());
 			
 			if (constellation != null) {
 				constellation.export(plan, "");

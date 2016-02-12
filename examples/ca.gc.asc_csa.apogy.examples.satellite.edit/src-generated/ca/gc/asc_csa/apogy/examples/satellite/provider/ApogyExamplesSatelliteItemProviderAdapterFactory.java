@@ -122,26 +122,26 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.DigitUID} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.StringUID} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DigitUIDItemProvider digitUIDItemProvider;
+	protected StringUIDItemProvider stringUIDItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DigitUID}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.StringUID}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDigitUIDAdapter() {
-		if (digitUIDItemProvider == null) {
-			digitUIDItemProvider = new DigitUIDItemProvider(this);
+	public Adapter createStringUIDAdapter() {
+		if (stringUIDItemProvider == null) {
+			stringUIDItemProvider = new StringUIDItemProvider(this);
 		}
 
-		return digitUIDItemProvider;
+		return stringUIDItemProvider;
 	}
 
 	/**
@@ -234,29 +234,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 		}
 
 		return constellationRequestsListItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationRequest} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DefaultConstellationRequestItemProvider defaultConstellationRequestItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationRequest}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDefaultConstellationRequestAdapter() {
-		if (defaultConstellationRequestItemProvider == null) {
-			defaultConstellationRequestItemProvider = new DefaultConstellationRequestItemProvider(this);
-		}
-
-		return defaultConstellationRequestItemProvider;
 	}
 
 	/**
@@ -638,12 +615,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	 * @generated
 	 */
 	public void dispose() {
-		if (digitUIDItemProvider != null) digitUIDItemProvider.dispose();
+		if (stringUIDItemProvider != null) stringUIDItemProvider.dispose();
 		if (constellationCommandPlansListItemProvider != null) constellationCommandPlansListItemProvider.dispose();
 		if (defaultConstellationItemProvider != null) defaultConstellationItemProvider.dispose();
 		if (constellationCommandPlanItemProvider != null) constellationCommandPlanItemProvider.dispose();
 		if (constellationRequestsListItemProvider != null) constellationRequestsListItemProvider.dispose();
-		if (defaultConstellationRequestItemProvider != null) defaultConstellationRequestItemProvider.dispose();
 		if (imageConstellationRequestItemProvider != null) imageConstellationRequestItemProvider.dispose();
 		if (satellitesListItemProvider != null) satellitesListItemProvider.dispose();
 		if (satelliteItemProvider != null) satelliteItemProvider.dispose();
@@ -1057,7 +1033,7 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createDigitUID()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createStringUID()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1078,11 +1054,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1152,7 +1123,7 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createDigitUID()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createStringUID()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1173,11 +1144,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter

@@ -85,16 +85,16 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ApogyExamplesSatellitePackage.UID: {
-				UID uid = (UID)theEObject;
-				T result = caseUID(uid);
+			case ApogyExamplesSatellitePackage.ABSTRACT_UID: {
+				AbstractUID abstractUID = (AbstractUID)theEObject;
+				T result = caseAbstractUID(abstractUID);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyExamplesSatellitePackage.DIGIT_UID: {
-				DigitUID digitUID = (DigitUID)theEObject;
-				T result = caseDigitUID(digitUID);
-				if (result == null) result = caseUID(digitUID);
+			case ApogyExamplesSatellitePackage.STRING_UID: {
+				StringUID stringUID = (StringUID)theEObject;
+				T result = caseStringUID(stringUID);
+				if (result == null) result = caseAbstractUID(stringUID);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -135,19 +135,11 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_REQUEST: {
-				DefaultConstellationRequest defaultConstellationRequest = (DefaultConstellationRequest)theEObject;
-				T result = caseDefaultConstellationRequest(defaultConstellationRequest);
-				if (result == null) result = caseAbstractConstellationRequest(defaultConstellationRequest);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: {
 				ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest)theEObject;
 				T result = caseImageConstellationRequest(imageConstellationRequest);
-				if (result == null) result = caseDefaultConstellationRequest(imageConstellationRequest);
-				if (result == null) result = caseGeographicCoordinates(imageConstellationRequest);
 				if (result == null) result = caseAbstractConstellationRequest(imageConstellationRequest);
+				if (result == null) result = caseGeographicCoordinates(imageConstellationRequest);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -251,32 +243,32 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>UID</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract UID</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>UID</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract UID</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUID(UID object) {
+	public T caseAbstractUID(AbstractUID object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Digit UID</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>String UID</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Digit UID</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>String UID</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDigitUID(DigitUID object) {
+	public T caseStringUID(StringUID object) {
 		return null;
 	}
 
@@ -367,21 +359,6 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractConstellationRequest(AbstractConstellationRequest object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Default Constellation Request</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Default Constellation Request</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDefaultConstellationRequest(DefaultConstellationRequest object) {
 		return null;
 	}
 

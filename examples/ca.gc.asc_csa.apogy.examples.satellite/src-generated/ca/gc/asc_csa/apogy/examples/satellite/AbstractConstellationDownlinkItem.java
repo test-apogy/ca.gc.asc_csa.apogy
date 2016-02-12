@@ -44,12 +44,12 @@ public interface AbstractConstellationDownlinkItem extends EObject {
 	 * Unique {@link AbstractConstellationRequest} identifier.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Request UID</em>' containment reference.
-	 * @see #setRequestUID(UID)
+	 * @see #setRequestUID(AbstractUID)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationDownlinkItem_RequestUID()
 	 * @model containment="true"
 	 * @generated
 	 */
-	UID getRequestUID();
+	AbstractUID getRequestUID();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}' containment reference.
@@ -59,6 +59,6 @@ public interface AbstractConstellationDownlinkItem extends EObject {
 	 * @see #getRequestUID()
 	 * @generated
 	 */
-	void setRequestUID(UID value);
+	void setRequestUID(AbstractUID value);
 
 } // AbstractConstellationDownlinkItem

@@ -71,12 +71,11 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ApogyExamplesSatellitePackage.DIGIT_UID: return createDigitUID();
+			case ApogyExamplesSatellitePackage.STRING_UID: return createStringUID();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST: return createConstellationCommandPlansList();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: return createConstellationCommandPlan();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
-			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_REQUEST: return createDefaultConstellationRequest();
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
 			case ApogyExamplesSatellitePackage.SATELLITES_LIST: return createSatellitesList();
 			case ApogyExamplesSatellitePackage.SATELLITE: return createSatellite();
@@ -140,9 +139,9 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DigitUID createDigitUID() {
-		DigitUIDImpl digitUID = new DigitUIDImpl();
-		return digitUID;
+	public StringUID createStringUID() {
+		StringUIDImpl stringUID = new StringUIDImpl();
+		return stringUID;
 	}
 
 	/**
@@ -183,16 +182,6 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	public ConstellationRequestsList createConstellationRequestsList() {
 		ConstellationRequestsListImpl constellationRequestsList = new ConstellationRequestsListImpl();
 		return constellationRequestsList;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DefaultConstellationRequest createDefaultConstellationRequest() {
-		DefaultConstellationRequestImpl defaultConstellationRequest = new DefaultConstellationRequestImpl();
-		return defaultConstellationRequest;
 	}
 
 	/**

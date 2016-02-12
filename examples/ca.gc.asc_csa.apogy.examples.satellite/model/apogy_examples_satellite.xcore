@@ -46,14 +46,14 @@ type SortedSet<T> wraps java.util.SortedSet
 /*
  * Abstract Unique Identifier.  This class is meant to be sub-classed.
  */
-abstract class UID{
+abstract class AbstractUID{
 }
 
 /*
- * Digital Unique Identifier.
+ * Unique Identifier in string format (Default).
  */
-class DigitUID extends UID{
-	long _id = "0"	
+class StringUID extends AbstractUID{
+	String ^id
 }
 
 /*
@@ -72,7 +72,7 @@ abstract class AbstractConstellation{
 	/*
 	 * Creates an new instance of {@link UID}.
 	 */
-	op UID newUID()
+	op AbstractUID newUID()
 	
 	/*
 	 * FIXME Remove the following item.
@@ -148,31 +148,7 @@ abstract class AbstractConstellation{
 	 * @param url URL that specifies the resource.
 	 * @return List of imported {@link AbstractConstellationRequest}. 
 	 */
-	op List<AbstractConstellationRequest> importConstellationRequests(String url)
-	
-	/*
-	 * Adds the specified {@link AbstractConstellationRequest} to the constellation.
-	 * @param request Specifies the request to add to the {@link AbstractConstellation}.
-	 */
-	op void add(AbstractConstellationRequest request)
-	
-	/*
-	 * Adds all the {@link AbstractConstellationRequest} specified in the list to the constellation.
-	 * @param requests Specifies the requests to add to the {@link AbstractConstellation}.
-	 */	
-	op void addAll(List<AbstractConstellationRequest> requests)
-	
-	/*
-	 * Removes the specified {@link AbstractConstellationRequest} from the constellation.
-	 * @param request Specifies the request to remove from the {@link AbstractConstellation}.
-	 */	
-	op void remove(AbstractConstellationRequest request)
-	
-	/*
-	 * Removes all the {@link AbstractConstellationRequest} specified in the list from the constellation.
-	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
-	 */		
-	op void removeAll(List<AbstractConstellationRequest> requests)	
+	op List<AbstractConstellationRequest> importConstellationRequests(String url)	
 }
 
 /*
@@ -211,7 +187,7 @@ abstract class AbstractConstellationRequest{
 	/*
 	 * Request Unique Identifier.
 	 */
-	contains UID uid
+	contains AbstractUID uid
 	
 	/*
 	 * Request Priority.
@@ -221,18 +197,14 @@ abstract class AbstractConstellationRequest{
 	/*
 	 * Order Status.
 	 */
-	ConstellationRequestStatus orderStatus = "NEW"	
-}
-
-class DefaultConstellationRequest extends AbstractConstellationRequest{	
+	ConstellationRequestStatus orderStatus = "NEW"		
 }
 
 /*
  * Class that documents a request to take an orbital image at a specific location.  
  * It also serves to store the status and the image obtained if any. 
  */
-class ImageConstellationRequest extends DefaultConstellationRequest, GeographicCoordinates{
-	
+class ImageConstellationRequest extends AbstractConstellationRequest, GeographicCoordinates{	
 	/*
 	 * Contains the {@link OrbitalImage} if the {@link ImageConstellationRequest} was successfully processed and retrieved.
 	 */
@@ -361,10 +333,10 @@ abstract class AbstractConstellationDownlinkItem{
 	/*
 	 * Unique {@link AbstractConstellationRequest} identifier.
 	 */
-	contains UID requestUID		
+	contains AbstractUID requestUID		
 }
 
-/*
+/*value
  * This class represents a {@link AbstractDownlinkItem} that contains an {@link OrbitalImage}.
  */
 class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlinkItem{
@@ -375,6 +347,35 @@ class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlin
  * Utilities class for the satellite example.
  */
 class ConstellationUtilities{
+	
+	/*
+	 * Adds all the specified requests into the specified container.
+	 * @param container Refers to the destination list.
+	 * @param requests List of {@link AbstractConstellationRequest} to be imported.
+	 */
+	op void addAllRequests(ConstellationRequestsList ^container, List<AbstractConstellationRequest> requests)
+	
+    /*
+	 * Adds the specified {@link AbstractConstellationRequest} to the list of {@link ConstellationRequestsList}.
+	 * @param container Refers to the destination list.
+	 * @param request Specifies the request to add to the list.
+	 */
+	op void addRequest(ConstellationRequestsList ^container, AbstractConstellationRequest request)
+	
+	/*
+	 * Removes the specified {@link AbstractConstellationRequest} from the specified {@link ConstellationRequestsList}.
+	 * @param container Refers to the {@link ConstellationRequestsList}. 
+	 * @param request Specifies the request to remove from the list.
+	 */	
+	op void removeRequest(ConstellationRequestsList ^container, AbstractConstellationRequest request)
+	
+	/*
+	 * Removes all the {@link AbstractConstellationRequest} specified from the list from the specified {@link ConstellationRequestsList}.
+	 * @param container Refers to the {@link ConstellationRequestsList}. 
+	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
+	 */		
+	op void removeAllRequests(ConstellationRequestsList ^container, List<AbstractConstellationRequest> requests)	
+		
 	/*
 	 * Sorts the list of {@link AbstractConstellationRequest} based on {@link AbstractConstellationRequest#priority}.
 	 * @param requests Specifies the list of {@link AbstractConstellationRequest} to sort.

@@ -23,8 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.UID;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,7 +48,7 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 	 * @generated
 	 * @ordered
 	 */
-	protected UID requestUID;
+	protected AbstractUID requestUID;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,7 +74,7 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UID getRequestUID() {
+	public AbstractUID getRequestUID() {
 		return requestUID;
 	}
 
@@ -83,8 +83,8 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRequestUID(UID newRequestUID, NotificationChain msgs) {
-		UID oldRequestUID = requestUID;
+	public NotificationChain basicSetRequestUID(AbstractUID newRequestUID, NotificationChain msgs) {
+		AbstractUID oldRequestUID = requestUID;
 		requestUID = newRequestUID;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID, oldRequestUID, newRequestUID);
@@ -98,7 +98,7 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRequestUID(UID newRequestUID) {
+	public void setRequestUID(AbstractUID newRequestUID) {
 		if (newRequestUID != requestUID) {
 			NotificationChain msgs = null;
 			if (requestUID != null)
@@ -149,7 +149,7 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID:
-				setRequestUID((UID)newValue);
+				setRequestUID((AbstractUID)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -164,7 +164,7 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID:
-				setRequestUID((UID)null);
+				setRequestUID((AbstractUID)null);
 				return;
 		}
 		super.eUnset(featureID);

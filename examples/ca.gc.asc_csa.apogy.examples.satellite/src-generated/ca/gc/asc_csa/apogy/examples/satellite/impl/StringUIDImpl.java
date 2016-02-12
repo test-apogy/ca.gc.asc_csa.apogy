@@ -1,10 +1,19 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * Contributors:
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.DigitUID;
+import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,44 +23,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Digit UID</b></em>'.
+ * An implementation of the model object '<em><b>String UID</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DigitUIDImpl#get_id <em>id</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.StringUIDImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DigitUIDImpl extends UIDImpl implements DigitUID {
+public class StringUIDImpl extends AbstractUIDImpl implements StringUID {
 	/**
-	 * The default value of the '{@link #get_id() <em>id</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #get_id()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long _ID_EDEFAULT = 0L;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #get_id() <em>id</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #get_id()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected long _id = _ID_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DigitUIDImpl() {
+	protected StringUIDImpl() {
 		super();
 	}
 
@@ -62,7 +71,7 @@ public class DigitUIDImpl extends UIDImpl implements DigitUID {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ApogyExamplesSatellitePackage.Literals.DIGIT_UID;
+		return ApogyExamplesSatellitePackage.Literals.STRING_UID;
 	}
 
 	/**
@@ -70,8 +79,8 @@ public class DigitUIDImpl extends UIDImpl implements DigitUID {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long get_id() {
-		return _id;
+	public String getId() {
+		return id;
 	}
 
 	/**
@@ -79,11 +88,11 @@ public class DigitUIDImpl extends UIDImpl implements DigitUID {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void set_id(long new_id) {
-		long old_id = _id;
-		_id = new_id;
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.DIGIT_UID__ID, old_id, _id));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.STRING_UID__ID, oldId, id));
 	}
 
 	/**
@@ -94,8 +103,8 @@ public class DigitUIDImpl extends UIDImpl implements DigitUID {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.DIGIT_UID__ID:
-				return get_id();
+			case ApogyExamplesSatellitePackage.STRING_UID__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +117,8 @@ public class DigitUIDImpl extends UIDImpl implements DigitUID {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.DIGIT_UID__ID:
-				set_id((Long)newValue);
+			case ApogyExamplesSatellitePackage.STRING_UID__ID:
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +132,8 @@ public class DigitUIDImpl extends UIDImpl implements DigitUID {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.DIGIT_UID__ID:
-				set_id(_ID_EDEFAULT);
+			case ApogyExamplesSatellitePackage.STRING_UID__ID:
+				setId(ID_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +147,8 @@ public class DigitUIDImpl extends UIDImpl implements DigitUID {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.DIGIT_UID__ID:
-				return _id != _ID_EDEFAULT;
+			case ApogyExamplesSatellitePackage.STRING_UID__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -154,10 +163,10 @@ public class DigitUIDImpl extends UIDImpl implements DigitUID {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (_id: ");
-		result.append(_id);
+		result.append(" (id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}
 
-} //DigitUIDImpl
+} //StringUIDImpl

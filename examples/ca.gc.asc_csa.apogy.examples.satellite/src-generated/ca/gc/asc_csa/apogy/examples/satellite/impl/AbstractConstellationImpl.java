@@ -19,25 +19,23 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
-import ca.gc.asc_csa.apogy.examples.satellite.UID;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -346,7 +344,7 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	abstract public UID newUID();
+	abstract public AbstractUID newUID();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -420,48 +418,6 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * @generated
 	 */
 	public List<AbstractConstellationRequest> importConstellationRequests(String url) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void add(AbstractConstellationRequest request) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public void addAll(List<AbstractConstellationRequest> requests) {
-		getConstellationRequestsList().getConstellationRequests().addAll(requests);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void remove(AbstractConstellationRequest request) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeAll(List<AbstractConstellationRequest> requests) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -617,18 +573,6 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 				return null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_REQUESTS__STRING:
 				return importConstellationRequests((String)arguments.get(0));
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST:
-				add((AbstractConstellationRequest)arguments.get(0));
-				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___ADD_ALL__LIST:
-				addAll((List<AbstractConstellationRequest>)arguments.get(0));
-				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST:
-				remove((AbstractConstellationRequest)arguments.get(0));
-				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST:
-				removeAll((List<AbstractConstellationRequest>)arguments.get(0));
-				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

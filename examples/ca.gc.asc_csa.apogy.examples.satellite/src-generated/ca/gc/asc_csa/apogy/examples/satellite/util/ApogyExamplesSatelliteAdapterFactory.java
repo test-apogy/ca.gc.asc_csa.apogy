@@ -87,12 +87,12 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	protected ApogyExamplesSatelliteSwitch<Adapter> modelSwitch =
 		new ApogyExamplesSatelliteSwitch<Adapter>() {
 			@Override
-			public Adapter caseUID(UID object) {
-				return createUIDAdapter();
+			public Adapter caseAbstractUID(AbstractUID object) {
+				return createAbstractUIDAdapter();
 			}
 			@Override
-			public Adapter caseDigitUID(DigitUID object) {
-				return createDigitUIDAdapter();
+			public Adapter caseStringUID(StringUID object) {
+				return createStringUIDAdapter();
 			}
 			@Override
 			public Adapter caseConstellationCommandPlansList(ConstellationCommandPlansList object) {
@@ -117,10 +117,6 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAbstractConstellationRequest(AbstractConstellationRequest object) {
 				return createAbstractConstellationRequestAdapter();
-			}
-			@Override
-			public Adapter caseDefaultConstellationRequest(DefaultConstellationRequest object) {
-				return createDefaultConstellationRequestAdapter();
 			}
 			@Override
 			public Adapter caseImageConstellationRequest(ImageConstellationRequest object) {
@@ -223,30 +219,30 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.UID <em>UID</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractUID <em>Abstract UID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.UID
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractUID
 	 * @generated
 	 */
-	public Adapter createUIDAdapter() {
+	public Adapter createAbstractUIDAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.DigitUID <em>Digit UID</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.StringUID <em>String UID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.DigitUID
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.StringUID
 	 * @generated
 	 */
-	public Adapter createDigitUIDAdapter() {
+	public Adapter createStringUIDAdapter() {
 		return null;
 	}
 
@@ -331,20 +327,6 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstractConstellationRequestAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationRequest <em>Default Constellation Request</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationRequest
-	 * @generated
-	 */
-	public Adapter createDefaultConstellationRequestAdapter() {
 		return null;
 	}
 

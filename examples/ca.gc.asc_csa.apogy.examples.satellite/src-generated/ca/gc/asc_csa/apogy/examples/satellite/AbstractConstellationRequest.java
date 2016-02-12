@@ -46,12 +46,12 @@ public interface AbstractConstellationRequest extends EObject {
 	 * Request Unique Identifier.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Uid</em>' containment reference.
-	 * @see #setUid(UID)
+	 * @see #setUid(AbstractUID)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationRequest_Uid()
 	 * @model containment="true"
 	 * @generated
 	 */
-	UID getUid();
+	AbstractUID getUid();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getUid <em>Uid</em>}' containment reference.
@@ -61,7 +61,7 @@ public interface AbstractConstellationRequest extends EObject {
 	 * @see #getUid()
 	 * @generated
 	 */
-	void setUid(UID value);
+	void setUid(AbstractUID value);
 
 	/**
 	 * Returns the value of the '<em><b>Order Priority</b></em>' attribute.

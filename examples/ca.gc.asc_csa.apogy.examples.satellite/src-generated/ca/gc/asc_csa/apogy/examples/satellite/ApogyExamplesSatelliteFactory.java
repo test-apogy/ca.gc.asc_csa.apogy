@@ -33,13 +33,13 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	ApogyExamplesSatelliteFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatelliteFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Digit UID</em>'.
+	 * Returns a new object of class '<em>String UID</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Digit UID</em>'.
+	 * @return a new object of class '<em>String UID</em>'.
 	 * @generated
 	 */
-	DigitUID createDigitUID();
+	StringUID createStringUID();
 
 	/**
 	 * Returns a new object of class '<em>Constellation Command Plans List</em>'.
@@ -76,15 +76,6 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	 * @generated
 	 */
 	ConstellationRequestsList createConstellationRequestsList();
-
-	/**
-	 * Returns a new object of class '<em>Default Constellation Request</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Default Constellation Request</em>'.
-	 * @generated
-	 */
-	DefaultConstellationRequest createDefaultConstellationRequest();
 
 	/**
 	 * Returns a new object of class '<em>Image Constellation Request</em>'.

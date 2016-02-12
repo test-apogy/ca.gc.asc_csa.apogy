@@ -151,7 +151,7 @@ public class AbstractConstellationDownlinkItemItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createDigitUID()));
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createStringUID()));
 	}
 
 	/**
