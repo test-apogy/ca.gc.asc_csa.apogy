@@ -33,11 +33,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.apogy
 
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList
-import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState
 
 class ConstellationSystemApiAdapter extends ApogySystemApiAdapter
 {
@@ -52,33 +48,7 @@ class ConstellationSystemApiAdapter extends ApogySystemApiAdapter
  * This class is the specialized data structure which is used to essentially
  * save and later restore the state of the component; this functionality is
  * implemented by the apply() (load) and collect() (save) methods of the constellation's
- * API adapter,
- * which is {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationApogySystemApiAdapter}.
+ * API adapter, which is {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationApogySystemApiAdapter}.
  */
-class ConstellationData extends ApogyInitializationData
-{
-	/*
-	 * List of the constellation {@link Satellite}. 
-	 */
-	contains SatellitesList[0..1] satellitesList
-	
-	/*
-	 * List of the {@link GroundStation}.
-	 */
-	contains GroundStationReferencesList[0..1] groundStationsReferencesList
-	
-		/*
-	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
-	 */
-	contains ConstellationDownlinksList[0..1] downlinksLists
-	
-	/*
-	 * List of {@link AbstractConstellationRequest}.
-	 */
-	contains ConstellationRequestsList[0..1] constellationRequestsList
-	
-	/*
-	 * FIXME Remove the following item.
-	 */
-	contains ConstellationCommandPlansList[0..1] constellationCommandPlansList
+class ConstellationData extends ApogyInitializationData, ConstellationState{
 }

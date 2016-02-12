@@ -4,7 +4,6 @@
 package ca.gc.asc_csa.apogy.examples.satellite;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * FIXME Remove the following class.
+ * Class that contains list of {@link ConstellationCommandPlan}.
  * <!-- end-model-doc -->
  *
  * <p>

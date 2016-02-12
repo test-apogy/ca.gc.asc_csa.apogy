@@ -15,13 +15,16 @@ package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
-import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
-import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,33 +63,28 @@ public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 		super.collect(initializationData);
 		
 		ConstellationData data = (ConstellationData) initializationData;						
-		AbstractConstellation constellation = (AbstractConstellation) getInstance();
-						
-		data.setConstellationRequestsList(EcoreUtil.copy(constellation.getConstellationRequestsList()));
-		data.setConstellationCommandPlansList(EcoreUtil.copy(constellation.getConstellationCommandPlansList()));
+		AbstractConstellation constellation = (AbstractConstellation) getInstance();						
+		ConstellationState constellationState = EcoreUtil.copy(constellation.getConstellationState());
 		
-		
-		
-		data.setDownlinksLists(EcoreUtil.copy(constellation.getDownlinksLists()));
-		data.setGroundStationsReferencesList(EcoreUtil.copy(constellation.getGroundStationsReferencesList()));
-		data.setSatellitesList(EcoreUtil.copy(constellation.getSatellitesList()));
-		
-		
+		data.setConstellationRequestsList(constellationState.getConstellationRequestsList());
+		data.setConstellationCommandPlansList(constellationState.getConstellationCommandPlansList());
+		data.setDownlinksLists(constellationState.getDownlinksLists());
+		data.setGroundStationsReferencesList(constellationState.getGroundStationsReferencesList());
+		data.setSatellitesList(constellationState.getSatellitesList());
 	}
 	
 	@Override
 	public void apply(AbstractInitializationData initializationData) {
-		super.apply(initializationData);
-		
-		ConstellationData data = (ConstellationData) initializationData;
+		super.apply(initializationData);		
+		ConstellationData data = EcoreUtil.copy((ConstellationData) initializationData);
 		AbstractConstellation constellation = (AbstractConstellation) getInstance();
 		
-		constellation.setConstellationRequestsList(EcoreUtil.copy(data.getConstellationRequestsList()));
-		constellation.setDownlinksLists(EcoreUtil.copy(data.getDownlinksLists()));
-		constellation.setGroundStationsReferencesList(EcoreUtil.copy(data.getGroundStationsReferencesList()));
-		constellation.setSatellitesList(EcoreUtil.copy(data.getSatellitesList()));		
-			
-		constellation.setConstellationCommandPlansList(EcoreUtil.copy(data.getConstellationCommandPlansList()));
+		constellation.setConstellationState(ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationState());
+		constellation.getConstellationState().setConstellationCommandPlansList(data.getConstellationCommandPlansList());
+		constellation.getConstellationState().setConstellationRequestsList(data.getConstellationRequestsList());
+		constellation.getConstellationState().setDownlinksLists(data.getDownlinksLists());
+		constellation.getConstellationState().setGroundStationsReferencesList(data.getGroundStationsReferencesList());
+		constellation.getConstellationState().setSatellitesList(data.getSatellitesList());
 	}
 	
 } //ConstellationSystemApiAdapterImpl

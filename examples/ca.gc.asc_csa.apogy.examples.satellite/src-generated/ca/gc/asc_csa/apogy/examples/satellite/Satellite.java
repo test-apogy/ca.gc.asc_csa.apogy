@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  */
 
 import ca.gc.asc_csa.apogy.common.emf.Named;
-
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 
 /**

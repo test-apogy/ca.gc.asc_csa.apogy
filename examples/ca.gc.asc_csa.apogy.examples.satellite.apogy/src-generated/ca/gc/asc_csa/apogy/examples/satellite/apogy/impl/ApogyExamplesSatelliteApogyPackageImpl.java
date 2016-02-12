@@ -15,18 +15,14 @@ package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
-import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
-import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -136,51 +132,6 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConstellationData_SatellitesList() {
-		return (EReference)constellationDataEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstellationData_GroundStationsReferencesList() {
-		return (EReference)constellationDataEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstellationData_DownlinksLists() {
-		return (EReference)constellationDataEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstellationData_ConstellationRequestsList() {
-		return (EReference)constellationDataEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstellationData_ConstellationCommandPlansList() {
-		return (EReference)constellationDataEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ApogyExamplesSatelliteApogyFactory getApogyExamplesSatelliteApogyFactory() {
 		return (ApogyExamplesSatelliteApogyFactory)getEFactoryInstance();
 	}
@@ -207,11 +158,6 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		constellationSystemApiAdapterEClass = createEClass(CONSTELLATION_SYSTEM_API_ADAPTER);
 
 		constellationDataEClass = createEClass(CONSTELLATION_DATA);
-		createEReference(constellationDataEClass, CONSTELLATION_DATA__SATELLITES_LIST);
-		createEReference(constellationDataEClass, CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST);
-		createEReference(constellationDataEClass, CONSTELLATION_DATA__DOWNLINKS_LISTS);
-		createEReference(constellationDataEClass, CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST);
-		createEReference(constellationDataEClass, CONSTELLATION_DATA__CONSTELLATION_COMMAND_PLANS_LIST);
 	}
 
 	/**
@@ -240,7 +186,6 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		// Obtain other dependent packages
 		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		ApogyExamplesSatellitePackage theApogyExamplesSatellitePackage = (ApogyExamplesSatellitePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesSatellitePackage.eNS_URI);
-		ApogyCoreEnvironmentOrbitEarthPackage theApogyCoreEnvironmentOrbitEarthPackage = (ApogyCoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitEarthPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -249,16 +194,12 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		// Add supertypes to classes
 		constellationSystemApiAdapterEClass.getESuperTypes().add(theApogyCorePackage.getApogySystemApiAdapter());
 		constellationDataEClass.getESuperTypes().add(theApogyCorePackage.getApogyInitializationData());
+		constellationDataEClass.getESuperTypes().add(theApogyExamplesSatellitePackage.getConstellationState());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(constellationSystemApiAdapterEClass, ConstellationSystemApiAdapter.class, "ConstellationSystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(constellationDataEClass, ConstellationData.class, "ConstellationData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstellationData_SatellitesList(), theApogyExamplesSatellitePackage.getSatellitesList(), null, "satellitesList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstellationData_GroundStationsReferencesList(), theApogyCoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstellationData_DownlinksLists(), theApogyExamplesSatellitePackage.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstellationData_ConstellationRequestsList(), theApogyExamplesSatellitePackage.getConstellationRequestsList(), null, "constellationRequestsList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstellationData_ConstellationCommandPlansList(), theApogyExamplesSatellitePackage.getConstellationCommandPlansList(), null, "constellationCommandPlansList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -295,37 +236,7 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		  (constellationDataEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "This class is the specialized data structure which is used to essentially\nsave and later restore the state of the component; this functionality is\nimplemented by the apply() (load) and collect() (save) methods of the constellation\'s\nAPI adapter,\nwhich is {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationApogySystemApiAdapter}."
-		   });	
-		addAnnotation
-		  (getConstellationData_SatellitesList(), 
-		   source, 
-		   new String[] {
-			 "documentation", "List of the constellation {@link Satellite}."
-		   });	
-		addAnnotation
-		  (getConstellationData_GroundStationsReferencesList(), 
-		   source, 
-		   new String[] {
-			 "documentation", "List of the {@link GroundStation}."
-		   });	
-		addAnnotation
-		  (getConstellationData_DownlinksLists(), 
-		   source, 
-		   new String[] {
-			 "documentation", "List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}."
-		   });	
-		addAnnotation
-		  (getConstellationData_ConstellationRequestsList(), 
-		   source, 
-		   new String[] {
-			 "documentation", "List of {@link AbstractConstellationRequest}."
-		   });	
-		addAnnotation
-		  (getConstellationData_ConstellationCommandPlansList(), 
-		   source, 
-		   new String[] {
-			 "documentation", "FIXME Remove the following item."
+			 "documentation", "This class is the specialized data structure which is used to essentially\nsave and later restore the state of the component; this functionality is\nimplemented by the apply() (load) and collect() (save) methods of the constellation\'s\nAPI adapter, which is {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationApogySystemApiAdapter}."
 		   });
 	}
 

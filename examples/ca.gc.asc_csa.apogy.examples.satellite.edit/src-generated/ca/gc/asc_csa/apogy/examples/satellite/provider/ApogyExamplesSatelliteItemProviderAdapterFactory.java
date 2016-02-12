@@ -168,6 +168,29 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConstellationStateItemProvider constellationStateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConstellationStateAdapter() {
+		if (constellationStateItemProvider == null) {
+			constellationStateItemProvider = new ConstellationStateItemProvider(this);
+		}
+
+		return constellationStateItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -617,6 +640,7 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	public void dispose() {
 		if (stringUIDItemProvider != null) stringUIDItemProvider.dispose();
 		if (constellationCommandPlansListItemProvider != null) constellationCommandPlansListItemProvider.dispose();
+		if (constellationStateItemProvider != null) constellationStateItemProvider.dispose();
 		if (defaultConstellationItemProvider != null) defaultConstellationItemProvider.dispose();
 		if (constellationCommandPlanItemProvider != null) constellationCommandPlanItemProvider.dispose();
 		if (constellationRequestsListItemProvider != null) constellationRequestsListItemProvider.dispose();
@@ -1043,6 +1067,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationState()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellation()));
 
 				newChildDescriptors.add
@@ -1129,6 +1158,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlansList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationState()));
 
 				newChildDescriptors.add
 					(createChildParameter

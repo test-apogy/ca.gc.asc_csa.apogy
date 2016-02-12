@@ -57,25 +57,18 @@ class StringUID extends AbstractUID{
 }
 
 /*
- * FIXME Remove the following class.
+ * Class that contains list of {@link ConstellationCommandPlan}.
  */
  class ConstellationCommandPlansList{
  	contains ConstellationCommandPlan[0..*] plans
  }
-
-/*
- * Represents a constellation of Satellites. It provides basic queries used to schedule 
- * image acquisition and upload requests and downloads data from the satellites.
- */
-abstract class AbstractConstellation{
-	
-	/*
-	 * Creates an new instance of {@link UID}.
-	 */
-	op AbstractUID newUID()
-	
-	/*
-	 * FIXME Remove the following item.
+ 
+ /*
+  * Class used to store the constellation state. 
+  */
+ class ConstellationState{
+ 	/*
+	 * List of {@link ConstellationCommandPlan}s.
 	 */	 
 	contains ConstellationCommandPlansList[0..1] constellationCommandPlansList
 	 
@@ -98,7 +91,24 @@ abstract class AbstractConstellation{
 	 * List of {@link AbstractConstellationRequest}.
 	 */
 	contains ConstellationRequestsList[0..1] constellationRequestsList
+ }
 
+/*
+ * Represents a constellation of Satellites. It provides basic queries used to schedule 
+ * image acquisition and upload requests and downloads data from the satellites.
+ */
+abstract class AbstractConstellation{
+	
+	/*
+	 * Creates an new instance of {@link UID}.
+	 */
+	op AbstractUID newUID()
+	
+	/*
+	 * Constellation State.
+	 */
+	contains ConstellationState[0..1] constellationState
+	
 	/*
 	 * Returns the list of {@link AbstractSatelliteCommand} required to process the constellation {@link AbstractConstellationRequest} 
 	 * based on the available constellation satellites.

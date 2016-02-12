@@ -32,8 +32,6 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
@@ -89,11 +87,7 @@ public class AbstractConstellationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__CONSTELLATION_COMMAND_PLANS_LIST);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__SATELLITES_LIST);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -135,11 +129,7 @@ public class AbstractConstellationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractConstellation.class)) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_COMMAND_PLANS_LIST:
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -159,28 +149,8 @@ public class AbstractConstellationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__CONSTELLATION_COMMAND_PLANS_LIST,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlansList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__SATELLITES_LIST,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellitesList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationState()));
 	}
 
 	/**

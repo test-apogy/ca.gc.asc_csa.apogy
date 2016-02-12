@@ -51,6 +51,15 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	ConstellationCommandPlansList createConstellationCommandPlansList();
 
 	/**
+	 * Returns a new object of class '<em>Constellation State</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constellation State</em>'.
+	 * @generated
+	 */
+	ConstellationState createConstellationState();
+
+	/**
 	 * Returns a new object of class '<em>Constellation Command Plan</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

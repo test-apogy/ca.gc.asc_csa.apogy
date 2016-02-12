@@ -15,19 +15,19 @@ package ca.gc.asc_csa.apogy.examples.satellite.apogy.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
-import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
-
+import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.apogy.examples.satellite.apogy.*;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -116,6 +116,10 @@ public class ApogyExamplesSatelliteApogyAdapterFactory extends AdapterFactoryImp
 			@Override
 			public Adapter caseApogyInitializationData(ApogyInitializationData object) {
 				return createApogyInitializationDataAdapter();
+			}
+			@Override
+			public Adapter caseConstellationState(ConstellationState object) {
+				return createConstellationStateAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -246,6 +250,20 @@ public class ApogyExamplesSatelliteApogyAdapterFactory extends AdapterFactoryImp
 	 * @generated
 	 */
 	public Adapter createApogyInitializationDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState <em>Constellation State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState
+	 * @generated
+	 */
+	public Adapter createConstellationStateAdapter() {
 		return null;
 	}
 

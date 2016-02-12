@@ -12,10 +12,10 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
+import org.eclipse.emf.ecore.EClass;
+
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

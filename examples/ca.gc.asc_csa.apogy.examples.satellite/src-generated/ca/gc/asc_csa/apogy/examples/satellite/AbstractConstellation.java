@@ -13,12 +13,11 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.rmi.server.UID;
 import java.util.Date;
 import java.util.List;
-import org.eclipse.emf.ecore.EObject;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,11 +33,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesL
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationCommandPlansList <em>Constellation Command Plans List</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationState <em>Constellation State</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation()
@@ -47,129 +42,29 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesL
  */
 public interface AbstractConstellation extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Constellation Command Plans List</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Constellation State</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * FIXME Remove the following item.
+	 * Constellation State.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Constellation Command Plans List</em>' containment reference.
-	 * @see #setConstellationCommandPlansList(ConstellationCommandPlansList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_ConstellationCommandPlansList()
+	 * @return the value of the '<em>Constellation State</em>' containment reference.
+	 * @see #setConstellationState(ConstellationState)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_ConstellationState()
 	 * @model containment="true"
 	 * @generated
 	 */
-	ConstellationCommandPlansList getConstellationCommandPlansList();
+	ConstellationState getConstellationState();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationCommandPlansList <em>Constellation Command Plans List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationState <em>Constellation State</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constellation Command Plans List</em>' containment reference.
-	 * @see #getConstellationCommandPlansList()
+	 * @param value the new value of the '<em>Constellation State</em>' containment reference.
+	 * @see #getConstellationState()
 	 * @generated
 	 */
-	void setConstellationCommandPlansList(ConstellationCommandPlansList value);
-
-	/**
-	 * Returns the value of the '<em><b>Satellites List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * List of the constellation {@link Satellite}.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Satellites List</em>' containment reference.
-	 * @see #setSatellitesList(SatellitesList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_SatellitesList()
-	 * @model containment="true"
-	 * @generated
-	 */
-	SatellitesList getSatellitesList();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Satellites List</em>' containment reference.
-	 * @see #getSatellitesList()
-	 * @generated
-	 */
-	void setSatellitesList(SatellitesList value);
-
-	/**
-	 * Returns the value of the '<em><b>Ground Stations References List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * List of the {@link GroundStation}.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ground Stations References List</em>' containment reference.
-	 * @see #setGroundStationsReferencesList(GroundStationReferencesList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_GroundStationsReferencesList()
-	 * @model containment="true"
-	 * @generated
-	 */
-	GroundStationReferencesList getGroundStationsReferencesList();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ground Stations References List</em>' containment reference.
-	 * @see #getGroundStationsReferencesList()
-	 * @generated
-	 */
-	void setGroundStationsReferencesList(GroundStationReferencesList value);
-
-	/**
-	 * Returns the value of the '<em><b>Downlinks Lists</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Downlinks Lists</em>' containment reference.
-	 * @see #setDownlinksLists(ConstellationDownlinksList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_DownlinksLists()
-	 * @model containment="true"
-	 * @generated
-	 */
-	ConstellationDownlinksList getDownlinksLists();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Downlinks Lists</em>' containment reference.
-	 * @see #getDownlinksLists()
-	 * @generated
-	 */
-	void setDownlinksLists(ConstellationDownlinksList value);
-
-	/**
-	 * Returns the value of the '<em><b>Constellation Requests List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * List of {@link AbstractConstellationRequest}.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Constellation Requests List</em>' containment reference.
-	 * @see #setConstellationRequestsList(ConstellationRequestsList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_ConstellationRequestsList()
-	 * @model containment="true"
-	 * @generated
-	 */
-	ConstellationRequestsList getConstellationRequestsList();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constellation Requests List</em>' containment reference.
-	 * @see #getConstellationRequestsList()
-	 * @generated
-	 */
-	void setConstellationRequestsList(ConstellationRequestsList value);
+	void setConstellationState(ConstellationState value);
 
 	/**
 	 * <!-- begin-user-doc -->
