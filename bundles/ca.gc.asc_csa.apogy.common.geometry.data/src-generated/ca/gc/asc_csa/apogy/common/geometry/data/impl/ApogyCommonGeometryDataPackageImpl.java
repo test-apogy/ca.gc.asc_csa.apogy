@@ -797,6 +797,12 @@ public class ApogyCommonGeometryDataPackageImpl extends EPackageImpl implements 
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry"
+		   });	
+		addAnnotation
+		  (polygonSamplingShapeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*"
 		   });
 	}
 

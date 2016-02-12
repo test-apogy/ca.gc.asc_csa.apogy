@@ -30,6 +30,10 @@ import ca.gc.asc_csa.apogy.common.converters.graphs.impl.ApogyCommonConvertersGr
  * A representation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A utility class used to perform a variety of functions
+ * <!-- end-model-doc -->
+ *
  *
  * @see ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsPackage#getApogyCommonConvertersGraphsFacade()
  * @model

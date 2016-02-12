@@ -732,6 +732,12 @@ public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements Apog
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
+		  (matrix3dEDataType, 
+		   source, 
+		   new String[] {
+			 "documentation", "A 3x3 Matrix, used to help implement the lander\'s position,\nnamely the 3D pose of the lander."
+		   });	
+		addAnnotation
 		  (positionEClass, 
 		   source, 
 		   new String[] {

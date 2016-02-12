@@ -23,6 +23,12 @@ import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
  * A representation of the model object '<em><b>Apogy Environment Node</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ *  -------------------------------------------------------------------------
+ * Specialized Nodes.
+ * -------------------------------------------------------------------------
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

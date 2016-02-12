@@ -19,6 +19,10 @@ package ca.gc.asc_csa.apogy.common.geometry.data;
  * A representation of the model object '<em><b>Polygon Sampling Shape</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * <!-- end-model-doc -->
+ *
  *
  * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#getPolygonSamplingShape()
  * @model interface="true" abstract="true"

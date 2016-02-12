@@ -27,6 +27,10 @@ import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
  * A representation of the model object '<em><b>Map View Configuration</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Configuration used for the Map View.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

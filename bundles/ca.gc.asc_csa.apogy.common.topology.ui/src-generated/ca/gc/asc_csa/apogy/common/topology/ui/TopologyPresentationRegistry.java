@@ -22,6 +22,11 @@ import ca.gc.asc_csa.apogy.common.topology.Node;
  * A representation of the model object '<em><b>Topology Presentation Registry</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The registry of all NodePresentation. This class is intended to be a singleton.
+ * It associates at most one NodePresentation to each Node. It registers to
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

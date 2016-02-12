@@ -406,6 +406,12 @@ public class ApogyExamplesAntennaPackageImpl extends EPackageImpl implements Apo
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
+		  (antennaEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This class represents the abstract concept of an antenna."
+		   });	
+		addAnnotation
 		  (getAntenna__Init(), 
 		   source, 
 		   new String[] {

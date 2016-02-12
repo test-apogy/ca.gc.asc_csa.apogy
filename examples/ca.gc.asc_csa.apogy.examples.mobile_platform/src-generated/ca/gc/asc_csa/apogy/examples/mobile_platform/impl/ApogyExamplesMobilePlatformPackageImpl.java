@@ -554,6 +554,12 @@ public class ApogyExamplesMobilePlatformPackageImpl extends EPackageImpl impleme
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
+		  (positionEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This class is used to represent a position of a particular object\nin space.  In particular, this provides both a Cartesian coordinate\nlocation as well as an angle corresponding to the object\'s pose."
+		   });	
+		addAnnotation
 		  (getPosition_X(), 
 		   source, 
 		   new String[] {

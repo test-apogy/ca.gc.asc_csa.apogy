@@ -1481,6 +1481,12 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"
 		   });	
 		addAnnotation
+		  (zCorrectionModeEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "Enumeration of available methods use to compute the correction along the Z axis."
+		   });	
+		addAnnotation
 		  (orientationCorrectionModeEEnum, 
 		   source, 
 		   new String[] {

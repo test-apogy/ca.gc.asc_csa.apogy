@@ -23,6 +23,10 @@ import ca.gc.asc_csa.apogy.examples.satellite.ui.impl.ApogyExamplesSatelliteUiFa
  * A representation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Constellation Facade.  This class provides utility methods.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

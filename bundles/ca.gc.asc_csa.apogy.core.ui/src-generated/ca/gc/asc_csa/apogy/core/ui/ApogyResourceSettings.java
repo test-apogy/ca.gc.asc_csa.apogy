@@ -23,6 +23,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Apogy Resource Settings</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This class is used to support Apogy wizards.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

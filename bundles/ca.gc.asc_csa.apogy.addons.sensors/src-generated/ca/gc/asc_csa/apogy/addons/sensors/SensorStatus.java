@@ -24,6 +24,14 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Sensor Status</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * Represents the various states that a sensor could be in.
+ *  * Typical status transitions :
+ *  * Power up (nominal) : OFF -> BUSY (initialization) -> READY
+ * Power up (off-nominal) : OFF -> BUSY (initialization) -> FAILED
+ *  * Data acquition (nominal): READY -> BUSY (Acquisition) -> READY
+ * Data acquition (off-nominal): READY -> BUSY (Acquisition) -> FAILED
+ * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage#getSensorStatus()
  * @model
  * @generated

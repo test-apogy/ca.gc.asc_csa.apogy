@@ -21,6 +21,11 @@ import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
  * A representation of the model object '<em><b>Circular Sector Field Of View Binding</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Binding that binds a CircularSectorFieldOfView to another CircularSectorFieldOfView.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

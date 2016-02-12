@@ -476,6 +476,12 @@ public class ApogyCommonProcessorsPackageImpl extends EPackageImpl implements Ap
 			 "basePackage", "ca.gc.asc_csa.apogy.common"
 		   });	
 		addAnnotation
+		  (monitorableEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Represent a object for which operation progress can be reported."
+		   });	
+		addAnnotation
 		  (getMonitorable_ProgressMonitor(), 
 		   source, 
 		   new String[] {

@@ -246,6 +246,12 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.satellite"
 		   });	
 		addAnnotation
+		  (apogyExamplesSatelliteUiFacadeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Constellation Facade.  This class provides utility methods."
+		   });	
+		addAnnotation
 		  (getApogyExamplesSatelliteUiFacade__GetConstellationVariable(), 
 		   source, 
 		   new String[] {
