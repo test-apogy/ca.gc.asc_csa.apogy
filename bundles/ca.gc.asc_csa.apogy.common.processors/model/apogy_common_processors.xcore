@@ -33,6 +33,9 @@ interface VerboseProvider
 	op void printVerbose(String message)
 }
 
+/*
+ * Represent a object for which operation progress can be reported.
+ */
 interface Monitorable
 {
 	@GenModel(property="None")
