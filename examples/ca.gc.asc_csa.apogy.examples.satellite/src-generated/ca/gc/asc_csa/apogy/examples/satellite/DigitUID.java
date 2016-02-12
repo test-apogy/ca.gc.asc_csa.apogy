@@ -8,6 +8,10 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  * A representation of the model object '<em><b>Digit UID</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Digital Unique Identifier.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

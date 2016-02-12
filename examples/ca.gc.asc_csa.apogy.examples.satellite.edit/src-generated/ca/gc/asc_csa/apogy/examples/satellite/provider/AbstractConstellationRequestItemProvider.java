@@ -138,7 +138,6 @@ public class AbstractConstellationRequestItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND);
 		}
 		return childrenFeatures;
 	}
@@ -196,7 +195,6 @@ public class AbstractConstellationRequestItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -218,21 +216,6 @@ public class AbstractConstellationRequestItemProvider
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID,
 				 ApogyExamplesSatelliteFactory.eINSTANCE.createDigitUID()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnSatelliteCommand()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffSatelliteCommand()));
 	}
 
 	/**

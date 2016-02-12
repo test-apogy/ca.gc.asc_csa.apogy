@@ -12,7 +12,16 @@
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 @GenModel(prefix="ApogyExamplesSatellite",
-		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+		  copyrightText="Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+Contributors:
+Canadian Space Agency (CSA) - Initial API and implementation
+-Pierre Allard (Pierre.Allard@canada.ca),
+-Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+-Sebastien Gemme (Sebastien.Gemme@canada.ca)",
 		  modelName="ApogyExamplesSatellite",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
@@ -34,10 +43,15 @@ type List<T> wraps java.util.List
 type SortedSet<T> wraps java.util.SortedSet 
 
  
-
+/*
+ * Abstract Unique Identifier.  This class is meant to be sub-classed.
+ */
 abstract class UID{
 }
 
+/*
+ * Digital Unique Identifier.
+ */
 class DigitUID extends UID{
 	long _id = "0"	
 }
@@ -54,6 +68,11 @@ class DigitUID extends UID{
  * image acquisition and upload requests and downloads data from the satellites.
  */
 abstract class AbstractConstellation{
+	
+	/*
+	 * Creates an new instance of {@link UID}.
+	 */
+	op UID newUID()
 	
 	/*
 	 * FIXME Remove the following item.
@@ -124,6 +143,11 @@ abstract class AbstractConstellation{
 	 */
 	op void importConstellationDownlink(String url)
 	
+	/*
+	 * Imports the {@link AbstractConstellationRequest} contained in the resource specified by the {@link url}.
+	 * @param url URL that specifies the resource.
+	 * @return List of imported {@link AbstractConstellationRequest}. 
+	 */
 	op List<AbstractConstellationRequest> importConstellationRequests(String url)
 	
 	/*
@@ -152,35 +176,22 @@ abstract class AbstractConstellation{
 }
 
 /*
+ * Default Constellation Implementation Class.
+ * 
+ * By default {@link AbstractConstellation#newUID} returns {@link DigitUID}.
+ */
+class DefaultConstellation extends AbstractConstellation{	
+}
+
+/*
  * This class contains a list of {@link SatelliteCommandPlanItem}.
  * The {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}. 
  */
 class ConstellationCommandPlan{
 	/*
-	 * List of {@link SatelliteCommandPlanItem}.
+	 * List of {@link AbstractSatelliteCommand}.
 	 */
-	contains ConstellationCommandPlanItem[0..*] constellationCommandPlanItems
-}
-
-/*
- * This class specifies the link between an {@link AbstractConstellationRequest} and a {@link AbstractSatelliteCommand}.
- */
-class ConstellationCommandPlanItem{
-	/*
-	 * Reference to the {@link AbstractConstellationRequest}.
-	 */	
-	refers AbstractConstellationRequest[1] request
-	
-	/*
-	 * Reference to the {@link AbstractSatelliteCommand} used/required to service the {@link AbstractConstellationRequest}.
-	 */
-	contains AbstractSatelliteCommand[0..1] satelliteCommand	
-}
-
-/*
- * Constellation Default Implementation Class.
- */
-class DefaultConstellation extends AbstractConstellation{	
+	contains AbstractSatelliteCommand[0..*] constellationCommands
 }
 
 /*
@@ -211,11 +222,6 @@ abstract class AbstractConstellationRequest{
 	 * Order Status.
 	 */
 	ConstellationRequestStatus orderStatus = "NEW"	
-	
-	/*
-	 * Reference to the {@link AbstractSatelliteCommand} associated to the {@link AbstractConstellationRequest}.
-	 */
-	contains AbstractSatelliteCommand satelliteCommand opposite constellationRequest 	
 }
 
 class DefaultConstellationRequest extends AbstractConstellationRequest{	
@@ -285,22 +291,27 @@ class Satellite extends Named{
 /*
  * Satellite Command.
  */
-abstract class AbstractSatelliteCommand extends GeographicCoordinates, Timed{	
+abstract class AbstractSatelliteCommand extends Timed{	
 	/*
 	 * Refers the {@link Satellite} associated with the {@link AbstractSatelliteCommand}. 
 	 */
 	refers Satellite satellite
+}
 
-	/* 
-	 * Reference to the associated {@link AbstractConstellationRequest}.
+/*
+ * Satellite Command that is linked to a specific {@link AbstractConstellationRequest}.
+ */
+abstract class AbstractRequestBasedSatelliteCommand extends AbstractSatelliteCommand{
+	/*
+	 * Refers to the {@link AbstractConstellationRequest} managed by this command.
 	 */
-	container AbstractConstellationRequest constellationRequest opposite satelliteCommand
+	refers AbstractConstellationRequest constellationRequest	
 }
 
 /*
  * Satellite Command to Acquire OrbitalImage
  */
-class AcquireImageSatelliteCommand extends AbstractSatelliteCommand
+class AcquireImageSatelliteCommand extends AbstractRequestBasedSatelliteCommand, GeographicCoordinates
 {
 	/* 
 	 * The satellite is nadir looking, and can roll back and forth (+- X degrees) along its trajectory.
@@ -317,10 +328,16 @@ class OrbitalImage extends EImage{
 	double rollAngle = "0.0"	
 }
 
-class TurnOnSatelliteCommand extends AbstractSatelliteCommand{	
+/*
+ * This command is used to turn on the Imager.
+ */
+class TurnOnImagerCommand extends AbstractSatelliteCommand{	
 }
 
-class TurnOffSatelliteCommand extends AbstractSatelliteCommand{	
+/*
+ * This command is used to turn off the Imager.
+ */
+class TurnOffImagerCommand extends AbstractSatelliteCommand{	
 }
 
 /*

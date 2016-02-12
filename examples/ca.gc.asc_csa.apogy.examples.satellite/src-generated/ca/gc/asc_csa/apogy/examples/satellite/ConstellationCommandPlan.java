@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan#getConstellationCommandPlanItems <em>Constellation Command Plan Items</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan#getConstellationCommands <em>Constellation Commands</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationCommandPlan()
@@ -40,18 +40,18 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ConstellationCommandPlan extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Constellation Command Plan Items</b></em>' containment reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem}.
+	 * Returns the value of the '<em><b>Constellation Commands</b></em>' containment reference list.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * List of {@link SatelliteCommandPlanItem}.
+	 * List of {@link AbstractSatelliteCommand}.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Constellation Command Plan Items</em>' containment reference list.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationCommandPlan_ConstellationCommandPlanItems()
+	 * @return the value of the '<em>Constellation Commands</em>' containment reference list.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationCommandPlan_ConstellationCommands()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ConstellationCommandPlanItem> getConstellationCommandPlanItems();
+	EList<AbstractSatelliteCommand> getConstellationCommands();
 
 } // ConstellationCommandPlan

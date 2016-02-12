@@ -110,22 +110,16 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: {
-				ConstellationCommandPlan constellationCommandPlan = (ConstellationCommandPlan)theEObject;
-				T result = caseConstellationCommandPlan(constellationCommandPlan);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM: {
-				ConstellationCommandPlanItem constellationCommandPlanItem = (ConstellationCommandPlanItem)theEObject;
-				T result = caseConstellationCommandPlanItem(constellationCommandPlanItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION: {
 				DefaultConstellation defaultConstellation = (DefaultConstellation)theEObject;
 				T result = caseDefaultConstellation(defaultConstellation);
 				if (result == null) result = caseAbstractConstellation(defaultConstellation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: {
+				ConstellationCommandPlan constellationCommandPlan = (ConstellationCommandPlan)theEObject;
+				T result = caseConstellationCommandPlan(constellationCommandPlan);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -173,16 +167,24 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND: {
 				AbstractSatelliteCommand abstractSatelliteCommand = (AbstractSatelliteCommand)theEObject;
 				T result = caseAbstractSatelliteCommand(abstractSatelliteCommand);
-				if (result == null) result = caseGeographicCoordinates(abstractSatelliteCommand);
 				if (result == null) result = caseTimed(abstractSatelliteCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyExamplesSatellitePackage.ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND: {
+				AbstractRequestBasedSatelliteCommand abstractRequestBasedSatelliteCommand = (AbstractRequestBasedSatelliteCommand)theEObject;
+				T result = caseAbstractRequestBasedSatelliteCommand(abstractRequestBasedSatelliteCommand);
+				if (result == null) result = caseAbstractSatelliteCommand(abstractRequestBasedSatelliteCommand);
+				if (result == null) result = caseTimed(abstractRequestBasedSatelliteCommand);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: {
 				AcquireImageSatelliteCommand acquireImageSatelliteCommand = (AcquireImageSatelliteCommand)theEObject;
 				T result = caseAcquireImageSatelliteCommand(acquireImageSatelliteCommand);
-				if (result == null) result = caseAbstractSatelliteCommand(acquireImageSatelliteCommand);
+				if (result == null) result = caseAbstractRequestBasedSatelliteCommand(acquireImageSatelliteCommand);
 				if (result == null) result = caseGeographicCoordinates(acquireImageSatelliteCommand);
+				if (result == null) result = caseAbstractSatelliteCommand(acquireImageSatelliteCommand);
 				if (result == null) result = caseTimed(acquireImageSatelliteCommand);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -195,21 +197,19 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyExamplesSatellitePackage.TURN_ON_SATELLITE_COMMAND: {
-				TurnOnSatelliteCommand turnOnSatelliteCommand = (TurnOnSatelliteCommand)theEObject;
-				T result = caseTurnOnSatelliteCommand(turnOnSatelliteCommand);
-				if (result == null) result = caseAbstractSatelliteCommand(turnOnSatelliteCommand);
-				if (result == null) result = caseGeographicCoordinates(turnOnSatelliteCommand);
-				if (result == null) result = caseTimed(turnOnSatelliteCommand);
+			case ApogyExamplesSatellitePackage.TURN_ON_IMAGER_COMMAND: {
+				TurnOnImagerCommand turnOnImagerCommand = (TurnOnImagerCommand)theEObject;
+				T result = caseTurnOnImagerCommand(turnOnImagerCommand);
+				if (result == null) result = caseAbstractSatelliteCommand(turnOnImagerCommand);
+				if (result == null) result = caseTimed(turnOnImagerCommand);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyExamplesSatellitePackage.TURN_OFF_SATELLITE_COMMAND: {
-				TurnOffSatelliteCommand turnOffSatelliteCommand = (TurnOffSatelliteCommand)theEObject;
-				T result = caseTurnOffSatelliteCommand(turnOffSatelliteCommand);
-				if (result == null) result = caseAbstractSatelliteCommand(turnOffSatelliteCommand);
-				if (result == null) result = caseGeographicCoordinates(turnOffSatelliteCommand);
-				if (result == null) result = caseTimed(turnOffSatelliteCommand);
+			case ApogyExamplesSatellitePackage.TURN_OFF_IMAGER_COMMAND: {
+				TurnOffImagerCommand turnOffImagerCommand = (TurnOffImagerCommand)theEObject;
+				T result = caseTurnOffImagerCommand(turnOffImagerCommand);
+				if (result == null) result = caseAbstractSatelliteCommand(turnOffImagerCommand);
+				if (result == null) result = caseTimed(turnOffImagerCommand);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -322,21 +322,6 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseConstellationCommandPlan(ConstellationCommandPlan object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Constellation Command Plan Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Constellation Command Plan Item</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseConstellationCommandPlanItem(ConstellationCommandPlanItem object) {
 		return null;
 	}
 
@@ -461,6 +446,21 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Request Based Satellite Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Request Based Satellite Command</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractRequestBasedSatelliteCommand(AbstractRequestBasedSatelliteCommand object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Acquire Image Satellite Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -491,32 +491,32 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Turn On Satellite Command</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Turn On Imager Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Turn On Satellite Command</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Turn On Imager Command</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTurnOnSatelliteCommand(TurnOnSatelliteCommand object) {
+	public T caseTurnOnImagerCommand(TurnOnImagerCommand object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Turn Off Satellite Command</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Turn Off Imager Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Turn Off Satellite Command</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Turn Off Imager Command</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTurnOffSatelliteCommand(TurnOffSatelliteCommand object) {
+	public T caseTurnOffImagerCommand(TurnOffImagerCommand object) {
 		return null;
 	}
 

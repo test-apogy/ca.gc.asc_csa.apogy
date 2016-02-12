@@ -1,12 +1,22 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * Contributors:
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
-import ca.gc.asc_csa.apogy.examples.satellite.TurnOnSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -15,19 +25,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOnSatelliteCommand} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TurnOnSatelliteCommandItemProvider extends AbstractSatelliteCommandItemProvider {
+public class TurnOffImagerCommandItemProvider extends AbstractSatelliteCommandItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TurnOnSatelliteCommandItemProvider(AdapterFactory adapterFactory) {
+	public TurnOffImagerCommandItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -47,14 +57,14 @@ public class TurnOnSatelliteCommandItemProvider extends AbstractSatelliteCommand
 	}
 
 	/**
-	 * This returns TurnOnSatelliteCommand.gif.
+	 * This returns TurnOffImagerCommand.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/TurnOnSatelliteCommand"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TurnOffImagerCommand"));
 	}
 
 	/**
@@ -65,8 +75,11 @@ public class TurnOnSatelliteCommandItemProvider extends AbstractSatelliteCommand
 	 */
 	@Override
 	public String getText(Object object) {
-		TurnOnSatelliteCommand turnOnSatelliteCommand = (TurnOnSatelliteCommand)object;
-		return getString("_UI_TurnOnSatelliteCommand_type") + " " + turnOnSatelliteCommand.getLongitude();
+		Date labelValue = ((TurnOffImagerCommand)object).getTime();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_TurnOffImagerCommand_type") :
+			getString("_UI_TurnOffImagerCommand_type") + " " + label;
 	}
 	
 

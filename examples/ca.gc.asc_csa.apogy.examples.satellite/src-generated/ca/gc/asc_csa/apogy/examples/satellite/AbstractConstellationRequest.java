@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getUid <em>Uid</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getOrderPriority <em>Order Priority</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getOrderStatus <em>Order Status</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getSatelliteCommand <em>Satellite Command</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationRequest()
@@ -121,32 +120,5 @@ public interface AbstractConstellationRequest extends EObject {
 	 * @generated
 	 */
 	void setOrderStatus(ConstellationRequestStatus value);
-
-	/**
-	 * Returns the value of the '<em><b>Satellite Command</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Reference to the {@link AbstractSatelliteCommand} associated to the {@link AbstractConstellationRequest}.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Satellite Command</em>' containment reference.
-	 * @see #setSatelliteCommand(AbstractSatelliteCommand)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationRequest_SatelliteCommand()
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getConstellationRequest
-	 * @model opposite="constellationRequest" containment="true"
-	 * @generated
-	 */
-	AbstractSatelliteCommand getSatelliteCommand();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getSatelliteCommand <em>Satellite Command</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Satellite Command</em>' containment reference.
-	 * @see #getSatelliteCommand()
-	 * @generated
-	 */
-	void setSatelliteCommand(AbstractSatelliteCommand value);
 
 } // AbstractConstellationRequest

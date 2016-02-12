@@ -16,6 +16,8 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.UID;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
@@ -43,6 +45,11 @@ public class DefaultConstellationImpl extends AbstractConstellationImpl implemen
 	@Override
 	protected EClass eStaticClass() {
 		return ApogyExamplesSatellitePackage.Literals.DEFAULT_CONSTELLATION;
+	}
+	
+	@Override
+	public UID newUID() {
+		return ApogyExamplesSatelliteFactory.eINSTANCE.createDigitUID();
 	}
 
 } //DefaultConstellationImpl

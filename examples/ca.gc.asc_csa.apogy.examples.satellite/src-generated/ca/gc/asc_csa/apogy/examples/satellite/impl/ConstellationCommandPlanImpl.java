@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -28,7 +29,6 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
@@ -39,22 +39,21 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanImpl#getConstellationCommandPlanItems <em>Constellation Command Plan Items</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanImpl#getConstellationCommands <em>Constellation Commands</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container implements ConstellationCommandPlan {
 	/**
-	 * The cached value of the '{@link #getConstellationCommandPlanItems() <em>Constellation Command Plan Items</em>}' containment reference list.
+	 * The cached value of the '{@link #getConstellationCommands() <em>Constellation Commands</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConstellationCommandPlanItems()
+	 * @see #getConstellationCommands()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ConstellationCommandPlanItem> constellationCommandPlanItems;
-
+	protected EList<AbstractSatelliteCommand> constellationCommands;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,11 +78,11 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ConstellationCommandPlanItem> getConstellationCommandPlanItems() {
-		if (constellationCommandPlanItems == null) {
-			constellationCommandPlanItems = new EObjectContainmentEList<ConstellationCommandPlanItem>(ConstellationCommandPlanItem.class, this, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS);
+	public EList<AbstractSatelliteCommand> getConstellationCommands() {
+		if (constellationCommands == null) {
+			constellationCommands = new EObjectContainmentEList<AbstractSatelliteCommand>(AbstractSatelliteCommand.class, this, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS);
 		}
-		return constellationCommandPlanItems;
+		return constellationCommands;
 	}
 
 	/**
@@ -94,8 +93,8 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
-				return ((InternalEList<?>)getConstellationCommandPlanItems()).basicRemove(otherEnd, msgs);
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
+				return ((InternalEList<?>)getConstellationCommands()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -108,8 +107,8 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
-				return getConstellationCommandPlanItems();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
+				return getConstellationCommands();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,9 +122,9 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
-				getConstellationCommandPlanItems().clear();
-				getConstellationCommandPlanItems().addAll((Collection<? extends ConstellationCommandPlanItem>)newValue);
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
+				getConstellationCommands().clear();
+				getConstellationCommands().addAll((Collection<? extends AbstractSatelliteCommand>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,8 +138,8 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
-				getConstellationCommandPlanItems().clear();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
+				getConstellationCommands().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -154,8 +153,8 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
-				return constellationCommandPlanItems != null && !constellationCommandPlanItems.isEmpty();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
+				return constellationCommands != null && !constellationCommands.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

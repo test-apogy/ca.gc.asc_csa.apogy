@@ -60,15 +60,6 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	ConstellationCommandPlan createConstellationCommandPlan();
 
 	/**
-	 * Returns a new object of class '<em>Constellation Command Plan Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constellation Command Plan Item</em>'.
-	 * @generated
-	 */
-	ConstellationCommandPlanItem createConstellationCommandPlanItem();
-
-	/**
 	 * Returns a new object of class '<em>Default Constellation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,22 +132,22 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	OrbitalImage createOrbitalImage();
 
 	/**
-	 * Returns a new object of class '<em>Turn On Satellite Command</em>'.
+	 * Returns a new object of class '<em>Turn On Imager Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Turn On Satellite Command</em>'.
+	 * @return a new object of class '<em>Turn On Imager Command</em>'.
 	 * @generated
 	 */
-	TurnOnSatelliteCommand createTurnOnSatelliteCommand();
+	TurnOnImagerCommand createTurnOnImagerCommand();
 
 	/**
-	 * Returns a new object of class '<em>Turn Off Satellite Command</em>'.
+	 * Returns a new object of class '<em>Turn Off Imager Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Turn Off Satellite Command</em>'.
+	 * @return a new object of class '<em>Turn Off Imager Command</em>'.
 	 * @generated
 	 */
-	TurnOffSatelliteCommand createTurnOffSatelliteCommand();
+	TurnOffImagerCommand createTurnOffImagerCommand();
 
 	/**
 	 * Returns a new object of class '<em>Constellation Downlinks List</em>'.

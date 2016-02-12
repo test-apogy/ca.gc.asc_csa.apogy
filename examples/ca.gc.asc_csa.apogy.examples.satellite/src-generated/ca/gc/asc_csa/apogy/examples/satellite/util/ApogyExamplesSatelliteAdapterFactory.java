@@ -103,16 +103,12 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractConstellationAdapter();
 			}
 			@Override
-			public Adapter caseConstellationCommandPlan(ConstellationCommandPlan object) {
-				return createConstellationCommandPlanAdapter();
-			}
-			@Override
-			public Adapter caseConstellationCommandPlanItem(ConstellationCommandPlanItem object) {
-				return createConstellationCommandPlanItemAdapter();
-			}
-			@Override
 			public Adapter caseDefaultConstellation(DefaultConstellation object) {
 				return createDefaultConstellationAdapter();
+			}
+			@Override
+			public Adapter caseConstellationCommandPlan(ConstellationCommandPlan object) {
+				return createConstellationCommandPlanAdapter();
 			}
 			@Override
 			public Adapter caseConstellationRequestsList(ConstellationRequestsList object) {
@@ -143,6 +139,10 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractSatelliteCommandAdapter();
 			}
 			@Override
+			public Adapter caseAbstractRequestBasedSatelliteCommand(AbstractRequestBasedSatelliteCommand object) {
+				return createAbstractRequestBasedSatelliteCommandAdapter();
+			}
+			@Override
 			public Adapter caseAcquireImageSatelliteCommand(AcquireImageSatelliteCommand object) {
 				return createAcquireImageSatelliteCommandAdapter();
 			}
@@ -151,12 +151,12 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createOrbitalImageAdapter();
 			}
 			@Override
-			public Adapter caseTurnOnSatelliteCommand(TurnOnSatelliteCommand object) {
-				return createTurnOnSatelliteCommandAdapter();
+			public Adapter caseTurnOnImagerCommand(TurnOnImagerCommand object) {
+				return createTurnOnImagerCommandAdapter();
 			}
 			@Override
-			public Adapter caseTurnOffSatelliteCommand(TurnOffSatelliteCommand object) {
-				return createTurnOffSatelliteCommandAdapter();
+			public Adapter caseTurnOffImagerCommand(TurnOffImagerCommand object) {
+				return createTurnOffImagerCommandAdapter();
 			}
 			@Override
 			public Adapter caseConstellationDownlinksList(ConstellationDownlinksList object) {
@@ -293,20 +293,6 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem <em>Constellation Command Plan Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem
-	 * @generated
-	 */
-	public Adapter createConstellationCommandPlanItemAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation <em>Default Constellation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -419,6 +405,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractRequestBasedSatelliteCommand <em>Abstract Request Based Satellite Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractRequestBasedSatelliteCommand
+	 * @generated
+	 */
+	public Adapter createAbstractRequestBasedSatelliteCommandAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand <em>Acquire Image Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -447,30 +447,30 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.TurnOnSatelliteCommand <em>Turn On Satellite Command</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.TurnOnImagerCommand <em>Turn On Imager Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.TurnOnSatelliteCommand
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.TurnOnImagerCommand
 	 * @generated
 	 */
-	public Adapter createTurnOnSatelliteCommandAdapter() {
+	public Adapter createTurnOnImagerCommandAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.TurnOffSatelliteCommand <em>Turn Off Satellite Command</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand <em>Turn Off Imager Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.TurnOffSatelliteCommand
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand
 	 * @generated
 	 */
-	public Adapter createTurnOffSatelliteCommandAdapter() {
+	public Adapter createTurnOffImagerCommandAdapter() {
 		return null;
 	}
 

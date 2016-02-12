@@ -73,9 +73,8 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 		switch (eClass.getClassifierID()) {
 			case ApogyExamplesSatellitePackage.DIGIT_UID: return createDigitUID();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST: return createConstellationCommandPlansList();
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: return createConstellationCommandPlan();
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM: return createConstellationCommandPlanItem();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: return createConstellationCommandPlan();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_REQUEST: return createDefaultConstellationRequest();
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
@@ -83,8 +82,8 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 			case ApogyExamplesSatellitePackage.SATELLITE: return createSatellite();
 			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: return createAcquireImageSatelliteCommand();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE: return createOrbitalImage();
-			case ApogyExamplesSatellitePackage.TURN_ON_SATELLITE_COMMAND: return createTurnOnSatelliteCommand();
-			case ApogyExamplesSatellitePackage.TURN_OFF_SATELLITE_COMMAND: return createTurnOffSatelliteCommand();
+			case ApogyExamplesSatellitePackage.TURN_ON_IMAGER_COMMAND: return createTurnOnImagerCommand();
+			case ApogyExamplesSatellitePackage.TURN_OFF_IMAGER_COMMAND: return createTurnOffImagerCommand();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: return createConstellationDownlinksList();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINK: return createConstellationDownlink();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM: return createOrbitalImageConstellationDownlinkItem();
@@ -164,16 +163,6 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	public ConstellationCommandPlan createConstellationCommandPlan() {
 		ConstellationCommandPlanImpl constellationCommandPlan = new ConstellationCommandPlanImpl();
 		return constellationCommandPlan;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConstellationCommandPlanItem createConstellationCommandPlanItem() {
-		ConstellationCommandPlanItemImpl constellationCommandPlanItem = new ConstellationCommandPlanItemImpl();
-		return constellationCommandPlanItem;
 	}
 
 	/**
@@ -261,9 +250,9 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TurnOnSatelliteCommand createTurnOnSatelliteCommand() {
-		TurnOnSatelliteCommandImpl turnOnSatelliteCommand = new TurnOnSatelliteCommandImpl();
-		return turnOnSatelliteCommand;
+	public TurnOnImagerCommand createTurnOnImagerCommand() {
+		TurnOnImagerCommandImpl turnOnImagerCommand = new TurnOnImagerCommandImpl();
+		return turnOnImagerCommand;
 	}
 
 	/**
@@ -271,9 +260,9 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TurnOffSatelliteCommand createTurnOffSatelliteCommand() {
-		TurnOffSatelliteCommandImpl turnOffSatelliteCommand = new TurnOffSatelliteCommandImpl();
-		return turnOffSatelliteCommand;
+	public TurnOffImagerCommand createTurnOffImagerCommand() {
+		TurnOffImagerCommandImpl turnOffImagerCommand = new TurnOffImagerCommandImpl();
+		return turnOffImagerCommand;
 	}
 
 	/**
