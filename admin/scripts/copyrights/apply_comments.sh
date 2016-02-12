@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CSCRIPT=$(dirname $0)/copyright-adder.py
-COPYRIGHT=$(dirname $0)/../../org.eclipse.symphony.admin/legal/copyrights.txt
+COPYRIGHT=$(dirname $0)/../../ca.gc.asc_csa.apogy.admin/legal/copyrights.txt
 
 echo "CSCRIPT: $CSCRIPT"
 

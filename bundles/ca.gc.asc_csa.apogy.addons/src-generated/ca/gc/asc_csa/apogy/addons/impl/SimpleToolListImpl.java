@@ -27,6 +27,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import ca.gc.asc_csa.apogy.addons.SimpleTool;
 import ca.gc.asc_csa.apogy.addons.SimpleToolList;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.addons.Activator;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 import ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl;
 
@@ -193,31 +196,95 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 					if(msg.getNotifier() instanceof SimpleToolList)
 					{												
 						int featureId = msg.getFeatureID(SimpleToolList.class);
-						
+																								
 						switch(featureId)
-						{
+						{						
 							case ApogyAddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
 							{
-								if(msg.getEventType() == Notification.REMOVE)
+								switch(msg.getEventType())
 								{
-									if(msg.getOldValue() instanceof SimpleTool)
+									case Notification.ADD:
 									{
-										SimpleTool simpleTool = (SimpleTool) msg.getOldValue();
-										simpleTool.dispose();
-									}
-								}
-								else if(msg.getEventType() == Notification.REMOVE_MANY)
-								{
-									if(msg.getOldValue() instanceof List)
-									{
-										@SuppressWarnings("unchecked")
-										List<SimpleTool> tools = (List<SimpleTool>) msg.getOldValue();
-										for(SimpleTool simpleTool : tools)
+										if(msg.getNewValue() instanceof SimpleTool)
 										{
-											simpleTool.dispose();
+											SimpleTool simpleTool = (SimpleTool) msg.getNewValue();
+											System.err.println("-------> Added " + simpleTool);
+											
+											try
+											{
+												simpleTool.initialise();
+											}
+											catch(Exception e)
+											{
+												e.printStackTrace();
+												Logger.INSTANCE.log(Activator.ID, this, "Exception occured during SimpleTool initialise() !", EventSeverity.ERROR);
+											}
 										}
 									}
+									break;
+									
+									case Notification.ADD_MANY:
+									{
+										if(msg.getNewValue() instanceof List)
+										{
+											@SuppressWarnings("unchecked")
+											List<SimpleTool> tools = (List<SimpleTool>) msg.getNewValue();
+											for(SimpleTool simpleTool : tools)
+											{
+												try
+												{
+													simpleTool.initialise();
+												}
+												catch(Exception e)
+												{
+													e.printStackTrace();
+													Logger.INSTANCE.log(Activator.ID, this, "Exception occured during SimpleTool initialise() !", EventSeverity.ERROR);
+												}												
+											}
+										}
+									}
+								
+									case Notification.REMOVE:
+									{
+										if(msg.getOldValue() instanceof SimpleTool)
+										{
+											SimpleTool simpleTool = (SimpleTool) msg.getOldValue();
+											
+											try
+											{
+												simpleTool.dispose();
+											}
+											catch(Exception e)
+											{
+												e.printStackTrace();
+												Logger.INSTANCE.log(Activator.ID, this, "Exception occured during SimpleTool dispose() !", EventSeverity.ERROR);
+											}											
+										}
+									}
+									break;
+									
+									case Notification.REMOVE_MANY:
+									{
+										if(msg.getOldValue() instanceof List)
+										{
+											@SuppressWarnings("unchecked")
+											List<SimpleTool> tools = (List<SimpleTool>) msg.getOldValue();
+											for(SimpleTool simpleTool : tools)
+											{
+												try
+												{
+													simpleTool.dispose();
+												}
+												catch(Exception e)
+												{
+													e.printStackTrace();
+													Logger.INSTANCE.log(Activator.ID, this, "Exception occured during SimpleTool dispose() !", EventSeverity.ERROR);
+												}												
+											}
+										}
+									}									
 								}
+								
 							}
 							break;
 						}

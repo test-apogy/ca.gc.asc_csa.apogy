@@ -26,6 +26,17 @@ package ca.gc.asc_csa.apogy.addons.sensors
 import ca.gc.asc_csa.apogy.common.topology.Node
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 
+/*
+ * Represents the various states that a sensor could be in.
+ *
+ * Typical status transitions :
+ *
+ * Power up (nominal) : OFF -> BUSY (initialization) -> READY 
+ * Power up (off-nominal) : OFF -> BUSY (initialization) -> FAILED 
+ *
+ * Data acquition (nominal): READY -> BUSY (Acquisition) -> READY
+ * Data acquition (off-nominal): READY -> BUSY (Acquisition) -> FAILED
+ */
 enum SensorStatus
 {
 	OFF as "OFF" = 0

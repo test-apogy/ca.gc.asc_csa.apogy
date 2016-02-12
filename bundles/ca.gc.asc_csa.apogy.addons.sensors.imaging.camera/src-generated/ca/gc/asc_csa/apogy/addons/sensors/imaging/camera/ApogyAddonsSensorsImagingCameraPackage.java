@@ -35,6 +35,19 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca),
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraFactory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsSensorsImagingCamera' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsSensorsImagingCamera' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.sensors.imaging'"

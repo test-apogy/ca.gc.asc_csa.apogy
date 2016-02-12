@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.addons.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.addons.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -135,6 +136,14 @@ public class ApogyAddonsAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseSunVector3DToolNode(SunVector3DToolNode object) {
 				return createSunVector3DToolNodeAdapter();
+			}
+			@Override
+			public Adapter caseTrajectoryPickingTool(TrajectoryPickingTool object) {
+				return createTrajectoryPickingToolAdapter();
+			}
+			@Override
+			public Adapter caseTrajectoryPickingToolNode(TrajectoryPickingToolNode object) {
+				return createTrajectoryPickingToolNodeAdapter();
 			}
 			@Override
 			public Adapter caseTrajectory3DTool(Trajectory3DTool object) {
@@ -327,6 +336,34 @@ public class ApogyAddonsAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createSunVector3DToolNodeAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool <em>Trajectory Picking Tool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool
+	 * @generated
+	 */
+	public Adapter createTrajectoryPickingToolAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode <em>Trajectory Picking Tool Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode
+	 * @generated
+	 */
+	public Adapter createTrajectoryPickingToolNodeAdapter() {
 		return null;
 	}
 

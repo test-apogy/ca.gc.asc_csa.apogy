@@ -73,6 +73,7 @@ public class ApogyCoreEnvironmentOrbitFactoryImpl extends EFactoryImpl implement
 			case ApogyCoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES: return createTimedStampedAngularCoordinates();
 			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE: return createSpacecraftAttitude();
 			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE: return createSpacecraftState();
+			case ApogyCoreEnvironmentOrbitPackage.INITIAL_ORBIT_CONTAINER: return createInitialOrbitContainer();
 			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL: return createOrbitModel();
 			case ApogyCoreEnvironmentOrbitPackage.APOGY_CORE_ENVIRONMENT_ORBIT_FACADE: return createApogyCoreEnvironmentOrbitFacade();
 			default:
@@ -172,6 +173,16 @@ public class ApogyCoreEnvironmentOrbitFactoryImpl extends EFactoryImpl implement
 	public SpacecraftState createSpacecraftState() {
 		SpacecraftStateImpl spacecraftState = new SpacecraftStateImpl();
 		return spacecraftState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InitialOrbitContainer createInitialOrbitContainer() {
+		InitialOrbitContainerImpl initialOrbitContainer = new InitialOrbitContainerImpl();
+		return initialOrbitContainer;
 	}
 
 	/**

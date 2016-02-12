@@ -24,6 +24,11 @@ package ca.gc.asc_csa.apogy.examples.mobile_platform
 
 import ca.gc.asc_csa.apogy.common.emf.Disposable 
 
+/*
+ * This class is used to represent a position of a particular object
+ * in space.  In particular, this provides both a Cartesian coordinate
+ * location as well as an angle corresponding to the object's pose.
+ */
 class Position
 {
 	/* 

@@ -29,6 +29,9 @@ import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
 import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 
+/**
+ * Binding that binds a CircularSectorFieldOfView to another CircularSectorFieldOfView.
+ */
 class CircularSectorFieldOfViewBinding extends AbstractTopologyBinding
 {
 	@GenModel(propertyCategory="DESTINATION")

@@ -1776,6 +1776,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		  (this, 
 		   source, 
 		   new String[] {
+			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyCoreEnvironmentUI",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -1910,12 +1911,6 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		   source, 
 		   new String[] {
 			 "documentation", "Return the MapViewConfigurationList in the Active Session.\n@return The MapViewConfigurationList in the Active Session, null if none is found."
-		   });	
-		addAnnotation
-		  (mapViewConfigurationEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "Configuration used for the Map View."
 		   });	
 		addAnnotation
 		  (getMapViewConfiguration__ForceUpdate(), 

@@ -26,6 +26,10 @@ import ca.gc.asc_csa.apogy.common.emf.Disposable
 
 import ca.gc.asc_csa.apogy.addons.vehicle.Thruster
 
+/*
+ * A 3x3 Matrix, used to help implement the lander's position,
+ * namely the 3D pose of the lander.
+ */
 type Matrix3d wraps javax.vecmath.Matrix3d
 
 /*

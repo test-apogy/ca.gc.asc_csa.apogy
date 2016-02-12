@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
@@ -41,11 +42,16 @@ import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
-import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 /**
@@ -69,6 +75,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Variable;
  */
 public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory3DTool 
 {
+	private VariableAdapter variableAdapter = null;
 	private Adapter poseProviderAdapter = null;  
 	private Point3d lastPoseAdded = null;
 	private WayPointPath currentWayPointPath = null;
@@ -191,30 +198,24 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		
 	@Override
 	public void setRootNode(Node newRootNode) 
-	{
-		if(newRootNode instanceof GroupNode)
-		{
-			((GroupNode) newRootNode).getChildren().add(getTrajectory3DToolNode());
-		}
-		else
-		{
-			if(getTrajectory3DToolNode().getParent() instanceof GroupNode)
-			{
-				((GroupNode)getTrajectory3DToolNode().getParent()).getChildren().remove(getTrajectory3DToolNode());
-			}
-		}
-		super.setRootNode(newRootNode);
-	}
-	
-	@Override
-	public void setActive(boolean newActive) 
 	{		
-		super.setActive(newActive);
+		super.setRootNode(newRootNode);						
+		Trajectory3DToolNode toolNode = getTrajectory3DToolNode();
 		
-		if(newActive)
+		if(toolNode != null)
 		{
-			initialize();
-		}
+			if(newRootNode instanceof GroupNode)
+			{
+				((GroupNode) newRootNode).getChildren().add(toolNode);
+			}
+			else
+			{
+				if(toolNode.getParent() instanceof GroupNode)
+				{
+					((GroupNode) toolNode.getParent()).getChildren().remove(toolNode);
+				}
+			}
+		}				
 	}
 	
 	/**
@@ -286,9 +287,23 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setVariable(Variable newVariable) 
+	{
+		setVariableGen(newVariable);
+		
+		// Attempts to resolve the ApiAdapter.
+		// TODO Do this in a Transaction friendly way.			
+		setPoseProvider(resolveApogySystemApiAdapter(newVariable));
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVariable(Variable newVariable) {
+	public void setVariableGen(Variable newVariable) {
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
@@ -324,8 +339,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	public double getTotalDistance() 
 	{		
 		double d = getTotalDistanceGen();
-		
+				
 		// Force update if distance is zero.
+		// TODO Do this in a Transaction friendly way.			
 		if(d == 0)
 		{
 			d = computeTotalDistance();
@@ -430,27 +446,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public Trajectory3DToolNode getTrajectory3DToolNode()
-	{
-		Trajectory3DToolNode node = getTrajectory3DToolNodeGen();
-		
-		if(node == null)
-		{
-			node = ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode();
-			setTrajectory3DToolNode(node);
-		}
-		
-		return node;
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Trajectory3DToolNode getTrajectory3DToolNodeGen() {
+	public Trajectory3DToolNode getTrajectory3DToolNode() {
 		if (trajectory3DToolNode != null && trajectory3DToolNode.eIsProxy()) {
 			InternalEObject oldTrajectory3DToolNode = (InternalEObject)trajectory3DToolNode;
 			trajectory3DToolNode = (Trajectory3DToolNode)eResolveProxy(oldTrajectory3DToolNode);
@@ -687,6 +685,45 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	}
 	
 	@Override
+	public void initialise() 
+	{	
+		// First, initialize the Trajectory3DToolNode.		
+		// TODO Do this in a Transaction friendly way.				
+		setTrajectory3DToolNode(ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode());	
+		
+		// Then, initialize the rest.
+		super.initialise();
+		
+		System.out.println("====================> Trajectory3DToolImpl.initialise()");
+								
+		try
+		{
+			ApogySystemApiAdapter apogySystemApiAdapter = resolveApogySystemApiAdapter(getVariable());
+			setPoseProvider(apogySystemApiAdapter);
+			if(apogySystemApiAdapter != null)
+			{												  
+				// Resets pose.						 
+				lastPoseAdded = null;
+				currentWayPointPath = null;
+				  
+				if(apogySystemApiAdapter.getPoseTransform() != null)
+				{					 
+					updatePose(apogySystemApiAdapter.getPoseTransform());
+				}				  				
+			}
+			  
+			  // Updates total distance.
+			  setTotalDistance(computeTotalDistance());
+		 }
+		 catch(Throwable t)
+		 {			 
+		 }	
+		
+		// Register to the active session.
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getVariableAdapter());	
+	}
+	
+	@Override
 	public void dispose() 
 	{
 		// Unregister listeners.
@@ -694,6 +731,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		{
 			setPoseProvider(null);
 		}
+				
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getVariableAdapter());
+		getVariableAdapter().setInvocatorSession(null);
 		
 		// Remove 3DTool Node.
 		if(getTrajectory3DToolNode() != null)
@@ -706,37 +746,6 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		}
 		
 		super.dispose();
-	}
-	
-	private void initialize()
-	{
-		 // Forces the Trajectory3DToolNode to be created.
-		 getTrajectory3DToolNode();
-		
-		 try
-		 {
-			  AbstractTypeImplementation abstractTypeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());			  
-			  if(abstractTypeImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
-			  {
-				  ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
-				  setPoseProvider(apogySystemApiAdapter);
-				  
-				  // Resets pose.						 
-				  lastPoseAdded = null;
-				  currentWayPointPath = null;
-				  
-				  if(apogySystemApiAdapter.getPoseTransform() != null)
-				  {					 
-					  updatePose(apogySystemApiAdapter.getPoseTransform());
-				  }				  				
-			  }
-			  
-			  // Updates total distance.
-			  setTotalDistance(computeTotalDistance());
-		  }
-		  catch(Throwable t)
-		  {			 
-		  }	
 	}
 	
 	private void penUp()
@@ -838,6 +847,24 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		return distance;
 	}
 	
+	protected ApogySystemApiAdapter resolveApogySystemApiAdapter(Variable variable)
+	{
+		if(getVariable() != null)
+		{
+			AbstractTypeImplementation abstractTypeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
+			if(abstractTypeImplementation != null)
+			{			
+				if(abstractTypeImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
+				{
+					ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
+					return apogySystemApiAdapter;			  						  			
+				}
+			}
+		}
+		
+		return null;
+	}
+	
 	protected Adapter getPoseProviderAdapter()
 	{
 	  if(poseProviderAdapter == null)
@@ -847,22 +874,165 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {
-				  if(msg.getFeatureID(PoseProvider.class) == ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
-				  {		
-					  if(isPenDown())
-					  {
-						  if(msg.getNewValue() instanceof Matrix4x4)
+				  if(isActive())
+				  {
+					  if(msg.getFeatureID(PoseProvider.class) == ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
+					  {		
+						  if(isPenDown())
 						  {
-							  Matrix4x4 newPose = (Matrix4x4) msg.getNewValue();							  						 			
-							  updatePose(newPose);						  						 
+							  if(msg.getNewValue() instanceof Matrix4x4)
+							  {
+								  Matrix4x4 newPose = (Matrix4x4) msg.getNewValue();							  						 			
+								  updatePose(newPose);						  						 
+							  }
 						  }
-					  }
-				  }					  
+					  }	
+				  }
 			  }  
 		  };
 	  }
 	  
 	  return poseProviderAdapter;
+	}
+	
+	private VariableAdapter getVariableAdapter()
+	{
+		if(variableAdapter == null)
+		{
+			variableAdapter = new VariableAdapter();
+		}
+		
+		return variableAdapter;
+	}
+	
+	private class VariableAdapter extends AdapterImpl
+	{
+		private InvocatorSession currentInvocatorSession = null;
+		private Environment currentEnvironment = null;
+		private Context currentContext = null;
+		
+		public void notifyChanged(Notification msg) 
+		{				
+			
+			if(msg.getNotifier() instanceof ApogyCoreInvocatorFacade)
+			{
+				int featureId = msg.getFeatureID(ApogyCoreInvocatorFacade.class);
+				switch (featureId) 
+				{
+					case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+					{	
+						setInvocatorSession((InvocatorSession) msg.getNewValue());
+					}
+					break;
+
+				default:
+					break;
+				}
+			}
+			else if(msg.getNotifier() instanceof InvocatorSession)
+			{
+				int featureId = msg.getFeatureID(InvocatorSession.class);
+				switch (featureId) 
+				{
+					case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__ENVIRONMENT:
+					{
+						setEnvironment((Environment) msg.getNewValue()); 
+					}
+					break;
+
+				default:
+					break;
+				}
+			}
+			else if(msg.getNotifier() instanceof Environment)
+			{
+				int featureId = msg.getFeatureID(Environment.class);
+				switch (featureId) 
+				{
+					case ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT:
+					{
+						setContext((Context) msg.getNewValue());						
+					}
+					break;
+				}
+			}
+			else if(msg.getNotifier() instanceof Context)
+			{
+				int featureId = msg.getFeatureID(Context.class);
+				switch (featureId) 
+				{
+					case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:					
+					{
+						setPoseProvider(resolveApogySystemApiAdapter(getVariable()));
+					}
+					break;
+				}
+				
+			}
+		}
+		
+		private void setInvocatorSession(InvocatorSession newInvocatorSession)
+		{
+			System.out.println(getName() + "setInvocatorSession " + newInvocatorSession);
+			
+			if(currentInvocatorSession != null)
+			{
+				currentInvocatorSession.eAdapters().remove(this);										
+			}
+			setEnvironment(null);
+			setContext(null);
+			
+			currentInvocatorSession = newInvocatorSession;
+			
+			if(currentInvocatorSession != null)
+			{						
+				currentInvocatorSession.eAdapters().add(this);
+				
+				if(currentInvocatorSession.getEnvironment() instanceof ApogyEnvironment)
+				{
+					setEnvironment((ApogyEnvironment) currentInvocatorSession.getEnvironment());
+				}
+			}
+		}
+		
+		public void setEnvironment(Environment newEnvironment)
+		{
+			System.out.println(getName() + "setEnvironment " + newEnvironment);
+			
+			if(currentEnvironment != null)
+			{
+				currentEnvironment.eAdapters().remove(this);								
+			}
+			
+			setContext(null);
+			
+			currentEnvironment = newEnvironment;
+			
+			if(currentEnvironment != null)
+			{
+				currentEnvironment.eAdapters().add(this);
+				setContext(currentEnvironment.getActiveContext());		
+			}			
+		}
+		
+		public void setContext(Context newContext)
+		{
+			System.out.println(getName() + " setContext " + newContext);
+			
+			if(currentContext != null)
+			{
+				currentContext.eAdapters().remove(this);
+			}
+			
+			currentContext = newContext;
+			
+			if(currentContext != null)
+			{
+				currentContext.eAdapters().add(this);
+			}
+				
+			setPoseProvider(resolveApogySystemApiAdapter(getVariable()));
+		}
 	}
 	
 } //Trajectory3DToolImpl

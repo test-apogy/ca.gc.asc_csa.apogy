@@ -15,11 +15,11 @@ Apogy is based on Eclipse platform ([https://www.eclipse.org https://www.eclipse
 |-
 | Apogy OTS
 | Apogy third party library bundles.
-| [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/]
+| [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip]
 |-
 | Apogy
 | Apogy core, examples, doc bundles.
-| [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/]
+| [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip]
 |-
 | Sirius
 | DSL Workbenches Designer 
@@ -78,11 +78,11 @@ To install Eclipse platform, we highly recommend to use Eclipse Installer also k
 = Apogy =
 Apogy is composed of a series of Eclipse features.  The following steps present the way to install them.
 == Apogy Third Party Features ==
-# Add the '''Apogy OTS''' P2 Site [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/].
+# Download and add the '''Apogy OTS''' P2 Site (archive site) [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip].
 # Install the following packages:
 #* Apogy Off The Shelves (OTS)
 == Apogy Features ==
-# Add the '''Apogy''' P2 Site [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/].
+# Download and add the '''Apogy''' P2 Site  (archive site)[ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip].
 # Install the following packages:
 #* Apogy
 = Known Issues =

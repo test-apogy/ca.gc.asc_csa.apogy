@@ -55,7 +55,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setSemiMajorAxis(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_SemiMajorAxis()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m' propertyCategory='KEPLER_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getSemiMajorAxis();
@@ -81,6 +81,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setEccentricity(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_Eccentricity()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='KEPLER_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getEccentricity();
@@ -106,7 +107,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setInclination(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_Inclination()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad' propertyCategory='KEPLER_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getInclination();
@@ -132,7 +133,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setPerigeeArgument(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_PerigeeArgument()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad' propertyCategory='KEPLER_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getPerigeeArgument();
@@ -158,7 +159,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setRightAscentionOfAscendingNode(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_RightAscentionOfAscendingNode()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad' propertyCategory='KEPLER_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getRightAscentionOfAscendingNode();
@@ -184,6 +185,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setMeanAnomaly(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_MeanAnomaly()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='KEPLER_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getMeanAnomaly();
@@ -209,6 +211,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setTrueAnomaly(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_TrueAnomaly()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='KEPLER_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getTrueAnomaly();

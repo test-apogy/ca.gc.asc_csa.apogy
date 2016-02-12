@@ -35,6 +35,9 @@ class FieldOfView extends Node
 	
 }
 
+/*
+ * Defines an distance range by specifying a minimum and maximum distance.
+ */
 class DistanceRange
 {
 	double minimumDistance = "0.0"

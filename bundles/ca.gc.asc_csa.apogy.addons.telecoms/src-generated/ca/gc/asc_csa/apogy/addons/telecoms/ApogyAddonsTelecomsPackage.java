@@ -397,6 +397,15 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	int TELECOM_STATUS_MONITOR_TOOL_LIST_FEATURE_COUNT = ApogyAddonsPackage.SIMPLE_TOOL_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TELECOM_STATUS_MONITOR_TOOL_LIST___INITIALISE = ApogyAddonsPackage.SIMPLE_TOOL___INITIALISE;
+
+	/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

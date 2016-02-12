@@ -129,6 +129,123 @@ class CameraViewConfiguration extends VariableFeatureReference, AbstractTool
 	op List<CameraImageAnnotation> getCameraImageAnnotations()
 }
 
+/* -------------------------------------------------------------------------
+ * 
+ * Filters.
+ * 
+ * ------------------------------------------------------------------------- */ 
+
+class FilterList
+{
+	/** The CameraViewConfiguration containing this FilterList.*/
+	@GenModel(property="None")
+	refers CameraViewConfiguration cameraViewConfiguration opposite filterList
+		
+	contains ImageFilter[0..*] imageFilters
+}
+
+abstract class ImageFilter extends Named, Described
+{
+	/* Whether or not the filter is enabled. */
+	@GenModel(propertyCategory="FILTER_SETTING")
+	boolean enabled = "true"
+	
+	op AbstractEImage filter(AbstractCamera camera, AbstractEImage cameraImage)
+	
+	/*
+	 * Method called to dispose of the ImageFilter. This method should be overridden by sub-classes
+	 * to release resources, unregister listeners, etc. 
+	 */
+	op void dispose() 
+}
+
+class GrayScaleFilter extends ImageFilter
+{	
+}
+
+class EdgeFilter extends ImageFilter
+{	
+}
+
+class ContrastAndBrightnessFilter extends ImageFilter
+{
+	@GenModel(propertyCategory="FILTER_SETTING")	
+	double contrast = "1.0"	
+	
+	@GenModel(propertyCategory="FILTER_SETTING")
+	double brightness = "1.0"
+}
+
+class ExposureFilter extends ImageFilter
+{
+	@GenModel(propertyCategory="FILTER_SETTING")	
+	double exposure = "2.5"
+}
+
+class GainFilter extends ImageFilter
+{
+	@GenModel(propertyCategory="FILTER_SETTING")	
+	double gain = "50"
+	
+	@GenModel(propertyCategory="FILTER_SETTING")
+	double bias = "50"
+}
+
+class InvertFilter extends ImageFilter
+{
+}
+
+class RescaleFilter extends ImageFilter
+{
+	@GenModel(propertyCategory="FILTER_SETTING")	
+	double scale = "1.0"
+}
+
+abstract class CameraImageAnnotation extends Named, Described
+{	
+	/* Whether or not the camera image annotation is visible. */
+	boolean visible = "true"		
+	
+	/*
+	 * Method called to dispose of the CameraImageAnnotation. This method should be overridden by sub-classes
+	 * to release resources, unregister listeners, etc. 
+	 */
+	op void dispose()
+}
+
+
+/* -------------------------------------------------------------------------
+ * 
+ * Overlays.
+ * 
+ * ------------------------------------------------------------------------- */ 
+
+class CameraOverlayList
+{
+	/* The  CameraViewConfiguration containing this CameraOverlayList.*/
+	@GenModel(property="None")
+	refers CameraViewConfiguration cameraViewConfiguration opposite overlayList
+	
+	/* The list of overlay shown onto the camera image. */	
+	contains CameraOverlay[0..*] overlays opposite cameraOverlayList
+}
+
+/* An overlay displayed on top of a camera image. */
+abstract class CameraOverlay extends CameraImageAnnotation
+{			
+	/** The  CameraOverlayList containing this CameraOverlay.*/
+	@GenModel(property="None")
+	refers CameraOverlayList cameraOverlayList opposite overlays
+		
+	/* Where the overlay should be shown. */
+	@GenModel(propertyCategory="OVERLAY_POSITION_PROPERTIES")	
+	OverlayAlignment overlayAlignment	
+}
+
+/* 
+ * An overlay that has to be drawn onto a camera image.  
+ * Such overlays are responsible for drawing their representation onto the provided image.
+ */
 abstract class DrawnCameraOverlay extends CameraOverlay
 {
 	/*

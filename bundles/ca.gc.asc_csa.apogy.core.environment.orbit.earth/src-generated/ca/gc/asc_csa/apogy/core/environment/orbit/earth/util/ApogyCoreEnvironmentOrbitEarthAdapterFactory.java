@@ -27,9 +27,12 @@ import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.*;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
@@ -178,6 +181,10 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 				return createURLBasedTLEEarthOrbitPropagatorAdapter();
 			}
 			@Override
+			public Adapter caseAbstractTLE(AbstractTLE object) {
+				return createAbstractTLEAdapter();
+			}
+			@Override
 			public Adapter caseTLE(TLE object) {
 				return createTLEAdapter();
 			}
@@ -278,8 +285,20 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 				return createOrbitAdapter();
 			}
 			@Override
+			public Adapter caseValidityRangeProvider(ValidityRangeProvider object) {
+				return createValidityRangeProviderAdapter();
+			}
+			@Override
 			public Adapter caseAbstractOrbitPropagator(AbstractOrbitPropagator object) {
 				return createAbstractOrbitPropagatorAdapter();
+			}
+			@Override
+			public Adapter caseInitialOrbitProvider(InitialOrbitProvider object) {
+				return createInitialOrbitProviderAdapter();
+			}
+			@Override
+			public Adapter caseInitialOrbitContainer(InitialOrbitContainer object) {
+				return createInitialOrbitContainerAdapter();
 			}
 			@Override
 			public Adapter caseUpdatable(Updatable object) {
@@ -512,6 +531,20 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createURLBasedTLEEarthOrbitPropagatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE <em>Abstract TLE</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE
+	 * @generated
+	 */
+	public Adapter createAbstractTLEAdapter() {
 		return null;
 	}
 
@@ -866,6 +899,20 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider <em>Validity Range Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider
+	 * @generated
+	 */
+	public Adapter createValidityRangeProviderAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator <em>Abstract Orbit Propagator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -876,6 +923,34 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createAbstractOrbitPropagatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider <em>Initial Orbit Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider
+	 * @generated
+	 */
+	public Adapter createInitialOrbitProviderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer <em>Initial Orbit Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer
+	 * @generated
+	 */
+	public Adapter createInitialOrbitContainerAdapter() {
 		return null;
 	}
 

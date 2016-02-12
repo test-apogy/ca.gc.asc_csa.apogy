@@ -35,6 +35,19 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca),
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddons' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='ApogyAddons' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.edit/src-generated' basePackage='ca.gc.asc_csa.apogy'"
@@ -232,13 +245,22 @@ public interface ApogyAddonsPackage extends EPackage
 	int SIMPLE_TOOL_FEATURE_COUNT = ABSTRACT_TOOL_FEATURE_COUNT + 3;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOOL___INITIALISE = ABSTRACT_TOOL_OPERATION_COUNT + 0;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL___DISPOSE = ABSTRACT_TOOL_OPERATION_COUNT + 0;
+	int SIMPLE_TOOL___DISPOSE = ABSTRACT_TOOL_OPERATION_COUNT + 1;
 
 		/**
 	 * The number of operations of the '<em>Simple Tool</em>' class.
@@ -247,7 +269,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_OPERATION_COUNT = ABSTRACT_TOOL_OPERATION_COUNT + 1;
+	int SIMPLE_TOOL_OPERATION_COUNT = ABSTRACT_TOOL_OPERATION_COUNT + 2;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.Simple3DToolImpl <em>Simple3 DTool</em>}' class.
@@ -330,6 +352,15 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @ordered
 	 */
 	int SIMPLE3_DTOOL_FEATURE_COUNT = SIMPLE_TOOL_FEATURE_COUNT + 2;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE3_DTOOL___INITIALISE = SIMPLE_TOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -521,6 +552,15 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @ordered
 	 */
 	int ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 9;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TWO_POINTS3_DTOOL___INITIALISE = SIMPLE3_DTOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -803,6 +843,15 @@ public interface ApogyAddonsPackage extends EPackage
 	int RULER3_DTOOL_FEATURE_COUNT = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 9;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RULER3_DTOOL___INITIALISE = ABSTRACT_TWO_POINTS3_DTOOL___INITIALISE;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1047,6 +1096,15 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @ordered
 	 */
 	int FEATURE_OF_INTEREST_PICKING_TOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 6;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_OF_INTEREST_PICKING_TOOL___INITIALISE = SIMPLE3_DTOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -1302,6 +1360,15 @@ public interface ApogyAddonsPackage extends EPackage
 	int SUN_VECTOR3_DTOOL_FEATURE_COUNT = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 7;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUN_VECTOR3_DTOOL___INITIALISE = ABSTRACT_TWO_POINTS3_DTOOL___INITIALISE;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1411,6 +1478,251 @@ public interface ApogyAddonsPackage extends EPackage
 	int SUN_VECTOR3_DTOOL_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl <em>Trajectory Picking Tool</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectoryPickingTool()
+	 * @generated
+	 */
+	int TRAJECTORY_PICKING_TOOL = 10;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__NAME = SIMPLE3_DTOOL__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__DESCRIPTION = SIMPLE3_DTOOL__DESCRIPTION;
+
+		/**
+	 * The feature id for the '<em><b>Tool List</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__TOOL_LIST = SIMPLE3_DTOOL__TOOL_LIST;
+
+		/**
+	 * The feature id for the '<em><b>Active</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__ACTIVE = SIMPLE3_DTOOL__ACTIVE;
+
+		/**
+	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__DISPOSED = SIMPLE3_DTOOL__DISPOSED;
+
+		/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__VISIBLE = SIMPLE3_DTOOL__VISIBLE;
+
+		/**
+	 * The feature id for the '<em><b>Root Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__ROOT_NODE = SIMPLE3_DTOOL__ROOT_NODE;
+
+		/**
+	 * The feature id for the '<em><b>Paths</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__PATHS = SIMPLE3_DTOOL_FEATURE_COUNT + 0;
+
+		/**
+	 * The feature id for the '<em><b>Active Path</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__ACTIVE_PATH = SIMPLE3_DTOOL_FEATURE_COUNT + 1;
+
+		/**
+	 * The feature id for the '<em><b>Trajectory Picking Tool Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__TRAJECTORY_PICKING_TOOL_NODE = SIMPLE3_DTOOL_FEATURE_COUNT + 2;
+
+		/**
+	 * The number of structural features of the '<em>Trajectory Picking Tool</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 3;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL___INITIALISE = SIMPLE3_DTOOL___INITIALISE;
+
+		/**
+	 * The operation id for the '<em>Dispose</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL___DISPOSE = SIMPLE3_DTOOL___DISPOSE;
+
+		/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL___SELECTION_CHANGED__NODESELECTION = SIMPLE3_DTOOL___SELECTION_CHANGED__NODESELECTION;
+
+		/**
+	 * The operation id for the '<em>Clear Active Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL___CLEAR_ACTIVE_PATH = SIMPLE3_DTOOL_OPERATION_COUNT + 0;
+
+		/**
+	 * The number of operations of the '<em>Trajectory Picking Tool</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_OPERATION_COUNT = SIMPLE3_DTOOL_OPERATION_COUNT + 1;
+
+		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolNodeImpl <em>Trajectory Picking Tool Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolNodeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectoryPickingToolNode()
+	 * @generated
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE = 11;
+
+		/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE__PARENT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE__DESCRIPTION = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+
+		/**
+	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE__NODE_ID = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+
+		/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE__CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+
+		/**
+	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+
+		/**
+	 * The feature id for the '<em><b>Trajectory Picking Tool</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE__TRAJECTORY_PICKING_TOOL = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+
+		/**
+	 * The number of structural features of the '<em>Trajectory Picking Tool Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE_FEATURE_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+
+		/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+
+		/**
+	 * The number of operations of the '<em>Trajectory Picking Tool Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+
+		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl <em>Trajectory3 DTool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1418,7 +1730,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectory3DTool()
 	 * @generated
 	 */
-	int TRAJECTORY3_DTOOL = 10;
+	int TRAJECTORY3_DTOOL = 12;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1556,6 +1868,15 @@ public interface ApogyAddonsPackage extends EPackage
 	int TRAJECTORY3_DTOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 7;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY3_DTOOL___INITIALISE = SIMPLE3_DTOOL___INITIALISE;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1590,7 +1911,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectory3DToolNode()
 	 * @generated
 	 */
-	int TRAJECTORY3_DTOOL_NODE = 11;
+	int TRAJECTORY3_DTOOL_NODE = 13;
 
 		/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1681,7 +2002,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getColor3f()
 	 * @generated
 	 */
-	int COLOR3F = 12;
+	int COLOR3F = 14;
 
 
 		/**
@@ -1692,7 +2013,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getNodeSelection()
 	 * @generated
 	 */
-	int NODE_SELECTION = 13;
+	int NODE_SELECTION = 15;
 
 
 		/**
@@ -1768,6 +2089,16 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getSimpleTool_Disposed();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#initialise() <em>Initialise</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Initialise</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleTool#initialise()
+	 * @generated
+	 */
+	EOperation getSimpleTool__Initialise();
 
 		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#dispose() <em>Dispose</em>}' operation.
@@ -2167,6 +2498,80 @@ public interface ApogyAddonsPackage extends EPackage
 	EReference getSunVector3DToolNode_SunVector3DTool();
 
 		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool <em>Trajectory Picking Tool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Trajectory Picking Tool</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool
+	 * @generated
+	 */
+	EClass getTrajectoryPickingTool();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getPaths <em>Paths</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Paths</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getPaths()
+	 * @see #getTrajectoryPickingTool()
+	 * @generated
+	 */
+	EReference getTrajectoryPickingTool_Paths();
+
+		/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getActivePath <em>Active Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Active Path</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getActivePath()
+	 * @see #getTrajectoryPickingTool()
+	 * @generated
+	 */
+	EReference getTrajectoryPickingTool_ActivePath();
+
+		/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getTrajectoryPickingToolNode <em>Trajectory Picking Tool Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Trajectory Picking Tool Node</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getTrajectoryPickingToolNode()
+	 * @see #getTrajectoryPickingTool()
+	 * @generated
+	 */
+	EReference getTrajectoryPickingTool_TrajectoryPickingToolNode();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#clearActivePath() <em>Clear Active Path</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Clear Active Path</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#clearActivePath()
+	 * @generated
+	 */
+	EOperation getTrajectoryPickingTool__ClearActivePath();
+
+		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode <em>Trajectory Picking Tool Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Trajectory Picking Tool Node</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode
+	 * @generated
+	 */
+	EClass getTrajectoryPickingToolNode();
+
+		/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode#getTrajectoryPickingTool <em>Trajectory Picking Tool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Trajectory Picking Tool</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode#getTrajectoryPickingTool()
+	 * @see #getTrajectoryPickingToolNode()
+	 * @generated
+	 */
+	EReference getTrajectoryPickingToolNode_TrajectoryPickingTool();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool <em>Trajectory3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2464,6 +2869,13 @@ public interface ApogyAddonsPackage extends EPackage
 		 */
 		EAttribute SIMPLE_TOOL__DISPOSED = eINSTANCE.getSimpleTool_Disposed();
 				/**
+		 * The meta object literal for the '<em><b>Initialise</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SIMPLE_TOOL___INITIALISE = eINSTANCE.getSimpleTool__Initialise();
+				/**
 		 * The meta object literal for the '<em><b>Dispose</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2736,6 +3148,59 @@ public interface ApogyAddonsPackage extends EPackage
 		 * @generated
 		 */
 		EReference SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL = eINSTANCE.getSunVector3DToolNode_SunVector3DTool();
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl <em>Trajectory Picking Tool</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectoryPickingTool()
+		 * @generated
+		 */
+		EClass TRAJECTORY_PICKING_TOOL = eINSTANCE.getTrajectoryPickingTool();
+				/**
+		 * The meta object literal for the '<em><b>Paths</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAJECTORY_PICKING_TOOL__PATHS = eINSTANCE.getTrajectoryPickingTool_Paths();
+				/**
+		 * The meta object literal for the '<em><b>Active Path</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAJECTORY_PICKING_TOOL__ACTIVE_PATH = eINSTANCE.getTrajectoryPickingTool_ActivePath();
+				/**
+		 * The meta object literal for the '<em><b>Trajectory Picking Tool Node</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAJECTORY_PICKING_TOOL__TRAJECTORY_PICKING_TOOL_NODE = eINSTANCE.getTrajectoryPickingTool_TrajectoryPickingToolNode();
+				/**
+		 * The meta object literal for the '<em><b>Clear Active Path</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TRAJECTORY_PICKING_TOOL___CLEAR_ACTIVE_PATH = eINSTANCE.getTrajectoryPickingTool__ClearActivePath();
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolNodeImpl <em>Trajectory Picking Tool Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolNodeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectoryPickingToolNode()
+		 * @generated
+		 */
+		EClass TRAJECTORY_PICKING_TOOL_NODE = eINSTANCE.getTrajectoryPickingToolNode();
+				/**
+		 * The meta object literal for the '<em><b>Trajectory Picking Tool</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAJECTORY_PICKING_TOOL_NODE__TRAJECTORY_PICKING_TOOL = eINSTANCE.getTrajectoryPickingToolNode_TrajectoryPickingTool();
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl <em>Trajectory3 DTool</em>}' class.
 		 * <!-- begin-user-doc -->

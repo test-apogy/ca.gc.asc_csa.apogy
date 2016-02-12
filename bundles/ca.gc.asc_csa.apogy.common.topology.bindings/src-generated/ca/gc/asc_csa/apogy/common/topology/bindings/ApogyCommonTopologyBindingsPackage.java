@@ -277,22 +277,13 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
   int ROTATION_BINDING__ROTATION_AXIS = ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
 
   /**
-	 * The feature id for the '<em><b>Rotation Units</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int ROTATION_BINDING__ROTATION_UNITS = ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 2;
-
-  /**
 	 * The number of structural features of the '<em>Rotation Binding</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ROTATION_BINDING_FEATURE_COUNT = ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 3;
+  int ROTATION_BINDING_FEATURE_COUNT = ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 2;
 
   /**
 	 * The operation id for the '<em>Bind</em>' operation.
@@ -943,16 +934,6 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	int AXIS = 10;
 
 		/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits <em>Angle Units</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits
-	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getAngleUnits()
-	 * @generated
-	 */
-	int ANGLE_UNITS = 11;
-
-		/**
 	 * The meta object id for the '<em>Map</em>' data type.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -960,7 +941,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getMap()
 	 * @generated
 	 */
-  int MAP = 12;
+  int MAP = 11;
 
 
   /**
@@ -1100,17 +1081,6 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @generated
 	 */
   EAttribute getRotationBinding_RotationAxis();
-
-  /**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationUnits <em>Rotation Units</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rotation Units</em>'.
-	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationUnits()
-	 * @see #getRotationBinding()
-	 * @generated
-	 */
-  EAttribute getRotationBinding_RotationUnits();
 
   /**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding <em>Translation Binding</em>}'.
@@ -1365,16 +1335,6 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	EEnum getAxis();
 
 		/**
-	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits <em>Angle Units</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Angle Units</em>'.
-	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits
-	 * @generated
-	 */
-	EEnum getAngleUnits();
-
-		/**
 	 * Returns the meta object for data type '{@link java.util.Map <em>Map</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1516,14 +1476,6 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 		 * @generated
 		 */
     EAttribute ROTATION_BINDING__ROTATION_AXIS = eINSTANCE.getRotationBinding_RotationAxis();
-
-    /**
-		 * The meta object literal for the '<em><b>Rotation Units</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EAttribute ROTATION_BINDING__ROTATION_UNITS = eINSTANCE.getRotationBinding_RotationUnits();
 
     /**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TranslationBindingImpl <em>Translation Binding</em>}' class.
@@ -1734,16 +1686,6 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 		 * @generated
 		 */
 		EEnum AXIS = eINSTANCE.getAxis();
-
-				/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits <em>Angle Units</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits
-		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getAngleUnits()
-		 * @generated
-		 */
-		EEnum ANGLE_UNITS = eINSTANCE.getAngleUnits();
 
 				/**
 		 * The meta object literal for the '<em>Map</em>' data type.

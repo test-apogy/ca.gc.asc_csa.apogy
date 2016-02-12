@@ -43,4 +43,6 @@ public class ApogySystem3dViewerPropertySection extends AbstractExtendedProperty
 		if (getEObject() instanceof ApogySystem)
 		{
 			composite.setApogySystem( (ApogySystem) getEObject());	
-		}
+		}		
+	}
+}

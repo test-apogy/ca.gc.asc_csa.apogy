@@ -34,16 +34,13 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getReferenceFrame <em>Reference Frame</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getAttitudeProvider <em>Attitude Provider</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getInitialOrbit <em>Initial Orbit</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getValidFromDate <em>Valid From Date</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator()
  * @model abstract="true"
  * @generated
  */
-public interface AbstractOrbitPropagator extends Named, Described {
+public interface AbstractOrbitPropagator extends Named, Described, ValidityRangeProvider {
 	/**
 	 * Returns the value of the '<em><b>Reference Frame</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -85,81 +82,6 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	EList<AttitudeProvider> getAttitudeProvider();
 
 	/**
-	 * Returns the value of the '<em><b>Initial Orbit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The initial orbit to propagate in time.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Initial Orbit</em>' reference.
-	 * @see #setInitialOrbit(Orbit)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_InitialOrbit()
-	 * @model required="true"
-	 * @generated
-	 */
-	Orbit getInitialOrbit();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getInitialOrbit <em>Initial Orbit</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Initial Orbit</em>' reference.
-	 * @see #getInitialOrbit()
-	 * @generated
-	 */
-	void setInitialOrbit(Orbit value);
-
-	/**
-	 * Returns the value of the '<em><b>Valid From Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Defines the earliest data for which the propagator is valid.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Valid From Date</em>' attribute.
-	 * @see #setValidFromDate(Date)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ValidFromDate()
-	 * @model unique="false" required="true"
-	 * @generated
-	 */
-	Date getValidFromDate();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getValidFromDate <em>Valid From Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Valid From Date</em>' attribute.
-	 * @see #getValidFromDate()
-	 * @generated
-	 */
-	void setValidFromDate(Date value);
-
-	/**
-	 * Returns the value of the '<em><b>Valid To Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Defines the latest data for which the propagator is valid.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Valid To Date</em>' attribute.
-	 * @see #setValidToDate(Date)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ValidToDate()
-	 * @model unique="false" required="true"
-	 * @generated
-	 */
-	Date getValidToDate();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getValidToDate <em>Valid To Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Valid To Date</em>' attribute.
-	 * @see #getValidToDate()
-	 * @generated
-	 */
-	void setValidToDate(Date value);
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -182,16 +104,5 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * @generated
 	 */
 	List<SpacecraftState> getSpacecraftStates(Date startDate, Date endDate, double timeInterval) throws Exception;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Returns wether or not a specified date falls within the validity range of the propagator.
-	 * <!-- end-model-doc -->
-	 * @model unique="false" dateUnique="false"
-	 * @generated
-	 */
-	boolean isDateInValidRange(Date date);
 
 } // AbstractOrbitPropagator

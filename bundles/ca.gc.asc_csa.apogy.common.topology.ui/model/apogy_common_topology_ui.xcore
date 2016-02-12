@@ -54,6 +54,10 @@ enum MeshPresentationMode
 	WIREFRAME as "WIREFRAME" = 2
 }
 
+/*
+ * The registry of all NodePresentation. This class is intended to be a singleton.
+ * It associates at most one NodePresentation to each Node. It registers to 
+ */
 class TopologyPresentationRegistry
 {
 	/*

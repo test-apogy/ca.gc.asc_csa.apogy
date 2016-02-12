@@ -45,10 +45,14 @@ public interface Simple3DTool extends SimpleTool {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Whether or  not the tool is visible.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
 	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimple3DTool_Visible()
-	 * @model default="true" unique="false" transient="true"
+	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isVisible();
@@ -68,7 +72,7 @@ public interface Simple3DTool extends SimpleTool {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * The root node of the current topology. Set automatically by Apogy after the too is registered.
+	 * * The root node of the current topology. Is set automatically by Apogy after the tool is registered.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Root Node</em>' reference.
 	 * @see #setRootNode(Node)

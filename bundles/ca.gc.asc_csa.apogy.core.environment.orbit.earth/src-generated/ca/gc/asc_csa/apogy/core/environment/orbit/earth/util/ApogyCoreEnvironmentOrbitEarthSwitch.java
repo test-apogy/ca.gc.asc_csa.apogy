@@ -26,9 +26,12 @@ import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.*;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
@@ -218,8 +221,10 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				EarthOrbitPropagator earthOrbitPropagator = (EarthOrbitPropagator)theEObject;
 				T result = caseEarthOrbitPropagator(earthOrbitPropagator);
 				if (result == null) result = caseAbstractOrbitPropagator(earthOrbitPropagator);
+				if (result == null) result = caseInitialOrbitProvider(earthOrbitPropagator);
 				if (result == null) result = caseNamed(earthOrbitPropagator);
 				if (result == null) result = caseDescribed(earthOrbitPropagator);
+				if (result == null) result = caseValidityRangeProvider(earthOrbitPropagator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -227,9 +232,12 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				KeplerianEarthOrbitPropagator keplerianEarthOrbitPropagator = (KeplerianEarthOrbitPropagator)theEObject;
 				T result = caseKeplerianEarthOrbitPropagator(keplerianEarthOrbitPropagator);
 				if (result == null) result = caseEarthOrbitPropagator(keplerianEarthOrbitPropagator);
+				if (result == null) result = caseInitialOrbitContainer(keplerianEarthOrbitPropagator);
 				if (result == null) result = caseAbstractOrbitPropagator(keplerianEarthOrbitPropagator);
+				if (result == null) result = caseInitialOrbitProvider(keplerianEarthOrbitPropagator);
 				if (result == null) result = caseNamed(keplerianEarthOrbitPropagator);
 				if (result == null) result = caseDescribed(keplerianEarthOrbitPropagator);
+				if (result == null) result = caseValidityRangeProvider(keplerianEarthOrbitPropagator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -238,8 +246,10 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				T result = caseTLEEarthOrbitPropagator(tleEarthOrbitPropagator);
 				if (result == null) result = caseEarthOrbitPropagator(tleEarthOrbitPropagator);
 				if (result == null) result = caseAbstractOrbitPropagator(tleEarthOrbitPropagator);
+				if (result == null) result = caseInitialOrbitProvider(tleEarthOrbitPropagator);
 				if (result == null) result = caseNamed(tleEarthOrbitPropagator);
 				if (result == null) result = caseDescribed(tleEarthOrbitPropagator);
+				if (result == null) result = caseValidityRangeProvider(tleEarthOrbitPropagator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -249,14 +259,23 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTLEEarthOrbitPropagator(urlBasedTLEEarthOrbitPropagator);
 				if (result == null) result = caseEarthOrbitPropagator(urlBasedTLEEarthOrbitPropagator);
 				if (result == null) result = caseAbstractOrbitPropagator(urlBasedTLEEarthOrbitPropagator);
+				if (result == null) result = caseInitialOrbitProvider(urlBasedTLEEarthOrbitPropagator);
 				if (result == null) result = caseNamed(urlBasedTLEEarthOrbitPropagator);
 				if (result == null) result = caseDescribed(urlBasedTLEEarthOrbitPropagator);
+				if (result == null) result = caseValidityRangeProvider(urlBasedTLEEarthOrbitPropagator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreEnvironmentOrbitEarthPackage.ABSTRACT_TLE: {
+				AbstractTLE abstractTLE = (AbstractTLE)theEObject;
+				T result = caseAbstractTLE(abstractTLE);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE: {
 				TLE tle = (TLE)theEObject;
 				T result = caseTLE(tle);
+				if (result == null) result = caseAbstractTLE(tle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -583,6 +602,21 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseURLBasedTLEEarthOrbitPropagator(URLBasedTLEEarthOrbitPropagator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract TLE</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract TLE</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractTLE(AbstractTLE object) {
 		return null;
 	}
 
@@ -962,6 +996,21 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Validity Range Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Validity Range Provider</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseValidityRangeProvider(ValidityRangeProvider object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Orbit Propagator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -973,6 +1022,36 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractOrbitPropagator(AbstractOrbitPropagator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Initial Orbit Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Initial Orbit Provider</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInitialOrbitProvider(InitialOrbitProvider object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Initial Orbit Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Initial Orbit Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInitialOrbitContainer(InitialOrbitContainer object) {
 		return null;
 	}
 

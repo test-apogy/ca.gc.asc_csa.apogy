@@ -87,6 +87,15 @@ public interface ApogyCoreEnvironmentOrbitFactory extends EFactory {
 	SpacecraftState createSpacecraftState();
 
 	/**
+	 * Returns a new object of class '<em>Initial Orbit Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Initial Orbit Container</em>'.
+	 * @generated
+	 */
+	InitialOrbitContainer createInitialOrbitContainer();
+
+	/**
 	 * Returns a new object of class '<em>Orbit Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

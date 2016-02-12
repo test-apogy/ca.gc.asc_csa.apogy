@@ -35,6 +35,10 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
 
 type IOException wraps java.io.IOException
 
+/*
+ * Represent 2.5D geometry where u and v are the
+ * independent variables and w the dependent variable.
+ */
 class Coordinates25D extends Coordinates
 {
 	double u

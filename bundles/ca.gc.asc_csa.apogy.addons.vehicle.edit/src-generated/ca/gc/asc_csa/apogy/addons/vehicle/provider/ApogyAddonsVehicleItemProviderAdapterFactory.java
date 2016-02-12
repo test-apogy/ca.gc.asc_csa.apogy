@@ -53,6 +53,8 @@ import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsP
 import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
@@ -669,6 +671,49 @@ public class ApogyAddonsVehicleItemProviderAdapterFactory extends ApogyAddonsVeh
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseApogySystemApiAdapter(ApogySystemApiAdapter object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAssemblyLink(AssemblyLink object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThruster()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

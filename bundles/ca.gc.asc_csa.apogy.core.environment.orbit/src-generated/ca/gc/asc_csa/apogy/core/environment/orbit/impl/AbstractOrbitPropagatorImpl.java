@@ -31,8 +31,8 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
-import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
@@ -47,9 +47,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPacka
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getReferenceFrame <em>Reference Frame</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getAttitudeProvider <em>Attitude Provider</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getInitialOrbit <em>Initial Orbit</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getValidFromDate <em>Valid From Date</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
  *
  * @generated
@@ -114,56 +111,6 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	 * @ordered
 	 */
 	protected EList<AttitudeProvider> attitudeProvider;
-
-	/**
-	 * The cached value of the '{@link #getInitialOrbit() <em>Initial Orbit</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInitialOrbit()
-	 * @generated
-	 * @ordered
-	 */
-	protected Orbit initialOrbit;
-
-	/**
-	 * The default value of the '{@link #getValidFromDate() <em>Valid From Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValidFromDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date VALID_FROM_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getValidFromDate() <em>Valid From Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValidFromDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date validFromDate = VALID_FROM_DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getValidToDate() <em>Valid To Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValidToDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date VALID_TO_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getValidToDate() <em>Valid To Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValidToDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date validToDate = VALID_TO_DATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -286,86 +233,6 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Orbit getInitialOrbit() {
-		if (initialOrbit != null && initialOrbit.eIsProxy()) {
-			InternalEObject oldInitialOrbit = (InternalEObject)initialOrbit;
-			initialOrbit = (Orbit)eResolveProxy(oldInitialOrbit);
-			if (initialOrbit != oldInitialOrbit) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT, oldInitialOrbit, initialOrbit));
-			}
-		}
-		return initialOrbit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Orbit basicGetInitialOrbit() {
-		return initialOrbit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInitialOrbit(Orbit newInitialOrbit) {
-		Orbit oldInitialOrbit = initialOrbit;
-		initialOrbit = newInitialOrbit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT, oldInitialOrbit, initialOrbit));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getValidFromDate() {
-		return validFromDate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValidFromDate(Date newValidFromDate) {
-		Date oldValidFromDate = validFromDate;
-		validFromDate = newValidFromDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE, oldValidFromDate, validFromDate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getValidToDate() {
-		return validToDate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValidToDate(Date newValidToDate) {
-		Date oldValidToDate = validToDate;
-		validToDate = newValidToDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE, oldValidToDate, validToDate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public SpacecraftState propagate(Date targetDate) throws Exception {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -391,23 +258,45 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	public boolean isDateInValidRange(Date date) 
 	{
 		// Checks that the specified date falls within the propagator valid interval.
-		if(getValidFromDate() != null)
+		if(getFromValidDate() != null)
 		{
-			if(date.getTime() < getValidFromDate().getTime())
+			if(date.getTime() < getFromValidDate().getTime())
 			{
 				return false;
 			}
 		}
 		
-		if(getValidToDate() != null)
+		if(getToValidDate() != null)
 		{
-			if(date.getTime() > getValidToDate().getTime())
+			if(date.getTime() > getToValidDate().getTime())
 			{
 				return false;
 			}
 		}	
 		
 		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getFromValidDate() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getToValidDate() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -442,13 +331,6 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 				return getReferenceFrame();
 			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
 				return getAttitudeProvider();
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
-				if (resolve) return getInitialOrbit();
-				return basicGetInitialOrbit();
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
-				return getValidFromDate();
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
-				return getValidToDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -475,15 +357,6 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 				getAttitudeProvider().clear();
 				getAttitudeProvider().addAll((Collection<? extends AttitudeProvider>)newValue);
 				return;
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
-				setInitialOrbit((Orbit)newValue);
-				return;
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
-				setValidFromDate((Date)newValue);
-				return;
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
-				setValidToDate((Date)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -508,15 +381,6 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
 				getAttitudeProvider().clear();
 				return;
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
-				setInitialOrbit((Orbit)null);
-				return;
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
-				setValidFromDate(VALID_FROM_DATE_EDEFAULT);
-				return;
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
-				setValidToDate(VALID_TO_DATE_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -537,12 +401,6 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 				return referenceFrame != null;
 			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
 				return attitudeProvider != null && !attitudeProvider.isEmpty();
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
-				return initialOrbit != null;
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
-				return VALID_FROM_DATE_EDEFAULT == null ? validFromDate != null : !VALID_FROM_DATE_EDEFAULT.equals(validFromDate);
-			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
-				return VALID_TO_DATE_EDEFAULT == null ? validToDate != null : !VALID_TO_DATE_EDEFAULT.equals(validToDate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -557,6 +415,11 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
 				case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		if (baseClass == ValidityRangeProvider.class) {
+			switch (derivedFeatureID) {
 				default: return -1;
 			}
 		}
@@ -576,7 +439,35 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 				default: return -1;
 			}
 		}
+		if (baseClass == ValidityRangeProvider.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == Described.class) {
+			switch (baseOperationID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == ValidityRangeProvider.class) {
+			switch (baseOperationID) {
+				case ApogyCoreEnvironmentOrbitPackage.VALIDITY_RANGE_PROVIDER___GET_FROM_VALID_DATE: return ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE;
+				case ApogyCoreEnvironmentOrbitPackage.VALIDITY_RANGE_PROVIDER___GET_TO_VALID_DATE: return ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___GET_TO_VALID_DATE;
+				case ApogyCoreEnvironmentOrbitPackage.VALIDITY_RANGE_PROVIDER___IS_DATE_IN_VALID_RANGE__DATE: return ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
 	}
 
 	/**
@@ -601,6 +492,10 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE:
+				return getFromValidDate();
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___GET_TO_VALID_DATE:
+				return getToValidDate();
 			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE:
 				return isDateInValidRange((Date)arguments.get(0));
 		}
@@ -621,10 +516,6 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
-		result.append(", validFromDate: ");
-		result.append(validFromDate);
-		result.append(", validToDate: ");
-		result.append(validToDate);
 		result.append(')');
 		return result.toString();
 	}
