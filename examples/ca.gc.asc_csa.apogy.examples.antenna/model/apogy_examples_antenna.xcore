@@ -24,6 +24,9 @@ package ca.gc.asc_csa.apogy.examples.antenna
 
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
 
+/*
+ * This class represents the abstract concept of an antenna.
+ */
 abstract class Antenna
 {
 	/*
