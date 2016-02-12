@@ -2,7 +2,6 @@
 
 As an example, integrating a rover in **Apogy** is as simple as creating an EMF model that represent its interface (command and telemetry) and defined its topology (i.e. how the physical components are attached together and how the degrees-of-freedom are mapped to the telemetry). Once these two steps are completed, one can visualize the rover in 3D in its environment (showing cameras field of view in 3D, using the generic 3D tools to measure distance, record trajectory, measure sun angle, etc), create commands  and display telemetry (camera views with overlays, filters and tools, recording and playback of data, etc) without having to write a single line of code ! This means that the operator can already start configuring his/her control station, even if there is no real rover to command at that point. Implementing the necessary interface between the generated EMF classes and the hardware (which is usually straightforward) is all that remain to complete the integration and benefit from the many tools already available  in **Apogy**. 
 
-
 ![Apogy Overview](/doc/ca.gc.asc_csa.apogy.doc/resources/main/apogy_overview.jpg "Apogy Overview")
 
 # Installation #
