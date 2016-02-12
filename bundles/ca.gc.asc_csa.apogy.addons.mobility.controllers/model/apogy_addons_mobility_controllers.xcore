@@ -29,6 +29,12 @@ import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose
 
+/**
+ * A PathFollower is an entity that makes a MobilePlatform follow a specified Path.
+ * The default implementation of PathFollower listens for changes in the SensorStatus 
+ * of its PoseSensor and the MobilePlateformStatus of its MobilePlateform and pauses 
+ * or resumes the path following accordingly.
+ */
 class PathFollower <PlatformType extends MobilePlatform, PathType extends Path>
 {
 	op boolean start()

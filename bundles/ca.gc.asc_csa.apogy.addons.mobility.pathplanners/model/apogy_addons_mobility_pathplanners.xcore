@@ -34,6 +34,9 @@ import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle
 import ca.gc.asc_csa.apogy.common.topology.GroupNode
 
+/**
+ * A path planner that produces a WayPoinPath.
+ */
 class WayPointPathPlanner extends Processor<CartesianCoordinatesSet, WayPointPath>
 {	
 	op WayPointPath plan(CartesianPositionCoordinates currentPosition, CartesianPositionCoordinates destinationPosition) throws Exception

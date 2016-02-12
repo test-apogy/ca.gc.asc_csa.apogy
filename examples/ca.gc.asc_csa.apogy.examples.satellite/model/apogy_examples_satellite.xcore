@@ -30,6 +30,9 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
 
+/*
+ * Basic Types.
+ */
  type List<T> wraps java.util.List
  type SortedSet<T> wraps java.util.SortedSet
 

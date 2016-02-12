@@ -63,6 +63,11 @@ abstract class WayPointPathInterpolator extends Processor<WayPointPath, WayPoint
 	
 }
 
+/*
+ * Fits a spline on the specified path using Catmull-Rom and generates an
+ * interpolated path using the specified maximum point to point distance.
+ * The original waypoints are included in the resulting interpolated path.
+ */
 class CatmullRomWayPointPathInterpolator extends WayPointPathInterpolator
 {
 	double tension = "0.5"
