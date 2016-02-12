@@ -49,8 +49,12 @@ class Path extends Node
 	
 }
 
+/**
+ * Class that defines a path as a series CartesianPositionCoordinates.
+ */
 class WayPointPath extends CartesianCoordinatesSet, Path
 {
+	@GenModel(notify="true", apogy_units = "m")
 	readonly transient derived double length = "0.0"
 	
 	op CartesianPositionCoordinates getStartPoint()

@@ -614,6 +614,19 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 			 "basePackage", "ca.gc.asc_csa.apogy.addons.geometry"
 		   });	
 		addAnnotation
+		  (wayPointPathEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClass that defines a path as a series CartesianPositionCoordinates."
+		   });	
+		addAnnotation
+		  (getWayPointPath_Length(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "apogy_units", "m"
+		   });	
+		addAnnotation
 		  (catmullRomWayPointPathInterpolatorEClass, 
 		   source, 
 		   new String[] {

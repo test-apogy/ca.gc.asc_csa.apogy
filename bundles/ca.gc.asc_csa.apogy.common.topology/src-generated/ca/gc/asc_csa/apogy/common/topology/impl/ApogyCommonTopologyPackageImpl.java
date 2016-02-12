@@ -1210,6 +1210,36 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 			 "basePackage", "ca.gc.asc_csa.apogy.common"
 		   });	
 		addAnnotation
+		  (nodeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe base class of all nodes in a topology."
+		   });	
+		addAnnotation
+		  (getNode_Parent(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The parent of the node.",
+			 "notify", "true",
+			 "propertyCategory", "NODE"
+		   });	
+		addAnnotation
+		  (getNode_Description(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The description of the node.",
+			 "notify", "true",
+			 "propertyCategory", "NODE"
+		   });	
+		addAnnotation
+		  (getNode_NodeId(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The node identifier.",
+			 "notify", "true",
+			 "propertyCategory", "NODE"
+		   });	
+		addAnnotation
 		  (getGroupNode_Children(), 
 		   source, 
 		   new String[] {

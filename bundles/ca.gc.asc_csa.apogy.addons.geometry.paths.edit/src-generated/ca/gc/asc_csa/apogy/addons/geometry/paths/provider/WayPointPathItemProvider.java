@@ -187,6 +187,13 @@ public class WayPointPathItemProvider
 		WayPointPath wayPointPath = (WayPointPath) object;
 						
 		String label = getString("_UI_WayPointPath_type");
+		
+		String nodeId = wayPointPath.getNodeId(); 
+		if(nodeId != null && nodeId.length() > 0)
+		{
+			label += " " + nodeId;
+		}
+		
 		label += " [" + wayPointPath.getPoints().size() + "]";
 		if(wayPointPath.getPoints().size() > 0)
 		{

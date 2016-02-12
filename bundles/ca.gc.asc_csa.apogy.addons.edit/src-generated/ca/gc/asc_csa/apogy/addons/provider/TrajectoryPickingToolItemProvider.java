@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
@@ -50,10 +51,33 @@ public class TrajectoryPickingToolItemProvider extends Simple3DToolItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addAltitudeOffsetPropertyDescriptor(object);
 			addActivePathPropertyDescriptor(object);
 			addTrajectoryPickingToolNodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Altitude Offset feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAltitudeOffsetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TrajectoryPickingTool_altitudeOffset_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryPickingTool_altitudeOffset_feature", "_UI_TrajectoryPickingTool_type"),
+				 ApogyAddonsPackage.Literals.TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_TRAJECTORY_PICKING_TOOLPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -174,8 +198,14 @@ public class TrajectoryPickingToolItemProvider extends Simple3DToolItemProvider
 		{
 			String distanceText = decimalFormat.format(trajectoryPickingTool.getActivePath().getLength()) + " m";
 			label += distanceText;
+			
+			String pathId = trajectoryPickingTool.getActivePath().getNodeId(); 
+			if(pathId != null && pathId.length() > 0)
+			{
+				label += ", " + pathId;
+			}
 		}
-		
+			
 		
 		label += ")";
 		
@@ -196,6 +226,7 @@ public class TrajectoryPickingToolItemProvider extends Simple3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TrajectoryPickingTool.class)) {
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET:
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ACTIVE_PATH:
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__TRAJECTORY_PICKING_TOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

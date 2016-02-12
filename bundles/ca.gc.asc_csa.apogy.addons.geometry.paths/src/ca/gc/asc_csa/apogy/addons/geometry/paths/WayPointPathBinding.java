@@ -134,6 +134,7 @@ public class WayPointPathBinding
 			if(pointCopy != null)
 			{
 				getTargetWayPointPath().getPoints().remove(pointCopy);
+				originalToCopy.remove(point);
 			}
 		}
 	}
@@ -149,6 +150,7 @@ public class WayPointPathBinding
 				if(pointCopy != null)
 				{
 					getTargetWayPointPath().getPoints().remove(pointCopy);
+					originalToCopy.remove(point);
 				}
 			}
 		}
@@ -186,11 +188,11 @@ public class WayPointPathBinding
 									
 									case Notification.REMOVE:
 										CartesianPositionCoordinates pointRemoved = (CartesianPositionCoordinates) msg.getOldValue();
-										addPoint(pointRemoved);
+										removePoint(pointRemoved);
 									break;
 									
 									case Notification.REMOVE_MANY:
-										List<CartesianPositionCoordinates> pointsRemoved = (List<CartesianPositionCoordinates>) msg.getNewValue();
+										List<CartesianPositionCoordinates> pointsRemoved = (List<CartesianPositionCoordinates>) msg.getOldValue();
 										removePoints(pointsRemoved);
 									break;
 								}

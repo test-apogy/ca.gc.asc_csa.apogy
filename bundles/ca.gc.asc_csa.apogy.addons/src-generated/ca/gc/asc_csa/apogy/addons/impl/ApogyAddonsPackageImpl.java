@@ -722,8 +722,8 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTrajectoryPickingTool_Paths() {
-		return (EReference)trajectoryPickingToolEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTrajectoryPickingTool_AltitudeOffset() {
+		return (EAttribute)trajectoryPickingToolEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -731,7 +731,7 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTrajectoryPickingTool_ActivePath() {
+	public EReference getTrajectoryPickingTool_Paths() {
 		return (EReference)trajectoryPickingToolEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -740,8 +740,17 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTrajectoryPickingTool_TrajectoryPickingToolNode() {
+	public EReference getTrajectoryPickingTool_ActivePath() {
 		return (EReference)trajectoryPickingToolEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrajectoryPickingTool_TrajectoryPickingToolNode() {
+		return (EReference)trajectoryPickingToolEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -971,6 +980,7 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		createEReference(sunVector3DToolNodeEClass, SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL);
 
 		trajectoryPickingToolEClass = createEClass(TRAJECTORY_PICKING_TOOL);
+		createEAttribute(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET);
 		createEReference(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL__PATHS);
 		createEReference(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL__ACTIVE_PATH);
 		createEReference(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL__TRAJECTORY_PICKING_TOOL_NODE);
@@ -1120,6 +1130,7 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		initEReference(getSunVector3DToolNode_SunVector3DTool(), this.getSunVector3DTool(), this.getSunVector3DTool_SunVector3DToolNode(), "sunVector3DTool", null, 0, 1, SunVector3DToolNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trajectoryPickingToolEClass, TrajectoryPickingTool.class, "TrajectoryPickingTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTrajectoryPickingTool_AltitudeOffset(), theEcorePackage.getEDouble(), "altitudeOffset", "0", 0, 1, TrajectoryPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrajectoryPickingTool_Paths(), theApogyAddonsGeometryPathsPackage.getWayPointPath(), null, "paths", null, 1, -1, TrajectoryPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrajectoryPickingTool_ActivePath(), theApogyAddonsGeometryPathsPackage.getWayPointPath(), null, "activePath", null, 1, 1, TrajectoryPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrajectoryPickingTool_TrajectoryPickingToolNode(), this.getTrajectoryPickingToolNode(), this.getTrajectoryPickingToolNode_TrajectoryPickingTool(), "trajectoryPickingToolNode", null, 0, 1, TrajectoryPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1534,6 +1545,15 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		   source, 
 		   new String[] {
 			 "documentation", "*\nClears all points from the active path."
+		   });	
+		addAnnotation
+		  (getTrajectoryPickingTool_AltitudeOffset(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* Offset to apply to the point to keep a wyapoint path above ground.",
+			 "notify", "true",
+			 "apogy_units", "m",
+			 "propertyCategory", "TRAJECTORY_PICKING_TOOL"
 		   });	
 		addAnnotation
 		  (getTrajectoryPickingTool_Paths(), 
