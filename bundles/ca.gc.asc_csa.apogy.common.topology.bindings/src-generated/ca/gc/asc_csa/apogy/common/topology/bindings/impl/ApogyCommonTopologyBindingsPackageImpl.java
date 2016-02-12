@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
-import ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits;
 import ca.gc.asc_csa.apogy.common.topology.bindings.Axis;
 import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
 import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet;
@@ -128,13 +127,6 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
   private EEnum axisEEnum = null;
 
   /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum angleUnitsEEnum = null;
-
-		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -336,16 +328,6 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
   public EAttribute getRotationBinding_RotationAxis()
   {
 		return (EAttribute)rotationBindingEClass.getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getRotationBinding_RotationUnits()
-  {
-		return (EAttribute)rotationBindingEClass.getEStructuralFeatures().get(2);
 	}
 
   /**
@@ -587,15 +569,6 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 
 		/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getAngleUnits() {
-		return angleUnitsEEnum;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -647,7 +620,6 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 		rotationBindingEClass = createEClass(ROTATION_BINDING);
 		createEReference(rotationBindingEClass, ROTATION_BINDING__ROTATION_NODE);
 		createEAttribute(rotationBindingEClass, ROTATION_BINDING__ROTATION_AXIS);
-		createEAttribute(rotationBindingEClass, ROTATION_BINDING__ROTATION_UNITS);
 
 		translationBindingEClass = createEClass(TRANSLATION_BINDING);
 		createEReference(translationBindingEClass, TRANSLATION_BINDING__POSITION_NODE);
@@ -682,7 +654,6 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 
 		// Create enums
 		axisEEnum = createEEnum(AXIS);
-		angleUnitsEEnum = createEEnum(ANGLE_UNITS);
 
 		// Create data types
 		mapEDataType = createEDataType(MAP);
@@ -753,7 +724,6 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 		initEClass(rotationBindingEClass, RotationBinding.class, "RotationBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRotationBinding_RotationNode(), theApogyCommonTopologyPackage.getRotationNode(), null, "rotationNode", null, 0, 1, RotationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRotationBinding_RotationAxis(), this.getAxis(), "rotationAxis", "X_AXIS", 0, 1, RotationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRotationBinding_RotationUnits(), this.getAngleUnits(), "rotationUnits", "DEGREES", 0, 1, RotationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(translationBindingEClass, TranslationBinding.class, "TranslationBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTranslationBinding_PositionNode(), theApogyCommonTopologyPackage.getPositionNode(), null, "positionNode", null, 0, 1, TranslationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -804,10 +774,6 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 		addEEnumLiteral(axisEEnum, Axis.MINUS_XAXIS);
 		addEEnumLiteral(axisEEnum, Axis.MINUS_YAXIS);
 		addEEnumLiteral(axisEEnum, Axis.MINUS_ZAXIS);
-
-		initEEnum(angleUnitsEEnum, AngleUnits.class, "AngleUnits");
-		addEEnumLiteral(angleUnitsEEnum, AngleUnits.RADIANS);
-		addEEnumLiteral(angleUnitsEEnum, AngleUnits.DEGREES);
 
 		// Initialize data types
 		initEDataType(mapEDataType, Map.class, "Map", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
