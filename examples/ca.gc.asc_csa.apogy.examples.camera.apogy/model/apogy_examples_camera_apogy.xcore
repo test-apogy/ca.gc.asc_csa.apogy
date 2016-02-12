@@ -24,6 +24,12 @@ import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 
 import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 
+/*
+ * This class is the Apogy API adapter that is used to
+ * interface the existing basic camera implementations with
+ * Apogy; this provides a series of callback methods that
+ * can be overridden to implement a variety of useful features.
+ */
 class CameraApogySystemApiAdapter extends ApogySystemApiAdapter
 {
 	/*

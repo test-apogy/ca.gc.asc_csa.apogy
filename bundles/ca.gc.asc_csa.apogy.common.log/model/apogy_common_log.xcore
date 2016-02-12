@@ -25,6 +25,10 @@ type Throwable wraps java.lang.Throwable
 type Bundle wraps org.osgi.framework.Bundle
 type FrameworkLog wraps org.eclipse.osgi.framework.log.FrameworkLog
 
+/** 
+ * Event Severity.
+ * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
+ */
 enum EventSeverity
 {
 	OK = 0,

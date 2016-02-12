@@ -31,6 +31,9 @@ import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer
 
 type Color3f wraps javax.vecmath.Color3f
 
+/*
+ *  The different possible states of the TelecomNode
+ */ 
 enum TelecomNodeStatus
 {
 	NOT_STARTED as "Not Started" = 0

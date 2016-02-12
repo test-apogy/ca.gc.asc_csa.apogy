@@ -32,6 +32,9 @@ type Map<K, V> wraps java.util.Map
 type ConverterEdge wraps ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge
 type ChainedConverter wraps ca.gc.asc_csa.apogy.common.converters.ChainedConverter
 
+/*
+ * A utility class used to perform a variety of functions
+ */
 class ApogyCommonConvertersGraphsFacade
 {
 	/*

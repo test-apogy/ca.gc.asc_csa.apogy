@@ -38,6 +38,9 @@ import ca.gc.asc_csa.apogy.common.topology.TransformNode
 
 type Map<K,V> wraps java.util.Map
 
+/*
+ * Cartesian Axis enumeration.
+ */
 enum Axis
 {	
 	X_AXIS as "X_AXIS" = 0,

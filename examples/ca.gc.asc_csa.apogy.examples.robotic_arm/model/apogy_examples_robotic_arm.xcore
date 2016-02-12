@@ -22,6 +22,12 @@
 
 package ca.gc.asc_csa.apogy.examples.robotic_arm
 
+/*
+ * This enumeration is used to indicate the overall possible
+ * levels of speed that a robotic arm can move at; as
+ * expected, this used by RoboticArm (and its subclasses) when
+ * moveTo() is called.
+ */
 enum MoveSpeedLevel
 {
 	/*

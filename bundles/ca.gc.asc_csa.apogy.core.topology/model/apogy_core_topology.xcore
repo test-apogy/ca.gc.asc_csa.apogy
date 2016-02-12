@@ -48,6 +48,13 @@ class SystemsTopologyAdapter
 }
 
 
+/* -------------------------------------------------------------------------
+ * Specialized Nodes.
+ * ------------------------------------------------------------------------- */ 
+
+/*
+ * A specialized Topology node representing a Deployment.
+ */
 class ApogyEnvironmentNode extends ReferencedGroupNode
 {
 	refers transient ApogyEnvironment apogyEnvironment

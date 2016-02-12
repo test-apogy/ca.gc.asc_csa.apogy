@@ -54,6 +54,9 @@ type TerrainProfile wraps ca.gc.asc_csa.apogy.addons.vehicle.TerrainProfile
 type ClosestNeighbourIteratorProvider wraps ca.gc.asc_csa.apogy.addons.vehicle.ClosestNeighbourIteratorProvider
 
 
+/*
+ * Enumeration of available methods use to compute the correction along the Z axis. 
+ */
 enum ZCorrectionMode
 {	
 	AverageContact as "AverageContact" = 0,
