@@ -19,6 +19,12 @@ package ca.gc.asc_csa.apogy.addons.geometry.paths;
  * A representation of the model object '<em><b>Catmull Rom Way Point Path Interpolator</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Fits a spline on the specified path using Catmull-Rom and generates an
+ * interpolated path using the specified maximum point to point distance.
+ * The original waypoints are included in the resulting interpolated path.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

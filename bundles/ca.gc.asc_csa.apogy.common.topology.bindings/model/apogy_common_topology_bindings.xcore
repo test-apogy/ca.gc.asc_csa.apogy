@@ -52,15 +52,6 @@ enum Axis
 }
 
 /*
- * Angle Units Enumeration.
- */
-enum AngleUnits
-{	
-	RADIANS as "RADIANS" = 0,
-	DEGREES as "DEGREES" = 1	
-}
-
-/*
  * Abstract base class representing a binding relationship between a topology and a feature. 
  */
 abstract class AbstractTopologyBinding
@@ -136,13 +127,7 @@ class RotationBinding extends AbstractTopologyBinding
 	 * The axis around which to revolve.
 	 */
 	@GenModel(propertyCategory="DESTINATION")
-	Axis rotationAxis = "X_AXIS"
-	
-	/*
-	 * The angle unit associated with the feature.
-	 */
-	@GenModel(propertyCategory="DESTINATION")
-	AngleUnits rotationUnits = "DEGREES"
+	Axis rotationAxis = "X_AXIS"	
 }
 
 /*

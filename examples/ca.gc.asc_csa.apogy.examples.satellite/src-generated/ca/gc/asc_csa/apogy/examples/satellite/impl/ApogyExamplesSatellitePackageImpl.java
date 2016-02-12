@@ -1095,6 +1095,12 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
+		  (listEDataType, 
+		   source, 
+		   new String[] {
+			 "documentation", "Basic Types."
+		   });	
+		addAnnotation
 		  (abstractConstellationEClass, 
 		   source, 
 		   new String[] {

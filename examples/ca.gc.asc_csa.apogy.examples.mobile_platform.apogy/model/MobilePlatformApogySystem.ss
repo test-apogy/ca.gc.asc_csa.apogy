@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:ApogySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="ca.gc.asc_csa.apogy.common.topology.bindings" xmlns:topology="ca.gc.asc_csa.apogy.common.topology" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:ecore="ca.gc.asc_csa.apogy.common.emf" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmlns:vehicle="ca.gc.asc_csa.apogy.addons.vehicle" xmi:id="_aD78wArNEeW4-_ONWXXiAw" name="MobilePlatformApogySystem">
+<core:ApogySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="ca.gc.asc_csa.apogy.common.topology.bindings" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:topology="ca.gc.asc_csa.apogy.common.topology" xmlns:vehicle="ca.gc.asc_csa.apogy.addons.vehicle" xmi:id="_aD78wArNEeW4-_ONWXXiAw" name="MobilePlatformApogySystem">
   <interfaceClass href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform"/>
   <typeApiAdapterClass href="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy#//MobilePlatformApogySystemApiAdapter"/>
   <topologyRoot xmi:id="_aD78wQrNEeW4-_ONWXXiAw">
@@ -102,20 +102,20 @@
   <bindingSet xmi:id="_aD9K7wrNEeW4-_ONWXXiAw">
     <featureRootsList xmi:id="_aD9K8ArNEeW4-_ONWXXiAw">
       <featureRoots xmi:id="_aD9K8QrNEeW4-_ONWXXiAw">
-        <children xsi:type="ecore:TreeFeatureNode" xmi:id="_aD9K8grNEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/leftWheelPosition"/>
+        <children xsi:type="emf:TreeFeatureNode" xmi:id="_aD9K8grNEeW4-_ONWXXiAw">
+          <structuralFeature xsi:type="ecore:EAttribute" href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/leftWheelPosition"/>
         </children>
-        <children xsi:type="ecore:TreeFeatureNode" xmi:id="_aD9K8wrNEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/rightWheelPosition"/>
+        <children xsi:type="emf:TreeFeatureNode" xmi:id="_aD9K8wrNEeW4-_ONWXXiAw">
+          <structuralFeature xsi:type="ecore:EAttribute" href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/rightWheelPosition"/>
         </children>
         <sourceClass href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform"/>
       </featureRoots>
     </featureRootsList>
     <bindingsList xmi:id="_aD9K9ArNEeW4-_ONWXXiAw">
-      <bindings xsi:type="bindings:RotationBinding" xmi:id="_aD9K9QrNEeW4-_ONWXXiAw" description="The binding for the mobile platform's left front wheel" name="MOBILE_PLATFORM_SYM_SYS_BIND_LEFT_FRONT_WHEEL_JOINT" featureNode="_aD9K8grNEeW4-_ONWXXiAw" rotationNode="_aD8j2ArNEeW4-_ONWXXiAw" rotationAxis="Y_AXIS" rotationUnits="RADIANS"/>
-      <bindings xsi:type="bindings:RotationBinding" xmi:id="_aD9K9grNEeW4-_ONWXXiAw" description="The binding for the mobile platform's left rear wheel" name="MOBILE_PLATFORM_SYM_SYS_BIND_LEFT_REAR_WHEEL_JOINT" featureNode="_aD9K8grNEeW4-_ONWXXiAw" rotationNode="_aD8j8wrNEeW4-_ONWXXiAw" rotationAxis="Y_AXIS" rotationUnits="RADIANS"/>
-      <bindings xsi:type="bindings:RotationBinding" xmi:id="_aD9K9wrNEeW4-_ONWXXiAw" description="The binding for the mobile platform's right front wheel" name="MOBILE_PLATFORM_SYM_SYS_BIND_RIGHT_FRONT_WHEEL_JOINT" featureNode="_aD9K8wrNEeW4-_ONWXXiAw" rotationNode="_aD78xArNEeW4-_ONWXXiAw" rotationAxis="Y_AXIS" rotationUnits="RADIANS"/>
-      <bindings xsi:type="bindings:RotationBinding" xmi:id="_aD9K-ArNEeW4-_ONWXXiAw" description="The binding for the mobile platform's right rear wheel" name="MOBILE_PLATFORM_SYM_SYS_BIND_RIGHT_REAR_WHEEL_JOINT" featureNode="_aD9K8wrNEeW4-_ONWXXiAw" rotationNode="_aD8j5ArNEeW4-_ONWXXiAw" rotationAxis="Y_AXIS" rotationUnits="RADIANS"/>
+      <bindings xsi:type="bindings:RotationBinding" xmi:id="_aD9K9QrNEeW4-_ONWXXiAw" description="The binding for the mobile platform's left front wheel" name="MOBILE_PLATFORM_SYM_SYS_BIND_LEFT_FRONT_WHEEL_JOINT" featureNode="_aD9K8grNEeW4-_ONWXXiAw" rotationNode="_aD8j2ArNEeW4-_ONWXXiAw" rotationAxis="Y_AXIS"/>
+      <bindings xsi:type="bindings:RotationBinding" xmi:id="_aD9K9grNEeW4-_ONWXXiAw" description="The binding for the mobile platform's left rear wheel" name="MOBILE_PLATFORM_SYM_SYS_BIND_LEFT_REAR_WHEEL_JOINT" featureNode="_aD9K8grNEeW4-_ONWXXiAw" rotationNode="_aD8j8wrNEeW4-_ONWXXiAw" rotationAxis="Y_AXIS"/>
+      <bindings xsi:type="bindings:RotationBinding" xmi:id="_aD9K9wrNEeW4-_ONWXXiAw" description="The binding for the mobile platform's right front wheel" name="MOBILE_PLATFORM_SYM_SYS_BIND_RIGHT_FRONT_WHEEL_JOINT" featureNode="_aD9K8wrNEeW4-_ONWXXiAw" rotationNode="_aD78xArNEeW4-_ONWXXiAw" rotationAxis="Y_AXIS"/>
+      <bindings xsi:type="bindings:RotationBinding" xmi:id="_aD9K-ArNEeW4-_ONWXXiAw" description="The binding for the mobile platform's right rear wheel" name="MOBILE_PLATFORM_SYM_SYS_BIND_RIGHT_REAR_WHEEL_JOINT" featureNode="_aD9K8wrNEeW4-_ONWXXiAw" rotationNode="_aD8j5ArNEeW4-_ONWXXiAw" rotationAxis="Y_AXIS"/>
     </bindingsList>
   </bindingSet>
   <connectionPointsList xmi:id="_aD9K-QrNEeW4-_ONWXXiAw">

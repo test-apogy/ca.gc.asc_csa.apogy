@@ -25,6 +25,11 @@ import ca.gc.asc_csa.apogy.common.processors.Processor;
  * A representation of the model object '<em><b>Way Point Path Planner</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A path planner that produces a WayPoinPath.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

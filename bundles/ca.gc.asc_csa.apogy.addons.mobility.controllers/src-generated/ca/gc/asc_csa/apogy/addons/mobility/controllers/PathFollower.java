@@ -26,6 +26,14 @@ import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
  * A representation of the model object '<em><b>Path Follower</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A PathFollower is an entity that makes a MobilePlatform follow a specified Path.
+ * The default implementation of PathFollower listens for changes in the SensorStatus
+ * of its PoseSensor and the MobilePlateformStatus of its MobilePlateform and pauses
+ * or resumes the path following accordingly.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

@@ -392,10 +392,7 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 		super.setRootNode(newRootNode);
 					
 		TrajectoryPickingToolNode toolNode = getTrajectoryPickingToolNode();
-		
-		System.out.println("ROOT      =========> " + newRootNode);
-		System.out.println("TOOL NODE =========> " + toolNode);
-		
+				
 		if(toolNode != null)
 		{
 			if(newRootNode instanceof GroupNode)

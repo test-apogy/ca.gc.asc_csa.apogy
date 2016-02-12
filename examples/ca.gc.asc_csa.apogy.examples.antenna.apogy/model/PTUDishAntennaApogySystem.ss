@@ -50,8 +50,8 @@
       </featureRoots>
     </featureRootsList>
     <bindingsList xmi:id="_sUdRaQrOEeW4-_ONWXXiAw">
-      <bindings xsi:type="bindings:RotationBinding" xmi:id="_sUd4YArOEeW4-_ONWXXiAw" description="The binding for the PTU dish antenna's pan angle" name="PTU_DISH_ANTENNA_SYM_SYS_BIND_PAN_JOINT" featureNode="_sUdRZwrOEeW4-_ONWXXiAw" rotationNode="_sUcqRArOEeW4-_ONWXXiAw" rotationAxis="Z_AXIS" rotationUnits="RADIANS"/>
-      <bindings xsi:type="bindings:RotationBinding" xmi:id="_sUd4YQrOEeW4-_ONWXXiAw" description="The binding for the PTU dish antenna's tilt joint" name="PTU_DISH_ANTENNA_SYM_SYS_BIND_TILT_JOINT" featureNode="_sUdRaArOEeW4-_ONWXXiAw" rotationNode="_sUcqRgrOEeW4-_ONWXXiAw" rotationAxis="MINUS_Y_AXIS" rotationUnits="RADIANS"/>
+      <bindings xsi:type="bindings:RotationBinding" xmi:id="_sUd4YArOEeW4-_ONWXXiAw" description="The binding for the PTU dish antenna's pan angle" name="PTU_DISH_ANTENNA_SYM_SYS_BIND_PAN_JOINT" featureNode="_sUdRZwrOEeW4-_ONWXXiAw" rotationNode="_sUcqRArOEeW4-_ONWXXiAw" rotationAxis="Z_AXIS"/>
+      <bindings xsi:type="bindings:RotationBinding" xmi:id="_sUd4YQrOEeW4-_ONWXXiAw" description="The binding for the PTU dish antenna's tilt joint" name="PTU_DISH_ANTENNA_SYM_SYS_BIND_TILT_JOINT" featureNode="_sUdRaArOEeW4-_ONWXXiAw" rotationNode="_sUcqRgrOEeW4-_ONWXXiAw" rotationAxis="MINUS_Y_AXIS"/>
     </bindingsList>
   </bindingSet>
 </core:ApogySystem>

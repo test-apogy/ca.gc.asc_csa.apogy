@@ -15,17 +15,25 @@ package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.util.Map;
 
+import javax.measure.unit.Unit;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.PositionNode;
-import ca.gc.asc_csa.apogy.common.topology.bindings.Axis;
 import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.Activator;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.Axis;
 import ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding;
 
 /**
@@ -44,6 +52,11 @@ import ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding;
  */
 public class TranslationBindingImpl extends AbstractTopologyBindingImpl implements TranslationBinding
 {
+  private static Unit<?> METERS = Unit.valueOf("m");
+		
+  /** The conversion factor to use to convert from the feature value to radians.*/
+  private double featureToMetersConversionFactor = 1.0;
+	
   /**
 	 * The cached value of the '{@link #getPositionNode() <em>Position Node</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -258,6 +271,16 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   }
   
   @Override
+  public void bind() 
+  {
+	  // Determine the conversion factor to use.
+	  featureToMetersConversionFactor = determineConversionFactor();
+	  
+	  // TODO Auto-generated method stub
+	  super.bind();
+  }
+  
+  @Override
   protected void valueChanged(Object newValue) 
   {
 		double value = 0.0;
@@ -271,8 +294,43 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 			value = ((Float) newValue).doubleValue();
 		}
 			
+		// Converts the value to meters.
+		value = value * featureToMetersConversionFactor;
+		
 		// Applies the value.
 		applyValue(value);
+  }
+  
+  private double determineConversionFactor()
+  {
+	  double factor = 1.0;
+	  
+	  // Gets the units associated with the feature node.
+	  if(getFeatureNode() instanceof AbstractFeatureSpecifier)
+	  {
+		  AbstractFeatureSpecifier featureSpecifier = (AbstractFeatureSpecifier) getFeatureNode();
+		  Unit<?> units = ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(featureSpecifier.getStructuralFeature());
+		
+		  // If units have been defined in the model.
+		  if(units != null)
+		  {
+			  try
+			  {
+				  factor = units.getConverterTo(METERS).convert(1.0);
+			  }
+			  catch(Exception e)
+			  {
+				  String message = this.getName() + ": Engineering units of the feature <" + units.toString() +"> are not an lenght value !";
+				  Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR, e);
+			  }
+		  }	  						
+		  else
+		  {
+			  String message = this.getName() + ": No Engineering units defined for feature, assuming meters !";
+			  Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
+		  }
+	  }
+	  return factor;
   }
   
   private void applyValue(final double newValue)
