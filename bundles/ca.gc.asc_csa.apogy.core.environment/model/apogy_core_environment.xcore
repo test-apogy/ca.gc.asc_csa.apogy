@@ -75,6 +75,9 @@ abstract class SurfaceWorksite extends Worksite
 	contains MapsList[1] mapsList
 }
 
+/*
+ * A specialization of Worksite defining a are or volume at the Earth surface.
+ */
 class EarthSurfaceWorksite extends SurfaceWorksite
 {	
 	/*
