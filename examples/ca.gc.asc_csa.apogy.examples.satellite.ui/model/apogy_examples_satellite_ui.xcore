@@ -25,6 +25,9 @@ package ca.gc.asc_csa.apogy.examples.satellite.ui
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList
 import ca.gc.asc_csa.apogy.core.invocator.Variable
 
+/*
+ * Constellation Facade.  This class provides utility methods.  
+ */
  class ApogyExamplesSatelliteUiFacade{
  	
  	/*
