@@ -217,6 +217,9 @@ class MapViewConfigurationList extends AbstractToolsListContainer
 }
 
 
+/*
+ * Configuration used for the Map View.
+ */
 class MapViewConfiguration extends Named, Described
 {		
 	/*
