@@ -22,57 +22,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ca.gc.asc_csa.apogy.core.invocator.*;
-import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
-import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
-import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
-import ca.gc.asc_csa.apogy.core.invocator.BasicContext;
-import ca.gc.asc_csa.apogy.core.invocator.ChannelsList;
-import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
-import ca.gc.asc_csa.apogy.core.invocator.DisplaysList;
-import ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer;
-import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
-import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
-import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.Environment;
-import ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer;
-import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
-import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
-import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
-import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
-import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
-import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
-import ca.gc.asc_csa.apogy.core.invocator.Type;
-import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement;
-import ca.gc.asc_csa.apogy.core.invocator.TypesList;
-import ca.gc.asc_csa.apogy.core.invocator.Value;
-import ca.gc.asc_csa.apogy.core.invocator.ValuesList;
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
-import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
-import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
-import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
-import ca.gc.asc_csa.apogy.core.invocator.Watch;
-import ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter;
-import ca.gc.asc_csa.apogy.core.invocator.WatchesList;
-import ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -162,12 +111,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE: return createAttributeResultValue();
 			case ApogyCoreInvocatorPackage.ATTRIBUTE_VALUE: return createAttributeValue();
 			case ApogyCoreInvocatorPackage.REFERENCE_RESULT_VALUE: return createReferenceResultValue();
-			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER: return createWatchesListsContainer();
-			case ApogyCoreInvocatorPackage.WATCHES_LIST: return createWatchesList();
-			case ApogyCoreInvocatorPackage.WATCH: return createWatch();
-			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER: return createWatchFeatureNodeAdapter();
-			case ApogyCoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER: return createDisplaysListsContainer();
-			case ApogyCoreInvocatorPackage.DISPLAYS_LIST: return createDisplaysList();
 			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER: return createRecordingToolsContainer();
 			case ApogyCoreInvocatorPackage.CHANNELS_LIST: return createChannelsList();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE: return createOperationCallResultsListTimeSource();
@@ -665,72 +608,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
   {
 		ReferenceResultValueImpl referenceResultValue = new ReferenceResultValueImpl();
 		return referenceResultValue;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public WatchesListsContainer createWatchesListsContainer()
-  {
-		WatchesListsContainerImpl watchesListsContainer = new WatchesListsContainerImpl();
-		return watchesListsContainer;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public WatchesList createWatchesList()
-  {
-		WatchesListImpl watchesList = new WatchesListImpl();
-		return watchesList;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public Watch createWatch()
-  {
-		WatchImpl watch = new WatchImpl();
-		return watch;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public WatchFeatureNodeAdapter createWatchFeatureNodeAdapter()
-  {
-		WatchFeatureNodeAdapterImpl watchFeatureNodeAdapter = new WatchFeatureNodeAdapterImpl();
-		return watchFeatureNodeAdapter;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public DisplaysListsContainer createDisplaysListsContainer()
-  {
-		DisplaysListsContainerImpl displaysListsContainer = new DisplaysListsContainerImpl();
-		return displaysListsContainer;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public DisplaysList createDisplaysList()
-  {
-		DisplaysListImpl displaysList = new DisplaysListImpl();
-		return displaysList;
 	}
 
   /**

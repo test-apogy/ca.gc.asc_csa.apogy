@@ -28,18 +28,22 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
-import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractType;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
@@ -51,9 +55,6 @@ import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
 import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Type;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
@@ -67,7 +68,6 @@ import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
-import ca.gc.asc_csa.apogy.core.invocator.Watch;
 import ca.gc.asc_csa.apogy.core.invocator.delegates.InvocatorDelegate;
 import ca.gc.asc_csa.apogy.core.invocator.delegates.InvocatorDelegateRegistry;
 
@@ -293,88 +293,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		} else {
 			return null;
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public Watch resolveWatch(AbstractFeatureNode abstractFeatureNode) {
-		Watch watch = null;
-
-		if (abstractFeatureNode != null) {
-			AbstractRootNode root = ApogyCommonEMFFacade.INSTANCE
-					.getFeatureRoot(abstractFeatureNode);
-
-			if (root != null) {
-				if (root.eContainer() instanceof Watch) {
-					watch = (Watch) root.eContainer();
-				} else if (root.eContainer() instanceof TypeMemberReferenceTreeElement) {
-					TypeMemberReferenceTreeElement rootRef = (TypeMemberReferenceTreeElement) root
-							.eContainer();
-					watch = resolveWatch(rootRef);
-				}
-			}
-
-		}
-
-		return watch;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public Watch resolveWatch(
-			TypeMemberReferenceTreeElement typeMemberReferenceTreeElement) {
-		Watch watch = null;
-
-		TypeMemberReferenceTreeElement element = typeMemberReferenceTreeElement;
-
-		while (element != null && watch == null) {
-			if (element.eContainer() instanceof Watch) {
-				watch = (Watch) element.eContainer();
-			} else {
-				element = element.getParent();
-			}
-		}
-
-		return watch;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public Object getValue(AbstractFeatureNode abstractFeatureNode) {
-		Object object = null;
-		AbstractRootNode root = ApogyCommonEMFFacade.INSTANCE
-				.getFeatureRoot(abstractFeatureNode);
-
-		if (root.eContainer() instanceof Watch) {
-			Watch watch = (Watch) root.eContainer();
-			EObject sourceObject = ApogyCoreInvocatorFacade.INSTANCE
-					.getInstance(watch.getVariable());
-			if (sourceObject != null) {
-				object = ApogyCommonEMFFacade.INSTANCE.resolve(sourceObject,
-						abstractFeatureNode);
-			}
-		} else if (root.eContainer() instanceof TypeMemberReferenceTreeElement) {
-			TypeMemberReferenceTreeElement element = (TypeMemberReferenceTreeElement) root
-					.eContainer();
-			EObject sourceObject = ApogyCoreInvocatorFacade.INSTANCE
-					.getInstance(element);
-
-			if (sourceObject != null) {
-				object = ApogyCommonEMFFacade.INSTANCE.resolve(sourceObject,
-						abstractFeatureNode);
-			}
-		}
-
-		return object;
 	}
 
 	/**
@@ -817,54 +735,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public EObject getInstance(
-			TypeMemberReferenceTreeElement typeMemberReferenceTreeElement) {
-		EObject eObject = null;
-
-		Watch watch = resolveWatch(typeMemberReferenceTreeElement);
-		Variable variable = watch.getVariable();
-
-		// Creates an list of ancestry.
-		List<TypeMemberReferenceTreeElement> ancestries = new ArrayList<TypeMemberReferenceTreeElement>();
-
-		TypeMemberReferenceTreeElement t = typeMemberReferenceTreeElement;
-		while (t.getParent() != null) {
-			t = t.getParent();
-			ancestries.add(0, t);
-		}
-
-		// Gets the active context.
-		Context activeContext = watch.getWatchesList()
-				.getWatchesListsContainer().getToolsList()
-				.getInvocatorSession().getEnvironment().getActiveContext();
-
-		if (activeContext != null) {
-			AbstractTypeImplementation typeMemberImplementations = activeContext
-					.getVariableImplementationsList()
-					.getVariableImplementation(variable);
-
-			Iterator<TypeMemberReferenceTreeElement> it = ancestries.iterator();
-			while (it.hasNext() && typeMemberImplementations != null) {
-				TypeMemberReferenceTreeElement element = it.next();
-				typeMemberImplementations = typeMemberImplementations
-						.getTypeMemberImplementation(element.getTypeMember());
-			}
-
-			TypeMemberImplementation typeMemberImplementation = typeMemberImplementations
-					.getTypeMemberImplementation(typeMemberReferenceTreeElement
-							.getTypeMember());
-			if (typeMemberImplementation != null) {
-				eObject = typeMemberImplementation.getInstance();
-			}
-		}
-		return eObject;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
 	public AbstractTypeImplementation getTypeImplementation(OperationCall operationCall) 
 	{				
 		AbstractTypeImplementation result = null;
@@ -1140,9 +1010,10 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public String getFullyQualifiedName(
-			TypeMemberReferenceTreeElement typeMemberReferenceTreeElement) {
-		if (typeMemberReferenceTreeElement != null) {
+	public String getFullyQualifiedName(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement) 
+	{
+		if (typeMemberReferenceTreeElement != null) 
+		{
 			String fullyQualifiedName = new String();
 			List<TypeMemberReferenceTreeElement> lineage = new ArrayList<TypeMemberReferenceTreeElement>();
 
@@ -1153,22 +1024,18 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			}
 
 			Iterator<TypeMemberReferenceTreeElement> it = lineage.iterator();
-			while (it.hasNext()) {
+			while (it.hasNext()) 
+			{
 				TypeMemberReferenceTreeElement element = it.next();
 				fullyQualifiedName += element.getTypeMember().getName();
 				if (it.hasNext())
 					fullyQualifiedName += ".";
 			}
 
-			// Add variable name
-			Watch watch = resolveWatch(typeMemberReferenceTreeElement);
-			if (watch != null && watch.getVariable() != null) {
-				fullyQualifiedName = watch.getVariable().getName() + "."
-						+ fullyQualifiedName;
-			}
-
 			return fullyQualifiedName;
-		} else {
+		} 
+		else 
+		{
 			return null;
 		}
 
@@ -1180,29 +1047,22 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * @generated_NOT
 	 */
 	public String getFullyQualifiedName(AbstractFeatureNode abstractFeatureNode) {
-		if (abstractFeatureNode != null) {
+		if (abstractFeatureNode != null) 
+		{
 			String fullyQualifiedName = new String();
-			AbstractRootNode root = ApogyCommonEMFFacade.INSTANCE
-					.getFeatureRoot(abstractFeatureNode);
-
-			if (root.eContainer() instanceof Watch) {
-				Watch watch = (Watch) root.eContainer();
-				fullyQualifiedName += watch.getVariable().getName();
-				fullyQualifiedName += "."
-						+ ApogyCommonEMFFacade.INSTANCE
-								.getAncestriesString(abstractFeatureNode);
-
-			} else if (root.eContainer() instanceof TypeMemberReferenceTreeElement) {
-				TypeMemberReferenceTreeElement typeMemberReferenceTreeElement = (TypeMemberReferenceTreeElement) root
-						.eContainer();
+			AbstractRootNode root = ApogyCommonEMFFacade.INSTANCE.getFeatureRoot(abstractFeatureNode);
+				
+			if (root.eContainer() instanceof TypeMemberReferenceTreeElement) 
+			{
+				TypeMemberReferenceTreeElement typeMemberReferenceTreeElement = (TypeMemberReferenceTreeElement) root.eContainer();
 				fullyQualifiedName = getFullyQualifiedName(typeMemberReferenceTreeElement);
-				fullyQualifiedName += "."
-						+ ApogyCommonEMFFacade.INSTANCE
-								.getAncestriesString(abstractFeatureNode);
+				fullyQualifiedName += "."+ ApogyCommonEMFFacade.INSTANCE.getAncestriesString(abstractFeatureNode);
 			}
 
 			return fullyQualifiedName;
-		} else {
+		} 
+		else 
+		{
 			return null;
 		}
 	}
@@ -1538,12 +1398,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 				return null;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT:
 				return createAbstractResultValue(arguments.get(0));
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE:
-				return resolveWatch((AbstractFeatureNode)arguments.get(0));
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT:
-				return resolveWatch((TypeMemberReferenceTreeElement)arguments.get(0));
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE:
-				return getValue((AbstractFeatureNode)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE:
 				return getInstance((Variable)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE:
@@ -1558,8 +1412,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 				return getEMFFeatureValue((VariableFeatureReference)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE:
 				return getInstanceClass((VariableFeatureReference)arguments.get(0));
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT:
-				return getInstance((TypeMemberReferenceTreeElement)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL:
 				return getTypeImplementation((OperationCall)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE:
