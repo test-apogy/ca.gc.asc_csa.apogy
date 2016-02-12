@@ -1,0 +1,8 @@
+h1. Eclipse Configuration Files for Apogy
+
+This directory contains configuration files for Eclipse which should be installed by every Apogy development team member to ensure a common coding style:
+* @CheckstyleConfiguration.xml@: the configuration file for CheckStyle. Import it from __Preferences > CheckStyle__. It is recommended to install the version 6.5 or 6.8 of checkstyle because some issues where detected on newer versions.
+* @JavaFormatter.xml@: the configuration file to format the Java file. Import it from __Preferences > Java > Code Style > Formatter__. Then go to __Preferences > Java > Editor > Save Actions__ and check __Perform the selected actions on save__ then __Format source code__ and __Format edited lines__. Finally, check __Organize import__.
+
+It also contains configuration files to initialize a new development environment:
+* @apogy.setup@: Oomph configuration file (TODO)
