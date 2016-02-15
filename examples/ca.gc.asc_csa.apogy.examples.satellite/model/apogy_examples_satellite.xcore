@@ -305,8 +305,7 @@ class AcquireImageSatelliteCommand extends AbstractRequestBasedSatelliteCommand,
 /*
  * This class represents an orbital image.
  */
-class OrbitalImage extends EImage{
-	contains GeographicCoordinates[1] coordinates	
+class OrbitalImage extends EImage, GeographicCoordinates{
 	double rollAngle = "0.0"	
 }
 

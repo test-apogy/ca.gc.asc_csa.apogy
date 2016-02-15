@@ -1031,13 +1031,31 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ORBITAL_IMAGE__IMAGE_CONTENT = ApogyCommonImagesPackage.EIMAGE__IMAGE_CONTENT;
 
 	/**
-	 * The feature id for the '<em><b>Coordinates</b></em>' containment reference.
+	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__COORDINATES = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 0;
+	int ORBITAL_IMAGE__LONGITUDE = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBITAL_IMAGE__LATITUDE = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Elevation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBITAL_IMAGE__ELEVATION = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Roll Angle</b></em>' attribute.
@@ -1046,7 +1064,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__ROLL_ANGLE = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 1;
+	int ORBITAL_IMAGE__ROLL_ANGLE = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Orbital Image</em>' class.
@@ -1055,7 +1073,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_FEATURE_COUNT = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 2;
+	int ORBITAL_IMAGE_FEATURE_COUNT = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>As Buffered Image</em>' operation.
@@ -1928,17 +1946,6 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EClass getOrbitalImage();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Coordinates</em>'.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getCoordinates()
-	 * @see #getOrbitalImage()
-	 * @generated
-	 */
-	EReference getOrbitalImage_Coordinates();
-
-	/**
 	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2569,14 +2576,6 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ORBITAL_IMAGE = eINSTANCE.getOrbitalImage();
-
-		/**
-		 * The meta object literal for the '<em><b>Coordinates</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ORBITAL_IMAGE__COORDINATES = eINSTANCE.getOrbitalImage_Coordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Roll Angle</b></em>' attribute feature.

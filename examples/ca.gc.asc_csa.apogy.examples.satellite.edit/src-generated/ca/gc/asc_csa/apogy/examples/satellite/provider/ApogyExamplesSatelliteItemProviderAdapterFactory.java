@@ -715,6 +715,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 
 				newChildDescriptors.add
 					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
@@ -725,6 +730,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 
 				newChildDescriptors.add
 					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
@@ -732,6 +742,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				return null;
 			}
@@ -825,6 +840,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
 				return null;
 			}
  
@@ -863,6 +883,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 					(createChildParameter
 						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				return null;
 			}

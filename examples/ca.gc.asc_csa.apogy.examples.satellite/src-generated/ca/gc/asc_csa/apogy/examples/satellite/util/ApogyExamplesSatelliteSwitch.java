@@ -23,6 +23,7 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 import ca.gc.asc_csa.apogy.common.images.EImage;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.examples.satellite.*;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
@@ -211,6 +212,7 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				OrbitalImage orbitalImage = (OrbitalImage)theEObject;
 				T result = caseOrbitalImage(orbitalImage);
 				if (result == null) result = caseEImage(orbitalImage);
+				if (result == null) result = caseGeographicCoordinates(orbitalImage);
 				if (result == null) result = caseAbstractEImage(orbitalImage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

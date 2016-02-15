@@ -730,17 +730,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOrbitalImage_Coordinates() {
-		return (EReference)orbitalImageEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getOrbitalImage_RollAngle() {
-		return (EAttribute)orbitalImageEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)orbitalImageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1011,7 +1002,6 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEAttribute(acquireImageSatelliteCommandEClass, ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE);
 
 		orbitalImageEClass = createEClass(ORBITAL_IMAGE);
-		createEReference(orbitalImageEClass, ORBITAL_IMAGE__COORDINATES);
 		createEAttribute(orbitalImageEClass, ORBITAL_IMAGE__ROLL_ANGLE);
 
 		turnOnImagerCommandEClass = createEClass(TURN_ON_IMAGER_COMMAND);
@@ -1094,6 +1084,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		acquireImageSatelliteCommandEClass.getESuperTypes().add(this.getAbstractRequestBasedSatelliteCommand());
 		acquireImageSatelliteCommandEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
 		orbitalImageEClass.getESuperTypes().add(theApogyCommonImagesPackage.getEImage());
+		orbitalImageEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
 		turnOnImagerCommandEClass.getESuperTypes().add(this.getAbstractSatelliteCommand());
 		turnOffImagerCommandEClass.getESuperTypes().add(this.getAbstractSatelliteCommand());
 		constellationDownlinksListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
@@ -1187,7 +1178,6 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEAttribute(getAcquireImageSatelliteCommand_RollAngle(), theEcorePackage.getEDouble(), "rollAngle", "0.0", 0, 1, AcquireImageSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orbitalImageEClass, OrbitalImage.class, "OrbitalImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrbitalImage_Coordinates(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "coordinates", null, 1, 1, OrbitalImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrbitalImage_RollAngle(), theEcorePackage.getEDouble(), "rollAngle", "0.0", 0, 1, OrbitalImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(turnOnImagerCommandEClass, TurnOnImagerCommand.class, "TurnOnImagerCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
