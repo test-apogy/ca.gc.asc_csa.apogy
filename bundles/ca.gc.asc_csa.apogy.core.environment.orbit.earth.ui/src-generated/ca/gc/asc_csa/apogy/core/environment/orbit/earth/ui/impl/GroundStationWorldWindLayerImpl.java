@@ -326,9 +326,9 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 				{
 					monitor.beginTask("Update", 1);
 					
-					if(isVisible() && getGroundStation()!= null && getGroundStation().getGeographicalCoordinates() != null)
+					if(isVisible() && getGroundStation()!= null)
 					{
-						GeographicCoordinates coord = getGroundStation().getGeographicalCoordinates();
+						GeographicCoordinates coord = getGroundStation();
 						
 						Angle latitude = Angle.fromRadiansLatitude(coord.getLatitude());
 				        Angle longitude = Angle.fromRadiansLongitude(coord.getLongitude());
@@ -399,8 +399,6 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 					{
 						GroundStation newGroundStation = (GroundStation) eObject;
 						super.registerToEObject(newGroundStation);
-						
-						if(newGroundStation.getGeographicalCoordinates() != null) newGroundStation.getGeographicalCoordinates().eAdapters().add(this);
 						if(newGroundStation.getElevationMask() != null)
 						{
 							newGroundStation.getElevationMask().eAdapters().add(this);																		
@@ -438,16 +436,9 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 								if(isAutoUpdateEnabled()) update();
 							break;
 							
-							case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION__GEOGRAPHICAL_COORDINATES:
-								if(msg.getOldValue() instanceof GeographicCoordinates)
-								{				
-									((GeographicCoordinates) msg.getOldValue()).eAdapters().remove(this);							
-								}
-								
-								if(msg.getNewValue() instanceof GeographicCoordinates)
-								{									
-									((GeographicCoordinates) msg.getNewValue()).eAdapters().add(this);									
-								}
+							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION:
+							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE:
+							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE:								
 								if(isAutoUpdateEnabled()) update();
 							break;
 							

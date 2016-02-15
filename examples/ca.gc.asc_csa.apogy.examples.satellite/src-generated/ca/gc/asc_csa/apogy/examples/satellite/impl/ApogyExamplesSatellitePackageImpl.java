@@ -1412,7 +1412,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		  (constellationCommandPlanEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "This class contains a list of {@link SatelliteCommandPlanItem}.\nThe {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}."
+			 "documentation", "This class contains a list of {@link AbstractSatelliteCommand}.\nThe {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}."
 		   });	
 		addAnnotation
 		  (getConstellationCommandPlan_ConstellationCommands(), 

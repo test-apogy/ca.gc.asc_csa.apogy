@@ -35,6 +35,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
@@ -197,12 +198,42 @@ public class CorridorPointItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
 				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
 				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 
 		newChildDescriptors.add
 			(createChildParameter

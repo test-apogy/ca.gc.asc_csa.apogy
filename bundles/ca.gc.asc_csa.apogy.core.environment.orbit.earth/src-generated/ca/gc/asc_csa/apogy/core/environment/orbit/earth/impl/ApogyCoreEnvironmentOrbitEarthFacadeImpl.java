@@ -185,12 +185,9 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 		loc.setName(name);
 		loc.setDescription(description);
 		
-		GeographicCoordinates coord = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-		coord.setLatitude(latitude);
-		coord.setLongitude(longitude);
-		coord.setElevation(elevation);
-		
-		loc.setGeographicalCoordinates(coord);
+		loc.setLatitude(latitude);
+		loc.setLongitude(longitude);
+		loc.setElevation(elevation);	
 		
 		return loc;
 		
@@ -244,10 +241,9 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 	 */
 	public double getSpacecraftElevationAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception
 	{
-		GeographicCoordinates surfaceLocation = earthSurfaceLocation.getGeographicalCoordinates();
 		OreKitBackedSpacecraftState oss = (OreKitBackedSpacecraftState) spacecraftState;
 		
-		GeodeticPoint location = new GeodeticPoint(surfaceLocation.getLatitude(), surfaceLocation.getLongitude(), surfaceLocation.getElevation());		
+		GeodeticPoint location = new GeodeticPoint(earthSurfaceLocation.getLatitude(), earthSurfaceLocation.getLongitude(), earthSurfaceLocation.getElevation());		
 		Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);
 		BodyShape earth = new OneAxisEllipsoid(Constants.WGS84_EARTH_EQUATORIAL_RADIUS, Constants.WGS84_EARTH_FLATTENING, earthFrame);
 		TopocentricFrame loc = new TopocentricFrame(earth, location, "location");
@@ -270,10 +266,9 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 	 */
 	public double getSpacecraftAzimuthAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception 
 	{
-		GeographicCoordinates surfaceLocation = earthSurfaceLocation.getGeographicalCoordinates();
 		OreKitBackedSpacecraftState oss = (OreKitBackedSpacecraftState) spacecraftState;
 		
-		GeodeticPoint location = new GeodeticPoint(surfaceLocation.getLatitude(), surfaceLocation.getLongitude(), surfaceLocation.getElevation());		
+		GeodeticPoint location = new GeodeticPoint(earthSurfaceLocation.getLatitude(), earthSurfaceLocation.getLongitude(), earthSurfaceLocation.getElevation());		
 		Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);
 		BodyShape earth = new OneAxisEllipsoid(Constants.WGS84_EARTH_EQUATORIAL_RADIUS, Constants.WGS84_EARTH_FLATTENING, earthFrame);
 		TopocentricFrame loc = new TopocentricFrame(earth, location, "location");
@@ -297,10 +292,9 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 	 */
 	public double getRange(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception 
 	{
-		GeographicCoordinates surfaceLocation = earthSurfaceLocation.getGeographicalCoordinates();
 		OreKitBackedSpacecraftState oss = (OreKitBackedSpacecraftState) spacecraftState;
 		
-		GeodeticPoint location = new GeodeticPoint(surfaceLocation.getLatitude(), surfaceLocation.getLongitude(), surfaceLocation.getElevation());		
+		GeodeticPoint location = new GeodeticPoint(earthSurfaceLocation.getLatitude(), earthSurfaceLocation.getLongitude(), earthSurfaceLocation.getElevation());		
 		Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);
 		BodyShape earth = new OneAxisEllipsoid(Constants.WGS84_EARTH_EQUATORIAL_RADIUS, Constants.WGS84_EARTH_FLATTENING, earthFrame);
 		TopocentricFrame loc = new TopocentricFrame(earth, location, "location");

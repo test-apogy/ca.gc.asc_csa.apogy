@@ -28,6 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.images.provider.EImageItemProvider;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
@@ -184,6 +185,16 @@ public class OrbitalImageItemProvider
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
 				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 
 		newChildDescriptors.add
 			(createChildParameter

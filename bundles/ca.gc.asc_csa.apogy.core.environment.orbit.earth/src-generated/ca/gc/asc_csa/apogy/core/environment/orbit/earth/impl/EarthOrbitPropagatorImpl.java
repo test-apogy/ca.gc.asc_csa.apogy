@@ -209,9 +209,9 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		List<VisibilityPass> passes = new ArrayList<VisibilityPass>();
 		
 		// Defined the target on Earth.
-		GeodeticPoint target = new GeodeticPoint(earthSurfaceLocation.getGeographicalCoordinates().getLatitude(), 
-												 earthSurfaceLocation.getGeographicalCoordinates().getLongitude(), 
-												 earthSurfaceLocation.getGeographicalCoordinates().getElevation());
+		GeodeticPoint target = new GeodeticPoint(earthSurfaceLocation.getLatitude(), 
+												 earthSurfaceLocation.getLongitude(), 
+												 earthSurfaceLocation.getElevation());
 		
 		// Define the Earth Frame.
 		Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);
@@ -315,9 +315,9 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		List<VisibilityPass> passes = new ArrayList<VisibilityPass>();
 		
 		// Defined the target on Earth.
-		GeodeticPoint target = new GeodeticPoint(groundStation.getGeographicalCoordinates().getLatitude(), 
-												 groundStation.getGeographicalCoordinates().getLongitude(), 
-												 groundStation.getGeographicalCoordinates().getElevation());
+		GeodeticPoint target = new GeodeticPoint(groundStation.getLatitude(), 
+												 groundStation.getLongitude(), 
+												 groundStation.getElevation());
 		
 		// Define the Earth Frame.
 		Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);

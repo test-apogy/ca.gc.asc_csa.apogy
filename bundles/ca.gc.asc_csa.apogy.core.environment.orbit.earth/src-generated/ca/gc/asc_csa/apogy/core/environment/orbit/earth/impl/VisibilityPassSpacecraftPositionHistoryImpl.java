@@ -445,7 +445,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			Propagator propagator = ((EarthOrbitPropagator) pass.getOrbitModel().getPropagator()).getOreKitPropagator();
 			Frame inertialFrame = FramesFactory.getEME2000();
 			LocalOrbitalFrame lof = new LocalOrbitalFrame(inertialFrame, LOFType.QSW, propagator, "QSW");
-			GeographicCoordinates coord = pass.getSurfaceLocation().getGeographicalCoordinates();
+			GeographicCoordinates coord = pass.getSurfaceLocation();
 			GeodeticPoint location = new GeodeticPoint(coord.getLatitude(), coord.getLongitude(), coord.getElevation());
 			Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);
 			BodyShape earth = new OneAxisEllipsoid(Constants.WGS84_EARTH_EQUATORIAL_RADIUS, Constants.WGS84_EARTH_FLATTENING, earthFrame);

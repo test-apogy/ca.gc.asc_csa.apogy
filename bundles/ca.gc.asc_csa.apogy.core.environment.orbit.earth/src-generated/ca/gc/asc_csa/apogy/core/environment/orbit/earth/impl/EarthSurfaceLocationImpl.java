@@ -14,17 +14,16 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
  */
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.asc_csa.apogy.common.emf.Described;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +35,9 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbi
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getLongitude <em>Longitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getLatitude <em>Latitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getElevation <em>Elevation</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,14 +84,64 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getGeographicalCoordinates() <em>Geographical Coordinates</em>}' containment reference.
+	 * The default value of the '{@link #getLongitude() <em>Longitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGeographicalCoordinates()
+	 * @see #getLongitude()
 	 * @generated
 	 * @ordered
 	 */
-	protected GeographicCoordinates geographicalCoordinates;
+	protected static final double LONGITUDE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getLongitude() <em>Longitude</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLongitude()
+	 * @generated
+	 * @ordered
+	 */
+	protected double longitude = LONGITUDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLatitude() <em>Latitude</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLatitude()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double LATITUDE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getLatitude() <em>Latitude</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLatitude()
+	 * @generated
+	 * @ordered
+	 */
+	protected double latitude = LATITUDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getElevation() <em>Elevation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElevation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double ELEVATION_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getElevation() <em>Elevation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElevation()
+	 * @generated
+	 * @ordered
+	 */
+	protected double elevation = ELEVATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,78 +207,66 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
-	public GeographicCoordinates getGeographicalCoordinates() 
-	{
-		GeographicCoordinates tmp = getGeographicalCoordinatesGen();
-		
-		if(tmp == null)
-		{
-			tmp = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-			setGeographicalCoordinates(tmp);
-		}
-		
-		return tmp;
+	public double getLongitude() {
+		return longitude;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLongitude(double newLongitude) {
+		double oldLongitude = longitude;
+		longitude = newLongitude;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE, oldLongitude, longitude));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getLatitude() {
+		return latitude;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLatitude(double newLatitude) {
+		double oldLatitude = latitude;
+		latitude = newLatitude;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE, oldLatitude, latitude));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getElevation() {
+		return elevation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setElevation(double newElevation) {
+		double oldElevation = elevation;
+		elevation = newElevation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION, oldElevation, elevation));
 	}
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GeographicCoordinates getGeographicalCoordinatesGen() {
-		return geographicalCoordinates;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGeographicalCoordinates(GeographicCoordinates newGeographicalCoordinates, NotificationChain msgs) {
-		GeographicCoordinates oldGeographicalCoordinates = geographicalCoordinates;
-		geographicalCoordinates = newGeographicalCoordinates;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, oldGeographicalCoordinates, newGeographicalCoordinates);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGeographicalCoordinates(GeographicCoordinates newGeographicalCoordinates) {
-		if (newGeographicalCoordinates != geographicalCoordinates) {
-			NotificationChain msgs = null;
-			if (geographicalCoordinates != null)
-				msgs = ((InternalEObject)geographicalCoordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, null, msgs);
-			if (newGeographicalCoordinates != null)
-				msgs = ((InternalEObject)newGeographicalCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, null, msgs);
-			msgs = basicSetGeographicalCoordinates(newGeographicalCoordinates, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, newGeographicalCoordinates, newGeographicalCoordinates));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				return basicSetGeographicalCoordinates(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -240,8 +279,12 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 				return getName();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				return getDescription();
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				return getGeographicalCoordinates();
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE:
+				return getLongitude();
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE:
+				return getLatitude();
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION:
+				return getElevation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,8 +303,14 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				setGeographicalCoordinates((GeographicCoordinates)newValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE:
+				setLongitude((Double)newValue);
+				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE:
+				setLatitude((Double)newValue);
+				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION:
+				setElevation((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -281,8 +330,14 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				setGeographicalCoordinates((GeographicCoordinates)null);
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE:
+				setLongitude(LONGITUDE_EDEFAULT);
+				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE:
+				setLatitude(LATITUDE_EDEFAULT);
+				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION:
+				setElevation(ELEVATION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -300,8 +355,12 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				return geographicalCoordinates != null;
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE:
+				return longitude != LONGITUDE_EDEFAULT;
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE:
+				return latitude != LATITUDE_EDEFAULT;
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION:
+				return elevation != ELEVATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -319,6 +378,14 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 				default: return -1;
 			}
 		}
+		if (baseClass == GeographicCoordinates.class) {
+			switch (derivedFeatureID) {
+				case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
+				case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
+				case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -332,6 +399,14 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
 				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		if (baseClass == GeographicCoordinates.class) {
+			switch (baseFeatureID) {
+				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE: return ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE;
+				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE: return ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE;
+				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION: return ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION;
 				default: return -1;
 			}
 		}
@@ -352,6 +427,12 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", longitude: ");
+		result.append(longitude);
+		result.append(", latitude: ");
+		result.append(latitude);
+		result.append(", elevation: ");
+		result.append(elevation);
 		result.append(')');
 		return result.toString();
 	}

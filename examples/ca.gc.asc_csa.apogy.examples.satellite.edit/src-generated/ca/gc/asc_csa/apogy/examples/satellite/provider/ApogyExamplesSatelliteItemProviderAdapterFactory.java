@@ -56,7 +56,6 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeIma
 import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.util.ApogyCoreEnvironmentOrbitEarthSwitch;
 import ca.gc.asc_csa.apogy.core.environment.util.ApogyCoreEnvironmentSwitch;
@@ -697,26 +696,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
 			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseEarthSurfaceLocation(EarthSurfaceLocation object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
-
-				return null;
-			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

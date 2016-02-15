@@ -468,9 +468,7 @@ class TLE extends AbstractTLE
 /*
  * Defines a location on the surface of the Earth.
  */
-class EarthSurfaceLocation extends Named, Described
-{
-	contains GeographicCoordinates geographicalCoordinates
+class EarthSurfaceLocation extends Named, Described, GeographicCoordinates{
 }
 
 class EarthSurfaceLocationList extends Named, Described

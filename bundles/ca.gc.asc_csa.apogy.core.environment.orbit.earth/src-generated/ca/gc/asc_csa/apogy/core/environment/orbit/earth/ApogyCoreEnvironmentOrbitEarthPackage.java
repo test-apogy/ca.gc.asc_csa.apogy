@@ -2095,13 +2095,31 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int EARTH_SURFACE_LOCATION__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Geographical Coordinates</b></em>' containment reference.
+	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int EARTH_SURFACE_LOCATION__LONGITUDE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION__LATITUDE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Elevation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION__ELEVATION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Earth Surface Location</em>' class.
@@ -2110,7 +2128,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int EARTH_SURFACE_LOCATION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Earth Surface Location</em>' class.
@@ -2242,13 +2260,31 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int GROUND_STATION__DESCRIPTION = EARTH_SURFACE_LOCATION__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Geographical Coordinates</b></em>' containment reference.
+	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUND_STATION__GEOGRAPHICAL_COORDINATES = EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES;
+	int GROUND_STATION__LONGITUDE = EARTH_SURFACE_LOCATION__LONGITUDE;
+
+	/**
+	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUND_STATION__LATITUDE = EARTH_SURFACE_LOCATION__LATITUDE;
+
+	/**
+	 * The feature id for the '<em><b>Elevation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUND_STATION__ELEVATION = EARTH_SURFACE_LOCATION__ELEVATION;
 
 	/**
 	 * The feature id for the '<em><b>Field Of View Orientation</b></em>' containment reference.
@@ -4279,17 +4315,6 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EClass getEarthSurfaceLocation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation#getGeographicalCoordinates <em>Geographical Coordinates</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Geographical Coordinates</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation#getGeographicalCoordinates()
-	 * @see #getEarthSurfaceLocation()
-	 * @generated
-	 */
-	EReference getEarthSurfaceLocation_GeographicalCoordinates();
-
-	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList <em>Earth Surface Location List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6018,14 +6043,6 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EARTH_SURFACE_LOCATION = eINSTANCE.getEarthSurfaceLocation();
-
-		/**
-		 * The meta object literal for the '<em><b>Geographical Coordinates</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES = eINSTANCE.getEarthSurfaceLocation_GeographicalCoordinates();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationListImpl <em>Earth Surface Location List</em>}' class.

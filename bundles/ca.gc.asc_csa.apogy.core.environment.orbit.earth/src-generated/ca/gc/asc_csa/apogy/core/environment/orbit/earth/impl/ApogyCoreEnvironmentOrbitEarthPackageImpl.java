@@ -1202,15 +1202,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEarthSurfaceLocation_GeographicalCoordinates() {
-		return (EReference)earthSurfaceLocationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getEarthSurfaceLocationList() {
 		return earthSurfaceLocationListEClass;
 	}
@@ -2243,7 +2234,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEAttribute(tleEClass, TLE__SECOND_LINE);
 
 		earthSurfaceLocationEClass = createEClass(EARTH_SURFACE_LOCATION);
-		createEReference(earthSurfaceLocationEClass, EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES);
 
 		earthSurfaceLocationListEClass = createEClass(EARTH_SURFACE_LOCATION_LIST);
 		createEReference(earthSurfaceLocationListEClass, EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS);
@@ -2423,6 +2413,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		tleEClass.getESuperTypes().add(this.getAbstractTLE());
 		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
 		earthSurfaceLocationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		earthSurfaceLocationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		groundStationEClass.getESuperTypes().add(this.getEarthSurfaceLocation());
@@ -2568,7 +2559,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEAttribute(getTLE_SecondLine(), theEcorePackage.getEString(), "secondLine", null, 1, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthSurfaceLocationEClass, EarthSurfaceLocation.class, "EarthSurfaceLocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEarthSurfaceLocation_GeographicalCoordinates(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "geographicalCoordinates", null, 0, 1, EarthSurfaceLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthSurfaceLocationListEClass, EarthSurfaceLocationList.class, "EarthSurfaceLocationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEarthSurfaceLocationList_EarthSurfaceLocations(), this.getEarthSurfaceLocation(), null, "earthSurfaceLocations", null, 0, -1, EarthSurfaceLocationList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

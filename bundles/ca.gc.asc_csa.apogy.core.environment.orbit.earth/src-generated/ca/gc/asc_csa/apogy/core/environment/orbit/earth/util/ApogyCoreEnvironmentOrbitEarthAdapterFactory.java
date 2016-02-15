@@ -22,6 +22,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.core.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
@@ -299,6 +300,10 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 			@Override
 			public Adapter caseInitialOrbitContainer(InitialOrbitContainer object) {
 				return createInitialOrbitContainerAdapter();
+			}
+			@Override
+			public Adapter caseGeographicCoordinates(GeographicCoordinates object) {
+				return createGeographicCoordinatesAdapter();
 			}
 			@Override
 			public Adapter caseUpdatable(Updatable object) {
@@ -951,6 +956,20 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createInitialOrbitContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
+	 * @generated
+	 */
+	public Adapter createGeographicCoordinatesAdapter() {
 		return null;
 	}
 

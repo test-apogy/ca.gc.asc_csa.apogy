@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class contains a list of {@link SatelliteCommandPlanItem}.
+ * This class contains a list of {@link AbstractSatelliteCommand}.
  * The {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}.
  * <!-- end-model-doc -->
  *
