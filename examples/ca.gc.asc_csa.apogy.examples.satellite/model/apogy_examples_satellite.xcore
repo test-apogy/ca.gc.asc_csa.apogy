@@ -274,6 +274,12 @@ class Satellite extends Named{
  * Satellite Command.
  */
 abstract class AbstractSatelliteCommand extends Timed{	
+	
+	/*
+	 * Request Unique Identifier.
+	 */
+	contains AbstractUID uid
+	
 	/*
 	 * Refers the {@link Satellite} associated with the {@link AbstractSatelliteCommand}. 
 	 */

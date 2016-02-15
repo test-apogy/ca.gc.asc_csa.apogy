@@ -28,6 +28,7 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getUid <em>Uid</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}</li>
  * </ul>
  *
@@ -36,6 +37,31 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
  * @generated
  */
 public interface AbstractSatelliteCommand extends Timed {
+	/**
+	 * Returns the value of the '<em><b>Uid</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Request Unique Identifier.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Uid</em>' containment reference.
+	 * @see #setUid(AbstractUID)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractSatelliteCommand_Uid()
+	 * @model containment="true"
+	 * @generated
+	 */
+	AbstractUID getUid();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getUid <em>Uid</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Uid</em>' containment reference.
+	 * @see #getUid()
+	 * @generated
+	 */
+	void setUid(AbstractUID value);
+
 	/**
 	 * Returns the value of the '<em><b>Satellite</b></em>' reference.
 	 * <!-- begin-user-doc -->

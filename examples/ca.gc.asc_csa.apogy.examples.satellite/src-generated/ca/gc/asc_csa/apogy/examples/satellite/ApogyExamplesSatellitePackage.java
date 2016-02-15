@@ -821,13 +821,22 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_SATELLITE_COMMAND__TIME = ApogyCommonEMFPackage.TIMED__TIME;
 
 	/**
+	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_SATELLITE_COMMAND__UID = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND__SATELLITE = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 0;
+	int ABSTRACT_SATELLITE_COMMAND__SATELLITE = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Satellite Command</em>' class.
@@ -836,7 +845,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND_FEATURE_COUNT = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 1;
+	int ABSTRACT_SATELLITE_COMMAND_FEATURE_COUNT = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Abstract Satellite Command</em>' class.
@@ -865,6 +874,15 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__TIME = ABSTRACT_SATELLITE_COMMAND__TIME;
+
+	/**
+	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__UID = ABSTRACT_SATELLITE_COMMAND__UID;
 
 	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' reference.
@@ -920,6 +938,15 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int ACQUIRE_IMAGE_SATELLITE_COMMAND__TIME = ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__TIME;
+
+	/**
+	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND__UID = ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__UID;
 
 	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' reference.
@@ -1113,6 +1140,15 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int TURN_ON_IMAGER_COMMAND__TIME = ABSTRACT_SATELLITE_COMMAND__TIME;
 
 	/**
+	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURN_ON_IMAGER_COMMAND__UID = ABSTRACT_SATELLITE_COMMAND__UID;
+
+	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1157,6 +1193,15 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int TURN_OFF_IMAGER_COMMAND__TIME = ABSTRACT_SATELLITE_COMMAND__TIME;
+
+	/**
+	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURN_OFF_IMAGER_COMMAND__UID = ABSTRACT_SATELLITE_COMMAND__UID;
 
 	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' reference.
@@ -1883,6 +1928,17 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EClass getAbstractSatelliteCommand();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getUid <em>Uid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Uid</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getUid()
+	 * @see #getAbstractSatelliteCommand()
+	 * @generated
+	 */
+	EReference getAbstractSatelliteCommand_Uid();
+
+	/**
 	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2522,6 +2578,14 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ABSTRACT_SATELLITE_COMMAND = eINSTANCE.getAbstractSatelliteCommand();
+
+		/**
+		 * The meta object literal for the '<em><b>Uid</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_SATELLITE_COMMAND__UID = eINSTANCE.getAbstractSatelliteCommand_Uid();
 
 		/**
 		 * The meta object literal for the '<em><b>Satellite</b></em>' reference feature.

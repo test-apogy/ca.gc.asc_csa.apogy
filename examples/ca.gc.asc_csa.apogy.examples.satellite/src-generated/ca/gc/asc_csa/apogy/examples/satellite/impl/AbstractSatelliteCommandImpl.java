@@ -16,12 +16,14 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 
@@ -34,6 +36,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl#getUid <em>Uid</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl#getSatellite <em>Satellite</em>}</li>
  * </ul>
  *
@@ -59,6 +62,16 @@ public abstract class AbstractSatelliteCommandImpl extends MinimalEObjectImpl.Co
 	 * @ordered
 	 */
 	protected Date time = TIME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getUid() <em>Uid</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUid()
+	 * @generated
+	 * @ordered
+	 */
+	protected AbstractUID uid;
 
 	/**
 	 * The cached value of the '{@link #getSatellite() <em>Satellite</em>}' reference.
@@ -115,6 +128,49 @@ public abstract class AbstractSatelliteCommandImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AbstractUID getUid() {
+		return uid;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUid(AbstractUID newUid, NotificationChain msgs) {
+		AbstractUID oldUid = uid;
+		uid = newUid;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID, oldUid, newUid);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUid(AbstractUID newUid) {
+		if (newUid != uid) {
+			NotificationChain msgs = null;
+			if (uid != null)
+				msgs = ((InternalEObject)uid).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID, null, msgs);
+			if (newUid != null)
+				msgs = ((InternalEObject)newUid).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID, null, msgs);
+			msgs = basicSetUid(newUid, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID, newUid, newUid));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Satellite getSatellite() {
 		if (satellite != null && satellite.eIsProxy()) {
 			InternalEObject oldSatellite = (InternalEObject)satellite;
@@ -154,10 +210,26 @@ public abstract class AbstractSatelliteCommandImpl extends MinimalEObjectImpl.Co
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				return basicSetUid(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
 				return getTime();
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				return getUid();
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__SATELLITE:
 				if (resolve) return getSatellite();
 				return basicGetSatellite();
@@ -175,6 +247,9 @@ public abstract class AbstractSatelliteCommandImpl extends MinimalEObjectImpl.Co
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
 				setTime((Date)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				setUid((AbstractUID)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__SATELLITE:
 				setSatellite((Satellite)newValue);
@@ -194,6 +269,9 @@ public abstract class AbstractSatelliteCommandImpl extends MinimalEObjectImpl.Co
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				setUid((AbstractUID)null);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__SATELLITE:
 				setSatellite((Satellite)null);
 				return;
@@ -211,6 +289,8 @@ public abstract class AbstractSatelliteCommandImpl extends MinimalEObjectImpl.Co
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				return uid != null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__SATELLITE:
 				return satellite != null;
 		}
