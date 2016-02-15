@@ -27,6 +27,11 @@ import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm
 import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform
 import ca.gc.asc_csa.apogy.examples.camera.PTUCamera
 
+/*
+ * This class represents a battery in the rover's
+ * power system; note that the rover's power supply
+ * is comprised of several battery.
+ */
 class Battery
 {
 	/*

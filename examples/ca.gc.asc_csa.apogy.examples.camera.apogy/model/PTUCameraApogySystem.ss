@@ -54,8 +54,8 @@
       </featureRoots>
     </featureRootsList>
     <bindingsList xmi:id="_1LQ6BgrOEeW4-_ONWXXiAw">
-      <bindings xsi:type="bindings:RotationBinding" xmi:id="_1LQ6BwrOEeW4-_ONWXXiAw" description="The binding for the PTU camera's pan joint" name="PTU_CAMERA_SYM_SYS_BIND_PAN_JOINT" featureNode="_1LQ6AwrOEeW4-_ONWXXiAw" rotationNode="_1LPExQrOEeW4-_ONWXXiAw" rotationAxis="Z_AXIS" rotationUnits="RADIANS"/>
-      <bindings xsi:type="bindings:RotationBinding" xmi:id="_1LQ6CArOEeW4-_ONWXXiAw" description="The binding for the PTU camera's tilt joint" name="PTU_CAMERA_SYM_SYS_BIND_TILT_JOINT" featureNode="_1LQ6BArOEeW4-_ONWXXiAw" rotationNode="_1LPEyArOEeW4-_ONWXXiAw" rotationUnits="RADIANS"/>
+      <bindings xsi:type="bindings:RotationBinding" xmi:id="_1LQ6BwrOEeW4-_ONWXXiAw" description="The binding for the PTU camera's pan joint" name="PTU_CAMERA_SYM_SYS_BIND_PAN_JOINT" featureNode="_1LQ6AwrOEeW4-_ONWXXiAw" rotationNode="_1LPExQrOEeW4-_ONWXXiAw" rotationAxis="Z_AXIS"/>
+      <bindings xsi:type="bindings:RotationBinding" xmi:id="_1LQ6CArOEeW4-_ONWXXiAw" description="The binding for the PTU camera's tilt joint" name="PTU_CAMERA_SYM_SYS_BIND_TILT_JOINT" featureNode="_1LQ6BArOEeW4-_ONWXXiAw" rotationNode="_1LPEyArOEeW4-_ONWXXiAw"/>
       <bindings xsi:type="bindings_1:RectangularFrustrumFieldOfViewBinding" xmi:id="_1LQ6CQrOEeW4-_ONWXXiAw" description="The binding for the PTU camera's field of view (FOV)" name="PTU_CAMERA_SYM_SYS_BIND_FOV" featureNode="_1LQ6BQrOEeW4-_ONWXXiAw" fov="_1LQ58QrOEeW4-_ONWXXiAw"/>
     </bindingsList>
   </bindingSet>

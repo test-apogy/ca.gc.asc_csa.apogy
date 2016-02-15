@@ -577,6 +577,12 @@ public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements Apogy
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
+		  (batteryEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This class represents a battery in the rover\'s\npower system; note that the rover\'s power supply\nis comprised of several battery."
+		   });	
+		addAnnotation
 		  (getBattery__Activate(), 
 		   source, 
 		   new String[] {

@@ -421,6 +421,12 @@ public class ApogyExamplesRoboticArmPackageImpl extends EPackageImpl implements 
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
+		  (moveSpeedLevelEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "This enumeration is used to indicate the overall possible\nlevels of speed that a robotic arm can move at; as\nexpected, this used by RoboticArm (and its subclasses) when\nmoveTo() is called."
+		   });	
+		addAnnotation
 		  (moveSpeedLevelEEnum.getELiterals().get(0), 
 		   source, 
 		   new String[] {

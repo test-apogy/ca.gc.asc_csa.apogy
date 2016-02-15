@@ -20,6 +20,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Distance Range</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Defines an distance range by specifying a minimum and maximum distance.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

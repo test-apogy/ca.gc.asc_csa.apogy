@@ -64,6 +64,9 @@ class ApogyCoreUIFacade
 	op ApogySystem createApogySystem(NewApogySystemSettings systemSettings)
 }
 
+/*
+ * This class is used to support Apogy wizards.
+ */
 class ApogyResourceSettings
 {
 	IProject resourceProject

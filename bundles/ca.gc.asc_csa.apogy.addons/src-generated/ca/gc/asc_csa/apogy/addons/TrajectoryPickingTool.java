@@ -22,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getAltitudeOffset <em>Altitude Offset</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getPaths <em>Paths</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getActivePath <em>Active Path</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getTrajectoryPickingToolNode <em>Trajectory Picking Tool Node</em>}</li>
@@ -33,6 +34,33 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface TrajectoryPickingTool extends Simple3DTool {
 	/**
+	 * Returns the value of the '<em><b>Altitude Offset</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Offset to apply to the point to keep a wyapoint path above ground.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Altitude Offset</em>' attribute.
+	 * @see #setAltitudeOffset(double)
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getTrajectoryPickingTool_AltitudeOffset()
+	 * @model default="0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='m' propertyCategory='TRAJECTORY_PICKING_TOOL'"
+	 * @generated
+	 */
+	double getAltitudeOffset();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getAltitudeOffset <em>Altitude Offset</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Altitude Offset</em>' attribute.
+	 * @see #getAltitudeOffset()
+	 * @generated
+	 */
+	void setAltitudeOffset(double value);
+
+	/**
 	 * Returns the value of the '<em><b>Paths</b></em>' containment reference list.
 	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath}.
 	 * <!-- begin-user-doc -->
@@ -43,6 +71,7 @@ public interface TrajectoryPickingTool extends Simple3DTool {
 	 * @return the value of the '<em>Paths</em>' containment reference list.
 	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getTrajectoryPickingTool_Paths()
 	 * @model containment="true" required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='TRAJECTORY_PICKING_TOOL'"
 	 * @generated
 	 */
 	EList<WayPointPath> getPaths();
@@ -58,6 +87,7 @@ public interface TrajectoryPickingTool extends Simple3DTool {
 	 * @see #setActivePath(WayPointPath)
 	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getTrajectoryPickingTool_ActivePath()
 	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='TRAJECTORY_PICKING_TOOL'"
 	 * @generated
 	 */
 	WayPointPath getActivePath();

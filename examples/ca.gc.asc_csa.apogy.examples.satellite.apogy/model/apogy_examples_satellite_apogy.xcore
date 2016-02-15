@@ -35,6 +35,14 @@ import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState
 
+/*
+ * This class is the specialized Apogy API adapter, used for connecting
+ * the existing constellation example, located at
+ * {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation},
+ * to Apogy; one can override the well-known callback functions to make
+ * Apogy perform a variety of useful functions, including initialization,
+ * disposal and other features. 
+ */
 class ConstellationSystemApiAdapter extends ApogySystemApiAdapter
 {
 	/*

@@ -300,6 +300,12 @@ public class ApogyExamplesAntennaApogyPackageImpl extends EPackageImpl implement
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.antenna"
 		   });	
 		addAnnotation
+		  (ptuDishAntennaApogySystemApiAdapterEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This class is the specialized Apogy API adapter, used for connecting\nthe existing PTU dish antenna example, located at\n{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna},\nto Apogy; one can override the well-known callback functions to make\nApogy perform a variety of useful functions, including initialization,\ndisposal and other features."
+		   });	
+		addAnnotation
 		  (ptuDishAntennaDataEClass, 
 		   source, 
 		   new String[] {

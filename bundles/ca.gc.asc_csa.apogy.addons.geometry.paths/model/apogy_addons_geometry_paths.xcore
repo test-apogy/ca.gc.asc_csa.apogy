@@ -49,8 +49,12 @@ class Path extends Node
 	
 }
 
+/**
+ * Class that defines a path as a series CartesianPositionCoordinates.
+ */
 class WayPointPath extends CartesianCoordinatesSet, Path
 {
+	@GenModel(notify="true", apogy_units = "m")
 	readonly transient derived double length = "0.0"
 	
 	op CartesianPositionCoordinates getStartPoint()
@@ -63,6 +67,11 @@ abstract class WayPointPathInterpolator extends Processor<WayPointPath, WayPoint
 	
 }
 
+/*
+ * Fits a spline on the specified path using Catmull-Rom and generates an
+ * interpolated path using the specified maximum point to point distance.
+ * The original waypoints are included in the resulting interpolated path.
+ */
 class CatmullRomWayPointPathInterpolator extends WayPointPathInterpolator
 {
 	double tension = "0.5"

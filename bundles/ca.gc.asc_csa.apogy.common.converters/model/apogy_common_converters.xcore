@@ -28,6 +28,9 @@ type SimpleDirectedWeightedGraph<V, E> wraps org.jgrapht.graph.SimpleDirectedWei
 type Exception wraps java.lang.Exception
 type IConverter wraps ca.gc.asc_csa.apogy.common.converters.IConverter
 
+/*
+ * A utility class to perform a variety of common functions
+ */
 class ApogyCommonConvertersFacade
 {	
 	/*

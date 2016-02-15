@@ -52,28 +52,45 @@ class SimpleToolList extends AbstractToolsListContainer
 
 abstract class SimpleTool extends AbstractTool
 {		
+	/**
+	 * The SimpleToolList containing the tool.
+	 */
 	refers SimpleToolList toolList opposite simpleTools
 	
+	/**
+	 * Whether or  not the tool is active.
+	 */
 	transient boolean active = "false"
 	
+	/**
+	 * Whether or  not the tool is disposed.
+	 */
 	@GenModel(property="Readonly")
 	transient boolean disposed = "false"
 	
+	/**
+	 * Method called when the tool is added to its toolList.
+	 */
+	op void initialise()
+	
+	/**
+	 * Method called when the tool is remove from its toolList.
+	 */
 	op void dispose()
 }
 
 abstract class Simple3DTool extends SimpleTool
 {		
-	transient boolean visible = "true"		
+	/**
+	 * Whether or  not the tool is visible.
+	 */
+	boolean visible = "true"		
 
-	/** The root node of the current topology. Set automatically by Apogy after the too is registered.*/
+	/** The root node of the current topology. Is set automatically by Apogy after the tool is registered.*/
 	refers transient Node rootNode
 	
 	/** Method called upon a user selection in the 3D viewer. Sub-classes should implement. */
 	op void selectionChanged(NodeSelection nodeSelection)
-	
-	
-	//op void selectionChanged(Node node, Tuple3d relativePosition, Tuple3d normal)
 }
 
 abstract class AbstractTwoPoints3DTool extends Simple3DTool
@@ -234,11 +251,17 @@ class SunVector3DToolNode extends Node
  */
  
 class TrajectoryPickingTool extends Simple3DTool
-{
+{	
+	/** Offset to apply to the point to keep a wyapoint path above ground. */
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="TRAJECTORY_PICKING_TOOL")
+	double altitudeOffset = "0"
+	
 	/** All the  WayPointPath created with this tool.*/
+	@GenModel(notify="true", propertyCategory="TRAJECTORY_PICKING_TOOL")
 	contains WayPointPath[1..*] paths
 	
 	/** The WayPointPath to which selected points are to be added. */
+	@GenModel(notify="true", propertyCategory="TRAJECTORY_PICKING_TOOL")
 	refers WayPointPath[1] activePath
 	
 	/** The node representing the tool in the topology. */

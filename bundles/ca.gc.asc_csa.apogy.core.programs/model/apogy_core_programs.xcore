@@ -22,6 +22,11 @@
 
 package ca.gc.asc_csa.apogy.core.programs
 
+/*
+ * This class defines the main specifications of the Program runtime.  
+ * The intent is to support capabilities similar to the Debug capabilities.
+ * Specialized {@link Program} must provide its own {@link ProgramRuntime}.  
+ */
 import ca.gc.asc_csa.apogy.core.invocator.Program
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
 import ca.gc.asc_csa.apogy.core.invocator.Variable

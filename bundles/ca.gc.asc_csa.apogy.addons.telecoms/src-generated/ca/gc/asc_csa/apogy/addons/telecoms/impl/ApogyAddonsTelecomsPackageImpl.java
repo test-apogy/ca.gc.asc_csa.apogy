@@ -824,6 +824,12 @@ public class ApogyAddonsTelecomsPackageImpl extends EPackageImpl implements Apog
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"
 		   });	
 		addAnnotation
+		  (telecomNodeStatusEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", " The different possible states of the TelecomNode"
+		   });	
+		addAnnotation
 		  (telecomNodeEClass, 
 		   source, 
 		   new String[] {

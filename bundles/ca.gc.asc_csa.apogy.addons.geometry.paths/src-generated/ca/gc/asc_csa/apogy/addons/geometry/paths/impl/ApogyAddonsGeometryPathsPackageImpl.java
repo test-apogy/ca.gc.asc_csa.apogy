@@ -614,6 +614,25 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 			 "basePackage", "ca.gc.asc_csa.apogy.addons.geometry"
 		   });	
 		addAnnotation
+		  (wayPointPathEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClass that defines a path as a series CartesianPositionCoordinates."
+		   });	
+		addAnnotation
+		  (getWayPointPath_Length(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "apogy_units", "m"
+		   });	
+		addAnnotation
+		  (catmullRomWayPointPathInterpolatorEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Fits a spline on the specified path using Catmull-Rom and generates an\ninterpolated path using the specified maximum point to point distance.\nThe original waypoints are included in the resulting interpolated path."
+		   });	
+		addAnnotation
 		  (getApogyAddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath(), 
 		   source, 
 		   new String[] {

@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder;
@@ -47,8 +46,6 @@ import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
-import ca.gc.asc_csa.apogy.core.invocator.DisplaysList;
-import ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
@@ -91,10 +88,6 @@ import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
-import ca.gc.asc_csa.apogy.core.invocator.Watch;
-import ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter;
-import ca.gc.asc_csa.apogy.core.invocator.WatchesList;
-import ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -463,55 +456,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass watchesListsContainerEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass watchesListEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass watchEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass watchFeatureNodeAdapterEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass displaysListsContainerEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass displaysListEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass abstractDisplayEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -728,7 +672,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__ResolveWatch__AbstractFeatureNode() {
+	public EOperation getApogyCoreInvocatorFacade__GetInstance__Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(4);
 	}
 
@@ -737,7 +681,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement() {
+	public EOperation getApogyCoreInvocatorFacade__GetInstanceClass__Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(5);
 	}
 
@@ -746,7 +690,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetValue__AbstractFeatureNode() {
+	public EOperation getApogyCoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(6);
 	}
 
@@ -755,7 +699,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetInstance__Variable() {
+	public EOperation getApogyCoreInvocatorFacade__GetInstance__VariableFeatureReference() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(7);
 	}
 
@@ -764,7 +708,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetInstanceClass__Variable() {
+	public EOperation getApogyCoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(8);
 	}
 
@@ -773,7 +717,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference() {
+	public EOperation getApogyCoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(9);
 	}
 
@@ -782,7 +726,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetInstance__VariableFeatureReference() {
+	public EOperation getApogyCoreInvocatorFacade__GetInstanceClass__VariableFeatureReference() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(10);
 	}
 
@@ -791,7 +735,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference() {
+	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__OperationCall() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(11);
 	}
 
@@ -800,7 +744,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference() {
+	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(12);
 	}
 
@@ -809,7 +753,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetInstanceClass__VariableFeatureReference() {
+	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(13);
 	}
 
@@ -818,7 +762,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement() {
+	public EOperation getApogyCoreInvocatorFacade__GetVariableByName__InvocatorSession_String() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(14);
 	}
 
@@ -827,7 +771,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__OperationCall() {
+	public EOperation getApogyCoreInvocatorFacade__CreateTypeMemberReferences__TypeMember() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(15);
 	}
 
@@ -836,7 +780,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType() {
+	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Environment_String() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(16);
 	}
 
@@ -845,7 +789,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Variable() {
+	public EOperation getApogyCoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(17);
 	}
 
@@ -854,7 +798,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetVariableByName__InvocatorSession_String() {
+	public EOperation getApogyCoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(18);
 	}
 
@@ -863,7 +807,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__CreateTypeMemberReferences__TypeMember() {
+	public EOperation getApogyCoreInvocatorFacade__CreateTypeMemberImplementations__Type() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(19);
 	}
 
@@ -872,7 +816,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Environment_String() {
+	public EOperation getApogyCoreInvocatorFacade__InitVariableInstances__Environment() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(20);
 	}
 
@@ -881,7 +825,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement() {
+	public EOperation getApogyCoreInvocatorFacade__DisposeVariableInstances__Environment() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(21);
 	}
 
@@ -890,7 +834,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode() {
+	public EOperation getApogyCoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(22);
 	}
 
@@ -899,7 +843,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__CreateTypeMemberImplementations__Type() {
+	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Environment() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(23);
 	}
 
@@ -908,7 +852,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__InitVariableInstances__Environment() {
+	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Environment() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(24);
 	}
 
@@ -917,7 +861,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__DisposeVariableInstances__Environment() {
+	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(25);
 	}
 
@@ -926,7 +870,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement() {
+	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(26);
 	}
 
@@ -935,7 +879,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Environment() {
+	public EOperation getApogyCoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(27);
 	}
 
@@ -944,7 +888,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Environment() {
+	public EOperation getApogyCoreInvocatorFacade__GetAllTypes__Environment() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(28);
 	}
 
@@ -953,7 +897,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Variable() {
+	public EOperation getApogyCoreInvocatorFacade__AddVariableListener__IVariableListener() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(29);
 	}
 
@@ -962,7 +906,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Variable() {
+	public EOperation getApogyCoreInvocatorFacade__RemoveVariableListener__IVariableListener() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(30);
 	}
 
@@ -971,44 +915,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(31);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreInvocatorFacade__GetAllTypes__Environment() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(32);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreInvocatorFacade__AddVariableListener__IVariableListener() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(33);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreInvocatorFacade__RemoveVariableListener__IVariableListener() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(34);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(35);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(31);
 	}
 
 		/**
@@ -2742,226 +2650,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getWatchesListsContainer()
-  {
-		return watchesListsContainerEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getWatchesListsContainer_Watches()
-  {
-		return (EReference)watchesListsContainerEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getWatchesList()
-  {
-		return watchesListEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getWatchesList_WatchesListsContainer()
-  {
-		return (EReference)watchesListEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getWatchesList_Watches()
-  {
-		return (EReference)watchesListEClass.getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getWatch()
-  {
-		return watchEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getWatch_WatchesList()
-  {
-		return (EReference)watchEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getWatch_Variable()
-  {
-		return (EReference)watchEClass.getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getWatch_TypeMemberReferenceTreeElement()
-  {
-		return (EReference)watchEClass.getEStructuralFeatures().get(2);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getWatch_TreeRootNode()
-  {
-		return (EReference)watchEClass.getEStructuralFeatures().get(3);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getWatchFeatureNodeAdapter()
-  {
-		return watchFeatureNodeAdapterEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getWatchFeatureNodeAdapter_SourceObject()
-  {
-		return (EReference)watchFeatureNodeAdapterEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getWatchFeatureNodeAdapter_FeatureNode()
-  {
-		return (EReference)watchFeatureNodeAdapterEClass.getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getWatchFeatureNodeAdapter_CurrentValue()
-  {
-		return (EAttribute)watchFeatureNodeAdapterEClass.getEStructuralFeatures().get(2);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getWatchFeatureNodeAdapter_Resolved()
-  {
-		return (EAttribute)watchFeatureNodeAdapterEClass.getEStructuralFeatures().get(3);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getDisplaysListsContainer()
-  {
-		return displaysListsContainerEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getDisplaysListsContainer_Displays()
-  {
-		return (EReference)displaysListsContainerEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getDisplaysList()
-  {
-		return displaysListEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getDisplaysList_DisplaysListsContainer()
-  {
-		return (EReference)displaysListEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getDisplaysList_Displays()
-  {
-		return (EReference)displaysListEClass.getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getAbstractDisplay()
-  {
-		return abstractDisplayEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getAbstractDisplay_DisplaysList()
-  {
-		return (EReference)abstractDisplayEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -3190,9 +2878,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE);
@@ -3200,7 +2885,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE);
@@ -3447,35 +3131,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		referenceResultValueEClass = createEClass(REFERENCE_RESULT_VALUE);
 		createEReference(referenceResultValueEClass, REFERENCE_RESULT_VALUE__VALUE);
 
-		watchesListsContainerEClass = createEClass(WATCHES_LISTS_CONTAINER);
-		createEReference(watchesListsContainerEClass, WATCHES_LISTS_CONTAINER__WATCHES);
-
-		watchesListEClass = createEClass(WATCHES_LIST);
-		createEReference(watchesListEClass, WATCHES_LIST__WATCHES_LISTS_CONTAINER);
-		createEReference(watchesListEClass, WATCHES_LIST__WATCHES);
-
-		watchEClass = createEClass(WATCH);
-		createEReference(watchEClass, WATCH__WATCHES_LIST);
-		createEReference(watchEClass, WATCH__VARIABLE);
-		createEReference(watchEClass, WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT);
-		createEReference(watchEClass, WATCH__TREE_ROOT_NODE);
-
-		watchFeatureNodeAdapterEClass = createEClass(WATCH_FEATURE_NODE_ADAPTER);
-		createEReference(watchFeatureNodeAdapterEClass, WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT);
-		createEReference(watchFeatureNodeAdapterEClass, WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE);
-		createEAttribute(watchFeatureNodeAdapterEClass, WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE);
-		createEAttribute(watchFeatureNodeAdapterEClass, WATCH_FEATURE_NODE_ADAPTER__RESOLVED);
-
-		displaysListsContainerEClass = createEClass(DISPLAYS_LISTS_CONTAINER);
-		createEReference(displaysListsContainerEClass, DISPLAYS_LISTS_CONTAINER__DISPLAYS);
-
-		displaysListEClass = createEClass(DISPLAYS_LIST);
-		createEReference(displaysListEClass, DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER);
-		createEReference(displaysListEClass, DISPLAYS_LIST__DISPLAYS);
-
-		abstractDisplayEClass = createEClass(ABSTRACT_DISPLAY);
-		createEReference(abstractDisplayEClass, ABSTRACT_DISPLAY__DISPLAYS_LIST);
-
 		recordingToolsContainerEClass = createEClass(RECORDING_TOOLS_CONTAINER);
 		createEReference(recordingToolsContainerEClass, RECORDING_TOOLS_CONTAINER__RECORDER);
 		createEReference(recordingToolsContainerEClass, RECORDING_TOOLS_CONTAINER__PLAYER);
@@ -3585,15 +3240,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		operationCallResultEClass.getESuperTypes().add(this.getOperationCallContainer());
 		attributeResultValueEClass.getESuperTypes().add(this.getAbstractResultValue());
 		referenceResultValueEClass.getESuperTypes().add(this.getAbstractResultValue());
-		watchesListsContainerEClass.getESuperTypes().add(this.getAbstractToolsListContainer());
-		watchesListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		watchesListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		watchEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		watchEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		displaysListsContainerEClass.getESuperTypes().add(this.getAbstractToolsListContainer());
-		displaysListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		displaysListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		abstractDisplayEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		recordingToolsContainerEClass.getESuperTypes().add(this.getAbstractToolsListContainer());
 		channelsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		channelsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
@@ -3623,15 +3269,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		op = initEOperation(getApogyCoreInvocatorFacade__CreateAbstractResultValue__Object(), this.getAbstractResultValue(), "createAbstractResultValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCoreInvocatorFacade__ResolveWatch__AbstractFeatureNode(), this.getWatch(), "resolveWatch", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theApogyCommonEMFPackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement(), this.getWatch(), "resolveWatch", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getTypeMemberReferenceTreeElement(), "typeMemberReferenceTreeElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCoreInvocatorFacade__GetValue__AbstractFeatureNode(), theEcorePackage.getEJavaObject(), "getValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theApogyCommonEMFPackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
 		op = initEOperation(getApogyCoreInvocatorFacade__GetInstance__Variable(), theEcorePackage.getEObject(), "getInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -3652,9 +3289,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		op = initEOperation(getApogyCoreInvocatorFacade__GetInstanceClass__VariableFeatureReference(), theEcorePackage.getEClass(), "getInstanceClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariableFeatureReference(), "variableFeatureReference", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement(), theEcorePackage.getEObject(), "getInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getTypeMemberReferenceTreeElement(), "typeMemberReferenceTreeElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCoreInvocatorFacade__GetTypeImplementation__OperationCall(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3996,35 +3630,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		initEClass(referenceResultValueEClass, ReferenceResultValue.class, "ReferenceResultValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReferenceResultValue_Value(), theEcorePackage.getEObject(), null, "value", null, 0, 1, ReferenceResultValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(watchesListsContainerEClass, WatchesListsContainer.class, "WatchesListsContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWatchesListsContainer_Watches(), this.getWatchesList(), this.getWatchesList_WatchesListsContainer(), "watches", null, 0, -1, WatchesListsContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(watchesListEClass, WatchesList.class, "WatchesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWatchesList_WatchesListsContainer(), this.getWatchesListsContainer(), this.getWatchesListsContainer_Watches(), "watchesListsContainer", null, 0, 1, WatchesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWatchesList_Watches(), this.getWatch(), this.getWatch_WatchesList(), "watches", null, 0, -1, WatchesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(watchEClass, Watch.class, "Watch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWatch_WatchesList(), this.getWatchesList(), this.getWatchesList_Watches(), "watchesList", null, 0, 1, Watch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWatch_Variable(), this.getVariable(), null, "variable", null, 1, 1, Watch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWatch_TypeMemberReferenceTreeElement(), this.getTypeMemberReferenceTreeElement(), null, "typeMemberReferenceTreeElement", null, 0, 1, Watch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWatch_TreeRootNode(), theApogyCommonEMFPackage.getTreeRootNode(), null, "treeRootNode", null, 0, 1, Watch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(watchFeatureNodeAdapterEClass, WatchFeatureNodeAdapter.class, "WatchFeatureNodeAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWatchFeatureNodeAdapter_SourceObject(), theEcorePackage.getEObject(), null, "sourceObject", null, 0, 1, WatchFeatureNodeAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWatchFeatureNodeAdapter_FeatureNode(), theApogyCommonEMFPackage.getAbstractFeatureNode(), null, "featureNode", null, 0, 1, WatchFeatureNodeAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWatchFeatureNodeAdapter_CurrentValue(), theEcorePackage.getEJavaObject(), "currentValue", null, 0, 1, WatchFeatureNodeAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWatchFeatureNodeAdapter_Resolved(), theEcorePackage.getEBoolean(), "resolved", "false", 0, 1, WatchFeatureNodeAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(displaysListsContainerEClass, DisplaysListsContainer.class, "DisplaysListsContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDisplaysListsContainer_Displays(), this.getDisplaysList(), this.getDisplaysList_DisplaysListsContainer(), "displays", null, 0, -1, DisplaysListsContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(displaysListEClass, DisplaysList.class, "DisplaysList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDisplaysList_DisplaysListsContainer(), this.getDisplaysListsContainer(), this.getDisplaysListsContainer_Displays(), "displaysListsContainer", null, 0, 1, DisplaysList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDisplaysList_Displays(), this.getAbstractDisplay(), this.getAbstractDisplay_DisplaysList(), "displays", null, 0, -1, DisplaysList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(abstractDisplayEClass, AbstractDisplay.class, "AbstractDisplay", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractDisplay_DisplaysList(), this.getDisplaysList(), this.getDisplaysList_Displays(), "displaysList", null, 0, 1, AbstractDisplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(recordingToolsContainerEClass, RecordingToolsContainer.class, "RecordingToolsContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRecordingToolsContainer_Recorder(), this.getAbstractRecorder(), this.getAbstractRecorder_RecordingToolsContainer(), "recorder", null, 1, 1, RecordingToolsContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

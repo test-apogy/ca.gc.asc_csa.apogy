@@ -27,6 +27,14 @@ import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
 
+/*
+ * This class is the specialized Apogy API adapter, used for connecting
+ * the existing PTU dish antenna example, located at
+ * {@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna},
+ * to Apogy; one can override the well-known callback functions to make
+ * Apogy perform a variety of useful functions, including initialization,
+ * disposal and other features. 
+ */
 class PTUDishAntennaApogySystemApiAdapter extends ApogySystemApiAdapter
 {
 	/*

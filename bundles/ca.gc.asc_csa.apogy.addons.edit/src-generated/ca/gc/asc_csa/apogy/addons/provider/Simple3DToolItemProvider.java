@@ -122,7 +122,7 @@ public class Simple3DToolItemProvider
 	
 	protected String getSimple3DToolText(Simple3DTool simple3DTool)
 	{
-		String text = new String("");
+		String text = new String();
 						
 		if(simple3DTool.isActive())
 		{

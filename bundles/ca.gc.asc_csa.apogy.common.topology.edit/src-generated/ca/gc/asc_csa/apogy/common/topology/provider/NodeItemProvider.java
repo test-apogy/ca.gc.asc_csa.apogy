@@ -95,7 +95,7 @@ public class NodeItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_NODEPropertyCategory"),
 				 null));
 	}
 
@@ -117,7 +117,7 @@ public class NodeItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_NODEPropertyCategory"),
 				 null));
 	}
 
@@ -139,7 +139,7 @@ public class NodeItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_NODEPropertyCategory"),
 				 null));
 	}
 
@@ -179,6 +179,7 @@ public class NodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Node.class)) {
+			case ApogyCommonTopologyPackage.NODE__PARENT:
 			case ApogyCommonTopologyPackage.NODE__DESCRIPTION:
 			case ApogyCommonTopologyPackage.NODE__NODE_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

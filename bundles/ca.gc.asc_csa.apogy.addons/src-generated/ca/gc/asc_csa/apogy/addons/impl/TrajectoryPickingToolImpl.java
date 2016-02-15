@@ -3,28 +3,32 @@
  */
 package ca.gc.asc_csa.apogy.addons.impl;
 
-import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
-import ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool;
-import ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode;
-
-import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
+
+import javax.vecmath.Point3d;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import ca.gc.asc_csa.apogy.addons.Activator;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.addons.TrajectoryPickingToolNode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl#getAltitudeOffset <em>Altitude Offset</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl#getPaths <em>Paths</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl#getActivePath <em>Active Path</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl#getTrajectoryPickingToolNode <em>Trajectory Picking Tool Node</em>}</li>
@@ -41,7 +46,28 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements TrajectoryPickingTool {
+public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements TrajectoryPickingTool 
+{
+	/**
+	 * The default value of the '{@link #getAltitudeOffset() <em>Altitude Offset</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAltitudeOffset()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double ALTITUDE_OFFSET_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getAltitudeOffset() <em>Altitude Offset</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAltitudeOffset()
+	 * @generated
+	 * @ordered
+	 */
+	protected double altitudeOffset = ALTITUDE_OFFSET_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getPaths() <em>Paths</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -96,6 +122,27 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getAltitudeOffset() {
+		return altitudeOffset;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAltitudeOffset(double newAltitudeOffset) {
+		double oldAltitudeOffset = altitudeOffset;
+		altitudeOffset = newAltitudeOffset;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET, oldAltitudeOffset, altitudeOffset));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<WayPointPath> getPaths() {
 		if (paths == null) {
 			paths = new EObjectContainmentEList<WayPointPath>(WayPointPath.class, this, ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__PATHS);
@@ -132,9 +179,27 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setActivePath(WayPointPath newActivePath)
+	{
+		if(newActivePath == null || getPaths().contains(newActivePath))
+		{
+			 setActivePathGen(newActivePath);
+			 Logger.INSTANCE.log(Activator.ID, this, "Sucessfully set Active Path to <" + newActivePath + ">.", EventSeverity.OK);
+		}
+		else
+		{
+			Logger.INSTANCE.log(Activator.ID, this, "Failed to set Active Path : The specified path <" + newActivePath + "> is not contained in the tool's path list !", EventSeverity.ERROR);
+		}
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActivePath(WayPointPath newActivePath) {
+	public void setActivePathGen(WayPointPath newActivePath) {
 		WayPointPath oldActivePath = activePath;
 		activePath = newActivePath;
 		if (eNotificationRequired())
@@ -204,12 +269,20 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public void clearActivePath() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void clearActivePath() 
+	{
+		if(getActivePath() != null)
+		{
+			getActivePath().getPoints().clear();
+			
+			Logger.INSTANCE.log(Activator.ID, this, "Active path cleared.", EventSeverity.OK);
+		}
+		else
+		{
+			Logger.INSTANCE.log(Activator.ID, this, "Failed to clear active path : No active path selected!", EventSeverity.ERROR);
+		}
 	}
 
 	/**
@@ -252,6 +325,8 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET:
+				return getAltitudeOffset();
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__PATHS:
 				return getPaths();
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ACTIVE_PATH:
@@ -273,6 +348,9 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET:
+				setAltitudeOffset((Double)newValue);
+				return;
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__PATHS:
 				getPaths().clear();
 				getPaths().addAll((Collection<? extends WayPointPath>)newValue);
@@ -295,6 +373,9 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET:
+				setAltitudeOffset(ALTITUDE_OFFSET_EDEFAULT);
+				return;
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__PATHS:
 				getPaths().clear();
 				return;
@@ -316,6 +397,8 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET:
+				return altitudeOffset != ALTITUDE_OFFSET_EDEFAULT;
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__PATHS:
 				return paths != null && !paths.isEmpty();
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL__ACTIVE_PATH:
@@ -340,5 +423,130 @@ public class TrajectoryPickingToolImpl extends Simple3DToolImpl implements Traje
 		}
 		return super.eInvoke(operationID, arguments);
 	}
+	
+	
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
 
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (altitudeOffset: ");
+		result.append(altitudeOffset);
+		result.append(')');
+		return result.toString();
+	}
+
+	@Override
+	public void setVisible(boolean newVisible) 
+	{	
+		super.setVisible(newVisible);
+		
+		if(getRootNode() instanceof GroupNode)
+		{
+			GroupNode parent = (GroupNode) getRootNode();
+			
+			// If visible, attach the TrajectoryPickingToolNode to the root.
+			if(newVisible)
+			{
+				if(!parent.getChildren().contains(getTrajectoryPickingToolNode()))
+				{
+					parent.getChildren().add(getTrajectoryPickingToolNode());
+				}
+			}
+			// If not visible, detach the TrajectoryPickingToolNode to the root.
+			else
+			{
+				if(parent.getChildren().contains(getTrajectoryPickingToolNode()))
+				{
+					parent.getChildren().remove(getTrajectoryPickingToolNode());
+				}
+			}
+		}
+		 // Forces the Trajectory3DToolNode to be created.
+		getTrajectoryPickingToolNode();		
+	}
+	
+	@Override
+	public void setRootNode(Node newRootNode) 
+	{			
+		super.setRootNode(newRootNode);
+					
+		TrajectoryPickingToolNode toolNode = getTrajectoryPickingToolNode();
+				
+		if(toolNode != null)
+		{
+			if(newRootNode instanceof GroupNode)
+			{
+				GroupNode parent = (GroupNode) getRootNode();
+				if(isVisible())
+				{
+					parent.getChildren().add(toolNode);
+				}
+				else
+				{
+					parent.getChildren().remove(toolNode);
+				}
+			}				
+		}
+	}
+
+	@Override
+	public void selectionChanged(NodeSelection nodeSelection) 
+	{	
+		// Add selected point to the current path.
+		if(getActivePath() != null)
+		{
+			Point3d point = nodeSelection.getAbsoluteIntersectionPoint();
+			
+			// Adds the altitude offset.
+			point.z += getAltitudeOffset();
+			
+			getActivePath().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z));
+			
+			String message = "Point added : (" + point.x + ", " + point.y + ", " + point.z + ")";
+			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.OK);
+		}
+		else
+		{			
+			Logger.INSTANCE.log(Activator.ID, this, "Failed to add point : No active path selected!", EventSeverity.ERROR);
+		}
+	}
+	
+	@Override
+	public void initialise() 
+	{
+		// First, initialize the TrajectoryPickingToolNode.		
+		// TODO Do this in a Transaction friendly way.
+		setTrajectoryPickingToolNode(ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode());	
+		
+		// Then, initialize the rest.
+		super.initialise();
+		
+				
+	}
+	
+	@Override
+	public void dispose() 
+	{
+		// Remove 3DTool Node.
+		if(trajectoryPickingToolNode != null)
+		{
+			if(trajectoryPickingToolNode.getParent() instanceof GroupNode)
+			{
+				GroupNode parent =  (GroupNode) trajectoryPickingToolNode.getParent();			
+				parent.getChildren().remove(trajectoryPickingToolNode);
+			}		
+			
+			setTrajectoryPickingToolNode(null);
+		}
+		
+		super.dispose();
+	}	
+	
 } //TrajectoryPickingToolImpl

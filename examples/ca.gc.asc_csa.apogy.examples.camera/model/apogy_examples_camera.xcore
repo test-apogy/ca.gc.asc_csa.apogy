@@ -30,6 +30,11 @@ import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera
 
 type Throwable wraps java.lang.Throwable
 
+/*
+ * This is the abstract representation of a camera,
+ * which implicitly has a rectangular frustrum as its
+ * field of view.
+ */
 abstract class Camera extends AbstractCamera, Zoomable
 {
 	/*

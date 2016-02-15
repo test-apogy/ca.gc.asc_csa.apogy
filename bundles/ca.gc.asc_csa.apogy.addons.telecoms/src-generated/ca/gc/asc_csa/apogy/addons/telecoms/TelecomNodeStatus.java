@@ -24,6 +24,9 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Telecom Node Status</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ *  The different possible states of the TelecomNode
+ * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getTelecomNodeStatus()
  * @model
  * @generated

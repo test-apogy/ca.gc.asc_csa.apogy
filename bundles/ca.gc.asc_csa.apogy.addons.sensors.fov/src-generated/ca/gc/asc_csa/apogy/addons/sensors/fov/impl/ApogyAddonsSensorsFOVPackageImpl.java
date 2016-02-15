@@ -766,6 +766,12 @@ public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements Ap
 			 "basePackage", "ca.gc.asc_csa.apogy.addons.sensors"
 		   });	
 		addAnnotation
+		  (distanceRangeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines an distance range by specifying a minimum and maximum distance."
+		   });	
+		addAnnotation
 		  (getDistanceRange__IsWithinRange__double(), 
 		   source, 
 		   new String[] {

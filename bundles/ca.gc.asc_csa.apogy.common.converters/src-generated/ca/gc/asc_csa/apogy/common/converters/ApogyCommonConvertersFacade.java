@@ -25,6 +25,10 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  * A representation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A utility class to perform a variety of common functions
+ * <!-- end-model-doc -->
+ *
  *
  * @see ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersPackage#getApogyCommonConvertersFacade()
  * @model

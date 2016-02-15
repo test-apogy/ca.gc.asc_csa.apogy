@@ -1484,6 +1484,12 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 			 "basePackage", "ca.gc.asc_csa.apogy.common.topology.addons"
 		   });	
 		addAnnotation
+		  (dynamicSystemPropertiesEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Base class for Dynamics System that is used as a container for many Dynamic System attributes."
+		   });	
+		addAnnotation
 		  (getDynamicSystemProperties_Constraints(), 
 		   source, 
 		   new String[] {

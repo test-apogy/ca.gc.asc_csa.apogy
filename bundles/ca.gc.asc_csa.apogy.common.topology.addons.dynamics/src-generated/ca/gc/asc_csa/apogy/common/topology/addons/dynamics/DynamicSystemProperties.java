@@ -22,6 +22,10 @@ import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
  * A representation of the model object '<em><b>Dynamic System Properties</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Base class for Dynamics System that is used as a container for many Dynamic System attributes.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

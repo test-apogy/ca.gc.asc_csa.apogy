@@ -25,7 +25,6 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder;
@@ -44,8 +43,6 @@ import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
-import ca.gc.asc_csa.apogy.core.invocator.DisplaysList;
-import ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
@@ -85,10 +82,6 @@ import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
-import ca.gc.asc_csa.apogy.core.invocator.Watch;
-import ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter;
-import ca.gc.asc_csa.apogy.core.invocator.WatchesList;
-import ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -507,57 +500,6 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				ReferenceResultValue referenceResultValue = (ReferenceResultValue)theEObject;
 				T result = caseReferenceResultValue(referenceResultValue);
 				if (result == null) result = caseAbstractResultValue(referenceResultValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER: {
-				WatchesListsContainer watchesListsContainer = (WatchesListsContainer)theEObject;
-				T result = caseWatchesListsContainer(watchesListsContainer);
-				if (result == null) result = caseAbstractToolsListContainer(watchesListsContainer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.WATCHES_LIST: {
-				WatchesList watchesList = (WatchesList)theEObject;
-				T result = caseWatchesList(watchesList);
-				if (result == null) result = caseNamed(watchesList);
-				if (result == null) result = caseDescribed(watchesList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.WATCH: {
-				Watch watch = (Watch)theEObject;
-				T result = caseWatch(watch);
-				if (result == null) result = caseNamed(watch);
-				if (result == null) result = caseDescribed(watch);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER: {
-				WatchFeatureNodeAdapter watchFeatureNodeAdapter = (WatchFeatureNodeAdapter)theEObject;
-				T result = caseWatchFeatureNodeAdapter(watchFeatureNodeAdapter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER: {
-				DisplaysListsContainer displaysListsContainer = (DisplaysListsContainer)theEObject;
-				T result = caseDisplaysListsContainer(displaysListsContainer);
-				if (result == null) result = caseAbstractToolsListContainer(displaysListsContainer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.DISPLAYS_LIST: {
-				DisplaysList displaysList = (DisplaysList)theEObject;
-				T result = caseDisplaysList(displaysList);
-				if (result == null) result = caseNamed(displaysList);
-				if (result == null) result = caseDescribed(displaysList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.ABSTRACT_DISPLAY: {
-				AbstractDisplay abstractDisplay = (AbstractDisplay)theEObject;
-				T result = caseAbstractDisplay(abstractDisplay);
-				if (result == null) result = caseDescribed(abstractDisplay);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1428,118 +1370,6 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	 * @generated
 	 */
   public T caseReferenceResultValue(ReferenceResultValue object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Watches Lists Container</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Watches Lists Container</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseWatchesListsContainer(WatchesListsContainer object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Watches List</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Watches List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseWatchesList(WatchesList object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Watch</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Watch</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseWatch(Watch object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Watch Feature Node Adapter</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Watch Feature Node Adapter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseWatchFeatureNodeAdapter(WatchFeatureNodeAdapter object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Displays Lists Container</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Displays Lists Container</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseDisplaysListsContainer(DisplaysListsContainer object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Displays List</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Displays List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseDisplaysList(DisplaysList object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Display</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Display</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseAbstractDisplay(AbstractDisplay object)
   {
 		return null;
 	}
