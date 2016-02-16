@@ -47,12 +47,12 @@ public interface ColoredCartesianPositionCoordinates extends CartesianPositionCo
 	 * The red component, between 0 and 255.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Red</em>' attribute.
-	 * @see #setRed(byte)
+	 * @see #setRed(short)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getColoredCartesianPositionCoordinates_Red()
 	 * @model unique="false"
 	 * @generated
 	 */
-	byte getRed();
+	short getRed();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates#getRed <em>Red</em>}' attribute.
@@ -62,7 +62,7 @@ public interface ColoredCartesianPositionCoordinates extends CartesianPositionCo
 	 * @see #getRed()
 	 * @generated
 	 */
-	void setRed(byte value);
+	void setRed(short value);
 
 	/**
 	 * Returns the value of the '<em><b>Green</b></em>' attribute.
@@ -73,12 +73,12 @@ public interface ColoredCartesianPositionCoordinates extends CartesianPositionCo
 	 * The green component, between 0 and 255.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Green</em>' attribute.
-	 * @see #setGreen(byte)
+	 * @see #setGreen(short)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getColoredCartesianPositionCoordinates_Green()
 	 * @model unique="false"
 	 * @generated
 	 */
-	byte getGreen();
+	short getGreen();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates#getGreen <em>Green</em>}' attribute.
@@ -88,7 +88,7 @@ public interface ColoredCartesianPositionCoordinates extends CartesianPositionCo
 	 * @see #getGreen()
 	 * @generated
 	 */
-	void setGreen(byte value);
+	void setGreen(short value);
 
 	/**
 	 * Returns the value of the '<em><b>Blue</b></em>' attribute.
@@ -99,12 +99,12 @@ public interface ColoredCartesianPositionCoordinates extends CartesianPositionCo
 	 * The blue component, between 0 and 255.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Blue</em>' attribute.
-	 * @see #setBlue(byte)
+	 * @see #setBlue(short)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getColoredCartesianPositionCoordinates_Blue()
 	 * @model unique="false"
 	 * @generated
 	 */
-	byte getBlue();
+	short getBlue();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates#getBlue <em>Blue</em>}' attribute.
@@ -114,6 +114,6 @@ public interface ColoredCartesianPositionCoordinates extends CartesianPositionCo
 	 * @see #getBlue()
 	 * @generated
 	 */
-	void setBlue(byte value);
+	void setBlue(short value);
 
 } // ColoredCartesianPositionCoordinates

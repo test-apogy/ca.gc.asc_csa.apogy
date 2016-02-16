@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
  */
 
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
 
@@ -34,7 +35,10 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPacka
  * <!-- end-user-doc -->
  * @generated
  */
-public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPositionCoordinatesItemProvider {
+public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPositionCoordinatesItemProvider 
+{
+	private DecimalFormat decimalFormat = new DecimalFormat("0.000");
+	
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -144,12 +148,21 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		ColoredCartesianPositionCoordinates coloredCartesianPositionCoordinates = (ColoredCartesianPositionCoordinates)object;
-		return getString("_UI_ColoredCartesianPositionCoordinates_type") + " " + coloredCartesianPositionCoordinates.getX();
+	public String getText(Object object) 
+	{				
+		ColoredCartesianPositionCoordinates coords = (ColoredCartesianPositionCoordinates)object;
+		
+		String label = getString("_UI_ColoredCartesianPositionCoordinates_type") + " (";
+		label += decimalFormat.format( coords.getX()) + ", ";
+		label +=  decimalFormat.format( coords.getY()) + ", ";
+		label +=  decimalFormat.format( coords.getZ()) + ", RGB ";
+		
+		label += coords.getRed() + ", " + coords.getGreen() + ", " + coords.getBlue() + ")";
+		
+		return label;
 	}
 	
 

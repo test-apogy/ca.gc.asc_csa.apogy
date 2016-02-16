@@ -1,0 +1,9 @@
+# Command the speed level to be used by the robotic arm.
+
+# The Move speed
+MoveSpeed speed
+
+---
+
+# Service result
+bool result

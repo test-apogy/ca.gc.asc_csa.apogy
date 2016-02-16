@@ -1,0 +1,6 @@
+# Command the robotic arm to move to the stowed configuration.
+
+---
+
+# Service result
+bool result

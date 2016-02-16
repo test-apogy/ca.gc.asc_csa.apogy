@@ -44,7 +44,7 @@ class File(object):
     def __loadCommentBlock(self, fileName):
         
         with open(fileName) as f:
-            self.__commentBlock = f.readlines()
+            self._commentBlock = f.readlines()
         
             f.close()
         
@@ -58,7 +58,7 @@ class File(object):
         for line in self.__fileContent:                
             if not headerInserted and self._canInsertHeader(line):                    
                 print(commentProvider.getBeginCommentString())
-                for headerLine in self.__commentBlock:                        
+                for headerLine in self._commentBlock:                        
                     sys.stdout.write(commentProvider.getInCommentString() + " " + headerLine) 
                 headerInserted = True
                 print(commentProvider.getEndCommentString())
@@ -75,6 +75,20 @@ class File(object):
             self.__ext = extractExtension(self.__fileName)
         
         return self.__ext
+    
+    def relaceXCoreCopyrightText(self):
+        """
+        For an excore file, replace the xcore copyright text, contained as a field called
+        copyrightText="..."
+        """
+        copyrightString = ""
+        copyrightString = copyrightString.join(self._commentBlock)
+        
+        copyrightString = copyrightString.replace("\n","")
+        
+        regex = re.compile("(.*copyrightText=\").*(\".*)")
+                
+        self.__fileContent = [re.sub(regex,"\g<1>" + str(copyrightString) + "\g<2>",line) for line in self.__fileContent]                
     
     def stripHeader(self):                    
         
@@ -154,7 +168,7 @@ class File(object):
 class CFamilyFile(File):
     
     def _canInsertHeader(self, line):
-        return True
+        return True        
     
 class JavaFile(File):
         
@@ -318,6 +332,7 @@ if __name__ == '__main__':
         if "copyrightBlock" in args:    
             f.setCommentBlockFileName(args.copyrightBlock)
             f.addHeader()
+            f.relaceXCoreCopyrightText()
         elif "sourceFile" in args:                
             f.stripHeader()
         else:

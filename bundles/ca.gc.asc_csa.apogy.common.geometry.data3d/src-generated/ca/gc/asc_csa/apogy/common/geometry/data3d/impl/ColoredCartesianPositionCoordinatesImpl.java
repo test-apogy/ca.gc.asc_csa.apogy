@@ -46,7 +46,7 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * @generated
 	 * @ordered
 	 */
-	protected static final byte RED_EDEFAULT = 0x00;
+	protected static final short RED_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getRed() <em>Red</em>}' attribute.
@@ -56,7 +56,7 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * @generated
 	 * @ordered
 	 */
-	protected byte red = RED_EDEFAULT;
+	protected short red = RED_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getGreen() <em>Green</em>}' attribute.
@@ -66,7 +66,7 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * @generated
 	 * @ordered
 	 */
-	protected static final byte GREEN_EDEFAULT = 0x00;
+	protected static final short GREEN_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getGreen() <em>Green</em>}' attribute.
@@ -76,7 +76,7 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * @generated
 	 * @ordered
 	 */
-	protected byte green = GREEN_EDEFAULT;
+	protected short green = GREEN_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getBlue() <em>Blue</em>}' attribute.
@@ -86,7 +86,7 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * @generated
 	 * @ordered
 	 */
-	protected static final byte BLUE_EDEFAULT = 0x00;
+	protected static final short BLUE_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getBlue() <em>Blue</em>}' attribute.
@@ -96,7 +96,7 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * @generated
 	 * @ordered
 	 */
-	protected byte blue = BLUE_EDEFAULT;
+	protected short blue = BLUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,7 +122,7 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public byte getRed() {
+	public short getRed() {
 		return red;
 	}
 
@@ -131,8 +131,8 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRed(byte newRed) {
-		byte oldRed = red;
+	public void setRed(short newRed) {
+		short oldRed = red;
 		red = newRed;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED, oldRed, red));
@@ -143,7 +143,7 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public byte getGreen() {
+	public short getGreen() {
 		return green;
 	}
 
@@ -152,8 +152,8 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGreen(byte newGreen) {
-		byte oldGreen = green;
+	public void setGreen(short newGreen) {
+		short oldGreen = green;
 		green = newGreen;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN, oldGreen, green));
@@ -164,7 +164,7 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public byte getBlue() {
+	public short getBlue() {
 		return blue;
 	}
 
@@ -173,8 +173,8 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBlue(byte newBlue) {
-		byte oldBlue = blue;
+	public void setBlue(short newBlue) {
+		short oldBlue = blue;
 		blue = newBlue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE, oldBlue, blue));
@@ -207,13 +207,13 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED:
-				setRed((Byte)newValue);
+				setRed((Short)newValue);
 				return;
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN:
-				setGreen((Byte)newValue);
+				setGreen((Short)newValue);
 				return;
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE:
-				setBlue((Byte)newValue);
+				setBlue((Short)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

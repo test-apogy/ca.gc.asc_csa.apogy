@@ -1,4 +1,3 @@
-package ca.gc.asc_csa.apogy.common;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -12,40 +11,26 @@ package ca.gc.asc_csa.apogy.common;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.examples.robotic_arm.ros;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-public class Activator implements BundleActivator{
+public class Activator implements BundleActivator 
+{
 
-	// The plug-in ID
-	public static final String PLUGIN_ID = "ca.gc.asc_csa.apogy.common"; //$NON-NLS-1$
-
-	private static BundleContext context;
+	public static final String ID = "ca.gc.asc_csa.apogy.examples.robotic_arm.ros";
 	
-	static BundleContext getContext() {
-		return context;
-	}
-	
-	/**
-	 * The constructor
-	 */
-	public Activator() {
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext)
-	 */
+	@Override
 	public void start(BundleContext context) throws Exception {
-		Activator.context = context;
+		// TODO Auto-generated method stub
+
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
-	 */
+	@Override
 	public void stop(BundleContext context) throws Exception {
-		Activator.context = null;
+		// TODO Auto-generated method stub
+
 	}
+
 }
