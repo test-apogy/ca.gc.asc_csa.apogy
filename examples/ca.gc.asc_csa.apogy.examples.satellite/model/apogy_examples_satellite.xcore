@@ -351,7 +351,7 @@ abstract class AbstractConstellationDownlinkItem{
 	contains AbstractUID requestUID		
 }
 
-/*value
+/*
  * This class represents a {@link AbstractDownlinkItem} that contains an {@link OrbitalImage}.
  */
 class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlinkItem{

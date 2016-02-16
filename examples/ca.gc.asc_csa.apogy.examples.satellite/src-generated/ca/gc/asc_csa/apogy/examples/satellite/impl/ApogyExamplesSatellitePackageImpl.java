@@ -1601,7 +1601,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		  (orbitalImageConstellationDownlinkItemEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "value\nThis class represents a {@link AbstractDownlinkItem} that contains an {@link OrbitalImage}."
+			 "documentation", "This class represents a {@link AbstractDownlinkItem} that contains an {@link OrbitalImage}."
 		   });	
 		addAnnotation
 		  (constellationUtilitiesEClass, 

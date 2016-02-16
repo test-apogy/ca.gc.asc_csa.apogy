@@ -2445,7 +2445,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEClass(nadirPointingAttitudeProviderEClass, NadirPointingAttitudeProvider.class, "NadirPointingAttitudeProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(earthOrbitWorksiteEClass, EarthOrbitWorksite.class, "EarthOrbitWorksite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEarthOrbitWorksite_Sky(), this.getEarthOrbitSky(), this.getEarthOrbitSky_EarthOrbitWorksite(), "sky", null, 1, 1, EarthOrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEarthOrbitWorksite_Sky(), this.getEarthOrbitSky(), this.getEarthOrbitSky_EarthOrbitWorksite(), "sky", null, 0, 1, EarthOrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEarthOrbitWorksite_EarthLocations(), this.getEarthSurfaceLocationList(), null, "earthLocations", null, 0, 1, EarthOrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthOrbitSkyEClass, EarthOrbitSky.class, "EarthOrbitSky", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

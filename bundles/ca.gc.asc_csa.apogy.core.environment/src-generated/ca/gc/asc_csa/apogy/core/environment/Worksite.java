@@ -48,7 +48,7 @@ public interface Worksite extends AbstractWorksite
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Worksite Node</em>' reference.
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getWorksite_WorksiteNode()
-	 * @model required="true" transient="true" changeable="false" derived="true"
+	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' children='true' notify='true'"
 	 * @generated
 	 */

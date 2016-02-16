@@ -3649,7 +3649,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(worksiteEClass, Worksite.class, "Worksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWorksite_WorksiteNode(), this.getWorksiteNode(), null, "worksiteNode", null, 1, 1, Worksite.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getWorksite_WorksiteNode(), this.getWorksiteNode(), null, "worksiteNode", null, 0, 1, Worksite.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getWorksite_OrbitsModels(), theApogyCorePackage.getAbstractOrbitModel(), null, "orbitsModels", null, 0, -1, Worksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorksite_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Worksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

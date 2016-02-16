@@ -20,7 +20,6 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * value
  * This class represents a {@link AbstractDownlinkItem} that contains an {@link OrbitalImage}.
  * <!-- end-model-doc -->
  *

@@ -51,7 +51,7 @@ public interface EarthOrbitWorksite extends OrbitWorksite {
 	 * @see #setSky(EarthOrbitSky)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitWorksite_Sky()
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky#getEarthOrbitWorksite
-	 * @model opposite="earthOrbitWorksite" containment="true" required="true"
+	 * @model opposite="earthOrbitWorksite" containment="true"
 	 * @generated
 	 */
 	EarthOrbitSky getSky();

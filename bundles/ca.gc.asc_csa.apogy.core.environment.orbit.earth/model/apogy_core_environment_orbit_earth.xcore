@@ -130,7 +130,7 @@ class NadirPointingAttitudeProvider extends OreKitBackedAttitudeProvider
  */
 class EarthOrbitWorksite extends OrbitWorksite
 {		
-	contains EarthOrbitSky[1] sky opposite earthOrbitWorksite
+	contains EarthOrbitSky[0..1] sky opposite earthOrbitWorksite
 	
 	/*
 	 * The list of surface location associated with the site.

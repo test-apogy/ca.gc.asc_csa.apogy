@@ -59,7 +59,7 @@ abstract class Worksite extends AbstractWorksite
 {
 	
     @GenModel(property="None", children="true", notify="true")
-	refers derived transient readonly WorksiteNode[1] worksiteNode
+	refers derived transient readonly WorksiteNode[0..1] worksiteNode
 		
 	refers AbstractOrbitModel[0..*] orbitsModels
 	
