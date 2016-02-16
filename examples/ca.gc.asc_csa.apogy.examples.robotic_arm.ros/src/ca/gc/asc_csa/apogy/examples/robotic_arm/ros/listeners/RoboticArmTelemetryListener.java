@@ -17,9 +17,9 @@ import org.ros.message.MessageListener;
 
 import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.RoboticArmTelemetry;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmTelemetry;
 
-public class RoboticArmTelemetryListener implements MessageListener<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.RoboticArmTelemetry>
+public class RoboticArmTelemetryListener implements MessageListener<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmTelemetry>
 {
 	private RoboticArm roboticArm = null;
 	

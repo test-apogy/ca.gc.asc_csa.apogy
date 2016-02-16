@@ -11,8 +11,21 @@
       <!-- @generated apogy_examples_robotic_arm_ros -->
       <package
             uri="ca.gc.asc_csa.apogy.examples.robotic_arm.ros"
-            class="ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmPackage"
+            class="ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmROSPackage"
             genModel="model/apogy_examples_robotic_arm_ros.xcore"/>
+   </extension>
+   <extension
+         id="ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmROSServerApplication"
+         name="Robotic Arm ROS Server Application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmROSServerApplication">
+         </run>
+      </application>
    </extension>
 
 </plugin>

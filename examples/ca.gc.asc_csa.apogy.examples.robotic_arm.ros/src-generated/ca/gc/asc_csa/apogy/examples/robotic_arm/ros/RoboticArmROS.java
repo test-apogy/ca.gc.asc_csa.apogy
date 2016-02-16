@@ -20,7 +20,7 @@ import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
  *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmROS#getRobotiocArmRosNode <em>Robotioc Arm Ros Node</em>}</li>
  * </ul>
  *
- * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmPackage#getRoboticArmROS()
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmROSPackage#getRoboticArmROS()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface RoboticArmROS extends RoboticArm, ROSInterface {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Robotioc Arm Ros Node</em>' containment reference.
 	 * @see #setRobotiocArmRosNode(ROSNode)
-	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmPackage#getRoboticArmROS_RobotiocArmRosNode()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmROSPackage#getRoboticArmROS_RobotiocArmRosNode()
 	 * @model containment="true"
 	 * @generated
 	 */
