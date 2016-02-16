@@ -22,6 +22,12 @@ import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable;
  * A representation of the model object '<em><b>Camera</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This is the abstract representation of a camera,
+ * which implicitly has a rectangular frustrum as its
+ * field of view.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

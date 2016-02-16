@@ -330,6 +330,12 @@ public class ApogyExamplesLidarPackageImpl extends EPackageImpl implements Apogy
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
+		  (lidarEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This is an abstraction of the Lidar unit, a 3D laser-based range\nfinder which is capable of scanning the environment and returning\na point cloud encompassing the resulting information.  It has a\nfield of view, which determines the subsection of the environment\nthat the unit can scan.  It also can keep track of whether or not\nthe unit was initialized."
+		   });	
+		addAnnotation
 		  (getLidar__Init(), 
 		   source, 
 		   new String[] {

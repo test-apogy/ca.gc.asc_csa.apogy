@@ -35,14 +35,23 @@ interface TopologyProvider
 	refers readonly GroupNode topologyRoot
 }
 
+/**
+ * The base class of all nodes in a topology.
+ */
 abstract class Node
 {
+	/** The parent of the node. */
+	@GenModel(notify="true", propertyCategory="NODE")
 	refers Node parent
 	
+	/** The description of the node. */
+	@GenModel(notify="true", propertyCategory="NODE")
 	String description
 	
+	/** The node identifier.*/
+	@GenModel(notify="true", propertyCategory="NODE")
 	String nodeId
-	
+		
 	op void accept(INodeVisitor visitor)
 }
 
@@ -92,6 +101,7 @@ class GroupNode extends Node
 
 class ReferencedGroupNode extends GroupNode
 {
+	@GenModel(children="true", createChild="false")
 	refers Node [0..*] referencedChildren
 }
 

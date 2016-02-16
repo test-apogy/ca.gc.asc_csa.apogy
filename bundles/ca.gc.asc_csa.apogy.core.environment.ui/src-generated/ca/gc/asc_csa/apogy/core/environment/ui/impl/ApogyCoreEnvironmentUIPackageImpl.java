@@ -1913,6 +1913,12 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 			 "documentation", "Return the MapViewConfigurationList in the Active Session.\n@return The MapViewConfigurationList in the Active Session, null if none is found."
 		   });	
 		addAnnotation
+		  (mapViewConfigurationEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Configuration used for the Map View."
+		   });	
+		addAnnotation
 		  (getMapViewConfiguration__ForceUpdate(), 
 		   source, 
 		   new String[] {

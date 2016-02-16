@@ -24,6 +24,12 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Move Speed Level</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * This enumeration is used to indicate the overall possible
+ * levels of speed that a robotic arm can move at; as
+ * expected, this used by RoboticArm (and its subclasses) when
+ * moveTo() is called.
+ * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getMoveSpeedLevel()
  * @model
  * @generated

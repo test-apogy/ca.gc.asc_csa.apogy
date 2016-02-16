@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2016
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_examples_robotic_arm_ros -->
+      <package
+            uri="ca.gc.asc_csa.apogy.examples.robotic_arm.ros"
+            class="ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmPackage"
+            genModel="model/apogy_examples_robotic_arm_ros.xcore"/>
+   </extension>
+
+</plugin>

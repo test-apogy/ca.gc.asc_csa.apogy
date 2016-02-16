@@ -252,6 +252,10 @@ class SunVector3DToolNode extends Node
  
 class TrajectoryPickingTool extends Simple3DTool
 {	
+	/** Offset to apply to the point to keep a wyapoint path above ground. */
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="TRAJECTORY_PICKING_TOOL")
+	double altitudeOffset = "0"
+	
 	/** All the  WayPointPath created with this tool.*/
 	@GenModel(notify="true", propertyCategory="TRAJECTORY_PICKING_TOOL")
 	contains WayPointPath[1..*] paths

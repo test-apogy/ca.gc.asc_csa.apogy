@@ -92,7 +92,7 @@ public class WayPointPathItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_NODEPropertyCategory"),
 				 null));
 	}
 
@@ -115,7 +115,7 @@ public class WayPointPathItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_NODEPropertyCategory"),
 				 null));
 	}
 
@@ -137,7 +137,7 @@ public class WayPointPathItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_NODEPropertyCategory"),
 				 null));
 	}
 
@@ -187,6 +187,13 @@ public class WayPointPathItemProvider
 		WayPointPath wayPointPath = (WayPointPath) object;
 						
 		String label = getString("_UI_WayPointPath_type");
+		
+		String nodeId = wayPointPath.getNodeId(); 
+		if(nodeId != null && nodeId.length() > 0)
+		{
+			label += " " + nodeId;
+		}
+		
 		label += " [" + wayPointPath.getPoints().size() + "]";
 		if(wayPointPath.getPoints().size() > 0)
 		{
@@ -210,6 +217,7 @@ public class WayPointPathItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WayPointPath.class)) {
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__PARENT:
 			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__DESCRIPTION:
 			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__NODE_ID:
 			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__LENGTH:

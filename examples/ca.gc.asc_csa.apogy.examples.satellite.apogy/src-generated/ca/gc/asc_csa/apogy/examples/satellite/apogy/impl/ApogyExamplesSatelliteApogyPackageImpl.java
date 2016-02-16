@@ -281,6 +281,12 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.satellite"
 		   });	
 		addAnnotation
+		  (constellationSystemApiAdapterEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This class is the specialized Apogy API adapter, used for connecting\nthe existing constellation example, located at\n{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation},\nto Apogy; one can override the well-known callback functions to make\nApogy perform a variety of useful functions, including initialization,\ndisposal and other features."
+		   });	
+		addAnnotation
 		  (constellationDataEClass, 
 		   source, 
 		   new String[] {

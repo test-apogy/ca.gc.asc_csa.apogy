@@ -282,6 +282,12 @@ public class ApogyAddonsSensorsPackageImpl extends EPackageImpl implements Apogy
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"
+		   });	
+		addAnnotation
+		  (sensorStatusEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "Represents the various states that a sensor could be in.\n * Typical status transitions :\n * Power up (nominal) : OFF -> BUSY (initialization) -> READY\nPower up (off-nominal) : OFF -> BUSY (initialization) -> FAILED\n * Data acquition (nominal): READY -> BUSY (Acquisition) -> READY\nData acquition (off-nominal): READY -> BUSY (Acquisition) -> FAILED"
 		   });
 	}
 

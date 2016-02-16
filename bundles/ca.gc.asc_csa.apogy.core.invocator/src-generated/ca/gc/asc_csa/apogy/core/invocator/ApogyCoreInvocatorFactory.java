@@ -394,60 +394,6 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   ReferenceResultValue createReferenceResultValue();
 
   /**
-	 * Returns a new object of class '<em>Watches Lists Container</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watches Lists Container</em>'.
-	 * @generated
-	 */
-  WatchesListsContainer createWatchesListsContainer();
-
-  /**
-	 * Returns a new object of class '<em>Watches List</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watches List</em>'.
-	 * @generated
-	 */
-  WatchesList createWatchesList();
-
-  /**
-	 * Returns a new object of class '<em>Watch</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watch</em>'.
-	 * @generated
-	 */
-  Watch createWatch();
-
-  /**
-	 * Returns a new object of class '<em>Watch Feature Node Adapter</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watch Feature Node Adapter</em>'.
-	 * @generated
-	 */
-  WatchFeatureNodeAdapter createWatchFeatureNodeAdapter();
-
-  /**
-	 * Returns a new object of class '<em>Displays Lists Container</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Displays Lists Container</em>'.
-	 * @generated
-	 */
-  DisplaysListsContainer createDisplaysListsContainer();
-
-  /**
-	 * Returns a new object of class '<em>Displays List</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Displays List</em>'.
-	 * @generated
-	 */
-  DisplaysList createDisplaysList();
-
-  /**
 	 * Returns a new object of class '<em>Recording Tools Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

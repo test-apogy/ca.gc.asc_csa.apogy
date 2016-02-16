@@ -422,6 +422,12 @@ public class ApogyExamplesCameraPackageImpl extends EPackageImpl implements Apog
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
+		  (cameraEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This is the abstract representation of a camera,\nwhich implicitly has a rectangular frustrum as its\nfield of view."
+		   });	
+		addAnnotation
 		  (getCamera__Init(), 
 		   source, 
 		   new String[] {

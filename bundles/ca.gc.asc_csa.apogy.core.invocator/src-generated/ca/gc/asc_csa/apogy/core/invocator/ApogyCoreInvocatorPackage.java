@@ -160,40 +160,13 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	int APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = 3;
 
 		/**
-	 * The operation id for the '<em>Resolve Watch</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = 4;
-
-		/**
-	 * The operation id for the '<em>Resolve Watch</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = 5;
-
-		/**
-	 * The operation id for the '<em>Get Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = 6;
-
-		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = 7;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = 4;
 
 		/**
 	 * The operation id for the '<em>Get Instance Class</em>' operation.
@@ -202,7 +175,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = 8;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = 5;
 
 		/**
 	 * The operation id for the '<em>Get Type Api Adapter</em>' operation.
@@ -211,7 +184,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = 9;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = 6;
 
 		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
@@ -220,7 +193,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = 10;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = 7;
 
 		/**
 	 * The operation id for the '<em>Get Type Member Instance</em>' operation.
@@ -229,7 +202,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = 11;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = 8;
 
 		/**
 	 * The operation id for the '<em>Get EMF Feature Value</em>' operation.
@@ -238,7 +211,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = 12;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = 9;
 
 		/**
 	 * The operation id for the '<em>Get Instance Class</em>' operation.
@@ -247,16 +220,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = 13;
-
-		/**
-	 * The operation id for the '<em>Get Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = 14;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = 10;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -265,7 +229,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = 15;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = 11;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -274,7 +238,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = 16;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = 12;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -283,7 +247,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = 17;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = 13;
 
 		/**
 	 * The operation id for the '<em>Get Variable By Name</em>' operation.
@@ -292,7 +256,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = 18;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = 14;
 
 		/**
 	 * The operation id for the '<em>Create Type Member References</em>' operation.
@@ -301,7 +265,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 19;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 15;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -310,7 +274,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 20;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 16;
 
 		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
@@ -319,7 +283,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 21;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 17;
 
 		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
@@ -328,7 +292,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 22;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 18;
 
 		/**
 	 * The operation id for the '<em>Create Type Member Implementations</em>' operation.
@@ -337,7 +301,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 23;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 19;
 
 		/**
 	 * The operation id for the '<em>Init Variable Instances</em>' operation.
@@ -346,7 +310,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 24;
+	int APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 20;
 
 		/**
 	 * The operation id for the '<em>Dispose Variable Instances</em>' operation.
@@ -355,7 +319,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 25;
+	int APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 21;
 
 		/**
 	 * The operation id for the '<em>Get Operation Call Container</em>' operation.
@@ -364,7 +328,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 26;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 22;
 
 		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -373,7 +337,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 27;
+	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 23;
 
 		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -382,7 +346,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 28;
+	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 24;
 
 		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -391,7 +355,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 29;
+	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 25;
 
 		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -400,7 +364,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 30;
+	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 26;
 
 		/**
 	 * The operation id for the '<em>Load Registered Types</em>' operation.
@@ -409,7 +373,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 31;
+	int APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 27;
 
 		/**
 	 * The operation id for the '<em>Get All Types</em>' operation.
@@ -418,7 +382,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 32;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 28;
 
 		/**
 	 * The operation id for the '<em>Add Variable Listener</em>' operation.
@@ -427,7 +391,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = 33;
+	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = 29;
 
 		/**
 	 * The operation id for the '<em>Remove Variable Listener</em>' operation.
@@ -436,7 +400,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = 34;
+	int APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = 30;
 
 		/**
 	 * The operation id for the '<em>Notify Variable Listeners</em>' operation.
@@ -445,7 +409,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = 35;
+	int APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = 31;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -454,7 +418,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 36;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 32;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -3774,418 +3738,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int REFERENCE_RESULT_VALUE_OPERATION_COUNT = ABSTRACT_RESULT_VALUE_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListsContainerImpl <em>Watches Lists Container</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListsContainerImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchesListsContainer()
-	 * @generated
-	 */
-  int WATCHES_LISTS_CONTAINER = 51;
-
-  /**
-	 * The feature id for the '<em><b>Tools List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LISTS_CONTAINER__TOOLS_LIST = ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
-
-  /**
-	 * The feature id for the '<em><b>Watches</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LISTS_CONTAINER__WATCHES = ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
-
-  /**
-	 * The number of structural features of the '<em>Watches Lists Container</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LISTS_CONTAINER_FEATURE_COUNT = ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
-
-  /**
-	 * The number of operations of the '<em>Watches Lists Container</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LISTS_CONTAINER_OPERATION_COUNT = ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
-
-  /**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListImpl <em>Watches List</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchesList()
-	 * @generated
-	 */
-  int WATCHES_LIST = 52;
-
-  /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-  /**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-  /**
-	 * The feature id for the '<em><b>Watches Lists Container</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LIST__WATCHES_LISTS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-  /**
-	 * The feature id for the '<em><b>Watches</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LIST__WATCHES = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-  /**
-	 * The number of structural features of the '<em>Watches List</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
-
-  /**
-	 * The number of operations of the '<em>Watches List</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCHES_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-  /**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchImpl <em>Watch</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatch()
-	 * @generated
-	 */
-  int WATCH = 53;
-
-  /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WATCH__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-		/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-  /**
-	 * The feature id for the '<em><b>Watches List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH__WATCHES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-  /**
-	 * The feature id for the '<em><b>Variable</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH__VARIABLE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-  /**
-	 * The feature id for the '<em><b>Type Member Reference Tree Element</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
-
-  /**
-	 * The feature id for the '<em><b>Tree Root Node</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH__TREE_ROOT_NODE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
-
-  /**
-	 * The number of structural features of the '<em>Watch</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
-
-  /**
-	 * The number of operations of the '<em>Watch</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-  /**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl <em>Watch Feature Node Adapter</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchFeatureNodeAdapter()
-	 * @generated
-	 */
-  int WATCH_FEATURE_NODE_ADAPTER = 54;
-
-  /**
-	 * The feature id for the '<em><b>Source Object</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT = 0;
-
-  /**
-	 * The feature id for the '<em><b>Feature Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE = 1;
-
-  /**
-	 * The feature id for the '<em><b>Current Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE = 2;
-
-  /**
-	 * The feature id for the '<em><b>Resolved</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH_FEATURE_NODE_ADAPTER__RESOLVED = 3;
-
-  /**
-	 * The number of structural features of the '<em>Watch Feature Node Adapter</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH_FEATURE_NODE_ADAPTER_FEATURE_COUNT = 4;
-
-  /**
-	 * The number of operations of the '<em>Watch Feature Node Adapter</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WATCH_FEATURE_NODE_ADAPTER_OPERATION_COUNT = 0;
-
-  /**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListsContainerImpl <em>Displays Lists Container</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListsContainerImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDisplaysListsContainer()
-	 * @generated
-	 */
-  int DISPLAYS_LISTS_CONTAINER = 55;
-
-  /**
-	 * The feature id for the '<em><b>Tools List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LISTS_CONTAINER__TOOLS_LIST = ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
-
-  /**
-	 * The feature id for the '<em><b>Displays</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LISTS_CONTAINER__DISPLAYS = ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
-
-  /**
-	 * The number of structural features of the '<em>Displays Lists Container</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LISTS_CONTAINER_FEATURE_COUNT = ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
-
-  /**
-	 * The number of operations of the '<em>Displays Lists Container</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LISTS_CONTAINER_OPERATION_COUNT = ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
-
-  /**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl <em>Displays List</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDisplaysList()
-	 * @generated
-	 */
-  int DISPLAYS_LIST = 56;
-
-  /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-  /**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-  /**
-	 * The feature id for the '<em><b>Displays Lists Container</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-  /**
-	 * The feature id for the '<em><b>Displays</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LIST__DISPLAYS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-  /**
-	 * The number of structural features of the '<em>Displays List</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
-
-  /**
-	 * The number of operations of the '<em>Displays List</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int DISPLAYS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-  /**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractDisplayImpl <em>Abstract Display</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractDisplayImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractDisplay()
-	 * @generated
-	 */
-  int ABSTRACT_DISPLAY = 57;
-
-  /**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int ABSTRACT_DISPLAY__DESCRIPTION = ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
-
-  /**
-	 * The feature id for the '<em><b>Displays List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int ABSTRACT_DISPLAY__DISPLAYS_LIST = ApogyCommonEMFPackage.DESCRIBED_FEATURE_COUNT + 0;
-
-  /**
-	 * The number of structural features of the '<em>Abstract Display</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int ABSTRACT_DISPLAY_FEATURE_COUNT = ApogyCommonEMFPackage.DESCRIBED_FEATURE_COUNT + 1;
-
-  /**
-	 * The number of operations of the '<em>Abstract Display</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int ABSTRACT_DISPLAY_OPERATION_COUNT = ApogyCommonEMFPackage.DESCRIBED_OPERATION_COUNT + 0;
-
-  /**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl <em>Recording Tools Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4193,7 +3745,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingToolsContainer()
 	 * @generated
 	 */
-	int RECORDING_TOOLS_CONTAINER = 58;
+	int RECORDING_TOOLS_CONTAINER = 51;
 
 		/**
 	 * The feature id for the '<em><b>Tools List</b></em>' container reference.
@@ -4257,7 +3809,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getChannelsList()
 	 * @generated
 	 */
-	int CHANNELS_LIST = 59;
+	int CHANNELS_LIST = 52;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4321,7 +3873,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractChannel()
 	 * @generated
 	 */
-	int ABSTRACT_CHANNEL = 60;
+	int ABSTRACT_CHANNEL = 53;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4376,7 +3928,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractRecorder()
 	 * @generated
 	 */
-  int ABSTRACT_RECORDER = 61;
+  int ABSTRACT_RECORDER = 54;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4431,7 +3983,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractPlayer()
 	 * @generated
 	 */
-  int ABSTRACT_PLAYER = 62;
+  int ABSTRACT_PLAYER = 55;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4486,7 +4038,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsListTimeSource()
 	 * @generated
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 63;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 56;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4703,7 +4255,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableListenerEventType()
 	 * @generated
 	 */
-	int VARIABLE_LISTENER_EVENT_TYPE = 64;
+	int VARIABLE_LISTENER_EVENT_TYPE = 57;
 
 		/**
 	 * The meta object id for the '<em>Throwable</em>' data type.
@@ -4713,7 +4265,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getThrowable()
 	 * @generated
 	 */
-  int THROWABLE = 65;
+  int THROWABLE = 58;
 
   /**
 	 * The meta object id for the '<em>Notification</em>' data type.
@@ -4723,7 +4275,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNotification()
 	 * @generated
 	 */
-  int NOTIFICATION = 66;
+  int NOTIFICATION = 59;
 
 
   /**
@@ -4734,7 +4286,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
 	 * @generated
 	 */
-  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 67;
+  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 60;
 
 
   /**
@@ -4744,7 +4296,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMembersArray()
 	 * @generated
 	 */
-	int TYPE_MEMBERS_ARRAY = 68;
+	int TYPE_MEMBERS_ARRAY = 61;
 
 
 		/**
@@ -4755,7 +4307,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getIVariableListener()
 	 * @generated
 	 */
-	int IVARIABLE_LISTENER = 69;
+	int IVARIABLE_LISTENER = 62;
 
 
 		/**
@@ -4831,36 +4383,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	EOperation getApogyCoreInvocatorFacade__CreateAbstractResultValue__Object();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode) <em>Resolve Watch</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Resolve Watch</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
-
-		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement) <em>Resolve Watch</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Resolve Watch</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
-
-		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getValue(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode) <em>Get Value</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Value</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getValue(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__GetValue__AbstractFeatureNode();
-
-		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstance(ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Get Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4929,16 +4451,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 */
 	EOperation getApogyCoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
-
-		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstance(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement) <em>Get Instance</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Instance</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstance(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
 
 		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeImplementation(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Get Type Implementation</em>}' operation.
@@ -6998,241 +6510,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   EReference getReferenceResultValue_Value();
 
   /**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer <em>Watches Lists Container</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Watches Lists Container</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer
-	 * @generated
-	 */
-  EClass getWatchesListsContainer();
-
-  /**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer#getWatches <em>Watches</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Watches</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer#getWatches()
-	 * @see #getWatchesListsContainer()
-	 * @generated
-	 */
-  EReference getWatchesListsContainer_Watches();
-
-  /**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesList <em>Watches List</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Watches List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesList
-	 * @generated
-	 */
-  EClass getWatchesList();
-
-  /**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatchesListsContainer <em>Watches Lists Container</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Watches Lists Container</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatchesListsContainer()
-	 * @see #getWatchesList()
-	 * @generated
-	 */
-  EReference getWatchesList_WatchesListsContainer();
-
-  /**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatches <em>Watches</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Watches</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatches()
-	 * @see #getWatchesList()
-	 * @generated
-	 */
-  EReference getWatchesList_Watches();
-
-  /**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.Watch <em>Watch</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Watch</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch
-	 * @generated
-	 */
-  EClass getWatch();
-
-  /**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getWatchesList <em>Watches List</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Watches List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch#getWatchesList()
-	 * @see #getWatch()
-	 * @generated
-	 */
-  EReference getWatch_WatchesList();
-
-  /**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getVariable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch#getVariable()
-	 * @see #getWatch()
-	 * @generated
-	 */
-  EReference getWatch_Variable();
-
-  /**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Type Member Reference Tree Element</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch#getTypeMemberReferenceTreeElement()
-	 * @see #getWatch()
-	 * @generated
-	 */
-  EReference getWatch_TypeMemberReferenceTreeElement();
-
-  /**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Tree Root Node</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch#getTreeRootNode()
-	 * @see #getWatch()
-	 * @generated
-	 */
-  EReference getWatch_TreeRootNode();
-
-  /**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter <em>Watch Feature Node Adapter</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Watch Feature Node Adapter</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter
-	 * @generated
-	 */
-  EClass getWatchFeatureNodeAdapter();
-
-  /**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getSourceObject <em>Source Object</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Object</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getSourceObject()
-	 * @see #getWatchFeatureNodeAdapter()
-	 * @generated
-	 */
-  EReference getWatchFeatureNodeAdapter_SourceObject();
-
-  /**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Feature Node</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getFeatureNode()
-	 * @see #getWatchFeatureNodeAdapter()
-	 * @generated
-	 */
-  EReference getWatchFeatureNodeAdapter_FeatureNode();
-
-  /**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getCurrentValue <em>Current Value</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Current Value</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getCurrentValue()
-	 * @see #getWatchFeatureNodeAdapter()
-	 * @generated
-	 */
-  EAttribute getWatchFeatureNodeAdapter_CurrentValue();
-
-  /**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Resolved</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#isResolved()
-	 * @see #getWatchFeatureNodeAdapter()
-	 * @generated
-	 */
-  EAttribute getWatchFeatureNodeAdapter_Resolved();
-
-  /**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer <em>Displays Lists Container</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Displays Lists Container</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer
-	 * @generated
-	 */
-  EClass getDisplaysListsContainer();
-
-  /**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer#getDisplays <em>Displays</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Displays</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer#getDisplays()
-	 * @see #getDisplaysListsContainer()
-	 * @generated
-	 */
-  EReference getDisplaysListsContainer_Displays();
-
-  /**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList <em>Displays List</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Displays List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysList
-	 * @generated
-	 */
-  EClass getDisplaysList();
-
-  /**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplaysListsContainer <em>Displays Lists Container</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Displays Lists Container</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplaysListsContainer()
-	 * @see #getDisplaysList()
-	 * @generated
-	 */
-  EReference getDisplaysList_DisplaysListsContainer();
-
-  /**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplays <em>Displays</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Displays</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplays()
-	 * @see #getDisplaysList()
-	 * @generated
-	 */
-  EReference getDisplaysList_Displays();
-
-  /**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay <em>Abstract Display</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Display</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay
-	 * @generated
-	 */
-  EClass getAbstractDisplay();
-
-  /**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay#getDisplaysList <em>Displays List</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Displays List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay#getDisplaysList()
-	 * @see #getAbstractDisplay()
-	 * @generated
-	 */
-  EReference getAbstractDisplay_DisplaysList();
-
-  /**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer <em>Recording Tools Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7538,30 +6815,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		EOperation APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = eINSTANCE.getApogyCoreInvocatorFacade__CreateAbstractResultValue__Object();
 
 			/**
-		 * The meta object literal for the '<em><b>Resolve Watch</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = eINSTANCE.getApogyCoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
-
-			/**
-		 * The meta object literal for the '<em><b>Resolve Watch</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getApogyCoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
-
-			/**
-		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = eINSTANCE.getApogyCoreInvocatorFacade__GetValue__AbstractFeatureNode();
-
-			/**
 		 * The meta object literal for the '<em><b>Get Instance</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7616,14 +6869,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = eINSTANCE.getApogyCoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
-
-			/**
-		 * The meta object literal for the '<em><b>Get Instance</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getApogyCoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Type Implementation</b></em>' operation.
@@ -9284,196 +8529,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
     EReference REFERENCE_RESULT_VALUE__VALUE = eINSTANCE.getReferenceResultValue_Value();
-
-    /**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListsContainerImpl <em>Watches Lists Container</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListsContainerImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchesListsContainer()
-		 * @generated
-		 */
-    EClass WATCHES_LISTS_CONTAINER = eINSTANCE.getWatchesListsContainer();
-
-    /**
-		 * The meta object literal for the '<em><b>Watches</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference WATCHES_LISTS_CONTAINER__WATCHES = eINSTANCE.getWatchesListsContainer_Watches();
-
-    /**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListImpl <em>Watches List</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchesList()
-		 * @generated
-		 */
-    EClass WATCHES_LIST = eINSTANCE.getWatchesList();
-
-    /**
-		 * The meta object literal for the '<em><b>Watches Lists Container</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference WATCHES_LIST__WATCHES_LISTS_CONTAINER = eINSTANCE.getWatchesList_WatchesListsContainer();
-
-    /**
-		 * The meta object literal for the '<em><b>Watches</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference WATCHES_LIST__WATCHES = eINSTANCE.getWatchesList_Watches();
-
-    /**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchImpl <em>Watch</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatch()
-		 * @generated
-		 */
-    EClass WATCH = eINSTANCE.getWatch();
-
-    /**
-		 * The meta object literal for the '<em><b>Watches List</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference WATCH__WATCHES_LIST = eINSTANCE.getWatch_WatchesList();
-
-    /**
-		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference WATCH__VARIABLE = eINSTANCE.getWatch_Variable();
-
-    /**
-		 * The meta object literal for the '<em><b>Type Member Reference Tree Element</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT = eINSTANCE.getWatch_TypeMemberReferenceTreeElement();
-
-    /**
-		 * The meta object literal for the '<em><b>Tree Root Node</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference WATCH__TREE_ROOT_NODE = eINSTANCE.getWatch_TreeRootNode();
-
-    /**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl <em>Watch Feature Node Adapter</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchFeatureNodeAdapter()
-		 * @generated
-		 */
-    EClass WATCH_FEATURE_NODE_ADAPTER = eINSTANCE.getWatchFeatureNodeAdapter();
-
-    /**
-		 * The meta object literal for the '<em><b>Source Object</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT = eINSTANCE.getWatchFeatureNodeAdapter_SourceObject();
-
-    /**
-		 * The meta object literal for the '<em><b>Feature Node</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE = eINSTANCE.getWatchFeatureNodeAdapter_FeatureNode();
-
-    /**
-		 * The meta object literal for the '<em><b>Current Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EAttribute WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE = eINSTANCE.getWatchFeatureNodeAdapter_CurrentValue();
-
-    /**
-		 * The meta object literal for the '<em><b>Resolved</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EAttribute WATCH_FEATURE_NODE_ADAPTER__RESOLVED = eINSTANCE.getWatchFeatureNodeAdapter_Resolved();
-
-    /**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListsContainerImpl <em>Displays Lists Container</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListsContainerImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDisplaysListsContainer()
-		 * @generated
-		 */
-    EClass DISPLAYS_LISTS_CONTAINER = eINSTANCE.getDisplaysListsContainer();
-
-    /**
-		 * The meta object literal for the '<em><b>Displays</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference DISPLAYS_LISTS_CONTAINER__DISPLAYS = eINSTANCE.getDisplaysListsContainer_Displays();
-
-    /**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl <em>Displays List</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDisplaysList()
-		 * @generated
-		 */
-    EClass DISPLAYS_LIST = eINSTANCE.getDisplaysList();
-
-    /**
-		 * The meta object literal for the '<em><b>Displays Lists Container</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER = eINSTANCE.getDisplaysList_DisplaysListsContainer();
-
-    /**
-		 * The meta object literal for the '<em><b>Displays</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference DISPLAYS_LIST__DISPLAYS = eINSTANCE.getDisplaysList_Displays();
-
-    /**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractDisplayImpl <em>Abstract Display</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractDisplayImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractDisplay()
-		 * @generated
-		 */
-    EClass ABSTRACT_DISPLAY = eINSTANCE.getAbstractDisplay();
-
-    /**
-		 * The meta object literal for the '<em><b>Displays List</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference ABSTRACT_DISPLAY__DISPLAYS_LIST = eINSTANCE.getAbstractDisplay_DisplaysList();
 
     /**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl <em>Recording Tools Container</em>}' class.

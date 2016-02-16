@@ -4292,6 +4292,12 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 			 "property", "None"
 		   });	
 		addAnnotation
+		  (earthSurfaceWorksiteEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "A specialization of Worksite defining a are or volume at the Earth surface."
+		   });	
+		addAnnotation
 		  (getEarthSurfaceWorksite__ConvertToGeographicCoordinates__Tuple3d(), 
 		   source, 
 		   new String[] {

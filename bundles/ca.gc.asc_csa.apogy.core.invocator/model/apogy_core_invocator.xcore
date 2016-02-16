@@ -68,10 +68,6 @@ class ApogyCoreInvocatorFacade
 	
 	op AbstractResultValue createAbstractResultValue(Object value)
 	
-	op Watch resolveWatch(AbstractFeatureNode abstractFeatureNode)
-	op Watch resolveWatch(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement)
-	op Object getValue(AbstractFeatureNode abstractFeatureNode)	
-	
 	op EObject getInstance(Variable variable)
 	op EClass getInstanceClass(Variable variable)
 
@@ -107,8 +103,7 @@ class ApogyCoreInvocatorFacade
 	 * @return Instance Class.
 	 */
 	op EClass getInstanceClass(VariableFeatureReference variableFeatureReference)
-	op EObject getInstance(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement)
-	
+		
 	op AbstractTypeImplementation getTypeImplementation(OperationCall operationCall)
 	op AbstractTypeImplementation getTypeImplementation(Variable variable, AbstractType elementType)
 	op AbstractTypeImplementation getTypeImplementation(Variable variable)
@@ -995,107 +990,6 @@ class ReferenceResultValue extends AbstractResultValue
 {
  	@GenModel(createChild="true", property="Readonly")
 	contains EObject value
-}
-
-/* -------------------------------------------------------------------------
- * WatchesListsContainer
- * ------------------------------------------------------------------------- */ 
-
-class WatchesListsContainer extends AbstractToolsListContainer
-{
-	@GenModel(property="None") 
-	contains WatchesList [0..*] watches opposite watchesListsContainer	
-} 
-
-
-/* -------------------------------------------------------------------------
- * WatchesList
- * ------------------------------------------------------------------------- */ 
-
-class WatchesList extends Named, Described
-{		
-	container WatchesListsContainer watchesListsContainer opposite watches
-	
-	contains Watch[0..*] watches opposite watchesList	
-}
-
-
-/* -------------------------------------------------------------------------
- * Watch
- * ------------------------------------------------------------------------- */ 
- 
-class Watch extends Named, Described
-{
- 	@GenModel(property="None")
-	container WatchesList watchesList opposite watches
-	
-	@GenModel(notify="true")
-	refers Variable[1] variable
-
-	contains TypeMemberReferenceTreeElement[0..1] typeMemberReferenceTreeElement
-
-	contains TreeRootNode[0..1] treeRootNode
-}
-
-/* -------------------------------------------------------------------------
- * WatchFeatureNodeAdapter
- * ------------------------------------------------------------------------- */ 
-
- class WatchFeatureNodeAdapter
- {
- 	/*
- 	 * The object onto which to apply the WatchFeatureNodeAdapter.
- 	 */
- 	refers EObject sourceObject
- 	
- 	/*
- 	 * The FeatureNode defining which feature to monitor.
- 	 */
- 	refers AbstractFeatureNode featureNode
- 	
- 	/*
- 	 * The current value of the monitored feature.
- 	 */
- 	Object currentValue 
- 	
-	/*
-	 * Tells whether or not the featureNode is currently resolved.
-	 */
- 	boolean resolved = "false"
- }
-
-
-/* -------------------------------------------------------------------------
- * DisplaysListsContainer
- * ------------------------------------------------------------------------- */ 
-
-class DisplaysListsContainer extends AbstractToolsListContainer
-{
- 	@GenModel(property="None")   
-	contains DisplaysList [0..*] displays opposite displaysListsContainer	
-} 
-
-/* -------------------------------------------------------------------------
- * DisplaysList
- * ------------------------------------------------------------------------- */ 
-
-class DisplaysList extends Named, Described
-{			
- 	@GenModel(property="None")
-	container DisplaysListsContainer displaysListsContainer opposite displays 
-	
-	contains AbstractDisplay[0..*] displays opposite displaysList
-}
-
-
-/* -------------------------------------------------------------------------
- * Display
- * ------------------------------------------------------------------------- */ 
- 
-abstract class AbstractDisplay extends Described
-{
-	@GenModel(property="None")
-	container DisplaysList displaysList opposite displays
 }
 
 /* -------------------------------------------------------------------------

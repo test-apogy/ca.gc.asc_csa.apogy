@@ -21,6 +21,11 @@ import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
  * A representation of the model object '<em><b>Node</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * The base class of all nodes in a topology.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -43,10 +48,13 @@ public interface Node extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * The parent of the node.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Parent</em>' reference.
 	 * @see #setParent(Node)
 	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getNode_Parent()
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='NODE'"
 	 * @generated
 	 */
 	Node getParent();
@@ -69,10 +77,14 @@ public interface Node extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * The description of the node.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getNode_Description()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='NODE'"
 	 * @generated
 	 */
 	String getDescription();
@@ -95,10 +107,14 @@ public interface Node extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * The node identifier.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node Id</em>' attribute.
 	 * @see #setNodeId(String)
 	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getNode_NodeId()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='NODE'"
 	 * @generated
 	 */
 	String getNodeId();

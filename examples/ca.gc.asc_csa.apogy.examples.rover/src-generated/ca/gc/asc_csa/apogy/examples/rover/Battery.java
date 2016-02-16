@@ -20,6 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Battery</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This class represents a battery in the rover's
+ * power system; note that the rover's power supply
+ * is comprised of several battery.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

@@ -526,6 +526,12 @@ public class ApogyCommonGeometryData3DASCPackageImpl extends EPackageImpl implem
 			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry.data3d"
 		   });	
 		addAnnotation
+		  (asc3DIOEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThis class is used to load DEM from .asc files found on the Utah DEM Repository. Each file covers a large area (20 km X 20 km)\nand the name of the file is a U.S. National Grid (USNG) identifier. The location of the south-west corner of the tile can be\nfound from  the identifier (see USGN to Geodetic). The data in the file is define however from the north-west corner. Each\nrow in the file is order west to east, and the row are ordered north to south.\n@see Utah DEM Repository http://mapserv.utah.gov/raster/?cat=5%20Meter%20{DEM}\n@see USGN to Geodetic http://www.ngs.noaa.gov/cgi-bin/usng_getgp.prl"
+		   });	
+		addAnnotation
 		  (getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode(), 
 		   source, 
 		   new String[] {

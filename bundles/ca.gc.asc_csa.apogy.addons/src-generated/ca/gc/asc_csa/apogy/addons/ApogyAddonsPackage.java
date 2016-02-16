@@ -1551,13 +1551,22 @@ public interface ApogyAddonsPackage extends EPackage
 	int TRAJECTORY_PICKING_TOOL__ROOT_NODE = SIMPLE3_DTOOL__ROOT_NODE;
 
 		/**
+	 * The feature id for the '<em><b>Altitude Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET = SIMPLE3_DTOOL_FEATURE_COUNT + 0;
+
+		/**
 	 * The feature id for the '<em><b>Paths</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY_PICKING_TOOL__PATHS = SIMPLE3_DTOOL_FEATURE_COUNT + 0;
+	int TRAJECTORY_PICKING_TOOL__PATHS = SIMPLE3_DTOOL_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Active Path</b></em>' reference.
@@ -1566,7 +1575,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY_PICKING_TOOL__ACTIVE_PATH = SIMPLE3_DTOOL_FEATURE_COUNT + 1;
+	int TRAJECTORY_PICKING_TOOL__ACTIVE_PATH = SIMPLE3_DTOOL_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Trajectory Picking Tool Node</b></em>' reference.
@@ -1575,7 +1584,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY_PICKING_TOOL__TRAJECTORY_PICKING_TOOL_NODE = SIMPLE3_DTOOL_FEATURE_COUNT + 2;
+	int TRAJECTORY_PICKING_TOOL__TRAJECTORY_PICKING_TOOL_NODE = SIMPLE3_DTOOL_FEATURE_COUNT + 3;
 
 		/**
 	 * The number of structural features of the '<em>Trajectory Picking Tool</em>' class.
@@ -1584,7 +1593,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY_PICKING_TOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 3;
+	int TRAJECTORY_PICKING_TOOL_FEATURE_COUNT = SIMPLE3_DTOOL_FEATURE_COUNT + 4;
 
 		/**
 	 * The operation id for the '<em>Initialise</em>' operation.
@@ -2508,6 +2517,17 @@ public interface ApogyAddonsPackage extends EPackage
 	EClass getTrajectoryPickingTool();
 
 		/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getAltitudeOffset <em>Altitude Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Altitude Offset</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getAltitudeOffset()
+	 * @see #getTrajectoryPickingTool()
+	 * @generated
+	 */
+	EAttribute getTrajectoryPickingTool_AltitudeOffset();
+
+		/**
 	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool#getPaths <em>Paths</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3157,6 +3177,13 @@ public interface ApogyAddonsPackage extends EPackage
 		 * @generated
 		 */
 		EClass TRAJECTORY_PICKING_TOOL = eINSTANCE.getTrajectoryPickingTool();
+				/**
+		 * The meta object literal for the '<em><b>Altitude Offset</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET = eINSTANCE.getTrajectoryPickingTool_AltitudeOffset();
 				/**
 		 * The meta object literal for the '<em><b>Paths</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->

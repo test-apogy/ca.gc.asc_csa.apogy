@@ -29,18 +29,6 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Activator;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.CartesianCoordinatesSetSceneObject;
-import ca.gc.asc_csa.apogy.common.log.EventSeverity;
-import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.common.topology.ContentNode;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -51,6 +39,20 @@ import com.jme3.scene.Geometry;
 import com.jme3.scene.Mesh;
 import com.jme3.scene.Mesh.Mode;
 import com.jme3.util.BufferUtils;
+
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.CartesianCoordinatesSetSceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet> extends DefaultJME3SceneObject<ContentNode<T>> implements
 		CartesianCoordinatesSetSceneObject 
@@ -169,11 +171,9 @@ public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet
 			@Override
 			public Object call() throws Exception 
 			{		
-				if(meshGeometry != null)
+				if(points != null)
 				{
-					Material mat = createMaterial();				
-					mat.setColor("Color", pointsColor);
-					meshGeometry.setMaterial(mat);
+					updateGeometryInternal(points);
 				}
 				return null;
 			}
@@ -233,20 +233,41 @@ public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet
 		
 		List<Vector3f> verticesList = new ArrayList<Vector3f>();
 		List<Integer> indexesList = new ArrayList<Integer>();
+		List<ColorRGBA> pointColorList = new ArrayList<ColorRGBA>();
 		
 		int index = 0;
 		for(CartesianPositionCoordinates point : points.getPoints())
 		{
 			verticesList.add(new Vector3f((float) point.getX(), (float) point.getY(), (float) point.getZ()));
 			indexesList.add(new Integer(index));
+			
+			ColorRGBA pointColor = null;
+			// If the point as associated color to it, use that color.
+			if(point instanceof ColoredCartesianPositionCoordinates)
+			{
+				ColoredCartesianPositionCoordinates coloredPoint = (ColoredCartesianPositionCoordinates) point;
+				float r = ((float)coloredPoint.getRed()) / 255.0f;
+				float g = ((float)coloredPoint.getGreen()) / 255.0f;
+				float b = ((float)coloredPoint.getBlue()) / 255.0f;
+					
+				pointColor = new ColorRGBA(r,g,b,1.0f);
+			}
+			else
+			{
+				pointColor = pointsColor.clone();			
+			}
+			pointColorList.add(pointColor);
+						
 			index++;
 		}
 									
 		jme3mMesh = new Mesh();
 		jme3mMesh.setMode(Mode.Points);
-		jme3mMesh.setPointSize(getPointSize());
-		jme3mMesh.setBuffer( com.jme3.scene.VertexBuffer.Type.Position, 3, BufferUtils.createFloatBuffer(JME3Utilities.convertToFloatArray(verticesList)));
-		jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Index, 1, BufferUtils.createIntBuffer(JME3Utilities.convertToIntArray(indexesList)));				
+		jme3mMesh.setPointSize(getPointSize());		
+		jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Position, 3, BufferUtils.createFloatBuffer(JME3Utilities.convertToFloatArray(verticesList)));
+		jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Index, 1, BufferUtils.createIntBuffer(JME3Utilities.convertToIntArray(indexesList)));
+		jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Color, 4, BufferUtils.createFloatBuffer(JME3Utilities.convertRGBAListToFloatArray(pointColorList)));
+				
 		jme3mMesh.updateBound();
 		jme3mMesh.updateCounts();
 		
@@ -289,9 +310,9 @@ public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet
 	private Material createMaterial()
 	{
 		Material mat = new Material(assetManager,  "Common/MatDefs/Misc/Unshaded.j3md");
-		mat.getAdditionalRenderState().setFaceCullMode(FaceCullMode.Off);  		
-		mat.setColor("Color", pointsColor.clone());
-				
+		mat.getAdditionalRenderState().setFaceCullMode(FaceCullMode.Off);  				
+		mat.setBoolean("VertexColor", true);
+		
 		return mat;
 	}
 	

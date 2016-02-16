@@ -583,6 +583,12 @@ public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implemen
 			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry"
 		   });	
 		addAnnotation
+		  (coordinates25DEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Represent 2.5D geometry where u and v are the\nindependent variables and w the dependent variable."
+		   });	
+		addAnnotation
 		  (getCoordinatesSet25D_EnforceUniqueness(), 
 		   source, 
 		   new String[] {

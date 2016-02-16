@@ -21,6 +21,11 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
  * A representation of the model object '<em><b>Way Point Path</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Class that defines a path as a series CartesianPositionCoordinates.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -45,6 +50,7 @@ public interface WayPointPath extends CartesianCoordinatesSet, Path {
 	 * @return the value of the '<em>Length</em>' attribute.
 	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getWayPointPath_Length()
 	 * @model default="0.0" unique="false" transient="true" changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='m'"
 	 * @generated
 	 */
 	double getLength();

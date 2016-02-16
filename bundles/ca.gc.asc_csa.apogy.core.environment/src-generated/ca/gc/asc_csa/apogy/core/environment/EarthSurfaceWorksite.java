@@ -21,6 +21,10 @@ import ca.gc.asc_csa.apogy.common.math.Tuple3d;
  * A representation of the model object '<em><b>Earth Surface Worksite</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A specialization of Worksite defining a are or volume at the Earth surface.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

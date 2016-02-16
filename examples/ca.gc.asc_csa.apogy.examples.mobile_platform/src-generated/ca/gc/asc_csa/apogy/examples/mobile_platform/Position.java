@@ -20,6 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Position</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This class is used to represent a position of a particular object
+ * in space.  In particular, this provides both a Cartesian coordinate
+ * location as well as an angle corresponding to the object's pose.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

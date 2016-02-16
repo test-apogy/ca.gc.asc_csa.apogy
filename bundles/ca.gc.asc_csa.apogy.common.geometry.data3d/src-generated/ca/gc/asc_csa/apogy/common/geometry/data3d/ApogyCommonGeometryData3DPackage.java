@@ -3209,13 +3209,22 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 0;
 
 	/**
+	 * The operation id for the '<em>Create Colored Cartesian Position Coordinates</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_COLORED_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE_SHORT_SHORT_SHORT = 1;
+
+	/**
 	 * The operation id for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 1;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 2;
 
 	/**
 	 * The operation id for the '<em>Create Spherical Coordinates</em>' operation.
@@ -3224,7 +3233,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 2;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 3;
 
 	/**
 	 * The operation id for the '<em>Create Pose</em>' operation.
@@ -3233,7 +3242,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 3;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 4;
 
 	/**
 	 * The operation id for the '<em>Create Pose</em>' operation.
@@ -3242,7 +3251,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE = 4;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE = 5;
 
 	/**
 	 * The operation id for the '<em>Create Pose</em>' operation.
@@ -3251,7 +3260,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = 5;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = 6;
 
 	/**
 	 * The operation id for the '<em>Create Digital Elevation Map</em>' operation.
@@ -3260,7 +3269,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = 6;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = 7;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Polygon</em>' operation.
@@ -3269,7 +3278,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 7;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 8;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Position Coordinates</em>' operation.
@@ -3278,7 +3287,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = 8;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = 9;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
@@ -3287,7 +3296,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = 9;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = 10;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3296,7 +3305,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = 10;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = 11;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangle</em>' operation.
@@ -3305,7 +3314,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 11;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 12;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangle</em>' operation.
@@ -3314,7 +3323,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = 12;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = 13;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3323,7 +3332,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = 13;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = 14;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3332,7 +3341,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = 14;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = 15;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangular Mesh</em>' operation.
@@ -3341,7 +3350,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = 15;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = 16;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangular Mesh</em>' operation.
@@ -3350,7 +3359,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = 16;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = 17;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3359,7 +3368,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = 17;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = 18;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3368,7 +3377,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = 18;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = 19;
 
 	/**
 	 * The operation id for the '<em>Create Transformed Mesh</em>' operation.
@@ -3377,7 +3386,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D = 19;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D = 20;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3386,7 +3395,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = 20;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = 21;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3395,7 +3404,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = 21;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = 22;
 
 	/**
 	 * The operation id for the '<em>Update Cartesian Coordinates Set</em>' operation.
@@ -3404,7 +3413,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = 22;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = 23;
 
 	/**
 	 * The operation id for the '<em>Concatenate Triangular Meshes</em>' operation.
@@ -3413,7 +3422,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = 23;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = 24;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -3422,7 +3431,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE_OPERATION_COUNT = 24;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE_OPERATION_COUNT = 25;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.
@@ -4996,6 +5005,16 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createColoredCartesianPositionCoordinates(double, double, double, short, short, short) <em>Create Colored Cartesian Position Coordinates</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Colored Cartesian Position Coordinates</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createColoredCartesianPositionCoordinates(double, double, double, short, short, short)
+	 * @generated
+	 */
+	EOperation getApogyCommonGeometryData3DFacade__CreateColoredCartesianPositionCoordinates__double_double_double_short_short_short();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}' operation.
@@ -6646,6 +6665,14 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Colored Cartesian Position Coordinates</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_COLORED_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE_SHORT_SHORT_SHORT = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateColoredCartesianPositionCoordinates__double_double_double_short_short_short();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Orientation Coordinates</b></em>' operation.

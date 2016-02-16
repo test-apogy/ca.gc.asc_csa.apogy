@@ -26,7 +26,6 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder;
@@ -45,8 +44,6 @@ import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
-import ca.gc.asc_csa.apogy.core.invocator.DisplaysList;
-import ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
@@ -86,10 +83,6 @@ import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
-import ca.gc.asc_csa.apogy.core.invocator.Watch;
-import ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter;
-import ca.gc.asc_csa.apogy.core.invocator.WatchesList;
-import ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -353,34 +346,6 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseReferenceResultValue(ReferenceResultValue object) {
 				return createReferenceResultValueAdapter();
-			}
-			@Override
-			public Adapter caseWatchesListsContainer(WatchesListsContainer object) {
-				return createWatchesListsContainerAdapter();
-			}
-			@Override
-			public Adapter caseWatchesList(WatchesList object) {
-				return createWatchesListAdapter();
-			}
-			@Override
-			public Adapter caseWatch(Watch object) {
-				return createWatchAdapter();
-			}
-			@Override
-			public Adapter caseWatchFeatureNodeAdapter(WatchFeatureNodeAdapter object) {
-				return createWatchFeatureNodeAdapterAdapter();
-			}
-			@Override
-			public Adapter caseDisplaysListsContainer(DisplaysListsContainer object) {
-				return createDisplaysListsContainerAdapter();
-			}
-			@Override
-			public Adapter caseDisplaysList(DisplaysList object) {
-				return createDisplaysListAdapter();
-			}
-			@Override
-			public Adapter caseAbstractDisplay(AbstractDisplay object) {
-				return createAbstractDisplayAdapter();
 			}
 			@Override
 			public Adapter caseRecordingToolsContainer(RecordingToolsContainer object) {
@@ -1215,111 +1180,6 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createReferenceResultValueAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer <em>Watches Lists Container</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer
-	 * @generated
-	 */
-  public Adapter createWatchesListsContainerAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesList <em>Watches List</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesList
-	 * @generated
-	 */
-  public Adapter createWatchesListAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.Watch <em>Watch</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch
-	 * @generated
-	 */
-  public Adapter createWatchAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter <em>Watch Feature Node Adapter</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter
-	 * @generated
-	 */
-  public Adapter createWatchFeatureNodeAdapterAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer <em>Displays Lists Container</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer
-	 * @generated
-	 */
-  public Adapter createDisplaysListsContainerAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList <em>Displays List</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysList
-	 * @generated
-	 */
-  public Adapter createDisplaysListAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay <em>Abstract Display</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay
-	 * @generated
-	 */
-  public Adapter createAbstractDisplayAdapter()
   {
 		return null;
 	}

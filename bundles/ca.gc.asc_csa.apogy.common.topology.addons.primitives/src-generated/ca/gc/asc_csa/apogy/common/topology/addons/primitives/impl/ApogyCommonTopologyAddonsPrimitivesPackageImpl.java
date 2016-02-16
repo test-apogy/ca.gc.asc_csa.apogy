@@ -998,6 +998,12 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 			 "apogy_units", "m"
 		   });	
 		addAnnotation
+		  (pointLightEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "The PointLight object specifies an attenuated light source at a fixed point in space that radiates light equally in all directions away from the light source. PointLight has the same attributes as a Light node, with the addition of location and attenuation parameters.\n * A point light contributes to diffuse and specular reflections, which in turn depend on the orientation and position of a surface. A point light does not contribute to ambient reflections.\n * A PointLight is attenuated by multiplying the contribution of the light by an attenuation factor. The attenuation factor causes the the PointLight\'s brightness to decrease as distance from the light source increases. A PointLight\'s attenuation factor contains three values:\n<ul>\n<li>Constant attenuation</li>\n<li>Linear attenuation</li>\n<li>Quadratic attenuation</li>\n</ul>\nA PointLight is attenuated by the reciprocal of the sum of:\n<ul>\n<li>The constant attenuation factor</li>\n<li>The Linear attenuation factor times the distance between the light and the vertex being illuminated</li>\n<li>The quadratic attenuation factor times the square of the distance between the light and the vertex </li>\n</ul>\nBy default, the constant attenuation value is 1 and the other two values are 0, resulting in no attenuation."
+		   });	
+		addAnnotation
 		  (spotLightEClass, 
 		   source, 
 		   new String[] {
