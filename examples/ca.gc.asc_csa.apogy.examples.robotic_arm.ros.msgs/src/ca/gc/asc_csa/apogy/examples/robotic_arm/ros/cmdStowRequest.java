@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.ros;
 
 public interface cmdStowRequest extends org.ros.internal.message.Message {
   static final java.lang.String _TYPE = "ca.gc.asc_csa.apogy.examples.robotic_arm.ros/cmdStowRequest";

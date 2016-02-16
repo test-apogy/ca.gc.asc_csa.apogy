@@ -23,20 +23,20 @@ import org.ros.node.topic.Publisher;
 
 import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.MoveSpeed;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.RoboticArmTelemetry;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToRequest;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToResponse;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelRequest;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelResponse;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowRequest;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowResponse;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.MoveSpeed;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmTelemetry;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToRequest;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToResponse;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevelRequest;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevelResponse;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStowRequest;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStowResponse;
 
 public class RoboticArmROSServer extends AbstractNodeMain
 {
 	protected RoboticArm roboticArm = null;
 	
-	protected Publisher<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.RoboticArmTelemetry> telemetryPublisher = null;
+	protected Publisher<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmTelemetry> telemetryPublisher = null;
 	
 	protected boolean telemetryShouldRun = true;
 	protected Thread telemetryThread = null;
@@ -89,14 +89,14 @@ public class RoboticArmROSServer extends AbstractNodeMain
 	private void initializeTopics()
 	{	
 		// Creates the Publishers.
-		telemetryPublisher = this.rosNode.newPublisher(RoboticArmROSConstants.TOPIC_NAME_ROBOTIC_ARM_TELEMETRY, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.RoboticArmTelemetry._TYPE);
+		telemetryPublisher = this.rosNode.newPublisher(RoboticArmROSConstants.TOPIC_NAME_ROBOTIC_ARM_TELEMETRY, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmTelemetry._TYPE);
 	}
 	
 	private void initializeServices()
 	{
 		// MoveTo service
-		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_MOVE_TO, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveTo._TYPE, 
-				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToResponse>() 
+		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_MOVE_TO, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveTo._TYPE, 
+				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToResponse>() 
 		{
 
 			@Override
@@ -125,8 +125,8 @@ public class RoboticArmROSServer extends AbstractNodeMain
 		});
 		
 		// Stow Arm Service
-		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStow._TYPE, 
-				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowResponse>() 
+		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStow._TYPE, 
+				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStowRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStowResponse>() 
 		{
 			@Override
 			public void build(cmdStowRequest request, cmdStowResponse response) throws ServiceException 
@@ -146,8 +146,8 @@ public class RoboticArmROSServer extends AbstractNodeMain
 		});
 		
 		//
-		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevel._TYPE, 
-				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelResponse>() 
+		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevel._TYPE, 
+				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevelRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevelResponse>() 
 		{
 			@Override
 			public void build(cmdSpeedLevelRequest request, cmdSpeedLevelResponse response) throws ServiceException 
