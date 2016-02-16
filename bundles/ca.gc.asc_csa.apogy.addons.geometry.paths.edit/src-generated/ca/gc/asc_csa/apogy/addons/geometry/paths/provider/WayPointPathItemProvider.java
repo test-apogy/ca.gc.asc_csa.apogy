@@ -92,7 +92,7 @@ public class WayPointPathItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_NODEPropertyCategory"),
 				 null));
 	}
 
@@ -115,7 +115,7 @@ public class WayPointPathItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_NODEPropertyCategory"),
 				 null));
 	}
 
@@ -137,7 +137,7 @@ public class WayPointPathItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_NODEPropertyCategory"),
 				 null));
 	}
 
@@ -217,6 +217,7 @@ public class WayPointPathItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WayPointPath.class)) {
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__PARENT:
 			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__DESCRIPTION:
 			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__NODE_ID:
 			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__LENGTH:

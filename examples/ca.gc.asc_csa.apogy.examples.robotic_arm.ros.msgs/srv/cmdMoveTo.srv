@@ -1,0 +1,19 @@
+# Command the robotic arm to move to a specified angle configuration.
+
+# The turret angle in radians.
+float32 turretAngle
+
+# The shoulder angle in radians.
+float32 shoulderAngle
+
+# The elbow angle in radians.
+float32 elbowAngle
+
+# The wrist angle in radians.
+float32 wristAngle
+
+
+---
+
+# Service result
+bool result

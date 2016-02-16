@@ -43,7 +43,7 @@ public interface ReferencedGroupNode extends GroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Referenced Children</em>' reference list.
 	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getReferencedGroupNode_ReferencedChildren()
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel children='true' createChild='false'"
 	 * @generated
 	 */
 	EList<Node> getReferencedChildren();

@@ -101,6 +101,7 @@ class GroupNode extends Node
 
 class ReferencedGroupNode extends GroupNode
 {
+	@GenModel(children="true", createChild="false")
 	refers Node [0..*] referencedChildren
 }
 

@@ -142,17 +142,17 @@ class ColoredCartesianPositionCoordinates extends CartesianPositionCoordinates
 	/**
 	 * The red component, between 0 and 255.
 	 */
-	byte red
+	short red
 	
 	/**
 	 * The green component, between 0 and 255.
 	 */
-	byte green
+	short green
 	
 	/**
 	 * The blue component, between 0 and 255.
 	 */
-	byte blue
+	short blue
 }
 
 /**
@@ -653,6 +653,8 @@ class RigidBodyPoseTracker
 class ApogyCommonGeometryData3DFacade
 {	
 	op CartesianPositionCoordinates createCartesianPositionCoordinates(double x, double y, double z)
+	
+	op ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates(double x, double y, double z, short red, short green, short blue)
 	
 	op CartesianOrientationCoordinates createCartesianOrientationCoordinates(double xRotation, double yRotation, double zRotation)
 	
