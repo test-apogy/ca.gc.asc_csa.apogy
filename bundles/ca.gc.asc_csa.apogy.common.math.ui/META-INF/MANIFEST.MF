@@ -21,7 +21,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.databinding.observable,
  org.eclipse.core.databinding.property,
  org.eclipse.jface.databinding,
- com.ibm.icu,
  ca.gc.asc_csa.apogy.common.ui;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.databinding;visibility:=reexport,
  org.eclipse.emf.databinding.edit,
@@ -38,6 +37,4 @@ Bundle-ClassPath: libs/swt-grouplayout.jar,
  .
 Export-Package: ca.gc.asc_csa.apogy.common.math.ui,
  ca.gc.asc_csa.apogy.common.math.ui.composites,
-  ca.gc.asc_csa.apogy.common.math.ui.properties.sections,
-  org.eclipse.wb.swt.layout.grouplayout,
- org.eclipse.wb.swt.widgets.baseline
+ ca.gc.asc_csa.apogy.common.math.ui.properties.sections
