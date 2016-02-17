@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
@@ -33,7 +34,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint} object.

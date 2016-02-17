@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -24,7 +25,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.EdgeType;
 
 /**

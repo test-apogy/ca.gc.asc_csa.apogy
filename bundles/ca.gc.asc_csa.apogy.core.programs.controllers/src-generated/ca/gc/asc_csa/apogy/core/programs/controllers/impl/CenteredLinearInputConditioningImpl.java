@@ -17,8 +17,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
-import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning;
 
 /**
  * <!-- begin-user-doc -->
