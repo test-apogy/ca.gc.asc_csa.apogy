@@ -1,4 +1,4 @@
-Version 0.1.0
+Version 0.5.1
  - Fixed #87.
  - Adding bumpversion script
  - Ignore from git /target.
