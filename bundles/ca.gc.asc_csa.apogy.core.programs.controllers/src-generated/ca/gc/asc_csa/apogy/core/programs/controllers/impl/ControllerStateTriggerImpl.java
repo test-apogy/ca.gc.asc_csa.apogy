@@ -21,8 +21,8 @@ import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.Activator;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger;
 
 /**
  * <!-- begin-user-doc -->

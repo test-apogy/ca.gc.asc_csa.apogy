@@ -11,28 +11,28 @@
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
-@GenModel(prefix="Symphony__CoreProgramsControllers",
+@GenModel(prefix="ApogyCoreProgramsControllers",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-		  modelName="Symphony__CoreProgramsControllers",
+		  modelName="ApogyCoreProgramsControllers",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.core.programs.controllers/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.core.programs.controllers.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.programs.controllers/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.programs.controllers.edit/src-generated")
 
-package org.eclipse.symphony.core.programs.controllers
+package ca.gc.asc_csa.apogy.core.programs.controllers
 
-import org.eclipse.symphony.common.emf.Described
-import org.eclipse.symphony.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Described
+import ca.gc.asc_csa.apogy.common.emf.Named
 
-import org.eclipse.symphony.core.invocator.Argument
-import org.eclipse.symphony.core.invocator.EDataTypeArgument
-import org.eclipse.symphony.core.invocator.OperationCall
-import org.eclipse.symphony.core.invocator.OperationCallContainer
-import org.eclipse.symphony.core.invocator.Program
-import org.eclipse.symphony.common.io.jinput.EComponent
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier
+import ca.gc.asc_csa.apogy.core.invocator.Argument
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer
+import ca.gc.asc_csa.apogy.core.invocator.Program
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier
 import org.eclipse.emf.ecore.EParameter
 
 /* -------------------------------------------------------------------------
@@ -50,7 +50,7 @@ type TreeSet<T> wraps java.util.TreeSet
  * 
  * ------------------------------------------------------------------------- */
 
-class Symphony__CoreProgramsControllersFacade
+class ApogyCoreProgramsControllersFacade
 {
 	op Object createValue(EParameter eParameter, float value)	
 	
