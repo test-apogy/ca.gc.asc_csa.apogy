@@ -46,6 +46,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates
 import org.eclipse.emf.ecore.EDate
+import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation
 
 
 // Basics Types
@@ -131,12 +132,6 @@ class NadirPointingAttitudeProvider extends OreKitBackedAttitudeProvider
 class EarthOrbitWorksite extends OrbitWorksite
 {		
 	contains EarthOrbitSky[0..1] sky opposite earthOrbitWorksite
-	
-	/*
-	 * The list of surface location associated with the site.
-	 */
-	@GenModel(children="true")
-	contains EarthSurfaceLocationList earthLocations	
 }
 
 /*
@@ -468,12 +463,7 @@ class TLE extends AbstractTLE
 /*
  * Defines a location on the surface of the Earth.
  */
-class EarthSurfaceLocation extends Named, Described, GeographicCoordinates{
-}
-
-class EarthSurfaceLocationList extends Named, Described
-{	
-	contains EarthSurfaceLocation[0..*] earthSurfaceLocations 
+class EarthSurfaceLocation extends GeographicCoordinates, AbstractSurfaceLocation{
 }
 
 /*

@@ -24,33 +24,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.*;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 import org.orekit.attitudes.AttitudeProvider;
 import org.orekit.frames.Frame;
 import org.orekit.orbits.CartesianOrbit;
@@ -126,7 +99,6 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 			case ApogyCoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR: return createURLBasedTLEEarthOrbitPropagator();
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE: return createTLE();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: return createEarthSurfaceLocation();
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST: return createEarthSurfaceLocationList();
 			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST: return createGroundStationReferencesList();
 			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION: return createGroundStation();
 			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST: return createGroundStationList();
@@ -393,16 +365,6 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	public EarthSurfaceLocation createEarthSurfaceLocation() {
 		EarthSurfaceLocationImpl earthSurfaceLocation = new EarthSurfaceLocationImpl();
 		return earthSurfaceLocation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EarthSurfaceLocationList createEarthSurfaceLocationList() {
-		EarthSurfaceLocationListImpl earthSurfaceLocationList = new EarthSurfaceLocationListImpl();
-		return earthSurfaceLocationList;
 	}
 
 	/**

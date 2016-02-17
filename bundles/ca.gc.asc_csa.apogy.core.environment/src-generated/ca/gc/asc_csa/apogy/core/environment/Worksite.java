@@ -13,8 +13,6 @@ package ca.gc.asc_csa.apogy.core.environment;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.common.util.EList;
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
 import ca.gc.asc_csa.apogy.core.AbstractWorksite;
 
 /**
@@ -27,7 +25,6 @@ import ca.gc.asc_csa.apogy.core.AbstractWorksite;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Worksite#getWorksiteNode <em>Worksite Node</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Worksite#getOrbitsModels <em>Orbits Models</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Worksite#getEnvironment <em>Environment</em>}</li>
  * </ul>
  *
@@ -55,22 +52,6 @@ public interface Worksite extends AbstractWorksite
   WorksiteNode getWorksiteNode();
 
   /**
-	 * Returns the value of the '<em><b>Orbits Models</b></em>' reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.AbstractOrbitModel}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Orbits Models</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Orbits Models</em>' reference list.
-	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getWorksite_OrbitsModels()
-	 * @model
-	 * @generated
-	 */
-	EList<AbstractOrbitModel> getOrbitsModels();
-
-		/**
 	 * Returns the value of the '<em><b>Environment</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>

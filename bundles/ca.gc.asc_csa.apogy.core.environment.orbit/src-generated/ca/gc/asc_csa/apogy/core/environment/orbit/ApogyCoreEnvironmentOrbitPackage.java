@@ -141,15 +141,6 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	int ORBIT_WORKSITE__WORKSITE_NODE = ApogyCoreEnvironmentPackage.WORKSITE__WORKSITE_NODE;
 
 	/**
-	 * The feature id for the '<em><b>Orbits Models</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_WORKSITE__ORBITS_MODELS = ApogyCoreEnvironmentPackage.WORKSITE__ORBITS_MODELS;
-
-	/**
 	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,13 +150,13 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	int ORBIT_WORKSITE__ENVIRONMENT = ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT;
 
 	/**
-	 * The feature id for the '<em><b>Active Orbit Model</b></em>' reference.
+	 * The feature id for the '<em><b>Orbit Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL = ApogyCoreEnvironmentPackage.WORKSITE_FEATURE_COUNT + 0;
+	int ORBIT_WORKSITE__ORBIT_MODEL = ApogyCoreEnvironmentPackage.WORKSITE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Orbit Worksite</em>' class.
@@ -1132,15 +1123,15 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	EClass getOrbitWorksite();
 
 	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getActiveOrbitModel <em>Active Orbit Model</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getOrbitModel <em>Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Active Orbit Model</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getActiveOrbitModel()
+	 * @return the meta object for the reference '<em>Orbit Model</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getOrbitModel()
 	 * @see #getOrbitWorksite()
 	 * @generated
 	 */
-	EReference getOrbitWorksite_ActiveOrbitModel();
+	EReference getOrbitWorksite_OrbitModel();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame <em>Abstract Frame</em>}'.
@@ -1646,12 +1637,12 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 		EClass ORBIT_WORKSITE = eINSTANCE.getOrbitWorksite();
 
 		/**
-		 * The meta object literal for the '<em><b>Active Orbit Model</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Orbit Model</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL = eINSTANCE.getOrbitWorksite_ActiveOrbitModel();
+		EReference ORBIT_WORKSITE__ORBIT_MODEL = eINSTANCE.getOrbitWorksite_OrbitModel();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractFrameImpl <em>Abstract Frame</em>}' class.

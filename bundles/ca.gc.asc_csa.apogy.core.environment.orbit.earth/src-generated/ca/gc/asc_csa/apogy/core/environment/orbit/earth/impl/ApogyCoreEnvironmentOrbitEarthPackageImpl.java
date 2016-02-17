@@ -44,7 +44,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
@@ -214,13 +213,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	private EClass earthSurfaceLocationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass earthSurfaceLocationListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -610,15 +602,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 */
 	public EReference getEarthOrbitWorksite_Sky() {
 		return (EReference)earthOrbitWorksiteEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEarthOrbitWorksite_EarthLocations() {
-		return (EReference)earthOrbitWorksiteEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1195,24 +1178,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 */
 	public EClass getEarthSurfaceLocation() {
 		return earthSurfaceLocationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getEarthSurfaceLocationList() {
-		return earthSurfaceLocationListEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEarthSurfaceLocationList_EarthSurfaceLocations() {
-		return (EReference)earthSurfaceLocationListEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2156,7 +2121,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 
 		earthOrbitWorksiteEClass = createEClass(EARTH_ORBIT_WORKSITE);
 		createEReference(earthOrbitWorksiteEClass, EARTH_ORBIT_WORKSITE__SKY);
-		createEReference(earthOrbitWorksiteEClass, EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS);
 
 		earthOrbitSkyEClass = createEClass(EARTH_ORBIT_SKY);
 		createEReference(earthOrbitSkyEClass, EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE);
@@ -2234,9 +2198,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEAttribute(tleEClass, TLE__SECOND_LINE);
 
 		earthSurfaceLocationEClass = createEClass(EARTH_SURFACE_LOCATION);
-
-		earthSurfaceLocationListEClass = createEClass(EARTH_SURFACE_LOCATION_LIST);
-		createEReference(earthSurfaceLocationListEClass, EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS);
 
 		groundStationReferencesListEClass = createEClass(GROUND_STATION_REFERENCES_LIST);
 		createEReference(groundStationReferencesListEClass, GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS);
@@ -2381,9 +2342,9 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		ApogyCoreEnvironmentOrbitPackage theApogyCoreEnvironmentOrbitPackage = (ApogyCoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitPackage.eNS_URI);
 		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
-		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -2411,11 +2372,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		tleEarthOrbitPropagatorEClass.getESuperTypes().add(this.getEarthOrbitPropagator());
 		urlBasedTLEEarthOrbitPropagatorEClass.getESuperTypes().add(this.getTLEEarthOrbitPropagator());
 		tleEClass.getESuperTypes().add(this.getAbstractTLE());
-		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
-		earthSurfaceLocationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		earthSurfaceLocationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCorePackage.getAbstractSurfaceLocation());
 		groundStationEClass.getESuperTypes().add(this.getEarthSurfaceLocation());
 		groundStationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		groundStationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
@@ -2446,7 +2404,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 
 		initEClass(earthOrbitWorksiteEClass, EarthOrbitWorksite.class, "EarthOrbitWorksite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEarthOrbitWorksite_Sky(), this.getEarthOrbitSky(), this.getEarthOrbitSky_EarthOrbitWorksite(), "sky", null, 0, 1, EarthOrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEarthOrbitWorksite_EarthLocations(), this.getEarthSurfaceLocationList(), null, "earthLocations", null, 0, 1, EarthOrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthOrbitSkyEClass, EarthOrbitSky.class, "EarthOrbitSky", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEarthOrbitSky_EarthOrbitWorksite(), this.getEarthOrbitWorksite(), this.getEarthOrbitWorksite_Sky(), "earthOrbitWorksite", null, 0, 1, EarthOrbitSky.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2559,9 +2516,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEAttribute(getTLE_SecondLine(), theEcorePackage.getEString(), "secondLine", null, 1, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthSurfaceLocationEClass, EarthSurfaceLocation.class, "EarthSurfaceLocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(earthSurfaceLocationListEClass, EarthSurfaceLocationList.class, "EarthSurfaceLocationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEarthSurfaceLocationList_EarthSurfaceLocations(), this.getEarthSurfaceLocation(), null, "earthSurfaceLocations", null, 0, -1, EarthSurfaceLocationList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groundStationReferencesListEClass, GroundStationReferencesList.class, "GroundStationReferencesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGroundStationReferencesList_GroundStations(), this.getGroundStation(), null, "groundStations", null, 0, -1, GroundStationReferencesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2853,13 +2807,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "Defines a worksite in orbit. The reference frame used is inertial (J2000), with its origin at the current orbital position."
-		   });	
-		addAnnotation
-		  (getEarthOrbitWorksite_EarthLocations(), 
-		   source, 
-		   new String[] {
-			 "documentation", "The list of surface location associated with the site.",
-			 "children", "true"
 		   });	
 		addAnnotation
 		  (earthOrbitSkyEClass, 

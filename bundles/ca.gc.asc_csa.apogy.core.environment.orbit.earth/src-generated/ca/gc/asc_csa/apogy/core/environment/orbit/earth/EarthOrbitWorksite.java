@@ -29,7 +29,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite#getSky <em>Sky</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite#getEarthLocations <em>Earth Locations</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitWorksite()
@@ -65,34 +64,4 @@ public interface EarthOrbitWorksite extends OrbitWorksite {
 	 * @generated
 	 */
 	void setSky(EarthOrbitSky value);
-
-	/**
-	 * Returns the value of the '<em><b>Earth Locations</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Earth Locations</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The list of surface location associated with the site.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Earth Locations</em>' containment reference.
-	 * @see #setEarthLocations(EarthSurfaceLocationList)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitWorksite_EarthLocations()
-	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
-	 * @generated
-	 */
-	EarthSurfaceLocationList getEarthLocations();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite#getEarthLocations <em>Earth Locations</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Earth Locations</em>' containment reference.
-	 * @see #getEarthLocations()
-	 * @generated
-	 */
-	void setEarthLocations(EarthSurfaceLocationList value);
 } // EarthOrbitWorksite

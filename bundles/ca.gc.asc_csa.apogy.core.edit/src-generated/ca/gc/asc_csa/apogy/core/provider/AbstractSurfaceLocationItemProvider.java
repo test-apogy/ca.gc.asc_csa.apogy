@@ -1,26 +1,22 @@
-package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
-/*
- * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+/**
+ * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
+package ca.gc.asc_csa.apogy.core.provider;
 
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+
+import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -32,18 +28,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class EarthSurfaceLocationListItemProvider 
+public class AbstractSurfaceLocationItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -57,7 +49,7 @@ public class EarthSurfaceLocationListItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EarthSurfaceLocationListItemProvider(AdapterFactory adapterFactory) {
+	public AbstractSurfaceLocationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -123,47 +115,6 @@ public class EarthSurfaceLocationListItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns EarthSurfaceLocationList.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/EarthSurfaceLocationList"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -171,10 +122,10 @@ public class EarthSurfaceLocationListItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EarthSurfaceLocationList)object).getName();
+		String label = ((AbstractSurfaceLocation)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_EarthSurfaceLocationList_type") :
-			getString("_UI_EarthSurfaceLocationList_type") + " " + label;
+			getString("_UI_AbstractSurfaceLocation_type") :
+			getString("_UI_AbstractSurfaceLocation_type") + " " + label;
 	}
 	
 
@@ -189,13 +140,10 @@ public class EarthSurfaceLocationListItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(EarthSurfaceLocationList.class)) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
+		switch (notification.getFeatureID(AbstractSurfaceLocation.class)) {
+			case ApogyCorePackage.ABSTRACT_SURFACE_LOCATION__NAME:
+			case ApogyCorePackage.ABSTRACT_SURFACE_LOCATION__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -211,16 +159,6 @@ public class EarthSurfaceLocationListItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 	}
 
 	/**

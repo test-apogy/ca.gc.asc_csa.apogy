@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.Updatable;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
@@ -34,35 +35,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.*;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 /**
  * <!-- begin-user-doc -->
@@ -283,17 +255,10 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: {
 				EarthSurfaceLocation earthSurfaceLocation = (EarthSurfaceLocation)theEObject;
 				T result = caseEarthSurfaceLocation(earthSurfaceLocation);
+				if (result == null) result = caseGeographicCoordinates(earthSurfaceLocation);
+				if (result == null) result = caseAbstractSurfaceLocation(earthSurfaceLocation);
 				if (result == null) result = caseNamed(earthSurfaceLocation);
 				if (result == null) result = caseDescribed(earthSurfaceLocation);
-				if (result == null) result = caseGeographicCoordinates(earthSurfaceLocation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST: {
-				EarthSurfaceLocationList earthSurfaceLocationList = (EarthSurfaceLocationList)theEObject;
-				T result = caseEarthSurfaceLocationList(earthSurfaceLocationList);
-				if (result == null) result = caseNamed(earthSurfaceLocationList);
-				if (result == null) result = caseDescribed(earthSurfaceLocationList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -307,9 +272,10 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				GroundStation groundStation = (GroundStation)theEObject;
 				T result = caseGroundStation(groundStation);
 				if (result == null) result = caseEarthSurfaceLocation(groundStation);
+				if (result == null) result = caseGeographicCoordinates(groundStation);
+				if (result == null) result = caseAbstractSurfaceLocation(groundStation);
 				if (result == null) result = caseNamed(groundStation);
 				if (result == null) result = caseDescribed(groundStation);
-				if (result == null) result = caseGeographicCoordinates(groundStation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -650,21 +616,6 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEarthSurfaceLocation(EarthSurfaceLocation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Earth Surface Location List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Earth Surface Location List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEarthSurfaceLocationList(EarthSurfaceLocationList object) {
 		return null;
 	}
 
@@ -1055,6 +1006,21 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInitialOrbitContainer(InitialOrbitContainer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Surface Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Surface Location</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {
 		return null;
 	}
 

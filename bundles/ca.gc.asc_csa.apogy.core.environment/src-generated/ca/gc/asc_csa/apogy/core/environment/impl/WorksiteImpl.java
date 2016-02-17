@@ -13,16 +13,11 @@ package ca.gc.asc_csa.apogy.core.environment.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.Environment;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
@@ -39,7 +34,6 @@ import ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.WorksiteImpl#getWorksiteNode <em>Worksite Node</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.WorksiteImpl#getOrbitsModels <em>Orbits Models</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.WorksiteImpl#getEnvironment <em>Environment</em>}</li>
  * </ul>
  *
@@ -58,16 +52,6 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   protected WorksiteNode worksiteNode;
 
   /**
-	 * The cached value of the '{@link #getOrbitsModels() <em>Orbits Models</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOrbitsModels()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<AbstractOrbitModel> orbitsModels;
-
-		/**
 	 * The cached value of the '{@link #getEnvironment() <em>Environment</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -144,18 +128,6 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 
   /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<AbstractOrbitModel> getOrbitsModels() {
-		if (orbitsModels == null) {
-			orbitsModels = new EObjectResolvingEList<AbstractOrbitModel>(AbstractOrbitModel.class, this, ApogyCoreEnvironmentPackage.WORKSITE__ORBITS_MODELS);
-		}
-		return orbitsModels;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -227,8 +199,6 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 			case ApogyCoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
 				if (resolve) return getWorksiteNode();
 				return basicGetWorksiteNode();
-			case ApogyCoreEnvironmentPackage.WORKSITE__ORBITS_MODELS:
-				return getOrbitsModels();
 			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				return getEnvironment();
 		}
@@ -245,10 +215,6 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case ApogyCoreEnvironmentPackage.WORKSITE__ORBITS_MODELS:
-				getOrbitsModels().clear();
-				getOrbitsModels().addAll((Collection<? extends AbstractOrbitModel>)newValue);
-				return;
 			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				setEnvironment((Environment)newValue);
 				return;
@@ -265,9 +231,6 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case ApogyCoreEnvironmentPackage.WORKSITE__ORBITS_MODELS:
-				getOrbitsModels().clear();
-				return;
 			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				setEnvironment((Environment)null);
 				return;
@@ -286,8 +249,6 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 		switch (featureID) {
 			case ApogyCoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
 				return worksiteNode != null;
-			case ApogyCoreEnvironmentPackage.WORKSITE__ORBITS_MODELS:
-				return orbitsModels != null && !orbitsModels.isEmpty();
 			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				return environment != null;
 		}

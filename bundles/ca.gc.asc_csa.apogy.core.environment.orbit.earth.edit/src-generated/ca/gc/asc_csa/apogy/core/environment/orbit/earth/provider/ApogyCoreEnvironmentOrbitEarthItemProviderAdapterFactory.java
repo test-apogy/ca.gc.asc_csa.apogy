@@ -41,6 +41,7 @@ import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.SurfaceLocationsList;
 import ca.gc.asc_csa.apogy.core.WorksitesList;
 import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
@@ -412,29 +413,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 		}
 
 		return earthSurfaceLocationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EarthSurfaceLocationListItemProvider earthSurfaceLocationListItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEarthSurfaceLocationListAdapter() {
-		if (earthSurfaceLocationListItemProvider == null) {
-			earthSurfaceLocationListItemProvider = new EarthSurfaceLocationListItemProvider(this);
-		}
-
-		return earthSurfaceLocationListItemProvider;
 	}
 
 	/**
@@ -829,7 +807,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 		if (urlBasedTLEEarthOrbitPropagatorItemProvider != null) urlBasedTLEEarthOrbitPropagatorItemProvider.dispose();
 		if (tleItemProvider != null) tleItemProvider.dispose();
 		if (earthSurfaceLocationItemProvider != null) earthSurfaceLocationItemProvider.dispose();
-		if (earthSurfaceLocationListItemProvider != null) earthSurfaceLocationListItemProvider.dispose();
 		if (groundStationReferencesListItemProvider != null) groundStationReferencesListItemProvider.dispose();
 		if (groundStationItemProvider != null) groundStationItemProvider.dispose();
 		if (groundStationListItemProvider != null) groundStationListItemProvider.dispose();
@@ -1135,11 +1112,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocationList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
 
 				newChildDescriptors.add
@@ -1266,11 +1238,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1417,6 +1384,25 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseSurfaceLocationsList(SurfaceLocationsList object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

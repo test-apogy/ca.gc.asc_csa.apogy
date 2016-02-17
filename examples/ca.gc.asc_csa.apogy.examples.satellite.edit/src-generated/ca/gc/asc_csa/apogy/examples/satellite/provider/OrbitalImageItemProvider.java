@@ -83,7 +83,7 @@ public class OrbitalImageItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_GEOGRAPHIC_COORDINATESPropertyCategory"),
 				 null));
 	}
 
@@ -105,7 +105,7 @@ public class OrbitalImageItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_GEOGRAPHIC_COORDINATESPropertyCategory"),
 				 null));
 	}
 
@@ -127,7 +127,7 @@ public class OrbitalImageItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_GEOGRAPHIC_COORDINATESPropertyCategory"),
 				 null));
 	}
 

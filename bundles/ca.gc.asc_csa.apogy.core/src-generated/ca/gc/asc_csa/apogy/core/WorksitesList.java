@@ -34,7 +34,8 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.WorksitesList#getWorksites <em>Worksites</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.WorksitesList#getOrbitsModels <em>Orbits Models</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.WorksitesList#getOrbitsModelsLists <em>Orbits Models Lists</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.WorksitesList#getSurfaceLocationsLists <em>Surface Locations Lists</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getWorksitesList()
@@ -61,30 +62,37 @@ public interface WorksitesList extends Named, Described {
 	EList<AbstractWorksite> getWorksites();
 
 	/**
-	 * Returns the value of the '<em><b>Orbits Models</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Orbits Models Lists</b></em>' containment reference list.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.OrbitModelsList}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Orbits Models</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Orbits Models Lists</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Orbits Models</em>' containment reference.
-	 * @see #setOrbitsModels(OrbitModelsList)
-	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getWorksitesList_OrbitsModels()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Orbits Models Lists</em>' containment reference list.
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getWorksitesList_OrbitsModelsLists()
+	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
 	 */
-	OrbitModelsList getOrbitsModels();
+	EList<OrbitModelsList> getOrbitsModelsLists();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.WorksitesList#getOrbitsModels <em>Orbits Models</em>}' containment reference.
+	 * Returns the value of the '<em><b>Surface Locations Lists</b></em>' containment reference list.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Surface Locations Lists</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Orbits Models</em>' containment reference.
-	 * @see #getOrbitsModels()
+	 * @return the value of the '<em>Surface Locations Lists</em>' containment reference list.
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getWorksitesList_SurfaceLocationsLists()
+	 * @model containment="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
 	 */
-	void setOrbitsModels(OrbitModelsList value);
+	EList<SurfaceLocationsList> getSurfaceLocationsLists();
 
 } // WorksitesList

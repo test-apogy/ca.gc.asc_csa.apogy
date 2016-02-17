@@ -1,40 +1,38 @@
-package ca.gc.asc_csa.apogy.core.impl;
-/*
- * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+/**
+ * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
+package ca.gc.asc_csa.apogy.core.impl;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.OrbitModelsList;
+import ca.gc.asc_csa.apogy.core.SurfaceLocationsList;
+import ca.gc.asc_csa.apogy.core.WorksitesList;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import ca.gc.asc_csa.apogy.common.emf.Described;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.AbstractWorksite;
-import ca.gc.asc_csa.apogy.core.OrbitModelsList;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.WorksitesList;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Worksites List</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Worksites List</b></em>'.
+ * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -42,16 +40,17 @@ import ca.gc.asc_csa.apogy.core.WorksitesList;
  *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getWorksites <em>Worksites</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getOrbitsModels <em>Orbits Models</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getOrbitsModelsLists <em>Orbits Models Lists</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getSurfaceLocationsLists <em>Surface Locations Lists</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
-		WorksitesList {
+public class WorksitesListImpl extends MinimalEObjectImpl.Container implements WorksitesList {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -60,7 +59,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -69,7 +69,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
@@ -78,7 +79,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
@@ -87,7 +89,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * The cached value of the '{@link #getWorksites() <em>Worksites</em>}' containment reference list.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getWorksites()
 	 * @generated
 	 * @ordered
@@ -95,17 +98,28 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	protected EList<AbstractWorksite> worksites;
 
 	/**
-	 * The cached value of the '{@link #getOrbitsModels() <em>Orbits Models</em>}' containment reference.
+	 * The cached value of the '{@link #getOrbitsModelsLists() <em>Orbits Models Lists</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOrbitsModels()
+	 * @see #getOrbitsModelsLists()
 	 * @generated
 	 * @ordered
 	 */
-	protected OrbitModelsList orbitsModels;
+	protected EList<OrbitModelsList> orbitsModelsLists;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * The cached value of the '{@link #getSurfaceLocationsLists() <em>Surface Locations Lists</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSurfaceLocationsLists()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SurfaceLocationsList> surfaceLocationsLists;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected WorksitesListImpl() {
@@ -113,7 +127,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -122,7 +137,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getName() {
@@ -130,7 +146,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setName(String newName) {
@@ -141,7 +158,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getDescription() {
@@ -149,7 +167,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setDescription(String newDescription) {
@@ -160,7 +179,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EList<AbstractWorksite> getWorksites() {
@@ -170,31 +190,16 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 		return worksites;
 	}
 
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public OrbitModelsList getOrbitsModels() 
-	{
-		OrbitModelsList tmp = getOrbitsModelsGen();
-		if(tmp == null)
-		{
-			tmp = ApogyCoreFactory.eINSTANCE.createOrbitModelsList();
-			setOrbitsModels(tmp);
-		}
-		
-		return tmp;
-	}
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrbitModelsList getOrbitsModelsGen() {
-		return orbitsModels;
+	public EList<OrbitModelsList> getOrbitsModelsLists() {
+		if (orbitsModelsLists == null) {
+			orbitsModelsLists = new EObjectContainmentEList<OrbitModelsList>(OrbitModelsList.class, this, ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS_LISTS);
+		}
+		return orbitsModelsLists;
 	}
 
 	/**
@@ -202,43 +207,21 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOrbitsModels(OrbitModelsList newOrbitsModels, NotificationChain msgs) {
-		OrbitModelsList oldOrbitsModels = orbitsModels;
-		orbitsModels = newOrbitsModels;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS, oldOrbitsModels, newOrbitsModels);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<SurfaceLocationsList> getSurfaceLocationsLists() {
+		if (surfaceLocationsLists == null) {
+			surfaceLocationsLists = new EObjectContainmentEList<SurfaceLocationsList>(SurfaceLocationsList.class, this, ApogyCorePackage.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS);
 		}
-		return msgs;
+		return surfaceLocationsLists;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOrbitsModels(OrbitModelsList newOrbitsModels) {
-		if (newOrbitsModels != orbitsModels) {
-			NotificationChain msgs = null;
-			if (orbitsModels != null)
-				msgs = ((InternalEObject)orbitsModels).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS, null, msgs);
-			if (newOrbitsModels != null)
-				msgs = ((InternalEObject)newOrbitsModels).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS, null, msgs);
-			msgs = basicSetOrbitsModels(newOrbitsModels, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS, newOrbitsModels, newOrbitsModels));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getWorksites()).basicAdd(otherEnd, msgs);
@@ -247,23 +230,26 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				return ((InternalEList<?>)getWorksites()).basicRemove(otherEnd, msgs);
-			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
-				return basicSetOrbitsModels(null, msgs);
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS_LISTS:
+				return ((InternalEList<?>)getOrbitsModelsLists()).basicRemove(otherEnd, msgs);
+			case ApogyCorePackage.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS:
+				return ((InternalEList<?>)getSurfaceLocationsLists()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -275,14 +261,17 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 				return getDescription();
 			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				return getWorksites();
-			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
-				return getOrbitsModels();
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS_LISTS:
+				return getOrbitsModelsLists();
+			case ApogyCorePackage.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS:
+				return getSurfaceLocationsLists();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -299,15 +288,21 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 				getWorksites().clear();
 				getWorksites().addAll((Collection<? extends AbstractWorksite>)newValue);
 				return;
-			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
-				setOrbitsModels((OrbitModelsList)newValue);
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS_LISTS:
+				getOrbitsModelsLists().clear();
+				getOrbitsModelsLists().addAll((Collection<? extends OrbitModelsList>)newValue);
+				return;
+			case ApogyCorePackage.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS:
+				getSurfaceLocationsLists().clear();
+				getSurfaceLocationsLists().addAll((Collection<? extends SurfaceLocationsList>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -322,15 +317,19 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				getWorksites().clear();
 				return;
-			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
-				setOrbitsModels((OrbitModelsList)null);
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS_LISTS:
+				getOrbitsModelsLists().clear();
+				return;
+			case ApogyCorePackage.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS:
+				getSurfaceLocationsLists().clear();
 				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -342,14 +341,17 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				return worksites != null && !worksites.isEmpty();
-			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
-				return orbitsModels != null;
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS_LISTS:
+				return orbitsModelsLists != null && !orbitsModelsLists.isEmpty();
+			case ApogyCorePackage.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS:
+				return surfaceLocationsLists != null && !surfaceLocationsLists.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -364,7 +366,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -379,7 +382,8 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -395,4 +399,4 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 		return result.toString();
 	}
 
-} // WorksitesListImpl
+} //WorksitesListImpl

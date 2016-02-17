@@ -52,7 +52,7 @@ public interface GeographicCoordinates extends EObject
 	 * @see #setLongitude(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getGeographicCoordinates_Longitude()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='GEOGRAPHIC_COORDINATES' apogy_units='rad'"
 	 * @generated
 	 */
   double getLongitude();
@@ -79,7 +79,7 @@ public interface GeographicCoordinates extends EObject
 	 * @see #setLatitude(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getGeographicCoordinates_Latitude()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='GEOGRAPHIC_COORDINATES' apogy_units='rad'"
 	 * @generated
 	 */
   double getLatitude();
@@ -105,7 +105,7 @@ public interface GeographicCoordinates extends EObject
 	 * @see #setElevation(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getGeographicCoordinates_Elevation()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='GEOGRAPHIC_COORDINATES' apogy_units='m'"
 	 * @generated
 	 */
   double getElevation();

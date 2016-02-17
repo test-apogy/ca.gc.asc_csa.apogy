@@ -150,15 +150,6 @@ public interface ApogyCoreEnvironmentOrbitEarthFactory extends EFactory {
 	EarthSurfaceLocation createEarthSurfaceLocation();
 
 	/**
-	 * Returns a new object of class '<em>Earth Surface Location List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Earth Surface Location List</em>'.
-	 * @generated
-	 */
-	EarthSurfaceLocationList createEarthSurfaceLocationList();
-
-	/**
 	 * Returns a new object of class '<em>Ground Station References List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

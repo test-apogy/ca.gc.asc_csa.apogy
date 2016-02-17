@@ -448,6 +448,29 @@ public class ApogyCoreItemProviderAdapterFactory extends
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SurfaceLocationsListItemProvider surfaceLocationsListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSurfaceLocationsListAdapter() {
+		if (surfaceLocationsListItemProvider == null) {
+			surfaceLocationsListItemProvider = new SurfaceLocationsListItemProvider(this);
+		}
+
+		return surfaceLocationsListItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.OrbitModelsList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -862,6 +885,7 @@ public class ApogyCoreItemProviderAdapterFactory extends
 		if (absolutePoseProviderItemProvider != null) absolutePoseProviderItemProvider.dispose();
 		if (apogyInitializationDataItemProvider != null) apogyInitializationDataItemProvider.dispose();
 		if (worksitesListItemProvider != null) worksitesListItemProvider.dispose();
+		if (surfaceLocationsListItemProvider != null) surfaceLocationsListItemProvider.dispose();
 		if (orbitModelsListItemProvider != null) orbitModelsListItemProvider.dispose();
 		if (positionedItemProvider != null) positionedItemProvider.dispose();
 		if (featureOfInterestItemProvider != null) featureOfInterestItemProvider.dispose();
@@ -1113,6 +1137,11 @@ public class ApogyCoreItemProviderAdapterFactory extends
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createSurfaceLocationsList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreFactory.eINSTANCE.createOrbitModelsList()));
 
 				newChildDescriptors.add
@@ -1249,6 +1278,11 @@ public class ApogyCoreItemProviderAdapterFactory extends
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreFactory.eINSTANCE.createWorksitesList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createSurfaceLocationsList()));
 
 				newChildDescriptors.add
 					(createChildParameter

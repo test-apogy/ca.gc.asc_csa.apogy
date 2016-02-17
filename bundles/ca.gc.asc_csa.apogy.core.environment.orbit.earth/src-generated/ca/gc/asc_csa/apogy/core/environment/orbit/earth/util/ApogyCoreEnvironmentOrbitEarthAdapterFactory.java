@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.Updatable;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
@@ -35,35 +36,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.*;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 /**
  * <!-- begin-user-doc -->
@@ -194,10 +166,6 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 				return createEarthSurfaceLocationAdapter();
 			}
 			@Override
-			public Adapter caseEarthSurfaceLocationList(EarthSurfaceLocationList object) {
-				return createEarthSurfaceLocationListAdapter();
-			}
-			@Override
 			public Adapter caseGroundStationReferencesList(GroundStationReferencesList object) {
 				return createGroundStationReferencesListAdapter();
 			}
@@ -304,6 +272,10 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 			@Override
 			public Adapter caseGeographicCoordinates(GeographicCoordinates object) {
 				return createGeographicCoordinatesAdapter();
+			}
+			@Override
+			public Adapter caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {
+				return createAbstractSurfaceLocationAdapter();
 			}
 			@Override
 			public Adapter caseUpdatable(Updatable object) {
@@ -578,20 +550,6 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createEarthSurfaceLocationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList <em>Earth Surface Location List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList
-	 * @generated
-	 */
-	public Adapter createEarthSurfaceLocationListAdapter() {
 		return null;
 	}
 
@@ -956,6 +914,20 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createInitialOrbitContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation <em>Abstract Surface Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation
+	 * @generated
+	 */
+	public Adapter createAbstractSurfaceLocationAdapter() {
 		return null;
 	}
 

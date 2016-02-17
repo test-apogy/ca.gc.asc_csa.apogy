@@ -13,8 +13,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.common.emf.Described;
-import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 
 /**
@@ -31,6 +30,6 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
  * @model
  * @generated
  */
-public interface EarthSurfaceLocation extends Named, Described, GeographicCoordinates {
+public interface EarthSurfaceLocation extends GeographicCoordinates, AbstractSurfaceLocation {
 
 } // EarthSurfaceLocation

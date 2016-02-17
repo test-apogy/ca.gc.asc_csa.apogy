@@ -48,7 +48,7 @@ abstract class OrbitWorksite extends Worksite
 	/*
 	 * The active OrbitModel to use to update the orbit worksite.
 	 */
-	refers AbstractOrbitModel activeOrbitModel
+	refers AbstractOrbitModel orbitModel
 }
 
 abstract class AbstractFrame extends Named, Described

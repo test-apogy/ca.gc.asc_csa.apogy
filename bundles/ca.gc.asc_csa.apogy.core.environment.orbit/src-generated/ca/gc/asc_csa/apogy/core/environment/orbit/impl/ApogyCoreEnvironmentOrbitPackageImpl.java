@@ -264,7 +264,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOrbitWorksite_ActiveOrbitModel() {
+	public EReference getOrbitWorksite_OrbitModel() {
 		return (EReference)orbitWorksiteEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -702,7 +702,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 
 		// Create classes and their features
 		orbitWorksiteEClass = createEClass(ORBIT_WORKSITE);
-		createEReference(orbitWorksiteEClass, ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL);
+		createEReference(orbitWorksiteEClass, ORBIT_WORKSITE__ORBIT_MODEL);
 
 		abstractFrameEClass = createEClass(ABSTRACT_FRAME);
 
@@ -824,7 +824,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(orbitWorksiteEClass, OrbitWorksite.class, "OrbitWorksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrbitWorksite_ActiveOrbitModel(), theApogyCorePackage.getAbstractOrbitModel(), null, "activeOrbitModel", null, 0, 1, OrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrbitWorksite_OrbitModel(), theApogyCorePackage.getAbstractOrbitModel(), null, "orbitModel", null, 0, 1, OrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractFrameEClass, AbstractFrame.class, "AbstractFrame", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -949,7 +949,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 			 "basePackage", "ca.gc.asc_csa.apogy.core.environment"
 		   });	
 		addAnnotation
-		  (getOrbitWorksite_ActiveOrbitModel(), 
+		  (getOrbitWorksite_OrbitModel(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The active OrbitModel to use to update the orbit worksite."

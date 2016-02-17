@@ -1,25 +1,24 @@
-package ca.gc.asc_csa.apogy.core.provider;
-/*
- * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+/**
+ * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
+package ca.gc.asc_csa.apogy.core.provider;
+
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.SurfaceLocationsList;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -31,34 +30,35 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.WorksitesList;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.WorksitesList} object.
- * <!-- begin-user-doc
- * --> <!-- end-user-doc -->
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList} object.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
  * @generated
  */
-public class WorksitesListItemProvider extends ItemProviderAdapter implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SurfaceLocationsListItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * This constructs an instance from a factory and a notifier.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WorksitesListItemProvider(AdapterFactory adapterFactory) {
+	public SurfaceLocationsListItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
 	/**
-	 * This returns the property descriptors for the adapted class. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * This returns the property descriptors for the adapted class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -74,8 +74,8 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 
 	/**
 	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc
-	 * --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
@@ -95,9 +95,9 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected void addDescriptionPropertyDescriptor(Object object) {
@@ -120,23 +120,22 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyCorePackage.Literals.WORKSITES_LIST__WORKSITES);
-			childrenFeatures.add(ApogyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS_LISTS);
-			childrenFeatures.add(ApogyCorePackage.Literals.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS);
+			childrenFeatures.add(ApogyCorePackage.Literals.SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS);
 		}
 		return childrenFeatures;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -148,49 +147,48 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 	}
 
 	/**
-	 * This returns WorksitesList.gif. <!-- begin-user-doc --> <!-- end-user-doc
-	 * -->
-	 * 
+	 * This returns SurfaceLocationsList.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/WorksitesList"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SurfaceLocationsList"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc
-	 * --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((WorksitesList)object).getName();
+		String label = ((SurfaceLocationsList)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_WorksitesList_type") :
-			getString("_UI_WorksitesList_type") + " " + label;
+			getString("_UI_SurfaceLocationsList_type") :
+			getString("_UI_SurfaceLocationsList_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(WorksitesList.class)) {
-			case ApogyCorePackage.WORKSITES_LIST__NAME:
-			case ApogyCorePackage.WORKSITES_LIST__DESCRIPTION:
+		switch (notification.getFeatureID(SurfaceLocationsList.class)) {
+			case ApogyCorePackage.SURFACE_LOCATIONS_LIST__NAME:
+			case ApogyCorePackage.SURFACE_LOCATIONS_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
-			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS_LISTS:
-			case ApogyCorePackage.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS:
+			case ApogyCorePackage.SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -198,32 +196,21 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 	}
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s
-	 * describing the children that can be created under this object. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+	 * that can be created under this object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS_LISTS,
-				 ApogyCoreFactory.eINSTANCE.createOrbitModelsList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCorePackage.Literals.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS,
-				 ApogyCoreFactory.eINSTANCE.createSurfaceLocationsList()));
 	}
 
 	/**
-	 * Return the resource locator for this item provider's resources. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
