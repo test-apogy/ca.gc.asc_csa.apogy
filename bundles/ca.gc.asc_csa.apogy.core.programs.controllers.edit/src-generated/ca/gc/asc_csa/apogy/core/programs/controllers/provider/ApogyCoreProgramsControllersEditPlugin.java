@@ -13,8 +13,12 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.io.jinput.provider.ApogyCommonIOJInputEditPlugin;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 
 /**
  * This is the central singleton for the ApogyCoreProgramsControllers edit plugin.
@@ -50,6 +54,10 @@ public final class ApogyCoreProgramsControllersEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
+		     EcoreEditPlugin.INSTANCE,
+		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCommonIOJInputEditPlugin.INSTANCE,
 		   });
 	}
 
