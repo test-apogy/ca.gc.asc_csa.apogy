@@ -8,8 +8,7 @@ import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory;
 import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
 
 import ca.gc.asc_csa.apogy.examples.robotic_arm.provider.RoboticArmItemProvider;
-
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmROSPackage;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmROS;
 
 import java.util.Collection;
@@ -164,7 +163,7 @@ public class RoboticArmROSItemProvider extends RoboticArmItemProvider {
 			childrenFeatures.add(ApogyAddonsROSPackage.Literals.ROS_INTERFACE__TOPIC_LAUNCHER);
 			childrenFeatures.add(ApogyAddonsROSPackage.Literals.ROS_INTERFACE__PUBLISHER_MANAGER);
 			childrenFeatures.add(ApogyAddonsROSPackage.Literals.ROS_INTERFACE__NODE);
-			childrenFeatures.add(ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE);
+			childrenFeatures.add(ApogyExamplesRoboticArmROSPackage.Literals.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -218,11 +217,11 @@ public class RoboticArmROSItemProvider extends RoboticArmItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RoboticArmROS.class)) {
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__NODE:
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -242,7 +241,7 @@ public class RoboticArmROSItemProvider extends RoboticArmItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE,
+				(ApogyExamplesRoboticArmROSPackage.Literals.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE,
 				 ApogyAddonsROSFactory.eINSTANCE.createROSNode()));
 	}
 

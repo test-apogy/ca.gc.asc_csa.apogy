@@ -11,7 +11,7 @@
       <!-- @generated apogy_examples_robotic_arm_ros -->
       <factory
             uri="ca.gc.asc_csa.apogy.examples.robotic_arm.ros"
-            class="ca.gc.asc_csa.apogy.examples.robotic_arm.ros.provider.ApogyExamplesRoboticArmItemProviderAdapterFactory"
+            class="ca.gc.asc_csa.apogy.examples.robotic_arm.ros.provider.ApogyExamplesRoboticArmROSItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

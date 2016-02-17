@@ -25,16 +25,16 @@ import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmImpl;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.Activator;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmROSPackage;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmROS;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmROSConstants;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToRequest;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToResponse;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevelRequest;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevelResponse;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStowRequest;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStowResponse;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.listeners.RoboticArmTelemetryListener;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToRequest;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToResponse;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelRequest;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelResponse;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowRequest;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowResponse;
 
 /**
  * <!-- begin-user-doc -->
@@ -120,7 +120,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM_ROS;
+		return ApogyExamplesRoboticArmROSPackage.Literals.ROBOTIC_ARM_ROS;
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 			serviceManager = (ROSServiceManager)eResolveProxy(oldServiceManager);
 			if (serviceManager != oldServiceManager) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER, oldServiceManager, serviceManager));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER, oldServiceManager, serviceManager));
 			}
 		}
 		return serviceManager;
@@ -158,7 +158,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 		ROSServiceManager oldServiceManager = serviceManager;
 		serviceManager = newServiceManager;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER, oldServiceManager, serviceManager));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER, oldServiceManager, serviceManager));
 	}
 
 	/**
@@ -172,7 +172,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 			topicLauncher = (ROSTopicLauncher)eResolveProxy(oldTopicLauncher);
 			if (topicLauncher != oldTopicLauncher) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER, oldTopicLauncher, topicLauncher));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER, oldTopicLauncher, topicLauncher));
 			}
 		}
 		return topicLauncher;
@@ -196,7 +196,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 		ROSTopicLauncher oldTopicLauncher = topicLauncher;
 		topicLauncher = newTopicLauncher;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER, oldTopicLauncher, topicLauncher));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER, oldTopicLauncher, topicLauncher));
 	}
 
 	/**
@@ -210,7 +210,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 			publisherManager = (ROSPublisherManager)eResolveProxy(oldPublisherManager);
 			if (publisherManager != oldPublisherManager) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER, oldPublisherManager, publisherManager));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER, oldPublisherManager, publisherManager));
 			}
 		}
 		return publisherManager;
@@ -234,7 +234,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 		ROSPublisherManager oldPublisherManager = publisherManager;
 		publisherManager = newPublisherManager;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER, oldPublisherManager, publisherManager));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER, oldPublisherManager, publisherManager));
 	}
 
 	/**
@@ -248,7 +248,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 			node = (ROSNode)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -272,7 +272,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 		ROSNode oldNode = node;
 		node = newNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__NODE, oldNode, node));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__NODE, oldNode, node));
 	}
 
 	/**
@@ -293,7 +293,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 		ROSNode oldRobotiocArmRosNode = robotiocArmRosNode;
 		robotiocArmRosNode = newRobotiocArmRosNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE, oldRobotiocArmRosNode, newRobotiocArmRosNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE, oldRobotiocArmRosNode, newRobotiocArmRosNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -308,14 +308,14 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 		if (newRobotiocArmRosNode != robotiocArmRosNode) {
 			NotificationChain msgs = null;
 			if (robotiocArmRosNode != null)
-				msgs = ((InternalEObject)robotiocArmRosNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE, null, msgs);
+				msgs = ((InternalEObject)robotiocArmRosNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE, null, msgs);
 			if (newRobotiocArmRosNode != null)
-				msgs = ((InternalEObject)newRobotiocArmRosNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE, null, msgs);
+				msgs = ((InternalEObject)newRobotiocArmRosNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE, null, msgs);
 			msgs = basicSetRobotiocArmRosNode(newRobotiocArmRosNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE, newRobotiocArmRosNode, newRobotiocArmRosNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE, newRobotiocArmRosNode, newRobotiocArmRosNode));
 	}
 
 	/**
@@ -328,12 +328,12 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 		// This method initialize connection with the ROS node provides the telemetry 
 		// and services associated with the ROS implementation of the RoboticArm.
 		
-		topicLauncher.createListener(RoboticArmROSConstants.TOPIC_NAME_ROBOTIC_ARM_TELEMETRY, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.RoboticArmTelemetry._TYPE, new RoboticArmTelemetryListener(this));
+		topicLauncher.createListener(RoboticArmROSConstants.TOPIC_NAME_ROBOTIC_ARM_TELEMETRY, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmTelemetry._TYPE, new RoboticArmTelemetryListener(this));
 		
 		// Add services.		
-		serviceManager.createService(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevel._TYPE, false);
-		serviceManager.createService(RoboticArmROSConstants.SERVICE_NAME_MOVE_TO, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveTo._TYPE, false);
-		serviceManager.createService(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStow._TYPE, false);
+		serviceManager.createService(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevel._TYPE, false);
+		serviceManager.createService(RoboticArmROSConstants.SERVICE_NAME_MOVE_TO, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveTo._TYPE, false);
+		serviceManager.createService(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStow._TYPE, false);
 
 		// Launch topics and services.
 		if(!topicLauncher.isRunning())  topicLauncher.launch();
@@ -349,7 +349,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
 				return basicSetRobotiocArmRosNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -363,19 +363,19 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
 				if (resolve) return getServiceManager();
 				return basicGetServiceManager();
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
 				if (resolve) return getTopicLauncher();
 				return basicGetTopicLauncher();
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
 				if (resolve) return getPublisherManager();
 				return basicGetPublisherManager();
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
 				return getRobotiocArmRosNode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -389,19 +389,19 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
 				setServiceManager((ROSServiceManager)newValue);
 				return;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
 				setTopicLauncher((ROSTopicLauncher)newValue);
 				return;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
 				setPublisherManager((ROSPublisherManager)newValue);
 				return;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__NODE:
 				setNode((ROSNode)newValue);
 				return;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
 				setRobotiocArmRosNode((ROSNode)newValue);
 				return;
 		}
@@ -416,19 +416,19 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
 				setServiceManager((ROSServiceManager)null);
 				return;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
 				setTopicLauncher((ROSTopicLauncher)null);
 				return;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
 				setPublisherManager((ROSPublisherManager)null);
 				return;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__NODE:
 				setNode((ROSNode)null);
 				return;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
 				setRobotiocArmRosNode((ROSNode)null);
 				return;
 		}
@@ -443,15 +443,15 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER:
 				return serviceManager != null;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER:
 				return topicLauncher != null;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER:
 				return publisherManager != null;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__NODE:
 				return node != null;
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__ROBOTIOC_ARM_ROS_NODE:
 				return robotiocArmRosNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -466,10 +466,10 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == ROSInterface.class) {
 			switch (derivedFeatureID) {
-				case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER: return ApogyAddonsROSPackage.ROS_INTERFACE__SERVICE_MANAGER;
-				case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER: return ApogyAddonsROSPackage.ROS_INTERFACE__TOPIC_LAUNCHER;
-				case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER: return ApogyAddonsROSPackage.ROS_INTERFACE__PUBLISHER_MANAGER;
-				case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__NODE: return ApogyAddonsROSPackage.ROS_INTERFACE__NODE;
+				case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER: return ApogyAddonsROSPackage.ROS_INTERFACE__SERVICE_MANAGER;
+				case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER: return ApogyAddonsROSPackage.ROS_INTERFACE__TOPIC_LAUNCHER;
+				case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER: return ApogyAddonsROSPackage.ROS_INTERFACE__PUBLISHER_MANAGER;
+				case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__NODE: return ApogyAddonsROSPackage.ROS_INTERFACE__NODE;
 				default: return -1;
 			}
 		}
@@ -485,10 +485,10 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == ROSInterface.class) {
 			switch (baseFeatureID) {
-				case ApogyAddonsROSPackage.ROS_INTERFACE__SERVICE_MANAGER: return ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER;
-				case ApogyAddonsROSPackage.ROS_INTERFACE__TOPIC_LAUNCHER: return ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER;
-				case ApogyAddonsROSPackage.ROS_INTERFACE__PUBLISHER_MANAGER: return ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER;
-				case ApogyAddonsROSPackage.ROS_INTERFACE__NODE: return ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS__NODE;
+				case ApogyAddonsROSPackage.ROS_INTERFACE__SERVICE_MANAGER: return ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__SERVICE_MANAGER;
+				case ApogyAddonsROSPackage.ROS_INTERFACE__TOPIC_LAUNCHER: return ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__TOPIC_LAUNCHER;
+				case ApogyAddonsROSPackage.ROS_INTERFACE__PUBLISHER_MANAGER: return ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__PUBLISHER_MANAGER;
+				case ApogyAddonsROSPackage.ROS_INTERFACE__NODE: return ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS__NODE;
 				default: return -1;
 			}
 		}
@@ -504,7 +504,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == ROSInterface.class) {
 			switch (baseOperationID) {
-				case ApogyAddonsROSPackage.ROS_INTERFACE___ROS_INIT: return ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS___ROS_INIT;
+				case ApogyAddonsROSPackage.ROS_INTERFACE___ROS_INIT: return ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS___ROS_INIT;
 				default: return -1;
 			}
 		}
@@ -519,7 +519,7 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_ROS___ROS_INIT:
+			case ApogyExamplesRoboticArmROSPackage.ROBOTIC_ARM_ROS___ROS_INIT:
 				rosInit();
 				return null;
 		}
@@ -608,6 +608,16 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	{		
 		cmdStowRequest request = getServiceManager().createRequestMessage(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM);
 		cmdStowResponse response = getServiceManager().callService(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM, request, false);
+		
+		try 
+		{
+			Thread.sleep(10000);
+		} 
+		catch (InterruptedException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		if(!response.getResult())
 		{
