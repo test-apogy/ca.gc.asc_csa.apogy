@@ -15,5 +15,5 @@ Apogy P2 Update Site           | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/
 # Documentation #
 Description                    | URL
 ------------------------------ | ---
-Installation Guide             | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/installation.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/installation.html)
-Tutorials                      | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/tutorials.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/tutorials.html)
+Installation Guide             | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html)
+Tutorials                      | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tutorials.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tutorials.html)
