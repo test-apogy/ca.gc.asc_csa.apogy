@@ -13,12 +13,12 @@
  */
 @GenModel(prefix="ApogyExamplesRoboticArmROS",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2016",
-		  modelName="ApogyExamplesRoboticArm",
+		  modelName="ApogyExamplesRoboticArmROS",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.robotic_arm.ros/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.robotic_arm.edit.ros/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.robotic_arm.ros.edit/src-generated")
 
 package ca.gc.asc_csa.apogy.examples.robotic_arm.ros
 
@@ -27,7 +27,13 @@ import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm
 import ca.gc.asc_csa.apogy.addons.ros.ROSNode
 import ca.gc.asc_csa.apogy.addons.ros.ROSInterface
 
+/**
+ * This class is an implementation of RoboticArm that is a client
+ * of a Robot Operating System (ROS) server node. It shows one way 
+ * of interfacing an Apogy System with an ROS implementation. 
+ */
 class RoboticArmROS extends RoboticArm, ROSInterface
 {
+	/** The ROSNode used to manage the connection with ROS. */
 	contains ROSNode robotiocArmRosNode	
 }

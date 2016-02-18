@@ -24,6 +24,11 @@ import org.ros.node.topic.Publisher;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
 
+/**
+ * This class is a ROS Node that is the server for the RoboticArmROS implementation of RoboticArm
+ * @author pallard
+ *
+ */
 public class RoboticArmROSServer extends AbstractNodeMain
 {
 	protected RoboticArm roboticArm = null;

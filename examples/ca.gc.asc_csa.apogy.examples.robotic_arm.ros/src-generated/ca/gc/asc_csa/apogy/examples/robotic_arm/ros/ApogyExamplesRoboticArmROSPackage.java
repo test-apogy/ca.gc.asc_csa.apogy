@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmROSFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesRoboticArmROS' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2016' modelName='ApogyExamplesRoboticArm' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.ros/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.edit.ros/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.robotic_arm'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesRoboticArmROS' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2016' modelName='ApogyExamplesRoboticArmROS' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.ros/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.ros.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.robotic_arm'"
  * @generated
  */
 public interface ApogyExamplesRoboticArmROSPackage extends EPackage {

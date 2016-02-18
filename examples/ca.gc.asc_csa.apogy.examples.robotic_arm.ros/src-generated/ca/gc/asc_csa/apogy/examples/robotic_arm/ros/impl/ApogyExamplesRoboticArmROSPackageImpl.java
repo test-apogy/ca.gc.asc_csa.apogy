@@ -208,13 +208,25 @@ public class ApogyExamplesRoboticArmROSPackageImpl extends EPackageImpl implemen
 			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyExamplesRoboticArmROS",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2016",
-			 "modelName", "ApogyExamplesRoboticArm",
+			 "modelName", "ApogyExamplesRoboticArmROS",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm.ros/src-generated",
-			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm.edit.ros/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm.ros.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.robotic_arm"
+		   });	
+		addAnnotation
+		  (roboticArmROSEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThis class is an implementation of RoboticArm that is a client\nof a Robot Operating System (ROS) server node. It shows one way\nof interfacing an Apogy System with an ROS implementation."
+		   });	
+		addAnnotation
+		  (getRoboticArmROS_RobotiocArmRosNode(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The ROSNode used to manage the connection with ROS."
 		   });
 	}
 

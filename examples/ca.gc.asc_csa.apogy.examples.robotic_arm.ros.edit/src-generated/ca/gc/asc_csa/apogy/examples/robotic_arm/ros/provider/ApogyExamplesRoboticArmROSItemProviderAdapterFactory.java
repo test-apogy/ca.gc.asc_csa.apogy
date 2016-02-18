@@ -65,7 +65,7 @@ public class ApogyExamplesRoboticArmROSItemProviderAdapterFactory extends ApogyE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesRoboticArmEditPlugin.INSTANCE, ApogyExamplesRoboticArmROSPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesRoboticArmROSEditPlugin.INSTANCE, ApogyExamplesRoboticArmROSPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
