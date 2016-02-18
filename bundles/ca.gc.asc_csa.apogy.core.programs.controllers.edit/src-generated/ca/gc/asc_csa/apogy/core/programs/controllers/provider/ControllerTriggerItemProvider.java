@@ -23,8 +23,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger} object.

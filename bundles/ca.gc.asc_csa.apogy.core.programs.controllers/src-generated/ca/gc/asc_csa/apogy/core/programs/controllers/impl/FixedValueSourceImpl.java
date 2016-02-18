@@ -24,8 +24,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import ca.gc.asc_csa.apogy.core.invocator.impl.EDataTypeArgumentImpl;
-import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
 

@@ -29,4 +29,11 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated apogy_core_programs_controllers -->
+      <extender
+            uri="ca.gc.asc_csa.apogy.core.invocator"
+            class="ca.gc.asc_csa.apogy.core.programs.controllers.provider.ApogyCoreProgramsControllersItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
+   </extension>
+
 </plugin>

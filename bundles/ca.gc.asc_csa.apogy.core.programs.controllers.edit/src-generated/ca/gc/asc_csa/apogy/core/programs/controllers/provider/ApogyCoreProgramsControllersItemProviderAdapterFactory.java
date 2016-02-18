@@ -113,6 +113,21 @@ public class ApogyCoreProgramsControllersItemProviderAdapterFactory extends Apog
 	protected ApogyCoreProgramsControllersFacadeItemProvider apogyCoreProgramsControllersFacadeItemProvider;
 
 		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createApogyCoreProgramsControllersFacadeAdapter() {
+		if (apogyCoreProgramsControllersFacadeItemProvider == null) {
+			apogyCoreProgramsControllersFacadeItemProvider = new ApogyCoreProgramsControllersFacadeItemProvider(this);
+		}
+
+		return apogyCoreProgramsControllersFacadeItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -464,21 +479,6 @@ public class ApogyCoreProgramsControllersItemProviderAdapterFactory extends Apog
 		}
 
 		return customInputConditioningPointItemProvider;
-	}
-
-		/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createApogyCoreProgramsControllersFacadeAdapter() {
-		if (apogyCoreProgramsControllersFacadeItemProvider == null) {
-			apogyCoreProgramsControllersFacadeItemProvider = new ApogyCoreProgramsControllersFacadeItemProvider(this);
-		}
-
-		return apogyCoreProgramsControllersFacadeItemProvider;
 	}
 
 		/**
