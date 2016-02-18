@@ -833,7 +833,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getROSServiceManager__CallService__String() {
+	public EOperation getROSServiceManager__CallService__String_Message_int() {
 		return rosServiceManagerEClass.getEOperations().get(5);
 	}
 
@@ -842,7 +842,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getROSServiceManager__CallService__String_Message_boolean() {
+	public EOperation getROSServiceManager__CallService__String() {
 		return rosServiceManagerEClass.getEOperations().get(6);
 	}
 
@@ -851,7 +851,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getROSServiceManager__CallService__String_boolean() {
+	public EOperation getROSServiceManager__CallService__String_Message_boolean() {
 		return rosServiceManagerEClass.getEOperations().get(7);
 	}
 
@@ -860,7 +860,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getROSServiceManager__Launch() {
+	public EOperation getROSServiceManager__CallService__String_Message_boolean_int() {
 		return rosServiceManagerEClass.getEOperations().get(8);
 	}
 
@@ -869,8 +869,26 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getROSServiceManager__Stop() {
+	public EOperation getROSServiceManager__CallService__String_boolean() {
 		return rosServiceManagerEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getROSServiceManager__Launch() {
+		return rosServiceManagerEClass.getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getROSServiceManager__Stop() {
+		return rosServiceManagerEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -979,6 +997,15 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 	 */
 	public EOperation getROSService__Call__Message_boolean() {
 		return rosServiceEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getROSService__Call__Message_boolean_int() {
+		return rosServiceEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1407,8 +1434,10 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___GET_SERVICE__STRING);
 		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___CREATE_REQUEST_MESSAGE__STRING);
 		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE);
+		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_INT);
 		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___CALL_SERVICE__STRING);
 		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN);
+		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN_INT);
 		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_BOOLEAN);
 		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___LAUNCH);
 		createEOperation(rosServiceManagerEClass, ROS_SERVICE_MANAGER___STOP);
@@ -1425,6 +1454,7 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 		createEOperation(rosServiceEClass, ROS_SERVICE___NEW_REQUEST_MESSAGE);
 		createEOperation(rosServiceEClass, ROS_SERVICE___CALL__MESSAGE);
 		createEOperation(rosServiceEClass, ROS_SERVICE___CALL__MESSAGE_BOOLEAN);
+		createEOperation(rosServiceEClass, ROS_SERVICE___CALL__MESSAGE_BOOLEAN_INT);
 
 		rosTopicLauncherEClass = createEClass(ROS_TOPIC_LAUNCHER);
 		createEReference(rosTopicLauncherEClass, ROS_TOPIC_LAUNCHER__LISTENER_LIST);
@@ -1715,6 +1745,21 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 		g1 = createEGenericType(t2);
 		initEOperation(op, g1);
 
+		op = initEOperation(getROSServiceManager__CallService__String_Message_int(), null, "callService", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		t1 = addETypeParameter(op, "Request");
+		g1 = createEGenericType(this.getMessage());
+		t1.getEBounds().add(g1);
+		t2 = addETypeParameter(op, "Response");
+		g1 = createEGenericType(this.getMessage());
+		t2.getEBounds().add(g1);
+		addEParameter(op, theEcorePackage.getEString(), "serviceName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(t1);
+		addEParameter(op, g1, "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "timeout", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(t2);
+		initEOperation(op, g1);
+
 		op = initEOperation(getROSServiceManager__CallService__String(), null, "callService", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		t1 = addETypeParameter(op, "Request");
 		g1 = createEGenericType(this.getMessage());
@@ -1737,6 +1782,22 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 		g1 = createEGenericType(t1);
 		addEParameter(op, g1, "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "enableLogging", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(t2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getROSServiceManager__CallService__String_Message_boolean_int(), null, "callService", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		t1 = addETypeParameter(op, "Request");
+		g1 = createEGenericType(this.getMessage());
+		t1.getEBounds().add(g1);
+		t2 = addETypeParameter(op, "Response");
+		g1 = createEGenericType(this.getMessage());
+		t2.getEBounds().add(g1);
+		addEParameter(op, theEcorePackage.getEString(), "serviceName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(t1);
+		addEParameter(op, g1, "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "enableLogging", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "timeout", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
 		g1 = createEGenericType(t2);
 		initEOperation(op, g1);
 
@@ -1789,6 +1850,14 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 		g1 = createEGenericType(rosServiceEClass_Request);
 		addEParameter(op, g1, "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "enableLogging", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(rosServiceEClass_Response);
+		initEOperation(op, g1);
+
+		op = initEOperation(getROSService__Call__Message_boolean_int(), null, "call", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(rosServiceEClass_Request);
+		addEParameter(op, g1, "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "enableLogging", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "timeout", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(rosServiceEClass_Response);
 		initEOperation(op, g1);
 
@@ -2262,6 +2331,12 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 			 "documentation", "Determines the service that corresponds to the given\nservice name; if it exists, the request is made to the\nservice and its corresponding response is returned.\n\nNote: The service\'s logging is enabled for this call.\n\n@param serviceName The name of the service to call\n@param request The request to send to the service\n@return The service\'s response to this call"
 		   });	
 		addAnnotation
+		  (getROSServiceManager__CallService__String_Message_int(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Determines the service that corresponds to the given\nservice name; if it exists, the request is made to the\nservice and its corresponding response is returned.\nIf the service call takes more than the timeout value,\na null response is returned.\n\nNote: The service\'s logging is enabled for this call.\n\n@param serviceName The name of the service to call\n@param request The request to send to the service\n@param timeout, in milliseconds. A negative value means no timeout.\n@return The service\'s response to this call\n@throws A TimeoutException if the call fails to return within the specified timeout."
+		   });	
+		addAnnotation
 		  (getROSServiceManager__CallService__String(), 
 		   source, 
 		   new String[] {
@@ -2272,6 +2347,12 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 		   source, 
 		   new String[] {
 			 "documentation", "Determines the service that corresponds to the given\nservice name; if it exists, the request is made to the\nservice and its corresponding response is returned.  The\nenable logging value determines whether or not logging\nshould be enabled for this service call.\n\n@param serviceName The name of the service to call\n@param request The request to send to the service\n@param enableLogging Whether or not logging should be enabled for this service call\n@return The service\'s response to this call"
+		   });	
+		addAnnotation
+		  (getROSServiceManager__CallService__String_Message_boolean_int(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Determines the service that corresponds to the given\nservice name; if it exists, the request is made to the\nservice and its corresponding response is returned.  The\nenable logging value determines whether or not logging\nshould be enabled for this service call. If the service\ncall takes more than the timeout value, a null response\nis returned.\n\n@param serviceName The name of the service to call\n@param request The request to send to the service\n@param enableLogging Whether or not logging should be enabled for this service call\n@param timeout, in milliseconds. A negative value means no timeout.\n@return The service\'s response to this call\n@throws A TimeoutException if the call fails to return within the specified timeout."
 		   });	
 		addAnnotation
 		  (getROSServiceManager__CallService__String_boolean(), 
@@ -2345,6 +2426,12 @@ public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddo
 		   source, 
 		   new String[] {
 			 "documentation", "Calls the service with the given request and the\nresponse of that call is returned.  The enable logging\nvalue will determine whether or not logging should be\nenabled for this call.\n\n@param request The rrequest to send to this service\n@param enableLogging Whether or not this call should be logged\n@return The service\'s response to the call"
+		   });	
+		addAnnotation
+		  (getROSService__Call__Message_boolean_int(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Calls the service with the given request and the\nresponse of that call is returned.  The enable logging\nvalue will determine whether or not logging should be\nenabled for this call. If the service call takes more\nthan the timeout value, a null response is returned.\n\n@param request The rrequest to send to this service\n@param enableLogging Whether or not this call should be logged\n@param timeout, in milliseconds. A negative value means no timeout.\n@return The service\'s response to the call"
 		   });	
 		addAnnotation
 		  (getROSService_ServiceName(), 

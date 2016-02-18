@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.jboss.netty.handler.timeout.TimeoutException;
 import org.ros.exception.RemoteException;
 import org.ros.exception.ServiceNotFoundException;
 import org.ros.internal.message.Message;
@@ -31,12 +32,12 @@ import org.ros.internal.message.RawMessage;
 import org.ros.internal.message.field.Field;
 import org.ros.node.service.ServiceClient;
 import org.ros.node.service.ServiceResponseListener;
-import ca.gc.asc_csa.apogy.addons.ros.Activator;
-import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
-import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
-import ca.gc.asc_csa.apogy.addons.ros.utilities.AsynchronousShutdowner;
-import ca.gc.asc_csa.apogy.addons.ros.ROSService;
 
+import ca.gc.asc_csa.apogy.addons.ros.Activator;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.addons.ros.ROSService;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.AsynchronousShutdowner;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 
@@ -60,6 +61,8 @@ import ca.gc.asc_csa.apogy.common.log.Logger;
  */
 public class ROSServiceImpl<Request extends Message, Response extends Message> extends MinimalEObjectImpl.Container implements ROSService<Request, Response>
 {
+	final int MAX_WAIT_TIME = 5000; // milliseconds
+	
 	/**
 	 * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -399,8 +402,18 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	@SuppressWarnings("unchecked")
 	public Response call(Request request, boolean enableLogging)
+	{
+		return call(request, enableLogging, MAX_WAIT_TIME);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	@SuppressWarnings("unchecked")
+	public Response call(Request request, boolean enableLogging, int timeout)
 	{
 		Response response = null;
 		ROSNode node = getNode();
@@ -409,15 +422,17 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 		{
 			if(enableLogging) logRequest(request);
 
-			BlockingServiceCall<Response> listener = new BlockingServiceCall<Response>();
-			getServiceClient().call(request, listener);
-
+			BlockingServiceCall<Response> listener = new BlockingServiceCall<Response>(request, timeout);
+			getServiceClient().call(request, listener);			
+			
 			response = listener.getResponse();
 		}
 
 		if (response == null && node.getNullResponseHandler() != null)
+		{
 			response = (Response)node.getNullResponseHandler().handleNullResponse(this);
-
+		}
+		
 		if(enableLogging)
 		{
 			if ( node.getResponseLogger() != null)	
@@ -611,6 +626,8 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 				return call((Request)arguments.get(0));
 			case ApogyAddonsROSPackage.ROS_SERVICE___CALL__MESSAGE_BOOLEAN:
 				return call((Request)arguments.get(0), (Boolean)arguments.get(1));
+			case ApogyAddonsROSPackage.ROS_SERVICE___CALL__MESSAGE_BOOLEAN_INT:
+				return call((Request)arguments.get(0), (Boolean)arguments.get(1), (Integer)arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -649,20 +666,40 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 	private class BlockingServiceCall<T extends Message> implements ServiceResponseListener<T>
 	{
 		final boolean USE_MAX_WAIT_TIME_DEFAULT = true;
-		final int MAX_WAIT_TIME = 5000; // milliseconds
-
+		
 		private boolean useMaxWaitTime = USE_MAX_WAIT_TIME_DEFAULT;
 		private boolean done = false;
 		private Condition condition = null;
 		private ReentrantLock lock;
 		private T response;
+		private int timeoutMilliseconds = MAX_WAIT_TIME;
+		
+		private Request request = null;
 
-		public BlockingServiceCall()
+		public BlockingServiceCall(Request request)
 		{
 			lock = new ReentrantLock();
 			condition = lock.newCondition();
+			this.request = request;
 		}
 
+		public BlockingServiceCall(Request request, int timeoutMilliseconds)
+		{
+			this(request);
+						
+			this.timeoutMilliseconds = timeoutMilliseconds;
+			
+			if(timeoutMilliseconds < 0)
+			{
+				this.useMaxWaitTime = false;	
+			}
+			else
+			{
+				this.useMaxWaitTime = true;
+			}
+			
+		}
+		
 		@Override
 		public void onSuccess(T response)
 		{
@@ -672,7 +709,8 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 				this.response = response;
 				done = true;
 				condition.signal();
-			} finally
+			} 
+			finally
 			{
 				lock.unlock();
 			}
@@ -687,7 +725,8 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 			{
 				done = true;
 				condition.signal();
-			} finally
+			} 
+			finally
 			{
 				lock.unlock();
 			}
@@ -698,29 +737,40 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 			lock.lock();
 			try
 			{
-				// while (!done)
+				try
 				{
-					try
-					{
-						if (useMaxWaitTime)
+					if (useMaxWaitTime)
+					{							
+						done = condition.await(timeoutMilliseconds, TimeUnit.MILLISECONDS);														
+													
+						if(!done)
 						{
-							done = condition.await(MAX_WAIT_TIME, TimeUnit.MILLISECONDS);
-							if (!done && isDisconnectOnTimeout())
+							if(isDisconnectOnTimeout())
 							{
 								node.setConnected(false);
 							}
-						} 
-						else
-						{
-							condition.await();
-
-						}
+							
+							// Generate an error message.
+							StringBuilder strBuilder = new StringBuilder();
+							strBuilder.append("Service ");
+							strBuilder.append(serviceName);
+							strBuilder.append(" called with parameters : ");
+							generateParametersString(strBuilder, request);
+							strBuilder.append(" : Timed out !");
+							Logger.INSTANCE.log(Activator.ID, this, strBuilder.toString(), EventSeverity.ERROR);	
+							
+							throw new TimeoutException(strBuilder.toString());
+						}							
 					} 
-					catch (InterruptedException e)
+					else
 					{
-
+						condition.await();
 					}
-				}
+				} 
+				catch (InterruptedException e)
+				{
+
+				}				
 			} 
 			finally
 			{
