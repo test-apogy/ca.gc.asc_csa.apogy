@@ -12,7 +12,8 @@ Apogy P2 Update Site (ZIP)     | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/
 Apogy OTS P2 Update Site       | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest) | NOT WORKING
 Apogy P2 Update Site           | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest)         | NOT WORKING
 
+# Documentation #
 Description                    | URL
 ------------------------------ | ---
 Installation Guide             | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/installation.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/installation.html)
-Main                           | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/main.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/main.html)
+Tutorials                      | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/tutorials.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/tutorials.html)
