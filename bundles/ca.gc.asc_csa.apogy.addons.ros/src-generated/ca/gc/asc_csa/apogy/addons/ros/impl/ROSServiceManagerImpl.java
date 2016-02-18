@@ -25,13 +25,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.ros.exception.ServiceNotFoundException;
 import org.ros.internal.message.Message;
 
-import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
-import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory;
 import ca.gc.asc_csa.apogy.addons.ros.Activator;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
 import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
 import ca.gc.asc_csa.apogy.addons.ros.ROSService;
 import ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager;
-
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 
@@ -288,6 +287,20 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public <Request extends Message, Response extends Message> Response callService(String serviceName, Request request, int timeout) throws Exception
+	{
+		ROSService<Request,Response> service = getService(serviceName);
+		if ( service != null )
+			return service.call(request, false, timeout);
+		else
+			return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	public <Request extends Message, Response extends Message> Response callService(String serviceName)
 	{
 		return callService(serviceName, true);
@@ -303,6 +316,20 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 		ROSService<Request,Response> service = getService(serviceName);
 		if ( service != null )
 			return service.call(request, enableLogging);
+		else
+			return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public <Request extends Message, Response extends Message> Response callService(String serviceName, Request request, boolean enableLogging, int timeout) throws Exception 
+	{
+		ROSService<Request,Response> service = getService(serviceName);
+		if ( service != null )
+			return service.call(request, enableLogging, timeout);
 		else
 			return null;
 	}
@@ -458,8 +485,7 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	@SuppressWarnings("unchecked")
+	@Override	
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
@@ -475,10 +501,24 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 				return createRequestMessage((String)arguments.get(0));
 			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE:
 				return callService((String)arguments.get(0), (Message)arguments.get(1));
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_INT:
+				try {
+					return callService((String)arguments.get(0), (Message)arguments.get(1), (Integer)arguments.get(2));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
 			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING:
 				return callService((String)arguments.get(0));
 			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN:
 				return callService((String)arguments.get(0), (Message)arguments.get(1), (Boolean)arguments.get(2));
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN_INT:
+				try {
+					return callService((String)arguments.get(0), (Message)arguments.get(1), (Boolean)arguments.get(2), (Integer)arguments.get(3));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
 			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_BOOLEAN:
 				return callService((String)arguments.get(0), (Boolean)arguments.get(1));
 			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___LAUNCH:

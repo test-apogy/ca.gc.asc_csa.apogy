@@ -28,6 +28,7 @@ import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.Activator;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmROSPackage;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmROS;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmROSConstants;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdInitRequest;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToRequest;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToResponse;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevelRequest;
@@ -529,99 +530,145 @@ public class RoboticArmROSImpl extends RoboticArmImpl implements RoboticArmROS {
 	@Override
 	public boolean init() 
 	{
-		  Logger.INSTANCE.log(Activator.ID, this, "start() with client node named <" + RoboticArmROSConstants.ROBOTIC_ARM_CLIENT_NODE_NAME + ">...", EventSeverity.INFO);		  
-		  
-		  // Initialize the ROS node.
-		  ROSNode node = ApogyAddonsROSFactory.eINSTANCE.createROSNode();	  
-		  node.setNodeName(RoboticArmROSConstants.ROBOTIC_ARM_CLIENT_NODE_NAME);
-		  node.setEnableAutoRestartOnConnectionLost(false);
-		  
-		  try
-		  {			  
-			  node.initialize();
-		  }
-		  catch(Exception e)
-		  {
+		if(!isInitialized())
+		{
+			  Logger.INSTANCE.log(Activator.ID, this, "start() with client node named <" + RoboticArmROSConstants.ROBOTIC_ARM_CLIENT_NODE_NAME + ">...", EventSeverity.INFO);		  
 			  
-			  Logger.INSTANCE.log(Activator.ID, this, "start() failed !",  EventSeverity.INFO, e);
+			  // Initialize the ROS node.
+			  ROSNode node = ApogyAddonsROSFactory.eINSTANCE.createROSNode();	  
+			  node.setNodeName(RoboticArmROSConstants.ROBOTIC_ARM_CLIENT_NODE_NAME);
+			  node.setEnableAutoRestartOnConnectionLost(false);
 			  
-			  return false;
-		  }
-		  
-		  setNode(node);	 		  	  	 
-		  node.register(this, false);
-		  
-		  node.eAdapters().add(new AdapterImpl()
-		  {
-				@Override
-				public void notifyChanged(Notification msg)
-				{
-					if (msg.getFeatureID(ROSNode.class) == ApogyAddonsROSPackage.ROS_NODE__CONNECTED)
+			  try
+			  {			  
+				  node.initialize();
+			  }
+			  catch(Exception e)
+			  {
+				  
+				  Logger.INSTANCE.log(Activator.ID, this, "start() failed !",  EventSeverity.INFO, e);
+				  
+				  return false;
+			  }
+			  
+			  setNode(node);	 		  	  	 
+			  node.register(this, false);
+			  
+			  node.eAdapters().add(new AdapterImpl()
+			  {
+					@Override
+					public void notifyChanged(Notification msg)
 					{
-						boolean connected = msg.getNewBooleanValue();										
-											
-						if (connected)
-						{			
-							Logger.INSTANCE.log(Activator.ID, this,"Connected to Robotic Arm ROS server!", EventSeverity.INFO);																			
-						}					
-					}
-				}			
-		  });
-
-		  node.start();
-		  		 		  
-		  return true;	
+						if (msg.getFeatureID(ROSNode.class) == ApogyAddonsROSPackage.ROS_NODE__CONNECTED)
+						{
+							boolean connected = msg.getNewBooleanValue();										
+												
+							if (connected)
+							{			
+								Logger.INSTANCE.log(Activator.ID, this,"Connected to Robotic Arm ROS server!", EventSeverity.INFO);															
+							}					
+						}
+					}			
+			  });
+			
+			  node.start();
+			  	
+			  // Calls init on the server
+			  try
+			  {				  
+				  cmdInitRequest request = getServiceManager().createRequestMessage(RoboticArmROSConstants.SERVICE_NAME_INIT);
+				  getServiceManager().callService(RoboticArmROSConstants.SERVICE_NAME_INIT, request, true);
+			  }
+			  catch(Exception e)
+			  {
+				  Logger.INSTANCE.log(Activator.ID, this,"Failed to call init() on the server !", EventSeverity.ERROR, e);	
+			  }
+			  
+			  setInitialized(true);
+		}
+		else
+		{
+			try
+			{
+				// Calls init on the server
+				cmdInitRequest request = getServiceManager().createRequestMessage(RoboticArmROSConstants.SERVICE_NAME_INIT);
+				getServiceManager().callService(RoboticArmROSConstants.SERVICE_NAME_INIT, request, false);
+			}
+			catch(Exception e)
+			{
+				Logger.INSTANCE.log(Activator.ID, this,"Failed to call init() on the server !", EventSeverity.ERROR, e);	
+			}
+		}
+		return true;	
 	}
 
 	@Override
 	public void cmdMoveSpeedLevel(MoveSpeedLevel speedLevel) 
 	{
-		cmdSpeedLevelRequest request = getServiceManager().createRequestMessage(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED);				
+		cmdSpeedLevelRequest request = getServiceManager().createRequestMessage(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED);
 		
-		cmdSpeedLevelResponse response = getServiceManager().callService(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED, request, false);
-		
-		if(!response.getResult())
+		try
 		{
-			throw new RuntimeException("Service RoboticArmROSConstants.SERVICE_NAME_MOVE_TO returned false !");
+			cmdSpeedLevelResponse response = getServiceManager().callService(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED, request, false, 2000);
+		
+			if(!response.getResult())
+			{
+				throw new RuntimeException("Service RoboticArmROSConstants.SERVICE_NAME_MOVE_TO returned false !");
+			}
+		}		
+		catch (Exception e) 
+		{
+			throw new RuntimeException(e);
 		}
 	}
 
 	@Override
 	public void moveTo(double turrentAngle, double shoulderAngle, double elbowAngle, double wristAngle) 
 	{
+		int MAX_MOVE_TIME = 60*1000;
+		
 		cmdMoveToRequest request = getServiceManager().createRequestMessage(RoboticArmROSConstants.SERVICE_NAME_MOVE_TO);
 		request.setTurretAngle((float) Math.toRadians(turrentAngle));
 		request.setShoulderAngle((float) Math.toRadians(shoulderAngle));
 		request.setElbowAngle((float) Math.toRadians(elbowAngle));
 		request.setWristAngle((float) Math.toRadians(wristAngle));
 		
-		cmdMoveToResponse response = getServiceManager().callService(RoboticArmROSConstants.SERVICE_NAME_MOVE_TO, request, false);
-		
-		if(!response.getResult())
+		cmdMoveToResponse response = null;
+		try
 		{
-			throw new RuntimeException("Service RoboticArmROSConstants.SERVICE_NAME_MOVE_TO returned false !");
+			response = getServiceManager().callService(RoboticArmROSConstants.SERVICE_NAME_MOVE_TO, request, false, MAX_MOVE_TIME);
+			
+			if(response != null && response.getResult())
+			{
+				throw new RuntimeException("Service RoboticArmROSConstants.SERVICE_NAME_MOVE_TO returned false !");
+			}
 		}		
+		catch (Exception e) 
+		{
+			throw new RuntimeException(e);
+		}
+				
 	}
 
 	@Override
 	public void stow() 
 	{		
+		// On purpose, this will time out for long move.
+		int MAX_STOW_TIME = 30*1000;
+		
 		cmdStowRequest request = getServiceManager().createRequestMessage(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM);
-		cmdStowResponse response = getServiceManager().callService(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM, request, false);
-		
-		try 
+		try
 		{
-			Thread.sleep(10000);
-		} 
-		catch (InterruptedException e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			cmdStowResponse response = getServiceManager().callService(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM, request, false, MAX_STOW_TIME);
+			
+			if(!response.getResult())
+			{
+				throw new RuntimeException("Service RoboticArmROSConstants.SERVICE_NAME_MOVE_TO returned false !");
+			}
 		}
-		
-		if(!response.getResult())
+		catch(Exception e)
 		{
-			throw new RuntimeException("Service RoboticArmROSConstants.SERVICE_NAME_MOVE_TO returned false !");
+			throw new RuntimeException(e);
 		}
 	}
 
