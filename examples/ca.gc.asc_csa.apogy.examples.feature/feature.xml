@@ -289,4 +289,25 @@
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="ca.gc.asc_csa.apogy.examples.robotic_arm.ros"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.apogy.examples.robotic_arm.ros.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>

@@ -37,3 +37,4 @@ class RoboticArmROS extends RoboticArm, ROSInterface
 	/** The ROSNode used to manage the connection with ROS. */
 	contains ROSNode robotiocArmRosNode	
 }
+

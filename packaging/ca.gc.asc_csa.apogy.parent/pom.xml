@@ -302,8 +302,10 @@
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.edit</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.ros</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.ros.edit</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy</module>
-		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.edit</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.edit</module>		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.ui</module>
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.rover</module>
