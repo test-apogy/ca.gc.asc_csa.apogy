@@ -24,6 +24,7 @@ import ca.gc.asc_csa.apogy.common.emf.Disposable;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.invocator.*;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
@@ -410,6 +411,30 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				EDataTypeArgument eDataTypeArgument = (EDataTypeArgument)theEObject;
 				T result = caseEDataTypeArgument(eDataTypeArgument);
 				if (result == null) result = caseArgument(eDataTypeArgument);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.BOOLEAN_EDATA_TYPE_ARGUMENT: {
+				BooleanEDataTypeArgument booleanEDataTypeArgument = (BooleanEDataTypeArgument)theEObject;
+				T result = caseBooleanEDataTypeArgument(booleanEDataTypeArgument);
+				if (result == null) result = caseEDataTypeArgument(booleanEDataTypeArgument);
+				if (result == null) result = caseArgument(booleanEDataTypeArgument);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.NUMERIC_EDATA_TYPE_ARGUMENT: {
+				NumericEDataTypeArgument numericEDataTypeArgument = (NumericEDataTypeArgument)theEObject;
+				T result = caseNumericEDataTypeArgument(numericEDataTypeArgument);
+				if (result == null) result = caseEDataTypeArgument(numericEDataTypeArgument);
+				if (result == null) result = caseArgument(numericEDataTypeArgument);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.STRING_EDATA_TYPE_ARGUMENT: {
+				StringEDataTypeArgument stringEDataTypeArgument = (StringEDataTypeArgument)theEObject;
+				T result = caseStringEDataTypeArgument(stringEDataTypeArgument);
+				if (result == null) result = caseEDataTypeArgument(stringEDataTypeArgument);
+				if (result == null) result = caseArgument(stringEDataTypeArgument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1183,6 +1208,51 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Boolean EData Type Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boolean EData Type Argument</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBooleanEDataTypeArgument(BooleanEDataTypeArgument object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Numeric EData Type Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Numeric EData Type Argument</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNumericEDataTypeArgument(NumericEDataTypeArgument object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>String EData Type Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String EData Type Argument</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringEDataTypeArgument(StringEDataTypeArgument object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>EEnum Argument</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

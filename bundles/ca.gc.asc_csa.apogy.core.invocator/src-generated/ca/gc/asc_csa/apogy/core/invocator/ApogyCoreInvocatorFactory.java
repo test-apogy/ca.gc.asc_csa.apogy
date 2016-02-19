@@ -304,15 +304,33 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   ArgumentsList createArgumentsList();
 
   /**
-	 * Returns a new object of class '<em>EData Type Argument</em>'.
+	 * Returns a new object of class '<em>Boolean EData Type Argument</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EData Type Argument</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boolean EData Type Argument</em>'.
 	 * @generated
 	 */
-  EDataTypeArgument createEDataTypeArgument();
+	BooleanEDataTypeArgument createBooleanEDataTypeArgument();
 
-  /**
+		/**
+	 * Returns a new object of class '<em>Numeric EData Type Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Numeric EData Type Argument</em>'.
+	 * @generated
+	 */
+	NumericEDataTypeArgument createNumericEDataTypeArgument();
+
+		/**
+	 * Returns a new object of class '<em>String EData Type Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>String EData Type Argument</em>'.
+	 * @generated
+	 */
+	StringEDataTypeArgument createStringEDataTypeArgument();
+
+		/**
 	 * Returns a new object of class '<em>EEnum Argument</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
