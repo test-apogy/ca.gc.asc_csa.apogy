@@ -46,6 +46,7 @@ public class ApogyCommonGeometryData3DTests extends TestSuite {
 		suite.addTestSuite(CartesianTriangleTest.class);
 		suite.addTestSuite(CartesianPositionCoordinatesTest.class);
 		suite.addTestSuite(ColoredCartesianPositionCoordinatesTest.class);
+		suite.addTestSuite(CartesianTriangularMeshColorizerBySlopeTest.class);
 		suite.addTestSuite(AbstractCartesianCoordinatesSetTest.class);
 		suite.addTestSuite(CartesianCoordinatesSetTest.class);
 		suite.addTestSuite(ColoredCoordinatesSetTest.class);

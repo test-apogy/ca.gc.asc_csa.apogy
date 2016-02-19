@@ -46,6 +46,7 @@ import junit.textui.TestRunner;
  * The following operations are tested:
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeNormals(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Compute Normals</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeNormalAtVertex(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Compute Normal At Vertex</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List) <em>Compute Centroid</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Centroid</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Min Max Values</em>}</li>
@@ -134,6 +135,19 @@ public class Data3DUtilsTest extends TestCase {
 	 * @generated
 	 */
 	public void testComputeNormals__CartesianTriangularMesh() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeNormalAtVertex(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Compute Normal At Vertex</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeNormalAtVertex(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @generated
+	 */
+	public void testComputeNormalAtVertex__CartesianTriangularMesh_CartesianPositionCoordinates() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

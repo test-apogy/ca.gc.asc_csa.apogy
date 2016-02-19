@@ -124,11 +124,35 @@ public class ApogyCommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCommonGeometryData3DPackage.RGBA_COLOR: {
+				RGBAColor rgbaColor = (RGBAColor)theEObject;
+				T1 result = caseRGBAColor(rgbaColor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES: {
 				ColoredCartesianPositionCoordinates coloredCartesianPositionCoordinates = (ColoredCartesianPositionCoordinates)theEObject;
 				T1 result = caseColoredCartesianPositionCoordinates(coloredCartesianPositionCoordinates);
 				if (result == null) result = caseCartesianPositionCoordinates(coloredCartesianPositionCoordinates);
+				if (result == null) result = caseRGBAColor(coloredCartesianPositionCoordinates);
 				if (result == null) result = caseCoordinates(coloredCartesianPositionCoordinates);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_COLORIZER: {
+				CartesianTriangularMeshColorizer cartesianTriangularMeshColorizer = (CartesianTriangularMeshColorizer)theEObject;
+				T1 result = caseCartesianTriangularMeshColorizer(cartesianTriangularMeshColorizer);
+				if (result == null) result = caseProcessor(cartesianTriangularMeshColorizer);
+				if (result == null) result = caseMonitorable(cartesianTriangularMeshColorizer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE: {
+				CartesianTriangularMeshColorizerBySlope cartesianTriangularMeshColorizerBySlope = (CartesianTriangularMeshColorizerBySlope)theEObject;
+				T1 result = caseCartesianTriangularMeshColorizerBySlope(cartesianTriangularMeshColorizerBySlope);
+				if (result == null) result = caseCartesianTriangularMeshColorizer(cartesianTriangularMeshColorizerBySlope);
+				if (result == null) result = caseProcessor(cartesianTriangularMeshColorizerBySlope);
+				if (result == null) result = caseMonitorable(cartesianTriangularMeshColorizerBySlope);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -525,6 +549,21 @@ public class ApogyCommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>RGBA Color</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>RGBA Color</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseRGBAColor(RGBAColor object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Colored Cartesian Position Coordinates</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -536,6 +575,36 @@ public class ApogyCommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseColoredCartesianPositionCoordinates(ColoredCartesianPositionCoordinates object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cartesian Triangular Mesh Colorizer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cartesian Triangular Mesh Colorizer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseCartesianTriangularMeshColorizer(CartesianTriangularMeshColorizer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cartesian Triangular Mesh Colorizer By Slope</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cartesian Triangular Mesh Colorizer By Slope</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseCartesianTriangularMeshColorizerBySlope(CartesianTriangularMeshColorizerBySlope object) {
 		return null;
 	}
 

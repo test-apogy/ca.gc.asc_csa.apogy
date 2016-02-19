@@ -17,15 +17,17 @@ import java.util.List;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Utils</b></em>'.
  * <!-- end-user-doc -->
+ *
+ * <!-- begin-model-doc -->
+ * *
+ * Utilities class.
+ * <!-- end-model-doc -->
  *
  *
  * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getData3DUtils()
@@ -36,10 +38,25 @@ public interface Data3DUtils extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.EList<ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d>" unique="false" many="false" meshUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d>" unique="false" many="false" meshUnique="false"
 	 * @generated
 	 */
-	EList<Vector3d> computeNormals(CartesianTriangularMesh mesh);
+	List<Vector3d> computeNormals(CartesianTriangularMesh mesh);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Computes the normal at a given vertex in a mesh. The normal is the weighted average (by polygon area)
+	 * of all the polygons sharing the specified point.
+	 * @param mesh The mesh containing the point.
+	 * @param vertex The vertex contained in the mesh.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d" unique="false" meshUnique="false" vertexUnique="false"
+	 * @generated
+	 */
+	Vector3d computeNormalAtVertex(CartesianTriangularMesh mesh, CartesianPositionCoordinates vertex);
 
 	/**
 	 * <!-- begin-user-doc -->

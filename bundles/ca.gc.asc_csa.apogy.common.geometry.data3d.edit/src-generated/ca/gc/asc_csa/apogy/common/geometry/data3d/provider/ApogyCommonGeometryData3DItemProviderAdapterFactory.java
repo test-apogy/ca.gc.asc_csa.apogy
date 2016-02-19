@@ -219,6 +219,29 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RGBAColorItemProvider rgbaColorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRGBAColorAdapter() {
+		if (rgbaColorItemProvider == null) {
+			rgbaColorItemProvider = new RGBAColorItemProvider(this);
+		}
+
+		return rgbaColorItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -239,6 +262,29 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 		}
 
 		return coloredCartesianPositionCoordinatesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizerBySlope} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CartesianTriangularMeshColorizerBySlopeItemProvider cartesianTriangularMeshColorizerBySlopeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizerBySlope}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCartesianTriangularMeshColorizerBySlopeAdapter() {
+		if (cartesianTriangularMeshColorizerBySlopeItemProvider == null) {
+			cartesianTriangularMeshColorizerBySlopeItemProvider = new CartesianTriangularMeshColorizerBySlopeItemProvider(this);
+		}
+
+		return cartesianTriangularMeshColorizerBySlopeItemProvider;
 	}
 
 	/**
@@ -1269,7 +1315,9 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 		if (sphericalPolygonItemProvider != null) sphericalPolygonItemProvider.dispose();
 		if (sphericalTriangleItemProvider != null) sphericalTriangleItemProvider.dispose();
 		if (cartesianPositionCoordinatesItemProvider != null) cartesianPositionCoordinatesItemProvider.dispose();
+		if (rgbaColorItemProvider != null) rgbaColorItemProvider.dispose();
 		if (coloredCartesianPositionCoordinatesItemProvider != null) coloredCartesianPositionCoordinatesItemProvider.dispose();
+		if (cartesianTriangularMeshColorizerBySlopeItemProvider != null) cartesianTriangularMeshColorizerBySlopeItemProvider.dispose();
 		if (cartesianOrientationCoordinatesItemProvider != null) cartesianOrientationCoordinatesItemProvider.dispose();
 		if (abstractCartesianCoordinatesSetItemProvider != null) abstractCartesianCoordinatesSetItemProvider.dispose();
 		if (cartesianCoordinatesSetItemProvider != null) cartesianCoordinatesSetItemProvider.dispose();
