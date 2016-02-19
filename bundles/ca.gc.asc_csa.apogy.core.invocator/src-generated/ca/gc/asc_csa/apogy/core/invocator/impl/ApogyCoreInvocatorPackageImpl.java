@@ -41,6 +41,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
 import ca.gc.asc_csa.apogy.core.invocator.BasicContext;
+import ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.ChannelsList;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
@@ -58,6 +59,7 @@ import ca.gc.asc_csa.apogy.core.invocator.IVariableListener;
 import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
@@ -71,6 +73,7 @@ import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
 import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 import ca.gc.asc_csa.apogy.core.invocator.Type;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
@@ -371,6 +374,27 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
   private EClass eDataTypeArgumentEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass booleanEDataTypeArgumentEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass numericEDataTypeArgumentEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringEDataTypeArgumentEClass = null;
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -2337,6 +2361,33 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBooleanEDataTypeArgument() {
+		return booleanEDataTypeArgumentEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNumericEDataTypeArgument() {
+		return numericEDataTypeArgumentEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStringEDataTypeArgument() {
+		return stringEDataTypeArgumentEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -3087,6 +3138,12 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		eDataTypeArgumentEClass = createEClass(EDATA_TYPE_ARGUMENT);
 		createEAttribute(eDataTypeArgumentEClass, EDATA_TYPE_ARGUMENT__VALUE);
 
+		booleanEDataTypeArgumentEClass = createEClass(BOOLEAN_EDATA_TYPE_ARGUMENT);
+
+		numericEDataTypeArgumentEClass = createEClass(NUMERIC_EDATA_TYPE_ARGUMENT);
+
+		stringEDataTypeArgumentEClass = createEClass(STRING_EDATA_TYPE_ARGUMENT);
+
 		eEnumArgumentEClass = createEClass(EENUM_ARGUMENT);
 		createEReference(eEnumArgumentEClass, EENUM_ARGUMENT__EENUM_LITERAL);
 		createEReference(eEnumArgumentEClass, EENUM_ARGUMENT__EENUM);
@@ -3228,6 +3285,9 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		operationCallEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		operationCallEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		eDataTypeArgumentEClass.getESuperTypes().add(this.getArgument());
+		booleanEDataTypeArgumentEClass.getESuperTypes().add(this.getEDataTypeArgument());
+		numericEDataTypeArgumentEClass.getESuperTypes().add(this.getEDataTypeArgument());
+		stringEDataTypeArgumentEClass.getESuperTypes().add(this.getEDataTypeArgument());
 		eEnumArgumentEClass.getESuperTypes().add(this.getArgument());
 		eClassArgumentEClass.getESuperTypes().add(this.getArgument());
 		resultsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
@@ -3583,8 +3643,14 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		initEOperation(getArgument__GetParameterValue(), theEcorePackage.getEJavaObject(), "getParameterValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(eDataTypeArgumentEClass, EDataTypeArgument.class, "EDataTypeArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(eDataTypeArgumentEClass, EDataTypeArgument.class, "EDataTypeArgument", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEDataTypeArgument_Value(), theEcorePackage.getEString(), "value", null, 0, 1, EDataTypeArgument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(booleanEDataTypeArgumentEClass, BooleanEDataTypeArgument.class, "BooleanEDataTypeArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(numericEDataTypeArgumentEClass, NumericEDataTypeArgument.class, "NumericEDataTypeArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stringEDataTypeArgumentEClass, StringEDataTypeArgument.class, "StringEDataTypeArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eEnumArgumentEClass, EEnumArgument.class, "EEnumArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEEnumArgument_EEnumLiteral(), theEcorePackage.getEEnumLiteral(), null, "eEnumLiteral", null, 0, 1, EEnumArgument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

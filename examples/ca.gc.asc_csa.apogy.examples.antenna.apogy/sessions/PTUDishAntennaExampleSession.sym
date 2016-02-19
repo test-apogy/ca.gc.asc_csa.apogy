@@ -51,14 +51,14 @@
       <operationCalls xmi:id="_wcZ-IQrOEeW4-_ONWXXiAw" name="Change Pan / Tilt" variable="_wazbpgrOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.antenna#//PTUDishAntenna/moveTo"/>
         <argumentsList xmi:id="_wce2oArOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_wcgr0ArOEeW4-_ONWXXiAw" value="1.5707963267948966"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_wcgr0QrOEeW4-_ONWXXiAw" value="0.7853981633974483"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_wcgr0ArOEeW4-_ONWXXiAw" value="1.5707963267948966"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_wcgr0QrOEeW4-_ONWXXiAw" value="0.7853981633974483"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_wcgr0grOEeW4-_ONWXXiAw" name="Track Sun" variable="_wazbpgrOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.antenna#//PTUDishAntenna/trackSun"/>
         <argumentsList xmi:id="_wcgr0wrOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_wcgr1ArOEeW4-_ONWXXiAw" value="false"/>
+          <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_wcgr1ArOEeW4-_ONWXXiAw" value="false"/>
         </argumentsList>
       </operationCalls>
     </programs>

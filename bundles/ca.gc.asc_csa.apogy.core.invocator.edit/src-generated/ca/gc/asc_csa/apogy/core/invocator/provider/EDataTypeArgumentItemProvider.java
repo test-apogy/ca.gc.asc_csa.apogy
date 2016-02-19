@@ -13,9 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator.provider;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -61,45 +59,43 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object){
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EDataTypeArgument_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EDataTypeArgument_value_feature", "_UI_EDataTypeArgument_type"),
+				 ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Value feature. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
 	 */
-	protected void addValuePropertyDescriptor(Object object) {
+	protected void addValuePropertyDescriptor1(Object object) {
 		EDataTypeArgument argument = (EDataTypeArgument) object;
 		Class<?> clazz = argument.getEParameter().getEGenericType()
 				.getEClassifier().getInstanceClass();
 
+		System.out.println("EDataTypeArgumentItemProvider.addValuePropertyDescriptor()");
+		
 		if (clazz.isAssignableFrom(boolean.class) || clazz.isAssignableFrom(Boolean.class)) {
 			
-			/** 
-			 * Boolean DataType.
-			 */			
-			itemPropertyDescriptors
-					.add(new ItemPropertyDescriptor(
-							((ComposeableAdapterFactory) adapterFactory)
-									.getRootAdapterFactory(),
-							getResourceLocator(),
-							getString("_UI_EDataTypeArgument_value_feature"),
-							getString("_UI_PropertyDescriptor_description",
-									"_UI_EDataTypeArgument_value_feature",
-									"_UI_EDataTypeArgument_type"),
-							ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
-							true, false, false,
-							ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-							null){
-				@Override
-				protected Collection<?> getComboBoxObjects(
-						Object object) {
-					
-					String[] options = {"true", "false"};
-					ArrayList<String> list = new ArrayList<String>();
-					Collections.addAll(list, options);					
-					return list;
-				}
-			});
-			
+	
 		} else if (clazz.isAssignableFrom(Number.class) ||
 				   clazz.isAssignableFrom(byte.class) || 
 				   clazz.isAssignableFrom(short.class) ||
@@ -147,17 +143,6 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 	}
 
 	/**
-	 * This returns EDataTypeArgument.gif.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/EDataTypeArgument"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class. <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * 
@@ -166,10 +151,10 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 	@Override
 	public String getText(Object object) {
 		// FIXME Consider Units Here.
+		
 		EDataTypeArgument argument = (EDataTypeArgument) object;
 		String label = super.getText(object);
 		label += " (" + argument.getValue() + ")";
-
 		return label;
 	}
 

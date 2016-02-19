@@ -816,30 +816,75 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EDataTypeArgumentItemProvider eDataTypeArgumentItemProvider;
+	protected BooleanEDataTypeArgumentItemProvider booleanEDataTypeArgumentItemProvider;
 
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument}.
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEDataTypeArgumentAdapter()
-  {
-		if (eDataTypeArgumentItemProvider == null) {
-			eDataTypeArgumentItemProvider = new EDataTypeArgumentItemProvider(this);
+	@Override
+	public Adapter createBooleanEDataTypeArgumentAdapter() {
+		if (booleanEDataTypeArgumentItemProvider == null) {
+			booleanEDataTypeArgumentItemProvider = new BooleanEDataTypeArgumentItemProvider(this);
 		}
 
-		return eDataTypeArgumentItemProvider;
+		return booleanEDataTypeArgumentItemProvider;
 	}
 
-  /**
+		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NumericEDataTypeArgumentItemProvider numericEDataTypeArgumentItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumericEDataTypeArgumentAdapter() {
+		if (numericEDataTypeArgumentItemProvider == null) {
+			numericEDataTypeArgumentItemProvider = new NumericEDataTypeArgumentItemProvider(this);
+		}
+
+		return numericEDataTypeArgumentItemProvider;
+	}
+
+		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StringEDataTypeArgumentItemProvider stringEDataTypeArgumentItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStringEDataTypeArgumentAdapter() {
+		if (stringEDataTypeArgumentItemProvider == null) {
+			stringEDataTypeArgumentItemProvider = new StringEDataTypeArgumentItemProvider(this);
+		}
+
+		return stringEDataTypeArgumentItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1292,7 +1337,9 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (variableFeatureReferenceItemProvider != null) variableFeatureReferenceItemProvider.dispose();
 		if (operationCallItemProvider != null) operationCallItemProvider.dispose();
 		if (argumentsListItemProvider != null) argumentsListItemProvider.dispose();
-		if (eDataTypeArgumentItemProvider != null) eDataTypeArgumentItemProvider.dispose();
+		if (booleanEDataTypeArgumentItemProvider != null) booleanEDataTypeArgumentItemProvider.dispose();
+		if (numericEDataTypeArgumentItemProvider != null) numericEDataTypeArgumentItemProvider.dispose();
+		if (stringEDataTypeArgumentItemProvider != null) stringEDataTypeArgumentItemProvider.dispose();
 		if (eEnumArgumentItemProvider != null) eEnumArgumentItemProvider.dispose();
 		if (eClassArgumentItemProvider != null) eClassArgumentItemProvider.dispose();
 		if (operationCallResultsListItemProvider != null) operationCallResultsListItemProvider.dispose();

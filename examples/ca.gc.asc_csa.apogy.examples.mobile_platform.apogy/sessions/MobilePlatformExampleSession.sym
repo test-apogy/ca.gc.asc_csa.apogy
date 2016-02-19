@@ -54,20 +54,20 @@
       <operationCalls xmi:id="_Ca4V5wrPEeW4-_ONWXXiAw" name="Change Angular Velocity" variable="_CaxoMArPEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdAngularVelocity"/>
         <argumentsList xmi:id="_Ca4V6ArPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V6QrPEeW4-_ONWXXiAw" value="0.17453292519943295"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V6QrPEeW4-_ONWXXiAw" value="0.17453292519943295"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V6grPEeW4-_ONWXXiAw" name="Change Linear Velocity" variable="_CaxoMArPEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdLinearVelocity"/>
         <argumentsList xmi:id="_Ca4V6wrPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V7ArPEeW4-_ONWXXiAw" value="0.5"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V7ArPEeW4-_ONWXXiAw" value="0.5"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V7QrPEeW4-_ONWXXiAw" name="Change Velocities" variable="_CaxoMArPEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
         <argumentsList xmi:id="_Ca4V7grPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V7wrPEeW4-_ONWXXiAw" value="0.25"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V8ArPEeW4-_ONWXXiAw" value="0.3490658503988659"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V7wrPEeW4-_ONWXXiAw" value="0.25"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V8ArPEeW4-_ONWXXiAw" value="0.3490658503988659"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V8QrPEeW4-_ONWXXiAw" name="Clear Error" variable="_CaxoMArPEeW4-_ONWXXiAw">
@@ -76,8 +76,8 @@
       <operationCalls xmi:id="_Ca4V8grPEeW4-_ONWXXiAw" name="Move To" variable="_CaxoMArPEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/moveTo"/>
         <argumentsList xmi:id="_Ca4V8wrPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V9ArPEeW4-_ONWXXiAw" value="0.0"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V9QrPEeW4-_ONWXXiAw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V9ArPEeW4-_ONWXXiAw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V9QrPEeW4-_ONWXXiAw" value="0.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V9grPEeW4-_ONWXXiAw" name="Reset Position" variable="_CaxoMArPEeW4-_ONWXXiAw">
