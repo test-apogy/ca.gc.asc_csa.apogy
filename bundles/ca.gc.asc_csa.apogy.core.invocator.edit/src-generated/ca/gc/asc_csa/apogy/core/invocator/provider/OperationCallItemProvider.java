@@ -318,8 +318,25 @@ public class OperationCallItemProvider extends
 					((EEnumArgument) argument).setEEnumLiteral(eEnum
 							.getEEnumLiteral(defaultValue.name()));
 				} else if (parameter.getEType() instanceof EDataType) {
-					argument = ApogyCoreInvocatorFactory.eINSTANCE
-							.createEDataTypeArgument();
+					
+					Class<?> clazz = parameter.getEType().getInstanceClass();
+					System.out.println("OperationCallItemProvider.createSetCommand()");
+					
+					
+					if (clazz.isAssignableFrom(boolean.class) || clazz.isAssignableFrom(Boolean.class)) {
+						argument = ApogyCoreInvocatorFactory.eINSTANCE.createBooleanEDataTypeArgument();
+					} else if (clazz.isAssignableFrom(Number.class) ||
+							   clazz.isAssignableFrom(byte.class) || 
+							   clazz.isAssignableFrom(short.class) ||
+							   clazz.isAssignableFrom(int.class) ||
+							   clazz.isAssignableFrom(long.class) ||
+							   clazz.isAssignableFrom(float.class) ||
+							   clazz.isAssignableFrom(double.class)){						
+						argument = ApogyCoreInvocatorFactory.eINSTANCE.createNumericEDataTypeArgument();
+					} else{
+						argument = ApogyCoreInvocatorFactory.eINSTANCE.createStringEDataTypeArgument();						
+					}
+					
 					Object defaultValue = parameter.getEType()
 							.getDefaultValue();
 

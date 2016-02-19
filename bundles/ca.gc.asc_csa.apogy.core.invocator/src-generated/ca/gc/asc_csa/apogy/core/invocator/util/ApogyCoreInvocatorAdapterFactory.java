@@ -25,6 +25,7 @@ import ca.gc.asc_csa.apogy.common.emf.Disposable;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.invocator.*;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
@@ -298,6 +299,18 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseEDataTypeArgument(EDataTypeArgument object) {
 				return createEDataTypeArgumentAdapter();
+			}
+			@Override
+			public Adapter caseBooleanEDataTypeArgument(BooleanEDataTypeArgument object) {
+				return createBooleanEDataTypeArgumentAdapter();
+			}
+			@Override
+			public Adapter caseNumericEDataTypeArgument(NumericEDataTypeArgument object) {
+				return createNumericEDataTypeArgumentAdapter();
+			}
+			@Override
+			public Adapter caseStringEDataTypeArgument(StringEDataTypeArgument object) {
+				return createStringEDataTypeArgumentAdapter();
 			}
 			@Override
 			public Adapter caseEEnumArgument(EEnumArgument object) {
@@ -1005,6 +1018,48 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument <em>Boolean EData Type Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument
+	 * @generated
+	 */
+	public Adapter createBooleanEDataTypeArgumentAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument <em>Numeric EData Type Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument
+	 * @generated
+	 */
+	public Adapter createNumericEDataTypeArgumentAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument <em>String EData Type Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument
+	 * @generated
+	 */
+	public Adapter createStringEDataTypeArgumentAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument <em>EEnum Argument</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
