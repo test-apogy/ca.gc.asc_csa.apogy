@@ -26,7 +26,6 @@ Contributors:
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
-		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)",
 		  modelName="ApogyAddonsSensorsImaging")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.edit/src-generated")

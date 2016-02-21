@@ -25,7 +25,6 @@ Contributors:
     Canadian Space Agency (CSA) - Initial API and implementation",	
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
-		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)",
 		  modelName="ApogyAddonsMobilityControllers")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.mobility.controllers/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.mobility.controllers.edit/src-generated")

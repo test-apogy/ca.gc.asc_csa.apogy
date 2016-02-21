@@ -26,7 +26,6 @@ Contributors:
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
-		  copyrightText="Agence spatiale canadienne - Canadian Space Agency 2015 Copyrights (c)",
 		  modelName="ApogyAddonsSensorsFOVBindings",
 		  complianceLevel="6.0")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.fov.bindings/src-generated")

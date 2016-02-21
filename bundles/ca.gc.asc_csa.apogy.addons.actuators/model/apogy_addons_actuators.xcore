@@ -26,7 +26,6 @@ Contributors:
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
-		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)",
 		  modelName="ApogyAddonsActuators",
 		  suppressGenModelAnnotations="false")
 		  

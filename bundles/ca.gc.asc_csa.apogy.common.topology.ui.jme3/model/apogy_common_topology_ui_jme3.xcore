@@ -23,7 +23,6 @@ Contributors:
     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
     Sebastien Gemme (Sebastien.Gemme@canada.ca),
     Canadian Space Agency (CSA) - Initial API and implementation",	
-		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)",
 		  modelName="ApogyCommonTopologyUIJME3",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
