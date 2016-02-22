@@ -331,5 +331,6 @@
 				
 		<!-- Doc -->
 		<module>../../doc/ca.gc.asc_csa.apogy.doc</module>
+		<module>../../doc/ca.gc.asc_csa.apogy.doc.feature</module>
 	</modules>
 </project>
