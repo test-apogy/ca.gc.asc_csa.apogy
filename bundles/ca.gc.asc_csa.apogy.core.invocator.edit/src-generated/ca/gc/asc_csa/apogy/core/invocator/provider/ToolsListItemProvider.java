@@ -225,16 +225,6 @@ public class ToolsListItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-				 ApogyCoreInvocatorFactory.eINSTANCE.createWatchesListsContainer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-				 ApogyCoreInvocatorFactory.eINSTANCE.createDisplaysListsContainer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
 				 ApogyCoreInvocatorFactory.eINSTANCE.createRecordingToolsContainer()));
 	}
 

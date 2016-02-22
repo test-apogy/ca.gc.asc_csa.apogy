@@ -20,6 +20,11 @@ import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
  * A representation of the model object '<em><b>Coordinates25 D</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Represent 2.5D geometry where u and v are the
+ * independent variables and w the dependent variable.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

@@ -606,12 +606,31 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+			 "copyrightText", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyAddonsGeometryPaths",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.geometry.paths/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.geometry.paths.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons.geometry"
+		   });	
+		addAnnotation
+		  (wayPointPathEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClass that defines a path as a series CartesianPositionCoordinates."
+		   });	
+		addAnnotation
+		  (getWayPointPath_Length(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "apogy_units", "m"
+		   });	
+		addAnnotation
+		  (catmullRomWayPointPathInterpolatorEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Fits a spline on the specified path using Catmull-Rom and generates an\ninterpolated path using the specified maximum point to point distance.\nThe original waypoints are included in the resulting interpolated path."
 		   });	
 		addAnnotation
 		  (getApogyAddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath(), 

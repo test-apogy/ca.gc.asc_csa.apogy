@@ -45,6 +45,7 @@ import junit.textui.TestRunner;
  * The following operations are tested:
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double) <em>Create Cartesian Position Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createColoredCartesianPositionCoordinates(double, double, double, short, short, short) <em>Create Colored Cartesian Position Coordinates</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createSphericalCoordinates(double, double, double) <em>Create Spherical Coordinates</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(double, double, double, double, double, double) <em>Create Pose</em>}</li>
@@ -158,6 +159,19 @@ public class ApogyCommonGeometryData3DFacadeTest extends TestCase {
 		assertEquals(10, coord.getX(), 1E-9);
 		assertEquals(20, coord.getY(), 1E-9);
 		assertEquals(30, coord.getZ(), 1E-9);		
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createColoredCartesianPositionCoordinates(double, double, double, short, short, short) <em>Create Colored Cartesian Position Coordinates</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createColoredCartesianPositionCoordinates(double, double, double, short, short, short)
+	 * @generated
+	 */
+	public void testCreateColoredCartesianPositionCoordinates__double_double_double_short_short_short() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 	/**

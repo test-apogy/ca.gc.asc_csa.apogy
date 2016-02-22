@@ -322,12 +322,18 @@ public class ApogyExamplesLidarPackageImpl extends EPackageImpl implements Apogy
 			 "prefix", "ApogyExamplesLidar",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
+			 "copyrightText", "Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyExamplesLidar",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.lidar/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.lidar.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
+		   });	
+		addAnnotation
+		  (lidarEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This is an abstraction of the Lidar unit, a 3D laser-based range\nfinder which is capable of scanning the environment and returning\na point cloud encompassing the resulting information.  It has a\nfield of view, which determines the subsection of the environment\nthat the unit can scan.  It also can keep track of whether or not\nthe unit was initialized."
 		   });	
 		addAnnotation
 		  (getLidar__Init(), 

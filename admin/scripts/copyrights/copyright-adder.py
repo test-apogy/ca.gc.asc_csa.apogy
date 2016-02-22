@@ -1,0 +1,347 @@
+#!/usr/bin/env python3
+'''
+Created on Jan 25, 2016
+
+@author: sgemme
+'''
+
+from abc import ABCMeta, abstractmethod
+import sys
+import re
+import argparse
+
+def extractExtension(fileName):
+        
+        ext = ''
+        
+        fields = fileName.split('.')
+        
+        if len(fields) > 0:
+            ext = fields[-1]                  
+        
+        return ext
+    
+class File(object):        
+    
+    def __init__(self, fileName):
+        self.__fileName = fileName
+        self.__ext = None
+        self.__copyright = None
+        
+        self.__copyrightRe = re.compile(".*copyright.*\d{4}",re.I)
+        
+        with open(self.__fileName) as f:
+            self.__fileContent = f.readlines()
+            
+            f.close()
+    
+    def setCommentBlockFileName(self, commentBlockFileName):
+        assert isinstance(commentBlockFileName, str)                
+        
+        # We load the comment block
+        self.__loadCommentBlock(commentBlockFileName)
+        
+    def __loadCommentBlock(self, fileName):
+        
+        with open(fileName) as f:
+            self._commentBlock = f.readlines()
+        
+            f.close()
+        
+    def addHeader(self):                
+        
+        # Get the factory
+        commentProvider = CommentFactory.getCharacterProvider(self.getExtension())                    
+            
+        headerInserted = False
+            
+        for line in self.__fileContent:                
+            if not headerInserted and self._canInsertHeader(line):                    
+                print(commentProvider.getBeginCommentString())
+                for headerLine in self._commentBlock:                        
+                    sys.stdout.write(commentProvider.getInCommentString() + " " + headerLine) 
+                headerInserted = True
+                print(commentProvider.getEndCommentString())
+                sys.stdout.write(line)
+            else:                    
+                sys.stdout.write(line)        
+    
+    @abstractmethod
+    def _canInsertHeader(self, line):
+        return True        
+    
+    def getExtension(self):
+        if not self.__ext:
+            self.__ext = extractExtension(self.__fileName)
+        
+        return self.__ext
+    
+    def relaceXCoreCopyrightText(self):
+        """
+        For an excore file, replace the xcore copyright text, contained as a field called
+        copyrightText="..."
+        """
+        copyrightString = ""
+        copyrightString = copyrightString.join(self._commentBlock)
+        
+        copyrightString = copyrightString.replace("\n","")
+        
+        regex = re.compile("(.*copyrightText=\").*(\".*)")
+                
+        self.__fileContent = [re.sub(regex,"\g<1>" + str(copyrightString) + "\g<2>",line) for line in self.__fileContent]                
+    
+    def stripHeader(self):                    
+        
+        # Ge the factory
+        commentProvider = CommentFactory.getCharacterProvider(self.getExtension())        
+        
+        # It is expected that the first line is where the comment block starts
+       
+        inCopyrightBlock = False           
+        done = False
+
+        blockStart = -1
+        blockEnd = 0
+        i = 0
+
+        for line in self.__fileContent:
+            if inCopyrightBlock:
+                if (commentProvider.getEndCommentString() == commentProvider.getInCommentString()):
+                    if commentProvider.getEndCommentString() not in line:
+                        blockEnd = i-1
+                        inCopyrightBlock = False
+                        break
+                elif commentProvider.getEndCommentString() in line:
+                    blockEnd = i
+                    inCopyrightBlock = False
+                    break
+            elif commentProvider.getBeginCommentString() in line:
+                inCopyrightBlock = True
+                blockStart = i
+            
+            i += 1
+
+        block = ""
+
+        commentBlock = self.__fileContent[blockStart:blockEnd+1]
+
+        block = block.join(commentBlock)
+
+        if "COPYRIGHT" in block.upper():
+            # Write the beginning
+            s = ""
+            s = s.join(self.__fileContent[0:blockStart])
+
+            sys.stdout.write(s)
+            
+            regex = re.compile("^([" + re.escape(commentProvider.getBeginCommentString()) + "]*)" + re.escape(commentProvider.getBeginCommentString()) + ".*" + re.escape(commentProvider.getEndCommentString()) + "(.*)",re.S | re.M)
+
+            m = regex.match(block)
+            if m:
+                sys.stdout.write(m.group(1) + m.group(2).rstrip("\n"))
+                
+            s = ""
+            s = s.join(self.__fileContent[blockEnd+1:])
+
+            sys.stdout.write(s)
+        else:
+            s = ""
+            sys.stdout.write(s.join(self.__fileContent))
+                
+    def isCopyrighted(self):        
+        
+        copyrighted = False
+        
+        for line in self.__fileContent:            
+            upperLine = line.upper()
+            if self.__copyrightRe.match(upperLine):            
+                copyrighted = "CANADIAN" not in upperLine                
+                self.__copyright = line
+                break
+            
+        return copyrighted
+    
+    def getCopyright(self):
+        return self.__copyright
+                
+                    
+class CFamilyFile(File):
+    
+    def _canInsertHeader(self, line):
+        return True        
+    
+class JavaFile(File):
+        
+    def _canInsertHeader(self, line):        
+        return not line.startswith("package")
+    
+class XMLFile(File):
+        
+    def _canInsertHeader(self, line):
+        return not line.startswith("<?")
+    
+class InterpreterFile(File):
+        
+    def _canInsertHeader(self, line):
+        return not line.startswith("#!")
+                    
+class FileFactory(object):
+    
+    @classmethod
+    def createFile(cls, fileName):
+        assert isinstance(fileName, str)
+        
+        ext = extractExtension(fileName).upper()
+        
+        fileObject = None
+        
+        if (ext == "C" or 
+            ext == "CPP" or  
+            ext == "CXX" or
+            ext == "H" or
+            ext == "HPP" or 
+            ext == "HXX"):          
+            
+            # Cpp file
+            fileObject = CFamilyFile(fileName)
+        elif (ext == "JAVA" or 
+              ext == "XCORE"):
+            
+            fileObject = JavaFile(fileName)
+            
+        elif (ext == "HTML" or 
+               ext == "XML"):
+            
+            fileObject = XMLFile(fileName)
+        elif (ext == "SH" or ext == "PY"):                        
+            fileObject = InterpreterFile(fileName)
+            
+        else:
+            fileObject = InterpreterFile(fileName) 
+            
+        return fileObject                       
+
+class CommentFactory(object):
+    
+    @classmethod
+    def getCharacterProvider(cls, extension):                
+        assert isinstance(extension, str)
+        
+        commentProvider = None
+        
+        ext = extension.upper()
+                
+        if (ext == "C" or 
+            ext == "CPP" or  
+            ext == "CXX" or
+            ext == "H" or
+            ext == "HPP" or 
+            ext == "HXX" or
+            ext == "JAVA" or 
+            ext == "XCORE"):
+            
+            # Cpp file
+            commentProvider = CCommentProvider()
+        elif (ext == "HTML" or 
+               ext == "XML"):
+            
+            commentProvider = MarkupLanguageCommentProvider()
+        elif (ext == "SH" or ext == "PY"):
+                        
+            commentProvider = HashTagCommentProvider()
+            
+        else:
+            commentProvider = HashTagCommentProvider()
+            
+        return commentProvider  
+
+class CommentCharacterProvider(object):
+    
+    __metaclass__ = ABCMeta
+    
+    @abstractmethod
+    def getBeginCommentString(self):
+        pass
+    
+    @abstractmethod
+    def getEndCommentString(self):
+        pass
+    
+    @abstractmethod
+    def getInCommentString(self):
+        pass
+
+class MarkupLanguageCommentProvider(CommentCharacterProvider):
+    
+    def getBeginCommentString(self):
+        return "<!--"
+    
+    def getEndCommentString(self):
+        return "-->"
+    
+    def getInCommentString(self):
+        return ""
+    
+class HashTagCommentProvider(CommentCharacterProvider):
+    
+    def getBeginCommentString(self):
+        return "#"
+    
+    def getEndCommentString(self):
+        return self.getBeginCommentString()
+    
+    def getInCommentString(self):
+        return self.getBeginCommentString()
+    
+class CCommentProvider(CommentCharacterProvider):
+    
+    def getBeginCommentString(self):
+        return "/*"
+    
+    def getEndCommentString(self):
+        return " */"
+    
+    def getInCommentString(self):
+        return " *"
+
+if __name__ == '__main__':
+    
+    parser = argparse.ArgumentParser()      
+    
+    subparsers = parser.add_subparsers(help="commands")  
+                
+    # Apply parser
+    applyParser = subparsers.add_parser("apply", help="Apply comment block")
+    applyParser.add_argument("sourceFile", help="Source File")
+    applyParser.add_argument("copyrightBlock", help="Copyrith Block File")
+    
+    # Strip parser
+    stripParser = subparsers.add_parser("strip", help="Strips Copyright Block from File")
+    stripParser.add_argument("sourceFile", help="Source File to Strip Comments from")  
+    
+    args = parser.parse_args()    
+   
+    if not "sourceFile" in args:
+        parser.print_usage()
+        sys.exit(1)
+        
+    f = FileFactory.createFile(args.sourceFile)
+    
+    if not f.isCopyrighted():
+    
+        if "copyrightBlock" in args:    
+            f.setCommentBlockFileName(args.copyrightBlock)
+            f.addHeader()
+            f.relaceXCoreCopyrightText()
+        elif "sourceFile" in args:                
+            f.stripHeader()
+        else:
+            parser.print_usage()
+            sys.exit(1) 
+    else:
+        sys.stderr.write("Error, file " + args.sourceFile + " is copyrighted: " + str(f.getCopyright()) + "\n")
+        sys.exit(1)
+        
+    sys.exit(0)
+    
+#     pass

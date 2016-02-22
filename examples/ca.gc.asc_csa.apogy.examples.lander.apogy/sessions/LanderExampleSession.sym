@@ -54,7 +54,7 @@
       <operationCalls xmi:id="_73SGAgrOEeW4-_ONWXXiAw" name="Start Flying" variable="_73QQ1grOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.lander#//Lander/startFlying"/>
         <argumentsList xmi:id="_73SGAwrOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73SGBArOEeW4-_ONWXXiAw" value="false"/>
+          <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_73SGBArOEeW4-_ONWXXiAw" value="false"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_73SGBQrOEeW4-_ONWXXiAw" name="Stop Flying" variable="_73QQ1grOEeW4-_ONWXXiAw">
@@ -63,9 +63,9 @@
       <operationCalls xmi:id="_73SGBgrOEeW4-_ONWXXiAw" name="Move To" variable="_73QQ1grOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.lander#//Lander/moveTo"/>
         <argumentsList xmi:id="_73SGBwrOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73SGCArOEeW4-_ONWXXiAw" value="10.0"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73SGCQrOEeW4-_ONWXXiAw" value="10.0"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73SGCgrOEeW4-_ONWXXiAw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73SGCArOEeW4-_ONWXXiAw" value="10.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73SGCQrOEeW4-_ONWXXiAw" value="10.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73SGCgrOEeW4-_ONWXXiAw" value="0.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_73SGCwrOEeW4-_ONWXXiAw" name="Change Leg Positions" variable="_73QQ1grOEeW4-_ONWXXiAw">
@@ -88,28 +88,28 @@
       <operationCalls xmi:id="_73TUIgrOEeW4-_ONWXXiAw" name="Change Thrust To" variable="_73QQ1grOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.lander#//Lander/commandThrust"/>
         <argumentsList xmi:id="_73TUIwrOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73TUJArOEeW4-_ONWXXiAw" value="2000.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73TUJArOEeW4-_ONWXXiAw" value="2000.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_73TUJQrOEeW4-_ONWXXiAw" name="Change Thrust By" variable="_73QQ1grOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.lander#//Lander/changeThrustBy"/>
         <argumentsList xmi:id="_73TUJgrOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73TUJwrOEeW4-_ONWXXiAw" value="50.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73TUJwrOEeW4-_ONWXXiAw" value="50.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_73TUKArOEeW4-_ONWXXiAw" name="Change Angular Velocities" variable="_73QQ1grOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.lander#//Lander/commandAngularVelocities"/>
         <argumentsList xmi:id="_73TUKQrOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73TUKgrOEeW4-_ONWXXiAw" value="0.17453292519943295"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73TUKwrOEeW4-_ONWXXiAw" value="-0.3490658503988659"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73TUKgrOEeW4-_ONWXXiAw" value="0.17453292519943295"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73TUKwrOEeW4-_ONWXXiAw" value="-0.3490658503988659"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_73TULArOEeW4-_ONWXXiAw" name="Change Attitude To" variable="_73QQ1grOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.lander#//Lander/changeAttitude"/>
         <argumentsList xmi:id="_73TULQrOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73TULgrOEeW4-_ONWXXiAw" value="0.0"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73TULwrOEeW4-_ONWXXiAw" value="0.0"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_73TUMArOEeW4-_ONWXXiAw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73TULgrOEeW4-_ONWXXiAw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73TULwrOEeW4-_ONWXXiAw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_73TUMArOEeW4-_ONWXXiAw" value="0.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_73TUMQrOEeW4-_ONWXXiAw" name="Reset Attitude" variable="_73QQ1grOEeW4-_ONWXXiAw">

@@ -20,15 +20,19 @@ import java.util.Set;
 import java.util.SortedSet;
 
 import org.eclipse.emf.ecore.EObject;
+import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 import ca.gc.asc_csa.apogy.common.converters.ChainedConverter;
 import ca.gc.asc_csa.apogy.common.converters.IConverter;
 import ca.gc.asc_csa.apogy.common.converters.graphs.impl.ApogyCommonConvertersGraphsFacadeImpl;
-import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
+ *
+ * <!-- begin-model-doc -->
+ * A utility class used to perform a variety of functions
+ * <!-- end-model-doc -->
  *
  *
  * @see ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsPackage#getApogyCommonConvertersGraphsFacade()

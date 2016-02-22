@@ -1202,7 +1202,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+			 "copyrightText", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyCommonTopology",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.topology/src-generated",
@@ -1210,10 +1210,47 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 			 "basePackage", "ca.gc.asc_csa.apogy.common"
 		   });	
 		addAnnotation
+		  (nodeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe base class of all nodes in a topology."
+		   });	
+		addAnnotation
+		  (getNode_Parent(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The parent of the node.",
+			 "notify", "true",
+			 "propertyCategory", "NODE"
+		   });	
+		addAnnotation
+		  (getNode_Description(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The description of the node.",
+			 "notify", "true",
+			 "propertyCategory", "NODE"
+		   });	
+		addAnnotation
+		  (getNode_NodeId(), 
+		   source, 
+		   new String[] {
+			 "documentation", "* The node identifier.",
+			 "notify", "true",
+			 "propertyCategory", "NODE"
+		   });	
+		addAnnotation
 		  (getGroupNode_Children(), 
 		   source, 
 		   new String[] {
 			 "children", "false",
+			 "createChild", "false"
+		   });	
+		addAnnotation
+		  (getReferencedGroupNode_ReferencedChildren(), 
+		   source, 
+		   new String[] {
+			 "children", "true",
 			 "createChild", "false"
 		   });	
 		addAnnotation

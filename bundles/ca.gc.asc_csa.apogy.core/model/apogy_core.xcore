@@ -14,7 +14,17 @@
 @GenModel(prefix="ApogyCore",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
-		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+          copyrightText="Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Pierre Allard (Pierre.Allard@canada.ca), 
+    Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
+    Canadian Space Agency (CSA) - Initial API and implementation",
 		  modelName="ApogyCore",
 		  multipleEditorPages="false",
 		  fileExtensions="sym") 
@@ -48,6 +58,191 @@ import ca.gc.asc_csa.apogy.common.topology.TransformNode
 import ca.gc.asc_csa.apogy.common.topology.Node
 import ca.gc.asc_csa.apogy.common.topology.GroupNode
 
+/* Types definitions. */
+type Map<K,V> wraps java.util.Map
+type List<T> wraps java.util.List
+type Collection<T> wraps java.util.Collection
+type Exception wraps java.lang.Exception
+
+/* -------------------------------------------------------------------------
+ * 
+ * Apogy Core Facade.
+ * 
+ * ------------------------------------------------------------------------- */ 
+class ApogyCoreFacade
+{
+	op Matrix4x4 computeAbsolutePoseMatrix(ApogySystem apogySystem, Matrix4x4 relativePose)
+	op ResultNode createResultNode(PositionedResult result)		
+	op InvocatorSession createApogySession(boolean createEnvironment, boolean createPrograms, boolean createDataProducts, boolean createTools)
+	
+	/*
+	 * Searches and returns the {@link ApogySystem} instance based on the specified fullyQualifiedName.
+	 * @param environment Environment from which the search will be performed.
+	 * @param param fullyQualifiedName Fully qualified name that refers the {@link ApogySystem} instance.
+	 * @return Reference to the {@link ApogySystem} that matches the fully qualified name or null if not found.
+	 */
+	op ApogySystem getApogySystem(Environment environment, String fullyQualifiedName)	
+	
+	/*
+	 * Loads FeatureOfInterest from file.
+	 * @param url The URL locating the file.
+	 * @return The list of loaded FeatureOfInterest.
+	 * @throws An Exception if the file could not be loaded.
+	 */
+	op List<FeatureOfInterest> loadFeatureOfInterestFromFile(String url) throws Exception
+	
+    /*
+	 * Saves a list of FeatureOfInterest to file (in CSV format).
+	 * @param path The path to the file.	
+	 * @param foiList The list of FeatureOfInterest.
+	 * @throws An Exception if the file could not be saved.
+	 */
+	op void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Apogy Environment.
+ * 
+ * ------------------------------------------------------------------------- */ 
+class ApogyEnvironment extends Environment, Timed
+{
+	contains WorksitesList[0..1] worksitesList
+	
+	/*
+	 * The worksite currently active.
+	 */
+	refers AbstractWorksite activeWorksite
+		
+	@GenModel(children="true", notify="true", property="None")
+	refers derived transient ApogyTopology[0..1] apogyTopology	
+	
+	/*
+	 * The list of available time sources.
+	 */
+	contains TimeSourcesList[0..1] timeSourcesList opposite environment 
+	
+	/*
+	 * The time source currently providing time used to drive the environment.
+	 */
+	refers TimeSource activeTimeSource	
+}
+
+class TimeSourcesList
+{	
+    @GenModel(property="None")
+	container ApogyEnvironment environment opposite timeSourcesList
+	contains TimeSource[0..*] timeSources 
+}
+
+
+class ApogyTopology
+{
+ 	@GenModel(children="true", notify="true", property="Readonly")
+	refers derived transient GroupNode rootNode
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Apogy System.
+ * 
+ * ------------------------------------------------------------------------- */ 
+class ApogySystem extends Type
+{
+	@GenModel(children="true", createChild="true", property="None")
+	contains TopologyRoot topologyRoot
+	contains BindingsSet bindingSet
+	contains ConnectionPointsList [0..1] connectionPointsList opposite apogySystem
+	contains AssemblyLinksList[0..1] assemblyLinksList
+	refers AbstractType[0..1] poseProvider
+	
+	// Used in the ApogySystem copies only.
+	refers transient PoseProvider [0..1] poseProviderInstance	
+}
+
+class ApogySystemApiAdapter extends TypeApiAdapter, PoseProvider
+{
+	contains PoseCorrector[0..1] poseCorrector opposite apogySystemApiAdapter
+	op Matrix4x4 createResultMatrix(OperationCall operationCall)	
+	
+	@GenModel(children="true", createChild="false")
+	refers transient ApogySystem [0..1] apogySystem	
+}
+
+class ConnectionPointsList
+{	
+    @GenModel(property="None")
+	container ApogySystem[1] apogySystem opposite connectionPointsList
+	contains ConnectionPoint[0..*] connectionPoints opposite pointsList	
+}
+
+class ConnectionPoint extends Named, Described 
+{
+	@GenModel(property="None")
+	container ConnectionPointsList[1] pointsList opposite connectionPoints
+	refers GroupNode node
+}
+
+class AssemblyLink extends Named, Described 
+{
+	/*
+	 * The parent type member of the link.
+	 */
+	@GenModel(propertyCategory="LINK_PARENT")
+	refers TypeMember [0..1] parentTypeMember
+
+	/*
+	 * The destination type member of the link.
+	 */
+	@GenModel(propertyCategory="LINK_CHILD")
+	refers TypeMember [1] subSystemTypeMember
+
+	/*
+	 * The connection on the parent member of the link.
+	 */
+	@GenModel(propertyCategory="LINK_PARENT")
+	refers ConnectionPoint [1] parentConnectionPoint
+	
+	/*
+	 * The transformation to position the subsystem
+	 * relative to the connection point.
+	 */
+	@GenModel(propertyCategory="LINK_TOPOLOGY")
+	contains Matrix4x4 [0..1] transformationMatrix
+
+	/*
+	 * Any geometry topology used to represent interface hardware.
+	 * This topology will be attached to the connection point.
+	 */
+	@GenModel(propertyCategory="LINK_TOPOLOGY")
+	contains Node [0..1] geometryNode
+	
+ 	@GenModel(property="Readonly", propertyCategory="LINK_PARENT")
+	refers transient ApogySystem [0..1] parentInstance
+		
+ 	@GenModel(property="Readonly", propertyCategory="LINK_CHILD")
+	refers transient ApogySystem [0..1] subSystemInstance	
+}
+
+class AssemblyLinksList{
+	contains AssemblyLink [0..*] assemblyLinks
+}
+
+
+/* -------------------------------------------------------------------------
+ * 
+ * Apogy System API.
+ * 
+ * ------------------------------------------------------------------------- */ 
+ 
+class PoseProvider
+{
+	contains Matrix4x4 [0..1] poseTransform 
+} 
+
+/**
+ * Class that provide an absolute pose (i.e. a transform relative to the worksite.)
+ */
 class AbsolutePoseProvider extends PoseProvider
 {
 }

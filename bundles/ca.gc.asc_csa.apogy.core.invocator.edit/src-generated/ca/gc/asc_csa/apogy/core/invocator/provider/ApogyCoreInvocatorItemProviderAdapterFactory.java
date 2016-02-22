@@ -816,30 +816,75 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EDataTypeArgumentItemProvider eDataTypeArgumentItemProvider;
+	protected BooleanEDataTypeArgumentItemProvider booleanEDataTypeArgumentItemProvider;
 
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument}.
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEDataTypeArgumentAdapter()
-  {
-		if (eDataTypeArgumentItemProvider == null) {
-			eDataTypeArgumentItemProvider = new EDataTypeArgumentItemProvider(this);
+	@Override
+	public Adapter createBooleanEDataTypeArgumentAdapter() {
+		if (booleanEDataTypeArgumentItemProvider == null) {
+			booleanEDataTypeArgumentItemProvider = new BooleanEDataTypeArgumentItemProvider(this);
 		}
 
-		return eDataTypeArgumentItemProvider;
+		return booleanEDataTypeArgumentItemProvider;
 	}
 
-  /**
+		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NumericEDataTypeArgumentItemProvider numericEDataTypeArgumentItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumericEDataTypeArgumentAdapter() {
+		if (numericEDataTypeArgumentItemProvider == null) {
+			numericEDataTypeArgumentItemProvider = new NumericEDataTypeArgumentItemProvider(this);
+		}
+
+		return numericEDataTypeArgumentItemProvider;
+	}
+
+		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StringEDataTypeArgumentItemProvider stringEDataTypeArgumentItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStringEDataTypeArgumentAdapter() {
+		if (stringEDataTypeArgumentItemProvider == null) {
+			stringEDataTypeArgumentItemProvider = new StringEDataTypeArgumentItemProvider(this);
+		}
+
+		return stringEDataTypeArgumentItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1053,150 +1098,6 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		}
 
 		return referenceResultValueItemProvider;
-	}
-
-  /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer} instances.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected WatchesListsContainerItemProvider watchesListsContainerItemProvider;
-
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public Adapter createWatchesListsContainerAdapter()
-  {
-		if (watchesListsContainerItemProvider == null) {
-			watchesListsContainerItemProvider = new WatchesListsContainerItemProvider(this);
-		}
-
-		return watchesListsContainerItemProvider;
-	}
-
-  /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.WatchesList} instances.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected WatchesListItemProvider watchesListItemProvider;
-
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.WatchesList}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public Adapter createWatchesListAdapter()
-  {
-		if (watchesListItemProvider == null) {
-			watchesListItemProvider = new WatchesListItemProvider(this);
-		}
-
-		return watchesListItemProvider;
-	}
-
-  /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.Watch} instances.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected WatchItemProvider watchItemProvider;
-
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Watch}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public Adapter createWatchAdapter()
-  {
-		if (watchItemProvider == null) {
-			watchItemProvider = new WatchItemProvider(this);
-		}
-
-		return watchItemProvider;
-	}
-
-  /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter} instances.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected WatchFeatureNodeAdapterItemProvider watchFeatureNodeAdapterItemProvider;
-
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public Adapter createWatchFeatureNodeAdapterAdapter()
-  {
-		if (watchFeatureNodeAdapterItemProvider == null) {
-			watchFeatureNodeAdapterItemProvider = new WatchFeatureNodeAdapterItemProvider(this);
-		}
-
-		return watchFeatureNodeAdapterItemProvider;
-	}
-
-  /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer} instances.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected DisplaysListsContainerItemProvider displaysListsContainerItemProvider;
-
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public Adapter createDisplaysListsContainerAdapter()
-  {
-		if (displaysListsContainerItemProvider == null) {
-			displaysListsContainerItemProvider = new DisplaysListsContainerItemProvider(this);
-		}
-
-		return displaysListsContainerItemProvider;
-	}
-
-  /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList} instances.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected DisplaysListItemProvider displaysListItemProvider;
-
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public Adapter createDisplaysListAdapter()
-  {
-		if (displaysListItemProvider == null) {
-			displaysListItemProvider = new DisplaysListItemProvider(this);
-		}
-
-		return displaysListItemProvider;
 	}
 
   /**
@@ -1436,7 +1337,9 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (variableFeatureReferenceItemProvider != null) variableFeatureReferenceItemProvider.dispose();
 		if (operationCallItemProvider != null) operationCallItemProvider.dispose();
 		if (argumentsListItemProvider != null) argumentsListItemProvider.dispose();
-		if (eDataTypeArgumentItemProvider != null) eDataTypeArgumentItemProvider.dispose();
+		if (booleanEDataTypeArgumentItemProvider != null) booleanEDataTypeArgumentItemProvider.dispose();
+		if (numericEDataTypeArgumentItemProvider != null) numericEDataTypeArgumentItemProvider.dispose();
+		if (stringEDataTypeArgumentItemProvider != null) stringEDataTypeArgumentItemProvider.dispose();
 		if (eEnumArgumentItemProvider != null) eEnumArgumentItemProvider.dispose();
 		if (eClassArgumentItemProvider != null) eClassArgumentItemProvider.dispose();
 		if (operationCallResultsListItemProvider != null) operationCallResultsListItemProvider.dispose();
@@ -1446,12 +1349,6 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (attributeResultValueItemProvider != null) attributeResultValueItemProvider.dispose();
 		if (attributeValueItemProvider != null) attributeValueItemProvider.dispose();
 		if (referenceResultValueItemProvider != null) referenceResultValueItemProvider.dispose();
-		if (watchesListsContainerItemProvider != null) watchesListsContainerItemProvider.dispose();
-		if (watchesListItemProvider != null) watchesListItemProvider.dispose();
-		if (watchItemProvider != null) watchItemProvider.dispose();
-		if (watchFeatureNodeAdapterItemProvider != null) watchFeatureNodeAdapterItemProvider.dispose();
-		if (displaysListsContainerItemProvider != null) displaysListsContainerItemProvider.dispose();
-		if (displaysListItemProvider != null) displaysListItemProvider.dispose();
 		if (recordingToolsContainerItemProvider != null) recordingToolsContainerItemProvider.dispose();
 		if (channelsListItemProvider != null) channelsListItemProvider.dispose();
 		if (operationCallResultsListTimeSourceItemProvider != null) operationCallResultsListTimeSourceItemProvider.dispose();

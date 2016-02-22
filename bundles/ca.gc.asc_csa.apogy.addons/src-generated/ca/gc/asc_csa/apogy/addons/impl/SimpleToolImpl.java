@@ -195,6 +195,17 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initialise() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
 	public void dispose() 
@@ -333,6 +344,9 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case ApogyAddonsPackage.SIMPLE_TOOL___INITIALISE:
+				initialise();
+				return null;
 			case ApogyAddonsPackage.SIMPLE_TOOL___DISPOSE:
 				dispose();
 				return null;

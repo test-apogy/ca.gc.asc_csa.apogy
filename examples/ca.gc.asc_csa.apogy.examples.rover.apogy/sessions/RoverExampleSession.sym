@@ -131,20 +131,20 @@
       <operationCalls xmi:id="_P7mI6wrPEeW4-_ONWXXiAw" name="Change Linear Velocity" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.rover#//Rover/cmdLinearVelocity"/>
         <argumentsList xmi:id="_P7mI7ArPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_P7mI7QrPEeW4-_ONWXXiAw" value="0.5"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_P7mI7QrPEeW4-_ONWXXiAw" value="0.5"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_P7mI6ArPEeW4-_ONWXXiAw" name="Change Angular Velocity" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.rover#//Rover/cmdAngularVelocity"/>
         <argumentsList xmi:id="_P7mI6QrPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_P7mI6grPEeW4-_ONWXXiAw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_P7mI6grPEeW4-_ONWXXiAw" value="0.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_P7mI7grPEeW4-_ONWXXiAw" name="Change Velocities" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.rover#//Rover/cmdVelocities"/>
         <argumentsList xmi:id="_P7mI7wrPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_P7mI8ArPEeW4-_ONWXXiAw" value="0.5"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_P7mI8QrPEeW4-_ONWXXiAw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_P7mI8ArPEeW4-_ONWXXiAw" value="0.5"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_P7mI8QrPEeW4-_ONWXXiAw" value="0.0"/>
         </argumentsList>
       </operationCalls>
     </programs>
@@ -155,8 +155,8 @@
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList xmi:id="_RrHp0DqzEeW90siL-RZo4A">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_RrHp0TqzEeW90siL-RZo4A" value="0.0"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_RrHp0jqzEeW90siL-RZo4A" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_RrHp0TqzEeW90siL-RZo4A" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_RrHp0jqzEeW90siL-RZo4A" value="0.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_d_DA8DqwEeWejcyRaZRBaQ" name="Move Arm" variable="_P7kTtgrPEeW4-_ONWXXiAw">
@@ -165,10 +165,10 @@
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
         <argumentsList xmi:id="_iyapUDqwEeWejcyRaZRBaQ">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_iyapUTqwEeWejcyRaZRBaQ" value="0.0"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_iyapUjqwEeWejcyRaZRBaQ" value="0.0"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_iyapUzqwEeWejcyRaZRBaQ" value="-1.5707963267948966"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_iyapVDqwEeWejcyRaZRBaQ" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_iyapUTqwEeWejcyRaZRBaQ" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_iyapUjqwEeWejcyRaZRBaQ" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_iyapUzqwEeWejcyRaZRBaQ" value="-1.5707963267948966"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_iyapVDqwEeWejcyRaZRBaQ" value="0.0"/>
         </argumentsList>
       </operationCalls>
     </programs>
@@ -179,8 +179,8 @@
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList xmi:id="_V9rEIjqzEeW90siL-RZo4A">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_V9rEIzqzEeW90siL-RZo4A" value="0.0"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_V9rEJDqzEeW90siL-RZo4A" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_V9rEIzqzEeW90siL-RZo4A" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_V9rEJDqzEeW90siL-RZo4A" value="0.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_y-OwoDqwEeWejcyRaZRBaQ" name="Stow Arm" variable="_P7kTtgrPEeW4-_ONWXXiAw">
@@ -202,8 +202,8 @@
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList xmi:id="_eHAiwDqzEeW90siL-RZo4A">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_eHAiwTqzEeW90siL-RZo4A" value="1.5707963267948966"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_eHAiwjqzEeW90siL-RZo4A" value="-0.4363323129985824"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_eHAiwTqzEeW90siL-RZo4A" value="1.5707963267948966"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_eHAiwjqzEeW90siL-RZo4A" value="-0.4363323129985824"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_iBW4cDqzEeW90siL-RZo4A" name="Move Rover Camera" variable="_P7kTtgrPEeW4-_ONWXXiAw">
@@ -212,8 +212,8 @@
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList xmi:id="_lhuA0DqzEeW90siL-RZo4A">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_lhuA0TqzEeW90siL-RZo4A" value="0.7853981633974483"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_lhuA0jqzEeW90siL-RZo4A" value="-0.5235987755982988"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_lhuA0TqzEeW90siL-RZo4A" value="0.7853981633974483"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_lhuA0jqzEeW90siL-RZo4A" value="-0.5235987755982988"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_ivy2UDq0EeW90siL-RZo4A" name="Zoom Arm Cam 2x" variable="_P7kTtgrPEeW4-_ONWXXiAw">
@@ -222,7 +222,7 @@
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList xmi:id="_kCcJ8Dq0EeW90siL-RZo4A">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_kCcJ8Tq0EeW90siL-RZo4A" value="2.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_kCcJ8Tq0EeW90siL-RZo4A" value="2.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_o-jeoDq0EeW90siL-RZo4A" name="Zoom Arm Cam 1x" variable="_P7kTtgrPEeW4-_ONWXXiAw">
@@ -231,7 +231,7 @@
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList xmi:id="_o-jeojq0EeW90siL-RZo4A">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_o-jeozq0EeW90siL-RZo4A" value="1.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_o-jeozq0EeW90siL-RZo4A" value="1.0"/>
         </argumentsList>
       </operationCalls>
     </programs>
@@ -242,7 +242,7 @@
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
         <argumentsList xmi:id="_NQWgIDreEeW65IGdx4wJdg">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_NQWgITreEeW65IGdx4wJdg" value="true"/>
+          <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_NQWgITreEeW65IGdx4wJdg" value="true"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_iPESYDq1EeW90siL-RZo4A" name="Rover Camera Enable Streaming" variable="_P7kTtgrPEeW4-_ONWXXiAw">
@@ -251,7 +251,7 @@
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
         <argumentsList xmi:id="_U6PCoDreEeW65IGdx4wJdg">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_U6PCoTreEeW65IGdx4wJdg" value="true"/>
+          <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_U6PCoTreEeW65IGdx4wJdg" value="true"/>
         </argumentsList>
       </operationCalls>
     </programs>
@@ -322,7 +322,7 @@
             </typeMemberReferenceListElement>
             <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
             <argumentsList xmi:id="_PRDzpTreEeW65IGdx4wJdg">
-              <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_PRDzpjreEeW65IGdx4wJdg" value="true"/>
+              <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_PRDzpjreEeW65IGdx4wJdg" value="true"/>
             </argumentsList>
           </operationCalls>
           <pose xmi:id="_PRDzpzreEeW65IGdx4wJdg" m01="-9.18338008663387E-49" m03="0.44999999999999996" m10="-9.18338008663387E-49" m13="0.24999999999999997" m23="0.88"/>

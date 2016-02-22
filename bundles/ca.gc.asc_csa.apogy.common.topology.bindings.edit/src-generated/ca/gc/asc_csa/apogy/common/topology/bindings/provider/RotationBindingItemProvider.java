@@ -23,8 +23,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
+
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding} object.
@@ -57,7 +58,6 @@ public class RotationBindingItemProvider
 
 			addRotationNodePropertyDescriptor(object);
 			addRotationAxisPropertyDescriptor(object);
-			addRotationUnitsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -109,29 +109,6 @@ public class RotationBindingItemProvider
 	}
 
   /**
-	 * This adds a property descriptor for the Rotation Units feature.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected void addRotationUnitsPropertyDescriptor(Object object)
-  {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RotationBinding_rotationUnits_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_RotationBinding_rotationUnits_feature", "_UI_RotationBinding_type"),
-				 ApogyCommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_UNITS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_DESTINATIONPropertyCategory"),
-				 null));
-	}
-
-  /**
 	 * This returns RotationBinding.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -170,13 +147,7 @@ public class RotationBindingItemProvider
 		{
 			info = rotationBinding.getRotationAxis().getName();
 		}
-		
-		if(rotationBinding.getRotationUnits() != null)
-		{
-			if(info != null) info += " , " + rotationBinding.getRotationUnits().getName();
-			else info = rotationBinding.getRotationUnits().getName();
-		}
-		
+
 		if(info != null)
 		{
 			label += " (" + info + ")";
@@ -198,7 +169,6 @@ public class RotationBindingItemProvider
 
 		switch (notification.getFeatureID(RotationBinding.class)) {
 			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
-			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

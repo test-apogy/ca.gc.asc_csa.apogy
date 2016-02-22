@@ -32,9 +32,22 @@ import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca),
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreTopology' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCoreTopology' modelDirectory='/ca.gc.asc_csa.apogy.core.topology/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.topology.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreTopology' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyCoreTopology' modelDirectory='/ca.gc.asc_csa.apogy.core.topology/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.topology.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core'"
  * @generated
  */
 public interface ApogyCoreTopologyPackage extends EPackage

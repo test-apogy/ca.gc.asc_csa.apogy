@@ -47,7 +47,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsROS' modelName='ApogyAddonsROS' operationReflection='true' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.ros/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.ros.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsROS' modelName='ApogyAddonsROS' operationReflection='true' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.ros/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.ros.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons'"
  * @generated
  */
 public interface ApogyAddonsROSPackage extends EPackage {
@@ -725,7 +725,7 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_SERVICE_MANAGER___CALL_SERVICE__STRING = 5;
+	int ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_INT = 5;
 
 	/**
 	 * The operation id for the '<em>Call Service</em>' operation.
@@ -734,7 +734,7 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN = 6;
+	int ROS_SERVICE_MANAGER___CALL_SERVICE__STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Call Service</em>' operation.
@@ -743,7 +743,25 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_BOOLEAN = 7;
+	int ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN = 7;
+
+	/**
+	 * The operation id for the '<em>Call Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN_INT = 8;
+
+	/**
+	 * The operation id for the '<em>Call Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_BOOLEAN = 9;
 
 	/**
 	 * The operation id for the '<em>Launch</em>' operation.
@@ -752,7 +770,7 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_SERVICE_MANAGER___LAUNCH = 8;
+	int ROS_SERVICE_MANAGER___LAUNCH = 10;
 
 	/**
 	 * The operation id for the '<em>Stop</em>' operation.
@@ -761,7 +779,7 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_SERVICE_MANAGER___STOP = 9;
+	int ROS_SERVICE_MANAGER___STOP = 11;
 
 	/**
 	 * The number of operations of the '<em>ROS Service Manager</em>' class.
@@ -770,7 +788,7 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_SERVICE_MANAGER_OPERATION_COUNT = 10;
+	int ROS_SERVICE_MANAGER_OPERATION_COUNT = 12;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl <em>ROS Service</em>}' class.
@@ -891,13 +909,22 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	int ROS_SERVICE___CALL__MESSAGE_BOOLEAN = 4;
 
 	/**
+	 * The operation id for the '<em>Call</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_SERVICE___CALL__MESSAGE_BOOLEAN_INT = 5;
+
+	/**
 	 * The number of operations of the '<em>ROS Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_SERVICE_OPERATION_COUNT = 5;
+	int ROS_SERVICE_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSTopicLauncherImpl <em>ROS Topic Launcher</em>}' class.
@@ -1942,6 +1969,16 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	EOperation getROSServiceManager__CallService__String_Message();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message, int) <em>Call Service</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Call Service</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message, int)
+	 * @generated
+	 */
+	EOperation getROSServiceManager__CallService__String_Message_int();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String) <em>Call Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1960,6 +1997,16 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getROSServiceManager__CallService__String_Message_boolean();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message, boolean, int) <em>Call Service</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Call Service</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message, boolean, int)
+	 * @generated
+	 */
+	EOperation getROSServiceManager__CallService__String_Message_boolean_int();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, boolean) <em>Call Service</em>}' operation.
@@ -2116,6 +2163,16 @@ public interface ApogyAddonsROSPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getROSService__Call__Message_boolean();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#call(org.ros.internal.message.Message, boolean, int) <em>Call</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Call</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#call(org.ros.internal.message.Message, boolean, int)
+	 * @generated
+	 */
+	EOperation getROSService__Call__Message_boolean_int();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher <em>ROS Topic Launcher</em>}'.
@@ -3036,6 +3093,14 @@ public interface ApogyAddonsROSPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
+		EOperation ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_INT = eINSTANCE.getROSServiceManager__CallService__String_Message_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Call Service</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
 		EOperation ROS_SERVICE_MANAGER___CALL_SERVICE__STRING = eINSTANCE.getROSServiceManager__CallService__String();
 
 		/**
@@ -3045,6 +3110,14 @@ public interface ApogyAddonsROSPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN = eINSTANCE.getROSServiceManager__CallService__String_Message_boolean();
+
+		/**
+		 * The meta object literal for the '<em><b>Call Service</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN_INT = eINSTANCE.getROSServiceManager__CallService__String_Message_boolean_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Call Service</b></em>' operation.
@@ -3167,6 +3240,14 @@ public interface ApogyAddonsROSPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROS_SERVICE___CALL__MESSAGE_BOOLEAN = eINSTANCE.getROSService__Call__Message_boolean();
+
+		/**
+		 * The meta object literal for the '<em><b>Call</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROS_SERVICE___CALL__MESSAGE_BOOLEAN_INT = eINSTANCE.getROSService__Call__Message_boolean_int();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSTopicLauncherImpl <em>ROS Topic Launcher</em>}' class.

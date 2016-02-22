@@ -411,7 +411,7 @@ public class ApogyExamplesRoboticArmPackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyExamplesRoboticArm",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
+			 "copyrightText", "Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyExamplesRoboticArm",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -419,6 +419,12 @@ public class ApogyExamplesRoboticArmPackageImpl extends EPackageImpl implements 
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
+		   });	
+		addAnnotation
+		  (moveSpeedLevelEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "This enumeration is used to indicate the overall possible\nlevels of speed that a robotic arm can move at; as\nexpected, this used by RoboticArm (and its subclasses) when\nmoveTo() is called."
 		   });	
 		addAnnotation
 		  (moveSpeedLevelEEnum.getELiterals().get(0), 

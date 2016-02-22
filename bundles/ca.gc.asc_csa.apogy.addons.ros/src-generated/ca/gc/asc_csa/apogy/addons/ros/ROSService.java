@@ -268,4 +268,24 @@ public interface ROSService<Request extends Message, Response extends Message> e
 	 */
 	Response call(Request request, boolean enableLogging);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Calls the service with the given request and the
+	 * response of that call is returned.  The enable logging
+	 * value will determine whether or not logging should be
+	 * enabled for this call. If the service call takes more
+	 * than the timeout value, a null response is returned.
+	 * 
+	 * @param request The rrequest to send to this service
+	 * @param enableLogging Whether or not this call should be logged
+	 * @param timeout, in milliseconds. A negative value means no timeout.
+	 * @return The service's response to the call
+	 * <!-- end-model-doc -->
+	 * @model unique="false" requestUnique="false" enableLoggingUnique="false" timeoutUnique="false"
+	 * @generated
+	 */
+	Response call(Request request, boolean enableLogging, int timeout);
+
 } // ROSService

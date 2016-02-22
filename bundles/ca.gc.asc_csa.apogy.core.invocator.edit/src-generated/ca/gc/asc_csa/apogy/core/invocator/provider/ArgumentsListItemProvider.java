@@ -176,7 +176,17 @@ public class ArgumentsListItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
-				 ApogyCoreInvocatorFactory.eINSTANCE.createEDataTypeArgument()));
+				 ApogyCoreInvocatorFactory.eINSTANCE.createBooleanEDataTypeArgument()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createNumericEDataTypeArgument()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createStringEDataTypeArgument()));
 
 		newChildDescriptors.add
 			(createChildParameter

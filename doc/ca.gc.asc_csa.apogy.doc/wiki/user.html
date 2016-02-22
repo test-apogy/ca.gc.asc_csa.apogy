@@ -1,0 +1,1812 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+	<body>
+		<h1 id="Using_Apogy">Using Apogy</h1>
+		<h2 id="Table_Of_Contents">Table Of Contents</h2>
+		<ol style="list-style: none;">
+			<li>
+				<a href="#Using_Apogy">Using Apogy</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#Table_Of_Contents">Table Of Contents</a>
+					</li>
+					<li>
+						<a href="#Eclipse_Basics">Eclipse Basics</a>
+						<ol style="list-style: none;">
+							<li>
+								<a href="#Workspace">Workspace</a>
+							</li>
+							<li>
+								<a href="#Preferences">Preferences</a>
+							</li>
+							<li>
+								<a href="#Selection_Providers_.26_Listeners">Selection Providers &amp; Listeners</a>
+							</li>
+							<li>
+								<a href="#Views">Views</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Project_Explorer_View">Project Explorer View</a>
+									</li>
+									<li>
+										<a href="#Properties_View">Properties View</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Editors">Editors</a>
+							</li>
+							<li>
+								<a href="#Menu_Contributions">Menu Contributions</a>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#Apogy_Concepts">Apogy Concepts</a>
+						<ol style="list-style: none;">
+							<li>
+								<a href="#Session_.26_Environment">Session &amp; Environment</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Session">Session</a>
+									</li>
+									<li>
+										<a href="#Apogy_Environment">Apogy Environment</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Worksites">Worksites</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Surface_Worksites">Surface Worksites</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#Reference_Frame">Reference Frame</a>
+											</li>
+											<li>
+												<a href="#Maps">Maps</a>
+												<ol style="list-style: none;">
+													<li>
+														<a href="#MapLayer">MapLayer</a>
+													</li>
+												</ol>
+											</li>
+											<li>
+												<a href="#EarthSky">EarthSky</a>
+											</li>
+										</ol>
+									</li>
+									<li>
+										<a href="#Orbital_Worksites">Orbital Worksites</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Time_Sources">Time Sources</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Available_Time_Sources">Available Time Sources</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Types.2C_Variables_.26_Contexts">Types, Variables &amp; Contexts</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Types">Types</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#Interface_Class">Interface Class</a>
+											</li>
+										</ol>
+									</li>
+									<li>
+										<a href="#Apogy_System">Apogy System</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#Connection_Points_.26_Assembly_Links">Connection Points &amp; Assembly Links</a>
+											</li>
+											<li>
+												<a href="#Simple_Systems">Simple Systems</a>
+											</li>
+											<li>
+												<a href="#Complex_Types">Complex Types</a>
+											</li>
+										</ol>
+									</li>
+									<li>
+										<a href="#Variables_.26_API_Adapters">Variables &amp; API Adapters</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#Variables">Variables</a>
+											</li>
+											<li>
+												<a href="#API_Adapter">API Adapter</a>
+											</li>
+										</ol>
+									</li>
+									<li>
+										<a href="#Pose_Corrector">Pose Corrector</a>
+									</li>
+									<li>
+										<a href="#Context">Context</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#Variable_Implementations">Variable Implementations</a>
+											</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Data_Products">Data Products</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Data_Products_Set">Data Products Set</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Operation_Calls_.26_Programs">Operation Calls &amp; Programs</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Programs">Programs</a>
+									</li>
+									<li>
+										<a href="#Operation_Call">Operation Call</a>
+									</li>
+									<li>
+										<a href="#Simple_Program">Simple Program</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Controller_Bindings_.26_Configurations">Controller Bindings &amp; Configurations</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Controller_Configuration">Controller Configuration</a>
+									</li>
+									<li>
+										<a href="#Operation_Call_Controller_Binding">Operation Call Controller Binding</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#Trigger_Types">Trigger Types</a>
+											</li>
+										</ol>
+									</li>
+									<li>
+										<a href="#Input_Value">Input Value</a>
+									</li>
+									<li>
+										<a href="#Controller_Value">Controller Value</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#Input_Conditioning_Types">Input Conditioning Types</a>
+											</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Tools">Tools</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Map_View_Configurations">Map View Configurations</a>
+									</li>
+									<li>
+										<a href="#Camera_View_Configuration">Camera View Configuration</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#Overlays">Overlays</a>
+												<ol style="list-style: none;">
+													<li>
+														<a href="#Built-in_Overlays">Built-in Overlays</a>
+													</li>
+												</ol>
+											</li>
+											<li>
+												<a href="#Built-in_Image_Filters">Built-in Image Filters</a>
+											</li>
+											<li>
+												<a href="#Built-in_Camera_Tools">Built-in Camera Tools</a>
+											</li>
+										</ol>
+									</li>
+									<li>
+										<a href="#Recording_Tools">Recording Tools</a>
+									</li>
+									<li>
+										<a href="#Simple_Tools">Simple Tools</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#Built-in_Simple_Tools">Built-in Simple Tools</a>
+											</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Topology">Topology</a>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#Apogy_UI">Apogy UI</a>
+						<ol style="list-style: none;">
+							<li>
+								<a href="#Preferences_2">Preferences</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Range_Preferences">Range Preferences</a>
+									</li>
+									<li>
+										<a href="#UI_Preferences">UI Preferences</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Session_Editor">Session Editor</a>
+							</li>
+							<li>
+								<a href="#Controllers_View">Controllers View</a>
+							</li>
+							<li>
+								<a href="#Nodes_Distance_View">Nodes Distance View</a>
+							</li>
+							<li>
+								<a href="#3D_Viewer">3D Viewer</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Node_Presentation">Node Presentation</a>
+									</li>
+									<li>
+										<a href="#Managing_Performance">Managing Performance</a>
+									</li>
+									<li>
+										<a href="#Moving_Using_The_Mouse">Moving Using The Mouse</a>
+									</li>
+									<li>
+										<a href="#Keyboard_Inputs">Keyboard Inputs</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Camera_View">Camera View</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Map_View">Map View</a>
+									</li>
+									<li>
+										<a href="#Earth_Sky_View">Earth Sky View</a>
+									</li>
+									<li>
+										<a href="#Time_Source_View">Time Source View</a>
+									</li>
+									<li>
+										<a href="#Virtual_Reality_Tools">Virtual Reality Tools</a>
+									</li>
+									<li>
+										<a href="#Data_Products_View">Data Products View</a>
+									</li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
+		<h2 id="Eclipse_Basics">Eclipse Basics</h2>
+		<p>As Apogy is set of functionality </p>
+		<h3 id="Workspace"><i>Workspace</i></h3>
+		<pre><b><i>Workspace</i></b>:
+</pre>
+		<ul>
+			<li>
+				<ul>
+					<li>Working environment of Eclipse;</li>
+					<li>Contains 
+						<i>Projects</i>;
+					</li>
+					<li>Mapped to a folder</li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<b>
+					<i>Project</i>
+				</b>:
+				<ul>
+					<li>Groups together folder and files;</li>
+					<li>Mapped to a sub-folder of the 
+						<i>Workspace</i>;
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 id="Preferences">Preferences</h3>
+		<ul>
+			<li>Used to persist settings between sessions;</li>
+			<li>Include UI settings, default values for various elements, data path, etc.</li>
+		</ul>
+		<h3 id="Selection_Providers_.26_Listeners"><i>Selection Providers &amp; Listeners</i></h3>
+		<ul>
+			<li>
+				<b>
+					<i>Selection Provider</i>
+				</b>:
+				<ul>
+					<li>UI component fires a selection upon user action;</li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<b>
+					<i>Selection Listener</i>
+				</b>:
+				<ul>
+					<li>UI component intercepts a selection and reacts to it;</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 id="Views">Views</h3>
+		<ul>
+			<li>A window managed by the main window;</li>
+			<li>Can be detached;</li>
+			<li>Most are singleton;</li>
+			<li>Most Apogy views are 
+				<i>Selection Listeners</i>
+			</li>
+		</ul>
+		<h4 id="Project_Explorer_View"><i>Project Explorer View</i></h4>
+		<ul>
+			<li>Is a singleton;</li>
+			<li>Displays the content of the workspace;</li>
+			<li>Is a 
+				<i>Selection Provider</i>
+			</li>
+		</ul>
+		<h4 id="Properties_View"><i>Properties View</i></h4>
+		<ul>
+			<li>Displays and edits the selection's attributes;</li>
+			<li>It is a 
+				<i>Selection Listener</i>;
+			</li>
+			<li>Multiple tabbed;</li>
+		</ul>
+		<h3 id="Editors"><i>Editors</i></h3>
+		<ul>
+			<li>Provides editing of resources;</li>
+			<li>Specific for types of resource;</li>
+			<li>Can be detached;</li>
+			<li>Most are 
+				<i>Selection Providers</i>;
+			</li>
+			<li>Most support 
+				<i>Undo / Redo</i>;
+			</li>
+			<li>Have an * when the resource is modified;</li>
+		</ul>
+		<h3 id="Menu_Contributions">Menu Contributions</h3>
+		<ul>
+			<li>Specific actions(s) available on a user-selected element;</li>
+			<li>Made available through a pull down;</li>
+			<li>Action(s) available are selection dependent;</li>
+		</ul>
+		<h2 id="Apogy_Concepts">Apogy Concepts</h2>
+		<h3 id="Session_.26_Environment"><i>Session</i> &amp; <i>Environment</i></h3>
+		<h4 id="Session"><i>Session</i></h4>
+		<ul>
+			<li>Resource that Apogy is centered around;</li>
+			<li>Is the container for all Apogy session elements;</li>
+		</ul>
+		<h4 id="Apogy_Environment"><i>Apogy Environment</i></h4>
+		<ul>
+			<li>Contains the definitions of the 
+				<i>Worksite</i>, 
+				<i>Time Sources</i> and the registered 
+				<i>Apogy Systems</i>;
+			</li>
+			<li>Defines what you have to work with in a specific deployment;</li>
+		</ul>
+		<h3 id="Worksites"><i>Worksites</i></h3>
+		<ul>
+			<li>Defines the area that you are operating in;</li>
+			<li>Include a priori information about the area (e.g. Digital Elevation Maps (DEMs), orbital imagery, etc.);</li>
+			<li>Inherently generic concept that could be specialized as required (e.g. Earth surface);</li>
+		</ul>
+		<h4 id="Surface_Worksites">Surface <i>Worksites</i></h4>
+		<ul>
+			<li>Defines a 
+				<i>Worksite</i> that resides on the surface of a Celestial body (e.g. Earth)
+			</li>
+		</ul>
+		<h5 id="Reference_Frame">Reference Frame</h5>
+		<p>TODO!</p>
+		<h5 id="Maps"><i>Maps</i></h5>
+		<ul>
+			<li>A component of a 
+				<i>Worksite</i> that contains 
+				<i>Map Layers</i> sharing a common pose relative to the 
+				<i>Worksite</i> origin;
+			</li>
+			<li>A 
+				<b>
+					<i>Map Layer</i>
+				</b> contains the actual data about the 
+				<i>Worksite</i> (e.g. DEM, Orbital Imagery, Slope, etc.);
+			</li>
+		</ul>
+		<h6 id="MapLayer"><i>MapLayer</i></h6>
+		<ul>
+			<li>Currently support 
+				<i>MapLayers</i>:
+				<ul>
+					<li>
+						<b>
+							<i>Triangular Mesh Map Layer</i>
+						</b> (a meshed DEM);
+					</li>
+					<li>
+						<b>
+							<i>Features Of Interest Map Layer</i>
+						</b> (specific locations in the 
+						<i>Worksite</i>);
+					</li>
+					<li>
+						<b>
+							<i>Image Map Layer</i>
+						</b> (Image and its physical size on the 
+						<i>Worksite</i>);
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h5 id="EarthSky"><i>EarthSky</i></h5>
+		<ul>
+			<li>Contains the Celestial bodies of interest (Sun, Moon, Stars);</li>
+			<li>Ephemerides updates based on time and the 
+				<i>Worksite</i> location;
+			</li>
+			<li>Represented in the 
+				<i>Topology</i>
+			</li>
+		</ul>
+		<h4 id="Orbital_Worksites">Orbital Worksites</h4>
+		<h3 id="Time_Sources"><i>Time Sources</i></h3>
+		<ul>
+			<li>
+				<b>
+					<i>Time Sources</i>
+				</b> are used to feed the time to the 
+				<i>Session</i>.
+			</li>
+			<li>This, in turn, updates the position of the sky elements (Sun, Moon, Stars);</li>
+			<li>The 
+				<i>Time Sources</i> element contains the available 
+				<i>Time Sources</i>, only one of which is set as the 
+				<i>Session Active Time Source</i>;
+			</li>
+			<li>The 
+				<i>Time Sources View</i> can be used to access the various time source parameters.
+			</li>
+		</ul>
+		<h4 id="Available_Time_Sources">Available <i>Time Sources</i></h4>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Fixed Time Source</i>
+					</b>
+				</td>
+				<td>A 
+					<i>Time Source</i> representing a fixed date and time.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Current Time Source</i>
+					</b>
+				</td>
+				<td>A 
+					<i>Time Source</i> that represents the current time, updated at a regular interval.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Selection-based Time Source</i>
+					</b>
+				</td>
+				<td>A 
+					<i>Time Source</i> that updates its time upon the selection of any 
+					<i>Timed</i> element in the UI.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Browseable Time Source</i>
+					</b>
+				</td>
+				<td>A 
+					<i>Time Source</i> that can be browsed, reset, played forward or reset, and accelerated.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Operation Calls Result List Time Source</i>
+					</b>
+				</td>
+				<td>A specialized 
+					<i>Browseable Time Source</i> that allows browsing a list of 
+					<i>Operation Calls</i>.
+				</td>
+			</tr>
+		</table>
+		<h3 id="Types.2C_Variables_.26_Contexts"><i>Types</i>, <i>Variables</i> &amp; <i>Contexts</i></h3>
+		<h4 id="Types"><i>Types</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Type</i>
+				</b> defines an entity that can execute commands and provides telemetry:
+				<ul>
+					<li>Similar to an Interface Control Document (ICD);</li>
+					<li>Used to specify what a 
+						<i>Variable</i> represents;
+					</li>
+				</ul>
+			</li>
+			<li>Type can include 
+				<i>Type Members</i> in their definitions;
+			</li>
+			<li>Types include an 
+				<i>API Adapter</i> that acts as a bridge between Apogy and the 
+				<i>Interface Class</i>;
+			</li>
+		</ul>
+		<h5 id="Interface_Class"><i>Interface Class</i></h5>
+		<ul>
+			<li>An 
+				<b>
+					<i>Interface Class</i>
+				</b> is the specific (i.e. real-world) Java type of the Apogy 
+				<i>Type</i>
+			</li>
+		</ul>
+		<h4 id="Apogy_System">Apogy <i>System</i></h4>
+		<ul>
+			<li>Is the "LEGO block" of Apogy;</li>
+			<li>A 
+				<b>
+					<i>System</i>
+				</b> is a specialization of 
+				<i>Type</i>;
+			</li>
+			<li>Adds functions to assemble systems together through 
+				<i>Connection Points</i> and 
+				<i>Assembly Links</i>;
+			</li>
+			<li>Provide 3D representation of the 
+				<i>System</i>;
+			</li>
+		</ul>
+		<ul>
+			<li>A given 
+				<i>System</i> may have multiple implementations (e.g. Stub, Simulated, etc.);
+			</li>
+			<li>Implementation specific details transparent to Apogy: what matters is the interface.</li>
+		</ul>
+		<h5 id="Connection_Points_.26_Assembly_Links"><i>Connection Points</i> &amp; <i>Assembly Links</i></h5>
+		<ul>
+			<li>A 
+				<b>
+					<i>Connection Point</i>
+				</b> represents a location in the 
+				<i>System</i> (as represented by a topology node) where another 
+				<i>Type</i> could connect to this System. 
+			</li>
+			<li>An 
+				<b>
+					<i>Assembly Link</i>
+				</b> actually provides the link between a 
+				<i>Connection Point</i> and another Type.
+			</li>
+		</ul>
+		<ul>
+			<li>In the diagram below, one could say that the 
+				<i>Connection Points</i> act like hooks while the 
+				<i>Assembly Links</i> act like strings.
+			</li>
+		</ul>
+		<h5 id="Simple_Systems">Simple <i>Systems</i></h5>
+		<ul>
+			<li>It has no 
+				<i>Type Member</i> (i.e. it has no sub-systems);
+			</li>
+			<li>It typically represents a "building block" (sub-system) that can be used in the assembly of more complex 
+				<i>Systems</i>;
+			</li>
+		</ul>
+		<h5 id="Complex_Types">Complex <i>Types</i></h5>
+		<ul>
+			<li>Has one or more 
+				<i>Type Members</i>;
+			</li>
+			<li>Represents an assembly of sub-systems into an integrated 
+				<i>System</i>;
+			</li>
+			<li>Complex Systems can also be nested;</li>
+		</ul>
+		<h4 id="Variables_.26_API_Adapters"><i>Variables</i> &amp; <i>API Adapters</i></h4>
+		<h5 id="Variables"><i>Variables</i></h5>
+		<ul>
+			<li>A 
+				<b>
+					<i>Variable</i>
+				</b> is a reference to a 
+				<i>Type (System)</i> <u>instance</u>;
+			</li>
+			<li>A 
+				<i>Variable</i> name should be unique;
+			</li>
+			<li>Multiple 
+				<i>Variables</i> of the same 
+				<i>Type</i> can be defined;
+			</li>
+		</ul>
+		<h5 id="API_Adapter"><i>API Adapter</i></h5>
+		<ul>
+			<li>An 
+				<b>
+					<i>API Adapter</i>
+				</b> is the object that acts as a bridge between the System (i.e. the 
+				<i>Interface Class</i>) and Apogy;
+			</li>
+			<li>Automatically managed by Apogy;</li>
+			<li>It provides:
+				<ul>
+					<li>System to Apogy pose transformation and update functions;</li>
+					<li>A 
+						<i>Pose Corrector</i>;
+					</li>
+					<li>A reference to the 
+						<i>Variable / Type Member</i> instance;
+					</li>
+					<li>A reference to the 
+						<i>Apogy Environment</i>;
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Pose_Corrector"><i>Pose Corrector</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Pose Corrector</i>
+				</b> is used by the 
+				<i>API Adapter</i> to modify the 
+				<i>System</i>-derived pose before updating;
+			</li>
+			<li>Can be used to keep a vehicle on the ground;</li>
+			<li>Can be enabled / disabled on the fly;</li>
+		</ul>
+		<h4 id="Context"><i>Context</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Context</i>
+				</b> map 
+				<i>Variables</i> to an actual implementation through the 
+				<i>Active Context</i>;
+			</li>
+			<li>Used by Apogy to dispatch commands to System instances;</li>
+			<li>Includes:
+				<ul>
+					<li>A name (which should be unique)</li>
+					<li>Where the results from operation invocations will be stored (i.e. 
+						<i>Data Product Set</i>);
+					</li>
+					<li>A hierarchy of 
+						<i>Variable Implementation</i>;
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h5 id="Variable_Implementations"><i>Variable Implementations</i></h5>
+		<ul>
+			<li>A 
+				<b>
+					<i>Variable Implementation</i>
+				</b> is used to specify the particular implementation (i.e. an 
+				<i>Interface Class</i> subclass) that a 
+				<i>Variable</i> should be using.
+			</li>
+			<li>Typically used in 
+				<i>Contexts</i>
+			</li>
+		</ul>
+		<h3 id="Data_Products"><i>Data Products</i></h3>
+		<ul>
+			<li>A 
+				<b>
+					<i>Data Product</i>
+				</b> represents the result of an 
+				<i>Operation Call</i>;
+			</li>
+			<li>Time-stamped;</li>
+			<li>Geo-referenced;</li>
+			<li>Conserves the operational context in which 
+				<i>Operation</i> was called;
+			</li>
+			<li>May have one or more 3D representations;</li>
+		</ul>
+		<h4 id="Data_Products_Set"><i>Data Products Set</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Data Products Set</i>
+				</b> contains all of the 
+				<i>Data Products</i> created with one or more 
+				<i>Contexts</i>:
+				<ul>
+					<li>Allows data generated using different 
+						<i>Contexts</i> to be stored separately (for example, separating simulated and real data.)
+					</li>
+					<li>Each 
+						<i>Context</i> refers to a 
+						<i>Data Products Set</i>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 id="Operation_Calls_.26_Programs"><i>Operation Calls</i> &amp; <i>Programs</i></h3>
+		<h4 id="Programs"><i>Programs</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Program</i>
+				</b> is an entity that invokes 
+				<i>Operation Calls</i> on 
+				<i>Variables</i>;
+			</li>
+			<li>A 
+				<i>Program</i> includes:
+				<ul>
+					<li>A name;</li>
+					<li>A description; and</li>
+					<li>A list of 
+						<i>Operation Calls</i>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Operation_Call"><i>Operation Call</i></h4>
+		<ul>
+			<li>An 
+				<b>
+					<i>Operation Call</i>
+				</b> is a specific invocation of an 
+				<i>Operation</i> on a 
+				<i>Variable</i> using a set of 
+				<i>Parameters</i>
+			</li>
+			<li>It contains:
+				<ul>
+					<li>A reference to the 
+						<i>Variable</i>;
+					</li>
+					<li>References to a 
+						<i>Variable</i> type member and/or feature onto which to call the 
+						<i>Operation</i> (if applicable);
+					</li>
+					<li>An 
+						<i>Operation</i> to be called;
+					</li>
+					<li>A List of 
+						<i>Parameters</i> to use when calling the 
+						<i>Operation</i>;
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Simple_Program">Simple <i>Program</i></h4>
+		<ul>
+			<li>A 
+				<i>Program</i> in the form of a flat list of 
+				<i>Operation Calls</i>;
+			</li>
+			<li>Does not include execution flow control;</li>
+			<li>Each 
+				<i>Operation Call</i> can be invoked individually, or
+			</li>
+			<li>It can be executed as a whole;</li>
+		</ul>
+		<h3 id="Controller_Bindings_.26_Configurations"><i>Controller Bindings &amp; Configurations</i></h3>
+		<h4 id="Controller_Configuration"><i>Controller Configuration</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Controller Configuration</i>
+				</b> is a set of 
+				<i>Operation Call Controller Bindings</i>;
+			</li>
+			<li>Used to map one or more joystick(s) / controller(s) to one or more 
+				<i>Operation Calls</i>;
+			</li>
+			<li>No more than 
+				<b>ONE</b> 
+				<i>Controller Configuration</i> is active at any given time in a given Apogy Session;
+			</li>
+		</ul>
+		<h4 id="Operation_Call_Controller_Binding"><i>Operation Call Controller Binding</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Operation Call Controller Binding</i>
+				</b> is a specialization of 
+				<i>Operation Call</i>;
+			</li>
+			<li>Allows the 
+				<i>Operation Call's Parameter</i> to be mapped to joystick inputs;
+			</li>
+			<li>It includes:
+				<ul>
+					<li>A name;</li>
+					<li>A 
+						<i>Trigger</i> that defines when to call this 
+						<i>Operation Call</i>:
+						<ul>
+							<li>Can be time-based or joystick state-/event-based;</li>
+						</ul>
+					</li>
+					<li>An 
+						<i>Input Value</i> for each of the 
+						<i>Parameters</i> defined in this 
+						<i>Operation Call</i>.
+					</li>
+					<li>A 
+						<i>boolean</i> indicating whether or not to create a 
+						<i>Data Product' when the ''Operation</i> is called (false by default.)
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h5 id="Trigger_Types"><i>Trigger Types</i></h5>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>Icon</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Time Trigger</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/trigger_time.gif"/>
+				</td>
+				<td>Triggers at a fixed time interval (or only once if time &lt;= 0).</td>
+			</tr>
+			<tr>
+				<td rowspan="3">
+					<b>
+						<i>Controller Edge Trigger</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/trigger_controller_edge_rising.gif"/> 
+				</td>
+				<td>Triggers when a rising edge is detected on the specified controller button state.</td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/trigger_controller_edge_falling.gif"/> 
+				</td>
+				<td>Triggers when a falling edge is detected on the specified controller button state.</td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/trigger_controller_edge_both.gif"/>
+				</td>
+				<td>Triggers when either a rising or falling edge is detected on the specified button state.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Controller State Trigger</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/trigger_controller_state.gif"/> 
+				</td>
+				<td>Triggers at a fixed time interval (or only once if time &lt;= 0) if the specified controller button state (
+					<i>boolean</i>) matches the target.
+				</td>
+			</tr>
+		</table>
+		<h4 id="Input_Value"><i>Input Value</i></h4>
+		<ul>
+			<li>An 
+				<b>
+					<i>Input Value</i>
+				</b> defines how to obtain the value of its associated 
+				<i>Parameter</i> in an 
+				<i>Operation Call Controller Binding.</i>
+			</li>
+		</ul>
+		<ul>
+			<li>Three types of 
+				<i>Input Value</i> are defined:
+				<ol>
+					<li>
+						<b>
+							<i>Fixed Value</i>
+						</b>: A fixed value for the 
+						<i>Parameter</i>;
+					</li>
+					<li>
+						<b>
+							<i>Toggle Value</i>
+						</b>: A 
+						<i>boolean</i> value that toggles each time the 
+						<i>Operation</i> is called; 
+					</li>
+					<li>
+						<b>
+							<i>Controller Value</i>
+						</b>: A value coming from a joystick input.
+					</li>
+				</ol>
+			</li>
+		</ul>
+		<h4 id="Controller_Value"><i>Controller Value</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Controller Value</i>
+				</b> includes:
+				<ul>
+					<li>the joystick / controller;</li>
+					<li>the specific input of the controller;</li>
+					<li>an 
+						<b>
+							<i>Input Conditioning</i>
+						</b> used to transform the raw joystick value into a value suittable for the 
+						<i>Parameter</i> being mapped:
+						<ul>
+							<li>This can include input scalling, input offsetting, saturation, dead-band,etc;</li>
+							<li>Various specializations of 
+								<i>Input Conditioning</i> are available to accommodate these needs. 
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h5 id="Input_Conditioning_Types"><i>Input Conditioning</i> Types</h5>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>Icon</th>
+				<th>Description</th>
+				<th>Scaling Supported</th>
+				<th>Offset Supported</th>
+				<th>Dead Band Supported</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Linear</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/input_conditioning_linear.gif"/>
+				</td>
+				<td>Linear transfer function with end points specified.</td>
+				<td style="text-align:center;">Yes</td>
+				<td style="text-align:center;">Yes</td>
+				<td style="text-align:center;">No</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Centered Linear</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/input_conditioning_centered_linear.gif"/>
+				</td>
+				<td>Linear transfer function with constraints that output is zero (0) for input falling within dead band.
+					<p>Output linearly falls to zero at dead band limits.</p>
+				</td>
+				<td style="text-align:center;">Yes</td>
+				<td style="text-align:center;">No</td>
+				<td style="text-align:center;">Yes</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Parabolic</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/input_conditioning_parabolic.gif"/>
+				</td>
+				<td>Second-order transfer function with end points specified.</td>
+				<td style="text-align:center;">Yes</td>
+				<td style="text-align:center;">Yes</td>
+				<td style="text-align:center;">No</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Centered Parabolic</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/input_conditioning_centered_parabolic.gif"/>
+				</td>
+				<td>Parabolic output with constraint that output is zero (0) for input falling within dead band.
+					<p>Slope is made continuous at dead band limits.</p>
+				</td>
+				<td style="text-align:center;">Yes</td>
+				<td style="text-align:center;">No</td>
+				<td style="text-align:center;">Yes</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>User Defined</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/input_conditioning_user_defined.gif"/>
+				</td>
+				<td>Piecewise linear interpolation based on user-provided list of points.</td>
+				<td style="text-align:center;">No</td>
+				<td style="text-align:center;">No</td>
+				<td style="text-align:center;">No</td>
+			</tr>
+		</table>
+		<h3 id="Tools"><i>Tools</i></h3>
+		<ul>
+			<li>The 
+				<b>
+					<i>Tools</i>
+				</b> element of the 
+				<i>Session</i> contains the tools defined by the user;
+			</li>
+			<li>Contains:
+				<ul>
+					<li>
+						<i>Map View Configuration List</i>
+					</li>
+					<li>
+						<i>Camera View Configuration List</i>
+					</li>
+					<li>
+						<i>Recording Tools Container</i>
+					</li>
+					<li>
+						<i>Simple Tool List</i>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Map_View_Configurations"><i>Map View Configurations</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Map View Configuration List</i>
+				</b>:
+				<ul>
+					<li>contains 
+						<i>Map View Configurations</i>;
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li>A 
+				<b>
+					<i>Map View Configuration</i>
+				</b> object:
+				<ul>
+					<li>defines what the 
+						<i>Apogy Map View</i> will display;
+					</li>
+					<li>defines the 
+						<i>Map Layers</i> to display;
+					</li>
+					<li>defines annotation to show vehicle position, FOV, etc.;</li>
+					<li>defines map tools (e.g. 
+						<i>Trajectory Picking Tool</i>);
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Camera_View_Configuration"><i>Camera View Configuration</i></h4>
+		<ul>
+			<li>A 
+				<b>
+					<i>Camera View Configuration List</i>
+				</b>:
+				<ul>
+					<li>contains 
+						<i>Camera View Configurations</i>;
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li>A 
+				<b>
+					<i>Camera View Configuration</i>
+				</b> object:
+				<ul>
+					<li>defines what the 
+						<i>Apogy Camera View</i> will display;
+					</li>
+					<li>defines the 
+						<i>Overlays</i> to display;
+					</li>
+					<li>specifies image processing steps;</li>
+				</ul>
+			</li>
+			<li>defines image tools (e.g. 
+				<i>Pointer Camera Tool</i>);
+			</li>
+		</ul>
+		<h5 id="Overlays"><i>Overlays</i></h5>
+		<ul>
+			<li>An 
+				<b>
+					<i>Overlay</i>
+				</b> represents graphics overlaid on top of the camera image.
+			</li>
+			<li>Apogy provides a list of basic, built-in 
+				<i>Overlays</i>;
+			</li>
+			<li>System-specific overlay can be contributed for a rover/instrument</li>
+		</ul>
+		<h6 id="Built-in_Overlays">Built-in <i>Overlays</i></h6>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>Icon</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>EMF Feature Overlay</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/overlay_emf_feature.gif"/>
+				</td>
+				<td>Displays any numerical or string value of a selected 
+					<i>Feature</i> on screen.  The display includes the name of the 
+					<i>Feature</i>, its units, and the value.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Camera Name Overlay</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/overlay_camera_name.gif"/> 
+				</td>
+				<td>Displays the name of the camera, if applicable.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Apogy Logo Overlay</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/overlay_apogy_logo.gif"/> 
+				</td>
+				<td>Displays the Apogy Logo.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>FOV Overlay</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/overlay_fov.gif"/>
+				</td>
+				<td>Displays a cross hair with marks indicating degrees along the vertical and horizontal axes, centered on the FOV origin.  The values are binded to the current camera FOV.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>EMF Feature Azimuth Elevation Overlay</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/overlay_emf_feature_azimuth_elevation.gif"/>
+				</td>
+				<td>Displays a cross hair with marks indicating degrees along the vertical and horizontal axes.  The 
+					<b>ABSOLUTE</b> orientation is displayed.  The values are bound to the current camera's Field of View (FOV) and the Azimuth and Elevation features selected.
+				</td>
+			</tr>
+		</table>
+		<h5 id="Built-in_Image_Filters">Built-in <i>Image Filters</i></h5>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>Icon</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Edge Filter</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/filter_edge.gif"/> 
+				</td>
+				<td>Detects edges by looking at the gradient of each channel ands replaces the channel by a value determined by the gradient.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Gain Filter</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/filter_gain.gif"/>
+				</td>
+				<td>Changes the contrast of the image by allowing the user to specify the gain and bias of the colors in the image.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Gray Scale Filter</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/filter_gray_scale.gif"/>
+				</td>
+				<td>Converts image to gray-scaled image.  The formula used is:
+					<p>
+						<i>luma</i> = 77 
+						<i>R</i> + 151 
+						<i>G</i> + 28 
+						<i>B</i>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Invert Filter</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/filter_invert.gif"/> 
+				</td>
+				<td>Inverts all of the pixels in an image.  This is done by subtracting each colour component from 255.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Rescale Filter</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/filter_rescale.gif"/>
+				</td>
+				<td>Multiplies the input image by a scale factor.</td>
+			</tr>
+		</table>
+		<h5 id="Built-in_Camera_Tools">Built-in <i>Camera Tools</i></h5>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>Icon</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Pointer Camera Tool</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/camera_tool_pointer.gif"/> 
+				</td>
+				<td>Allow the user to point in the camera image and then draws in the 3D environment, a ray showing where the selected position point projects into the 3D environment.</td>
+			</tr>
+		</table>
+		<h4 id="Recording_Tools"><i>Recording Tools</i></h4>
+		<p>TODO!</p>
+		<h4 id="Simple_Tools"><i>Simple Tools</i></h4>
+		<ul>
+			<li>Apogy provides a few 
+				<i>Simple Tools</i> that are used with the 
+				<i>Apogy 3D Viewer</i> and other views;
+			</li>
+			<li>These tools act as a 
+				<i>Selection Listener</i> to the above views.
+				<ul>
+					<li>Tool responds only if active;</li>
+					<li>More than one tool can be active at the same time!</li>
+				</ul>
+			</li>
+		</ul>
+		<h5 id="Built-in_Simple_Tools">Built-in <i>Simple Tools</i></h5>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>Icon</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Ruler 3D Tool</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/simple_tool_ruler_3d.gif"/>
+				</td>
+				<td>Shows a ruler between two points.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Sun Vector 3D Tool</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/simple_tool_sun_vector_3d.gif"/>
+				</td>
+				<td>Shows the vector connecting the selected point to the current position of the Sun.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Feature Of Interest Picking Tool</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<img border="0" src="../resources/user/simple_tool_feature_of_interest_picking.gif"/>
+				</td>
+				<td>Allows the user to point and click to create a new 
+					<i>Feature Of Interest</i>.
+					<p>Note that the 
+						<i>Feature Of Interest List</i>, where the 
+						<i>Feature Of Interests</i> are created, must be set for this tool to work.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Trajectory 3D Tool</i>
+					</b>
+				</td>
+				<td></td>
+				<td>TODO!</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Path Planner Tool</i>
+					</b>
+				</td>
+				<td></td>
+				<td>TODO!</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Vehicle Path Planner Tool</i>
+					</b>
+				</td>
+				<td></td>
+				<td>TODO!</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Telecom Status Monitor Tool</i>
+					</b>
+				</td>
+				<td></td>
+				<td>TODO!</td>
+			</tr>
+		</table>
+		<h3 id="Topology">Topology</h3>
+		<ul>
+			<li>The complete topology, including all that is present in the 
+				<i>Apogy Environment</i>:
+				<ul>
+					<li>
+						<i>Variable</i> instances;
+					</li>
+					<li>
+						<i>Worksite</i>;
+					</li>
+					<li>
+						<i>Data Products</i>; and
+					</li>
+					<li>
+						<i>Tools</i>.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h2 id="Apogy_UI">Apogy UI</h2>
+		<h3 id="Preferences_2">Preferences</h3>
+		<h4 id="Range_Preferences">Range Preferences</h4>
+		<ul>
+			<li><i>Types</i> support definition of ranges for attributes and 
+				<i>Operation Call Parameters</i>;
+			</li>
+			<li>Colour used to highlight value ranges.</li>
+			<li>
+				<b>Currently, Apogy does not provide colouring to the Properties Page cells</b>;
+			</li>
+		</ul>
+		<h4 id="UI_Preferences">UI Preferences</h4>
+		<ul>
+			<li><i>Types</i> supports definitions of units for attributes and 
+				<i>Operation Call Parameters</i>;
+			</li>
+			<li>Allows conversion between 
+				<i>Native Units</i> (units used by the 
+				<i>System</i>) to 
+				<i>Display Units</i> (what you see);
+			</li>
+			<li>Applies to:
+				<ul>
+					<li>values displayed in the 
+						<i>Properties View</i>;
+					</li>
+					<li>values entered in 
+						<i>Operation Call Parameters</i>;
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 id="Session_Editor"><i>Session Editor</i></h3>
+		<ul>
+			<li>It is an 
+				<i>Editor</i>
+			</li>
+			<li>Is used to explore and edit Apogy elements;</li>
+			<li>Presents the 
+				<i>Apogy Session</i> as an hierarchical tree of containment;
+			</li>
+			<li>Opens 
+				<i>.sym</i> files;
+			</li>
+			<li>Supports Undo/Redo</li>
+			<li>Is a 
+				<i>Selection Provider</i>
+			</li>
+		</ul>
+		<h3 id="Controllers_View"><i>Controllers View</i></h3>
+		<ul>
+			<li>View is a singleton;</li>
+			<li>Used to monitor all Controllers (joysticks) connected to the host;</li>
+			<li>Shows all Controllers components including names, types and current values;</li>
+			<li>
+				<i>Controllers conntected after Apogy has started will not be recognized!</i>
+			</li>
+		</ul>
+		<h3 id="Nodes_Distance_View"><i>Nodes Distance View</i></h3>
+		<ul>
+			<li>Selection based (topology 
+				<i>Node</i>);
+			</li>
+			<li>Allows the selection of any two (2) nodes;</li>
+			<li>Displays:
+				<ul>
+					<li>Relative Euclidean distance;</li>
+					<li>Relative geodesic distance;</li>
+					<li>Relative position (x,y,z), given in metres;</li>
+					<li>Relative orientation (rx, ry, rz), given in degrees;</li>
+				</ul>
+			</li>
+			<li>Supports real-time update.</li>
+		</ul>
+		<h3 id="3D_Viewer"><i>3D Viewer</i></h3>
+		<ul>
+			<li>Selection based (
+				<i>Apogy Environment</i>);
+			</li>
+		</ul>
+		<ul>
+			<li>Displays in 3D, the following elements:
+				<ul>
+					<li>
+						<i>Variable</i> instance
+					</li>
+					<li>
+						<i>Field Of Views</i>
+					</li>
+					<li>Reference frames;</li>
+					<li>The 
+						<i>Earth Sky</i> (Sun, Moon, Stars, grid)
+					</li>
+					<li>
+						<i>Map Layers</i> that can be rendered in 3D
+					</li>
+					<li>
+						<i>Data Product</i> marker for all products;
+					</li>
+					<li>
+						<i>Data Product</i> 3D representations (when applicable);
+					</li>
+					<li>
+						<i>Tools</i> 3D representations (when applicable).
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li>Displaying 
+				<i>Data Products</i>:
+				<ul>
+					<li>All 
+						<i>Data Products</i> (marker + 3D representation) are visible by default;
+					</li>
+					<li>Is 
+						<i>Selection Listener</i> for Data Products
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Node_Presentation"><i>Node Presentation</i></h4>
+		<ul>
+			<li>Configuring 3D representations of topology 
+				<i>Nodes</i>:
+				<ul>
+					<li>Each 
+						<i>Node</i> in the topology is assigned a 
+						<b>
+							<i>Presentation</i>
+						</b> that contains its 3D representation attributes.
+					</li>
+					<li>
+						<i>Presentation</i> attributes are accessible using the 
+						<i>Properties View</i>, under the 
+						<i>Presentation</i> tab.
+					</li>
+					<li>Node visibility can be toggled by right-clicking on the 
+						<i>Node</i> and selecting 
+						<i>"Apogy &gt; Toggle Node Visibility."</i>
+					</li>
+					<li>
+						<i>URL Nodes</i> (
+						<i>Nodes</i> associated with a CAD model) have an additional 
+						<b>
+							<i>Presentation Mode</i>
+						</b> attribute, which can be one of three values:
+						<ol>
+							<li>
+								<b>
+									<i>SURFACE</i>
+								</b>: The CAD will be rendered as a surface (if possible)
+							</li>
+							<li>
+								<b>
+									<i>WIREFRAME</i>
+								</b>: Only the wireframe outline of the CAD surface will be rendered (if possible)
+							</li>
+							<li>
+								<b>
+									<i>POINTS</i>
+								</b>: Only the point cloud specified in the CAD will be rendered (if possible) 
+							</li>
+						</ol>
+					</li>
+					<li>The visibility, 
+						<i>Presentation Mode</i> and colour can be set for all FOV of a given type through the Preferences;
+					</li>
+					<li>The visibility, and axis length can be set for all 
+						<i>Node</i> of a given basic type (
+						<i>Position</i>, 
+						<i>Rotation</i>, 
+						<i>Transform</i>, 
+						<i>URL</i>) through the Preferences; 
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Managing_Performance">Managing Performance</h4>
+		<ul>
+			<li>The maximum frame rate (in Hz) can be lowered (default is 15 Hz);</li>
+			<li>Under 
+				<i>Field Of View</i> and 
+				<i>Image Snapshot</i> preferences:
+				<ul>
+					<li>Disabiling Show Project;</li>
+				</ul>
+			</li>
+			<li>Under 
+				<i>Earth Sky</i> preferences:
+				<ul>
+					<li>Disabling Sun And Moon Blooming;</li>
+					<li>Disabling Shadows;</li>
+					<li>Reducing the Shadow Map Size; </li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Moving_Using_The_Mouse">Moving Using The Mouse</h4>
+		<table style="text-align:center;" border="1" cellpadding="2">
+			<tr>
+				<th>Button</th>
+				<th>Mouse Motion</th>
+				<th>Movement</th>
+			</tr>
+			<tr>
+				<td rowspan="2">Center</td>
+				<td>Forward</td>
+				<td>Move forwards</td>
+			</tr>
+			<tr>
+				<td>Back</td>
+				<td>Move backwards</td>
+			</tr>
+			<tr>
+				<td rowspan="4">Left</td>
+				<td>Forward</td>
+				<td>Rotate downwards</td>
+			</tr>
+			<tr>
+				<td>Back</td>
+				<td>Rotate upwards</td>
+			</tr>
+			<tr>
+				<td>Left</td>
+				<td>Rotate to the left</td>
+			</tr>
+			<tr>
+				<td>Right</td>
+				<td>Rotate to the right</td>
+			</tr>
+			<tr>
+				<td rowspan="4">Right</td>
+				<td>Forward</td>
+				<td>Translate downwards</td>
+			</tr>
+			<tr>
+				<td>Back</td>
+				<td>Translate upwards</td>
+			</tr>
+			<tr>
+				<td>Left</td>
+				<td>Translate to the right</td>
+			</tr>
+			<tr>
+				<td>Right</td>
+				<td>Translate to the left</td>
+			</tr>
+		</table>
+		<h4 id="Keyboard_Inputs">Keyboard Inputs</h4>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Key</th>
+				<th>Function</th>
+			</tr>
+			<tr>
+				<td style="text-align:center;">Q</td>
+				<td>
+					<b>Q</b>uick: Accelerate translation
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">L</td>
+				<td>
+					<b>L</b>evel: Set view point orientation so that the user line of sight is level (perpendicular to the Z axis.)
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">P</td>
+				<td>
+					<b>P</b>icking: Enables the picking mode(used by some 3D tools.)  
+					<b>Picking Enabled</b> shows up on the left hand side of the viewer when activated.
+				</td>
+			</tr>
+		</table>
+		<h3 id="Camera_View"><i>Camera View</i></h3>
+		<ul>
+			<li>Selection-based (
+				<i>Camera View Configuration</i>);
+			</li>
+			<li>Display latest image return by specified 
+				<i>Camera</i>;
+			</li>
+			<li>Display the 
+				<i>Overlays</i>;
+			</li>
+			<li>Applies the 
+				<i>Image Filters</i> before displaying the image
+			</li>
+			<li>Supports interaction with 
+				<i>Camera Tools</i>
+			</li>
+		</ul>
+		<h4 id="Map_View"><i>Map View</i></h4>
+		<ul>
+			<li>Selection-based (
+				<i>Map View Configuration</i>);
+			</li>
+			<li>Displays:
+				<ul>
+					<li>Selected 
+						<i>Image Map Layers</i>;
+					</li>
+					<li>Selected 
+						<i>Feature Of Interest Map Layers</i>;
+					</li>
+					<li>Various map annotations such as:
+						<ul>
+							<li>Vehicle position and orientation;</li>
+							<li>Trajectories;</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Earth_Sky_View"><i>Earth Sky View</i></h4>
+		<ul>
+			<li>Selection-based (
+				<i>Earth Sky</i>);
+			</li>
+			<li>Displays:
+				<ul>
+					<li>Sun and Moon ephemerides as well as Sun intensity;</li>
+					<li>The time at the 
+						<i>Worksite</i>:
+						<ul>
+							<li>Local time;</li>
+							<li>Julian day;</li>
+							<li>Sideral time;</li>
+						</ul>
+					</li>
+					<li>The location of the 
+						<i>Worksite</i>:
+						<ul>
+							<li>Longitude;</li>
+							<li>Latitude;</li>
+							<li>Altitude;</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4 id="Time_Source_View"><i>Time Source View</i></h4>
+		<p>TODO!</p>
+		<h4 id="Virtual_Reality_Tools"><i>Virtual Reality Tools</i></h4>
+		<p>TODO!</p>
+		<h4 id="Data_Products_View"><i>Data Products View</i></h4>
+		<p>TODO!</p>
+	</body>
+</html>

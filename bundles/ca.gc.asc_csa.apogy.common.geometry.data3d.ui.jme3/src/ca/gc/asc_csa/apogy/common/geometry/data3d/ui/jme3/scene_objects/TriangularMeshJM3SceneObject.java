@@ -153,19 +153,23 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 			{					
 				if(meshGeometry != null)
 				{					
-					Material mat = createMaterial();
 					
-					if(useShading)
-					{
-						mat.setColor("Diffuse", meshColor);
-						mat.setColor("Ambient", meshColor);
-						mat.setColor("Specular", meshColor);
-					}
-					else
-					{	
-						mat.setColor("Color", meshColor);
-					}
-					meshGeometry.setMaterial(mat);
+					final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh, meshColor);
+					updateGeometryInternal(newMesh);		
+					
+//					Material mat = createMaterial();
+//					
+//					if(useShading)
+//					{
+//						mat.setColor("Diffuse", meshColor);
+//						mat.setColor("Ambient", meshColor);
+//						mat.setColor("Specular", meshColor);
+//					}
+//					else
+//					{	
+//						mat.setColor("Color", meshColor);
+//					}
+//					meshGeometry.setMaterial(mat);
 				}
 				return null;
 			}
@@ -299,7 +303,7 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 					}
 					else
 					{	
-						mat.setColor("Color", meshColor);
+						//mat.setColor("Color", meshColor);
 					}
 					meshGeometry.setMaterial(mat);
 					return null;
@@ -313,7 +317,7 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 	 */
 	private void updateGeometry()
 	{			
-		final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh);
+		final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh, meshColor);
 		
 		jme3Application.enqueue(new Callable<Object>() 
 		{
@@ -400,7 +404,9 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 			if(meshColor != null)
 			{
 				mat.setColor("Color", meshColor);
-			}
+			}					
+			
+			mat.setBoolean("VertexColor", true);
 		}		
 			
 		return mat;

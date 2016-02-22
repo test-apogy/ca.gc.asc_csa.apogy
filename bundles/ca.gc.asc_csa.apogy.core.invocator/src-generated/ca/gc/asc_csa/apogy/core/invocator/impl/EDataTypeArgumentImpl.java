@@ -34,7 +34,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
  *
  * @generated
  */
-public class EDataTypeArgumentImpl extends ArgumentImpl implements EDataTypeArgument
+public abstract class EDataTypeArgumentImpl extends ArgumentImpl implements EDataTypeArgument
 {
   /**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

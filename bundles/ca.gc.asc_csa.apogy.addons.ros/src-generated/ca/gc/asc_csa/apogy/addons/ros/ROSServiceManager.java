@@ -201,6 +201,29 @@ public interface ROSServiceManager extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Determines the service that corresponds to the given
+	 * service name; if it exists, the request is made to the
+	 * service and its corresponding response is returned.
+	 * If the service call takes more than the timeout value,
+	 * a null response is returned.
+	 * 
+	 * Note: The service's logging is enabled for this call.
+	 * 
+	 * @param serviceName The name of the service to call
+	 * @param request The request to send to the service
+	 * @param timeout, in milliseconds. A negative value means no timeout.
+	 * @return The service's response to this call
+	 * @throws A TimeoutException if the call fails to return within the specified timeout.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.addons.ros.Exception" serviceNameUnique="false" requestUnique="false" timeoutUnique="false" RequestBounds="ca.gc.asc_csa.apogy.addons.ros.Message" ResponseBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
+	 * @generated
+	 */
+	<Request extends Message, Response extends Message> Response callService(String serviceName, Request request, int timeout) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Determines the service that corresponds to the given
 	 * service name; if it exists, the service is called and
 	 * the corresponding response is returned.
 	 * 
@@ -233,6 +256,30 @@ public interface ROSServiceManager extends EObject {
 	 * @generated
 	 */
 	<Request extends Message, Response extends Message> Response callService(String serviceName, Request request, boolean enableLogging);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Determines the service that corresponds to the given
+	 * service name; if it exists, the request is made to the
+	 * service and its corresponding response is returned.  The
+	 * enable logging value determines whether or not logging
+	 * should be enabled for this service call. If the service
+	 * call takes more than the timeout value, a null response
+	 * is returned.
+	 * 
+	 * @param serviceName The name of the service to call
+	 * @param request The request to send to the service
+	 * @param enableLogging Whether or not logging should be enabled for this service call
+	 * @param timeout, in milliseconds. A negative value means no timeout.
+	 * @return The service's response to this call
+	 * @throws A TimeoutException if the call fails to return within the specified timeout.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.addons.ros.Exception" serviceNameUnique="false" requestUnique="false" enableLoggingUnique="false" timeoutUnique="false" RequestBounds="ca.gc.asc_csa.apogy.addons.ros.Message" ResponseBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
+	 * @generated
+	 */
+	<Request extends Message, Response extends Message> Response callService(String serviceName, Request request, boolean enableLogging, int timeout) throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -41,6 +41,7 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
@@ -97,6 +98,26 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 		coord.setY(y);
 		coord.setZ(z);
 
+		return coord;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates(double x, double y, double z, short red, short green, short blue) 
+	{
+		ColoredCartesianPositionCoordinates coord = ApogyCommonGeometryData3DFactory.eINSTANCE.createColoredCartesianPositionCoordinates();
+		
+		coord.setX(x);
+		coord.setY(y);
+		coord.setZ(z);
+		
+		coord.setRed(red);
+		coord.setGreen(green);
+		coord.setBlue(blue);
+		
 		return coord;
 	}
 
@@ -830,6 +851,8 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 		switch (operationID) {
 			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
 				return createCartesianPositionCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
+			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_COLORED_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE_SHORT_SHORT_SHORT:
+				return createColoredCartesianPositionCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Short)arguments.get(3), (Short)arguments.get(4), (Short)arguments.get(5));
 			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
 				return createCartesianOrientationCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE:

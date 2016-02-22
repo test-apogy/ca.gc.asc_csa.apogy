@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits;
 import ca.gc.asc_csa.apogy.common.topology.bindings.Axis;
 import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
 import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet;
@@ -107,8 +106,6 @@ public class ApogyCommonTopologyBindingsFactoryImpl extends EFactoryImpl impleme
 		switch (eDataType.getClassifierID()) {
 			case ApogyCommonTopologyBindingsPackage.AXIS:
 				return createAxisFromString(eDataType, initialValue);
-			case ApogyCommonTopologyBindingsPackage.ANGLE_UNITS:
-				return createAngleUnitsFromString(eDataType, initialValue);
 			case ApogyCommonTopologyBindingsPackage.MAP:
 				return createMapFromString(eDataType, initialValue);
 			default:
@@ -127,8 +124,6 @@ public class ApogyCommonTopologyBindingsFactoryImpl extends EFactoryImpl impleme
 		switch (eDataType.getClassifierID()) {
 			case ApogyCommonTopologyBindingsPackage.AXIS:
 				return convertAxisToString(eDataType, instanceValue);
-			case ApogyCommonTopologyBindingsPackage.ANGLE_UNITS:
-				return convertAngleUnitsToString(eDataType, instanceValue);
 			case ApogyCommonTopologyBindingsPackage.MAP:
 				return convertMapToString(eDataType, instanceValue);
 			default:
@@ -251,26 +246,6 @@ public class ApogyCommonTopologyBindingsFactoryImpl extends EFactoryImpl impleme
 	 * @generated
 	 */
 	public String convertAxisToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AngleUnits createAngleUnitsFromString(EDataType eDataType, String initialValue) {
-		AngleUnits result = AngleUnits.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertAngleUnitsToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -1085,7 +1085,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		   new String[] {
 			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyExamplesSatellite",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+			 "copyrightText", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyExamplesSatellite",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -1093,6 +1093,12 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.satellite/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
+		   });	
+		addAnnotation
+		  (listEDataType, 
+		   source, 
+		   new String[] {
+			 "documentation", "Basic Types."
 		   });	
 		addAnnotation
 		  (abstractConstellationEClass, 

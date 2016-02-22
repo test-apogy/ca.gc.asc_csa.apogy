@@ -17,7 +17,17 @@
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
-		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+		  copyrightText="Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Pierre Allard (Pierre.Allard@canada.ca), 
+    Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
+    Canadian Space Agency (CSA) - Initial API and implementation",
 		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.ros/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.ros.edit/src-generated")
@@ -406,6 +416,24 @@ class ROSServiceManager
 	 * @return The service's response to this call
 	 */
 	op <Request extends Message, Response extends Message> Response callService(String serviceName, Request request)
+
+	/*
+	 * Determines the service that corresponds to the given
+	 * service name; if it exists, the request is made to the
+	 * service and its corresponding response is returned.
+	 * If the service call takes more than the timeout value,
+	 * a null response is returned.
+	 * 
+	 * Note: The service's logging is enabled for this call.
+	 * 
+	 * @param serviceName The name of the service to call
+	 * @param request The request to send to the service
+	 * @param timeout, in milliseconds. A negative value means no timeout.
+	 * @return The service's response to this call
+	 * @throws A TimeoutException if the call fails to return within the specified timeout.
+	 */
+	op <Request extends Message, Response extends Message> Response callService(String serviceName, Request request, int timeout) throws Exception
+
 	
 	/*
 	 * Determines the service that corresponds to the given
@@ -432,7 +460,25 @@ class ROSServiceManager
 	 * @return The service's response to this call
 	 */
 	op <Request extends Message, Response extends Message> Response callService(String serviceName, Request request, boolean enableLogging)
-	
+
+	/*
+	 * Determines the service that corresponds to the given
+	 * service name; if it exists, the request is made to the
+	 * service and its corresponding response is returned.  The
+	 * enable logging value determines whether or not logging
+	 * should be enabled for this service call. If the service 
+	 * call takes more than the timeout value, a null response 
+	 * is returned.
+	 * 
+	 * @param serviceName The name of the service to call
+	 * @param request The request to send to the service
+	 * @param enableLogging Whether or not logging should be enabled for this service call
+	 * @param timeout, in milliseconds. A negative value means no timeout.
+	 * @return The service's response to this call
+	 * @throws A TimeoutException if the call fails to return within the specified timeout.
+	 */
+	op <Request extends Message, Response extends Message> Response callService(String serviceName, Request request, boolean enableLogging, int timeout) throws Exception
+
 	/*
 	 * Determines the service that corresponds to the given
 	 * service name; if it exists, the call is made to the
@@ -520,6 +566,20 @@ class ROSService<Request extends Message, Response extends Message>
 	 * @return The service's response to the call
 	 */
 	op Response call(Request request, boolean enableLogging)
+	
+	/*
+	 * Calls the service with the given request and the
+	 * response of that call is returned.  The enable logging
+	 * value will determine whether or not logging should be
+	 * enabled for this call. If the service call takes more 
+	 * than the timeout value, a null response is returned.
+	 * 
+	 * @param request The rrequest to send to this service
+	 * @param enableLogging Whether or not this call should be logged
+	 * @param timeout, in milliseconds. A negative value means no timeout.
+	 * @return The service's response to the call
+	 */
+	op Response call(Request request, boolean enableLogging, int timeout)
 	
 	/*
 	 * The service's name

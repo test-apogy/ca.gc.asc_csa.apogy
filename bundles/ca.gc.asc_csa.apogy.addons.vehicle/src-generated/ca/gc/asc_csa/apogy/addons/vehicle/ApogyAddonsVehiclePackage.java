@@ -53,7 +53,7 @@ import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsVehicle' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsVehicle' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.vehicle/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.vehicle.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsVehicle' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyAddonsVehicle' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.vehicle/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.vehicle.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons'"
  * @generated
  */
 public interface ApogyAddonsVehiclePackage extends EPackage
@@ -101,7 +101,7 @@ public interface ApogyAddonsVehiclePackage extends EPackage
   int VEHICLE_POSE_CORRECTOR = 0;
 
   /**
-	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1400,6 +1400,15 @@ public interface ApogyAddonsVehiclePackage extends EPackage
 	int PATH_PLANNER_TOOL_FEATURE_COUNT = ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 6;
 
 		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_PLANNER_TOOL___INITIALISE = ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL___INITIALISE;
+
+		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1760,6 +1769,15 @@ public interface ApogyAddonsVehiclePackage extends EPackage
 	 * @ordered
 	 */
 	int VEHICLE_PATH_PLANNER_TOOL_FEATURE_COUNT = PATH_PLANNER_TOOL_FEATURE_COUNT + 1;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VEHICLE_PATH_PLANNER_TOOL___INITIALISE = PATH_PLANNER_TOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.

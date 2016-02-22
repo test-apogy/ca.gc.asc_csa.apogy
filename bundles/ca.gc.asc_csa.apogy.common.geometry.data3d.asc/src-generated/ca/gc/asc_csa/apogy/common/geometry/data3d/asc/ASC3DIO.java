@@ -22,6 +22,16 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
  * A representation of the model object '<em><b>ASC3DIO</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * This class is used to load DEM from .asc files found on the Utah DEM Repository. Each file covers a large area (20 km X 20 km)
+ * and the name of the file is a U.S. National Grid (USNG) identifier. The location of the south-west corner of the tile can be
+ * found from  the identifier (see USGN to Geodetic). The data in the file is define however from the north-west corner. Each
+ * row in the file is order west to east, and the row are ordered north to south.
+ * @see Utah DEM Repository http://mapserv.utah.gov/raster/?cat=5%20Meter%20{DEM}
+ * @see USGN to Geodetic http://www.ngs.noaa.gov/cgi-bin/usng_getgp.prl
+ * <!-- end-model-doc -->
+ *
  *
  * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getASC3DIO()
  * @model

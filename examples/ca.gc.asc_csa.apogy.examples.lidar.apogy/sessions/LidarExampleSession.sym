@@ -51,15 +51,15 @@
       <operationCalls xmi:id="__Idi5wrOEeW4-_ONWXXiAw" name="Acquire Scan (Blocking)" variable="__IW1NgrOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.lidar#//Lidar/acquireScan"/>
         <argumentsList xmi:id="__Idi6ArOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi6QrOEeW4-_ONWXXiAw" value="0.8726646259971648"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi6grOEeW4-_ONWXXiAw" value="0.6981317007977318"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="__Idi6QrOEeW4-_ONWXXiAw" value="0.8726646259971648"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="__Idi6grOEeW4-_ONWXXiAw" value="0.6981317007977318"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="__Idi6wrOEeW4-_ONWXXiAw" name="Acquire Scan (Non-Blocking)" variable="__IW1NgrOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.lidar#//Lidar/acquireScanNonBlocking"/>
         <argumentsList xmi:id="__Idi7ArOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi7QrOEeW4-_ONWXXiAw" value="0.8726646259971648"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi7grOEeW4-_ONWXXiAw" value="0.6981317007977318"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="__Idi7QrOEeW4-_ONWXXiAw" value="0.8726646259971648"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="__Idi7grOEeW4-_ONWXXiAw" value="0.6981317007977318"/>
         </argumentsList>
       </operationCalls>
     </programs>

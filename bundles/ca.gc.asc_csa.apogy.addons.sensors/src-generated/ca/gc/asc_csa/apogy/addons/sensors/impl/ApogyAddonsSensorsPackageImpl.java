@@ -276,12 +276,18 @@ public class ApogyAddonsSensorsPackageImpl extends EPackageImpl implements Apogy
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+			 "copyrightText", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyAddonsSensors",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"
+		   });	
+		addAnnotation
+		  (sensorStatusEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "Represents the various states that a sensor could be in.\n * Typical status transitions :\n * Power up (nominal) : OFF -> BUSY (initialization) -> READY\nPower up (off-nominal) : OFF -> BUSY (initialization) -> FAILED\n * Data acquition (nominal): READY -> BUSY (Acquisition) -> READY\nData acquition (off-nominal): READY -> BUSY (Acquisition) -> FAILED"
 		   });
 	}
 

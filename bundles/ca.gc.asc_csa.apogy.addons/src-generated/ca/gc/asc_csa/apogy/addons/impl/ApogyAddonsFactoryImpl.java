@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.addons.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.addons.*;
 import javax.vecmath.Color3f;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -86,6 +87,8 @@ public class ApogyAddonsFactoryImpl extends EFactoryImpl implements ApogyAddonsF
 			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL: return createFeatureOfInterestPickingTool();
 			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL: return createSunVector3DTool();
 			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL_NODE: return createSunVector3DToolNode();
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL: return createTrajectoryPickingTool();
+			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL_NODE: return createTrajectoryPickingToolNode();
 			case ApogyAddonsPackage.TRAJECTORY3_DTOOL: return createTrajectory3DTool();
 			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE: return createTrajectory3DToolNode();
 			default:
@@ -185,6 +188,26 @@ public class ApogyAddonsFactoryImpl extends EFactoryImpl implements ApogyAddonsF
 	public SunVector3DToolNode createSunVector3DToolNode() {
 		SunVector3DToolNodeImpl sunVector3DToolNode = new SunVector3DToolNodeImpl();
 		return sunVector3DToolNode;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrajectoryPickingTool createTrajectoryPickingTool() {
+		TrajectoryPickingToolImpl trajectoryPickingTool = new TrajectoryPickingToolImpl();
+		return trajectoryPickingTool;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrajectoryPickingToolNode createTrajectoryPickingToolNode() {
+		TrajectoryPickingToolNodeImpl trajectoryPickingToolNode = new TrajectoryPickingToolNodeImpl();
+		return trajectoryPickingToolNode;
 	}
 
 		/**

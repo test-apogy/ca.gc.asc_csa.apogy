@@ -22,12 +22,16 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
+
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.examples.lidar.Activator;
@@ -220,8 +224,8 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 	 * @return The resulting scan with the given horizontal and vertical angular resolution.
 	 * @see #acquireScanNonBlocking(double, double)
 	 */
-	@Override
-	public CartesianCoordinatesSet acquireScan(double horizontalResolution,
+	//@Override
+	public CartesianCoordinatesSet acquireScanOLD(double horizontalResolution,
 											   double verticalResolution) 
 	{
 		final String LOG_PREFIX = this.getClass().getSimpleName() +
@@ -265,7 +269,30 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 			return cartesianCoordinatesSet;
 		}
 	}
-
+	
+	//@Override
+	public CartesianCoordinatesSet acquireScan(double horizontalResolution, double verticalResolution)
+	{
+		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		
+		ColoredCartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createColoredCartesianPositionCoordinates(-1,-1,0, (short) 255, (short) 0 ,   (short) 0);
+		ColoredCartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createColoredCartesianPositionCoordinates( 1,-1,0, (short) 255, (short) 0 , (short) 0);
+		ColoredCartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createColoredCartesianPositionCoordinates( 1, 1,0, (short) 0,   (short) 0 ,   (short) 255);
+		//ColoredCartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createColoredCartesianPositionCoordinates(-1, 1,0, (short) 255, (short) 0, (short) 0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1, 1,0);
+		mesh.getPoints().add(p0);
+		mesh.getPoints().add(p1);
+		mesh.getPoints().add(p2);
+		mesh.getPoints().add(p3);
+		
+		CartesianTriangle t0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p0, p1, p2);
+		CartesianTriangle t1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p2, p3, p0);
+		mesh.getPolygons().add(t0);
+		mesh.getPolygons().add(t1);
+		
+		return mesh;
+	}
+	
 	/**
 	 * This operation is used to acquire a depth scan of the field of view, with the given
 	 * horizontal and vertical resolution.
@@ -398,12 +425,28 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 				double y = range * Math.cos(elevationAngle) * Math.sin(azimuthAngle);
 				double z = range * Math.cos(elevationAngle) * Math.cos(azimuthAngle);
 
-				// Create a Cartesian coordinate with the calculated X, Y and Z.
-				CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x,y,z);
+				// Generate a mix of colored and non-colored point.
+				if(Math.IEEEremainder(v, 2) > 0)
+				{
+					// Color code with distance.
+					double ratio = Math.sqrt(x*x + y*y + z*z) / getFov().getRange().getMaximumDistance();
+					short color = (short)(ratio * 255);
+					if(color > 255) color = (short) 255;
+					
+					// Create a Cartesian coordinate with the calculated X, Y and Z.
+					ColoredCartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createColoredCartesianPositionCoordinates(x,y,z, (short) 0, (short) 0 , (short) color);
+													
+					// Add the point to the list of scan line points
+					scanLine.add(point);
+				}
+				else
+				{
+					CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
+					
+					// Add the point to the list of scan line points
+					scanLine.add(point);
+				}
 				
-				// Add the point to the list of scan line points
-				scanLine.add(point);
-
 				// Increment elevation
 				elevationAngle += verticalResolutionAngle;
 			}

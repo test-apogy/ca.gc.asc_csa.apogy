@@ -30,9 +30,22 @@ import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca),
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesRoboticArmApogy' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015' modelName='ApogyExamplesRoboticArmApogy' modelDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.robotic_arm'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesRoboticArmApogy' copyrightText='Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyExamplesRoboticArmApogy' modelDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.robotic_arm'"
  * @generated
  */
 public interface ApogyExamplesRoboticArmApogyPackage extends EPackage

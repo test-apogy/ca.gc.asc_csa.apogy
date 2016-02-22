@@ -44,6 +44,14 @@ public interface ApogyCommonGeometryData3DFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @model unique="false" xUnique="false" yUnique="false" zUnique="false" redUnique="false" greenUnique="false" blueUnique="false"
+	 * @generated
+	 */
+	ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates(double x, double y, double z, short red, short green, short blue);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" xRotationUnique="false" yRotationUnique="false" zRotationUnique="false"
 	 * @generated
 	 */

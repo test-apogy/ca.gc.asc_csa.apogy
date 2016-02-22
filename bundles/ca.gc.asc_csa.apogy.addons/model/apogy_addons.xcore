@@ -12,10 +12,20 @@
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 @GenModel(prefix="ApogyAddons",
+          copyrightText="Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Pierre Allard (Pierre.Allard@canada.ca), 
+    Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
+    Canadian Space Agency (CSA) - Initial API and implementation",	
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
-		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)",
 		  modelName="ApogyAddons",
 		  complianceLevel="6.0",
 		  suppressGenModelAnnotations="false")
@@ -52,28 +62,45 @@ class SimpleToolList extends AbstractToolsListContainer
 
 abstract class SimpleTool extends AbstractTool
 {		
+	/**
+	 * The SimpleToolList containing the tool.
+	 */
 	refers SimpleToolList toolList opposite simpleTools
 	
+	/**
+	 * Whether or  not the tool is active.
+	 */
 	transient boolean active = "false"
 	
+	/**
+	 * Whether or  not the tool is disposed.
+	 */
 	@GenModel(property="Readonly")
 	transient boolean disposed = "false"
 	
+	/**
+	 * Method called when the tool is added to its toolList.
+	 */
+	op void initialise()
+	
+	/**
+	 * Method called when the tool is remove from its toolList.
+	 */
 	op void dispose()
 }
 
 abstract class Simple3DTool extends SimpleTool
 {		
-	transient boolean visible = "true"		
+	/**
+	 * Whether or  not the tool is visible.
+	 */
+	boolean visible = "true"		
 
-	/** The root node of the current topology. Set automatically by Apogy after the too is registered.*/
+	/** The root node of the current topology. Is set automatically by Apogy after the tool is registered.*/
 	refers transient Node rootNode
 	
 	/** Method called upon a user selection in the 3D viewer. Sub-classes should implement. */
 	op void selectionChanged(NodeSelection nodeSelection)
-	
-	
-	//op void selectionChanged(Node node, Tuple3d relativePosition, Tuple3d normal)
 }
 
 abstract class AbstractTwoPoints3DTool extends Simple3DTool
@@ -228,6 +255,43 @@ class SunVector3DToolNode extends Node
 	refers transient SunVector3DTool sunVector3DTool opposite sunVector3DToolNode	
 }
 
+/**
+ * A 3D tool used to define trajectories by piking point in the 3D world.
+ * The tool support the creation of multiple path.
+ */
+ 
+class TrajectoryPickingTool extends Simple3DTool
+{	
+	/** Offset to apply to the point to keep a wyapoint path above ground. */
+	@GenModel(notify="true", apogy_units = "m", propertyCategory="TRAJECTORY_PICKING_TOOL")
+	double altitudeOffset = "0"
+	
+	/** All the  WayPointPath created with this tool.*/
+	@GenModel(notify="true", propertyCategory="TRAJECTORY_PICKING_TOOL")
+	contains WayPointPath[1..*] paths
+	
+	/** The WayPointPath to which selected points are to be added. */
+	@GenModel(notify="true", propertyCategory="TRAJECTORY_PICKING_TOOL")
+	refers WayPointPath[1] activePath
+	
+	/** The node representing the tool in the topology. */
+	@GenModel(notify="true", children="false", property="Readonly", propertyCategory="TRAJECTORY_PICKING_TOOL")
+	refers transient TrajectoryPickingToolNode trajectoryPickingToolNode opposite trajectoryPickingTool
+	
+	/**
+	 * Clears all points from the active path. 
+	 */
+	op void clearActivePath()	
+}
+
+/**
+  * Node representing the TrajectoryPickingTool in the topology.
+  */
+class TrajectoryPickingToolNode extends AggregateGroupNode
+{
+	/** The  TrajectoryPickingTool associated with this node. */
+	refers transient TrajectoryPickingTool trajectoryPickingTool opposite trajectoryPickingToolNode
+}
 
 /**
  * A 3D tool used to trace the trajectory of a Variable.

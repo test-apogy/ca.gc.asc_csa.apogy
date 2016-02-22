@@ -30,7 +30,6 @@ import ca.gc.asc_csa.apogy.common.topology.RotationNode;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationNode <em>Rotation Node</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationAxis <em>Rotation Axis</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationUnits <em>Rotation Units</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getRotationBinding()
@@ -101,39 +100,5 @@ public interface RotationBinding extends AbstractTopologyBinding
 	 * @generated
 	 */
   void setRotationAxis(Axis value);
-
-  /**
-	 * Returns the value of the '<em><b>Rotation Units</b></em>' attribute.
-	 * The default value is <code>"DEGREES"</code>.
-	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits}.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Rotation Units</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The angle unit associated with the feature.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Rotation Units</em>' attribute.
-	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits
-	 * @see #setRotationUnits(AngleUnits)
-	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getRotationBinding_RotationUnits()
-	 * @model default="DEGREES" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
-	 * @generated
-	 */
-  AngleUnits getRotationUnits();
-
-  /**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationUnits <em>Rotation Units</em>}' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rotation Units</em>' attribute.
-	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits
-	 * @see #getRotationUnits()
-	 * @generated
-	 */
-  void setRotationUnits(AngleUnits value);
 
 } // RotationBinding

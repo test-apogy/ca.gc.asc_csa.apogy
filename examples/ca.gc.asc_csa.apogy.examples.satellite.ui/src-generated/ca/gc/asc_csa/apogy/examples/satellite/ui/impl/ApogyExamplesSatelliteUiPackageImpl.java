@@ -236,7 +236,7 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 		   new String[] {
 			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyExamplesSatelliteUi",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)",
+			 "copyrightText", "Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyExamplesSatelliteUi",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -244,6 +244,12 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.ui/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.ui.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.satellite"
+		   });	
+		addAnnotation
+		  (apogyExamplesSatelliteUiFacadeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Constellation Facade.  This class provides utility methods."
 		   });	
 		addAnnotation
 		  (getApogyExamplesSatelliteUiFacade__GetConstellationVariable(), 

@@ -516,7 +516,7 @@ public class ApogyCommonGeometryData3DASCPackageImpl extends EPackageImpl implem
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
-			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+			 "copyrightText", "Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyCommonGeometryData3DASC",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
@@ -524,6 +524,12 @@ public class ApogyCommonGeometryData3DASCPackageImpl extends EPackageImpl implem
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.edit/src-generated",
 			 "testsDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry.data3d"
+		   });	
+		addAnnotation
+		  (asc3DIOEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThis class is used to load DEM from .asc files found on the Utah DEM Repository. Each file covers a large area (20 km X 20 km)\nand the name of the file is a U.S. National Grid (USNG) identifier. The location of the south-west corner of the tile can be\nfound from  the identifier (see USGN to Geodetic). The data in the file is define however from the north-west corner. Each\nrow in the file is order west to east, and the row are ordered north to south.\n@see Utah DEM Repository http://mapserv.utah.gov/raster/?cat=5%20Meter%20{DEM}\n@see USGN to Geodetic http://www.ngs.noaa.gov/cgi-bin/usng_getgp.prl"
 		   });	
 		addAnnotation
 		  (getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode(), 

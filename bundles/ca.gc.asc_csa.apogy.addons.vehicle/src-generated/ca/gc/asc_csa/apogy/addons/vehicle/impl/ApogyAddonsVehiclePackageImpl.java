@@ -337,7 +337,6 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 
 		// Initialize simple dependencies
 		ApogyCommonTopologyAddonsDynamicsPackage.eINSTANCE.eClass();
-		ApogyCommonTopologyBindingsPackage.eINSTANCE.eClass();
 		ApogyAddonsPackage.eINSTANCE.eClass();
 		ApogyCoreEnvironmentPackage.eINSTANCE.eClass();
 		ApogyAddonsMobilityPathplannersPackage.eINSTANCE.eClass();
@@ -1474,12 +1473,18 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 			 "prefix", "ApogyAddonsVehicle",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
-			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+			 "copyrightText", "Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyAddonsVehicle",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.vehicle/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.vehicle.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"
+		   });	
+		addAnnotation
+		  (zCorrectionModeEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "Enumeration of available methods use to compute the correction along the Z axis."
 		   });	
 		addAnnotation
 		  (orientationCorrectionModeEEnum, 

@@ -25,7 +25,6 @@ import javax.vecmath.Matrix3d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.swt.graphics.RGB;
-import ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -43,6 +42,8 @@ import com.jme3.scene.VertexBuffer;
 import com.jme3.texture.Texture2D;
 import com.jme3.texture.plugins.AWTLoader;
 import com.jme3.util.BufferUtils;
+
+import ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode;
 
 public class JME3Utilities 
 {	
@@ -304,6 +305,24 @@ public class JME3Utilities
 			i++;
 		}
 		return array;		
+	}
+	
+	public static float[] convertRGBAListToFloatArray(List<ColorRGBA> list)
+	{
+		float[] array = new float[list.size() * 4];
+		
+		int i = 0;		
+		for(ColorRGBA color : list)
+		{			
+			int indexBase = 4 * i;
+			array[indexBase]     = color.r;
+			array[indexBase + 1] = color.g;
+			array[indexBase + 2] = color.b;
+			array[indexBase + 3] = color.a;					
+			i++;
+		}
+		
+		return array;
 	}
 	
 	public static Vector3f convertToVector3f(javax.vecmath.Tuple3d tuple3d)

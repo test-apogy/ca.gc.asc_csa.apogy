@@ -5,7 +5,6 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.common
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.apogy.common.Activator
 Require-Bundle: org.eclipse.core.runtime
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

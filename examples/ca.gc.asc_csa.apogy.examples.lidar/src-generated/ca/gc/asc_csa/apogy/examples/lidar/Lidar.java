@@ -22,6 +22,15 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
  * A representation of the model object '<em><b>Lidar</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This is an abstraction of the Lidar unit, a 3D laser-based range
+ * finder which is capable of scanning the environment and returning
+ * a point cloud encompassing the resulting information.  It has a
+ * field of view, which determines the subsection of the environment
+ * that the unit can scan.  It also can keep track of whether or not
+ * the unit was initialized.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

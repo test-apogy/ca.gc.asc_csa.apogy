@@ -544,7 +544,7 @@ public class ApogyExamplesMobilePlatformPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyExamplesMobilePlatform",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
+			 "copyrightText", "Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyExamplesMobilePlatform",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -552,6 +552,12 @@ public class ApogyExamplesMobilePlatformPackageImpl extends EPackageImpl impleme
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.mobile_platform/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.mobile_platform.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
+		   });	
+		addAnnotation
+		  (positionEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This class is used to represent a position of a particular object\nin space.  In particular, this provides both a Cartesian coordinate\nlocation as well as an angle corresponding to the object\'s pose."
 		   });	
 		addAnnotation
 		  (getPosition_X(), 

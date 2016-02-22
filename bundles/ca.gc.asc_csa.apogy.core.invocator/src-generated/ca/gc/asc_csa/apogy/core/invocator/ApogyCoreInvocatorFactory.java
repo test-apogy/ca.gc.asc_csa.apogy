@@ -304,15 +304,33 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   ArgumentsList createArgumentsList();
 
   /**
-	 * Returns a new object of class '<em>EData Type Argument</em>'.
+	 * Returns a new object of class '<em>Boolean EData Type Argument</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EData Type Argument</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boolean EData Type Argument</em>'.
 	 * @generated
 	 */
-  EDataTypeArgument createEDataTypeArgument();
+	BooleanEDataTypeArgument createBooleanEDataTypeArgument();
 
-  /**
+		/**
+	 * Returns a new object of class '<em>Numeric EData Type Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Numeric EData Type Argument</em>'.
+	 * @generated
+	 */
+	NumericEDataTypeArgument createNumericEDataTypeArgument();
+
+		/**
+	 * Returns a new object of class '<em>String EData Type Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>String EData Type Argument</em>'.
+	 * @generated
+	 */
+	StringEDataTypeArgument createStringEDataTypeArgument();
+
+		/**
 	 * Returns a new object of class '<em>EEnum Argument</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -392,60 +410,6 @@ public interface ApogyCoreInvocatorFactory extends EFactory
 	 * @generated
 	 */
   ReferenceResultValue createReferenceResultValue();
-
-  /**
-	 * Returns a new object of class '<em>Watches Lists Container</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watches Lists Container</em>'.
-	 * @generated
-	 */
-  WatchesListsContainer createWatchesListsContainer();
-
-  /**
-	 * Returns a new object of class '<em>Watches List</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watches List</em>'.
-	 * @generated
-	 */
-  WatchesList createWatchesList();
-
-  /**
-	 * Returns a new object of class '<em>Watch</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watch</em>'.
-	 * @generated
-	 */
-  Watch createWatch();
-
-  /**
-	 * Returns a new object of class '<em>Watch Feature Node Adapter</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watch Feature Node Adapter</em>'.
-	 * @generated
-	 */
-  WatchFeatureNodeAdapter createWatchFeatureNodeAdapter();
-
-  /**
-	 * Returns a new object of class '<em>Displays Lists Container</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Displays Lists Container</em>'.
-	 * @generated
-	 */
-  DisplaysListsContainer createDisplaysListsContainer();
-
-  /**
-	 * Returns a new object of class '<em>Displays List</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Displays List</em>'.
-	 * @generated
-	 */
-  DisplaysList createDisplaysList();
 
   /**
 	 * Returns a new object of class '<em>Recording Tools Container</em>'.

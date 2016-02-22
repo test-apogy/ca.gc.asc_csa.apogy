@@ -15,19 +15,26 @@ package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.util.Map;
 
+import javax.measure.unit.Unit;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.RotationNode;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
-import ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits;
-import ca.gc.asc_csa.apogy.common.topology.bindings.Axis;
 import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
-import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.Activator;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.Axis;
+import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,13 +46,18 @@ import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsP
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.RotationBindingImpl#getRotationNode <em>Rotation Node</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.RotationBindingImpl#getRotationAxis <em>Rotation Axis</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.RotationBindingImpl#getRotationUnits <em>Rotation Units</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RotationBindingImpl extends AbstractTopologyBindingImpl implements RotationBinding
 {
+  private static Unit<?> RADIANS = Unit.valueOf("rad");
+	
+  /** The conversion factor to use to convert from the feature value to radians.*/
+  private double featureToRadiansConversionFactor = 1.0;
+  
+	
   /**
 	 * The cached value of the '{@link #getRotationNode() <em>Rotation Node</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -75,26 +87,6 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 	 * @ordered
 	 */
   protected Axis rotationAxis = ROTATION_AXIS_EDEFAULT;
-
-  /**
-	 * The default value of the '{@link #getRotationUnits() <em>Rotation Units</em>}' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getRotationUnits()
-	 * @generated
-	 * @ordered
-	 */
-  protected static final AngleUnits ROTATION_UNITS_EDEFAULT = AngleUnits.DEGREES;
-
-  /**
-	 * The cached value of the '{@link #getRotationUnits() <em>Rotation Units</em>}' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getRotationUnits()
-	 * @generated
-	 * @ordered
-	 */
-  protected AngleUnits rotationUnits = ROTATION_UNITS_EDEFAULT;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -186,29 +178,6 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public AngleUnits getRotationUnits()
-  {
-		return rotationUnits;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public void setRotationUnits(AngleUnits newRotationUnits)
-  {
-		AngleUnits oldRotationUnits = rotationUnits;
-		rotationUnits = newRotationUnits == null ? ROTATION_UNITS_EDEFAULT : newRotationUnits;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS, oldRotationUnits, rotationUnits));
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -218,8 +187,6 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 				return basicGetRotationNode();
 			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
 				return getRotationAxis();
-			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
-				return getRotationUnits();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -238,9 +205,6 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 				return;
 			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
 				setRotationAxis((Axis)newValue);
-				return;
-			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
-				setRotationUnits((AngleUnits)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -261,9 +225,6 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
 				setRotationAxis(ROTATION_AXIS_EDEFAULT);
 				return;
-			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
-				setRotationUnits(ROTATION_UNITS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -281,8 +242,6 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 				return rotationNode != null;
 			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
 				return rotationAxis != ROTATION_AXIS_EDEFAULT;
-			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
-				return rotationUnits != ROTATION_UNITS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -300,12 +259,19 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (rotationAxis: ");
 		result.append(rotationAxis);
-		result.append(", rotationUnits: ");
-		result.append(rotationUnits);
 		result.append(')');
 		return result.toString();
 	}
 
+  @Override
+  public void bind() 
+  {
+	  // Determine the conversion factor to use.
+	  featureToRadiansConversionFactor = determineConversionFactor();
+	  
+	  super.bind();
+  }
+  
   @Override
   public AbstractTopologyBinding clone(Map<Node, Node> originalToCopyNodeMap) 
   {
@@ -331,21 +297,45 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 		// Applies the value.
 		applyValue(value);	
   }
+      
+  private double determineConversionFactor()
+  {
+	  double factor = 1.0;
+
+	  
+	  // Gets the units associated with the feature node.
+	  if(getFeatureNode() instanceof AbstractFeatureSpecifier)
+	  {
+		  AbstractFeatureSpecifier featureSpecifier = (AbstractFeatureSpecifier) getFeatureNode();
+		  Unit<?> units = ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(featureSpecifier.getStructuralFeature());
+		
+		  // If units have been defined in the model.
+		  if(units != null)
+		  {
+			  try
+			  {
+				  factor = units.getConverterTo(RADIANS).convert(1.0);
+			  }
+			  catch(Exception e)
+			  {
+				  String message = this.getName() + ": Engineering units of the feature <" + units.toString() +"> are not an angle value !";
+				  Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR, e);
+			  }
+		  }
+		  else
+		  {
+			  String message = this.getName() + ": No Engineering units defined for feature, assuming radians !";
+			  Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
+		  }
+	  }
+	  
+	  return factor;
+  }
   
   private void applyValue(final double newValue)
   {
-		double value = newValue;
-				
-		/* Converts to radians if required.*/					
-		switch (getRotationUnits().getValue()) 
-		{
-				case AngleUnits.DEGREES_VALUE:
-					value = Math.toRadians(newValue);
-				break;
-
-				default:
-				break;
-		}
+	  	// Converts value to radians.
+		double value = newValue * featureToRadiansConversionFactor;
 		
 		/* Rotate around the specified axis.*/
 		switch(getRotationAxis().getValue())

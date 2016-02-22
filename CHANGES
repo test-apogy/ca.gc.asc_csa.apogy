@@ -1,0 +1,716 @@
+Version 0.5.4:
+ - Remove .xcore copyright text duplicates.
+ - Fixed .xcore copyright text.
+
+Version 0.5.3:
+
+
+Version 0.5.2:
+ - PA: Fixed problem with timeout.
+ - Merge branch 'master' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
+ - Generated HTML from wiki.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+
+Version 0.5.1
+ - Fixed #87.
+ - Adding bumpversion script
+ - Ignore from git /target.
+ - Merge branch 'master' of bitbucket.org:apogy/ca.gc.asc_csa.apogy
+ - PA : Removed dependency cycle.
+ - Merge branch 'master' into develop
+ - Added method for replacing copyright header in xcore files, not tested yet
+ - Merge branch 'master' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
+ - PA: Created ROS Server/Client Robotic Arm Example.
+ - Don't reexport wb packages
+ - Remove duplicate entry in requirement
+ - remove unecessary activator
+ - Remove unecessary activator
+ - minor updates
+ - PA : #69 Resolved a few issues with the tool and the WaypoinPathBinding.
+ - PA : generated code.
+ - Merge branch 'master' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
+ - PA : #27 Watches and Displays removed. Watch related operation in ApogyInvocatoreFacade removed.
+ - Mergine with master
+ - copyrights now became a project ... well not a CSA project, an eclipse .project
+ - Merge branch 'master' of bitbucket.org:apogy/ca.gc.asc_csa.apogy
+ - SG, Issue #81: apogy_examples_satellite_ui.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_satellite_apogy.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_rover.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_rover_apogy.xcore got stripped because of the copyright script
+ - PA: Code regenerated.
+ - SG, Issue #81: apogy_examples_robotic_arm.xcore got stripped because of the copyright script
+ - Merge branch 'master' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
+ - SG, Issue #81: apogy_examples_robotic_arm_apogy.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_mobile_platform.xcore got stripped because of the copyright script
+ - PA : Issue #70 : Removed AngleUnits attribute from RotationBinding. Rotation and Translation binding are now using the model units.Also updated rotation bindings in examples models.
+ - SG, Issue #81: apogy_examples_mobile_platform_apogy.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_lidar.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_lidar_apogy.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_lander.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_lander_apogy.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_camera.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_camera_apogy.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_antenna.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_examples_antenna_apogy.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_core_ui.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_core_topology.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_core_programs.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_core_environment.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_core_environment_ui.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_topology_ui.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_topology_bindings.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_topology_addons_primitives.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_processors.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_log.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_addons_telecoms.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_topology_addons_dynamics.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_geometry_data.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_converters.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_geometry_data3d_asc.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_geometry_data25d.xcore got stripped because of the copyright script
+ - SG, Issue #81: apogy_common_converters_graphs.xcore got stripped because of the copyright script
+ - apogy_addons_vehicle.xcore got stripped because of the copyright script
+ - apogy_addons_sensors.xcore got stripped because of the copyright script
+ - apogy_addons_sensors.xcore got stripped because of the copyright script
+ - apogy_addons_sensors_fov.xcore got stripped because of the copyright script
+ - apogy_addons_sensors_fov.xcore got stripped because of the copyright script
+ - apogy_addons_sensors_fov_bindings.xcore got stripped because of the copyright script
+ - apogy_addons_sensors_fov_bindings.xcore got stripped because of the copyright script
+ - apogy_addons_mobility_pathplanners.xcore got stripped because of the copyright script
+ - apogy_addons_mobility_controllers.xcore got stripped because of the copyright script
+ - apogy_addons_geometry_paths.xcore got stripped because of the copyright script
+ - apogy_examples_satellite.xcore got stripped because of the copyright script
+ - apogy_examples_satellite.xcore got stripped because of the copyright script
+ - Merge branch 'master' of bitbucket.org:apogy/ca.gc.asc_csa.apogy
+ - apogy_core_programs_controllers.xcore got stripped because of the copyright script
+ - Copyright header applied.
+ - Merge branch 'master' of bitbucket.org:apogy/ca.gc.asc_csa.apogy
+ - Adding copyright script
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - PA : Upadtes.
+ - Merge branch 'master' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
+ - PA : Update.
+ - PA : Updates.
+ - PA : Update.
+ - Using the new path to the copyright notice (copyrights.txt) in apply_comments.sh
+ - Fixed corrupted version of apogy_core_environment_orbit_earth_ui.xcore using the updated copyright-adder.py script
+ - File got truncated by a bug in copyright script, reverting to initial version
+ - Updated installation guide.
+ - README.md edited online with Bitbucket
+ - PA : Updates based on Jay Jay Billings e-mail.
+ - PA : Added detail procedure to get started with the Rover example.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Fixed bug that was corrupting the files in trying to strip the comment containing the copyright
+ - Changed target name.
+ - Applying comments to .properties files as well
+ - PA : Updates based on discussion with P. Rapicault.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/apogy/ca.gc.asc_csa.apogy.git
+ - Ignore files from git.
+ - PA : Addressed most comments by Pascal Rapicault.
+ - Added screenshot.
+ - PA : Issue #69 : Added tool to create waypoint path + modified initialization for Simple3DTools.
+ - PA : Proposal with P. Rapicault initial comments.
+ - PA : Fixed .xcore files damaged by Copyrights update.
+ - PA : Updated documentation.
+ - Merge branch 'master' of bitbucket.org:apogy/ca.gc.asc_csa.apogy
+ - Added TrajectoryPickingTool and TrajectoryPickingToolNode.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/apogy/ca.gc.asc_csa.apogy.git
+ - Include apogy sdk target (Eclipse Mars).
+ - Modified getText().
+ - Updated description.
+ - Added copyrights.
+ - # WARNING: head commit changed in the meantime
+ - Mergine
+ - Renamed to apogy
+ - Added comments to properties file
+ - Fixed bug in copyright adder script
+ - Merge branch 'master' into develop
+ - Fixed bug in extracting copyright block
+ - Included satellite design screenshots + apogy storyboard screenshots.
+ - Added new satellite bundles into the example feature.
+ - README.md edited online with Bitbucket
+ - Move copyright scripts under .admin bundle
+ - Ignore target directory.
+ - Fixed bug #63.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/apogy/ca.gc.asc_csa.apogy.git
+ - Renamed org.eclipse.symphony.admin to ca.gc.asc_csa.apogy.admin
+ - Renamed org.eclipse.symphony.admin to ca.gc.asc_csa.apogy.admin
+ - Minor fixes.
+ - Merge branch 'develop'
+ - Modified the TLE model in preparation for the GPS Coordinates based TLE.
+ - Added copyright notice
+ - Minor changes.
+ - Modified getText().
+ - Working on copyright script
+ - Working on copyright script
+ - Working on copyright script
+ - Working on copyright script
+ - Fixed the Orbit Models for the TLE case.
+ - README.md edited online with Bitbucket
+ - Minor fix.
+ - Treating copyrighted files
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/apogy/ca.gc.asc_csa.apogy.git
+ - Used FTP site to link to Apogy-OTS repository.
+ - Treating copyrighted files
+ - Treating copyrighted files
+ - Typo
+ - README.md edited online with Bitbucket
+ - Fixed FTP site and installation guide.
+ - Added names to the list of contributors
+ - Added names to the list of contributors
+ - Not processing .MF files
+ - Working on copyright script
+ - Fix some issues from TLEOrbitPropagator.
+ - Fixed typo
+ - Fixed typo
+ - Fixed typo
+ - Fixed typo
+ - Fixed typo
+ - Recovered script
+ - Working on copyright script
+ - Working on copyright script
+ - Fixed problem with invalid TLE lines causing crash.
+ - apply_comments.sh also supports xcore files
+ - Supporting xcore files
+ - Modified comment
+ - Typo in apply_comments.sh: fixed
+ - Removed * at the beginning of legal copyright text
+ - Fixed bugs in apply comment python script
+ - Renamed apply comment script
+ - Renamed apply comment script
+ - Working on copyright block script
+ - Working on copyright script
+ - Merge branch 'master' of bitbucket.org:apogy/org.eclipse.symphony into develop
+ - Merge branch 'copyrights' into develop
+ - Merging with symphony
+ - Added procedure to convert from VRML to Wavefront files.
+ - Fixed indentation
+ - Merge branch 'renaming4'
+ - Renaming
+ - Adding renaming script (rename.sh)
+ - Compiles, after enabling xcore
+ - Replaced text
+ - Renaming done
+ - Added logo.
+ - Merge branch 'master' of https://peteallard@bitbucket.org/apogy/org.eclipse.symphony.git
+ - Remove unused org.vtk.
+ - Included Apogy logo.
+ - Updated.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/apogy/org.eclipse.symphony.git
+ - Fixed installation guide.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Created.
+ - Initial release
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Merge branch 'master' of git@bitbucket.org:Symphony2Eclipse/org.eclipse.symphony.git
+ - Generated installation.html.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Include Apogy Logo Image.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Merge branch 'master' of git@bitbucket.org:Symphony2Eclipse/org.eclipse.symphony.git
+ - Include apogee overview image.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Include copyright apogy template.
+ - Few changes in the licenses
+ - Include Apogy License Readme Files
+ - Merge branch 'NewSatelliteExample'
+ - First UI draft of the Constellation Dashboard.
+ - Modified to prevent controller binding from queuing commands.
+ - Few changes.
+ - Created few composite templates for the constellation dashboard.
+ - Produce Constellation Class Diagram.
+ - Few changes.
+ - Implemented using ECoreUtil.copy collect(data) and apply(data).
+ - Merge branch 'master' of git@bitbucket.org:Symphony2Eclipse/org.eclipse.symphony.git into NewSatelliteExample
+ - Created the new constellation meta-models.  Problems with transient references and ItemProvider that makes use of non-containment reference.
+ - Merge branch 'master' of git@bitbucket.org:Symphony2Eclipse/org.eclipse.symphony.git
+ - GIT Ignore .class
+ - Added old CSA copyrights.
+ - Fixes in the installation procedure.
+ - Few changes.
+ - Worked on tests.
+ - Fixed bug #40: Instance View does not show the object itself.
+ - Fixed .classpath.
+ - Added src folder in the .classpath.
+ - Merge branch 'master' of https://SymphonyBitBucketDev@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Added test.
+ - Merge branch 'master' of git@bitbucket.org:Symphony2Eclipse/org.eclipse.symphony.git
+ - Added JUnit tests.
+ - Merge branch 'master' of git@bitbucket.org:Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed Item Providers for duplicate children with GroupNode.
+ - Merge branch 'master' of https://SymphonyBitBucketDev@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Added JUnit Tests.
+ - Fixed documentation merge issues.
+ - Data3d cleanup and JUnit tests.
+ - Sirius Type UI roughly operational - More refinements are required
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Refactored some of the UI components for the Sirius topology Editor
+ - Added autogenerated tests.
+ - Merge branch 'master' of https://SymphonyBitBucketDev@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Data3d cleanup.
+ - Data3d .asc format Unit tests.
+ - Data3d .asc format Unit tests.
+ - Data3D .asc format support Unit testing.
+ - Cleanup of data 3D.
+ - Added missing Sirius UI type diagram starter
+ - Made required changes to refactor Sirius Topology UI for Git version
+ - Readded external actions for Sirius topology editor
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Added missing Java External Actions for Sirius UI
+ - Test.
+ - Test.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Prototyping of Time Sources.  Updated installation documentation.
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Pushed progress on Type Sirius Diagram to Git
+ - Changed Symphony annotations from "csa_*" to "symphony_*" in all places
+ - Fixed some typos in the code
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Removed obsolete utility class
+ - Updated a few missing files to 1.8
+ - Fixed Issue 41: All Manifests + relevant values have been updated to 1.8
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed EarthView (WorldWind) not displaying properly
+ - Removed .cvsignore from Symphony ROS plugins
+ - Slight cleanup of ROS edit plugins
+ - Pushed Symphony high-level support for ROS into Git
+ - Updated references in topology tests
+ - Updated the Symphony one pager and few fixes in the project description.
+ - Removed VariableFeatureReference from OrbitModel.
+ - CurrentTimeSource starts by default.
+ - TimeSourcesList refactoring.
+ - Fixed few ItemProvider.getText().
+ - Removed unnecessary println statements.
+ - Fixed properties settings.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed Task 30 - Support Multiple Time Sources of the same sort and Task 35 - Time Source must support an offset in milliseconds.
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Small additions to Symphony documentation
+ - Fixed properties.
+ - Fixed properties.
+ - Fixed few URL links.
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Added Symphonyzing SVG to dev guide
+ - Added Geometry for PTU Camera Tutorial to docs
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Updated satellite contributed session.
+ - Pushed all the necessary code into tutorials doc
+ - Pushed code into tutorial documentation.
+ - Numerous additions and improvements to the docs
+ - Added more SVGs to the docs + general improvements
+ - Add PTU Camera Class Hierarchy SVG to tutorial doc
+ - Added missing icons to user documentation
+ - Added SVG for desired PTU Camera topology.
+ - Added extension to invocatorDelegate for DefaultInvocatorDelegate
+ - Added additional descriptions to the tutorials documentation
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Add the SVG for op call invocation process to doc
+ - Made few fixes in the satellite session.
+ - Added missing plugin.properties.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Added Satellite Session.
+ - Added Satellite Session.
+ - Updated sections.
+ - Fixed bug in the GeoCoord -> Position Converter
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Continue adding SVGs to documentation
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Updated SDK section.
+ - Added svg image for symphony architecture
+ - Fixed the manifest.
+ - Copied Trainee and Teacher Package Archives.
+ - Update and refine documentation, especially tutorial.mediawiki
+ - Fixed Telecom Status Monitor to make it more robust to bad addresses
+ - Adjust heading levels.
+ - Fixed formatting of documentation and added some content
+ - Improved formating and styling of symphony.doc's wiki pages
+ - Finished pushing all of the dev guide into symphony.doc
+ - Started pushing the developer guide into symphony.doc
+ - Pushed the entire user guide into user.mediawiki and tutorials.mediawiki
+ - Almost finished pushing last part of user guide into symphony.doc
+ - Fixed the Export Image command; it now appears in the pop-menu correctly
+ - Pushed more of the user guide into symphony.doc
+ - Pushed the majority of the Symphony user presentation into symphony.doc
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Started importing of user and dev guides to doc
+ - Changed the document structure.
+ - Fixed tests so that they work with the new converter code
+ - Refactored converter code out of Activator, put into relevant Facades
+ - Created first template of the symphony.mediawiki.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Added symphony presentation materials.
+ - Added symphony training materials.
+ - Removed data3d.asc.tests
+ - Remove "documentation" lines from xCore + fixed categories + other fixes
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Renamed all of the facades to reflect the new xcore prefixes
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed bundle version.
+ - Moved test bundles under tests
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed pom.xml.
+ - Completed renaming all of .xcore prefixes, incl examples, to new format
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Created examples.ui.
+ - Created examples.ui.
+ - Removed examples.ui.
+ - Removed examples.ui.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed bundle version.
+ - Fixed bundle version.
+ - Moved data3d.asc.tests under tests.
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Updated the prefixes for the majority of Symphony's plugins
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed wrong bundle version.
+ - Fixed wrong bundle version.
+ - Fixed plugin.properties
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed prefiex for ALL of symphony.addons.*
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed mismatched bundle name in pom.xml.  Ignore target/ directory.
+ - Fixed mismatched bundle name in pom.xml.
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed prefix for addons.*
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed mismatched bundle name in pom.xml.  Ignore /target directory.
+ - Fixed topology bundle name in pom.xml.
+ - Fixed VariableFeatureReferenceComposite NullPointerException.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Few fixes.
+ - Few fixes.
+ - Removed obsolete bundles from git
+ - Removed obsolete bundles from git.
+ - Minor fix.
+ - Removed the incorrectly generated *.tests generated directories from Git
+ - Made all remaining plugins output /src-generated instead of /src
+ - Fixed antenna pom.xml
+ - Rename doc bundle to new org.eclipse.symphony.doc
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed few pom.xml bugs.
+ - Moved examples under examples/.
+ - Moved examples.ui under examples/.
+ - Moved examples.ui under examples/.
+ - Fixed few pom.xml
+ - Minor git fix.
+ - Updated parent pom.xml
+ - Fixed rover session.
+ - Moved test bundles under tests/
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Removed symphony_common_recorders.
+ - Removed symphony_common_recorders.
+ - bug #20 Set proper filename for .xcore done.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Removed java.emf bundles
+ - Removed java.emf bundles
+ - Minor changes.
+ - Removed and ignored few bin/ directorires
+ - Moved tests bundles under tests/
+ - Removed old bundles
+ - Removed osbsolete bundles.
+ - Update new plugin names table.
+ - Deleted emf.edit obsolete bundle.
+ - Minor changes.
+ - Removed from git obsolete bundles
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Deleted ...core.recordings.* and ...core.display.*.
+ - Deleted ...core.recordings.* and ...core.display.*.
+ - Fixed generic warnings.
+ - Minor changes.
+ - Various UI fixes
+ - Fixed Camera Example Sessions
+ - Fixed extension points (schemas + plugin.xmls) to use proper naming
+ - Fixed additional warnings, ensured all menu contributions use new style
+ - Added fixes for crashes on start and removed more warnings
+ - Various fixes including fixing references, removing useless plugins
+ - Fixed problems that occurred when performing merge
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Removed all references to mrt and asc_csa from manifest files
+ - Minor fixes.
+ - Fixed example sessions (.sym files) to refer to new project names
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Removed obsolete bundle.
+ - Removed obsolete bundle.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Deleted obsolete bundles.
+ - Deleted obsolete bundles.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Minor fixes.
+ - Minor fixes.
+ - Fixed broken links to xcore models for .ss files in the examples
+ - Few fixes.
+ - Minor warning fixes.
+ - Minor fixes.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Remove obsolete plugin ca.gc.space.eclipse.emf.ui
+ - Updated plugin new names map.
+ - Minor fix.
+ - Transfered common.math.statistics ecore to xcore
+ - Removed old .ecore
+ - Transfered mobility.pathplanners.grap ecore to xcore.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Transfered mobility.pathplanners ecore to xcore.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Transfered mobility.controller ecore in xcore.
+ - Transfered mobility.controller ecore in xcore.
+ - Transfer mobility ecore to xcore.
+ - Converted common.geometry.data3d.las model to use xcore instead of ecore
+ - Ignore a file.
+ - Few fixes.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Warning fixes.
+ - Finished conversion of addons.sensors.* from ecore to xcore
+ - Fix all errors.  Only EMF generated code errors remain.
+ - 27 errors.
+ - Few fixes (32 errors).
+ - Minor fixes 46 errors remaining.
+ - Few fixes.
+ - Few fixes.
+ - Few fixes.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Few fixes.
+ - Changed addons.sensors[,.pose,.fov] to use xcore instead of ecore
+ - Minor fixes.
+ - Minor fixes.
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Converted addons.geometry.path.* to use .xcore instead of .ecore
+ - Less bugs.
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Converted topology.addons.dynamics.* and topology.addons.primitives.* to use xcore instead of ecore
+ - Lot of import / dependency fixes.
+ - Minor fixes
+ - Minor fixes
+ - Minor fixes.
+ - Refactored obsolete bundles
+ - Refactored obsolete bundles.
+ - Update plugin names.
+ - Refactored org.eclipse.symphony.common
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Refactored org.eclipse.symphony.common
+ - org.eclipse.symphony.common
+ - Refactored org.eclipse.symphony.common
+ - org.eclipse.symphony.addons.sensors.imaging*
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Refatored org.eclipse.symphony.addons.sensors.imaging.
+ - Refatored org.eclipse.symphony.addons.sensors.imaging.
+ - Refactored org.eclipse.symphony.addons.mobility.*
+ - Refactored org.eclipse.symphony.addons.mobility.*
+ - org.eclipse.symphony.addons.mobility.pathplanners
+ - Refactored org.eclipse.symphony.addons.mobility.pathplanners
+ - org.eclipse.symphony.addons.sensors.fov
+ - Refactored org.eclipse.symphony.addons.sensors.fov
+ - org.eclipse.symphony.addons.sensors.gps
+ - Refactored org.eclipse.symphony.addons.sensors.gps
+ - Refactored org.eclipse.symphony.addons.motion
+ - Refactored org.eclipse.symphony.addons.motion
+ - Refactored org.eclipse.symphony.addons.sensors.pose
+ - Refactored org.eclipse.symphony.addons.sensors.pose
+ - Refactored org.eclipse.symphony.addons.sensors.range
+ - Refactored org.eclipse.symphony.addons.sensors.
+ - Refactored org.eclipse.symphony.addons.geometry.path
+ - Refactored org.eclipse.symphony.addons.geometry.path
+ - Moved topology tests under tests/
+ - Refactored org.eclipse.symphony.common.topology
+ - Refactored org.eclipse.symphony.common.topology
+ - Refactore org.eclipse.symphony.common (processors & recorders)
+ - Refactore org.eclipse.symphony.common (processors & recorders)
+ - Refactored org.eclipse.symphony.common.lang.java
+ - Refactored org.eclipse.symphony.common.lang.java
+ - Refactored org.eclipse.symphony.common.file.csv
+ - Refactored org.eclipse.symphony.common.file.csv
+ - Refactored org.eclipse.symphony.common.geometry.data3d
+ - Refactored org.eclipse.symphony.common.geometry.data3d
+ - Minor fixes
+ - Minor fixes
+ - Minor fixes.
+ - Refactored org.eclipse.symphony.common.geometry.data3d.*
+ - Minor fixes.
+ - Refactored org.eclipse.symphony.common.geometry.data3d
+ - Refactored org.eclipse.symphony.common.geometry.data3d
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - org.eclipse.symphony.common.geometry.data25d
+ - org.eclipse.symphony.common.geometry.data25d
+ - Refactored org.eclipse.symphony.common.geometry.data25d
+ - org.eclipse.symphony.common.data
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Refactored org.eclipse.symphony.common.data
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Updated space.topology.core to use xcore instead of ecore
+ - Minor fixes.
+ - Preliminary space.topology.* commits
+ - org.eclipse.symphony.addons.sensors
+ - Refactored org.eclipse.symphony.addons.sensors
+ - org.eclipse.symphony.admin
+ - Renamed org.eclipse.symphony.admin
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed GeometryDataEditPlugin .genmodel
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Updated Symphony New Plugin Names.
+ - org.eclipse.symphony.addons.actuators
+ - Refactored org.eclipse.symphony.addons.actuators
+ - Fixed conflicts.
+ - Merge branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Fixed .xCore
+ - Removed ca.gc.asc_csa.eclipse.ros
+ - Removed ca.gc.space.java3d.core
+ - Removed ca.gc.space.java3d.core
+ - Minor fixes.
+ - Refactored org.eclipse.symphony.addons
+ - Refactored org.eclipse.symphony.addons.*
+ - Refactored org.eclipse.symphony.addons.vehicle.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - org.eclipse.symphony.addons.vehicle
+ - org.eclipse.symphony.addons.vehicle
+ - Refactored org.eclipse.symphony.addons.vehicle
+ - Minor fixes.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Refactored org.eclipse.symphony.addons.telecoms
+ - Fixed ca.gc.space.mrt.common's .classpath
+ - Fixed ca.gc.space.mrt.common's build.properties
+ - Fixed the majority of mrt.geometry.* to go from eCore to xCore
+ - Fixed mrt.common.* to use xCore instead of eCore
+ - Fixed mrt.common.* and mrt.actuators.* to use xCore instead of eCore
+ - Refactored org.eclipse.symphony.addons.telecoms
+ - Minor fixes.
+ - Minor Fixes.
+ - Refactored org.eclipse.symphony.common.io.jinput
+ - Refactored org.eclipse.symphony.common.io.jinput
+ - Minor fixes
+ - Minor fixes.
+ - Refactored org.eclipse.symphony.core.environment
+ - Refactored org.eclipse.symphony.core.environment
+ - Minor fix.
+ - Refactored org.eclipse.symphony.core.environment.orbit.earth
+ - Refactored org.eclipse.symphony.core.environment.orbit.earth
+ - Minor fixes.
+ - Refactored org.eclipse.symphony.core.invocator.
+ - Refactored org.eclipse.symphony.core.invocator.
+ - Minor Fixes.
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Refactored org.eclipse.symphony.core.*
+ - Refactored org.eclipse.symphony.core.*
+ - Refactored org.eclipse.symphony.core.programs.controllers
+ - Refactored org.eclipse.symphony.core.programs.controllers
+ - Refactored org.eclipse.symphony.core.topology
+ - Refactored org.eclipse.symphony.core.topology
+ - Rename Packages
+ - Refactored org.eclipse.symphony.core
+ - Refactored org.eclipse.symphony.examples.satellite
+ - Merge branch 'RenamePackages'
+ - Refactored org.eclipse.symphony.examples.satellite
+ - Refactored org.eclipse.symphony.examples.rover
+ - Merge branch 'RenamePackages'
+ - Refactored org.eclipse.symphony.examples.rover
+ - Refactored org.eclipse.symphony.examples.robotic_arm
+ - Merge branch 'RenamePackages'
+ - Refactored org.eclipse.symphony.examples.robotic_arm
+ - Refactored org.eclipse.symphony.examples.mobile_platform
+ - Merge branch 'RenamePackages'
+ - Refactored org.eclipse.symphony.examples.mobile_platform and create .xcore for org.eclipse.symphony.common.math.
+ - Refactored org.eclipse.symphony.examples.lidar
+ - Refactored org.eclipse.symphony.examples.lidar
+ - Refactored org.eclipse.symphony.examples.lander
+ - Refactored org.eclipse.symphony.examples.lander
+ - Merge branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
+ - Updated New Plugin Names table.
+ - Minor fixes.
+ - Minor fixes.
+ - Refactored org.eclipse.symphony.common.math
+ - Refactored org.eclipse.symphony.common.math
+ - Refactored org.eclipse.symphony.common.converters
+ - Refactored org.eclipse.symphony.common.converters.
+ - Refactored org.eclipse.symphony.common (images + log).
+ - Refactored org.eclipse.symphony.examples (Camera + Antenna)
+ - Refactored org.eclipse.symphony.common.images
+ - Refactored org.eclipse.symphony.common.log.
+ - ignore /bin/
+ - Merge branch 'RefactorSymphonyPackages'
+ - ignore bin/
+ - Removed wrong bundle (org.eclipse.symphony.examples.symphony.antenna).
+ - Refactored Antenna example into org.eclipse.symphony.
+ - Fixed examples feature.
+ - Camera example refactored in org.eclipse.symphony.
+ - Changed output directory to bin/.
+ - Created the repository.
+ - Removed .m2
+ - _remote.repositories deleted online with Bitbucket
+ - Remove m2e build artifacts.
+ - Merge branch 'CreateRepositoryAndFeatures'
+ - Disable invocator.tests.AllTests in pom.xml.
+ - Few fixes.
+ - Removed org.eclipse.m2e.core.prefs
+ - 1) Fix .classpath built path="bin" 2) Added /bin and /target in .gitignore 3) Remove m2e nature
+ - Fixed .gitignore
+ - First version of features build with tycho.
+ - Created Symphony main features and included them in tycho.
+ - Tycho compiles successfully all the bundles.
+ - Convert to maven.
+ - Convert to maven.
+ - Added parent pom.xml.
+ - Added top pom.xml
+ - Remove old parent and repository tycho projects.
+ - Include symphony.admin in git.
+ - Fix compilation bugs.
+ - Update mrt plugins.
+ - Remove bad plugins (wrong version). *.mrt.common *.mrt.common.edit *.mrt.common.ui
+ - Added .gitignore.
+ - Few bug fixes.
+ - Remove .cvsignore
+ - Remove cvsignore.
+ - Add .gitignore
+ - ignore target directory.
+ - ignore target directory.
+ - Move doc under doc directory
+ - Initial commit
+

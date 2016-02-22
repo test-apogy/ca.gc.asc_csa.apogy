@@ -136,30 +136,6 @@ public interface ApogyCoreInvocatorFacade extends EObject
 
   /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model unique="false" abstractFeatureNodeUnique="false"
-	 * @generated
-	 */
-	Watch resolveWatch(AbstractFeatureNode abstractFeatureNode);
-
-		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @model unique="false" typeMemberReferenceTreeElementUnique="false"
-	 * @generated
-	 */
-  Watch resolveWatch(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement);
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model unique="false" abstractFeatureNodeUnique="false"
-	 * @generated
-	 */
-	Object getValue(AbstractFeatureNode abstractFeatureNode);
-
-		/**
-	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @model unique="false" variableUnique="false"
 	 * @generated
@@ -239,14 +215,6 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	EClass getInstanceClass(VariableFeatureReference variableFeatureReference);
 
 		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @model unique="false" typeMemberReferenceTreeElementUnique="false"
-	 * @generated
-	 */
-  EObject getInstance(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement);
-
-  /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @model unique="false" operationCallUnique="false"

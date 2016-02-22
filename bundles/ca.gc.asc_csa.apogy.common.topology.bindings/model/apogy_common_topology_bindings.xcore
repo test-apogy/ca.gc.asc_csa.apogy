@@ -15,7 +15,17 @@
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
-		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  copyrightText="Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Pierre Allard (Pierre.Allard@canada.ca), 
+    Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
+    Canadian Space Agency (CSA) - Initial API and implementation",
 		  modelName="ApogyCommonTopologyBindings",
 		  complianceLevel="6.0")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.bindings/src-generated")
@@ -38,6 +48,9 @@ import ca.gc.asc_csa.apogy.common.topology.TransformNode
 
 type Map<K,V> wraps java.util.Map
 
+/*
+ * Cartesian Axis enumeration.
+ */
 enum Axis
 {	
 	X_AXIS as "X_AXIS" = 0,
@@ -46,15 +59,6 @@ enum Axis
 	MINUS_X_AXIS as "MINUS_X_AXIS" = 3,
 	MINUS_Y_AXIS as "MINUS_Y_AXIS" = 4,
 	MINUS_Z_AXIS as "MINUS_Z_AXIS" = 5	
-}
-
-/*
- * Angle Units Enumeration.
- */
-enum AngleUnits
-{	
-	RADIANS as "RADIANS" = 0,
-	DEGREES as "DEGREES" = 1	
 }
 
 /*
@@ -133,13 +137,7 @@ class RotationBinding extends AbstractTopologyBinding
 	 * The axis around which to revolve.
 	 */
 	@GenModel(propertyCategory="DESTINATION")
-	Axis rotationAxis = "X_AXIS"
-	
-	/*
-	 * The angle unit associated with the feature.
-	 */
-	@GenModel(propertyCategory="DESTINATION")
-	AngleUnits rotationUnits = "DEGREES"
+	Axis rotationAxis = "X_AXIS"	
 }
 
 /*
