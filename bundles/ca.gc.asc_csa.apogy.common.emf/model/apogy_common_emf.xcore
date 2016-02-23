@@ -243,6 +243,39 @@ class Startable
 	transient boolean started = "false"
 }
 
+/*
+ * This class handles the concept of time duration.  It provides methods to process duration 
+ * between two {@link Timed} event.  It provides methods to express the duration in years, months, 
+ * days, minutes, seconds and milliseconds.   
+ */
+class Duration{
+	/* Duration value in ms. */
+	long value
+		
+	/* Number of days. */
+	derived readonly volatile transient byte days
+	
+	/* Number of hours. */
+	derived readonly volatile transient byte hours
+	
+	/* Number of minutes. */
+	derived readonly volatile transient byte minutes
+	
+	/* Number of seconds. */
+	derived readonly volatile transient byte seconds
+	
+	/* Number of milliseconds. */
+	derived readonly volatile transient int milliseconds
+	
+	/*
+	 * Creates and returns the duration between the {@link firstEvent} and the {@link secondEvent}.
+	 * @param firstEvent First {@link Timed} event.
+	 * @param secondEvent Second {@link Timed} event.
+	 * @return Duration instance.
+	 */
+	op Duration getDuration(Timed firstEvent, Timed secondEvent)	
+}
+
 /* -------------------------------------------------------------------------
  * 
  * Time Sources.
