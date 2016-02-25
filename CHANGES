@@ -1,3 +1,16 @@
+Version 0.5.6:
+ - Merge branch 'feature-apogy_all_feature' into hotfix-0.5.6
+ - Merge branch 'feature-bintray_support' into feature-apogy_all_feature
+ - cleanup the configuration of bintray invocation
+ - Updated documentation.
+ - Minor fixes.
+ - Minor fixes.
+ - Merge branch 'feature-bintray_support' into feature-apogy_all_feature
+ - Added features.
+ - Created Apogy SDK Feature (draft).
+ - #95 maven build should do something meaningful w/o specifying arguments
+ - #91 - Upload repos to bintray
+
 Version 0.5.5:
 
 
