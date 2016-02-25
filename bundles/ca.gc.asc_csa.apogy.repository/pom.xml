@@ -23,26 +23,27 @@
   </parent>
 
 	<properties>
-		<!-- The name of your own Bintray repository -->
-		<bintray.repo>Development</bintray.repo>
-		<!-- The name of your own Bintray repository's package for releases -->
-		<bintray.package>0.5</bintray.package>
+		<!-- The label for the Composite sites -->
+		<repoName>Apogy Development</repoName>
+		<devStream>0.5</devStream>
 
-		<!-- If the Bintray repository is owned by someone different from your
-			user, then specify the bintray.owner explicitly -->
+		<!-- The name of the Bintray repository -->
+		<bintray.repo>Develop</bintray.repo>
+
+		<!-- Internal properties -->
+		<!-- The name of your own Bintray repository's package for releases -->
+		<bintray.package>${devStream}</bintray.package>
+
 		<!-- Define bintray.user and bintray.apikey in some secret place,
 			like .m2/settings.xml -->
 		<bintray.owner>${bintray.user}</bintray.owner>
 		<bintray.apikey>${bintray.key}</bintray.apikey>
 
 		<!-- Default values for remote directories -->
-		<bintray.releases.path>Releases/0.5/</bintray.releases.path>
-                <maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
+		<bintray.releases.path>${devStream}</bintray.releases.path>
 
-		<!-- The label for the Composite sites -->
-		<repoName>Demo apogy repo</repoName>
-		<repoTarget>target/composite-main</repoTarget>
 		<repoChildName>${unqualifiedVersion}.${buildQualifier}</repoChildName>
+		<repoTarget>target/composite-main</repoTarget>
 	</properties>
 
 
@@ -59,7 +60,7 @@
 				<plugins>
 					<plugin>
 						<artifactId>maven-antrun-plugin</artifactId>
-						<version>${maven-antrun-plugin.version}</version>
+						<version>1.8</version>
 						<executions>
 							<execution>
 								<!-- Retrieve possibly existing remote composite metadata -->
@@ -68,7 +69,6 @@
 								<configuration>
 									<target>
 										<ant antfile="${basedir}/bintray.ant" target="get-composite-metadata">
-
 										</ant>
 									</target>
 								</configuration>
@@ -103,7 +103,7 @@
 						<configuration>
 							<!-- Update p2 composite metadata or create it -->
 							<!-- IMPORTANT: DO NOT split the arg line -->
-							<appArgLine>-application org.eclipse.ant.core.antRunner -buildfile packaging-p2composite.ant p2.composite.add -Dsite.composite.name=${repoName} -Dsource.repository=repository -Dtarget.repository=${repoTarget} -Dtarget.child.repository.relativePath=${repoChildName}</appArgLine>
+							<appArgLine>-application org.eclipse.ant.core.antRunner -buildfile packaging-p2composite.ant p2.composite.add -Dsite.composite.name="${repoName}" -Dsource.repository=repository -Dtarget.repository=${repoTarget} -Dtarget.child.repository.relativePath=${repoChildName}</appArgLine>
 							<repositories>
 								<repository>
 									<id>mars</id>
