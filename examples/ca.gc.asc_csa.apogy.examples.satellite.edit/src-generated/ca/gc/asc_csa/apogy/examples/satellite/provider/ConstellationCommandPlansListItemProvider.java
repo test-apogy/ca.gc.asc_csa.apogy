@@ -153,7 +153,7 @@ public class ConstellationCommandPlansListItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLANS_LIST__PLANS,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlan()));
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationCommandPlan()));
 	}
 
 	/**

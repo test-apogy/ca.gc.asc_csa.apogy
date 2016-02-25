@@ -3,6 +3,7 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -14,7 +15,6 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
 
 /**
@@ -39,7 +39,7 @@ public class ConstellationCommandPlansListImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ConstellationCommandPlan> plans;
+	protected EList<AbstractConstellationCommandPlan> plans;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,9 +65,9 @@ public class ConstellationCommandPlansListImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ConstellationCommandPlan> getPlans() {
+	public EList<AbstractConstellationCommandPlan> getPlans() {
 		if (plans == null) {
-			plans = new EObjectContainmentEList<ConstellationCommandPlan>(ConstellationCommandPlan.class, this, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST__PLANS);
+			plans = new EObjectContainmentEList<AbstractConstellationCommandPlan>(AbstractConstellationCommandPlan.class, this, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST__PLANS);
 		}
 		return plans;
 	}
@@ -111,7 +111,7 @@ public class ConstellationCommandPlansListImpl extends MinimalEObjectImpl.Contai
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST__PLANS:
 				getPlans().clear();
-				getPlans().addAll((Collection<? extends ConstellationCommandPlan>)newValue);
+				getPlans().addAll((Collection<? extends AbstractConstellationCommandPlan>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

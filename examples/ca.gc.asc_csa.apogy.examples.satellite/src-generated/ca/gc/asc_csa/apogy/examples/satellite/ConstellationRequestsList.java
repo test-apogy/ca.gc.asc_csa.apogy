@@ -13,8 +13,9 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ConstellationRequestsList extends EObject {
+public interface ConstellationRequestsList extends Named, Described {
 	/**
 	 * Returns the value of the '<em><b>Constellation Requests</b></em>' containment reference list.
 	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest}.

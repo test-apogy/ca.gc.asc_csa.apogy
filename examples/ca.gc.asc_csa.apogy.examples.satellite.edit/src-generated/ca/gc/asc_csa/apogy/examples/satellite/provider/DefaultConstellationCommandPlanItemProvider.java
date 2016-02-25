@@ -13,10 +13,9 @@
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
-import ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan;
 
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -25,19 +24,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TurnOffImagerCommandItemProvider extends AbstractSatelliteCommandItemProvider {
+public class DefaultConstellationCommandPlanItemProvider extends AbstractConstellationCommandPlanItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TurnOffImagerCommandItemProvider(AdapterFactory adapterFactory) {
+	public DefaultConstellationCommandPlanItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -57,14 +56,14 @@ public class TurnOffImagerCommandItemProvider extends AbstractSatelliteCommandIt
 	}
 
 	/**
-	 * This returns TurnOffImagerCommand.gif.
+	 * This returns DefaultConstellationCommandPlan.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/TurnOffImagerCommand"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/DefaultConstellationCommandPlan"));
 	}
 
 	/**
@@ -75,11 +74,10 @@ public class TurnOffImagerCommandItemProvider extends AbstractSatelliteCommandIt
 	 */
 	@Override
 	public String getText(Object object) {
-		Date labelValue = ((TurnOffImagerCommand)object).getTime();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((DefaultConstellationCommandPlan)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_TurnOffImagerCommand_type") :
-			getString("_UI_TurnOffImagerCommand_type") + " " + label;
+			getString("_UI_DefaultConstellationCommandPlan_type") :
+			getString("_UI_DefaultConstellationCommandPlan_type") + " " + label;
 	}
 	
 

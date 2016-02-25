@@ -13,8 +13,7 @@
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
-import ca.gc.asc_csa.apogy.examples.satellite.TurnOnImagerCommand;
-
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -25,19 +24,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOnImagerCommand} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TurnOnImagerCommandItemProvider extends AbstractSatelliteCommandItemProvider {
+public class DefaultConstellationPlannerItemProvider extends AbstractConstellationPlannerItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TurnOnImagerCommandItemProvider(AdapterFactory adapterFactory) {
+	public DefaultConstellationPlannerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -57,14 +56,14 @@ public class TurnOnImagerCommandItemProvider extends AbstractSatelliteCommandIte
 	}
 
 	/**
-	 * This returns TurnOnImagerCommand.gif.
+	 * This returns DefaultConstellationPlanner.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/TurnOnImagerCommand"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/DefaultConstellationPlanner"));
 	}
 
 	/**
@@ -75,11 +74,11 @@ public class TurnOnImagerCommandItemProvider extends AbstractSatelliteCommandIte
 	 */
 	@Override
 	public String getText(Object object) {
-		Date labelValue = ((TurnOnImagerCommand)object).getTime();
+		Date labelValue = ((DefaultConstellationPlanner)object).getStartDate();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
-			getString("_UI_TurnOnImagerCommand_type") :
-			getString("_UI_TurnOnImagerCommand_type") + " " + label;
+			getString("_UI_DefaultConstellationPlanner_type") :
+			getString("_UI_DefaultConstellationPlanner_type") + " " + label;
 	}
 	
 

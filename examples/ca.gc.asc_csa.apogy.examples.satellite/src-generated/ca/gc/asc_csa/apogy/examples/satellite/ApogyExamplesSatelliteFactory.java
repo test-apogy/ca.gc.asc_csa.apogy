@@ -60,15 +60,6 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	ConstellationState createConstellationState();
 
 	/**
-	 * Returns a new object of class '<em>Constellation Command Plan</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constellation Command Plan</em>'.
-	 * @generated
-	 */
-	ConstellationCommandPlan createConstellationCommandPlan();
-
-	/**
 	 * Returns a new object of class '<em>Default Constellation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,6 +67,24 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	 * @generated
 	 */
 	DefaultConstellation createDefaultConstellation();
+
+	/**
+	 * Returns a new object of class '<em>Default Constellation Planner</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Default Constellation Planner</em>'.
+	 * @generated
+	 */
+	DefaultConstellationPlanner createDefaultConstellationPlanner();
+
+	/**
+	 * Returns a new object of class '<em>Default Constellation Command Plan</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Default Constellation Command Plan</em>'.
+	 * @generated
+	 */
+	DefaultConstellationCommandPlan createDefaultConstellationCommandPlan();
 
 	/**
 	 * Returns a new object of class '<em>Constellation Requests List</em>'.
@@ -130,24 +139,6 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	 * @generated
 	 */
 	OrbitalImage createOrbitalImage();
-
-	/**
-	 * Returns a new object of class '<em>Turn On Imager Command</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Turn On Imager Command</em>'.
-	 * @generated
-	 */
-	TurnOnImagerCommand createTurnOnImagerCommand();
-
-	/**
-	 * Returns a new object of class '<em>Turn Off Imager Command</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Turn Off Imager Command</em>'.
-	 * @generated
-	 */
-	TurnOffImagerCommand createTurnOffImagerCommand();
 
 	/**
 	 * Returns a new object of class '<em>Constellation Downlinks List</em>'.

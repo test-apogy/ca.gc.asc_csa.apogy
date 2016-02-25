@@ -12,25 +12,25 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
-import org.eclipse.emf.ecore.EClass;
-
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.TurnOnImagerCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan;
+
+import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Turn On Imager Command</b></em>'.
+ * An implementation of the model object '<em><b>Default Constellation Command Plan</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class TurnOnImagerCommandImpl extends AbstractSatelliteCommandImpl implements TurnOnImagerCommand {
+public class DefaultConstellationCommandPlanImpl extends AbstractConstellationCommandPlanImpl implements DefaultConstellationCommandPlan {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TurnOnImagerCommandImpl() {
+	protected DefaultConstellationCommandPlanImpl() {
 		super();
 	}
 
@@ -41,7 +41,7 @@ public class TurnOnImagerCommandImpl extends AbstractSatelliteCommandImpl implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ApogyExamplesSatellitePackage.Literals.TURN_ON_IMAGER_COMMAND;
+		return ApogyExamplesSatellitePackage.Literals.DEFAULT_CONSTELLATION_COMMAND_PLAN;
 	}
 
-} //TurnOnImagerCommandImpl
+} //DefaultConstellationCommandPlanImpl

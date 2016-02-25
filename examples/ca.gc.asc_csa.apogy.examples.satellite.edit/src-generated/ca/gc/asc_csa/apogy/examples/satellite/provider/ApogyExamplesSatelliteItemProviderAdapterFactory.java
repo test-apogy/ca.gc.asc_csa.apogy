@@ -190,29 +190,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConstellationCommandPlanItemProvider constellationCommandPlanItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createConstellationCommandPlanAdapter() {
-		if (constellationCommandPlanItemProvider == null) {
-			constellationCommandPlanItemProvider = new ConstellationCommandPlanItemProvider(this);
-		}
-
-		return constellationCommandPlanItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -233,6 +210,52 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 		}
 
 		return defaultConstellationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DefaultConstellationPlannerItemProvider defaultConstellationPlannerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDefaultConstellationPlannerAdapter() {
+		if (defaultConstellationPlannerItemProvider == null) {
+			defaultConstellationPlannerItemProvider = new DefaultConstellationPlannerItemProvider(this);
+		}
+
+		return defaultConstellationPlannerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DefaultConstellationCommandPlanItemProvider defaultConstellationCommandPlanItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDefaultConstellationCommandPlanAdapter() {
+		if (defaultConstellationCommandPlanItemProvider == null) {
+			defaultConstellationCommandPlanItemProvider = new DefaultConstellationCommandPlanItemProvider(this);
+		}
+
+		return defaultConstellationCommandPlanItemProvider;
 	}
 
 	/**
@@ -371,52 +394,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 		}
 
 		return orbitalImageItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOnImagerCommand} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TurnOnImagerCommandItemProvider turnOnImagerCommandItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOnImagerCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTurnOnImagerCommandAdapter() {
-		if (turnOnImagerCommandItemProvider == null) {
-			turnOnImagerCommandItemProvider = new TurnOnImagerCommandItemProvider(this);
-		}
-
-		return turnOnImagerCommandItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TurnOffImagerCommandItemProvider turnOffImagerCommandItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTurnOffImagerCommandAdapter() {
-		if (turnOffImagerCommandItemProvider == null) {
-			turnOffImagerCommandItemProvider = new TurnOffImagerCommandItemProvider(this);
-		}
-
-		return turnOffImagerCommandItemProvider;
 	}
 
 	/**
@@ -641,15 +618,14 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 		if (constellationCommandPlansListItemProvider != null) constellationCommandPlansListItemProvider.dispose();
 		if (constellationStateItemProvider != null) constellationStateItemProvider.dispose();
 		if (defaultConstellationItemProvider != null) defaultConstellationItemProvider.dispose();
-		if (constellationCommandPlanItemProvider != null) constellationCommandPlanItemProvider.dispose();
+		if (defaultConstellationPlannerItemProvider != null) defaultConstellationPlannerItemProvider.dispose();
+		if (defaultConstellationCommandPlanItemProvider != null) defaultConstellationCommandPlanItemProvider.dispose();
 		if (constellationRequestsListItemProvider != null) constellationRequestsListItemProvider.dispose();
 		if (imageConstellationRequestItemProvider != null) imageConstellationRequestItemProvider.dispose();
 		if (satellitesListItemProvider != null) satellitesListItemProvider.dispose();
 		if (satelliteItemProvider != null) satelliteItemProvider.dispose();
 		if (acquireImageSatelliteCommandItemProvider != null) acquireImageSatelliteCommandItemProvider.dispose();
 		if (orbitalImageItemProvider != null) orbitalImageItemProvider.dispose();
-		if (turnOnImagerCommandItemProvider != null) turnOnImagerCommandItemProvider.dispose();
-		if (turnOffImagerCommandItemProvider != null) turnOffImagerCommandItemProvider.dispose();
 		if (constellationDownlinksListItemProvider != null) constellationDownlinksListItemProvider.dispose();
 		if (constellationDownlinkItemProvider != null) constellationDownlinkItemProvider.dispose();
 		if (orbitalImageConstellationDownlinkItemItemProvider != null) orbitalImageConstellationDownlinkItemItemProvider.dispose();
@@ -1081,7 +1057,12 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlan()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationPlanner()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationCommandPlan()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1112,16 +1093,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnImagerCommand()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffImagerCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1176,7 +1147,12 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlan()));
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationPlanner()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationCommandPlan()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1207,16 +1183,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnImagerCommand()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffImagerCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter

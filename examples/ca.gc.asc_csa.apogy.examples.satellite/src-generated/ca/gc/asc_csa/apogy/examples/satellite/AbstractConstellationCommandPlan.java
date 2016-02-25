@@ -1,25 +1,25 @@
-package ca.gc.asc_csa.apogy.examples.satellite;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
  * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Constellation Command Plan</b></em>'.
+ * A representation of the model object '<em><b>Abstract Constellation Command Plan</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
@@ -31,14 +31,14 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan#getConstellationCommands <em>Constellation Commands</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getConstellationCommands <em>Constellation Commands</em>}</li>
  * </ul>
  *
- * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationCommandPlan()
- * @model
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationCommandPlan()
+ * @model abstract="true"
  * @generated
  */
-public interface ConstellationCommandPlan extends Named, Described {
+public interface AbstractConstellationCommandPlan extends Named, Described {
 	/**
 	 * Returns the value of the '<em><b>Constellation Commands</b></em>' containment reference list.
 	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand}.
@@ -48,10 +48,10 @@ public interface ConstellationCommandPlan extends Named, Described {
 	 * List of {@link AbstractSatelliteCommand}.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constellation Commands</em>' containment reference list.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationCommandPlan_ConstellationCommands()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationCommandPlan_ConstellationCommands()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<AbstractSatelliteCommand> getConstellationCommands();
 
-} // ConstellationCommandPlan
+} // AbstractConstellationCommandPlan

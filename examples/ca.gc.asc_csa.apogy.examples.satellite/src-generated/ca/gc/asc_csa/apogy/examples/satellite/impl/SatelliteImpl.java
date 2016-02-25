@@ -33,8 +33,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl#getOrbitModel <em>Orbit Model</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl#getMaximumRollRate <em>Maximum Roll Rate</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl#getMaximumRoll <em>Maximum Roll</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl#getMaxRoll <em>Max Roll</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,44 +70,24 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	protected OrbitModel orbitModel;
 
 	/**
-	 * The default value of the '{@link #getMaximumRollRate() <em>Maximum Roll Rate</em>}' attribute.
+	 * The default value of the '{@link #getMaxRoll() <em>Max Roll</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMaximumRollRate()
+	 * @see #getMaxRoll()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double MAXIMUM_ROLL_RATE_EDEFAULT = 0.017452778;
+	protected static final double MAX_ROLL_EDEFAULT = 5.0;
 
 	/**
-	 * The cached value of the '{@link #getMaximumRollRate() <em>Maximum Roll Rate</em>}' attribute.
+	 * The cached value of the '{@link #getMaxRoll() <em>Max Roll</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMaximumRollRate()
+	 * @see #getMaxRoll()
 	 * @generated
 	 * @ordered
 	 */
-	protected double maximumRollRate = MAXIMUM_ROLL_RATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMaximumRoll() <em>Maximum Roll</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaximumRoll()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double MAXIMUM_ROLL_EDEFAULT = 0.087;
-
-	/**
-	 * The cached value of the '{@link #getMaximumRoll() <em>Maximum Roll</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaximumRoll()
-	 * @generated
-	 * @ordered
-	 */
-	protected double maximumRoll = MAXIMUM_ROLL_EDEFAULT;
+	protected double maxRoll = MAX_ROLL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,8 +172,8 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getMaximumRollRate() {
-		return maximumRollRate;
+	public double getMaxRoll() {
+		return maxRoll;
 	}
 
 	/**
@@ -202,32 +181,11 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaximumRollRate(double newMaximumRollRate) {
-		double oldMaximumRollRate = maximumRollRate;
-		maximumRollRate = newMaximumRollRate;
+	public void setMaxRoll(double newMaxRoll) {
+		double oldMaxRoll = maxRoll;
+		maxRoll = newMaxRoll;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE, oldMaximumRollRate, maximumRollRate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getMaximumRoll() {
-		return maximumRoll;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMaximumRoll(double newMaximumRoll) {
-		double oldMaximumRoll = maximumRoll;
-		maximumRoll = newMaximumRoll;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL, oldMaximumRoll, maximumRoll));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.SATELLITE__MAX_ROLL, oldMaxRoll, maxRoll));
 	}
 
 	/**
@@ -243,10 +201,8 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				if (resolve) return getOrbitModel();
 				return basicGetOrbitModel();
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
-				return getMaximumRollRate();
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
-				return getMaximumRoll();
+			case ApogyExamplesSatellitePackage.SATELLITE__MAX_ROLL:
+				return getMaxRoll();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -265,11 +221,8 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)newValue);
 				return;
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
-				setMaximumRollRate((Double)newValue);
-				return;
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
-				setMaximumRoll((Double)newValue);
+			case ApogyExamplesSatellitePackage.SATELLITE__MAX_ROLL:
+				setMaxRoll((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -289,11 +242,8 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)null);
 				return;
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
-				setMaximumRollRate(MAXIMUM_ROLL_RATE_EDEFAULT);
-				return;
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
-				setMaximumRoll(MAXIMUM_ROLL_EDEFAULT);
+			case ApogyExamplesSatellitePackage.SATELLITE__MAX_ROLL:
+				setMaxRoll(MAX_ROLL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -311,10 +261,8 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				return orbitModel != null;
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
-				return maximumRollRate != MAXIMUM_ROLL_RATE_EDEFAULT;
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
-				return maximumRoll != MAXIMUM_ROLL_EDEFAULT;
+			case ApogyExamplesSatellitePackage.SATELLITE__MAX_ROLL:
+				return maxRoll != MAX_ROLL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -331,10 +279,8 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", maximumRollRate: ");
-		result.append(maximumRollRate);
-		result.append(", maximumRoll: ");
-		result.append(maximumRoll);
+		result.append(", maxRoll: ");
+		result.append(maxRoll);
 		result.append(')');
 		return result.toString();
 	}

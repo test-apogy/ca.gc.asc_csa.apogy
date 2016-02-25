@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ConstellationCommandPlansList extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Plans</b></em>' containment reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Plans</em>' containment reference list isn't clear,
@@ -41,6 +41,6 @@ public interface ConstellationCommandPlansList extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ConstellationCommandPlan> getPlans();
+	EList<AbstractConstellationCommandPlan> getPlans();
 
 } // ConstellationCommandPlansList

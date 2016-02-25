@@ -35,6 +35,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesL
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getDownlinksLists <em>Downlinks Lists</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlanner <em>Constellation Planner</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState()
@@ -166,5 +167,30 @@ public interface ConstellationState extends EObject {
 	 * @generated
 	 */
 	void setConstellationRequestsList(ConstellationRequestsList value);
+
+	/**
+	 * Returns the value of the '<em><b>Constellation Planner</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Constellation Planner.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Constellation Planner</em>' containment reference.
+	 * @see #setConstellationPlanner(AbstractConstellationPlanner)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState_ConstellationPlanner()
+	 * @model containment="true"
+	 * @generated
+	 */
+	AbstractConstellationPlanner getConstellationPlanner();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlanner <em>Constellation Planner</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Constellation Planner</em>' containment reference.
+	 * @see #getConstellationPlanner()
+	 * @generated
+	 */
+	void setConstellationPlanner(AbstractConstellationPlanner value);
 
 } // ConstellationState

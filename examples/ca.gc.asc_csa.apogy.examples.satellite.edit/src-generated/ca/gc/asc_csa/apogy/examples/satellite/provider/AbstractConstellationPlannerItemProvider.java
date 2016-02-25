@@ -1,29 +1,28 @@
-package ca.gc.asc_csa.apogy.examples.satellite.provider;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
  * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
@@ -37,17 +36,13 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConstellationRequestsListItemProvider 
+public class AbstractConstellationPlannerItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -61,7 +56,7 @@ public class ConstellationRequestsListItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstellationRequestsListItemProvider(AdapterFactory adapterFactory) {
+	public AbstractConstellationPlannerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -76,26 +71,28 @@ public class ConstellationRequestsListItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
+			addStartDatePropertyDescriptor(object);
+			addEndDatePropertyDescriptor(object);
+			addConstellationRequestsListPropertyDescriptor(object);
+			addConstellationCommandPlanPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Start Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addStartDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Named_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
+				 getString("_UI_AbstractConstellationPlanner_startDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationPlanner_startDate_feature", "_UI_AbstractConstellationPlanner_type"),
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_PLANNER__START_DATE,
 				 true,
 				 false,
 				 false,
@@ -105,19 +102,19 @@ public class ConstellationRequestsListItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature.
+	 * This adds a property descriptor for the End Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
+	protected void addEndDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Described_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 getString("_UI_AbstractConstellationPlanner_endDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationPlanner_endDate_feature", "_UI_AbstractConstellationPlanner_type"),
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_PLANNER__END_DATE,
 				 true,
 				 false,
 				 false,
@@ -127,44 +124,47 @@ public class ConstellationRequestsListItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Constellation Requests List feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS);
-		}
-		return childrenFeatures;
+	protected void addConstellationRequestsListPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AbstractConstellationPlanner_constellationRequestsList_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationPlanner_constellationRequestsList_feature", "_UI_AbstractConstellationPlanner_type"),
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_REQUESTS_LIST,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
+	 * This adds a property descriptor for the Constellation Command Plan feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns ConstellationRequestsList.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ConstellationRequestsList"));
+	protected void addConstellationCommandPlanPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AbstractConstellationPlanner_constellationCommandPlan_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationPlanner_constellationCommandPlan_feature", "_UI_AbstractConstellationPlanner_type"),
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -175,10 +175,11 @@ public class ConstellationRequestsListItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ConstellationRequestsList)object).getName();
+		Date labelValue = ((AbstractConstellationPlanner)object).getStartDate();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ConstellationRequestsList_type") :
-			getString("_UI_ConstellationRequestsList_type") + " " + label;
+			getString("_UI_AbstractConstellationPlanner_type") :
+			getString("_UI_AbstractConstellationPlanner_type") + " " + label;
 	}
 	
 
@@ -193,13 +194,10 @@ public class ConstellationRequestsListItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ConstellationRequestsList.class)) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__NAME:
-			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__DESCRIPTION:
+		switch (notification.getFeatureID(AbstractConstellationPlanner.class)) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__START_DATE:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__END_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -215,11 +213,6 @@ public class ConstellationRequestsListItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 	}
 
 	/**

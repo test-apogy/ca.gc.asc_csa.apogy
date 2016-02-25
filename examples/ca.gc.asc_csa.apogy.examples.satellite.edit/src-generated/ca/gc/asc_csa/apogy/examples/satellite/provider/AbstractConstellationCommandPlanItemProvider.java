@@ -13,11 +13,11 @@
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 
 import java.util.Collection;
 import java.util.List;
@@ -29,6 +29,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -36,16 +37,17 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConstellationStateItemProvider 
+public class AbstractConstellationCommandPlanItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -59,7 +61,7 @@ public class ConstellationStateItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstellationStateItemProvider(AdapterFactory adapterFactory) {
+	public AbstractConstellationCommandPlanItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -74,8 +76,54 @@ public class ConstellationStateItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Named_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Described_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -90,12 +138,7 @@ public class ConstellationStateItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_COMMAND_PLANS_LIST);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__SATELLITES_LIST);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__GROUND_STATIONS_REFERENCES_LIST);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__DOWNLINKS_LISTS);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_REQUESTS_LIST);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_PLANNER);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS);
 		}
 		return childrenFeatures;
 	}
@@ -114,17 +157,6 @@ public class ConstellationStateItemProvider
 	}
 
 	/**
-	 * This returns ConstellationState.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ConstellationState"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,7 +164,10 @@ public class ConstellationStateItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ConstellationState_type");
+		String label = ((AbstractConstellationCommandPlan)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_AbstractConstellationCommandPlan_type") :
+			getString("_UI_AbstractConstellationCommandPlan_type") + " " + label;
 	}
 	
 
@@ -147,13 +182,12 @@ public class ConstellationStateItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ConstellationState.class)) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_COMMAND_PLANS_LIST:
-			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE__SATELLITES_LIST:
-			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE__GROUND_STATIONS_REFERENCES_LIST:
-			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE__DOWNLINKS_LISTS:
-			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_REQUESTS_LIST:
-			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_PLANNER:
+		switch (notification.getFeatureID(AbstractConstellationCommandPlan.class)) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__NAME:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__DESCRIPTION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -173,33 +207,8 @@ public class ConstellationStateItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_COMMAND_PLANS_LIST,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlansList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__SATELLITES_LIST,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellitesList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__GROUND_STATIONS_REFERENCES_LIST,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__DOWNLINKS_LISTS,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_REQUESTS_LIST,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_PLANNER,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationPlanner()));
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 	}
 
 	/**

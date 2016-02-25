@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -24,6 +25,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -31,6 +33,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -73,8 +76,54 @@ public class ConstellationCommandPlanItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Named_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Described_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -126,7 +175,10 @@ public class ConstellationCommandPlanItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ConstellationCommandPlan_type");
+		String label = ((ConstellationCommandPlan)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ConstellationCommandPlan_type") :
+			getString("_UI_ConstellationCommandPlan_type") + " " + label;
 	}
 	
 
@@ -142,6 +194,10 @@ public class ConstellationCommandPlanItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstellationCommandPlan.class)) {
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__NAME:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__DESCRIPTION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -164,16 +220,6 @@ public class ConstellationCommandPlanItemProvider
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS,
 				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOnImagerCommand()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createTurnOffImagerCommand()));
 	}
 
 	/**

@@ -53,7 +53,6 @@ import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
-
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory;
@@ -435,7 +434,6 @@ public class ApogyExamplesSatelliteApogyItemProviderAdapterFactory extends Apogy
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

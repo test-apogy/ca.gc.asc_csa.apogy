@@ -50,6 +50,13 @@
             id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationRequestsCommand"
             name="ImportConstellationRequestsCommand">
       </command>
+
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
+            description="This command generates a plan based on the list of requests selected."
+            id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
+            name="GenerateConstellationCommandPlan">
+      </command>
       
    </extension>   
    
@@ -78,6 +85,27 @@
             </visibleWhen>
          </command>         
       </menuContribution>
+
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
+               label="Generate Constellation Command Plan"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <instanceof
+                        value="ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation">
+                  </instanceof>
+               </with>
+            </visibleWhen>
+         </command>         
+      </menuContribution>
+
       
       <menuContribution
             allPopups="true"

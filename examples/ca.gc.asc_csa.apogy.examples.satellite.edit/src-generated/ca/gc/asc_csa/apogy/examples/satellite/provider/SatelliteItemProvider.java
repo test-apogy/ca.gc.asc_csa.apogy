@@ -76,8 +76,7 @@ public class SatelliteItemProvider
 
 			addNamePropertyDescriptor(object);
 			addOrbitModelPropertyDescriptor(object);
-			addMaximumRollRatePropertyDescriptor(object);
-			addMaximumRollPropertyDescriptor(object);
+			addMaxRollPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -127,41 +126,19 @@ public class SatelliteItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Maximum Roll Rate feature.
+	 * This adds a property descriptor for the Max Roll feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMaximumRollRatePropertyDescriptor(Object object) {
+	protected void addMaxRollPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Satellite_maximumRollRate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maximumRollRate_feature", "_UI_Satellite_type"),
-				 ApogyExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL_RATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Maximum Roll feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMaximumRollPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Satellite_maximumRoll_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maximumRoll_feature", "_UI_Satellite_type"),
-				 ApogyExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL,
+				 getString("_UI_Satellite_maxRoll_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maxRoll_feature", "_UI_Satellite_type"),
+				 ApogyExamplesSatellitePackage.Literals.SATELLITE__MAX_ROLL,
 				 true,
 				 false,
 				 false,
@@ -209,8 +186,7 @@ public class SatelliteItemProvider
 
 		switch (notification.getFeatureID(Satellite.class)) {
 			case ApogyExamplesSatellitePackage.SATELLITE__NAME:
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAX_ROLL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.examples.satellite.*;
 import java.util.List;
 import java.util.SortedSet;
 
@@ -22,28 +23,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
-import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
-import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
-import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
-import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
-import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
-import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
-import ca.gc.asc_csa.apogy.examples.satellite.TurnOffImagerCommand;
-import ca.gc.asc_csa.apogy.examples.satellite.TurnOnImagerCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,15 +72,14 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST: return createConstellationCommandPlansList();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE: return createConstellationState();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: return createConstellationCommandPlan();
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER: return createDefaultConstellationPlanner();
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_COMMAND_PLAN: return createDefaultConstellationCommandPlan();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
 			case ApogyExamplesSatellitePackage.SATELLITES_LIST: return createSatellitesList();
 			case ApogyExamplesSatellitePackage.SATELLITE: return createSatellite();
 			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: return createAcquireImageSatelliteCommand();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE: return createOrbitalImage();
-			case ApogyExamplesSatellitePackage.TURN_ON_IMAGER_COMMAND: return createTurnOnImagerCommand();
-			case ApogyExamplesSatellitePackage.TURN_OFF_IMAGER_COMMAND: return createTurnOffImagerCommand();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: return createConstellationDownlinksList();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINK: return createConstellationDownlink();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM: return createOrbitalImageConstellationDownlinkItem();
@@ -188,9 +166,9 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstellationCommandPlan createConstellationCommandPlan() {
-		ConstellationCommandPlanImpl constellationCommandPlan = new ConstellationCommandPlanImpl();
-		return constellationCommandPlan;
+	public DefaultConstellation createDefaultConstellation() {
+		DefaultConstellationImpl defaultConstellation = new DefaultConstellationImpl();
+		return defaultConstellation;
 	}
 
 	/**
@@ -198,9 +176,19 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DefaultConstellation createDefaultConstellation() {
-		DefaultConstellationImpl defaultConstellation = new DefaultConstellationImpl();
-		return defaultConstellation;
+	public DefaultConstellationPlanner createDefaultConstellationPlanner() {
+		DefaultConstellationPlannerImpl defaultConstellationPlanner = new DefaultConstellationPlannerImpl();
+		return defaultConstellationPlanner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DefaultConstellationCommandPlan createDefaultConstellationCommandPlan() {
+		DefaultConstellationCommandPlanImpl defaultConstellationCommandPlan = new DefaultConstellationCommandPlanImpl();
+		return defaultConstellationCommandPlan;
 	}
 
 	/**
@@ -261,26 +249,6 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	public OrbitalImage createOrbitalImage() {
 		OrbitalImageImpl orbitalImage = new OrbitalImageImpl();
 		return orbitalImage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TurnOnImagerCommand createTurnOnImagerCommand() {
-		TurnOnImagerCommandImpl turnOnImagerCommand = new TurnOnImagerCommandImpl();
-		return turnOnImagerCommand;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TurnOffImagerCommand createTurnOffImagerCommand() {
-		TurnOffImagerCommandImpl turnOffImagerCommand = new TurnOffImagerCommandImpl();
-		return turnOffImagerCommand;
 	}
 
 	/**

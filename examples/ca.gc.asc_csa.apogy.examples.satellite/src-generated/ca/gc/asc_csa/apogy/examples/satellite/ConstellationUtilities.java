@@ -14,8 +14,6 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  */
 
 import java.util.List;
-import java.util.SortedSet;
-
 import org.eclipse.emf.ecore.EObject;
 
 import ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationUtilitiesImpl;
@@ -93,17 +91,5 @@ public interface ConstellationUtilities extends EObject {
 	 * @generated
 	 */
 	void removeAllRequests(ConstellationRequestsList container, List<AbstractConstellationRequest> requests);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Sorts the list of {@link AbstractConstellationRequest} based on {@link AbstractConstellationRequest#priority}.
-	 * @param requests Specifies the list of {@link AbstractConstellationRequest} to sort.
-	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.SortedSet<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
-	 * @generated
-	 */
-	SortedSet<AbstractConstellationRequest> sortByPriority(List<AbstractConstellationRequest> requests);
 
 } // ConstellationUtilities

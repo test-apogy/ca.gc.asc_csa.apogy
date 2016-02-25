@@ -15,17 +15,18 @@ package ca.gc.asc_csa.apogy.examples.satellite;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Turn Off Imager Command</b></em>'.
+ * A representation of the model object '<em><b>Default Constellation Command Plan</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This command is used to turn off the Imager.
+ * This class contains a list of {@link AbstractSatelliteCommand}.
+ * The {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}.
  * <!-- end-model-doc -->
  *
  *
- * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getTurnOffImagerCommand()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getDefaultConstellationCommandPlan()
  * @model
  * @generated
  */
-public interface TurnOffImagerCommand extends AbstractSatelliteCommand {
-} // TurnOffImagerCommand
+public interface DefaultConstellationCommandPlan extends AbstractConstellationCommandPlan {
+} // DefaultConstellationCommandPlan

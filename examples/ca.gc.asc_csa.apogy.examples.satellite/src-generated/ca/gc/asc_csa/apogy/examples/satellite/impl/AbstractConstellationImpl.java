@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  */
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,10 +25,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 
@@ -56,7 +55,6 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * @ordered
 	 */
 	protected ConstellationState constellationState;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -131,7 +129,7 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstellationCommandPlan plan(Date startDate, Date endDate) {
+	public void plan() throws Exception {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -142,7 +140,7 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstellationCommandPlan plan(List<AbstractConstellationRequest> requests, Date startDate, Date endDate) {
+	public void export(AbstractConstellationCommandPlan plan, String url) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -153,18 +151,7 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void export(ConstellationCommandPlan plan, String url) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void commit(ConstellationCommandPlan plan) {
+	public void commit(AbstractConstellationCommandPlan plan) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -287,15 +274,19 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 		switch (operationID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___NEW_UID:
 				return newUID();
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__DATE_DATE:
-				return plan((Date)arguments.get(0), (Date)arguments.get(1));
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE:
-				return plan((List<AbstractConstellationRequest>)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___EXPORT__CONSTELLATIONCOMMANDPLAN_STRING:
-				export((ConstellationCommandPlan)arguments.get(0), (String)arguments.get(1));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN:
+				try {
+					plan();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___EXPORT__ABSTRACTCONSTELLATIONCOMMANDPLAN_STRING:
+				export((AbstractConstellationCommandPlan)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___COMMIT__CONSTELLATIONCOMMANDPLAN:
-				commit((ConstellationCommandPlan)arguments.get(0));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___COMMIT__ABSTRACTCONSTELLATIONCOMMANDPLAN:
+				commit((AbstractConstellationCommandPlan)arguments.get(0));
 				return null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK:
 				apply((ConstellationDownlink)arguments.get(0));

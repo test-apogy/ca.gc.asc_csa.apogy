@@ -83,6 +83,7 @@ public class ConstellationDataItemProvider extends ApogyInitializationDataItemPr
 			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__GROUND_STATIONS_REFERENCES_LIST);
 			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__DOWNLINKS_LISTS);
 			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_REQUESTS_LIST);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_PLANNER);
 		}
 		return childrenFeatures;
 	}
@@ -140,6 +141,7 @@ public class ConstellationDataItemProvider extends ApogyInitializationDataItemPr
 			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
 			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
 			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_PLANNER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,6 +183,11 @@ public class ConstellationDataItemProvider extends ApogyInitializationDataItemPr
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_REQUESTS_LIST,
 				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_STATE__CONSTELLATION_PLANNER,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationPlanner()));
 	}
 
 }

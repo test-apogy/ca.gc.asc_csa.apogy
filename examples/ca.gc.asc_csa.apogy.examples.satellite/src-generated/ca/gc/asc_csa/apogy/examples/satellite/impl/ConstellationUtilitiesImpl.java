@@ -15,8 +15,6 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import java.util.SortedSet;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -103,17 +101,6 @@ public class ConstellationUtilitiesImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SortedSet<AbstractConstellationRequest> sortByPriority(List<AbstractConstellationRequest> requests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
@@ -130,8 +117,6 @@ public class ConstellationUtilitiesImpl extends MinimalEObjectImpl.Container imp
 			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES___REMOVE_ALL_REQUESTS__CONSTELLATIONREQUESTSLIST_LIST:
 				removeAllRequests((ConstellationRequestsList)arguments.get(0), (List<AbstractConstellationRequest>)arguments.get(1));
 				return null;
-			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES___SORT_BY_PRIORITY__LIST:
-				return sortByPriority((List<AbstractConstellationRequest>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -14,9 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  */
 
 import java.rmi.server.UID;
-import java.util.Date;
 import java.util.List;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -81,32 +79,13 @@ public interface AbstractConstellation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the list of {@link AbstractSatelliteCommand} required to process the constellation {@link AbstractConstellationRequest}
-	 * based on the available constellation satellites.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @return Reference to the {@link SatelliteCommandPlan}.
+	 * Invokes the {@link AbstractConstellationPlanner#plan}.
+	 * @throws Exception Reference to the planner exception if any.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" startDateUnique="false" endDateUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception"
 	 * @generated
 	 */
-	ConstellationCommandPlan plan(Date startDate, Date endDate);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest}
-	 * based on the available constellation satellites.
-	 * @param requests Refers to the list of {@link AbstractConstellationRequest} to process.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @return Reference to the {@link SatelliteCommandPlan}.
-	 * <!-- end-model-doc -->
-	 * @model unique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false" startDateUnique="false" endDateUnique="false"
-	 * @generated
-	 */
-	ConstellationCommandPlan plan(List<AbstractConstellationRequest> requests, Date startDate, Date endDate);
+	void plan() throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,7 +98,7 @@ public interface AbstractConstellation extends EObject {
 	 * @model planUnique="false" urlUnique="false"
 	 * @generated
 	 */
-	void export(ConstellationCommandPlan plan, String url);
+	void export(AbstractConstellationCommandPlan plan, String url);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,7 +110,7 @@ public interface AbstractConstellation extends EObject {
 	 * @model planUnique="false"
 	 * @generated
 	 */
-	void commit(ConstellationCommandPlan plan);
+	void commit(AbstractConstellationCommandPlan plan);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -309,13 +309,22 @@ public interface ApogyExamplesSatelliteApogyPackage extends EPackage {
 	int CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Constellation Planner</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_DATA__CONSTELLATION_PLANNER = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Constellation Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 5;
+	int CONSTELLATION_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Constellation Data</em>' class.

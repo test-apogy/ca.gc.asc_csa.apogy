@@ -30,8 +30,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getOrbitModel <em>Orbit Model</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRollRate <em>Maximum Roll Rate</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRoll <em>Maximum Roll</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaxRoll <em>Max Roll</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite()
@@ -65,57 +64,30 @@ public interface Satellite extends Named {
 	void setOrbitModel(OrbitModel value);
 
 	/**
-	 * Returns the value of the '<em><b>Maximum Roll Rate</b></em>' attribute.
-	 * The default value is <code>"0.017452778"</code>.
+	 * Returns the value of the '<em><b>Max Roll</b></em>' attribute.
+	 * The default value is <code>"5.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The satellite maximum roll rate.
+	 * Maximum Satellite Roll.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Maximum Roll Rate</em>' attribute.
-	 * @see #setMaximumRollRate(double)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite_MaximumRollRate()
-	 * @model default="0.017452778" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s'"
+	 * @return the value of the '<em>Max Roll</em>' attribute.
+	 * @see #setMaxRoll(double)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite_MaxRoll()
+	 * @model default="5.0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='degrees'"
 	 * @generated
 	 */
-	double getMaximumRollRate();
+	double getMaxRoll();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRollRate <em>Maximum Roll Rate</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaxRoll <em>Max Roll</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Roll Rate</em>' attribute.
-	 * @see #getMaximumRollRate()
+	 * @param value the new value of the '<em>Max Roll</em>' attribute.
+	 * @see #getMaxRoll()
 	 * @generated
 	 */
-	void setMaximumRollRate(double value);
-
-	/**
-	 * Returns the value of the '<em><b>Maximum Roll</b></em>' attribute.
-	 * The default value is <code>"0.087"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The satellite maximum roll.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Maximum Roll</em>' attribute.
-	 * @see #setMaximumRoll(double)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite_MaximumRoll()
-	 * @model default="0.087" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
-	 * @generated
-	 */
-	double getMaximumRoll();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRoll <em>Maximum Roll</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Roll</em>' attribute.
-	 * @see #getMaximumRoll()
-	 * @generated
-	 */
-	void setMaximumRoll(double value);
+	void setMaxRoll(double value);
 
 } // Satellite
