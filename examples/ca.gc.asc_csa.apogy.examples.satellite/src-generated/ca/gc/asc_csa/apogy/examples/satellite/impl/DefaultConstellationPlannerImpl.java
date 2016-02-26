@@ -23,11 +23,14 @@ import java.util.TreeSet;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.Activator;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
@@ -67,7 +70,7 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 	@Override
 	public void plan(SatellitesList satellitesList) throws Exception {
 
-		long startChrono = System.currentTimeMillis();
+		Logger.INSTANCE.log(Activator.ID, "Constellation Planner started", EventSeverity.INFO);
 		
 		/* 
 		 * 
@@ -115,6 +118,8 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 			AbstractConstellationRequest request = requests.next();
 			SortedSet<VisibilityPass> sortedPasses = getConstellationState().getTargetPasses(request, getStartDate(), getEndDate(), getElevationMask());
 			
+			Logger.INSTANCE.log(Activator.ID, "Constellation Planner found " + sortedPasses.size() + " passes", EventSeverity.INFO);
+			
 			if (!sortedPasses.isEmpty()){
 				VisibilityPass selectedVisibilityPass = null;
 				
@@ -143,14 +148,14 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 					}					
 				}
 			}			
-		}		
+		}				
 		
-		long stopChrono = System.currentTimeMillis();
+		Logger.INSTANCE.log(Activator.ID, "Constellation Planner completed", EventSeverity.INFO);
 	}
 	
 	@Override
 	public SortedSet<AbstractConstellationRequest> sortRequests(List<AbstractConstellationRequest> requests) {
-		SortedSet<AbstractConstellationRequest> sortedSet = new TreeSet<AbstractConstellationRequest>();
+		SortedSet<AbstractConstellationRequest> sortedSet = new TreeSet<AbstractConstellationRequest>(getConstellationRequestComparator());
 		sortedSet.addAll(requests);
 		return sortedSet;
 	}

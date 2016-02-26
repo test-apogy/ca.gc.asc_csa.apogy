@@ -75,7 +75,7 @@ public interface Satellite extends Named {
 	 * @see #setMaximumRoll(double)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite_MaximumRoll()
 	 * @model default="5.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='degrees'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg'"
 	 * @generated
 	 */
 	double getMaximumRoll();

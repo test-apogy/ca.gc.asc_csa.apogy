@@ -1774,7 +1774,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		   source, 
 		   new String[] {
 			 "documentation", "Maximum Satellite Roll.",
-			 "apogy_units", "degrees"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (abstractSatelliteCommandEClass, 

@@ -71,6 +71,7 @@ public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 		data.setDownlinksLists(constellationState.getDownlinksLists());
 		data.setGroundStationsReferencesList(constellationState.getGroundStationsReferencesList());
 		data.setSatellitesList(constellationState.getSatellitesList());
+		data.setConstellationPlanner(constellationState.getConstellationPlanner());
 	}
 	
 	@Override
@@ -85,6 +86,7 @@ public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 		constellation.getConstellationState().setDownlinksLists(data.getDownlinksLists());
 		constellation.getConstellationState().setGroundStationsReferencesList(data.getGroundStationsReferencesList());
 		constellation.getConstellationState().setSatellitesList(data.getSatellitesList());
+		constellation.getConstellationState().setConstellationPlanner(data.getConstellationPlanner());
 	}
 	
 } //ConstellationSystemApiAdapterImpl

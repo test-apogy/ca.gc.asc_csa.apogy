@@ -98,9 +98,13 @@
                   checkEnabled="false">
                <with
                     variable="activeMenuSelection">
-                  <instanceof
-                        value="ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation">
-                  </instanceof>
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation">
+                       </instanceof>
+                  </iterate>
                </with>
             </visibleWhen>
          </command>         

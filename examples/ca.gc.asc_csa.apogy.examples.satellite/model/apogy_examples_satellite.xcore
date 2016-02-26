@@ -360,7 +360,7 @@ class Satellite extends Named{
 	/*
 	 * Maximum Satellite Roll.
 	 */
-	 @GenModel(apogy_units="degrees")
+	 @GenModel(apogy_units="deg")
 	 double maximumRoll = "5.0" 
 }
 
