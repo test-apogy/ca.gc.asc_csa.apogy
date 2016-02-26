@@ -263,31 +263,13 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int CONSTELLATION_STATE_FEATURE_COUNT = 6;
 
 	/**
-	 * The operation id for the '<em>Get Target Passes</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTELLATION_STATE___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = 0;
-
-	/**
-	 * The operation id for the '<em>Get Satellite</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTELLATION_STATE___GET_SATELLITE__ORBITMODEL = 1;
-
-	/**
 	 * The number of operations of the '<em>Constellation State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_STATE_OPERATION_COUNT = 2;
+	int CONSTELLATION_STATE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl <em>Abstract Constellation</em>}' class.
@@ -336,31 +318,13 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>New UID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CONSTELLATION___NEW_UID = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Plan</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CONSTELLATION___PLAN = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
-
-	/**
 	 * The operation id for the '<em>Export</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___EXPORT__ABSTRACTCONSTELLATIONCOMMANDPLAN_STRING = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 2;
+	int ABSTRACT_CONSTELLATION___EXPORT__ABSTRACTCONSTELLATIONCOMMANDPLAN_STRING = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Commit</em>' operation.
@@ -369,7 +333,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___COMMIT__ABSTRACTCONSTELLATIONCOMMANDPLAN = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 3;
+	int ABSTRACT_CONSTELLATION___COMMIT__ABSTRACTCONSTELLATIONCOMMANDPLAN = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -378,7 +342,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 4;
+	int ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Import Constellation Downlink</em>' operation.
@@ -387,7 +351,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_DOWNLINK__STRING = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 5;
+	int ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_DOWNLINK__STRING = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Import Constellation Requests</em>' operation.
@@ -396,7 +360,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_REQUESTS__STRING = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 6;
+	int ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_REQUESTS__STRING = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Abstract Constellation</em>' class.
@@ -405,7 +369,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 7;
+	int ABSTRACT_CONSTELLATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationImpl <em>Default Constellation</em>}' class.
@@ -452,24 +416,6 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int DEFAULT_CONSTELLATION_FEATURE_COUNT = ABSTRACT_CONSTELLATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>New UID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEFAULT_CONSTELLATION___NEW_UID = ABSTRACT_CONSTELLATION___NEW_UID;
-
-	/**
-	 * The operation id for the '<em>Plan</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEFAULT_CONSTELLATION___PLAN = ABSTRACT_CONSTELLATION___PLAN;
 
 	/**
 	 * The operation id for the '<em>Export</em>' operation.
@@ -599,13 +545,31 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_PLANNER_FEATURE_COUNT = 6;
 
 	/**
+	 * The operation id for the '<em>Get Target Passes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = 0;
+
+	/**
+	 * The operation id for the '<em>Get Satellite</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL = 1;
+
+	/**
 	 * The operation id for the '<em>Plan</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___PLAN__SATELLITESLIST = 0;
+	int ABSTRACT_CONSTELLATION_PLANNER___PLAN = 2;
 
 	/**
 	 * The operation id for the '<em>Sort Requests</em>' operation.
@@ -614,7 +578,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___SORT_REQUESTS__LIST = 1;
+	int ABSTRACT_CONSTELLATION_PLANNER___SORT_REQUESTS__LIST = 3;
 
 	/**
 	 * The operation id for the '<em>Get Constellation Request Comparator</em>' operation.
@@ -623,7 +587,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR = 2;
+	int ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR = 4;
 
 	/**
 	 * The operation id for the '<em>Create Observation Satellite Commands</em>' operation.
@@ -632,7 +596,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE = 3;
+	int ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE = 5;
 
 	/**
 	 * The number of operations of the '<em>Abstract Constellation Planner</em>' class.
@@ -641,7 +605,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER_OPERATION_COUNT = 4;
+	int ABSTRACT_CONSTELLATION_PLANNER_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationPlannerImpl <em>Default Constellation Planner</em>}' class.
@@ -717,13 +681,31 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int DEFAULT_CONSTELLATION_PLANNER_FEATURE_COUNT = ABSTRACT_CONSTELLATION_PLANNER_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Get Target Passes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK;
+
+	/**
+	 * The operation id for the '<em>Get Satellite</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL = ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL;
+
+	/**
 	 * The operation id for the '<em>Plan</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_CONSTELLATION_PLANNER___PLAN__SATELLITESLIST = ABSTRACT_CONSTELLATION_PLANNER___PLAN__SATELLITESLIST;
+	int DEFAULT_CONSTELLATION_PLANNER___PLAN = ABSTRACT_CONSTELLATION_PLANNER___PLAN;
 
 	/**
 	 * The operation id for the '<em>Sort Requests</em>' operation.
@@ -1903,26 +1885,6 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EReference getConstellationState_ConstellationPlanner();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getTargetPasses(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask) <em>Get Target Passes</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Target Passes</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getTargetPasses(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask)
-	 * @generated
-	 */
-	EOperation getConstellationState__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Satellite</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel)
-	 * @generated
-	 */
-	EOperation getConstellationState__GetSatellite__OrbitModel();
-
-	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation <em>Abstract Constellation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1942,26 +1904,6 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAbstractConstellation_ConstellationState();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#newUID() <em>New UID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>New UID</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#newUID()
-	 * @generated
-	 */
-	EOperation getAbstractConstellation__NewUID();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#plan() <em>Plan</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Plan</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#plan()
-	 * @generated
-	 */
-	EOperation getAbstractConstellation__Plan();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#export(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan, java.lang.String) <em>Export</em>}' operation.
@@ -2100,14 +2042,34 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EReference getAbstractConstellationPlanner_ElevationMask();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#plan(ca.gc.asc_csa.apogy.examples.satellite.SatellitesList) <em>Plan</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getTargetPasses(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask) <em>Get Target Passes</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Target Passes</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getTargetPasses(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask)
+	 * @generated
+	 */
+	EOperation getAbstractConstellationPlanner__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Satellite</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel)
+	 * @generated
+	 */
+	EOperation getAbstractConstellationPlanner__GetSatellite__OrbitModel();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#plan() <em>Plan</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Plan</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#plan(ca.gc.asc_csa.apogy.examples.satellite.SatellitesList)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#plan()
 	 * @generated
 	 */
-	EOperation getAbstractConstellationPlanner__Plan__SatellitesList();
+	EOperation getAbstractConstellationPlanner__Plan();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#sortRequests(java.util.List) <em>Sort Requests</em>}' operation.
@@ -2728,22 +2690,6 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		EReference CONSTELLATION_STATE__CONSTELLATION_PLANNER = eINSTANCE.getConstellationState_ConstellationPlanner();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Target Passes</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONSTELLATION_STATE___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = eINSTANCE.getConstellationState__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Satellite</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONSTELLATION_STATE___GET_SATELLITE__ORBITMODEL = eINSTANCE.getConstellationState__GetSatellite__OrbitModel();
-
-		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl <em>Abstract Constellation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2760,22 +2706,6 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_CONSTELLATION__CONSTELLATION_STATE = eINSTANCE.getAbstractConstellation_ConstellationState();
-
-		/**
-		 * The meta object literal for the '<em><b>New UID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ABSTRACT_CONSTELLATION___NEW_UID = eINSTANCE.getAbstractConstellation__NewUID();
-
-		/**
-		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ABSTRACT_CONSTELLATION___PLAN = eINSTANCE.getAbstractConstellation__Plan();
 
 		/**
 		 * The meta object literal for the '<em><b>Export</b></em>' operation.
@@ -2886,12 +2816,28 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		EReference ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK = eINSTANCE.getAbstractConstellationPlanner_ElevationMask();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Target Passes</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = eINSTANCE.getAbstractConstellationPlanner__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Satellite</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL = eINSTANCE.getAbstractConstellationPlanner__GetSatellite__OrbitModel();
+
+		/**
 		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ABSTRACT_CONSTELLATION_PLANNER___PLAN__SATELLITESLIST = eINSTANCE.getAbstractConstellationPlanner__Plan__SatellitesList();
+		EOperation ABSTRACT_CONSTELLATION_PLANNER___PLAN = eINSTANCE.getAbstractConstellationPlanner__Plan();
 
 		/**
 		 * The meta object literal for the '<em><b>Sort Requests</b></em>' operation.

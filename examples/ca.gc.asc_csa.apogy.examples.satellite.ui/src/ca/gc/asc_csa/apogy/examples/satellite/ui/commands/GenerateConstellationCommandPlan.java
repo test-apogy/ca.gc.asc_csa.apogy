@@ -6,21 +6,38 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.Activator;
 
 public class GenerateConstellationCommandPlan extends AbstractHandler implements IHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		Iterator<?> selections = ((IStructuredSelection) HandlerUtil.getActiveMenuSelection(event)).iterator();
-		AbstractConstellation constellation = (AbstractConstellation) selections.next();
+		AbstractConstellationPlanner planner = (AbstractConstellationPlanner) selections.next();
 		
-		if (constellation != null) {
+		if (planner != null) {
 			try {
-				constellation.plan();
+				new Job("Constellation Planner"){
+					@Override
+					protected IStatus run(IProgressMonitor monitor) {
+						try {
+							planner.plan();
+						} catch (Exception e) {
+							Logger.INSTANCE.log(Activator.PLUGIN_ID, e.getMessage(), EventSeverity.ERROR, e);
+						}
+						return Status.OK_STATUS;
+					}					
+				}.schedule();
 			} catch (Exception e) {
 				// FIXME Log Error.
 				e.printStackTrace();

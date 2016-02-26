@@ -12,37 +12,21 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
-import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.SortedSet;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -387,55 +371,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_PLANNER, newConstellationPlanner, newConstellationPlanner));
 	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate,
-			ElevationMask elevationMask) throws Exception {
-		long startChrono = System.currentTimeMillis();
-		
-		List<VisibilityPass> visibilityPasses = new ArrayList<VisibilityPass>();
-
-		if (request instanceof ImageConstellationRequest){
-			ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest) request;
-			EarthSurfaceLocation location = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createEarthSurfaceLocation("Dummy", "Dummy", imageConstellationRequest.getLongitude(), imageConstellationRequest.getLatitude(), imageConstellationRequest.getElevation());
-		
-			for (Satellite satellite: getSatellitesList().getSatellites()){
-				if (satellite.getOrbitModel().getPropagator() instanceof EarthOrbitPropagator){
-					EarthOrbitPropagator propagator = (EarthOrbitPropagator) satellite.getOrbitModel().getPropagator();
-					visibilityPasses.addAll(propagator.getTargetPasses(location, startDate, endDate, elevationMask));
-				}
-			}			
-		}
-		
-		SortedSet<VisibilityPass> sortedVisibilityPasses = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.getVisibilityPassSortedByStartDate(visibilityPasses);		
-		long stopChrono = System.currentTimeMillis();
-		return sortedVisibilityPasses;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public Satellite getSatellite(OrbitModel orbitModel) {
-		Satellite result = null;
-
-		if (getSatellitesList() != null) {
-			Iterator<Satellite> satellites = getSatellitesList().getSatellites().iterator();
-			while (satellites.hasNext() && result == null) {
-				Satellite satellite = satellites.next();
-
-				if (satellite.getOrbitModel() == orbitModel) {
-					result = satellite;
-				}
-			}
-		}
-		return result;
-	}
-
+	
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -576,26 +512,6 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 				return constellationPlanner != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK:
-				try {
-					return getTargetPasses((AbstractConstellationRequest)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
-			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE___GET_SATELLITE__ORBITMODEL:
-				return getSatellite((OrbitModel)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } // ConstellationStateImpl

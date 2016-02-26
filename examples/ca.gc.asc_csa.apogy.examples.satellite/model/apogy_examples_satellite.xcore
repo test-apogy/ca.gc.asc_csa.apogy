@@ -105,23 +105,6 @@ class StringUID extends AbstractUID{
 	 * Constellation Planner.
 	 */
 	contains AbstractConstellationPlanner[0..1] constellationPlanner opposite constellationState	
-	
-	/*
-	 * Returns the visibility passes for a given {@link AbstractConstellationRequest}. 
-	 * @param request The {@link AbstractConstellationRequest} that needs commanding.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
-	 * @return The list of Visibility passes, ordered by start time.
-	 */
-	op SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception
-	
-	/**
-	 * Returns the satellite associated with the specified {@link OrbitModel}.
-	 * @param orbitModel The specified {@link OrbitModel}.
-	 * @return The Satellite associated with the specified {@link OrbitModel}, null if none is found.
-	 */
-	op Satellite getSatellite(OrbitModel orbitModel)
  }
 
 /*
@@ -129,23 +112,11 @@ class StringUID extends AbstractUID{
  * image acquisition and upload requests and downloads data from the satellites.
  */
 abstract class AbstractConstellation extends Named, Described{
-	
-	/*
-	 * Creates an new instance of {@link UID}.
-	 * FIXME Not Required???
-	 */
-	op AbstractUID newUID()
-	
+		
 	/*
 	 * Constellation State.
 	 */
 	contains ConstellationState[0..1] constellationState
-				
-	/*
-	 * Invokes the {@link AbstractConstellationPlanner#plan}.
-	 * @throws Exception Reference to the planner exception if any.
-	 */
-	op void plan() throws Exception	
 	
 	/*
 	 * Exports the specified plan into the resource specified by the url.
@@ -225,15 +196,27 @@ abstract class AbstractConstellationPlanner{
 	contains ConstantElevationMask elevationMask
 		
 	/*
-	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest} 
-	 * based on the available constellation satellites.
-	 * @param satellitesList List of {@link Satellite}.
-	 * @param requests Refers to the list of {@link AbstractConstellationRequest} to process.
+	 * Returns the visibility passes for a given {@link AbstractConstellationRequest}. 
+	 * @param request The {@link AbstractConstellationRequest} that needs commanding.
 	 * @param startDate The start date of the period to be queried.
 	 * @param endDate The end date of the period to be queried.
-	 * @param plan that will contains the required {@link SatelliteCommand}. 
+	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
+	 * @return The list of Visibility passes, ordered by start time.
 	 */
-	op void plan(SatellitesList satellitesList) throws Exception	
+	op SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception
+	
+	/**
+	 * Returns the satellite associated with the specified {@link OrbitModel}.
+	 * @param orbitModel The specified {@link OrbitModel}.
+	 * @return The Satellite associated with the specified {@link OrbitModel}, null if none is found.
+	 */
+	op Satellite getSatellite(OrbitModel orbitModel)		
+		
+	/*
+	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest} 
+	 * based on the available constellation satellites.  The plan is added to the list of plans.
+	 */
+	op void plan() throws Exception	
 	
 	/*
 	 * Sorts the following requests.

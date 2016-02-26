@@ -15,7 +15,6 @@ package ca.gc.asc_csa.apogy.examples.satellite;
 
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
-import java.rmi.server.UID;
 import java.util.List;
 
 /**
@@ -64,30 +63,6 @@ public interface AbstractConstellation extends Named, Described {
 	 * @generated
 	 */
 	void setConstellationState(ConstellationState value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Creates an new instance of {@link UID}.
-	 * FIXME Not Required???
-	 * <!-- end-model-doc -->
-	 * @model unique="false"
-	 * @generated
-	 */
-	AbstractUID newUID();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Invokes the {@link AbstractConstellationPlanner#plan}.
-	 * @throws Exception Reference to the planner exception if any.
-	 * <!-- end-model-doc -->
-	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception"
-	 * @generated
-	 */
-	void plan() throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->

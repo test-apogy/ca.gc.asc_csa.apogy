@@ -12,15 +12,10 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.emf.ecore.EObject;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import java.util.Date;
-import java.util.SortedSet;
 
 /**
  * <!-- begin-user-doc -->
@@ -199,35 +194,5 @@ public interface ConstellationState extends EObject {
 	 * @generated
 	 */
 	void setConstellationPlanner(AbstractConstellationPlanner value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Returns the visibility passes for a given {@link AbstractConstellationRequest}.
-	 * @param request The {@link AbstractConstellationRequest} that needs commanding.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
-	 * @return The list of Visibility passes, ordered by start time.
-	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.SortedSet<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" unique="false" exceptions="ca.gc.asc_csa.apogy.core.Exception" requestUnique="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false"
-	 * @generated
-	 */
-	SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Returns the satellite associated with the specified {@link OrbitModel}.
-	 * @param orbitModel The specified {@link OrbitModel}.
-	 * @return The Satellite associated with the specified {@link OrbitModel}, null if none is found.
-	 * <!-- end-model-doc -->
-	 * @model unique="false" orbitModelUnique="false"
-	 * @generated
-	 */
-	Satellite getSatellite(OrbitModel orbitModel);
 
 } // ConstellationState

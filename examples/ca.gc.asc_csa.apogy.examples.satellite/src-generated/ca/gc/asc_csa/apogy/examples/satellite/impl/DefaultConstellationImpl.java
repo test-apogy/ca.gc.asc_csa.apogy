@@ -13,12 +13,16 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.List;
+
 import org.eclipse.emf.ecore.EClass;
 
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
 
 /**
@@ -52,20 +56,25 @@ public class DefaultConstellationImpl extends AbstractConstellationImpl implemen
 	public AbstractUID newUID() {
 		return ApogyExamplesSatelliteFactory.eINSTANCE.createStringUID();
 	}
-	
+
 	@Override
-	public void plan() throws Exception {
-		
-		if (getConstellationState() == null){
-			throw new Exception("There is no constellation state defined in the constellation <" + getName() == null ? null : getName() + ">" );
-		}
-		
-		AbstractConstellationPlanner planner = getConstellationState().getConstellationPlanner();
-		if (planner == null){
-			throw new Exception("There is no planned defined in the constellation <" + getName() == null ? null : getName() + ">" );
-		}
-		
-		planner.plan(getConstellationState().getSatellitesList());
+	public void export(AbstractConstellationCommandPlan plan, String url) {
 	}
 
+	@Override
+	public void commit(AbstractConstellationCommandPlan plan) {
+	}
+
+	@Override
+	public void apply(ConstellationDownlink downlink) {
+	}
+
+	@Override
+	public void importConstellationDownlink(String url) {
+	}
+
+	@Override
+	public List<AbstractConstellationRequest> importConstellationRequests(String url) {
+		return null;
+	}
 } //DefaultConstellationImpl

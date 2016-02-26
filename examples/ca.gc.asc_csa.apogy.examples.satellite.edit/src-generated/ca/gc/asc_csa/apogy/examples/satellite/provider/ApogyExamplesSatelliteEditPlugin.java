@@ -66,10 +66,10 @@ public final class ApogyExamplesSatelliteEditPlugin extends EMFPlugin {
 	public ApogyExamplesSatelliteEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ApogyCoreEditPlugin.INSTANCE,
 		     ApogyCoreEnvironmentOrbitEarthEditPlugin.INSTANCE,
-		     ApogyCoreEnvironmentOrbitEditPlugin.INSTANCE,
 		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCoreEditPlugin.INSTANCE,
+		     ApogyCoreEnvironmentOrbitEditPlugin.INSTANCE,
 		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonImagesEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,

@@ -25,6 +25,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
@@ -36,7 +41,6 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
 import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
-import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +72,7 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 	}
 	
 	@Override
-	public void plan(SatellitesList satellitesList) throws Exception {
+	public void plan() throws Exception {
 
 		Logger.INSTANCE.log(Activator.ID, "Constellation Planner started", EventSeverity.INFO);
 		
@@ -116,7 +120,7 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 		Iterator<AbstractConstellationRequest> requests = sortedRequests.iterator();
 		while (requests.hasNext()){
 			AbstractConstellationRequest request = requests.next();
-			SortedSet<VisibilityPass> sortedPasses = getConstellationState().getTargetPasses(request, getStartDate(), getEndDate(), getElevationMask());
+			SortedSet<VisibilityPass> sortedPasses = getTargetPasses(request, getStartDate(), getEndDate(), getElevationMask());
 			
 			Logger.INSTANCE.log(Activator.ID, "Constellation Planner found " + sortedPasses.size() + " passes", EventSeverity.INFO);
 			
@@ -128,7 +132,7 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 				{												
 					VisibilityPass pass = passesIterator.next();
 					
-					Satellite satellite = getConstellationState().getSatellite(pass.getOrbitModel());
+					Satellite satellite = getSatellite(pass.getOrbitModel());
 					
 					// Checks to see if the pass brings us close enough to the target.
 					VisibilityPassSpacecraftPosition smallestCrossTrackAnglePosition = pass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
@@ -190,5 +194,44 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 		}	
 		return commands;
 	}
+
+	@Override
+	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate,
+			ElevationMask elevationMask) throws Exception {	
+		List<VisibilityPass> visibilityPasses = new ArrayList<VisibilityPass>();
+
+		if (request instanceof ImageConstellationRequest){
+			ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest) request;
+			EarthSurfaceLocation location = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createEarthSurfaceLocation("Dummy", "Dummy", imageConstellationRequest.getLongitude(), imageConstellationRequest.getLatitude(), imageConstellationRequest.getElevation());
+		
+			for (Satellite satellite: getConstellationState().getSatellitesList().getSatellites()){
+				if (satellite.getOrbitModel().getPropagator() instanceof EarthOrbitPropagator){
+					EarthOrbitPropagator propagator = (EarthOrbitPropagator) satellite.getOrbitModel().getPropagator();
+					visibilityPasses.addAll(propagator.getTargetPasses(location, startDate, endDate, elevationMask));
+				}
+			}			
+		}
+		
+		SortedSet<VisibilityPass> sortedVisibilityPasses = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.getVisibilityPassSortedByStartDate(visibilityPasses);		
+		return sortedVisibilityPasses;
+	}
+
+	@Override
+	public Satellite getSatellite(OrbitModel orbitModel) {
+		Satellite result = null;
+
+		if (getConstellationState().getSatellitesList() != null) {
+			Iterator<Satellite> satellites = getConstellationState().getSatellitesList().getSatellites().iterator();
+			while (satellites.hasNext() && result == null) {
+				Satellite satellite = satellites.next();
+
+				if (satellite.getOrbitModel() == orbitModel) {
+					result = satellite;
+				}
+			}
+		}
+		return result;
+	}
+	
 	
 } //DefaultConstellationPlannerImpl
