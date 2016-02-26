@@ -12,8 +12,8 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
@@ -33,10 +33,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationState <em>Constellation State</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getEndDate <em>End Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationCommandPlan <em>Constellation Command Plan</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner()
@@ -44,6 +46,33 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface AbstractConstellationPlanner extends EObject {
+
+	/**
+	 * Returns the value of the '<em><b>Constellation State</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlanner <em>Constellation Planner</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers the {@link ConstellationState} that contains the planner.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Constellation State</em>' container reference.
+	 * @see #setConstellationState(ConstellationState)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationState()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlanner
+	 * @model opposite="constellationPlanner" transient="false"
+	 * @generated
+	 */
+	ConstellationState getConstellationState();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationState <em>Constellation State</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Constellation State</em>' container reference.
+	 * @see #getConstellationState()
+	 * @generated
+	 */
+	void setConstellationState(ConstellationState value);
 
 	/**
 	 * Returns the value of the '<em><b>Start Date</b></em>' attribute.
@@ -162,20 +191,29 @@ public interface AbstractConstellationPlanner extends EObject {
 	void setConstellationCommandPlan(AbstractConstellationCommandPlan value);
 
 	/**
+	 * Returns the value of the '<em><b>Elevation Mask</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the visibility passes for a given {@link AbstractConstellationRequest}.
-	 * @param request The {@link AbstractConstellationRequest} that needs commanding.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
-	 * @return The list of Visibility passes, ordered by start time.
+	 * Specifies the elevation mask used
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.SortedSet<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" unique="false" exceptions="ca.gc.asc_csa.apogy.core.Exception" requestUnique="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false"
+	 * @return the value of the '<em>Elevation Mask</em>' containment reference.
+	 * @see #setElevationMask(ConstantElevationMask)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ElevationMask()
+	 * @model containment="true"
 	 * @generated
 	 */
-	SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception;
+	ConstantElevationMask getElevationMask();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getElevationMask <em>Elevation Mask</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Elevation Mask</em>' containment reference.
+	 * @see #getElevationMask()
+	 * @generated
+	 */
+	void setElevationMask(ConstantElevationMask value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,10 +236,36 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * FIXME Provide Hook (Class) to specify the Request Sorter (Comparator).
+	 * Sorts the following requests.
 	 * <!-- end-model-doc -->
 	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.SortedSet<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
 	 * @generated
 	 */
 	SortedSet<AbstractConstellationRequest> sortRequests(List<AbstractConstellationRequest> requests);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns the comparator of {@link AbstractConstellationRequest} used to sort them.
+	 * <!-- end-model-doc -->
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.examples.satellite.Comparator<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false"
+	 * @generated
+	 */
+	Comparator<AbstractConstellationRequest> getConstellationRequestComparator();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Creates a list of commands to address the specified {@link AbstractConstellationRequest}.
+	 * @param request
+	 * @param time Time at which the main command must be performed.
+	 * @param satellite Refers to the satellite that will perform the command.
+	 * @param rollAngle Roll angle associated to the observation request.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand>" unique="false" many="false" requestUnique="false" timeUnique="false" satelliteUnique="false" rollAngleUnique="false"
+	 * @generated
+	 */
+	List<AbstractSatelliteCommand> createObservationSatelliteCommands(AbstractConstellationRequest request, Date time, Satellite satellite, double rollAngle);
 } // AbstractConstellationPlanner

@@ -11,7 +11,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade;
 
 public class ExportConstellationPlanCommand extends AbstractHandler implements IHandler {
@@ -22,7 +22,7 @@ public class ExportConstellationPlanCommand extends AbstractHandler implements I
 		Iterator<?> selections = ((IStructuredSelection) HandlerUtil.getActiveMenuSelection(event)).iterator();
 		
 		while (selections.hasNext()) {
-			ConstellationCommandPlan plan = (ConstellationCommandPlan) selections.next();
+			AbstractConstellationCommandPlan plan = (AbstractConstellationCommandPlan) selections.next();
 			
 			if (constellation != null) {
 				constellation.export(plan, "");

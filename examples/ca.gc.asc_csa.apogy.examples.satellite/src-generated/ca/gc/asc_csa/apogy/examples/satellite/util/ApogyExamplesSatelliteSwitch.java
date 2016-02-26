@@ -110,6 +110,8 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION: {
 				AbstractConstellation abstractConstellation = (AbstractConstellation)theEObject;
 				T result = caseAbstractConstellation(abstractConstellation);
+				if (result == null) result = caseNamed(abstractConstellation);
+				if (result == null) result = caseDescribed(abstractConstellation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -117,6 +119,8 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				DefaultConstellation defaultConstellation = (DefaultConstellation)theEObject;
 				T result = caseDefaultConstellation(defaultConstellation);
 				if (result == null) result = caseAbstractConstellation(defaultConstellation);
+				if (result == null) result = caseNamed(defaultConstellation);
+				if (result == null) result = caseDescribed(defaultConstellation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

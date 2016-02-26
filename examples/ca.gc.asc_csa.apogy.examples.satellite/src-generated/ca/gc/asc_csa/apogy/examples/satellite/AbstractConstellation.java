@@ -13,9 +13,10 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import java.rmi.server.UID;
 import java.util.List;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +39,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface AbstractConstellation extends EObject {
+public interface AbstractConstellation extends Named, Described {
 	/**
 	 * Returns the value of the '<em><b>Constellation State</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -69,6 +70,7 @@ public interface AbstractConstellation extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Creates an new instance of {@link UID}.
+	 * FIXME Not Required???
 	 * <!-- end-model-doc -->
 	 * @model unique="false"
 	 * @generated

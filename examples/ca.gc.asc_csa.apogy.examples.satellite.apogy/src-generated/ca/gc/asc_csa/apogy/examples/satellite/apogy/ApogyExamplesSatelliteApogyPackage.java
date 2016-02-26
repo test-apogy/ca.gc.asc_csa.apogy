@@ -327,13 +327,31 @@ public interface ApogyExamplesSatelliteApogyPackage extends EPackage {
 	int CONSTELLATION_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 6;
 
 	/**
+	 * The operation id for the '<em>Get Target Passes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_DATA___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = ApogyCorePackage.APOGY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Satellite</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_DATA___GET_SATELLITE__ORBITMODEL = ApogyCorePackage.APOGY_INITIALIZATION_DATA_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Constellation Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA_OPERATION_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
+	int CONSTELLATION_DATA_OPERATION_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_OPERATION_COUNT + 2;
 
 
 	/**

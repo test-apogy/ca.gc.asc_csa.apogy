@@ -30,7 +30,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getOrbitModel <em>Orbit Model</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaxRoll <em>Max Roll</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRoll <em>Maximum Roll</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite()
@@ -48,7 +48,7 @@ public interface Satellite extends Named {
 	 * @return the value of the '<em>Orbit Model</em>' reference.
 	 * @see #setOrbitModel(OrbitModel)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite_OrbitModel()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	OrbitModel getOrbitModel();
@@ -64,30 +64,30 @@ public interface Satellite extends Named {
 	void setOrbitModel(OrbitModel value);
 
 	/**
-	 * Returns the value of the '<em><b>Max Roll</b></em>' attribute.
+	 * Returns the value of the '<em><b>Maximum Roll</b></em>' attribute.
 	 * The default value is <code>"5.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Maximum Satellite Roll.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Max Roll</em>' attribute.
-	 * @see #setMaxRoll(double)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite_MaxRoll()
+	 * @return the value of the '<em>Maximum Roll</em>' attribute.
+	 * @see #setMaximumRoll(double)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite_MaximumRoll()
 	 * @model default="5.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='degrees'"
 	 * @generated
 	 */
-	double getMaxRoll();
+	double getMaximumRoll();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaxRoll <em>Max Roll</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRoll <em>Maximum Roll</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Max Roll</em>' attribute.
-	 * @see #getMaxRoll()
+	 * @param value the new value of the '<em>Maximum Roll</em>' attribute.
+	 * @see #getMaximumRoll()
 	 * @generated
 	 */
-	void setMaxRoll(double value);
+	void setMaximumRoll(double value);
 
 } // Satellite

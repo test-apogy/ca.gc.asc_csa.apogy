@@ -76,7 +76,7 @@ public class SatelliteItemProvider
 
 			addNamePropertyDescriptor(object);
 			addOrbitModelPropertyDescriptor(object);
-			addMaxRollPropertyDescriptor(object);
+			addMaximumRollPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -126,19 +126,19 @@ public class SatelliteItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Max Roll feature.
+	 * This adds a property descriptor for the Maximum Roll feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMaxRollPropertyDescriptor(Object object) {
+	protected void addMaximumRollPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Satellite_maxRoll_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maxRoll_feature", "_UI_Satellite_type"),
-				 ApogyExamplesSatellitePackage.Literals.SATELLITE__MAX_ROLL,
+				 getString("_UI_Satellite_maximumRoll_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maximumRoll_feature", "_UI_Satellite_type"),
+				 ApogyExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL,
 				 true,
 				 false,
 				 false,
@@ -186,7 +186,7 @@ public class SatelliteItemProvider
 
 		switch (notification.getFeatureID(Satellite.class)) {
 			case ApogyExamplesSatellitePackage.SATELLITE__NAME:
-			case ApogyExamplesSatellitePackage.SATELLITE__MAX_ROLL:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

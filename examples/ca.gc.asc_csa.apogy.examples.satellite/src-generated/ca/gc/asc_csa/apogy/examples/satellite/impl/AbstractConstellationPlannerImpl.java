@@ -12,25 +12,30 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,10 +45,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getConstellationState <em>Constellation State</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getConstellationCommandPlan <em>Constellation Command Plan</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,6 +112,16 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	protected AbstractConstellationCommandPlan constellationCommandPlan;
 
 	/**
+	 * The cached value of the '{@link #getElevationMask() <em>Elevation Mask</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElevationMask()
+	 * @generated
+	 * @ordered
+	 */
+	protected ConstantElevationMask elevationMask;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,6 +138,57 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	@Override
 	protected EClass eStaticClass() {
 		return ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_PLANNER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationState getConstellationState() {
+		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE) return null;
+		return (ConstellationState)eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationState basicGetConstellationState() {
+		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE) return null;
+		return (ConstellationState)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConstellationState(ConstellationState newConstellationState, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newConstellationState, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConstellationState(ConstellationState newConstellationState) {
+		if (newConstellationState != eInternalContainer() || (eContainerFeatureID() != ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE && newConstellationState != null)) {
+			if (EcoreUtil.isAncestor(this, newConstellationState))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newConstellationState != null)
+				msgs = ((InternalEObject)newConstellationState).eInverseAdd(this, ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_PLANNER, ConstellationState.class, msgs);
+			msgs = basicSetConstellationState(newConstellationState, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE, newConstellationState, newConstellationState));
 	}
 
 	/**
@@ -246,10 +314,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public ConstantElevationMask getElevationMask() {
+		return elevationMask;
 	}
 
 	/**
@@ -257,10 +323,14 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void plan(SatellitesList satellitesList) throws Exception {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public NotificationChain basicSetElevationMask(ConstantElevationMask newElevationMask, NotificationChain msgs) {
+		ConstantElevationMask oldElevationMask = elevationMask;
+		elevationMask = newElevationMask;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK, oldElevationMask, newElevationMask);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -268,7 +338,47 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SortedSet<AbstractConstellationRequest> sortRequests(List<AbstractConstellationRequest> requests) {
+	public void setElevationMask(ConstantElevationMask newElevationMask) {
+		if (newElevationMask != elevationMask) {
+			NotificationChain msgs = null;
+			if (elevationMask != null)
+				msgs = ((InternalEObject)elevationMask).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK, null, msgs);
+			if (newElevationMask != null)
+				msgs = ((InternalEObject)newElevationMask).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK, null, msgs);
+			msgs = basicSetElevationMask(newElevationMask, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK, newElevationMask, newElevationMask));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	abstract public void plan(SatellitesList satellitesList) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	abstract public SortedSet<AbstractConstellationRequest> sortRequests(List<AbstractConstellationRequest> requests);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	abstract public Comparator<AbstractConstellationRequest> getConstellationRequestComparator();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<AbstractSatelliteCommand> createObservationSatelliteCommands(AbstractConstellationRequest request, Date time, Satellite satellite, double rollAngle) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -280,8 +390,57 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetConstellationState((ConstellationState)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE:
+				return basicSetConstellationState(null, msgs);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
+				return basicSetElevationMask(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE:
+				return eInternalContainer().eInverseRemove(this, ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_PLANNER, ConstellationState.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE:
+				if (resolve) return getConstellationState();
+				return basicGetConstellationState();
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__START_DATE:
 				return getStartDate();
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__END_DATE:
@@ -292,6 +451,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				if (resolve) return getConstellationCommandPlan();
 				return basicGetConstellationCommandPlan();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
+				return getElevationMask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -304,6 +465,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE:
+				setConstellationState((ConstellationState)newValue);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__START_DATE:
 				setStartDate((Date)newValue);
 				return;
@@ -315,6 +479,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				setConstellationCommandPlan((AbstractConstellationCommandPlan)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
+				setElevationMask((ConstantElevationMask)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -328,6 +495,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE:
+				setConstellationState((ConstellationState)null);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__START_DATE:
 				setStartDate(START_DATE_EDEFAULT);
 				return;
@@ -339,6 +509,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				setConstellationCommandPlan((AbstractConstellationCommandPlan)null);
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
+				setElevationMask((ConstantElevationMask)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -352,6 +525,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE:
+				return basicGetConstellationState() != null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__START_DATE:
 				return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__END_DATE:
@@ -360,6 +535,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				return constellationRequestsList != null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				return constellationCommandPlan != null;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
+				return elevationMask != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -373,13 +550,6 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK:
-				try {
-					return getTargetPasses((AbstractConstellationRequest)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___PLAN__SATELLITESLIST:
 				try {
 					plan((SatellitesList)arguments.get(0));
@@ -390,6 +560,10 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				}
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___SORT_REQUESTS__LIST:
 				return sortRequests((List<AbstractConstellationRequest>)arguments.get(0));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR:
+				return getConstellationRequestComparator();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE:
+				return createObservationSatelliteCommands((AbstractConstellationRequest)arguments.get(0), (Date)arguments.get(1), (Satellite)arguments.get(2), (Double)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

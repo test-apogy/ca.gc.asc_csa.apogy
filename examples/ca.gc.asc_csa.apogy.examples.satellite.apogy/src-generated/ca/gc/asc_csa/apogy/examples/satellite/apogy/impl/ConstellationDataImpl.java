@@ -13,23 +13,32 @@ package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.impl.ApogyInitializationDataImpl;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
+import java.util.SortedSet;
 
 /**
  * <!-- begin-user-doc -->
@@ -328,14 +337,52 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 		if (newConstellationPlanner != constellationPlanner) {
 			NotificationChain msgs = null;
 			if (constellationPlanner != null)
-				msgs = ((InternalEObject)constellationPlanner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_PLANNER, null, msgs);
+				msgs = ((InternalEObject)constellationPlanner).eInverseRemove(this, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE, AbstractConstellationPlanner.class, msgs);
 			if (newConstellationPlanner != null)
-				msgs = ((InternalEObject)newConstellationPlanner).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_PLANNER, null, msgs);
+				msgs = ((InternalEObject)newConstellationPlanner).eInverseAdd(this, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE, AbstractConstellationPlanner.class, msgs);
 			msgs = basicSetConstellationPlanner(newConstellationPlanner, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_PLANNER, newConstellationPlanner, newConstellationPlanner));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Satellite getSatellite(OrbitModel orbitModel) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_PLANNER:
+				if (constellationPlanner != null)
+					msgs = ((InternalEObject)constellationPlanner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_PLANNER, null, msgs);
+				return basicSetConstellationPlanner((AbstractConstellationPlanner)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -554,6 +601,44 @@ public class ConstellationDataImpl extends ApogyInitializationDataImpl implement
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == ConstellationState.class) {
+			switch (baseOperationID) {
+				case ApogyExamplesSatellitePackage.CONSTELLATION_STATE___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK: return ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK;
+				case ApogyExamplesSatellitePackage.CONSTELLATION_STATE___GET_SATELLITE__ORBITMODEL: return ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA___GET_SATELLITE__ORBITMODEL;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK:
+				try {
+					return getTargetPasses((AbstractConstellationRequest)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA___GET_SATELLITE__ORBITMODEL:
+				return getSatellite((OrbitModel)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ConstellationDataImpl

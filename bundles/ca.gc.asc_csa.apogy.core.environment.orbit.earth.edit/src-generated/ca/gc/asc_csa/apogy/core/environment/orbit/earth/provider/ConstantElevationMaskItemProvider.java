@@ -26,6 +26,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
@@ -65,11 +66,11 @@ public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider
 	 * This adds a property descriptor for the Constant Elevation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	protected void addConstantElevationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_ConstantElevationMask_constantElevation_feature"),

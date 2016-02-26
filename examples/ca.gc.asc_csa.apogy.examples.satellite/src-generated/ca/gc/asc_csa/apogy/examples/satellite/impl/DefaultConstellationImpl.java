@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
@@ -50,6 +51,21 @@ public class DefaultConstellationImpl extends AbstractConstellationImpl implemen
 	@Override
 	public AbstractUID newUID() {
 		return ApogyExamplesSatelliteFactory.eINSTANCE.createStringUID();
+	}
+	
+	@Override
+	public void plan() throws Exception {
+		
+		if (getConstellationState() == null){
+			throw new Exception("There is no constellation state defined in the constellation <" + getName() == null ? null : getName() + ">" );
+		}
+		
+		AbstractConstellationPlanner planner = getConstellationState().getConstellationPlanner();
+		if (planner == null){
+			throw new Exception("There is no planned defined in the constellation <" + getName() == null ? null : getName() + ">" );
+		}
+		
+		planner.plan(getConstellationState().getSatellitesList());
 	}
 
 } //DefaultConstellationImpl

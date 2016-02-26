@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  */
 
 import ca.gc.asc_csa.apogy.examples.satellite.*;
+import java.util.Comparator;
 import java.util.List;
 import java.util.SortedSet;
 
@@ -105,6 +106,8 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 				return createListFromString(eDataType, initialValue);
 			case ApogyExamplesSatellitePackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
+			case ApogyExamplesSatellitePackage.COMPARATOR:
+				return createComparatorFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -126,6 +129,8 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 				return convertListToString(eDataType, instanceValue);
 			case ApogyExamplesSatellitePackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
+			case ApogyExamplesSatellitePackage.COMPARATOR:
+				return convertComparatorToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -364,6 +369,24 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * @generated
 	 */
 	public String convertSortedSetToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Comparator<?> createComparatorFromString(EDataType eDataType, String initialValue) {
+		return (Comparator<?>)super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertComparatorToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
 	}
 

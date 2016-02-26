@@ -12,26 +12,41 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.SortedSet;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Constellation State</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Constellation State</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -48,9 +63,10 @@ import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
  */
 public class ConstellationStateImpl extends MinimalEObjectImpl.Container implements ConstellationState {
 	/**
-	 * The cached value of the '{@link #getConstellationCommandPlansList() <em>Constellation Command Plans List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getConstellationCommandPlansList()
+	 * <em>Constellation Command Plans List</em>}' containment reference. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getConstellationCommandPlansList()
 	 * @generated
 	 * @ordered
@@ -68,9 +84,10 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	protected SatellitesList satellitesList;
 
 	/**
-	 * The cached value of the '{@link #getGroundStationsReferencesList() <em>Ground Stations References List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getGroundStationsReferencesList()
+	 * <em>Ground Stations References List</em>}' containment reference. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getGroundStationsReferencesList()
 	 * @generated
 	 * @ordered
@@ -88,9 +105,10 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	protected ConstellationDownlinksList downlinksLists;
 
 	/**
-	 * The cached value of the '{@link #getConstellationRequestsList() <em>Constellation Requests List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getConstellationRequestsList()
+	 * <em>Constellation Requests List</em>}' containment reference. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getConstellationRequestsList()
 	 * @generated
 	 * @ordered
@@ -98,9 +116,10 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	protected ConstellationRequestsList constellationRequestsList;
 
 	/**
-	 * The cached value of the '{@link #getConstellationPlanner() <em>Constellation Planner</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getConstellationPlanner()
+	 * <em>Constellation Planner</em>}' containment reference. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getConstellationPlanner()
 	 * @generated
 	 * @ordered
@@ -108,8 +127,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	protected AbstractConstellationPlanner constellationPlanner;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected ConstellationStateImpl() {
@@ -117,8 +135,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -127,8 +144,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstellationCommandPlansList getConstellationCommandPlansList() {
@@ -136,11 +152,11 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConstellationCommandPlansList(ConstellationCommandPlansList newConstellationCommandPlansList, NotificationChain msgs) {
+	public NotificationChain basicSetConstellationCommandPlansList(
+			ConstellationCommandPlansList newConstellationCommandPlansList, NotificationChain msgs) {
 		ConstellationCommandPlansList oldConstellationCommandPlansList = constellationCommandPlansList;
 		constellationCommandPlansList = newConstellationCommandPlansList;
 		if (eNotificationRequired()) {
@@ -151,8 +167,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setConstellationCommandPlansList(ConstellationCommandPlansList newConstellationCommandPlansList) {
@@ -170,8 +185,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SatellitesList getSatellitesList() {
@@ -179,8 +193,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public NotificationChain basicSetSatellitesList(SatellitesList newSatellitesList, NotificationChain msgs) {
@@ -194,8 +207,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setSatellitesList(SatellitesList newSatellitesList) {
@@ -213,8 +225,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public GroundStationReferencesList getGroundStationsReferencesList() {
@@ -222,11 +233,11 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGroundStationsReferencesList(GroundStationReferencesList newGroundStationsReferencesList, NotificationChain msgs) {
+	public NotificationChain basicSetGroundStationsReferencesList(
+			GroundStationReferencesList newGroundStationsReferencesList, NotificationChain msgs) {
 		GroundStationReferencesList oldGroundStationsReferencesList = groundStationsReferencesList;
 		groundStationsReferencesList = newGroundStationsReferencesList;
 		if (eNotificationRequired()) {
@@ -237,8 +248,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setGroundStationsReferencesList(GroundStationReferencesList newGroundStationsReferencesList) {
@@ -256,8 +266,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstellationDownlinksList getDownlinksLists() {
@@ -265,11 +274,11 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDownlinksLists(ConstellationDownlinksList newDownlinksLists, NotificationChain msgs) {
+	public NotificationChain basicSetDownlinksLists(ConstellationDownlinksList newDownlinksLists,
+			NotificationChain msgs) {
 		ConstellationDownlinksList oldDownlinksLists = downlinksLists;
 		downlinksLists = newDownlinksLists;
 		if (eNotificationRequired()) {
@@ -280,8 +289,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setDownlinksLists(ConstellationDownlinksList newDownlinksLists) {
@@ -299,8 +307,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstellationRequestsList getConstellationRequestsList() {
@@ -308,11 +315,11 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConstellationRequestsList(ConstellationRequestsList newConstellationRequestsList, NotificationChain msgs) {
+	public NotificationChain basicSetConstellationRequestsList(ConstellationRequestsList newConstellationRequestsList,
+			NotificationChain msgs) {
 		ConstellationRequestsList oldConstellationRequestsList = constellationRequestsList;
 		constellationRequestsList = newConstellationRequestsList;
 		if (eNotificationRequired()) {
@@ -323,8 +330,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setConstellationRequestsList(ConstellationRequestsList newConstellationRequestsList) {
@@ -342,8 +348,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AbstractConstellationPlanner getConstellationPlanner() {
@@ -351,11 +356,11 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConstellationPlanner(AbstractConstellationPlanner newConstellationPlanner, NotificationChain msgs) {
+	public NotificationChain basicSetConstellationPlanner(AbstractConstellationPlanner newConstellationPlanner,
+			NotificationChain msgs) {
 		AbstractConstellationPlanner oldConstellationPlanner = constellationPlanner;
 		constellationPlanner = newConstellationPlanner;
 		if (eNotificationRequired()) {
@@ -366,17 +371,16 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setConstellationPlanner(AbstractConstellationPlanner newConstellationPlanner) {
 		if (newConstellationPlanner != constellationPlanner) {
 			NotificationChain msgs = null;
 			if (constellationPlanner != null)
-				msgs = ((InternalEObject)constellationPlanner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_PLANNER, null, msgs);
+				msgs = ((InternalEObject)constellationPlanner).eInverseRemove(this, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE, AbstractConstellationPlanner.class, msgs);
 			if (newConstellationPlanner != null)
-				msgs = ((InternalEObject)newConstellationPlanner).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_PLANNER, null, msgs);
+				msgs = ((InternalEObject)newConstellationPlanner).eInverseAdd(this, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE, AbstractConstellationPlanner.class, msgs);
 			msgs = basicSetConstellationPlanner(newConstellationPlanner, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -385,8 +389,70 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate,
+			ElevationMask elevationMask) throws Exception {
+		long startChrono = System.currentTimeMillis();
+		
+		List<VisibilityPass> visibilityPasses = new ArrayList<VisibilityPass>();
+
+		if (request instanceof ImageConstellationRequest){
+			ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest) request;
+			EarthSurfaceLocation location = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createEarthSurfaceLocation("Dummy", "Dummy", imageConstellationRequest.getLongitude(), imageConstellationRequest.getLatitude(), imageConstellationRequest.getElevation());
+		
+			for (Satellite satellite: getSatellitesList().getSatellites()){
+				if (satellite.getOrbitModel().getPropagator() instanceof EarthOrbitPropagator){
+					EarthOrbitPropagator propagator = (EarthOrbitPropagator) satellite.getOrbitModel().getPropagator();
+					visibilityPasses.addAll(propagator.getTargetPasses(location, startDate, endDate, elevationMask));
+				}
+			}			
+		}
+		
+		SortedSet<VisibilityPass> sortedVisibilityPasses = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.getVisibilityPassSortedByStartDate(visibilityPasses);		
+		long stopChrono = System.currentTimeMillis();
+		return sortedVisibilityPasses;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public Satellite getSatellite(OrbitModel orbitModel) {
+		Satellite result = null;
+
+		if (getSatellitesList() != null) {
+			Iterator<Satellite> satellites = getSatellitesList().getSatellites().iterator();
+			while (satellites.hasNext() && result == null) {
+				Satellite satellite = satellites.next();
+
+				if (satellite.getOrbitModel() == orbitModel) {
+					result = satellite;
+				}
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_PLANNER:
+				if (constellationPlanner != null)
+					msgs = ((InternalEObject)constellationPlanner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_PLANNER, null, msgs);
+				return basicSetConstellationPlanner((AbstractConstellationPlanner)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -409,8 +475,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -433,8 +498,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -463,8 +527,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -493,8 +556,7 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -516,4 +578,24 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 		return super.eIsSet(featureID);
 	}
 
-} //ConstellationStateImpl
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK:
+				try {
+					return getTargetPasses((AbstractConstellationRequest)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE___GET_SATELLITE__ORBITMODEL:
+				return getSatellite((OrbitModel)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+} // ConstellationStateImpl

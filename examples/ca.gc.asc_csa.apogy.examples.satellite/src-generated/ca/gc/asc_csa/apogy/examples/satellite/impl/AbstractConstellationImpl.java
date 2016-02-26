@@ -13,9 +13,10 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -40,12 +41,50 @@ import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getConstellationState <em>Constellation State</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Container implements AbstractConstellation {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getConstellationState() <em>Constellation State</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -72,6 +111,48 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	protected EClass eStaticClass() {
 		return ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -212,6 +293,10 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME:
+				return getName();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION:
+				return getDescription();
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
 				return getConstellationState();
 		}
@@ -227,6 +312,12 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME:
+				setName((String)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
 				setConstellationState((ConstellationState)newValue);
 				return;
@@ -242,6 +333,12 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
 				setConstellationState((ConstellationState)null);
 				return;
@@ -257,10 +354,46 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
 				return constellationState != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Described.class) {
+			switch (derivedFeatureID) {
+				case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Described.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -298,6 +431,24 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 				return importConstellationRequests((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", description: ");
+		result.append(description);
+		result.append(')');
+		return result.toString();
 	}
 
 } //AbstractConstellationImpl

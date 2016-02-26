@@ -41,11 +41,17 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesL
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass
 import ca.gc.asc_csa.apogy.core.Exception
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask
 
 type List<T> wraps java.util.List
 type SortedSet<T> wraps java.util.SortedSet 
-
+type Comparator<T> wraps java.util.Comparator 
  
+ 
+ // FIXME Add public SortedSet<VisibilityPass> getGroundStationPasses(Satellite satellite, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception
+ // FIXME Add Parallel Execution to process passes.
+ // FIXME Include Derived Visibility Passes in the Constellation.
+  
 /*
  * Abstract Unique Identifier.  This class is meant to be sub-classed.
  */
@@ -66,7 +72,7 @@ class StringUID extends AbstractUID{
  	contains AbstractConstellationCommandPlan[0..*] plans
  }
  
-  /*
+ /*
   * Class used to store the constellation state. 
   */
  class ConstellationState{
@@ -98,17 +104,35 @@ class StringUID extends AbstractUID{
 	/*
 	 * Constellation Planner.
 	 */
-	contains AbstractConstellationPlanner[0..1] constellationPlanner	
+	contains AbstractConstellationPlanner[0..1] constellationPlanner opposite constellationState	
+	
+	/*
+	 * Returns the visibility passes for a given {@link AbstractConstellationRequest}. 
+	 * @param request The {@link AbstractConstellationRequest} that needs commanding.
+	 * @param startDate The start date of the period to be queried.
+	 * @param endDate The end date of the period to be queried.
+	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
+	 * @return The list of Visibility passes, ordered by start time.
+	 */
+	op SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception
+	
+	/**
+	 * Returns the satellite associated with the specified {@link OrbitModel}.
+	 * @param orbitModel The specified {@link OrbitModel}.
+	 * @return The Satellite associated with the specified {@link OrbitModel}, null if none is found.
+	 */
+	op Satellite getSatellite(OrbitModel orbitModel)
  }
 
 /*
  * Represents a constellation of Satellites. It provides basic queries used to schedule 
  * image acquisition and upload requests and downloads data from the satellites.
  */
-abstract class AbstractConstellation{
+abstract class AbstractConstellation extends Named, Described{
 	
 	/*
 	 * Creates an new instance of {@link UID}.
+	 * FIXME Not Required???
 	 */
 	op AbstractUID newUID()
 	
@@ -169,6 +193,11 @@ class DefaultConstellation extends AbstractConstellation{
  * a list of {@link AbstractConstellationRequest} and to generate a {@link ConstellationCommandPlan}.
  */
 abstract class AbstractConstellationPlanner{
+
+	/*
+	 * Refers the {@link ConstellationState} that contains the planner.
+	 */	
+	container ConstellationState constellationState opposite constellationPlanner
 	
 	/*
 	 * Specifies the start date used by the planner.
@@ -191,15 +220,10 @@ abstract class AbstractConstellationPlanner{
 	refers AbstractConstellationCommandPlan constellationCommandPlan
 	
 	/*
-	 * Returns the visibility passes for a given {@link AbstractConstellationRequest}. 
-	 * @param request The {@link AbstractConstellationRequest} that needs commanding.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
-	 * @return The list of Visibility passes, ordered by start time.
+	 * Specifies the elevation mask used 
 	 */
-	op SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception
-	
+	contains ConstantElevationMask elevationMask
+		
 	/*
 	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest} 
 	 * based on the available constellation satellites.
@@ -212,13 +236,23 @@ abstract class AbstractConstellationPlanner{
 	op void plan(SatellitesList satellitesList) throws Exception	
 	
 	/*
-	 * FIXME Provide Hook (Class) to specify the Request Sorter (Comparator).
-	 */
-	
-	/*
 	 * Sorts the following requests.
 	 */
 	op SortedSet<AbstractConstellationRequest> sortRequests(List<AbstractConstellationRequest> requests)
+	
+	/*
+	 * Returns the comparator of {@link AbstractConstellationRequest} used to sort them.
+	 */
+	op Comparator<AbstractConstellationRequest> getConstellationRequestComparator()
+	
+	/*
+	 * Creates a list of commands to address the specified {@link AbstractConstellationRequest}.
+	 * @param request
+	 * @param time Time at which the main command must be performed.
+	 * @param satellite Refers to the satellite that will perform the command.
+	 * @param rollAngle Roll angle associated to the observation request.
+	 */
+	op List<AbstractSatelliteCommand> createObservationSatelliteCommands(AbstractConstellationRequest request, Date time, Satellite satellite, double rollAngle)
 }
 
 /*
@@ -321,13 +355,13 @@ class Satellite extends Named{
 	/*
 	 * Refers to the {@link OrbitModel}.
 	 */
-	refers OrbitModel orbitModel
+	refers OrbitModel[1] orbitModel
 	
 	/*
 	 * Maximum Satellite Roll.
 	 */
 	 @GenModel(apogy_units="degrees")
-	 double maxRoll = "5.0" 
+	 double maximumRoll = "5.0" 
 }
 
 /*
