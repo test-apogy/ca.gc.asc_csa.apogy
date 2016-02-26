@@ -39,8 +39,7 @@ public class GenerateConstellationCommandPlan extends AbstractHandler implements
 					}					
 				}.schedule();
 			} catch (Exception e) {
-				// FIXME Log Error.
-				e.printStackTrace();
+				Logger.INSTANCE.log(Activator.PLUGIN_ID, e.getMessage(), EventSeverity.ERROR, e);
 			}
 		}
 		return null;
