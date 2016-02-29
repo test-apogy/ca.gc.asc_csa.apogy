@@ -7,10 +7,10 @@ As an example, integrating a rover in **Apogy** is as simple as creating an EMF 
 # Installation #
 Description                    | URL            | Status
 ------------------------------ | -------------  | ---------
+Apogy P2 Update Site           | [https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/)          | NOT WORKING
 Apogy OTS P2 Update Site (ZIP) | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip) | OK
 Apogy P2 Update Site (ZIP)     | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip)         | OK
-Apogy OTS P2 Update Site       | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest) | NOT WORKING
-Apogy P2 Update Site           | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest)         | NOT WORKING
+
 
 # Documentation #
 Description                    | URL
