@@ -241,4 +241,23 @@ public class PTUCameraApogySystemApiAdapterImpl extends
 			return super.createResultMatrix(operationCall);
 		}
 	}
+	
+	@Override
+	public void dispose() 
+	{
+		try
+		{
+			// Stops streaming if it is enabled.
+			if(this.getPTUCamera().isStreamingEnabled())
+			{
+				this.getPTUCamera().commandStreaming(false);
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		super.dispose();
+	}
 } // PTUCameraApogySystemApiAdapterImpl

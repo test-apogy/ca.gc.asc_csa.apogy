@@ -602,13 +602,12 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements
 			{
 				@Override
 				public void notifyChanged(Notification msg) 
-				{
+				{									
 					if(msg.getNotifier() instanceof TimeSource)
-					{
+					{												
 						int featureId = msg.getFeatureID(TimeSource.class);
-						
-						if(featureId == ApogyCommonEMFPackage.TIMED__TIME)
-						{
+						if(featureId == ApogyCommonEMFPackage.TIME_SOURCE__TIME)
+						{							
 							if(msg.getNewValue() instanceof Date)
 							{
 								Date newDate = (Date) msg.getNewValue();
