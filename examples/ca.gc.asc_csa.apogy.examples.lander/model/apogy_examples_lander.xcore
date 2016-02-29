@@ -289,7 +289,7 @@ abstract class Lander extends Disposable
 			  notify="true",
 	 		  apogy_units="rad/s",
 	 		  propertyCategory="Velocities")
-	double yAngularVelocity = "0"
+	double yAngularVelocity = "0"	
 	
 	/*
 	 * This represents the mass of the lander (in kg).
@@ -299,6 +299,17 @@ abstract class Lander extends Disposable
 	 		   property="Readonly",
 	 		   propertyCategory="Flight")
 	transient volatile readonly derived double mass
+	
+	
+	/*
+	 * This represents the fuel mass of the lander (in kg).
+	 */
+	 @GenModel(children="false",
+	 		   apogy_units="kg",
+	 		   property="Readonly",
+	 		   propertyCategory="Flight")
+	transient double fuelMass
+	
 	
 	/*
 	 * This is the amount of force (in N) of gravity that is being

@@ -14,8 +14,10 @@ package ca.gc.asc_csa.apogy.examples.lander.provider;
  */
 
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -31,6 +33,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
 import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderFactory;
@@ -51,6 +54,10 @@ public class LanderItemProvider extends ItemProviderAdapter
 								IItemLabelProvider,
 								IItemPropertySource
 {
+	private DecimalFormat fuelMassFormat = new DecimalFormat("0.0");
+	private DecimalFormat thrustFormat = new DecimalFormat("0");
+	
+	
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -83,6 +90,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 			addXAngularVelocityPropertyDescriptor(object);
 			addYAngularVelocityPropertyDescriptor(object);
 			addMassPropertyDescriptor(object);
+			addFuelMassPropertyDescriptor(object);
 			addGravitationalPullPropertyDescriptor(object);
 			addChangingLegsPropertyDescriptor(object);
 			addChangingAttitudePropertyDescriptor(object);
@@ -301,6 +309,28 @@ public class LanderItemProvider extends ItemProviderAdapter
 	}
 
 	/**
+	 * This adds a property descriptor for the Fuel Mass feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFuelMassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lander_fuelMass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_fuelMass_feature", "_UI_Lander_type"),
+				 ApogyExamplesLanderPackage.Literals.LANDER__FUEL_MASS,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_FlightPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Gravitational Pull feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -502,40 +532,27 @@ public class LanderItemProvider extends ItemProviderAdapter
 		// The label to be displayed for the lander
 		String label = getString("UI_Lander_type"); 
 		
-		// If the lander isn't null
-		if (lander != null)
-		{
-			// If the position is present
-			if (lander.getPosition() != null)
-			{
-				// Add the coordinates to the label
-				label = label + " (X=" + lander.getPosition().getX() +
-								", Y=" + lander.getPosition().getY() +
-								", Z=" + lander.getPosition().getZ();
-				
-				// If the thruster is also present
-				if (lander.getThruster() != null)
-				{
-					// Add the thrust level to the label
-					label = label + ", Thrust=" + lander.getThruster().getCurrentThrust();
-				}
-				
-				// Finish off the label
-				label = label + ")";
-			}
-			// Otherwise if the position is not present
-			// but the thruster is
-			else if (lander.getThruster() != null)
-			{
-				// Add the thrust level to the label
-				label = "(Thrust=" + lander.getThruster().getCurrentThrust() +")";
-			}
-		}
+		label += getLanderSuffixText(lander);
 		
 		// Return the generated label
 		return label;
+	}	
+	
+	protected String getLanderSuffixText(Lander lander)
+	{
+		String text = "";
+			
+		text += "(Fuel : " + fuelMassFormat.format(lander.getFuelMass()) + " kg";
+		if(lander.getThruster() != null)
+		{
+			text += ", Thrust : " + thrustFormat.format(lander.getThruster().getCurrentThrust()) + " N";
+		}
+		
+		text += ")";
+		
+		return text;
 	}
-
+	
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
@@ -558,6 +575,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 			case ApogyExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
 			case ApogyExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
 			case ApogyExamplesLanderPackage.LANDER__MASS:
+			case ApogyExamplesLanderPackage.LANDER__FUEL_MASS:
 			case ApogyExamplesLanderPackage.LANDER__GRAVITATIONAL_PULL:
 			case ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS:
 			case ApogyExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
