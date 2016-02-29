@@ -5,12 +5,10 @@ As an example, integrating a rover in **Apogy** is as simple as creating an EMF 
 ![Apogy Overview](/doc/ca.gc.asc_csa.apogy.doc/resources/main/apogy_overview.jpg "Apogy Overview")
 
 # Installation #
-Description                    | URL            | Status
------------------------------- | -------------  | ---------
-Apogy OTS P2 Update Site (ZIP) | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip) | OK
-Apogy P2 Update Site (ZIP)     | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip)         | OK
-Apogy OTS P2 Update Site       | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest) | NOT WORKING
-Apogy P2 Update Site           | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest)         | NOT WORKING
+Description                    | URL          
+------------------------------ | -------------
+Eclipse Update Site (Stable)        | [https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/)
+Eclipse Update Site (Latest)        | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/)
 
 # Documentation #
 Description                    | URL
@@ -22,3 +20,9 @@ Tutorials                      | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tu
 User                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html)
 Development                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html)
 Eclipse Proposal               | [https://projects.eclipse.org/proposals/apogy](https://projects.eclipse.org/proposals/apogy)
+
+# Archives #
+Description                    | URL          
+------------------------------ | -------------
+Apogy OTS P2 Update Site (ZIP) | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip)
+Apogy P2 Update Site (ZIP)     | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip)
