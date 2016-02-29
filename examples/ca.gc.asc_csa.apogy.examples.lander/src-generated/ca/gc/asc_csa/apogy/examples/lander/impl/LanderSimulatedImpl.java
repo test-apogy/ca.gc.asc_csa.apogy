@@ -120,7 +120,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 	 * @see #startFlying(boolean)
 	 * @see #getMass()
 	 */
-	protected static final double LANDER__FUEL_SPECIFIC_IMPULSE = 200;
+	protected static final double LANDER__FUEL_SPECIFIC_IMPULSE = 220;
 	
 	
 	/**
