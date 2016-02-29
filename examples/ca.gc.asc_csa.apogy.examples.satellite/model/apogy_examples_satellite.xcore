@@ -208,7 +208,7 @@ abstract class AbstractConstellationPlanner{
 	/*
 	 * Checks if the pass is valid.
 	 */
-	op boolean valid(VisibilityPass visibilityPass)
+	op boolean isValid(VisibilityPass visibilityPass)
 	
 	/**
 	 * Returns the satellite associated with the specified {@link OrbitModel}.

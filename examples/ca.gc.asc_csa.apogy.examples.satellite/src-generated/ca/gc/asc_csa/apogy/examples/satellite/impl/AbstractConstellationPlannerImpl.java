@@ -367,7 +367,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public boolean valid(VisibilityPass visibilityPass) {
+	public boolean isValid(VisibilityPass visibilityPass) {
 		return true;
 	}
 
@@ -586,8 +586,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS:
-				return valid((VisibilityPass)arguments.get(0));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS:
+				return isValid((VisibilityPass)arguments.get(0));
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL:
 				return getSatellite((OrbitModel)arguments.get(0));
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___PLAN:

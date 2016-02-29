@@ -554,13 +554,13 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = 0;
 
 	/**
-	 * The operation id for the '<em>Valid</em>' operation.
+	 * The operation id for the '<em>Is Valid</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS = 1;
+	int ABSTRACT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS = 1;
 
 	/**
 	 * The operation id for the '<em>Get Satellite</em>' operation.
@@ -708,13 +708,13 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int DEFAULT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK;
 
 	/**
-	 * The operation id for the '<em>Valid</em>' operation.
+	 * The operation id for the '<em>Is Valid</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS = ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS;
+	int DEFAULT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS = ABSTRACT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS;
 
 	/**
 	 * The operation id for the '<em>Get Satellite</em>' operation.
@@ -2088,14 +2088,14 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EOperation getAbstractConstellationPlanner__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#valid(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass) <em>Valid</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isValid(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass) <em>Is Valid</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Valid</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#valid(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass)
+	 * @return the meta object for the '<em>Is Valid</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isValid(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass)
 	 * @generated
 	 */
-	EOperation getAbstractConstellationPlanner__Valid__VisibilityPass();
+	EOperation getAbstractConstellationPlanner__IsValid__VisibilityPass();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
@@ -2880,12 +2880,12 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		EOperation ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = eINSTANCE.getAbstractConstellationPlanner__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask();
 
 		/**
-		 * The meta object literal for the '<em><b>Valid</b></em>' operation.
+		 * The meta object literal for the '<em><b>Is Valid</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS = eINSTANCE.getAbstractConstellationPlanner__Valid__VisibilityPass();
+		EOperation ABSTRACT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS = eINSTANCE.getAbstractConstellationPlanner__IsValid__VisibilityPass();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Satellite</b></em>' operation.

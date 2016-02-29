@@ -243,7 +243,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @model unique="false" visibilityPassUnique="false"
 	 * @generated
 	 */
-	boolean valid(VisibilityPass visibilityPass);
+	boolean isValid(VisibilityPass visibilityPass);
 
 	/**
 	 * <!-- begin-user-doc -->

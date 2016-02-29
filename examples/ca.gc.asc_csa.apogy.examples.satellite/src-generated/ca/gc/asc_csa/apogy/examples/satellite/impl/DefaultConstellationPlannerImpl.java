@@ -196,8 +196,8 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 	}
 	
 	@Override
-	public boolean valid(VisibilityPass visibilityPass) {
-		// FIXME Check if the pass is valid.
+	public boolean isValid(VisibilityPass visibilityPass) {
+		// FIXME Pierre: Implement the check for sun/shadow observation.
 		return true;
 	}
 
@@ -214,10 +214,9 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 				if (satellite.getOrbitModel().getPropagator() instanceof EarthOrbitPropagator){
 					EarthOrbitPropagator propagator = (EarthOrbitPropagator) satellite.getOrbitModel().getPropagator();
 		
-					List<VisibilityPass> potentialVisibilityPasses = propagator.getTargetPasses(location, startDate, endDate, elevationMask);
-					
+					List<VisibilityPass> potentialVisibilityPasses = propagator.getTargetPasses(location, startDate, endDate, elevationMask);					
 					for (VisibilityPass pass: potentialVisibilityPasses){
-						if (valid(pass)){
+						if (isValid(pass)){
 							visibilityPasses.add(pass);
 						}
 					}

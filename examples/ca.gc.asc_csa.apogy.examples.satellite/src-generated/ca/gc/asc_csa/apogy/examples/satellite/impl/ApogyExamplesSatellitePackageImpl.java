@@ -594,7 +594,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__Valid__VisibilityPass() {
+	public EOperation getAbstractConstellationPlanner__IsValid__VisibilityPass() {
 		return abstractConstellationPlannerEClass.getEOperations().get(1);
 	}
 
@@ -1110,7 +1110,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN);
 		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK);
-		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___PLAN);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___VALIDATE);
@@ -1308,7 +1308,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getAbstractConstellationPlanner__Valid__VisibilityPass(), theEcorePackage.getEBoolean(), "valid", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getAbstractConstellationPlanner__IsValid__VisibilityPass(), theEcorePackage.getEBoolean(), "isValid", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), "visibilityPass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getAbstractConstellationPlanner__GetSatellite__OrbitModel(), this.getSatellite(), "getSatellite", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1590,7 +1590,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "Returns the visibility passes for a given {@link AbstractConstellationRequest}.\n@param request The {@link AbstractConstellationRequest} that needs commanding.\n@param startDate The start date of the period to be queried.\n@param endDate The end date of the period to be queried.\n@param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.\n@return The list of Visibility passes, ordered by start time."
 		   });	
 		addAnnotation
-		  (getAbstractConstellationPlanner__Valid__VisibilityPass(), 
+		  (getAbstractConstellationPlanner__IsValid__VisibilityPass(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Checks if the pass is valid."
