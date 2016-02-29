@@ -1,3 +1,6 @@
+Version 0.5.7:
+ - Created a separate document for Simple Way To Start tutorial.
+
 Version 0.5.6:
  - Merge branch 'feature-apogy_all_feature' into hotfix-0.5.6
  - Merge branch 'feature-bintray_support' into feature-apogy_all_feature
