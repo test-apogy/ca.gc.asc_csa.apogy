@@ -594,7 +594,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__GetSatellite__OrbitModel() {
+	public EOperation getAbstractConstellationPlanner__Valid__VisibilityPass() {
 		return abstractConstellationPlannerEClass.getEOperations().get(1);
 	}
 
@@ -603,7 +603,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__Plan() {
+	public EOperation getAbstractConstellationPlanner__GetSatellite__OrbitModel() {
 		return abstractConstellationPlannerEClass.getEOperations().get(2);
 	}
 
@@ -612,7 +612,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__SortRequests__List() {
+	public EOperation getAbstractConstellationPlanner__Plan() {
 		return abstractConstellationPlannerEClass.getEOperations().get(3);
 	}
 
@@ -621,7 +621,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__GetConstellationRequestComparator() {
+	public EOperation getAbstractConstellationPlanner__Validate() {
 		return abstractConstellationPlannerEClass.getEOperations().get(4);
 	}
 
@@ -630,8 +630,26 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__CreateObservationSatelliteCommands__AbstractConstellationRequest_Date_Satellite_double() {
+	public EOperation getAbstractConstellationPlanner__SortRequests__List() {
 		return abstractConstellationPlannerEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractConstellationPlanner__GetConstellationRequestComparator() {
+		return abstractConstellationPlannerEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractConstellationPlanner__CreateObservationSatelliteCommands__AbstractConstellationRequest_Date_Satellite_double() {
+		return abstractConstellationPlannerEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -1092,8 +1110,10 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN);
 		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___PLAN);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___VALIDATE);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___SORT_REQUESTS__LIST);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE);
@@ -1288,10 +1308,16 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
+		op = initEOperation(getAbstractConstellationPlanner__Valid__VisibilityPass(), theEcorePackage.getEBoolean(), "valid", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), "visibilityPass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		op = initEOperation(getAbstractConstellationPlanner__GetSatellite__OrbitModel(), this.getSatellite(), "getSatellite", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreEnvironmentOrbitPackage.getOrbitModel(), "orbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getAbstractConstellationPlanner__Plan(), null, "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCorePackage.getException());
+
+		op = initEOperation(getAbstractConstellationPlanner__Validate(), null, "validate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCorePackage.getException());
 
 		op = initEOperation(getAbstractConstellationPlanner__SortRequests__List(), null, "sortRequests", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1564,6 +1590,12 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "Returns the visibility passes for a given {@link AbstractConstellationRequest}.\n@param request The {@link AbstractConstellationRequest} that needs commanding.\n@param startDate The start date of the period to be queried.\n@param endDate The end date of the period to be queried.\n@param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.\n@return The list of Visibility passes, ordered by start time."
 		   });	
 		addAnnotation
+		  (getAbstractConstellationPlanner__Valid__VisibilityPass(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Checks if the pass is valid."
+		   });	
+		addAnnotation
 		  (getAbstractConstellationPlanner__GetSatellite__OrbitModel(), 
 		   source, 
 		   new String[] {
@@ -1574,6 +1606,12 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest}\nbased on the available constellation satellites.  The plan is added to the list of plans."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner__Validate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Validates the planner properties."
 		   });	
 		addAnnotation
 		  (getAbstractConstellationPlanner__SortRequests__List(), 

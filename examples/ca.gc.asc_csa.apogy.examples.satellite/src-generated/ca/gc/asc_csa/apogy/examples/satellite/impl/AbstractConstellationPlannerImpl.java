@@ -367,6 +367,15 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public boolean valid(VisibilityPass visibilityPass) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	abstract public Satellite getSatellite(OrbitModel orbitModel);
 
 	/**
@@ -375,6 +384,13 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * @generated_NOT
 	 */
 	abstract public void plan() throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	abstract public void validate() throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -570,11 +586,21 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS:
+				return valid((VisibilityPass)arguments.get(0));
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL:
 				return getSatellite((OrbitModel)arguments.get(0));
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___PLAN:
 				try {
 					plan();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___VALIDATE:
+				try {
+					validate();
 					return null;
 				}
 				catch (Throwable throwable) {

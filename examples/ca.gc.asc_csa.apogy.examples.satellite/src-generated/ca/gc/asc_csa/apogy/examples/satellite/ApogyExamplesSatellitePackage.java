@@ -554,13 +554,22 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = 0;
 
 	/**
+	 * The operation id for the '<em>Valid</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS = 1;
+
+	/**
 	 * The operation id for the '<em>Get Satellite</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL = 1;
+	int ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL = 2;
 
 	/**
 	 * The operation id for the '<em>Plan</em>' operation.
@@ -569,7 +578,16 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___PLAN = 2;
+	int ABSTRACT_CONSTELLATION_PLANNER___PLAN = 3;
+
+	/**
+	 * The operation id for the '<em>Validate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_PLANNER___VALIDATE = 4;
 
 	/**
 	 * The operation id for the '<em>Sort Requests</em>' operation.
@@ -578,7 +596,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___SORT_REQUESTS__LIST = 3;
+	int ABSTRACT_CONSTELLATION_PLANNER___SORT_REQUESTS__LIST = 5;
 
 	/**
 	 * The operation id for the '<em>Get Constellation Request Comparator</em>' operation.
@@ -587,7 +605,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR = 4;
+	int ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR = 6;
 
 	/**
 	 * The operation id for the '<em>Create Observation Satellite Commands</em>' operation.
@@ -596,7 +614,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE = 5;
+	int ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE = 7;
 
 	/**
 	 * The number of operations of the '<em>Abstract Constellation Planner</em>' class.
@@ -605,7 +623,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER_OPERATION_COUNT = 6;
+	int ABSTRACT_CONSTELLATION_PLANNER_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationPlannerImpl <em>Default Constellation Planner</em>}' class.
@@ -690,6 +708,15 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int DEFAULT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK;
 
 	/**
+	 * The operation id for the '<em>Valid</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS = ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS;
+
+	/**
 	 * The operation id for the '<em>Get Satellite</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -706,6 +733,15 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int DEFAULT_CONSTELLATION_PLANNER___PLAN = ABSTRACT_CONSTELLATION_PLANNER___PLAN;
+
+	/**
+	 * The operation id for the '<em>Validate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION_PLANNER___VALIDATE = ABSTRACT_CONSTELLATION_PLANNER___VALIDATE;
 
 	/**
 	 * The operation id for the '<em>Sort Requests</em>' operation.
@@ -2052,6 +2088,16 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EOperation getAbstractConstellationPlanner__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#valid(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass) <em>Valid</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Valid</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#valid(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass)
+	 * @generated
+	 */
+	EOperation getAbstractConstellationPlanner__Valid__VisibilityPass();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2070,6 +2116,16 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getAbstractConstellationPlanner__Plan();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#validate() <em>Validate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Validate</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#validate()
+	 * @generated
+	 */
+	EOperation getAbstractConstellationPlanner__Validate();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#sortRequests(java.util.List) <em>Sort Requests</em>}' operation.
@@ -2824,6 +2880,14 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		EOperation ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK = eINSTANCE.getAbstractConstellationPlanner__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask();
 
 		/**
+		 * The meta object literal for the '<em><b>Valid</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION_PLANNER___VALID__VISIBILITYPASS = eINSTANCE.getAbstractConstellationPlanner__Valid__VisibilityPass();
+
+		/**
 		 * The meta object literal for the '<em><b>Get Satellite</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2838,6 +2902,14 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ABSTRACT_CONSTELLATION_PLANNER___PLAN = eINSTANCE.getAbstractConstellationPlanner__Plan();
+
+		/**
+		 * The meta object literal for the '<em><b>Validate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION_PLANNER___VALIDATE = eINSTANCE.getAbstractConstellationPlanner__Validate();
 
 		/**
 		 * The meta object literal for the '<em><b>Sort Requests</b></em>' operation.

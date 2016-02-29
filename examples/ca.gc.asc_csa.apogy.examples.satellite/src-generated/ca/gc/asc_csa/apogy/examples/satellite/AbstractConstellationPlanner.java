@@ -238,6 +238,17 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Checks if the pass is valid.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" visibilityPassUnique="false"
+	 * @generated
+	 */
+	boolean valid(VisibilityPass visibilityPass);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * *
 	 * Returns the satellite associated with the specified {@link OrbitModel}.
 	 * @param orbitModel The specified {@link OrbitModel}.
@@ -259,6 +270,17 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @generated
 	 */
 	void plan() throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Validates the planner properties.
+	 * <!-- end-model-doc -->
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception"
+	 * @generated
+	 */
+	void validate() throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->

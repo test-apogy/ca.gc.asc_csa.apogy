@@ -72,16 +72,7 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 	}
 	
 	@Override
-	public void plan() throws Exception {
-
-		Logger.INSTANCE.log(Activator.ID, "Constellation Planner started", EventSeverity.INFO);
-		
-		/* 
-		 * 
-		 * Validate the planner settings.
-		 * 
-		 */
-		
+	public void validate() throws Exception {
 		if (getConstellationState().getSatellitesList() == null || getConstellationState().getSatellitesList().getSatellites().isEmpty()){
 			throw new Exception("The planner does not have any satellites defined.");
 		}
@@ -109,7 +100,16 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 		if (getElevationMask() == null){
 			throw new Exception("The planner does not define any elevation mask.");
 		}
+	}
+	
+	@Override
+	public void plan() throws Exception {
+
+		Logger.INSTANCE.log(Activator.ID, "Constellation Planner started", EventSeverity.INFO);
 		
+		/* Validate the planner settings. */
+		validate();
+				
 		/* Clear the command plan. */
 		getConstellationCommandPlan().getConstellationCommands().clear();
 		
@@ -194,6 +194,12 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 		}	
 		return commands;
 	}
+	
+	@Override
+	public boolean valid(VisibilityPass visibilityPass) {
+		// FIXME Check if the pass is valid.
+		return true;
+	}
 
 	@Override
 	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate,
@@ -207,7 +213,14 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 			for (Satellite satellite: getConstellationState().getSatellitesList().getSatellites()){
 				if (satellite.getOrbitModel().getPropagator() instanceof EarthOrbitPropagator){
 					EarthOrbitPropagator propagator = (EarthOrbitPropagator) satellite.getOrbitModel().getPropagator();
-					visibilityPasses.addAll(propagator.getTargetPasses(location, startDate, endDate, elevationMask));
+		
+					List<VisibilityPass> potentialVisibilityPasses = propagator.getTargetPasses(location, startDate, endDate, elevationMask);
+					
+					for (VisibilityPass pass: potentialVisibilityPasses){
+						if (valid(pass)){
+							visibilityPasses.add(pass);
+						}
+					}
 				}
 			}			
 		}

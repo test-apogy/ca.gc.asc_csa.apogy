@@ -205,6 +205,11 @@ abstract class AbstractConstellationPlanner{
 	 */
 	op SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception
 	
+	/*
+	 * Checks if the pass is valid.
+	 */
+	op boolean valid(VisibilityPass visibilityPass)
+	
 	/**
 	 * Returns the satellite associated with the specified {@link OrbitModel}.
 	 * @param orbitModel The specified {@link OrbitModel}.
@@ -217,6 +222,11 @@ abstract class AbstractConstellationPlanner{
 	 * based on the available constellation satellites.  The plan is added to the list of plans.
 	 */
 	op void plan() throws Exception	
+	
+	/*
+	 * Validates the planner properties.
+	 */
+	op void validate() throws Exception
 	
 	/*
 	 * Sorts the following requests.
