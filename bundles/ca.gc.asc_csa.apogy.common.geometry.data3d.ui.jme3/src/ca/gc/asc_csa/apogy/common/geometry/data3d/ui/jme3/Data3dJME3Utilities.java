@@ -132,8 +132,6 @@ public class Data3dJME3Utilities
 					}
 				}
 				
-				System.out.println(pointColor);
-				
 				pointColorList.add(pointColor);
 				
 				index++;
