@@ -1,6 +1,5 @@
-package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
-/*
- * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+/**
+ * Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,17 +11,21 @@ package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.impl.EPackageImpl;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
 
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -223,11 +226,7 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyExamplesSatelliteApogy",
-<<<<<<< HEAD
-			 "copyrightText", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\nContributors:\nCanadian Space Agency (CSA) - Initial API and implementation\n-Pierre Allard (Pierre.Allard@canada.ca),\n-Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n-Sebastien Gemme (Sebastien.Gemme@canada.ca)",
-=======
 			 "copyrightText", "Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
->>>>>>> refs/heads/master
 			 "modelName", "ApogyExamplesSatelliteApogy",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
