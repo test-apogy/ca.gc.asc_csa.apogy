@@ -59,10 +59,33 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTleValidityPeriodPropertyDescriptor(object);
 			addValidFromDatePropertyDescriptor(object);
 			addValidToDatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Tle Validity Period feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTleValidityPeriodPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TLEEarthOrbitPropagator_tleValidityPeriod_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TLEEarthOrbitPropagator_tleValidityPeriod_feature", "_UI_TLEEarthOrbitPropagator_type"),
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -177,6 +200,7 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TLEEarthOrbitPropagator.class)) {
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD:
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE:
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

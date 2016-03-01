@@ -40,6 +40,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEEarthOrbitPropagatorImpl#getTle <em>Tle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEEarthOrbitPropagatorImpl#getTleValidityPeriod <em>Tle Validity Period</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEEarthOrbitPropagatorImpl#getValidFromDate <em>Valid From Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.TLEEarthOrbitPropagatorImpl#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
@@ -49,7 +50,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
 public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implements TLEEarthOrbitPropagator 
 {
 	
-	public static final long TLE_VALIDITY_PERIOD_MS = 24*60*60*1000; 
+
 	
 	/**
 	 * The cached value of the '{@link #getTle() <em>Tle</em>}' containment reference.
@@ -60,6 +61,26 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 	 * @ordered
 	 */
 	protected TLE tle;
+
+	/**
+	 * The default value of the '{@link #getTleValidityPeriod() <em>Tle Validity Period</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTleValidityPeriod()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final long TLE_VALIDITY_PERIOD_EDEFAULT = 86400000L;
+
+	/**
+	 * The cached value of the '{@link #getTleValidityPeriod() <em>Tle Validity Period</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTleValidityPeriod()
+	 * @generated
+	 * @ordered
+	 */
+	protected long tleValidityPeriod = TLE_VALIDITY_PERIOD_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getValidFromDate() <em>Valid From Date</em>}' attribute.
@@ -147,6 +168,27 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public long getTleValidityPeriod() {
+		return tleValidityPeriod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTleValidityPeriod(long newTleValidityPeriod) {
+		long oldTleValidityPeriod = tleValidityPeriod;
+		tleValidityPeriod = newTleValidityPeriod;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD, oldTleValidityPeriod, tleValidityPeriod));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
 	public Date getValidFromDate() 
@@ -174,7 +216,7 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 	{
 		if(getValidFromDate() != null)
 		{
-			return new Date(getValidFromDate().getTime() + TLE_VALIDITY_PERIOD_MS);
+			return new Date(getValidFromDate().getTime() + getTleValidityPeriod());
 		}
 		
 		return null;
@@ -251,6 +293,8 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				return getTle();
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD:
+				return getTleValidityPeriod();
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE:
 				return getValidFromDate();
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE:
@@ -270,6 +314,9 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				setTle((TLE)newValue);
 				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD:
+				setTleValidityPeriod((Long)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -285,6 +332,9 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				setTle((TLE)null);
 				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD:
+				setTleValidityPeriod(TLE_VALIDITY_PERIOD_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -299,6 +349,8 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				return tle != null;
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD:
+				return tleValidityPeriod != TLE_VALIDITY_PERIOD_EDEFAULT;
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE:
 				return VALID_FROM_DATE_EDEFAULT == null ? getValidFromDate() != null : !VALID_FROM_DATE_EDEFAULT.equals(getValidFromDate());
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE:
@@ -319,5 +371,21 @@ public class TLEEarthOrbitPropagatorImpl extends EarthOrbitPropagatorImpl implem
 				return getOreKitTLEPropagator();
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (tleValidityPeriod: ");
+		result.append(tleValidityPeriod);
+		result.append(')');
+		return result.toString();
 	}
 } //TLEEarthOrbitPropagatorImpl

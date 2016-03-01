@@ -1335,13 +1335,22 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int TLE_EARTH_ORBIT_PROPAGATOR__TLE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Tle Validity Period</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Valid From Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 1;
+	int TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Valid To Date</b></em>' attribute.
@@ -1350,7 +1359,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 2;
+	int TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>TLE Earth Orbit Propagator</em>' class.
@@ -1359,7 +1368,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TLE_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 3;
+	int TLE_EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT = EARTH_ORBIT_PROPAGATOR_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get From Valid Date</em>' operation.
@@ -1514,6 +1523,15 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @ordered
 	 */
 	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE = TLE_EARTH_ORBIT_PROPAGATOR__TLE;
+
+	/**
+	 * The feature id for the '<em><b>Tle Validity Period</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD = TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD;
 
 	/**
 	 * The feature id for the '<em><b>Valid From Date</b></em>' attribute.
@@ -3931,6 +3949,17 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EReference getTLEEarthOrbitPropagator_Tle();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getTleValidityPeriod <em>Tle Validity Period</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tle Validity Period</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getTleValidityPeriod()
+	 * @see #getTLEEarthOrbitPropagator()
+	 * @generated
+	 */
+	EAttribute getTLEEarthOrbitPropagator_TleValidityPeriod();
+
+	/**
 	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getValidFromDate <em>Valid From Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5698,6 +5727,14 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TLE_EARTH_ORBIT_PROPAGATOR__TLE = eINSTANCE.getTLEEarthOrbitPropagator_Tle();
+
+		/**
+		 * The meta object literal for the '<em><b>Tle Validity Period</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD = eINSTANCE.getTLEEarthOrbitPropagator_TleValidityPeriod();
 
 		/**
 		 * The meta object literal for the '<em><b>Valid From Date</b></em>' attribute feature.

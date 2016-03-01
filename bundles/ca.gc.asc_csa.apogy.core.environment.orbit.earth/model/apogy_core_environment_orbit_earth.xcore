@@ -312,6 +312,11 @@ class TLEEarthOrbitPropagator extends EarthOrbitPropagator
 	contains TLE[1] tle
 		
 	/*
+	 * TLE Validity Period in ms.
+	 */
+	long tleValidityPeriod = "86400000"
+		
+	/*
 	 * Defines the earliest data for which the propagator is valid.
 	 */
 	derived readonly transient volatile EDate[1] validFromDate

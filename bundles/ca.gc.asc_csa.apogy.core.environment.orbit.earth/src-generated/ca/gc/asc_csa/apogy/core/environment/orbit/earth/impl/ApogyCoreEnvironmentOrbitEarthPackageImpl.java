@@ -933,7 +933,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTLEEarthOrbitPropagator_ValidFromDate() {
+	public EAttribute getTLEEarthOrbitPropagator_TleValidityPeriod() {
 		return (EAttribute)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -942,8 +942,17 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTLEEarthOrbitPropagator_ValidToDate() {
+	public EAttribute getTLEEarthOrbitPropagator_ValidFromDate() {
 		return (EAttribute)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTLEEarthOrbitPropagator_ValidToDate() {
+		return (EAttribute)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2166,6 +2175,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 
 		tleEarthOrbitPropagatorEClass = createEClass(TLE_EARTH_ORBIT_PROPAGATOR);
 		createEReference(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__TLE);
+		createEAttribute(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__TLE_VALIDITY_PERIOD);
 		createEAttribute(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE);
 		createEAttribute(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE);
 		createEOperation(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_TLE_PROPAGATOR);
@@ -2479,6 +2489,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 
 		initEClass(tleEarthOrbitPropagatorEClass, TLEEarthOrbitPropagator.class, "TLEEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTLEEarthOrbitPropagator_Tle(), this.getTLE(), null, "tle", null, 1, 1, TLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTLEEarthOrbitPropagator_TleValidityPeriod(), theEcorePackage.getELong(), "tleValidityPeriod", "86400000", 0, 1, TLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTLEEarthOrbitPropagator_ValidFromDate(), theEcorePackage.getEDate(), "validFromDate", null, 1, 1, TLEEarthOrbitPropagator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTLEEarthOrbitPropagator_ValidToDate(), theEcorePackage.getEDate(), "validToDate", null, 1, 1, TLEEarthOrbitPropagator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
@@ -2990,6 +3001,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "The Two-Line Elements used by this propagator."
+		   });	
+		addAnnotation
+		  (getTLEEarthOrbitPropagator_TleValidityPeriod(), 
+		   source, 
+		   new String[] {
+			 "documentation", "TLE Validity Period in ms."
 		   });	
 		addAnnotation
 		  (getTLEEarthOrbitPropagator_ValidFromDate(), 

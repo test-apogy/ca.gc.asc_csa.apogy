@@ -26,6 +26,7 @@ import org.orekit.propagation.analytical.tle.TLEPropagator;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getTle <em>Tle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getTleValidityPeriod <em>Tle Validity Period</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getValidFromDate <em>Valid From Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
@@ -59,6 +60,32 @@ public interface TLEEarthOrbitPropagator extends EarthOrbitPropagator {
 	 * @generated
 	 */
 	void setTle(TLE value);
+
+	/**
+	 * Returns the value of the '<em><b>Tle Validity Period</b></em>' attribute.
+	 * The default value is <code>"86400000"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * TLE Validity Period in ms.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Tle Validity Period</em>' attribute.
+	 * @see #setTleValidityPeriod(long)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLEEarthOrbitPropagator_TleValidityPeriod()
+	 * @model default="86400000" unique="false"
+	 * @generated
+	 */
+	long getTleValidityPeriod();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator#getTleValidityPeriod <em>Tle Validity Period</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tle Validity Period</em>' attribute.
+	 * @see #getTleValidityPeriod()
+	 * @generated
+	 */
+	void setTleValidityPeriod(long value);
 
 	/**
 	 * Returns the value of the '<em><b>Valid From Date</b></em>' attribute.
