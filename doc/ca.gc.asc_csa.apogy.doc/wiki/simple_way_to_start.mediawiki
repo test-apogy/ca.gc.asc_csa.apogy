@@ -17,8 +17,10 @@ Lets use the ''Rover'' example system to do that. Here is the step by step proce
 		<ul>
 			<li> Ensure that the "'''Import Registered Apogy Project'''" check box is '''checked''';</li>
 		</ul>
+		[[File:../resources/tutorials/rover_example_import_registered_project.png|640x512px]]		
 		<li> Click "''Next >''";</li>
 		<li> In the list of registered Apogy Project, select '''Rover Example''';</li>		
+		[[File:../resources/tutorials/rover_example_import_rover_example.png|640x512px]]	
 		<li> Click "''Finish''";</li>
 	</ol>
 	<li> The project is now created. The session editor should now be opened and the content of the  session.sym displayed and should look like this:</li>
@@ -50,22 +52,24 @@ You are now ready to initialize the rover and start issuing it commands. Here ar
 	[[File:../resources/tutorials/rover_example_rover_instanciated.png|640x512px]]	
 	<li> The rover is now ready to accept commands. Lets start by invoking its  '''init()''' command :</li>
 	<ol type="i">
-		<li> In the session editor, navigate down the tree to the ''Operation Calls'' (see screenshot below). This is a container of Operation Calls;</li>
+		<li> In the session editor, navigate down the tree to ''Programs'' then to ''Operation Calls Setup'' (see screenshot below). This is a container of Operation Calls (lists of Operation Call);</li>
 		[[File:../resources/tutorials/rover_example_navigating_to_operation_calls.png|640x512px]]			
-		<li> Select the "''Init()''" operation call and right-click, this will bring up a menu like this: ;</li>
+		<li> Select the "''Operation Calls Setup''" operation call list and right-click, this will bring up a menu like this: ;</li>
 		[[File:../resources/tutorials/rover_example_invoke_init.png|640x512px]]		
-		<li>Select "''Apogy > Invoke''". This will invoke the command on the rover. </li>
-		<li> Select "''Change Angular Velocity''" and invoke it using the same procedure. The rover should now start to turn on itself at a rate of 10.0 &deg;/s.</li>		
-		<li> Select "''Change Linear Velocity''" and invoke it using the same procedure. The rover should now start move forward at 0.5 m/s and turn at the same time, thus doing an arc turn.</li>		
+		<li>Select "''Apogy > Invoke''". This will invoke all the commands listed inside the "''Operation Calls Setup''" on the rover, on after the other. </li>
+		<li> Navigate to the ''Operation Calls Navigate'', expand the list and select the "''Change Angular Velocity Only''" and invoke it using the same procedure (see below). 
+		[[File:../resources/tutorials/rover_example_invoke_change_angular_velocity_only.png|640x512px]]	
+		The rover should now start to turn on itself at a rate of 10.0 &deg;/s.</li>		
+		<li> Select "''Change Linear Velocity Only''" and invoke it using the same procedure. The rover should now start move forward at 0.5 m/s and turn at the same time, thus doing an arc turn.</li>		
 		
 	</ol>
 </ol>
 
-Lets modify the angular velocity of the rover to make the arc turn wider. In order to do so, we will change the "''angularVelocity"'' parameter of the "''Change Angular Velocity''" command. Here is how to do it:
+Lets modify the angular velocity of the rover to make the arc turn wider. In order to do so, we will change the "''angularVelocity"'' parameter of the "''Change Angular Velocity Only''" command. Here is how to do it:
 <ol>
-			<li> Select "''Change Linear Velocity''" and expand it down to the "''angularVelocity''" parameter (see screenshot below). </li>
+			<li> Select "''Change Angular Velocity Only''" and expand it down to the "''angularVelocity''" parameter (see screenshot below). </li>
 			[[File:../resources/tutorials/rover_example_changing_angular_vel.png|640x512px]]
-			<li> Select the "''angularVelocity''" parameter, the Properties view should now show it and its current value (10.0 &deg;/s)</li>
+			<li> Select the "''angularVelocity''" parameter, then in the Properties view, select the "''Advanced''" tab. The Properties view should now show it and its current value (10.0 &deg;/s)</li>
 			<li> In the Properties view, set the "''angularVelocity''" parameter value to 2.0 &deg;/s</li>
 			<li> Invoke "''Change Linear Velocity''". This will command the current angular velocity without changing the linear one, making the rover move along a wider arc.</li>
 </ol>
