@@ -608,13 +608,13 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR = 6;
 
 	/**
-	 * The operation id for the '<em>Create Observation Satellite Commands</em>' operation.
+	 * The operation id for the '<em>Create Visibility Pass Based Satellite Command</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE = 7;
+	int ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__ABSTRACTCONSTELLATIONREQUEST_VISIBILITYPASS = 7;
 
 	/**
 	 * The number of operations of the '<em>Abstract Constellation Planner</em>' class.
@@ -762,13 +762,13 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int DEFAULT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR = ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR;
 
 	/**
-	 * The operation id for the '<em>Create Observation Satellite Commands</em>' operation.
+	 * The operation id for the '<em>Create Visibility Pass Based Satellite Command</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE = ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE;
+	int DEFAULT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__ABSTRACTCONSTELLATIONREQUEST_VISIBILITYPASS = ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__ABSTRACTCONSTELLATIONREQUEST_VISIBILITYPASS;
 
 	/**
 	 * The number of operations of the '<em>Default Constellation Planner</em>' class.
@@ -1302,6 +1302,79 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND_OPERATION_COUNT = ABSTRACT_SATELLITE_COMMAND_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.VisibilityPassBasedSatelliteCommandImpl <em>Visibility Pass Based Satellite Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.VisibilityPassBasedSatelliteCommandImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getVisibilityPassBasedSatelliteCommand()
+	 * @generated
+	 */
+	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND = 17;
+
+	/**
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND__TIME = ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__TIME;
+
+	/**
+	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND__UID = ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__UID;
+
+	/**
+	 * The feature id for the '<em><b>Satellite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND__SATELLITE = ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__SATELLITE;
+
+	/**
+	 * The feature id for the '<em><b>Constellation Request</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND__CONSTELLATION_REQUEST = ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__CONSTELLATION_REQUEST;
+
+	/**
+	 * The feature id for the '<em><b>Visibility Pass</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITY_PASS = ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Visibility Pass Based Satellite Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND_FEATURE_COUNT = ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Visibility Pass Based Satellite Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND_OPERATION_COUNT = ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AcquireImageSatelliteCommandImpl <em>Acquire Image Satellite Command</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1309,7 +1382,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAcquireImageSatelliteCommand()
 	 * @generated
 	 */
-	int ACQUIRE_IMAGE_SATELLITE_COMMAND = 17;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND = 18;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1409,7 +1482,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getOrbitalImage()
 	 * @generated
 	 */
-	int ORBITAL_IMAGE = 18;
+	int ORBITAL_IMAGE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -1509,7 +1582,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationDownlinksList()
 	 * @generated
 	 */
-	int CONSTELLATION_DOWNLINKS_LIST = 19;
+	int CONSTELLATION_DOWNLINKS_LIST = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1564,7 +1637,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationDownlink()
 	 * @generated
 	 */
-	int CONSTELLATION_DOWNLINK = 20;
+	int CONSTELLATION_DOWNLINK = 21;
 
 	/**
 	 * The feature id for the '<em><b>Downlink Items</b></em>' containment reference list.
@@ -1601,7 +1674,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellationDownlinkItem()
 	 * @generated
 	 */
-	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM = 21;
+	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM = 22;
 
 	/**
 	 * The feature id for the '<em><b>Request UID</b></em>' containment reference.
@@ -1638,7 +1711,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getOrbitalImageConstellationDownlinkItem()
 	 * @generated
 	 */
-	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM = 22;
+	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM = 23;
 
 	/**
 	 * The feature id for the '<em><b>Request UID</b></em>' containment reference.
@@ -1684,7 +1757,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationUtilities()
 	 * @generated
 	 */
-	int CONSTELLATION_UTILITIES = 23;
+	int CONSTELLATION_UTILITIES = 24;
 
 	/**
 	 * The number of structural features of the '<em>Constellation Utilities</em>' class.
@@ -1748,7 +1821,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestPriority()
 	 * @generated
 	 */
-	int CONSTELLATION_REQUEST_PRIORITY = 24;
+	int CONSTELLATION_REQUEST_PRIORITY = 25;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}' enum.
@@ -1758,7 +1831,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestStatus()
 	 * @generated
 	 */
-	int CONSTELLATION_REQUEST_STATUS = 25;
+	int CONSTELLATION_REQUEST_STATUS = 26;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -1768,7 +1841,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 26;
+	int LIST = 27;
 
 	/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -1778,7 +1851,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSortedSet()
 	 * @generated
 	 */
-	int SORTED_SET = 27;
+	int SORTED_SET = 28;
 
 
 	/**
@@ -1789,7 +1862,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getComparator()
 	 * @generated
 	 */
-	int COMPARATOR = 28;
+	int COMPARATOR = 29;
 
 
 	/**
@@ -2148,14 +2221,14 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EOperation getAbstractConstellationPlanner__GetConstellationRequestComparator();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#createObservationSatelliteCommands(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest, java.util.Date, ca.gc.asc_csa.apogy.examples.satellite.Satellite, double) <em>Create Observation Satellite Commands</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#createVisibilityPassBasedSatelliteCommand(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest, ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass) <em>Create Visibility Pass Based Satellite Command</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Observation Satellite Commands</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#createObservationSatelliteCommands(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest, java.util.Date, ca.gc.asc_csa.apogy.examples.satellite.Satellite, double)
+	 * @return the meta object for the '<em>Create Visibility Pass Based Satellite Command</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#createVisibilityPassBasedSatelliteCommand(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest, ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass)
 	 * @generated
 	 */
-	EOperation getAbstractConstellationPlanner__CreateObservationSatelliteCommands__AbstractConstellationRequest_Date_Satellite_double();
+	EOperation getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__AbstractConstellationRequest_VisibilityPass();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner <em>Default Constellation Planner</em>}'.
@@ -2388,6 +2461,27 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAbstractRequestBasedSatelliteCommand_ConstellationRequest();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand <em>Visibility Pass Based Satellite Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Visibility Pass Based Satellite Command</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand
+	 * @generated
+	 */
+	EClass getVisibilityPassBasedSatelliteCommand();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand#getVisibilityPass <em>Visibility Pass</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Visibility Pass</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand#getVisibilityPass()
+	 * @see #getVisibilityPassBasedSatelliteCommand()
+	 * @generated
+	 */
+	EReference getVisibilityPassBasedSatelliteCommand_VisibilityPass();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand <em>Acquire Image Satellite Command</em>}'.
@@ -2928,12 +3022,12 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		EOperation ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR = eINSTANCE.getAbstractConstellationPlanner__GetConstellationRequestComparator();
 
 		/**
-		 * The meta object literal for the '<em><b>Create Observation Satellite Commands</b></em>' operation.
+		 * The meta object literal for the '<em><b>Create Visibility Pass Based Satellite Command</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE = eINSTANCE.getAbstractConstellationPlanner__CreateObservationSatelliteCommands__AbstractConstellationRequest_Date_Satellite_double();
+		EOperation ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__ABSTRACTCONSTELLATIONREQUEST_VISIBILITYPASS = eINSTANCE.getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__AbstractConstellationRequest_VisibilityPass();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationPlannerImpl <em>Default Constellation Planner</em>}' class.
@@ -3130,6 +3224,24 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__CONSTELLATION_REQUEST = eINSTANCE.getAbstractRequestBasedSatelliteCommand_ConstellationRequest();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.VisibilityPassBasedSatelliteCommandImpl <em>Visibility Pass Based Satellite Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.VisibilityPassBasedSatelliteCommandImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getVisibilityPassBasedSatelliteCommand()
+		 * @generated
+		 */
+		EClass VISIBILITY_PASS_BASED_SATELLITE_COMMAND = eINSTANCE.getVisibilityPassBasedSatelliteCommand();
+
+		/**
+		 * The meta object literal for the '<em><b>Visibility Pass</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITY_PASS = eINSTANCE.getVisibilityPassBasedSatelliteCommand_VisibilityPass();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AcquireImageSatelliteCommandImpl <em>Acquire Image Satellite Command</em>}' class.

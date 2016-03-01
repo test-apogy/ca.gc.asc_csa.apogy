@@ -50,7 +50,6 @@ type Comparator<T> wraps java.util.Comparator
  
  // FIXME Add public SortedSet<VisibilityPass> getGroundStationPasses(Satellite satellite, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception
  // FIXME Add Parallel Execution to process passes.
- // FIXME Include Derived Visibility Passes in the Constellation.
   
 /*
  * Abstract Unique Identifier.  This class is meant to be sub-classed.
@@ -167,7 +166,8 @@ abstract class AbstractConstellationPlanner{
 
 	/*
 	 * Refers the {@link ConstellationState} that contains the planner.
-	 */	
+	 */	 
+    @GenModel(property="None")
 	container ConstellationState constellationState opposite constellationPlanner
 	
 	/*
@@ -239,13 +239,11 @@ abstract class AbstractConstellationPlanner{
 	op Comparator<AbstractConstellationRequest> getConstellationRequestComparator()
 	
 	/*
-	 * Creates a list of commands to address the specified {@link AbstractConstellationRequest}.
-	 * @param request
-	 * @param time Time at which the main command must be performed.
-	 * @param satellite Refers to the satellite that will perform the command.
-	 * @param rollAngle Roll angle associated to the observation request.
+	 * Creates a command to address the specified {@link AbstractConstellationRequest}.
+	 * @param request Refers to the request.
+	 * @param visibilityPass Visibility pass context.
 	 */
-	op List<AbstractSatelliteCommand> createObservationSatelliteCommands(AbstractConstellationRequest request, Date time, Satellite satellite, double rollAngle)
+	op VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(AbstractConstellationRequest request, VisibilityPass visibilityPass)
 }
 
 /*
@@ -381,6 +379,13 @@ abstract class AbstractRequestBasedSatelliteCommand extends AbstractSatelliteCom
 	 * Refers to the {@link AbstractConstellationRequest} managed by this command.
 	 */
 	refers AbstractConstellationRequest constellationRequest	
+}
+
+class VisibilityPassBasedSatelliteCommand extends AbstractRequestBasedSatelliteCommand{
+	/*
+	 * Refers the {@link VisibilityPass} associated to the command.
+	 */	
+	contains VisibilityPass [0..1] visibilityPass
 }
 
 /*

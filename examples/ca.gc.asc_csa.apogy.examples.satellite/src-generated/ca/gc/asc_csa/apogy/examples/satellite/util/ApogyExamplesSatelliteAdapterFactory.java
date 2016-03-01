@@ -151,6 +151,10 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractRequestBasedSatelliteCommandAdapter();
 			}
 			@Override
+			public Adapter caseVisibilityPassBasedSatelliteCommand(VisibilityPassBasedSatelliteCommand object) {
+				return createVisibilityPassBasedSatelliteCommandAdapter();
+			}
+			@Override
 			public Adapter caseAcquireImageSatelliteCommand(AcquireImageSatelliteCommand object) {
 				return createAcquireImageSatelliteCommandAdapter();
 			}
@@ -457,6 +461,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstractRequestBasedSatelliteCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand <em>Visibility Pass Based Satellite Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand
+	 * @generated
+	 */
+	public Adapter createVisibilityPassBasedSatelliteCommandAdapter() {
 		return null;
 	}
 

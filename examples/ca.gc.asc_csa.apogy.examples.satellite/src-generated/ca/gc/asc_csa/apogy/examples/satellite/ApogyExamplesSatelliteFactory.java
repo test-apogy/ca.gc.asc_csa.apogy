@@ -123,6 +123,15 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	Satellite createSatellite();
 
 	/**
+	 * Returns a new object of class '<em>Visibility Pass Based Satellite Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Visibility Pass Based Satellite Command</em>'.
+	 * @generated
+	 */
+	VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand();
+
+	/**
 	 * Returns a new object of class '<em>Acquire Image Satellite Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

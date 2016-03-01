@@ -208,6 +208,11 @@ public class AbstractConstellationCommandPlanItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS,
 				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 	}
 

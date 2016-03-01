@@ -34,11 +34,11 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -411,7 +411,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	abstract public List<AbstractSatelliteCommand> createObservationSatelliteCommands(AbstractConstellationRequest request, Date time, Satellite satellite, double rollAngle);
+	abstract public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(AbstractConstellationRequest request, VisibilityPass visibilityPass);
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -610,8 +611,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				return sortRequests((List<AbstractConstellationRequest>)arguments.get(0));
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR:
 				return getConstellationRequestComparator();
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE:
-				return createObservationSatelliteCommands((AbstractConstellationRequest)arguments.get(0), (Date)arguments.get(1), (Satellite)arguments.get(2), (Double)arguments.get(3));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__ABSTRACTCONSTELLATIONREQUEST_VISIBILITYPASS:
+				return createVisibilityPassBasedSatelliteCommand((AbstractConstellationRequest)arguments.get(0), (VisibilityPass)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

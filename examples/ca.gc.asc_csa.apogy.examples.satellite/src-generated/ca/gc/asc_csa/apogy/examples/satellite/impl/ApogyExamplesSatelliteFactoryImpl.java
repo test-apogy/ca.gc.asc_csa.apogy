@@ -79,6 +79,7 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
 			case ApogyExamplesSatellitePackage.SATELLITES_LIST: return createSatellitesList();
 			case ApogyExamplesSatellitePackage.SATELLITE: return createSatellite();
+			case ApogyExamplesSatellitePackage.VISIBILITY_PASS_BASED_SATELLITE_COMMAND: return createVisibilityPassBasedSatelliteCommand();
 			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: return createAcquireImageSatelliteCommand();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE: return createOrbitalImage();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: return createConstellationDownlinksList();
@@ -234,6 +235,16 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	public Satellite createSatellite() {
 		SatelliteImpl satellite = new SatelliteImpl();
 		return satellite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand() {
+		VisibilityPassBasedSatelliteCommandImpl visibilityPassBasedSatelliteCommand = new VisibilityPassBasedSatelliteCommandImpl();
+		return visibilityPassBasedSatelliteCommand;
 	}
 
 	/**

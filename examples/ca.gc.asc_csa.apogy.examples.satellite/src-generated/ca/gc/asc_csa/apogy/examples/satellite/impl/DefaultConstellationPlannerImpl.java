@@ -33,14 +33,13 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
-import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.Activator;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
 import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -143,12 +142,9 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 						selectedVisibilityPass = pass;
 																				
 						// Creates a command to roll the spacecraft a little bit before the imaging.
-						List<AbstractSatelliteCommand> commands = 
-								createObservationSatelliteCommands(request, 
-										                           smallestCrossTrackAnglePosition.getTime(), 
-										                           satellite, 
-										                           smallestCrossTrackAnglePosition.getSpacecraftCrossTrackAngle());						
-						getConstellationCommandPlan().getConstellationCommands().addAll(commands);
+						VisibilityPassBasedSatelliteCommand command = 
+								createVisibilityPassBasedSatelliteCommand(request, pass);						
+						getConstellationCommandPlan().getConstellationCommands().add(command);
 					}					
 				}
 			}			
@@ -176,23 +172,22 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 		}		
 		return constellationRequestComparator;
 	}
-	
+		
 	@Override
-	public List<AbstractSatelliteCommand> createObservationSatelliteCommands(AbstractConstellationRequest request,
-			Date time, Satellite satellite, double rollAngle) {
-		
-		List<AbstractSatelliteCommand> commands = new ArrayList<AbstractSatelliteCommand>();
-		
+	public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(
+			AbstractConstellationRequest request, VisibilityPass visibilityPass) {
+
+		VisibilityPassBasedSatelliteCommand command = null;		
 		if (request instanceof ImageConstellationRequest){			
-			AcquireImageSatelliteCommand command = ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand();
+			command = ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand();
 			command.setConstellationRequest(request);
 			command.setUid(EcoreUtil.copy(request.getUid()));
-			command.setTime(time);
-			command.setSatellite(satellite);
-			command.setRollAngle(rollAngle);
-			commands.add(command);
+			VisibilityPassSpacecraftPosition smallestCrossTrackAnglePosition = visibilityPass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
+			command.setTime(smallestCrossTrackAnglePosition.getTime());
+			command.setSatellite(getSatellite(visibilityPass.getOrbitModel()));
+			command.setVisibilityPass(EcoreUtil.copy(visibilityPass));
 		}	
-		return commands;
+		return command;
 	}
 	
 	@Override

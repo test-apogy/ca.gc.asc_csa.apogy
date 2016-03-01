@@ -61,6 +61,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkI
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
 import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
+import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 import java.util.Comparator;
 
 /**
@@ -188,6 +189,13 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	private EClass abstractRequestBasedSatelliteCommandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass visibilityPassBasedSatelliteCommandEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -648,7 +656,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__CreateObservationSatelliteCommands__AbstractConstellationRequest_Date_Satellite_double() {
+	public EOperation getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__AbstractConstellationRequest_VisibilityPass() {
 		return abstractConstellationPlannerEClass.getEOperations().get(7);
 	}
 
@@ -848,6 +856,24 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 */
 	public EReference getAbstractRequestBasedSatelliteCommand_ConstellationRequest() {
 		return (EReference)abstractRequestBasedSatelliteCommandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVisibilityPassBasedSatelliteCommand() {
+		return visibilityPassBasedSatelliteCommandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVisibilityPassBasedSatelliteCommand_VisibilityPass() {
+		return (EReference)visibilityPassBasedSatelliteCommandEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1116,7 +1142,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___VALIDATE);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___SORT_REQUESTS__LIST);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR);
-		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___CREATE_OBSERVATION_SATELLITE_COMMANDS__ABSTRACTCONSTELLATIONREQUEST_DATE_SATELLITE_DOUBLE);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__ABSTRACTCONSTELLATIONREQUEST_VISIBILITYPASS);
 
 		defaultConstellationPlannerEClass = createEClass(DEFAULT_CONSTELLATION_PLANNER);
 
@@ -1149,6 +1175,9 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 
 		abstractRequestBasedSatelliteCommandEClass = createEClass(ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND);
 		createEReference(abstractRequestBasedSatelliteCommandEClass, ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__CONSTELLATION_REQUEST);
+
+		visibilityPassBasedSatelliteCommandEClass = createEClass(VISIBILITY_PASS_BASED_SATELLITE_COMMAND);
+		createEReference(visibilityPassBasedSatelliteCommandEClass, VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITY_PASS);
 
 		acquireImageSatelliteCommandEClass = createEClass(ACQUIRE_IMAGE_SATELLITE_COMMAND);
 		createEAttribute(acquireImageSatelliteCommandEClass, ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE);
@@ -1239,6 +1268,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		satelliteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		abstractSatelliteCommandEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 		abstractRequestBasedSatelliteCommandEClass.getESuperTypes().add(this.getAbstractSatelliteCommand());
+		visibilityPassBasedSatelliteCommandEClass.getESuperTypes().add(this.getAbstractRequestBasedSatelliteCommand());
 		acquireImageSatelliteCommandEClass.getESuperTypes().add(this.getAbstractRequestBasedSatelliteCommand());
 		acquireImageSatelliteCommandEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
 		orbitalImageEClass.getESuperTypes().add(theApogyCommonImagesPackage.getEImage());
@@ -1336,15 +1366,9 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getAbstractConstellationPlanner__CreateObservationSatelliteCommands__AbstractConstellationRequest_Date_Satellite_double(), null, "createObservationSatelliteCommands", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__AbstractConstellationRequest_VisibilityPass(), this.getVisibilityPassBasedSatelliteCommand(), "createVisibilityPassBasedSatelliteCommand", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAbstractConstellationRequest(), "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDate(), "time", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getSatellite(), "satellite", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "rollAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(this.getAbstractSatelliteCommand());
-		g1.getETypeArguments().add(g2);
-		initEOperation(op, g1);
+		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), "visibilityPass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(defaultConstellationPlannerEClass, DefaultConstellationPlanner.class, "DefaultConstellationPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1377,6 +1401,9 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 
 		initEClass(abstractRequestBasedSatelliteCommandEClass, AbstractRequestBasedSatelliteCommand.class, "AbstractRequestBasedSatelliteCommand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractRequestBasedSatelliteCommand_ConstellationRequest(), this.getAbstractConstellationRequest(), null, "constellationRequest", null, 0, 1, AbstractRequestBasedSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(visibilityPassBasedSatelliteCommandEClass, VisibilityPassBasedSatelliteCommand.class, "VisibilityPassBasedSatelliteCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVisibilityPassBasedSatelliteCommand_VisibilityPass(), theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), null, "visibilityPass", null, 0, 1, VisibilityPassBasedSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(acquireImageSatelliteCommandEClass, AcquireImageSatelliteCommand.class, "AcquireImageSatelliteCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAcquireImageSatelliteCommand_RollAngle(), theEcorePackage.getEDouble(), "rollAngle", "0.0", 0, 1, AcquireImageSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1626,16 +1653,17 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "Returns the comparator of {@link AbstractConstellationRequest} used to sort them."
 		   });	
 		addAnnotation
-		  (getAbstractConstellationPlanner__CreateObservationSatelliteCommands__AbstractConstellationRequest_Date_Satellite_double(), 
+		  (getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__AbstractConstellationRequest_VisibilityPass(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Creates a list of commands to address the specified {@link AbstractConstellationRequest}.\n@param request\n@param time Time at which the main command must be performed.\n@param satellite Refers to the satellite that will perform the command.\n@param rollAngle Roll angle associated to the observation request."
+			 "documentation", "Creates a command to address the specified {@link AbstractConstellationRequest}.\n@param request Refers to the request.\n@param visibilityPass Visibility pass context."
 		   });	
 		addAnnotation
 		  (getAbstractConstellationPlanner_ConstellationState(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Refers the {@link ConstellationState} that contains the planner."
+			 "documentation", "Refers the {@link ConstellationState} that contains the planner.",
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (getAbstractConstellationPlanner_StartDate(), 
@@ -1805,6 +1833,12 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		   source, 
 		   new String[] {
 			 "documentation", "Refers to the {@link AbstractConstellationRequest} managed by this command."
+		   });	
+		addAnnotation
+		  (getVisibilityPassBasedSatelliteCommand_VisibilityPass(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers the {@link VisibilityPass} associated to the command."
 		   });	
 		addAnnotation
 		  (acquireImageSatelliteCommandEClass, 

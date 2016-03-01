@@ -351,6 +351,29 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VisibilityPassBasedSatelliteCommandItemProvider visibilityPassBasedSatelliteCommandItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVisibilityPassBasedSatelliteCommandAdapter() {
+		if (visibilityPassBasedSatelliteCommandItemProvider == null) {
+			visibilityPassBasedSatelliteCommandItemProvider = new VisibilityPassBasedSatelliteCommandItemProvider(this);
+		}
+
+		return visibilityPassBasedSatelliteCommandItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -624,6 +647,7 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 		if (imageConstellationRequestItemProvider != null) imageConstellationRequestItemProvider.dispose();
 		if (satellitesListItemProvider != null) satellitesListItemProvider.dispose();
 		if (satelliteItemProvider != null) satelliteItemProvider.dispose();
+		if (visibilityPassBasedSatelliteCommandItemProvider != null) visibilityPassBasedSatelliteCommandItemProvider.dispose();
 		if (acquireImageSatelliteCommandItemProvider != null) acquireImageSatelliteCommandItemProvider.dispose();
 		if (orbitalImageItemProvider != null) orbitalImageItemProvider.dispose();
 		if (constellationDownlinksListItemProvider != null) constellationDownlinksListItemProvider.dispose();
@@ -1087,6 +1111,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
@@ -1173,6 +1202,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellite()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter

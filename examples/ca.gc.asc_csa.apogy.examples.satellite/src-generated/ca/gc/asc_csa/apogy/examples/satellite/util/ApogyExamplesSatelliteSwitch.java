@@ -204,6 +204,15 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyExamplesSatellitePackage.VISIBILITY_PASS_BASED_SATELLITE_COMMAND: {
+				VisibilityPassBasedSatelliteCommand visibilityPassBasedSatelliteCommand = (VisibilityPassBasedSatelliteCommand)theEObject;
+				T result = caseVisibilityPassBasedSatelliteCommand(visibilityPassBasedSatelliteCommand);
+				if (result == null) result = caseAbstractRequestBasedSatelliteCommand(visibilityPassBasedSatelliteCommand);
+				if (result == null) result = caseAbstractSatelliteCommand(visibilityPassBasedSatelliteCommand);
+				if (result == null) result = caseTimed(visibilityPassBasedSatelliteCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: {
 				AcquireImageSatelliteCommand acquireImageSatelliteCommand = (AcquireImageSatelliteCommand)theEObject;
 				T result = caseAcquireImageSatelliteCommand(acquireImageSatelliteCommand);
@@ -512,6 +521,21 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractRequestBasedSatelliteCommand(AbstractRequestBasedSatelliteCommand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Visibility Pass Based Satellite Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Visibility Pass Based Satellite Command</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVisibilityPassBasedSatelliteCommand(VisibilityPassBasedSatelliteCommand object) {
 		return null;
 	}
 

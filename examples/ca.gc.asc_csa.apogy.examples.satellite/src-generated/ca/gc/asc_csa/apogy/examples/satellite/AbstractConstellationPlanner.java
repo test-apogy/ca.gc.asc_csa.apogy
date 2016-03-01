@@ -63,6 +63,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationState()
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlanner
 	 * @model opposite="constellationPlanner" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	ConstellationState getConstellationState();
@@ -308,14 +309,12 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Creates a list of commands to address the specified {@link AbstractConstellationRequest}.
-	 * @param request
-	 * @param time Time at which the main command must be performed.
-	 * @param satellite Refers to the satellite that will perform the command.
-	 * @param rollAngle Roll angle associated to the observation request.
+	 * Creates a command to address the specified {@link AbstractConstellationRequest}.
+	 * @param request Refers to the request.
+	 * @param visibilityPass Visibility pass context.
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand>" unique="false" many="false" requestUnique="false" timeUnique="false" satelliteUnique="false" rollAngleUnique="false"
+	 * @model unique="false" requestUnique="false" visibilityPassUnique="false"
 	 * @generated
 	 */
-	List<AbstractSatelliteCommand> createObservationSatelliteCommands(AbstractConstellationRequest request, Date time, Satellite satellite, double rollAngle);
+	VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(AbstractConstellationRequest request, VisibilityPass visibilityPass);
 } // AbstractConstellationPlanner
