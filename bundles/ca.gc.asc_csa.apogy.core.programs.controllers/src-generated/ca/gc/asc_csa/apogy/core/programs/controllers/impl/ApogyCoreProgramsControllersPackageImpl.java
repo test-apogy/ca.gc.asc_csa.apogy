@@ -27,11 +27,11 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
@@ -1127,11 +1127,12 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		  (this, 
 		   source, 
 		   new String[] {
+			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyCoreProgramsControllers",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+			 "copyrightText", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "modelName", "ApogyCoreProgramsControllers",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.programs.controllers/src-generated",
@@ -1187,7 +1188,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		   new String[] {
 			 "documentation", "The refresh period, in millisecond, at which the operation should be called.",
 			 "notify", "true",
-			 "apogy_units", "ms"
+			 "symphony_units", "ms"
 		   });	
 		addAnnotation
 		  (getControllerTrigger_ComponentQualifier(), 
@@ -1207,7 +1208,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		   new String[] {
 			 "documentation", "The repeat period, in millisecond, at which the operation should be called.",
 			 "notify", "true",
-			 "apogy_units", "ms"
+			 "symphony_units", "ms"
 		   });	
 		addAnnotation
 		  (bindedEDataTypeArgumentEClass, 

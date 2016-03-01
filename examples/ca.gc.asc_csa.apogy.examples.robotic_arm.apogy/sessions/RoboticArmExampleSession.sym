@@ -60,10 +60,10 @@
       <operationCalls xmi:id="_MjK0hgrPEeW4-_ONWXXiAw" name="Move To" variable="_MjIYRgrPEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
         <argumentsList xmi:id="_MjK0hwrPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MjK0iArPEeW4-_ONWXXiAw" value="0.7853981633974483"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MjK0iQrPEeW4-_ONWXXiAw" value="0.5235987755982988"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MjK0igrPEeW4-_ONWXXiAw" value="-0.2617993877991494"/>
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MjK0iwrPEeW4-_ONWXXiAw" value="1.0471975511965976"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_MjK0iArPEeW4-_ONWXXiAw" value="0.7853981633974483"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_MjK0iQrPEeW4-_ONWXXiAw" value="0.5235987755982988"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_MjK0igrPEeW4-_ONWXXiAw" value="-0.2617993877991494"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_MjK0iwrPEeW4-_ONWXXiAw" value="1.0471975511965976"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_MjK0jArPEeW4-_ONWXXiAw" name="Stow" variable="_MjIYRgrPEeW4-_ONWXXiAw">

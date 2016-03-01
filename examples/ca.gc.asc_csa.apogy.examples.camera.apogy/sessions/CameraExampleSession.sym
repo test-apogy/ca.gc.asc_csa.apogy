@@ -54,7 +54,7 @@
       <operationCalls xmi:id="_2ism-grOEeW4-_ONWXXiAw" name="Change Zoom" variable="_2irY1grOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList xmi:id="_2ism-wrOEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_2ism_ArOEeW4-_ONWXXiAw" value="1.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_2ism_ArOEeW4-_ONWXXiAw" value="1.0"/>
         </argumentsList>
       </operationCalls>
     </programs>

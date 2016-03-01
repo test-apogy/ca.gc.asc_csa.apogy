@@ -27,7 +27,7 @@ package ca.gc.asc_csa.apogy.core.invocator;
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEDataTypeArgument()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface EDataTypeArgument extends Argument

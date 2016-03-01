@@ -56,7 +56,6 @@ public class ApogyCoreInvocatorTests extends TestSuite {
 		suite.addTestSuite(OperationCallsListTest.class);
 		suite.addTestSuite(OperationCallTest.class);
 		suite.addTestSuite(ArgumentsListTest.class);
-		suite.addTestSuite(EDataTypeArgumentTest.class);
 		suite.addTestSuite(EEnumArgumentTest.class);
 		suite.addTestSuite(EClassArgumentTest.class);
 		suite.addTestSuite(OperationCallResultsListTest.class);

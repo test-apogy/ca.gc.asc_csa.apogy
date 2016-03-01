@@ -1,0 +1,1394 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+	<body>
+		<h1 id="Developing_for_Apogy">Developing for Apogy</h1>
+		<h2 id="Table_Of_Contents">Table Of Contents</h2>
+		<ol style="list-style: none;">
+			<li>
+				<a href="#Developing_for_Apogy">Developing for Apogy</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#Table_Of_Contents">Table Of Contents</a>
+					</li>
+					<li>
+						<a href="#Apogy_Architecture">Apogy Architecture</a>
+						<ol style="list-style: none;">
+							<li>
+								<a href="#Type_Interface_Modeling">Type Interface Modeling</a>
+							</li>
+							<li>
+								<a href="#Variable_Initialization">Variable Initialization</a>
+							</li>
+							<li>
+								<a href="#Operation_Call_Invocation">Operation Call Invocation</a>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#Apogyzing">Apogyzing</a>
+						<ol style="list-style: none;">
+							<li>
+								<a href="#Definition">Definition</a>
+							</li>
+							<li>
+								<a href="#High-Level_Steps">High-Level Steps</a>
+							</li>
+							<li>
+								<a href="#Guidelines">Guidelines</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Suggested_Plugin_Nomenclature">Suggested Plugin Nomenclature</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Step_1._Defining_The_System_In_EMF">Step 1. Defining The System In EMF</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Creating_An_EMF_Model_Of_The_System">Creating An EMF Model Of The System</a>
+									</li>
+									<li>
+										<a href="#Recommended_Class_Hierarchy">Recommended Class Hierarchy</a>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Step_2._Creating_the_Apogy_plugin">Step 2. Creating the Apogy plugin</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Definition_2">Definition</a>
+									</li>
+									<li>
+										<a href="#The_Four_Steps_to_making_a_Apogy_Plugin">The Four Steps to making a Apogy Plugin</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#i._Creating_the_Apogy_Plugin_Itself">i. Creating the Apogy Plugin Itself</a>
+											</li>
+											<li>
+												<a href="#ii._Creating_a_Xcore_.28.xcore.29_Model">ii. Creating a Xcore (.xcore) Model</a>
+											</li>
+											<li>
+												<a href="#iii._Defining_a_Subclass_of_ApogyInitializationData">iii. Defining a Subclass of ApogyInitializationData</a>
+												<ol style="list-style: none;">
+													<li>
+														<a href="#Rules_.26_Guidelines">Rules &amp; Guidelines</a>
+													</li>
+												</ol>
+											</li>
+											<li>
+												<a href="#iv._Defining_a_Subclass_of_ApogySystemApiAdapter">iv. Defining a Subclass of ApogySystemApiAdapter</a>
+												<ol style="list-style: none;">
+													<li>
+														<a href="#Localization">Localization</a>
+													</li>
+													<li>
+														<a href="#Rules_.26_Guidelines_2">Rules &amp; Guidelines</a>
+													</li>
+													<li>
+														<a href="#ApogySystemApiAdapter_Methods">ApogySystemApiAdapter Methods</a>
+													</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<a href="#Step_3._Creating_the_Apogy_System_Model_.28*.ss.29_file">Step 3. Creating the Apogy System Model (*.ss) file</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Definition_3">Definition</a>
+									</li>
+									<li>
+										<a href="#The_Six_Steps_to_make_a_Apogy_System_Model">The Six Steps to make a Apogy System Model</a>
+										<ol style="list-style: none;">
+											<li>
+												<a href="#i._Defining_the_Topology_Root">i. Defining the Topology Root</a>
+												<ol style="list-style: none;">
+													<li>
+														<a href="#Topology_Guidelines">Topology Guidelines</a>
+													</li>
+												</ol>
+											</li>
+											<li>
+												<a href="#ii._Defining_the_Bindings">ii. Defining the Bindings</a>
+												<ol style="list-style: none;">
+													<li>
+														<a href="#Populating_the_Feature_Roots_List">Populating the Feature Roots List</a>
+													</li>
+													<li>
+														<a href="#Populating_the_Bindings_List">Populating the Bindings List</a>
+													</li>
+													<li>
+														<a href="#Bindings_Currently_Available_in_Apogy">Bindings Currently Available in Apogy</a>
+													</li>
+												</ol>
+											</li>
+											<li>
+												<a href="#iii._Defining_the_Connection_Points">iii. Defining the Connection Points</a>
+											</li>
+											<li>
+												<a href="#iv._Defining_Type_Members_.28Only_for_Composite_Systems.29">iv. Defining Type Members (Only for Composite Systems)</a>
+											</li>
+											<li>
+												<a href="#v._Defining_Assembly_Links_.28Only_for_Composite_Systems.29">v. Defining Assembly Links (Only for Composite Systems)</a>
+											</li>
+											<li>
+												<a href="#vi._Registering_your_Apogy_System_Model_with_Apogy">vi. Registering your Apogy System Model with Apogy</a>
+											</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#Advanced_Topics">Advanced Topics</a>
+						<ol style="list-style: none;">
+							<li>
+								<a href="#Specialized_Topology_Nodes">Specialized Topology Nodes</a>
+							</li>
+							<li>
+								<a href="#Extending_the_Tools">Extending the Tools</a>
+								<ol style="list-style: none;">
+									<li>
+										<a href="#Built-in_Camera_View_Tools">Built-in Camera View Tools</a>
+									</li>
+									<li>
+										<a href="#Built-in_Map_View_Tools">Built-in Map View Tools</a>
+									</li>
+									<li>
+										<a href="#Units_Management">Units Management</a>
+									</li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
+		<h2 id="Apogy_Architecture">Apogy Architecture</h2>
+		<ul>
+			<li>Based on the Eclipse Modeling Framework (EMF);</li>
+			<li>A basic custom framework (
+				<i>EMFInvocator</i>) defines the 
+				<i>Type</i>, 
+				<i>Variable</i>, 
+				<i>Context</i>, 
+				<i>Operation Call</i>, and 
+				<i>Operation Call Result</i> concepts;
+			</li>
+			<li>Apogy specializes a few concepts defined in 
+				<i>EMFInvocator</i> and adds new ones: 3D representation, 
+				<i>Assembly Links</i>, 
+				<i>Connection Points</i> and 
+				<i>Data Product</i> geo-referencing; 
+			</li>
+		</ul>
+		<p>
+			<img border="1" src="../resources/dev/apogy_arch.svg"/>
+		</p>
+		<h3 id="Type_Interface_Modeling">Type Interface Modeling</h3>
+		<ul>
+			<li>Recall, that a 
+				<i>System</i> is a specialized 
+				<i>Type</i>, which's use forms much of the backbone of Apogy.
+			</li>
+			<li>The interface of the 
+				<i>System</i> is modeled in EMF (e.g. via Xcore) and ends up being transformed into an EClass
+			</li>
+			<li>The commands of the 
+				<i>System</i> directly correspond the modeled system's operations.
+			</li>
+			<li>The command's parameters and return value types correspond to 
+				<i>EClasses</i>, 
+				<i>EEnumerations</i>, and other built-in types (e.g. 
+				<i>boolean</i>, 
+				<i>float</i>, 
+				<i>int</i>, etc.)
+			</li>
+			<li>The states (telemetry) of the 
+				<i>System</i> directly corresponds to the modeled system's attributes.
+			</li>
+			<li>The states's types of the 
+				<i>System</i> also correspond to 
+				<i>EClasses</i>, 
+				<i>EEnumerations</i>, and other built-in types.
+			</li>
+			<li>The most important fact of the 
+				<i>System</i> is 
+				<b>while there is only one interface, there many be any number of possible implementations.</b> 
+			</li>
+		</ul>
+		<h3 id="Variable_Initialization">Variable Initialization</h3>
+		<p><ul>
+				<li> 
+			<i>Variable</i> initialization is done through the 
+			<i>InvocatorDelegate</i> (which is specialized in Apogy):</li>
+				<ol>
+					<li> Gets the 
+			<i>ApogySystemApiAdapter</i> associated with the 
+			<i>Variable</i>;</li>
+					<li> Instantiate the 
+			<i>System</i>;</li>
+					<li> Copies its associated topology and sets it in the 
+			<i>ApogySystemApiAdapter</i>;</li>
+					<li> For each 
+			<i>TypeMember</i>:</li>
+					<ol type="i">
+						<li> Gets the 
+			<i>ApogySystemApiAdapter</i> associated with the 
+			<i>Variable</i>;</li>
+						<li> Instantiate the 
+			<i>System</i>;</li>
+						<li> Copies its associated topology and sets in the appropriate 
+			<i>ApogySystemApiAdapter</i>;</li>
+						<li> Attaches the topology to the parent's 
+			<i>Connection Point</i>;</li>
+						<li> Recurse for each 
+			<i>TypeMember</i> of the current 
+			<i>TypeMember</i>.</li>
+					</ol>
+				</ol>
+</ul>
+		</p>
+		<h3 id="Operation_Call_Invocation">Operation Call Invocation</h3>
+		<ul>
+			<li>Method invocation is done through EMF reflection;</li>
+			<li>Actual invocation done through the invocator delegate, which in turn, delegates part of it to the 
+				<i>ApogySystemApiAdapter</i>.
+			</li>
+		</ul>
+		<p>
+			<img border="0" src="../resources/dev/operation_call_invocation.svg"/>
+		</p>
+		<h2 id="Apogyzing">Apogyzing</h2>
+		<h3 id="Definition">Definition</h3>
+		<p>
+			<b>
+				<i>Apogyzing</i>
+			</b>: 
+			<i>The process of creating EMF models of a System to expose its interface to Apogy.</i>
+		</p>
+		<p>Some of what you get in return:</p>
+		<ul>
+			<li>Generic support for command call invocation and documentation;</li>
+			<li>Generic support for telemetry (display, recording and playback);</li>
+			<li>Command call result tracking (time, position, command parameters);</li>
+			<li>3D 
+				<i>System</i> and 
+				<i>Environment</i> representation.
+			</li>
+		</ul>
+		<h3 id="High-Level_Steps">High-Level Steps</h3>
+		<p>Defining a Apogy 
+			<i>System</i> involves 3 steps:
+		</p>
+		<ol>
+			<li>Defining the 
+				<i>System</i> in EMF;
+			</li>
+			<li>Creating the Apogy plugin;</li>
+			<li>Creating the Apogy System Model (*.ss).</li>
+		</ol>
+		<p>
+			<img border="0" src="../resources/dev/apogyzing.svg"/>
+		</p>
+		<h3 id="Guidelines">Guidelines</h3>
+		<p>Symphonizing Guidelines:</p>
+		<ol>
+			<li>Keep the 
+				<i>System</i> EMF model seperate from Apogy; this provides modularity and your system can be used before your Apogy plugin is done!
+			</li>
+			<li>Attributes are 
+				<b>NEVER</b> changed directly by an operator; they are considered states that are changed in response to command calls and interaction with the environment.
+			</li>
+			<li>Commands are used to change the settings of a 
+				<i>System</i> (e.g. operating mode, limits, etc.) as well as to to command actions. However, commands are 
+				<b>NOT</b> used to get the current status of the System; attributes are used instead to accomplish this. 
+			</li>
+		</ol>
+		<h4 id="Suggested_Plugin_Nomenclature">Suggested Plugin Nomenclature</h4>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<i>&lt;org_prefix&gt;.&lt;system_name&gt;</i>
+				</td>
+				<td>Core plugin that defines the 
+					<i>System</i> and its associated types.  This should be kept independently of Apogy.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i>&lt;org_prefix&gt;.&lt;system_name&gt;.edit</i>
+				</td>
+				<td>Edit plugin providing basic GUI support for the 
+					<i>System</i>.  Generated automatically by EMF.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i>&lt;org_prefix&gt;.&lt;system_name&gt;.ui</i>
+				</td>
+				<td>Plugin providing 
+					<i>System</i>-specific contributions to the Eclipse Workbench (e.g. Views, Commands, Menu Contributions, etc.).  This plugin may or may not be present.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i>&lt;org_prefix&gt;.&lt;system_name&gt;.apogy</i>
+				</td>
+				<td>Plugin defining the Apogy System (*.ss), specialized 
+					<i>ApogyInitializationData</i> and 
+					<i>ApogySystemApiAdapter</i>.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i>&lt;org_prefix&gt;.&lt;system_name&gt;.apogy.edit</i>
+				</td>
+				<td>Edit plugin providing basic GUI support for the Apogy System.  Generated automatically by EMF.</td>
+			</tr>
+		</table>
+		<h3 id="Step_1._Defining_The_System_In_EMF">Step 1. Defining The System In EMF</h3>
+		<h4 id="Creating_An_EMF_Model_Of_The_System">Creating An EMF Model Of The System</h4>
+		<p><ol>
+				<li> Create an Xcore Project named 
+			<b>&lt;org_prefix&gt;.&lt;system_name&gt;</b>, where 
+			<b>&lt;org_prefix&gt;</b> is a placeholder for a prefix appropriate for your organization;</li>
+				<li> Rename the 
+			<b>
+				<i>/src-gen</i>
+			</b> folder to 
+			<b>
+				<i>/src-generated</i>
+			</b>;</li>
+				<li> Create your Xcore model in the 
+			<b>
+				<i>/model</i>
+			</b> folder;</li>
+				<ol type="i">
+					<li> Ensure that you change the 
+			<b>
+				<i>modelDirectory</i>
+			</b> @GenModel directive to point to the 
+			<i>&lt;org_prefix&gt;.&lt;system_name&gt;</i>
+			<b>
+				<i>/src-generated</i>
+			</b> folder;</li>
+					<li> Ensure that you change the 
+			<b>
+				<i>editDirectory</i>
+			</b> @GenModel directive to point to the 
+			<i>&lt;org_prefix&gt;.&lt;system_name&gt;.edit</i>
+			<b>
+				<i>/src-generated/</i>
+			</b> folder;</li>
+				</ol>
+				<li> Define your 
+			<i>System</i> classes;</li>
+				<li> Implement the methods as required;</li>
+				<ul>
+					<li> Ensure that you either remove the methods' @generated annotations or change them to @generated_NOT; otherwise, your changes will be overwritten the next time the Xcore compiler runs!</li>
+				</ul>
+				<li> Override getters for attributes that have a cardinality of [1] (i.e. are required)</li>
+				<li> You are done!</li>
+</ol>
+		</p>
+		<h4 id="Recommended_Class_Hierarchy">Recommended Class Hierarchy</h4>
+		<p>
+			<img border="0" src="../resources/dev/recommended_class_hierarchy.svg"/>
+		</p>
+		<p><ol>
+				<li> Define an abstract class (
+			<i>A</i>) representing your 
+			<i>System</i>; this includes:</li>
+				<ol type="i">
+					<li> Defining the class itself;</li>
+					<li> Defining all the class attributes and their classes;</li>
+					<li> Defining all methods as well as their parameters and return values; this may involve specifying additional classes.</li>
+				</ol> 
+				<li> Define a concrete 
+			<i>AStub</i> class that extends 
+			<i>A</i>.  The methods for this implementation do nothing.  This class can be used in Apogy when playing data back.</li>
+				<li> Define a concrete 
+			<i>ASimulated</i> class that extends 
+			<i>A</i>. This implementation provides a simulated 
+			<i>A</i> for Apogy.</li>
+				<li> Define a concrete 
+			<i>AReal</i> class that extends 
+			<i>A</i>.  This implementation provides an interface to the real (physical) system.</li>
+</ol>
+		</p>
+		<h3 id="Step_2._Creating_the_Apogy_plugin">Step 2. Creating the Apogy plugin</h3>
+		<h4 id="Definition_2">Definition</h4>
+		<p>The 
+			<b>Apogy plugin</b> is an EMF (typically Xcore) plugin, which contains the required meta-model to specify the 
+			<i>System</i>'s interface with Apogy.
+		</p>
+		<p>It typically defines a specialization of 
+			<i>ApogyInitializationData</i>; this allows Apogy to be able to both capture as well as restore the specific state of the 
+			<i>System</i>, which is useful in a variety of circumstances.  The 
+			<i>ApogySystemApiAdapter</i> is also typically subclassed, allowing one to customize the invocation of the 
+			<i>System</i>'s operations.     
+		</p>
+		<h4 id="The_Four_Steps_to_making_a_Apogy_Plugin">The Four Steps to making a Apogy Plugin</h4>
+		<p>Creating the Apogy plugin involves four (4) steps:</p>
+		<ol>
+			<li>Creating the plugin;</li>
+			<li>Creating an Xcore model;</li>
+			<li>Defining a sub-class of 
+				<i>ApogyInitializationData</i>;
+			</li>
+			<li>Defining a sub-class of 
+				<i>ApogySystemApiAdapter</i>.
+			</li>
+		</ol>
+		<h5 id="i._Creating_the_Apogy_Plugin_Itself">i. Creating the Apogy Plugin Itself</h5>
+		<p>TODO!</p>
+		<h5 id="ii._Creating_a_Xcore_.28.xcore.29_Model">ii. Creating a Xcore (.xcore) Model</h5>
+		<p>TODO!</p>
+		<h5 id="iii._Defining_a_Subclass_of_ApogyInitializationData">iii. Defining a Subclass of <i>ApogyInitializationData</i></h5>
+		<p>The 
+			<i>ApogyInitializationData</i> class only includes the pose of your 
+			<i>System</i> in the 
+			<i>Worksite</i> frame.
+		</p>
+		<p>Your specialized 
+			<i>ApogyInitializationData</i>:
+		</p>
+		<ul>
+			<li>Defines the required initialization data for your 
+				<i>System</i>.
+			</li>
+			<li>Apogy persists the data for you.</li>
+			<li>Apogy delegates to your custom 
+				<i>ApogySystemApiAdapter</i> sub-class, the responsibility to create, populate and apply the data; 
+			</li>
+		</ul>
+		<h6 id="Rules_.26_Guidelines">Rules &amp; Guidelines</h6>
+		<ul>
+			<li>All attributes in your specialized ApogyInitializationData must be:
+				<ul>
+					<li>Contained in the 
+						<i>ApogyInitializationData</i> (or marked as 
+						<b>transient</b>);
+					</li>
+					<li>Serializable (or have the necessary methods implemented correctly in your Apogy plugin Factory implementation class);</li>
+				</ul>
+			</li>
+			<li>Should contain all of the data required to bring your 
+				<i>System</i> back to a given state (e.g. modes, actuators, position, etc.)
+			</li>
+		</ul>
+		<h5 id="iv._Defining_a_Subclass_of_ApogySystemApiAdapter">iv. Defining a Subclass of <i>ApogySystemApiAdapter</i></h5>
+		<p>Providing a specialized 
+			<i>ApogySystemApiAdapter</i>:
+		</p>
+		<ul>
+			<li>Allows for the specialization of 
+				<i>OperationCallPositionResult</i>';
+			</li>
+			<li>Enables the customized calculation of the result position matrix for each specific 
+				<i>Operation Call</i>;
+			</li>
+			<li>Provides support for custom 
+				<i>InitializationData</i> creation, collection and application;
+			</li>
+			<li>Grants access to the 
+				<i>Apogy Environment</i> (which includes the worksite, sky, etc.) 
+			</li>
+		</ul>
+		<h6 id="Localization">Localization</h6>
+		<ul>
+			<li>Apogy does 
+				<b>NOT</b> assume anything about the 
+				<i>System</i>'s 
+				<i>Interface Class</i> (apart from it being an EClass), so there is no way for Apogy to know where to get the pose information about your 
+				<i>System</i>.
+			</li>
+		</ul>
+		<ul>
+			<li>There are two ways to implement this:
+				<ol>
+					<li>Through the 
+						<i>ApogySystemApiAdapter</i>:
+						<ul>
+							<li>Typically done by using an adapter on the system to figure out when the pose changes and call the 
+								<b>setPoseTransform(Matrix4x4)</b> method of the ''ApogySystemApiAdapter;
+								<ul>
+									<li>The 
+										<i>MobilePlatform</i> and 
+										<i>Lander</i> examples use this method;
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Have your System implement 
+						<i>PoseProvider</i> (
+						<i>ca.gc.asc_csa.apogy.core.PoseProvider</i>): The 
+						<i>ApogySystemApiAdapter</i> will handle it for you. 
+					</li>
+				</ol>
+			</li>
+		</ul>
+		<h6 id="Rules_.26_Guidelines_2">Rules &amp; Guidelines</h6>
+		<ul>
+			<li>Your specialized 
+				<i>ApogySystemApiAdapter</i> is:
+				<ul>
+					<li>
+						<b>NOT PERSISTED</b>: it is instantiated every time you call 
+						<i>Reset Instances</i>;
+					</li>
+					<li>Not shared between instances of your System;</li>
+				</ul>
+			</li>
+			<li>While your specialized 
+				<i>ApogySystemApiAdapter</i> can depend on your 
+				<i>System</i>'s EMF model, the opposite is not true (would lead to a dependency cycle);
+			</li>
+			<li>Just override the methods you need: the 
+				<i>ApogySystemApiAdapter</i> provides adequate default implementation for all methods
+			</li>
+		</ul>
+		<h6 id="ApogySystemApiAdapter_Methods"><i>ApogySystemApiAdapter</i> Methods</h6>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Method</th>
+				<th>Description</th>
+				<th>Default Implementation</th>
+				<th>Override must call super</th>
+			</tr>
+			<tr>
+				<td>void 
+					<b>init</b>(
+					<i>Environment</i>, 
+					<i>Type</i>, 
+					<i>EObject</i>)
+				</td>
+				<td>Initialize the adapter with the 
+					<i>Environment</i>, 
+					<i>Type</i>, and the System instance (
+					<i>EObject</i>).
+				</td>
+				<td>Initialize the 
+					<i>Environment</i>, 
+					<i>Type</i>, and 
+					<i>EObject</i> (instance) of the adapter.
+				</td>
+				<td style="text-align:center;">Yes</td>
+			</tr>
+			<tr>
+				<td>void 
+					<b>apply</b>(
+					<i>AbstractInitializationData</i>)
+				</td>
+				<td>Applies the specified initialization data to the System.</td>
+				<td>Sets the pose of the System relative to the worksite.</td>
+				<td style="text-align:center;">Yes</td>
+			</tr>
+			<tr>
+				<td>
+					<i>AbstractInitializationData</i> 
+					<b>createInitializationData</b>()
+				</td>
+				<td>Creates an instance of initialization data.</td>
+				<td>Creates an instance of 
+					<i>ApogyInitializationData</i>
+				</td>
+				<td style="text-align:center;">No</td>
+			</tr>
+			<tr>
+				<td>void 
+					<b>collect</b>(
+					<i>AbstractInitializationData</i>)
+				</td>
+				<td>Collects the System's required initialization and stores in the 
+					<i>AbstractInitializationData</i> instance provided.
+				</td>
+				<td>Collects the pose of the System relative to the worksite.</td>
+				<td style="text-align:center;">Yes</td>
+			</tr>
+			<tr>
+				<td>
+					<i>OperationCallResult</i> 
+					<b>createResult</b>(
+					<i>OperationCall</i>)
+				</td>
+				<td>Must create an 
+					<i>OperationCallPositionedResult</i> that will be used to store the result of invoking the specified command.
+				</td>
+				<td>Creates an instance of 
+					<i>OperationCallPositionedResult</i>
+				</td>
+				<td style="text-align:center;">No</td>
+			</tr>
+			<tr>
+				<td>
+					<i>Matrix4x4</i> 
+					<b>createResultMatrix</b>(
+					<i>OperationCall</i>)
+				</td>
+				<td>Creates the 4-by-4 matrix (
+					<i>Matrix4x4</i>) that defines the pose of the specified result relative to the System's origin.
+				</td>
+				<td>Return an instance of 
+					<i>Matrix4x4</i> that is the identity matrix.
+				</td>
+				<td style="text-align:center;">No</td>
+			</tr>
+		</table>
+		<h3 id="Step_3._Creating_the_Apogy_System_Model_.28*.ss.29_file">Step 3. Creating the <i>Apogy System Model</i> (*.ss) file</h3>
+		<h4 id="Definition_3">Definition</h4>
+		<p>Recall that the 
+			<i>Apogy System</i>:
+		</p>
+		<ul>
+			<li>Is the "LEGO block" of Apogy;</li>
+			<li>A 
+				<b>
+					<i>System</i>
+				</b> is a specialization of 
+				<i>Type</i>;
+			</li>
+			<li>Adds functions to assemble systems together through 
+				<i>Connection Points</i> and 
+				<i>Assembly Links</i>;
+			</li>
+			<li>Provdes a 3D representation of the System.</li>
+		</ul>
+		<h4 id="The_Six_Steps_to_make_a_Apogy_System_Model">The Six Steps to make a <i>Apogy System Model</i></h4>
+		<p>Creating a 
+			<i>Apogy System Model</i> (*.ss file) involves:
+<ol>
+				<li> Defining the 
+			<i>Topology Root</i>;</li>
+				<li> Defining the 
+			<i>Bindings</i>;</li>
+				<li> Defining the 
+			<i>Connection Points</i>;</li>
+</ol>
+		</p>
+		<p>Additionally, for Composite 
+			<i>Systems</i>:
+		</p>
+		<p><ol start="4">
+				<li> Defining 
+			<i>Type Members</i>;</li>
+				<li> Defining 
+			<i>Assembly Links</i>;</li>
+</ol>
+		</p>
+		<p>Finally:</p>
+		<p><ol start="6">
+				<li> Registering your 
+			<i>Apogy System</i>;</li>
+</ol>
+		</p>
+		<h5 id="i._Defining_the_Topology_Root">i. Defining the <i>Topology Root</i></h5>
+		<p>The steps to fully defining the 
+			<i>Apogy System</i>'s topology are:
+		</p>
+		<ol>
+			<li>Creating a root node (e.g 
+				<i>AggregateGroupNode</i>)
+			</li>
+			<li>Assembly a hierarchy of transforms (e.g 
+				<i>TransformNode</i>, 
+				<i>RotationNode</i>, 
+				<i>PositionNode</i>) to defined how parts are relative in position to each other and allow support for animation;
+			</li>
+			<li>Add nodes representing geometries (e.g 
+				<i>URLNode</i>);
+			</li>
+			<li>Add other specialized nodes (e.g. 
+				<i>Wheel</i>, 
+				<i>Thruster</i>, 
+				<i>RectangularFrustrumFieldOfView</i>, etc.)
+			</li>
+		</ol>
+		<h6 id="Topology_Guidelines">Topology Guidelines</h6>
+		<ul>
+			<li>Be sure to specify the 
+				<b>Node Id</b> for every node.  The recommended naming pattern should include the name of the 
+				<i>System</i> as a prefix (e.g. a prefix like "
+				<b>&lt;SYSTEM_NAME&gt;_SYM_SYS</b>"); 
+			</li>
+			<li>For 
+				<i>TransformNodes</i> that are intended to be used to affect DOF, include 
+				<b>JOINT</b> in the 
+				<b>Node Id</b>;
+			</li>
+			<li>Fill in the description with a meaningful explanation (it aids in clarity and long-term maintenance.);</li>
+			<li>Defining a joint (either revolution or linear) is typically done using a pair of 
+				<i>TransformNodes</i>:
+				<ul>
+					<li>The first 
+						<i>TransformNode</i> defines where the joint is and is not intended to change;
+					</li>
+					<li>The second 
+						<i>TransformNode</i> (the one with its 
+						<b>Node Id</b> containing 
+						<b>JOINT</b>) is the one that will affect the motion;
+					</li>
+				</ul>
+			</li>
+			<li>A geometry file (e.g. 
+				<i>CAD</i>) is needed to specify each part that makes up an articulated system.  For example:
+				<ul>
+					<li>One file for the rover chassis, one for the wheel(s);</li>
+					<li>One for the base of a PTU Camera, one for the tilt fork and one for the camera;</li>
+				</ul>
+			</li>
+		</ul>
+		<p>An example of the general structure given by these guidelines is:</p>
+		<p>
+			<img border="0" src="../resources/dev/topology_guidelines_example.svg"/>
+		</p>
+		<h5 id="ii._Defining_the_Bindings">ii. Defining the Bindings</h5>
+		<p>Topology bindings are what Apogy uses to relate selected attributes in the 
+			<i>System</i>'s 
+			<i>Interface Class</i> to behaviours of the topology.  This allows, for example:
+		</p>
+		<ul>
+			<li>Binding the position of a certain 
+				<i>TransformNode</i> to a linear position atribute in the System's 
+				<i>Interface Class</i>;
+			</li>
+			<li>Binding the vertical and horizontal angles of a FOV in the topology to the FOV of a camera attribute in the System's 
+				<i>Interface Class</i>  
+			</li>
+		</ul>
+		<p>Defining the bindings required the following steps:</p>
+		<ol>
+			<li>Populating the 
+				<i>Feature Roots List</i>
+			</li>
+			<li>Populating the 
+				<i>Bindings List</i>
+			</li>
+		</ol>
+		<h6 id="Populating_the_Feature_Roots_List">Populating the <i>Feature Roots List</i></h6>
+		<ul>
+			<li>The 
+				<i>Feature Roots List</i> is where all of the attributes of the 
+				<i>System</i>'s 
+				<i>Interface Class</i> that will be used in bindings are specified
+			</li>
+			<li>The list of available attributes is automatically populated, based on the 
+				<i>System</i>'s specified 
+				<i>Interface Class</i>.
+			</li>
+			<li>Populating the 
+				<i>Feature Roots List</i> involves the following:
+				<ol>
+					<li>Under 
+						<i>Feature Roots List</i>, create a new 
+						<i>Tree Root Node</i>;
+					</li>
+					<li>Set the 
+						<i>Source Class</i> of the 
+						<i>Tree Root Node</i> to the same class as the 
+						<i>Interface Class</i> of the 
+						<i>Apogy System</i>;
+					</li>
+					<li>Add the required child child under the 
+						<i>Tree Root Node</i> and its sub-nodes to specify the required attributes for the bindings.
+					</li>
+				</ol>
+			</li>
+		</ul>
+		<h6 id="Populating_the_Bindings_List">Populating the <i>Bindings List</i></h6>
+		<ul>
+			<li>Populating the 
+				<i>Binding List</i> involves:
+				<ol>
+					<li>Under 
+						<i>Binding List</i>, create a new 
+						<i>Binding</i> of the required type;
+						<ul>
+							<li>It is recommended that the name of all binding elements include 
+								<b>BIND</b> 
+							</li>
+						</ul>
+					</li>
+					<li>Set the attributes of the newly created 
+						<i>Binding</i>
+					</li>
+				</ol>
+			</li>
+		</ul>
+		<h6 id="Bindings_Currently_Available_in_Apogy">Bindings Currently Available in Apogy</h6>
+		<p>The bindings currently available for generic topology 
+			<i>Nodes</i> are:
+		</p>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Binding</th>
+				<th>Applicable Node(s)</th>
+				<th>Function</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>RotationBinding</i>
+					</b>
+				</td>
+				<td>
+					<i>RotationNode</i>, 
+					<i>TransformNode</i>
+				</td>
+				<td>Maps an angular position about a given axis to a numerical attribute.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>TranslationBinding</i>
+					</b>
+				</td>
+				<td>
+					<i>PositionNode</i>, 
+					<i>TransformNode</i>
+				</td>
+				<td>Maps a linear translation along a given axis to a numerical attribute.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>TransformBinding</i>
+					</b>
+				</td>
+				<td>
+					<i>TransformNode</i>
+				</td>
+				<td>Maps a 
+					<i>TransformNode</i> transform to a 
+					<i>Matrix4x4</i> attribute.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>EnumerationSwitchBinding</i>
+					</b>
+				</td>
+				<td>
+					<i>GroupNode</i>
+				</td>
+				<td>Switches between sub-topology trees, based on an enumeratuve attribute.</td>
+			</tr>
+		</table>
+		<p>The bindings currently available for field of view (FOV) topology 
+			<i>Nodes</i>:
+		</p>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Binding</th>
+				<th>Applicable Node(s)</th>
+				<th>Function</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>CircularSectorFieldOfViewBinding</i>
+					</b>
+				</td>
+				<td>
+					<i>CircularSectorFieldOfView</i>
+				</td>
+				<td>Maps the values of a 
+					<i>CircularSectorFieldOfView</i> to another 
+					<i>CircularSectorFieldOfView</i> attribute.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>ConicalFieldOfViewBinding</i>
+					</b>
+				</td>
+				<td>
+					<i>ConicalFieldOfView</i>
+				</td>
+				<td>Maps the values of a 
+					<i>ConicalFieldOfView</i> to another 
+					<i>ConicalFieldOfView</i> attribute.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>RectangularFrustrumFieldOfViewBinding</i>
+					</b>
+				</td>
+				<td>
+					<i>RectangularFrustrumFieldOfView</i>
+				</td>
+				<td>Maps the values of a 
+					<i>RectangularFrustrumFieldOfView</i> to another 
+					<i>RectangularFrustrumFieldOfView</i> attribute.
+				</td>
+			</tr>
+		</table>
+		<p>The bindings currently available for vehicle topology 
+			<i>Nodes</i> are:
+		</p>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Binding</th>
+				<th>Applicable Node(s)</th>
+				<th>Function</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>ThrusterBinding</i>
+					</b>
+				</td>
+				<td>
+					<i>Thruster</i>
+				</td>
+				<td>Maps the values of a 
+					<i>Thruster</i> to another 
+					<i>Thruster</i> attribute.
+				</td>
+			</tr>
+		</table>
+		<h5 id="iii._Defining_the_Connection_Points">iii. Defining the <i>Connection Points</i></h5>
+		<ul>
+			<li>Recall that, 
+				<i>Connection Points</i> are metaphorical hooks where sub-''Systems'' can be attached.
+			</li>
+			<li>A 
+				<i>Connection Point</i> typically defines a physical location where a 
+				<i>System</i> might expect other sub-''Systems'' to be assembled. 
+			</li>
+			<li>Populating the 
+				<i>Connections Points List</i> involves the following:
+				<ol>
+					<li>Under the 
+						<i>Connection Points List</i>, create a new 
+						<i>Connection Point</i>;
+					</li>
+					<li>Set the name and description of the 
+						<i>Connection Point</i>; 
+						<ul>
+							<li>It is recommended that the name of the 
+								<i>Connection Point</i> include 
+								<b>CONNECT</b>;
+							</li>
+						</ul>
+					</li>
+					<li>Set the 
+						<i>Node</i> of the 
+						<i>Connection Point</i>.
+					</li>
+				</ol>
+			</li>
+		</ul>
+		<h5 id="iv._Defining_Type_Members_.28Only_for_Composite_Systems.29">iv. Defining <i>Type Members</i> (Only for Composite <i>Systems</i>)</h5>
+		<p>TODO!</p>
+		<h5 id="v._Defining_Assembly_Links_.28Only_for_Composite_Systems.29">v. Defining <i>Assembly Links</i> (Only for Composite <i>Systems</i>)</h5>
+		<p>TODO!</p>
+		<h5 id="vi._Registering_your_Apogy_System_Model_with_Apogy">vi. Registering your <i>Apogy System Model</i> with Apogy</h5>
+		<p>In order for Apogy to be made aware of your 
+			<i>Apogy System Model</i>, your model must be registered.
+			Here are the steps to do so:
+		</p>
+		<ol>
+			<li>Open the 
+				<b>MANIFEST.MF</b> of the the plugin where your 
+				<i>Apogy System Model</i> is defined;
+			</li>
+			<li>In the 
+				<i>Extensions</i> tab, click 
+				<i>Add...</i>
+			</li>
+			<li>Ensure the "
+				<i>Show only the extension points from the required plug-ins</i>" checkbox is 
+				<b>NOT</b> checked.
+			</li>
+			<li>Select the 
+				<b>ca.gc.asc_csa.apogy.core.invocator.typeContributor</b> extension point;
+			</li>
+			<li>Click 
+				<i>Finish</i>
+			</li>
+			<li>Select the newly added extension and then click on 
+				<i>Browse</i> for the 
+				<b>URI</b> field;
+			</li>
+			<li>Browse to your 
+				<i>Apogy System Model</i> (*.ss) file and click 
+				<i>OK</i>;
+			</li>
+			<li>Save the 
+				<b>MANIFEST.MF</b>
+			</li>
+		</ol>
+		<h2 id="Advanced_Topics">Advanced Topics</h2>
+		<h3 id="Specialized_Topology_Nodes">Specialized Topology <i>Nodes</i></h3>
+		<p>The currently available specialized topology 
+			<i>Nodes</i> in Apogy are:
+		</p>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>Plugin / Package</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>CircularSectorFieldOfView</i>
+					</b>
+				</td>
+				<td style="text-align:center;" rowspan="3">
+					<i>ca.gc.asc_csa.apogy.addons.sensors.fov</i>
+				</td>
+				<td>Represents a field of view (FOV) that is a circular sector.  This is useful for representing the FOV for certain types of line scanner sensors (e.g. SICK Lidar)</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>ConicalFieldOfView</i>
+					</b>
+				</td>
+				<td>Represents a field of view (FOV) that is a cone.  This is used for representing the FOV for sonar sensors or simplified directional antennas.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>RectangularFrustrumFieldOfView</i>
+					</b>
+				</td>
+				<td>Represents a field of view (FOV) that is rectangular.  This is used for representing the FOV for cameras and many range sensors.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>AbstractCamera</i>
+					</b>
+				</td>
+				<td style="text-align:center;" rowspan="2">
+					<i>ca.gc.asc_csa.apogy.addons.sensors.imaging</i>
+				</td>
+				<td>Represents a camera that includes a 
+					<i>RectangularFrustrumFieldOfView and can take an </i>ImageSnapshot''.  This is the class expected by the 
+					<i>Apogy Camera View</i>.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>ImageSnapshot</i>
+					</b>
+				</td>
+				<td>Represents an image and its associated 
+					<i>RectangularFrustrumFieldOfView</i>. This is required to enable image projections in Apogy.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>URLNode</i>
+					</b>
+				</td>
+				<td>
+					<i>ca.gc.asc_csa.apogy.common.topology</i>
+				</td>
+				<td>Represents an object's geometry.  Refers to the actual geometry by defining a URL to the file containing the geometry.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>WayPointPath</i>
+					</b>
+				</td>
+				<td>
+					<i>ca.gc.asc_csa.apogy.addons.geometry.paths</i>
+				</td>
+				<td>Represents a trajectory as a list of way points.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Wheel</i>
+					</b>
+				</td>
+				<td style="text-align:center;" rowspan="3">
+					<i>ca.gc.asc_csa.apogy.addons.vehicle</i>
+				</td>
+				<td>Represents a wheel as a cylinder.  Used by the 
+					<i>VehiclePoseCorrector</i>.  See the 
+					<i>MobilePlatform</i> Example.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>LanderSphericalFoot</i>
+					</b>
+				</td>
+				<td>Represents a lander foot as a sphere.  Used by the 
+					<i>VehiclePoseCorrector</i>.  See the 
+					<i>Lander</i> Example.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>Thruster</i>
+					</b>
+				</td>
+				<td>Represents a thruster and its plume. See the 
+					<i>Lander</i> Example.
+				</td>
+			</tr>
+		</table>
+		<h3 id="Extending_the_Tools">Extending the Tools</h3>
+		<ul>
+			<li>Extending the built-in tools in Apogy is done through EMF;</li>
+			<li>You simply extend the tool you want to customize in your meta-model and implement / override the required methods;</li>
+			<li>That's it!</li>
+		</ul>
+		<h4 id="Built-in_Camera_View_Tools">Built-in <i>Camera View</i> Tools</h4>
+		<p>The following built-in 
+			<i>Camera View</i> tools (located in 
+			<i>ca.gc.asc_csa.apogy.addons.sensors.imaging.camera</i>) are available in Apogy: 
+		</p>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>
+					<i>Camera View Configuration</i> Subsection
+				</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>ImageFilter</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<i>Filters</i>
+				</td>
+				<td>Provides the facility to process or enhance features of a camera image (e.g. edge detection, etc.)</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>DrawnCameraOverlay</i>
+					</b>
+				</td>
+				<td style="text-align:center;" rowspan="3">
+					<i>Overlays</i>
+				</td>
+				<td>Overlay that is drawn onto a camera image.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>AbstractTextOverlay</i>
+					</b>
+				</td>
+				<td>Text-only overlay that is drawn onto a camera image.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>ImageCameraOverlay</i>
+					</b>
+				</td>
+				<td>Overlay that provides an 
+					<i>Image</i> with a transparent background that is superimposed onto a camera image.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>CameraTool</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<i>Tools</i>
+				</td>
+				<td>Tool that provides interaction with mouse motion and selection in the 
+					<i>Apogy Camera View</i>.
+				</td>
+			</tr>
+		</table>
+		<h4 id="Built-in_Map_View_Tools">Built-in <i>Map View</i> Tools</h4>
+		<p>The following built-in 
+			<i>Map View</i> tools (located in 
+			<i>ca.gc.asc_csa.apogy.core.environment.ui</i>) are available in Apogy:
+		</p>
+		<table border="1" cellpadding="2">
+			<tr>
+				<th>Name</th>
+				<th>
+					<i>Map View Configuration</i> Subsection
+				</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>ImageMapLayerPresentation</i>
+					</b>
+				</td>
+				<td style="text-align:center;">
+					<i>Map Layers</i>
+				</td>
+				<td>Provides the image to be displayed for a given 
+					<i>Image Map Layer</i> in the 
+					<i>Map View</i>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>MapAnnotation</i>
+					</b> 
+				</td>
+				<td style="text-align:center;" rowspan="7">
+					<i>Annotations</i>
+				</td>
+				<td>Provides annotation (JFreeChart) that can be drawn on top of the map.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>AbstractVariableAnnotation</i>
+					</b>
+				</td>
+				<td>Specialization of 
+					<i>MapAnnotation</i> that represents a 
+					<i>Variable</i> on the map.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>VariableTrajectoryAnnotation</i>
+					</b>
+				</td>
+				<td>Specialization of 
+					<i>AbstractVariableAnnotation</i> that draws the trajectory of a 
+					<i>Variable</i> on the map.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>PoseVariableAnnotation</i>
+					</b>
+				</td>
+				<td>Specialization of 
+					<i>AbstractVariableAnnotation</i> that shows the position and orientation of a 
+					<i>Variable</i> on the map.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>VehicleVariableAnnotation</i>
+					</b>
+				</td>
+				<td>Specialization of 
+					<i>PoseVariableAnnotation</i> that shows the position and orientation of a 
+					<i>Variable</i> on the map.  The vehicle footprint is represented as a rectangle with configurable dimensions.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>MapTool</i>
+					</b>
+				</td>
+				<td>Specialization of 
+					<i>MapAnnotation</i> that adds interaction with mouse motion and selection in the 
+					<i>Map View</i>.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>
+						<i>TrajectoryPickingTool</i>
+					</b>
+				</td>
+				<td>Specialization of 
+					<i>MapTool</i> that allows a user to define a list of 2D points by clicking on the map.
+				</td>
+			</tr>
+		</table>
+		<h4 id="Units_Management">Units Management</h4>
+		<ul>
+			<li>Recall, that an attribute's units (e.g. radians, metres, seconds, etc.) can be specified by using the 
+				<b>csa_units="..."</b> directive in the @GenModel annotations of one's xcore models.
+			</li>
+			<li>This information can then be used to perform those 
+				<i>Native Units</i> to a 
+				<i>Different Display</i> unit (e.g. degrees &lt;-&gt; radians) 
+			</li>
+			<li>In order to have the 
+				<i>Properties View</i> correctly manage attributes for which units have been defined:
+				<ul>
+					<li>Need to modify the generated method in the generated 
+						<i>ItemProvider</i> for the EClass (found in the respective .edit plugin):
+						<ol>
+							<li>Add a dependency to ca.gc.asc_csa.apogy.common.emf.ui;</li>
+							<li>Replace the 
+								<b>createItemPropertyDescriptor()</b> call with 
+								<b>new ''AbstractUnitItemPropertyDescriptor</b>'';
+							</li>
+							<li>Mark the method as 
+								<b>@generated_NOT</b> to prevent your work from being overwritten;
+							</li>
+						</ol>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>For a concrete example, the following block of code:</p>
+		<pre>/**
+ * This adds a property descriptor to the Current Pan Angle feature
+ * @generated
+ */
+</pre>
+		<pre>protected void addCurrentPanAnglePropertyDescriptor(Object object)
+{
+	itemPropertyDescriptor.add
+		(<b>createItemPropertyDescriptor</b>
+			(((ComposableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+			 getResourceLocator(),
+			 ...
+}
+</pre>
+		<p>should become:</p>
+		<pre>/**
+ * This adds a property descriptor to the Current Pan Angle feature
+ * @generated<b>_NOT</b>
+ */
+</pre>
+		<pre>protected void addCurrentPanAnglePropertyDescriptor(Object object)
+{
+	itemPropertyDescriptor.add
+		(<b>new AbstractUnitItemPropertyDescriptor</b>
+			(((ComposableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+			 getResourceLocator(),
+			 ...
+}
+</pre>
+	</body>
+</html>

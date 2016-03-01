@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+	<body>
+		<h1 id="Simple_Way_To_Start">Simple Way To Start</h1>
+		<ol style="list-style: none;">
+			<li>
+				<a href="#Simple_Way_To_Start">Simple Way To Start</a>
+			</li>
+			<li>
+				<a href="#Importing_the_Rover_Example_Session">Importing the Rover Example Session</a>
+			</li>
+			<li>
+				<a href="#Configuring_the_Views">Configuring the Views</a>
+			</li>
+			<li>
+				<a href="#Initializing_and_Using_the_Rover">Initializing and Using the Rover</a>
+			</li>
+		</ol>
+		<p>The examples are a simple way to get started interacting with Apogy and seeing what it can do.  As laid out in the 
+			<i>Registered Apogy Projects</i> section above, it's easy to start using Apogy 
+			<i>Systems</i>; by doing so, one can gain a foundation for the material and better understanding for how Apogy and its various components operate.
+		</p>
+		<p>Lets use the 
+			<i>Rover</i> example system to do that. Here is the step by step procedure to get started:
+		</p>
+		<h1 id="Importing_the_Rover_Example_Session">Importing the <i>Rover Example</i> Session</h1>
+		<p><ol>
+				<li> Ensure the 
+			<i>Project Explorer</i> view is opened </li>
+				<li> Right-click on the 
+			<i>Project Explorer</i> and select "
+			<i>New &gt; Project...</i>";</li>
+				<li> Select "
+			<i>Apogy &gt; New Apogy Project</i>" and click "
+			<i>Next &gt;</i>";</li>
+				<li> In the wizard that appears:</li>
+				<ol type="i">
+					<li> Enter 
+			<b>MyFirstApogyProject</b> for the name of the new project;</li>
+					<ul>
+						<li> Ensure that the "
+			<b>Import Registered Apogy Project</b>" check box is 
+			<b>checked</b>;</li>
+					</ul>
+					<li> Click "
+			<i>Next &gt;</i>";</li>
+					<li> In the list of registered Apogy Project, select 
+			<b>Rover Example</b>;</li>		
+					<li> Click "
+			<i>Finish</i>";</li>
+				</ol>
+				<li> The project is now created. The session editor should now be opened and the content of the  session.sym displayed and should look like this:</li>
+				
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_in_session_editor.png"/>
+</ol>
+		</p>
+		<h1 id="Configuring_the_Views">Configuring the Views</h1>
+		<p>In order to view the Rover, a few views are necessary. Here are the steps to configure them:</p>
+		<p><ol>
+				<li> Ensure the 
+			<i>Properties</i> view is opened. </li>
+				<li> Open the 
+			<i>Apogy 3D Viewer</i> by selecting in the menu bar 
+			<i>Window &gt; Show View &gt; Other.. &gt; Apogy Core &gt; Apogy 3D Viewer</i> and press OK;</li>
+				<li> Select "
+			<i>Apogy &gt; New Apogy Project</i>" and click "
+			<i>Next &gt;</i>";</li>	
+				<li> The Apogy 3D viewer should now be opened (this can take a few seconds) and should look like this:</li>
+				
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_views_configured.png"/>
+</ol>
+		</p>
+		<h1 id="Initializing_and_Using_the_Rover">Initializing and Using the Rover</h1>
+		<p>You are now ready to initialize the rover and start issuing it commands. Here are the steps to do that:</p>
+		<p><ol>
+				<li> In the session editor, navigate down the tree to the 
+			<i>Apogy Environment</i> (see screen shot below); </li>
+				
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_navigating_to_apogy_environment.png"/>	
+				<li> Select "
+			<i>Apogy Environment</i>" and right-click, this will bring up a menu like this:</li>
+				
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_reset_instances.png"/>	
+				<li>Select "
+			<i>Apogy &gt; Reset Instances</i>". This will start the rover instanciation and the rover geometry will appear in the Apogy 3D Viewer: </li>
+				
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_rover_instanciated.png"/>	
+				<li> The rover is now ready to accept commands. Lets start by invoking its  
+			<b>init()</b> command :</li>
+				<ol type="i">
+					<li> In the session editor, navigate down the tree to the 
+			<i>Operation Calls</i> (see screenshot below). This is a container of Operation Calls;</li>
+					
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_navigating_to_operation_calls.png"/>			
+					<li> Select the "
+			<i>Init()</i>" operation call and right-click, this will bring up a menu like this: ;</li>
+					
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_invoke_init.png"/>		
+					<li>Select "
+			<i>Apogy &gt; Invoke</i>". This will invoke the command on the rover. </li>
+					<li> Select "
+			<i>Change Angular Velocity</i>" and invoke it using the same procedure. The rover should now start to turn on itself at a rate of 10.0 &deg;/s.</li>		
+					<li> Select "
+			<i>Change Linear Velocity</i>" and invoke it using the same procedure. The rover should now start move forward at 0.5 m/s and turn at the same time, thus doing an arc turn.</li>		
+		</p>
+		<p>	</ol>
+</ol></p>
+		<p>Lets modify the angular velocity of the rover to make the arc turn wider. In order to do so, we will change the "
+			<i>angularVelocity"</i> parameter of the "
+			<i>Change Angular Velocity</i>" command. Here is how to do it:
+<ol>
+						<li> Select "
+			<i>Change Linear Velocity</i>" and expand it down to the "
+			<i>angularVelocity</i>" parameter (see screenshot below). </li>
+						
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_changing_angular_vel.png"/>
+						<li> Select the "
+			<i>angularVelocity</i>" parameter, the Properties view should now show it and its current value (10.0 &deg;/s)</li>
+						<li> In the Properties view, set the "
+			<i>angularVelocity</i>" parameter value to 2.0 &deg;/s</li>
+						<li> Invoke "
+			<i>Change Linear Velocity</i>". This will command the current angular velocity without changing the linear one, making the rover move along a wider arc.</li>
+</ol>
+		</p>
+		<p>If you want the rover to stop, just invoke "
+			<i>Stop</i>". This command will set both linear and angular velocity to zero. 
+		</p>
+	</body>
+</html>

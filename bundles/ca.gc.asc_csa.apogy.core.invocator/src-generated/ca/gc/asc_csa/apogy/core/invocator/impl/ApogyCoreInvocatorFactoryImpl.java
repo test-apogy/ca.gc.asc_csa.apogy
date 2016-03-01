@@ -101,7 +101,9 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE: return createVariableFeatureReference();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL: return createOperationCall();
 			case ApogyCoreInvocatorPackage.ARGUMENTS_LIST: return createArgumentsList();
-			case ApogyCoreInvocatorPackage.EDATA_TYPE_ARGUMENT: return createEDataTypeArgument();
+			case ApogyCoreInvocatorPackage.BOOLEAN_EDATA_TYPE_ARGUMENT: return createBooleanEDataTypeArgument();
+			case ApogyCoreInvocatorPackage.NUMERIC_EDATA_TYPE_ARGUMENT: return createNumericEDataTypeArgument();
+			case ApogyCoreInvocatorPackage.STRING_EDATA_TYPE_ARGUMENT: return createStringEDataTypeArgument();
 			case ApogyCoreInvocatorPackage.EENUM_ARGUMENT: return createEEnumArgument();
 			case ApogyCoreInvocatorPackage.ECLASS_ARGUMENT: return createEClassArgument();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST: return createOperationCallResultsList();
@@ -502,16 +504,35 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataTypeArgument createEDataTypeArgument()
-  {
-		EDataTypeArgumentImpl eDataTypeArgument = new EDataTypeArgumentImpl();
-		return eDataTypeArgument;
+	public BooleanEDataTypeArgument createBooleanEDataTypeArgument() {
+		BooleanEDataTypeArgumentImpl booleanEDataTypeArgument = new BooleanEDataTypeArgumentImpl();
+		return booleanEDataTypeArgument;
 	}
 
-  /**
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericEDataTypeArgument createNumericEDataTypeArgument() {
+		NumericEDataTypeArgumentImpl numericEDataTypeArgument = new NumericEDataTypeArgumentImpl();
+		return numericEDataTypeArgument;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringEDataTypeArgument createStringEDataTypeArgument() {
+		StringEDataTypeArgumentImpl stringEDataTypeArgument = new StringEDataTypeArgumentImpl();
+		return stringEDataTypeArgument;
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

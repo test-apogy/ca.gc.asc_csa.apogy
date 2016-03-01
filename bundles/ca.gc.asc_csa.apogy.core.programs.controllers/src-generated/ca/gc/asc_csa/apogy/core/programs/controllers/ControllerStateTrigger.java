@@ -79,7 +79,7 @@ public interface ControllerStateTrigger extends ControllerTrigger
 	 * @see #setRepeatPeriod(long)
 	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllerStateTrigger_RepeatPeriod()
 	 * @model default="100" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='ms'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='ms'"
 	 * @generated
 	 */
   long getRepeatPeriod();

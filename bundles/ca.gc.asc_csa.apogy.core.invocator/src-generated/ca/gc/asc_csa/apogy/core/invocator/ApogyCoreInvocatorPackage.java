@@ -49,7 +49,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreInvocator' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)' modelName='ApogyCoreInvocator' fileExtensions='sym' resource='XMI' modelDirectory='/ca.gc.asc_csa.apogy.core.invocator/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.invocator.edit/src-generated' editorDirectory='/ca.gc.asc_csa.apogy.core.invocator.editor/src-generated' basePackage='ca.gc.asc_csa.apogy.core'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreInvocator' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\n All rights reserved. This program and the accompanying materials\n are made available under the terms of the Eclipse Public License v1.0\n which accompanies this distribution, and is available at\n http://www.eclipse.org/legal/epl-v10.html\n \n Contributors:\n     Pierre Allard (Pierre.Allard@canada.ca), \n     Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n     Sebastien Gemme (Sebastien.Gemme@canada.ca),\n     Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyCoreInvocator' fileExtensions='sym' resource='XMI' modelDirectory='/ca.gc.asc_csa.apogy.core.invocator/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.invocator.edit/src-generated' editorDirectory='/ca.gc.asc_csa.apogy.core.invocator.editor/src-generated' basePackage='ca.gc.asc_csa.apogy.core'"
  * @generated
  */
 public interface ApogyCoreInvocatorPackage extends EPackage
@@ -2952,6 +2952,225 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int EDATA_TYPE_ARGUMENT_OPERATION_COUNT = ARGUMENT_OPERATION_COUNT + 0;
 
   /**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.BooleanEDataTypeArgumentImpl <em>Boolean EData Type Argument</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.BooleanEDataTypeArgumentImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getBooleanEDataTypeArgument()
+	 * @generated
+	 */
+	int BOOLEAN_EDATA_TYPE_ARGUMENT = 39;
+
+		/**
+	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EDATA_TYPE_ARGUMENT__ARGUMENTS_LIST = EDATA_TYPE_ARGUMENT__ARGUMENTS_LIST;
+
+		/**
+	 * The feature id for the '<em><b>Operation Call</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EDATA_TYPE_ARGUMENT__OPERATION_CALL = EDATA_TYPE_ARGUMENT__OPERATION_CALL;
+
+		/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EDATA_TYPE_ARGUMENT__VALUE = EDATA_TYPE_ARGUMENT__VALUE;
+
+		/**
+	 * The number of structural features of the '<em>Boolean EData Type Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EDATA_TYPE_ARGUMENT_FEATURE_COUNT = EDATA_TYPE_ARGUMENT_FEATURE_COUNT + 0;
+
+		/**
+	 * The operation id for the '<em>Get EParameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EDATA_TYPE_ARGUMENT___GET_EPARAMETER = EDATA_TYPE_ARGUMENT___GET_EPARAMETER;
+
+		/**
+	 * The operation id for the '<em>Get Parameter Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EDATA_TYPE_ARGUMENT___GET_PARAMETER_VALUE = EDATA_TYPE_ARGUMENT___GET_PARAMETER_VALUE;
+
+		/**
+	 * The number of operations of the '<em>Boolean EData Type Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EDATA_TYPE_ARGUMENT_OPERATION_COUNT = EDATA_TYPE_ARGUMENT_OPERATION_COUNT + 0;
+
+		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.NumericEDataTypeArgumentImpl <em>Numeric EData Type Argument</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.NumericEDataTypeArgumentImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNumericEDataTypeArgument()
+	 * @generated
+	 */
+	int NUMERIC_EDATA_TYPE_ARGUMENT = 40;
+
+		/**
+	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_EDATA_TYPE_ARGUMENT__ARGUMENTS_LIST = EDATA_TYPE_ARGUMENT__ARGUMENTS_LIST;
+
+		/**
+	 * The feature id for the '<em><b>Operation Call</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_EDATA_TYPE_ARGUMENT__OPERATION_CALL = EDATA_TYPE_ARGUMENT__OPERATION_CALL;
+
+		/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_EDATA_TYPE_ARGUMENT__VALUE = EDATA_TYPE_ARGUMENT__VALUE;
+
+		/**
+	 * The number of structural features of the '<em>Numeric EData Type Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_EDATA_TYPE_ARGUMENT_FEATURE_COUNT = EDATA_TYPE_ARGUMENT_FEATURE_COUNT + 0;
+
+		/**
+	 * The operation id for the '<em>Get EParameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_EDATA_TYPE_ARGUMENT___GET_EPARAMETER = EDATA_TYPE_ARGUMENT___GET_EPARAMETER;
+
+		/**
+	 * The operation id for the '<em>Get Parameter Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_EDATA_TYPE_ARGUMENT___GET_PARAMETER_VALUE = EDATA_TYPE_ARGUMENT___GET_PARAMETER_VALUE;
+
+		/**
+	 * The number of operations of the '<em>Numeric EData Type Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_EDATA_TYPE_ARGUMENT_OPERATION_COUNT = EDATA_TYPE_ARGUMENT_OPERATION_COUNT + 0;
+
+		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.StringEDataTypeArgumentImpl <em>String EData Type Argument</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.StringEDataTypeArgumentImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getStringEDataTypeArgument()
+	 * @generated
+	 */
+	int STRING_EDATA_TYPE_ARGUMENT = 41;
+
+		/**
+	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_EDATA_TYPE_ARGUMENT__ARGUMENTS_LIST = EDATA_TYPE_ARGUMENT__ARGUMENTS_LIST;
+
+		/**
+	 * The feature id for the '<em><b>Operation Call</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_EDATA_TYPE_ARGUMENT__OPERATION_CALL = EDATA_TYPE_ARGUMENT__OPERATION_CALL;
+
+		/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_EDATA_TYPE_ARGUMENT__VALUE = EDATA_TYPE_ARGUMENT__VALUE;
+
+		/**
+	 * The number of structural features of the '<em>String EData Type Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_EDATA_TYPE_ARGUMENT_FEATURE_COUNT = EDATA_TYPE_ARGUMENT_FEATURE_COUNT + 0;
+
+		/**
+	 * The operation id for the '<em>Get EParameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_EDATA_TYPE_ARGUMENT___GET_EPARAMETER = EDATA_TYPE_ARGUMENT___GET_EPARAMETER;
+
+		/**
+	 * The operation id for the '<em>Get Parameter Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_EDATA_TYPE_ARGUMENT___GET_PARAMETER_VALUE = EDATA_TYPE_ARGUMENT___GET_PARAMETER_VALUE;
+
+		/**
+	 * The number of operations of the '<em>String EData Type Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_EDATA_TYPE_ARGUMENT_OPERATION_COUNT = EDATA_TYPE_ARGUMENT_OPERATION_COUNT + 0;
+
+		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EEnumArgumentImpl <em>EEnum Argument</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2959,7 +3178,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEEnumArgument()
 	 * @generated
 	 */
-  int EENUM_ARGUMENT = 39;
+  int EENUM_ARGUMENT = 42;
 
   /**
 	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
@@ -3041,7 +3260,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEClassArgument()
 	 * @generated
 	 */
-  int ECLASS_ARGUMENT = 40;
+  int ECLASS_ARGUMENT = 43;
 
   /**
 	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
@@ -3114,7 +3333,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getResultsList()
 	 * @generated
 	 */
-  int RESULTS_LIST = 41;
+  int RESULTS_LIST = 44;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3178,7 +3397,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsList()
 	 * @generated
 	 */
-  int OPERATION_CALL_RESULTS_LIST = 42;
+  int OPERATION_CALL_RESULTS_LIST = 45;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3260,7 +3479,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingResultsList()
 	 * @generated
 	 */
-  int RECORDING_RESULTS_LIST = 43;
+  int RECORDING_RESULTS_LIST = 46;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3342,7 +3561,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResult()
 	 * @generated
 	 */
-  int ABSTRACT_RESULT = 44;
+  int ABSTRACT_RESULT = 47;
 
   /**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -3424,7 +3643,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResultValue()
 	 * @generated
 	 */
-  int ABSTRACT_RESULT_VALUE = 45;
+  int ABSTRACT_RESULT_VALUE = 48;
 
   /**
 	 * The feature id for the '<em><b>Result</b></em>' container reference.
@@ -3461,7 +3680,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResult()
 	 * @generated
 	 */
-  int OPERATION_CALL_RESULT = 46;
+  int OPERATION_CALL_RESULT = 49;
 
   /**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -3579,7 +3798,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getExceptionContainer()
 	 * @generated
 	 */
-  int EXCEPTION_CONTAINER = 47;
+  int EXCEPTION_CONTAINER = 50;
 
   /**
 	 * The feature id for the '<em><b>Exception</b></em>' attribute.
@@ -3616,7 +3835,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeResultValue()
 	 * @generated
 	 */
-  int ATTRIBUTE_RESULT_VALUE = 48;
+  int ATTRIBUTE_RESULT_VALUE = 51;
 
   /**
 	 * The feature id for the '<em><b>Result</b></em>' container reference.
@@ -3662,7 +3881,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeValue()
 	 * @generated
 	 */
-  int ATTRIBUTE_VALUE = 49;
+  int ATTRIBUTE_VALUE = 52;
 
   /**
 	 * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -3699,7 +3918,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getReferenceResultValue()
 	 * @generated
 	 */
-  int REFERENCE_RESULT_VALUE = 50;
+  int REFERENCE_RESULT_VALUE = 53;
 
   /**
 	 * The feature id for the '<em><b>Result</b></em>' container reference.
@@ -3745,7 +3964,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingToolsContainer()
 	 * @generated
 	 */
-	int RECORDING_TOOLS_CONTAINER = 51;
+	int RECORDING_TOOLS_CONTAINER = 54;
 
 		/**
 	 * The feature id for the '<em><b>Tools List</b></em>' container reference.
@@ -3809,7 +4028,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getChannelsList()
 	 * @generated
 	 */
-	int CHANNELS_LIST = 52;
+	int CHANNELS_LIST = 55;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3873,7 +4092,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractChannel()
 	 * @generated
 	 */
-	int ABSTRACT_CHANNEL = 53;
+	int ABSTRACT_CHANNEL = 56;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3928,7 +4147,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractRecorder()
 	 * @generated
 	 */
-  int ABSTRACT_RECORDER = 54;
+  int ABSTRACT_RECORDER = 57;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3983,7 +4202,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractPlayer()
 	 * @generated
 	 */
-  int ABSTRACT_PLAYER = 55;
+  int ABSTRACT_PLAYER = 58;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4038,7 +4257,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsListTimeSource()
 	 * @generated
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 56;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 59;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4255,7 +4474,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableListenerEventType()
 	 * @generated
 	 */
-	int VARIABLE_LISTENER_EVENT_TYPE = 57;
+	int VARIABLE_LISTENER_EVENT_TYPE = 60;
 
 		/**
 	 * The meta object id for the '<em>Throwable</em>' data type.
@@ -4265,7 +4484,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getThrowable()
 	 * @generated
 	 */
-  int THROWABLE = 58;
+  int THROWABLE = 61;
 
   /**
 	 * The meta object id for the '<em>Notification</em>' data type.
@@ -4275,7 +4494,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNotification()
 	 * @generated
 	 */
-  int NOTIFICATION = 59;
+  int NOTIFICATION = 62;
 
 
   /**
@@ -4286,7 +4505,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
 	 * @generated
 	 */
-  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 60;
+  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 63;
 
 
   /**
@@ -4296,7 +4515,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMembersArray()
 	 * @generated
 	 */
-	int TYPE_MEMBERS_ARRAY = 61;
+	int TYPE_MEMBERS_ARRAY = 64;
 
 
 		/**
@@ -4307,7 +4526,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getIVariableListener()
 	 * @generated
 	 */
-	int IVARIABLE_LISTENER = 62;
+	int IVARIABLE_LISTENER = 65;
 
 
 		/**
@@ -6171,6 +6390,36 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   EAttribute getEDataTypeArgument_Value();
 
   /**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument <em>Boolean EData Type Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Boolean EData Type Argument</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument
+	 * @generated
+	 */
+	EClass getBooleanEDataTypeArgument();
+
+		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument <em>Numeric EData Type Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Numeric EData Type Argument</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument
+	 * @generated
+	 */
+	EClass getNumericEDataTypeArgument();
+
+		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument <em>String EData Type Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String EData Type Argument</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument
+	 * @generated
+	 */
+	EClass getStringEDataTypeArgument();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument <em>EEnum Argument</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8251,6 +8500,36 @@ public interface ApogyCoreInvocatorPackage extends EPackage
     EAttribute EDATA_TYPE_ARGUMENT__VALUE = eINSTANCE.getEDataTypeArgument_Value();
 
     /**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.BooleanEDataTypeArgumentImpl <em>Boolean EData Type Argument</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.BooleanEDataTypeArgumentImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getBooleanEDataTypeArgument()
+		 * @generated
+		 */
+		EClass BOOLEAN_EDATA_TYPE_ARGUMENT = eINSTANCE.getBooleanEDataTypeArgument();
+
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.NumericEDataTypeArgumentImpl <em>Numeric EData Type Argument</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.NumericEDataTypeArgumentImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNumericEDataTypeArgument()
+		 * @generated
+		 */
+		EClass NUMERIC_EDATA_TYPE_ARGUMENT = eINSTANCE.getNumericEDataTypeArgument();
+
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.StringEDataTypeArgumentImpl <em>String EData Type Argument</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.StringEDataTypeArgumentImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getStringEDataTypeArgument()
+		 * @generated
+		 */
+		EClass STRING_EDATA_TYPE_ARGUMENT = eINSTANCE.getStringEDataTypeArgument();
+
+				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EEnumArgumentImpl <em>EEnum Argument</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

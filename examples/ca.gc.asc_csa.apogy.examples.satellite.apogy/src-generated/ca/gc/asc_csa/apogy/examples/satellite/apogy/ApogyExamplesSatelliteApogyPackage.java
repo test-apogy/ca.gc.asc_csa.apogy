@@ -45,7 +45,11 @@ import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory
  * @model kind="package"
+<<<<<<< HEAD
  *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesSatelliteApogy' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\nContributors:\nCanadian Space Agency (CSA) - Initial API and implementation\n-Pierre Allard (Pierre.Allard@canada.ca),\n-Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n-Sebastien Gemme (Sebastien.Gemme@canada.ca)' modelName='ApogyExamplesSatelliteApogy' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.satellite.apogy/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.satellite.apogy.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.satellite'"
+=======
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesSatelliteApogy' copyrightText='Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyExamplesSatelliteApogy' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.satellite.apogy/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.satellite.apogy.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.satellite'"
+>>>>>>> refs/heads/master
  * @generated
  */
 public interface ApogyExamplesSatelliteApogyPackage extends EPackage {

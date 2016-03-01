@@ -21,4 +21,135 @@
   	<version>0.5.0-SNAPSHOT</version>
   	<relativePath>../../packaging/ca.gc.asc_csa.apogy.parent</relativePath>
   </parent>
+
+	<properties>
+		<!-- The label for the Composite sites -->
+		<repoName>Apogy Development</repoName>
+		<devStream>0.5</devStream>
+
+		<!-- The name of the Bintray repository -->
+		<!--<bintray.repo>Develop</bintray.repo>-->
+
+		<!-- Internal properties -->
+		<!-- The name of your own Bintray repository's package for releases -->
+		<bintray.package>${devStream}</bintray.package>
+
+		<!-- Define bintray.user and bintray.apikey in some secret place,
+			like .m2/settings.xml -->
+		<bintray.owner>${bintray.user}</bintray.owner>
+		<bintray.apikey>${bintray.key}</bintray.apikey>
+
+		<!-- Default values for remote directories -->
+		<bintray.releases.path>${devStream}</bintray.releases.path>
+
+		<repoChildName>${unqualifiedVersion}.${buildQualifier}</repoChildName>
+		<repoTarget>target/composite-main</repoTarget>
+	</properties>
+
+
+
+	<profiles>
+		<profile>
+			<!-- Activate this profile to perform the release to Bintray -->
+			<id>deploy-to-bintray</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.8</version>
+						<executions>
+							<execution>
+								<!-- Retrieve possibly existing remote composite metadata -->
+								<id>update-local-repository</id>
+								<phase>prepare-package</phase>
+								<configuration>
+									<target>
+										<ant antfile="${basedir}/bintray.ant" target="get-composite-metadata">
+										</ant>
+									</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+							
+							<execution>
+								<!-- Deploy p2 repository, p2 composite updated metadata and zipped p2 repository -->
+								<id>deploy-repository</id>
+								<phase>verify</phase>
+								<configuration>
+									<target>
+										<echo message="The property is ${project.version}"/>
+										<property name="bintray.package.version" value="${unqualifiedVersion}.${buildQualifier}"/>
+										<ant antfile="${basedir}/bintray.ant" target="push-to-bintray">
+										</ant>
+									</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+					<plugin>
+						<groupId>org.eclipse.tycho.extras</groupId>
+						<artifactId>tycho-eclipserun-plugin</artifactId>
+						<version>0.24.0</version>
+						<configuration>
+							<!-- Update p2 composite metadata or create it -->
+							<!-- IMPORTANT: DO NOT split the arg line -->
+							<appArgLine>-application org.eclipse.ant.core.antRunner -buildfile packaging-p2composite.ant p2.composite.add -Dsite.composite.name="${repoName}" -Dsource.repository=repository -Dtarget.repository=${repoTarget} -Dtarget.child.repository.relativePath=${repoChildName}</appArgLine>
+							<repositories>
+								<repository>
+									<id>mars</id>
+									<layout>p2</layout>
+									<url>http://download.eclipse.org/releases/mars</url>
+								</repository>
+							</repositories>
+							<dependencies>
+								<dependency>
+									<artifactId>org.eclipse.ant.core</artifactId>
+									<type>eclipse-plugin</type>
+								</dependency>
+								<dependency>
+									<artifactId>org.apache.ant</artifactId>
+									<type>eclipse-plugin</type>
+								</dependency>
+								<dependency>
+									<artifactId>org.eclipse.equinox.p2.repository.tools</artifactId>
+									<type>eclipse-plugin</type>
+								</dependency>
+								<dependency>
+									<artifactId>org.eclipse.equinox.p2.core.feature</artifactId>
+									<type>eclipse-feature</type>
+								</dependency>
+								<dependency>
+									<artifactId>org.eclipse.equinox.p2.extras.feature</artifactId>
+									<type>eclipse-feature</type>
+								</dependency>
+								<dependency>
+									<artifactId>org.eclipse.equinox.ds</artifactId>
+									<type>eclipse-plugin</type>
+								</dependency>
+							</dependencies>
+						</configuration>
+						<executions>
+							<execution>
+								<id>add-p2-composite-repository</id>
+								<phase>package</phase>
+								<goals>
+									<goal>eclipse-run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
