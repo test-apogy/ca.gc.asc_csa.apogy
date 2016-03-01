@@ -1,7 +1,7 @@
 = Simple Way To Start =
 __TOC__
 
-The examples are a simple way to get started interacting with Apogy and seeing what it can do.  As laid out in the ''Registered Apogy Projects'' section above, it's easy to start using Apogy ''Systems''; by doing so, one can gain a foundation for the material and better understanding for how Apogy and its various components operate.
+The examples are a simple way to get started interacting with Apogy and seeing what it can do.  The simplest way to get started is to use one of the ''Registered Apogy Projects''. Each of these include an Apogy Session that is ready to use in a few clicks.
 
 Lets use the ''Rover'' example system to do that. Here is the step by step procedure to get started:
 
@@ -33,8 +33,7 @@ In order to view the Rover, a few views are necessary. Here are the steps to con
 
 <ol>
 	<li> Ensure the ''Properties'' view is opened. </li>
-	<li> Open the ''Apogy 3D Viewer'' by selecting in the menu bar ''Window > Show View > Other.. > Apogy Core > Apogy 3D Viewer'' and press OK;</li>
-	<li> Select "''Apogy > New Apogy Project''" and click "''Next >''";</li>	
+	<li> Open the ''Apogy 3D Viewer'' by selecting in the menu bar ''Window > Show View > Other.. > Apogy Core > Apogy 3D Viewer'' and press ''OK'';</li>	
 	<li> The Apogy 3D viewer should now be opened (this can take a few seconds) and should look like this:</li>
 	[[File:../resources/tutorials/rover_example_views_configured.png|640x512px]]
 </ol>
@@ -50,17 +49,17 @@ You are now ready to initialize the rover and start issuing it commands. Here ar
 	[[File:../resources/tutorials/rover_example_reset_instances.png|640x512px]]	
 	<li>Select "''Apogy > Reset Instances''". This will start the rover instanciation and the rover geometry will appear in the Apogy 3D Viewer: </li>
 	[[File:../resources/tutorials/rover_example_rover_instanciated.png|640x512px]]	
-	<li> The rover is now ready to accept commands. Lets start by invoking its  '''init()''' command :</li>
+	<li> The rover is now ready to accept commands. Lets start by issuing the required commands to initialize it :</li>
 	<ol type="i">
 		<li> In the session editor, navigate down the tree to ''Programs'' then to ''Operation Calls Setup'' (see screenshot below). This is a container of Operation Calls (lists of Operation Call);</li>
 		[[File:../resources/tutorials/rover_example_navigating_to_operation_calls.png|640x512px]]			
 		<li> Select the "''Operation Calls Setup''" operation call list and right-click, this will bring up a menu like this: ;</li>
 		[[File:../resources/tutorials/rover_example_invoke_init.png|640x512px]]		
-		<li>Select "''Apogy > Invoke''". This will invoke all the commands listed inside the "''Operation Calls Setup''" on the rover, on after the other. </li>
-		<li> Navigate to the ''Operation Calls Navigate'', expand the list and select the "''Change Angular Velocity Only''" and invoke it using the same procedure (see below). 
+		<li>Select "''Apogy > Invoke''". This will invoke all the commands listed inside the "''Operation Calls Setup''" on the rover, on after the other. The rover is then fully initialized. Lets now move it around.</li>
+		<li> Navigate to the ''Operation Calls Navigate'', expand the list and select the "''Change Angular Velocity Only''" and invoke it using the same procedure (see below). The rover should now start to turn on itself at a rate of 10.0 &deg;/s.</li>
 		[[File:../resources/tutorials/rover_example_invoke_change_angular_velocity_only.png|640x512px]]	
-		The rover should now start to turn on itself at a rate of 10.0 &deg;/s.</li>		
-		<li> Select "''Change Linear Velocity Only''" and invoke it using the same procedure. The rover should now start move forward at 0.5 m/s and turn at the same time, thus doing an arc turn.</li>		
+				
+		<li> Select "''Change Angular Velocity Only''" and invoke it using the same procedure. The rover should now start move forward at 0.5 m/s and turn at the same time, thus doing an arc turn.</li>		
 		
 	</ol>
 </ol>
@@ -71,7 +70,7 @@ Lets modify the angular velocity of the rover to make the arc turn wider. In ord
 			[[File:../resources/tutorials/rover_example_changing_angular_vel.png|640x512px]]
 			<li> Select the "''angularVelocity''" parameter, then in the Properties view, select the "''Advanced''" tab. The Properties view should now show it and its current value (10.0 &deg;/s)</li>
 			<li> In the Properties view, set the "''angularVelocity''" parameter value to 2.0 &deg;/s</li>
-			<li> Invoke "''Change Linear Velocity''". This will command the current angular velocity without changing the linear one, making the rover move along a wider arc.</li>
+			<li> Invoke "''Change Angular Velocity Only''". This will command the current angular velocity without changing the linear one, making the rover move along a wider arc.</li>
 </ol>
 
 If you want the rover to stop, just invoke "''Stop''". This command will set both linear and angular velocity to zero. 
