@@ -44,7 +44,7 @@ import ca.gc.asc_csa.apogy.examples.lander.Position;
  * @generated
  */
 public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
-{
+{	
 	/**
 	 * This is the degree symbol, as expressed in unicode
 	 */
@@ -83,8 +83,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 	 * lander movement takes place.
 	 * @see #move(double, double, double)
 	 */
-	protected static final double MOVE_TO_LINEAR_SPEED = 5.0;
-	// TODO FIXME: Is this actually a reasonable value?
+	protected static final double MOVE_TO_LINEAR_SPEED = 5.0;	
 	
 	/**
 	 * This constant defines the period of time (in milliseconds) to wait
@@ -107,7 +106,22 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 	 * @see #startFlying(boolean)
 	 * @see #getMass()
 	 */
-	protected static final double LANDER_MASS = 200.0;
+	protected static final double LANDER__DRY_MASS = 572.0;
+	
+	/**
+	 * This constant defines the mass (in kg) of hydrazine fuel carried by the lander
+	 * @see #startFlying(boolean)
+	 * @see #getMass()
+	 */
+	protected static final double LANDER__FUEL_MASS_AT_LAUNCH = 85.0;
+	
+	/**
+	 * This constant defines the specific impulse (in sec) of the hydrazine fuel carried by the lander.
+	 * @see #startFlying(boolean)
+	 * @see #getMass()
+	 */
+	protected static final double LANDER__FUEL_SPECIFIC_IMPULSE = 220;
+	
 	
 	/**
 	 * This constant defines the maximum thrust (in N) that
@@ -115,11 +129,11 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 	 * @see #startFlying(boolean)
 	 * @see #getMaximumThrustLevel()
 	 */
-	protected static final double LANDER_MAX_THRUST = 3000.0;
+	protected static final double LANDER_MAX_THRUST = 8000.0;
 	
 	/**
 	 * This constant defines an approximation of the gravitational
-	 * pull of the Earth.
+	 * pull of Earth.
 	 * @see #startFlying(boolean)
 	 */
 	protected static final double EARTH_GRAVITY = -9.81;
@@ -137,7 +151,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 	 * This is used to keep track of whether or not the lander is
 	 * landing
 	 */
-	private boolean isLanding;
+	private boolean isLanding = false;
 	
 	/**
 	 * This is the constructor for the LanderSimulatedImpl class
@@ -177,7 +191,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 	public double getGravitationalPull()
 	{
 		// Determine how much gravitational pull is subjected to the lander 
-		return LANDER_MASS * EARTH_GRAVITY;
+		return getMass() * EARTH_GRAVITY;
 	}
 
 	/**
@@ -189,7 +203,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 	public double getMass()
 	{
 		// Just return the mass
-		return LANDER_MASS;
+		return LANDER__DRY_MASS + getFuelMass();
 	}
 	
 	/**
@@ -451,8 +465,16 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 				thrustLevel = this.getThruster().getMaximumThrust();
 			}
 			
-			// Set the thrust level accordingly
-			this.getThruster().setCurrentThrust(thrustLevel);
+			// If there is still fuel to burn.
+			if(getFuelMass() > 0)
+			{			
+				// Set the thrust level accordingly
+				this.getThruster().setCurrentThrust(thrustLevel);
+			}
+			else
+			{
+				this.getThruster().setCurrentThrust(0);
+			}
 		}
 	}
 	
@@ -557,8 +579,16 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 				newThrustLevel = this.getThruster().getMaximumThrust();
 			}
 			
-			// Set the thrust level accordingly
-			this.getThruster().setCurrentThrust(newThrustLevel);
+			// If there is still fuel to burn.
+			if(getFuelMass() > 0)
+			{			
+				// Set the thrust level accordingly
+				this.getThruster().setCurrentThrust(newThrustLevel);
+			}
+			else
+			{
+				this.getThruster().setCurrentThrust(0);
+			}
 		}
 	}
 
@@ -998,6 +1028,9 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"and depending on the thrust, will do so.";
 			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.INFO);
 			
+			// Fuel up.
+			setFuelMass(LANDER__FUEL_MASS_AT_LAUNCH);
+			
 			// Update whether or not the simulation should be logging events
 			this.flyingSim.shouldLog(logStateChanges);
 		
@@ -1092,9 +1125,13 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 			// While the lander hasn't hit the ground
 			while (this.getPosition().getZ() > LanderSimulatedFlyingJob.GROUND_Z)
 			{
+				System.err.println("his.getPosition().getZ() " + this.getPosition().getZ());
+				
 				// If a movement is already taking place
-				while (this.isChangingLocation() == true)
+				while (this.isChangingLocation() == true)				
 				{
+					System.err.println("his.getPosition().getZ() " + this.getPosition().getZ());
+					
 					try
 					{
 						// Wait a short period of time
@@ -1106,6 +1143,16 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 						ex.printStackTrace();
 					}
 				}
+				
+				// Wait for the sim to update.
+				try
+				{
+					Thread.sleep(100);
+				} 
+				catch (InterruptedException e) 
+				{				
+					e.printStackTrace();
+				}
 			}
 			
 			// Indicate that the lander is landed
@@ -1115,6 +1162,8 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 			message = LOG_PREFIX +
 						"The lander has successfully landed.";
 			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.INFO);
+			
+			System.err.println("isLanding = " + isLanding);
 		}
 	}
 
@@ -1666,8 +1715,23 @@ final class LanderSimulatedFlyingJob extends Job
 												  lander.getPosition().getZ());
 				Matrix3d newAttitude = new Matrix3d(lander.getPosition().getAttitude());
 
+				// Updates the fuel mass and available thrust.
+				double fuelFlowRate = lander.getThruster().getCurrentThrust() / (9.81 * LanderSimulatedImpl.LANDER__FUEL_SPECIFIC_IMPULSE);
+				double deltaFuel = deltaT * fuelFlowRate;
+				lander.setFuelMass(lander.getFuelMass() - deltaFuel);
+							
+				if(lander.getFuelMass() < 0) lander.setFuelMass(0.0);
+				if(lander.getFuelMass() == 0)
+				{
+					lander.getThruster().setCurrentThrust(0);
+				}
+				
+				System.out.println("Fuel Flow Rate " + fuelFlowRate);
+				System.out.println("Fuel Mass      " + lander.getFuelMass());
+	
+												
 				// Calculate the net forces on the lander
-				Vector3d thrust = new Vector3d(0, 0, lander.getThruster().getCurrentThrust());
+				Vector3d thrust = new Vector3d(0, 0, lander.getThruster().getCurrentThrust());				
 				newAttitude.transform(thrust);					  
 				Vector3d gravity = new Vector3d(0, 0, lander.getGravitationalPull());
 
