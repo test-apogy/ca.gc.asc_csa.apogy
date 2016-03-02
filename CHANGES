@@ -1,3 +1,23 @@
+Version 0.5.8:
+ - Fixes.
+ - Fixes
+ - Fixes.
+ - Merge branch 'master' into hotfix-issue_98
+ - Updated Apogy P2 URL in the documentation.
+ - Removed from Apogy SDK dependencies to emf.*
+ - Updated.
+ - Fixes.
+ - Fixes.
+ - Fixes.
+ - Merge branch 'master' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
+ - Updated bintray update site.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Fixes.
+
 Version 0.5.7:
  - Created a separate document for Simple Way To Start tutorial.
 
