@@ -25,6 +25,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
@@ -191,9 +193,20 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 	}
 	
 	@Override
-	public boolean isValid(VisibilityPass visibilityPass) {
-		// FIXME Pierre: Implement the check for sun/shadow observation.
-		return true;
+	public boolean isValid(VisibilityPass visibilityPass) 
+	{
+		// Finds the closest point the satellite comes to the target in the pass.
+		VisibilityPassSpacecraftPosition closestPosition = visibilityPass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
+		
+		// Gets the location of the target
+		double observerLongitude = visibilityPass.getSurfaceLocation().getLongitude();
+		double observerLatitude = visibilityPass.getSurfaceLocation().getLatitude();
+		
+		// Finds the horizontal coordinates of the sun at the target at the time of the closest approach.
+		HorizontalCoordinates sunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(closestPosition.getTime(), observerLongitude, observerLatitude);
+		
+		// Returns true if the sun is at least 10 degrees above the horizon.
+		return (sunCoordinates.getAltitude() > Math.toDegrees(10));		
 	}
 
 	@Override
