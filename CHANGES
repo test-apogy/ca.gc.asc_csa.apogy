@@ -1,3 +1,12 @@
+Version 0.5.9:
+ - Fixed build.properties (missing root package)
+ - Merge branch 'master' of bitbucket.org:apogy/ca.gc.asc_csa.apogy into hotfix-issue_103
+ - Added other packages.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Minor fix
+
 Version 0.5.8:
  - Fixes.
  - Fixes
