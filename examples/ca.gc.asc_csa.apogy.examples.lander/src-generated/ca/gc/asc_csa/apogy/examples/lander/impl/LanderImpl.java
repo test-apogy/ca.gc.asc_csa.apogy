@@ -47,6 +47,7 @@ import ca.gc.asc_csa.apogy.examples.lander.Position;
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getMass <em>Mass</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getFuelMass <em>Fuel Mass</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getGravitationalPull <em>Gravitational Pull</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#isChangingLegs <em>Changing Legs</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#isChangingAttitude <em>Changing Attitude</em>}</li>
@@ -244,6 +245,26 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected static final double MASS_EDEFAULT = 0.0;
+
+	/**
+	 * The default value of the '{@link #getFuelMass() <em>Fuel Mass</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFuelMass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double FUEL_MASS_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getFuelMass() <em>Fuel Mass</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFuelMass()
+	 * @generated
+	 * @ordered
+	 */
+	protected double fuelMass = FUEL_MASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getGravitationalPull() <em>Gravitational Pull</em>}' attribute.
@@ -803,6 +824,27 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 	abstract public double getMass();
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getFuelMass() {
+		return fuelMass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFuelMass(double newFuelMass) {
+		double oldFuelMass = fuelMass;
+		fuelMass = newFuelMass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__FUEL_MASS, oldFuelMass, fuelMass));
+	}
+
+	/**
 	 * This is the amount of force (in N) of gravity that is being
 	 * imposed upon the lander.
 	 * <p>
@@ -994,6 +1036,8 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 				return getYAngularVelocity();
 			case ApogyExamplesLanderPackage.LANDER__MASS:
 				return getMass();
+			case ApogyExamplesLanderPackage.LANDER__FUEL_MASS:
+				return getFuelMass();
 			case ApogyExamplesLanderPackage.LANDER__GRAVITATIONAL_PULL:
 				return getGravitationalPull();
 			case ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS:
@@ -1050,6 +1094,9 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case ApogyExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
 				setYAngularVelocity((Double)newValue);
+				return;
+			case ApogyExamplesLanderPackage.LANDER__FUEL_MASS:
+				setFuelMass((Double)newValue);
 				return;
 			case ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS:
 				setChangingLegs((Boolean)newValue);
@@ -1112,6 +1159,9 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 			case ApogyExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
 				setYAngularVelocity(YANGULAR_VELOCITY_EDEFAULT);
 				return;
+			case ApogyExamplesLanderPackage.LANDER__FUEL_MASS:
+				setFuelMass(FUEL_MASS_EDEFAULT);
+				return;
 			case ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS:
 				setChangingLegs(CHANGING_LEGS_EDEFAULT);
 				return;
@@ -1165,6 +1215,8 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 				return yAngularVelocity != YANGULAR_VELOCITY_EDEFAULT;
 			case ApogyExamplesLanderPackage.LANDER__MASS:
 				return getMass() != MASS_EDEFAULT;
+			case ApogyExamplesLanderPackage.LANDER__FUEL_MASS:
+				return fuelMass != FUEL_MASS_EDEFAULT;
 			case ApogyExamplesLanderPackage.LANDER__GRAVITATIONAL_PULL:
 				return getGravitationalPull() != GRAVITATIONAL_PULL_EDEFAULT;
 			case ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS:
@@ -1255,6 +1307,8 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		result.append(xAngularVelocity);
 		result.append(", yAngularVelocity: ");
 		result.append(yAngularVelocity);
+		result.append(", fuelMass: ");
+		result.append(fuelMass);
 		result.append(", changingLegs: ");
 		result.append(changingLegs);
 		result.append(", changingAttitude: ");
