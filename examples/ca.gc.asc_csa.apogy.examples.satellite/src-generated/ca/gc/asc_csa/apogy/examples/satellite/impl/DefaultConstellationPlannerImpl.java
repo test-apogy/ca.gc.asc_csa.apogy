@@ -206,7 +206,7 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 		HorizontalCoordinates sunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(closestPosition.getTime(), observerLongitude, observerLatitude);
 		
 		// Returns true if the sun is at least 10 degrees above the horizon.
-		return (sunCoordinates.getAltitude() > Math.toDegrees(10));		
+		return (sunCoordinates.getAltitude() > Math.toRadians(10));		
 	}
 
 	@Override
