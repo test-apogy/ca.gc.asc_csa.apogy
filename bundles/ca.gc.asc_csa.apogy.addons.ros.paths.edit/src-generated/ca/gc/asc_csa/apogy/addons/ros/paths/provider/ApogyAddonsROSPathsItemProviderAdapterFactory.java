@@ -3,17 +3,9 @@
  */
 package ca.gc.asc_csa.apogy.addons.ros.paths.provider;
 
-import ca.gc.asc_csa.apogy.addons.ros.paths.ApogyAddonsROSPathsFactory;
 import ca.gc.asc_csa.apogy.addons.ros.paths.ApogyAddonsROSPathsPackage;
 
 import ca.gc.asc_csa.apogy.addons.ros.paths.util.ApogyAddonsROSPathsAdapterFactory;
-
-import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-import ca.gc.asc_csa.apogy.common.topology.ContentNode;
-
-import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -23,11 +15,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.emf.edit.command.CommandParameter;
-
 import org.eclipse.emf.edit.domain.EditingDomain;
 
 import org.eclipse.emf.edit.provider.ChangeNotifier;
@@ -250,108 +237,6 @@ public class ApogyAddonsROSPathsItemProviderAdapterFactory extends ApogyAddonsRO
 	 */
 	public void dispose() {
 		if (apogyAddonsROSPathFacadeItemProvider != null) apogyAddonsROSPathFacadeItemProvider.dispose();
-	}
-
-	/**
-	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public <T> Object caseContentNode(ContentNode<T> object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyAddonsROSPathsFactory.eINSTANCE.createApogyAddonsROSPathFacade()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyAddonsROSPathsFactory.eINSTANCE.createApogyAddonsROSPathFacade()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return ApogyAddonsROSPathsEditPlugin.INSTANCE;
-		}
 	}
 
 }

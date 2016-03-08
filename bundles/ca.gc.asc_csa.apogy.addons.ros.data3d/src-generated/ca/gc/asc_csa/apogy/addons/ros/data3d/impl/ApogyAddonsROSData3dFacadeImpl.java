@@ -202,10 +202,11 @@ public class ApogyAddonsROSData3dFacadeImpl extends MinimalEObjectImpl.Container
 		
 		byteBuffer.getFloat(); //Skip 4 bytes
 
-		long rgb = byteBuffer.getLong();
-		byte red = (byte)(rgb >> 16 & 0x0000ff);
-		byte green = (byte)(rgb >> 8 & 0x0000ff);
-		byte blue = (byte)(rgb & 0x0000ff);		
+		long rgb   		= byteBuffer.getLong();		
+		short red   	= (short)(rgb >> 16 & 0x0000ff);
+		short green  	= (short)(rgb >> 8  & 0x0000ff);
+		short blue  	= (short)(rgb >> 0  & 0x0000ff);					
+		
 		byteBuffer.getLong(); //Skip 8 bytes
 		
 		return ApogyCommonGeometryData3DFacade.INSTANCE.createColoredCartesianPositionCoordinates(x, y, z, red, green, blue);	

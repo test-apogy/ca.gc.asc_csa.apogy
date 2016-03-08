@@ -20,11 +20,4 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated apogy_addons_ros_paths -->
-      <extender
-            uri="ca.gc.asc_csa.apogy.common.topology"
-            class="ca.gc.asc_csa.apogy.addons.ros.paths.provider.ApogyAddonsROSPathsItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
-   </extension>
-
 </plugin>
