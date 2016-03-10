@@ -20,7 +20,7 @@ Tutorials                      | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tu
 User                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html)
 Development                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html)
 Eclipse Proposal               | [https://projects.eclipse.org/proposals/apogy](https://projects.eclipse.org/proposals/apogy)
-Eclipse 2016 Presentation      | [https://www.eclipsecon.org/na2016/sites/default/files/slides/apogy_eclipsecon2016_0.pdf]
+Eclipse 2016 Presentation      | [https://www.eclipsecon.org/na2016/sites/default/files/slides/apogy_eclipsecon2016_0.pdf](https://www.eclipsecon.org/na2016/sites/default/files/slides/apogy_eclipsecon2016_0.pdf)
 
 # Medias #
 Description                    | URL
