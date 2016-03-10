@@ -20,3 +20,8 @@ Tutorials                      | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tu
 User                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html)
 Development                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html)
 Eclipse Proposal               | [https://projects.eclipse.org/proposals/apogy](https://projects.eclipse.org/proposals/apogy)
+
+# Medias #
+Description                    | URL
+------------------------------ | ---
+EclipseCon2016 Speaker Pitch   | https://youtu.be/-zb8EgQdXdc
