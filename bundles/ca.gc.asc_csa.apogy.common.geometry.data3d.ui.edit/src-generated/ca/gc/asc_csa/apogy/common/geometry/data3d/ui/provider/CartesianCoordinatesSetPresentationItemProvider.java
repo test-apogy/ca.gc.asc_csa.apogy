@@ -77,11 +77,11 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 				 getString("_UI_CartesianCoordinatesSetPresentation_pointCloud_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetPresentation_pointCloud_feature", "_UI_CartesianCoordinatesSetPresentation_type"),
 				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD,
-				 true,
+				 false,
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_PRESENTATION_INTERNAL_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -103,7 +103,7 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_VISUAL_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -125,7 +125,7 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_COORDINATES_SET_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -168,6 +168,7 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianCoordinatesSetPresentation.class)) {
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD:
 			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
 			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

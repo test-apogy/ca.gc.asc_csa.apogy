@@ -42,13 +42,31 @@ public interface ApogyCommonGeometryData3DUIFactory extends EFactory {
 	CartesianCoordinatesSetPresentation createCartesianCoordinatesSetPresentation();
 
 	/**
-	 * Returns a new object of class '<em>Triangular Mesh Presentation</em>'.
+	 * Returns a new object of class '<em>Colored Cartesian Coordinates Set Presentation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Triangular Mesh Presentation</em>'.
+	 * @return a new object of class '<em>Colored Cartesian Coordinates Set Presentation</em>'.
 	 * @generated
 	 */
-	TriangularMeshPresentation createTriangularMeshPresentation();
+	ColoredCartesianCoordinatesSetPresentation createColoredCartesianCoordinatesSetPresentation();
+
+	/**
+	 * Returns a new object of class '<em>Cartesian Triangular Mesh Presentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cartesian Triangular Mesh Presentation</em>'.
+	 * @generated
+	 */
+	CartesianTriangularMeshPresentation createCartesianTriangularMeshPresentation();
+
+	/**
+	 * Returns a new object of class '<em>Colored Triangular Mesh Presentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Colored Triangular Mesh Presentation</em>'.
+	 * @generated
+	 */
+	ColoredTriangularMeshPresentation createColoredTriangularMeshPresentation();
 
 	/**
 	 * Returns the package supported by this factory.

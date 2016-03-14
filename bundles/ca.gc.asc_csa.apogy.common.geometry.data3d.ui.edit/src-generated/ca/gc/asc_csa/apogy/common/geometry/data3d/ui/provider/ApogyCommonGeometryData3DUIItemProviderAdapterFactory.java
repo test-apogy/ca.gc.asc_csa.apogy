@@ -128,26 +128,72 @@ public class ApogyCommonGeometryData3DUIItemProviderAdapterFactory extends Apogy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredCartesianCoordinatesSetPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TriangularMeshPresentationItemProvider triangularMeshPresentationItemProvider;
+	protected ColoredCartesianCoordinatesSetPresentationItemProvider coloredCartesianCoordinatesSetPresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredCartesianCoordinatesSetPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTriangularMeshPresentationAdapter() {
-		if (triangularMeshPresentationItemProvider == null) {
-			triangularMeshPresentationItemProvider = new TriangularMeshPresentationItemProvider(this);
+	public Adapter createColoredCartesianCoordinatesSetPresentationAdapter() {
+		if (coloredCartesianCoordinatesSetPresentationItemProvider == null) {
+			coloredCartesianCoordinatesSetPresentationItemProvider = new ColoredCartesianCoordinatesSetPresentationItemProvider(this);
 		}
 
-		return triangularMeshPresentationItemProvider;
+		return coloredCartesianCoordinatesSetPresentationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CartesianTriangularMeshPresentationItemProvider cartesianTriangularMeshPresentationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCartesianTriangularMeshPresentationAdapter() {
+		if (cartesianTriangularMeshPresentationItemProvider == null) {
+			cartesianTriangularMeshPresentationItemProvider = new CartesianTriangularMeshPresentationItemProvider(this);
+		}
+
+		return cartesianTriangularMeshPresentationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredTriangularMeshPresentation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColoredTriangularMeshPresentationItemProvider coloredTriangularMeshPresentationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredTriangularMeshPresentation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColoredTriangularMeshPresentationAdapter() {
+		if (coloredTriangularMeshPresentationItemProvider == null) {
+			coloredTriangularMeshPresentationItemProvider = new ColoredTriangularMeshPresentationItemProvider(this);
+		}
+
+		return coloredTriangularMeshPresentationItemProvider;
 	}
 
 	/**
@@ -277,7 +323,9 @@ public class ApogyCommonGeometryData3DUIItemProviderAdapterFactory extends Apogy
 	 */
 	public void dispose() {
 		if (cartesianCoordinatesSetPresentationItemProvider != null) cartesianCoordinatesSetPresentationItemProvider.dispose();
-		if (triangularMeshPresentationItemProvider != null) triangularMeshPresentationItemProvider.dispose();
+		if (coloredCartesianCoordinatesSetPresentationItemProvider != null) coloredCartesianCoordinatesSetPresentationItemProvider.dispose();
+		if (cartesianTriangularMeshPresentationItemProvider != null) cartesianTriangularMeshPresentationItemProvider.dispose();
+		if (coloredTriangularMeshPresentationItemProvider != null) coloredTriangularMeshPresentationItemProvider.dispose();
 	}
 
 	/**
@@ -335,7 +383,17 @@ public class ApogyCommonGeometryData3DUIItemProviderAdapterFactory extends Apogy
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createTriangularMeshPresentation()));
+						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createColoredCartesianCoordinatesSetPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createCartesianTriangularMeshPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createColoredTriangularMeshPresentation()));
 
 				return null;
 			}
@@ -427,7 +485,17 @@ public class ApogyCommonGeometryData3DUIItemProviderAdapterFactory extends Apogy
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createTriangularMeshPresentation()));
+						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createColoredCartesianCoordinatesSetPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createCartesianTriangularMeshPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createColoredTriangularMeshPresentation()));
 
 				return null;
 			}
@@ -447,7 +515,17 @@ public class ApogyCommonGeometryData3DUIItemProviderAdapterFactory extends Apogy
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createTriangularMeshPresentation()));
+						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createColoredCartesianCoordinatesSetPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createCartesianTriangularMeshPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonGeometryData3DUIFactory.eINSTANCE.createColoredTriangularMeshPresentation()));
 
 				return null;
 			}

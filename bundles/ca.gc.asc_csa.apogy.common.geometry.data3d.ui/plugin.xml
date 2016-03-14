@@ -23,7 +23,13 @@
             Class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters.CartesianCoordinatMeshNodePresentationAdapter">
       </Class>
       <Class
-            Class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters.TriangularMeshPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters.CartesianTriangularMeshPresentationAdapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters.ColoredCartesianCoordinatesPresentationAdapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters.ColoredCartesianTriangularMeshPresentationAdapter">
       </Class>
    </extension> 
    <extension

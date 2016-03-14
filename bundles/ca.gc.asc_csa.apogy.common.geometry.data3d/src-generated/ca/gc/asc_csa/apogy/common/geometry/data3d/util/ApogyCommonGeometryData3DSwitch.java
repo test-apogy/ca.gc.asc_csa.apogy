@@ -139,6 +139,17 @@ public class ApogyCommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_TRIANGULAR_MESH: {
+				ColoredCartesianTriangularMesh coloredCartesianTriangularMesh = (ColoredCartesianTriangularMesh)theEObject;
+				T1 result = caseColoredCartesianTriangularMesh(coloredCartesianTriangularMesh);
+				if (result == null) result = caseCartesianTriangularMesh(coloredCartesianTriangularMesh);
+				if (result == null) result = caseMesh(coloredCartesianTriangularMesh);
+				if (result == null) result = caseCartesianCoordinatesSet(coloredCartesianTriangularMesh);
+				if (result == null) result = caseAbstractCartesianCoordinatesSet(coloredCartesianTriangularMesh);
+				if (result == null) result = caseCoordinatesSet(coloredCartesianTriangularMesh);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_COLORIZER: {
 				CartesianTriangularMeshColorizer cartesianTriangularMeshColorizer = (CartesianTriangularMeshColorizer)theEObject;
 				T1 result = caseCartesianTriangularMeshColorizer(cartesianTriangularMeshColorizer);
@@ -178,11 +189,11 @@ public class ApogyCommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCommonGeometryData3DPackage.COLORED_COORDINATES_SET: {
-				ColoredCoordinatesSet coloredCoordinatesSet = (ColoredCoordinatesSet)theEObject;
-				T1 result = caseColoredCoordinatesSet(coloredCoordinatesSet);
-				if (result == null) result = caseAbstractCartesianCoordinatesSet(coloredCoordinatesSet);
-				if (result == null) result = caseCoordinatesSet(coloredCoordinatesSet);
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_COORDINATES_SET: {
+				ColoredCartesianCoordinatesSet coloredCartesianCoordinatesSet = (ColoredCartesianCoordinatesSet)theEObject;
+				T1 result = caseColoredCartesianCoordinatesSet(coloredCartesianCoordinatesSet);
+				if (result == null) result = caseAbstractCartesianCoordinatesSet(coloredCartesianCoordinatesSet);
+				if (result == null) result = caseCoordinatesSet(coloredCartesianCoordinatesSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -579,6 +590,21 @@ public class ApogyCommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Colored Cartesian Triangular Mesh</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Colored Cartesian Triangular Mesh</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseColoredCartesianTriangularMesh(ColoredCartesianTriangularMesh object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Cartesian Triangular Mesh Colorizer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -654,17 +680,17 @@ public class ApogyCommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Colored Coordinates Set</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Colored Cartesian Coordinates Set</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Colored Coordinates Set</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Colored Cartesian Coordinates Set</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseColoredCoordinatesSet(ColoredCoordinatesSet object) {
+	public T1 caseColoredCartesianCoordinatesSet(ColoredCartesianCoordinatesSet object) {
 		return null;
 	}
 

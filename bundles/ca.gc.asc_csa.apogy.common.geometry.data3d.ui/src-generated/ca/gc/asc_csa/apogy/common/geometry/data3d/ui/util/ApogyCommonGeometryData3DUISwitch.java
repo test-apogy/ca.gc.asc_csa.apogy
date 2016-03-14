@@ -13,12 +13,10 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
@@ -85,10 +83,26 @@ public class ApogyCommonGeometryData3DUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION: {
-				TriangularMeshPresentation triangularMeshPresentation = (TriangularMeshPresentation)theEObject;
-				T result = caseTriangularMeshPresentation(triangularMeshPresentation);
-				if (result == null) result = caseNodePresentation(triangularMeshPresentation);
+			case ApogyCommonGeometryData3DUIPackage.COLORED_CARTESIAN_COORDINATES_SET_PRESENTATION: {
+				ColoredCartesianCoordinatesSetPresentation coloredCartesianCoordinatesSetPresentation = (ColoredCartesianCoordinatesSetPresentation)theEObject;
+				T result = caseColoredCartesianCoordinatesSetPresentation(coloredCartesianCoordinatesSetPresentation);
+				if (result == null) result = caseCartesianCoordinatesSetPresentation(coloredCartesianCoordinatesSetPresentation);
+				if (result == null) result = caseNodePresentation(coloredCartesianCoordinatesSetPresentation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION: {
+				CartesianTriangularMeshPresentation cartesianTriangularMeshPresentation = (CartesianTriangularMeshPresentation)theEObject;
+				T result = caseCartesianTriangularMeshPresentation(cartesianTriangularMeshPresentation);
+				if (result == null) result = caseNodePresentation(cartesianTriangularMeshPresentation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonGeometryData3DUIPackage.COLORED_TRIANGULAR_MESH_PRESENTATION: {
+				ColoredTriangularMeshPresentation coloredTriangularMeshPresentation = (ColoredTriangularMeshPresentation)theEObject;
+				T result = caseColoredTriangularMeshPresentation(coloredTriangularMeshPresentation);
+				if (result == null) result = caseCartesianTriangularMeshPresentation(coloredTriangularMeshPresentation);
+				if (result == null) result = caseNodePresentation(coloredTriangularMeshPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,17 +126,47 @@ public class ApogyCommonGeometryData3DUISwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Triangular Mesh Presentation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Colored Cartesian Coordinates Set Presentation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Triangular Mesh Presentation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Colored Cartesian Coordinates Set Presentation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTriangularMeshPresentation(TriangularMeshPresentation object) {
+	public T caseColoredCartesianCoordinatesSetPresentation(ColoredCartesianCoordinatesSetPresentation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cartesian Triangular Mesh Presentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cartesian Triangular Mesh Presentation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCartesianTriangularMeshPresentation(CartesianTriangularMeshPresentation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Colored Triangular Mesh Presentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Colored Triangular Mesh Presentation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseColoredTriangularMeshPresentation(ColoredTriangularMeshPresentation object) {
 		return null;
 	}
 

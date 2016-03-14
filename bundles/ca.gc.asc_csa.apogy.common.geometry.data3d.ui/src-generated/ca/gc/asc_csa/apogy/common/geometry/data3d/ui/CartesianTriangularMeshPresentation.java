@@ -27,21 +27,21 @@ import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getMesh <em>Mesh</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getPointSize <em>Point Size</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getNumberOfPoints <em>Number Of Points</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getNumberOfPolygons <em>Number Of Polygons</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getTransparency <em>Transparency</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#isUseShading <em>Use Shading</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getTextureImage <em>Texture Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getMesh <em>Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getPointSize <em>Point Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getNumberOfPoints <em>Number Of Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getNumberOfPolygons <em>Number Of Polygons</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getTransparency <em>Transparency</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#isUseShading <em>Use Shading</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getTextureImage <em>Texture Image</em>}</li>
  * </ul>
  *
- * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getTriangularMeshPresentation()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianTriangularMeshPresentation()
  * @model
  * @generated
  */
-public interface TriangularMeshPresentation extends NodePresentation {
+public interface CartesianTriangularMeshPresentation extends NodePresentation {
 	/**
 	 * Returns the value of the '<em><b>Mesh</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -51,8 +51,9 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' reference.
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getTriangularMeshPresentation_Mesh()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianTriangularMeshPresentation_Mesh()
 	 * @model transient="true" changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='PRESENTATION_INTERNAL_INFORMATION' child='false'"
 	 * @generated
 	 */
 	CartesianTriangularMesh getMesh();
@@ -68,14 +69,15 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Point Size</em>' attribute.
 	 * @see #setPointSize(int)
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getTriangularMeshPresentation_PointSize()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianTriangularMeshPresentation_PointSize()
 	 * @model default="1" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
 	 */
 	int getPointSize();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getPointSize <em>Point Size</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getPointSize <em>Point Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Point Size</em>' attribute.
@@ -93,8 +95,9 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Points</em>' attribute.
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getTriangularMeshPresentation_NumberOfPoints()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianTriangularMeshPresentation_NumberOfPoints()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='MESH_INFORMATION' child='false'"
 	 * @generated
 	 */
 	int getNumberOfPoints();
@@ -108,8 +111,9 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Polygons</em>' attribute.
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getTriangularMeshPresentation_NumberOfPolygons()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianTriangularMeshPresentation_NumberOfPolygons()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='MESH_INFORMATION' child='false'"
 	 * @generated
 	 */
 	int getNumberOfPolygons();
@@ -127,14 +131,15 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
 	 * @see ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
 	 * @see #setPresentationMode(MeshPresentationMode)
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getTriangularMeshPresentation_PresentationMode()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianTriangularMeshPresentation_PresentationMode()
 	 * @model default="SURFACE" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
 	 */
 	MeshPresentationMode getPresentationMode();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getPresentationMode <em>Presentation Mode</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getPresentationMode <em>Presentation Mode</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Presentation Mode</em>' attribute.
@@ -154,14 +159,15 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transparency</em>' attribute.
 	 * @see #setTransparency(float)
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getTriangularMeshPresentation_Transparency()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianTriangularMeshPresentation_Transparency()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
 	 */
 	float getTransparency();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getTransparency <em>Transparency</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getTransparency <em>Transparency</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Transparency</em>' attribute.
@@ -181,14 +187,15 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Use Shading</em>' attribute.
 	 * @see #setUseShading(boolean)
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getTriangularMeshPresentation_UseShading()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianTriangularMeshPresentation_UseShading()
 	 * @model default="true" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
 	 */
 	boolean isUseShading();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#isUseShading <em>Use Shading</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#isUseShading <em>Use Shading</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Use Shading</em>' attribute.
@@ -212,14 +219,15 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Texture Image</em>' reference.
 	 * @see #setTextureImage(AbstractEImage)
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getTriangularMeshPresentation_TextureImage()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianTriangularMeshPresentation_TextureImage()
 	 * @model transient="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
 	 */
 	AbstractEImage getTextureImage();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation#getTextureImage <em>Texture Image</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation#getTextureImage <em>Texture Image</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Texture Image</em>' reference.

@@ -116,6 +116,10 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 				return createColoredCartesianPositionCoordinatesAdapter();
 			}
 			@Override
+			public Adapter caseColoredCartesianTriangularMesh(ColoredCartesianTriangularMesh object) {
+				return createColoredCartesianTriangularMeshAdapter();
+			}
+			@Override
 			public Adapter caseCartesianTriangularMeshColorizer(CartesianTriangularMeshColorizer object) {
 				return createCartesianTriangularMeshColorizerAdapter();
 			}
@@ -136,8 +140,8 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 				return createCartesianCoordinatesSetAdapter();
 			}
 			@Override
-			public Adapter caseColoredCoordinatesSet(ColoredCoordinatesSet object) {
-				return createColoredCoordinatesSetAdapter();
+			public Adapter caseColoredCartesianCoordinatesSet(ColoredCartesianCoordinatesSet object) {
+				return createColoredCartesianCoordinatesSetAdapter();
 			}
 			@Override
 			public Adapter caseCartesianCoordinatesSetExtent(CartesianCoordinatesSetExtent object) {
@@ -292,20 +296,20 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 				return createCoordinatesAdapter();
 			}
 			@Override
-			public Adapter caseMonitorable(Monitorable object) {
-				return createMonitorableAdapter();
-			}
-			@Override
-			public <I, O> Adapter caseProcessor(Processor<I, O> object) {
-				return createProcessorAdapter();
-			}
-			@Override
 			public <T extends Coordinates> Adapter caseCoordinatesSet(CoordinatesSet<T> object) {
 				return createCoordinatesSetAdapter();
 			}
 			@Override
 			public <CoordinatesType extends Coordinates, PolygonType extends Polygon<CoordinatesType>> Adapter caseMesh(Mesh<CoordinatesType, PolygonType> object) {
 				return createMeshAdapter();
+			}
+			@Override
+			public Adapter caseMonitorable(Monitorable object) {
+				return createMonitorableAdapter();
+			}
+			@Override
+			public <I, O> Adapter caseProcessor(Processor<I, O> object) {
+				return createProcessorAdapter();
 			}
 			@Override
 			public Adapter caseSamplingShape(SamplingShape object) {
@@ -450,6 +454,20 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh <em>Colored Cartesian Triangular Mesh</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh
+	 * @generated
+	 */
+	public Adapter createColoredCartesianTriangularMeshAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer <em>Cartesian Triangular Mesh Colorizer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -520,16 +538,16 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet <em>Colored Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet <em>Colored Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet
 	 * @generated
 	 */
-	public Adapter createColoredCoordinatesSetAdapter() {
+	public Adapter createColoredCartesianCoordinatesSetAdapter() {
 		return null;
 	}
 

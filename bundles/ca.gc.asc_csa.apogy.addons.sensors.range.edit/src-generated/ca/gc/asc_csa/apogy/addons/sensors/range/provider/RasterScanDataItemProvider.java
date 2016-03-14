@@ -22,14 +22,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsFactory;
-import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
 import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFactory;
 import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
 import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFactory;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
@@ -180,91 +177,6 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRangeSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createContactSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleRangeSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleSonar()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createLineRangeScanner()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRangeScanner()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanRangeSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanData()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsFactory.eINSTANCE.createSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS,
 				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
 
@@ -272,31 +184,6 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 			(createChildParameter
 				(ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__SCAN_DATA,
 				 ApogyCommonGeometryData25DFactory.eINSTANCE.createVolumetricCoordinatesSet25D()));
-	}
-
-	/**
-	 * This returns the label text for
-	 * {@link org.eclipse.emf.edit.command.CreateChildCommand}. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature,
-			Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

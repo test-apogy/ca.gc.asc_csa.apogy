@@ -61,8 +61,9 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColoriz
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizerBySlope;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils;
@@ -158,6 +159,13 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass coloredCartesianTriangularMeshEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass cartesianTriangularMeshColorizerEClass = null;
 
 	/**
@@ -193,7 +201,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass coloredCoordinatesSetEClass = null;
+	private EClass coloredCartesianCoordinatesSetEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -825,6 +833,15 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getColoredCartesianTriangularMesh() {
+		return coloredCartesianTriangularMeshEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCartesianTriangularMeshColorizer() {
 		return cartesianTriangularMeshColorizerEClass;
 	}
@@ -834,17 +851,8 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCartesianTriangularMeshColorizer__Replace__CartesianTriangularMesh_CartesianPositionCoordinates_ColoredCartesianPositionCoordinates() {
-		return cartesianTriangularMeshColorizerEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getCartesianTriangularMeshColorizer__ComputeColor__CartesianTriangularMesh_CartesianPositionCoordinates() {
-		return cartesianTriangularMeshColorizerEClass.getEOperations().get(1);
+		return cartesianTriangularMeshColorizerEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -933,8 +941,8 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getColoredCoordinatesSet() {
-		return coloredCoordinatesSetEClass;
+	public EClass getColoredCartesianCoordinatesSet() {
+		return coloredCartesianCoordinatesSetEClass;
 	}
 
 	/**
@@ -2376,8 +2384,9 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		coloredCartesianPositionCoordinatesEClass = createEClass(COLORED_CARTESIAN_POSITION_COORDINATES);
 
+		coloredCartesianTriangularMeshEClass = createEClass(COLORED_CARTESIAN_TRIANGULAR_MESH);
+
 		cartesianTriangularMeshColorizerEClass = createEClass(CARTESIAN_TRIANGULAR_MESH_COLORIZER);
-		createEOperation(cartesianTriangularMeshColorizerEClass, CARTESIAN_TRIANGULAR_MESH_COLORIZER___REPLACE__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES_COLOREDCARTESIANPOSITIONCOORDINATES);
 		createEOperation(cartesianTriangularMeshColorizerEClass, CARTESIAN_TRIANGULAR_MESH_COLORIZER___COMPUTE_COLOR__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES);
 
 		cartesianTriangularMeshColorizerBySlopeEClass = createEClass(CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE);
@@ -2393,7 +2402,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		cartesianCoordinatesSetEClass = createEClass(CARTESIAN_COORDINATES_SET);
 
-		coloredCoordinatesSetEClass = createEClass(COLORED_COORDINATES_SET);
+		coloredCartesianCoordinatesSetEClass = createEClass(COLORED_CARTESIAN_COORDINATES_SET);
 
 		cartesianCoordinatesSetExtentEClass = createEClass(CARTESIAN_COORDINATES_SET_EXTENT);
 		createEAttribute(cartesianCoordinatesSetExtentEClass, CARTESIAN_COORDINATES_SET_EXTENT__XMIN);
@@ -2652,10 +2661,11 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		cartesianPositionCoordinatesEClass.getESuperTypes().add(theApogyCommonGeometryDataPackage.getCoordinates());
 		coloredCartesianPositionCoordinatesEClass.getESuperTypes().add(this.getCartesianPositionCoordinates());
 		coloredCartesianPositionCoordinatesEClass.getESuperTypes().add(this.getRGBAColor());
+		coloredCartesianTriangularMeshEClass.getESuperTypes().add(this.getCartesianTriangularMesh());
 		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getCartesianTriangularMesh());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(this.getCartesianTriangularMesh());
+		g2 = createEGenericType(this.getColoredCartesianTriangularMesh());
 		g1.getETypeArguments().add(g2);
 		cartesianTriangularMeshColorizerEClass.getEGenericSuperTypes().add(g1);
 		cartesianTriangularMeshColorizerBySlopeEClass.getESuperTypes().add(this.getCartesianTriangularMeshColorizer());
@@ -2671,7 +2681,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		g1 = createEGenericType(this.getAbstractCartesianCoordinatesSet());
 		g2 = createEGenericType(this.getColoredCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
-		coloredCoordinatesSetEClass.getEGenericSuperTypes().add(g1);
+		coloredCartesianCoordinatesSetEClass.getEGenericSuperTypes().add(g1);
 		digitalElevationMapEClass.getESuperTypes().add(this.getCartesianCoordinatesSet());
 		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getMesh());
 		g2 = createEGenericType(this.getCartesianPositionCoordinates());
@@ -2845,14 +2855,11 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		initEClass(coloredCartesianPositionCoordinatesEClass, ColoredCartesianPositionCoordinates.class, "ColoredCartesianPositionCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(coloredCartesianTriangularMeshEClass, ColoredCartesianTriangularMesh.class, "ColoredCartesianTriangularMesh", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(cartesianTriangularMeshColorizerEClass, CartesianTriangularMeshColorizer.class, "CartesianTriangularMeshColorizer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getCartesianTriangularMeshColorizer__Replace__CartesianTriangularMesh_CartesianPositionCoordinates_ColoredCartesianPositionCoordinates(), null, "replace", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getCartesianPositionCoordinates(), "originalVertex", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getColoredCartesianPositionCoordinates(), "coloredVertices", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getCartesianTriangularMeshColorizer__ComputeColor__CartesianTriangularMesh_CartesianPositionCoordinates(), this.getRGBAColor(), "computeColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getCartesianTriangularMeshColorizer__ComputeColor__CartesianTriangularMesh_CartesianPositionCoordinates(), this.getRGBAColor(), "computeColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -2870,7 +2877,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		initEClass(cartesianCoordinatesSetEClass, CartesianCoordinatesSet.class, "CartesianCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(coloredCoordinatesSetEClass, ColoredCoordinatesSet.class, "ColoredCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(coloredCartesianCoordinatesSetEClass, ColoredCartesianCoordinatesSet.class, "ColoredCartesianCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(cartesianCoordinatesSetExtentEClass, CartesianCoordinatesSetExtent.class, "CartesianCoordinatesSetExtent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCartesianCoordinatesSetExtent_XMin(), theEcorePackage.getEDouble(), "xMin", null, 0, 1, CartesianCoordinatesSetExtent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3492,16 +3499,16 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 			 "documentation", "*\nA specialization of CartesianPositionCoordinates that assigns a color to the position."
 		   });	
 		addAnnotation
+		  (coloredCartesianTriangularMeshEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nMesh for which each vertex has a color that is associated."
+		   });	
+		addAnnotation
 		  (cartesianTriangularMeshColorizerEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "*\nA Processor that creates a colorized copy of an input Cartesian Triangular Mesh by providing color for each Cartesian\nTriangular Mesh vertex."
-		   });	
-		addAnnotation
-		  (getCartesianTriangularMeshColorizer__Replace__CartesianTriangularMesh_CartesianPositionCoordinates_ColoredCartesianPositionCoordinates(), 
-		   source, 
-		   new String[] {
-			 "documentation", "*\nMethod that replaces a list of CartesianPositionCoordinates defined in a mesh by its colored version."
 		   });	
 		addAnnotation
 		  (getCartesianTriangularMeshColorizer__ComputeColor__CartesianTriangularMesh_CartesianPositionCoordinates(), 
@@ -3567,7 +3574,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 			 "documentation", "*\nA set containing CartesianPositionCoordinates. It represent a point cloud."
 		   });	
 		addAnnotation
-		  (coloredCoordinatesSetEClass, 
+		  (coloredCartesianCoordinatesSetEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "*\nA set containing ColoredCartesianPositionCoordinates. It represents a point cloud."

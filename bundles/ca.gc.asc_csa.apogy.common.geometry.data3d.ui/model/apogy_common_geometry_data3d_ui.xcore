@@ -34,35 +34,55 @@ Contributors:
 package ca.gc.asc_csa.apogy.common.geometry.data3d.ui
 
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet
 
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage
 import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 
 class CartesianCoordinatesSetPresentation extends NodePresentation
 {
+	@GenModel(notify="true", property="Readonly", propertyCategory="PRESENTATION_INTERNAL_INFORMATION", child="false")
 	refers CartesianCoordinatesSet pointCloud
 
+	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
 	int pointSize = "1"
 
+	@GenModel(notify="true", property="Readonly", propertyCategory="COORDINATES_SET_INFORMATION", child="false")
 	readonly derived transient int numberOfPoints
 }
 
-class TriangularMeshPresentation extends NodePresentation
+class ColoredCartesianCoordinatesSetPresentation extends CartesianCoordinatesSetPresentation
 {
+	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
+	boolean overrideColor = "false"	
+	
+	@GenModel(notify="true", property="Readonly", propertyCategory="PRESENTATION_INTERNAL_INFORMATION", child="false")
+	refers ColoredCartesianCoordinatesSet coloredPointCloud			
+}
+
+class CartesianTriangularMeshPresentation extends NodePresentation
+{
+	@GenModel(notify="true", property="Readonly", propertyCategory="PRESENTATION_INTERNAL_INFORMATION", child="false")
 	refers readonly derived transient CartesianTriangularMesh mesh 
 
+	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
  	int pointSize = "1"
 	
+	@GenModel(notify="true", property="Readonly", propertyCategory="MESH_INFORMATION", child="false")
 	readonly derived transient int numberOfPoints
 	
+	@GenModel(notify="true", property="Readonly", propertyCategory="MESH_INFORMATION", child="false")
 	readonly derived transient int numberOfPolygons
 	
+	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
 	MeshPresentationMode presentationMode ="SURFACE"
 	
+	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
 	float transparency 
 	
+	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
 	boolean useShading="true"
 	
 	/*
@@ -70,5 +90,15 @@ class TriangularMeshPresentation extends NodePresentation
 	 * Note that the image will be applied using the relative
 	 * coordinates of the mesh (i.e. relative to its minimum X and Y).
 	 */
+	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
 	refers transient AbstractEImage textureImage
+}
+
+/**
+ * Class representing the presentation attributes for a ColoredCartesianTriangularMesh.
+ */
+class ColoredTriangularMeshPresentation extends CartesianTriangularMeshPresentation
+{
+	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
+	boolean overrideColor = "false"	
 }

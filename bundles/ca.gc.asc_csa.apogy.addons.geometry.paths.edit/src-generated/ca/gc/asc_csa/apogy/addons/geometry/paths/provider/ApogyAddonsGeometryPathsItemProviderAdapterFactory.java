@@ -55,7 +55,6 @@ import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data.util.ApogyCommonGeometryDataSwitch;
 
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
-import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
@@ -573,31 +572,6 @@ public class ApogyAddonsGeometryPathsItemProviderAdapterFactory extends ApogyAdd
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createApogyAddonsGeometryPathsFacade()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseAggregateGroupNode(AggregateGroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createPath()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 
 				return null;
 			}

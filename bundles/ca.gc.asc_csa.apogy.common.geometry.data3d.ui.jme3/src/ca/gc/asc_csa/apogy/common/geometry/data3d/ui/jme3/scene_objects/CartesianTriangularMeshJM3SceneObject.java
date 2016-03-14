@@ -29,21 +29,6 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Activator;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Data3dJME3Utilities;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
-import ca.gc.asc_csa.apogy.common.log.EventSeverity;
-import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.common.topology.ContentNode;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -52,7 +37,23 @@ import com.jme3.renderer.queue.RenderQueue.ShadowMode;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Mesh;
 
-public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<ContentNode<CartesianTriangularMesh>> implements TriangularMeshSceneObject
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Data3dJME3Utilities;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.CartesianTriangularMeshSceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+
+public class CartesianTriangularMeshJM3SceneObject extends DefaultJME3SceneObject<ContentNode<CartesianTriangularMesh>> implements CartesianTriangularMeshSceneObject
 {	
 	private boolean useShading = true;
 	
@@ -71,9 +72,9 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 	
 	private AssetManager assetManager;
 	private Geometry meshGeometry = null;
-	private com.jme3.scene.Mesh jme3mMesh = null;
+	private com.jme3.scene.Mesh jme3mMesh = null;		
 	
-	public TriangularMeshJM3SceneObject(ContentNode<CartesianTriangularMesh> meshContentNode, JME3RenderEngineDelegate jme3RenderEngineDelegate) 
+	public CartesianTriangularMeshJM3SceneObject(ContentNode<CartesianTriangularMesh> meshContentNode, JME3RenderEngineDelegate jme3RenderEngineDelegate) 
 	{
 		super(meshContentNode, jme3RenderEngineDelegate);
 		
@@ -86,13 +87,13 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 		this.mesh = meshContentNode.getContent();		
 		
 		// Updates the geometry.
-		Job job = new Job("TriangularMeshJM3SceneObject : Updating Geometry.")
+		Job job = new Job("CartesianTriangularMeshJM3SceneObject : Updating Geometry.")
 		{
 			@Override
 			protected IStatus run(IProgressMonitor monitor) 
 			{					
 				// Creates the new mesh.
-				final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh);
+				final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh, true, meshColor);
 				
 				jme3Application.enqueue(new Callable<Object>() 
 				{
@@ -100,7 +101,8 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 					public Object call() throws Exception 
 					{					
 						updateGeometryInternal(newMesh);		
-						setPresentationMode(meshPresentationMode);						
+						setPresentationMode(meshPresentationMode);			
+												
 						return null;
 					}
 				});
@@ -154,22 +156,22 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 				if(meshGeometry != null)
 				{					
 					
-					final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh, meshColor);
+					final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh, true, meshColor);															
 					updateGeometryInternal(newMesh);		
 					
-//					Material mat = createMaterial();
-//					
-//					if(useShading)
-//					{
-//						mat.setColor("Diffuse", meshColor);
-//						mat.setColor("Ambient", meshColor);
-//						mat.setColor("Specular", meshColor);
-//					}
-//					else
-//					{	
-//						mat.setColor("Color", meshColor);
-//					}
-//					meshGeometry.setMaterial(mat);
+					Material mat = createMaterial();
+					
+					if(useShading)
+					{
+						mat.setColor("Diffuse", meshColor);
+						mat.setColor("Ambient", meshColor);
+						mat.setColor("Specular", meshColor);
+					}
+					else
+					{	
+						mat.setColor("Color", meshColor);
+					}
+					meshGeometry.setMaterial(mat);
 				}
 				return null;
 			}
@@ -281,8 +283,7 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 	@Override
 	public void setUseShading(boolean useShading) 
 	{
-		Logger.INSTANCE.log(Activator.ID, this, "Setting use shading to " + useShading, EventSeverity.INFO);
-		
+		Logger.INSTANCE.log(Activator.ID, this, "Setting use shading to " + useShading, EventSeverity.INFO);	
 		this.useShading = useShading;
 		
 		// Update material.
@@ -317,7 +318,7 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 	 */
 	private void updateGeometry()
 	{			
-		final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh, meshColor);
+		final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh, true, meshColor);		
 		
 		jme3Application.enqueue(new Callable<Object>() 
 		{
@@ -408,7 +409,7 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 			
 			mat.setBoolean("VertexColor", true);
 		}		
-			
+					
 		return mat;
 	}
 	
@@ -526,5 +527,4 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 
 		return contentAdapter;
 	}
-
 }

@@ -24,24 +24,25 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
+
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TriangularMeshPresentationItemProvider extends NodePresentationItemProvider {
+public class CartesianTriangularMeshPresentationItemProvider extends NodePresentationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TriangularMeshPresentationItemProvider(AdapterFactory adapterFactory) {
+	public CartesianTriangularMeshPresentationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -79,14 +80,14 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TriangularMeshPresentation_mesh_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_mesh_feature", "_UI_TriangularMeshPresentation_type"),
-				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__MESH,
+				 getString("_UI_CartesianTriangularMeshPresentation_mesh_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshPresentation_mesh_feature", "_UI_CartesianTriangularMeshPresentation_type"),
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__MESH,
 				 false,
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI_PRESENTATION_INTERNAL_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -101,14 +102,14 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TriangularMeshPresentation_pointSize_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_pointSize_feature", "_UI_TriangularMeshPresentation_type"),
-				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE,
+				 getString("_UI_CartesianTriangularMeshPresentation_pointSize_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshPresentation_pointSize_feature", "_UI_CartesianTriangularMeshPresentation_type"),
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__POINT_SIZE,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_VISUAL_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -123,14 +124,14 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TriangularMeshPresentation_numberOfPoints_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_numberOfPoints_feature", "_UI_TriangularMeshPresentation_type"),
-				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS,
+				 getString("_UI_CartesianTriangularMeshPresentation_numberOfPoints_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshPresentation_numberOfPoints_feature", "_UI_CartesianTriangularMeshPresentation_type"),
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS,
 				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_MESH_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -145,14 +146,14 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TriangularMeshPresentation_numberOfPolygons_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_numberOfPolygons_feature", "_UI_TriangularMeshPresentation_type"),
-				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS,
+				 getString("_UI_CartesianTriangularMeshPresentation_numberOfPolygons_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshPresentation_numberOfPolygons_feature", "_UI_CartesianTriangularMeshPresentation_type"),
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS,
 				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_MESH_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -167,14 +168,14 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TriangularMeshPresentation_presentationMode_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_presentationMode_feature", "_UI_TriangularMeshPresentation_type"),
-				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE,
+				 getString("_UI_CartesianTriangularMeshPresentation_presentationMode_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshPresentation_presentationMode_feature", "_UI_CartesianTriangularMeshPresentation_type"),
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_VISUAL_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -189,14 +190,14 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TriangularMeshPresentation_transparency_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_transparency_feature", "_UI_TriangularMeshPresentation_type"),
-				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY,
+				 getString("_UI_CartesianTriangularMeshPresentation_transparency_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshPresentation_transparency_feature", "_UI_CartesianTriangularMeshPresentation_type"),
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_VISUAL_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -211,14 +212,14 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TriangularMeshPresentation_useShading_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_useShading_feature", "_UI_TriangularMeshPresentation_type"),
-				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__USE_SHADING,
+				 getString("_UI_CartesianTriangularMeshPresentation_useShading_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshPresentation_useShading_feature", "_UI_CartesianTriangularMeshPresentation_type"),
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__USE_SHADING,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
+				 getString("_UI_VISUAL_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
@@ -233,26 +234,26 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TriangularMeshPresentation_textureImage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_textureImage_feature", "_UI_TriangularMeshPresentation_type"),
-				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE,
+				 getString("_UI_CartesianTriangularMeshPresentation_textureImage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshPresentation_textureImage_feature", "_UI_CartesianTriangularMeshPresentation_type"),
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE,
 				 true,
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_VISUAL_INFORMATIONPropertyCategory"),
 				 null));
 	}
 
 	/**
-	 * This returns TriangularMeshPresentation.gif.
+	 * This returns CartesianTriangularMeshPresentation.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/TriangularMeshPresentation"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CartesianTriangularMeshPresentation"));
 	}
 
 	/**
@@ -263,11 +264,11 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 	 */
 	@Override
 	public String getText(Object object) {
-		RGB labelValue = ((TriangularMeshPresentation)object).getColor();
+		RGB labelValue = ((CartesianTriangularMeshPresentation)object).getColor();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
-			getString("_UI_TriangularMeshPresentation_type") :
-			getString("_UI_TriangularMeshPresentation_type") + " " + label;
+			getString("_UI_CartesianTriangularMeshPresentation_type") :
+			getString("_UI_CartesianTriangularMeshPresentation_type") + " " + label;
 	}
 	
 
@@ -282,13 +283,15 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(TriangularMeshPresentation.class)) {
-			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
-			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS:
-			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS:
-			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
-			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
-			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
+		switch (notification.getFeatureID(CartesianTriangularMeshPresentation.class)) {
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__MESH:
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS:
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS:
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

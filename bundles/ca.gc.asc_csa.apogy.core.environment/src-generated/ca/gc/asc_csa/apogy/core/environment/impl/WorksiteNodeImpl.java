@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
@@ -37,7 +37,7 @@ import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
  *
  * @generated
  */
-public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
+public class WorksiteNodeImpl extends AggregateGroupNodeImpl implements WorksiteNode
 {	
   /**
 	 * The cached value of the '{@link #getWorksite() <em>Worksite</em>}' reference.

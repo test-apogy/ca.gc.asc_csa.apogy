@@ -181,17 +181,20 @@ class ColoredCartesianPositionCoordinates extends CartesianPositionCoordinates, 
 {
 
 }
+
+/**
+ * Mesh for which each vertex has a color that is associated.
+ */
+class ColoredCartesianTriangularMesh extends CartesianTriangularMesh
+{	
+}
+
 /**
  * A Processor that creates a colorized copy of an input Cartesian Triangular Mesh by providing color for each Cartesian 
  * Triangular Mesh vertex.
  */
-abstract class CartesianTriangularMeshColorizer extends Processor<CartesianTriangularMesh, CartesianTriangularMesh>
-{
-	/**
-	 * Method that replaces a list of CartesianPositionCoordinates defined in a mesh by its colored version.  
-	 */	
-	op void replace(CartesianTriangularMesh mesh, CartesianPositionCoordinates originalVertex, ColoredCartesianPositionCoordinates coloredVertices)
-	
+abstract class CartesianTriangularMeshColorizer extends Processor<CartesianTriangularMesh, ColoredCartesianTriangularMesh>
+{	
 	/**
 	 * This method provides the color that should be associated with the specified vertex that is part 
 	 * of the input CartesianTriangularMesh. This method must be overloaded by sub-classes.
@@ -200,6 +203,7 @@ abstract class CartesianTriangularMeshColorizer extends Processor<CartesianTrian
 	 */
 	op RGBAColor computeColor(CartesianTriangularMesh mesh, CartesianPositionCoordinates point)
 }
+
 
 /**
  * A specialization of CartesianTriangularMeshColorizer that colorize a mesh based on the normal at each vertex.
@@ -248,7 +252,7 @@ class CartesianCoordinatesSet extends AbstractCartesianCoordinatesSet<CartesianP
 /**
  * A set containing ColoredCartesianPositionCoordinates. It represents a point cloud.
  */
-class ColoredCoordinatesSet extends AbstractCartesianCoordinatesSet<ColoredCartesianPositionCoordinates>
+class ColoredCartesianCoordinatesSet extends AbstractCartesianCoordinatesSet<ColoredCartesianPositionCoordinates>
 {
 		
 }

@@ -109,7 +109,7 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	 */
 	public ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates(double x, double y, double z, short red, short green, short blue) 
 	{
-		return createColoredCartesianPositionCoordinates(x, y, z,(byte) 255, red, green, blue);
+		return createColoredCartesianPositionCoordinates(x, y, z,(short) 255, red, green, blue);
 	}
 
 	/**

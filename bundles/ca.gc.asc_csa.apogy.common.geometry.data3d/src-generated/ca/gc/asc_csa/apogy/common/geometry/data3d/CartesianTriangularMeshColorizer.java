@@ -21,19 +21,7 @@ import ca.gc.asc_csa.apogy.common.processors.Processor;
  * @model abstract="true"
  * @generated
  */
-public interface CartesianTriangularMeshColorizer extends Processor<CartesianTriangularMesh, CartesianTriangularMesh> {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Method that replaces a list of CartesianPositionCoordinates defined in a mesh by its colored version.
-	 * <!-- end-model-doc -->
-	 * @model meshUnique="false" originalVertexUnique="false" coloredVerticesUnique="false"
-	 * @generated
-	 */
-	void replace(CartesianTriangularMesh mesh, CartesianPositionCoordinates originalVertex, ColoredCartesianPositionCoordinates coloredVertices);
-
+public interface CartesianTriangularMeshColorizer extends Processor<CartesianTriangularMesh, ColoredCartesianTriangularMesh> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

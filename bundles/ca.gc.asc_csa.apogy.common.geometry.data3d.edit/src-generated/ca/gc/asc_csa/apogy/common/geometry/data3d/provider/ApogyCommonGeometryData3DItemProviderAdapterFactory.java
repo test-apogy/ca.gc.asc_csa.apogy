@@ -265,6 +265,29 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColoredCartesianTriangularMeshItemProvider coloredCartesianTriangularMeshItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColoredCartesianTriangularMeshAdapter() {
+		if (coloredCartesianTriangularMeshItemProvider == null) {
+			coloredCartesianTriangularMeshItemProvider = new ColoredCartesianTriangularMeshItemProvider(this);
+		}
+
+		return coloredCartesianTriangularMeshItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizerBySlope} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -357,26 +380,26 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ColoredCoordinatesSetItemProvider coloredCoordinatesSetItemProvider;
+	protected ColoredCartesianCoordinatesSetItemProvider coloredCartesianCoordinatesSetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createColoredCoordinatesSetAdapter() {
-		if (coloredCoordinatesSetItemProvider == null) {
-			coloredCoordinatesSetItemProvider = new ColoredCoordinatesSetItemProvider(this);
+	public Adapter createColoredCartesianCoordinatesSetAdapter() {
+		if (coloredCartesianCoordinatesSetItemProvider == null) {
+			coloredCartesianCoordinatesSetItemProvider = new ColoredCartesianCoordinatesSetItemProvider(this);
 		}
 
-		return coloredCoordinatesSetItemProvider;
+		return coloredCartesianCoordinatesSetItemProvider;
 	}
 
 	/**
@@ -1317,11 +1340,12 @@ public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCo
 		if (cartesianPositionCoordinatesItemProvider != null) cartesianPositionCoordinatesItemProvider.dispose();
 		if (rgbaColorItemProvider != null) rgbaColorItemProvider.dispose();
 		if (coloredCartesianPositionCoordinatesItemProvider != null) coloredCartesianPositionCoordinatesItemProvider.dispose();
+		if (coloredCartesianTriangularMeshItemProvider != null) coloredCartesianTriangularMeshItemProvider.dispose();
 		if (cartesianTriangularMeshColorizerBySlopeItemProvider != null) cartesianTriangularMeshColorizerBySlopeItemProvider.dispose();
 		if (cartesianOrientationCoordinatesItemProvider != null) cartesianOrientationCoordinatesItemProvider.dispose();
 		if (abstractCartesianCoordinatesSetItemProvider != null) abstractCartesianCoordinatesSetItemProvider.dispose();
 		if (cartesianCoordinatesSetItemProvider != null) cartesianCoordinatesSetItemProvider.dispose();
-		if (coloredCoordinatesSetItemProvider != null) coloredCoordinatesSetItemProvider.dispose();
+		if (coloredCartesianCoordinatesSetItemProvider != null) coloredCartesianCoordinatesSetItemProvider.dispose();
 		if (cartesianCoordinatesSetExtentItemProvider != null) cartesianCoordinatesSetExtentItemProvider.dispose();
 		if (digitalElevationMapItemProvider != null) digitalElevationMapItemProvider.dispose();
 		if (cartesianCoordinatesMeshItemProvider != null) cartesianCoordinatesMeshItemProvider.dispose();

@@ -24,12 +24,10 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsFactory;
 import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFactory;
 import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
 import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.provider.TransformNodeItemProvider;
 
 /**
@@ -257,51 +255,6 @@ public class PoseSensorItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
 	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsPoseFactory.eINSTANCE.createSelfPlaceSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsPoseFactory.eINSTANCE.createPositionSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsPoseFactory.eINSTANCE.createSimulatedPositionSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsPoseFactory.eINSTANCE.createOrientationSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsPoseFactory.eINSTANCE.createInertialMeasurementUnit()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsPoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsPoseFactory.eINSTANCE.createPoseSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsPoseFactory.eINSTANCE.createSimulatedPoseSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter

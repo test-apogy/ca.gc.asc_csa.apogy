@@ -43,7 +43,6 @@ import com.jme3.util.BufferUtils;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Activator;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.CartesianCoordinatesSetSceneObject;
@@ -190,18 +189,12 @@ public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet
 	public void dispose() 
 	{
 		// Unregister listener from points.
-		if(getPoints() != null)
+		if(points != null)
 		{
-			getPoints().eAdapters().remove(getPointsListener());
+			points.eAdapters().remove(getPointsListener());
 		}
 		
 		super.dispose();
-	}
-	
-	@Override
-	public CartesianCoordinatesSet getPoints() 
-	{
-		return points;
 	}
 	
 	@Override
@@ -239,24 +232,8 @@ public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet
 		for(CartesianPositionCoordinates point : points.getPoints())
 		{
 			verticesList.add(new Vector3f((float) point.getX(), (float) point.getY(), (float) point.getZ()));
-			indexesList.add(new Integer(index));
-			
-			ColorRGBA pointColor = null;
-			// If the point as associated color to it, use that color.
-			if(point instanceof ColoredCartesianPositionCoordinates)
-			{
-				ColoredCartesianPositionCoordinates coloredPoint = (ColoredCartesianPositionCoordinates) point;
-				float r = ((float)coloredPoint.getRed()) / 255.0f;
-				float g = ((float)coloredPoint.getGreen()) / 255.0f;
-				float b = ((float)coloredPoint.getBlue()) / 255.0f;
-					
-				pointColor = new ColorRGBA(r,g,b,1.0f);
-			}
-			else
-			{
-				pointColor = pointsColor.clone();			
-			}
-			pointColorList.add(pointColor);
+			indexesList.add(new Integer(index));						
+			pointColorList.add(pointsColor.clone());
 						
 			index++;
 		}

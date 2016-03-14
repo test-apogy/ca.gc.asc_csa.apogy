@@ -3637,7 +3637,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		cartesianTriangularMeshURLMapLayerEClass.getESuperTypes().add(this.getURLMapLayer());
 		featuresOfInterestMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
 		featuresOfInterestMapLayerEClass.getESuperTypes().add(this.getRectangularRegionProvider());
-		worksiteNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
+		worksiteNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 		surfaceWorksiteNodeEClass.getESuperTypes().add(this.getWorksiteNode());
 		earthSurfaceWorksiteNodeEClass.getESuperTypes().add(this.getSurfaceWorksiteNode());
 		mapsListNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
@@ -5645,7 +5645,8 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		   source, 
 		   new String[] {
 			 "property", "Readonly",
-			 "propertyCategory", "TRIANGULAR_MESH"
+			 "propertyCategory", "TRIANGULAR_MESH",
+			 "children", "true"
 		   });	
 		addAnnotation
 		  (featuresOfInterestMapLayerEClass, 

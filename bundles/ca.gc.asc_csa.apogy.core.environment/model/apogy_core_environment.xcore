@@ -1389,9 +1389,10 @@ class BasicCartesianTriangularMeshMapLayer extends CartesianTriangularMeshMapLay
  */
 class CartesianTriangularMeshURLMapLayer extends CartesianTriangularMeshMapLayer, URLMapLayer 
 {	
-	@GenModel(property="Readonly", propertyCategory="TRIANGULAR_MESH")
+	@GenModel(property="Readonly", propertyCategory="TRIANGULAR_MESH", children = "true")
 	refers transient CartesianTriangularMesh[0..1] mesh
 }
+
 
 /*
  * Map Layer that contains Feature Of Interest.
@@ -1403,7 +1404,7 @@ class FeaturesOfInterestMapLayer extends AbstractMapLayer, RectangularRegionProv
 
 // Specific Topology Nodes.
 
-class WorksiteNode extends GroupNode
+class WorksiteNode extends AggregateGroupNode
 {	
 	refers transient Worksite worksite	
 }

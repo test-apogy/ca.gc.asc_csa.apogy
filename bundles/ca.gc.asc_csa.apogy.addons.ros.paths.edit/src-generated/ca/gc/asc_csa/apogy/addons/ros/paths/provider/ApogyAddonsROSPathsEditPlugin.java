@@ -4,6 +4,11 @@
 package ca.gc.asc_csa.apogy.addons.ros.paths.provider;
 
 import ca.gc.asc_csa.apogy.addons.geometry.paths.provider.ApogyAddonsGeometryPathsEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -41,6 +46,11 @@ public final class ApogyAddonsROSPathsEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     ApogyAddonsGeometryPathsEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

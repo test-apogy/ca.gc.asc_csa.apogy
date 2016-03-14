@@ -15,16 +15,16 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters;
 
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIFactory;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
-public class TriangularMeshPresentationAdapter implements
+public class CartesianTriangularMeshPresentationAdapter implements
 		NodePresentationAdapter {
 
-	public TriangularMeshPresentationAdapter() {
+	public CartesianTriangularMeshPresentationAdapter() {
 	}
 
 	@SuppressWarnings("unchecked")
@@ -35,7 +35,7 @@ public class TriangularMeshPresentationAdapter implements
 			throw new IllegalArgumentException();
 		}
 
-		TriangularMeshPresentation presentation = ApogyCommonGeometryData3DUIFactory.eINSTANCE.createTriangularMeshPresentation();
+		CartesianTriangularMeshPresentation presentation = ApogyCommonGeometryData3DUIFactory.eINSTANCE.createCartesianTriangularMeshPresentation();
 
 		ContentNode<CartesianTriangularMesh> cNode = (ContentNode<CartesianTriangularMesh>) node;
 

@@ -524,7 +524,259 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMeshColorizer()
 	 * @generated
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_COLORIZER = 7;
+	int CARTESIAN_TRIANGULAR_MESH_COLORIZER = 8;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshColorizerBySlopeImpl <em>Cartesian Triangular Mesh Colorizer By Slope</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshColorizerBySlopeImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMeshColorizerBySlope()
+	 * @generated
+	 */
+	int CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE = 9;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl <em>Cartesian Orientation Coordinates</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianOrientationCoordinates()
+	 * @generated
+	 */
+	int CARTESIAN_ORIENTATION_COORDINATES = 10;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl <em>Abstract Cartesian Coordinates Set</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getAbstractCartesianCoordinatesSet()
+	 * @generated
+	 */
+	int ABSTRACT_CARTESIAN_COORDINATES_SET = 11;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetImpl <em>Cartesian Coordinates Set</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSet()
+	 * @generated
+	 */
+	int CARTESIAN_COORDINATES_SET = 12;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl <em>Cartesian Coordinates Set Extent</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSetExtent()
+	 * @generated
+	 */
+	int CARTESIAN_COORDINATES_SET_EXTENT = 14;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl <em>Digital Elevation Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMap()
+	 * @generated
+	 */
+	int DIGITAL_ELEVATION_MAP = 15;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl <em>Cartesian Coordinates Mesh</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMesh()
+	 * @generated
+	 */
+	int CARTESIAN_COORDINATES_MESH = 16;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshImpl <em>Cartesian Triangular Mesh</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMesh()
+	 * @generated
+	 */
+	int CARTESIAN_TRIANGULAR_MESH = 17;
+
+	/**
+	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_TRIANGULAR_MESH__POINTS = ApogyCommonGeometryDataPackage.MESH__POINTS;
+
+	/**
+	 * The feature id for the '<em><b>Normals</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_TRIANGULAR_MESH__NORMALS = ApogyCommonGeometryDataPackage.MESH__NORMALS;
+
+	/**
+	 * The feature id for the '<em><b>Polygons</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_TRIANGULAR_MESH__POLYGONS = ApogyCommonGeometryDataPackage.MESH__POLYGONS;
+
+	/**
+	 * The number of structural features of the '<em>Cartesian Triangular Mesh</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_TRIANGULAR_MESH_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Polygon Neighbours</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_TRIANGULAR_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = ApogyCommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
+
+	/**
+	 * The operation id for the '<em>Get Point Neighbours</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_TRIANGULAR_MESH___GET_POINT_NEIGHBOURS__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
+
+	/**
+	 * The operation id for the '<em>Get Polygons Sharing Point</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_TRIANGULAR_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
+
+	/**
+	 * The operation id for the '<em>Get Extent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_TRIANGULAR_MESH___GET_EXTENT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Cartesian Triangular Mesh</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_TRIANGULAR_MESH_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianTriangularMeshImpl <em>Colored Cartesian Triangular Mesh</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianTriangularMeshImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCartesianTriangularMesh()
+	 * @generated
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH = 7;
+
+	/**
+	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH__POINTS = CARTESIAN_TRIANGULAR_MESH__POINTS;
+
+	/**
+	 * The feature id for the '<em><b>Normals</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH__NORMALS = CARTESIAN_TRIANGULAR_MESH__NORMALS;
+
+	/**
+	 * The feature id for the '<em><b>Polygons</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH__POLYGONS = CARTESIAN_TRIANGULAR_MESH__POLYGONS;
+
+	/**
+	 * The number of structural features of the '<em>Colored Cartesian Triangular Mesh</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH_FEATURE_COUNT = CARTESIAN_TRIANGULAR_MESH_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Polygon Neighbours</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = CARTESIAN_TRIANGULAR_MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
+
+	/**
+	 * The operation id for the '<em>Get Point Neighbours</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH___GET_POINT_NEIGHBOURS__COORDINATES = CARTESIAN_TRIANGULAR_MESH___GET_POINT_NEIGHBOURS__COORDINATES;
+
+	/**
+	 * The operation id for the '<em>Get Polygons Sharing Point</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = CARTESIAN_TRIANGULAR_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
+
+	/**
+	 * The operation id for the '<em>Get Extent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH___GET_EXTENT = CARTESIAN_TRIANGULAR_MESH___GET_EXTENT;
+
+	/**
+	 * The number of operations of the '<em>Colored Cartesian Triangular Mesh</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_CARTESIAN_TRIANGULAR_MESH_OPERATION_COUNT = CARTESIAN_TRIANGULAR_MESH_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -572,22 +824,13 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_TRIANGULAR_MESH_COLORIZER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
-	 * The operation id for the '<em>Replace</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH_COLORIZER___REPLACE__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES_COLOREDCARTESIANPOSITIONCOORDINATES = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
-
-	/**
 	 * The operation id for the '<em>Compute Color</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_COLORIZER___COMPUTE_COLOR__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 1;
+	int CARTESIAN_TRIANGULAR_MESH_COLORIZER___COMPUTE_COLOR__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Triangular Mesh Colorizer</em>' class.
@@ -596,17 +839,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_COLORIZER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshColorizerBySlopeImpl <em>Cartesian Triangular Mesh Colorizer By Slope</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshColorizerBySlopeImpl
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMeshColorizerBySlope()
-	 * @generated
-	 */
-	int CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE = 8;
+	int CARTESIAN_TRIANGULAR_MESH_COLORIZER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -663,15 +896,6 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE___PROCESS__OBJECT = CARTESIAN_TRIANGULAR_MESH_COLORIZER___PROCESS__OBJECT;
 
 	/**
-	 * The operation id for the '<em>Replace</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE___REPLACE__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES_COLOREDCARTESIANPOSITIONCOORDINATES = CARTESIAN_TRIANGULAR_MESH_COLORIZER___REPLACE__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES_COLOREDCARTESIANPOSITIONCOORDINATES;
-
-	/**
 	 * The operation id for the '<em>Compute Color</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -688,16 +912,6 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE_OPERATION_COUNT = CARTESIAN_TRIANGULAR_MESH_COLORIZER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl <em>Cartesian Orientation Coordinates</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianOrientationCoordinates()
-	 * @generated
-	 */
-	int CARTESIAN_ORIENTATION_COORDINATES = 9;
 
 	/**
 	 * The feature id for the '<em><b>XRotation</b></em>' attribute.
@@ -745,16 +959,6 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_ORIENTATION_COORDINATES_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl <em>Abstract Cartesian Coordinates Set</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getAbstractCartesianCoordinatesSet()
-	 * @generated
-	 */
-	int ABSTRACT_CARTESIAN_COORDINATES_SET = 10;
-
-	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -798,16 +1002,6 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetImpl <em>Cartesian Coordinates Set</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetImpl
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSet()
-	 * @generated
-	 */
-	int CARTESIAN_COORDINATES_SET = 11;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -855,14 +1049,14 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_COORDINATES_SET_OPERATION_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCoordinatesSetImpl <em>Colored Coordinates Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianCoordinatesSetImpl <em>Colored Cartesian Coordinates Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCoordinatesSetImpl
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCoordinatesSet()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianCoordinatesSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCartesianCoordinatesSet()
 	 * @generated
 	 */
-	int COLORED_COORDINATES_SET = 12;
+	int COLORED_CARTESIAN_COORDINATES_SET = 13;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -871,7 +1065,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLORED_COORDINATES_SET__POINTS = ABSTRACT_CARTESIAN_COORDINATES_SET__POINTS;
+	int COLORED_CARTESIAN_COORDINATES_SET__POINTS = ABSTRACT_CARTESIAN_COORDINATES_SET__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -880,16 +1074,16 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLORED_COORDINATES_SET__NORMALS = ABSTRACT_CARTESIAN_COORDINATES_SET__NORMALS;
+	int COLORED_CARTESIAN_COORDINATES_SET__NORMALS = ABSTRACT_CARTESIAN_COORDINATES_SET__NORMALS;
 
 	/**
-	 * The number of structural features of the '<em>Colored Coordinates Set</em>' class.
+	 * The number of structural features of the '<em>Colored Cartesian Coordinates Set</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLORED_COORDINATES_SET_FEATURE_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 0;
+	int COLORED_CARTESIAN_COORDINATES_SET_FEATURE_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Extent</em>' operation.
@@ -898,26 +1092,16 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLORED_COORDINATES_SET___GET_EXTENT = ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT;
+	int COLORED_CARTESIAN_COORDINATES_SET___GET_EXTENT = ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT;
 
 	/**
-	 * The number of operations of the '<em>Colored Coordinates Set</em>' class.
+	 * The number of operations of the '<em>Colored Cartesian Coordinates Set</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLORED_COORDINATES_SET_OPERATION_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl <em>Cartesian Coordinates Set Extent</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSetExtent()
-	 * @generated
-	 */
-	int CARTESIAN_COORDINATES_SET_EXTENT = 13;
+	int COLORED_CARTESIAN_COORDINATES_SET_OPERATION_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>XMin</b></em>' attribute.
@@ -1019,16 +1203,6 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_COORDINATES_SET_EXTENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl <em>Digital Elevation Map</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMap()
-	 * @generated
-	 */
-	int DIGITAL_ELEVATION_MAP = 14;
-
-	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1090,16 +1264,6 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIGITAL_ELEVATION_MAP_OPERATION_COUNT = CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl <em>Cartesian Coordinates Mesh</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMesh()
-	 * @generated
-	 */
-	int CARTESIAN_COORDINATES_MESH = 15;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -1183,97 +1347,6 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_COORDINATES_MESH_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshImpl <em>Cartesian Triangular Mesh</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshImpl
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMesh()
-	 * @generated
-	 */
-	int CARTESIAN_TRIANGULAR_MESH = 16;
-
-	/**
-	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH__POINTS = ApogyCommonGeometryDataPackage.MESH__POINTS;
-
-	/**
-	 * The feature id for the '<em><b>Normals</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH__NORMALS = ApogyCommonGeometryDataPackage.MESH__NORMALS;
-
-	/**
-	 * The feature id for the '<em><b>Polygons</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH__POLYGONS = ApogyCommonGeometryDataPackage.MESH__POLYGONS;
-
-	/**
-	 * The number of structural features of the '<em>Cartesian Triangular Mesh</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Polygon Neighbours</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = ApogyCommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
-
-	/**
-	 * The operation id for the '<em>Get Point Neighbours</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH___GET_POINT_NEIGHBOURS__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
-
-	/**
-	 * The operation id for the '<em>Get Polygons Sharing Point</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
-
-	/**
-	 * The operation id for the '<em>Get Extent</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH___GET_EXTENT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Cartesian Triangular Mesh</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARTESIAN_TRIANGULAR_MESH_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 1;
-
-	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesImpl <em>Spherical Coordinates</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1281,7 +1354,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalCoordinates()
 	 * @generated
 	 */
-	int SPHERICAL_COORDINATES = 17;
+	int SPHERICAL_COORDINATES = 18;
 
 	/**
 	 * The feature id for the '<em><b>Phi</b></em>' attribute.
@@ -1336,7 +1409,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalCoordinatesSet()
 	 * @generated
 	 */
-	int SPHERICAL_COORDINATES_SET = 18;
+	int SPHERICAL_COORDINATES_SET = 19;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -1382,7 +1455,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalCoordinatesMesh()
 	 * @generated
 	 */
-	int SPHERICAL_COORDINATES_MESH = 19;
+	int SPHERICAL_COORDINATES_MESH = 20;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -1464,7 +1537,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalTriangularMesh()
 	 * @generated
 	 */
-	int SPHERICAL_TRIANGULAR_MESH = 20;
+	int SPHERICAL_TRIANGULAR_MESH = 21;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -1546,7 +1619,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPose()
 	 * @generated
 	 */
-	int POSE = 21;
+	int POSE = 22;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -1637,7 +1710,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphereSamplingShape()
 	 * @generated
 	 */
-	int SPHERE_SAMPLING_SHAPE = 22;
+	int SPHERE_SAMPLING_SHAPE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Radius</b></em>' attribute.
@@ -1710,7 +1783,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCubeSamplingShape()
 	 * @generated
 	 */
-	int CUBE_SAMPLING_SHAPE = 23;
+	int CUBE_SAMPLING_SHAPE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Corner1</b></em>' reference.
@@ -1783,7 +1856,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSetShapeSampler()
 	 * @generated
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER = 24;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER = 25;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -1865,7 +1938,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshSampler()
 	 * @generated
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER = 25;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER = 26;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -1956,7 +2029,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshPolygonSampler()
 	 * @generated
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER = 26;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER = 27;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2038,7 +2111,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMeshSampler()
 	 * @generated
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER = 27;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER = 28;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2129,7 +2202,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMeshPolygonSampler()
 	 * @generated
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER = 28;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER = 29;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2211,7 +2284,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPositionCoordinatesMesher()
 	 * @generated
 	 */
-	int CARTESIAN_POSITION_COORDINATES_MESHER = 29;
+	int CARTESIAN_POSITION_COORDINATES_MESHER = 30;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2275,7 +2348,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getNormalPointCloud()
 	 * @generated
 	 */
-	int NORMAL_POINT_CLOUD = 30;
+	int NORMAL_POINT_CLOUD = 31;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' attribute.
@@ -2321,7 +2394,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPointLocator()
 	 * @generated
 	 */
-	int POINT_LOCATOR = 31;
+	int POINT_LOCATOR = 32;
 
 	/**
 	 * The number of structural features of the '<em>Point Locator</em>' class.
@@ -2430,7 +2503,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getKDTreeBasedPointLocator()
 	 * @generated
 	 */
-	int KD_TREE_BASED_POINT_LOCATOR = 32;
+	int KD_TREE_BASED_POINT_LOCATOR = 33;
 
 	/**
 	 * The number of structural features of the '<em>KD Tree Based Point Locator</em>' class.
@@ -2539,7 +2612,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMeshLocalizer()
 	 * @generated
 	 */
-	int MESH_LOCALIZER = 33;
+	int MESH_LOCALIZER = 34;
 
 	/**
 	 * The number of structural features of the '<em>Mesh Localizer</em>' class.
@@ -2576,7 +2649,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDelaunayMesher()
 	 * @generated
 	 */
-	int DELAUNAY_MESHER = 34;
+	int DELAUNAY_MESHER = 35;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2640,7 +2713,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMapMesher()
 	 * @generated
 	 */
-	int DIGITAL_ELEVATION_MAP_MESHER = 35;
+	int DIGITAL_ELEVATION_MAP_MESHER = 36;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2704,7 +2777,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMapSampler()
 	 * @generated
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER = 36;
+	int DIGITAL_ELEVATION_MAP_SAMPLER = 37;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2777,7 +2850,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getTriangularMeshNormalsCalculator()
 	 * @generated
 	 */
-	int TRIANGULAR_MESH_NORMALS_CALCULATOR = 37;
+	int TRIANGULAR_MESH_NORMALS_CALCULATOR = 38;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2841,7 +2914,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getTriangularMeshToNormalPointCloud()
 	 * @generated
 	 */
-	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD = 38;
+	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD = 39;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2905,7 +2978,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getUniquePointsFilter()
 	 * @generated
 	 */
-	int UNIQUE_POINTS_FILTER = 39;
+	int UNIQUE_POINTS_FILTER = 40;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2969,7 +3042,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getTriangleEdgeLengthTriangularMeshFilter()
 	 * @generated
 	 */
-	int TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER = 40;
+	int TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER = 41;
 
 	/**
 	 * The feature id for the '<em><b>Minimum Range</b></em>' attribute.
@@ -3033,7 +3106,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getOutlierFilter()
 	 * @generated
 	 */
-	int OUTLIER_FILTER = 41;
+	int OUTLIER_FILTER = 42;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -3106,7 +3179,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMeshSmoother()
 	 * @generated
 	 */
-	int MESH_SMOOTHER = 42;
+	int MESH_SMOOTHER = 43;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -3179,7 +3252,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getVoxelBased3DPointCloudResampler()
 	 * @generated
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER = 43;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER = 44;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -3288,7 +3361,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getRigidBodyPoseTracker()
 	 * @generated
 	 */
-	int RIGID_BODY_POSE_TRACKER = 45;
+	int RIGID_BODY_POSE_TRACKER = 46;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PositionMarkerImpl <em>Position Marker</em>}' class.
@@ -3298,7 +3371,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPositionMarker()
 	 * @generated
 	 */
-	int POSITION_MARKER = 44;
+	int POSITION_MARKER = 45;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -3434,7 +3507,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getApogyCommonGeometryData3DFacade()
 	 * @generated
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE = 46;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE = 47;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -3705,7 +3778,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getData3DIO()
 	 * @generated
 	 */
-	int DATA3_DIO = 47;
+	int DATA3_DIO = 48;
 
 	/**
 	 * The number of structural features of the '<em>Data3 DIO</em>' class.
@@ -3850,7 +3923,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getData3DUtils()
 	 * @generated
 	 */
-	int DATA3_DUTILS = 48;
+	int DATA3_DUTILS = 49;
 
 	/**
 	 * The number of structural features of the '<em>Data3 DUtils</em>' class.
@@ -3941,7 +4014,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianAxis()
 	 * @generated
 	 */
-	int CARTESIAN_AXIS = 49;
+	int CARTESIAN_AXIS = 50;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPlane <em>Cartesian Plane</em>}' enum.
@@ -3951,7 +4024,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPlane()
 	 * @generated
 	 */
-	int CARTESIAN_PLANE = 50;
+	int CARTESIAN_PLANE = 51;
 
 	/**
 	 * The meta object id for the '<em>Vector2d</em>' data type.
@@ -3961,7 +4034,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getVector2d()
 	 * @generated
 	 */
-	int VECTOR2D = 51;
+	int VECTOR2D = 52;
 
 	/**
 	 * The meta object id for the '<em>Vector3d</em>' data type.
@@ -3971,7 +4044,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getVector3d()
 	 * @generated
 	 */
-	int VECTOR3D = 52;
+	int VECTOR3D = 53;
 
 	/**
 	 * The meta object id for the '<em>Point3d</em>' data type.
@@ -3981,7 +4054,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPoint3d()
 	 * @generated
 	 */
-	int POINT3D = 53;
+	int POINT3D = 54;
 
 	/**
 	 * The meta object id for the '<em>Matrix4d</em>' data type.
@@ -3991,7 +4064,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMatrix4d()
 	 * @generated
 	 */
-	int MATRIX4D = 54;
+	int MATRIX4D = 55;
 
 	/**
 	 * The meta object id for the '<em>GVector</em>' data type.
@@ -4001,7 +4074,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getGVector()
 	 * @generated
 	 */
-	int GVECTOR = 55;
+	int GVECTOR = 56;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -4011,7 +4084,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 56;
+	int LIST = 57;
 
 	/**
 	 * The meta object id for the '<em>Map</em>' data type.
@@ -4021,7 +4094,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 57;
+	int MAP = 58;
 
 	/**
 	 * The meta object id for the '<em>Set</em>' data type.
@@ -4031,7 +4104,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSet()
 	 * @generated
 	 */
-	int SET = 58;
+	int SET = 59;
 
 	/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -4041,7 +4114,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSortedSet()
 	 * @generated
 	 */
-	int SORTED_SET = 59;
+	int SORTED_SET = 60;
 
 	/**
 	 * The meta object id for the '<em>Collection</em>' data type.
@@ -4051,7 +4124,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 60;
+	int COLLECTION = 61;
 
 	/**
 	 * The meta object id for the '<em>EList</em>' data type.
@@ -4061,7 +4134,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getEList()
 	 * @generated
 	 */
-	int ELIST = 61;
+	int ELIST = 62;
 
 	/**
 	 * The meta object id for the '<em>IProgress Monitor</em>' data type.
@@ -4071,7 +4144,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIProgressMonitor()
 	 * @generated
 	 */
-	int IPROGRESS_MONITOR = 62;
+	int IPROGRESS_MONITOR = 63;
 
 	/**
 	 * The meta object id for the '<em>Output Stream</em>' data type.
@@ -4081,7 +4154,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getOutputStream()
 	 * @generated
 	 */
-	int OUTPUT_STREAM = 63;
+	int OUTPUT_STREAM = 64;
 
 	/**
 	 * The meta object id for the '<em>Input Stream</em>' data type.
@@ -4091,7 +4164,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getInputStream()
 	 * @generated
 	 */
-	int INPUT_STREAM = 64;
+	int INPUT_STREAM = 65;
 
 	/**
 	 * The meta object id for the '<em>IO Exception</em>' data type.
@@ -4101,7 +4174,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIOException()
 	 * @generated
 	 */
-	int IO_EXCEPTION = 65;
+	int IO_EXCEPTION = 66;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -4111,7 +4184,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 66;
+	int EXCEPTION = 67;
 
 	/**
 	 * The meta object id for the '<em>Illegal Argument Exception</em>' data type.
@@ -4121,7 +4194,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIllegalArgumentException()
 	 * @generated
 	 */
-	int ILLEGAL_ARGUMENT_EXCEPTION = 67;
+	int ILLEGAL_ARGUMENT_EXCEPTION = 68;
 
 	/**
 	 * The meta object id for the '<em>Double Array Of Array</em>' data type.
@@ -4130,7 +4203,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDoubleArrayOfArray()
 	 * @generated
 	 */
-	int DOUBLE_ARRAY_OF_ARRAY = 68;
+	int DOUBLE_ARRAY_OF_ARRAY = 69;
 
 	/**
 	 * The meta object id for the '<em>Int Array</em>' data type.
@@ -4139,7 +4212,7 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIntArray()
 	 * @generated
 	 */
-	int INT_ARRAY = 69;
+	int INT_ARRAY = 70;
 
 
 	/**
@@ -4333,6 +4406,16 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	EClass getColoredCartesianPositionCoordinates();
 
 	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh <em>Colored Cartesian Triangular Mesh</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Colored Cartesian Triangular Mesh</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh
+	 * @generated
+	 */
+	EClass getColoredCartesianTriangularMesh();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer <em>Cartesian Triangular Mesh Colorizer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4341,16 +4424,6 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCartesianTriangularMeshColorizer();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer#replace(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates) <em>Replace</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Replace</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer#replace(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates)
-	 * @generated
-	 */
-	EOperation getCartesianTriangularMeshColorizer__Replace__CartesianTriangularMesh_CartesianPositionCoordinates_ColoredCartesianPositionCoordinates();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer#computeColor(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Compute Color</em>}' operation.
@@ -4457,14 +4530,14 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	EClass getCartesianCoordinatesSet();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet <em>Colored Coordinates Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet <em>Colored Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Colored Coordinates Set</em>'.
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet
+	 * @return the meta object for class '<em>Colored Cartesian Coordinates Set</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet
 	 * @generated
 	 */
-	EClass getColoredCoordinatesSet();
+	EClass getColoredCartesianCoordinatesSet();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent <em>Cartesian Coordinates Set Extent</em>}'.
@@ -6240,6 +6313,16 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 		EClass COLORED_CARTESIAN_POSITION_COORDINATES = eINSTANCE.getColoredCartesianPositionCoordinates();
 
 		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianTriangularMeshImpl <em>Colored Cartesian Triangular Mesh</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianTriangularMeshImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCartesianTriangularMesh()
+		 * @generated
+		 */
+		EClass COLORED_CARTESIAN_TRIANGULAR_MESH = eINSTANCE.getColoredCartesianTriangularMesh();
+
+		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshColorizerImpl <em>Cartesian Triangular Mesh Colorizer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6248,14 +6331,6 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CARTESIAN_TRIANGULAR_MESH_COLORIZER = eINSTANCE.getCartesianTriangularMeshColorizer();
-
-		/**
-		 * The meta object literal for the '<em><b>Replace</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CARTESIAN_TRIANGULAR_MESH_COLORIZER___REPLACE__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES_COLOREDCARTESIANPOSITIONCOORDINATES = eINSTANCE.getCartesianTriangularMeshColorizer__Replace__CartesianTriangularMesh_CartesianPositionCoordinates_ColoredCartesianPositionCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Compute Color</b></em>' operation.
@@ -6346,14 +6421,14 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 		EClass CARTESIAN_COORDINATES_SET = eINSTANCE.getCartesianCoordinatesSet();
 
 		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCoordinatesSetImpl <em>Colored Coordinates Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianCoordinatesSetImpl <em>Colored Cartesian Coordinates Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCoordinatesSetImpl
-		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCoordinatesSet()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianCoordinatesSetImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCartesianCoordinatesSet()
 		 * @generated
 		 */
-		EClass COLORED_COORDINATES_SET = eINSTANCE.getColoredCoordinatesSet();
+		EClass COLORED_CARTESIAN_COORDINATES_SET = eINSTANCE.getColoredCartesianCoordinatesSet();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl <em>Cartesian Coordinates Set Extent</em>}' class.

@@ -46,7 +46,7 @@ public interface CartesianCoordinatesSetPresentation extends NodePresentation {
 	 * @return the value of the '<em>Point Cloud</em>' reference.
 	 * @see #setPointCloud(CartesianCoordinatesSet)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_PointCloud()
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='PRESENTATION_INTERNAL_INFORMATION' child='false'"
 	 * @generated
 	 */
 	CartesianCoordinatesSet getPointCloud();
@@ -74,6 +74,7 @@ public interface CartesianCoordinatesSetPresentation extends NodePresentation {
 	 * @see #setPointSize(int)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_PointSize()
 	 * @model default="1" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
 	 */
 	int getPointSize();
@@ -99,6 +100,7 @@ public interface CartesianCoordinatesSetPresentation extends NodePresentation {
 	 * @return the value of the '<em>Number Of Points</em>' attribute.
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_NumberOfPoints()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='COORDINATES_SET_INFORMATION' child='false'"
 	 * @generated
 	 */
 	int getNumberOfPoints();

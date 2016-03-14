@@ -14,7 +14,6 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer#replace(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates) <em>Replace</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer#computeColor(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Compute Color</em>}</li>
  * </ul>
  * </p>
@@ -58,19 +57,6 @@ public abstract class CartesianTriangularMeshColorizerTest extends TestCase {
 	 */
 	protected CartesianTriangularMeshColorizer getFixture() {
 		return fixture;
-	}
-
-	/**
-	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer#replace(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates) <em>Replace</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer#replace(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates)
-	 * @generated
-	 */
-	public void testReplace__CartesianTriangularMesh_CartesianPositionCoordinates_ColoredCartesianPositionCoordinates() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
 	}
 
 	/**

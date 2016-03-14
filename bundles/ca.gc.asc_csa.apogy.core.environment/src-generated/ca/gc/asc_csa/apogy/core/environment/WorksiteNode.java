@@ -13,7 +13,7 @@ package ca.gc.asc_csa.apogy.core.environment;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ import ca.gc.asc_csa.apogy.common.topology.GroupNode;
  * @model
  * @generated
  */
-public interface WorksiteNode extends GroupNode
+public interface WorksiteNode extends AggregateGroupNode
 {
   /**
 	 * Returns the value of the '<em><b>Worksite</b></em>' reference.
