@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.mobile_platform.provider;
  */
 
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
 
@@ -31,6 +32,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform;
@@ -50,6 +52,14 @@ ITreeItemContentProvider,
 IItemLabelProvider,
 IItemPropertySource
 {
+	/**
+	 * This is the degree symbol, as expressed in unicode
+	 */
+	public static final String DEGREE_SYM = "\u00b0";
+	private DecimalFormat positionFormat = new DecimalFormat("0.000");
+	private DecimalFormat linearVelocityFormat = new DecimalFormat("0.000");
+	private DecimalFormat angularVelocityFormat = new DecimalFormat("0.000");
+	
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -273,31 +283,40 @@ IItemPropertySource
 	@Override
 	public String getText(Object object)
 	{
-		/**
-		 * This is the degree symbol, as expressed in unicode
-		 */
-		final String DEGREE_SYM = "\u00b0";
-		
 		// Get the current mobile platform
 		MobilePlatform mobilePlatform = (MobilePlatform)object;
 		
 		// Get the default label
 		String label = getString("_UI_MobilePlatform_type");
 		
-		// If the mobile platform isn't null
-		if (mobilePlatform != null)
-		{
-			// Add on appropriate values
-			label += " (X=" + mobilePlatform.getPosition().getX() +
-					 ", Y=" + mobilePlatform.getPosition().getY() +
-					 ", LinVel=" + mobilePlatform.getLinearVelocity() +
-					 ", AngVel=" + Math.toDegrees(mobilePlatform.getAngularVelocity()) +
-					 "(" + DEGREE_SYM + "/s))";
-		}
+		// Adds additional info as part of the text.
+		label += getMobilePlatformSuffixText(mobilePlatform);
 		
 		return label;
 	}
 
+	/**
+	 * Return addition MobilePlatform information as apart of a displayable text.
+	 * @param mobilePlatform The MobilePlatform.
+	 * @return The text.
+	 */
+	protected String getMobilePlatformSuffixText(MobilePlatform mobilePlatform)
+	{
+		String text = "";
+		// If the mobile platform isn't null
+		if (mobilePlatform != null)
+		{
+			// Add on appropriate values
+			text += " (X=" + positionFormat.format(mobilePlatform.getPosition().getX()) +
+					 ", Y=" + positionFormat.format(mobilePlatform.getPosition().getY()) +
+					 ", LinVel=" + linearVelocityFormat.format(mobilePlatform.getLinearVelocity()) + "(m/s)" + 
+					 ", AngVel=" + angularVelocityFormat.format(Math.toDegrees(mobilePlatform.getAngularVelocity())) +
+					 "(" + DEGREE_SYM + "/s))";
+		}
+		
+		return text;
+	}
+	
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.

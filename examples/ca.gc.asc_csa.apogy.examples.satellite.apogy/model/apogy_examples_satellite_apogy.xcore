@@ -59,5 +59,6 @@ class ConstellationSystemApiAdapter extends ApogySystemApiAdapter
  * implemented by the apply() (load) and collect() (save) methods of the constellation's
  * API adapter, which is {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationApogySystemApiAdapter}.
  */
-class ConstellationData extends ApogyInitializationData, ConstellationState{
+class ConstellationData extends ApogyInitializationData{
+	contains ConstellationState [0..1] constellationState
 }

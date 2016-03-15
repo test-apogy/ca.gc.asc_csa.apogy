@@ -62,16 +62,17 @@ public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 	public void collect(AbstractInitializationData initializationData) {
 		super.collect(initializationData);
 		
-		ConstellationData data = (ConstellationData) initializationData;						
+		ConstellationData data = (ConstellationData) initializationData;		
+		data.setConstellationState(ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationState());
 		AbstractConstellation constellation = (AbstractConstellation) getInstance();						
 		ConstellationState constellationState = EcoreUtil.copy(constellation.getConstellationState());
 		
-		data.setConstellationRequestsList(constellationState.getConstellationRequestsList());
-		data.setConstellationCommandPlansList(constellationState.getConstellationCommandPlansList());
-		data.setDownlinksLists(constellationState.getDownlinksLists());
-		data.setGroundStationsReferencesList(constellationState.getGroundStationsReferencesList());
-		data.setSatellitesList(constellationState.getSatellitesList());
-		data.setConstellationPlanner(constellationState.getConstellationPlanner());
+		data.getConstellationState().setConstellationRequestsList(constellationState.getConstellationRequestsList());
+		data.getConstellationState().setConstellationCommandPlansList(constellationState.getConstellationCommandPlansList());
+		data.getConstellationState().setDownlinksLists(constellationState.getDownlinksLists());
+		data.getConstellationState().setGroundStationsReferencesList(constellationState.getGroundStationsReferencesList());
+		data.getConstellationState().setSatellitesList(constellationState.getSatellitesList());
+		data.getConstellationState().setConstellationPlanner(constellationState.getConstellationPlanner());
 	}
 	
 	@Override
@@ -81,12 +82,15 @@ public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 		AbstractConstellation constellation = (AbstractConstellation) getInstance();
 		
 		constellation.setConstellationState(ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationState());
-		constellation.getConstellationState().setConstellationCommandPlansList(data.getConstellationCommandPlansList());
-		constellation.getConstellationState().setConstellationRequestsList(data.getConstellationRequestsList());
-		constellation.getConstellationState().setDownlinksLists(data.getDownlinksLists());
-		constellation.getConstellationState().setGroundStationsReferencesList(data.getGroundStationsReferencesList());
-		constellation.getConstellationState().setSatellitesList(data.getSatellitesList());
-		constellation.getConstellationState().setConstellationPlanner(data.getConstellationPlanner());
+		
+		if (data.getConstellationState() != null){
+			constellation.getConstellationState().setConstellationCommandPlansList(data.getConstellationState().getConstellationCommandPlansList());
+			constellation.getConstellationState().setConstellationRequestsList(data.getConstellationState().getConstellationRequestsList());
+			constellation.getConstellationState().setDownlinksLists(data.getConstellationState().getDownlinksLists());
+			constellation.getConstellationState().setGroundStationsReferencesList(data.getConstellationState().getGroundStationsReferencesList());
+			constellation.getConstellationState().setSatellitesList(data.getConstellationState().getSatellitesList());
+			constellation.getConstellationState().setConstellationPlanner(data.getConstellationState().getConstellationPlanner());
+		}
 	}
 	
 } //ConstellationSystemApiAdapterImpl

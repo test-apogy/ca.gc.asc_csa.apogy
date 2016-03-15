@@ -260,13 +260,22 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	int LANDER__MASS = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 10;
 
 		/**
+	 * The feature id for the '<em><b>Fuel Mass</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANDER__FUEL_MASS = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 11;
+
+		/**
 	 * The feature id for the '<em><b>Gravitational Pull</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__GRAVITATIONAL_PULL = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 11;
+	int LANDER__GRAVITATIONAL_PULL = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 12;
 
 		/**
 	 * The feature id for the '<em><b>Changing Legs</b></em>' attribute.
@@ -275,7 +284,7 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__CHANGING_LEGS = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 12;
+	int LANDER__CHANGING_LEGS = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 13;
 
 		/**
 	 * The feature id for the '<em><b>Changing Attitude</b></em>' attribute.
@@ -284,7 +293,7 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__CHANGING_ATTITUDE = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 13;
+	int LANDER__CHANGING_ATTITUDE = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 14;
 
 		/**
 	 * The feature id for the '<em><b>Changing Location</b></em>' attribute.
@@ -293,7 +302,7 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__CHANGING_LOCATION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 14;
+	int LANDER__CHANGING_LOCATION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 15;
 
 		/**
 	 * The feature id for the '<em><b>Flying Enabled</b></em>' attribute.
@@ -302,7 +311,7 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__FLYING_ENABLED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 15;
+	int LANDER__FLYING_ENABLED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 16;
 
 		/**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -311,7 +320,7 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__INITIALIZED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 16;
+	int LANDER__INITIALIZED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 17;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -320,7 +329,7 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__DISPOSED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 17;
+	int LANDER__DISPOSED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 18;
 
 		/**
 	 * The number of structural features of the '<em>Lander</em>' class.
@@ -329,7 +338,7 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_FEATURE_COUNT = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 18;
+  int LANDER_FEATURE_COUNT = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 19;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -547,6 +556,15 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	 * @ordered
 	 */
 	int LANDER_STUB__MASS = LANDER__MASS;
+
+		/**
+	 * The feature id for the '<em><b>Fuel Mass</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANDER_STUB__FUEL_MASS = LANDER__FUEL_MASS;
 
 		/**
 	 * The feature id for the '<em><b>Gravitational Pull</b></em>' attribute.
@@ -836,6 +854,15 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	 * @ordered
 	 */
 	int LANDER_SIMULATED__MASS = LANDER__MASS;
+
+		/**
+	 * The feature id for the '<em><b>Fuel Mass</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANDER_SIMULATED__FUEL_MASS = LANDER__FUEL_MASS;
 
 		/**
 	 * The feature id for the '<em><b>Gravitational Pull</b></em>' attribute.
@@ -1225,6 +1252,17 @@ public interface ApogyExamplesLanderPackage extends EPackage
 	EAttribute getLander_Mass();
 
 		/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getFuelMass <em>Fuel Mass</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fuel Mass</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getFuelMass()
+	 * @see #getLander()
+	 * @generated
+	 */
+	EAttribute getLander_FuelMass();
+
+		/**
 	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getGravitationalPull <em>Gravitational Pull</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1605,6 +1643,14 @@ public interface ApogyExamplesLanderPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute LANDER__MASS = eINSTANCE.getLander_Mass();
+
+				/**
+		 * The meta object literal for the '<em><b>Fuel Mass</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LANDER__FUEL_MASS = eINSTANCE.getLander_FuelMass();
 
 				/**
 		 * The meta object literal for the '<em><b>Gravitational Pull</b></em>' attribute feature.

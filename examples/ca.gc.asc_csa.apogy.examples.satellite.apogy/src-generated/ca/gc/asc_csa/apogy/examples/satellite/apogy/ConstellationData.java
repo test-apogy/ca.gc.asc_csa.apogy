@@ -28,10 +28,42 @@ import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
  * API adapter, which is {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationApogySystemApiAdapter}.
  * <!-- end-model-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationState <em>Constellation State</em>}</li>
+ * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationData()
  * @model
  * @generated
  */
-public interface ConstellationData extends ApogyInitializationData, ConstellationState {
+public interface ConstellationData extends ApogyInitializationData {
+
+	/**
+	 * Returns the value of the '<em><b>Constellation State</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Constellation State</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Constellation State</em>' containment reference.
+	 * @see #setConstellationState(ConstellationState)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationData_ConstellationState()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ConstellationState getConstellationState();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationState <em>Constellation State</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Constellation State</em>' containment reference.
+	 * @see #getConstellationState()
+	 * @generated
+	 */
+	void setConstellationState(ConstellationState value);
 } // ConstellationData

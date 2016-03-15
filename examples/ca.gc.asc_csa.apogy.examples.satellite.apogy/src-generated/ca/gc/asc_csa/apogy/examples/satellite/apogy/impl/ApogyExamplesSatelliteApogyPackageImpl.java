@@ -25,6 +25,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapte
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -135,6 +136,15 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getConstellationData_ConstellationState() {
+		return (EReference)constellationDataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyExamplesSatelliteApogyFactory getApogyExamplesSatelliteApogyFactory() {
 		return (ApogyExamplesSatelliteApogyFactory)getEFactoryInstance();
 	}
@@ -161,6 +171,7 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		constellationSystemApiAdapterEClass = createEClass(CONSTELLATION_SYSTEM_API_ADAPTER);
 
 		constellationDataEClass = createEClass(CONSTELLATION_DATA);
+		createEReference(constellationDataEClass, CONSTELLATION_DATA__CONSTELLATION_STATE);
 	}
 
 	/**
@@ -197,12 +208,12 @@ public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl impleme
 		// Add supertypes to classes
 		constellationSystemApiAdapterEClass.getESuperTypes().add(theApogyCorePackage.getApogySystemApiAdapter());
 		constellationDataEClass.getESuperTypes().add(theApogyCorePackage.getApogyInitializationData());
-		constellationDataEClass.getESuperTypes().add(theApogyExamplesSatellitePackage.getConstellationState());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(constellationSystemApiAdapterEClass, ConstellationSystemApiAdapter.class, "ConstellationSystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(constellationDataEClass, ConstellationData.class, "ConstellationData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConstellationData_ConstellationState(), theApogyExamplesSatellitePackage.getConstellationState(), null, "constellationState", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

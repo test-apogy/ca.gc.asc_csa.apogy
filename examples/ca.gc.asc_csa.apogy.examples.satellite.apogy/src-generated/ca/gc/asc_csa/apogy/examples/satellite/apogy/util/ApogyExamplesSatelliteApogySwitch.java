@@ -23,7 +23,6 @@ import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
@@ -98,7 +97,6 @@ public class ApogyExamplesSatelliteApogySwitch<T> extends Switch<T> {
 				ConstellationData constellationData = (ConstellationData)theEObject;
 				T result = caseConstellationData(constellationData);
 				if (result == null) result = caseApogyInitializationData(constellationData);
-				if (result == null) result = caseConstellationState(constellationData);
 				if (result == null) result = caseInitializationData(constellationData);
 				if (result == null) result = caseAbstractInitializationData(constellationData);
 				if (result == null) result = defaultCase(theEObject);
@@ -225,21 +223,6 @@ public class ApogyExamplesSatelliteApogySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApogyInitializationData(ApogyInitializationData object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Constellation State</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Constellation State</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseConstellationState(ConstellationState object) {
 		return null;
 	}
 

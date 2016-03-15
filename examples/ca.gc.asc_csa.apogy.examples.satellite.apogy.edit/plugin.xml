@@ -36,9 +36,6 @@
             uri="ca.gc.asc_csa.apogy.core.invocator"
             class="ca.gc.asc_csa.apogy.examples.satellite.apogy.provider.ApogyExamplesSatelliteApogyItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.apogy.examples.satellite"
-            class="ca.gc.asc_csa.apogy.examples.satellite.apogy.provider.ApogyExamplesSatelliteApogyItemProviderAdapterFactory$ApogyExamplesSatelliteChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.apogy.common.topology"
             class="ca.gc.asc_csa.apogy.examples.satellite.apogy.provider.ApogyExamplesSatelliteApogyItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>

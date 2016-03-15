@@ -74,26 +74,15 @@ public class MobilePlatformSimulatedItemProvider extends MobilePlatformItemProvi
 	@Override
 	public String getText(Object object)
 	{
-		/**
-		 * This is the degree symbol, as expressed in unicode
-		 */
-		final String DEGREE_SYM = "\u00b0";
-		
 		MobilePlatformSimulated mobilePlatformSimulated = (MobilePlatformSimulated)object;
 		
 		// Get the basic label
 		String label = getString("_UI_MobilePlatformSimulated_type"); 
 		
-		// If the platform isn't null
-		if (mobilePlatformSimulated != null)
-		{
-			// Add on appropriate values
-			label += " (X=" + mobilePlatformSimulated.getPosition().getX() +
-					 ", Y=" + mobilePlatformSimulated.getPosition().getY() +
-					 ", LinVel=" + mobilePlatformSimulated.getLinearVelocity() +
-					 ", AngVel=" + Math.toDegrees(mobilePlatformSimulated.getAngularVelocity()) +
-					 "(" + DEGREE_SYM + "/s))";
-		}
+		
+		// Adds additional infor as part of the text.
+		label += getMobilePlatformSuffixText(mobilePlatformSimulated);
+		
 		return label;
 	}
 	
