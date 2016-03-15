@@ -78,35 +78,7 @@ public class LanderStubItemProvider extends LanderItemProvider {
 		// The default label for the lander
 		String label = this.getString("_UI_LanderStub_type");
 
-		// If the stub lander isn't null
-		if (stubLander != null)
-		{
-			// If the position is present
-			if (stubLander.getPosition() != null)
-			{
-				// Add the coordinates to the label
-				label = label + " (X=" + stubLander.getPosition().getX() +
-						", Y=" + stubLander.getPosition().getY() +
-						", Z=" + stubLander.getPosition().getZ();
-
-				// If the thruster is also present
-				if (stubLander.getThruster() != null)
-				{
-					// Add the thrust level to the label
-					label = label + ", Thrust=" + stubLander.getThruster().getCurrentThrust();
-				}
-
-				// Finish off the label
-				label = label + ")";
-			}
-			// Otherwise if the position is not present
-			// but the thruster is
-			else if (stubLander.getThruster() != null)
-			{
-				// Add the thrust level to the label
-				label = "(Thrust=" + stubLander.getThruster().getCurrentThrust() +")";
-			}
-		}
+		label += getLanderSuffixText(stubLander);
 
 		// Return the generated label
 		return label;

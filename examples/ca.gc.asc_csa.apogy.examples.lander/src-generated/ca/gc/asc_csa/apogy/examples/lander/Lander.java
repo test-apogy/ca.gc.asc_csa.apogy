@@ -43,6 +43,7 @@ import ca.gc.asc_csa.apogy.common.emf.Disposable;
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getMass <em>Mass</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getFuelMass <em>Fuel Mass</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getGravitationalPull <em>Gravitational Pull</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingLegs <em>Changing Legs</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingAttitude <em>Changing Attitude</em>}</li>
@@ -393,6 +394,32 @@ public interface Lander extends Disposable
 	 * @generated
 	 */
 	double getMass();
+
+		/**
+	 * Returns the value of the '<em><b>Fuel Mass</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * This represents the fuel mass of the lander (in kg).
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Fuel Mass</em>' attribute.
+	 * @see #setFuelMass(double)
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_FuelMass()
+	 * @model unique="false" transient="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' apogy_units='kg' property='Readonly' propertyCategory='Flight'"
+	 * @generated
+	 */
+	double getFuelMass();
+
+		/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getFuelMass <em>Fuel Mass</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fuel Mass</em>' attribute.
+	 * @see #getFuelMass()
+	 * @generated
+	 */
+	void setFuelMass(double value);
 
 		/**
 	 * Returns the value of the '<em><b>Gravitational Pull</b></em>' attribute.

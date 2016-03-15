@@ -45,10 +45,14 @@
 			<b>Import Registered Apogy Project</b>" check box is 
 			<b>checked</b>;</li>
 					</ul>
+					
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_import_registered_project.png"/>		
 					<li> Click "
 			<i>Next &gt;</i>";</li>
 					<li> In the list of registered Apogy Project, select 
 			<b>Rover Example</b>;</li>		
+					
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_import_rover_example.png"/>	
 					<li> Click "
 			<i>Finish</i>";</li>
 				</ol>
@@ -91,34 +95,41 @@
 				<li> The rover is now ready to accept commands. Lets start by invoking its  
 			<b>init()</b> command :</li>
 				<ol type="i">
-					<li> In the session editor, navigate down the tree to the 
-			<i>Operation Calls</i> (see screenshot below). This is a container of Operation Calls;</li>
+					<li> In the session editor, navigate down the tree to 
+			<i>Programs</i> then to 
+			<i>Operation Calls Setup</i> (see screenshot below). This is a container of Operation Calls (lists of Operation Call);</li>
 					
 			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_navigating_to_operation_calls.png"/>			
 					<li> Select the "
-			<i>Init()</i>" operation call and right-click, this will bring up a menu like this: ;</li>
+			<i>Operation Calls Setup</i>" operation call list and right-click, this will bring up a menu like this: ;</li>
 					
 			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_invoke_init.png"/>		
 					<li>Select "
-			<i>Apogy &gt; Invoke</i>". This will invoke the command on the rover. </li>
+			<i>Apogy &gt; Invoke</i>". This will invoke all the commands listed inside the "
+			<i>Operation Calls Setup</i>" on the rover, on after the other. </li>
+					<li> Navigate to the 
+			<i>Operation Calls Navigate</i>, expand the list and select the "
+			<i>Change Angular Velocity Only</i>" and invoke it using the same procedure (see below). 
+					
+			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_invoke_change_angular_velocity_only.png"/>	
+					The rover should now start to turn on itself at a rate of 10.0 &deg;/s.</li>		
 					<li> Select "
-			<i>Change Angular Velocity</i>" and invoke it using the same procedure. The rover should now start to turn on itself at a rate of 10.0 &deg;/s.</li>		
-					<li> Select "
-			<i>Change Linear Velocity</i>" and invoke it using the same procedure. The rover should now start move forward at 0.5 m/s and turn at the same time, thus doing an arc turn.</li>		
+			<i>Change Linear Velocity Only</i>" and invoke it using the same procedure. The rover should now start move forward at 0.5 m/s and turn at the same time, thus doing an arc turn.</li>		
 		</p>
 		<p>	</ol>
 </ol></p>
 		<p>Lets modify the angular velocity of the rover to make the arc turn wider. In order to do so, we will change the "
 			<i>angularVelocity"</i> parameter of the "
-			<i>Change Angular Velocity</i>" command. Here is how to do it:
+			<i>Change Angular Velocity Only</i>" command. Here is how to do it:
 <ol>
 						<li> Select "
-			<i>Change Linear Velocity</i>" and expand it down to the "
+			<i>Change Angular Velocity Only</i>" and expand it down to the "
 			<i>angularVelocity</i>" parameter (see screenshot below). </li>
 						
 			<img height="512" width="640" border="0" src="../resources/tutorials/rover_example_changing_angular_vel.png"/>
 						<li> Select the "
-			<i>angularVelocity</i>" parameter, the Properties view should now show it and its current value (10.0 &deg;/s)</li>
+			<i>angularVelocity</i>" parameter, then in the Properties view, select the "
+			<i>Advanced</i>" tab. The Properties view should now show it and its current value (10.0 &deg;/s)</li>
 						<li> In the Properties view, set the "
 			<i>angularVelocity</i>" parameter value to 2.0 &deg;/s</li>
 						<li> Invoke "

@@ -232,4 +232,23 @@ public class CameraApogySystemApiAdapterImpl extends
 		}
 	}
 
+	
+	@Override
+	public void dispose() 
+	{
+		try
+		{
+			// Stops streaming if it is enabled.
+			if(this.getCamera().isStreamingEnabled())
+			{
+				this.getCamera().commandStreaming(false);
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		super.dispose();
+	}
 } // CameraApogySystemApiAdapterImpl

@@ -29,6 +29,7 @@
 
 		<!-- The name of the Bintray repository -->
 		<!--<bintray.repo>Develop</bintray.repo>-->
+		<!--<bintray.repo>Releases</bintray.repo>-->
 
 		<!-- Internal properties -->
 		<!-- The name of your own Bintray repository's package for releases -->
