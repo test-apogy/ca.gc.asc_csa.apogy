@@ -402,7 +402,7 @@ public class ApogyAddonsROSData3dPackageImpl extends EPackageImpl implements Apo
 		addEParameter(op, theApogyCommonGeometryData3DPackage.getPose(), "pose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMessageFactory(), "messageFactory", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyAddonsROSData3dFacade__RosPointCloudToCartesianCoordinateSet__PointCloud2(), theApogyCommonGeometryData3DPackage.getCartesianCoordinatesSet(), "rosPointCloudToCartesianCoordinateSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsROSData3dFacade__RosPointCloudToCartesianCoordinateSet__PointCloud2(), theApogyCommonGeometryData3DPackage.getColoredCartesianCoordinatesSet(), "rosPointCloudToCartesianCoordinateSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPointCloud2(), "pointCloud2", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyAddonsROSData3dFacade__ReadRGBCartesianPositionCoordinates__ByteBuffer(), theApogyCommonGeometryData3DPackage.getColoredCartesianPositionCoordinates(), "readRGBCartesianPositionCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);

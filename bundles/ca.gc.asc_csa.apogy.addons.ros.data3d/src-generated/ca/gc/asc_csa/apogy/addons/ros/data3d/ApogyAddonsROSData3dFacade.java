@@ -11,6 +11,7 @@ import ca.gc.asc_csa.apogy.addons.ros.data3d.impl.ApogyAddonsROSData3dFacadeImpl
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 import geometry_msgs.Point;
@@ -90,7 +91,7 @@ public interface ApogyAddonsROSData3dFacade extends EObject
 	 * @model unique="false" pointCloud2DataType="ca.gc.asc_csa.apogy.addons.ros.data3d.PointCloud2" pointCloud2Unique="false"
 	 * @generated
 	 */
-	CartesianCoordinatesSet rosPointCloudToCartesianCoordinateSet(PointCloud2 pointCloud2);
+	ColoredCartesianCoordinatesSet rosPointCloudToCartesianCoordinateSet(PointCloud2 pointCloud2);
 
 	/**
 	 * <!-- begin-user-doc -->

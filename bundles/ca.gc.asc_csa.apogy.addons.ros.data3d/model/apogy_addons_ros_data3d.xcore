@@ -23,9 +23,10 @@
 package ca.gc.asc_csa.apogy.addons.ros.data3d
 
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose
 
 type PointCloud2 wraps sensor_msgs.PointCloud2
@@ -50,7 +51,7 @@ class ApogyAddonsROSData3dFacade
 	op Pose convertToPose(ROSPose rosPose)
 	op ROSPose convertToROSPose(Pose pose,  MessageFactory messageFactory)
 	
- 	op CartesianCoordinatesSet rosPointCloudToCartesianCoordinateSet(PointCloud2 pointCloud2)
+ 	op ColoredCartesianCoordinatesSet rosPointCloudToCartesianCoordinateSet(PointCloud2 pointCloud2)
  	
  	op ColoredCartesianPositionCoordinates readRGBCartesianPositionCoordinates(ByteBuffer byteBuffer)
  	op CartesianPositionCoordinates readCartesianPositionCoordinates(ByteBuffer byteBuffer)

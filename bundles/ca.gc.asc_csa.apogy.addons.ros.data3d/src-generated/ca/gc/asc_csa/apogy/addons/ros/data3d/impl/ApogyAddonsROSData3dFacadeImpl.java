@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.buffer.ChannelBuffers;
 import org.ros.message.MessageFactory;
+
 import ca.gc.asc_csa.apogy.addons.ros.data3d.ApogyAddonsROSData3dFacade;
 import ca.gc.asc_csa.apogy.addons.ros.data3d.ApogyAddonsROSData3dPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
@@ -22,6 +23,7 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacto
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 import geometry_msgs.Point;
@@ -161,10 +163,10 @@ public class ApogyAddonsROSData3dFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public CartesianCoordinatesSet rosPointCloudToCartesianCoordinateSet(PointCloud2 pointCloud2) 
+	public ColoredCartesianCoordinatesSet rosPointCloudToCartesianCoordinateSet(PointCloud2 pointCloud2) 
 	{
-		CartesianCoordinatesSet coordinates = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
-		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
+		ColoredCartesianCoordinatesSet coordinates = ApogyCommonGeometryData3DFactory.eINSTANCE.createColoredCartesianCoordinatesSet();
+		List<ColoredCartesianPositionCoordinates> points = new ArrayList<ColoredCartesianPositionCoordinates>();
 		
 		int count = pointCloud2.getData().capacity() / pointCloud2.getPointStep();
 		ByteBuffer bb = ByteBuffer.wrap(pointCloud2.getData().array());
@@ -175,12 +177,16 @@ public class ApogyAddonsROSData3dFacadeImpl extends MinimalEObjectImpl.Container
 		
 		for ( int i = 0; i < count; i ++ )
 		{
-			CartesianPositionCoordinates coord;
+			ColoredCartesianPositionCoordinates coord;
 			if ( color )
+			{
 				coord = readRGBCartesianPositionCoordinates(bb);
+			}
 			else
-				coord = readCartesianPositionCoordinates(bb);
-			
+			{
+				CartesianPositionCoordinates tmp = readCartesianPositionCoordinates(bb);
+				coord = ApogyCommonGeometryData3DFacade.INSTANCE.createColoredCartesianPositionCoordinates(tmp.getX(), tmp.getY(), tmp.getZ(), (short) 255, (short) 255, (short) 255);
+			}
 			points.add(coord);
 		}
 
