@@ -295,11 +295,12 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	 * 
 	 * @generated_NOT
 	 */
-	public void invoke(EObject instance, OperationCall operationCall, boolean saveResult) {
+	public OperationCallResult invoke(EObject instance, OperationCall operationCall, boolean saveResult) {
 
 		long invokeTime = 0;
 		Object result_value = null;
 		Throwable exception = null;
+		OperationCallResult result = null;
 
 		/** Create arguments list. */
 		EList<?> arguments = null;
@@ -323,15 +324,17 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 			Logger.INSTANCE.log(Activator.ID, this, "Error occured while invoking OperationCall !", EventSeverity.ERROR, e);
 		}
 
+		
 		// Saves the result if required.
-		if (saveResult) 
-		{
-			OperationCallResult result = (OperationCallResult) createResult(
+		if (saveResult){
+			result = (OperationCallResult) createResult(
 					operationCall, invokeTime, result_value,
 					(Exception) exception);
 			
 			environment.getActiveContext().getDataProductsList().getOperationCallResultsList().getResults().add(result);			
 		}
+		
+		return result;
 	}
 
 	/**
@@ -443,8 +446,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION:
 				return createResult((OperationCall)arguments.get(0), (Long)arguments.get(1), arguments.get(2), (Exception)arguments.get(3));
 			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN:
-				invoke((EObject)arguments.get(0), (OperationCall)arguments.get(1), (Boolean)arguments.get(2));
-				return null;
+				return invoke((EObject)arguments.get(0), (OperationCall)arguments.get(1), (Boolean)arguments.get(2));
 			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___DISPOSE:
 				dispose();
 				return null;
