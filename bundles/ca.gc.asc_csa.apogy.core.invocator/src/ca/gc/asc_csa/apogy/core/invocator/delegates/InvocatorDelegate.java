@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
 import ca.gc.asc_csa.apogy.core.invocator.Type;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
@@ -81,8 +82,9 @@ public interface InvocatorDelegate
 	 * @param instance The object onto which to call the operation.	
 	 * @param operationCall The specified OperationCall
 	 * @param saveResult If true then the result will be stored.
+	 * @param Reference to the result.
 	 */
-	public void execute(EObject instance, OperationCall operationCall, boolean saveResult);	
+	public OperationCallResult execute(EObject instance, OperationCall operationCall, boolean saveResult);	
 	
 	/**
 	 * Returns the {@link Type} class handled by this InvocatorDelegate.
