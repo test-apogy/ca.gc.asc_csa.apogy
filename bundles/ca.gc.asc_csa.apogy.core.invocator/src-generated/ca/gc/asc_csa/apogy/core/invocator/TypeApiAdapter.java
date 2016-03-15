@@ -214,11 +214,12 @@ public interface TypeApiAdapter extends EObject
 	 * @param instance Object onto which the operation is to be called.
 	 * @param operationCall Reference to the operation call.
 	 * @param saveResult If true then results will be saved in the {@link DataProductsList}.
+	 * @return Reference to the result.
 	 * <!-- end-model-doc -->
-	 * @model instanceUnique="false" operationCallUnique="false" saveResultUnique="false"
+	 * @model unique="false" instanceUnique="false" operationCallUnique="false" saveResultUnique="false"
 	 * @generated
 	 */
-	void invoke(EObject instance, OperationCall operationCall, boolean saveResult);
+	OperationCallResult invoke(EObject instance, OperationCall operationCall, boolean saveResult);
 
 		/**
 	 * <!-- begin-user-doc -->

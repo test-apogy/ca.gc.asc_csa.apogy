@@ -27,6 +27,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
 import ca.gc.asc_csa.apogy.core.invocator.Type;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
@@ -201,11 +202,11 @@ public class DefaultInvocatorDelegate implements InvocatorDelegate {
 		}
 	}
 
-	public void execute(EObject instance, OperationCall operationCall,
+	public OperationCallResult execute(EObject instance, OperationCall operationCall,
 			boolean saveResult) {
 		TypeApiAdapter typeApiAdapter = ApogyCoreInvocatorFacade.INSTANCE
 				.getTypeApiAdapter(operationCall);
-		typeApiAdapter.invoke(instance, operationCall, saveResult);
+		return typeApiAdapter.invoke(instance, operationCall, saveResult);
 	}
 
 	@Override

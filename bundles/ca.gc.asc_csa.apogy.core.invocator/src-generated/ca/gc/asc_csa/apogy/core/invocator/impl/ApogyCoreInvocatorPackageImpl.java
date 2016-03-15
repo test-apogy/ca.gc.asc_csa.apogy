@@ -3316,10 +3316,10 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEAttribute(getApogyCoreInvocatorFacade_InitVariableInstancesDate(), theEcorePackage.getEDate(), "initVariableInstancesDate", null, 0, 1, ApogyCoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyCoreInvocatorFacade_ActiveInvocatorSession(), this.getInvocatorSession(), null, "activeInvocatorSession", null, 0, 1, ApogyCoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getApogyCoreInvocatorFacade__Exec__OperationCall(), null, "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyCoreInvocatorFacade__Exec__OperationCall(), this.getOperationCallResult(), "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCoreInvocatorFacade__Exec__OperationCall_boolean(), null, "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreInvocatorFacade__Exec__OperationCall_boolean(), this.getOperationCallResult(), "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "saveResult", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -3503,7 +3503,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		addEParameter(op, theEcorePackage.getEJavaObject(), "resultValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCommonEMFPackage.getException(), "exception", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTypeApiAdapter__Invoke__EObject_OperationCall_boolean(), null, "invoke", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTypeApiAdapter__Invoke__EObject_OperationCall_boolean(), this.getOperationCallResult(), "invoke", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEObject(), "instance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "saveResult", 0, 1, !IS_UNIQUE, IS_ORDERED);
