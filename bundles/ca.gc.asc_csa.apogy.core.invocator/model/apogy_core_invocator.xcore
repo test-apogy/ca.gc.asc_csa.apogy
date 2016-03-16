@@ -95,6 +95,13 @@ class ApogyCoreInvocatorFacade
 	 */	
 	op void exec(OperationCallsList operationCallsList) 
 	
+	/*
+	 * Returns the value contained in the {@link OperationCallResult}.
+	 * @param operationCallResult {@link OperationCallResult} that contains the result. 
+	 * @return Reference to the value (Java Object). 
+	 */
+	op Object getValue(OperationCallResult operationCallResult)
+	
 	op AbstractResultValue createAbstractResultValue(Object value)
 	
 	op EObject getInstance(Variable variable)
