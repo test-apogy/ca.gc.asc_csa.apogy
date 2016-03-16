@@ -172,6 +172,52 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 	}
 
   /**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanBinding} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BooleanBindingItemProvider booleanBindingItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanBinding}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBooleanBindingAdapter() {
+		if (booleanBindingItemProvider == null) {
+			booleanBindingItemProvider = new BooleanBindingItemProvider(this);
+		}
+
+		return booleanBindingItemProvider;
+	}
+
+		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BooleanCaseItemProvider booleanCaseItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBooleanCaseAdapter() {
+		if (booleanCaseItemProvider == null) {
+			booleanCaseItemProvider = new BooleanCaseItemProvider(this);
+		}
+
+		return booleanCaseItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -442,6 +488,8 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 		if (rotationBindingItemProvider != null) rotationBindingItemProvider.dispose();
 		if (translationBindingItemProvider != null) translationBindingItemProvider.dispose();
 		if (transformMatrixBindingItemProvider != null) transformMatrixBindingItemProvider.dispose();
+		if (booleanBindingItemProvider != null) booleanBindingItemProvider.dispose();
+		if (booleanCaseItemProvider != null) booleanCaseItemProvider.dispose();
 		if (enumerationSwitchBindingItemProvider != null) enumerationSwitchBindingItemProvider.dispose();
 		if (enumerationCaseItemProvider != null) enumerationCaseItemProvider.dispose();
 		if (bindingsListItemProvider != null) bindingsListItemProvider.dispose();
@@ -515,6 +563,16 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBooleanBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBooleanCase()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
 
 				newChildDescriptors.add
@@ -566,6 +624,16 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBooleanBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBooleanCase()));
 
 				newChildDescriptors.add
 					(createChildParameter

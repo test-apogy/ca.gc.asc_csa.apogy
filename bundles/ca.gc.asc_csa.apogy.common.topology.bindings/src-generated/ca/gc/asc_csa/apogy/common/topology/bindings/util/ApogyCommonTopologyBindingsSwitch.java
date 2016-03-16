@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.topology.bindings.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.topology.bindings.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -113,6 +114,19 @@ public class ApogyCommonTopologyBindingsSwitch<T> extends Switch<T>
 				TransformMatrixBinding transformMatrixBinding = (TransformMatrixBinding)theEObject;
 				T result = caseTransformMatrixBinding(transformMatrixBinding);
 				if (result == null) result = caseAbstractTopologyBinding(transformMatrixBinding);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonTopologyBindingsPackage.BOOLEAN_BINDING: {
+				BooleanBinding booleanBinding = (BooleanBinding)theEObject;
+				T result = caseBooleanBinding(booleanBinding);
+				if (result == null) result = caseAbstractTopologyBinding(booleanBinding);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE: {
+				BooleanCase booleanCase = (BooleanCase)theEObject;
+				T result = caseBooleanCase(booleanCase);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -222,6 +236,36 @@ public class ApogyCommonTopologyBindingsSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Boolean Binding</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boolean Binding</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBooleanBinding(BooleanBinding object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Boolean Case</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boolean Case</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBooleanCase(BooleanCase object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Enumeration Switch Binding</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

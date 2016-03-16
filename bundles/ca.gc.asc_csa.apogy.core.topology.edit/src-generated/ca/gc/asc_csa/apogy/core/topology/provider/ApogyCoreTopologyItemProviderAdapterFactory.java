@@ -49,7 +49,6 @@ import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
-
 import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
 
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;

@@ -61,6 +61,24 @@ public interface ApogyCommonTopologyBindingsFactory extends EFactory
   TransformMatrixBinding createTransformMatrixBinding();
 
   /**
+	 * Returns a new object of class '<em>Boolean Binding</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boolean Binding</em>'.
+	 * @generated
+	 */
+	BooleanBinding createBooleanBinding();
+
+		/**
+	 * Returns a new object of class '<em>Boolean Case</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boolean Case</em>'.
+	 * @generated
+	 */
+	BooleanCase createBooleanCase();
+
+		/**
 	 * Returns a new object of class '<em>Enumeration Switch Binding</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

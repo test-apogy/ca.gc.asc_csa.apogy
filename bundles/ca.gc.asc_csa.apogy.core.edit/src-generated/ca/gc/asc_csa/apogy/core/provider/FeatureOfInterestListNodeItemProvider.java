@@ -21,10 +21,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
@@ -132,26 +130,6 @@ public class FeatureOfInterestListNodeItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreFactory.eINSTANCE.createResultNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 	}
 
 }

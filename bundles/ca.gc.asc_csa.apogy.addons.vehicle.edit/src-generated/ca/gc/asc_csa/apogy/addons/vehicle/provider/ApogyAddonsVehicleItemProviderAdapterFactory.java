@@ -47,6 +47,7 @@ import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
@@ -1016,6 +1017,30 @@ public class ApogyAddonsVehicleItemProviderAdapterFactory extends ApogyAddonsVeh
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseBooleanCase(BooleanCase object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->

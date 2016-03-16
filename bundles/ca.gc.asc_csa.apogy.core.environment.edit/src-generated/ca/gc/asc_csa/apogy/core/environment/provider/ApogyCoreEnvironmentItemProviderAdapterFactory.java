@@ -42,6 +42,7 @@ import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
@@ -2395,6 +2396,55 @@ public class ApogyCoreEnvironmentItemProviderAdapterFactory extends ApogyCoreEnv
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseBooleanCase(BooleanCase object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreEnvironmentFactory.eINSTANCE.createMapsListNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreEnvironmentFactory.eINSTANCE.createMapNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->

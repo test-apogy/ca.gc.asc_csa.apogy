@@ -45,6 +45,7 @@ import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode
 import ca.gc.asc_csa.apogy.common.emf.TreeRootNode
 import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter
 import ca.gc.asc_csa.apogy.common.topology.TransformNode
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 
 type Map<K,V> wraps java.util.Map
 
@@ -169,6 +170,47 @@ class TransformMatrixBinding extends AbstractTopologyBinding
 	 */
 	@GenModel(propertyCategory="DESTINATION")
 	refers TransformNode transformNode
+}
+
+/**
+ * Binding that attaches two different sub-topology to a GroupNode based
+ * on the feature value. The feature must be a Boolean.
+ */
+class BooleanBinding extends AbstractTopologyBinding
+{
+	boolean currentValue
+	
+	/*
+	 * The parent node under which to attach the sub-topology.
+	 */
+	@GenModel(propertyCategory="DESTINATION")
+	refers GroupNode[1] parentNode
+	
+	/*
+	 * The true case.
+	 */
+	@GenModel(children="true")
+	contains BooleanCase[1] trueCase
+	
+	/*
+	 * The false case.
+	 */
+	@GenModel(children="true")
+	contains BooleanCase[1] falseCase
+	
+}
+
+class BooleanCase
+{
+	@GenModel(property="Editable", children="false")
+	boolean caseValue
+	
+	/*
+	 * The root of the topology to add to the parent Node
+	 * when this case is activated.
+	 */
+	@GenModel(children="true")
+	contains AggregateGroupNode[0..1] topologyRoot	
 }
 
 /*

@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.topology.bindings.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.topology.bindings.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -103,6 +104,14 @@ public class ApogyCommonTopologyBindingsAdapterFactory extends AdapterFactoryImp
 			@Override
 			public Adapter caseTransformMatrixBinding(TransformMatrixBinding object) {
 				return createTransformMatrixBindingAdapter();
+			}
+			@Override
+			public Adapter caseBooleanBinding(BooleanBinding object) {
+				return createBooleanBindingAdapter();
+			}
+			@Override
+			public Adapter caseBooleanCase(BooleanCase object) {
+				return createBooleanCaseAdapter();
 			}
 			@Override
 			public Adapter caseEnumerationSwitchBinding(EnumerationSwitchBinding object) {
@@ -210,6 +219,34 @@ public class ApogyCommonTopologyBindingsAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanBinding <em>Boolean Binding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BooleanBinding
+	 * @generated
+	 */
+	public Adapter createBooleanBindingAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase <em>Boolean Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase
+	 * @generated
+	 */
+	public Adapter createBooleanCaseAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding <em>Enumeration Switch Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;

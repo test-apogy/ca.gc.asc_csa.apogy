@@ -44,6 +44,7 @@ import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
@@ -618,6 +619,25 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseBooleanCase(BooleanCase object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->
