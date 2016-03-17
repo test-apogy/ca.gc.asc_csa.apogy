@@ -124,31 +124,16 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 			SortedSet<VisibilityPass> sortedPasses = getTargetPasses(request, getStartDate(), getEndDate(), getElevationMask());
 			
 			Logger.INSTANCE.log(Activator.ID, "Constellation Planner found " + sortedPasses.size() + " passes", EventSeverity.INFO);
-			
-			if (!sortedPasses.isEmpty()){
-				VisibilityPass selectedVisibilityPass = null;
+
+			/* Creates a Visibility Pass Based Satellite Command for each valid passes. */
+			Iterator<VisibilityPass> passesIterator = sortedPasses.iterator();
+			while(passesIterator.hasNext())
+			{												
+				VisibilityPass pass = passesIterator.next();
 				
-				Iterator<VisibilityPass> passesIterator = sortedPasses.iterator();
-				while(selectedVisibilityPass == null && passesIterator.hasNext())
-				{												
-					VisibilityPass pass = passesIterator.next();
-					
-					Satellite satellite = getSatellite(pass.getOrbitModel());
-					
-					// Checks to see if the pass brings us close enough to the target.
-					VisibilityPassSpacecraftPosition smallestCrossTrackAnglePosition = pass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
-					if(smallestCrossTrackAnglePosition != null && 
-					   Math.abs(smallestCrossTrackAnglePosition.getSpacecraftCrossTrackAngle()) <= Math.abs(satellite.getMaximumRoll()))
-					  {
-						// We have found a good pass.
-						selectedVisibilityPass = pass;
-																				
-						// Creates a command to roll the spacecraft a little bit before the imaging.
-						VisibilityPassBasedSatelliteCommand command = 
-								createVisibilityPassBasedSatelliteCommand(request, pass);						
-						getConstellationCommandPlan().getConstellationCommands().add(command);
-					}					
-				}
+				VisibilityPassBasedSatelliteCommand command = 
+						createVisibilityPassBasedSatelliteCommand(request, pass);						
+				getConstellationCommandPlan().getConstellationCommands().add(command);
 			}			
 		}				
 		
@@ -195,9 +180,17 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 	@Override
 	public boolean isValid(VisibilityPass visibilityPass) 
 	{
+		/* Check if there is a satellite associated to the OrbitModel. */
+		Satellite satellite = getSatellite(visibilityPass.getOrbitModel());		
+		if (satellite == null) return false;
+
 		// Finds the closest point the satellite comes to the target in the pass.
 		VisibilityPassSpacecraftPosition closestPosition = visibilityPass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
+		if (closestPosition == null) return false;
 		
+		// Checks to see if the pass brings us close enough to the target.
+		if(Math.abs(closestPosition.getSpacecraftCrossTrackAngle()) > Math.abs(satellite.getMaximumRoll())) return false;
+				
 		// Gets the location of the target
 		double observerLongitude = visibilityPass.getSurfaceLocation().getLongitude();
 		double observerLatitude = visibilityPass.getSurfaceLocation().getLatitude();
@@ -206,7 +199,7 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 		HorizontalCoordinates sunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(closestPosition.getTime(), observerLongitude, observerLatitude);
 		
 		// Returns true if the sun is at least 10 degrees above the horizon.
-		return (sunCoordinates.getAltitude() > Math.toRadians(10));		
+		return sunCoordinates.getAltitude() > Math.toRadians(10);
 	}
 
 	@Override
