@@ -35,6 +35,7 @@ import ca.gc.asc_csa.apogy.common.topology.bindings.BooleanBinding;
 import ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.FalseBooleanCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList;
 import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade;
@@ -42,6 +43,7 @@ import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsF
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding;
 import ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TrueBooleanCase;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,6 +94,20 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	private EClass booleanCaseEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass trueBooleanCaseEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass falseBooleanCaseEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -455,8 +471,8 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBooleanCase_CaseValue() {
-		return (EAttribute)booleanCaseEClass.getEStructuralFeatures().get(0);
+	public EReference getBooleanCase_TopologyRoot() {
+		return (EReference)booleanCaseEClass.getEStructuralFeatures().get(0);
 	}
 
 		/**
@@ -464,8 +480,17 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBooleanCase_TopologyRoot() {
-		return (EReference)booleanCaseEClass.getEStructuralFeatures().get(1);
+	public EClass getTrueBooleanCase() {
+		return trueBooleanCaseEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFalseBooleanCase() {
+		return falseBooleanCaseEClass;
 	}
 
 		/**
@@ -723,8 +748,11 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 		createEReference(booleanBindingEClass, BOOLEAN_BINDING__FALSE_CASE);
 
 		booleanCaseEClass = createEClass(BOOLEAN_CASE);
-		createEAttribute(booleanCaseEClass, BOOLEAN_CASE__CASE_VALUE);
 		createEReference(booleanCaseEClass, BOOLEAN_CASE__TOPOLOGY_ROOT);
+
+		trueBooleanCaseEClass = createEClass(TRUE_BOOLEAN_CASE);
+
+		falseBooleanCaseEClass = createEClass(FALSE_BOOLEAN_CASE);
 
 		enumerationSwitchBindingEClass = createEClass(ENUMERATION_SWITCH_BINDING);
 		createEReference(enumerationSwitchBindingEClass, ENUMERATION_SWITCH_BINDING__PARENT_NODE);
@@ -797,6 +825,8 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 		translationBindingEClass.getESuperTypes().add(this.getAbstractTopologyBinding());
 		transformMatrixBindingEClass.getESuperTypes().add(this.getAbstractTopologyBinding());
 		booleanBindingEClass.getESuperTypes().add(this.getAbstractTopologyBinding());
+		trueBooleanCaseEClass.getESuperTypes().add(this.getBooleanCase());
+		falseBooleanCaseEClass.getESuperTypes().add(this.getBooleanCase());
 		enumerationSwitchBindingEClass.getESuperTypes().add(this.getAbstractTopologyBinding());
 
 		// Initialize classes, features, and operations; add parameters
@@ -834,12 +864,15 @@ public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl impleme
 		initEClass(booleanBindingEClass, BooleanBinding.class, "BooleanBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBooleanBinding_CurrentValue(), theEcorePackage.getEBoolean(), "currentValue", null, 0, 1, BooleanBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBooleanBinding_ParentNode(), theApogyCommonTopologyPackage.getGroupNode(), null, "parentNode", null, 1, 1, BooleanBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBooleanBinding_TrueCase(), this.getBooleanCase(), null, "trueCase", null, 1, 1, BooleanBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBooleanBinding_FalseCase(), this.getBooleanCase(), null, "falseCase", null, 1, 1, BooleanBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBooleanBinding_TrueCase(), this.getTrueBooleanCase(), null, "trueCase", null, 0, 1, BooleanBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBooleanBinding_FalseCase(), this.getFalseBooleanCase(), null, "falseCase", null, 0, 1, BooleanBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(booleanCaseEClass, BooleanCase.class, "BooleanCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBooleanCase_CaseValue(), theEcorePackage.getEBoolean(), "caseValue", null, 0, 1, BooleanCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(booleanCaseEClass, BooleanCase.class, "BooleanCase", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBooleanCase_TopologyRoot(), theApogyCommonTopologyPackage.getAggregateGroupNode(), null, "topologyRoot", null, 0, 1, BooleanCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(trueBooleanCaseEClass, TrueBooleanCase.class, "TrueBooleanCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(falseBooleanCaseEClass, FalseBooleanCase.class, "FalseBooleanCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(enumerationSwitchBindingEClass, EnumerationSwitchBinding.class, "EnumerationSwitchBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEnumerationSwitchBinding_ParentNode(), theApogyCommonTopologyPackage.getGroupNode(), null, "parentNode", null, 1, 1, EnumerationSwitchBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

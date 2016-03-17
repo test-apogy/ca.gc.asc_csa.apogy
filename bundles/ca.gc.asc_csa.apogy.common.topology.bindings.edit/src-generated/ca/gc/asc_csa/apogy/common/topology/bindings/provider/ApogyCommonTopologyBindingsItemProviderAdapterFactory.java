@@ -195,26 +195,49 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.TrueBooleanCase} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BooleanCaseItemProvider booleanCaseItemProvider;
+	protected TrueBooleanCaseItemProvider trueBooleanCaseItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.TrueBooleanCase}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createBooleanCaseAdapter() {
-		if (booleanCaseItemProvider == null) {
-			booleanCaseItemProvider = new BooleanCaseItemProvider(this);
+	public Adapter createTrueBooleanCaseAdapter() {
+		if (trueBooleanCaseItemProvider == null) {
+			trueBooleanCaseItemProvider = new TrueBooleanCaseItemProvider(this);
 		}
 
-		return booleanCaseItemProvider;
+		return trueBooleanCaseItemProvider;
+	}
+
+		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.FalseBooleanCase} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FalseBooleanCaseItemProvider falseBooleanCaseItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.FalseBooleanCase}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFalseBooleanCaseAdapter() {
+		if (falseBooleanCaseItemProvider == null) {
+			falseBooleanCaseItemProvider = new FalseBooleanCaseItemProvider(this);
+		}
+
+		return falseBooleanCaseItemProvider;
 	}
 
 		/**
@@ -489,7 +512,8 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 		if (translationBindingItemProvider != null) translationBindingItemProvider.dispose();
 		if (transformMatrixBindingItemProvider != null) transformMatrixBindingItemProvider.dispose();
 		if (booleanBindingItemProvider != null) booleanBindingItemProvider.dispose();
-		if (booleanCaseItemProvider != null) booleanCaseItemProvider.dispose();
+		if (trueBooleanCaseItemProvider != null) trueBooleanCaseItemProvider.dispose();
+		if (falseBooleanCaseItemProvider != null) falseBooleanCaseItemProvider.dispose();
 		if (enumerationSwitchBindingItemProvider != null) enumerationSwitchBindingItemProvider.dispose();
 		if (enumerationCaseItemProvider != null) enumerationCaseItemProvider.dispose();
 		if (bindingsListItemProvider != null) bindingsListItemProvider.dispose();
@@ -568,7 +592,12 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBooleanCase()));
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createTrueBooleanCase()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createFalseBooleanCase()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -633,7 +662,12 @@ public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends Apogy
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBooleanCase()));
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createTrueBooleanCase()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createFalseBooleanCase()));
 
 				newChildDescriptors.add
 					(createChildParameter

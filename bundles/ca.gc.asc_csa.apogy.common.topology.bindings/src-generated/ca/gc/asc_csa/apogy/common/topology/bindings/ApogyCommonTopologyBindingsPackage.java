@@ -722,22 +722,13 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	int BOOLEAN_CASE = 5;
 
 		/**
-	 * The feature id for the '<em><b>Case Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_CASE__CASE_VALUE = 0;
-
-		/**
 	 * The feature id for the '<em><b>Topology Root</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_CASE__TOPOLOGY_ROOT = 1;
+	int BOOLEAN_CASE__TOPOLOGY_ROOT = 0;
 
 		/**
 	 * The number of structural features of the '<em>Boolean Case</em>' class.
@@ -746,7 +737,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_CASE_FEATURE_COUNT = 2;
+	int BOOLEAN_CASE_FEATURE_COUNT = 1;
 
 		/**
 	 * The number of operations of the '<em>Boolean Case</em>' class.
@@ -758,6 +749,80 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	int BOOLEAN_CASE_OPERATION_COUNT = 0;
 
 		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TrueBooleanCaseImpl <em>True Boolean Case</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.TrueBooleanCaseImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getTrueBooleanCase()
+	 * @generated
+	 */
+	int TRUE_BOOLEAN_CASE = 6;
+
+		/**
+	 * The feature id for the '<em><b>Topology Root</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRUE_BOOLEAN_CASE__TOPOLOGY_ROOT = BOOLEAN_CASE__TOPOLOGY_ROOT;
+
+		/**
+	 * The number of structural features of the '<em>True Boolean Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRUE_BOOLEAN_CASE_FEATURE_COUNT = BOOLEAN_CASE_FEATURE_COUNT + 0;
+
+		/**
+	 * The number of operations of the '<em>True Boolean Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRUE_BOOLEAN_CASE_OPERATION_COUNT = BOOLEAN_CASE_OPERATION_COUNT + 0;
+
+		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.FalseBooleanCaseImpl <em>False Boolean Case</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.FalseBooleanCaseImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getFalseBooleanCase()
+	 * @generated
+	 */
+	int FALSE_BOOLEAN_CASE = 7;
+
+		/**
+	 * The feature id for the '<em><b>Topology Root</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FALSE_BOOLEAN_CASE__TOPOLOGY_ROOT = BOOLEAN_CASE__TOPOLOGY_ROOT;
+
+		/**
+	 * The number of structural features of the '<em>False Boolean Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FALSE_BOOLEAN_CASE_FEATURE_COUNT = BOOLEAN_CASE_FEATURE_COUNT + 0;
+
+		/**
+	 * The number of operations of the '<em>False Boolean Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FALSE_BOOLEAN_CASE_OPERATION_COUNT = BOOLEAN_CASE_OPERATION_COUNT + 0;
+
+		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationSwitchBindingImpl <em>Enumeration Switch Binding</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -765,7 +830,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getEnumerationSwitchBinding()
 	 * @generated
 	 */
-  int ENUMERATION_SWITCH_BINDING = 6;
+  int ENUMERATION_SWITCH_BINDING = 8;
 
   /**
 	 * The feature id for the '<em><b>Binded</b></em>' attribute.
@@ -901,7 +966,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getEnumerationCase()
 	 * @generated
 	 */
-  int ENUMERATION_CASE = 7;
+  int ENUMERATION_CASE = 9;
 
   /**
 	 * The feature id for the '<em><b>Enumeration Literals</b></em>' reference list.
@@ -947,7 +1012,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getBindingsList()
 	 * @generated
 	 */
-  int BINDINGS_LIST = 8;
+  int BINDINGS_LIST = 10;
 
   /**
 	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
@@ -984,7 +1049,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getFeatureRootsList()
 	 * @generated
 	 */
-  int FEATURE_ROOTS_LIST = 9;
+  int FEATURE_ROOTS_LIST = 11;
 
   /**
 	 * The feature id for the '<em><b>Feature Roots</b></em>' containment reference list.
@@ -1021,7 +1086,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getBindingsSet()
 	 * @generated
 	 */
-  int BINDINGS_SET = 10;
+  int BINDINGS_SET = 12;
 
   /**
 	 * The feature id for the '<em><b>Feature Roots List</b></em>' containment reference.
@@ -1085,7 +1150,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getApogyCommonTopologyBindingsFacade()
 	 * @generated
 	 */
-	int APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE = 11;
+	int APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE = 13;
 
 		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -1122,7 +1187,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getAxis()
 	 * @generated
 	 */
-	int AXIS = 12;
+	int AXIS = 14;
 
 		/**
 	 * The meta object id for the '<em>Map</em>' data type.
@@ -1132,7 +1197,7 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getMap()
 	 * @generated
 	 */
-  int MAP = 13;
+  int MAP = 15;
 
 
   /**
@@ -1391,17 +1456,6 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	EClass getBooleanCase();
 
 		/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase#isCaseValue <em>Case Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Case Value</em>'.
-	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase#isCaseValue()
-	 * @see #getBooleanCase()
-	 * @generated
-	 */
-	EAttribute getBooleanCase_CaseValue();
-
-		/**
 	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase#getTopologyRoot <em>Topology Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1411,6 +1465,26 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 	 * @generated
 	 */
 	EReference getBooleanCase_TopologyRoot();
+
+		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TrueBooleanCase <em>True Boolean Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>True Boolean Case</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.TrueBooleanCase
+	 * @generated
+	 */
+	EClass getTrueBooleanCase();
+
+		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.FalseBooleanCase <em>False Boolean Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>False Boolean Case</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.FalseBooleanCase
+	 * @generated
+	 */
+	EClass getFalseBooleanCase();
 
 		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding <em>Enumeration Switch Binding</em>}'.
@@ -1851,20 +1925,32 @@ public interface ApogyCommonTopologyBindingsPackage extends EPackage
 		EClass BOOLEAN_CASE = eINSTANCE.getBooleanCase();
 
 				/**
-		 * The meta object literal for the '<em><b>Case Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BOOLEAN_CASE__CASE_VALUE = eINSTANCE.getBooleanCase_CaseValue();
-
-				/**
 		 * The meta object literal for the '<em><b>Topology Root</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference BOOLEAN_CASE__TOPOLOGY_ROOT = eINSTANCE.getBooleanCase_TopologyRoot();
+
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TrueBooleanCaseImpl <em>True Boolean Case</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.TrueBooleanCaseImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getTrueBooleanCase()
+		 * @generated
+		 */
+		EClass TRUE_BOOLEAN_CASE = eINSTANCE.getTrueBooleanCase();
+
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.FalseBooleanCaseImpl <em>False Boolean Case</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.FalseBooleanCaseImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getFalseBooleanCase()
+		 * @generated
+		 */
+		EClass FALSE_BOOLEAN_CASE = eINSTANCE.getFalseBooleanCase();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationSwitchBindingImpl <em>Enumeration Switch Binding</em>}' class.

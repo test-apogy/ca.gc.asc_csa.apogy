@@ -190,27 +190,32 @@ class BooleanBinding extends AbstractTopologyBinding
 	 * The true case.
 	 */
 	@GenModel(children="true")
-	contains BooleanCase[1] trueCase
+	contains TrueBooleanCase trueCase
 	
 	/*
 	 * The false case.
 	 */
 	@GenModel(children="true")
-	contains BooleanCase[1] falseCase
+	contains FalseBooleanCase falseCase
 	
 }
 
-class BooleanCase
+abstract class BooleanCase
 {
-	@GenModel(property="Editable", children="false")
-	boolean caseValue
-	
 	/*
 	 * The root of the topology to add to the parent Node
 	 * when this case is activated.
 	 */
 	@GenModel(children="true")
 	contains AggregateGroupNode[0..1] topologyRoot	
+}
+
+class TrueBooleanCase extends BooleanCase
+{	
+}
+
+class FalseBooleanCase extends BooleanCase
+{	
 }
 
 /*

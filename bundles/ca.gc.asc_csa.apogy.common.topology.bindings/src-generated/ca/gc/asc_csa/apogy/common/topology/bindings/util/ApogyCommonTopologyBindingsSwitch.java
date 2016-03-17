@@ -130,6 +130,20 @@ public class ApogyCommonTopologyBindingsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCommonTopologyBindingsPackage.TRUE_BOOLEAN_CASE: {
+				TrueBooleanCase trueBooleanCase = (TrueBooleanCase)theEObject;
+				T result = caseTrueBooleanCase(trueBooleanCase);
+				if (result == null) result = caseBooleanCase(trueBooleanCase);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonTopologyBindingsPackage.FALSE_BOOLEAN_CASE: {
+				FalseBooleanCase falseBooleanCase = (FalseBooleanCase)theEObject;
+				T result = caseFalseBooleanCase(falseBooleanCase);
+				if (result == null) result = caseBooleanCase(falseBooleanCase);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING: {
 				EnumerationSwitchBinding enumerationSwitchBinding = (EnumerationSwitchBinding)theEObject;
 				T result = caseEnumerationSwitchBinding(enumerationSwitchBinding);
@@ -262,6 +276,36 @@ public class ApogyCommonTopologyBindingsSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseBooleanCase(BooleanCase object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>True Boolean Case</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>True Boolean Case</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrueBooleanCase(TrueBooleanCase object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>False Boolean Case</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>False Boolean Case</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFalseBooleanCase(FalseBooleanCase object) {
 		return null;
 	}
 

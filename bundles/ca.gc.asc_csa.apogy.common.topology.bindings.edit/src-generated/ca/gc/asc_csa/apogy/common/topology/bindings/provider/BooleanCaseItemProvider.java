@@ -28,8 +28,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -37,7 +35,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -76,31 +73,8 @@ public class BooleanCaseItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addCaseValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Case Value feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCaseValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_BooleanCase_caseValue_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BooleanCase_caseValue_feature", "_UI_BooleanCase_type"),
-				 ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__CASE_VALUE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -134,17 +108,6 @@ public class BooleanCaseItemProvider
 	}
 
 	/**
-	 * This returns BooleanCase.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/BooleanCase"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,9 +115,8 @@ public class BooleanCaseItemProvider
 	 */
 	@Override
 	public String getText(Object object) 
-	{
-		BooleanCase booleanCase = (BooleanCase)object;				
-		return getString("_UI_BooleanCase_type") + " " + Boolean.toString(booleanCase.isCaseValue()).toUpperCase();
+	{					
+		return getString("_UI_BooleanCase_type");
 	}
 	
 
@@ -170,9 +132,6 @@ public class BooleanCaseItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BooleanCase.class)) {
-			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__CASE_VALUE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__TOPOLOGY_ROOT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

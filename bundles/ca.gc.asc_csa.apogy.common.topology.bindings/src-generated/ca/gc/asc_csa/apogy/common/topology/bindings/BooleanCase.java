@@ -25,42 +25,14 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase#isCaseValue <em>Case Value</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase#getTopologyRoot <em>Topology Root</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getBooleanCase()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface BooleanCase extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Case Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Case Value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Case Value</em>' attribute.
-	 * @see #setCaseValue(boolean)
-	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getBooleanCase_CaseValue()
-	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' children='false'"
-	 * @generated
-	 */
-	boolean isCaseValue();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase#isCaseValue <em>Case Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Case Value</em>' attribute.
-	 * @see #isCaseValue()
-	 * @generated
-	 */
-	void setCaseValue(boolean value);
-
 	/**
 	 * Returns the value of the '<em><b>Topology Root</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

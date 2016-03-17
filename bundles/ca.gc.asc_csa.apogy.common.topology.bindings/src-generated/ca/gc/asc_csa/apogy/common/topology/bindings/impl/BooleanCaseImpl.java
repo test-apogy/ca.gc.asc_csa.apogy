@@ -34,33 +34,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.BooleanCaseImpl#isCaseValue <em>Case Value</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.BooleanCaseImpl#getTopologyRoot <em>Topology Root</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class BooleanCaseImpl extends MinimalEObjectImpl.Container implements BooleanCase {
-	/**
-	 * The default value of the '{@link #isCaseValue() <em>Case Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isCaseValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean CASE_VALUE_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isCaseValue() <em>Case Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isCaseValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean caseValue = CASE_VALUE_EDEFAULT;
-
+public abstract class BooleanCaseImpl extends MinimalEObjectImpl.Container implements BooleanCase {
 	/**
 	 * The cached value of the '{@link #getTopologyRoot() <em>Topology Root</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -88,27 +67,6 @@ public class BooleanCaseImpl extends MinimalEObjectImpl.Container implements Boo
 	@Override
 	protected EClass eStaticClass() {
 		return ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isCaseValue() {
-		return caseValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCaseValue(boolean newCaseValue) {
-		boolean oldCaseValue = caseValue;
-		caseValue = newCaseValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__CASE_VALUE, oldCaseValue, caseValue));
 	}
 
 	/**
@@ -176,8 +134,6 @@ public class BooleanCaseImpl extends MinimalEObjectImpl.Container implements Boo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__CASE_VALUE:
-				return isCaseValue();
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__TOPOLOGY_ROOT:
 				return getTopologyRoot();
 		}
@@ -192,9 +148,6 @@ public class BooleanCaseImpl extends MinimalEObjectImpl.Container implements Boo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__CASE_VALUE:
-				setCaseValue((Boolean)newValue);
-				return;
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__TOPOLOGY_ROOT:
 				setTopologyRoot((AggregateGroupNode)newValue);
 				return;
@@ -210,9 +163,6 @@ public class BooleanCaseImpl extends MinimalEObjectImpl.Container implements Boo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__CASE_VALUE:
-				setCaseValue(CASE_VALUE_EDEFAULT);
-				return;
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__TOPOLOGY_ROOT:
 				setTopologyRoot((AggregateGroupNode)null);
 				return;
@@ -228,28 +178,10 @@ public class BooleanCaseImpl extends MinimalEObjectImpl.Container implements Boo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__CASE_VALUE:
-				return caseValue != CASE_VALUE_EDEFAULT;
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE__TOPOLOGY_ROOT:
 				return topologyRoot != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (caseValue: ");
-		result.append(caseValue);
-		result.append(')');
-		return result.toString();
 	}
 
 } //BooleanCaseImpl

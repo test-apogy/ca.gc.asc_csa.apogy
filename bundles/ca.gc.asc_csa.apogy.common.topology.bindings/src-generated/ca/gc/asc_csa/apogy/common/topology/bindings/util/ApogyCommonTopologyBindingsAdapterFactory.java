@@ -114,6 +114,14 @@ public class ApogyCommonTopologyBindingsAdapterFactory extends AdapterFactoryImp
 				return createBooleanCaseAdapter();
 			}
 			@Override
+			public Adapter caseTrueBooleanCase(TrueBooleanCase object) {
+				return createTrueBooleanCaseAdapter();
+			}
+			@Override
+			public Adapter caseFalseBooleanCase(FalseBooleanCase object) {
+				return createFalseBooleanCaseAdapter();
+			}
+			@Override
 			public Adapter caseEnumerationSwitchBinding(EnumerationSwitchBinding object) {
 				return createEnumerationSwitchBindingAdapter();
 			}
@@ -243,6 +251,34 @@ public class ApogyCommonTopologyBindingsAdapterFactory extends AdapterFactoryImp
 	 * @generated
 	 */
 	public Adapter createBooleanCaseAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TrueBooleanCase <em>True Boolean Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.TrueBooleanCase
+	 * @generated
+	 */
+	public Adapter createTrueBooleanCaseAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.FalseBooleanCase <em>False Boolean Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.FalseBooleanCase
+	 * @generated
+	 */
+	public Adapter createFalseBooleanCaseAdapter() {
 		return null;
 	}
 

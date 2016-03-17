@@ -29,7 +29,8 @@ import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.BooleanBinding;
-import ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.FalseBooleanCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TrueBooleanCase;
 
 /**
  * <!-- begin-user-doc -->
@@ -89,7 +90,7 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 	 * @generated
 	 * @ordered
 	 */
-	protected BooleanCase trueCase;
+	protected TrueBooleanCase trueCase;
 
 	/**
 	 * The cached value of the '{@link #getFalseCase() <em>False Case</em>}' containment reference.
@@ -99,7 +100,7 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 	 * @generated
 	 * @ordered
 	 */
-	protected BooleanCase falseCase;
+	protected FalseBooleanCase falseCase;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,7 +185,7 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BooleanCase getTrueCase() 
+	public TrueBooleanCase getTrueCase() 
 	{
 		return trueCase;
 	}
@@ -194,8 +195,8 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTrueCase(BooleanCase newTrueCase, NotificationChain msgs) {
-		BooleanCase oldTrueCase = trueCase;
+	public NotificationChain basicSetTrueCase(TrueBooleanCase newTrueCase, NotificationChain msgs) {
+		TrueBooleanCase oldTrueCase = trueCase;
 		trueCase = newTrueCase;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.BOOLEAN_BINDING__TRUE_CASE, oldTrueCase, newTrueCase);
@@ -209,7 +210,7 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTrueCase(BooleanCase newTrueCase) {
+	public void setTrueCase(TrueBooleanCase newTrueCase) {
 		if (newTrueCase != trueCase) {
 			NotificationChain msgs = null;
 			if (trueCase != null)
@@ -228,7 +229,7 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BooleanCase getFalseCase() 
+	public FalseBooleanCase getFalseCase() 
 	{
 		return falseCase;
 	}
@@ -238,8 +239,8 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFalseCase(BooleanCase newFalseCase, NotificationChain msgs) {
-		BooleanCase oldFalseCase = falseCase;
+	public NotificationChain basicSetFalseCase(FalseBooleanCase newFalseCase, NotificationChain msgs) {
+		FalseBooleanCase oldFalseCase = falseCase;
 		falseCase = newFalseCase;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.BOOLEAN_BINDING__FALSE_CASE, oldFalseCase, newFalseCase);
@@ -253,7 +254,7 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFalseCase(BooleanCase newFalseCase) {
+	public void setFalseCase(FalseBooleanCase newFalseCase) {
 		if (newFalseCase != falseCase) {
 			NotificationChain msgs = null;
 			if (falseCase != null)
@@ -319,10 +320,10 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 				setParentNode((GroupNode)newValue);
 				return;
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_BINDING__TRUE_CASE:
-				setTrueCase((BooleanCase)newValue);
+				setTrueCase((TrueBooleanCase)newValue);
 				return;
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_BINDING__FALSE_CASE:
-				setFalseCase((BooleanCase)newValue);
+				setFalseCase((FalseBooleanCase)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -343,10 +344,10 @@ public class BooleanBindingImpl extends AbstractTopologyBindingImpl implements B
 				setParentNode((GroupNode)null);
 				return;
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_BINDING__TRUE_CASE:
-				setTrueCase((BooleanCase)null);
+				setTrueCase((TrueBooleanCase)null);
 				return;
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_BINDING__FALSE_CASE:
-				setFalseCase((BooleanCase)null);
+				setFalseCase((FalseBooleanCase)null);
 				return;
 		}
 		super.eUnset(featureID);

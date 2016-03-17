@@ -101,13 +101,13 @@ public interface BooleanBinding extends AbstractTopologyBinding {
 	 * The true case.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>True Case</em>' containment reference.
-	 * @see #setTrueCase(BooleanCase)
+	 * @see #setTrueCase(TrueBooleanCase)
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getBooleanBinding_TrueCase()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
 	 * @generated
 	 */
-	BooleanCase getTrueCase();
+	TrueBooleanCase getTrueCase();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanBinding#getTrueCase <em>True Case</em>}' containment reference.
@@ -117,7 +117,7 @@ public interface BooleanBinding extends AbstractTopologyBinding {
 	 * @see #getTrueCase()
 	 * @generated
 	 */
-	void setTrueCase(BooleanCase value);
+	void setTrueCase(TrueBooleanCase value);
 
 	/**
 	 * Returns the value of the '<em><b>False Case</b></em>' containment reference.
@@ -127,13 +127,13 @@ public interface BooleanBinding extends AbstractTopologyBinding {
 	 * The false case.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>False Case</em>' containment reference.
-	 * @see #setFalseCase(BooleanCase)
+	 * @see #setFalseCase(FalseBooleanCase)
 	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getBooleanBinding_FalseCase()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
 	 * @generated
 	 */
-	BooleanCase getFalseCase();
+	FalseBooleanCase getFalseCase();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BooleanBinding#getFalseCase <em>False Case</em>}' containment reference.
@@ -143,6 +143,6 @@ public interface BooleanBinding extends AbstractTopologyBinding {
 	 * @see #getFalseCase()
 	 * @generated
 	 */
-	void setFalseCase(BooleanCase value);
+	void setFalseCase(FalseBooleanCase value);
 
 } // BooleanBinding

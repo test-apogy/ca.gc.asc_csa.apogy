@@ -86,7 +86,8 @@ public class ApogyCommonTopologyBindingsFactoryImpl extends EFactoryImpl impleme
 			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING: return createTranslationBinding();
 			case ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING: return createTransformMatrixBinding();
 			case ApogyCommonTopologyBindingsPackage.BOOLEAN_BINDING: return createBooleanBinding();
-			case ApogyCommonTopologyBindingsPackage.BOOLEAN_CASE: return createBooleanCase();
+			case ApogyCommonTopologyBindingsPackage.TRUE_BOOLEAN_CASE: return createTrueBooleanCase();
+			case ApogyCommonTopologyBindingsPackage.FALSE_BOOLEAN_CASE: return createFalseBooleanCase();
 			case ApogyCommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING: return createEnumerationSwitchBinding();
 			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE: return createEnumerationCase();
 			case ApogyCommonTopologyBindingsPackage.BINDINGS_LIST: return createBindingsList();
@@ -182,9 +183,19 @@ public class ApogyCommonTopologyBindingsFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BooleanCase createBooleanCase() {
-		BooleanCaseImpl booleanCase = new BooleanCaseImpl();
-		return booleanCase;
+	public TrueBooleanCase createTrueBooleanCase() {
+		TrueBooleanCaseImpl trueBooleanCase = new TrueBooleanCaseImpl();
+		return trueBooleanCase;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FalseBooleanCase createFalseBooleanCase() {
+		FalseBooleanCaseImpl falseBooleanCase = new FalseBooleanCaseImpl();
+		return falseBooleanCase;
 	}
 
 		/**
