@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:apogy="ca.gc.asc_csa.apogy.examples.satellite.apogy" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:earth="ca.gc.asc_csa.apogy.core.environment.orbit.earth" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmlns:orbit="ca.gc.asc_csa.apogy.core.environment.orbit" xmlns:satellite="ca.gc.asc_csa.apogy.examples.satellite" xmi:id="_NpQFMOxPEeWis-UY2uIzVg">
+  <environment xsi:type="core:ApogyEnvironment" xmi:id="_NpQFMexPEeWis-UY2uIzVg" activeContext="_NpQFNexPEeWis-UY2uIzVg" time="2016-03-17T10:47:46.691-0400" activeTimeSource="_NpQFOexPEeWis-UY2uIzVg">
+    <typesList xmi:id="_NpQFMuxPEeWis-UY2uIzVg">
+      <localTypes xmi:id="_TY03IOxPEeWis-UY2uIzVg"/>
+      <registeredTypes xmi:id="_Npv0cOxPEeWis-UY2uIzVg"/>
+    </typesList>
+    <variablesList xmi:id="_NpQFM-xPEeWis-UY2uIzVg">
+      <variables xmi:id="_e0Y7gOxPEeWis-UY2uIzVg" name="constellation">
+        <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.satellite.apogy/model/constellation.ss#_FYHr0LrTEeWkHvFmuWZVPA"/>
+      </variables>
+    </variablesList>
+    <contextsList xmi:id="_NpQFNOxPEeWis-UY2uIzVg">
+      <contexts xsi:type="invocator:BasicContext" xmi:id="_NpQFNexPEeWis-UY2uIzVg" name="Default" dataProductsList="_NpQFQOxPEeWis-UY2uIzVg">
+        <variableImplementationsList xmi:id="_l6td8OxPEeWis-UY2uIzVg">
+          <variableImplementations xmi:id="_l6td8exPEeWis-UY2uIzVg" variable="_e0Y7gOxPEeWis-UY2uIzVg">
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.satellite#//DefaultConstellation"/>
+            <abstractInitializationData xsi:type="apogy:ConstellationData" xmi:id="_pQH6kOxPEeWis-UY2uIzVg">
+              <constellationState xmi:id="_qMKFAOxPEeWis-UY2uIzVg">
+                <constellationCommandPlansList xmi:id="_NSk1IOxQEeWis-UY2uIzVg"/>
+                <satellitesList xmi:id="_JW5CsOxQEeWis-UY2uIzVg">
+                  <satellites xmi:id="_J889IOxQEeWis-UY2uIzVg" name="Landsat 8" orbitModel="_vYuQgOxPEeWis-UY2uIzVg" maximumRoll="84.0"/>
+                </satellitesList>
+                <constellationRequestsList xmi:id="_O-7CMOxQEeWis-UY2uIzVg">
+                  <constellationRequests xsi:type="satellite:ImageConstellationRequest" xmi:id="_Pz14AOxQEeWis-UY2uIzVg"/>
+                </constellationRequestsList>
+                <constellationPlanner xsi:type="satellite:DefaultConstellationPlanner" xmi:id="_OHg5EOxQEeWis-UY2uIzVg"/>
+              </constellationState>
+            </abstractInitializationData>
+          </variableImplementations>
+        </variableImplementationsList>
+      </contexts>
+    </contextsList>
+    <worksitesList xmi:id="_NpQFNuxPEeWis-UY2uIzVg">
+      <orbitsModelsLists xmi:id="_rlpngOxPEeWis-UY2uIzVg" name="">
+        <orbitModels xsi:type="orbit:OrbitModel" xmi:id="_vYuQgOxPEeWis-UY2uIzVg" name="Landsat 8">
+          <propagator xsi:type="earth:TLEEarthOrbitPropagator" xmi:id="_x8FlIOxPEeWis-UY2uIzVg" name="Landsat 8">
+            <tle xmi:id="_A1iFoOxQEeWis-UY2uIzVg" bStar="4.0347E-5" epoch="2016-03-03T13:31:40.365-0500" eccentricity="1.211E-4" elementNumber="9998" inclination="1.7138574749223678" meanAnomaly="4.6952690457518775" meanMotion="0.0010596435682690625" revolutionPerDay="14.57114502" meanMotionFirstDerivative="2.3062317469446676E-15" argumentOfPerigee="1.5902497666376254" rightAscentionOfAscendingNode="2.3565522826890035" revolutionNumberAtEpoch="16254" satelliteNumber="39084" firstLine="1 39084U 13008A   16063.77199497  .00000137  00000-0  40347-4 0 9998" secondLine="2 39084  98.1968 135.0205 0001211  91.1146 269.0191 14.57114502162546"/>
+          </propagator>
+        </orbitModels>
+      </orbitsModelsLists>
+      <surfaceLocationsLists xmi:id="_VPZhwOxQEeWis-UY2uIzVg">
+        <surfaceLocations xsi:type="earth:EarthSurfaceLocation" xmi:id="_V9EgEOxQEeWis-UY2uIzVg" longitude="1.7404423300887455" latitude="0.318871654339364" elevation="1242.0" name=""/>
+        <surfaceLocations xsi:type="earth:EarthSurfaceLocation" xmi:id="_QFdXAOxREeWis-UY2uIzVg" longitude="-1.7128420423635575" latitude="0.5005037062712838" elevation="140.0"/>
+      </surfaceLocationsLists>
+    </worksitesList>
+    <timeSourcesList xmi:id="_NpQFN-xPEeWis-UY2uIzVg">
+      <timeSources xsi:type="emf:FixedTimeSource" xmi:id="_NpQFOOxPEeWis-UY2uIzVg" time="2016-03-17T10:49:01.157-0400"/>
+      <timeSources xsi:type="emf:CurrentTimeSource" xmi:id="_NpQFOexPEeWis-UY2uIzVg" time="2016-03-17T10:47:46.691-0400"/>
+      <timeSources xsi:type="emf:BrowseableTimeSource" xmi:id="_NpQFOuxPEeWis-UY2uIzVg" time="2016-03-17T10:49:01.225-0400" startTime="2016-03-17T10:49:01.224-0400"/>
+      <timeSources xsi:type="emf:SelectionBasedTimeSource" xmi:id="_NpQFO-xPEeWis-UY2uIzVg" time="2016-03-17T10:47:46.691-0400"/>
+      <timeSources xsi:type="emf:CollectionTimedTimeSource" xmi:id="_NpQFPOxPEeWis-UY2uIzVg" time="2016-03-17T10:49:01.258-0400" startTime="2016-03-17T10:49:01.257-0400"/>
+      <timeSources xsi:type="invocator:OperationCallResultsListTimeSource" xmi:id="_NpQFPexPEeWis-UY2uIzVg" time="2016-03-17T10:49:01.281-0400" startTime="2016-03-17T10:49:01.281-0400"/>
+    </timeSourcesList>
+  </environment>
+  <programsList xmi:id="_NpQFPuxPEeWis-UY2uIzVg"/>
+  <dataProductsListContainer xmi:id="_NpQFP-xPEeWis-UY2uIzVg">
+    <dataProductsList xmi:id="_NpQFQOxPEeWis-UY2uIzVg">
+      <operationCallResultsList xmi:id="_NpQFQexPEeWis-UY2uIzVg"/>
+    </dataProductsList>
+  </dataProductsListContainer>
+  <toolsList xmi:id="_NpQFQuxPEeWis-UY2uIzVg"/>
+</invocator:InvocatorSession>

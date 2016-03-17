@@ -24,5 +24,6 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.pde.PluginNature</nature>
+		<nature>ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature</nature>	
 	</natures>
 </projectDescription>
