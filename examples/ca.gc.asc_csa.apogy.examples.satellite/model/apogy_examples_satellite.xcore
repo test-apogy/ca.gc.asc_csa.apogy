@@ -29,6 +29,7 @@ Canadian Space Agency (CSA) - Initial API and implementation
 		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.satellite/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.satellite.edit/src-generated")
+@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.examples.satellite.tests/src-generated")
 
 package ca.gc.asc_csa.apogy.examples.satellite
 

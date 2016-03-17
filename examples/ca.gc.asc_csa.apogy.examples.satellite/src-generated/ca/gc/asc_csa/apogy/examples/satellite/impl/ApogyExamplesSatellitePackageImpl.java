@@ -1501,6 +1501,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.satellite/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.edit/src-generated",
+			 "testsDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.tests/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
