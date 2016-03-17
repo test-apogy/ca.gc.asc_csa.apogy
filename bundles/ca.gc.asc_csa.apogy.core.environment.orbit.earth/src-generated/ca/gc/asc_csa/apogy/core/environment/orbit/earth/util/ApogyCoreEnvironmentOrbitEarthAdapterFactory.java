@@ -210,6 +210,14 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 				return createApogyCoreEnvironmentOrbitEarthFacadeAdapter();
 			}
 			@Override
+			public Adapter caseEclipse(Eclipse object) {
+				return createEclipseAdapter();
+			}
+			@Override
+			public Adapter caseEclipseEvent(EclipseEvent object) {
+				return createEclipseEventAdapter();
+			}
+			@Override
 			public Adapter caseTimed(Timed object) {
 				return createTimedAdapter();
 			}
@@ -704,6 +712,34 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createApogyCoreEnvironmentOrbitEarthFacadeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse <em>Eclipse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse
+	 * @generated
+	 */
+	public Adapter createEclipseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent <em>Eclipse Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent
+	 * @generated
+	 */
+	public Adapter createEclipseEventAdapter() {
 		return null;
 	}
 

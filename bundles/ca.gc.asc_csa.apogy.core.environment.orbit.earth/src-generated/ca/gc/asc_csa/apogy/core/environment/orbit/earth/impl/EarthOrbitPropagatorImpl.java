@@ -33,6 +33,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
@@ -410,6 +411,17 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public List<Eclipse> getEclipses(Date startDate, Date endDate) throws Exception {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Orbit getInitialOrbit() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -482,6 +494,13 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE:
 				try {
 					return getGroundStationPasses((GroundStation)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_ECLIPSES__DATE_DATE:
+				try {
+					return getEclipses((Date)arguments.get(0), (Date)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);

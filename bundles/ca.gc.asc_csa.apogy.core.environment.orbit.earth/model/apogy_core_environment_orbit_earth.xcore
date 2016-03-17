@@ -283,6 +283,11 @@ abstract class EarthOrbitPropagator extends AbstractOrbitPropagator, InitialOrbi
 	 * Returns the list of passes for a given Ground Station (and its Field Of View) during a specified interval.
 	 */	
 	op List<VisibilityPass> getGroundStationPasses(GroundStation groundStation, EDate startDate, EDate endDate) throws Exception
+
+	/**
+	 * Returns the list of {@link Eclipse}.
+	 */		
+	op List<Eclipse> getEclipses(EDate startDate, EDate endDate) throws Exception
 	
 	/**
 	 * Return the init
@@ -622,10 +627,22 @@ class VisibilityPassSpacecraftPosition extends Timed
 	double rangeRate = "0"	
 	
 	/*
-	 * The angle of the surface location relative to the spacecraft nadir.
+	 * The cross track angle of the surface location relative to the spacecraft nadir.
 	 */
 	@GenModel(notify="true", property="Readonly",apogy_units="rad")
 	double spacecraftCrossTrackAngle="0"
+	
+	/*
+	 * The along track angle of the surface location relative to the spacecraft nadir.
+	 */
+	@GenModel(notify="true", property="Readonly",apogy_units="rad")
+	double spacecraftAlongTrackAngle="0"	
+	
+	/*
+	 * Spacecraft Geographical Coordinates.
+	 */
+	@GenModel(notify="true", property="None")
+	contains GeographicCoordinates spacecraftCoordinates
 }
 
 class SpacecraftsVisibilitySet extends Named, Described, Updatable
@@ -871,4 +888,50 @@ class ApogyCoreEnvironmentOrbitEarthFacade
 	 * @return The TLEEarthOrbitPropagator.
 	 */
 	op TLEEarthOrbitPropagator createTLEEarthOrbitPropagator(TLE tle) throws Exception		
+}
+
+/*
+ * Defines an Eclipse for spacecrafts. 
+ */
+class Eclipse{
+	/*
+	 * Entry in Penumbra.
+	 */
+	@GenModel(notify="true", property="None")
+	contains EclipseEvent penumbraEntry
+
+	/*
+	 * Entry in Umbra, can be null.
+	 */	
+	@GenModel(notify="true", property="None")
+	contains EclipseEvent umbraEntry
+
+	/*
+	 * Exit from Umbra, can be null.
+	 */		
+	@GenModel(notify="true", property="None")
+	contains EclipseEvent umbraExit
+	
+	/*
+	 * Exit from Penumbra, can be null.
+	 */		
+	@GenModel(notify="true", property="None")
+	contains EclipseEvent penumbraExit
+}
+
+/*
+ * Eclipse Event.
+ */
+class EclipseEvent extends GeographicCoordinates, Timed{
+	EclipseEventType ^type
+}
+
+/*
+ * Eclipse Event Type.
+ */
+enum EclipseEventType{
+	PENUMBRA_ENTRY as "Penumbra Entry" = 0,
+	PENUMBRA_EXIT as "Penumbra Exit" = 1,
+	UMBRA_ENTRY as "Umbra Entry" = 2,
+	UMBRA_EXIT as "Umbra Exit" = 3	
 }

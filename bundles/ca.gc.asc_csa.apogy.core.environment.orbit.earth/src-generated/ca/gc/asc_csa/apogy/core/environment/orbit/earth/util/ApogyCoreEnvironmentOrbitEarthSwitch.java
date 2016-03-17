@@ -345,6 +345,20 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE: {
+				Eclipse eclipse = (Eclipse)theEObject;
+				T result = caseEclipse(eclipse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE_EVENT: {
+				EclipseEvent eclipseEvent = (EclipseEvent)theEObject;
+				T result = caseEclipseEvent(eclipseEvent);
+				if (result == null) result = caseGeographicCoordinates(eclipseEvent);
+				if (result == null) result = caseTimed(eclipseEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -781,6 +795,36 @@ public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApogyCoreEnvironmentOrbitEarthFacade(ApogyCoreEnvironmentOrbitEarthFacade object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Eclipse</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Eclipse</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEclipse(Eclipse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Eclipse Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Eclipse Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEclipseEvent(EclipseEvent object) {
 		return null;
 	}
 

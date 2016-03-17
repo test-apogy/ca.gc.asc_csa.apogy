@@ -1,6 +1,5 @@
-package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
-/*
- * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+/**
+ * Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,17 +11,23 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
+
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse;
 
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -30,22 +35,16 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class CorridorPointItemProvider 
+public class EclipseItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -59,7 +58,7 @@ public class CorridorPointItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CorridorPointItemProvider(AdapterFactory adapterFactory) {
+	public EclipseItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -74,31 +73,8 @@ public class CorridorPointItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTimePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Time feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTimePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Timed_time_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -113,9 +89,10 @@ public class CorridorPointItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT);
-			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER);
-			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__PENUMBRA_ENTRY);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__UMBRA_ENTRY);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__UMBRA_EXIT);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__PENUMBRA_EXIT);
 		}
 		return childrenFeatures;
 	}
@@ -134,14 +111,14 @@ public class CorridorPointItemProvider
 	}
 
 	/**
-	 * This returns CorridorPoint.gif.
+	 * This returns Eclipse.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/CorridorPoint"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Eclipse"));
 	}
 
 	/**
@@ -152,11 +129,7 @@ public class CorridorPointItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Date labelValue = ((CorridorPoint)object).getTime();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_CorridorPoint_type") :
-			getString("_UI_CorridorPoint_type") + " " + label;
+		return getString("_UI_Eclipse_type");
 	}
 	
 
@@ -171,13 +144,11 @@ public class CorridorPointItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(CorridorPoint.class)) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__TIME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT:
-			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER:
-			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT:
+		switch (notification.getFeatureID(Eclipse.class)) {
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE__PENUMBRA_ENTRY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE__UMBRA_ENTRY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE__UMBRA_EXIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE__PENUMBRA_EXIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -197,63 +168,23 @@ public class CorridorPointItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__PENUMBRA_ENTRY,
 				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__UMBRA_ENTRY,
 				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__UMBRA_EXIT,
 				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__PENUMBRA_EXIT,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
 	}
 
 	/**
@@ -268,9 +199,10 @@ public class CorridorPointItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT ||
-			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER ||
-			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT;
+			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__PENUMBRA_ENTRY ||
+			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__UMBRA_ENTRY ||
+			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__UMBRA_EXIT ||
+			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.ECLIPSE__PENUMBRA_EXIT;
 
 		if (qualify) {
 			return getString

@@ -74,6 +74,18 @@ public interface EarthOrbitPropagator extends AbstractOrbitPropagator, InitialOr
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * *
+	 * Returns the list of {@link Eclipse}.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" startDateUnique="false" endDateUnique="false"
+	 * @generated
+	 */
+	List<Eclipse> getEclipses(Date startDate, Date endDate) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
 	 * Return the init
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"

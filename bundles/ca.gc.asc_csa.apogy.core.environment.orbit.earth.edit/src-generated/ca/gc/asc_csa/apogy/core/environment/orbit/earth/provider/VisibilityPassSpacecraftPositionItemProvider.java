@@ -21,6 +21,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -33,6 +34,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 
@@ -77,6 +80,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 			addRangePropertyDescriptor(object);
 			addRangeRatePropertyDescriptor(object);
 			addSpacecraftCrossTrackAnglePropertyDescriptor(object);
+			addSpacecraftAlongTrackAnglePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -214,6 +218,58 @@ public class VisibilityPassSpacecraftPositionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Spacecraft Along Track Angle feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSpacecraftAlongTrackAnglePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_VisibilityPassSpacecraftPosition_spacecraftAlongTrackAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_spacecraftAlongTrackAngle_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_ALONG_TRACK_ANGLE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This returns VisibilityPassSpacecraftPosition.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -258,7 +314,11 @@ public class VisibilityPassSpacecraftPositionItemProvider
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE:
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE:
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_ALONG_TRACK_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -274,6 +334,26 @@ public class VisibilityPassSpacecraftPositionItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 
 	/**

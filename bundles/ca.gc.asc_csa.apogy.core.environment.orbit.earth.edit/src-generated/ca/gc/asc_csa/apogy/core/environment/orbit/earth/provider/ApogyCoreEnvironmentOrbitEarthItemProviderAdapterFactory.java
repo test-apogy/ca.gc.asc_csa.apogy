@@ -669,6 +669,52 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EclipseItemProvider eclipseItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEclipseAdapter() {
+		if (eclipseItemProvider == null) {
+			eclipseItemProvider = new EclipseItemProvider(this);
+		}
+
+		return eclipseItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EclipseEventItemProvider eclipseEventItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEclipseEventAdapter() {
+		if (eclipseEventItemProvider == null) {
+			eclipseEventItemProvider = new EclipseEventItemProvider(this);
+		}
+
+		return eclipseEventItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -818,6 +864,8 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 		if (corridorItemProvider != null) corridorItemProvider.dispose();
 		if (spacecraftSwathCorridorItemProvider != null) spacecraftSwathCorridorItemProvider.dispose();
 		if (apogyCoreEnvironmentOrbitEarthFacadeItemProvider != null) apogyCoreEnvironmentOrbitEarthFacadeItemProvider.dispose();
+		if (eclipseItemProvider != null) eclipseItemProvider.dispose();
+		if (eclipseEventItemProvider != null) eclipseEventItemProvider.dispose();
 	}
 
 	/**
@@ -1164,6 +1212,16 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createApogyCoreEnvironmentOrbitEarthFacade()));
 
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipse()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
+
 				return null;
 			}
  
@@ -1293,6 +1351,16 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createApogyCoreEnvironmentOrbitEarthFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipse()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
 
 				return null;
 			}
@@ -1507,6 +1575,11 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
+
 				return null;
 			}
 			/**
@@ -1525,6 +1598,11 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 					(createChildParameter
 						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
 
 				return null;
 			}

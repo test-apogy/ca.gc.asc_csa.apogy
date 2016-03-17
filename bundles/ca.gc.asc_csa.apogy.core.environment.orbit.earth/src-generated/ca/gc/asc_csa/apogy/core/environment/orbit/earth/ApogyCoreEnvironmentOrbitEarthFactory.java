@@ -249,6 +249,24 @@ public interface ApogyCoreEnvironmentOrbitEarthFactory extends EFactory {
 	ApogyCoreEnvironmentOrbitEarthFacade createApogyCoreEnvironmentOrbitEarthFacade();
 
 	/**
+	 * Returns a new object of class '<em>Eclipse</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Eclipse</em>'.
+	 * @generated
+	 */
+	Eclipse createEclipse();
+
+	/**
+	 * Returns a new object of class '<em>Eclipse Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Eclipse Event</em>'.
+	 * @generated
+	 */
+	EclipseEvent createEclipseEvent();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

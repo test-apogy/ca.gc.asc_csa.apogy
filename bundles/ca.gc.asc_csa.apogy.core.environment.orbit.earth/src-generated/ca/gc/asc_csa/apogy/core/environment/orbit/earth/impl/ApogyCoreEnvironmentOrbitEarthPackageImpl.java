@@ -44,6 +44,9 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEventType;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
@@ -296,7 +299,28 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass eclipseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eclipseEventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum ephemerisTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eclipseEventTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -870,8 +894,17 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitPropagator__GetInitialOrbit() {
+	public EOperation getEarthOrbitPropagator__GetEclipses__Date_Date() {
 		return earthOrbitPropagatorEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthOrbitPropagator__GetInitialOrbit() {
+		return earthOrbitPropagatorEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1437,6 +1470,24 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVisibilityPassSpacecraftPosition_SpacecraftAlongTrackAngle() {
+		return (EAttribute)visibilityPassSpacecraftPositionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVisibilityPassSpacecraftPosition_SpacecraftCoordinates() {
+		return (EReference)visibilityPassSpacecraftPositionEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSpacecraftsVisibilitySet() {
 		return spacecraftsVisibilitySetEClass;
 	}
@@ -1878,8 +1929,80 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEclipse() {
+		return eclipseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEclipse_PenumbraEntry() {
+		return (EReference)eclipseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEclipse_UmbraEntry() {
+		return (EReference)eclipseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEclipse_UmbraExit() {
+		return (EReference)eclipseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEclipse_PenumbraExit() {
+		return (EReference)eclipseEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEclipseEvent() {
+		return eclipseEventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEclipseEvent_Type() {
+		return (EAttribute)eclipseEventEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEphemerisType() {
 		return ephemerisTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEclipseEventType() {
+		return eclipseEventTypeEEnum;
 	}
 
 	/**
@@ -2166,6 +2289,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE);
+		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_ECLIPSES__DATE_DATE);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT);
 
 		keplerianEarthOrbitPropagatorEClass = createEClass(KEPLERIAN_EARTH_ORBIT_PROPAGATOR);
@@ -2241,6 +2365,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEAttribute(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE);
 		createEAttribute(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE);
 		createEAttribute(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE);
+		createEAttribute(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_ALONG_TRACK_ANGLE);
+		createEReference(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES);
 
 		spacecraftsVisibilitySetEClass = createEClass(SPACECRAFTS_VISIBILITY_SET);
 		createEAttribute(spacecraftsVisibilitySetEClass, SPACECRAFTS_VISIBILITY_SET__START_TIME);
@@ -2296,8 +2422,18 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_TLE__TLE_STRING);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE);
 
+		eclipseEClass = createEClass(ECLIPSE);
+		createEReference(eclipseEClass, ECLIPSE__PENUMBRA_ENTRY);
+		createEReference(eclipseEClass, ECLIPSE__UMBRA_ENTRY);
+		createEReference(eclipseEClass, ECLIPSE__UMBRA_EXIT);
+		createEReference(eclipseEClass, ECLIPSE__PENUMBRA_EXIT);
+
+		eclipseEventEClass = createEClass(ECLIPSE_EVENT);
+		createEAttribute(eclipseEventEClass, ECLIPSE_EVENT__TYPE);
+
 		// Create enums
 		ephemerisTypeEEnum = createEEnum(EPHEMERIS_TYPE);
+		eclipseEventTypeEEnum = createEEnum(ECLIPSE_EVENT_TYPE);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
@@ -2397,6 +2533,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		spacecraftSwathCorridorEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		spacecraftSwathCorridorEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		spacecraftSwathCorridorEClass.getESuperTypes().add(theApogyCorePackage.getUpdatable());
+		eclipseEventEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
+		eclipseEventEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(oreKitBackedSpacecraftStateEClass, OreKitBackedSpacecraftState.class, "OreKitBackedSpacecraftState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2476,6 +2614,15 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		addEException(op, this.getException());
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getVisibilityPass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getEarthOrbitPropagator__GetEclipses__Date_Date(), null, "getEclipses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getEclipse());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
@@ -2563,6 +2710,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEAttribute(getVisibilityPassSpacecraftPosition_Range(), theEcorePackage.getEDouble(), "range", "0", 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVisibilityPassSpacecraftPosition_RangeRate(), theEcorePackage.getEDouble(), "rangeRate", "0", 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVisibilityPassSpacecraftPosition_SpacecraftCrossTrackAngle(), theEcorePackage.getEDouble(), "spacecraftCrossTrackAngle", "0", 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVisibilityPassSpacecraftPosition_SpacecraftAlongTrackAngle(), theEcorePackage.getEDouble(), "spacecraftAlongTrackAngle", "0", 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVisibilityPassSpacecraftPosition_SpacecraftCoordinates(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "spacecraftCoordinates", null, 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(spacecraftsVisibilitySetEClass, SpacecraftsVisibilitySet.class, "SpacecraftsVisibilitySet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSpacecraftsVisibilitySet_StartTime(), theEcorePackage.getEDate(), "startTime", null, 0, 1, SpacecraftsVisibilitySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2728,6 +2877,15 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		addEParameter(op, this.getTLE(), "tle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
+		initEClass(eclipseEClass, Eclipse.class, "Eclipse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEclipse_PenumbraEntry(), this.getEclipseEvent(), null, "penumbraEntry", null, 0, 1, Eclipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEclipse_UmbraEntry(), this.getEclipseEvent(), null, "umbraEntry", null, 0, 1, Eclipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEclipse_UmbraExit(), this.getEclipseEvent(), null, "umbraExit", null, 0, 1, Eclipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEclipse_PenumbraExit(), this.getEclipseEvent(), null, "penumbraExit", null, 0, 1, Eclipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eclipseEventEClass, EclipseEvent.class, "EclipseEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEclipseEvent_Type(), this.getEclipseEventType(), "type", null, 0, 1, EclipseEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(ephemerisTypeEEnum, EphemerisType.class, "EphemerisType");
 		addEEnumLiteral(ephemerisTypeEEnum, EphemerisType.DEFAULT);
@@ -2736,6 +2894,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		addEEnumLiteral(ephemerisTypeEEnum, EphemerisType.SDP4);
 		addEEnumLiteral(ephemerisTypeEEnum, EphemerisType.SGP8);
 		addEEnumLiteral(ephemerisTypeEEnum, EphemerisType.SDP8);
+
+		initEEnum(eclipseEventTypeEEnum, EclipseEventType.class, "EclipseEventType");
+		addEEnumLiteral(eclipseEventTypeEEnum, EclipseEventType.PENUMBRA_ENTRY);
+		addEEnumLiteral(eclipseEventTypeEEnum, EclipseEventType.PENUMBRA_EXIT);
+		addEEnumLiteral(eclipseEventTypeEEnum, EclipseEventType.UMBRA_ENTRY);
+		addEEnumLiteral(eclipseEventTypeEEnum, EclipseEventType.UMBRA_EXIT);
 
 		// Initialize data types
 		initEDataType(listEDataType, List.class, "List", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -2963,6 +3127,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "*\nReturns the list of passes for a given Ground Station (and its Field Of View) during a specified interval."
+		   });	
+		addAnnotation
+		  (getEarthOrbitPropagator__GetEclipses__Date_Date(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of {@link Eclipse}."
 		   });	
 		addAnnotation
 		  (getEarthOrbitPropagator__GetInitialOrbit(), 
@@ -3384,10 +3554,27 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		  (getVisibilityPassSpacecraftPosition_SpacecraftCrossTrackAngle(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The angle of the surface location relative to the spacecraft nadir.",
+			 "documentation", "The cross track angle of the surface location relative to the spacecraft nadir.",
 			 "notify", "true",
 			 "property", "Readonly",
 			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getVisibilityPassSpacecraftPosition_SpacecraftAlongTrackAngle(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The along track angle of the surface location relative to the spacecraft nadir.",
+			 "notify", "true",
+			 "property", "Readonly",
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getVisibilityPassSpacecraftPosition_SpacecraftCoordinates(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Spacecraft Geographical Coordinates.",
+			 "notify", "true",
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (getSpacecraftsVisibilitySet_StartTime(), 
@@ -3655,6 +3842,56 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "Create a TLEEarthOrbitPropagator using a TLE.\n@param tle The Two-Line Element defining the propagator.\n@return The TLEEarthOrbitPropagator."
+		   });	
+		addAnnotation
+		  (eclipseEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines an Eclipse for spacecrafts."
+		   });	
+		addAnnotation
+		  (getEclipse_PenumbraEntry(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Entry in Penumbra.",
+			 "notify", "true",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (getEclipse_UmbraEntry(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Entry in Umbra, can be null.",
+			 "notify", "true",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (getEclipse_UmbraExit(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Exit from Umbra, can be null.",
+			 "notify", "true",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (getEclipse_PenumbraExit(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Exit from Penumbra, can be null.",
+			 "notify", "true",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (eclipseEventEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Eclipse Event."
+		   });	
+		addAnnotation
+		  (eclipseEventTypeEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "Eclipse Event Type."
 		   });
 	}
 

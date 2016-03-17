@@ -110,6 +110,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR: return createCorridor();
 			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR: return createSpacecraftSwathCorridor();
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE: return createApogyCoreEnvironmentOrbitEarthFacade();
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE: return createEclipse();
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE_EVENT: return createEclipseEvent();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -125,6 +127,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EPHEMERIS_TYPE:
 				return createEphemerisTypeFromString(eDataType, initialValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE_EVENT_TYPE:
+				return createEclipseEventTypeFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.LIST:
 				return createListFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.MAP:
@@ -186,6 +190,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EPHEMERIS_TYPE:
 				return convertEphemerisTypeToString(eDataType, instanceValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE_EVENT_TYPE:
+				return convertEclipseEventTypeToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.MAP:
@@ -482,6 +488,26 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Eclipse createEclipse() {
+		EclipseImpl eclipse = new EclipseImpl();
+		return eclipse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EclipseEvent createEclipseEvent() {
+		EclipseEventImpl eclipseEvent = new EclipseEventImpl();
+		return eclipseEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EphemerisType createEphemerisTypeFromString(EDataType eDataType, String initialValue) {
 		EphemerisType result = EphemerisType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -494,6 +520,26 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 * @generated
 	 */
 	public String convertEphemerisTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EclipseEventType createEclipseEventTypeFromString(EDataType eDataType, String initialValue) {
+		EclipseEventType result = EclipseEventType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEclipseEventTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

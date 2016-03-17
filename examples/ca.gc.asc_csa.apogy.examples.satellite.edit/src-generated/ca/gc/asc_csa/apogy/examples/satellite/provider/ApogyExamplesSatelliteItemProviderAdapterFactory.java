@@ -56,6 +56,7 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeIma
 import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.util.ApogyCoreEnvironmentOrbitEarthSwitch;
 import ca.gc.asc_csa.apogy.core.environment.util.ApogyCoreEnvironmentSwitch;
@@ -695,6 +696,30 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseVisibilityPassSpacecraftPosition(VisibilityPassSpacecraftPosition object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->
