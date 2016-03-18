@@ -79,35 +79,7 @@ public class LanderSimulatedItemProvider extends LanderItemProvider {
 		// The label to be displayed for the lander
 		String label = getString("_UI_LanderSimulated_type");
 		
-		// If the simulated lander isn't null
-		if (simulatedLander != null)
-		{
-			// If the position is present
-			if (simulatedLander.getPosition() != null)
-			{
-				// Add the coordinates to the label
-				label = label + " (X=" + simulatedLander.getPosition().getX() +
-								", Y=" + simulatedLander.getPosition().getY() +
-								", Z=" + simulatedLander.getPosition().getZ();
-				
-				// If the thruster is also present
-				if (simulatedLander.getThruster() != null)
-				{
-					// Add the thrust level to the label
-					label = label + ", Thrust=" + simulatedLander.getThruster().getCurrentThrust();
-				}
-				
-				// Finish off the label
-				label = label + ")";
-			}
-			// Otherwise if the position is not present
-			// but the thruster is
-			else if (simulatedLander.getThruster() != null)
-			{
-				// Add the thrust level to the label
-				label = "(Thrust=" + simulatedLander.getThruster().getCurrentThrust() +")";
-			}
-		}
+		label += getLanderSuffixText(simulatedLander);
 		
 		// Return the generated label
 		return label;

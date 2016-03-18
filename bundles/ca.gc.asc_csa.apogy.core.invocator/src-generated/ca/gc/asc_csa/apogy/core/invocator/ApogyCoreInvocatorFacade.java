@@ -105,28 +105,58 @@ public interface ApogyCoreInvocatorFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model operationCallUnique="false"
+	 * <!-- begin-model-doc -->
+	 * Executes the specified {@link OperationCall} and returns the {@link OperationCallResult}.
+	 * This method invokes {@link ApogyCoreInvocatorFacade#exec(OperationCall operationCall, true).
+	 * @param operationCall Reference to the {@link OperationCall}.
+	 * @return Reference to the result.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" operationCallUnique="false"
 	 * @generated
 	 */
-  void exec(OperationCall operationCall);
+  OperationCallResult exec(OperationCall operationCall);
 
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model operationCallUnique="false" saveResultUnique="false"
+	 * <!-- begin-model-doc -->
+	 * Executes the specified {@link OperationCall} and returns the {@link OperationCallResult}.
+	 * @param operationCall Reference to the {@link OperationCall}.
+	 * @param saveResult If true the result is stored in the {@link OperationCallResultsList} specified
+	 * in the active {@link Context}.
+	 * @return Reference to the result.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" operationCallUnique="false" saveResultUnique="false"
 	 * @generated
 	 */
-  void exec(OperationCall operationCall, boolean saveResult);
+  OperationCallResult exec(OperationCall operationCall, boolean saveResult);
 
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Executes the list of {@link OperationCall} sequentially.
+	 * @param operationCallsList Reference to the list of {@link OperationCall}.
+	 * <!-- end-model-doc -->
 	 * @model operationCallsListUnique="false"
 	 * @generated
 	 */
   void exec(OperationCallsList operationCallsList);
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns the value contained in the {@link OperationCallResult}.
+	 * @param operationCallResult {@link OperationCallResult} that contains the result.
+	 * @return Reference to the value (Java Object).
+	 * <!-- end-model-doc -->
+	 * @model unique="false" operationCallResultUnique="false"
+	 * @generated
+	 */
+	Object getValue(OperationCallResult operationCallResult);
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @model unique="false" valueUnique="false"

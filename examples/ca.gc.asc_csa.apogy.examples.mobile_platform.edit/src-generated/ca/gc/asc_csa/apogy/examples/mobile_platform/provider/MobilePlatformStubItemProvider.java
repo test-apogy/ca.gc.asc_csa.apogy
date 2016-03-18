@@ -20,6 +20,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
 import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformStub;
 
 /**
@@ -79,26 +80,13 @@ extends MobilePlatformItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		/**
-		 * This is the degree symbol, as expressed in unicode
-		 */
-		final String DEGREE_SYM = "\u00b0";
-		
 		MobilePlatformStub mobilePlatformStub = (MobilePlatformStub)object;
 		
 		// Get the basic label
 		String label = getString("_UI_MobilePlatformStub_type");
 		
-		// If the platform isn't null
-		if (mobilePlatformStub != null)
-		{
-			// Add on appropriate values
-			label += " (X=" + mobilePlatformStub.getPosition().getX() +
-					 ", Y=" + mobilePlatformStub.getPosition().getY() +
-					 ", LinVel=" + mobilePlatformStub.getLinearVelocity() +
-					 ", AngVel=" + Math.toDegrees(mobilePlatformStub.getAngularVelocity()) +
-					 "(" + DEGREE_SYM + "/s))";
-		}
+		// Adds additional info as part of the text.
+		label += getMobilePlatformSuffixText(mobilePlatformStub);
 		
 		// Return the label
 		return label;

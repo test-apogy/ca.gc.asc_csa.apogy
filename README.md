@@ -4,20 +4,25 @@ As an example, integrating a rover in **Apogy** is as simple as creating an EMF 
 
 ![Apogy Overview](/doc/ca.gc.asc_csa.apogy.doc/resources/main/apogy_overview.jpg "Apogy Overview")
 
-# Installation #
-Description                    | URL            | Status
------------------------------- | -------------  | ---------
-Apogy OTS P2 Update Site (ZIP) | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/ca.gc.asc_csa.apogy.ots.repository-0.1.0-SNAPSHOT.zip) | OK
-Apogy P2 Update Site (ZIP)     | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest/ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip)         | OK
-Apogy OTS P2 Update Site       | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest) | NOT WORKING
-Apogy P2 Update Site           | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy/repository/latest)         | NOT WORKING
+# Eclipse Update Sites #
+Description                    | URL          
+------------------------------ | -------------
+Stable                         | [https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/)
+Latest                         | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/)
 
 # Documentation #
 Description                    | URL
 ------------------------------ | ---
 Main Guide                     | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/main.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/main.html)
 Installation                   | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html)
+Simple Way To Start            | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/simple_way_to_start.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/simple_way_to_start.html)
 Tutorials                      | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tutorials.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tutorials.html)
 User                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html)
 Development                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html)
 Eclipse Proposal               | [https://projects.eclipse.org/proposals/apogy](https://projects.eclipse.org/proposals/apogy)
+Eclipse Conference 2016 Presentation      | [https://www.eclipsecon.org/na2016/sites/default/files/slides/apogy_eclipsecon2016_0.pdf](https://www.eclipsecon.org/na2016/sites/default/files/slides/apogy_eclipsecon2016_0.pdf)
+
+# Medias #
+Description                    | URL
+------------------------------ | ---
+Eclipse Conference 2016 Speaker Pitch   | https://youtu.be/-zb8EgQdXdc

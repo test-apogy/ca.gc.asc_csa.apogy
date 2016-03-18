@@ -21,6 +21,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<tycho.version>0.24.0</tycho.version>
+		<eclipse.version>mars</eclipse.version>
+		<eclipse.updates.version>4.5</eclipse.updates.version>
 	</properties>
 
 	<repositories>
@@ -44,9 +47,21 @@
 		</repository>
 		
 		<repository>
+			<id>Orbit</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/</url>
+		</repository>		
+		
+		<repository>
+			<id>Sirius</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/sirius/updates/releases/3.1.1/mars</url>
+		</repository>		
+		
+		<repository>
 			<id>Apogy-OTS</id>
 			<layout>p2</layout>
-			<url>ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest</url>
+			<url>https://dl.bintray.com/apogy/OTS/0.1/</url>
 		</repository>
 		
 	</repositories>
@@ -270,6 +285,7 @@
 		
 		<module>../../bundles/ca.gc.asc_csa.apogy.ui</module>		
 		<module>../../bundles/ca.gc.asc_csa.apogy.feature</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.sdk.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.repository</module>
 
 		<!-- Examples -->
@@ -331,5 +347,6 @@
 				
 		<!-- Doc -->
 		<module>../../doc/ca.gc.asc_csa.apogy.doc</module>
+		<module>../../doc/ca.gc.asc_csa.apogy.doc.feature</module>
 	</modules>
 </project>

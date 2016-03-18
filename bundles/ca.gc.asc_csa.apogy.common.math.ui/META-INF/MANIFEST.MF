@@ -37,4 +37,6 @@ Bundle-ClassPath: libs/swt-grouplayout.jar,
  .
 Export-Package: ca.gc.asc_csa.apogy.common.math.ui,
  ca.gc.asc_csa.apogy.common.math.ui.composites,
- ca.gc.asc_csa.apogy.common.math.ui.properties.sections
+ ca.gc.asc_csa.apogy.common.math.ui.properties.sections,
+ org.eclipse.wb.swt.layout.grouplayout,
+ org.eclipse.wb.swt.widgets.baseline

@@ -72,9 +72,35 @@ type IVariableListener wraps IVariableListener
 
 class ApogyCoreInvocatorFacade
 {
-	op void exec(OperationCall operationCall)
-	op void exec(OperationCall operationCall, boolean saveResult)
+	/*
+	 * Executes the specified {@link OperationCall} and returns the {@link OperationCallResult}.
+	 * This method invokes {@link ApogyCoreInvocatorFacade#exec(OperationCall operationCall, true).
+	 * @param operationCall Reference to the {@link OperationCall}.
+	 * @return Reference to the result.
+	 */
+	op OperationCallResult exec(OperationCall operationCall)
+
+	/*
+	 * Executes the specified {@link OperationCall} and returns the {@link OperationCallResult}.
+	 * @param operationCall Reference to the {@link OperationCall}.
+	 * @param saveResult If true the result is stored in the {@link OperationCallResultsList} specified
+	 * in the active {@link Context}.
+	 * @return Reference to the result.
+	 */
+	op OperationCallResult exec(OperationCall operationCall, boolean saveResult)
+	
+	/*
+	 * Executes the list of {@link OperationCall} sequentially.
+	 * @param operationCallsList Reference to the list of {@link OperationCall}.
+	 */	
 	op void exec(OperationCallsList operationCallsList) 
+	
+	/*
+	 * Returns the value contained in the {@link OperationCallResult}.
+	 * @param operationCallResult {@link OperationCallResult} that contains the result. 
+	 * @return Reference to the value (Java Object). 
+	 */
+	op Object getValue(OperationCallResult operationCallResult)
 	
 	op AbstractResultValue createAbstractResultValue(Object value)
 	
@@ -436,8 +462,9 @@ class InvocatorSession extends Named, Described
 	 * @param instance Object onto which the operation is to be called.
 	 * @param operationCall Reference to the operation call.
 	 * @param saveResult If true then results will be saved in the {@link DataProductsList}.
+	 * @return Reference to the result.
 	 */		
-	op void invoke(EObject instance, OperationCall operationCall, boolean saveResult)
+	op OperationCallResult invoke(EObject instance, OperationCall operationCall, boolean saveResult)
 	
 	/*
 	 * This method is called when the adapter is disposed. 

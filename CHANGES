@@ -1,3 +1,61 @@
+Version 0.5.11:
+ - Fixed issue #114.
+
+Version 0.5.10:
+ - Fixed issue #106.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+
+Version 0.5.9:
+ - Fixed build.properties (missing root package)
+ - Merge branch 'master' of bitbucket.org:apogy/ca.gc.asc_csa.apogy into hotfix-issue_103
+ - Added other packages.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Minor fix
+
+Version 0.5.8:
+ - Fixes.
+ - Fixes
+ - Fixes.
+ - Merge branch 'master' into hotfix-issue_98
+ - Updated Apogy P2 URL in the documentation.
+ - Removed from Apogy SDK dependencies to emf.*
+ - Updated.
+ - Fixes.
+ - Fixes.
+ - Fixes.
+ - Merge branch 'master' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
+ - Updated bintray update site.
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - README.md edited online with Bitbucket
+ - Fixes.
+
+Version 0.5.7:
+ - Created a separate document for Simple Way To Start tutorial.
+
+Version 0.5.6:
+ - Merge branch 'feature-apogy_all_feature' into hotfix-0.5.6
+ - Merge branch 'feature-bintray_support' into feature-apogy_all_feature
+ - cleanup the configuration of bintray invocation
+ - Updated documentation.
+ - Minor fixes.
+ - Minor fixes.
+ - Merge branch 'feature-bintray_support' into feature-apogy_all_feature
+ - Added features.
+ - Created Apogy SDK Feature (draft).
+ - #95 maven build should do something meaningful w/o specifying arguments
+ - #91 - Upload repos to bintray
+
+Version 0.5.5:
+
+
 Version 0.5.4:
  - Remove .xcore copyright text duplicates.
  - Fixed .xcore copyright text.

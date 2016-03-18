@@ -323,7 +323,7 @@ public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLander_GravitationalPull() {
+	public EAttribute getLander_FuelMass() {
 		return (EAttribute)landerEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -332,34 +332,7 @@ public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLander_FlyingEnabled() {
-		return (EAttribute)landerEClass.getEStructuralFeatures().get(15);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLander_Initialized() {
-		return (EAttribute)landerEClass.getEStructuralFeatures().get(16);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLander_Disposed() {
-		return (EAttribute)landerEClass.getEStructuralFeatures().get(17);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLander_ChangingLegs() {
+	public EAttribute getLander_GravitationalPull() {
 		return (EAttribute)landerEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -368,7 +341,34 @@ public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLander_ChangingAttitude() {
+	public EAttribute getLander_FlyingEnabled() {
+		return (EAttribute)landerEClass.getEStructuralFeatures().get(16);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLander_Initialized() {
+		return (EAttribute)landerEClass.getEStructuralFeatures().get(17);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLander_Disposed() {
+		return (EAttribute)landerEClass.getEStructuralFeatures().get(18);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLander_ChangingLegs() {
 		return (EAttribute)landerEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -377,8 +377,17 @@ public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLander_ChangingLocation() {
+	public EAttribute getLander_ChangingAttitude() {
 		return (EAttribute)landerEClass.getEStructuralFeatures().get(14);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLander_ChangingLocation() {
+		return (EAttribute)landerEClass.getEStructuralFeatures().get(15);
 	}
 
 		/**
@@ -557,6 +566,7 @@ public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements Apog
 		createEAttribute(landerEClass, LANDER__XANGULAR_VELOCITY);
 		createEAttribute(landerEClass, LANDER__YANGULAR_VELOCITY);
 		createEAttribute(landerEClass, LANDER__MASS);
+		createEAttribute(landerEClass, LANDER__FUEL_MASS);
 		createEAttribute(landerEClass, LANDER__GRAVITATIONAL_PULL);
 		createEAttribute(landerEClass, LANDER__CHANGING_LEGS);
 		createEAttribute(landerEClass, LANDER__CHANGING_ATTITUDE);
@@ -643,6 +653,7 @@ public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements Apog
 		initEAttribute(getLander_XAngularVelocity(), theEcorePackage.getEDouble(), "xAngularVelocity", "0", 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_YAngularVelocity(), theEcorePackage.getEDouble(), "yAngularVelocity", "0", 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_Mass(), theEcorePackage.getEDouble(), "mass", null, 0, 1, Lander.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLander_FuelMass(), theEcorePackage.getEDouble(), "fuelMass", null, 0, 1, Lander.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_GravitationalPull(), theEcorePackage.getEDouble(), "gravitationalPull", null, 0, 1, Lander.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_ChangingLegs(), theEcorePackage.getEBoolean(), "changingLegs", "false", 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_ChangingAttitude(), theEcorePackage.getEBoolean(), "changingAttitude", "false", 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1025,6 +1036,16 @@ public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements Apog
 		   source, 
 		   new String[] {
 			 "documentation", "This represents the mass of the lander (in kg).",
+			 "children", "false",
+			 "apogy_units", "kg",
+			 "property", "Readonly",
+			 "propertyCategory", "Flight"
+		   });	
+		addAnnotation
+		  (getLander_FuelMass(), 
+		   source, 
+		   new String[] {
+			 "documentation", "This represents the fuel mass of the lander (in kg).",
 			 "children", "false",
 			 "apogy_units", "kg",
 			 "property", "Readonly",
