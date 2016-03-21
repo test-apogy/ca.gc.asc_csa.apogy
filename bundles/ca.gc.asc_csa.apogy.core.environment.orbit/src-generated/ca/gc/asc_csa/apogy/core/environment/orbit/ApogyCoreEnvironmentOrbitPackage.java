@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EReference;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import org.eclipse.emf.ecore.EAttribute;
 
 /**
  * <!-- begin-user-doc -->
@@ -645,22 +646,13 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	int SPACECRAFT_STATE__ATTITUDE = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Orbit</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPACECRAFT_STATE__ORBIT = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Spacecraft State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_STATE_FEATURE_COUNT = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 3;
+	int SPACECRAFT_STATE_FEATURE_COUNT = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Spacecraft State</em>' class.
@@ -746,31 +738,31 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	int VALIDITY_RANGE_PROVIDER = 11;
 
 	/**
+	 * The feature id for the '<em><b>From Valid Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALIDITY_RANGE_PROVIDER__FROM_VALID_DATE = 0;
+
+	/**
+	 * The feature id for the '<em><b>To Valid Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALIDITY_RANGE_PROVIDER__TO_VALID_DATE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Validity Range Provider</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALIDITY_RANGE_PROVIDER_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Get From Valid Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VALIDITY_RANGE_PROVIDER___GET_FROM_VALID_DATE = 0;
-
-	/**
-	 * The operation id for the '<em>Get To Valid Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VALIDITY_RANGE_PROVIDER___GET_TO_VALID_DATE = 1;
+	int VALIDITY_RANGE_PROVIDER_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
@@ -779,7 +771,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALIDITY_RANGE_PROVIDER___IS_DATE_IN_VALID_RANGE__DATE = 2;
+	int VALIDITY_RANGE_PROVIDER___IS_DATE_IN_VALID_RANGE__DATE = 0;
 
 	/**
 	 * The number of operations of the '<em>Validity Range Provider</em>' class.
@@ -788,199 +780,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALIDITY_RANGE_PROVIDER_OPERATION_COUNT = 3;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl <em>Abstract Orbit Propagator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getAbstractOrbitPropagator()
-	 * @generated
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR = 12;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Reference Frame</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Attitude Provider</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Orbit Propagator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get From Valid Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR___GET_FROM_VALID_DATE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get To Valid Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR___GET_TO_VALID_DATE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Propagate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR___PROPAGATE__DATE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get Spacecraft States</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Abstract Orbit Propagator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 5;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider <em>Initial Orbit Provider</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getInitialOrbitProvider()
-	 * @generated
-	 */
-	int INITIAL_ORBIT_PROVIDER = 13;
-
-	/**
-	 * The number of structural features of the '<em>Initial Orbit Provider</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_ORBIT_PROVIDER_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Get Initial Orbit</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_ORBIT_PROVIDER___GET_INITIAL_ORBIT = 0;
-
-	/**
-	 * The number of operations of the '<em>Initial Orbit Provider</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_ORBIT_PROVIDER_OPERATION_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.InitialOrbitContainerImpl <em>Initial Orbit Container</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.InitialOrbitContainerImpl
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getInitialOrbitContainer()
-	 * @generated
-	 */
-	int INITIAL_ORBIT_CONTAINER = 14;
-
-	/**
-	 * The feature id for the '<em><b>Start Orbit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_ORBIT_CONTAINER__START_ORBIT = INITIAL_ORBIT_PROVIDER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Initial Orbit Container</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_ORBIT_CONTAINER_FEATURE_COUNT = INITIAL_ORBIT_PROVIDER_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Initial Orbit</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_ORBIT_CONTAINER___GET_INITIAL_ORBIT = INITIAL_ORBIT_PROVIDER___GET_INITIAL_ORBIT;
-
-	/**
-	 * The number of operations of the '<em>Initial Orbit Container</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_ORBIT_CONTAINER_OPERATION_COUNT = INITIAL_ORBIT_PROVIDER_OPERATION_COUNT + 0;
+	int VALIDITY_RANGE_PROVIDER_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl <em>Orbit Model</em>}' class.
@@ -990,7 +790,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getOrbitModel()
 	 * @generated
 	 */
-	int ORBIT_MODEL = 15;
+	int ORBIT_MODEL = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1020,22 +820,40 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	int ORBIT_MODEL__ORBIT_MODELS_LIST = ApogyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST;
 
 	/**
-	 * The feature id for the '<em><b>Initial Orbit</b></em>' containment reference.
+	 * The feature id for the '<em><b>From Valid Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL__INITIAL_ORBIT = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 0;
+	int ORBIT_MODEL__FROM_VALID_DATE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Propagator</b></em>' containment reference.
+	 * The feature id for the '<em><b>To Valid Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL__PROPAGATOR = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 1;
+	int ORBIT_MODEL__TO_VALID_DATE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Reference Frame</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBIT_MODEL__REFERENCE_FRAME = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attitude Provider</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBIT_MODEL__ATTITUDE_PROVIDER = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Orbit Model</em>' class.
@@ -1044,7 +862,34 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL_FEATURE_COUNT = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 2;
+	int ORBIT_MODEL_FEATURE_COUNT = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBIT_MODEL___IS_DATE_IN_VALID_RANGE__DATE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Propagate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBIT_MODEL___PROPAGATE__DATE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Spacecraft States</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBIT_MODEL___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Orbit Model</em>' class.
@@ -1053,7 +898,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL_OPERATION_COUNT = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 0;
+	int ORBIT_MODEL_OPERATION_COUNT = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitFacadeImpl <em>Facade</em>}' class.
@@ -1063,7 +908,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getApogyCoreEnvironmentOrbitFacade()
 	 * @generated
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_FACADE = 16;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_FACADE = 13;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -1075,13 +920,13 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	int APOGY_CORE_ENVIRONMENT_ORBIT_FACADE_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Create Orbit Model Copy</em>' operation.
+	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL = 0;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___IS_DATE_IN_VALID_RANGE__DATE_DATE_DATE = 0;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1100,7 +945,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 17;
+	int LIST = 14;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -1110,7 +955,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 18;
+	int EXCEPTION = 15;
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite <em>Orbit Worksite</em>}'.
@@ -1365,17 +1210,6 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	EReference getSpacecraftState_Attitude();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getOrbit <em>Orbit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Orbit</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getOrbit()
-	 * @see #getSpacecraftState()
-	 * @generated
-	 */
-	EReference getSpacecraftState_Orbit();
-
-	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.Orbit <em>Orbit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1407,24 +1241,26 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	EClass getValidityRangeProvider();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getFromValidDate() <em>Get From Valid Date</em>}' operation.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getFromValidDate <em>From Valid Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get From Valid Date</em>' operation.
+	 * @return the meta object for the attribute '<em>From Valid Date</em>'.
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getFromValidDate()
+	 * @see #getValidityRangeProvider()
 	 * @generated
 	 */
-	EOperation getValidityRangeProvider__GetFromValidDate();
+	EAttribute getValidityRangeProvider_FromValidDate();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getToValidDate() <em>Get To Valid Date</em>}' operation.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getToValidDate <em>To Valid Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get To Valid Date</em>' operation.
+	 * @return the meta object for the attribute '<em>To Valid Date</em>'.
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getToValidDate()
+	 * @see #getValidityRangeProvider()
 	 * @generated
 	 */
-	EOperation getValidityRangeProvider__GetToValidDate();
+	EAttribute getValidityRangeProvider_ToValidDate();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#isDateInValidRange(java.util.Date) <em>Is Date In Valid Range</em>}' operation.
@@ -1437,99 +1273,6 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	EOperation getValidityRangeProvider__IsDateInValidRange__Date();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator <em>Abstract Orbit Propagator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Orbit Propagator</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator
-	 * @generated
-	 */
-	EClass getAbstractOrbitPropagator();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getReferenceFrame <em>Reference Frame</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Reference Frame</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getReferenceFrame()
-	 * @see #getAbstractOrbitPropagator()
-	 * @generated
-	 */
-	EReference getAbstractOrbitPropagator_ReferenceFrame();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getAttitudeProvider <em>Attitude Provider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Attitude Provider</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getAttitudeProvider()
-	 * @see #getAbstractOrbitPropagator()
-	 * @generated
-	 */
-	EReference getAbstractOrbitPropagator_AttitudeProvider();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#propagate(java.util.Date) <em>Propagate</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Propagate</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#propagate(java.util.Date)
-	 * @generated
-	 */
-	EOperation getAbstractOrbitPropagator__Propagate__Date();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getSpacecraftStates(java.util.Date, java.util.Date, double) <em>Get Spacecraft States</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Spacecraft States</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getSpacecraftStates(java.util.Date, java.util.Date, double)
-	 * @generated
-	 */
-	EOperation getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider <em>Initial Orbit Provider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Initial Orbit Provider</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider
-	 * @generated
-	 */
-	EClass getInitialOrbitProvider();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider#getInitialOrbit() <em>Get Initial Orbit</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Initial Orbit</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider#getInitialOrbit()
-	 * @generated
-	 */
-	EOperation getInitialOrbitProvider__GetInitialOrbit();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer <em>Initial Orbit Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Initial Orbit Container</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer
-	 * @generated
-	 */
-	EClass getInitialOrbitContainer();
-
-	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer#getStartOrbit <em>Start Orbit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Start Orbit</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer#getStartOrbit()
-	 * @see #getInitialOrbitContainer()
-	 * @generated
-	 */
-	EReference getInitialOrbitContainer_StartOrbit();
-
-	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel <em>Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1540,26 +1283,46 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	EClass getOrbitModel();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getInitialOrbit <em>Initial Orbit</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getReferenceFrame <em>Reference Frame</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Initial Orbit</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getInitialOrbit()
+	 * @return the meta object for the containment reference '<em>Reference Frame</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getReferenceFrame()
 	 * @see #getOrbitModel()
 	 * @generated
 	 */
-	EReference getOrbitModel_InitialOrbit();
+	EReference getOrbitModel_ReferenceFrame();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getPropagator <em>Propagator</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getAttitudeProvider <em>Attitude Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Propagator</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getPropagator()
+	 * @return the meta object for the containment reference list '<em>Attitude Provider</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getAttitudeProvider()
 	 * @see #getOrbitModel()
 	 * @generated
 	 */
-	EReference getOrbitModel_Propagator();
+	EReference getOrbitModel_AttitudeProvider();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#propagate(java.util.Date) <em>Propagate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Propagate</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#propagate(java.util.Date)
+	 * @generated
+	 */
+	EOperation getOrbitModel__Propagate__Date();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getSpacecraftStates(java.util.Date, java.util.Date, double) <em>Get Spacecraft States</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Spacecraft States</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getSpacecraftStates(java.util.Date, java.util.Date, double)
+	 * @generated
+	 */
+	EOperation getOrbitModel__GetSpacecraftStates__Date_Date_double();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade <em>Facade</em>}'.
@@ -1572,14 +1335,14 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	EClass getApogyCoreEnvironmentOrbitFacade();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade#createOrbitModelCopy(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel) <em>Create Orbit Model Copy</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade#isDateInValidRange(java.util.Date, java.util.Date, java.util.Date) <em>Is Date In Valid Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Orbit Model Copy</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade#createOrbitModelCopy(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel)
+	 * @return the meta object for the '<em>Is Date In Valid Range</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade#isDateInValidRange(java.util.Date, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getApogyCoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel();
+	EOperation getApogyCoreEnvironmentOrbitFacade__IsDateInValidRange__Date_Date_Date();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>List</em>}'.
@@ -1839,14 +1602,6 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 		EReference SPACECRAFT_STATE__ATTITUDE = eINSTANCE.getSpacecraftState_Attitude();
 
 		/**
-		 * The meta object literal for the '<em><b>Orbit</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPACECRAFT_STATE__ORBIT = eINSTANCE.getSpacecraftState_Orbit();
-
-		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitImpl <em>Orbit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1875,20 +1630,20 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 		EClass VALIDITY_RANGE_PROVIDER = eINSTANCE.getValidityRangeProvider();
 
 		/**
-		 * The meta object literal for the '<em><b>Get From Valid Date</b></em>' operation.
+		 * The meta object literal for the '<em><b>From Valid Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation VALIDITY_RANGE_PROVIDER___GET_FROM_VALID_DATE = eINSTANCE.getValidityRangeProvider__GetFromValidDate();
+		EAttribute VALIDITY_RANGE_PROVIDER__FROM_VALID_DATE = eINSTANCE.getValidityRangeProvider_FromValidDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Get To Valid Date</b></em>' operation.
+		 * The meta object literal for the '<em><b>To Valid Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation VALIDITY_RANGE_PROVIDER___GET_TO_VALID_DATE = eINSTANCE.getValidityRangeProvider__GetToValidDate();
+		EAttribute VALIDITY_RANGE_PROVIDER__TO_VALID_DATE = eINSTANCE.getValidityRangeProvider_ToValidDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Date In Valid Range</b></em>' operation.
@@ -1897,84 +1652,6 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation VALIDITY_RANGE_PROVIDER___IS_DATE_IN_VALID_RANGE__DATE = eINSTANCE.getValidityRangeProvider__IsDateInValidRange__Date();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl <em>Abstract Orbit Propagator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl
-		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getAbstractOrbitPropagator()
-		 * @generated
-		 */
-		EClass ABSTRACT_ORBIT_PROPAGATOR = eINSTANCE.getAbstractOrbitPropagator();
-
-		/**
-		 * The meta object literal for the '<em><b>Reference Frame</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME = eINSTANCE.getAbstractOrbitPropagator_ReferenceFrame();
-
-		/**
-		 * The meta object literal for the '<em><b>Attitude Provider</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER = eINSTANCE.getAbstractOrbitPropagator_AttitudeProvider();
-
-		/**
-		 * The meta object literal for the '<em><b>Propagate</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ABSTRACT_ORBIT_PROPAGATOR___PROPAGATE__DATE = eINSTANCE.getAbstractOrbitPropagator__Propagate__Date();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Spacecraft States</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ABSTRACT_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = eINSTANCE.getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider <em>Initial Orbit Provider</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider
-		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getInitialOrbitProvider()
-		 * @generated
-		 */
-		EClass INITIAL_ORBIT_PROVIDER = eINSTANCE.getInitialOrbitProvider();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Initial Orbit</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation INITIAL_ORBIT_PROVIDER___GET_INITIAL_ORBIT = eINSTANCE.getInitialOrbitProvider__GetInitialOrbit();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.InitialOrbitContainerImpl <em>Initial Orbit Container</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.InitialOrbitContainerImpl
-		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getInitialOrbitContainer()
-		 * @generated
-		 */
-		EClass INITIAL_ORBIT_CONTAINER = eINSTANCE.getInitialOrbitContainer();
-
-		/**
-		 * The meta object literal for the '<em><b>Start Orbit</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INITIAL_ORBIT_CONTAINER__START_ORBIT = eINSTANCE.getInitialOrbitContainer_StartOrbit();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl <em>Orbit Model</em>}' class.
@@ -1987,20 +1664,36 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 		EClass ORBIT_MODEL = eINSTANCE.getOrbitModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Initial Orbit</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Reference Frame</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORBIT_MODEL__INITIAL_ORBIT = eINSTANCE.getOrbitModel_InitialOrbit();
+		EReference ORBIT_MODEL__REFERENCE_FRAME = eINSTANCE.getOrbitModel_ReferenceFrame();
 
 		/**
-		 * The meta object literal for the '<em><b>Propagator</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Attitude Provider</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORBIT_MODEL__PROPAGATOR = eINSTANCE.getOrbitModel_Propagator();
+		EReference ORBIT_MODEL__ATTITUDE_PROVIDER = eINSTANCE.getOrbitModel_AttitudeProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Propagate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ORBIT_MODEL___PROPAGATE__DATE = eINSTANCE.getOrbitModel__Propagate__Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Spacecraft States</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ORBIT_MODEL___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = eINSTANCE.getOrbitModel__GetSpacecraftStates__Date_Date_double();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitFacadeImpl <em>Facade</em>}' class.
@@ -2013,12 +1706,12 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 		EClass APOGY_CORE_ENVIRONMENT_ORBIT_FACADE = eINSTANCE.getApogyCoreEnvironmentOrbitFacade();
 
 		/**
-		 * The meta object literal for the '<em><b>Create Orbit Model Copy</b></em>' operation.
+		 * The meta object literal for the '<em><b>Is Date In Valid Range</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL = eINSTANCE.getApogyCoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel();
+		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___IS_DATE_IN_VALID_RANGE__DATE_DATE_DATE = eINSTANCE.getApogyCoreEnvironmentOrbitFacade__IsDateInValidRange__Date_Date_Date();
 
 		/**
 		 * The meta object literal for the '<em>List</em>' data type.

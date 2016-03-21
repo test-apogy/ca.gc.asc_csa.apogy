@@ -41,17 +41,16 @@ import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.OrbitModelsList;
 import ca.gc.asc_csa.apogy.core.SurfaceLocationsList;
 import ca.gc.asc_csa.apogy.core.WorksitesList;
 import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude;
-import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
@@ -232,6 +231,29 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.InitialOrbitBasedEarthOrbitModel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InitialOrbitBasedEarthOrbitModelItemProvider initialOrbitBasedEarthOrbitModelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.InitialOrbitBasedEarthOrbitModel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInitialOrbitBasedEarthOrbitModelAdapter() {
+		if (initialOrbitBasedEarthOrbitModelItemProvider == null) {
+			initialOrbitBasedEarthOrbitModelItemProvider = new InitialOrbitBasedEarthOrbitModelItemProvider(this);
+		}
+
+		return initialOrbitBasedEarthOrbitModelItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -324,26 +346,26 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitModel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TLEEarthOrbitPropagatorItemProvider tleEarthOrbitPropagatorItemProvider;
+	protected TLEEarthOrbitModelItemProvider tleEarthOrbitModelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitModel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTLEEarthOrbitPropagatorAdapter() {
-		if (tleEarthOrbitPropagatorItemProvider == null) {
-			tleEarthOrbitPropagatorItemProvider = new TLEEarthOrbitPropagatorItemProvider(this);
+	public Adapter createTLEEarthOrbitModelAdapter() {
+		if (tleEarthOrbitModelItemProvider == null) {
+			tleEarthOrbitModelItemProvider = new TLEEarthOrbitModelItemProvider(this);
 		}
 
-		return tleEarthOrbitPropagatorItemProvider;
+		return tleEarthOrbitModelItemProvider;
 	}
 
 	/**
@@ -845,11 +867,12 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 		if (nadirPointingAttitudeProviderItemProvider != null) nadirPointingAttitudeProviderItemProvider.dispose();
 		if (earthOrbitWorksiteItemProvider != null) earthOrbitWorksiteItemProvider.dispose();
 		if (earthOrbitSkyItemProvider != null) earthOrbitSkyItemProvider.dispose();
+		if (initialOrbitBasedEarthOrbitModelItemProvider != null) initialOrbitBasedEarthOrbitModelItemProvider.dispose();
 		if (keplerianEarthOrbitItemProvider != null) keplerianEarthOrbitItemProvider.dispose();
 		if (cartesianEarthOrbitItemProvider != null) cartesianEarthOrbitItemProvider.dispose();
 		if (constantElevationMaskItemProvider != null) constantElevationMaskItemProvider.dispose();
 		if (keplerianEarthOrbitPropagatorItemProvider != null) keplerianEarthOrbitPropagatorItemProvider.dispose();
-		if (tleEarthOrbitPropagatorItemProvider != null) tleEarthOrbitPropagatorItemProvider.dispose();
+		if (tleEarthOrbitModelItemProvider != null) tleEarthOrbitModelItemProvider.dispose();
 		if (urlBasedTLEEarthOrbitPropagatorItemProvider != null) urlBasedTLEEarthOrbitPropagatorItemProvider.dispose();
 		if (tleItemProvider != null) tleItemProvider.dispose();
 		if (earthSurfaceLocationItemProvider != null) earthSurfaceLocationItemProvider.dispose();
@@ -929,26 +952,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 			 * @generated
 			 */
 			@Override
-			public Object caseSpacecraftState(SpacecraftState object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
 			public Object caseOrbit(Orbit object) {
 				newChildDescriptors.add
 					(createChildParameter
@@ -964,55 +967,19 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 			 * @generated
 			 */
 			@Override
-			public Object caseAbstractOrbitPropagator(AbstractOrbitPropagator object) {
+			public Object caseOrbitModel(OrbitModel object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME,
+						(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__REFERENCE_FRAME,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedFrame()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER,
+						(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__ATTITUDE_PROVIDER,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createNadirPointingAttitudeProvider()));
 
 				return null;
 			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseOrbitModel(OrbitModel object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__INITIAL_ORBIT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__INITIAL_ORBIT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__PROPAGATOR,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbitPropagator()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__PROPAGATOR,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitPropagator()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__PROPAGATOR,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createURLBasedTLEEarthOrbitPropagator()));
-
-				return null;
-			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
@@ -1120,6 +1087,11 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createInitialOrbitBasedEarthOrbitModel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
 
 				newChildDescriptors.add
@@ -1140,7 +1112,7 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitPropagator()));
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitModel()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1260,6 +1232,11 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createInitialOrbitBasedEarthOrbitModel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
 
 				newChildDescriptors.add
@@ -1280,7 +1257,7 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitPropagator()));
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitModel()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1468,6 +1445,30 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 					(createChildParameter
 						(ApogyCorePackage.Literals.SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseOrbitModelsList(OrbitModelsList object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createInitialOrbitBasedEarthOrbitModel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitModel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createURLBasedTLEEarthOrbitPropagator()));
 
 				return null;
 			}

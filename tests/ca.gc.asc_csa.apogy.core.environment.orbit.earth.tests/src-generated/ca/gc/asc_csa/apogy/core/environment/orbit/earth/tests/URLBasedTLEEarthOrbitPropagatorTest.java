@@ -24,7 +24,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class URLBasedTLEEarthOrbitPropagatorTest extends TLEEarthOrbitPropagatorTest {
+public class URLBasedTLEEarthOrbitPropagatorTest extends TLEEarthOrbitModelTest {
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -34,7 +34,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPro
  * <!-- end-user-doc -->
  * @generated
  */
-public class URLBasedTLEEarthOrbitPropagatorItemProvider extends TLEEarthOrbitPropagatorItemProvider {
+public class URLBasedTLEEarthOrbitPropagatorItemProvider extends TLEEarthOrbitModelItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

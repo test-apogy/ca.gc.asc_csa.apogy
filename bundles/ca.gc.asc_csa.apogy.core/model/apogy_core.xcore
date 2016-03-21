@@ -318,6 +318,7 @@ abstract class AbstractOrbitModel extends Named, Described
 {		
     @GenModel(property="None")
 	container OrbitModelsList orbitModelsList opposite orbitModels
+	
 }
 
 

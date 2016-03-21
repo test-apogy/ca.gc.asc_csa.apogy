@@ -23,6 +23,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -38,8 +39,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.orekit.bodies.BodyShape;
+import org.orekit.bodies.CelestialBodyFactory;
 import org.orekit.bodies.GeodeticPoint;
 import org.orekit.bodies.OneAxisEllipsoid;
+import org.orekit.errors.OrekitException;
+import org.orekit.errors.PropagationException;
 import org.orekit.frames.Frame;
 import org.orekit.frames.FramesFactory;
 import org.orekit.frames.LOFType;
@@ -48,15 +52,23 @@ import org.orekit.frames.TopocentricFrame;
 import org.orekit.frames.Transform;
 import org.orekit.orbits.CartesianOrbit;
 import org.orekit.orbits.KeplerianOrbit;
+import org.orekit.propagation.Propagator;
+import org.orekit.propagation.events.EclipseDetector;
+import org.orekit.propagation.events.ElevationDetector;
+import org.orekit.propagation.events.handlers.EventHandler;
+import org.orekit.propagation.sampling.OrekitFixedStepHandler;
 import org.orekit.time.AbsoluteDate;
 import org.orekit.time.TimeScalesFactory;
 import org.orekit.time.UTCScale;
 import org.orekit.utils.Constants;
 import org.orekit.utils.IERSConventions;
 import org.orekit.utils.PVCoordinates;
+import org.orekit.utils.PVCoordinatesProvider;
 import org.orekit.utils.TimeStampedAngularCoordinates;
 import org.orekit.utils.TimeStampedPVCoordinates;
 
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
@@ -68,18 +80,26 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Activator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEventType;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 
@@ -324,10 +344,7 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 		// TODO Sets Attitude.
 		// TimedStampedAngularCoordinates attitude = createTimedStampedAngularCoordinates(oreKitSpacecraftState.getAttitude());
 		// ss.setAttitude(attitude);
-		
-		// Sets orbit.		
-		ss.setOrbit(orbit);
-						
+								
 		// Sets date.
 		Date date = createDate(oreKitSpacecraftState.getDate());
 		ss.setTime(date);
@@ -355,10 +372,7 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 		// Sets Attitude.
 		// TODO TimedStampedAngularCoordinates attitude = createAttitude(oreKitSpacecraftState.getAttitude());
 		// ss.setAttitude(attitude);
-		
-		// Sets orbit.
-		ss.setOrbit(orbit);
-						
+								
 		// Sets date.
 		Date date = createDate(oreKitSpacecraftState.getDate());
 		ss.setTime(date);
@@ -483,20 +497,7 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 	 */
 	public KeplerianEarthOrbit createKeplerianOrbit(EarthOrbitPropagator earthOrbitPropagator) throws Exception 
 	{
-		if(earthOrbitPropagator instanceof TLEEarthOrbitPropagator)
-		{
-			TLEEarthOrbitPropagator tlePropagator = (TLEEarthOrbitPropagator) earthOrbitPropagator;
-			Date epoch = tlePropagator.getTle().getEpoch();
-			
-			AbsoluteDate startDate = createAbsoluteDate(epoch);
-			org.orekit.propagation.SpacecraftState ss = tlePropagator.getOreKitTLEPropagator().propagate(startDate);
-			
-			KeplerianOrbit ko = new KeplerianOrbit(ss.getPVCoordinates(), ss.getFrame(), startDate, getMu());
-			
-			// Creates and return the Apogy KeplerianEarthOrbit.
-			return createKeplerianOrbit(ko);
-		}
-		else if(earthOrbitPropagator.getInitialOrbit() instanceof EarthOrbit)
+		if(earthOrbitPropagator.getInitialOrbit() instanceof EarthOrbit)
 		{
 			EarthOrbit eo = (EarthOrbit) earthOrbitPropagator.getInitialOrbit();
 			
@@ -604,6 +605,424 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public List<SpacecraftState> getSpacecraftStates(Propagator propagator, Date startDate, Date endDate, double timeInterval) throws Exception 
+	{		
+		// Computes the duration.
+		double duration = (endDate.getTime() - startDate.getTime()) * 0.001;
+		
+		List<SpacecraftState> states = new ArrayList<SpacecraftState>();
+		
+		// Adds a fixed step handler to record the SpacecraftStates.
+		propagator.setMasterMode(timeInterval, new OrekitFixedStepHandler() 
+		{		
+			@Override
+			public void init(org.orekit.propagation.SpacecraftState spacecraftState, AbsoluteDate arg1) throws PropagationException 
+			{			
+			}
+			
+			@Override
+			public void handleStep(org.orekit.propagation.SpacecraftState spacecraftState,	boolean arg1) throws PropagationException 
+			{		
+				try
+				{
+					// Checks that the state falls inside the specified range.
+					Date date = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(spacecraftState.getDate());
+					if(date.getTime() >= startDate.getTime() && endDate.getTime() >= date.getTime())
+					{	
+						Orbit orbit = null;
+						if(spacecraftState.getOrbit() instanceof KeplerianOrbit)
+						{
+							orbit = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createKeplerianOrbit((KeplerianOrbit) spacecraftState.getOrbit());	
+						}
+						else if(spacecraftState.getOrbit() instanceof CartesianOrbit)
+						{
+							orbit = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createCartesianEarthOrbit((CartesianOrbit) spacecraftState.getOrbit());
+						}
+						OreKitBackedSpacecraftState ss = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createOreKitBackedSpacecraftState(orbit, spacecraftState);
+						states.add(ss);
+					}
+				}
+				catch(PropagationException pe)
+				{
+					throw pe;
+				}
+				catch(Exception e)
+				{
+					throw new PropagationException(e, null, this);
+				}
+			}
+		});
+						
+		AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		
+		try 
+		{						
+			// Start orbit propagation.
+			propagator.propagate(new AbsoluteDate(startAbsoluteDate, duration));
+			AbsoluteDate absoluteDateStartDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+			
+			// Adds the start date state at the beginning of the list.			
+			SpacecraftState startState = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createSpacecraftState(null, propagator.propagate(absoluteDateStartDate));
+			states.add(0, startState);
+			
+			// Adds the end date state at the end of the list.
+			AbsoluteDate absoluteDateEndDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
+			SpacecraftState endState = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createSpacecraftState(null, propagator.propagate(absoluteDateEndDate));
+			states.add(endState);
+		} 
+		catch (PropagationException e1) 
+		{			
+			e1.printStackTrace();
+			
+			Logger.INSTANCE.log(Activator.ID, this, "Error occured during execution !", EventSeverity.ERROR, e1);
+			
+			throw e1;
+		}
+		
+		return states;
+	}
+
+
+	
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<VisibilityPass> getTargetPasses(EarthOrbitModel earthOrbitModel, EarthSurfaceLocation earthSurfaceLocation, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception 
+	{
+		List<VisibilityPass> passes = new ArrayList<VisibilityPass>();
+		
+		// Defined the target on Earth.
+		GeodeticPoint target = new GeodeticPoint(earthSurfaceLocation.getLatitude(), 
+												 earthSurfaceLocation.getLongitude(), 
+												 earthSurfaceLocation.getElevation());
+		
+		// Define the Earth Frame.
+		Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);
+		BodyShape earth = new OneAxisEllipsoid(Constants.WGS84_EARTH_EQUATORIAL_RADIUS,
+		                                       Constants.WGS84_EARTH_FLATTENING,
+		                                       earthFrame);
+		
+		// Define the target in the Earth Frame.
+		String name = "?";
+		if( earthSurfaceLocation.getName() != null) name =  earthSurfaceLocation.getName();
+		TopocentricFrame targetFrame = new TopocentricFrame(earth, target, name);
+				
+		// Define a visibility handler that will be called when the target is in sight.
+		EventHandler<ElevationDetector>  eventHandler = new EventHandler<ElevationDetector> ()
+		{			
+			VisibilityPass lastPass = null;
+			
+			@Override
+			public org.orekit.propagation.events.handlers.EventHandler.Action eventOccurred(org.orekit.propagation.SpacecraftState s, ElevationDetector detector, boolean increasing)
+					throws OrekitException 
+			{	
+				if (increasing) 
+				{
+					if(lastPass == null)
+					{
+						lastPass = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();						
+						lastPass.setStartTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
+						lastPass.setSurfaceLocation(earthSurfaceLocation);																
+						lastPass.setOrbitModel(earthOrbitModel);						
+					}
+					else
+					{
+						// TODO Fills in the pass position history
+					}
+		        } 
+				else 
+				{
+					if(lastPass != null)
+					{
+						lastPass.setEndTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
+						passes.add(lastPass);
+						
+						// Update pass position history
+						lastPass.getPositionHistory().updateHistory();
+						
+						// Reset last pass.
+						lastPass = null;
+					}	
+					
+		        }			
+				
+				return Action.CONTINUE;
+			}
+
+			@Override
+			public org.orekit.propagation.SpacecraftState resetState(ElevationDetector detector, org.orekit.propagation.SpacecraftState oldState)
+					throws OrekitException 
+			{			
+				 return oldState;
+			}
+		};
+		
+		// Define an event detector that detects when the spacecraft rises and sets at the target location.
+		double convergenceThreshold = 0.001; // in seconds.		
+				
+		ElevationDetector detector =  null;
+		if(elevationMask instanceof ConstantElevationMask)
+		{
+			double elevation = ((ConstantElevationMask) elevationMask).getConstantElevation();
+			detector = new ElevationDetector(1, convergenceThreshold, targetFrame).withConstantElevation(elevation).withHandler(eventHandler);
+		}
+		else
+		{
+			detector = new ElevationDetector(1, convergenceThreshold, targetFrame).withElevationMask(elevationMask.getOreKitElevationMask()).withHandler(eventHandler);	
+		}
+
+		// Setup the propagator.
+		Propagator propagator = earthOrbitModel.getOreKitPropagator();
+		propagator.setSlaveMode();
+		propagator.addEventDetector(detector);
+		
+		AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate endAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
+		
+		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
+		
+		return passes;
+	}
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<VisibilityPass> getGroundStationPasses(EarthOrbitModel earthOrbitModel, GroundStation groundStation, Date startDate, Date endDate) throws Exception 
+	{
+		List<VisibilityPass> passes = new ArrayList<VisibilityPass>();
+		
+		// Defined the target on Earth.
+		GeodeticPoint target = new GeodeticPoint(groundStation.getLatitude(), 
+												 groundStation.getLongitude(), 
+												 groundStation.getElevation());
+		
+		// Define the Earth Frame.
+		Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);
+		BodyShape earth = new OneAxisEllipsoid(Constants.WGS84_EARTH_EQUATORIAL_RADIUS,
+		                                       Constants.WGS84_EARTH_FLATTENING,
+		                                       earthFrame);
+		
+		// Define the target in the Earth Frame.
+		String name = "?";
+		if( groundStation.getName() != null) name =  groundStation.getName();
+		TopocentricFrame targetFrame = new TopocentricFrame(earth, target, name);
+				
+		// Define a visibility handler that will be called when the target is in sight.
+		EventHandler<ElevationDetector>  eventHandler = new EventHandler<ElevationDetector> ()
+		{			
+			VisibilityPass lastPass = null;
+			
+			@Override
+			public org.orekit.propagation.events.handlers.EventHandler.Action eventOccurred(org.orekit.propagation.SpacecraftState s, ElevationDetector detector, boolean increasing) throws OrekitException 
+			{	
+				if (increasing) 
+				{
+					if(lastPass == null)
+					{
+						lastPass = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();	
+						lastPass.setSurfaceLocation(groundStation);
+						lastPass.setStartTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));												
+						lastPass.setOrbitModel(earthOrbitModel);						
+					}
+		        } 
+				else 
+				{
+					if(lastPass != null)
+					{
+						lastPass.setEndTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
+						passes.add(lastPass);
+						
+						// Update pass position history
+						lastPass.getPositionHistory().updateHistory();
+						
+						// Reset last pass.
+						lastPass = null;
+					}		            
+		        }			
+				
+				return Action.CONTINUE;
+			}
+
+			@Override
+			public org.orekit.propagation.SpacecraftState resetState(ElevationDetector detector, org.orekit.propagation.SpacecraftState oldState) throws OrekitException 
+			{			
+				 return oldState;
+			}
+		};
+		
+		// Define an event detector that detects when the spacecraft rises and sets at the target location.
+		double convergenceThreshold = 0.001; // in seconds.		
+				
+		// Get elevation mask.		
+		ElevationDetector detector =  null;
+		if(groundStation.getElevationMask() instanceof ConstantElevationMask)
+		{
+			double elevation = ((ConstantElevationMask) groundStation.getElevationMask() ).getConstantElevation();
+			detector = new ElevationDetector(1, convergenceThreshold, targetFrame).withConstantElevation(elevation).withHandler(eventHandler);
+		}
+		else
+		{
+			detector = new ElevationDetector(1, convergenceThreshold, targetFrame).withElevationMask(groundStation.getElevationMask().getOreKitElevationMask()).withHandler(eventHandler);	
+		}
+
+		// Setup the propagator.	
+		Propagator propagator = earthOrbitModel.getOreKitPropagator();
+		propagator.setSlaveMode();
+		propagator.addEventDetector(detector);
+		
+		AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate endAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
+		
+		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
+		
+		return passes;
+	}
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<Eclipse> getEclipses(EarthOrbitModel earthOrbitModel, Date startDate, Date endDate) throws Exception 
+	{
+		List<Eclipse> eclipses = new ArrayList<Eclipse>();
+			
+		// Define the Earth Frame.		
+		final PVCoordinatesProvider earth = CelestialBodyFactory.getEarth();
+		
+		// Define the Sun
+		final PVCoordinatesProvider sun = CelestialBodyFactory.getSun();
+				
+		EventHandler<EclipseDetector>  eventHandler = new EventHandler<EclipseDetector> ()
+		{
+			Eclipse latestEclipse = null;
+						
+			@Override
+			public org.orekit.propagation.events.handlers.EventHandler.Action eventOccurred(org.orekit.propagation.SpacecraftState ss, EclipseDetector eclipseDetector, boolean increasing) throws OrekitException 
+			{	
+				if(latestEclipse == null)
+				{
+					latestEclipse = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipse();
+					eclipses.add(latestEclipse);
+				}
+				
+				if(eclipseDetector.getTotalEclipse())
+				{
+					// Umbra Event Detected
+					
+					if(increasing)
+					{				
+						// Exit of Umbra
+						
+						EclipseEvent umbraExit = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent();
+						umbraExit.setTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(ss.getDate()));
+						umbraExit.setType(EclipseEventType.UMBRA_EXIT);
+						setGeographicCoordinates(umbraExit, ss);
+						
+						latestEclipse.setUmbraExit(umbraExit);								
+					}
+					else
+					{
+						// Entry in Umbra
+						
+						EclipseEvent umbraEntry = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent();
+						umbraEntry.setTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(ss.getDate()));
+						umbraEntry.setType(EclipseEventType.UMBRA_ENTRY);		
+						setGeographicCoordinates(umbraEntry, ss);
+						
+						latestEclipse.setUmbraEntry(umbraEntry);										
+					}
+				}
+				else
+				{
+					// Penumbra Event Detected
+					
+					if(increasing)
+					{				
+						// Exit of Penumbra
+						
+						EclipseEvent penumbraExit = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent();
+						penumbraExit.setTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(ss.getDate()));
+						penumbraExit.setType(EclipseEventType.PENUMBRA_EXIT);						
+						setGeographicCoordinates(penumbraExit, ss);
+						
+						latestEclipse.setPenumbraExit(penumbraExit);
+						
+						// Exiting penumbra, eclipse is over.
+						latestEclipse = null;
+					}
+					else
+					{					
+						// Entry in Penumbra
+						
+						EclipseEvent penumbraEntry = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent();
+						penumbraEntry.setTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(ss.getDate()));
+						penumbraEntry.setType(EclipseEventType.PENUMBRA_ENTRY);
+						setGeographicCoordinates(penumbraEntry, ss);
+																							
+						latestEclipse.setPenumbraEntry(penumbraEntry);
+					}
+				}
+				
+				return Action.CONTINUE;
+			}
+
+			@Override
+			public org.orekit.propagation.SpacecraftState resetState(EclipseDetector arg0,org.orekit.propagation.SpacecraftState oldState) throws OrekitException 
+			{
+				return oldState;
+			}
+								
+			private void setGeographicCoordinates(EclipseEvent eclipseEvent, org.orekit.propagation.SpacecraftState ss)
+			{
+				try
+				{
+					OreKitBackedSpacecraftState oreKitBackedSpacecraftState = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedSpacecraftState();
+					oreKitBackedSpacecraftState.setOreKitSpacecraftState(ss);
+					GeographicCoordinates geographicCoordinates = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates(oreKitBackedSpacecraftState);
+					
+					eclipseEvent.setElevation(geographicCoordinates.getElevation());
+	                eclipseEvent.setLatitude(geographicCoordinates.getLatitude());	                
+	                eclipseEvent.setLongitude(geographicCoordinates.getLongitude());
+				}
+				catch(Throwable t)
+				{
+					t.printStackTrace();
+				}
+			}
+			
+		};
+		
+		final EclipseDetector umbraDetector = new EclipseDetector(sun, 696000000, earth, Constants.WGS84_EARTH_EQUATORIAL_RADIUS).withUmbra().withHandler(eventHandler);		
+		final EclipseDetector penumbraDetector = new EclipseDetector(sun, 696000000, earth, Constants.WGS84_EARTH_EQUATORIAL_RADIUS).withPenumbra().withHandler(eventHandler);
+									
+		// Setup the propagator.		
+		Propagator propagator = earthOrbitModel.getOreKitPropagator();
+		propagator.setSlaveMode();
+		propagator.addEventDetector(umbraDetector);
+		propagator.addEventDetector(penumbraDetector);
+		
+		AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate endAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
+		
+		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
+		
+		return eclipses;
+	}
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	public SortedSet<VisibilityPass> getVisibilityPassSortedByStartDate(List<VisibilityPass> passes) 
 	{				
 		SortedSet<VisibilityPass> sortedSet = new TreeSet<VisibilityPass>(new VisibilityPassStartDateComparator());
@@ -704,10 +1123,10 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public TLEEarthOrbitPropagator createTLEEarthOrbitPropagator(TLE tle) throws Exception 
+	public TLEEarthOrbitModel createTLEEarthOrbitModel(TLE tle) throws Exception 
 	{
-		// Create a new TLEEarthOrbitPropagator
-		TLEEarthOrbitPropagator propagator = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitPropagator();
+		// Create a new TLEEarthOrbitModel
+		TLEEarthOrbitModel propagator = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitModel();
 		
 		// Sets TLE.
 		propagator.setTle(tle);
@@ -810,6 +1229,34 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_STATES__PROPAGATOR_DATE_DATE_DOUBLE:
+				try {
+					return getSpacecraftStates((Propagator)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (Double)arguments.get(3));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK:
+				try {
+					return getTargetPasses((EarthOrbitModel)arguments.get(0), (EarthSurfaceLocation)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3), (ElevationMask)arguments.get(4));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_GROUNDSTATION_DATE_DATE:
+				try {
+					return getGroundStationPasses((EarthOrbitModel)arguments.get(0), (GroundStation)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_ECLIPSES__EARTHORBITMODEL_DATE_DATE:
+				try {
+					return getEclipses((EarthOrbitModel)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST:
 				return getVisibilityPassSortedByStartDate((List<VisibilityPass>)arguments.get(0));
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST:
@@ -833,9 +1280,9 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_MODEL__TLE:
 				try {
-					return createTLEEarthOrbitPropagator((TLE)arguments.get(0));
+					return createTLEEarthOrbitModel((TLE)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
@@ -1023,4 +1470,5 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 		
 		return tempFile;
 	}
+
 } //ApogyCoreEnvironmentOrbitEarthFacadeImpl

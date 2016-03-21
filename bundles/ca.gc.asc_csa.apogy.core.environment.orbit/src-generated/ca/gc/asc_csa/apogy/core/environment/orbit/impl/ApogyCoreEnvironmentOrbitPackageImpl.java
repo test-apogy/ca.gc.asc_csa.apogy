@@ -26,11 +26,8 @@ import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
-import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
-import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer;
-import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
@@ -45,6 +42,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider;
 import java.util.List;
+import org.eclipse.emf.ecore.EAttribute;
 
 /**
  * <!-- begin-user-doc -->
@@ -136,27 +134,6 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	private EClass validityRangeProviderEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass abstractOrbitPropagatorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass initialOrbitProviderEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass initialOrbitContainerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -471,15 +448,6 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpacecraftState_Orbit() {
-		return (EReference)spacecraftStateEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getOrbit() {
 		return orbitEClass;
 	}
@@ -507,8 +475,8 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getValidityRangeProvider__GetFromValidDate() {
-		return validityRangeProviderEClass.getEOperations().get(0);
+	public EAttribute getValidityRangeProvider_FromValidDate() {
+		return (EAttribute)validityRangeProviderEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -516,8 +484,8 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getValidityRangeProvider__GetToValidDate() {
-		return validityRangeProviderEClass.getEOperations().get(1);
+	public EAttribute getValidityRangeProvider_ToValidDate() {
+		return (EAttribute)validityRangeProviderEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -526,88 +494,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	public EOperation getValidityRangeProvider__IsDateInValidRange__Date() {
-		return validityRangeProviderEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAbstractOrbitPropagator() {
-		return abstractOrbitPropagatorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbstractOrbitPropagator_ReferenceFrame() {
-		return (EReference)abstractOrbitPropagatorEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbstractOrbitPropagator_AttitudeProvider() {
-		return (EReference)abstractOrbitPropagatorEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractOrbitPropagator__Propagate__Date() {
-		return abstractOrbitPropagatorEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double() {
-		return abstractOrbitPropagatorEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInitialOrbitProvider() {
-		return initialOrbitProviderEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getInitialOrbitProvider__GetInitialOrbit() {
-		return initialOrbitProviderEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInitialOrbitContainer() {
-		return initialOrbitContainerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInitialOrbitContainer_StartOrbit() {
-		return (EReference)initialOrbitContainerEClass.getEStructuralFeatures().get(0);
+		return validityRangeProviderEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -624,7 +511,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOrbitModel_InitialOrbit() {
+	public EReference getOrbitModel_ReferenceFrame() {
 		return (EReference)orbitModelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -633,8 +520,26 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOrbitModel_Propagator() {
+	public EReference getOrbitModel_AttitudeProvider() {
 		return (EReference)orbitModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getOrbitModel__Propagate__Date() {
+		return orbitModelEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getOrbitModel__GetSpacecraftStates__Date_Date_double() {
+		return orbitModelEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -651,7 +556,7 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel() {
+	public EOperation getApogyCoreEnvironmentOrbitFacade__IsDateInValidRange__Date_Date_Date() {
 		return apogyCoreEnvironmentOrbitFacadeEClass.getEOperations().get(0);
 	}
 
@@ -734,34 +639,23 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		spacecraftStateEClass = createEClass(SPACECRAFT_STATE);
 		createEReference(spacecraftStateEClass, SPACECRAFT_STATE__COORDINATES);
 		createEReference(spacecraftStateEClass, SPACECRAFT_STATE__ATTITUDE);
-		createEReference(spacecraftStateEClass, SPACECRAFT_STATE__ORBIT);
 
 		orbitEClass = createEClass(ORBIT);
 		createEReference(orbitEClass, ORBIT__REFERENCE_FRAME);
 
 		validityRangeProviderEClass = createEClass(VALIDITY_RANGE_PROVIDER);
-		createEOperation(validityRangeProviderEClass, VALIDITY_RANGE_PROVIDER___GET_FROM_VALID_DATE);
-		createEOperation(validityRangeProviderEClass, VALIDITY_RANGE_PROVIDER___GET_TO_VALID_DATE);
+		createEAttribute(validityRangeProviderEClass, VALIDITY_RANGE_PROVIDER__FROM_VALID_DATE);
+		createEAttribute(validityRangeProviderEClass, VALIDITY_RANGE_PROVIDER__TO_VALID_DATE);
 		createEOperation(validityRangeProviderEClass, VALIDITY_RANGE_PROVIDER___IS_DATE_IN_VALID_RANGE__DATE);
 
-		abstractOrbitPropagatorEClass = createEClass(ABSTRACT_ORBIT_PROPAGATOR);
-		createEReference(abstractOrbitPropagatorEClass, ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME);
-		createEReference(abstractOrbitPropagatorEClass, ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER);
-		createEOperation(abstractOrbitPropagatorEClass, ABSTRACT_ORBIT_PROPAGATOR___PROPAGATE__DATE);
-		createEOperation(abstractOrbitPropagatorEClass, ABSTRACT_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE);
-
-		initialOrbitProviderEClass = createEClass(INITIAL_ORBIT_PROVIDER);
-		createEOperation(initialOrbitProviderEClass, INITIAL_ORBIT_PROVIDER___GET_INITIAL_ORBIT);
-
-		initialOrbitContainerEClass = createEClass(INITIAL_ORBIT_CONTAINER);
-		createEReference(initialOrbitContainerEClass, INITIAL_ORBIT_CONTAINER__START_ORBIT);
-
 		orbitModelEClass = createEClass(ORBIT_MODEL);
-		createEReference(orbitModelEClass, ORBIT_MODEL__INITIAL_ORBIT);
-		createEReference(orbitModelEClass, ORBIT_MODEL__PROPAGATOR);
+		createEReference(orbitModelEClass, ORBIT_MODEL__REFERENCE_FRAME);
+		createEReference(orbitModelEClass, ORBIT_MODEL__ATTITUDE_PROVIDER);
+		createEOperation(orbitModelEClass, ORBIT_MODEL___PROPAGATE__DATE);
+		createEOperation(orbitModelEClass, ORBIT_MODEL___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE);
 
 		apogyCoreEnvironmentOrbitFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_ORBIT_FACADE);
-		createEOperation(apogyCoreEnvironmentOrbitFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL);
+		createEOperation(apogyCoreEnvironmentOrbitFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___IS_DATE_IN_VALID_RANGE__DATE_DATE_DATE);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
@@ -816,11 +710,8 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		orbitEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		orbitEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		orbitEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
-		abstractOrbitPropagatorEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		abstractOrbitPropagatorEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		abstractOrbitPropagatorEClass.getESuperTypes().add(this.getValidityRangeProvider());
-		initialOrbitContainerEClass.getESuperTypes().add(this.getInitialOrbitProvider());
 		orbitModelEClass.getESuperTypes().add(theApogyCorePackage.getAbstractOrbitModel());
+		orbitModelEClass.getESuperTypes().add(this.getValidityRangeProvider());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(orbitWorksiteEClass, OrbitWorksite.class, "OrbitWorksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -863,29 +754,26 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		initEClass(spacecraftStateEClass, SpacecraftState.class, "SpacecraftState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpacecraftState_Coordinates(), this.getTimedStampedPVACoordinates(), null, "coordinates", null, 0, 1, SpacecraftState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpacecraftState_Attitude(), this.getTimedStampedAngularCoordinates(), null, "attitude", null, 0, 1, SpacecraftState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpacecraftState_Orbit(), this.getOrbit(), null, "orbit", null, 0, 1, SpacecraftState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orbitEClass, Orbit.class, "Orbit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOrbit_ReferenceFrame(), this.getAbstractFrame(), null, "referenceFrame", null, 0, 1, Orbit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(validityRangeProviderEClass, ValidityRangeProvider.class, "ValidityRangeProvider", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getValidityRangeProvider__GetFromValidDate(), theEcorePackage.getEDate(), "getFromValidDate", 1, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getValidityRangeProvider__GetToValidDate(), theEcorePackage.getEDate(), "getToValidDate", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		initEAttribute(getValidityRangeProvider_FromValidDate(), theEcorePackage.getEDate(), "fromValidDate", null, 1, 1, ValidityRangeProvider.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getValidityRangeProvider_ToValidDate(), theEcorePackage.getEDate(), "toValidDate", null, 1, 1, ValidityRangeProvider.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getValidityRangeProvider__IsDateInValidRange__Date(), theEcorePackage.getEBoolean(), "isDateInValidRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDate(), "date", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(abstractOrbitPropagatorEClass, AbstractOrbitPropagator.class, "AbstractOrbitPropagator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractOrbitPropagator_ReferenceFrame(), this.getAbstractFrame(), null, "referenceFrame", null, 0, 1, AbstractOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractOrbitPropagator_AttitudeProvider(), this.getAttitudeProvider(), null, "attitudeProvider", null, 0, -1, AbstractOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(orbitModelEClass, OrbitModel.class, "OrbitModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOrbitModel_ReferenceFrame(), this.getAbstractFrame(), null, "referenceFrame", null, 0, 1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrbitModel_AttitudeProvider(), this.getAttitudeProvider(), null, "attitudeProvider", null, 0, -1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getAbstractOrbitPropagator__Propagate__Date(), this.getSpacecraftState(), "propagate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getOrbitModel__Propagate__Date(), this.getSpacecraftState(), "propagate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDate(), "targetDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double(), null, "getSpacecraftStates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getOrbitModel__GetSpacecraftStates__Date_Date_double(), null, "getSpacecraftStates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "timeInterval", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -895,21 +783,12 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		initEClass(initialOrbitProviderEClass, InitialOrbitProvider.class, "InitialOrbitProvider", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getInitialOrbitProvider__GetInitialOrbit(), this.getOrbit(), "getInitialOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEClass(initialOrbitContainerEClass, InitialOrbitContainer.class, "InitialOrbitContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInitialOrbitContainer_StartOrbit(), this.getOrbit(), null, "startOrbit", null, 1, 1, InitialOrbitContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(orbitModelEClass, OrbitModel.class, "OrbitModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrbitModel_InitialOrbit(), this.getOrbit(), null, "initialOrbit", null, 0, 1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOrbitModel_Propagator(), this.getAbstractOrbitPropagator(), null, "propagator", null, 0, 1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(apogyCoreEnvironmentOrbitFacadeEClass, ApogyCoreEnvironmentOrbitFacade.class, "ApogyCoreEnvironmentOrbitFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getApogyCoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel(), this.getOrbitModel(), "createOrbitModelCopy", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getOrbitModel(), "originalOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentOrbitFacade__IsDateInValidRange__Date_Date_Date(), theEcorePackage.getEBoolean(), "isDateInValidRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "fromDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "toDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "date", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(listEDataType, List.class, "List", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1045,13 +924,6 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 			 "property", "Readonly"
 		   });	
 		addAnnotation
-		  (getSpacecraftState_Orbit(), 
-		   source, 
-		   new String[] {
-			 "documentation", "The spacecraft orbit at the specified time.",
-			 "property", "Readonly"
-		   });	
-		addAnnotation
 		  (orbitEClass, 
 		   source, 
 		   new String[] {
@@ -1064,76 +936,58 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 			 "documentation", "The inertial frame used to represent this orbit."
 		   });	
 		addAnnotation
-		  (getValidityRangeProvider__GetFromValidDate(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Defines the earliest date for which the data is valid."
-		   });	
-		addAnnotation
-		  (getValidityRangeProvider__GetToValidDate(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Defines the latest date for which the data is valid."
-		   });	
-		addAnnotation
 		  (getValidityRangeProvider__IsDateInValidRange__Date(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns whether or not a specified date falls within the validity range."
 		   });	
 		addAnnotation
-		  (abstractOrbitPropagatorEClass, 
+		  (getValidityRangeProvider_FromValidDate(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Defines a class that propagate an initial orbit through time."
+			 "documentation", "Defines the earliest date for which the data is valid."
 		   });	
 		addAnnotation
-		  (getAbstractOrbitPropagator__Propagate__Date(), 
+		  (getValidityRangeProvider_ToValidDate(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Propagate the current orbit to a specified time to get a Spacecraft state."
-		   });	
-		addAnnotation
-		  (getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.\n@param timeInterval The time interval to get spacecraft states, in seconds."
-		   });	
-		addAnnotation
-		  ((getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double()).getEParameters().get(2), 
-		   source, 
-		   new String[] {
-			 "apogy_units", "s"
-		   });	
-		addAnnotation
-		  (getAbstractOrbitPropagator_ReferenceFrame(), 
-		   source, 
-		   new String[] {
-			 "documentation", "The frame in which the orbit is propagated."
-		   });	
-		addAnnotation
-		  (getAbstractOrbitPropagator_AttitudeProvider(), 
-		   source, 
-		   new String[] {
-			 "documentation", "The attitude provider. Can be used to specify an attitude control law."
-		   });	
-		addAnnotation
-		  (initialOrbitContainerEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "*\nA class containing an initial orbit. Mainly used by some AbstractOrbitPropagator sub-classes."
-		   });	
-		addAnnotation
-		  (getInitialOrbitContainer_StartOrbit(), 
-		   source, 
-		   new String[] {
-			 "documentation", "The initial orbit to propagate in time."
+			 "documentation", "Defines the latest date for which the data is valid."
 		   });	
 		addAnnotation
 		  (orbitModelEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "Class that defines an orbit model. An orbit model specifies both initial condition (through the initial Orbit), and\na propagation method (through the AbstractOrbitPropagator)."
+		   });	
+		addAnnotation
+		  (getOrbitModel__Propagate__Date(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Propagate the current orbit to a specified time to get a Spacecraft state."
+		   });	
+		addAnnotation
+		  (getOrbitModel__GetSpacecraftStates__Date_Date_double(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.\n@param timeInterval The time interval to get spacecraft states, in seconds."
+		   });	
+		addAnnotation
+		  ((getOrbitModel__GetSpacecraftStates__Date_Date_double()).getEParameters().get(2), 
+		   source, 
+		   new String[] {
+			 "apogy_units", "s"
+		   });	
+		addAnnotation
+		  (getOrbitModel_ReferenceFrame(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The frame in which the orbit is propagated."
+		   });	
+		addAnnotation
+		  (getOrbitModel_AttitudeProvider(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The attitude provider. Can be used to specify an attitude control law."
 		   });	
 		addAnnotation
 		  (apogyCoreEnvironmentOrbitFacadeEClass, 

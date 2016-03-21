@@ -22,13 +22,23 @@ import junit.framework.TestCase;
  * A test case for the model object '<em><b>Earth Orbit Propagator</b></em>'.
  * <!-- end-user-doc -->
  * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getFromValidDate() <em>From Valid Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getToValidDate() <em>To Valid Date</em>}</li>
+ * </ul>
+ * </p>
+ * <p>
  * The following operations are tested:
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getOreKitPropagator() <em>Get Ore Kit Propagator</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#propagate(java.util.Date) <em>Propagate</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getSpacecraftStates(java.util.Date, java.util.Date, double) <em>Get Spacecraft States</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getTargetPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask) <em>Get Target Passes</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getGroundStationPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation, java.util.Date, java.util.Date) <em>Get Ground Station Passes</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getEclipses(java.util.Date, java.util.Date) <em>Get Eclipses</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getInitialOrbit() <em>Get Initial Orbit</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#isDateInValidRange(java.util.Date) <em>Is Date In Valid Range</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -78,9 +88,33 @@ public abstract class EarthOrbitPropagatorTest extends TestCase {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getOreKitPropagator()
+	 * @generated_NOT
+	 */
+	public void testGetOreKitPropagator() 
+	{
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#propagate(java.util.Date) <em>Propagate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#propagate(java.util.Date)
 	 * @generated
 	 */
-	public void testGetOreKitPropagator() {
+	public void testPropagate__Date() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getSpacecraftStates(java.util.Date, java.util.Date, double) <em>Get Spacecraft States</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getSpacecraftStates(java.util.Date, java.util.Date, double)
+	 * @generated
+	 */
+	public void testGetSpacecraftStates__Date_Date_double() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -130,9 +164,46 @@ public abstract class EarthOrbitPropagatorTest extends TestCase {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getInitialOrbit()
+	 * @generated_NOT
+	 */
+	public void testGetInitialOrbit() 
+	{	
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getFromValidDate() <em>From Valid Date</em>}' feature getter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getFromValidDate()
 	 * @generated
 	 */
-	public void testGetInitialOrbit() {
+	public void testGetFromValidDate() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getToValidDate() <em>To Valid Date</em>}' feature getter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#getToValidDate()
+	 * @generated
+	 */
+	public void testGetToValidDate() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#isDateInValidRange(java.util.Date) <em>Is Date In Valid Range</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider#isDateInValidRange(java.util.Date)
+	 * @generated
+	 */
+	public void testIsDateInValidRange__Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

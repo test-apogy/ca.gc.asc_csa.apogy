@@ -30,7 +30,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
  * @model
  * @generated
  */
-public interface URLBasedTLEEarthOrbitPropagator extends TLEEarthOrbitPropagator {
+public interface URLBasedTLEEarthOrbitPropagator extends TLEEarthOrbitModel {
 	/**
 	 * Returns the value of the '<em><b>Tle URL</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -31,7 +31,6 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getCoordinates <em>Coordinates</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getAttitude <em>Attitude</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getOrbit <em>Orbit</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getSpacecraftState()
@@ -98,31 +97,5 @@ public interface SpacecraftState extends Timed {
 	 * @generated
 	 */
 	void setAttitude(TimedStampedAngularCoordinates value);
-
-	/**
-	 * Returns the value of the '<em><b>Orbit</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The spacecraft orbit at the specified time.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Orbit</em>' containment reference.
-	 * @see #setOrbit(Orbit)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getSpacecraftState_Orbit()
-	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
-	 * @generated
-	 */
-	Orbit getOrbit();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getOrbit <em>Orbit</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Orbit</em>' containment reference.
-	 * @see #getOrbit()
-	 * @generated
-	 */
-	void setOrbit(Orbit value);
 
 } // SpacecraftState

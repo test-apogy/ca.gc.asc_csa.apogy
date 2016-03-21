@@ -30,14 +30,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 import org.orekit.bodies.BodyShape;
 import org.orekit.bodies.GeodeticPoint;
 import org.orekit.bodies.OneAxisEllipsoid;
@@ -54,6 +46,16 @@ import org.orekit.time.TimeScalesFactory;
 import org.orekit.utils.Constants;
 import org.orekit.utils.IERSConventions;
 import org.orekit.utils.PVCoordinates;
+
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 /**
  * <!-- begin-user-doc -->
@@ -442,7 +444,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 		
 		try
 		{
-			Propagator propagator = ((EarthOrbitPropagator) pass.getOrbitModel().getPropagator()).getOreKitPropagator();
+			Propagator propagator = ((EarthOrbitPropagator) pass.getOrbitModel()).getOreKitPropagator();
 			Frame inertialFrame = FramesFactory.getEME2000();
 			LocalOrbitalFrame lof = new LocalOrbitalFrame(inertialFrame, LOFType.QSW, propagator, "QSW");
 			GeographicCoordinates coord = pass.getSurfaceLocation();
@@ -455,9 +457,10 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(pass.getStartTime());
 			AbsoluteDate endAbsoluteDate = new AbsoluteDate(startAbsoluteDate, pass.getDuration());
 			AbsoluteDate extrapDate = startAbsoluteDate;
+			
 			while (extrapDate.compareTo(endAbsoluteDate) <= 0)  
 			{
-			    // We can simply get the position and velocity of station in LOF frame at any time
+			    // We can simply get the position and velocity of spacecraft in LOF frame at any time
 			    PVCoordinates pv = lof.getTransformTo(loc, extrapDate).transformPVCoordinates(PVCoordinates.ZERO);
 			    			    
 			    // Calculate the range.
@@ -480,15 +483,18 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			    Vector3D      p     = scToEarth.transformPosition(sc.getPosition());
                 Vector3D      v     = scToEarth.transformVector(sc.getVelocity());
                 Vector3D      nadir = p.normalize().negate();
-                Vector3D      crossTrack = p.crossProduct(v).normalize();
+                Vector3D crossTrack = p.crossProduct(v).normalize();
+                Vector3D alongTrack = v.normalize();
 			    
                 Transform targetToEarth = loc.getTransformTo(earth.getBodyFrame(), extrapDate);
                 Vector3D  target        = targetToEarth.transformPosition(Vector3D.ZERO);
                 Vector3D  scToTarget    = p.subtract(1.0, target).normalize();                                
                                                 
                 double scToTargetProjectionOntoCrossTrack = Vector3D.dotProduct(crossTrack, scToTarget);
+                double scToTargetProjectionOntoAlongTrack = Vector3D.dotProduct(alongTrack, scToTarget);
                 double scToTargetProjectionOntoNadir = Vector3D.dotProduct(nadir, scToTarget);                
 			    double scCrossTrackAngle = Math.atan(scToTargetProjectionOntoCrossTrack / scToTargetProjectionOntoNadir);
+			    double scAlongTrackAngle = Math.atan(scToTargetProjectionOntoAlongTrack / scToTargetProjectionOntoNadir);
 			    
 			    VisibilityPassSpacecraftPosition position = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPosition();
 			    position.setTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(extrapDate));
@@ -497,7 +503,17 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			    position.setAzimuth(azimuth);
 			    position.setElevation(elevation);
 			    position.setSpacecraftCrossTrackAngle(scCrossTrackAngle);
+			    position.setSpacecraftAlongTrackAngle(scAlongTrackAngle);
 			    
+			    // Computes the position of the spacecraft.					    
+		        GeodeticPoint scCoords  = earth.transform(sc.getPosition(), earth.getBodyFrame(), extrapDate);
+		        		        
+		        GeographicCoordinates geo = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+		        geo.setElevation(scCoords.getAltitude());
+		        geo.setLatitude(scCoords.getLatitude());
+		        geo.setLongitude(scCoords.getLongitude());
+		        
+			    position.setSpacecraftCoordinates(geo);
 			    positions.add(position);
 			    
 			    extrapDate = new AbsoluteDate(extrapDate, timeInterval, utc);

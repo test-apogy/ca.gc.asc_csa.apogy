@@ -46,11 +46,12 @@ public class ApogyCoreEnvironmentOrbitEarthTests extends TestSuite {
 		suite.addTestSuite(NadirPointingAttitudeProviderTest.class);
 		suite.addTestSuite(EarthOrbitWorksiteTest.class);
 		suite.addTestSuite(EarthOrbitSkyTest.class);
+		suite.addTestSuite(InitialOrbitBasedEarthOrbitModelTest.class);
 		suite.addTestSuite(KeplerianEarthOrbitTest.class);
 		suite.addTestSuite(CartesianEarthOrbitTest.class);
 		suite.addTestSuite(ConstantElevationMaskTest.class);
 		suite.addTestSuite(KeplerianEarthOrbitPropagatorTest.class);
-		suite.addTestSuite(TLEEarthOrbitPropagatorTest.class);
+		suite.addTestSuite(TLEEarthOrbitModelTest.class);
 		suite.addTestSuite(URLBasedTLEEarthOrbitPropagatorTest.class);
 		suite.addTestSuite(TLETest.class);
 		suite.addTestSuite(VisibilityPassSpacecraftPositionHistoryTest.class);

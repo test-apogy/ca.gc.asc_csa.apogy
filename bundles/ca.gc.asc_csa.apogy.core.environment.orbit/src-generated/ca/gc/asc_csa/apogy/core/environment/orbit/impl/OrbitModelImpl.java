@@ -13,16 +13,25 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
 import ca.gc.asc_csa.apogy.core.impl.AbstractOrbitModelImpl;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,31 +41,51 @@ import ca.gc.asc_csa.apogy.core.impl.AbstractOrbitModelImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl#getInitialOrbit <em>Initial Orbit</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl#getPropagator <em>Propagator</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl#getFromValidDate <em>From Valid Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl#getToValidDate <em>To Valid Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl#getReferenceFrame <em>Reference Frame</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl#getAttitudeProvider <em>Attitude Provider</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel {
 	/**
-	 * The cached value of the '{@link #getInitialOrbit() <em>Initial Orbit</em>}' containment reference.
+	 * The default value of the '{@link #getFromValidDate() <em>From Valid Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInitialOrbit()
+	 * @see #getFromValidDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected Orbit initialOrbit;
+	protected static final Date FROM_VALID_DATE_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getPropagator() <em>Propagator</em>}' containment reference.
+	 * The default value of the '{@link #getToValidDate() <em>To Valid Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPropagator()
+	 * @see #getToValidDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected AbstractOrbitPropagator propagator;
+	protected static final Date TO_VALID_DATE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getReferenceFrame() <em>Reference Frame</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferenceFrame()
+	 * @generated
+	 * @ordered
+	 */
+	protected AbstractFrame referenceFrame;
+	/**
+	 * The cached value of the '{@link #getAttitudeProvider() <em>Attitude Provider</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttitudeProvider()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AttitudeProvider> attitudeProvider;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,8 +111,10 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Orbit getInitialOrbit() {
-		return initialOrbit;
+	public Date getFromValidDate() {
+		// TODO: implement this method to return the 'From Valid Date' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -91,11 +122,31 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInitialOrbit(Orbit newInitialOrbit, NotificationChain msgs) {
-		Orbit oldInitialOrbit = initialOrbit;
-		initialOrbit = newInitialOrbit;
+	public Date getToValidDate() {
+		// TODO: implement this method to return the 'To Valid Date' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractFrame getReferenceFrame() {
+		return referenceFrame;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetReferenceFrame(AbstractFrame newReferenceFrame, NotificationChain msgs) {
+		AbstractFrame oldReferenceFrame = referenceFrame;
+		referenceFrame = newReferenceFrame;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT, oldInitialOrbit, newInitialOrbit);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME, oldReferenceFrame, newReferenceFrame);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -106,18 +157,18 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInitialOrbit(Orbit newInitialOrbit) {
-		if (newInitialOrbit != initialOrbit) {
+	public void setReferenceFrame(AbstractFrame newReferenceFrame) {
+		if (newReferenceFrame != referenceFrame) {
 			NotificationChain msgs = null;
-			if (initialOrbit != null)
-				msgs = ((InternalEObject)initialOrbit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT, null, msgs);
-			if (newInitialOrbit != null)
-				msgs = ((InternalEObject)newInitialOrbit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT, null, msgs);
-			msgs = basicSetInitialOrbit(newInitialOrbit, msgs);
+			if (referenceFrame != null)
+				msgs = ((InternalEObject)referenceFrame).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME, null, msgs);
+			if (newReferenceFrame != null)
+				msgs = ((InternalEObject)newReferenceFrame).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME, null, msgs);
+			msgs = basicSetReferenceFrame(newReferenceFrame, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT, newInitialOrbit, newInitialOrbit));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME, newReferenceFrame, newReferenceFrame));
 	}
 
 	/**
@@ -125,23 +176,11 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractOrbitPropagator getPropagator() {
-		return propagator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPropagator(AbstractOrbitPropagator newPropagator, NotificationChain msgs) {
-		AbstractOrbitPropagator oldPropagator = propagator;
-		propagator = newPropagator;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR, oldPropagator, newPropagator);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<AttitudeProvider> getAttitudeProvider() {
+		if (attitudeProvider == null) {
+			attitudeProvider = new EObjectContainmentEList<AttitudeProvider>(AttitudeProvider.class, this, ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__ATTITUDE_PROVIDER);
 		}
-		return msgs;
+		return attitudeProvider;
 	}
 
 	/**
@@ -149,18 +188,32 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPropagator(AbstractOrbitPropagator newPropagator) {
-		if (newPropagator != propagator) {
-			NotificationChain msgs = null;
-			if (propagator != null)
-				msgs = ((InternalEObject)propagator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR, null, msgs);
-			if (newPropagator != null)
-				msgs = ((InternalEObject)newPropagator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR, null, msgs);
-			msgs = basicSetPropagator(newPropagator, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR, newPropagator, newPropagator));
+	public SpacecraftState propagate(Date targetDate) throws Exception {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<SpacecraftState> getSpacecraftStates(Date startDate, Date endDate, double timeInterval) throws Exception {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isDateInValidRange(Date date) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -171,10 +224,10 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
-				return basicSetInitialOrbit(null, msgs);
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
-				return basicSetPropagator(null, msgs);
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME:
+				return basicSetReferenceFrame(null, msgs);
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__ATTITUDE_PROVIDER:
+				return ((InternalEList<?>)getAttitudeProvider()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -187,10 +240,14 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
-				return getInitialOrbit();
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
-				return getPropagator();
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__FROM_VALID_DATE:
+				return getFromValidDate();
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__TO_VALID_DATE:
+				return getToValidDate();
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME:
+				return getReferenceFrame();
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__ATTITUDE_PROVIDER:
+				return getAttitudeProvider();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -200,14 +257,16 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
-				setInitialOrbit((Orbit)newValue);
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME:
+				setReferenceFrame((AbstractFrame)newValue);
 				return;
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
-				setPropagator((AbstractOrbitPropagator)newValue);
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__ATTITUDE_PROVIDER:
+				getAttitudeProvider().clear();
+				getAttitudeProvider().addAll((Collection<? extends AttitudeProvider>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -221,11 +280,11 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
-				setInitialOrbit((Orbit)null);
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME:
+				setReferenceFrame((AbstractFrame)null);
 				return;
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
-				setPropagator((AbstractOrbitPropagator)null);
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__ATTITUDE_PROVIDER:
+				getAttitudeProvider().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -239,12 +298,94 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
-				return initialOrbit != null;
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
-				return propagator != null;
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__FROM_VALID_DATE:
+				return FROM_VALID_DATE_EDEFAULT == null ? getFromValidDate() != null : !FROM_VALID_DATE_EDEFAULT.equals(getFromValidDate());
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__TO_VALID_DATE:
+				return TO_VALID_DATE_EDEFAULT == null ? getToValidDate() != null : !TO_VALID_DATE_EDEFAULT.equals(getToValidDate());
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME:
+				return referenceFrame != null;
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__ATTITUDE_PROVIDER:
+				return attitudeProvider != null && !attitudeProvider.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == ValidityRangeProvider.class) {
+			switch (derivedFeatureID) {
+				case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__FROM_VALID_DATE: return ApogyCoreEnvironmentOrbitPackage.VALIDITY_RANGE_PROVIDER__FROM_VALID_DATE;
+				case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__TO_VALID_DATE: return ApogyCoreEnvironmentOrbitPackage.VALIDITY_RANGE_PROVIDER__TO_VALID_DATE;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == ValidityRangeProvider.class) {
+			switch (baseFeatureID) {
+				case ApogyCoreEnvironmentOrbitPackage.VALIDITY_RANGE_PROVIDER__FROM_VALID_DATE: return ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__FROM_VALID_DATE;
+				case ApogyCoreEnvironmentOrbitPackage.VALIDITY_RANGE_PROVIDER__TO_VALID_DATE: return ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__TO_VALID_DATE;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == ValidityRangeProvider.class) {
+			switch (baseOperationID) {
+				case ApogyCoreEnvironmentOrbitPackage.VALIDITY_RANGE_PROVIDER___IS_DATE_IN_VALID_RANGE__DATE: return ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL___IS_DATE_IN_VALID_RANGE__DATE;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL___PROPAGATE__DATE:
+				try {
+					return propagate((Date)arguments.get(0));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE:
+				try {
+					return getSpacecraftStates((Date)arguments.get(0), (Date)arguments.get(1), (Double)arguments.get(2));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL___IS_DATE_IN_VALID_RANGE__DATE:
+				return isDateInValidRange((Date)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //OrbitModelImpl

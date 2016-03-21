@@ -537,7 +537,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 					{
 						try 
 						{				
-							SpacecraftState ss = getOrbitModel().getPropagator().propagate( getTimeSource().getTime());								
+							SpacecraftState ss = getOrbitModel().propagate( getTimeSource().getTime());								
 							GeographicCoordinates coord = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
 	
 							// Create latitude, longitude and elevation values.

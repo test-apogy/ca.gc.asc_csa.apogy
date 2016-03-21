@@ -76,7 +76,6 @@ public class SpacecraftStateItemProvider
 			addTimePropertyDescriptor(object);
 			addCoordinatesPropertyDescriptor(object);
 			addAttitudePropertyDescriptor(object);
-			addOrbitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -148,28 +147,6 @@ public class SpacecraftStateItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Orbit feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOrbitPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SpacecraftState_orbit_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftState_orbit_feature", "_UI_SpacecraftState_type"),
-				 ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
-				 false,
-				 false,
-				 false,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -183,7 +160,6 @@ public class SpacecraftStateItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES);
 			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE);
-			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT);
 		}
 		return childrenFeatures;
 	}
@@ -245,7 +221,6 @@ public class SpacecraftStateItemProvider
 				return;
 			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__COORDINATES:
 			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ATTITUDE:
-			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

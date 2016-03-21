@@ -91,11 +91,12 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 			case ApogyCoreEnvironmentOrbitEarthPackage.NADIR_POINTING_ATTITUDE_PROVIDER: return createNadirPointingAttitudeProvider();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE: return createEarthOrbitWorksite();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY: return createEarthOrbitSky();
+			case ApogyCoreEnvironmentOrbitEarthPackage.INITIAL_ORBIT_BASED_EARTH_ORBIT_MODEL: return createInitialOrbitBasedEarthOrbitModel();
 			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT: return createKeplerianEarthOrbit();
 			case ApogyCoreEnvironmentOrbitEarthPackage.CARTESIAN_EARTH_ORBIT: return createCartesianEarthOrbit();
 			case ApogyCoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK: return createConstantElevationMask();
 			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT_PROPAGATOR: return createKeplerianEarthOrbitPropagator();
-			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR: return createTLEEarthOrbitPropagator();
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_MODEL: return createTLEEarthOrbitModel();
 			case ApogyCoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR: return createURLBasedTLEEarthOrbitPropagator();
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE: return createTLE();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: return createEarthSurfaceLocation();
@@ -298,6 +299,16 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public InitialOrbitBasedEarthOrbitModel createInitialOrbitBasedEarthOrbitModel() {
+		InitialOrbitBasedEarthOrbitModelImpl initialOrbitBasedEarthOrbitModel = new InitialOrbitBasedEarthOrbitModelImpl();
+		return initialOrbitBasedEarthOrbitModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public KeplerianEarthOrbit createKeplerianEarthOrbit() {
 		KeplerianEarthOrbitImpl keplerianEarthOrbit = new KeplerianEarthOrbitImpl();
 		return keplerianEarthOrbit;
@@ -338,9 +349,9 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TLEEarthOrbitPropagator createTLEEarthOrbitPropagator() {
-		TLEEarthOrbitPropagatorImpl tleEarthOrbitPropagator = new TLEEarthOrbitPropagatorImpl();
-		return tleEarthOrbitPropagator;
+	public TLEEarthOrbitModel createTLEEarthOrbitModel() {
+		TLEEarthOrbitModelImpl tleEarthOrbitModel = new TLEEarthOrbitModelImpl();
+		return tleEarthOrbitModel;
 	}
 
 	/**

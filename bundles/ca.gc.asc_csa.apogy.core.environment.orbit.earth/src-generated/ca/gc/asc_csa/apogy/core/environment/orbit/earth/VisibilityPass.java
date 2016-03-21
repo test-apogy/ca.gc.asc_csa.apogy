@@ -16,7 +16,6 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,15 +49,15 @@ public interface VisibilityPass extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The Orbit Model that was used to compute the visibility.
+	 * The Earth Orbit Model that was used to compute the visibility.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' reference.
-	 * @see #setOrbitModel(OrbitModel)
+	 * @see #setOrbitModel(EarthOrbitModel)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPass_OrbitModel()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
 	 */
-	OrbitModel getOrbitModel();
+	EarthOrbitModel getOrbitModel();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getOrbitModel <em>Orbit Model</em>}' reference.
@@ -68,7 +67,7 @@ public interface VisibilityPass extends EObject {
 	 * @see #getOrbitModel()
 	 * @generated
 	 */
-	void setOrbitModel(OrbitModel value);
+	void setOrbitModel(EarthOrbitModel value);
 
 	/**
 	 * Returns the value of the '<em><b>Surface Location</b></em>' reference.

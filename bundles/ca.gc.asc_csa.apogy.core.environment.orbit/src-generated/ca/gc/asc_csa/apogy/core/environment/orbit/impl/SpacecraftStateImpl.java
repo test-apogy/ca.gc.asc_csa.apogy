@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates;
@@ -38,7 +37,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates;
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.SpacecraftStateImpl#getTime <em>Time</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.SpacecraftStateImpl#getCoordinates <em>Coordinates</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.SpacecraftStateImpl#getAttitude <em>Attitude</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.SpacecraftStateImpl#getOrbit <em>Orbit</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,16 +81,6 @@ public class SpacecraftStateImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected TimedStampedAngularCoordinates attitude;
-
-	/**
-	 * The cached value of the '{@link #getOrbit() <em>Orbit</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOrbit()
-	 * @generated
-	 * @ordered
-	 */
-	protected Orbit orbit;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -225,49 +213,6 @@ public class SpacecraftStateImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Orbit getOrbit() {
-		return orbit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetOrbit(Orbit newOrbit, NotificationChain msgs) {
-		Orbit oldOrbit = orbit;
-		orbit = newOrbit;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT, oldOrbit, newOrbit);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOrbit(Orbit newOrbit) {
-		if (newOrbit != orbit) {
-			NotificationChain msgs = null;
-			if (orbit != null)
-				msgs = ((InternalEObject)orbit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT, null, msgs);
-			if (newOrbit != null)
-				msgs = ((InternalEObject)newOrbit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT, null, msgs);
-			msgs = basicSetOrbit(newOrbit, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT, newOrbit, newOrbit));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -275,8 +220,6 @@ public class SpacecraftStateImpl extends MinimalEObjectImpl.Container implements
 				return basicSetCoordinates(null, msgs);
 			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ATTITUDE:
 				return basicSetAttitude(null, msgs);
-			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT:
-				return basicSetOrbit(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -295,8 +238,6 @@ public class SpacecraftStateImpl extends MinimalEObjectImpl.Container implements
 				return getCoordinates();
 			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ATTITUDE:
 				return getAttitude();
-			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT:
-				return getOrbit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -317,9 +258,6 @@ public class SpacecraftStateImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ATTITUDE:
 				setAttitude((TimedStampedAngularCoordinates)newValue);
-				return;
-			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT:
-				setOrbit((Orbit)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -342,9 +280,6 @@ public class SpacecraftStateImpl extends MinimalEObjectImpl.Container implements
 			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ATTITUDE:
 				setAttitude((TimedStampedAngularCoordinates)null);
 				return;
-			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT:
-				setOrbit((Orbit)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -363,8 +298,6 @@ public class SpacecraftStateImpl extends MinimalEObjectImpl.Container implements
 				return coordinates != null;
 			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ATTITUDE:
 				return attitude != null;
-			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT:
-				return orbit != null;
 		}
 		return super.eIsSet(featureID);
 	}
