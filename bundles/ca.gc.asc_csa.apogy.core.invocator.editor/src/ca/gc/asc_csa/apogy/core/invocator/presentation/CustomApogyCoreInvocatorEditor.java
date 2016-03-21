@@ -13,6 +13,8 @@ package ca.gc.asc_csa.apogy.core.invocator.presentation;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.EventObject;
 import java.util.HashMap;
@@ -20,9 +22,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.core.filesystem.EFS;
+import org.eclipse.core.filesystem.IFileStore;
 import org.eclipse.core.resources.IMarker;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -36,27 +45,33 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.viewers.DecoratingLabelProvider;
+import org.eclipse.jface.viewers.DoubleClickEvent;
+import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.graphics.Image;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.ui.properties.ExtendedTabbedPropertySheetPage;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.ISharedImages;
+import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
+import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.views.markers.MarkerItem;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.ui.properties.ExtendedTabbedPropertySheetPage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 /**
  * This is an example of a ApogyCoreInvocator model editor. <!-- begin-user-doc
@@ -196,14 +211,16 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
 	/**
 	 * @generated_NOT
 	 */
-	public String getContributorId() {
+	@Override
+    public String getContributorId() {
 		return ExtendedTabbedPropertySheetPage.PROPERTY_CONTRIBUTOR_ID;
 	}
 
 	/**
 	 * @generated_NOT
 	 */
-	protected void initializeEditingDomain() {
+	@Override
+    protected void initializeEditingDomain() {
 		super.initializeEditingDomain();
 		editingDomain.getCommandStack().addCommandStackListener(
 				getCommandStackListener());
@@ -417,7 +434,8 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
 	 * 
 	 * @generated_NOT
 	 */
-	public TabbedPropertySheetPage getPropertySheetPage() {
+	@Override
+    public TabbedPropertySheetPage getPropertySheetPage() {
 		propertySheetPage = new ExtendedTabbedPropertySheetPage(this,
 				adapterFactory) {
 			@Override
@@ -456,10 +474,101 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
 				}, PlatformUI.getWorkbench().getDecoratorManager()
 						.getLabelDecorator()));
 		
-		((TreeViewer)selectionViewer).getTree().setLinesVisible(true);
+		selectionViewer.getTree().setLinesVisible(true);
+
+        selectionViewer.addDoubleClickListener(new IDoubleClickListener() {
+
+            /**
+             * Double click listener that only reacts on JavaScriptProgram model
+             * element and open the referenced JavaScript File in the default
+             * editor.
+             */
+            @Override
+            public void doubleClick(DoubleClickEvent event) {
+                if (event.getSelection() instanceof TreeSelection) {
+                    TreeSelection treeSelection = (TreeSelection) event.getSelection();
+                    Object firstElement = treeSelection.getFirstElement();
+                    if (firstElement instanceof EObject && "JavaScriptProgramImpl".equals(firstElement.getClass().getSimpleName())) { //$NON-NLS-1$
+                        openJavaScriptEditor((EObject) firstElement);
+                    }
+                }
+
+            }
+        });
 
 		getSite().getPage().addSelectionListener(getSelectionListener());
 		executeDiagnostician();
+	}
+
+	/**
+	 * Look for the path of the JavaScript file and open it with the default
+	 * editor.
+	 * 
+	 * @param javaScriptProgram
+	 *            the JavaScriptProgram model element
+	 */
+	private void openJavaScriptEditor(EObject javaScriptProgram) {
+		String relativePath = (String) javaScriptProgram.eGet(javaScriptProgram.eClass().getEStructuralFeature("scriptPath")); //$NON-NLS-1$
+
+		if (relativePath == null || !relativePath.endsWith(".js")) { //$NON-NLS-1$
+			return;
+		}
+
+		// Only open (and eventually create) the JavaScript File if the path
+		// is non null and the file extension is ".js"
+		
+		IPath absolutePath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append(relativePath);
+		
+		File fileToOpen = new File(absolutePath.toOSString());
+
+		if (!(fileToOpen.exists() && fileToOpen.isFile())) {
+			// The file does not exist and need to be created
+			createJavaScriptFile(relativePath, fileToOpen);
+		}
+
+		if (fileToOpen.exists() && fileToOpen.isFile()) {
+			// Open the file with the default editor
+			IFileStore fileStore = EFS.getLocalFileSystem().getStore(fileToOpen.toURI());
+			IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+
+			try {
+				IDE.openEditorOnFileStore(page, fileStore);
+			} catch (PartInitException e) {
+				ApogyCoreInvocatorEditorPlugin.INSTANCE.log(e);
+			}
+		}
+	}
+
+	/**
+	 * Creation of the JavaScript file if non existing.
+	 * 
+	 * @param scriptPath
+	 *            path of the JavaScript file given in the model element
+	 * @param fileToOpen
+	 *            the JavaScript File
+	 */
+	private void createJavaScriptFile(String scriptPath, File fileToOpen) {
+		try {
+			File parent = fileToOpen.getParentFile();
+			if (parent != null) {
+				parent.mkdirs();
+			}
+			fileToOpen.createNewFile();
+			// The project need to be refreshed once the file is created in
+			// order to be visible to the user.
+			IProject[] projects = ResourcesPlugin.getWorkspace().getRoot().getProjects();
+			for (IProject iProject : projects) {
+				if (scriptPath.startsWith(iProject.getLocation().lastSegment())) {
+					try {
+						iProject.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
+					} catch (CoreException e) {
+						ApogyCoreInvocatorEditorPlugin.INSTANCE.log(e);
+					}
+				}
+			}
+		} catch (IOException e) {
+			ApogyCoreInvocatorEditorPlugin.INSTANCE.log(e);
+		}
 	}
 
 	/**
