@@ -12,6 +12,7 @@
 
 package ca.gc.asc_csa.apogy.core.programs.javascript;
 
+import java.io.FileReader;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,13 @@ import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram;
  *
  */
 public class ScriptExecutor {
+	
+	public static void execute(JavaScriptProgram program, boolean debug) throws Exception {
+		String relativePath = program.getScriptPath(); 
+		IPath absolutePath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append(relativePath);
+		Reader reader = new FileReader(absolutePath.toOSString());
+		execute(program, reader, debug);
+	}
 
 	/**
 	 * Executes a {@link JavaScriptProgram}.

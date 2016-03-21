@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="ca.gc.asc_csa.apogy.core.programs.javascript.ui.commands.ScriptExecutorHandler"
+            commandId="ca.gc.asc_csa.apogy.core.programs.javascript.ui.scriptExecutor">
+         <enabledWhen>
+            <test
+                  forcePluginActivation="true"
+                  property="ca.gc.asc_csa.apogy.core.programs.javascript.ui.JavaScriptProgramTester">
+            </test>
+            <!--instanceof
+                  value="ca.gc.asc_csa.apogy.core.programs.javascript.ProgramJavascript">
+            </instanceof-->
+         </enabledWhen>
+      </handler>
+      <handler
+            class="ca.gc.asc_csa.apogy.core.programs.javascript.ui.commands.ScriptExecutorDebugHandler"
+            commandId="ca.gc.asc_csa.apogy.core.programs.javascript.ui.scriptExecutorDebug">
+         <enabledWhen>
+            <test
+                  forcePluginActivation="true"
+                  property="ca.gc.asc_csa.apogy.core.programs.javascript.ui.JavaScriptProgramTester">
+            </test>
+         </enabledWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Execute script"
+            id="ca.gc.asc_csa.apogy.core.programs.javascript.ui.scriptExecutor"
+            name="Execute script">
+      </command>
+      <command
+            description="Debug script"
+            id="ca.gc.asc_csa.apogy.core.programs.javascript.ui.scriptExecutorDebug"
+            name="Debug script">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.programs.javascript.ui.scriptExecutor"
+               label="Execute Script"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.programs.javascript.ui.scriptExecutorDebug"
+               label="Debug Script"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="ca.gc.asc_csa.apogy.core.programs.javascript.ui.testers.JavaScriptProgramTester"
+            id="ca.gc.asc_csa.apogy.core.programs.javascript.ui.JavaScriptProgramTester"
+            namespace="ca.gc.asc_csa.apogy.core.programs.javascript.ui"
+            properties="JavaScriptProgramTester"
+            type="java.lang.Object">
+      </propertyTester>
+   </extension>
+
+</plugin>
