@@ -27,9 +27,8 @@ import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
 import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
@@ -204,33 +203,33 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 
 	@Override
 	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate,
-			ElevationMask elevationMask) throws Exception {	
+			ElevationMask elevationMask) throws Exception {
 		List<VisibilityPass> visibilityPasses = new ArrayList<VisibilityPass>();
 
-		if (request instanceof ImageConstellationRequest){
+		if (request instanceof ImageConstellationRequest) {
 			ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest) request;
-			EarthSurfaceLocation location = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createEarthSurfaceLocation("Dummy", "Dummy", imageConstellationRequest.getLongitude(), imageConstellationRequest.getLatitude(), imageConstellationRequest.getElevation());
-		
-			for (Satellite satellite: getConstellationState().getSatellitesList().getSatellites()){
-				if (satellite.getOrbitModel().getPropagator() instanceof EarthOrbitPropagator){
-					EarthOrbitPropagator propagator = (EarthOrbitPropagator) satellite.getOrbitModel().getPropagator();
-		
-					List<VisibilityPass> potentialVisibilityPasses = propagator.getTargetPasses(location, startDate, endDate, elevationMask);					
-					for (VisibilityPass pass: potentialVisibilityPasses){
-						if (isValid(pass)){
-							visibilityPasses.add(pass);
-						}
+			EarthSurfaceLocation location = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createEarthSurfaceLocation(
+					"Dummy", "Dummy", imageConstellationRequest.getLongitude(), imageConstellationRequest.getLatitude(),
+					imageConstellationRequest.getElevation());
+
+			for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
+				List<VisibilityPass> potentialVisibilityPasses = satellite.getOrbitModel().getTargetPasses(location,
+						startDate, endDate, elevationMask);
+				for (VisibilityPass pass : potentialVisibilityPasses) {
+					if (isValid(pass)) {
+						visibilityPasses.add(pass);
 					}
 				}
-			}			
+			}
 		}
-		
-		SortedSet<VisibilityPass> sortedVisibilityPasses = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.getVisibilityPassSortedByStartDate(visibilityPasses);		
+
+		SortedSet<VisibilityPass> sortedVisibilityPasses = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE
+				.getVisibilityPassSortedByStartDate(visibilityPasses);
 		return sortedVisibilityPasses;
 	}
 
 	@Override
-	public Satellite getSatellite(OrbitModel orbitModel) {
+	public Satellite getSatellite(EarthOrbitModel orbitModel) {
 		Satellite result = null;
 
 		if (getConstellationState().getSatellitesList() != null) {

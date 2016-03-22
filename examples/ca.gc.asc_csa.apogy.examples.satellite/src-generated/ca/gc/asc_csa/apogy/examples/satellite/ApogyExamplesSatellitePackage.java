@@ -569,7 +569,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL = 2;
+	int ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__EARTHORBITMODEL = 2;
 
 	/**
 	 * The operation id for the '<em>Plan</em>' operation.
@@ -723,7 +723,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL = ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL;
+	int DEFAULT_CONSTELLATION_PLANNER___GET_SATELLITE__EARTHORBITMODEL = ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__EARTHORBITMODEL;
 
 	/**
 	 * The operation id for the '<em>Plan</em>' operation.
@@ -2171,14 +2171,14 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EOperation getAbstractConstellationPlanner__IsValid__VisibilityPass();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel) <em>Get Satellite</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Satellite</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel)
 	 * @generated
 	 */
-	EOperation getAbstractConstellationPlanner__GetSatellite__OrbitModel();
+	EOperation getAbstractConstellationPlanner__GetSatellite__EarthOrbitModel();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#plan() <em>Plan</em>}' operation.
@@ -2987,7 +2987,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL = eINSTANCE.getAbstractConstellationPlanner__GetSatellite__OrbitModel();
+		EOperation ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__EARTHORBITMODEL = eINSTANCE.getAbstractConstellationPlanner__GetSatellite__EarthOrbitModel();
 
 		/**
 		 * The meta object literal for the '<em><b>Plan</b></em>' operation.

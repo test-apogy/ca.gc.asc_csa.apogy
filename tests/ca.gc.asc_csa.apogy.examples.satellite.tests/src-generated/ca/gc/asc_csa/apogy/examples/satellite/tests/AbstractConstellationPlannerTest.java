@@ -26,7 +26,7 @@ import junit.framework.TestCase;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getTargetPasses(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask) <em>Get Target Passes</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isValid(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass) <em>Is Valid</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel) <em>Get Satellite</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#plan() <em>Plan</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#validate() <em>Validate</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#sortRequests(java.util.List) <em>Sort Requests</em>}</li>
@@ -103,13 +103,13 @@ public abstract class AbstractConstellationPlannerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel) <em>Get Satellite</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getSatellite(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel)
 	 * @generated
 	 */
-	public void testGetSatellite__OrbitModel() {
+	public void testGetSatellite__EarthOrbitModel() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
