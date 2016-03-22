@@ -662,11 +662,6 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 		{						
 			// Start orbit propagation.
 			propagator.propagate(new AbsoluteDate(startAbsoluteDate, duration));
-			AbsoluteDate absoluteDateStartDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
-			
-			// Adds the start date state at the beginning of the list.			
-			SpacecraftState startState = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createSpacecraftState(null, propagator.propagate(absoluteDateStartDate));
-			states.add(0, startState);
 			
 			// Adds the end date state at the end of the list.
 			AbsoluteDate absoluteDateEndDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);

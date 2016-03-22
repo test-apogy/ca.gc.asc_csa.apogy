@@ -132,6 +132,9 @@ public class TLEEarthOrbitModelTest extends EarthOrbitModelTest {
 			Date fromDate = getFixture().getFromValidDate();
 			Date toDate = new Date(fromDate.getTime() + 60 * 60 * 1000);		
 	
+			System.out.println("From Date : " + fromDate);
+			System.out.println("To Date   : " + toDate);
+			
 			List<SpacecraftState> states = getFixture().getSpacecraftStates(fromDate, toDate, 60);
 			assertNotNull(states);
 			assertTrue(states.size() > 0);
@@ -184,6 +187,8 @@ public class TLEEarthOrbitModelTest extends EarthOrbitModelTest {
 					System.out.println("\t Latitude (deg)  : " + Math.toDegrees(position.getSpacecraftCoordinates().getLatitude()));
 					System.out.println("\t Longitude (deg) : " + Math.toDegrees(position.getSpacecraftCoordinates().getLongitude()));
 				}
+				
+				i++;
 			}
 		}
 		catch(Throwable t)
@@ -229,6 +234,8 @@ public class TLEEarthOrbitModelTest extends EarthOrbitModelTest {
 					System.out.println("\t Longitude (deg) : " + Math.toDegrees(position.getSpacecraftCoordinates().getLongitude()));
 					System.out.println();
 				}
+				
+				i++;
 				System.out.println();
 			}
 		}
