@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.examples.satellite;
 
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,12 +47,12 @@ public interface Satellite extends Named {
 	 * Refers to the {@link OrbitModel}.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' reference.
-	 * @see #setOrbitModel(OrbitModel)
+	 * @see #setOrbitModel(EarthOrbitModel)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellite_OrbitModel()
 	 * @model required="true"
 	 * @generated
 	 */
-	OrbitModel getOrbitModel();
+	EarthOrbitModel getOrbitModel();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getOrbitModel <em>Orbit Model</em>}' reference.
@@ -61,7 +62,7 @@ public interface Satellite extends Named {
 	 * @see #getOrbitModel()
 	 * @generated
 	 */
-	void setOrbitModel(OrbitModel value);
+	void setOrbitModel(EarthOrbitModel value);
 
 	/**
 	 * Returns the value of the '<em><b>Maximum Roll</b></em>' attribute.

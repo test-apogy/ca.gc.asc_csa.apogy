@@ -18,8 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 
@@ -67,7 +66,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	 * @generated
 	 * @ordered
 	 */
-	protected OrbitModel orbitModel;
+	protected EarthOrbitModel orbitModel;
 
 	/**
 	 * The default value of the '{@link #getMaximumRoll() <em>Maximum Roll</em>}' attribute.
@@ -134,10 +133,10 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrbitModel getOrbitModel() {
+	public EarthOrbitModel getOrbitModel() {
 		if (orbitModel != null && orbitModel.eIsProxy()) {
 			InternalEObject oldOrbitModel = (InternalEObject)orbitModel;
-			orbitModel = (OrbitModel)eResolveProxy(oldOrbitModel);
+			orbitModel = (EarthOrbitModel)eResolveProxy(oldOrbitModel);
 			if (orbitModel != oldOrbitModel) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, oldOrbitModel, orbitModel));
@@ -151,7 +150,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrbitModel basicGetOrbitModel() {
+	public EarthOrbitModel basicGetOrbitModel() {
 		return orbitModel;
 	}
 
@@ -160,8 +159,8 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrbitModel(OrbitModel newOrbitModel) {
-		OrbitModel oldOrbitModel = orbitModel;
+	public void setOrbitModel(EarthOrbitModel newOrbitModel) {
+		EarthOrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, oldOrbitModel, orbitModel));
@@ -219,7 +218,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 				setName((String)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
-				setOrbitModel((OrbitModel)newValue);
+				setOrbitModel((EarthOrbitModel)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				setMaximumRoll((Double)newValue);
@@ -240,7 +239,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 				setName(NAME_EDEFAULT);
 				return;
 			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
-				setOrbitModel((OrbitModel)null);
+				setOrbitModel((EarthOrbitModel)null);
 				return;
 			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				setMaximumRoll(MAXIMUM_ROLL_EDEFAULT);

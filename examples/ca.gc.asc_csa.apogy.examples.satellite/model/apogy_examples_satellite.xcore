@@ -37,13 +37,13 @@ import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.common.emf.Timed
 import ca.gc.asc_csa.apogy.common.images.EImage
+import ca.gc.asc_csa.apogy.core.Exception
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass
-import ca.gc.asc_csa.apogy.core.Exception
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask
 
 type List<T> wraps java.util.List
 type SortedSet<T> wraps java.util.SortedSet 
@@ -152,7 +152,7 @@ abstract class AbstractConstellation extends Named, Described{
 	op List<AbstractConstellationRequest> importConstellationRequests(String url)	
 }
 
-/*
+/*ca.gc.asc_csa.apogy.examples.satellite
  * Default Constellation Implementation Class.
  * 
  * By default {@link AbstractConstellation#newUID} returns {@link DigitUID}.
@@ -216,8 +216,8 @@ abstract class AbstractConstellationPlanner{
 	 * Returns the satellite associated with the specified {@link OrbitModel}.
 	 * @param orbitModel The specified {@link OrbitModel}.
 	 * @return The Satellite associated with the specified {@link OrbitModel}, null if none is found.
-	 */
-	op Satellite getSatellite(OrbitModel orbitModel)		
+	 */	 
+	op Satellite getSatellite(EarthOrbitModel orbitModel)		
 		
 	/*
 	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest} 
@@ -348,7 +348,7 @@ class Satellite extends Named{
 	/*
 	 * Refers to the {@link OrbitModel}.
 	 */
-	refers OrbitModel[1] orbitModel
+	refers EarthOrbitModel[1] orbitModel
 	
 	/*
 	 * Maximum Satellite Roll.

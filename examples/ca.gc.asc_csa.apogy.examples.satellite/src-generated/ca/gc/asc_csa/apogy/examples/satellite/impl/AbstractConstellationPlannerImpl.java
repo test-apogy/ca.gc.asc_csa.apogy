@@ -12,7 +12,6 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Comparator;
 import java.util.Date;
@@ -29,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
@@ -376,7 +376,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	abstract public Satellite getSatellite(OrbitModel orbitModel);
+	abstract public Satellite getSatellite(EarthOrbitModel orbitModel);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -589,8 +589,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				}
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS:
 				return isValid((VisibilityPass)arguments.get(0));
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__ORBITMODEL:
-				return getSatellite((OrbitModel)arguments.get(0));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__EARTHORBITMODEL:
+				return getSatellite((EarthOrbitModel)arguments.get(0));
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___PLAN:
 				try {
 					plan();

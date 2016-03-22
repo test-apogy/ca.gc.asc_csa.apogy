@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import java.util.Comparator;
@@ -258,7 +259,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @model unique="false" orbitModelUnique="false"
 	 * @generated
 	 */
-	Satellite getSatellite(OrbitModel orbitModel);
+	Satellite getSatellite(EarthOrbitModel orbitModel);
 
 	/**
 	 * <!-- begin-user-doc -->

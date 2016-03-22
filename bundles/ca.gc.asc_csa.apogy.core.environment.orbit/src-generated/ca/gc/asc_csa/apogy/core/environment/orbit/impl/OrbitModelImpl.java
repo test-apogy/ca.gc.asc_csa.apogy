@@ -193,7 +193,7 @@ public abstract class OrbitModelImpl extends AbstractOrbitModelImpl implements O
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	public abstract boolean isDateInValidRange(Date date);
 
