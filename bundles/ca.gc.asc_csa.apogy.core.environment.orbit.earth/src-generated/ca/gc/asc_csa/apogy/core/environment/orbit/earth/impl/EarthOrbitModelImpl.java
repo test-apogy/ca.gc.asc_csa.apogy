@@ -13,6 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
@@ -72,6 +73,12 @@ public abstract class EarthOrbitModelImpl extends OrbitModelImpl implements Eart
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public List<SpacecraftState> getSpacecraftStates(Date startDate, Date endDate, double timeInterval) throws Exception 
+	{		
+		return ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.getSpacecraftStates(this.getOreKitPropagator(), startDate, endDate, timeInterval);
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

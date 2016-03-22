@@ -21,7 +21,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.orekit.propagation.analytical.tle.TLEPropagator;
+import org.orekit.time.AbsoluteDate;
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitModel;
@@ -290,5 +294,18 @@ public class TLEEarthOrbitModelImpl extends EarthOrbitModelImpl implements TLEEa
 		}
 		
 		return null;
+	}
+
+	@Override
+	public SpacecraftState propagate(Date targetDate) throws Exception 
+	{
+		AbsoluteDate absoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(targetDate);
+		return ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createSpacecraftState(null,getOreKitPropagator().propagate(absoluteDate));
+	}
+
+	@Override
+	public boolean isDateInValidRange(Date date) 
+	{
+		return ApogyCoreEnvironmentOrbitFacade.INSTANCE.isDateInValidRange(getFromValidDate(), getToValidDate(), date);
 	}		
 } //TLEEarthOrbitModelImpl

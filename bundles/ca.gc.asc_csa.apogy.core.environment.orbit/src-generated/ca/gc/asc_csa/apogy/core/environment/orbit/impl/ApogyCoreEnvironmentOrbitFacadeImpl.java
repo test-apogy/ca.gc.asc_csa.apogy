@@ -63,12 +63,11 @@ public class ApogyCoreEnvironmentOrbitFacadeImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public boolean isDateInValidRange(Date fromDate, Date toDate, Date date) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public boolean isDateInValidRange(Date fromDate, Date toDate, Date date) 
+	{
+		return (date.getTime() <= toDate.getTime() && date.getTime() >= fromDate.getTime());
 	}
 
 	/**

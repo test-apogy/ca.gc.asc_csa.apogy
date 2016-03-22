@@ -37,7 +37,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitModel()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface OrbitModel extends AbstractOrbitModel, ValidityRangeProvider {

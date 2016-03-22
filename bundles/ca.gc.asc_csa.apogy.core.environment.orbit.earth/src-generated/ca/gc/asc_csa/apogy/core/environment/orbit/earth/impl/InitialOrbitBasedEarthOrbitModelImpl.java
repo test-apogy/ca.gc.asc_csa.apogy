@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
@@ -308,5 +309,50 @@ public class InitialOrbitBasedEarthOrbitModelImpl extends EarthOrbitModelImpl im
 			throws Exception 
 	{	
 		return getPropagator().getSpacecraftStates(startDate, endDate, timeInterval);
+	}
+
+	@Override
+	public Date getFromValidDate() 
+	{
+		if(getPropagator() != null)
+		{
+			return getPropagator().getFromValidDate();
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+	@Override
+	public Date getToValidDate() 
+	{
+		if(getPropagator() != null)
+		{
+			return getPropagator().getToValidDate();
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+	@Override
+	public SpacecraftState propagate(Date targetDate) throws Exception 
+	{
+		if(getPropagator() != null)
+		{
+			return getPropagator().propagate(targetDate);
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+	@Override
+	public boolean isDateInValidRange(Date date) 
+	{
+		return ApogyCoreEnvironmentOrbitFacade.INSTANCE.isDateInValidRange(getFromValidDate(), getToValidDate(), date);
 	}
 } //InitialOrbitBasedEarthOrbitModelImpl

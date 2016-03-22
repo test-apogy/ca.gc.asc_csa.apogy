@@ -624,9 +624,12 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 			public void handleStep(org.orekit.propagation.SpacecraftState spacecraftState,	boolean arg1) throws PropagationException 
 			{		
 				try
-				{
+				{										
 					// Checks that the state falls inside the specified range.
 					Date date = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(spacecraftState.getDate());
+					
+					System.out.println(date);
+					
 					if(date.getTime() >= startDate.getTime() && endDate.getTime() >= date.getTime())
 					{	
 						Orbit orbit = null;

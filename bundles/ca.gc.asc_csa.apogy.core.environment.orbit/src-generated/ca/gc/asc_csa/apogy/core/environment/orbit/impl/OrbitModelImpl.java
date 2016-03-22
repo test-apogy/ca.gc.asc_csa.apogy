@@ -49,7 +49,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
  *
  * @generated
  */
-public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel {
+public abstract class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel {
 	/**
 	 * The default value of the '{@link #getFromValidDate() <em>From Valid Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -109,24 +109,16 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT 
 	 */
-	public Date getFromValidDate() {
-		// TODO: implement this method to return the 'From Valid Date' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+	public abstract Date getFromValidDate();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public Date getToValidDate() {
-		// TODO: implement this method to return the 'To Valid Date' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+	public abstract Date getToValidDate();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,35 +178,24 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public SpacecraftState propagate(Date targetDate) throws Exception {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+	public abstract SpacecraftState propagate(Date targetDate) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public abstract List<SpacecraftState> getSpacecraftStates(Date startDate, Date endDate, double timeInterval) throws Exception;
+
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<SpacecraftState> getSpacecraftStates(Date startDate, Date endDate, double timeInterval) throws Exception {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isDateInValidRange(Date date) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+	public abstract boolean isDateInValidRange(Date date);
 
 	/**
 	 * <!-- begin-user-doc -->
