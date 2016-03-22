@@ -17,6 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
@@ -124,6 +125,30 @@ public class TLEEarthOrbitModelTest extends EarthOrbitModelTest {
 	}
 
 	@Override
+	public void testGetSpacecraftStates__Date_Date_double() 
+	{
+		try
+		{
+			Date fromDate = getFixture().getFromValidDate();
+			Date toDate = new Date(fromDate.getTime() + 60 * 60 * 1000);		
+	
+			List<SpacecraftState> states = getFixture().getSpacecraftStates(fromDate, toDate, 60);
+			assertNotNull(states);
+			assertTrue(states.size() > 0);
+			
+			for(SpacecraftState ss : states)
+			{
+				System.out.println(ss.getTime() + ", " + ss.getCoordinates());
+			}		
+		}
+		catch(Throwable t)
+		{
+			t.printStackTrace();
+			fail(t.getMessage());
+		}
+	}
+	
+	@Override
 	public void testGetGroundStationPasses__GroundStation_Date_Date() 
 	{
 		try
@@ -202,7 +227,9 @@ public class TLEEarthOrbitModelTest extends EarthOrbitModelTest {
 					System.out.println("\t Altitude (km)   : " + position.getSpacecraftCoordinates().getElevation() / 1000.0);
 					System.out.println("\t Latitude (deg)  : " + Math.toDegrees(position.getSpacecraftCoordinates().getLatitude()));
 					System.out.println("\t Longitude (deg) : " + Math.toDegrees(position.getSpacecraftCoordinates().getLongitude()));
+					System.out.println();
 				}
+				System.out.println();
 			}
 		}
 		catch(Throwable t)

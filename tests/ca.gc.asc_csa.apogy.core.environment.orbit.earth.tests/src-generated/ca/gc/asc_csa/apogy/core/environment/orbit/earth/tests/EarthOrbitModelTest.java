@@ -123,5 +123,9 @@ public abstract class EarthOrbitModelTest extends TestCase {
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
-
+	
+	public void testGetSpacecraftStates__Date_Date_double()
+	{
+		fail();
+	}
 } //EarthOrbitModelTest

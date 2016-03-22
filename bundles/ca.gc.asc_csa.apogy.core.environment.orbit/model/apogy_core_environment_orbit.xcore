@@ -198,11 +198,12 @@ interface ValidityRangeProvider
 	op boolean isDateInValidRange(EDate date)
 }
 
+
 /*
  * Class that defines an orbit model. An orbit model specifies both initial condition (through the initial Orbit), and 
  * a propagation method (through the AbstractOrbitPropagator).
  */
-class OrbitModel extends AbstractOrbitModel, ValidityRangeProvider
+abstract class OrbitModel extends AbstractOrbitModel, ValidityRangeProvider
 {
 	/*
 	 * The frame in which the orbit is propagated.

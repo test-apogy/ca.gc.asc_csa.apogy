@@ -52,7 +52,6 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
@@ -444,7 +443,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 		
 		try
 		{
-			Propagator propagator = ((EarthOrbitPropagator) pass.getOrbitModel()).getOreKitPropagator();
+			Propagator propagator = pass.getOrbitModel().getOreKitPropagator();
 			Frame inertialFrame = FramesFactory.getEME2000();
 			LocalOrbitalFrame lof = new LocalOrbitalFrame(inertialFrame, LOFType.QSW, propagator, "QSW");
 			GeographicCoordinates coord = pass.getSurfaceLocation();
