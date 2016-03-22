@@ -151,12 +151,18 @@ public class GeographicCoordinatesItemProvider extends ItemProviderAdapter imple
 	public String getText(Object object) {
 		GeographicCoordinates geographicCoordinates = (GeographicCoordinates) object;
 		String string = getString("_UI_GeographicCoordinates_type");
-		string += " (" + decimalFormat.format(Math.toDegrees(geographicCoordinates.getLatitude())) + DEGREE_STRING;
+		string += getSuffix(geographicCoordinates);
+		return string;
+	}
+
+	protected String getSuffix(GeographicCoordinates geographicCoordinates)
+	{
+		String string = " (" + decimalFormat.format(Math.toDegrees(geographicCoordinates.getLatitude())) + DEGREE_STRING;
 		string += ", ";
 		string += decimalFormat.format(Math.toDegrees(geographicCoordinates.getLongitude())) + DEGREE_STRING + ")";
 		return string;
 	}
-
+	
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.

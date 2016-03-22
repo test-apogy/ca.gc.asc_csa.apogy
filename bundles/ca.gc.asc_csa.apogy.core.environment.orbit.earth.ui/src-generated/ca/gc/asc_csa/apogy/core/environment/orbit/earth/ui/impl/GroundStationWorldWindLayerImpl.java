@@ -446,6 +446,10 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 							break;
 						}
 					}
+					else if(msg.getNotifier() instanceof ElevationMask)
+					{
+						if(isAutoUpdateEnabled()) update();
+					}
 					else if(msg.getNotifier() instanceof GeographicCoordinates)
 					{
 						if(isAutoUpdateEnabled()) update();
@@ -479,6 +483,10 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 								if(isAutoUpdateEnabled()) update();
 							break;
 						}
+					}
+					else
+					{
+						if(isAutoUpdateEnabled()) update();
 					}
 				}
 			};

@@ -34,8 +34,8 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbi
  * <!-- end-user-doc -->
  * @generated
  */
-public class EarthSurfaceLocationItemProvider 
-	extends GeographicCoordinatesItemProvider {
+public class EarthSurfaceLocationItemProvider extends GeographicCoordinatesItemProvider 
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -122,14 +122,22 @@ public class EarthSurfaceLocationItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((EarthSurfaceLocation)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_EarthSurfaceLocation_type") :
-			getString("_UI_EarthSurfaceLocation_type") + " " + label;
+	public String getText(Object object) 
+	{
+		EarthSurfaceLocation earthSurfaceLocation = (EarthSurfaceLocation) object;
+		
+		String label = earthSurfaceLocation.getName();			
+		if(label == null || label.length() == 0)
+		{
+			label = getString("_UI_EarthSurfaceLocation_type");
+		}
+		
+		label += getSuffix(earthSurfaceLocation);
+		
+		return label;
 	}
 	
 
