@@ -111,6 +111,9 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 				
 		/* For each request finds the target passes available within the period defined. */
 		Iterator<AbstractConstellationRequest> requests = getConstellationRequestsList().getConstellationRequests().iterator();
+		
+		// FIXME SortRequests not working.
+		// FIXME Improve Logging.
 //		Iterator<AbstractConstellationRequest> requests = sortRequests(getConstellationRequestsList().getConstellationRequests()).iterator();
 		while (requests.hasNext()){
 			AbstractConstellationRequest request = requests.next();
@@ -176,6 +179,8 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 	public boolean isValid(VisibilityPass visibilityPass) 
 	{
 		return true;
+		
+		// FIXME re-enable is valid.
 		
 //		/* Check if there is a satellite associated to the OrbitModel. */
 //		Satellite satellite = getSatellite(visibilityPass.getOrbitModel());		
