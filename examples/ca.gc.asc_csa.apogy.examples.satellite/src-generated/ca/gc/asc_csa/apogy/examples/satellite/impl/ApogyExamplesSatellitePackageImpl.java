@@ -45,6 +45,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
 import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
 import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
@@ -158,6 +159,13 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	private EClass abstractConstellationRequestEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass observationConstellationRequestEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -759,6 +767,24 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getObservationConstellationRequest() {
+		return observationConstellationRequestEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getObservationConstellationRequest_Location() {
+		return (EReference)observationConstellationRequestEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getImageConstellationRequest() {
 		return imageConstellationRequestEClass;
 	}
@@ -1163,6 +1189,9 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEAttribute(abstractConstellationRequestEClass, ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY);
 		createEAttribute(abstractConstellationRequestEClass, ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS);
 
+		observationConstellationRequestEClass = createEClass(OBSERVATION_CONSTELLATION_REQUEST);
+		createEReference(observationConstellationRequestEClass, OBSERVATION_CONSTELLATION_REQUEST__LOCATION);
+
 		imageConstellationRequestEClass = createEClass(IMAGE_CONSTELLATION_REQUEST);
 		createEReference(imageConstellationRequestEClass, IMAGE_CONSTELLATION_REQUEST__IMAGE);
 
@@ -1266,8 +1295,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		defaultConstellationCommandPlanEClass.getESuperTypes().add(this.getAbstractConstellationCommandPlan());
 		constellationRequestsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		constellationRequestsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		imageConstellationRequestEClass.getESuperTypes().add(this.getAbstractConstellationRequest());
-		imageConstellationRequestEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
+		observationConstellationRequestEClass.getESuperTypes().add(this.getAbstractConstellationRequest());
+		imageConstellationRequestEClass.getESuperTypes().add(this.getObservationConstellationRequest());
 		satelliteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		abstractSatelliteCommandEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 		abstractRequestBasedSatelliteCommandEClass.getESuperTypes().add(this.getAbstractSatelliteCommand());
@@ -1387,6 +1416,9 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEReference(getAbstractConstellationRequest_Uid(), this.getAbstractUID(), null, "uid", null, 0, 1, AbstractConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractConstellationRequest_OrderPriority(), this.getConstellationRequestPriority(), "orderPriority", "NORMAL", 0, 1, AbstractConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractConstellationRequest_OrderStatus(), this.getConstellationRequestStatus(), "orderStatus", "NEW", 0, 1, AbstractConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(observationConstellationRequestEClass, ObservationConstellationRequest.class, "ObservationConstellationRequest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getObservationConstellationRequest_Location(), theApogyCoreEnvironmentOrbitEarthPackage.getEarthSurfaceLocation(), null, "location", null, 0, 1, ObservationConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageConstellationRequestEClass, ImageConstellationRequest.class, "ImageConstellationRequest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImageConstellationRequest_Image(), this.getOrbitalImage(), null, "image", null, 0, 1, ImageConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1758,6 +1790,18 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		   source, 
 		   new String[] {
 			 "documentation", "Order Status."
+		   });	
+		addAnnotation
+		  (observationConstellationRequestEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Class that defines a Earth Observation request."
+		   });	
+		addAnnotation
+		  (getObservationConstellationRequest_Location(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the location of the observation."
 		   });	
 		addAnnotation
 		  (imageConstellationRequestEClass, 

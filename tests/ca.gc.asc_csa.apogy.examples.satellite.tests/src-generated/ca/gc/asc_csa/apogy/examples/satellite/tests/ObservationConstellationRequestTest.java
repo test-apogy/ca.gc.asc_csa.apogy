@@ -14,17 +14,17 @@
 package ca.gc.asc_csa.apogy.examples.satellite.tests;
 
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
-import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Image Constellation Request</b></em>'.
+ * A test case for the model object '<em><b>Observation Constellation Request</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class ImageConstellationRequestTest extends ObservationConstellationRequestTest {
+public class ObservationConstellationRequestTest extends AbstractConstellationRequestTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -32,28 +32,28 @@ public class ImageConstellationRequestTest extends ObservationConstellationReque
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(ImageConstellationRequestTest.class);
+		TestRunner.run(ObservationConstellationRequestTest.class);
 	}
 
 	/**
-	 * Constructs a new Image Constellation Request test case with the given name.
+	 * Constructs a new Observation Constellation Request test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ImageConstellationRequestTest(String name) {
+	public ObservationConstellationRequestTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Image Constellation Request test case.
+	 * Returns the fixture for this Observation Constellation Request test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected ImageConstellationRequest getFixture() {
-		return (ImageConstellationRequest)fixture;
+	protected ObservationConstellationRequest getFixture() {
+		return (ObservationConstellationRequest)fixture;
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class ImageConstellationRequestTest extends ObservationConstellationReque
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest());
+		setFixture(ApogyExamplesSatelliteFactory.eINSTANCE.createObservationConstellationRequest());
 	}
 
 	/**
@@ -78,4 +78,4 @@ public class ImageConstellationRequestTest extends ObservationConstellationReque
 		setFixture(null);
 	}
 
-} //ImageConstellationRequestTest
+} //ObservationConstellationRequestTest

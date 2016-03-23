@@ -41,6 +41,7 @@ import ca.gc.asc_csa.apogy.core.Exception
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass
@@ -304,10 +305,20 @@ abstract class AbstractConstellationRequest{
 }
 
 /*
+ * Class that defines a Earth Observation request. 
+ */
+class ObservationConstellationRequest extends AbstractConstellationRequest{
+	/*
+	 * Specifies the location of the observation.
+	 */
+	contains EarthSurfaceLocation location
+}
+
+/*
  * Class that documents a request to take an orbital image at a specific location.  
  * It also serves to store the status and the image obtained if any. 
  */
-class ImageConstellationRequest extends AbstractConstellationRequest, GeographicCoordinates{	
+class ImageConstellationRequest extends ObservationConstellationRequest{	
 	/*
 	 * Contains the {@link OrbitalImage} if the {@link ImageConstellationRequest} was successfully processed and retrieved.
 	 */

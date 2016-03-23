@@ -4,6 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
+ * 
  * Contributors:
  * Canadian Space Agency (CSA) - Initial API and implementation
  * -Pierre Allard (Pierre.Allard@canada.ca),
@@ -12,45 +13,49 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Image Constellation Request</b></em>'.
+ * An implementation of the model object '<em><b>Observation Constellation Request</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ImageConstellationRequestImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ObservationConstellationRequestImpl#getLocation <em>Location</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ImageConstellationRequestImpl extends ObservationConstellationRequestImpl implements ImageConstellationRequest {
+public class ObservationConstellationRequestImpl extends AbstractConstellationRequestImpl implements ObservationConstellationRequest {
 	/**
-	 * The cached value of the '{@link #getImage() <em>Image</em>}' containment reference.
+	 * The cached value of the '{@link #getLocation() <em>Location</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getImage()
+	 * @see #getLocation()
 	 * @generated
 	 * @ordered
 	 */
-	protected OrbitalImage image;
+	protected EarthSurfaceLocation location;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ImageConstellationRequestImpl() {
+	protected ObservationConstellationRequestImpl() {
 		super();
 	}
 
@@ -61,7 +66,7 @@ public class ImageConstellationRequestImpl extends ObservationConstellationReque
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ApogyExamplesSatellitePackage.Literals.IMAGE_CONSTELLATION_REQUEST;
+		return ApogyExamplesSatellitePackage.Literals.OBSERVATION_CONSTELLATION_REQUEST;
 	}
 
 	/**
@@ -69,8 +74,8 @@ public class ImageConstellationRequestImpl extends ObservationConstellationReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrbitalImage getImage() {
-		return image;
+	public EarthSurfaceLocation getLocation() {
+		return location;
 	}
 
 	/**
@@ -78,11 +83,11 @@ public class ImageConstellationRequestImpl extends ObservationConstellationReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetImage(OrbitalImage newImage, NotificationChain msgs) {
-		OrbitalImage oldImage = image;
-		image = newImage;
+	public NotificationChain basicSetLocation(EarthSurfaceLocation newLocation, NotificationChain msgs) {
+		EarthSurfaceLocation oldLocation = location;
+		location = newLocation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, oldImage, newImage);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION, oldLocation, newLocation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -93,18 +98,18 @@ public class ImageConstellationRequestImpl extends ObservationConstellationReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setImage(OrbitalImage newImage) {
-		if (newImage != image) {
+	public void setLocation(EarthSurfaceLocation newLocation) {
+		if (newLocation != location) {
 			NotificationChain msgs = null;
-			if (image != null)
-				msgs = ((InternalEObject)image).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, null, msgs);
-			if (newImage != null)
-				msgs = ((InternalEObject)newImage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, null, msgs);
-			msgs = basicSetImage(newImage, msgs);
+			if (location != null)
+				msgs = ((InternalEObject)location).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION, null, msgs);
+			if (newLocation != null)
+				msgs = ((InternalEObject)newLocation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION, null, msgs);
+			msgs = basicSetLocation(newLocation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, newImage, newImage));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION, newLocation, newLocation));
 	}
 
 	/**
@@ -115,8 +120,8 @@ public class ImageConstellationRequestImpl extends ObservationConstellationReque
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
-				return basicSetImage(null, msgs);
+			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION:
+				return basicSetLocation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -129,8 +134,8 @@ public class ImageConstellationRequestImpl extends ObservationConstellationReque
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
-				return getImage();
+			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION:
+				return getLocation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,8 +148,8 @@ public class ImageConstellationRequestImpl extends ObservationConstellationReque
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
-				setImage((OrbitalImage)newValue);
+			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION:
+				setLocation((EarthSurfaceLocation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,8 +163,8 @@ public class ImageConstellationRequestImpl extends ObservationConstellationReque
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
-				setImage((OrbitalImage)null);
+			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION:
+				setLocation((EarthSurfaceLocation)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -173,10 +178,10 @@ public class ImageConstellationRequestImpl extends ObservationConstellationReque
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
-				return image != null;
+			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION:
+				return location != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ImageConstellationRequestImpl
+} //ObservationConstellationRequestImpl

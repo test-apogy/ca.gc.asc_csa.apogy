@@ -168,11 +168,18 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST: {
+				ObservationConstellationRequest observationConstellationRequest = (ObservationConstellationRequest)theEObject;
+				T result = caseObservationConstellationRequest(observationConstellationRequest);
+				if (result == null) result = caseAbstractConstellationRequest(observationConstellationRequest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: {
 				ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest)theEObject;
 				T result = caseImageConstellationRequest(imageConstellationRequest);
+				if (result == null) result = caseObservationConstellationRequest(imageConstellationRequest);
 				if (result == null) result = caseAbstractConstellationRequest(imageConstellationRequest);
-				if (result == null) result = caseGeographicCoordinates(imageConstellationRequest);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -446,6 +453,21 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractConstellationRequest(AbstractConstellationRequest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Observation Constellation Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Observation Constellation Request</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObservationConstellationRequest(ObservationConstellationRequest object) {
 		return null;
 	}
 

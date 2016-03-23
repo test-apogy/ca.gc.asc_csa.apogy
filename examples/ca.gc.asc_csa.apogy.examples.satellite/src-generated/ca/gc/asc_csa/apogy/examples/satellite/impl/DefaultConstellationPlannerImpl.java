@@ -25,20 +25,16 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
-import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.Activator;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
-import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
@@ -112,12 +108,10 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 				
 		/* Clear the command plan. */
 		getConstellationCommandPlan().getConstellationCommands().clear();
-		
-		/* Sort requests. */
-		SortedSet<AbstractConstellationRequest> sortedRequests = sortRequests(getConstellationRequestsList().getConstellationRequests());
-		
+				
 		/* For each request finds the target passes available within the period defined. */
-		Iterator<AbstractConstellationRequest> requests = sortedRequests.iterator();
+		Iterator<AbstractConstellationRequest> requests = getConstellationRequestsList().getConstellationRequests().iterator();
+//		Iterator<AbstractConstellationRequest> requests = sortRequests(getConstellationRequestsList().getConstellationRequests()).iterator();
 		while (requests.hasNext()){
 			AbstractConstellationRequest request = requests.next();
 			SortedSet<VisibilityPass> sortedPasses = getTargetPasses(request, getStartDate(), getEndDate(), getElevationMask());
@@ -131,7 +125,10 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 				VisibilityPass pass = passesIterator.next();
 				
 				VisibilityPassBasedSatelliteCommand command = 
-						createVisibilityPassBasedSatelliteCommand(request, pass);						
+						createVisibilityPassBasedSatelliteCommand(request, pass);	
+				
+				System.out.println("DefaultConstellationPlannerImpl.plan()" + command);
+				
 				getConstellationCommandPlan().getConstellationCommands().add(command);
 			}			
 		}				
@@ -164,12 +161,11 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 			AbstractConstellationRequest request, VisibilityPass visibilityPass) {
 
 		VisibilityPassBasedSatelliteCommand command = null;		
-		if (request instanceof ImageConstellationRequest){			
+		if (request instanceof ObservationConstellationRequest){			
 			command = ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand();
 			command.setConstellationRequest(request);
 			command.setUid(EcoreUtil.copy(request.getUid()));
-			VisibilityPassSpacecraftPosition smallestCrossTrackAnglePosition = visibilityPass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
-			command.setTime(smallestCrossTrackAnglePosition.getTime());
+			command.setTime(visibilityPass.getStartTime());
 			command.setSatellite(getSatellite(visibilityPass.getOrbitModel()));
 			command.setVisibilityPass(EcoreUtil.copy(visibilityPass));
 		}	
@@ -179,26 +175,28 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 	@Override
 	public boolean isValid(VisibilityPass visibilityPass) 
 	{
-		/* Check if there is a satellite associated to the OrbitModel. */
-		Satellite satellite = getSatellite(visibilityPass.getOrbitModel());		
-		if (satellite == null) return false;
-
-		// Finds the closest point the satellite comes to the target in the pass.
-		VisibilityPassSpacecraftPosition closestPosition = visibilityPass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
-		if (closestPosition == null) return false;
+		return true;
 		
-		// Checks to see if the pass brings us close enough to the target.
-		if(Math.abs(closestPosition.getSpacecraftCrossTrackAngle()) > Math.abs(satellite.getMaximumRoll())) return false;
-				
-		// Gets the location of the target
-		double observerLongitude = visibilityPass.getSurfaceLocation().getLongitude();
-		double observerLatitude = visibilityPass.getSurfaceLocation().getLatitude();
-		
-		// Finds the horizontal coordinates of the sun at the target at the time of the closest approach.
-		HorizontalCoordinates sunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(closestPosition.getTime(), observerLongitude, observerLatitude);
-		
-		// Returns true if the sun is at least 10 degrees above the horizon.
-		return sunCoordinates.getAltitude() > Math.toRadians(10);
+//		/* Check if there is a satellite associated to the OrbitModel. */
+//		Satellite satellite = getSatellite(visibilityPass.getOrbitModel());		
+//		if (satellite == null) return false;
+//
+//		// Finds the closest point the satellite comes to the target in the pass.
+//		VisibilityPassSpacecraftPosition closestPosition = visibilityPass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
+//		if (closestPosition == null) return false;
+//		
+//		// Checks to see if the pass brings us close enough to the target.
+//		if(Math.abs(closestPosition.getSpacecraftCrossTrackAngle()) > Math.abs(satellite.getMaximumRoll())) return false;
+//				
+//		// Gets the location of the target
+//		double observerLongitude = visibilityPass.getSurfaceLocation().getLongitude();
+//		double observerLatitude = visibilityPass.getSurfaceLocation().getLatitude();
+//		
+//		// Finds the horizontal coordinates of the sun at the target at the time of the closest approach.
+//		HorizontalCoordinates sunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(closestPosition.getTime(), observerLongitude, observerLatitude);
+//		
+//		// Returns true if the sun is at least 10 degrees above the horizon.
+//		return sunCoordinates.getAltitude() > Math.toRadians(10);
 	}
 
 	@Override
@@ -206,14 +204,11 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 			ElevationMask elevationMask) throws Exception {
 		List<VisibilityPass> visibilityPasses = new ArrayList<VisibilityPass>();
 
-		if (request instanceof ImageConstellationRequest) {
-			ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest) request;
-			EarthSurfaceLocation location = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createEarthSurfaceLocation(
-					"Dummy", "Dummy", imageConstellationRequest.getLongitude(), imageConstellationRequest.getLatitude(),
-					imageConstellationRequest.getElevation());
+		if (request instanceof ObservationConstellationRequest) {
+			ObservationConstellationRequest observationRequest = (ObservationConstellationRequest) request;
 
 			for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
-				List<VisibilityPass> potentialVisibilityPasses = satellite.getOrbitModel().getTargetPasses(location,
+				List<VisibilityPass> potentialVisibilityPasses = satellite.getOrbitModel().getTargetPasses(observationRequest.getLocation(),
 						startDate, endDate, elevationMask);
 				for (VisibilityPass pass : potentialVisibilityPasses) {
 					if (isValid(pass)) {

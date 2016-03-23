@@ -12,8 +12,6 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite;
 
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Image Constellation Request</b></em>'.
@@ -35,7 +33,7 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
  * @model
  * @generated
  */
-public interface ImageConstellationRequest extends AbstractConstellationRequest, GeographicCoordinates {
+public interface ImageConstellationRequest extends ObservationConstellationRequest {
 
 	/**
 	 * Returns the value of the '<em><b>Image</b></em>' containment reference.

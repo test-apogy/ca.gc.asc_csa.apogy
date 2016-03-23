@@ -131,6 +131,10 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractConstellationRequestAdapter();
 			}
 			@Override
+			public Adapter caseObservationConstellationRequest(ObservationConstellationRequest object) {
+				return createObservationConstellationRequestAdapter();
+			}
+			@Override
 			public Adapter caseImageConstellationRequest(ImageConstellationRequest object) {
 				return createImageConstellationRequestAdapter();
 			}
@@ -191,12 +195,12 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createDescribedAdapter();
 			}
 			@Override
-			public Adapter caseGeographicCoordinates(GeographicCoordinates object) {
-				return createGeographicCoordinatesAdapter();
-			}
-			@Override
 			public Adapter caseTimed(Timed object) {
 				return createTimedAdapter();
+			}
+			@Override
+			public Adapter caseGeographicCoordinates(GeographicCoordinates object) {
+				return createGeographicCoordinatesAdapter();
 			}
 			@Override
 			public Adapter caseAbstractEImage(AbstractEImage object) {
@@ -391,6 +395,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstractConstellationRequestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest <em>Observation Constellation Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest
+	 * @generated
+	 */
+	public Adapter createObservationConstellationRequestAdapter() {
 		return null;
 	}
 

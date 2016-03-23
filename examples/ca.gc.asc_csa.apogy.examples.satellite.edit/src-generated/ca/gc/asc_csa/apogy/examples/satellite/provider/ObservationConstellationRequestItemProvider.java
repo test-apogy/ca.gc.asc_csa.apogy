@@ -4,6 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
+ * 
  * Contributors:
  * Canadian Space Agency (CSA) - Initial API and implementation
  * -Pierre Allard (Pierre.Allard@canada.ca),
@@ -13,32 +14,37 @@
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ImageConstellationRequestItemProvider extends ObservationConstellationRequestItemProvider {
+public class ObservationConstellationRequestItemProvider extends AbstractConstellationRequestItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ImageConstellationRequestItemProvider(AdapterFactory adapterFactory) {
+	public ObservationConstellationRequestItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -69,7 +75,7 @@ public class ImageConstellationRequestItemProvider extends ObservationConstellat
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.IMAGE_CONSTELLATION_REQUEST__IMAGE);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.OBSERVATION_CONSTELLATION_REQUEST__LOCATION);
 		}
 		return childrenFeatures;
 	}
@@ -88,30 +94,29 @@ public class ImageConstellationRequestItemProvider extends ObservationConstellat
 	}
 
 	/**
-	 * This returns ImageConstellationRequest.gif.
+	 * This returns ObservationConstellationRequest.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ImageConstellationRequest"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ObservationConstellationRequest"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		return super.getText(object);
-	}
-	
-	@Override
-	public String getAbstractConstellationRequestTypeName() {
-		return getString("_UI_ImageConstellationRequest_type");
+		ConstellationRequestPriority labelValue = ((ObservationConstellationRequest)object).getOrderPriority();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ObservationConstellationRequest_type") :
+			getString("_UI_ObservationConstellationRequest_type") + " " + label;
 	}
 	
 
@@ -126,8 +131,8 @@ public class ImageConstellationRequestItemProvider extends ObservationConstellat
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ImageConstellationRequest.class)) {
-			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
+		switch (notification.getFeatureID(ObservationConstellationRequest.class)) {
+			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST__LOCATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -147,8 +152,13 @@ public class ImageConstellationRequestItemProvider extends ObservationConstellat
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.IMAGE_CONSTELLATION_REQUEST__IMAGE,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+				(ApogyExamplesSatellitePackage.Literals.OBSERVATION_CONSTELLATION_REQUEST__LOCATION,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.OBSERVATION_CONSTELLATION_REQUEST__LOCATION,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 	}
 
 }
