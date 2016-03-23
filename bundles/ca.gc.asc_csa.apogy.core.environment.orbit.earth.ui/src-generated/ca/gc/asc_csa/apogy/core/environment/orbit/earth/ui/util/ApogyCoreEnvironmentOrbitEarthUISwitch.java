@@ -154,6 +154,14 @@ public class ApogyCoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER: {
+				GeographicCoordinatesWorldWindLayer geographicCoordinatesWorldWindLayer = (GeographicCoordinatesWorldWindLayer)theEObject;
+				T result = caseGeographicCoordinatesWorldWindLayer(geographicCoordinatesWorldWindLayer);
+				if (result == null) result = caseAbstractWorldWindLayer(geographicCoordinatesWorldWindLayer);
+				if (result == null) result = caseUpdatable(geographicCoordinatesWorldWindLayer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST: {
 				SpacecraftVisibilityPassViewConfigurationList spacecraftVisibilityPassViewConfigurationList = (SpacecraftVisibilityPassViewConfigurationList)theEObject;
 				T result = caseSpacecraftVisibilityPassViewConfigurationList(spacecraftVisibilityPassViewConfigurationList);
@@ -296,6 +304,21 @@ public class ApogyCoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGroundStationWorldWindLayer(GroundStationWorldWindLayer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Geographic Coordinates World Wind Layer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Geographic Coordinates World Wind Layer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeographicCoordinatesWorldWindLayer(GeographicCoordinatesWorldWindLayer object) {
 		return null;
 	}
 

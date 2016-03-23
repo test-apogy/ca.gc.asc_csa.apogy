@@ -265,6 +265,29 @@ public class ApogyCoreEnvironmentOrbitEarthUIItemProviderAdapterFactory extends 
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GeographicCoordinatesWorldWindLayerItemProvider geographicCoordinatesWorldWindLayerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGeographicCoordinatesWorldWindLayerAdapter() {
+		if (geographicCoordinatesWorldWindLayerItemProvider == null) {
+			geographicCoordinatesWorldWindLayerItemProvider = new GeographicCoordinatesWorldWindLayerItemProvider(this);
+		}
+
+		return geographicCoordinatesWorldWindLayerItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -466,6 +489,7 @@ public class ApogyCoreEnvironmentOrbitEarthUIItemProviderAdapterFactory extends 
 		if (spacecraftSwathWorldWindLayerItemProvider != null) spacecraftSwathWorldWindLayerItemProvider.dispose();
 		if (earthSurfaceLocationWorldWindLayerItemProvider != null) earthSurfaceLocationWorldWindLayerItemProvider.dispose();
 		if (groundStationWorldWindLayerItemProvider != null) groundStationWorldWindLayerItemProvider.dispose();
+		if (geographicCoordinatesWorldWindLayerItemProvider != null) geographicCoordinatesWorldWindLayerItemProvider.dispose();
 		if (spacecraftVisibilityPassViewConfigurationListItemProvider != null) spacecraftVisibilityPassViewConfigurationListItemProvider.dispose();
 		if (spacecraftVisibilityPassViewConfigurationItemProvider != null) spacecraftVisibilityPassViewConfigurationItemProvider.dispose();
 		if (earthViewUtilitiesItemProvider != null) earthViewUtilitiesItemProvider.dispose();
@@ -648,6 +672,11 @@ public class ApogyCoreEnvironmentOrbitEarthUIItemProviderAdapterFactory extends 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGeographicCoordinatesWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
 
 				newChildDescriptors.add
@@ -704,6 +733,11 @@ public class ApogyCoreEnvironmentOrbitEarthUIItemProviderAdapterFactory extends 
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGeographicCoordinatesWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter

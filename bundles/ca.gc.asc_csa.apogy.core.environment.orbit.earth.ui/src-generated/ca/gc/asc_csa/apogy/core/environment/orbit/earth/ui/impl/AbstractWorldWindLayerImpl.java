@@ -21,6 +21,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.jface.viewers.ISelection;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.impl.UpdatableImpl;
@@ -199,6 +200,16 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 		// Nothing.
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void selectionChanged(ISelection selection) 
+	{
+		// Nothing to do be default.
+	}
+
 	@Override
 	public boolean getDefaultAutoUpdateEnabled() 
 	{
@@ -283,6 +294,9 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 		switch (operationID) {
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER___DISPOSE:
 				dispose();
+				return null;
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION:
+				selectionChanged((ISelection)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

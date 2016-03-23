@@ -121,6 +121,12 @@ public class EarthView extends AbstractView
 			EarthViewConfiguration earthViewConfiguration = (EarthViewConfiguration) earthViewConfigurations.get(0);										
 			setEarthViewConfiguration(earthViewConfiguration);								
 		} 		
+		
+		// Notifies the EarthViewConfiguration of a new selection.
+		if(earthViewConfiguration != null)
+		{
+			earthViewConfiguration.selectionChanged(selection);
+		}
  	} 
      
  	public void setEarthViewConfiguration(EarthViewConfiguration earthViewConfiguration)

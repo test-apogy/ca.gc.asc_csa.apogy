@@ -123,6 +123,10 @@ public class ApogyCoreEnvironmentOrbitEarthUIAdapterFactory extends AdapterFacto
 				return createGroundStationWorldWindLayerAdapter();
 			}
 			@Override
+			public Adapter caseGeographicCoordinatesWorldWindLayer(GeographicCoordinatesWorldWindLayer object) {
+				return createGeographicCoordinatesWorldWindLayerAdapter();
+			}
+			@Override
 			public Adapter caseSpacecraftVisibilityPassViewConfigurationList(SpacecraftVisibilityPassViewConfigurationList object) {
 				return createSpacecraftVisibilityPassViewConfigurationListAdapter();
 			}
@@ -279,6 +283,20 @@ public class ApogyCoreEnvironmentOrbitEarthUIAdapterFactory extends AdapterFacto
 	 * @generated
 	 */
 	public Adapter createGroundStationWorldWindLayerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer <em>Geographic Coordinates World Wind Layer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer
+	 * @generated
+	 */
+	public Adapter createGeographicCoordinatesWorldWindLayerAdapter() {
 		return null;
 	}
 

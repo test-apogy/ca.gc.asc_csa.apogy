@@ -37,18 +37,19 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui
 import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.common.emf.Timed
-import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
-
 import ca.gc.asc_csa.apogy.core.Updatable
-
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
 
 type RenderableLayer wraps gov.nasa.worldwind.layers.RenderableLayer
 type Map<K,V> wraps java.util.Map
+
+type ISelection wraps org.eclipse.jface.viewers.ISelection
 
 class EarthViewConfigurationList extends AbstractToolsListContainer
 {
@@ -60,6 +61,12 @@ class EarthViewConfiguration extends Named, Described
 	/** List of Maps being displayed.*/
 	@GenModel(children="true", notify="true", property="None")
 	contains AbstractWorldWindLayer[0..*] layers
+	
+	/**
+	 * Method that notifies all AbstractWorldWindLayer of a new selection.	 
+	 * @param selection The new selection made.
+	 */
+	op void selectionChanged(ISelection selection)
 }
 
 /**
@@ -84,6 +91,13 @@ abstract class AbstractWorldWindLayer extends Updatable
 	 * needed (i.e. when it gets deleted.)
 	 */
 	op void dispose()
+	
+	/**
+	 * Method called when a selection is made by the user.
+	 * Sub-classes can override this method if applicable.
+	 * @param selection The new selection made.
+	 */
+	op void selectionChanged(ISelection selection)
 }
 
 class SpacecraftLocationWorldWindLayer extends AbstractWorldWindLayer, Named
@@ -242,6 +256,22 @@ class GroundStationWorldWindLayer extends EarthSurfaceLocationWorldWindLayer
 	@GenModel(propertyCategory="VISUALS", apogy_units="km")
 	double referenceAltitude = "500"
 }
+
+class GeographicCoordinatesWorldWindLayer extends AbstractWorldWindLayer
+{
+	@GenModel(notify="true")
+	refers transient readonly GeographicCoordinates[0..*] geographicCoordinatesList
+	
+	/**
+	 * Specifies whether or not the layer will respond to new selection.
+	 */
+	@GenModel(notify="true")
+	transient boolean lockSelection = "false"
+	
+	@GenModel(propertyCategory="VISUALS", apogy_units="km")
+	double displayedRadius = "50"
+}
+
 
 /**
  * Defines a list of configuration for the view that

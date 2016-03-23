@@ -96,6 +96,15 @@ public interface ApogyCoreEnvironmentOrbitEarthUIFactory extends EFactory {
 	GroundStationWorldWindLayer createGroundStationWorldWindLayer();
 
 	/**
+	 * Returns a new object of class '<em>Geographic Coordinates World Wind Layer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Geographic Coordinates World Wind Layer</em>'.
+	 * @generated
+	 */
+	GeographicCoordinatesWorldWindLayer createGeographicCoordinatesWorldWindLayer();
+
+	/**
 	 * Returns a new object of class '<em>Spacecraft Visibility Pass View Configuration List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
