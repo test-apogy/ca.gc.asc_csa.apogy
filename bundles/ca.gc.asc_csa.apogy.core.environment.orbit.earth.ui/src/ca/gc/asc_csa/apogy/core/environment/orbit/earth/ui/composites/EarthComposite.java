@@ -120,6 +120,7 @@ public class EarthComposite extends Composite
 		getWorldWindowGLJPanel().redraw();
 		
 		// Re-initialize all layers.
+		removeAllLayers();
 		initializeEarthViewConfiguration(getEarthViewConfiguration());
 	}
 
@@ -177,6 +178,8 @@ public class EarthComposite extends Composite
 			{
 				addLayer(layer);
 			}
+			
+			updateAllLayers();
 		}
 	}
 	
@@ -218,6 +221,23 @@ public class EarthComposite extends Composite
 										}
 									break;
 									
+									case Notification.ADD_MANY:
+										try
+										{
+											@SuppressWarnings("unchecked")
+											List<AbstractWorldWindLayer> layers = (List<AbstractWorldWindLayer>) msg.getNewValue();
+											 
+											for(AbstractWorldWindLayer layer : layers)
+											{												
+												addLayer(layer);
+											}
+										}
+										catch(Throwable t)
+										{
+											t.printStackTrace();
+										}
+									break;
+									
 									case Notification.REMOVE:
 										if(msg.getOldValue() instanceof AbstractWorldWindLayer)
 										{
@@ -225,7 +245,22 @@ public class EarthComposite extends Composite
 										}										
 									break;
 									
-									// TODO : add other cases.
+									case Notification.REMOVE_MANY:
+										try
+										{
+											@SuppressWarnings("unchecked")
+											List<AbstractWorldWindLayer> layers = (List<AbstractWorldWindLayer>) msg.getOldValue();
+											 
+											for(AbstractWorldWindLayer layer : layers)
+											{												
+												removeLayer(layer);
+											}
+										}
+										catch(Throwable t)
+										{
+											t.printStackTrace();
+										}
+									break;									
 								}
 							}
 							break;

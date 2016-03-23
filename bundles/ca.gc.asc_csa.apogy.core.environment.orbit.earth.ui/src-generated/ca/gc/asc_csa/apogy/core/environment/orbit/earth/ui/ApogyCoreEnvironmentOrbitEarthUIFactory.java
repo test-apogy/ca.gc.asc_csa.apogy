@@ -114,6 +114,15 @@ public interface ApogyCoreEnvironmentOrbitEarthUIFactory extends EFactory {
 	SpacecraftVisibilityPassViewConfiguration createSpacecraftVisibilityPassViewConfiguration();
 
 	/**
+	 * Returns a new object of class '<em>Earth View Utilities</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Earth View Utilities</em>'.
+	 * @generated
+	 */
+	EarthViewUtilities createEarthViewUtilities();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

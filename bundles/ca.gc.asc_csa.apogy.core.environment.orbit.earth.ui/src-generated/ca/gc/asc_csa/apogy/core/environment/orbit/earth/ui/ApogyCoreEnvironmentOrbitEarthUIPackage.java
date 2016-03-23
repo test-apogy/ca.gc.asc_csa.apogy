@@ -1096,6 +1096,61 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewUtilitiesImpl <em>Earth View Utilities</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewUtilitiesImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewUtilities()
+	 * @generated
+	 */
+	int EARTH_VIEW_UTILITIES = 10;
+
+	/**
+	 * The number of structural features of the '<em>Earth View Utilities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Get Camera View Configuration Identifier</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__EARTHVIEWCONFIGURATION = 0;
+
+	/**
+	 * The operation id for the '<em>Get Active Earth View Configuration</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Get Active Earth View Configuration List</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION_LIST = 2;
+
+	/**
+	 * The number of operations of the '<em>Earth View Utilities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES_OPERATION_COUNT = 3;
+
+	/**
 	 * The meta object id for the '<em>Renderable Layer</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1103,7 +1158,7 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getRenderableLayer()
 	 * @generated
 	 */
-	int RENDERABLE_LAYER = 10;
+	int RENDERABLE_LAYER = 11;
 
 
 	/**
@@ -1114,7 +1169,7 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 11;
+	int MAP = 12;
 
 
 	/**
@@ -1580,6 +1635,46 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	EReference getSpacecraftVisibilityPassViewConfiguration_VisibilitySet();
 
 	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities <em>Earth View Utilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Earth View Utilities</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities
+	 * @generated
+	 */
+	EClass getEarthViewUtilities();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getCameraViewConfigurationIdentifier(ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration) <em>Get Camera View Configuration Identifier</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Camera View Configuration Identifier</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getCameraViewConfigurationIdentifier(ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration)
+	 * @generated
+	 */
+	EOperation getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getActiveEarthViewConfiguration(java.lang.String) <em>Get Active Earth View Configuration</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Active Earth View Configuration</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getActiveEarthViewConfiguration(java.lang.String)
+	 * @generated
+	 */
+	EOperation getEarthViewUtilities__GetActiveEarthViewConfiguration__String();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getActiveEarthViewConfigurationList() <em>Get Active Earth View Configuration List</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Active Earth View Configuration List</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getActiveEarthViewConfigurationList()
+	 * @generated
+	 */
+	EOperation getEarthViewUtilities__GetActiveEarthViewConfigurationList();
+
+	/**
 	 * Returns the meta object for data type '{@link gov.nasa.worldwind.layers.RenderableLayer <em>Renderable Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1987,6 +2082,40 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET = eINSTANCE.getSpacecraftVisibilityPassViewConfiguration_VisibilitySet();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewUtilitiesImpl <em>Earth View Utilities</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewUtilitiesImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewUtilities()
+		 * @generated
+		 */
+		EClass EARTH_VIEW_UTILITIES = eINSTANCE.getEarthViewUtilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Camera View Configuration Identifier</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EARTH_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__EARTHVIEWCONFIGURATION = eINSTANCE.getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Active Earth View Configuration</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION__STRING = eINSTANCE.getEarthViewUtilities__GetActiveEarthViewConfiguration__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Active Earth View Configuration List</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION_LIST = eINSTANCE.getEarthViewUtilities__GetActiveEarthViewConfigurationList();
 
 		/**
 		 * The meta object literal for the '<em>Renderable Layer</em>' data type.

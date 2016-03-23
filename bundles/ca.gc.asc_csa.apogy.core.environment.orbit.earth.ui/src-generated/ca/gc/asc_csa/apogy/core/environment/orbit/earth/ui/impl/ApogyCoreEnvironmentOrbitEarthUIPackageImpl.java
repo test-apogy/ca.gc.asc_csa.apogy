@@ -33,6 +33,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLaye
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
@@ -119,6 +120,13 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 * @generated
 	 */
 	private EClass spacecraftVisibilityPassViewConfigurationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass earthViewUtilitiesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -590,6 +598,42 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEarthViewUtilities() {
+		return earthViewUtilitiesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration() {
+		return earthViewUtilitiesEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthViewUtilities__GetActiveEarthViewConfiguration__String() {
+		return earthViewUtilitiesEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthViewUtilities__GetActiveEarthViewConfigurationList() {
+		return earthViewUtilitiesEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getRenderableLayer() {
 		return renderableLayerEDataType;
 	}
@@ -683,6 +727,11 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		spacecraftVisibilityPassViewConfigurationEClass = createEClass(SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION);
 		createEReference(spacecraftVisibilityPassViewConfigurationEClass, SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST);
 		createEReference(spacecraftVisibilityPassViewConfigurationEClass, SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET);
+
+		earthViewUtilitiesEClass = createEClass(EARTH_VIEW_UTILITIES);
+		createEOperation(earthViewUtilitiesEClass, EARTH_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__EARTHVIEWCONFIGURATION);
+		createEOperation(earthViewUtilitiesEClass, EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION__STRING);
+		createEOperation(earthViewUtilitiesEClass, EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION_LIST);
 
 		// Create data types
 		renderableLayerEDataType = createEDataType(RENDERABLE_LAYER);
@@ -795,6 +844,16 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		initEClass(spacecraftVisibilityPassViewConfigurationEClass, SpacecraftVisibilityPassViewConfiguration.class, "SpacecraftVisibilityPassViewConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpacecraftVisibilityPassViewConfiguration_ConfigurationsList(), this.getSpacecraftVisibilityPassViewConfigurationList(), this.getSpacecraftVisibilityPassViewConfigurationList_Configurations(), "configurationsList", null, 0, 1, SpacecraftVisibilityPassViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpacecraftVisibilityPassViewConfiguration_VisibilitySet(), theApogyCoreEnvironmentOrbitEarthPackage.getSpacecraftsVisibilitySet(), null, "visibilitySet", null, 0, 1, SpacecraftVisibilityPassViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(earthViewUtilitiesEClass, EarthViewUtilities.class, "EarthViewUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = initEOperation(getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration(), theEcorePackage.getEString(), "getCameraViewConfigurationIdentifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthViewConfiguration(), "earthViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getEarthViewUtilities__GetActiveEarthViewConfiguration__String(), this.getEarthViewConfiguration(), "getActiveEarthViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "identifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getEarthViewUtilities__GetActiveEarthViewConfigurationList(), this.getEarthViewConfigurationList(), "getActiveEarthViewConfigurationList", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(renderableLayerEDataType, RenderableLayer.class, "RenderableLayer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1065,6 +1124,24 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "chilrend", "true",
 			 "property", "None"
+		   });	
+		addAnnotation
+		  (getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the identifier associated with a given EarthViewConfiguration.\n@param earthViewConfiguration The given EarthViewConfiguration.\n@return The identifier, null if none is found."
+		   });	
+		addAnnotation
+		  (getEarthViewUtilities__GetActiveEarthViewConfiguration__String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the EarthViewConfiguration (in the Active Session) with the specified identifier.\n@param identifier The EarthViewConfiguration identifier.\n@return The EarthViewConfiguration with the specified identifier, null if non is found."
+		   });	
+		addAnnotation
+		  (getEarthViewUtilities__GetActiveEarthViewConfigurationList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the EarthViewConfigurationList in the Active Session.\n@return The EarthViewConfigurationList in the Active Session, null if none is found."
 		   });
 	}
 

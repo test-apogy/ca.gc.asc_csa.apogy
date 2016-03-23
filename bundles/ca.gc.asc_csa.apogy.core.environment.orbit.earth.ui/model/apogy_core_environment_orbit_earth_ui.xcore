@@ -266,3 +266,25 @@ class SpacecraftVisibilityPassViewConfiguration extends Named, Described
 	contains SpacecraftsVisibilitySet visibilitySet
 }
 
+class EarthViewUtilities
+{
+	/**
+	 * Return the identifier associated with a given EarthViewConfiguration.
+	 * @param earthViewConfiguration The given EarthViewConfiguration.
+	 * @return The identifier, null if none is found.
+	 */
+	op String getCameraViewConfigurationIdentifier(EarthViewConfiguration earthViewConfiguration)
+	
+	/**
+	 * Return the EarthViewConfiguration (in the Active Session) with the specified identifier.
+	 * @param identifier The EarthViewConfiguration identifier.
+	 * @return The EarthViewConfiguration with the specified identifier, null if non is found.
+	 */
+	op EarthViewConfiguration getActiveEarthViewConfiguration(String identifier)
+	
+	/**
+	 * Return the EarthViewConfigurationList in the Active Session.
+	 * @return The EarthViewConfigurationList in the Active Session, null if none is found.
+	 */
+	op EarthViewConfigurationList getActiveEarthViewConfigurationList()	
+}

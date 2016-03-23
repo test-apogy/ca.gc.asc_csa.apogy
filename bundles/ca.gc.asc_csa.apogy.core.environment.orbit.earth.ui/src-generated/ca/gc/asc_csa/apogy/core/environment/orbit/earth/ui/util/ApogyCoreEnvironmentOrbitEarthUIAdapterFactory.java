@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.*;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
@@ -128,6 +129,10 @@ public class ApogyCoreEnvironmentOrbitEarthUIAdapterFactory extends AdapterFacto
 			@Override
 			public Adapter caseSpacecraftVisibilityPassViewConfiguration(SpacecraftVisibilityPassViewConfiguration object) {
 				return createSpacecraftVisibilityPassViewConfigurationAdapter();
+			}
+			@Override
+			public Adapter caseEarthViewUtilities(EarthViewUtilities object) {
+				return createEarthViewUtilitiesAdapter();
 			}
 			@Override
 			public Adapter caseAbstractToolsListContainer(AbstractToolsListContainer object) {
@@ -302,6 +307,20 @@ public class ApogyCoreEnvironmentOrbitEarthUIAdapterFactory extends AdapterFacto
 	 * @generated
 	 */
 	public Adapter createSpacecraftVisibilityPassViewConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities <em>Earth View Utilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities
+	 * @generated
+	 */
+	public Adapter createEarthViewUtilitiesAdapter() {
 		return null;
 	}
 

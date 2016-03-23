@@ -610,7 +610,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 			DecimalFormat altitudeDecimalFormat = new DecimalFormat("0.0");
 			double altitude = coord.getElevation() * 0.001;
 			
-			text += "\n (lat " + latLongDecimalFormat.format(lat) + DEGREE_STRING + " , lon " + latLongDecimalFormat.format(lon) + DEGREE_STRING + ", alt " +  altitudeDecimalFormat.format(altitude) + " km)";
+			text += "\n lat " + latLongDecimalFormat.format(lat) + DEGREE_STRING + ", lon " + latLongDecimalFormat.format(lon) + DEGREE_STRING + ", alt " +  altitudeDecimalFormat.format(altitude) + " km";
 			
 		}		
 		

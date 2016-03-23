@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.*;
 import gov.nasa.worldwind.layers.RenderableLayer;
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
@@ -86,6 +87,7 @@ public class ApogyCoreEnvironmentOrbitEarthUIFactoryImpl extends EFactoryImpl im
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER: return createGroundStationWorldWindLayer();
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST: return createSpacecraftVisibilityPassViewConfigurationList();
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION: return createSpacecraftVisibilityPassViewConfiguration();
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_UTILITIES: return createEarthViewUtilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -213,6 +215,16 @@ public class ApogyCoreEnvironmentOrbitEarthUIFactoryImpl extends EFactoryImpl im
 	public SpacecraftVisibilityPassViewConfiguration createSpacecraftVisibilityPassViewConfiguration() {
 		SpacecraftVisibilityPassViewConfigurationImpl spacecraftVisibilityPassViewConfiguration = new SpacecraftVisibilityPassViewConfigurationImpl();
 		return spacecraftVisibilityPassViewConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EarthViewUtilities createEarthViewUtilities() {
+		EarthViewUtilitiesImpl earthViewUtilities = new EarthViewUtilitiesImpl();
+		return earthViewUtilities;
 	}
 
 	/**
