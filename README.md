@@ -1,7 +1,6 @@
 # News #
-Release 0.5.13 available 2016.03.29-1400EDT [https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/)
+Release 0.5.13 available 2016.03.29-1400EDT ([https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/))
 # Background #
-
 **Apogy** is a multi-mission operations and planning software framework. **Apogy** uses Eclipse Modeling Framework models to define the systems being controlled, the environment in which these systems are operated, the operations being carried out and the corresponding data produced during operations.
 
 As an example, integrating a rover in **Apogy** is as simple as creating an EMF model that represent its interface (command and telemetry) and defined its topology (i.e. how the physical components are attached together and how the degrees-of-freedom are mapped to the telemetry). Once these two steps are completed, one can visualize the rover in 3D in its environment (showing cameras field of view in 3D, using the generic 3D tools to measure distance, record trajectory, measure sun angle, etc), create commands  and display telemetry (camera views with overlays, filters and tools, recording and playback of data, etc) without having to write a single line of code ! This means that the operator can already start configuring his/her control station, even if there is no real rover to command at that point. Implementing the necessary interface between the generated EMF classes and the hardware (which is usually straightforward) is all that remain to complete the integration and benefit from the many tools already available  in **Apogy**. 
