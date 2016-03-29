@@ -1,61 +1,43 @@
-/**
- * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- * Canadian Space Agency (CSA) - Initial API and implementation
- * -Pierre Allard (Pierre.Allard@canada.ca),
- * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
- */
 package ca.gc.asc_csa.apogy.examples.satellite.tests;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
+import org.junit.Test;
 
-import junit.textui.TestRunner;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
 
-/**
- * <!-- begin-user-doc -->
- * A test suite for the '<em><b>satellite</b></em>' package.
- * <!-- end-user-doc -->
- * @generated
- */
-public class ApogyExamplesSatelliteTests extends TestSuite {
+public class ApogyExamplesSatelliteTests {
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static void main(String[] args) {
-		TestRunner.run(suite());
+	private static final String SESSION_URI = "platform:/plugin/ca.gc.asc_csa.apogy.examples.satellite.tests/sessions/tests.sym";	
+	private static final String CONTEXT_NAME = "Default";
+	private static final String VARIABLE_NAME = "constellation";
+	
+	@Test
+	public void testDefaultConstellationPlanner() throws Exception {
+		/* Load the session, constellation state and planner. */
+		InvocatorSession invocatorSession = ApogyCoreInvocatorFacade.INSTANCE.loadInvocatorSession(SESSION_URI);
+		ConstellationState constellationState = getConstellationState(invocatorSession);
+		DefaultConstellationPlanner planner = (DefaultConstellationPlanner) constellationState.getConstellationPlanner();
+		
+		/* Invoke the planner. */
+		planner.plan();
+		
+		System.out.println("ApogyExamplesSatelliteTests.testDefaultConstellationPlanner()");
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	
+	/*
+	 * Returns the Stored {@link ConstellationState}.
+	 * @param session Reference to the session.
+	 * @return Reference to the {@link ConstellationState}.
 	 */
-	public static Test suite() {
-		TestSuite suite = new ApogyExamplesSatelliteTests("satellite Tests");
-		suite.addTestSuite(DefaultConstellationTest.class);
-		suite.addTestSuite(DefaultConstellationPlannerTest.class);
-		suite.addTestSuite(OrbitalImageTest.class);
-		suite.addTestSuite(ConstellationUtilitiesTest.class);
-		return suite;
+	private static ConstellationState getConstellationState(InvocatorSession session){
+		Context context = ApogyCoreInvocatorFacade.INSTANCE.getContextByName(session, CONTEXT_NAME);
+		VariableImplementation variableImplementation = context.getVariableImplementationsList().getVariableImplementation(VARIABLE_NAME);		
+		ConstellationData data = (ConstellationData) variableImplementation.getAbstractInitializationData();		
+		return data.getConstellationState();
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ApogyExamplesSatelliteTests(String name) {
-		super(name);
-	}
-
-} //ApogyExamplesSatelliteTests
+}

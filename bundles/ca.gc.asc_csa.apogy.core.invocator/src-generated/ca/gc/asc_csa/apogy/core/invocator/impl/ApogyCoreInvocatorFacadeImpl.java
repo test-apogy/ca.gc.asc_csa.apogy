@@ -22,6 +22,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
@@ -47,6 +48,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.IVariableListener;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
@@ -54,6 +56,7 @@ import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
 import ca.gc.asc_csa.apogy.core.invocator.Type;
@@ -1338,6 +1341,60 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public InvocatorSession loadInvocatorSession(String uri) throws Exception {
+		URI sessionURI = URI.createURI(uri);
+		List<EObject> contents = ApogyCommonEMFFacade.INSTANCE.getContent(sessionURI);
+		InvocatorSession invocatorSession = (InvocatorSession) contents.get(0);
+		return invocatorSession;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public DataProductsList getDataProductsByName(InvocatorSession invocatorSession, String name) {
+		for (DataProductsList dataProductsList : invocatorSession.getDataProductsListContainer().getDataProductsList()) {
+			if (dataProductsList.getName().equals(name)) {
+				return dataProductsList;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public Program getProgramByName(InvocatorSession invocatorSession, String name) {
+		for (Program program : invocatorSession.getProgramsList().getPrograms()) {
+			if (program.getName().equals(name)) {
+				return program;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public Context getContextByName(InvocatorSession invocatorSession, String name) {
+		for (Context context : invocatorSession.getEnvironment().getContextsList().getContexts()) {
+			if (context.getName().equals(name)) {
+				return context;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1489,6 +1546,19 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE:
 				notifyVariableListeners((Variable)arguments.get(0), (VariableListenerEventType)arguments.get(1));
 				return null;
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___LOAD_INVOCATOR_SESSION__STRING:
+				try {
+					return loadInvocatorSession((String)arguments.get(0));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING:
+				return getDataProductsByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING:
+				return getProgramByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING:
+				return getContextByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

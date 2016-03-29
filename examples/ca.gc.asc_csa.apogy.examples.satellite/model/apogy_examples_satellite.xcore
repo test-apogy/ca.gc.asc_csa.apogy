@@ -29,7 +29,6 @@ Canadian Space Agency (CSA) - Initial API and implementation
 		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.satellite/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.satellite.edit/src-generated")
-@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.examples.satellite.tests/src-generated")
 
 package ca.gc.asc_csa.apogy.examples.satellite
 
@@ -50,9 +49,11 @@ type List<T> wraps java.util.List
 type SortedSet<T> wraps java.util.SortedSet 
 type Comparator<T> wraps java.util.Comparator 
  
- 
- // FIXME Add public SortedSet<VisibilityPass> getGroundStationPasses(Satellite satellite, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception
- // FIXME Add Parallel Execution to process passes.
+/*
+ * Apogy Examples Satellite Facade. 
+ */
+class ApogyExamplesSatelliteFacade{	
+}
   
 /*
  * Abstract Unique Identifier.  This class is meant to be sub-classed.
@@ -153,7 +154,7 @@ abstract class AbstractConstellation extends Named, Described{
 	op List<AbstractConstellationRequest> importConstellationRequests(String url)	
 }
 
-/*ca.gc.asc_csa.apogy.examples.satellite
+/*
  * Default Constellation Implementation Class.
  * 
  * By default {@link AbstractConstellation#newUID} returns {@link DigitUID}.
@@ -452,6 +453,7 @@ class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlin
 }
 
 /*
+ * FIXME Remove this class.  Not used.
  * Utilities class for the satellite example.
  */
 class ConstellationUtilities{

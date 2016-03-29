@@ -25,5 +25,6 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.junit;visibility:=reexport
+ org.junit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.examples.satellite.apogy;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy

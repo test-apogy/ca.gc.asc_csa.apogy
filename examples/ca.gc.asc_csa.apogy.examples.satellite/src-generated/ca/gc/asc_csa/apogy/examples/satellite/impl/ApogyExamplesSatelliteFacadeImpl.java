@@ -11,37 +11,40 @@
  * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
-package ca.gc.asc_csa.apogy.examples.satellite.tests;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractRequestBasedSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Abstract Request Based Satellite Command</b></em>'.
+ * An implementation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
+ *
  * @generated
  */
-public abstract class AbstractRequestBasedSatelliteCommandTest extends AbstractSatelliteCommandTest {
-
+public class ApogyExamplesSatelliteFacadeImpl extends MinimalEObjectImpl.Container implements ApogyExamplesSatelliteFacade {
 	/**
-	 * Constructs a new Abstract Request Based Satellite Command test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractRequestBasedSatelliteCommandTest(String name) {
-		super(name);
+	protected ApogyExamplesSatelliteFacadeImpl() {
+		super();
 	}
 
 	/**
-	 * Returns the fixture for this Abstract Request Based Satellite Command test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected AbstractRequestBasedSatelliteCommand getFixture() {
-		return (AbstractRequestBasedSatelliteCommand)fixture;
+	protected EClass eStaticClass() {
+		return ApogyExamplesSatellitePackage.Literals.APOGY_EXAMPLES_SATELLITE_FACADE;
 	}
 
-} //AbstractRequestBasedSatelliteCommandTest
+} //ApogyExamplesSatelliteFacadeImpl
