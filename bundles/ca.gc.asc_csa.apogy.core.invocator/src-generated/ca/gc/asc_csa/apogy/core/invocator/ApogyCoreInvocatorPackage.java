@@ -151,13 +151,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	int APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = 2;
 
 		/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__OPERATIONCALLRESULT = 3;
+
+		/**
 	 * The operation id for the '<em>Create Abstract Result Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = 3;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = 4;
 
 		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
@@ -166,7 +175,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = 4;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = 5;
 
 		/**
 	 * The operation id for the '<em>Get Instance Class</em>' operation.
@@ -175,7 +184,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = 5;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = 6;
 
 		/**
 	 * The operation id for the '<em>Get Type Api Adapter</em>' operation.
@@ -184,7 +193,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = 6;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = 7;
 
 		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
@@ -193,7 +202,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = 7;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = 8;
 
 		/**
 	 * The operation id for the '<em>Get Type Member Instance</em>' operation.
@@ -202,7 +211,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = 8;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = 9;
 
 		/**
 	 * The operation id for the '<em>Get EMF Feature Value</em>' operation.
@@ -211,7 +220,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = 9;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = 10;
 
 		/**
 	 * The operation id for the '<em>Get Instance Class</em>' operation.
@@ -220,7 +229,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = 10;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = 11;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -229,7 +238,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = 11;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = 12;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -238,7 +247,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = 12;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = 13;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -247,7 +256,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = 13;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = 14;
 
 		/**
 	 * The operation id for the '<em>Get Variable By Name</em>' operation.
@@ -256,7 +265,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = 14;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = 15;
 
 		/**
 	 * The operation id for the '<em>Create Type Member References</em>' operation.
@@ -265,7 +274,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 15;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 16;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -274,7 +283,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 16;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 17;
 
 		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
@@ -283,7 +292,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 17;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 18;
 
 		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
@@ -292,7 +301,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 18;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 19;
 
 		/**
 	 * The operation id for the '<em>Create Type Member Implementations</em>' operation.
@@ -301,7 +310,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 19;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 20;
 
 		/**
 	 * The operation id for the '<em>Init Variable Instances</em>' operation.
@@ -310,7 +319,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 20;
+	int APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 21;
 
 		/**
 	 * The operation id for the '<em>Dispose Variable Instances</em>' operation.
@@ -319,7 +328,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 21;
+	int APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 22;
 
 		/**
 	 * The operation id for the '<em>Get Operation Call Container</em>' operation.
@@ -328,7 +337,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 22;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 23;
 
 		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -337,7 +346,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 23;
+	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 24;
 
 		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -346,7 +355,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 24;
+	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 25;
 
 		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -355,7 +364,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 25;
+	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 26;
 
 		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -364,7 +373,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 26;
+	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 27;
 
 		/**
 	 * The operation id for the '<em>Load Registered Types</em>' operation.
@@ -373,7 +382,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 27;
+	int APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 28;
 
 		/**
 	 * The operation id for the '<em>Get All Types</em>' operation.
@@ -382,7 +391,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 28;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 29;
 
 		/**
 	 * The operation id for the '<em>Add Variable Listener</em>' operation.
@@ -391,7 +400,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = 29;
+	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = 30;
 
 		/**
 	 * The operation id for the '<em>Remove Variable Listener</em>' operation.
@@ -400,7 +409,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = 30;
+	int APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = 31;
 
 		/**
 	 * The operation id for the '<em>Notify Variable Listeners</em>' operation.
@@ -409,7 +418,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = 31;
+	int APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = 32;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -418,7 +427,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 32;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 33;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -4592,6 +4601,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	EOperation getApogyCoreInvocatorFacade__Exec__OperationCallsList();
 
 		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getValue(ca.gc.asc_csa.apogy.core.invocator.OperationCallResult) <em>Get Value</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Value</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getValue(ca.gc.asc_csa.apogy.core.invocator.OperationCallResult)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__GetValue__OperationCallResult();
+
+		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createAbstractResultValue(java.lang.Object) <em>Create Abstract Result Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7054,6 +7073,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = eINSTANCE.getApogyCoreInvocatorFacade__Exec__OperationCallsList();
+
+			/**
+		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__OPERATIONCALLRESULT = eINSTANCE.getApogyCoreInvocatorFacade__GetValue__OperationCallResult();
 
 			/**
 		 * The meta object literal for the '<em><b>Create Abstract Result Value</b></em>' operation.

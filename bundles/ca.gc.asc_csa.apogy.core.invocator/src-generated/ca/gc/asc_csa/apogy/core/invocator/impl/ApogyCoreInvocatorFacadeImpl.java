@@ -277,6 +277,26 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public Object getValue(OperationCallResult operationCallResult) {
+		Object value = null;
+		AbstractResultValue abstractValue = operationCallResult.getResultValue();
+
+		if (abstractValue instanceof AttributeResultValue) {
+			AttributeResultValue attributeResultValue = (AttributeResultValue) abstractValue;
+			if (attributeResultValue.getValue() != null){
+				value = attributeResultValue.getValue().getObject();	
+			}			
+		} else if (abstractValue instanceof ReferenceResultValue) {
+			value = ((ReferenceResultValue) abstractValue).getValue();
+		}
+		return value;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -1399,6 +1419,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST:
 				exec((OperationCallsList)arguments.get(0));
 				return null;
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__OPERATIONCALLRESULT:
+				return getValue((OperationCallResult)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT:
 				return createAbstractResultValue(arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE:

@@ -1,0 +1,127 @@
+= Table Of Contents =
+__TOC__
+
+= Introduction =
+
+A ''JavaScriptProgram'' allows you to invoke <code>Operation Calls</code> on Apogy Variables - and get their attributes - directly from JavaScript.
+
+Each Apogy Variable defined in a Apogy Session is exposed as a global variable in a <code>JavaScriptProgram</code>. For example, if you define the ''rover'' variable in Apogy, the global variable ''rover'' will be injected into the <code>JavaScriptProgram</code>. Below is a <code>JavaScriptProgram</code> example:
+
+
+ if (!rover.initialized) {
+     rover.init();
+ }
+
+ rover.cmdLinearVelocity(0.1);
+
+ var snapshot = rover.centerCamera.takeSnapshot();
+ java.lang.System.out.println(snapshot.image.width + ", " + snapshot.image.height);
+
+
+== Invoking a <code>JavaScriptProgram</code> ==
+
+Right-click on the ''JavaScriptProgram'', select ''Apogy'', then ''Invoke''.
+
+== Debugging a <code>JavaScriptProgram</code> ==
+
+# Right-click on the ''JavaScriptProgram'', select ''Apogy'', then ''Debug''.
+# Create a Debug Configuration "Remote JavaScript"
+# Select the "Mozilla Rhino" connector. Set "localhost" as the "Host" and "9000" as the "Port"
+# Launch the Debug Configuration
+
+= Installation Requirements =
+
+* ''Eclipse Web Developer Tools'' (3.7.1+) available from the Eclipse Mars update site.
+
+
+= Plugins =
+
+Since an operation on an object must be invoked through the ''ApogyCoreInvocatorFacade'', it cannot be directly exposed in JavaScript. Instead, the object is wrapped in a proxy that automatically calls the ''ApogyCoreInvocatorFacade'' when an operation is invoked.
+
+Apogy uses generic proxies for all classes, instead of specific proxies for each metaclass generated from the metamodel.
+
+
+== <code>ca.gc.asc_csa.apogy.core.programs.javascript</code> ==
+
+Core plugin that defines:
+
+* <code>JavaScriptProgram</code> Xcore model
+* <code>VariableProxy</code>, <code>TypeMemberProxy</code> and <code>ReferenceProxy</code>
+* <code>ScriptExecutor</code>
+
+=== <code>JavaScriptProgram</code> (<code>model/apogy_core_javascript_programs.xcore</code>) ===
+
+A <code>JavaScriptProgram</code> is a <code>Program</code> with a <code>scriptPath</code> attribute. This attribute refers to the file path of the JavaScript file. It is relative to the workspace. For example, if the <code>rover.js</code> file is in the directory <code>scripts</code> of the project <code>MyRover</code>, the <code>scriptPath</code> is <code>MyRover/scripts/rover.js</code>.
+
+
+=== <code>ScriptExecutor</code> (<code>src/ca/gc/asc_csa/apogy/core/programs/javascript</code>) ===
+
+The top-level proxies (those wrapping an Apogy variable) are created at the beginning of the execution of a <code>JavaScriptProgram</code>. For example, if there are two variables in a session, only two proxies are created at the beginning of the execution of the <code>JavaScriptProgram</code>. The proxies for subtypes and features are created on demand as the <code>JavaScriptProgram</code> needs them.
+
+Here is a high-level view of what is happening when you execute a <code>JavaScriptProgram</code>:
+
+
+# <code>ScriptExecutor.execute</code>
+## Create a new Rhino scope and initialize it with the standard JavaScript objects
+## Create a proxy for each Apogy variable of the active session
+## Inject these proxies as global variables into the Rhino scope
+## Execute the script
+
+If the debug flag is set to <code>true</code>, it starts a <code>RhinoDebugger</code> listening at <code>127.0.0.1:9000</code>.
+
+=== Proxy ===
+
+There are three types of proxies:
+
+* <code>VariableProxy</code>: wraps an Apogy variable
+* <code>TypeMemberProxy</code>: wraps an Apogy subtype
+* <code>ReferenceProxy</code>: wraps a reference to an <code>EObject</code>
+
+Each proxy extends <code>ScriptableObject</code>. <code>ScriptableObject</code> provides default behavior that makes it easier to expose host objects to JavaScript.
+
+A proxy holds two important attributes:
+
+* <code>VariableFeatureReference</code>: contains the variable, the subtype (if applicable) and the chain of features the proxy represents
+* <code>JavaScriptProgram</code>: the <code>JavaScriptProgram</code> being executed
+
+When a proxy is created, it dynamically adds properties to itself based on reflection. For example, it will add properties for each operation, feature (attribute and reference) and type member (if applicable). Those properties are not proxies, but instead getters (methods) that generate a proxy when they are accessed from JavaScript. If a property for a feature or type member is never accessed in JavaScript, the underlying proxy is never created. (No proxy are needed for an operation.)
+
+
+== <code>ca.gc.asc_csa.apogy.core.programs.javascript.edit</code> ==
+
+Edit plugin providing basic GUI support.  Generated automatically by EMF.
+
+== <code>ca.gc.asc_csa.apogy.core.programs.javascript.doc</code> ==
+
+Documentation plugin.
+
+== <code>ca.gc.asc_csa.apogy.core.programs.javascript.ui</code> ==
+
+User interface plugin providing the ''Execute Script'' (<code>ScriptExecutorHandler</code>) and ''Debug Script'' (<code>ScriptExecutorDebugHandler</code>) context menu items.
+
+=== <code>ScriptExecutorHandler</code> (<code>asc_csa/apogy/core/programs/javascript/ui/commands</code>) ===
+
+<code>ScriptExecutorHandler.execute</code> is called when the ''Execute Script'' context menu item is clicked. <code>ScriptExecutorHandler.execute</code> gets the <code>JavaScriptProgram</code> and calls <code>ScriptExecutor.execute</code>.
+
+=== <code>ScriptExecutorDebugHandler</code> (<code>asc_csa/apogy/core/programs/javascript/ui/commands</code>) ===
+
+<code>ScriptExecutorDebugHandler.execute</code> is called when the ''Execute Script'' context menu item is clicked. <code>ScriptExecutorDebugHandler.execute</code> gets the <code>JavaScriptProgram</code> and calls <code>ScriptExecutor.execute</code> with the debug flag set to <code>true</code>.
+
+
+== <code>ca.gc.asc_csa.apogy.core.programs.javascript.tests</code> ==
+
+Test plugin defining tests for the core plugin.
+
+You can launch the tests from the ''Run/Debug Configurations'' | ''JUnit Plugin Test''.
+
+=== <code>ScriptExecutorTest</code> (<code>src/ca/gc/asc_csa/apogy/core/programs/javascript/tests</code>) ===
+
+The test case <code>ScriptExecutorTest.executeRoverExampleDemo</code>:
+
+* loads an Apogy session which contains a <code>JavaScriptProgram</code>
+* calls <code>ScriptExecutor.execute</code>
+* checks that the operation calls have been called through the <code>ApogyCoreInvocatorFacade</code> by querying the data product
+
+
+
+

@@ -1,0 +1,9 @@
+[customer]
+codename='csa'
+project='apogy'
+
+[build]
+command='JAVA_HOME=/usr/java/jre1.8.0_74 mvn clean package -Dtycho.version=0.24.0 -Declipse.version=mars -Declipse.updates.version=4.5'
+
+[release]
+files=''
