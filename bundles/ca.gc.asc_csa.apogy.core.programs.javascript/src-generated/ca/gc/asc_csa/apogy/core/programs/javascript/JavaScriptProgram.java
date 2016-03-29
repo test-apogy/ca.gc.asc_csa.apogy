@@ -11,6 +11,10 @@ import ca.gc.asc_csa.apogy.core.invocator.Program;
  * A representation of the model object '<em><b>Java Script Program</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A JavaScriptProgram is an entity that invokes Operation Calls on Variables through a JavaScript program file.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
