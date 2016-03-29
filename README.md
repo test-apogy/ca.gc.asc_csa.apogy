@@ -5,10 +5,10 @@ As an example, integrating a rover in **Apogy** is as simple as creating an EMF 
 ![Apogy Overview](/doc/ca.gc.asc_csa.apogy.doc/resources/main/apogy_overview.jpg "Apogy Overview")
 
 # Eclipse Update Sites #
-Description                    | URL          
------------------------------- | -------------
-Stable                         | [https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/)
-Latest                         | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/)
+Description                    | URL          | Notes
+------------------------------ | -------------|-------------------------
+Stable                         | [https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/) | [Changes](/CHANGES "Changes")
+Latest                         | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/) | 
 
 # Documentation #
 Description                    | URL
