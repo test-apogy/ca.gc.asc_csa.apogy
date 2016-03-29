@@ -8,7 +8,7 @@ As an example, integrating a rover in **Apogy** is as simple as creating an EMF 
 Description                    | URL          | Notes
 ------------------------------ | -------------|-------------------------
 Stable                         | [https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/) | [Changes](/CHANGES "Changes"), [Version](/VERSION "Version")
-Latest                         | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/) | [Changes](src/[develop]/CHANGES "Changes"), [Version](src/[develop]/VERSION "Version")
+Latest                         | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/) | [Changes]([develop]/CHANGES "Changes"), [Version]([develop]/VERSION "Version")
 
 # Documentation #
 Description                    | URL
