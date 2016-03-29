@@ -262,6 +262,16 @@ TODO!
 * Each ''Operation Call'' can be invoked individually, or
 * It can be executed as a whole;
 
+==== JavaScript <i>Program</i> ====
+
+* A ''JavaScript Program'' is an entity that invokes ''Operation Calls'' on ''Variables'' through a JavaScript Program file;
+* A ''JavaScript Program'' includes:
+** A name;
+** A description; and
+** A script path relative to the workspace.
+* It can be executed as a whole or
+* It can be executed in debug mode and benefits from all the features of the [https://eclipse.org/webtools/jsdt/ JSDT framework] (breakpoints, step by step...) 
+
 === <i>Controller Bindings & Configurations</i> ===
 
 ==== <i>Controller Configuration</i> ====
