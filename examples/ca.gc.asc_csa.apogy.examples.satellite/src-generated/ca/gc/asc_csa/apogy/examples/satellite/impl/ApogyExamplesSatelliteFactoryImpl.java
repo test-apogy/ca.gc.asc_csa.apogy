@@ -77,6 +77,7 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER: return createDefaultConstellationPlanner();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_COMMAND_PLAN: return createDefaultConstellationCommandPlan();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
+			case ApogyExamplesSatellitePackage.SIMPLE_REQUEST: return createSimpleRequest();
 			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST: return createObservationConstellationRequest();
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
 			case ApogyExamplesSatellitePackage.SATELLITES_LIST: return createSatellitesList();
@@ -217,6 +218,16 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	public ConstellationRequestsList createConstellationRequestsList() {
 		ConstellationRequestsListImpl constellationRequestsList = new ConstellationRequestsListImpl();
 		return constellationRequestsList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleRequest createSimpleRequest() {
+		SimpleRequestImpl simpleRequest = new SimpleRequestImpl();
+		return simpleRequest;
 	}
 
 	/**

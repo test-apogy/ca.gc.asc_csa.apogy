@@ -99,7 +99,7 @@ public class AbstractConstellationPlannerItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_PLANNER_SETTINGSPropertyCategory"),
 				 null));
 	}
 
@@ -121,7 +121,7 @@ public class AbstractConstellationPlannerItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI_PLANNER_SETTINGSPropertyCategory"),
 				 null));
 	}
 
@@ -143,7 +143,7 @@ public class AbstractConstellationPlannerItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_PLANNER_SETTINGSPropertyCategory"),
 				 null));
 	}
 
@@ -165,7 +165,7 @@ public class AbstractConstellationPlannerItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI_PLANNER_SETTINGSPropertyCategory"),
 				 null));
 	}
 

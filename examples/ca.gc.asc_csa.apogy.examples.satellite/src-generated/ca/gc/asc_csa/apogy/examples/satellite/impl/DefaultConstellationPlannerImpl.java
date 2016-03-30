@@ -12,41 +12,87 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import ca.gc.asc_csa.apogy.common.log.EventSeverity;
-import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.Activator;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
-import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
-import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Default Constellation Planner</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationPlannerImpl#isUmbraPassesValid <em>Umbra Passes Valid</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationPlannerImpl#isSatelliteRollCommandValid <em>Satellite Roll Command Valid</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationPlannerImpl#getSunHorizonAngleUmbraThreshold <em>Sun Horizon Angle Umbra Threshold</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class DefaultConstellationPlannerImpl extends AbstractConstellationPlannerImpl implements DefaultConstellationPlanner {
-	private Comparator<AbstractConstellationRequest> constellationRequestComparator;
+	/**
+	 * The default value of the '{@link #isUmbraPassesValid() <em>Umbra Passes Valid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUmbraPassesValid()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean UMBRA_PASSES_VALID_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isUmbraPassesValid() <em>Umbra Passes Valid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUmbraPassesValid()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean umbraPassesValid = UMBRA_PASSES_VALID_EDEFAULT;
+	/**
+	 * The default value of the '{@link #isSatelliteRollCommandValid() <em>Satellite Roll Command Valid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSatelliteRollCommandValid()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SATELLITE_ROLL_COMMAND_VALID_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isSatelliteRollCommandValid() <em>Satellite Roll Command Valid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSatelliteRollCommandValid()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean satelliteRollCommandValid = SATELLITE_ROLL_COMMAND_VALID_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getSunHorizonAngleUmbraThreshold() <em>Sun Horizon Angle Umbra Threshold</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSunHorizonAngleUmbraThreshold()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double SUN_HORIZON_ANGLE_UMBRA_THRESHOLD_EDEFAULT = 5.0;
+	/**
+	 * The cached value of the '{@link #getSunHorizonAngleUmbraThreshold() <em>Sun Horizon Angle Umbra Threshold</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSunHorizonAngleUmbraThreshold()
+	 * @generated
+	 * @ordered
+	 */
+	protected double sunHorizonAngleUmbraThreshold = SUN_HORIZON_ANGLE_UMBRA_THRESHOLD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,183 +113,204 @@ public class DefaultConstellationPlannerImpl extends AbstractConstellationPlanne
 		return ApogyExamplesSatellitePackage.Literals.DEFAULT_CONSTELLATION_PLANNER;
 	}
 	
-	@Override
-	public void validate() throws Exception {
-		if (getConstellationState().getSatellitesList() == null || getConstellationState().getSatellitesList().getSatellites().isEmpty()){
-			throw new Exception("The planner does not have any satellites defined.");
-		}
-
-		if (getConstellationCommandPlan() == null){
-			throw new Exception("The planner does not refer to any Constellation Command Plan required to store resuling plan.");
-		}
-		
-		if (getStartDate() == null){
-			throw new Exception("The planner start date is not defined.");
-		}
-		
-		if (getEndDate() == null){
-			throw new Exception("The planner end date is not defined.");
-		}		
-		
-		if ((long)(getEndDate().getTime() - getStartDate().getTime()) < 0){
-			throw new Exception("The planner start date and end date are not consistent.");
-		}
-		
-		if (getConstellationRequestsList() == null){
-			throw new Exception("The planner does not refer to any requests.");
-		}
-		
-		if (getElevationMask() == null){
-			throw new Exception("The planner does not define any elevation mask.");
-		}
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isUmbraPassesValid() {
+		return umbraPassesValid;
 	}
-	
-	@Override
-	public void plan() throws Exception {
 
-		Logger.INSTANCE.log(Activator.ID, "Constellation Planner started", EventSeverity.INFO);
-		
-		/* Validate the planner settings. */
-		validate();
-				
-		/* Clear the command plan. */
-		getConstellationCommandPlan().getConstellationCommands().clear();
-				
-		/* For each request finds the target passes available within the period defined. */
-		Iterator<AbstractConstellationRequest> requests = getConstellationRequestsList().getConstellationRequests().iterator();
-		
-		// FIXME SortRequests not working.
-		// FIXME Improve Logging.
-//		Iterator<AbstractConstellationRequest> requests = sortRequests(getConstellationRequestsList().getConstellationRequests()).iterator();
-		while (requests.hasNext()){
-			AbstractConstellationRequest request = requests.next();
-			SortedSet<VisibilityPass> sortedPasses = getTargetPasses(request, getStartDate(), getEndDate(), getElevationMask());
-			
-			Logger.INSTANCE.log(Activator.ID, "Constellation Planner found " + sortedPasses.size() + " passes", EventSeverity.INFO);
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUmbraPassesValid(boolean newUmbraPassesValid) {
+		boolean oldUmbraPassesValid = umbraPassesValid;
+		umbraPassesValid = newUmbraPassesValid;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__UMBRA_PASSES_VALID, oldUmbraPassesValid, umbraPassesValid));
+	}
 
-			/* Creates a Visibility Pass Based Satellite Command for each valid passes. */
-			Iterator<VisibilityPass> passesIterator = sortedPasses.iterator();
-			while(passesIterator.hasNext())
-			{												
-				VisibilityPass pass = passesIterator.next();
-				
-				VisibilityPassBasedSatelliteCommand command = 
-						createVisibilityPassBasedSatelliteCommand(request, pass);	
-				
-				System.out.println("DefaultConstellationPlannerImpl.plan()" + command);
-				
-				getConstellationCommandPlan().getConstellationCommands().add(command);
-			}			
-		}				
-		
-		Logger.INSTANCE.log(Activator.ID, "Constellation Planner completed", EventSeverity.INFO);
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSatelliteRollCommandValid() {
+		return satelliteRollCommandValid;
 	}
-	
-	@Override
-	public SortedSet<AbstractConstellationRequest> sortRequests(List<AbstractConstellationRequest> requests) {
-		SortedSet<AbstractConstellationRequest> sortedSet = new TreeSet<AbstractConstellationRequest>(getConstellationRequestComparator());
-		sortedSet.addAll(requests);
-		return sortedSet;
-	}
-	
-	@Override
-	public Comparator<AbstractConstellationRequest> getConstellationRequestComparator() {		
-		if (constellationRequestComparator == null){
-			constellationRequestComparator = new Comparator<AbstractConstellationRequest>() {
-				@Override
-				public int compare(AbstractConstellationRequest o1, AbstractConstellationRequest o2) {
-					return o1.getOrderPriority().compareTo(o2.getOrderPriority());
-				}				
-			};
-		}		
-		return constellationRequestComparator;
-	}
-		
-	@Override
-	public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(
-			AbstractConstellationRequest request, VisibilityPass visibilityPass) {
 
-		VisibilityPassBasedSatelliteCommand command = null;		
-		if (request instanceof ObservationConstellationRequest){			
-			command = ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand();
-			command.setConstellationRequest(request);
-			command.setUid(EcoreUtil.copy(request.getUid()));
-			command.setTime(visibilityPass.getStartTime());
-			command.setSatellite(getSatellite(visibilityPass.getOrbitModel()));
-			command.setVisibilityPass(EcoreUtil.copy(visibilityPass));
-		}	
-		return command;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSatelliteRollCommandValid(boolean newSatelliteRollCommandValid) {
+		boolean oldSatelliteRollCommandValid = satelliteRollCommandValid;
+		satelliteRollCommandValid = newSatelliteRollCommandValid;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SATELLITE_ROLL_COMMAND_VALID, oldSatelliteRollCommandValid, satelliteRollCommandValid));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getSunHorizonAngleUmbraThreshold() {
+		return sunHorizonAngleUmbraThreshold;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSunHorizonAngleUmbraThreshold(double newSunHorizonAngleUmbraThreshold) {
+		double oldSunHorizonAngleUmbraThreshold = sunHorizonAngleUmbraThreshold;
+		sunHorizonAngleUmbraThreshold = newSunHorizonAngleUmbraThreshold;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SUN_HORIZON_ANGLE_UMBRA_THRESHOLD, oldSunHorizonAngleUmbraThreshold, sunHorizonAngleUmbraThreshold));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__UMBRA_PASSES_VALID:
+				return isUmbraPassesValid();
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SATELLITE_ROLL_COMMAND_VALID:
+				return isSatelliteRollCommandValid();
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SUN_HORIZON_ANGLE_UMBRA_THRESHOLD:
+				return getSunHorizonAngleUmbraThreshold();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__UMBRA_PASSES_VALID:
+				setUmbraPassesValid((Boolean)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SATELLITE_ROLL_COMMAND_VALID:
+				setSatelliteRollCommandValid((Boolean)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SUN_HORIZON_ANGLE_UMBRA_THRESHOLD:
+				setSunHorizonAngleUmbraThreshold((Double)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__UMBRA_PASSES_VALID:
+				setUmbraPassesValid(UMBRA_PASSES_VALID_EDEFAULT);
+				return;
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SATELLITE_ROLL_COMMAND_VALID:
+				setSatelliteRollCommandValid(SATELLITE_ROLL_COMMAND_VALID_EDEFAULT);
+				return;
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SUN_HORIZON_ANGLE_UMBRA_THRESHOLD:
+				setSunHorizonAngleUmbraThreshold(SUN_HORIZON_ANGLE_UMBRA_THRESHOLD_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__UMBRA_PASSES_VALID:
+				return umbraPassesValid != UMBRA_PASSES_VALID_EDEFAULT;
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SATELLITE_ROLL_COMMAND_VALID:
+				return satelliteRollCommandValid != SATELLITE_ROLL_COMMAND_VALID_EDEFAULT;
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SUN_HORIZON_ANGLE_UMBRA_THRESHOLD:
+				return sunHorizonAngleUmbraThreshold != SUN_HORIZON_ANGLE_UMBRA_THRESHOLD_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (umbraPassesValid: ");
+		result.append(umbraPassesValid);
+		result.append(", satelliteRollCommandValid: ");
+		result.append(satelliteRollCommandValid);
+		result.append(", sunHorizonAngleUmbraThreshold: ");
+		result.append(sunHorizonAngleUmbraThreshold);
+		result.append(')');
+		return result.toString();
 	}
 	
 	@Override
 	public boolean isValid(VisibilityPass visibilityPass) 
 	{
+		// Check if there is a satellite associated to the OrbitModel.
+		Satellite satellite = getSatellite(visibilityPass.getOrbitModel());		
+		if (satellite == null) return false;
+
+		// Finds the closest point the satellite comes to the target in the pass.
+		VisibilityPassSpacecraftPosition closestPosition = visibilityPass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
+		if (closestPosition == null) return false;
+			
+		/*
+		 * Verify if the satellite roll capability must be considered by the planner.
+		 */
+		if (isSatelliteRollCommandValid()){
+		
+			// Checks to see if the pass brings us close enough to the target.		
+			if(Math.abs(closestPosition.getSpacecraftCrossTrackAngle()) > Math.abs(satellite.getMaximumRoll())) return false;
+		}
+		
+		/*
+		 * Verify if passes that occur in umbra must be considered. 
+		 */
+		if (isUmbraPassesValid()){
+				
+			// Gets the location of the target
+			double observerLongitude = visibilityPass.getSurfaceLocation().getLongitude();
+			double observerLatitude = visibilityPass.getSurfaceLocation().getLatitude();
+			
+			// Finds the horizontal coordinates of the sun at the target at the time of the closest approach.
+			HorizontalCoordinates sunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(closestPosition.getTime(), observerLongitude, observerLatitude);
+			
+			// Returns true if the sun is at least <x> degrees above the horizon.
+			return sunCoordinates.getAltitude() > Math.toRadians(getSunHorizonAngleUmbraThreshold());
+		}
+		
 		return true;
-		
-		// FIXME re-enable is valid.
-		
-//		/* Check if there is a satellite associated to the OrbitModel. */
-//		Satellite satellite = getSatellite(visibilityPass.getOrbitModel());		
-//		if (satellite == null) return false;
-//
-//		// Finds the closest point the satellite comes to the target in the pass.
-//		VisibilityPassSpacecraftPosition closestPosition = visibilityPass.getPositionHistory().getSmallestSpacecraftCrossTrackAnglePosition();
-//		if (closestPosition == null) return false;
-//		
-//		// Checks to see if the pass brings us close enough to the target.
-//		if(Math.abs(closestPosition.getSpacecraftCrossTrackAngle()) > Math.abs(satellite.getMaximumRoll())) return false;
-//				
-//		// Gets the location of the target
-//		double observerLongitude = visibilityPass.getSurfaceLocation().getLongitude();
-//		double observerLatitude = visibilityPass.getSurfaceLocation().getLatitude();
-//		
-//		// Finds the horizontal coordinates of the sun at the target at the time of the closest approach.
-//		HorizontalCoordinates sunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(closestPosition.getTime(), observerLongitude, observerLatitude);
-//		
-//		// Returns true if the sun is at least 10 degrees above the horizon.
-//		return sunCoordinates.getAltitude() > Math.toRadians(10);
 	}
-
-	@Override
-	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate,
-			ElevationMask elevationMask) throws Exception {
-		List<VisibilityPass> visibilityPasses = new ArrayList<VisibilityPass>();
-
-		if (request instanceof ObservationConstellationRequest) {
-			ObservationConstellationRequest observationRequest = (ObservationConstellationRequest) request;
-
-			for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
-				List<VisibilityPass> potentialVisibilityPasses = satellite.getOrbitModel().getTargetPasses(observationRequest.getLocation(),
-						startDate, endDate, elevationMask);
-				for (VisibilityPass pass : potentialVisibilityPasses) {
-					if (isValid(pass)) {
-						visibilityPasses.add(pass);
-					}
-				}
-			}
-		}
-
-		SortedSet<VisibilityPass> sortedVisibilityPasses = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE
-				.getVisibilityPassSortedByStartDate(visibilityPasses);
-		return sortedVisibilityPasses;
-	}
-
-	@Override
-	public Satellite getSatellite(EarthOrbitModel orbitModel) {
-		Satellite result = null;
-
-		if (getConstellationState().getSatellitesList() != null) {
-			Iterator<Satellite> satellites = getConstellationState().getSatellitesList().getSatellites().iterator();
-			while (satellites.hasNext() && result == null) {
-				Satellite satellite = satellites.next();
-
-				if (satellite.getOrbitModel() == orbitModel) {
-					result = satellite;
-				}
-			}
-		}
-		return result;
-	}
-	
 	
 } //DefaultConstellationPlannerImpl

@@ -13,10 +13,14 @@
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.SortedSet;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -27,6 +31,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
@@ -34,16 +41,19 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractRequestBasedSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.Activator;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Abstract Constellation Planner</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Abstract Constellation Planner</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -58,11 +68,11 @@ import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteComman
  *
  * @generated
  */
-public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImpl.Container implements AbstractConstellationPlanner {
+public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImpl.Container
+		implements AbstractConstellationPlanner {
 	/**
 	 * The default value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getStartDate()
 	 * @generated
 	 * @ordered
@@ -70,8 +80,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	protected static final Date START_DATE_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getStartDate()
 	 * @generated
 	 * @ordered
@@ -79,8 +88,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	protected Date startDate = START_DATE_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getEndDate() <em>End Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getEndDate()
 	 * @generated
 	 * @ordered
@@ -88,8 +96,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	protected static final Date END_DATE_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getEndDate() <em>End Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getEndDate()
 	 * @generated
 	 * @ordered
@@ -124,9 +131,10 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 */
 	protected ConstantElevationMask elevationMask;
 
+	private Comparator<AbstractRequestBasedSatelliteCommand> constellationRequestComparator;
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected AbstractConstellationPlannerImpl() {
@@ -134,8 +142,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -144,8 +151,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstellationState getConstellationState() {
@@ -154,8 +160,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstellationState basicGetConstellationState() {
@@ -164,18 +169,17 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConstellationState(ConstellationState newConstellationState, NotificationChain msgs) {
+	public NotificationChain basicSetConstellationState(ConstellationState newConstellationState,
+			NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newConstellationState, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE, msgs);
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setConstellationState(ConstellationState newConstellationState) {
@@ -195,8 +199,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Date getStartDate() {
@@ -204,8 +207,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setStartDate(Date newStartDate) {
@@ -216,8 +218,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Date getEndDate() {
@@ -225,8 +226,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setEndDate(Date newEndDate) {
@@ -237,8 +237,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstellationRequestsList getConstellationRequestsList() {
@@ -254,8 +253,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstellationRequestsList basicGetConstellationRequestsList() {
@@ -263,8 +261,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setConstellationRequestsList(ConstellationRequestsList newConstellationRequestsList) {
@@ -275,8 +272,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AbstractConstellationCommandPlan getConstellationCommandPlan() {
@@ -292,8 +288,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AbstractConstellationCommandPlan basicGetConstellationCommandPlan() {
@@ -301,8 +296,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setConstellationCommandPlan(AbstractConstellationCommandPlan newConstellationCommandPlan) {
@@ -313,8 +307,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstantElevationMask getElevationMask() {
@@ -322,8 +315,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public NotificationChain basicSetElevationMask(ConstantElevationMask newElevationMask, NotificationChain msgs) {
@@ -337,8 +329,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setElevationMask(ConstantElevationMask newElevationMask) {
@@ -356,15 +347,36 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	abstract public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception;
+	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate,
+			ElevationMask elevationMask) throws Exception {
+		List<VisibilityPass> visibilityPasses = new ArrayList<VisibilityPass>();
+
+		if (request instanceof ObservationConstellationRequest) {
+			ObservationConstellationRequest observationRequest = (ObservationConstellationRequest) request;
+
+			for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
+				List<VisibilityPass> potentialVisibilityPasses = satellite.getOrbitModel()
+						.getTargetPasses(observationRequest.getLocation(), startDate, endDate, elevationMask);
+				for (VisibilityPass pass : potentialVisibilityPasses) {
+					if (isValid(pass)) {
+						visibilityPasses.add(pass);
+					}
+				}
+			}
+		}
+
+		SortedSet<VisibilityPass> sortedVisibilityPasses = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE
+				.getVisibilityPassSortedByStartDate(visibilityPasses);
+		return sortedVisibilityPasses;
+	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public boolean isValid(VisibilityPass visibilityPass) {
@@ -372,51 +384,188 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	abstract public Satellite getSatellite(EarthOrbitModel orbitModel);
+	public Satellite getSatellite(EarthOrbitModel orbitModel) {
+		Satellite result = null;
+
+		if (getConstellationState().getSatellitesList() != null) {
+			Iterator<Satellite> satellites = getConstellationState().getSatellitesList().getSatellites().iterator();
+			while (satellites.hasNext() && result == null) {
+				Satellite satellite = satellites.next();
+
+				if (satellite.getOrbitModel() == orbitModel) {
+					result = satellite;
+				}
+			}
+		}
+		return result;
+	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	abstract public void plan() throws Exception;
+	public void plan() throws Exception {
+		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Started", EventSeverity.INFO);
+
+		/* Validate the planner settings. */
+		validate();
+
+		/* Clear the command plan. */
+		getConstellationCommandPlan().getConstellationCommands().clear();
+		
+		/* Create a set to sort the commands. */
+		TreeSet<AbstractRequestBasedSatelliteCommand> commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(getRequestBasedSatelliteCommandsComparator());
+
+		/* Gets the observation requests. */
+		List<AbstractConstellationRequest> requestsList = 
+				getConstellationRequestsList().getConstellationRequests().stream().filter(p -> p instanceof ObservationConstellationRequest).collect(Collectors.toList());		
+
+		Logger.INSTANCE.log(
+				Activator.ID, "Constellation Planner: "
+						+ requestsList.size() + " observation requests to process.",
+				EventSeverity.INFO);
+		
+		Logger.INSTANCE.log(
+				Activator.ID, "Constellation Planner: "
+						+ (getConstellationRequestsList().getConstellationRequests().size() - requestsList.size()) + " requests are not observation requests and will not be processed.",
+				EventSeverity.INFO);
+
+		/*
+		 * For each observation request finds the target passes available within the period defined.
+		 */
+		Iterator<AbstractConstellationRequest> requests = requestsList.iterator(); 
+		while (requests.hasNext()) {
+			ObservationConstellationRequest request = (ObservationConstellationRequest) requests.next();
+			SortedSet<VisibilityPass> sortedPasses = getTargetPasses(request, getStartDate(), getEndDate(),
+					getElevationMask());
+
+			Logger.INSTANCE.log(Activator.ID, "Constellation Planner found " + sortedPasses.size() + " passes",
+					EventSeverity.INFO);
+
+			// Creates a Visibility Pass Based Satellite Command for each valid passes.
+			Iterator<VisibilityPass> passesIterator = sortedPasses.iterator();
+			while (passesIterator.hasNext()) {
+				VisibilityPass pass = passesIterator.next();
+				commands.add(createVisibilityPassBasedSatelliteCommand(request, pass));
+			}
+		}
+
+		/*
+		 * Remove duplicates.
+		 */
+		TreeSet<AbstractRequestBasedSatelliteCommand> no_duplicate_commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(new Comparator<AbstractRequestBasedSatelliteCommand>() {
+			@Override
+			public int compare(AbstractRequestBasedSatelliteCommand o1, AbstractRequestBasedSatelliteCommand o2) {
+				return o1.getConstellationRequest().equals(o2.getConstellationRequest()) ? 
+					0 : 
+					getRequestBasedSatelliteCommandsComparator().compare(o1, o2);
+			}
+		});
+		no_duplicate_commands.addAll(commands);
+		
+		/* Copy the results. */
+		getConstellationCommandPlan().getConstellationCommands().addAll(no_duplicate_commands);
+
+		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Completed", EventSeverity.INFO);
+	}	
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	abstract public void validate() throws Exception;
+	public void validate() throws Exception {
+		if (getConstellationState().getSatellitesList() == null
+				|| getConstellationState().getSatellitesList().getSatellites().isEmpty()) {
+			throw new Exception("The planner does not have any satellites defined.");
+		}
+
+		if (getConstellationCommandPlan() == null) {
+			throw new Exception(
+					"The planner does not refer to any Constellation Command Plan required to store resuling plan.");
+		}
+
+		if (getStartDate() == null) {
+			throw new Exception("The planner start date is not defined.");
+		}
+
+		if (getEndDate() == null) {
+			throw new Exception("The planner end date is not defined.");
+		}
+
+		if ((long) (getEndDate().getTime() - getStartDate().getTime()) < 0) {
+			throw new Exception("The planner start date and end date are not consistent.");
+		}
+
+		if (getConstellationRequestsList() == null) {
+			throw new Exception("The planner does not refer to any requests.");
+		}
+
+		if (getElevationMask() == null) {
+			throw new Exception("The planner does not define any elevation mask.");
+		}
+	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	abstract public SortedSet<AbstractConstellationRequest> sortRequests(List<AbstractConstellationRequest> requests);
+	public Comparator<AbstractRequestBasedSatelliteCommand> getRequestBasedSatelliteCommandsComparator() {
+		if (constellationRequestComparator == null) {
+			constellationRequestComparator = new Comparator<AbstractRequestBasedSatelliteCommand>() {
+				@Override
+				public int compare(AbstractRequestBasedSatelliteCommand o1, AbstractRequestBasedSatelliteCommand o2) {
+					/*
+					 * Check the request priority.
+					 */
+					if (o1.getConstellationRequest().getOrderPriority() != o2.getConstellationRequest()
+							.getOrderPriority()) {
+						// Use the request priorities to compare.
+						return o2.getConstellationRequest().getOrderPriority()
+								.compareTo(o1.getConstellationRequest().getOrderPriority());
+					} else {
+						// Different request priorities, use the date to
+						// compare.
+						if (o1.getTime().getTime() == o2.getTime().getTime()) {
+							return 0;
+						} else {
+							return o1.getTime().getTime() < o2.getTime().getTime() ? -1 : 1;
+						}
+					}
+				}
+			};
+		}
+		return constellationRequestComparator;
+	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	abstract public Comparator<AbstractConstellationRequest> getConstellationRequestComparator();
+	@Override
+	public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(
+			ObservationConstellationRequest request, VisibilityPass visibilityPass) {
 
+		VisibilityPassBasedSatelliteCommand command = null;		
+		command = ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand();
+		command.setConstellationRequest(request);
+		command.setUid(EcoreUtil.copy(request.getUid()));
+		command.setTime(visibilityPass.getStartTime());
+		command.setSatellite(getSatellite(visibilityPass.getOrbitModel()));
+		command.setVisibilityPass(EcoreUtil.copy(visibilityPass));
+		
+		return command;
+	}
+	
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	abstract public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(AbstractConstellationRequest request, VisibilityPass visibilityPass);
-
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -431,8 +580,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -447,8 +595,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -461,8 +608,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -488,8 +634,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -518,8 +663,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -548,8 +692,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -572,8 +715,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -607,19 +749,16 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___SORT_REQUESTS__LIST:
-				return sortRequests((List<AbstractConstellationRequest>)arguments.get(0));
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_CONSTELLATION_REQUEST_COMPARATOR:
-				return getConstellationRequestComparator();
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__ABSTRACTCONSTELLATIONREQUEST_VISIBILITYPASS:
-				return createVisibilityPassBasedSatelliteCommand((AbstractConstellationRequest)arguments.get(0), (VisibilityPass)arguments.get(1));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_REQUEST_BASED_SATELLITE_COMMANDS_COMPARATOR:
+				return getRequestBasedSatelliteCommandsComparator();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS:
+				return createVisibilityPassBasedSatelliteCommand((ObservationConstellationRequest)arguments.get(0), (VisibilityPass)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -635,4 +774,4 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		return result.toString();
 	}
 
-} //AbstractConstellationPlannerImpl
+} // AbstractConstellationPlannerImpl

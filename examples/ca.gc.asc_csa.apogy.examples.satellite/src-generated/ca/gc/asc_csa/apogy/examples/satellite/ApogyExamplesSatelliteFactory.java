@@ -105,6 +105,15 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	ConstellationRequestsList createConstellationRequestsList();
 
 	/**
+	 * Returns a new object of class '<em>Simple Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Request</em>'.
+	 * @generated
+	 */
+	SimpleRequest createSimpleRequest();
+
+	/**
 	 * Returns a new object of class '<em>Observation Constellation Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

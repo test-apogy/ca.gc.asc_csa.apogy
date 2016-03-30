@@ -177,21 +177,25 @@ abstract class AbstractConstellationPlanner{
 	/*
 	 * Specifies the start date used by the planner.
 	 */
+	@GenModel(propertyCategory="PLANNER_SETTINGS")
 	Date startDate
 
 	/*
 	 * Specifies the end date used by the planner.
 	 */
+    @GenModel(propertyCategory="PLANNER_SETTINGS")	 
 	Date endDate
 	
 	/*
 	 * Specifies the list of {@AbstractConstellationRequest} to be processed by the planner.
 	 */
+    @GenModel(propertyCategory="PLANNER_SETTINGS")	 
 	refers ConstellationRequestsList constellationRequestsList
 	
 	/*
 	 * Specifies in which plan the planner will store its results.
-	 */	
+	 */
+    @GenModel(propertyCategory="PLANNER_SETTINGS")	 	
 	refers AbstractConstellationCommandPlan constellationCommandPlan
 	
 	/*
@@ -231,29 +235,41 @@ abstract class AbstractConstellationPlanner{
 	 * Validates the planner properties.
 	 */
 	op void validate() throws Exception
-	
+			
 	/*
-	 * Sorts the following requests.
+	 * Returns the comparator of {@link AbstractRequestBasedSatelliteCommand} used to sort them.
 	 */
-	op SortedSet<AbstractConstellationRequest> sortRequests(List<AbstractConstellationRequest> requests)
+	op Comparator<AbstractRequestBasedSatelliteCommand> getRequestBasedSatelliteCommandsComparator()	
 	
 	/*
-	 * Returns the comparator of {@link AbstractConstellationRequest} used to sort them.
-	 */
-	op Comparator<AbstractConstellationRequest> getConstellationRequestComparator()
-	
-	/*
-	 * Creates a command to address the specified {@link AbstractConstellationRequest}.
+	 * Creates a command to address the specified {@link ObservationConstellationRequest}.
 	 * @param request Refers to the request.
 	 * @param visibilityPass Visibility pass context.
 	 */
-	op VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(AbstractConstellationRequest request, VisibilityPass visibilityPass)
+	op VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(ObservationConstellationRequest request, VisibilityPass visibilityPass)
 }
 
 /*
  * Default Implementation of {@link AbstractConstellationPlanner}.
  */
-class DefaultConstellationPlanner extends AbstractConstellationPlanner{	
+class DefaultConstellationPlanner extends AbstractConstellationPlanner{
+	/*
+	 * Indicates if a pass that occurs in umbra must be considered by the planner.
+	 */	
+	@GenModel(propertyCategory="VISIBILITY_PASS_VALIDITY")
+	boolean umbraPassesValid = "false"
+	
+	/*
+	 * Indicates if a pass that requires roll command to ensure coverage must be considered by the planner. 
+	 */
+	@GenModel(propertyCategory="VISIBILITY_PASS_VALIDITY")
+	boolean satelliteRollCommandValid = "false"
+	
+	/*
+	 * Specifies the angle threshold value the planner uses to determine the umbra.
+	 */
+	@GenModel(propertyCategory="VISIBILITY_PASS_VALIDITY", apogy_units="deg")
+	double sunHorizonAngleUmbraThreshold = "5.0"
 }
 
 /*
@@ -303,6 +319,12 @@ abstract class AbstractConstellationRequest{
 	 * Order Status.
 	 */
 	ConstellationRequestStatus orderStatus = "NEW"		
+}
+
+/*
+ * Simple Request.
+ */
+class SimpleRequest extends AbstractConstellationRequest{
 }
 
 /*
@@ -453,7 +475,6 @@ class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlin
 }
 
 /*
- * FIXME Remove this class.  Not used.
  * Utilities class for the satellite example.
  */
 class ConstellationUtilities{

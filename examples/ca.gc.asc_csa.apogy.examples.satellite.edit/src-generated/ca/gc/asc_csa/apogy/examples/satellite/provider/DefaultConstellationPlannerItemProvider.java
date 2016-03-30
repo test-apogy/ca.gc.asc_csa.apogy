@@ -13,6 +13,8 @@
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
 import java.util.Collection;
 import java.util.Date;
@@ -21,7 +23,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner} object.
@@ -51,8 +56,77 @@ public class DefaultConstellationPlannerItemProvider extends AbstractConstellati
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addUmbraPassesValidPropertyDescriptor(object);
+			addSatelliteRollCommandValidPropertyDescriptor(object);
+			addSunHorizonAngleUmbraThresholdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Umbra Passes Valid feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUmbraPassesValidPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DefaultConstellationPlanner_umbraPassesValid_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DefaultConstellationPlanner_umbraPassesValid_feature", "_UI_DefaultConstellationPlanner_type"),
+				 ApogyExamplesSatellitePackage.Literals.DEFAULT_CONSTELLATION_PLANNER__UMBRA_PASSES_VALID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_VISIBILITY_PASS_VALIDITYPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Satellite Roll Command Valid feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSatelliteRollCommandValidPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DefaultConstellationPlanner_satelliteRollCommandValid_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DefaultConstellationPlanner_satelliteRollCommandValid_feature", "_UI_DefaultConstellationPlanner_type"),
+				 ApogyExamplesSatellitePackage.Literals.DEFAULT_CONSTELLATION_PLANNER__SATELLITE_ROLL_COMMAND_VALID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_VISIBILITY_PASS_VALIDITYPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Sun Horizon Angle Umbra Threshold feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	protected void addSunHorizonAngleUmbraThresholdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DefaultConstellationPlanner_sunHorizonAngleUmbraThreshold_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DefaultConstellationPlanner_sunHorizonAngleUmbraThreshold_feature", "_UI_DefaultConstellationPlanner_type"),
+				 ApogyExamplesSatellitePackage.Literals.DEFAULT_CONSTELLATION_PLANNER__SUN_HORIZON_ANGLE_UMBRA_THRESHOLD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_VISIBILITY_PASS_VALIDITYPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -92,6 +166,14 @@ public class DefaultConstellationPlannerItemProvider extends AbstractConstellati
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(DefaultConstellationPlanner.class)) {
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__UMBRA_PASSES_VALID:
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SATELLITE_ROLL_COMMAND_VALID:
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER__SUN_HORIZON_ANGLE_UMBRA_THRESHOLD:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

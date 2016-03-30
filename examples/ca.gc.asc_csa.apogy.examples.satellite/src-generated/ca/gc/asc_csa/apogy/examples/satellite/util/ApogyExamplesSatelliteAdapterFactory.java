@@ -135,6 +135,10 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractConstellationRequestAdapter();
 			}
 			@Override
+			public Adapter caseSimpleRequest(SimpleRequest object) {
+				return createSimpleRequestAdapter();
+			}
+			@Override
 			public Adapter caseObservationConstellationRequest(ObservationConstellationRequest object) {
 				return createObservationConstellationRequestAdapter();
 			}
@@ -413,6 +417,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstractConstellationRequestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest <em>Simple Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest
+	 * @generated
+	 */
+	public Adapter createSimpleRequestAdapter() {
 		return null;
 	}
 

@@ -19,7 +19,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.List;
 import java.util.SortedSet;
 import org.eclipse.emf.ecore.EObject;
 
@@ -94,6 +93,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @see #setStartDate(Date)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_StartDate()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
 	Date getStartDate();
@@ -123,6 +123,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @see #setEndDate(Date)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_EndDate()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
 	Date getEndDate();
@@ -151,7 +152,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Constellation Requests List</em>' reference.
 	 * @see #setConstellationRequestsList(ConstellationRequestsList)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationRequestsList()
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
 	ConstellationRequestsList getConstellationRequestsList();
@@ -180,7 +181,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Constellation Command Plan</em>' reference.
 	 * @see #setConstellationCommandPlan(AbstractConstellationCommandPlan)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationCommandPlan()
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
 	AbstractConstellationCommandPlan getConstellationCommandPlan();
@@ -288,34 +289,23 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Sorts the following requests.
+	 * Returns the comparator of {@link AbstractRequestBasedSatelliteCommand} used to sort them.
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.SortedSet<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.examples.satellite.Comparator<ca.gc.asc_csa.apogy.examples.satellite.AbstractRequestBasedSatelliteCommand>" unique="false"
 	 * @generated
 	 */
-	SortedSet<AbstractConstellationRequest> sortRequests(List<AbstractConstellationRequest> requests);
+	Comparator<AbstractRequestBasedSatelliteCommand> getRequestBasedSatelliteCommandsComparator();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the comparator of {@link AbstractConstellationRequest} used to sort them.
-	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.examples.satellite.Comparator<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false"
-	 * @generated
-	 */
-	Comparator<AbstractConstellationRequest> getConstellationRequestComparator();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Creates a command to address the specified {@link AbstractConstellationRequest}.
+	 * Creates a command to address the specified {@link ObservationConstellationRequest}.
 	 * @param request Refers to the request.
 	 * @param visibilityPass Visibility pass context.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" requestUnique="false" visibilityPassUnique="false"
 	 * @generated
 	 */
-	VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(AbstractConstellationRequest request, VisibilityPass visibilityPass);
+	VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(ObservationConstellationRequest request, VisibilityPass visibilityPass);
 } // AbstractConstellationPlanner

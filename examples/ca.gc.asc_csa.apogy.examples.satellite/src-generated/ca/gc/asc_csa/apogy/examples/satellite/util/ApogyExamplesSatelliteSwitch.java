@@ -174,6 +174,13 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyExamplesSatellitePackage.SIMPLE_REQUEST: {
+				SimpleRequest simpleRequest = (SimpleRequest)theEObject;
+				T result = caseSimpleRequest(simpleRequest);
+				if (result == null) result = caseAbstractConstellationRequest(simpleRequest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST: {
 				ObservationConstellationRequest observationConstellationRequest = (ObservationConstellationRequest)theEObject;
 				T result = caseObservationConstellationRequest(observationConstellationRequest);
@@ -474,6 +481,21 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractConstellationRequest(AbstractConstellationRequest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Request</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSimpleRequest(SimpleRequest object) {
 		return null;
 	}
 

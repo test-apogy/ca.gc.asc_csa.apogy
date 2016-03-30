@@ -24,7 +24,6 @@ import ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationUtilitiesImpl;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * FIXME Remove this class.  Not used.
  * Utilities class for the satellite example.
  * <!-- end-model-doc -->
  *
