@@ -268,6 +268,15 @@ class GeographicCoordinatesWorldWindLayer extends AbstractWorldWindLayer
 	@GenModel(notify="true")
 	transient boolean lockSelection = "false"
 	
+	/**
+	 * Specified wether or not to add the lat/lon/alt as aprt of the displayed text.
+	 */
+	@GenModel(notify="true", propertyCategory="VISUALS")
+	boolean displayLocation = "true"
+	
+	/**
+	 * Specifies the radius of the circle display at the target location.
+	 */
 	@GenModel(propertyCategory="VISUALS", apogy_units="km")
 	double displayedRadius = "50"
 }

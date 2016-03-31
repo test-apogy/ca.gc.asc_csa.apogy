@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.text.DecimalFormat;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -52,6 +53,7 @@ import gov.nasa.worldwind.render.SurfaceCircle;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GeographicCoordinatesWorldWindLayerImpl#getGeographicCoordinatesList <em>Geographic Coordinates List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GeographicCoordinatesWorldWindLayerImpl#isLockSelection <em>Lock Selection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GeographicCoordinatesWorldWindLayerImpl#isDisplayLocation <em>Display Location</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GeographicCoordinatesWorldWindLayerImpl#getDisplayedRadius <em>Displayed Radius</em>}</li>
  * </ul>
  *
@@ -59,7 +61,12 @@ import gov.nasa.worldwind.render.SurfaceCircle;
  */
 public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLayerImpl implements GeographicCoordinatesWorldWindLayer 
 {
+	public static final String DEGREE_STRING = "\u00b0";
+	
 	private MultiEObjectsAdapter geographicCoordinatesAdapter= null;
+	
+	private DecimalFormat latLongFormat = new DecimalFormat("0.000");
+	private DecimalFormat altitudeFormat = new DecimalFormat("0.0");
 	
 	/**
 	 * The cached value of the '{@link #getGeographicCoordinatesList() <em>Geographic Coordinates List</em>}' reference list.
@@ -90,6 +97,26 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 	 * @ordered
 	 */
 	protected boolean lockSelection = LOCK_SELECTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isDisplayLocation() <em>Display Location</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDisplayLocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean DISPLAY_LOCATION_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isDisplayLocation() <em>Display Location</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDisplayLocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean displayLocation = DISPLAY_LOCATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDisplayedRadius() <em>Displayed Radius</em>}' attribute.
@@ -168,6 +195,27 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isDisplayLocation() {
+		return displayLocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDisplayLocation(boolean newDisplayLocation) {
+		boolean oldDisplayLocation = displayLocation;
+		displayLocation = newDisplayLocation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION, oldDisplayLocation, displayLocation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public double getDisplayedRadius() {
 		return displayedRadius;
 	}
@@ -208,6 +256,8 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 				return getGeographicCoordinatesList();
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION:
 				return isLockSelection();
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION:
+				return isDisplayLocation();
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS:
 				return getDisplayedRadius();
 		}
@@ -224,6 +274,9 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION:
 				setLockSelection((Boolean)newValue);
+				return;
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION:
+				setDisplayLocation((Boolean)newValue);
 				return;
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS:
 				setDisplayedRadius((Double)newValue);
@@ -242,6 +295,9 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION:
 				setLockSelection(LOCK_SELECTION_EDEFAULT);
+				return;
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION:
+				setDisplayLocation(DISPLAY_LOCATION_EDEFAULT);
 				return;
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS:
 				setDisplayedRadius(DISPLAYED_RADIUS_EDEFAULT);
@@ -262,6 +318,8 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 				return geographicCoordinatesList != null && !geographicCoordinatesList.isEmpty();
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION:
 				return lockSelection != LOCK_SELECTION_EDEFAULT;
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION:
+				return displayLocation != DISPLAY_LOCATION_EDEFAULT;
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS:
 				return displayedRadius != DISPLAYED_RADIUS_EDEFAULT;
 		}
@@ -280,6 +338,8 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (lockSelection: ");
 		result.append(lockSelection);
+		result.append(", displayLocation: ");
+		result.append(displayLocation);
 		result.append(", displayedRadius: ");
 		result.append(displayedRadius);
 		result.append(')');
@@ -355,34 +415,65 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 		        layer.addRenderable(surfaceCircle);
 		        
 		        // Adds the name as text
-		        if(coord instanceof Named)
+		        String text = getDisplayedText(coord);
+		        if(text != null)
 		        {
-		        	Named named = (Named) coord;	
-		        	String name = named.getName();
-			        if(name != null && name.length() > 0)
-			        {
-			        	// Creates an annotation.
-			            GlobeAnnotation annotation = new GlobeAnnotation(name, position);
-			            
-			            AnnotationAttributes annotationAttributes = new AnnotationAttributes();
-			            annotationAttributes.setCornerRadius(0);
-			            annotationAttributes.setVisible(true);
-			            
-			            Font font = annotationAttributes.getFont();	               
-			            font = font.deriveFont(Font.BOLD, 16.0f);
-			            annotationAttributes.setFont(font);
-			            
-			            Color transparent = new Color(0, 0f, 1f, 0.3f);
-			            annotationAttributes.setBackgroundColor(transparent);
-			            annotationAttributes.setTextColor(Color.YELLOW);		            
-			            
-			            annotation.setAttributes(annotationAttributes);
-			            layer.addRenderable(annotation);
-			        }
+		        	// Creates an annotation.
+		            GlobeAnnotation annotation = new GlobeAnnotation(text, position);
+		            
+		            AnnotationAttributes annotationAttributes = new AnnotationAttributes();
+		            annotationAttributes.setCornerRadius(0);
+		            annotationAttributes.setVisible(true);
+		            
+		            Font font = annotationAttributes.getFont();	               
+		            font = font.deriveFont(Font.BOLD, 16.0f);
+		            annotationAttributes.setFont(font);
+		            
+		            Color transparent = new Color(0, 0f, 1f, 0.3f);
+		            annotationAttributes.setBackgroundColor(transparent);
+		            annotationAttributes.setTextColor(Color.YELLOW);		            
+		            
+		            annotation.setAttributes(annotationAttributes);
+		            layer.addRenderable(annotation);
 		        }
 			}
 		}		
 	}
+	
+	protected String getDisplayedText(GeographicCoordinates coord)
+	{
+		String text = null;
+		
+		 if(coord instanceof Named)
+	     {
+			Named named = (Named) coord;	
+	        String name = named.getName();
+		    if(name != null && name.length() > 0)
+		    {
+		        text = name;
+		    }
+	     }
+
+		 if(isDisplayLocation())
+		 {
+			 // Initialze text is none has been created yet.
+			 if(text == null)
+			 {
+				 text = new String();
+			 }
+			 else
+			 {
+				 text += "\n";
+			 }
+			 
+			 text += latLongFormat.format(Math.toDegrees(coord.getLatitude())) + DEGREE_STRING + " lat, ";
+			 text += latLongFormat.format(Math.toDegrees(coord.getLongitude())) + DEGREE_STRING + " lon, ";
+			 text += altitudeFormat.format(coord.getElevation()) + " m alt";
+		 }
+		
+		return text;
+	}
+	
 	
 	protected MultiEObjectsAdapter getGeographicCoordinatesAdapter() 
 	{

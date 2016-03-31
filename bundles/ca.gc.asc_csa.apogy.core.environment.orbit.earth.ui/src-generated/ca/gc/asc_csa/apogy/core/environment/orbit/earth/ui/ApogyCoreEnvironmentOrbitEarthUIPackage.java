@@ -1113,13 +1113,22 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Display Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Displayed Radius</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 2;
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Geographic Coordinates World Wind Layer</em>' class.
@@ -1128,7 +1137,7 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER_FEATURE_COUNT = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 3;
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER_FEATURE_COUNT = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Default Auto Update Enabled</em>' operation.
@@ -1835,6 +1844,17 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	EAttribute getGeographicCoordinatesWorldWindLayer_LockSelection();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#isDisplayLocation <em>Display Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Display Location</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#isDisplayLocation()
+	 * @see #getGeographicCoordinatesWorldWindLayer()
+	 * @generated
+	 */
+	EAttribute getGeographicCoordinatesWorldWindLayer_DisplayLocation();
+
+	/**
 	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#getDisplayedRadius <em>Displayed Radius</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2355,6 +2375,14 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION = eINSTANCE.getGeographicCoordinatesWorldWindLayer_LockSelection();
+
+		/**
+		 * The meta object literal for the '<em><b>Display Location</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION = eINSTANCE.getGeographicCoordinatesWorldWindLayer_DisplayLocation();
 
 		/**
 		 * The meta object literal for the '<em><b>Displayed Radius</b></em>' attribute feature.

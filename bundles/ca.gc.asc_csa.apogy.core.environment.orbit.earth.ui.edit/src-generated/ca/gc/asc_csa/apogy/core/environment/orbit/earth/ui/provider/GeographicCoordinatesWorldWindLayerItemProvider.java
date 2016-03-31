@@ -58,6 +58,7 @@ public class GeographicCoordinatesWorldWindLayerItemProvider extends AbstractWor
 
 			addGeographicCoordinatesListPropertyDescriptor(object);
 			addLockSelectionPropertyDescriptor(object);
+			addDisplayLocationPropertyDescriptor(object);
 			addDisplayedRadiusPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -104,6 +105,28 @@ public class GeographicCoordinatesWorldWindLayerItemProvider extends AbstractWor
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Display Location feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDisplayLocationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GeographicCoordinatesWorldWindLayer_displayLocation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinatesWorldWindLayer_displayLocation_feature", "_UI_GeographicCoordinatesWorldWindLayer_type"),
+				 ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_VISUALSPropertyCategory"),
 				 null));
 	}
 
@@ -191,6 +214,7 @@ public class GeographicCoordinatesWorldWindLayerItemProvider extends AbstractWor
 		switch (notification.getFeatureID(GeographicCoordinatesWorldWindLayer.class)) {
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__GEOGRAPHIC_COORDINATES_LIST:
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION:
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

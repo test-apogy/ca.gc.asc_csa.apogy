@@ -615,8 +615,17 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGeographicCoordinatesWorldWindLayer_DisplayedRadius() {
+	public EAttribute getGeographicCoordinatesWorldWindLayer_DisplayLocation() {
 		return (EAttribute)geographicCoordinatesWorldWindLayerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGeographicCoordinatesWorldWindLayer_DisplayedRadius() {
+		return (EAttribute)geographicCoordinatesWorldWindLayerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -806,6 +815,7 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		geographicCoordinatesWorldWindLayerEClass = createEClass(GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER);
 		createEReference(geographicCoordinatesWorldWindLayerEClass, GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__GEOGRAPHIC_COORDINATES_LIST);
 		createEAttribute(geographicCoordinatesWorldWindLayerEClass, GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION);
+		createEAttribute(geographicCoordinatesWorldWindLayerEClass, GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION);
 		createEAttribute(geographicCoordinatesWorldWindLayerEClass, GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS);
 
 		spacecraftVisibilityPassViewConfigurationListEClass = createEClass(SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST);
@@ -937,6 +947,7 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		initEClass(geographicCoordinatesWorldWindLayerEClass, GeographicCoordinatesWorldWindLayer.class, "GeographicCoordinatesWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeographicCoordinatesWorldWindLayer_GeographicCoordinatesList(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "geographicCoordinatesList", null, 0, -1, GeographicCoordinatesWorldWindLayer.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeographicCoordinatesWorldWindLayer_LockSelection(), theEcorePackage.getEBoolean(), "lockSelection", "false", 0, 1, GeographicCoordinatesWorldWindLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeographicCoordinatesWorldWindLayer_DisplayLocation(), theEcorePackage.getEBoolean(), "displayLocation", "true", 0, 1, GeographicCoordinatesWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeographicCoordinatesWorldWindLayer_DisplayedRadius(), theEcorePackage.getEDouble(), "displayedRadius", "50", 0, 1, GeographicCoordinatesWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(spacecraftVisibilityPassViewConfigurationListEClass, SpacecraftVisibilityPassViewConfigurationList.class, "SpacecraftVisibilityPassViewConfigurationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1227,9 +1238,18 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 			 "notify", "true"
 		   });	
 		addAnnotation
+		  (getGeographicCoordinatesWorldWindLayer_DisplayLocation(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSpecified wether or not to add the lat/lon/alt as aprt of the displayed text.",
+			 "notify", "true",
+			 "propertyCategory", "VISUALS"
+		   });	
+		addAnnotation
 		  (getGeographicCoordinatesWorldWindLayer_DisplayedRadius(), 
 		   source, 
 		   new String[] {
+			 "documentation", "*\nSpecifies the radius of the circle display at the target location.",
 			 "propertyCategory", "VISUALS",
 			 "apogy_units", "km"
 		   });	

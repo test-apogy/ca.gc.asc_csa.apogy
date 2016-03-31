@@ -27,6 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#getGeographicCoordinatesList <em>Geographic Coordinates List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#isLockSelection <em>Lock Selection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#isDisplayLocation <em>Display Location</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#getDisplayedRadius <em>Displayed Radius</em>}</li>
  * </ul>
  *
@@ -81,6 +82,34 @@ public interface GeographicCoordinatesWorldWindLayer extends AbstractWorldWindLa
 	void setLockSelection(boolean value);
 
 	/**
+	 * Returns the value of the '<em><b>Display Location</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Specified wether or not to add the lat/lon/alt as aprt of the displayed text.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Display Location</em>' attribute.
+	 * @see #setDisplayLocation(boolean)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getGeographicCoordinatesWorldWindLayer_DisplayLocation()
+	 * @model default="true" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='VISUALS'"
+	 * @generated
+	 */
+	boolean isDisplayLocation();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#isDisplayLocation <em>Display Location</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Display Location</em>' attribute.
+	 * @see #isDisplayLocation()
+	 * @generated
+	 */
+	void setDisplayLocation(boolean value);
+
+	/**
 	 * Returns the value of the '<em><b>Displayed Radius</b></em>' attribute.
 	 * The default value is <code>"50"</code>.
 	 * <!-- begin-user-doc -->
@@ -89,6 +118,10 @@ public interface GeographicCoordinatesWorldWindLayer extends AbstractWorldWindLa
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Specifies the radius of the circle display at the target location.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Displayed Radius</em>' attribute.
 	 * @see #setDisplayedRadius(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getGeographicCoordinatesWorldWindLayer_DisplayedRadius()
