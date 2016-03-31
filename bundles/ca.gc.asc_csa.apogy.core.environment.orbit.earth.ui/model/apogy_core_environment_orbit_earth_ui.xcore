@@ -279,6 +279,7 @@ class GeographicCoordinatesWorldWindLayer extends AbstractWorldWindLayer
 	 */
 	@GenModel(propertyCategory="VISUALS", apogy_units="km")
 	double displayedRadius = "50"
+	
 }
 
 

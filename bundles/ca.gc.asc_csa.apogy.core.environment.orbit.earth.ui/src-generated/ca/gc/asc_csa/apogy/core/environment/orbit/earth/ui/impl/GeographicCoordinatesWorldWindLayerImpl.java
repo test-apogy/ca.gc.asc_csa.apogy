@@ -68,6 +68,7 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 	private DecimalFormat latLongFormat = new DecimalFormat("0.000");
 	private DecimalFormat altitudeFormat = new DecimalFormat("0.0");
 	
+	
 	/**
 	 * The cached value of the '{@link #getGeographicCoordinatesList() <em>Geographic Coordinates List</em>}' reference list.
 	 * <!-- begin-user-doc -->
