@@ -178,30 +178,30 @@ abstract class AbstractConstellationPlanner{
 	 * Specifies the start date used by the planner.
 	 */
 	@GenModel(propertyCategory="PLANNER_SETTINGS")
-	Date startDate
+	Date[1] startDate
 
 	/*
 	 * Specifies the end date used by the planner.
 	 */
     @GenModel(propertyCategory="PLANNER_SETTINGS")	 
-	Date endDate
+	Date[1] endDate
 	
 	/*
 	 * Specifies the list of {@AbstractConstellationRequest} to be processed by the planner.
 	 */
     @GenModel(propertyCategory="PLANNER_SETTINGS")	 
-	refers ConstellationRequestsList constellationRequestsList
+	refers ConstellationRequestsList[1] constellationRequestsList
 	
 	/*
 	 * Specifies in which plan the planner will store its results.
 	 */
     @GenModel(propertyCategory="PLANNER_SETTINGS")	 	
-	refers AbstractConstellationCommandPlan constellationCommandPlan
+	refers AbstractConstellationCommandPlan[1] constellationCommandPlan
 	
 	/*
 	 * Specifies the elevation mask used 
 	 */
-	contains ConstantElevationMask elevationMask
+	contains ConstantElevationMask[1] elevationMask
 		
 	/*
 	 * Returns the visibility passes for a given {@link AbstractConstellationRequest}. 

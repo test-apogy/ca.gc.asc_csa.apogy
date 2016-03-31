@@ -30,5 +30,13 @@
             URI="model/constellation.ss">
       </Type>
    </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
+      <SessionProvider
+            Description="Session showing the use of the Radarsat 2 example system."
+            Name="Satellite (Radarsat 2) Example"
+            URI="sessions/radarsat2.sym">
+      </SessionProvider>
+   </extension>
 
 </plugin>

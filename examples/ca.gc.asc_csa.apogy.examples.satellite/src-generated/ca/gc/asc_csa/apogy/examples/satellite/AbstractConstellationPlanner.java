@@ -92,7 +92,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Start Date</em>' attribute.
 	 * @see #setStartDate(Date)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_StartDate()
-	 * @model unique="false"
+	 * @model unique="false" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
@@ -122,7 +122,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>End Date</em>' attribute.
 	 * @see #setEndDate(Date)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_EndDate()
-	 * @model unique="false"
+	 * @model unique="false" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
@@ -152,7 +152,8 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Constellation Requests List</em>' reference.
 	 * @see #setConstellationRequestsList(ConstellationRequestsList)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationRequestsList()
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
+	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
 	ConstellationRequestsList getConstellationRequestsList();
@@ -181,7 +182,8 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Constellation Command Plan</em>' reference.
 	 * @see #setConstellationCommandPlan(AbstractConstellationCommandPlan)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationCommandPlan()
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
+	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
 	AbstractConstellationCommandPlan getConstellationCommandPlan();
@@ -206,7 +208,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Elevation Mask</em>' containment reference.
 	 * @see #setElevationMask(ConstantElevationMask)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ElevationMask()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	ConstantElevationMask getElevationMask();
