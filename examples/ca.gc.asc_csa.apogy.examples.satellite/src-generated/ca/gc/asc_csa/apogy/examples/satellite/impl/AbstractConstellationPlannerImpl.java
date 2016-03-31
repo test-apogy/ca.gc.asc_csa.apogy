@@ -63,6 +63,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteComman
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getConstellationCommandPlan <em>Constellation Command Plan</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#isCommandDuplicatesPreserved <em>Command Duplicates Preserved</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
  *
@@ -121,6 +122,24 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 */
 	protected AbstractConstellationCommandPlan constellationCommandPlan;
 
+	/**
+	 * The default value of the '{@link #isCommandDuplicatesPreserved() <em>Command Duplicates Preserved</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCommandDuplicatesPreserved()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean COMMAND_DUPLICATES_PRESERVED_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isCommandDuplicatesPreserved() <em>Command Duplicates Preserved</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCommandDuplicatesPreserved()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean commandDuplicatesPreserved = COMMAND_DUPLICATES_PRESERVED_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getElevationMask() <em>Elevation Mask</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -307,6 +326,27 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isCommandDuplicatesPreserved() {
+		return commandDuplicatesPreserved;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCommandDuplicatesPreserved(boolean newCommandDuplicatesPreserved) {
+		boolean oldCommandDuplicatesPreserved = commandDuplicatesPreserved;
+		commandDuplicatesPreserved = newCommandDuplicatesPreserved;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED, oldCommandDuplicatesPreserved, commandDuplicatesPreserved));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -458,18 +498,20 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		/*
 		 * Remove duplicates.
 		 */
-		TreeSet<AbstractRequestBasedSatelliteCommand> no_duplicate_commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(new Comparator<AbstractRequestBasedSatelliteCommand>() {
-			@Override
-			public int compare(AbstractRequestBasedSatelliteCommand o1, AbstractRequestBasedSatelliteCommand o2) {
-				return o1.getConstellationRequest().equals(o2.getConstellationRequest()) ? 
-					0 : 
-					getRequestBasedSatelliteCommandsComparator().compare(o1, o2);
-			}
-		});
-		no_duplicate_commands.addAll(commands);
-		
-		/* Copy the results. */
-		getConstellationCommandPlan().getConstellationCommands().addAll(no_duplicate_commands);
+		if (!isCommandDuplicatesPreserved()){		
+			TreeSet<AbstractRequestBasedSatelliteCommand> no_duplicate_commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(new Comparator<AbstractRequestBasedSatelliteCommand>() {
+				@Override
+				public int compare(AbstractRequestBasedSatelliteCommand o1, AbstractRequestBasedSatelliteCommand o2) {
+					return o1.getConstellationRequest().equals(o2.getConstellationRequest()) ? 
+						0 : 
+						getRequestBasedSatelliteCommandsComparator().compare(o1, o2);
+				}
+			});
+			no_duplicate_commands.addAll(commands);
+			getConstellationCommandPlan().getConstellationCommands().addAll(no_duplicate_commands);
+		}else{
+			getConstellationCommandPlan().getConstellationCommands().addAll(commands);
+		}		
 
 		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Completed", EventSeverity.INFO);
 	}	
@@ -627,6 +669,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				if (resolve) return getConstellationCommandPlan();
 				return basicGetConstellationCommandPlan();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
+				return isCommandDuplicatesPreserved();
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
 				return getElevationMask();
 		}
@@ -654,6 +698,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				setConstellationCommandPlan((AbstractConstellationCommandPlan)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
+				setCommandDuplicatesPreserved((Boolean)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
 				setElevationMask((ConstantElevationMask)newValue);
@@ -684,6 +731,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				setConstellationCommandPlan((AbstractConstellationCommandPlan)null);
 				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
+				setCommandDuplicatesPreserved(COMMAND_DUPLICATES_PRESERVED_EDEFAULT);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
 				setElevationMask((ConstantElevationMask)null);
 				return;
@@ -708,6 +758,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				return constellationRequestsList != null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				return constellationCommandPlan != null;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
+				return commandDuplicatesPreserved != COMMAND_DUPLICATES_PRESERVED_EDEFAULT;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
 				return elevationMask != null;
 		}
@@ -770,6 +822,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		result.append(startDate);
 		result.append(", endDate: ");
 		result.append(endDate);
+		result.append(", commandDuplicatesPreserved: ");
+		result.append(commandDuplicatesPreserved);
 		result.append(')');
 		return result.toString();
 	}

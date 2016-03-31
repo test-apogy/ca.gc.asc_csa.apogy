@@ -77,6 +77,7 @@ public class AbstractConstellationPlannerItemProvider
 			addEndDatePropertyDescriptor(object);
 			addConstellationRequestsListPropertyDescriptor(object);
 			addConstellationCommandPlanPropertyDescriptor(object);
+			addCommandDuplicatesPreservedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -170,6 +171,28 @@ public class AbstractConstellationPlannerItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Command Duplicates Preserved feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCommandDuplicatesPreservedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AbstractConstellationPlanner_commandDuplicatesPreserved_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationPlanner_commandDuplicatesPreserved_feature", "_UI_AbstractConstellationPlanner_type"),
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_VISIBILITY_PASS_VALIDITYPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -229,6 +252,7 @@ public class AbstractConstellationPlannerItemProvider
 		switch (notification.getFeatureID(AbstractConstellationPlanner.class)) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__START_DATE:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__END_DATE:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:

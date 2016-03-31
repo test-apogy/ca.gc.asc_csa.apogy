@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getEndDate <em>End Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationCommandPlan <em>Constellation Command Plan</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isCommandDuplicatesPreserved <em>Command Duplicates Preserved</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
  *
@@ -197,6 +198,35 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @generated
 	 */
 	void setConstellationCommandPlan(AbstractConstellationCommandPlan value);
+
+	/**
+	 * Returns the value of the '<em><b>Command Duplicates Preserved</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Indicates if the duplicates are preserved.  False (default value) indicates only the first command that addresses a
+	 * {@link ObservationConstellationRequest} will be preserved.  The commands that occur after in time will be deleted.  True means
+	 * all the commands will be preserved.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Command Duplicates Preserved</em>' attribute.
+	 * @see #setCommandDuplicatesPreserved(boolean)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_CommandDuplicatesPreserved()
+	 * @model default="false" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VISIBILITY_PASS_VALIDITY'"
+	 * @generated
+	 */
+	boolean isCommandDuplicatesPreserved();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isCommandDuplicatesPreserved <em>Command Duplicates Preserved</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Command Duplicates Preserved</em>' attribute.
+	 * @see #isCommandDuplicatesPreserved()
+	 * @generated
+	 */
+	void setCommandDuplicatesPreserved(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Elevation Mask</b></em>' containment reference.

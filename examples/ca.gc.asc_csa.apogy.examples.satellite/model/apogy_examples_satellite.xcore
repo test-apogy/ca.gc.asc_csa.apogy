@@ -199,6 +199,14 @@ abstract class AbstractConstellationPlanner{
 	refers AbstractConstellationCommandPlan[1] constellationCommandPlan
 	
 	/*
+	 * Indicates if the duplicates are preserved.  False (default value) indicates only the first command that addresses a
+	 * {@link ObservationConstellationRequest} will be preserved.  The commands that occur after in time will be deleted.  True means
+	 * all the commands will be preserved. 
+	 */
+	@GenModel(propertyCategory="VISIBILITY_PASS_VALIDITY")
+	boolean commandDuplicatesPreserved  = "false"	
+	
+	/*
 	 * Specifies the elevation mask used 
 	 */
 	contains ConstantElevationMask[1] elevationMask
@@ -246,7 +254,7 @@ abstract class AbstractConstellationPlanner{
 	 * @param request Refers to the request.
 	 * @param visibilityPass Visibility pass context.
 	 */
-	op VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(ObservationConstellationRequest request, VisibilityPass visibilityPass)
+	op VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(ObservationConstellationRequest request, VisibilityPass visibilityPass)	
 }
 
 /*
@@ -269,7 +277,7 @@ class DefaultConstellationPlanner extends AbstractConstellationPlanner{
 	 * Specifies the angle threshold value the planner uses to determine the umbra.
 	 */
 	@GenModel(propertyCategory="VISIBILITY_PASS_VALIDITY", apogy_units="deg")
-	double sunHorizonAngleUmbraThreshold = "5.0"
+	double sunHorizonAngleUmbraThreshold = "5.0"	
 }
 
 /*
