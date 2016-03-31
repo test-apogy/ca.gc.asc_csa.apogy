@@ -199,6 +199,12 @@ abstract class AbstractConstellationPlanner{
 	refers AbstractConstellationCommandPlan[1] constellationCommandPlan
 	
 	/*
+	 * Specifies the maximum number of threads used by the planner.  0 (default) means the maximum available.
+	 */	 
+    @GenModel(propertyCategory="PLANNER_SETTINGS")	 	
+	int maxNumberThreads = "0"	
+	
+	/*
 	 * Indicates if the duplicates are preserved.  False (default value) indicates only the first command that addresses a
 	 * {@link ObservationConstellationRequest} will be preserved.  The commands that occur after in time will be deleted.  True means
 	 * all the commands will be preserved. 

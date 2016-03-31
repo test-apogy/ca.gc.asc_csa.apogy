@@ -21,7 +21,12 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
-
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.SubMonitor;
+import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.core.runtime.jobs.JobGroup;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -63,6 +68,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteComman
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getConstellationCommandPlan <em>Constellation Command Plan</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getMaxNumberThreads <em>Max Number Threads</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#isCommandDuplicatesPreserved <em>Command Duplicates Preserved</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationPlannerImpl#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
@@ -123,9 +129,27 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	protected AbstractConstellationCommandPlan constellationCommandPlan;
 
 	/**
-	 * The default value of the '{@link #isCommandDuplicatesPreserved() <em>Command Duplicates Preserved</em>}' attribute.
+	 * The default value of the '{@link #getMaxNumberThreads() <em>Max Number Threads</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see #getMaxNumberThreads()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int MAX_NUMBER_THREADS_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getMaxNumberThreads() <em>Max Number Threads</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxNumberThreads()
+	 * @generated
+	 * @ordered
+	 */
+	protected int maxNumberThreads = MAX_NUMBER_THREADS_EDEFAULT;
+	/**
+	 * The default value of the '{@link #isCommandDuplicatesPreserved() <em>Command Duplicates Preserved</em>}' attribute.
+	 * <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
 	 * @see #isCommandDuplicatesPreserved()
 	 * @generated
 	 * @ordered
@@ -133,8 +157,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	protected static final boolean COMMAND_DUPLICATES_PRESERVED_EDEFAULT = false;
 	/**
 	 * The cached value of the '{@link #isCommandDuplicatesPreserved() <em>Command Duplicates Preserved</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
 	 * @see #isCommandDuplicatesPreserved()
 	 * @generated
 	 * @ordered
@@ -330,13 +354,32 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isCommandDuplicatesPreserved() {
-		return commandDuplicatesPreserved;
+	public int getMaxNumberThreads() {
+		return maxNumberThreads;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMaxNumberThreads(int newMaxNumberThreads) {
+		int oldMaxNumberThreads = maxNumberThreads;
+		maxNumberThreads = newMaxNumberThreads;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS, oldMaxNumberThreads, maxNumberThreads));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isCommandDuplicatesPreserved() {
+		return commandDuplicatesPreserved;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setCommandDuplicatesPreserved(boolean newCommandDuplicatesPreserved) {
@@ -457,64 +500,124 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 
 		/* Clear the command plan. */
 		getConstellationCommandPlan().getConstellationCommands().clear();
-		
+
 		/* Create a set to sort the commands. */
-		TreeSet<AbstractRequestBasedSatelliteCommand> commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(getRequestBasedSatelliteCommandsComparator());
+		TreeSet<AbstractRequestBasedSatelliteCommand> commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(
+				getRequestBasedSatelliteCommandsComparator());
 
 		/* Gets the observation requests. */
-		List<AbstractConstellationRequest> requestsList = 
-				getConstellationRequestsList().getConstellationRequests().stream().filter(p -> p instanceof ObservationConstellationRequest).collect(Collectors.toList());		
+		List<AbstractConstellationRequest> requestsList = getConstellationRequestsList().getConstellationRequests()
+				.stream().filter(p -> p instanceof ObservationConstellationRequest).collect(Collectors.toList());
 
-		Logger.INSTANCE.log(
-				Activator.ID, "Constellation Planner: "
-						+ requestsList.size() + " observation requests to process.",
+		Logger.INSTANCE.log(Activator.ID,
+				"Constellation Planner: " + requestsList.size() + " observation requests to process.",
 				EventSeverity.INFO);
+
+		Logger.INSTANCE.log(Activator.ID,
+				"Constellation Planner: "
+						+ (getConstellationRequestsList().getConstellationRequests().size() - requestsList.size())
+						+ " requests are not observation requests and will not be processed.",
+				EventSeverity.INFO);
+
+//		JobGroup jobGroup = new JobGroup("BBBConstellation Planner: Processing " + Integer.toString(requestsList.size()) + " request"
+//				+ (requestsList.size() > 1 ? "s" : ""), getMaxNumberThreads(), 1);
+
+		JobGroup jobGroup = new JobGroup("Test", getMaxNumberThreads(), 1);
 		
-		Logger.INSTANCE.log(
-				Activator.ID, "Constellation Planner: "
-						+ (getConstellationRequestsList().getConstellationRequests().size() - requestsList.size()) + " requests are not observation requests and will not be processed.",
-				EventSeverity.INFO);
+//		Job plannerJob = new Job("AAAConstellation Planner: Processing " + Integer.toString(requestsList.size()) + " request"
+//				+ (requestsList.size() > 1 ? "s" : "")) 
+		
+		Job plannerJob = new Job("TestJob") {
+
+			@Override
+			protected IStatus run(IProgressMonitor monitor) {
+				monitor.beginTask("Processinng requests", requestsList.size());
+				
+				/*
+				 * For each observation request finds the target passes
+				 * available within the period defined.
+				 */
+				Iterator<AbstractConstellationRequest> requests = requestsList.iterator();
+				while (requests.hasNext()) {
+					ObservationConstellationRequest request = (ObservationConstellationRequest) requests.next();
+
+					Job job = new Job("Constellation Planner: Processing request <" + (request.getUid() == null ? "n/a"
+							: request.getUid()) + ">") {
+						@Override
+						protected IStatus run(IProgressMonitor monitor) {
+							monitor.worked(1);
+							SortedSet<VisibilityPass> sortedPasses;
+							try {
+								Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Processing request <" + (request.getUid() == null
+										? "n/a" : request.getUid()) + ">", EventSeverity.INFO);
+
+								sortedPasses = getTargetPasses(request, getStartDate(), getEndDate(),
+										getElevationMask());
+
+								Logger.INSTANCE.log(Activator.ID,
+										"Constellation Planner: " + sortedPasses.size() + " passe" + (sortedPasses.size() > 1 ? "s":"") + " found for request <"+ (request.getUid() == null
+												? "n/a" : request.getUid()) + ">",
+										EventSeverity.INFO);
+
+								// Creates a Visibility Pass Based Satellite
+								// Command for each valid passes.
+								Iterator<VisibilityPass> passesIterator = sortedPasses.iterator();
+								while (passesIterator.hasNext()) {
+									VisibilityPass pass = passesIterator.next();
+									commands.add(createVisibilityPassBasedSatelliteCommand(request, pass));
+								}
+
+							} catch (Exception e) {
+								Logger.INSTANCE.log(Activator.ID,
+										"Constellation Planner: Error while processing request <" + (request.getUid() == null ? "n/a"
+												: request.getUid()) + ">",
+										EventSeverity.ERROR, e);
+								return Status.CANCEL_STATUS;
+							}
+							return Status.OK_STATUS;
+						}
+					};
+					job.setPriority(Job.LONG);
+					job.setJobGroup(jobGroup);
+					
+					job.schedule();					
+				}
+								
+				return Status.OK_STATUS;
+			}
+		};
+
+		plannerJob.setPriority(Job.LONG);
+		plannerJob.setJobGroup(jobGroup);
+		plannerJob.setUser(true);
+		plannerJob.schedule();
 
 		/*
-		 * For each observation request finds the target passes available within the period defined.
+		 * Wait for jobs to be completed.
 		 */
-		Iterator<AbstractConstellationRequest> requests = requestsList.iterator(); 
-		while (requests.hasNext()) {
-			ObservationConstellationRequest request = (ObservationConstellationRequest) requests.next();
-			SortedSet<VisibilityPass> sortedPasses = getTargetPasses(request, getStartDate(), getEndDate(),
-					getElevationMask());
-
-			Logger.INSTANCE.log(Activator.ID, "Constellation Planner found " + sortedPasses.size() + " passes",
-					EventSeverity.INFO);
-
-			// Creates a Visibility Pass Based Satellite Command for each valid passes.
-			Iterator<VisibilityPass> passesIterator = sortedPasses.iterator();
-			while (passesIterator.hasNext()) {
-				VisibilityPass pass = passesIterator.next();
-				commands.add(createVisibilityPassBasedSatelliteCommand(request, pass));
-			}
-		}
-
+		jobGroup.join(0, null);
+		
 		/*
 		 * Remove duplicates.
 		 */
-		if (!isCommandDuplicatesPreserved()){		
-			TreeSet<AbstractRequestBasedSatelliteCommand> no_duplicate_commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(new Comparator<AbstractRequestBasedSatelliteCommand>() {
-				@Override
-				public int compare(AbstractRequestBasedSatelliteCommand o1, AbstractRequestBasedSatelliteCommand o2) {
-					return o1.getConstellationRequest().equals(o2.getConstellationRequest()) ? 
-						0 : 
-						getRequestBasedSatelliteCommandsComparator().compare(o1, o2);
-				}
-			});
+		if (!isCommandDuplicatesPreserved()) {
+			TreeSet<AbstractRequestBasedSatelliteCommand> no_duplicate_commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(
+					new Comparator<AbstractRequestBasedSatelliteCommand>() {
+						@Override
+						public int compare(AbstractRequestBasedSatelliteCommand o1,
+								AbstractRequestBasedSatelliteCommand o2) {
+							return o1.getConstellationRequest().equals(o2.getConstellationRequest()) ? 0
+									: getRequestBasedSatelliteCommandsComparator().compare(o1, o2);
+						}
+					});
 			no_duplicate_commands.addAll(commands);
 			getConstellationCommandPlan().getConstellationCommands().addAll(no_duplicate_commands);
-		}else{
+		} else {
 			getConstellationCommandPlan().getConstellationCommands().addAll(commands);
-		}		
-
+		}
+		
 		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Completed", EventSeverity.INFO);
-	}	
+	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -595,17 +698,17 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(
 			ObservationConstellationRequest request, VisibilityPass visibilityPass) {
 
-		VisibilityPassBasedSatelliteCommand command = null;		
+		VisibilityPassBasedSatelliteCommand command = null;
 		command = ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand();
 		command.setConstellationRequest(request);
 		command.setUid(EcoreUtil.copy(request.getUid()));
 		command.setTime(visibilityPass.getStartTime());
 		command.setSatellite(getSatellite(visibilityPass.getOrbitModel()));
 		command.setVisibilityPass(EcoreUtil.copy(visibilityPass));
-		
+
 		return command;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -669,6 +772,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				if (resolve) return getConstellationCommandPlan();
 				return basicGetConstellationCommandPlan();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS:
+				return getMaxNumberThreads();
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
 				return isCommandDuplicatesPreserved();
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
@@ -698,6 +803,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				setConstellationCommandPlan((AbstractConstellationCommandPlan)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS:
+				setMaxNumberThreads((Integer)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
 				setCommandDuplicatesPreserved((Boolean)newValue);
@@ -731,6 +839,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				setConstellationCommandPlan((AbstractConstellationCommandPlan)null);
 				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS:
+				setMaxNumberThreads(MAX_NUMBER_THREADS_EDEFAULT);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
 				setCommandDuplicatesPreserved(COMMAND_DUPLICATES_PRESERVED_EDEFAULT);
 				return;
@@ -758,6 +869,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				return constellationRequestsList != null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN:
 				return constellationCommandPlan != null;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS:
+				return maxNumberThreads != MAX_NUMBER_THREADS_EDEFAULT;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
 				return commandDuplicatesPreserved != COMMAND_DUPLICATES_PRESERVED_EDEFAULT;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK:
@@ -822,6 +935,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		result.append(startDate);
 		result.append(", endDate: ");
 		result.append(endDate);
+		result.append(", maxNumberThreads: ");
+		result.append(maxNumberThreads);
 		result.append(", commandDuplicatesPreserved: ");
 		result.append(commandDuplicatesPreserved);
 		result.append(')');

@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getEndDate <em>End Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationCommandPlan <em>Constellation Command Plan</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getMaxNumberThreads <em>Max Number Threads</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isCommandDuplicatesPreserved <em>Command Duplicates Preserved</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
@@ -198,6 +199,33 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @generated
 	 */
 	void setConstellationCommandPlan(AbstractConstellationCommandPlan value);
+
+	/**
+	 * Returns the value of the '<em><b>Max Number Threads</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Specifies the maximum number of threads used by the planner.  0 (default) means the maximum available.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Max Number Threads</em>' attribute.
+	 * @see #setMaxNumberThreads(int)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_MaxNumberThreads()
+	 * @model default="0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
+	 * @generated
+	 */
+	int getMaxNumberThreads();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getMaxNumberThreads <em>Max Number Threads</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Max Number Threads</em>' attribute.
+	 * @see #getMaxNumberThreads()
+	 * @generated
+	 */
+	void setMaxNumberThreads(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Command Duplicates Preserved</b></em>' attribute.

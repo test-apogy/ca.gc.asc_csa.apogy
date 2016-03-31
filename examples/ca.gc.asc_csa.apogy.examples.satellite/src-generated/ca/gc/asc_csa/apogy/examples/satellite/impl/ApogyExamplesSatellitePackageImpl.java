@@ -621,7 +621,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAbstractConstellationPlanner_CommandDuplicatesPreserved() {
+	public EAttribute getAbstractConstellationPlanner_MaxNumberThreads() {
 		return (EAttribute)abstractConstellationPlannerEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -630,8 +630,17 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAbstractConstellationPlanner_CommandDuplicatesPreserved() {
+		return (EAttribute)abstractConstellationPlannerEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getAbstractConstellationPlanner_ElevationMask() {
-		return (EReference)abstractConstellationPlannerEClass.getEStructuralFeatures().get(6);
+		return (EReference)abstractConstellationPlannerEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1227,6 +1236,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEAttribute(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__END_DATE);
 		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_REQUESTS_LIST);
 		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN);
+		createEAttribute(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS);
 		createEAttribute(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED);
 		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK);
@@ -1428,6 +1438,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEAttribute(getAbstractConstellationPlanner_EndDate(), theEcorePackage.getEDate(), "endDate", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractConstellationPlanner_ConstellationRequestsList(), this.getConstellationRequestsList(), null, "constellationRequestsList", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractConstellationPlanner_ConstellationCommandPlan(), this.getAbstractConstellationCommandPlan(), null, "constellationCommandPlan", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractConstellationPlanner_MaxNumberThreads(), theEcorePackage.getEInt(), "maxNumberThreads", "0", 0, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractConstellationPlanner_CommandDuplicatesPreserved(), theEcorePackage.getEBoolean(), "commandDuplicatesPreserved", "false", 0, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractConstellationPlanner_ElevationMask(), theApogyCoreEnvironmentOrbitEarthPackage.getConstantElevationMask(), null, "elevationMask", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1793,6 +1804,13 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		   source, 
 		   new String[] {
 			 "documentation", "Specifies in which plan the planner will store its results.",
+			 "propertyCategory", "PLANNER_SETTINGS"
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner_MaxNumberThreads(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the maximum number of threads used by the planner.  0 (default) means the maximum available.",
 			 "propertyCategory", "PLANNER_SETTINGS"
 		   });	
 		addAnnotation

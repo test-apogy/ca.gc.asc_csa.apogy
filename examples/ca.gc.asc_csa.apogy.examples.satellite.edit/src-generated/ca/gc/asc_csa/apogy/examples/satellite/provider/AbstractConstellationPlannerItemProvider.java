@@ -77,6 +77,7 @@ public class AbstractConstellationPlannerItemProvider
 			addEndDatePropertyDescriptor(object);
 			addConstellationRequestsListPropertyDescriptor(object);
 			addConstellationCommandPlanPropertyDescriptor(object);
+			addMaxNumberThreadsPropertyDescriptor(object);
 			addCommandDuplicatesPreservedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -171,6 +172,28 @@ public class AbstractConstellationPlannerItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Max Number Threads feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMaxNumberThreadsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AbstractConstellationPlanner_maxNumberThreads_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationPlanner_maxNumberThreads_feature", "_UI_AbstractConstellationPlanner_type"),
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 getString("_UI_PLANNER_SETTINGSPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Command Duplicates Preserved feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -252,6 +275,7 @@ public class AbstractConstellationPlannerItemProvider
 		switch (notification.getFeatureID(AbstractConstellationPlanner.class)) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__START_DATE:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__END_DATE:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

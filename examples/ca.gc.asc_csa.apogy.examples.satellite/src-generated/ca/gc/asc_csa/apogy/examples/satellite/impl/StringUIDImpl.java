@@ -154,17 +154,18 @@ public class StringUIDImpl extends AbstractUIDImpl implements StringUID {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(')');
-		return result.toString();
+//		if (eIsProxy()) return super.toString();
+//
+//		StringBuffer result = new StringBuffer(super.toString());
+//		result.append(" (id: ");
+//		result.append(id);
+//		result.append(')');
+//		return result.toString();
+		return getId();
 	}
 
 } //StringUIDImpl
