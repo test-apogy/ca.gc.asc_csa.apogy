@@ -102,6 +102,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 /**
  * <!-- begin-user-doc -->
@@ -1134,6 +1135,42 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String exportAsCSV(VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory, boolean includeHeader) 
+	{
+		StringBuffer buffer = new StringBuffer();
+		
+		if(includeHeader)
+		{
+			buffer.append("Time, Azimuth (deg),Elevation (deg),Range (km), Range Rate (m/s), Target Along Track Angle (deg), Target Cross Track Angle (deg), S/C Latitude (deg), S/C Longitude (deg), S/C Altitude (km) \n");
+		}
+		
+		for(VisibilityPassSpacecraftPosition position : visibilityPassSpacecraftPositionHistory.getPositions())
+		{
+			buffer.append(position.getTime().toString() + ",");					
+			buffer.append(Double.toString(Math.toDegrees(position.getAzimuth())) + ",");
+			buffer.append(Double.toString(Math.toDegrees(position.getElevation())) + ",");
+			buffer.append(Double.toString(position.getRange() * 0.001) + ",");
+			buffer.append(Double.toString(position.getRangeRate()) + ",");
+			
+			buffer.append(Double.toString(Math.toDegrees(position.getSpacecraftAlongTrackAngle())) + ",");
+			buffer.append(Double.toString(Math.toDegrees(position.getSpacecraftCrossTrackAngle())) + ",");
+			
+			buffer.append(Double.toString(Math.toDegrees(position.getSpacecraftCoordinates().getLatitude())) + ",");
+			buffer.append(Double.toString(Math.toDegrees(position.getSpacecraftCoordinates().getLongitude())) + ",");
+			buffer.append(Double.toString(position.getSpacecraftCoordinates().getElevation() * 0.001) + ",");
+			
+			buffer.append("\n");
+		}
+		
+		return buffer.toString();
+	}
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1283,6 +1320,8 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_AS_CSV__VISIBILITYPASSSPACECRAFTPOSITIONHISTORY_BOOLEAN:
+				return exportAsCSV((VisibilityPassSpacecraftPositionHistory)arguments.get(0), (Boolean)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

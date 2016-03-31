@@ -603,6 +603,12 @@ class VisibilityPassSpacecraftPositionHistory
 	contains VisibilityPassSpacecraftPosition[0..*] positions
 	
 	/*
+	 * Returns the VisibilityPassSpacecraftPosition with the smallest range in the position history.	 
+	 * @return The VisibilityPassSpacecraftPosition with the smallest range, null if the history position is empty.
+	 */
+	op VisibilityPassSpacecraftPosition getClosestRangePosition()
+	
+	/*
 	 * Returns the VisibilityPassSpacecraftPosition with the highest elevation in the position history.	 
 	 * @return The VisibilityPassSpacecraftPosition with the highest elevation, null if the history position is empty.
 	 */
@@ -950,6 +956,14 @@ class ApogyCoreEnvironmentOrbitEarthFacade
 	 * @return The TLEEarthOrbitModel.
 	 */
 	op TLEEarthOrbitModel createTLEEarthOrbitModel(TLE tle) throws Exception		
+	
+	
+	/**
+	 * Exports a VisibilityPassSpacecraftPositionHistory as a comma separated file (.csv).
+	 * @param visibilityPassSpacecraftPositionHistory The VisibilityPassSpacecraftPositionHistory to export.
+	 * @param includeHeader Whether or not to include a header line in the format.
+	 */
+	op String exportAsCSV(VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory, boolean includeHeader)
 }
 
 /*

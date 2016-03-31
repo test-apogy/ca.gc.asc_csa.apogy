@@ -1486,7 +1486,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition() {
+	public EOperation getVisibilityPassSpacecraftPositionHistory__GetClosestRangePosition() {
 		return visibilityPassSpacecraftPositionHistoryEClass.getEOperations().get(0);
 	}
 
@@ -1495,7 +1495,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVisibilityPassSpacecraftPositionHistory__GetSmallestSpacecraftCrossTrackAnglePosition() {
+	public EOperation getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition() {
 		return visibilityPassSpacecraftPositionHistoryEClass.getEOperations().get(1);
 	}
 
@@ -1504,8 +1504,17 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVisibilityPassSpacecraftPositionHistory__UpdateHistory() {
+	public EOperation getVisibilityPassSpacecraftPositionHistory__GetSmallestSpacecraftCrossTrackAnglePosition() {
 		return visibilityPassSpacecraftPositionHistoryEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVisibilityPassSpacecraftPositionHistory__UpdateHistory() {
+		return visibilityPassSpacecraftPositionHistoryEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -2062,6 +2071,15 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(31);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEclipse() {
 		return eclipseEClass;
 	}
@@ -2499,6 +2517,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEAttribute(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL);
 		createEReference(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS);
 		createEReference(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS);
+		createEOperation(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_CLOSEST_RANGE_POSITION);
 		createEOperation(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_HIGHEST_ELEVATION_POSITION);
 		createEOperation(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_SMALLEST_SPACECRAFT_CROSS_TRACK_ANGLE_POSITION);
 		createEOperation(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___UPDATE_HISTORY);
@@ -2569,6 +2588,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_TLE__TLE_STRING);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_MODEL__TLE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_AS_CSV__VISIBILITYPASSSPACECRAFTPOSITIONHISTORY_BOOLEAN);
 
 		eclipseEClass = createEClass(ECLIPSE);
 		createEReference(eclipseEClass, ECLIPSE__PENUMBRA_ENTRY);
@@ -2897,6 +2917,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEReference(getVisibilityPassSpacecraftPositionHistory_VisibilityPass(), this.getVisibilityPass(), this.getVisibilityPass_PositionHistory(), "visibilityPass", null, 0, 1, VisibilityPassSpacecraftPositionHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVisibilityPassSpacecraftPositionHistory_Positions(), this.getVisibilityPassSpacecraftPosition(), null, "positions", null, 0, -1, VisibilityPassSpacecraftPositionHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEOperation(getVisibilityPassSpacecraftPositionHistory__GetClosestRangePosition(), this.getVisibilityPassSpacecraftPosition(), "getClosestRangePosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEOperation(getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition(), this.getVisibilityPassSpacecraftPosition(), "getHighestElevationPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getVisibilityPassSpacecraftPositionHistory__GetSmallestSpacecraftCrossTrackAnglePosition(), this.getVisibilityPassSpacecraftPosition(), "getSmallestSpacecraftCrossTrackAnglePosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3119,6 +3141,10 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitModel__TLE(), this.getTLEEarthOrbitModel(), "createTLEEarthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTLE(), "tle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
+
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean(), theEcorePackage.getEString(), "exportAsCSV", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVisibilityPassSpacecraftPositionHistory(), "visibilityPassSpacecraftPositionHistory", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "includeHeader", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(eclipseEClass, Eclipse.class, "Eclipse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEclipse_PenumbraEntry(), this.getEclipseEvent(), null, "penumbraEntry", null, 0, 1, Eclipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3714,6 +3740,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "apogy_units", "s"
 		   });	
 		addAnnotation
+		  (getVisibilityPassSpacecraftPositionHistory__GetClosestRangePosition(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Returns the VisibilityPassSpacecraftPosition with the smallest range in the position history.\n@return The VisibilityPassSpacecraftPosition with the smallest range, null if the history position is empty."
+		   });	
+		addAnnotation
 		  (getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition(), 
 		   source, 
 		   new String[] {
@@ -4110,6 +4142,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "Create a TLEEarthOrbitModel using a TLE.\n@param tle The Two-Line Element defining the propagator.\n@return The TLEEarthOrbitModel."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nExports a VisibilityPassSpacecraftPositionHistory as a comma separated file (.csv).\n@param visibilityPassSpacecraftPositionHistory The VisibilityPassSpacecraftPositionHistory to export.\n@param includeHeader Whether or not to include a header line in the format."
 		   });	
 		addAnnotation
 		  (eclipseEClass, 

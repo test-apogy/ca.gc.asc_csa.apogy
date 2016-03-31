@@ -2732,13 +2732,22 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY_FEATURE_COUNT = 3;
 
 	/**
+	 * The operation id for the '<em>Get Closest Range Position</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_CLOSEST_RANGE_POSITION = 0;
+
+	/**
 	 * The operation id for the '<em>Get Highest Elevation Position</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_HIGHEST_ELEVATION_POSITION = 0;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_HIGHEST_ELEVATION_POSITION = 1;
 
 	/**
 	 * The operation id for the '<em>Get Smallest Spacecraft Cross Track Angle Position</em>' operation.
@@ -2747,7 +2756,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_SMALLEST_SPACECRAFT_CROSS_TRACK_ANGLE_POSITION = 1;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_SMALLEST_SPACECRAFT_CROSS_TRACK_ANGLE_POSITION = 2;
 
 	/**
 	 * The operation id for the '<em>Update History</em>' operation.
@@ -2756,7 +2765,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___UPDATE_HISTORY = 2;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___UPDATE_HISTORY = 3;
 
 	/**
 	 * The number of operations of the '<em>Visibility Pass Spacecraft Position History</em>' class.
@@ -2765,7 +2774,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY_OPERATION_COUNT = 3;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl <em>Visibility Pass Spacecraft Position</em>}' class.
@@ -3566,13 +3575,22 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_MODEL__TLE = 30;
 
 	/**
+	 * The operation id for the '<em>Export As CSV</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_AS_CSV__VISIBILITYPASSSPACECRAFTPOSITIONHISTORY_BOOLEAN = 31;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE_OPERATION_COUNT = 31;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE_OPERATION_COUNT = 32;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EclipseImpl <em>Eclipse</em>}' class.
@@ -5037,6 +5055,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EReference getVisibilityPassSpacecraftPositionHistory_Positions();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getClosestRangePosition() <em>Get Closest Range Position</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Closest Range Position</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getClosestRangePosition()
+	 * @generated
+	 */
+	EOperation getVisibilityPassSpacecraftPositionHistory__GetClosestRangePosition();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getHighestElevationPosition() <em>Get Highest Elevation Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5699,6 +5727,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitModel__TLE();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#exportAsCSV(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory, boolean) <em>Export As CSV</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Export As CSV</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#exportAsCSV(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory, boolean)
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse <em>Eclipse</em>}'.
@@ -6938,6 +6976,14 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		EReference VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS = eINSTANCE.getVisibilityPassSpacecraftPositionHistory_Positions();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Closest Range Position</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_CLOSEST_RANGE_POSITION = eINSTANCE.getVisibilityPassSpacecraftPositionHistory__GetClosestRangePosition();
+
+		/**
 		 * The meta object literal for the '<em><b>Get Highest Elevation Position</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7460,6 +7506,14 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_MODEL__TLE = eINSTANCE.getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitModel__TLE();
+
+		/**
+		 * The meta object literal for the '<em><b>Export As CSV</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_AS_CSV__VISIBILITYPASSSPACECRAFTPOSITIONHISTORY_BOOLEAN = eINSTANCE.getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EclipseImpl <em>Eclipse</em>}' class.

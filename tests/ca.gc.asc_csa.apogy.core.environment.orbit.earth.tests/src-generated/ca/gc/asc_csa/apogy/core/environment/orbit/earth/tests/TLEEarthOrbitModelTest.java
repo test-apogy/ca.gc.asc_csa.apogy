@@ -13,11 +13,15 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.tests;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
@@ -26,7 +30,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import junit.textui.TestRunner;
 
 /**
@@ -181,12 +184,33 @@ public class TLEEarthOrbitModelTest extends EarthOrbitModelTest {
 				
 				assertNotNull(visibilityPass.getPositionHistory());
 				
-				for(VisibilityPassSpacecraftPosition position : visibilityPass.getPositionHistory().getPositions())
+				String passHistory = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.exportAsCSV(visibilityPass.getPositionHistory(), true);
+				//System.out.println(passHistory);
+				
+				if(i == 0)
 				{
-					System.out.println("\t Altitude (km)   : " + position.getSpacecraftCoordinates().getElevation() / 1000.0);
-					System.out.println("\t Latitude (deg)  : " + Math.toDegrees(position.getSpacecraftCoordinates().getLatitude()));
-					System.out.println("\t Longitude (deg) : " + Math.toDegrees(position.getSpacecraftCoordinates().getLongitude()));
+					try
+					{
+						File logFile=new File("/home/pallard/Downloads/test.csv");
+	
+					    BufferedWriter writer = new BufferedWriter(new FileWriter(logFile));
+					    writer.write(passHistory);
+	
+					    //Close writer
+					    writer.close();
+					}
+					catch(Throwable t)
+					{
+						t.printStackTrace();
+					}
 				}
+				
+//				for(VisibilityPassSpacecraftPosition position : visibilityPass.getPositionHistory().getPositions())
+//				{
+//					System.out.println("\t Altitude (km)   : " + position.getSpacecraftCoordinates().getElevation() / 1000.0);
+//					System.out.println("\t Latitude (deg)  : " + Math.toDegrees(position.getSpacecraftCoordinates().getLatitude()));
+//					System.out.println("\t Longitude (deg) : " + Math.toDegrees(position.getSpacecraftCoordinates().getLongitude()));
+//				}
 				
 				i++;
 			}
@@ -227,13 +251,15 @@ public class TLEEarthOrbitModelTest extends EarthOrbitModelTest {
 				
 				assertNotNull(visibilityPass.getPositionHistory());
 				
-				for(VisibilityPassSpacecraftPosition position : visibilityPass.getPositionHistory().getPositions())
-				{
-					System.out.println("\t Altitude (km)   : " + position.getSpacecraftCoordinates().getElevation() / 1000.0);
-					System.out.println("\t Latitude (deg)  : " + Math.toDegrees(position.getSpacecraftCoordinates().getLatitude()));
-					System.out.println("\t Longitude (deg) : " + Math.toDegrees(position.getSpacecraftCoordinates().getLongitude()));
-					System.out.println();
-				}
+				String passHistory = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.exportAsCSV(visibilityPass.getPositionHistory(), true);
+				System.out.println(passHistory);
+				
+//				for(VisibilityPassSpacecraftPosition position : visibilityPass.getPositionHistory().getPositions())
+//				{
+//					System.out.println("\t Altitude (km)   : " + position.getSpacecraftCoordinates().getElevation() / 1000.0);
+//					System.out.println("\t Latitude (deg)  : " + Math.toDegrees(position.getSpacecraftCoordinates().getLatitude()));
+//					System.out.println("\t Longitude (deg) : " + Math.toDegrees(position.getSpacecraftCoordinates().getLongitude()));
+//				}
 				
 				i++;
 				System.out.println();

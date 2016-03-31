@@ -452,4 +452,19 @@ public interface ApogyCoreEnvironmentOrbitEarthFacade extends EObject
 	 */
 	TLEEarthOrbitModel createTLEEarthOrbitModel(TLE tle) throws Exception;
 
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Exports a VisibilityPassSpacecraftPositionHistory as a comma separated file (.csv).
+	 * @param visibilityPassSpacecraftPositionHistory The VisibilityPassSpacecraftPositionHistory to export.
+	 * @param includeHeader Whether or not to include a header line in the format.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" visibilityPassSpacecraftPositionHistoryUnique="false" includeHeaderUnique="false"
+	 * @generated
+	 */
+	String exportAsCSV(VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory, boolean includeHeader);
+
 } // ApogyCoreEnvironmentOrbitEarthFacade

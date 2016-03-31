@@ -58,6 +58,7 @@ import junit.textui.TestRunner;
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#loadTLE(java.lang.String) <em>Load TLE</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#exportTLE(ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE, java.lang.String) <em>Export TLE</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#createTLEEarthOrbitModel(ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE) <em>Create TLE Earth Orbit Model</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#exportAsCSV(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory, boolean) <em>Export As CSV</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -531,6 +532,19 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeTest extends TestCase {
 	 * @generated
 	 */
 	public void testCreateTLEEarthOrbitModel__TLE() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#exportAsCSV(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory, boolean) <em>Export As CSV</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#exportAsCSV(ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory, boolean)
+	 * @generated
+	 */
+	public void testExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

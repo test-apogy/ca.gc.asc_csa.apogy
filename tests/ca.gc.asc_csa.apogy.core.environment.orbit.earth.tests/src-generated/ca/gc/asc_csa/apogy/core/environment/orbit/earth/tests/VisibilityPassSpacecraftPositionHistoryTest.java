@@ -27,6 +27,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getClosestRangePosition() <em>Get Closest Range Position</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getHighestElevationPosition() <em>Get Highest Elevation Position</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getSmallestSpacecraftCrossTrackAnglePosition() <em>Get Smallest Spacecraft Cross Track Angle Position</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#updateHistory() <em>Update History</em>}</li>
@@ -103,6 +104,19 @@ public class VisibilityPassSpacecraftPositionHistoryTest extends TestCase {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getClosestRangePosition() <em>Get Closest Range Position</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getClosestRangePosition()
+	 * @generated
+	 */
+	public void testGetClosestRangePosition() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 	/**

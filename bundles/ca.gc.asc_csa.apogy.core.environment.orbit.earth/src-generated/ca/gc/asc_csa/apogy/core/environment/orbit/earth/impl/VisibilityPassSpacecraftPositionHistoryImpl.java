@@ -38,7 +38,6 @@ import org.orekit.frames.FramesFactory;
 import org.orekit.frames.LOFType;
 import org.orekit.frames.LocalOrbitalFrame;
 import org.orekit.frames.TopocentricFrame;
-import org.orekit.frames.Transform;
 import org.orekit.propagation.Propagator;
 import org.orekit.time.AbsoluteDate;
 import org.orekit.time.TimeScale;
@@ -201,6 +200,34 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			positions = new EObjectContainmentEList<VisibilityPassSpacecraftPosition>(VisibilityPassSpacecraftPosition.class, this, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS);
 		}
 		return positions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public VisibilityPassSpacecraftPosition getClosestRangePosition() 
+	{
+		VisibilityPassSpacecraftPosition smallestRangePosition = null;
+		
+		if(!getPositions().isEmpty())
+		{
+			// Finds the position with the highest elevation.
+			double closestRange = Double.POSITIVE_INFINITY;				
+			Iterator<VisibilityPassSpacecraftPosition> it = getPositions().iterator();
+			while(it.hasNext())
+			{
+				VisibilityPassSpacecraftPosition p = it.next();
+				if(p.getRange() < closestRange)
+				{
+					closestRange = p.getRange();
+					smallestRangePosition = p;
+				}
+			}						
+		}	
+		
+		return smallestRangePosition;
 	}
 
 	/**
@@ -410,6 +437,8 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_CLOSEST_RANGE_POSITION:
+				return getClosestRangePosition();
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_HIGHEST_ELEVATION_POSITION:
 				return getHighestElevationPosition();
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_SMALLEST_SPACECRAFT_CROSS_TRACK_ANGLE_POSITION:
@@ -459,7 +488,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			
 			while (extrapDate.compareTo(endAbsoluteDate) <= 0)  
 			{
-			    // We can simply get the position and velocity of spacecraft in LOF frame at any time
+			    // We can simply get the position and velocity of spacecraft in LOC frame at any time
 			    PVCoordinates pv = lof.getTransformTo(loc, extrapDate).transformPVCoordinates(PVCoordinates.ZERO);
 			    			    
 			    // Calculate the range.
@@ -474,26 +503,36 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			    // Calculate the elevation.
 			    double l = Math.sqrt((pv.getPosition().getX() * pv.getPosition().getX() +  pv.getPosition().getY() *  pv.getPosition().getY()));
 			    double elevation = Math.atan2(pv.getPosition().getZ(), l);
+			    			    			    			    
+			    PVCoordinates sc    = lof.getTransformTo(earth.getBodyFrame(), extrapDate).transformPVCoordinates(PVCoordinates.ZERO);			    
+			    PVCoordinates tgt = loc.getTransformTo(earth.getBodyFrame(), extrapDate).transformPVCoordinates(PVCoordinates.ZERO);
 			    			    
-			    // Calculate the spacecraft nadir angle to the surface location.
-			    // TODO : Confirm these calculations !
-			    PVCoordinates sc    = lof.getTransformTo(earth.getBodyFrame(), extrapDate).transformPVCoordinates(PVCoordinates.ZERO);
-			    Transform scToEarth = lof.getTransformTo(earth.getBodyFrame(), extrapDate);
-			    Vector3D      p     = scToEarth.transformPosition(sc.getPosition());
-                Vector3D      v     = scToEarth.transformVector(sc.getVelocity());
-                Vector3D      nadir = p.normalize().negate();
-                Vector3D crossTrack = p.crossProduct(v).normalize();
-                Vector3D alongTrack = v.normalize();
+			    // Spacecraft position vector
+			    Vector3D      p     = sc.getPosition();
+			    			    			    
+			    // Spacecraft velocity vector
+                Vector3D      v     = sc.getVelocity();
+                
+                // Spacecraft cross track vector.
+                Vector3D crossTrack = p.crossProduct(v);
+                                
+                // Target position vector.
+                Vector3D  target        = tgt.getPosition();
+                
+                // Spacecraft to target vector.
+                Vector3D  scToTarget    = p.subtract(target);         
+                
+                // Projection of scToTarget onto the orbital plane.
+                Vector3D scToTargetOntoOrbitalPlane = projectOntoPlane(scToTarget, crossTrack.normalize());
+                
+                // Projection of scToTarget onto the crosstrack plane.
+                Vector3D scToTargetOntoCrossTrackPlane = projectOntoPlane(scToTarget, v.normalize());
+                                			    
+			    //double scAlongTrackAngle = getAngle(p, scToTargetOntoOrbitalPlane);
+			    double scAlongTrackAngle = getAlongTrackAngle(p, scToTargetOntoOrbitalPlane, crossTrack);
 			    
-                Transform targetToEarth = loc.getTransformTo(earth.getBodyFrame(), extrapDate);
-                Vector3D  target        = targetToEarth.transformPosition(Vector3D.ZERO);
-                Vector3D  scToTarget    = p.subtract(1.0, target).normalize();                                
-                                                
-                double scToTargetProjectionOntoCrossTrack = Vector3D.dotProduct(crossTrack, scToTarget);
-                double scToTargetProjectionOntoAlongTrack = Vector3D.dotProduct(alongTrack, scToTarget);
-                double scToTargetProjectionOntoNadir = Vector3D.dotProduct(nadir, scToTarget);                
-			    double scCrossTrackAngle = Math.atan(scToTargetProjectionOntoCrossTrack / scToTargetProjectionOntoNadir);
-			    double scAlongTrackAngle = Math.atan(scToTargetProjectionOntoAlongTrack / scToTargetProjectionOntoNadir);
+			    //double scCrossTrackAngle = getAngle(p, scToTargetOntoCrossTrackPlane);
+			    double scCrossTrackAngle = getCrossTrackAngle(p, scToTargetOntoCrossTrackPlane, v);
 			    
 			    VisibilityPassSpacecraftPosition position = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPosition();
 			    position.setTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(extrapDate));
@@ -504,7 +543,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			    position.setSpacecraftCrossTrackAngle(scCrossTrackAngle);
 			    position.setSpacecraftAlongTrackAngle(scAlongTrackAngle);
 			    
-			    // Computes the position of the spacecraft.					    
+			    // Computes the position of the spacecraft.						    
 		        GeodeticPoint scCoords  = earth.transform(sc.getPosition(), earth.getBodyFrame(), extrapDate);
 		        		        
 		        GeographicCoordinates geo = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
@@ -527,6 +566,65 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 		}		
 		
 		return positions;
+	}
+	
+	/**
+	 * Computes the along track angle.
+	 * @param p The position of the S/C.
+	 * @param scToTargetOntoOrbitalPlane he position of the target projected onto the orbital plane.
+	 * @param crossTrackVector The cross track vector.
+	 * @return The along track angle.
+	 */
+	private double getAlongTrackAngle(Vector3D p, Vector3D scToTargetOntoOrbitalPlane, Vector3D crossTrackVector)
+	{	
+		// Finds the angle between the spacecraft position and the target position on the orbital plane.
+		double angle = getAngle(p,scToTargetOntoOrbitalPlane);
+		
+		// Figures out the sign of the angle.
+		Vector3D rotation = p.crossProduct(scToTargetOntoOrbitalPlane).normalize();		
+		double dotProduct = rotation.dotProduct(crossTrackVector.normalize());				
+		if(dotProduct > 0)
+		{
+			angle = -angle;
+		}
+				
+		return angle;
+	}
+	
+	/**
+	 * Computes the cross track angle.
+	 * @param p The position of the S/C.
+	 * @param scToTargetOntoCrossTrackPlane The position of the target projected onto the plane perpendicular to the orbital plane.
+	 * @param alongTrackVector The along track vector.
+	 * @return The cross track angle.
+	 */
+	private double getCrossTrackAngle(Vector3D p, Vector3D scToTargetOntoCrossTrackPlane, Vector3D alongTrackVector)
+	{	
+		// Finds the angle between the spacecraft position and the target position on the plane perpendicular to the orbital plane.
+		double angle = getAngle(p,scToTargetOntoCrossTrackPlane);
+		
+		// Figures out the sign of the angle.
+		Vector3D rotation = p.crossProduct(scToTargetOntoCrossTrackPlane).normalize();		
+		double dotProduct = rotation.dotProduct(alongTrackVector.normalize());				
+		if(dotProduct > 0)
+		{
+			angle = -angle;
+		}
+				
+		return angle;
+	}
+		
+	private double getAngle(Vector3D v1, Vector3D v2)
+	{
+		double dotProduct = v1.dotProduct(v2);
+		return Math.acos(dotProduct / (v1.getNorm() * v2.getNorm()));
+	}
+	
+	private Vector3D projectOntoPlane(Vector3D u, Vector3D planeNormal)
+	{
+		double projUOnNormalLenght = u.dotProduct(planeNormal) / (planeNormal.getNormSq()); 
+		Vector3D projUOnNormal = planeNormal.scalarMultiply(projUOnNormalLenght);		
+		return u.subtract(projUOnNormal);
 	}
 
 } //VisibilityPassSpacecraftPositionHistoryImpl
