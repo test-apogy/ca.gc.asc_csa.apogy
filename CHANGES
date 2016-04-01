@@ -1,3 +1,22 @@
+Version 0.5.12:
+ - Merge branch 'feature-asm'
+ - Update build to include the Javascript plug-ins
+ - Add documentation for the JavaScript plugins
+ - Add tests for JavaScriptProgram
+ - Add UI to execute and debug a JavaScriptProgram
+ - Add basic JavaScript support
+ - Merge branch 'master' of bitbucket.org:apogy/ca.gc.asc_csa.apogy
+ - Removed Apogy Logo from the one pager
+ - Added new screenshot
+ - Added new Apogy screenshots
+ - Merge tag 'v0.5.11' into feature-asm
+ - Merge branch 'master' into feature-asm
+ - sfl: switch git-review to feature-asm branch
+ - sfl: enforce Oracle JRE 1.8 for build
+ - [#38] Addition of a target platform
+ - [#39] Addition of coding conventions
+ - sfl: Add support for build infrastructure
+
 Version 0.5.11:
  - Fixed issue #114.
 
