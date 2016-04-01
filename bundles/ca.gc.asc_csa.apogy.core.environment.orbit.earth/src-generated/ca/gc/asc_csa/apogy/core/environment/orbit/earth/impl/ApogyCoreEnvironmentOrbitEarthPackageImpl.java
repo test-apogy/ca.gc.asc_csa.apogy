@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.SortedSet;
 
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -365,6 +366,13 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	private EDataType sortedSetEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iProgressMonitorEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1990,7 +1998,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_GroundStation_Date_Date() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_List_Date_Date_ElevationMask_IProgressMonitor() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(22);
 	}
 
@@ -1999,7 +2007,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetEclipses__EarthOrbitModel_Date_Date() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_GroundStation_Date_Date() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(23);
 	}
 
@@ -2008,7 +2016,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_List_Date_Date_IProgressMonitor() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(24);
 	}
 
@@ -2017,7 +2025,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetEclipses__EarthOrbitModel_Date_Date() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(25);
 	}
 
@@ -2026,7 +2034,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(26);
 	}
 
@@ -2035,7 +2043,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(27);
 	}
 
@@ -2044,7 +2052,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__LoadTLE__String() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(28);
 	}
 
@@ -2053,7 +2061,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportTLE__TLE_String() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(29);
 	}
 
@@ -2062,7 +2070,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitModel__TLE() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__LoadTLE__String() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(30);
 	}
 
@@ -2071,8 +2079,26 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportTLE__TLE_String() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(31);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitModel__TLE() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(32);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(33);
 	}
 
 	/**
@@ -2190,6 +2216,15 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 */
 	public EDataType getSortedSet() {
 		return sortedSetEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getIProgressMonitor() {
+		return iProgressMonitorEDataType;
 	}
 
 	/**
@@ -2579,7 +2614,9 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_STATES__PROPAGATOR_DATE_DATE_DOUBLE);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_ELEVATIONMASK_IPROGRESSMONITOR);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_GROUNDSTATION_DATE_DATE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_IPROGRESSMONITOR);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_ECLIPSES__EARTHORBITMODEL_DATE_DATE);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST);
@@ -2608,6 +2645,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		mapEDataType = createEDataType(MAP);
 		exceptionEDataType = createEDataType(EXCEPTION);
 		sortedSetEDataType = createEDataType(SORTED_SET);
+		iProgressMonitorEDataType = createEDataType(IPROGRESS_MONITOR);
 		rotationEDataType = createEDataType(ROTATION);
 		oreKitFrameEDataType = createEDataType(ORE_KIT_FRAME);
 		oreKitTimeStampedAngularCoordinatesEDataType = createEDataType(ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES);
@@ -3068,11 +3106,42 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_List_Date_Date_ElevationMask_IProgressMonitor(), null, "getTargetPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthOrbitModel(), "earthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getEarthSurfaceLocation());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "earthSurfaceLocations", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getElevationMask(), "elevationMask", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getIProgressMonitor(), "monitor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getVisibilityPass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
 		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_GroundStation_Date_Date(), null, "getGroundStationPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthOrbitModel(), "earthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getGroundStation(), "groundStation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getVisibilityPass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_List_Date_Date_IProgressMonitor(), null, "getGroundStationPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthOrbitModel(), "earthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getGroundStation());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "groundStations", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getIProgressMonitor(), "monitor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getVisibilityPass());
@@ -3175,6 +3244,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEDataType(mapEDataType, Map.class, "Map", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(exceptionEDataType, Exception.class, "Exception", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(sortedSetEDataType, SortedSet.class, "SortedSet", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(iProgressMonitorEDataType, IProgressMonitor.class, "IProgressMonitor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(rotationEDataType, Rotation.class, "Rotation", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(oreKitFrameEDataType, Frame.class, "OreKitFrame", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(oreKitTimeStampedAngularCoordinatesEDataType, TimeStampedAngularCoordinates.class, "OreKitTimeStampedAngularCoordinates", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -4090,10 +4160,22 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "documentation", "*\nReturns the list of passes for a given target.\n@param earthOrbitModel The EarthOrbitModel used.\n@param propagator The OreKit propagator to use.\n@param earthSurfaceLocation The location of the target.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@param elevationMaks The elevation mask used to determine the visibility of the spacecraft at the target location.\n@param The list of VisibilityPass. Never null, but can be empty."
 		   });	
 		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_List_Date_Date_ElevationMask_IProgressMonitor(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of passes for a list of targets.\n@param earthOrbitModel The EarthOrbitModel used.\n@param propagator The OreKit propagator to use.\n@param earthSurfaceLocations The list of the targets.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@param elevationMaks The elevation mask used to determine the visibility of the spacecraft at the target locations.\n@param monitor A progress monitor, can be null.\n@return The list of VisibilityPass. Never null, but can be empty."
+		   });	
+		addAnnotation
 		  (getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_GroundStation_Date_Date(), 
 		   source, 
 		   new String[] {
 			 "documentation", "*\nReturns the list of passes for a given Ground Station (and its Field Of View) during a specified interval.\n@param propagator The OreKit propagator to use.\n@param groundStation The location of the target.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@return The list of VisibilityPass. Never null, but can be empty."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_List_Date_Date_IProgressMonitor(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of passes for a list of Ground Station (and its Field Of View) during a specified interval.\n@param propagator The OreKit propagator to use.\n@param groundStation The list of targets.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@return The list of VisibilityPass. Never null, but can be empty."
 		   });	
 		addAnnotation
 		  (getApogyCoreEnvironmentOrbitEarthFacade__GetEclipses__EarthOrbitModel_Date_Date(), 

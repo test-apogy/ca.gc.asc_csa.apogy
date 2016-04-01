@@ -63,6 +63,9 @@ type Map<K,V> wraps java.util.Map
 type Exception wraps java.lang.Exception
 type SortedSet<T> wraps java.util.SortedSet
 
+// Eclipse Types
+type IProgressMonitor wraps org.eclipse.core.runtime.IProgressMonitor
+
 // Appache Types
 type Rotation wraps org.apache.commons.math3.geometry.euclidean.threed.Rotation
 
@@ -887,6 +890,19 @@ class ApogyCoreEnvironmentOrbitEarthFacade
 	op List<VisibilityPass> getTargetPasses(EarthOrbitModel earthOrbitModel, EarthSurfaceLocation earthSurfaceLocation, EDate startDate, EDate endDate, ElevationMask elevationMask) throws Exception
 	
 	/**
+	 * Returns the list of passes for a list of targets.
+	 * @param earthOrbitModel The EarthOrbitModel used.
+	 * @param propagator The OreKit propagator to use.
+	 * @param earthSurfaceLocations The list of the targets.
+	 * @param startDate The start time of the propagation.
+	 * @param endDate The end time of the propagation.
+	 * @param elevationMaks The elevation mask used to determine the visibility of the spacecraft at the target locations.
+	 * @param monitor A progress monitor, can be null.
+	 * @return The list of VisibilityPass. Never null, but can be empty.
+	 */	
+	op List<VisibilityPass> getTargetPasses(EarthOrbitModel earthOrbitModel, List<EarthSurfaceLocation> earthSurfaceLocations, EDate startDate, EDate endDate, ElevationMask elevationMask, IProgressMonitor monitor) throws Exception
+	
+	/**
 	 * Returns the list of passes for a given Ground Station (and its Field Of View) during a specified interval.
 	 * @param propagator The OreKit propagator to use.
 	 * @param groundStation The location of the target.
@@ -895,6 +911,16 @@ class ApogyCoreEnvironmentOrbitEarthFacade
 	 * @return The list of VisibilityPass. Never null, but can be empty.
 	 */	
 	op List<VisibilityPass> getGroundStationPasses(EarthOrbitModel earthOrbitModel, GroundStation groundStation, EDate startDate, EDate endDate) throws Exception
+
+	/**
+	 * Returns the list of passes for a list of Ground Station (and its Field Of View) during a specified interval.
+	 * @param propagator The OreKit propagator to use.
+	 * @param groundStation The list of targets.
+	 * @param startDate The start time of the propagation.
+	 * @param endDate The end time of the propagation.
+	 * @return The list of VisibilityPass. Never null, but can be empty.
+	 */	
+	op List<VisibilityPass> getGroundStationPasses(EarthOrbitModel earthOrbitModel, List<GroundStation> groundStations, EDate startDate, EDate endDate, IProgressMonitor monitor) throws Exception
 
 	/**
 	 * Returns the list of {@link Eclipse} that will be experienced by the spacecraft within a specified time period.

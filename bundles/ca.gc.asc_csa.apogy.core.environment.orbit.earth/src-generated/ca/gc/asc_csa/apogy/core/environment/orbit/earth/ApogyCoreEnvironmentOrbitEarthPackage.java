@@ -3494,13 +3494,31 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK = 21;
 
 	/**
+	 * The operation id for the '<em>Get Target Passes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_ELEVATIONMASK_IPROGRESSMONITOR = 22;
+
+	/**
 	 * The operation id for the '<em>Get Ground Station Passes</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_GROUNDSTATION_DATE_DATE = 22;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_GROUNDSTATION_DATE_DATE = 23;
+
+	/**
+	 * The operation id for the '<em>Get Ground Station Passes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_IPROGRESSMONITOR = 24;
 
 	/**
 	 * The operation id for the '<em>Get Eclipses</em>' operation.
@@ -3509,7 +3527,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_ECLIPSES__EARTHORBITMODEL_DATE_DATE = 23;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_ECLIPSES__EARTHORBITMODEL_DATE_DATE = 25;
 
 	/**
 	 * The operation id for the '<em>Get Visibility Pass Sorted By Start Date</em>' operation.
@@ -3518,7 +3536,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST = 24;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST = 26;
 
 	/**
 	 * The operation id for the '<em>Get Visibility Pass Sorted By Duration</em>' operation.
@@ -3527,7 +3545,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST = 25;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST = 27;
 
 	/**
 	 * The operation id for the '<em>Get Visibility Pass Spacecraft Position Sorted By Elevation</em>' operation.
@@ -3536,7 +3554,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST = 26;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST = 28;
 
 	/**
 	 * The operation id for the '<em>Get Visibility Pass Spacecraft Position Sorted By Spacecraft Cross Track Angle</em>' operation.
@@ -3545,7 +3563,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST = 27;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST = 29;
 
 	/**
 	 * The operation id for the '<em>Load TLE</em>' operation.
@@ -3554,7 +3572,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING = 28;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING = 30;
 
 	/**
 	 * The operation id for the '<em>Export TLE</em>' operation.
@@ -3563,7 +3581,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_TLE__TLE_STRING = 29;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_TLE__TLE_STRING = 31;
 
 	/**
 	 * The operation id for the '<em>Create TLE Earth Orbit Model</em>' operation.
@@ -3572,7 +3590,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_MODEL__TLE = 30;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_MODEL__TLE = 32;
 
 	/**
 	 * The operation id for the '<em>Export As CSV</em>' operation.
@@ -3581,7 +3599,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_AS_CSV__VISIBILITYPASSSPACECRAFTPOSITIONHISTORY_BOOLEAN = 31;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_AS_CSV__VISIBILITYPASSSPACECRAFTPOSITIONHISTORY_BOOLEAN = 33;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -3590,7 +3608,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE_OPERATION_COUNT = 32;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE_OPERATION_COUNT = 34;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EclipseImpl <em>Eclipse</em>}' class.
@@ -3790,6 +3808,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	int SORTED_SET = 38;
 
 	/**
+	 * The meta object id for the '<em>IProgress Monitor</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.core.runtime.IProgressMonitor
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getIProgressMonitor()
+	 * @generated
+	 */
+	int IPROGRESS_MONITOR = 39;
+
+	/**
 	 * The meta object id for the '<em>Rotation</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3797,7 +3825,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getRotation()
 	 * @generated
 	 */
-	int ROTATION = 39;
+	int ROTATION = 40;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Frame</em>' data type.
@@ -3807,7 +3835,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitFrame()
 	 * @generated
 	 */
-	int ORE_KIT_FRAME = 40;
+	int ORE_KIT_FRAME = 41;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Time Stamped Angular Coordinates</em>' data type.
@@ -3817,7 +3845,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitTimeStampedAngularCoordinates()
 	 * @generated
 	 */
-	int ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES = 41;
+	int ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES = 42;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Time Stamped PV Coordinates</em>' data type.
@@ -3827,7 +3855,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitTimeStampedPVCoordinates()
 	 * @generated
 	 */
-	int ORE_KIT_TIME_STAMPED_PV_COORDINATES = 42;
+	int ORE_KIT_TIME_STAMPED_PV_COORDINATES = 43;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Spacecraft State</em>' data type.
@@ -3837,7 +3865,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitSpacecraftState()
 	 * @generated
 	 */
-	int ORE_KIT_SPACECRAFT_STATE = 43;
+	int ORE_KIT_SPACECRAFT_STATE = 44;
 
 	/**
 	 * The meta object id for the '<em>Absolute Date</em>' data type.
@@ -3847,7 +3875,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getAbsoluteDate()
 	 * @generated
 	 */
-	int ABSOLUTE_DATE = 44;
+	int ABSOLUTE_DATE = 45;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Orbit</em>' data type.
@@ -3857,7 +3885,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitOrbit()
 	 * @generated
 	 */
-	int ORE_KIT_ORBIT = 45;
+	int ORE_KIT_ORBIT = 46;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Keplerian Orbit</em>' data type.
@@ -3867,7 +3895,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitKeplerianOrbit()
 	 * @generated
 	 */
-	int ORE_KIT_KEPLERIAN_ORBIT = 46;
+	int ORE_KIT_KEPLERIAN_ORBIT = 47;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Cartesian Orbit</em>' data type.
@@ -3877,7 +3905,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitCartesianOrbit()
 	 * @generated
 	 */
-	int ORE_KIT_CARTESIAN_ORBIT = 47;
+	int ORE_KIT_CARTESIAN_ORBIT = 48;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Elevation Mask</em>' data type.
@@ -3887,7 +3915,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitElevationMask()
 	 * @generated
 	 */
-	int ORE_KIT_ELEVATION_MASK = 48;
+	int ORE_KIT_ELEVATION_MASK = 49;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Attitude Provider</em>' data type.
@@ -3897,7 +3925,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitAttitudeProvider()
 	 * @generated
 	 */
-	int ORE_KIT_ATTITUDE_PROVIDER = 49;
+	int ORE_KIT_ATTITUDE_PROVIDER = 50;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Propagator</em>' data type.
@@ -3907,7 +3935,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_PROPAGATOR = 50;
+	int ORE_KIT_PROPAGATOR = 51;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit DSST Propagator</em>' data type.
@@ -3917,7 +3945,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitDSSTPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_DSST_PROPAGATOR = 51;
+	int ORE_KIT_DSST_PROPAGATOR = 52;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Eckstein Hechler Propagator</em>' data type.
@@ -3927,7 +3955,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitEcksteinHechlerPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR = 52;
+	int ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR = 53;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Ephemeris Progator</em>' data type.
@@ -3937,7 +3965,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitEphemerisProgator()
 	 * @generated
 	 */
-	int ORE_KIT_EPHEMERIS_PROGATOR = 53;
+	int ORE_KIT_EPHEMERIS_PROGATOR = 54;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Keplerian Propagator</em>' data type.
@@ -3947,7 +3975,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitKeplerianPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_KEPLERIAN_PROPAGATOR = 54;
+	int ORE_KIT_KEPLERIAN_PROPAGATOR = 55;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Numerical Propagator</em>' data type.
@@ -3957,7 +3985,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitNumericalPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_NUMERICAL_PROPAGATOR = 55;
+	int ORE_KIT_NUMERICAL_PROPAGATOR = 56;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit TLE Propagator</em>' data type.
@@ -3967,7 +3995,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitTLEPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_TLE_PROPAGATOR = 56;
+	int ORE_KIT_TLE_PROPAGATOR = 57;
 
 
 	/**
@@ -3978,7 +4006,7 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getOreKitTLE()
 	 * @generated
 	 */
-	int ORE_KIT_TLE = 57;
+	int ORE_KIT_TLE = 58;
 
 
 	/**
@@ -5639,6 +5667,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_EarthSurfaceLocation_Date_Date_ElevationMask();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getTargetPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask, org.eclipse.core.runtime.IProgressMonitor) <em>Get Target Passes</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Target Passes</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getTargetPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask, org.eclipse.core.runtime.IProgressMonitor)
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_List_Date_Date_ElevationMask_IProgressMonitor();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getGroundStationPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation, java.util.Date, java.util.Date) <em>Get Ground Station Passes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5647,6 +5685,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_GroundStation_Date_Date();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getGroundStationPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, org.eclipse.core.runtime.IProgressMonitor) <em>Get Ground Station Passes</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Ground Station Passes</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getGroundStationPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, org.eclipse.core.runtime.IProgressMonitor)
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_List_Date_Date_IProgressMonitor();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getEclipses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.Date, java.util.Date) <em>Get Eclipses</em>}' operation.
@@ -5876,6 +5924,17 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getSortedSet();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.core.runtime.IProgressMonitor <em>IProgress Monitor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>IProgress Monitor</em>'.
+	 * @see org.eclipse.core.runtime.IProgressMonitor
+	 * @model instanceClass="org.eclipse.core.runtime.IProgressMonitor"
+	 * @generated
+	 */
+	EDataType getIProgressMonitor();
 
 	/**
 	 * Returns the meta object for data type '{@link org.apache.commons.math3.geometry.euclidean.threed.Rotation <em>Rotation</em>}'.
@@ -7436,12 +7495,28 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK = eINSTANCE.getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_EarthSurfaceLocation_Date_Date_ElevationMask();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Target Passes</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_ELEVATIONMASK_IPROGRESSMONITOR = eINSTANCE.getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_List_Date_Date_ElevationMask_IProgressMonitor();
+
+		/**
 		 * The meta object literal for the '<em><b>Get Ground Station Passes</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_GROUNDSTATION_DATE_DATE = eINSTANCE.getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_GroundStation_Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Ground Station Passes</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_IPROGRESSMONITOR = eINSTANCE.getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_List_Date_Date_IProgressMonitor();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Eclipses</b></em>' operation.
@@ -7634,6 +7709,16 @@ public interface ApogyCoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType SORTED_SET = eINSTANCE.getSortedSet();
+
+		/**
+		 * The meta object literal for the '<em>IProgress Monitor</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.core.runtime.IProgressMonitor
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthPackageImpl#getIProgressMonitor()
+		 * @generated
+		 */
+		EDataType IPROGRESS_MONITOR = eINSTANCE.getIProgressMonitor();
 
 		/**
 		 * The meta object literal for the '<em>Rotation</em>' data type.

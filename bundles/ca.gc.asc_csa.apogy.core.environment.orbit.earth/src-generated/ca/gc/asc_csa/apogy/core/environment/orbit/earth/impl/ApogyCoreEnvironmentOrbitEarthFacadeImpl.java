@@ -35,6 +35,7 @@ import javax.vecmath.Matrix3d;
 import org.apache.commons.math3.geometry.euclidean.threed.Line;
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -53,6 +54,7 @@ import org.orekit.frames.Transform;
 import org.orekit.orbits.CartesianOrbit;
 import org.orekit.orbits.KeplerianOrbit;
 import org.orekit.propagation.Propagator;
+import org.orekit.propagation.events.DateDetector;
 import org.orekit.propagation.events.EclipseDetector;
 import org.orekit.propagation.events.ElevationDetector;
 import org.orekit.propagation.events.handlers.EventHandler;
@@ -784,6 +786,85 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 		return passes;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<VisibilityPass> getTargetPasses(EarthOrbitModel earthOrbitModel, List<EarthSurfaceLocation> earthSurfaceLocations, Date startDate, Date endDate, ElevationMask elevationMask, IProgressMonitor monitor) throws Exception 
+	{	
+		double convergenceThreshold = 0.001; 
+		
+		// Define the Earth Frame.
+		Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);
+		BodyShape earth = new OneAxisEllipsoid(Constants.WGS84_EARTH_EQUATORIAL_RADIUS,
+		                                       Constants.WGS84_EARTH_FLATTENING,
+		                                       earthFrame);
+		
+		// Setup the propagator.
+		Propagator propagator = earthOrbitModel.getOreKitPropagator();
+		propagator.setSlaveMode();
+		
+		// Creates the list if targets location
+		List<EarthSurfaceLocationEventHandler> earthSurfaceLocationEventHandlers = new ArrayList<EarthSurfaceLocationEventHandler>();
+		for(EarthSurfaceLocation earthSurfaceLocation : earthSurfaceLocations)
+		{
+			// Defined the target's GeodeticPoint on Earth.
+			GeodeticPoint target = new GeodeticPoint(earthSurfaceLocation.getLatitude(), earthSurfaceLocation.getLongitude(), earthSurfaceLocation.getElevation());
+						
+			// Define the target in the Earth Frame.
+			String name = "?";
+			if( earthSurfaceLocation.getName() != null) name =  earthSurfaceLocation.getName();
+			TopocentricFrame targetFrame = new TopocentricFrame(earth, target, name);
+
+			// Created the event handler.
+			EarthSurfaceLocationEventHandler eventHandler = new EarthSurfaceLocationEventHandler(earthOrbitModel, earthSurfaceLocation);
+			earthSurfaceLocationEventHandlers.add(eventHandler);
+			
+			// Defines the elevation detector.
+			ElevationDetector detector =  null;
+			if(elevationMask instanceof ConstantElevationMask)
+			{
+				double elevation = ((ConstantElevationMask) elevationMask).getConstantElevation();
+				detector = new ElevationDetector(1, convergenceThreshold, targetFrame).withConstantElevation(elevation).withHandler(eventHandler);
+			}
+			else
+			{
+				detector = new ElevationDetector(1, convergenceThreshold, targetFrame).withElevationMask(elevationMask.getOreKitElevationMask()).withHandler(eventHandler);	
+			}
+			
+			// Adds the event detector to the propagator. 
+			propagator.addEventDetector(detector);
+		}
+			
+		// Adds the progress monitoring if required.
+		if(monitor != null)
+		{
+			monitor.beginTask("Get Target Passes for EarthSurfaceLocation.", 100);
+						
+			DateDetector dateDetector = createTimeProgressDateDetector(startDate, endDate, 100, monitor);
+			propagator.addEventDetector(dateDetector);		
+		}
+		
+							
+		// Starts the propagator.
+		AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate endAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);		
+		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
+
+		// Concatenate the passes from all targets.
+		List<VisibilityPass> passes = new ArrayList<VisibilityPass>();
+		
+		for(EarthSurfaceLocationEventHandler handler : earthSurfaceLocationEventHandlers)
+		{
+			passes.addAll(handler.getFoundPasses());
+		}
+		
+		if(monitor != null) monitor.done();
+		
+		return passes;
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -877,6 +958,85 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 		AbsoluteDate endAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
 		
 		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
+		
+		return passes;
+	}
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<VisibilityPass> getGroundStationPasses(EarthOrbitModel earthOrbitModel, List<GroundStation> groundStations, Date startDate, Date endDate, IProgressMonitor monitor) throws Exception 
+	{
+		double convergenceThreshold = 0.001; 
+		
+		// Define the Earth Frame.
+		Frame earthFrame = FramesFactory.getITRF(IERSConventions.IERS_2010, true);
+		BodyShape earth = new OneAxisEllipsoid(Constants.WGS84_EARTH_EQUATORIAL_RADIUS,
+		                                       Constants.WGS84_EARTH_FLATTENING,
+		                                       earthFrame);
+		
+		// Setup the propagator.
+		Propagator propagator = earthOrbitModel.getOreKitPropagator();
+		propagator.setSlaveMode();
+		
+		// Creates the list if targets location
+		List<EarthSurfaceLocationEventHandler> earthSurfaceLocationEventHandlers = new ArrayList<EarthSurfaceLocationEventHandler>();
+		for(GroundStation groundStation : groundStations)
+		{
+			// Defined the target's GeodeticPoint on Earth.
+			GeodeticPoint target = new GeodeticPoint(groundStation.getLatitude(), groundStation.getLongitude(), groundStation.getElevation());
+						
+			// Define the target in the Earth Frame.
+			String name = "?";
+			if( groundStation.getName() != null) name =  groundStation.getName();
+			TopocentricFrame targetFrame = new TopocentricFrame(earth, target, name);
+
+			// Created the event handler.
+			EarthSurfaceLocationEventHandler eventHandler = new EarthSurfaceLocationEventHandler(earthOrbitModel, groundStation);
+			earthSurfaceLocationEventHandlers.add(eventHandler);
+			
+			// Defines the elevation detector.
+			ElevationDetector detector =  null;
+			if(groundStation.getElevationMask() instanceof ConstantElevationMask)
+			{
+				double elevation = ((ConstantElevationMask) groundStation.getElevationMask() ).getConstantElevation();
+				detector = new ElevationDetector(1, convergenceThreshold, targetFrame).withConstantElevation(elevation).withHandler(eventHandler);
+			}
+			else
+			{
+				detector = new ElevationDetector(1, convergenceThreshold, targetFrame).withElevationMask(groundStation.getElevationMask().getOreKitElevationMask()).withHandler(eventHandler);	
+			}
+			
+			// Adds the event detector to the propagator. 
+			propagator.addEventDetector(detector);
+		}
+		
+		// Adds the progress monitoring if required.
+		if(monitor != null)
+		{
+			monitor.beginTask("Get Target Passes for GroundStation.", 100);
+						
+			DateDetector dateDetector = createTimeProgressDateDetector(startDate, endDate, 100, monitor);
+			propagator.addEventDetector(dateDetector);		
+		}
+			
+		// Starts the propagator.
+		AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate endAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);		
+		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
+
+		// Concatenate the passes from all targets.
+		List<VisibilityPass> passes = new ArrayList<VisibilityPass>();
+		
+		for(EarthSurfaceLocationEventHandler handler : earthSurfaceLocationEventHandlers)
+		{
+			passes.addAll(handler.getFoundPasses());
+		}
+		
+		if(monitor != null) monitor.done();
 		
 		return passes;
 	}
@@ -1276,9 +1436,23 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_ELEVATIONMASK_IPROGRESSMONITOR:
+				try {
+					return getTargetPasses((EarthOrbitModel)arguments.get(0), (List<EarthSurfaceLocation>)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3), (ElevationMask)arguments.get(4), (IProgressMonitor)arguments.get(5));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_GROUNDSTATION_DATE_DATE:
 				try {
 					return getGroundStationPasses((EarthOrbitModel)arguments.get(0), (GroundStation)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_IPROGRESSMONITOR:
+				try {
+					return getGroundStationPasses((EarthOrbitModel)arguments.get(0), (List<GroundStation>)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3), (IProgressMonitor)arguments.get(4));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
@@ -1506,4 +1680,114 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 		return tempFile;
 	}
 
+	protected DateDetector createTimeProgressDateDetector(Date startDate, Date endDate, int totalWorkUnits, IProgressMonitor monitor)
+	{
+		// Creates the list of Absolute Dates.
+		long duration = endDate.getTime() - startDate.getTime();
+		long timeIncrement = Math.round(1.0 * duration / totalWorkUnits);
+		
+		AbsoluteDate absoluteStartDate = createAbsoluteDate(startDate);
+				
+		TimeProgressEventHandler handler = new TimeProgressEventHandler(monitor);
+		DateDetector dateDetector = new DateDetector(1, 1, absoluteStartDate).withHandler(handler);
+		
+		// Creates a list of date to check for.
+		long time = startDate.getTime() + timeIncrement;		
+		while(time < endDate.getTime())
+		{
+			Date date = new Date(time);
+			AbsoluteDate absoluteDate = createAbsoluteDate(date);
+			
+			dateDetector.addEventDate(absoluteDate);
+			
+			time += timeIncrement;
+		}
+		
+		return dateDetector;
+	}
+	
+	private class TimeProgressEventHandler implements EventHandler<DateDetector>
+	{
+		private IProgressMonitor monitor;
+		
+		public TimeProgressEventHandler(IProgressMonitor monitor)
+		{
+			this.monitor= monitor;
+		}
+		
+		@Override
+		public org.orekit.propagation.events.handlers.EventHandler.Action eventOccurred(org.orekit.propagation.SpacecraftState arg0, DateDetector arg1, boolean increasing) throws OrekitException 
+		{
+			monitor.worked(1);						
+			return Action.CONTINUE;
+		}
+
+		@Override
+		public org.orekit.propagation.SpacecraftState resetState(DateDetector arg0, org.orekit.propagation.SpacecraftState oldState) throws OrekitException 
+		{
+			return oldState;
+		}
+		
+	}
+	
+	private class EarthSurfaceLocationEventHandler implements EventHandler<ElevationDetector> 
+	{		
+		private EarthSurfaceLocation earthSurfaceLocation;
+		private EarthOrbitModel earthOrbitModel;
+		
+		private VisibilityPass lastPass = null;
+		private List<VisibilityPass> passes = new ArrayList<VisibilityPass>();
+		
+		public EarthSurfaceLocationEventHandler( EarthOrbitModel earthOrbitModel, EarthSurfaceLocation earthSurfaceLocation)
+		{
+			this.earthOrbitModel = earthOrbitModel;
+			this.earthSurfaceLocation = earthSurfaceLocation;
+		}
+		
+		public List<VisibilityPass> getFoundPasses()
+		{
+			return passes;
+		}
+		
+		@Override
+		public org.orekit.propagation.events.handlers.EventHandler.Action eventOccurred(org.orekit.propagation.SpacecraftState s, ElevationDetector detector, boolean increasing) throws OrekitException 
+		{
+			if (increasing) 
+			{
+				if(lastPass == null)
+				{
+					lastPass = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();						
+					lastPass.setStartTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
+					lastPass.setSurfaceLocation(earthSurfaceLocation);																
+					lastPass.setOrbitModel(earthOrbitModel);						
+				}
+				else
+				{
+					// TODO Fills in the pass position history
+				}
+	        } 
+			else 
+			{
+				if(lastPass != null)
+				{
+					lastPass.setEndTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
+					passes.add(lastPass);
+					
+					// Update pass position history
+					lastPass.getPositionHistory().updateHistory();
+					
+					// Reset last pass.
+					lastPass = null;
+				}					
+	        }			
+			
+			return Action.CONTINUE;
+		}
+
+		@Override
+		public org.orekit.propagation.SpacecraftState resetState(ElevationDetector arg0, org.orekit.propagation.SpacecraftState oldState) throws OrekitException 
+		{		
+			return oldState;
+		}		
+	}
 } //ApogyCoreEnvironmentOrbitEarthFacadeImpl

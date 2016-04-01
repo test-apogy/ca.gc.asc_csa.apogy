@@ -13,11 +13,27 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.tests;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.NullProgressMonitor;
+
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
-
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -49,7 +65,9 @@ import junit.textui.TestRunner;
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#convertToGeographicCoordinates(ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState) <em>Convert To Geographic Coordinates</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getSpacecraftStates(org.orekit.propagation.Propagator, java.util.Date, java.util.Date, double) <em>Get Spacecraft States</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getTargetPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask) <em>Get Target Passes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getTargetPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask, org.eclipse.core.runtime.IProgressMonitor) <em>Get Target Passes</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getGroundStationPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation, java.util.Date, java.util.Date) <em>Get Ground Station Passes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getGroundStationPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, org.eclipse.core.runtime.IProgressMonitor) <em>Get Ground Station Passes</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getEclipses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.Date, java.util.Date) <em>Get Eclipses</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getVisibilityPassSortedByStartDate(java.util.List) <em>Get Visibility Pass Sorted By Start Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getVisibilityPassSortedByDuration(java.util.List) <em>Get Visibility Pass Sorted By Duration</em>}</li>
@@ -421,6 +439,95 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeTest extends TestCase {
 	}
 
 	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getTargetPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask, org.eclipse.core.runtime.IProgressMonitor) <em>Get Target Passes</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getTargetPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask, org.eclipse.core.runtime.IProgressMonitor)
+	 * @generated_NOT
+	 */
+	public void testGetTargetPasses__EarthOrbitModel_List_Date_Date_ElevationMask_IProgressMonitor() 
+	{
+		TLE tle = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLE();
+		tle.setFirstLine("1 25544U 98067A   16077.22498784  .00011633  00000-0  18251-3 0  9999");
+		tle.setSecondLine("2 25544  51.6438 156.6708 0001478 307.3798 150.1482 15.54156238990671");		
+		
+		TLEEarthOrbitModel tleEarthOrbitModel = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitModel();
+		tleEarthOrbitModel.setTle(tle);
+	
+		Date startDate = tleEarthOrbitModel.getFromValidDate();
+		Date endDate = new Date(startDate.getTime() + 10800000); //tleEarthOrbitModel.getToValidDate();		
+
+		double timeInterval = (endDate.getTime() - startDate.getTime()) * 0.001;
+		System.out.println("getTargetPasses duration (s) : " + timeInterval);
+		
+		ConstantElevationMask constantElevationMask = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createConstantElevationMask();
+		constantElevationMask.setConstantElevation(Math.toRadians(10.0));			
+		
+		List<EarthSurfaceLocation> earthSurfaceLocations = new ArrayList<EarthSurfaceLocation>();
+			
+		IProgressMonitor monitor = new NullProgressMonitor();
+		
+		Map<Integer, Double> targetNumberToProcesingTimeMap = new HashMap<Integer, Double>();
+		int numberOfTargets = 1;
+		for(int testIndex = 1; testIndex <= 3; testIndex++)
+		{
+			double latitude = 0;
+			double longitude = 0;			
+			
+			earthSurfaceLocations.clear();
+			for(int i = 0; i < numberOfTargets; i++)
+			{
+				EarthSurfaceLocation loc = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation();
+				loc.setElevation(0);
+				
+				loc.setLatitude(Math.toRadians(latitude));
+				loc.setLongitude(Math.toRadians(longitude));
+				
+				earthSurfaceLocations.add(loc);
+				
+				latitude += 90.0 / numberOfTargets;
+				longitude += 180.0 / numberOfTargets;
+			}
+			
+			try
+			{
+				System.out.println("getTargetPasses starts for <" + earthSurfaceLocations.size() + "> targets...");
+				monitor = new NullProgressMonitor();
+				long startTime = System.currentTimeMillis();
+				List<VisibilityPass> passes = getFixture().getTargetPasses(tleEarthOrbitModel, earthSurfaceLocations, startDate, endDate, constantElevationMask, monitor);
+				long endTime = System.currentTimeMillis();
+				double duration = (endTime - startTime) * 0.001;
+				targetNumberToProcesingTimeMap.put(new Integer(numberOfTargets), duration);
+				
+				assertNotNull(passes);		
+				//assertTrue(passes.size() > 0);
+				
+				System.out.print("getTargetPasses took <" + duration  + "> s for <"+ earthSurfaceLocations.size() + "> targets.");
+				System.out.println("It found <" + passes.size() + "> passes.");		
+			}
+			catch(Throwable t)
+			{
+				t.printStackTrace();
+				fail(t.getMessage());
+			}	
+			
+			numberOfTargets = testIndex * 10;
+		}
+		
+		System.out.println("Performance Results");
+		System.out.println("Number Of Targets, Processing Time (s)");
+		
+		SortedSet<Integer> sortedTargetNumber = new TreeSet<Integer>(targetNumberToProcesingTimeMap.keySet());
+		Iterator<Integer> it = sortedTargetNumber.iterator();
+				
+		while(it.hasNext())
+		{
+			Integer targetCount = it.next();
+			System.out.println(targetCount + "," + targetNumberToProcesingTimeMap.get(targetCount) );
+		}
+	}
+
+	/**
 	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getGroundStationPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation, java.util.Date, java.util.Date) <em>Get Ground Station Passes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -431,6 +538,101 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeTest extends TestCase {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
+	}
+
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getGroundStationPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, org.eclipse.core.runtime.IProgressMonitor) <em>Get Ground Station Passes</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getGroundStationPasses(ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel, java.util.List, java.util.Date, java.util.Date, org.eclipse.core.runtime.IProgressMonitor)
+	 * @generated_NOT
+	 */
+	public void testGetGroundStationPasses__EarthOrbitModel_List_Date_Date_IProgressMonitor() 
+	{
+		TLE tle = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLE();
+		tle.setFirstLine("1 25544U 98067A   16077.22498784  .00011633  00000-0  18251-3 0  9999");
+		tle.setSecondLine("2 25544  51.6438 156.6708 0001478 307.3798 150.1482 15.54156238990671");		
+		
+		TLEEarthOrbitModel tleEarthOrbitModel = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitModel();
+		tleEarthOrbitModel.setTle(tle);
+	
+		Date startDate = tleEarthOrbitModel.getFromValidDate();
+		Date endDate = tleEarthOrbitModel.getToValidDate();		
+
+		double timeInterval = (endDate.getTime() - startDate.getTime()) * 0.001;
+		System.out.println("getGroundStationPasses duration (s) : " + timeInterval);
+
+		
+		ConstantElevationMask constantElevationMask = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createConstantElevationMask();
+		constantElevationMask.setConstantElevation(Math.toRadians(10.0));			
+		
+		List<GroundStation> groundStations = new ArrayList<GroundStation>();
+		
+		IProgressMonitor monitor = new NullProgressMonitor();
+		
+		Map<Integer, Double> targetNumberToProcesingTimeMap = new HashMap<Integer, Double>();
+		int numberOfTargets = 1;
+		for(int testIndex = 0; testIndex < 3; testIndex++)
+		{
+			double latitude = 0;
+			double longitude = 0;			
+			
+			groundStations.clear();
+			for(int i = 1; i <= numberOfTargets; i++)
+			{
+				ConstantElevationMask elevationMask = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createConstantElevationMask();
+				constantElevationMask.setConstantElevation(Math.toRadians(10.0));			
+				
+				GroundStation loc = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation();
+				loc.setElevation(0);				
+				loc.setLatitude(Math.toRadians(latitude));
+				loc.setLongitude(Math.toRadians(longitude));
+				loc.setElevationMask(elevationMask);
+				
+				groundStations.add(loc);
+				
+				latitude += 90.0 / numberOfTargets;
+				longitude += 180.0 / numberOfTargets;
+			}
+			
+			try
+			{
+				System.out.println("getGroundStationPasses starts for <" + groundStations.size() + "> targets...");
+				monitor = new NullProgressMonitor();
+				long startTime = System.currentTimeMillis();
+				List<VisibilityPass> passes = getFixture().getGroundStationPasses(tleEarthOrbitModel, groundStations, startDate, endDate, monitor);
+				long endTime = System.currentTimeMillis();
+				
+				double duration = (endTime - startTime) * 0.001;
+				targetNumberToProcesingTimeMap.put(new Integer(numberOfTargets), duration);
+
+				
+				assertNotNull(passes);		
+				assertTrue(passes.size() > 0);
+				
+				System.out.print("getGroundStationPasses took <" + duration + "> s for <"+ groundStations.size() + "> targets.");
+				System.out.println("It found <" + passes.size() + "> passes.");		
+			}
+			catch(Throwable t)
+			{
+				t.printStackTrace();
+				fail(t.getMessage());
+			}	
+			
+			numberOfTargets = testIndex * 10;
+		}
+		
+		System.out.println("Performance Results");
+		System.out.println("Number Of Targets, Processing Time (s)");
+		
+		SortedSet<Integer> sortedTargetNumber = new TreeSet<Integer>(targetNumberToProcesingTimeMap.keySet());
+		Iterator<Integer> it = sortedTargetNumber.iterator();
+				
+		while(it.hasNext())
+		{
+			Integer targetCount = it.next();
+			System.out.println(targetCount + "," + targetNumberToProcesingTimeMap.get(targetCount) );
+		}
 	}
 
 	/**

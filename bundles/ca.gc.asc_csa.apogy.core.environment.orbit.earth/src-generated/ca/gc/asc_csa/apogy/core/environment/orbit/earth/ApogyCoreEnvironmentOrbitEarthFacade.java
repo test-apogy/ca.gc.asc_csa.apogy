@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.SortedSet;
 
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
@@ -323,6 +324,27 @@ public interface ApogyCoreEnvironmentOrbitEarthFacade extends EObject
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * *
+	 * Returns the list of passes for a list of targets.
+	 * @param earthOrbitModel The EarthOrbitModel used.
+	 * @param propagator The OreKit propagator to use.
+	 * @param earthSurfaceLocations The list of the targets.
+	 * @param startDate The start time of the propagation.
+	 * @param endDate The end time of the propagation.
+	 * @param elevationMaks The elevation mask used to determine the visibility of the spacecraft at the target locations.
+	 * @param monitor A progress monitor, can be null.
+	 * @return The list of VisibilityPass. Never null, but can be empty.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" earthOrbitModelUnique="false" earthSurfaceLocationsDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation>" earthSurfaceLocationsUnique="false" earthSurfaceLocationsMany="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false" monitorDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.IProgressMonitor" monitorUnique="false"
+	 * @generated
+	 */
+	List<VisibilityPass> getTargetPasses(EarthOrbitModel earthOrbitModel, List<EarthSurfaceLocation> earthSurfaceLocations, Date startDate, Date endDate, ElevationMask elevationMask, IProgressMonitor monitor) throws Exception;
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
 	 * Returns the list of passes for a given Ground Station (and its Field Of View) during a specified interval.
 	 * @param propagator The OreKit propagator to use.
 	 * @param groundStation The location of the target.
@@ -334,6 +356,24 @@ public interface ApogyCoreEnvironmentOrbitEarthFacade extends EObject
 	 * @generated
 	 */
 	List<VisibilityPass> getGroundStationPasses(EarthOrbitModel earthOrbitModel, GroundStation groundStation, Date startDate, Date endDate) throws Exception;
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns the list of passes for a list of Ground Station (and its Field Of View) during a specified interval.
+	 * @param propagator The OreKit propagator to use.
+	 * @param groundStation The list of targets.
+	 * @param startDate The start time of the propagation.
+	 * @param endDate The end time of the propagation.
+	 * @return The list of VisibilityPass. Never null, but can be empty.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" earthOrbitModelUnique="false" groundStationsDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation>" groundStationsUnique="false" groundStationsMany="false" startDateUnique="false" endDateUnique="false" monitorDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.IProgressMonitor" monitorUnique="false"
+	 * @generated
+	 */
+	List<VisibilityPass> getGroundStationPasses(EarthOrbitModel earthOrbitModel, List<GroundStation> groundStations, Date startDate, Date endDate, IProgressMonitor monitor) throws Exception;
 
 
 	/**

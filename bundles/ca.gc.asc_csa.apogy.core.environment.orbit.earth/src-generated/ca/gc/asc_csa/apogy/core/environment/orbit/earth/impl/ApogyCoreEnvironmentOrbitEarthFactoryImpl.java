@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -138,6 +139,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 				return createExceptionFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.IPROGRESS_MONITOR:
+				return createIProgressMonitorFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.ROTATION:
 				return createRotationFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_FRAME:
@@ -201,6 +204,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 				return convertExceptionToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.IPROGRESS_MONITOR:
+				return convertIProgressMonitorToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.ROTATION:
 				return convertRotationToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_FRAME:
@@ -624,6 +629,24 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 */
 	public String convertSortedSetToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IProgressMonitor createIProgressMonitorFromString(EDataType eDataType, String initialValue) {
+		return (IProgressMonitor)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertIProgressMonitorToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**
