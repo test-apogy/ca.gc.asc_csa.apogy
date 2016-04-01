@@ -583,7 +583,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 		// Figures out the sign of the angle.
 		Vector3D rotation = p.crossProduct(scToTargetOntoOrbitalPlane).normalize();		
 		double dotProduct = rotation.dotProduct(crossTrackVector.normalize());				
-		if(dotProduct > 0)
+		if(dotProduct < 0)
 		{
 			angle = -angle;
 		}
