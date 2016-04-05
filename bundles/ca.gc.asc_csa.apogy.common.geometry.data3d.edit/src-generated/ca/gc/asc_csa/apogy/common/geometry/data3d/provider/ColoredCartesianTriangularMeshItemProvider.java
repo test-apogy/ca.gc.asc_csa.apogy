@@ -14,7 +14,6 @@
 package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh;
 
 import java.util.Collection;

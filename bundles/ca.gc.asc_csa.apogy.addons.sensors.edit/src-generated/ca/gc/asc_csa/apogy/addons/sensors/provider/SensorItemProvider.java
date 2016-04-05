@@ -26,11 +26,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
-import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsFactory;
 import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
-
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-
 import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
@@ -143,11 +139,6 @@ public class SensorItemProvider extends AggregateGroupNodeItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsSensorsFactory.eINSTANCE.createSensor()));
 	}
 
 }
