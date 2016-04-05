@@ -78,7 +78,7 @@ public class VisibilityPassSpacecraftPositionHistoryAnglesComposite extends Comp
 	{
 		if(chart == null)
 		{
-		   	String chartTitle = "Range and Range Rate vs Time";   	
+		   	String chartTitle = "Angles vs Time";   	
 	    	String chartXAxisLabel = "Time (s)";    	
 	    	String chartYAxisLabel = "Along Track Angle (deg)";
 	    	
