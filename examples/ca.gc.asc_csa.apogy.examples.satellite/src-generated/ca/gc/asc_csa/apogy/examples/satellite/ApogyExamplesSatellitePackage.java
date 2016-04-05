@@ -555,13 +555,31 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN = 4;
 
 	/**
+	 * The feature id for the '<em><b>Max Number Threads</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Command Duplicates Preserved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED = 6;
+
+	/**
 	 * The feature id for the '<em><b>Elevation Mask</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK = 5;
+	int ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK = 7;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Constellation Planner</em>' class.
@@ -570,7 +588,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER_FEATURE_COUNT = 6;
+	int ABSTRACT_CONSTELLATION_PLANNER_FEATURE_COUNT = 8;
 
 	/**
 	 * The operation id for the '<em>Get Target Passes</em>' operation.
@@ -698,6 +716,24 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int DEFAULT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN = ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN;
+
+	/**
+	 * The feature id for the '<em><b>Max Number Threads</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS = ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS;
+
+	/**
+	 * The feature id for the '<em><b>Command Duplicates Preserved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED = ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED;
 
 	/**
 	 * The feature id for the '<em><b>Elevation Mask</b></em>' containment reference.
@@ -2288,6 +2324,28 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EReference getAbstractConstellationPlanner_ConstellationCommandPlan();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getMaxNumberThreads <em>Max Number Threads</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Number Threads</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getMaxNumberThreads()
+	 * @see #getAbstractConstellationPlanner()
+	 * @generated
+	 */
+	EAttribute getAbstractConstellationPlanner_MaxNumberThreads();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isCommandDuplicatesPreserved <em>Command Duplicates Preserved</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Command Duplicates Preserved</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isCommandDuplicatesPreserved()
+	 * @see #getAbstractConstellationPlanner()
+	 * @generated
+	 */
+	EAttribute getAbstractConstellationPlanner_CommandDuplicatesPreserved();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getElevationMask <em>Elevation Mask</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3168,6 +3226,22 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN = eINSTANCE.getAbstractConstellationPlanner_ConstellationCommandPlan();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Number Threads</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS = eINSTANCE.getAbstractConstellationPlanner_MaxNumberThreads();
+
+		/**
+		 * The meta object literal for the '<em><b>Command Duplicates Preserved</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED = eINSTANCE.getAbstractConstellationPlanner_CommandDuplicatesPreserved();
 
 		/**
 		 * The meta object literal for the '<em><b>Elevation Mask</b></em>' containment reference feature.

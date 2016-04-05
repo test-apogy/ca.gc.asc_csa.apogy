@@ -41,6 +41,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getEndDate <em>End Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationCommandPlan <em>Constellation Command Plan</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getMaxNumberThreads <em>Max Number Threads</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isCommandDuplicatesPreserved <em>Command Duplicates Preserved</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
  *
@@ -92,7 +94,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Start Date</em>' attribute.
 	 * @see #setStartDate(Date)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_StartDate()
-	 * @model unique="false"
+	 * @model unique="false" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
@@ -122,7 +124,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>End Date</em>' attribute.
 	 * @see #setEndDate(Date)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_EndDate()
-	 * @model unique="false"
+	 * @model unique="false" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
@@ -152,7 +154,8 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Constellation Requests List</em>' reference.
 	 * @see #setConstellationRequestsList(ConstellationRequestsList)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationRequestsList()
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
+	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
 	ConstellationRequestsList getConstellationRequestsList();
@@ -181,7 +184,8 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Constellation Command Plan</em>' reference.
 	 * @see #setConstellationCommandPlan(AbstractConstellationCommandPlan)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationCommandPlan()
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
+	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
 	 * @generated
 	 */
 	AbstractConstellationCommandPlan getConstellationCommandPlan();
@@ -197,6 +201,62 @@ public interface AbstractConstellationPlanner extends EObject {
 	void setConstellationCommandPlan(AbstractConstellationCommandPlan value);
 
 	/**
+	 * Returns the value of the '<em><b>Max Number Threads</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Specifies the maximum number of threads used by the planner.  0 (default) means the maximum available.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Max Number Threads</em>' attribute.
+	 * @see #setMaxNumberThreads(int)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_MaxNumberThreads()
+	 * @model default="0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANNER_SETTINGS'"
+	 * @generated
+	 */
+	int getMaxNumberThreads();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getMaxNumberThreads <em>Max Number Threads</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Max Number Threads</em>' attribute.
+	 * @see #getMaxNumberThreads()
+	 * @generated
+	 */
+	void setMaxNumberThreads(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Command Duplicates Preserved</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Indicates if the duplicates are preserved.  False (default value) indicates only the first command that addresses a
+	 * {@link ObservationConstellationRequest} will be preserved.  The commands that occur after in time will be deleted.  True means
+	 * all the commands will be preserved.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Command Duplicates Preserved</em>' attribute.
+	 * @see #setCommandDuplicatesPreserved(boolean)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_CommandDuplicatesPreserved()
+	 * @model default="false" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VISIBILITY_PASS_VALIDITY'"
+	 * @generated
+	 */
+	boolean isCommandDuplicatesPreserved();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#isCommandDuplicatesPreserved <em>Command Duplicates Preserved</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Command Duplicates Preserved</em>' attribute.
+	 * @see #isCommandDuplicatesPreserved()
+	 * @generated
+	 */
+	void setCommandDuplicatesPreserved(boolean value);
+
+	/**
 	 * Returns the value of the '<em><b>Elevation Mask</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,7 +266,7 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @return the value of the '<em>Elevation Mask</em>' containment reference.
 	 * @see #setElevationMask(ConstantElevationMask)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ElevationMask()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	ConstantElevationMask getElevationMask();
