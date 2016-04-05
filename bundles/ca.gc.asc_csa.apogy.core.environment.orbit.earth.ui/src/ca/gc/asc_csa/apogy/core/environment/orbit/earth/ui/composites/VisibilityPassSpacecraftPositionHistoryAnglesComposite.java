@@ -21,7 +21,9 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.StandardXYItemRenderer;
 import org.jfree.chart.renderer.xy.XYItemRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.time.Millisecond;
@@ -76,9 +78,9 @@ public class VisibilityPassSpacecraftPositionHistoryAnglesComposite extends Comp
 	{
 		if(chart == null)
 		{
-		   	String chartTitle = "Along and Cross Track Angles vs Time";   	
+		   	String chartTitle = "Range and Range Rate vs Time";   	
 	    	String chartXAxisLabel = "Time (s)";    	
-	    	String chartYAxisLabel = "Angle (deg)";
+	    	String chartYAxisLabel = "Along Track Angle (deg)";
 	    	
 	    	chart = ChartFactory.createTimeSeriesChart(
 					chartTitle, // title
@@ -94,10 +96,13 @@ public class VisibilityPassSpacecraftPositionHistoryAnglesComposite extends Comp
 	
 	        // Creates the Plot.
 	        XYPlot plot = (XYPlot) chart.getPlot();
-	                	        	    
-	        plot.setDataset(1, getCrossAngleDataSet());
-	        plot.mapDatasetToRangeAxis(1, 0);
 	        
+	        final NumberAxis axis2 = new NumberAxis("Cross Track Angle (deg)");
+	        axis2.setAutoRangeIncludesZero(false);
+	        plot.setRangeAxis(1, axis2);
+	        plot.setDataset(1, getCrossAngleDataSet());
+	        plot.mapDatasetToRangeAxis(1, 1);
+	        	        	        	       
 	        plot.setBackgroundPaint(Color.white);
 	        plot.setDomainGridlinePaint(Color.black);
 	        plot.setRangeGridlinePaint(Color.black);
@@ -122,11 +127,9 @@ public class VisibilityPassSpacecraftPositionHistoryAnglesComposite extends Comp
 				renderer.setSeriesPaint(0, Color.BLUE);
 			}
 	        
-	        final XYLineAndShapeRenderer renderer2 = new XYLineAndShapeRenderer();
-	        renderer2.setBaseShapesVisible(false);
-	        renderer2.setBaseShapesFilled(false);
-	        renderer2.setSeriesStroke(0, new BasicStroke(2.0f));
-	        renderer2.setSeriesPaint(0, Color.GREEN);	   	        	   
+	        final StandardXYItemRenderer renderer2 = new StandardXYItemRenderer();
+	        renderer2.setSeriesPaint(0, Color.RED);	   
+	        renderer2.setSeriesStroke(0, new BasicStroke(2.0f));	   
 	        plot.setRenderer(1, renderer2);
 	       
 	        plot.getRangeAxis().setAutoRange(true);

@@ -587,8 +587,12 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 		{
 			angle = -angle;
 		}
-				
-		return angle;
+		
+		// return angle;
+		
+		// DEBUG
+		return Math.abs(angle);
+		
 	}
 	
 	/**
