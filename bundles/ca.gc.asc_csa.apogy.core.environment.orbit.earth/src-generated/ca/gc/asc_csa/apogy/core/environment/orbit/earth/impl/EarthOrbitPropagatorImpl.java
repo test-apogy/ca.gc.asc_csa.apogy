@@ -503,7 +503,7 @@ public abstract class EarthOrbitPropagatorImpl extends MinimalEObjectImpl.Contai
 				{
 					if(lastPass == null)
 					{
-						lastPass = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();	
+						lastPass = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();							
 						lastPass.setSurfaceLocation(groundStation);
 						lastPass.setStartTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));												
 						lastPass.setOrbitModel(EarthOrbitPropagatorImpl.this.getInitialOrbitBasedEarthOrbitModel());						

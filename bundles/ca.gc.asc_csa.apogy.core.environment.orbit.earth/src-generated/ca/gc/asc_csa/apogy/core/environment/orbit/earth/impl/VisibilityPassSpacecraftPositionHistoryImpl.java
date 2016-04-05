@@ -504,7 +504,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			    double l = Math.sqrt((pv.getPosition().getX() * pv.getPosition().getX() +  pv.getPosition().getY() *  pv.getPosition().getY()));
 			    double elevation = Math.atan2(pv.getPosition().getZ(), l);
 			    			    			    			    
-			    PVCoordinates sc    = lof.getTransformTo(earth.getBodyFrame(), extrapDate).transformPVCoordinates(PVCoordinates.ZERO);			    
+			    PVCoordinates sc  = lof.getTransformTo(earth.getBodyFrame(), extrapDate).transformPVCoordinates(PVCoordinates.ZERO);			    
 			    PVCoordinates tgt = loc.getTransformTo(earth.getBodyFrame(), extrapDate).transformPVCoordinates(PVCoordinates.ZERO);
 			    			    
 			    // Spacecraft position vector
