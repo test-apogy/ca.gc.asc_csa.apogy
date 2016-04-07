@@ -1,5 +1,5 @@
 # News #
-Release 0.5.13 available 2016.03.29-1400EDT ([Download](https://dl.bintray.com/apogy/Releases/0.5/))
+Release 0.5.14 available 2016.04.07-1324EDT ([Download](https://dl.bintray.com/apogy/Releases/0.5/))
 # Background #
 **Apogy** is a multi-mission operations and planning software framework. **Apogy** uses Eclipse Modeling Framework models to define the systems being controlled, the environment in which these systems are operated, the operations being carried out and the corresponding data produced during operations.
 
