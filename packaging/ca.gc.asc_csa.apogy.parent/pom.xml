@@ -291,6 +291,15 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.sdk.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.repository</module>
+		
+		<!-- JavaScript -->
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.edit</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.feature</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.ui</module>
+		<module>../../doc/ca.gc.asc_csa.apogy.core.programs.javascript.doc</module>
+		<module>../../tests/ca.gc.asc_csa.apogy.core.programs.javascript.tests</module>
+		
 
 		<!-- Examples -->
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.antenna</module>

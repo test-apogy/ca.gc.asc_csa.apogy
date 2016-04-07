@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:images="ca.gc.asc_csa.apogy.common.images" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmlns:mobile_platform="ca.gc.asc_csa.apogy.examples.mobile_platform" xmlns:javascript="ca.gc.asc_csa.apogy.core.programs.javascript" xmi:id="_CaxBIArPEeW4-_ONWXXiAw" name="">
+  <environment xsi:type="core:ApogyEnvironment" xmi:id="_CaxBIQrPEeW4-_ONWXXiAw" name="Mobile Platform Example" description="This is an example session, illustrating how to use the mobile platform example." activeContext="_CaxoMgrPEeW4-_ONWXXiAw" time="2016-02-29T13:15:59.930-0500" activeWorksite="_CaxoOQrPEeW4-_ONWXXiAw" activeTimeSource="_Ca4V4grPEeW4-_ONWXXiAw">
+    <typesList xmi:id="_CaxBIgrPEeW4-_ONWXXiAw">
+      <localTypes xmi:id="_CaxBIwrPEeW4-_ONWXXiAw"/>
+      <registeredTypes xmi:id="_CaxBJArPEeW4-_ONWXXiAw"/>
+    </typesList>
+    <variablesList xmi:id="_CaxBJQrPEeW4-_ONWXXiAw">
+      <variables xmi:id="_CaxoMArPEeW4-_ONWXXiAw" name="mobilePlatform">
+        <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.mobile_platform.apogy/model/MobilePlatformApogySystem.ss#_aD78wArNEeW4-_ONWXXiAw"/>
+      </variables>
+    </variablesList>
+    <contextsList xmi:id="_CaxoMQrPEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:BasicContext" xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw" instancesCreationDate="2016-02-29T13:09:08.095-0500">
+        <variableImplementationsList xmi:id="_CaxoMwrPEeW4-_ONWXXiAw">
+          <variableImplementations xmi:id="_CaxoNArPEeW4-_ONWXXiAw" variable="_CaxoMArPEeW4-_ONWXXiAw">
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatformSimulated"/>
+          </variableImplementations>
+        </variableImplementationsList>
+      </contexts>
+      <contexts xsi:type="invocator:BasicContext" xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
+        <variableImplementationsList xmi:id="_CaxoNgrPEeW4-_ONWXXiAw">
+          <variableImplementations xmi:id="_CaxoNwrPEeW4-_ONWXXiAw" variable="_CaxoMArPEeW4-_ONWXXiAw">
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatformStub"/>
+          </variableImplementations>
+        </variableImplementationsList>
+      </contexts>
+    </contextsList>
+    <worksitesList xmi:id="_CaxoOArPEeW4-_ONWXXiAw">
+      <worksites xsi:type="environment:EarthSurfaceWorksite" xmi:id="_CaxoOQrPEeW4-_ONWXXiAw" name="CSA AT" description="The CSA Default Worksite." time="2016-02-29T13:15:59.930-0500" xAxisAzimuth="3.1311206780778273">
+        <sky xsi:type="environment:EarthSky" xmi:id="_CaxoOgrPEeW4-_ONWXXiAw" time="2016-02-29T13:15:59.930-0500"/>
+        <mapsList xmi:id="_CayPQArPEeW4-_ONWXXiAw">
+          <maps xmi:id="_CayPQQrPEeW4-_ONWXXiAw" name="MarsYard" description="Simple Mars Yard Map.">
+            <transformation xmi:id="_CayPQgrPEeW4-_ONWXXiAw"/>
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_CayPQwrPEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri">
+              <mapLayerPresentations xsi:type="environment:ImageMapLayerPresentation" xmi:id="_SuPDsN72EeW0zIqmOwfISQ" name="Aerial" mapLayer="_UOjm8N72EeW0zIqmOwfISQ"/>
+              <mapLayerPresentations xsi:type="environment:ImageMapLayerPresentation" xmi:id="_ikswoN73EeWUu90KVuiwJg" name="Slope Constraints" description="Shows slopes." mapLayer="_AlL-MN73EeW0zIqmOwfISQ"/>
+            </layers>
+            <layers xsi:type="environment:URLImageMapLayer" xmi:id="_UOjm8N72EeW0zIqmOwfISQ" name="Aerial View" description="The CSA terrain aerial image." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSA-AT-NGC-MET-seen-from-sky.jpg">
+              <image xsi:type="images:URLEImage" xmi:id="_g6pfEN72EeW0zIqmOwfISQ" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSA-AT-NGC-MET-seen-from-sky.jpg"/>
+            </layers>
+            <layers xsi:type="environment:CartesianTriangularMeshDiscreteSlopeImageMapLayer" xmi:id="_AlL-MN73EeW0zIqmOwfISQ" name="Slope" description="Shows the areas were the terrain slopes affect the mobile plateform accessibility. In yellow are the caution zones, in red the danger zones." cartesianTriangularMeshMapLayer="_CayPQwrPEeW4-_ONWXXiAw">
+              <image xsi:type="images:EImage" xmi:id="_hcyzwN7_EeWEppI0BeYPAg" width="60" height="120" imageContent="iVBORw0KGgoAAAANSUhEUgAAADwAAAB4CAYAAACuNZEIAAACmElEQVR42u2c0W7DMAhF+f+f9qZJm9LW2IDJAhdQ+9g0J9j4gnGIlDZ+PoVsjO/P5VsKuJyXqa2trW0TK/optBUZwvWED12+qODvstYNOqpe/oOcgXsCX8GffAAzbx4Bc6ARPP0xjD08HBn4xZv0OX/V97eDDQU9DmF3wBHz4KN74cL8zrtp178pMIECrxZy6PoVp1xgNatWqqX3/ilwTmilGPcEfuSBvXvZorWtoCGAf6E/xAf5DefHgyOrV2mtY62e8o4Ds6Rie30V9OENz+Sru4CSxCW1pydC/v0POLXmDnya/LAXEHh890cewK7VD9UwMqSYGmDJg/u3wDdLI5cjY5GCWtLBsOLHkm9DJDHs8HZeBXLo+bFe6/GgmflObW1+y01DI0N2wGhra7tDmNQApXndDUdXK6ot2KAjuadFoJP5m87LkvrY8vfewHc+tdU2rfga0T28q3EdTQOPXq1bQY1rKjfH3W4yShZm3lXQZEknu4LuI8SrR4uDNs8rxz3jFeijmpVrC3SFfDoaew+zo92/u7MUzxtbNo6G3yjXCoeIPZ1SnWue+9FyXE0QsQDnEPebvo60m2DSKgPn5XQNbNMdPYFH0253Sjy8W6JSDettgu64ROUBRyqqaVM0/EZy9PN/nPYlZPPspK23dYJ+mESixDAD36LvEhbYo7QE4eEOWr28tbW1RVmG2tra2tra2nJkUxAiJMs7gG5JC3cvUcEFhmsPruJlzYlxbus1pYfVQS0jsLXJJeUJU2lZdnlsnoCWJ01QywtL8jP/GAJE0AMCV8ZdNbfhJgmV3sM3ha7QSlGmI0gMDT+8B2i2xMFyAQ1HRSF09ply3szQJ0l+DS/PCntQsKR7dRxW7QphnS0F2xbIvgBD+r7cGb62ygAAAABJRU5ErkJggg=="/>
+              <slopeRanges xmi:id="_CY5XgN73EeW0zIqmOwfISQ" name="Safe" description="Safe slopes." color="-1.0,-1.0,-1.0"/>
+              <slopeRanges xmi:id="_EumDkN73EeW0zIqmOwfISQ" name="Caution" description="Caution slopes." slopeLowerBound="10.0" slopeUpperBound="20.0" color="1.0,1.0,0.0"/>
+              <slopeRanges xmi:id="_HXgmkN73EeW0zIqmOwfISQ" name="Danger" description="Dangerous slopes." slopeLowerBound="20.0" slopeUpperBound="90.0" color="1.0,0.0,0.0"/>
+            </layers>
+          </maps>
+        </mapsList>
+        <geographicalCoordinates xmi:id="_Ca1SkArPEeW4-_ONWXXiAw" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
+      </worksites>
+      <orbitsModels xmi:id="_Ca4V4ArPEeW4-_ONWXXiAw"/>
+    </worksitesList>
+    <timeSourcesList xmi:id="_Ca4V4QrPEeW4-_ONWXXiAw">
+      <timeSources xsi:type="emf:CurrentTimeSource" xmi:id="_Ca4V4grPEeW4-_ONWXXiAw" name="Current Time" time="2016-02-29T13:15:59.930-0500"/>
+      <timeSources xsi:type="emf:BrowseableTimeSource" xmi:id="_xwMDYN73EeWUu90KVuiwJg" name="Browseable Time" time="2016-03-02T19:25:18.665-0500" startTime="2016-02-29T10:19:08.465-0500" updatePeriod="100" timeAcceration="3000.0"/>
+      <timeSources xsi:type="emf:FixedTimeSource" xmi:id="_eK62gN8DEeWYA5av90szLg" name="Noon" time="2016-02-29T12:00:00.000-0500"/>
+      <timeSources xsi:type="emf:FixedTimeSource" xmi:id="_gQ8u4N8DEeWYA5av90szLg" name="Midnight" time="2016-02-29T23:59:59.000-0500"/>
+      <timeSources xsi:type="emf:SelectionBasedTimeSource" xmi:id="_NK9gAN8EEeWG-djpd_eLug" name="Selection" time="2016-02-29T10:22:54.874-0500"/>
+      <timeSources xsi:type="invocator:OperationCallResultsListTimeSource" xmi:id="_2oTxcN8OEeWObpCwMBazUA" name="Ops Call List" description="Time source allowing one to navigate throught a list of time Ops Call Results." time="2016-02-29T10:25:18.836-0500" startTime="2016-02-29T13:04:19.661-0500" timeAcceration="1000.0" loopEnable="true" earliestDate="2016-02-29T10:25:18.836-0500" latestDate="2016-02-29T10:25:18.836-0500" opsCallList="_Ca7ZMwrPEeW4-_ONWXXiAw"/>
+    </timeSourcesList>
+  </environment>
+  <programsList xmi:id="_Ca4V4wrPEeW4-_ONWXXiAw">
+  <programs xsi:type="javascript:JavaScriptProgram" xmi:id="_4e6HkOVtEeWq_uZ3QSVGg1" name="Mobile Platform Demo" scriptPath="platform:/plugin/ca.gc.asc_csa.apogy.core.programs.javascript.tests/js-programs/mobile-platform.js"/>
+    <programs xsi:type="invocator:OperationCallsList" xmi:id="_B6d5oN74EeWUu90KVuiwJg" name="Setup" description="Sets up the mobile plateform to start using it.">
+      <operationCalls xmi:id="_Ca4V5QrPEeW4-_ONWXXiAw" name="Init" variable="_CaxoMArPEeW4-_ONWXXiAw">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/init"/>
+      </operationCalls>
+      <operationCalls xmi:id="_Gm824N74EeWUu90KVuiwJg" name="Clear Position Error" variable="_CaxoMArPEeW4-_ONWXXiAw">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
+      </operationCalls>
+      <operationCalls xmi:id="_Ca4V8QrPEeW4-_ONWXXiAw" name="Clear Error" variable="_CaxoMArPEeW4-_ONWXXiAw">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
+      </operationCalls>
+    </programs>
+    <programs xsi:type="invocator:OperationCallsList" xmi:id="_UOVSkN74EeWUu90KVuiwJg" name="Navigate">
+      <operationCalls xmi:id="_Ca4V6grPEeW4-_ONWXXiAw" name="Change Linear Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the linear velocity component only.">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdLinearVelocity"/>
+        <argumentsList xmi:id="_Ca4V6wrPEeW4-_ONWXXiAw">
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V7ArPEeW4-_ONWXXiAw" value="0.5"/>
+        </argumentsList>
+      </operationCalls>
+      <operationCalls xmi:id="_Ca4V5wrPEeW4-_ONWXXiAw" name="Change Angular Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the angular velocity component only.">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdAngularVelocity"/>
+        <argumentsList xmi:id="_Ca4V6ArPEeW4-_ONWXXiAw">
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V6QrPEeW4-_ONWXXiAw" value="0.17453292519943295"/>
+        </argumentsList>
+      </operationCalls>
+      <operationCalls xmi:id="_Ca4V7QrPEeW4-_ONWXXiAw" name="Move Forward" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+        <argumentsList xmi:id="_Ca4V7grPEeW4-_ONWXXiAw">
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V7wrPEeW4-_ONWXXiAw" value="0.5"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V8ArPEeW4-_ONWXXiAw" value="0.0"/>
+        </argumentsList>
+      </operationCalls>
+      <operationCalls xmi:id="_29CO0N8PEeWkAptrmJWICw" name="Move Reverse" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure reverse motion.">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+        <argumentsList xmi:id="_29CO0d8PEeWkAptrmJWICw">
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_29CO0t8PEeWkAptrmJWICw" value="-0.5"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_29CO098PEeWkAptrmJWICw" value="0.0"/>
+        </argumentsList>
+      </operationCalls>
+      <operationCalls xmi:id="_sn3KwN8PEeWkAptrmJWICw" name="Turn Left" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+        <argumentsList xmi:id="_sn3Kwd8PEeWkAptrmJWICw">
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_sn3Kwt8PEeWkAptrmJWICw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_sn3Kw98PEeWkAptrmJWICw" value="0.08726646259971647"/>
+        </argumentsList>
+      </operationCalls>
+      <operationCalls xmi:id="_xH9R0N8PEeWkAptrmJWICw" name="Turn Right" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+        <argumentsList xmi:id="_xH9R0d8PEeWkAptrmJWICw">
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_xH9R0t8PEeWkAptrmJWICw" value="0.0"/>
+          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_xH9R098PEeWkAptrmJWICw" value="-0.08726646259971647"/>
+        </argumentsList>
+      </operationCalls>
+      <operationCalls xmi:id="_Ca7ZMArPEeW4-_ONWXXiAw" name="Stop" variable="_CaxoMArPEeW4-_ONWXXiAw">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/stop"/>
+      </operationCalls>
+      <operationCalls xmi:id="_zBnZkN74EeWUu90KVuiwJg" name="Reset position to start position." variable="_CaxoMArPEeW4-_ONWXXiAw" description="Resets the position to start position.">
+        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/resetPosition"/>
+        <argumentsList xmi:id="_zBnZkd74EeWUu90KVuiwJg">
+          <arguments xsi:type="invocator:EClassArgument" xmi:id="_zBnZkt74EeWUu90KVuiwJg">
+            <value xsi:type="mobile_platform:Position" xmi:id="_zBnZk974EeWUu90KVuiwJg"/>
+          </arguments>
+        </argumentsList>
+      </operationCalls>
+    </programs>
+  </programsList>
+  <dataProductsListContainer xmi:id="_Ca7ZMQrPEeW4-_ONWXXiAw">
+    <dataProductsList xmi:id="_Ca7ZMgrPEeW4-_ONWXXiAw" name="Simulated Data" description="The list of data products associated with the mobile platform's simulated implementation">
+      <operationCallResultsList xmi:id="_Ca7ZMwrPEeW4-_ONWXXiAw" name="Simulated Ops Call Data"/>
+    </dataProductsList>
+    <dataProductsList xmi:id="_Ca7ZNArPEeW4-_ONWXXiAw" name="Stub Data" description="The list of data products associated with the mobile platform's stub implementation">
+      <operationCallResultsList xmi:id="_Ca7ZNQrPEeW4-_ONWXXiAw" name="Stub Ops Call Data"/>
+    </dataProductsList>
+  </dataProductsListContainer>
+  <toolsList xmi:id="_Ca7ZNgrPEeW4-_ONWXXiAw"/>
+</invocator:InvocatorSession>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.programs.javascript.tests
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: ca.gc.asc_csa.apogy.core.programs.javascript.tests.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.junit;bundle-version="4.12.0",
+ ca.gc.asc_csa.apogy.core.invocator,
+ org.eclipse.emf.ecore,
+ ca.gc.asc_csa.apogy.core.programs.javascript.ui,
+ ca.gc.asc_csa.apogy.core.programs.javascript
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Import-Package: org.mozilla.javascript

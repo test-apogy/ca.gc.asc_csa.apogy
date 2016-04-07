@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+	<body>
+		<h1 id="Table_Of_Contents">Table Of Contents</h1>
+		<ol style="list-style: none;">
+			<li>
+				<a href="#Table_Of_Contents">Table Of Contents</a>
+			</li>
+			<li>
+				<a href="#Introduction">Introduction</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#Invoking_a_JavaScriptProgram">Invoking a JavaScriptProgram</a>
+					</li>
+					<li>
+						<a href="#Debugging_a_JavaScriptProgram">Debugging a JavaScriptProgram</a>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<a href="#Installation_Requirements">Installation Requirements</a>
+			</li>
+			<li>
+				<a href="#Plugins">Plugins</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#ca.gc.asc_csa.apogy.core.programs.javascript">ca.gc.asc_csa.apogy.core.programs.javascript</a>
+						<ol style="list-style: none;">
+							<li>
+								<a href="#JavaScriptProgram_.28model.2Fapogy_core_javascript_programs.xcore.29">JavaScriptProgram (model/apogy_core_javascript_programs.xcore)</a>
+							</li>
+							<li>
+								<a href="#ScriptExecutor_.28src.2Fca.2Fgc.2Fasc_csa.2Fapogy.2Fcore.2Fprograms.2Fjavascript.29">ScriptExecutor (src/ca/gc/asc_csa/apogy/core/programs/javascript)</a>
+							</li>
+							<li>
+								<a href="#Proxy">Proxy</a>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#ca.gc.asc_csa.apogy.core.programs.javascript.edit">ca.gc.asc_csa.apogy.core.programs.javascript.edit</a>
+					</li>
+					<li>
+						<a href="#ca.gc.asc_csa.apogy.core.programs.javascript.doc">ca.gc.asc_csa.apogy.core.programs.javascript.doc</a>
+					</li>
+					<li>
+						<a href="#ca.gc.asc_csa.apogy.core.programs.javascript.ui">ca.gc.asc_csa.apogy.core.programs.javascript.ui</a>
+						<ol style="list-style: none;">
+							<li>
+								<a href="#ScriptExecutorHandler_.28asc_csa.2Fapogy.2Fcore.2Fprograms.2Fjavascript.2Fui.2Fcommands.29">ScriptExecutorHandler (asc_csa/apogy/core/programs/javascript/ui/commands)</a>
+							</li>
+							<li>
+								<a href="#ScriptExecutorDebugHandler_.28asc_csa.2Fapogy.2Fcore.2Fprograms.2Fjavascript.2Fui.2Fcommands.29">ScriptExecutorDebugHandler (asc_csa/apogy/core/programs/javascript/ui/commands)</a>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#ca.gc.asc_csa.apogy.core.programs.javascript.tests">ca.gc.asc_csa.apogy.core.programs.javascript.tests</a>
+						<ol style="list-style: none;">
+							<li>
+								<a href="#ScriptExecutorTest_.28src.2Fca.2Fgc.2Fasc_csa.2Fapogy.2Fcore.2Fprograms.2Fjavascript.2Ftests.29">ScriptExecutorTest (src/ca/gc/asc_csa/apogy/core/programs/javascript/tests)</a>
+							</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
+		<h1 id="Introduction">Introduction</h1>
+		<p>A 
+			<i>JavaScriptProgram</i> allows you to invoke <code>Operation Calls</code> on Apogy Variables - and get their attributes - directly from JavaScript.
+		</p>
+		<p>Each Apogy Variable defined in a Apogy Session is exposed as a global variable in a <code>JavaScriptProgram</code>. For example, if you define the 
+			<i>rover</i> variable in Apogy, the global variable 
+			<i>rover</i> will be injected into the <code>JavaScriptProgram</code>. Below is a <code>JavaScriptProgram</code> example:
+		</p>
+		<pre>if (!rover.initialized) {
+    rover.init();
+}
+</pre>
+		<pre>rover.cmdLinearVelocity(0.1);
+</pre>
+		<pre>var snapshot = rover.centerCamera.takeSnapshot();
+java.lang.System.out.println(snapshot.image.width + ", " + snapshot.image.height);
+</pre>
+		<h2 id="Invoking_a_JavaScriptProgram">Invoking a <code>JavaScriptProgram</code></h2>
+		<p>Right-click on the 
+			<i>JavaScriptProgram</i>, select 
+			<i>Apogy</i>, then 
+			<i>Invoke</i>.
+		</p>
+		<h2 id="Debugging_a_JavaScriptProgram">Debugging a <code>JavaScriptProgram</code></h2>
+		<ol>
+			<li>Right-click on the 
+				<i>JavaScriptProgram</i>, select 
+				<i>Apogy</i>, then 
+				<i>Debug</i>.
+			</li>
+			<li>Create a Debug Configuration "Remote JavaScript"</li>
+			<li>Select the "Mozilla Rhino" connector. Set "localhost" as the "Host" and "9000" as the "Port"</li>
+			<li>Launch the Debug Configuration</li>
+		</ol>
+		<h1 id="Installation_Requirements">Installation Requirements</h1>
+		<ul>
+			<li>
+				<i>Eclipse Web Developer Tools</i> (3.7.1+) available from the Eclipse Mars update site.
+			</li>
+		</ul>
+		<h1 id="Plugins">Plugins</h1>
+		<p>Since an operation on an object must be invoked through the 
+			<i>ApogyCoreInvocatorFacade</i>, it cannot be directly exposed in JavaScript. Instead, the object is wrapped in a proxy that automatically calls the 
+			<i>ApogyCoreInvocatorFacade</i> when an operation is invoked.
+		</p>
+		<p>Apogy uses generic proxies for all classes, instead of specific proxies for each metaclass generated from the metamodel.</p>
+		<h2 id="ca.gc.asc_csa.apogy.core.programs.javascript"><code>ca.gc.asc_csa.apogy.core.programs.javascript</code></h2>
+		<p>Core plugin that defines:</p>
+		<ul>
+			<li><code>JavaScriptProgram</code> Xcore model</li>
+			<li><code>VariableProxy</code>, <code>TypeMemberProxy</code> and <code>ReferenceProxy</code></li>
+			<li><code>ScriptExecutor</code></li>
+		</ul>
+		<h3 id="JavaScriptProgram_.28model.2Fapogy_core_javascript_programs.xcore.29"><code>JavaScriptProgram</code> (<code>model/apogy_core_javascript_programs.xcore</code>)</h3>
+		<p>A <code>JavaScriptProgram</code> is a <code>Program</code> with a <code>scriptPath</code> attribute. This attribute refers to the file path of the JavaScript file. It is relative to the workspace. For example, if the <code>rover.js</code> file is in the directory <code>scripts</code> of the project <code>MyRover</code>, the <code>scriptPath</code> is <code>MyRover/scripts/rover.js</code>.</p>
+		<h3 id="ScriptExecutor_.28src.2Fca.2Fgc.2Fasc_csa.2Fapogy.2Fcore.2Fprograms.2Fjavascript.29"><code>ScriptExecutor</code> (<code>src/ca/gc/asc_csa/apogy/core/programs/javascript</code>)</h3>
+		<p>The top-level proxies (those wrapping an Apogy variable) are created at the beginning of the execution of a <code>JavaScriptProgram</code>. For example, if there are two variables in a session, only two proxies are created at the beginning of the execution of the <code>JavaScriptProgram</code>. The proxies for subtypes and features are created on demand as the <code>JavaScriptProgram</code> needs them.</p>
+		<p>Here is a high-level view of what is happening when you execute a <code>JavaScriptProgram</code>:</p>
+		<ol>
+			<li><code>ScriptExecutor.execute</code>
+				<ol>
+					<li>Create a new Rhino scope and initialize it with the standard JavaScript objects</li>
+					<li>Create a proxy for each Apogy variable of the active session</li>
+					<li>Inject these proxies as global variables into the Rhino scope</li>
+					<li>Execute the script</li>
+				</ol>
+			</li>
+		</ol>
+		<p>If the debug flag is set to <code>true</code>, it starts a <code>RhinoDebugger</code> listening at <code>127.0.0.1:9000</code>.</p>
+		<h3 id="Proxy">Proxy</h3>
+		<p>There are three types of proxies:</p>
+		<ul>
+			<li><code>VariableProxy</code>: wraps an Apogy variable</li>
+			<li><code>TypeMemberProxy</code>: wraps an Apogy subtype</li>
+			<li><code>ReferenceProxy</code>: wraps a reference to an <code>EObject</code></li>
+		</ul>
+		<p>Each proxy extends <code>ScriptableObject</code>. <code>ScriptableObject</code> provides default behavior that makes it easier to expose host objects to JavaScript.</p>
+		<p>A proxy holds two important attributes:</p>
+		<ul>
+			<li><code>VariableFeatureReference</code>: contains the variable, the subtype (if applicable) and the chain of features the proxy represents</li>
+			<li><code>JavaScriptProgram</code>: the <code>JavaScriptProgram</code> being executed</li>
+		</ul>
+		<p>When a proxy is created, it dynamically adds properties to itself based on reflection. For example, it will add properties for each operation, feature (attribute and reference) and type member (if applicable). Those properties are not proxies, but instead getters (methods) that generate a proxy when they are accessed from JavaScript. If a property for a feature or type member is never accessed in JavaScript, the underlying proxy is never created. (No proxy are needed for an operation.)</p>
+		<h2 id="ca.gc.asc_csa.apogy.core.programs.javascript.edit"><code>ca.gc.asc_csa.apogy.core.programs.javascript.edit</code></h2>
+		<p>Edit plugin providing basic GUI support.  Generated automatically by EMF.</p>
+		<h2 id="ca.gc.asc_csa.apogy.core.programs.javascript.doc"><code>ca.gc.asc_csa.apogy.core.programs.javascript.doc</code></h2>
+		<p>Documentation plugin.</p>
+		<h2 id="ca.gc.asc_csa.apogy.core.programs.javascript.ui"><code>ca.gc.asc_csa.apogy.core.programs.javascript.ui</code></h2>
+		<p>User interface plugin providing the 
+			<i>Execute Script</i> (<code>ScriptExecutorHandler</code>) and 
+			<i>Debug Script</i> (<code>ScriptExecutorDebugHandler</code>) context menu items.
+		</p>
+		<h3 id="ScriptExecutorHandler_.28asc_csa.2Fapogy.2Fcore.2Fprograms.2Fjavascript.2Fui.2Fcommands.29"><code>ScriptExecutorHandler</code> (<code>asc_csa/apogy/core/programs/javascript/ui/commands</code>)</h3>
+		<p><code>ScriptExecutorHandler.execute</code> is called when the 
+			<i>Execute Script</i> context menu item is clicked. <code>ScriptExecutorHandler.execute</code> gets the <code>JavaScriptProgram</code> and calls <code>ScriptExecutor.execute</code>.
+		</p>
+		<h3 id="ScriptExecutorDebugHandler_.28asc_csa.2Fapogy.2Fcore.2Fprograms.2Fjavascript.2Fui.2Fcommands.29"><code>ScriptExecutorDebugHandler</code> (<code>asc_csa/apogy/core/programs/javascript/ui/commands</code>)</h3>
+		<p><code>ScriptExecutorDebugHandler.execute</code> is called when the 
+			<i>Execute Script</i> context menu item is clicked. <code>ScriptExecutorDebugHandler.execute</code> gets the <code>JavaScriptProgram</code> and calls <code>ScriptExecutor.execute</code> with the debug flag set to <code>true</code>.
+		</p>
+		<h2 id="ca.gc.asc_csa.apogy.core.programs.javascript.tests"><code>ca.gc.asc_csa.apogy.core.programs.javascript.tests</code></h2>
+		<p>Test plugin defining tests for the core plugin.</p>
+		<p>You can launch the tests from the 
+			<i>Run/Debug Configurations</i> | 
+			<i>JUnit Plugin Test</i>.
+		</p>
+		<h3 id="ScriptExecutorTest_.28src.2Fca.2Fgc.2Fasc_csa.2Fapogy.2Fcore.2Fprograms.2Fjavascript.2Ftests.29"><code>ScriptExecutorTest</code> (<code>src/ca/gc/asc_csa/apogy/core/programs/javascript/tests</code>)</h3>
+		<p>The test case <code>ScriptExecutorTest.executeRoverExampleDemo</code>:</p>
+		<ul>
+			<li>loads an Apogy session which contains a <code>JavaScriptProgram</code></li>
+			<li>calls <code>ScriptExecutor.execute</code></li>
+			<li>checks that the operation calls have been called through the <code>ApogyCoreInvocatorFacade</code> by querying the data product</li>
+		</ul>
+	</body>
+</html>

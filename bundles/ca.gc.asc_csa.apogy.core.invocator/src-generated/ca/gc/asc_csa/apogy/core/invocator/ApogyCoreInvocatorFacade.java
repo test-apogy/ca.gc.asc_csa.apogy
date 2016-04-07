@@ -145,6 +145,19 @@ public interface ApogyCoreInvocatorFacade extends EObject
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns the value contained in the {@link OperationCallResult}.
+	 * @param operationCallResult {@link OperationCallResult} that contains the result.
+	 * @return Reference to the value (Java Object).
+	 * <!-- end-model-doc -->
+	 * @model unique="false" operationCallResultUnique="false"
+	 * @generated
+	 */
+	Object getValue(OperationCallResult operationCallResult);
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @model unique="false" valueUnique="false"
 	 * @generated
