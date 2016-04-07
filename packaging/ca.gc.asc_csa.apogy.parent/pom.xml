@@ -135,7 +135,11 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.edit</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.imaging</module>
-		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.imaging.edit</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.imaging.edit</module>		
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.data3d</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.data3d.edit</module>		
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.paths</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.paths.edit</module>		
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.messages</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.ui</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.sensors</module>
