@@ -97,46 +97,46 @@ extends ApogyInitializationDataItemProvider
 	 * This adds a property descriptor for the Pan Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addPanAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PTUDishAntennaData_panAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_panAngle_feature", "_UI_PTUDishAntennaData_type"),
-				ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__PAN_ANGLE,
-				true,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_PanTiltUnitPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PTUDishAntennaData_panAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_panAngle_feature", "_UI_PTUDishAntennaData_type"),
+				 ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__PAN_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_PanTiltUnitPropertyCategory"),
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Tilt Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addTiltAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PTUDishAntennaData_tiltAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_tiltAngle_feature", "_UI_PTUDishAntennaData_type"),
-				ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__TILT_ANGLE,
-				true,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_PanTiltUnitPropertyCategory"),				           
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PTUDishAntennaData_tiltAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_tiltAngle_feature", "_UI_PTUDishAntennaData_type"),
+				 ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__TILT_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_PanTiltUnitPropertyCategory"),
+				 null));
 	}
 
 	/**

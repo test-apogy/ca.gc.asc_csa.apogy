@@ -489,6 +489,8 @@ public class ApogyAddonsActuatorsPackageImpl extends EPackageImpl implements Apo
 			 "multipleEditorPages", "false",
 			 "modelName", "ApogyAddonsActuators",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.actuators/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.actuators.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"

@@ -100,12 +100,12 @@ public class SunVector3DToolItemProvider
 	 * This adds a property descriptor for the Vector Length feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addVectorLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_vectorLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_vectorLength_feature", "_UI_SunVector3DTool_type"),
@@ -122,12 +122,12 @@ public class SunVector3DToolItemProvider
 	 * This adds a property descriptor for the End Point Radius feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addEndPointRadiusPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_endPointRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_endPointRadius_feature", "_UI_SunVector3DTool_type"),
@@ -144,12 +144,12 @@ public class SunVector3DToolItemProvider
 	 * This adds a property descriptor for the Sun Intensity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addSunIntensityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_sunIntensity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_sunIntensity_feature", "_UI_SunVector3DTool_type"),
@@ -158,7 +158,7 @@ public class SunVector3DToolItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_SUN_VECTOR_PROPERTIESPropertyCategory"),
+				 getString("_UI_SUN_VECTOR_LIGHT_PROPERTIESPropertyCategory"),
 				 null));
 	}
 
@@ -170,7 +170,7 @@ public class SunVector3DToolItemProvider
 	 */
 	protected void addCurrentDayMaximumSunIntensityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_currentDayMaximumSunIntensity_feature"),
@@ -192,7 +192,7 @@ public class SunVector3DToolItemProvider
 	 */
 	protected void addCurrentSunIntensityPercentagePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_currentSunIntensityPercentage_feature"),

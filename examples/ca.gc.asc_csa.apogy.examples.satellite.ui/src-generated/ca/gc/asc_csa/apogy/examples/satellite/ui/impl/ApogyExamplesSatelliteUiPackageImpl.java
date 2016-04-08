@@ -241,6 +241,8 @@ public class ApogyExamplesSatelliteUiPackageImpl extends EPackageImpl implements
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.ui/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.ui.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.satellite"

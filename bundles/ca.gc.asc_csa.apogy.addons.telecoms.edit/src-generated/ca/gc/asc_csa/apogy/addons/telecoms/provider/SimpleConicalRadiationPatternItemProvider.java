@@ -68,12 +68,12 @@ public class SimpleConicalRadiationPatternItemProvider extends AbstractAntennaRa
 	 * This adds a property descriptor for the Apex Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addApexAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SimpleConicalRadiationPattern_apexAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleConicalRadiationPattern_apexAngle_feature", "_UI_SimpleConicalRadiationPattern_type"),

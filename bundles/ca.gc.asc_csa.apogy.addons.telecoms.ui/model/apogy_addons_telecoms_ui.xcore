@@ -28,7 +28,9 @@ Contributors:
     Canadian Space Agency (CSA) - Initial API and implementation",
 		  modelName="ApogyAddonsTelecomsUI",
 		  complianceLevel="6.0",
-		  suppressGenModelAnnotations="false")
+		  suppressGenModelAnnotations="false",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.telecoms.ui/src-generated")
 @GenModel(editDirectory= "/ca.gc.asc_csa.apogy.addons.telecoms.ui.edit/src-generated")
 

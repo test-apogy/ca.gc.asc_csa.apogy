@@ -22,6 +22,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.topology.edit;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
- ca.gc.asc_csa.apogy.common.geometry.data.edit;visibility:=reexport
+ ca.gc.asc_csa.apogy.common.geometry.data.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf.ui;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

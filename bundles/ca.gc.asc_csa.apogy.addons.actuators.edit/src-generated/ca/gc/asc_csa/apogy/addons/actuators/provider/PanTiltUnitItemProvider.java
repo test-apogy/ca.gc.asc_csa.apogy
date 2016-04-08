@@ -72,96 +72,96 @@ public class PanTiltUnitItemProvider
 	}
 
   /**
-   * This adds a property descriptor for the Current Pan Angle feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Current Pan Angle feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addCurrentPanAnglePropertyDescriptor(Object object)
   {
-		ItemPropertyDescriptor descriptor = new AbstractUnitItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-		         getResourceLocator(),
-		         getString("_UI_PanTiltUnit_currentPanAngle_feature"),
-		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentPanAngle_feature", "_UI_PanTiltUnit_type"),
-		         ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
-		         false,
-		         false,
-		         false,
-		         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-		         getString("_UI_ACTUATOR_INFORMATIONPropertyCategory"),
-		         null);
-	  
-		itemPropertyDescriptors.add(descriptor);		
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PanTiltUnit_currentPanAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentPanAngle_feature", "_UI_PanTiltUnit_type"),
+				 ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_ACTUATOR_INFORMATIONPropertyCategory"),
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Current Tilt Angle feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Current Tilt Angle feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addCurrentTiltAnglePropertyDescriptor(Object object)
   {
-		ItemPropertyDescriptor descriptor = new AbstractUnitItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-		         getResourceLocator(),
-		         getString("_UI_PanTiltUnit_currentTiltAngle_feature"),
-		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentTiltAngle_feature", "_UI_PanTiltUnit_type"),
-		         ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
-		         false,
-		         false,
-		         false,
-		         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-		         getString("_UI_ACTUATOR_INFORMATIONPropertyCategory"),
-		         null);
-	  
-		itemPropertyDescriptors.add(descriptor);		    
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PanTiltUnit_currentTiltAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentTiltAngle_feature", "_UI_PanTiltUnit_type"),
+				 ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_ACTUATOR_INFORMATIONPropertyCategory"),
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Commanded Pan Angle feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Commanded Pan Angle feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addCommandedPanAnglePropertyDescriptor(Object object)
   {
-		ItemPropertyDescriptor descriptor = new AbstractUnitItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-		         getResourceLocator(),
-		         getString("_UI_PanTiltUnit_commandedPanAngle_feature"),
-		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedPanAngle_feature", "_UI_PanTiltUnit_type"),
-		         ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
-		         false,
-		         false,
-		         false,
-		         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-		         getString("_UI_ACTUATOR_INFORMATIONPropertyCategory"),
-		         null);
-	  
-		itemPropertyDescriptors.add(descriptor);	
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PanTiltUnit_commandedPanAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedPanAngle_feature", "_UI_PanTiltUnit_type"),
+				 ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_ACTUATOR_INFORMATIONPropertyCategory"),
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Commanded Tilt Angle feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Commanded Tilt Angle feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addCommandedTiltAnglePropertyDescriptor(Object object)
   {
-		ItemPropertyDescriptor descriptor = new AbstractUnitItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-		         getResourceLocator(),
-		         getString("_UI_PanTiltUnit_commandedTiltAngle_feature"),
-		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedTiltAngle_feature", "_UI_PanTiltUnit_type"),
-		         ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
-		         false,
-		         false,
-		         false,
-		         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-		         getString("_UI_ACTUATOR_INFORMATIONPropertyCategory"),
-		         null);
-	  
-		itemPropertyDescriptors.add(descriptor);	
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PanTiltUnit_commandedTiltAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedTiltAngle_feature", "_UI_PanTiltUnit_type"),
+				 ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_ACTUATOR_INFORMATIONPropertyCategory"),
+				 null));
+	}
 
   /**
    * This returns the label text for the adapted class.

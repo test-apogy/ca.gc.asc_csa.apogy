@@ -26,7 +26,9 @@ Contributors:
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
-		  modelName="ApogyAddonsSensorsImaging")
+		  modelName="ApogyAddonsSensorsImaging",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.edit/src-generated")
 

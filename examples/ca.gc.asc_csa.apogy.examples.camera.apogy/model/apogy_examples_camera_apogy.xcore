@@ -23,7 +23,9 @@ Contributors:
     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
     Sebastien Gemme (Sebastien.Gemme@canada.ca),
     Canadian Space Agency (CSA) - Initial API and implementation",
-		  modelName="ApogyExamplesCameraApogy")
+		  modelName="ApogyExamplesCameraApogy",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.camera.apogy/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.camera.apogy.edit/src-generated")
 

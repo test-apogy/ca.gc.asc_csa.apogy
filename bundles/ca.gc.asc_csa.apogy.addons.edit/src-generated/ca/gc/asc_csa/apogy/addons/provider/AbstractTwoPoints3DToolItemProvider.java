@@ -249,12 +249,12 @@ public class AbstractTwoPoints3DToolItemProvider
 	 * This adds a property descriptor for the Distance feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addDistancePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_distance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_distance_feature", "_UI_AbstractTwoPoints3DTool_type"),

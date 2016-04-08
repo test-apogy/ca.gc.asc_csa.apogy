@@ -87,12 +87,12 @@ public class EarthSurfaceLocationWorldWindLayerItemProvider extends AbstractWorl
 	 * This adds a property descriptor for the Target Radius feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addTargetRadiusPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceLocationWorldWindLayer_targetRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceLocationWorldWindLayer_targetRadius_feature", "_UI_EarthSurfaceLocationWorldWindLayer_type"),
@@ -101,7 +101,7 @@ public class EarthSurfaceLocationWorldWindLayerItemProvider extends AbstractWorl
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_VISUALSPropertyCategory"),
 				 null));
 	}
 

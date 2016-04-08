@@ -88,46 +88,46 @@ public class PositionItemProvider extends ItemProviderAdapter
 	 * This adds a property descriptor for the X feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addXPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Position_x_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Position_x_feature", "_UI_Position_type"),
-				ApogyExamplesLanderPackage.Literals.POSITION__X,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				null,
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Position_x_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Position_x_feature", "_UI_Position_type"),
+				 ApogyExamplesLanderPackage.Literals.POSITION__X,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_LocationPropertyCategory"),
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Y feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addYPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Position_y_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Position_y_feature", "_UI_Position_type"),
-				ApogyExamplesLanderPackage.Literals.POSITION__Y,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				null,
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Position_y_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Position_y_feature", "_UI_Position_type"),
+				 ApogyExamplesLanderPackage.Literals.POSITION__Y,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_LocationPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 	protected void addZPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Position_z_feature"),

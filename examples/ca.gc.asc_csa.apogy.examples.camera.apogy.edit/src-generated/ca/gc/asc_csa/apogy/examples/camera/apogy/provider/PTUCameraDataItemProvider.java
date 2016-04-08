@@ -69,7 +69,7 @@ public class PTUCameraDataItemProvider
 	 * This adds a property descriptor for the Pan Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addPanAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
@@ -83,7 +83,7 @@ public class PTUCameraDataItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_PTU_CAMERA_INFOPropertyCategory"),
+				 getString("_UI_PTUAnglesPropertyCategory"),
 				 null));
 	}
 
@@ -91,7 +91,7 @@ public class PTUCameraDataItemProvider
 	 * This adds a property descriptor for the Tilt Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addTiltAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
@@ -105,7 +105,7 @@ public class PTUCameraDataItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_PTU_CAMERA_INFOPropertyCategory"),
+				 getString("_UI_PTUAnglesPropertyCategory"),
 				 null));
 	}
 

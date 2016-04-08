@@ -106,23 +106,23 @@ public class LanderItemProvider extends ItemProviderAdapter
 	 * This adds a property descriptor for the Leg APosition feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addLegAPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Lander_legAPosition_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Lander_legAPosition_feature", "_UI_Lander_type"),
-				ApogyExamplesLanderPackage.Literals.LANDER__LEG_APOSITION,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_LegPositionsPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lander_legAPosition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_legAPosition_feature", "_UI_Lander_type"),
+				 ApogyExamplesLanderPackage.Literals.LANDER__LEG_APOSITION,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_LegPositionsPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -152,23 +152,23 @@ public class LanderItemProvider extends ItemProviderAdapter
 	 * This adds a property descriptor for the Leg BPosition feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addLegBPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Lander_legBPosition_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Lander_legBPosition_feature", "_UI_Lander_type"),
-				ApogyExamplesLanderPackage.Literals.LANDER__LEG_BPOSITION,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_LegPositionsPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lander_legBPosition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_legBPosition_feature", "_UI_Lander_type"),
+				 ApogyExamplesLanderPackage.Literals.LANDER__LEG_BPOSITION,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_LegPositionsPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -198,23 +198,23 @@ public class LanderItemProvider extends ItemProviderAdapter
 	 * This adds a property descriptor for the Leg CPosition feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addLegCPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Lander_legCPosition_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Lander_legCPosition_feature", "_UI_Lander_type"),
-				ApogyExamplesLanderPackage.Literals.LANDER__LEG_CPOSITION,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_LegPositionsPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lander_legCPosition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_legCPosition_feature", "_UI_Lander_type"),
+				 ApogyExamplesLanderPackage.Literals.LANDER__LEG_CPOSITION,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_LegPositionsPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -244,68 +244,68 @@ public class LanderItemProvider extends ItemProviderAdapter
 	 * This adds a property descriptor for the XAngular Velocity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addXAngularVelocityPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Lander_xAngularVelocity_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Lander_xAngularVelocity_feature", "_UI_Lander_type"),
-						ApogyExamplesLanderPackage.Literals.LANDER__XANGULAR_VELOCITY,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						getString("_UI_VelocitiesPropertyCategory"),
-						null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lander_xAngularVelocity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_xAngularVelocity_feature", "_UI_Lander_type"),
+				 ApogyExamplesLanderPackage.Literals.LANDER__XANGULAR_VELOCITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_VelocitiesPropertyCategory"),
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the YAngular Velocity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addYAngularVelocityPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Lander_yAngularVelocity_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Lander_yAngularVelocity_feature", "_UI_Lander_type"),
-						ApogyExamplesLanderPackage.Literals.LANDER__YANGULAR_VELOCITY,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						getString("_UI_VelocitiesPropertyCategory"),
-						null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lander_yAngularVelocity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_yAngularVelocity_feature", "_UI_Lander_type"),
+				 ApogyExamplesLanderPackage.Literals.LANDER__YANGULAR_VELOCITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_VelocitiesPropertyCategory"),
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Mass feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Lander_mass_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Lander_mass_feature", "_UI_Lander_type"),
-						ApogyExamplesLanderPackage.Literals.LANDER__MASS,
-						false,
-						false,
-						false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						getString("_UI_FlightPropertyCategory"),
-						null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lander_mass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_mass_feature", "_UI_Lander_type"),
+				 ApogyExamplesLanderPackage.Literals.LANDER__MASS,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_FlightPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -316,7 +316,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 	 */
 	protected void addFuelMassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Lander_fuelMass_feature"),
@@ -334,22 +334,22 @@ public class LanderItemProvider extends ItemProviderAdapter
 	 * This adds a property descriptor for the Gravitational Pull feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addGravitationalPullPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Lander_gravitationalPull_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Lander_gravitationalPull_feature", "_UI_Lander_type"),
-						ApogyExamplesLanderPackage.Literals.LANDER__GRAVITATIONAL_PULL,
-						false,
-						false,
-						false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						getString("_UI_FlightPropertyCategory"),
-						null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lander_gravitationalPull_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_gravitationalPull_feature", "_UI_Lander_type"),
+				 ApogyExamplesLanderPackage.Literals.LANDER__GRAVITATIONAL_PULL,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_FlightPropertyCategory"),
+				 null));
 	}
 
 	/**

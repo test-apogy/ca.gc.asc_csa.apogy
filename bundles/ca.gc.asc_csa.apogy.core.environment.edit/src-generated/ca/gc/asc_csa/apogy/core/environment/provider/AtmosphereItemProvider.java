@@ -83,119 +83,119 @@ public class AtmosphereItemProvider
 	}
 
   /**
-   * This adds a property descriptor for the Wind Speed feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Wind Speed feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addWindSpeedPropertyDescriptor(Object object)
   {
-    itemPropertyDescriptors.add
-      (new AbstractUnitItemPropertyDescriptor(
-        ((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_Atmosphere_windSpeed_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_windSpeed_feature", "_UI_Atmosphere_type"),
-         ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__WIND_SPEED,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-         null,
-         null));
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Atmosphere_windSpeed_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_windSpeed_feature", "_UI_Atmosphere_type"),
+				 ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__WIND_SPEED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Wind Direction feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Wind Direction feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addWindDirectionPropertyDescriptor(Object object)
-  {	  	  
-    itemPropertyDescriptors.add
-      (new AbstractUnitItemPropertyDescriptor(
-        ((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_Atmosphere_windDirection_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_windDirection_feature", "_UI_Atmosphere_type"),
-         ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__WIND_DIRECTION,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-         null,
-         null));
-  }
+  {
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Atmosphere_windDirection_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_windDirection_feature", "_UI_Atmosphere_type"),
+				 ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__WIND_DIRECTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Temperature feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Temperature feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addTemperaturePropertyDescriptor(Object object)
   {
-    itemPropertyDescriptors.add
-      (new AbstractUnitItemPropertyDescriptor(
-        ((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_Atmosphere_temperature_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_temperature_feature", "_UI_Atmosphere_type"),
-         ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__TEMPERATURE,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-         null,
-         null));
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Atmosphere_temperature_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_temperature_feature", "_UI_Atmosphere_type"),
+				 ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__TEMPERATURE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Surface Pressure feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Surface Pressure feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addSurfacePressurePropertyDescriptor(Object object)
   {
-    itemPropertyDescriptors.add
-      (new AbstractUnitItemPropertyDescriptor(
-        ((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_Atmosphere_surfacePressure_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_surfacePressure_feature", "_UI_Atmosphere_type"),
-         ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__SURFACE_PRESSURE,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-         null,
-         null));
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Atmosphere_surfacePressure_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_surfacePressure_feature", "_UI_Atmosphere_type"),
+				 ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__SURFACE_PRESSURE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Surface Density feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Surface Density feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addSurfaceDensityPropertyDescriptor(Object object)
   {
-    itemPropertyDescriptors.add
-      (new AbstractUnitItemPropertyDescriptor(
-        ((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_Atmosphere_surfaceDensity_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_surfaceDensity_feature", "_UI_Atmosphere_type"),
-         ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__SURFACE_DENSITY,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-         null,
-         null));
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Atmosphere_surfaceDensity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_surfaceDensity_feature", "_UI_Atmosphere_type"),
+				 ApogyCoreEnvironmentPackage.Literals.ATMOSPHERE__SURFACE_DENSITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
 	 * This returns Atmosphere.gif.

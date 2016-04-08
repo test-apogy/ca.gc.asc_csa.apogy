@@ -738,6 +738,8 @@ public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements Apog
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.lander/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.lander.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"

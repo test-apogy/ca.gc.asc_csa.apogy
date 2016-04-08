@@ -212,6 +212,12 @@ public class ApogyCoreJavaScriptProgramsPackageImpl extends EPackageImpl impleme
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.programs.javascript/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.core.programs.javascript.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.core.programs"
+		   });	
+		addAnnotation
+		  (javaScriptProgramEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "A JavaScriptProgram is an entity that invokes Operation Calls on Variables through a JavaScript program file."
 		   });
 	}
 
