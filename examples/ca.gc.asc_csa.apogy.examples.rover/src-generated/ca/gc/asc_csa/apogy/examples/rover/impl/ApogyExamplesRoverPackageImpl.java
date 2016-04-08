@@ -572,6 +572,8 @@ public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements Apogy
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.rover/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.rover.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"

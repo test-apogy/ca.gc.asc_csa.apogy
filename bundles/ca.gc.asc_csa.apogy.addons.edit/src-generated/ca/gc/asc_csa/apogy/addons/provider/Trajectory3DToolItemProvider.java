@@ -119,7 +119,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 	 * This adds a property descriptor for the Distance Threshold feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addDistanceThresholdPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
@@ -141,7 +141,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 	 * This adds a property descriptor for the Total Distance feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addTotalDistancePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add

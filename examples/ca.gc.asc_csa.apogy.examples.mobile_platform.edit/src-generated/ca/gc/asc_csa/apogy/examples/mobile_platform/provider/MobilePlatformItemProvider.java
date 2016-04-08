@@ -143,23 +143,23 @@ IItemPropertySource
 	 * This adds a property descriptor for the Position Error feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addPositionErrorPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_MobilePlatform_positionError_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_positionError_feature", "_UI_MobilePlatform_type"),
-				ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION_ERROR,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_PositionPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobilePlatform_positionError_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_positionError_feature", "_UI_MobilePlatform_type"),
+				 ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION_ERROR,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_PositionPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -170,7 +170,7 @@ IItemPropertySource
 	 */
 	protected void addLinearVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_linearVelocity_feature"),
@@ -192,7 +192,7 @@ IItemPropertySource
 	 */
 	protected void addAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_angularVelocity_feature"),
@@ -215,7 +215,7 @@ IItemPropertySource
 	protected void addLeftWheelPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_leftWheelPosition_feature"),
@@ -238,7 +238,7 @@ IItemPropertySource
 	protected void addRightWheelPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_rightWheelPosition_feature"),

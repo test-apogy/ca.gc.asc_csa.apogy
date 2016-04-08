@@ -34,6 +34,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan} object.
@@ -87,96 +88,92 @@ public class AngularSpanItemProvider
 	 * This adds a property descriptor for the Minimum Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMinimumAnglePropertyDescriptor(Object object)
 	{
-		ItemPropertyDescriptor descriptor = new AngleItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AngularSpan_minimumAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_minimumAngle_feature", "_UI_AngularSpan_type"),
-				ApogyAddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__MINIMUM_ANGLE,
-				true, 
-				false,
-				false, 
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,  
-				null,
-				null);
-
-		itemPropertyDescriptors.add(descriptor);
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AngularSpan_minimumAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_minimumAngle_feature", "_UI_AngularSpan_type"),
+				 ApogyAddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__MINIMUM_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Maximum Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMaximumAnglePropertyDescriptor(Object object)
-	{		
-		ItemPropertyDescriptor descriptor = new AngleItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AngularSpan_maximumAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_maximumAngle_feature", "_UI_AngularSpan_type"),
-				ApogyAddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__MAXIMUM_ANGLE,
-				true, 
-				false,
-				false, 
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,  
-				null,
-				null);
-
-		itemPropertyDescriptors.add(descriptor);
+	{
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AngularSpan_maximumAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_maximumAngle_feature", "_UI_AngularSpan_type"),
+				 ApogyAddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__MAXIMUM_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Spanning Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addSpanningAnglePropertyDescriptor(Object object)
 	{
-		ItemPropertyDescriptor descriptor = new AngleItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AngularSpan_spanningAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_spanningAngle_feature", "_UI_AngularSpan_type"),
-				ApogyAddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__SPANNING_ANGLE,
-				false, 
-				false,
-				false, 
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,  
-				null,
-				null);
-
-		itemPropertyDescriptors.add(descriptor);
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AngularSpan_spanningAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_spanningAngle_feature", "_UI_AngularSpan_type"),
+				 ApogyAddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__SPANNING_ANGLE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Center Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addCenterAnglePropertyDescriptor(Object object)
 	{
-		ItemPropertyDescriptor descriptor = new AngleItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AngularSpan_centerAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_centerAngle_feature", "_UI_AngularSpan_type"),
-				ApogyAddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__CENTER_ANGLE,
-				false, 
-				false,
-				false, 
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,  
-				null,
-				null);
-
-		itemPropertyDescriptors.add(descriptor);
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AngularSpan_centerAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_centerAngle_feature", "_UI_AngularSpan_type"),
+				 ApogyAddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__CENTER_ANGLE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**

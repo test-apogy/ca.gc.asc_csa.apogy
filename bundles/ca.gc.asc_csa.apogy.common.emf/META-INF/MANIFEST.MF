@@ -20,3 +20,4 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.apogy.common.emf.Activator
+Eclipse-BundleShape: dir 

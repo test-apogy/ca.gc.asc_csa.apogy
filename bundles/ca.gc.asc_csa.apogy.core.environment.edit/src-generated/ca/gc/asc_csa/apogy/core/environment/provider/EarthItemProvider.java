@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -68,7 +69,7 @@ public class EarthItemProvider extends GroupNodeItemProvider {
 	 */
 	protected void addRadiusPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Earth_radius_feature"),

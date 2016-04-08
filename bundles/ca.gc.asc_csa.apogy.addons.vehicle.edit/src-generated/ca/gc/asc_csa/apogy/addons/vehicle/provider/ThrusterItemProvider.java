@@ -77,12 +77,12 @@ public class ThrusterItemProvider
 	 * This adds a property descriptor for the Minimum Thrust feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMinimumThrustPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Thruster_minimumThrust_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Thruster_minimumThrust_feature", "_UI_Thruster_type"),
@@ -99,12 +99,12 @@ public class ThrusterItemProvider
 	 * This adds a property descriptor for the Maximum Thrust feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMaximumThrustPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Thruster_maximumThrust_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Thruster_maximumThrust_feature", "_UI_Thruster_type"),
@@ -121,12 +121,12 @@ public class ThrusterItemProvider
 	 * This adds a property descriptor for the Current Thrust feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addCurrentThrustPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Thruster_currentThrust_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Thruster_currentThrust_feature", "_UI_Thruster_type"),
@@ -143,13 +143,13 @@ public class ThrusterItemProvider
 	 * This adds a property descriptor for the Plume Angle feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
   protected void addPlumeAnglePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Thruster_plumeAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Thruster_plumeAngle_feature", "_UI_Thruster_type"),

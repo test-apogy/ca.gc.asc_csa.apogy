@@ -132,11 +132,15 @@ This Agreement is governed by the laws of the State of New York and the intellec
          version="0.0.0"/>
 
    <includes
+<<<<<<< HEAD
          id="org.eclipse.emf.ecore.xcore.lib"
          version="0.0.0"/>
 
    <includes
          id="ca.gc.asc_csa.apogy.addons.feature"
+=======
+         id="org.eclipse.wst.jsdt.feature"
+>>>>>>> master
          version="0.0.0"/>
 
    <plugin

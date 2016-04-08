@@ -69,12 +69,12 @@ public class SimpleRectangularFrustumRadiationPatternItemProvider extends Abstra
 	 * This adds a property descriptor for the Horizontal Field Of View feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addHorizontalFieldOfViewPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SimpleRectangularFrustumRadiationPattern_horizontalFieldOfView_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRectangularFrustumRadiationPattern_horizontalFieldOfView_feature", "_UI_SimpleRectangularFrustumRadiationPattern_type"),
@@ -91,12 +91,12 @@ public class SimpleRectangularFrustumRadiationPatternItemProvider extends Abstra
 	 * This adds a property descriptor for the Vertical Field Of View feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addVerticalFieldOfViewPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SimpleRectangularFrustumRadiationPattern_verticalFieldOfView_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRectangularFrustumRadiationPattern_verticalFieldOfView_feature", "_UI_SimpleRectangularFrustumRadiationPattern_type"),

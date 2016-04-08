@@ -28,7 +28,9 @@ Contributors:
     Canadian Space Agency (CSA) - Initial API and implementation",
 		  modelName="ApogyCoreEnvironmentOrbitEarthUI",
 		  complianceLevel="8.0",
-		  suppressGenModelAnnotations="false")
+		  suppressGenModelAnnotations="false",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui/src-generated")
 @GenModel(editDirectory= "/ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.edit/src-generated")
 

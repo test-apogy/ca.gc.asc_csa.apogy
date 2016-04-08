@@ -1,3 +1,16 @@
+Version 0.5.15:
+ - README.md edited online with Bitbucket
+ - Fixed Issue #124
+
+Version 0.5.14:
+ - Version bump to 0.5.14
+ - Version bump to 0.5.14
+ - Created templates to support Apogy Units (#122).
+ - Ignored target/
+ - README.md edited online with Bitbucket
+Version 0.5.13:
+ - Version bump to 0.5.13
+ - Added org.eclipse.wst.jsdt.feature
 Version 0.5.12:
  - Merge branch 'feature-asm'
  - Update build to include the Javascript plug-ins

@@ -151,12 +151,12 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 * This adds a property descriptor for the Extremities Radius feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addExtremitiesRadiusPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_extremitiesRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_extremitiesRadius_feature", "_UI_Ruler3DTool_type"),
@@ -195,12 +195,12 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 * This adds a property descriptor for the Minor Tick Spacing feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMinorTickSpacingPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickSpacing_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickSpacing_feature", "_UI_Ruler3DTool_type"),
@@ -217,12 +217,12 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 * This adds a property descriptor for the Minor Tick Length feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMinorTickLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickLength_feature", "_UI_Ruler3DTool_type"),
@@ -261,12 +261,12 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 * This adds a property descriptor for the Major Tick Spacing feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMajorTickSpacingPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickSpacing_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickSpacing_feature", "_UI_Ruler3DTool_type"),
@@ -283,12 +283,12 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 * This adds a property descriptor for the Major Tick Length feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMajorTickLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickLength_feature", "_UI_Ruler3DTool_type"),

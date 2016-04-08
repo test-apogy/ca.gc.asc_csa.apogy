@@ -520,6 +520,8 @@ public class ApogyCommonGeometryData3DASCPackageImpl extends EPackageImpl implem
 			 "modelName", "ApogyCommonGeometryData3DASC",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.asc/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.edit/src-generated",
 			 "testsDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests/src-generated",

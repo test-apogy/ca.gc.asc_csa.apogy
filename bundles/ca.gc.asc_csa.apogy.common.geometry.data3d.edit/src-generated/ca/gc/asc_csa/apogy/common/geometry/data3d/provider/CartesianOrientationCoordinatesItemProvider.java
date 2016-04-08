@@ -75,7 +75,7 @@ public class CartesianOrientationCoordinatesItemProvider
 	 * This adds a property descriptor for the XRotation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated_NOT
 	 */
 	protected void addXRotationPropertyDescriptor(Object object) {
 	
@@ -109,7 +109,7 @@ public class CartesianOrientationCoordinatesItemProvider
 	 * This adds a property descriptor for the YRotation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated_NOT
 	 */
 	protected void addYRotationPropertyDescriptor(Object object){
 	
@@ -142,7 +142,7 @@ public class CartesianOrientationCoordinatesItemProvider
 	 * This adds a property descriptor for the ZRotation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated_NOT
 	 */
 	protected void addZRotationPropertyDescriptor(Object object) {
 	
@@ -185,7 +185,7 @@ public class CartesianOrientationCoordinatesItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated_NOT
 	 */
 	@Override
 	public String getText(Object object) 

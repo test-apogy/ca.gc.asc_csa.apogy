@@ -97,27 +97,27 @@ public class EarthSurfaceWorksitePresentationItemProvider
 	}
 
   /**
-   * This adds a property descriptor for the Axis Length feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Axis Length feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addAxisLengthPropertyDescriptor(Object object)
   {
-    itemPropertyDescriptors.add
-      (new AbstractUnitItemPropertyDescriptor(
-        ((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_EarthSurfaceWorksitePresentation_axisLength_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_axisLength_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-         ApogyCoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-         getString("_UI_AXISPropertyCategory"),
-         null));
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EarthSurfaceWorksitePresentation_axisLength_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_axisLength_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
+				 ApogyCoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_AXISPropertyCategory"),
+				 null));
+	}
 
   /**
 	 * This adds a property descriptor for the Azimuth Visible feature.
@@ -212,50 +212,50 @@ public class EarthSurfaceWorksitePresentationItemProvider
 	}
 
   /**
-   * This adds a property descriptor for the Plane Grid Size feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Plane Grid Size feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addPlaneGridSizePropertyDescriptor(Object object)
   {
-    itemPropertyDescriptors.add
-      (new AbstractUnitItemPropertyDescriptor(
-        ((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_EarthSurfaceWorksitePresentation_planeGridSize_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_planeGridSize_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-         ApogyCoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-         getString("_UI_PLANEPropertyCategory"),
-         null));
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EarthSurfaceWorksitePresentation_planeGridSize_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_planeGridSize_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
+				 ApogyCoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_PLANEPropertyCategory"),
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Plane Size feature.
-   * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Plane Size feature.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated_NOT
-   */
+	 * @generated
+	 */
   protected void addPlaneSizePropertyDescriptor(Object object)
   {
-    itemPropertyDescriptors.add
-      (new AbstractUnitItemPropertyDescriptor(
-        ((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_EarthSurfaceWorksitePresentation_planeSize_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_planeSize_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-         ApogyCoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-         getString("_UI_PLANEPropertyCategory"),
-         null));
-  }
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EarthSurfaceWorksitePresentation_planeSize_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_planeSize_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
+				 ApogyCoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_PLANEPropertyCategory"),
+				 null));
+	}
 
   /**
 	 * This returns EarthSurfaceWorksitePresentation.gif.

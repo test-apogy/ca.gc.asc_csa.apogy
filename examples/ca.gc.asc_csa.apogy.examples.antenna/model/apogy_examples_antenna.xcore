@@ -26,7 +26,9 @@ Contributors:
 		  modelName="ApogyExamplesAntenna",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
-		  suppressGenModelAnnotations="false")
+		  suppressGenModelAnnotations="false", 
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.antenna/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.antenna.edit/src-generated")
 
