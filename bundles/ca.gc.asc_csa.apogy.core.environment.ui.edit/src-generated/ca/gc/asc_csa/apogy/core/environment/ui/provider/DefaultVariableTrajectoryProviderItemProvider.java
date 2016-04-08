@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.ui.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -74,7 +75,7 @@ public class DefaultVariableTrajectoryProviderItemProvider
   protected void addDistanceThresholdPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_DefaultVariableTrajectoryProvider_distanceThreshold_feature"),
@@ -97,7 +98,7 @@ public class DefaultVariableTrajectoryProviderItemProvider
   protected void addAzimuthThresholdPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_DefaultVariableTrajectoryProvider_azimuthThreshold_feature"),

@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
@@ -76,7 +77,7 @@ public class CartesianPositionCoordinatesItemProvider
 	 */
 	protected void addXPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianPositionCoordinates_x_feature"),
@@ -98,7 +99,7 @@ public class CartesianPositionCoordinatesItemProvider
 	 */
 	protected void addYPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianPositionCoordinates_y_feature"),
@@ -120,7 +121,7 @@ public class CartesianPositionCoordinatesItemProvider
 	 */
 	protected void addZPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianPositionCoordinates_z_feature"),

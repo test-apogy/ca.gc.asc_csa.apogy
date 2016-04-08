@@ -27,6 +27,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView} object.
@@ -71,48 +72,46 @@ public class RectangularFrustrumFieldOfViewItemProvider
 	 * This adds a property descriptor for the Horizontal Field Of View Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addHorizontalFieldOfViewAnglePropertyDescriptor(Object object)
 	{
-		ItemPropertyDescriptor descriptor = new AngleItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_RectangularFrustrumFieldOfView_horizontalFieldOfViewAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_horizontalFieldOfViewAngle_feature", "_UI_RectangularFrustrumFieldOfView_type"),
-				ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE,
-				true, 
-				false,
-				false, 
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,  
-				getString("_UI_FOV_INFOPropertyCategory"), 
-				null);
-
-		itemPropertyDescriptors.add(descriptor);
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RectangularFrustrumFieldOfView_horizontalFieldOfViewAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_horizontalFieldOfViewAngle_feature", "_UI_RectangularFrustrumFieldOfView_type"),
+				 ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Vertical Field Of View Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addVerticalFieldOfViewAnglePropertyDescriptor(Object object)
 	{
-		ItemPropertyDescriptor descriptor = new AngleItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_RectangularFrustrumFieldOfView_verticalFieldOfViewAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_verticalFieldOfViewAngle_feature", "_UI_RectangularFrustrumFieldOfView_type"),
-				ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE,
-				true, 
-				false,
-				false, 
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,  
-				getString("_UI_FOV_INFOPropertyCategory"), 
-				null);
-
-		itemPropertyDescriptors.add(descriptor);
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RectangularFrustrumFieldOfView_verticalFieldOfViewAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_verticalFieldOfViewAngle_feature", "_UI_RectangularFrustrumFieldOfView_type"),
+				 ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**

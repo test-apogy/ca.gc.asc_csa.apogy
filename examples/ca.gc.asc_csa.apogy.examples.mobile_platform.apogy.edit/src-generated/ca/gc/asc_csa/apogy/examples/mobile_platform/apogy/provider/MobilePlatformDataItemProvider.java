@@ -112,12 +112,12 @@ public class MobilePlatformDataItemProvider extends ApogyInitializationDataItemP
 	 * This adds a property descriptor for the Linear Velocity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addLinearVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_linearVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_linearVelocity_feature", "_UI_MobilePlatformData_type"),
@@ -134,12 +134,12 @@ public class MobilePlatformDataItemProvider extends ApogyInitializationDataItemP
 	 * This adds a property descriptor for the Angular Velocity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_angularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_angularVelocity_feature", "_UI_MobilePlatformData_type"),

@@ -203,6 +203,8 @@ public class ApogyAddonsTelecomsUIPackageImpl extends EPackageImpl implements Ap
 			 "modelName", "ApogyAddonsTelecomsUI",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.telecoms.ui/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.telecoms.ui.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons.telecoms"

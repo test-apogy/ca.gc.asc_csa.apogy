@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -71,7 +72,7 @@ public class SphericalCoordinatesItemProvider
 	 */
 	protected void addPhiPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SphericalCoordinates_phi_feature"),
@@ -93,7 +94,7 @@ public class SphericalCoordinatesItemProvider
 	 */
 	protected void addThetaPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SphericalCoordinates_theta_feature"),
@@ -115,7 +116,7 @@ public class SphericalCoordinatesItemProvider
 	 */
 	protected void addRPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SphericalCoordinates_r_feature"),

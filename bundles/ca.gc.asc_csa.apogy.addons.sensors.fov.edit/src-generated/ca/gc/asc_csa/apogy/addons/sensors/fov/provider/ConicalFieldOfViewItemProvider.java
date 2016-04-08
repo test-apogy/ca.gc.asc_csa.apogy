@@ -25,6 +25,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 
@@ -70,24 +71,23 @@ public class ConicalFieldOfViewItemProvider
 	 * This adds a property descriptor for the Field Of View Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addFieldOfViewAnglePropertyDescriptor(Object object)
 	{
-		ItemPropertyDescriptor descriptor = new AngleItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ConicalFieldOfView_fieldOfViewAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ConicalFieldOfView_fieldOfViewAngle_feature", "_UI_ConicalFieldOfView_type"),
-				ApogyAddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE,
-				true, 
-				false,
-				false, 
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,  
-				getString("_UI_FOV_INFOPropertyCategory"), 
-				null);
-
-		itemPropertyDescriptors.add(descriptor);
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ConicalFieldOfView_fieldOfViewAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConicalFieldOfView_fieldOfViewAngle_feature", "_UI_ConicalFieldOfView_type"),
+				 ApogyAddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**

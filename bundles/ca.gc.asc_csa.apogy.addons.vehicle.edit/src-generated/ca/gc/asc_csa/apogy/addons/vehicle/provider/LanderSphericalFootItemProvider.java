@@ -76,13 +76,13 @@ public class LanderSphericalFootItemProvider
 	 * This adds a property descriptor for the Radius feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
   protected void addRadiusPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_LanderSphericalFoot_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderSphericalFoot_radius_feature", "_UI_LanderSphericalFoot_type"),

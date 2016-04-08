@@ -69,46 +69,46 @@ public class PTUDishAntennaItemProvider extends DishAntennaItemProvider
 	 * This adds a property descriptor for the Pan Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addPanAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PTUDishAntenna_panAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntenna_panAngle_feature", "_UI_PTUDishAntenna_type"),
-				ApogyExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA__PAN_ANGLE,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_ANTENNA_PTU_INFOPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PTUDishAntenna_panAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntenna_panAngle_feature", "_UI_PTUDishAntenna_type"),
+				 ApogyExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA__PAN_ANGLE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_PTUAnglesPropertyCategory"),
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Tilt Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addTiltAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PTUDishAntenna_tiltAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntenna_tiltAngle_feature", "_UI_PTUDishAntenna_type"),
-				ApogyExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA__TILT_ANGLE,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_ANTENNA_PTU_INFOPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PTUDishAntenna_tiltAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntenna_tiltAngle_feature", "_UI_PTUDishAntenna_type"),
+				 ApogyExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA__TILT_ANGLE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_PTUAnglesPropertyCategory"),
+				 null));
 	}
 
 	/**

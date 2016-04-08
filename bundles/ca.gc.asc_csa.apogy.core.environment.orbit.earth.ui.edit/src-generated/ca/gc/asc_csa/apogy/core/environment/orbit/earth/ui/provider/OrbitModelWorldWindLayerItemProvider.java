@@ -114,12 +114,12 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 	 * This adds a property descriptor for the Time Interval feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addTimeIntervalPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_timeInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_timeInterval_feature", "_UI_OrbitModelWorldWindLayer_type"),
@@ -128,7 +128,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_TIME_PERIODPropertyCategory"),
 				 null));
 	}
 
@@ -136,12 +136,12 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 	 * This adds a property descriptor for the Forward Propagation Duration feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addForwardPropagationDurationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_forwardPropagationDuration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_forwardPropagationDuration_feature", "_UI_OrbitModelWorldWindLayer_type"),
@@ -150,7 +150,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_TIME_PERIODPropertyCategory"),
 				 null));
 	}
 
@@ -158,12 +158,12 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 	 * This adds a property descriptor for the Backward Propagation Duration feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addBackwardPropagationDurationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_backwardPropagationDuration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_backwardPropagationDuration_feature", "_UI_OrbitModelWorldWindLayer_type"),
@@ -172,7 +172,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_TIME_PERIODPropertyCategory"),
 				 null));
 	}
 

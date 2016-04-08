@@ -26,7 +26,9 @@ Contributors:
     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
     Sebastien Gemme (Sebastien.Gemme@canada.ca),
     Canadian Space Agency (CSA) - Initial API and implementation",
-	      modelName="ApogyAddonsSensorsImagingUI")
+	      modelName="ApogyAddonsSensorsImagingUI",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.ui/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.edit/src-generated")
 
