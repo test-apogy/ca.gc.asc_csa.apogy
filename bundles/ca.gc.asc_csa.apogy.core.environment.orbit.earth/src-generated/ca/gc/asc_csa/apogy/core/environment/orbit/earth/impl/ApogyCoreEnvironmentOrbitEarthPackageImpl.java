@@ -2836,6 +2836,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "modelName", "ApogyCoreEnvironmentOrbitEarth",
 			 "complianceLevel", "8.0",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.earth/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.earth.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.core.environment.orbit"

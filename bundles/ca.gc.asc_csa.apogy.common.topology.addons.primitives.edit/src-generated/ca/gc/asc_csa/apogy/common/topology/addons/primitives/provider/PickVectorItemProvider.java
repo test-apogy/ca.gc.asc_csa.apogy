@@ -70,7 +70,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 	 * This adds a property descriptor for the Intersection Distance feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addIntersectionDistancePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
@@ -80,7 +80,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 				 getString("_UI_PickVector_intersectionDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PickVector_intersectionDistance_feature", "_UI_PickVector_type"),
 				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__INTERSECTION_DISTANCE,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,

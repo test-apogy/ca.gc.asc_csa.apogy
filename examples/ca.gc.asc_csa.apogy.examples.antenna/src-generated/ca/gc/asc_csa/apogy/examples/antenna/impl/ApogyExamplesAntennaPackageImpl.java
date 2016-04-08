@@ -401,6 +401,8 @@ public class ApogyExamplesAntennaPackageImpl extends EPackageImpl implements Apo
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.antenna/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.antenna.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"

@@ -27,7 +27,9 @@ Contributors:
     Sebastien Gemme (Sebastien.Gemme@canada.ca),
     Canadian Space Agency (CSA) - Initial API and implementation",
 	      modelName="ApogyCommonTopologyAddonsDynamics",
-	      suppressGenModelAnnotations="false")
+	      suppressGenModelAnnotations="false",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.dynamics/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.dynamics.edit/src-generated")
 

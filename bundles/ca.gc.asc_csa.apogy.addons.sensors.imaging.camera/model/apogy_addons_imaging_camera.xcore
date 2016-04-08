@@ -27,7 +27,9 @@ Contributors:
     Sebastien Gemme (Sebastien.Gemme@canada.ca),
     Canadian Space Agency (CSA) - Initial API and implementation",
 		  modelName="ApogyAddonsSensorsImagingCamera",
-		  complianceLevel="6.0")
+		  complianceLevel="6.0",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.edit/src-generated")
 

@@ -81,7 +81,7 @@
                        ifEmpty="false"
                        operator="or">
                        <instanceof
-                            value="ca.gc.asc_csa.apogy.addons.vehicle.WheeledVehiclePoseCorrector">
+                            value="ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector">
                        </instanceof>
                     </iterate>
                 </with>

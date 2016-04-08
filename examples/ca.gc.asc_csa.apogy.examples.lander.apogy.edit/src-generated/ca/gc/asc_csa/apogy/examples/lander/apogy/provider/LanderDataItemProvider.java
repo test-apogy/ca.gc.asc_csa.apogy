@@ -208,7 +208,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 * This adds a property descriptor for the Curr Thrust Level feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addCurrThrustLevelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
@@ -230,7 +230,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 * This adds a property descriptor for the Min Thrust Level feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMinThrustLevelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
@@ -252,7 +252,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 * This adds a property descriptor for the Max Thrust Level feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addMaxThrustLevelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
@@ -274,7 +274,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 * This adds a property descriptor for the XAngular Velocity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addXAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
@@ -296,7 +296,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 * This adds a property descriptor for the YAngular Velocity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addYAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add

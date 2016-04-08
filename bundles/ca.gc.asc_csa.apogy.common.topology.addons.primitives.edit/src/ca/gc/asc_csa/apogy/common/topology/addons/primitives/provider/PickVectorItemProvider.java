@@ -69,7 +69,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 	 * This adds a property descriptor for the Intersection Distance feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addIntersectionDistancePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add

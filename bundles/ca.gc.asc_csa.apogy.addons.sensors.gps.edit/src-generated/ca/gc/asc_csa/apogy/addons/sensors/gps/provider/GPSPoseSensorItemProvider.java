@@ -28,6 +28,11 @@ import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSFactory;
 import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage;
 import ca.gc.asc_csa.apogy.addons.sensors.pose.provider.PoseSensorItemProvider;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+<<<<<<< HEAD
+=======
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+>>>>>>> refs/heads/master
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor} object.
@@ -121,7 +126,7 @@ public class GPSPoseSensorItemProvider
 	 */
 	protected void addOriginLatitudePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GPSPoseSensor_originLatitude_feature"),
@@ -143,7 +148,7 @@ public class GPSPoseSensorItemProvider
 	 */
 	protected void addOriginLongitudePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GPSPoseSensor_originLongitude_feature"),
@@ -165,7 +170,7 @@ public class GPSPoseSensorItemProvider
 	 */
 	protected void addNeAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GPSPoseSensor_neAngle_feature"),

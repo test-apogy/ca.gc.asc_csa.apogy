@@ -87,12 +87,12 @@ public class GroundStationWorldWindLayerItemProvider extends EarthSurfaceLocatio
 	 * This adds a property descriptor for the Reference Altitude feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addReferenceAltitudePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GroundStationWorldWindLayer_referenceAltitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GroundStationWorldWindLayer_referenceAltitude_feature", "_UI_GroundStationWorldWindLayer_type"),
@@ -101,7 +101,7 @@ public class GroundStationWorldWindLayerItemProvider extends EarthSurfaceLocatio
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_VISUALSPropertyCategory"),
 				 null));
 	}
 

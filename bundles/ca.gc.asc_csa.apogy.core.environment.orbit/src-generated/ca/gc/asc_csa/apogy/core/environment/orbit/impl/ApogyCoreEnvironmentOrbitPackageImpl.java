@@ -944,6 +944,8 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 			 "modelName", "ApogyCoreEnvironmentOrbit",
 			 "complianceLevel", "8.0",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.core.environment"

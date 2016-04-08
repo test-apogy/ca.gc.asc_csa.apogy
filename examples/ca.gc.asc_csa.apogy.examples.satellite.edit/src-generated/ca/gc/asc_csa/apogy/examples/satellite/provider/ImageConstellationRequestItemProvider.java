@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -76,7 +77,7 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 	 */
 	protected void addLongitudePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_longitude_feature"),
@@ -98,7 +99,7 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 	 */
 	protected void addLatitudePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_latitude_feature"),
@@ -120,7 +121,7 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 	 */
 	protected void addElevationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_elevation_feature"),

@@ -819,6 +819,8 @@ public class ApogyAddonsTelecomsPackageImpl extends EPackageImpl implements Apog
 			 "modelName", "ApogyAddonsTelecoms",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.telecoms/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.telecoms.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"

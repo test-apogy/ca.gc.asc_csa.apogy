@@ -84,69 +84,69 @@ IItemPropertySource
 	 * This adds a property descriptor for the X feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addXPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Position_x_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Position_x_feature", "_UI_Position_type"),
-						ApogyExamplesMobilePlatformPackage.Literals.POSITION__X,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						null,
-						null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Position_x_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Position_x_feature", "_UI_Position_type"),
+				 ApogyExamplesMobilePlatformPackage.Literals.POSITION__X,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Y feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addYPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Position_y_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Position_y_feature", "_UI_Position_type"),
-						ApogyExamplesMobilePlatformPackage.Literals.POSITION__Y,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						null,
-						null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Position_y_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Position_y_feature", "_UI_Position_type"),
+				 ApogyExamplesMobilePlatformPackage.Literals.POSITION__Y,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Theta feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addThetaPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Position_theta_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Position_theta_feature", "_UI_Position_type"),
-						ApogyExamplesMobilePlatformPackage.Literals.POSITION__THETA,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						null,
-						null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Position_theta_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Position_theta_feature", "_UI_Position_type"),
+				 ApogyExamplesMobilePlatformPackage.Literals.POSITION__THETA,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**

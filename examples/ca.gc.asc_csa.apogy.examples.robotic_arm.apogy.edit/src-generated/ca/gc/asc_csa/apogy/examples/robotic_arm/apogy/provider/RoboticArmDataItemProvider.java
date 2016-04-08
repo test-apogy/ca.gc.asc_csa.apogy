@@ -118,91 +118,91 @@ public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvi
 	 * This adds a property descriptor for the Turret Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addTurretAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_RoboticArmData_turretAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_turretAngle_feature", "_UI_RoboticArmData_type"),
-				ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__TURRET_ANGLE,
-				true,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_JointAnglesPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RoboticArmData_turretAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_turretAngle_feature", "_UI_RoboticArmData_type"),
+				 ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__TURRET_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_JointAnglesPropertyCategory"),
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Shoulder Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addShoulderAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_RoboticArmData_shoulderAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_shoulderAngle_feature", "_UI_RoboticArmData_type"),
-				ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__SHOULDER_ANGLE,
-				true,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_JointAnglesPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RoboticArmData_shoulderAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_shoulderAngle_feature", "_UI_RoboticArmData_type"),
+				 ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__SHOULDER_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_JointAnglesPropertyCategory"),
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Elbow Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addElbowAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_RoboticArmData_elbowAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_elbowAngle_feature", "_UI_RoboticArmData_type"),
-				ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__ELBOW_ANGLE,
-				true,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_JointAnglesPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RoboticArmData_elbowAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_elbowAngle_feature", "_UI_RoboticArmData_type"),
+				 ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__ELBOW_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_JointAnglesPropertyCategory"),
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Wrist Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addWristAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_RoboticArmData_wristAngle_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_wristAngle_feature", "_UI_RoboticArmData_type"),
-				ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__WRIST_ANGLE,
-				true,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_JointAnglesPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RoboticArmData_wristAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_wristAngle_feature", "_UI_RoboticArmData_type"),
+				 ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__WRIST_ANGLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_JointAnglesPropertyCategory"),
+				 null));
 	}
 
 	/**

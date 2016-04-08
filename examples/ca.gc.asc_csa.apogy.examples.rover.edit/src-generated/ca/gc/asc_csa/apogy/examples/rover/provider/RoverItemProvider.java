@@ -181,44 +181,44 @@ public class RoverItemProvider extends ItemProviderAdapter
 	 * This adds a property descriptor for the Linear Velocity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addLinearVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Rover_linearVelocity_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Rover_linearVelocity_feature", "_UI_Rover_type"),
-				ApogyExamplesRoverPackage.Literals.ROVER__LINEAR_VELOCITY,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_VELOCITIESPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Rover_linearVelocity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_linearVelocity_feature", "_UI_Rover_type"),
+				 ApogyExamplesRoverPackage.Literals.ROVER__LINEAR_VELOCITY,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_VelocitiesPropertyCategory"),
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Angular Velocity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	protected void addAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-		(new AbstractUnitItemPropertyDescriptor(
-				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Rover_angularVelocity_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Rover_angularVelocity_feature", "_UI_Rover_type"),
-				ApogyExamplesRoverPackage.Literals.ROVER__ANGULAR_VELOCITY,
-				false,
-				false,
-				false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_VELOCITIESPropertyCategory"),
-				null));
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Rover_angularVelocity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_angularVelocity_feature", "_UI_Rover_type"),
+				 ApogyExamplesRoverPackage.Literals.ROVER__ANGULAR_VELOCITY,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_VelocitiesPropertyCategory"),
+				 null));
 	}
 
 	/**
