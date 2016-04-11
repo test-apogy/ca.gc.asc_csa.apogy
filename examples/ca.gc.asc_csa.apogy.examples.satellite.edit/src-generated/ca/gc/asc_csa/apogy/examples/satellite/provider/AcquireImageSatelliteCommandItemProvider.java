@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import java.util.Collection;
 import java.util.Date;
@@ -74,7 +75,7 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractRequestBas
 	 */
 	protected void addLongitudePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_longitude_feature"),
@@ -96,7 +97,7 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractRequestBas
 	 */
 	protected void addLatitudePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_latitude_feature"),
@@ -118,7 +119,7 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractRequestBas
 	 */
 	protected void addElevationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_elevation_feature"),

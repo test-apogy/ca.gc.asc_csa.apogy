@@ -226,7 +226,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 	 */
 	protected void addSpacecraftAlongTrackAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_spacecraftAlongTrackAngle_feature"),
