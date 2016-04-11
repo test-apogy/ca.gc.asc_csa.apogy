@@ -13,7 +13,6 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.examples.satellite.*;
 import java.util.Comparator;
 import java.util.List;
 import java.util.SortedSet;
@@ -24,6 +23,30 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
+import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,7 +92,6 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ApogyExamplesSatellitePackage.APOGY_EXAMPLES_SATELLITE_FACADE: return createApogyExamplesSatelliteFacade();
 			case ApogyExamplesSatellitePackage.STRING_UID: return createStringUID();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST: return createConstellationCommandPlansList();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE: return createConstellationState();
@@ -138,16 +160,6 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ApogyExamplesSatelliteFacade createApogyExamplesSatelliteFacade() {
-		ApogyExamplesSatelliteFacadeImpl apogyExamplesSatelliteFacade = new ApogyExamplesSatelliteFacadeImpl();
-		return apogyExamplesSatelliteFacade;
 	}
 
 	/**

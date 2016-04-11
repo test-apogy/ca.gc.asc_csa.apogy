@@ -13,20 +13,17 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
-
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
  * <!-- begin-user-doc -->

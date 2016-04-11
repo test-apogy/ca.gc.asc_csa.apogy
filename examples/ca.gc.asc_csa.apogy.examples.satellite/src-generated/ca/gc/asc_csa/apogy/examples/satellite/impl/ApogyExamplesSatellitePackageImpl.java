@@ -13,15 +13,26 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
+import java.util.Comparator;
+import java.util.List;
+import java.util.SortedSet;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-
 import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
-
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
@@ -31,7 +42,6 @@ import ca.gc.asc_csa.apogy.examples.satellite.AbstractRequestBasedSatelliteComma
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
@@ -55,22 +65,6 @@ import ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
 import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.SortedSet;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EGenericType;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
@@ -78,13 +72,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements ApogyExamplesSatellitePackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass apogyExamplesSatelliteFacadeEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -378,15 +365,6 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getApogyExamplesSatelliteFacade() {
-		return apogyExamplesSatelliteFacadeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAbstractUID() {
 		return abstractUIDEClass;
 	}
@@ -648,7 +626,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask() {
+	public EOperation getAbstractConstellationPlanner__IsValid__VisibilityPass() {
 		return abstractConstellationPlannerEClass.getEOperations().get(0);
 	}
 
@@ -657,7 +635,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__IsValid__VisibilityPass() {
+	public EOperation getAbstractConstellationPlanner__GetSatellite__EarthOrbitModel() {
 		return abstractConstellationPlannerEClass.getEOperations().get(1);
 	}
 
@@ -666,7 +644,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__GetSatellite__EarthOrbitModel() {
+	public EOperation getAbstractConstellationPlanner__Plan() {
 		return abstractConstellationPlannerEClass.getEOperations().get(2);
 	}
 
@@ -675,7 +653,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__Plan() {
+	public EOperation getAbstractConstellationPlanner__Validate() {
 		return abstractConstellationPlannerEClass.getEOperations().get(3);
 	}
 
@@ -684,7 +662,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__Validate() {
+	public EOperation getAbstractConstellationPlanner__GetRequestBasedSatelliteCommandsComparator() {
 		return abstractConstellationPlannerEClass.getEOperations().get(4);
 	}
 
@@ -693,17 +671,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellationPlanner__GetRequestBasedSatelliteCommandsComparator() {
-		return abstractConstellationPlannerEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__ObservationConstellationRequest_VisibilityPass() {
-		return abstractConstellationPlannerEClass.getEOperations().get(6);
+		return abstractConstellationPlannerEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1202,8 +1171,6 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		isCreated = true;
 
 		// Create classes and their features
-		apogyExamplesSatelliteFacadeEClass = createEClass(APOGY_EXAMPLES_SATELLITE_FACADE);
-
 		abstractUIDEClass = createEClass(ABSTRACT_UID);
 
 		stringUIDEClass = createEClass(STRING_UID);
@@ -1239,7 +1206,6 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEAttribute(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS);
 		createEAttribute(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED);
 		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK);
-		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__EARTHORBITMODEL);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___PLAN);
@@ -1389,8 +1355,6 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		orbitalImageConstellationDownlinkItemEClass.getESuperTypes().add(this.getAbstractConstellationDownlinkItem());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogyExamplesSatelliteFacadeEClass, ApogyExamplesSatelliteFacade.class, "ApogyExamplesSatelliteFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(abstractUIDEClass, AbstractUID.class, "AbstractUID", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(stringUIDEClass, StringUID.class, "StringUID", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1441,17 +1405,6 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEAttribute(getAbstractConstellationPlanner_MaxNumberThreads(), theEcorePackage.getEInt(), "maxNumberThreads", "0", 0, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractConstellationPlanner_CommandDuplicatesPreserved(), theEcorePackage.getEBoolean(), "commandDuplicatesPreserved", "false", 0, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractConstellationPlanner_ElevationMask(), theApogyCoreEnvironmentOrbitEarthPackage.getConstantElevationMask(), null, "elevationMask", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		op = initEOperation(getAbstractConstellationPlanner__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask(), null, "getTargetPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractConstellationRequest(), "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getElevationMask(), "elevationMask", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theApogyCorePackage.getException());
-		g1 = createEGenericType(this.getSortedSet());
-		g2 = createEGenericType(theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass());
-		g1.getETypeArguments().add(g2);
-		initEOperation(op, g1);
 
 		op = initEOperation(getAbstractConstellationPlanner__IsValid__VisibilityPass(), theEcorePackage.getEBoolean(), "isValid", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), "visibilityPass", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1612,12 +1565,6 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
-		  (apogyExamplesSatelliteFacadeEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "Apogy Examples Satellite Facade."
-		   });	
-		addAnnotation
 		  (abstractUIDEClass, 
 		   source, 
 		   new String[] {
@@ -1730,12 +1677,6 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		   source, 
 		   new String[] {
 			 "documentation", "Abstract class that defines the concept of Constellation Planner.  A planner is used to process\na list of {@link AbstractConstellationRequest} and to generate a {@link ConstellationCommandPlan}."
-		   });	
-		addAnnotation
-		  (getAbstractConstellationPlanner__GetTargetPasses__AbstractConstellationRequest_Date_Date_ElevationMask(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Returns the visibility passes for a given {@link AbstractConstellationRequest}.\n@param request The {@link AbstractConstellationRequest} that needs commanding.\n@param startDate The start date of the period to be queried.\n@param endDate The end date of the period to be queried.\n@param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.\n@return The list of Visibility passes, ordered by start time."
 		   });	
 		addAnnotation
 		  (getAbstractConstellationPlanner__IsValid__VisibilityPass(), 

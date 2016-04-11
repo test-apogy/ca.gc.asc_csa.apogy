@@ -43,7 +43,6 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass
 
@@ -51,12 +50,6 @@ type List<T> wraps java.util.List
 type SortedSet<T> wraps java.util.SortedSet 
 type Comparator<T> wraps java.util.Comparator 
  
-/*
- * Apogy Examples Satellite Facade. 
- */
-class ApogyExamplesSatelliteFacade{	
-}
-  
 /*
  * Abstract Unique Identifier.  This class is meant to be sub-classed.
  */
@@ -100,7 +93,7 @@ class StringUID extends AbstractUID{
 	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
 	 */
 	contains ConstellationDownlinksList[0..1] downlinksLists
-	
+		
 	/*
 	 * List of {@link AbstractConstellationRequest}.
 	 */
@@ -218,16 +211,6 @@ abstract class AbstractConstellationPlanner{
 	 * Specifies the elevation mask used 
 	 */
 	contains ConstantElevationMask[1] elevationMask
-		
-	/*
-	 * Returns the visibility passes for a given {@link AbstractConstellationRequest}. 
-	 * @param request The {@link AbstractConstellationRequest} that needs commanding.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
-	 * @return The list of Visibility passes, ordered by start time.
-	 */
-	op SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception
 	
 	/*
 	 * Checks if the pass is valid.

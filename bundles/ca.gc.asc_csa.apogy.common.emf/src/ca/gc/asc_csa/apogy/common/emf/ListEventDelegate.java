@@ -15,8 +15,6 @@ package ca.gc.asc_csa.apogy.common.emf;
 
 import java.util.List;
 
-import org.eclipse.emf.common.notify.Notification;
-
 public interface ListEventDelegate<T> {
 
 	public void added(T element);

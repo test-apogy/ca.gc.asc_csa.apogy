@@ -16,11 +16,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.SortedSet;
+import java.util.Map;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -40,7 +42,7 @@ import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
@@ -433,34 +435,6 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * 
 	 * @generated_NOT
 	 */
-	public SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate,
-			ElevationMask elevationMask) throws Exception {
-		List<VisibilityPass> visibilityPasses = new ArrayList<VisibilityPass>();
-
-		if (request instanceof ObservationConstellationRequest) {
-			ObservationConstellationRequest observationRequest = (ObservationConstellationRequest) request;
-
-			for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
-				List<VisibilityPass> potentialVisibilityPasses = satellite.getOrbitModel()
-						.getTargetPasses(observationRequest.getLocation(), startDate, endDate, elevationMask);
-				for (VisibilityPass pass : potentialVisibilityPasses) {
-					if (isValid(pass)) {
-						visibilityPasses.add(pass);
-					}
-				}
-			}
-		}
-
-		SortedSet<VisibilityPass> sortedVisibilityPasses = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE
-				.getVisibilityPassSortedByStartDate(visibilityPasses);
-		return sortedVisibilityPasses;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
 	public boolean isValid(VisibilityPass visibilityPass) {
 		return true;
 	}
@@ -508,84 +482,99 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		List<AbstractConstellationRequest> requestsList = getConstellationRequestsList().getConstellationRequests()
 				.stream().filter(p -> p instanceof ObservationConstellationRequest).collect(Collectors.toList());
 
+		final int numberThreads = getMaxNumberThreads() < 1 ? 
+				Runtime.getRuntime().availableProcessors() : getMaxNumberThreads();						
+
 		Logger.INSTANCE.log(Activator.ID,
-				"Constellation Planner: " + requestsList.size() + " observation requests to process.",
+				"Constellation Planner: " + requestsList.size() + " observation requests to process using <" + numberThreads +"> threads.",
 				EventSeverity.INFO);
 
 		Logger.INSTANCE.log(Activator.ID,
 				"Constellation Planner: "
 						+ (getConstellationRequestsList().getConstellationRequests().size() - requestsList.size())
 						+ " requests are not observation requests and will not be processed.",
-				EventSeverity.INFO);
-
-//		JobGroup jobGroup = new JobGroup("BBBConstellation Planner: Processing " + Integer.toString(requestsList.size()) + " request"
-//				+ (requestsList.size() > 1 ? "s" : ""), getMaxNumberThreads(), 1);
-
-		JobGroup jobGroup = new JobGroup("Test", getMaxNumberThreads(), 1);
+				EventSeverity.INFO);		
 		
-//		Job plannerJob = new Job("AAAConstellation Planner: Processing " + Integer.toString(requestsList.size()) + " request"
-//				+ (requestsList.size() > 1 ? "s" : "")) 
 		
+		JobGroup jobGroup = new JobGroup("Test", numberThreads, 1);
 		Job plannerJob = new Job("TestJob") {
 
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				monitor.beginTask("Processinng requests", requestsList.size());
-				
+
+				/* Creates a temporary map to bind the requests with their locations. */ 
+				Map<EarthSurfaceLocation, ObservationConstellationRequest> locationMap = new HashMap<EarthSurfaceLocation, ObservationConstellationRequest>();
+				for (AbstractConstellationRequest request : requestsList) {
+					locationMap.put(((ObservationConstellationRequest)request).getLocation(), (ObservationConstellationRequest) request);
+				}
+				List<EarthSurfaceLocation> locations = new ArrayList<EarthSurfaceLocation>(locationMap.keySet());
+								
 				/*
-				 * For each observation request finds the target passes
-				 * available within the period defined.
+				 * Determine how to spawn the list of locations to be processed 
 				 */
-				Iterator<AbstractConstellationRequest> requests = requestsList.iterator();
-				while (requests.hasNext()) {
-					ObservationConstellationRequest request = (ObservationConstellationRequest) requests.next();
-
-					Job job = new Job("Constellation Planner: Processing request <" + (request.getUid() == null ? "n/a"
-							: request.getUid()) + ">") {
+				int modulus = requestsList.size() / numberThreads;
+				int remainder = requestsList.size() % numberThreads;
+				int locationIndex = 0;
+				
+				for (int i = 0; i < numberThreads; i++){									
+					int extraLocation = remainder > 0 ? 1: 0;					
+					int locationStartIndex = locationIndex;
+					int threadId = i;
+					
+					Job job = new Job("Constellation Planner: Thread <" + (threadId + 1) +">"){
 						@Override
-						protected IStatus run(IProgressMonitor monitor) {
-							monitor.worked(1);
-							SortedSet<VisibilityPass> sortedPasses;
-							try {
-								Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Processing request <" + (request.getUid() == null
-										? "n/a" : request.getUid()) + ">", EventSeverity.INFO);
+						protected IStatus run(IProgressMonitor monitor) {								
+							for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
+								try {
+									Logger.INSTANCE.log(Activator.ID,
+											"Constellation Planner: Processing passes in Thread <"
+													+ (threadId + 1) + ">", EventSeverity.INFO);
 
-								sortedPasses = getTargetPasses(request, getStartDate(), getEndDate(),
-										getElevationMask());
-
-								Logger.INSTANCE.log(Activator.ID,
-										"Constellation Planner: " + sortedPasses.size() + " passe" + (sortedPasses.size() > 1 ? "s":"") + " found for request <"+ (request.getUid() == null
-												? "n/a" : request.getUid()) + ">",
-										EventSeverity.INFO);
-
-								// Creates a Visibility Pass Based Satellite
-								// Command for each valid passes.
-								Iterator<VisibilityPass> passesIterator = sortedPasses.iterator();
-								while (passesIterator.hasNext()) {
-									VisibilityPass pass = passesIterator.next();
-									commands.add(createVisibilityPassBasedSatelliteCommand(request, pass));
+									List<VisibilityPass> passes = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE
+											.getTargetPasses(satellite.getOrbitModel(), 
+													         locations.subList(locationStartIndex, locationStartIndex + modulus + extraLocation),
+													getStartDate(), getEndDate(), getElevationMask(), monitor);
+									
+									Logger.INSTANCE.log(Activator.ID,
+											"Constellation Planner: <" + passes.size() + "> found in Thread <"
+													+ (threadId + 1) + ">", EventSeverity.INFO);
+									
+									// Creates a Visibility Pass Based Satellite
+									// Command for each valid passes.
+									Iterator<VisibilityPass> passesIterator = passes.iterator();
+									while (passesIterator.hasNext()) {
+										VisibilityPass pass = passesIterator.next();
+										if (isValid(pass)){
+											synchronized (commands){
+												commands.add(createVisibilityPassBasedSatelliteCommand(locationMap.get(pass.getSurfaceLocation()), pass));
+											}
+										}
+									}									
+									
+								} catch (Exception e) {
+									Logger.INSTANCE.log(Activator.ID,
+											"Constellation Planner: Error while processing passes in Thread <"
+													+ (threadId + 1) + ">",
+											EventSeverity.ERROR, e);
+									return Status.CANCEL_STATUS;
 								}
-
-							} catch (Exception e) {
-								Logger.INSTANCE.log(Activator.ID,
-										"Constellation Planner: Error while processing request <" + (request.getUid() == null ? "n/a"
-												: request.getUid()) + ">",
-										EventSeverity.ERROR, e);
-								return Status.CANCEL_STATUS;
 							}
 							return Status.OK_STATUS;
-						}
+						}						
 					};
 					job.setPriority(Job.LONG);
-					job.setJobGroup(jobGroup);
+					job.setJobGroup(jobGroup);					
+					job.schedule();				
 					
-					job.schedule();					
+					/* Reduce the remainder by one if not all dispatched. */
+					remainder = remainder > 0 ? remainder - 1 : 0;
+					locationIndex = locationIndex + modulus + remainder;
 				}
-								
+				
 				return Status.OK_STATUS;
 			}
 		};
-
 		plannerJob.setPriority(Job.LONG);
 		plannerJob.setJobGroup(jobGroup);
 		plannerJob.setUser(true);
@@ -883,16 +872,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_TARGET_PASSES__ABSTRACTCONSTELLATIONREQUEST_DATE_DATE_ELEVATIONMASK:
-				try {
-					return getTargetPasses((AbstractConstellationRequest)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS:
 				return isValid((VisibilityPass)arguments.get(0));
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__EARTHORBITMODEL:

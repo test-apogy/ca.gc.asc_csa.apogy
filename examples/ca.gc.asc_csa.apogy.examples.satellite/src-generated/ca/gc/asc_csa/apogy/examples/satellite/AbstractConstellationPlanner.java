@@ -12,15 +12,15 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite;
 
+import java.util.Comparator;
+import java.util.Date;
+
+import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.SortedSet;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -280,22 +280,6 @@ public interface AbstractConstellationPlanner extends EObject {
 	 * @generated
 	 */
 	void setElevationMask(ConstantElevationMask value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Returns the visibility passes for a given {@link AbstractConstellationRequest}.
-	 * @param request The {@link AbstractConstellationRequest} that needs commanding.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
-	 * @return The list of Visibility passes, ordered by start time.
-	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.SortedSet<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" unique="false" exceptions="ca.gc.asc_csa.apogy.core.Exception" requestUnique="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false"
-	 * @generated
-	 */
-	SortedSet<VisibilityPass> getTargetPasses(AbstractConstellationRequest request, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -1,5 +1,4 @@
-package ca.gc.asc_csa.apogy.examples.satellite.util;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -7,11 +6,12 @@ package ca.gc.asc_csa.apogy.examples.satellite.util;
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
+package ca.gc.asc_csa.apogy.examples.satellite.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -24,7 +24,34 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 import ca.gc.asc_csa.apogy.common.images.EImage;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.examples.satellite.*;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractRequestBasedSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
+import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
+import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,10 +109,6 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected ApogyExamplesSatelliteSwitch<Adapter> modelSwitch =
 		new ApogyExamplesSatelliteSwitch<Adapter>() {
-			@Override
-			public Adapter caseApogyExamplesSatelliteFacade(ApogyExamplesSatelliteFacade object) {
-				return createApogyExamplesSatelliteFacadeAdapter();
-			}
 			@Override
 			public Adapter caseAbstractUID(AbstractUID object) {
 				return createAbstractUIDAdapter();
@@ -237,20 +260,6 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade <em>Facade</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade
-	 * @generated
-	 */
-	public Adapter createApogyExamplesSatelliteFacadeAdapter() {
-		return null;
-	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractUID <em>Abstract UID</em>}'.
@@ -631,20 +640,6 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
-	 * @generated
-	 */
-	public Adapter createGeographicCoordinatesAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -659,6 +654,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
+	 * @generated
+	 */
+	public Adapter createDescribedAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -669,6 +678,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTimedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
+	 * @generated
+	 */
+	public Adapter createGeographicCoordinatesAdapter() {
 		return null;
 	}
 
@@ -697,20 +720,6 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEImageAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.common.emf.Described
-	 * @generated
-	 */
-	public Adapter createDescribedAdapter() {
 		return null;
 	}
 

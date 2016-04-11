@@ -12,8 +12,8 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.apogy.common.converters,
  org.jgrapht;bundle-version="0.8.2",
  ca.gc.asc_csa.apogy.common.converters.ui
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.common.converters.tests,
  ca.gc.asc_csa.apogy.common.converters.tests.converters,
  ca.gc.asc_csa.apogy.common.converters.tests.types
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

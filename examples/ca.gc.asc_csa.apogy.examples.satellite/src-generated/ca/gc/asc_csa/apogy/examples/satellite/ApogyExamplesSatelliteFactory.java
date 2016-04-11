@@ -33,15 +33,6 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	ApogyExamplesSatelliteFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatelliteFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Facade</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Facade</em>'.
-	 * @generated
-	 */
-	ApogyExamplesSatelliteFacade createApogyExamplesSatelliteFacade();
-
-	/**
 	 * Returns a new object of class '<em>String UID</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

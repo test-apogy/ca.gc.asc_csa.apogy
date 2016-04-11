@@ -13,9 +13,10 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.emf.common.util.EList;
+
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->

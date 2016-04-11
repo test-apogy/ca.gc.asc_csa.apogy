@@ -8,3 +8,4 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.11.1",
  org.ros.messages;bundle-version="1.6.6"
 Eclipse-RegisterBuddy: org.ros.bootstrap
 Export-Package: ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

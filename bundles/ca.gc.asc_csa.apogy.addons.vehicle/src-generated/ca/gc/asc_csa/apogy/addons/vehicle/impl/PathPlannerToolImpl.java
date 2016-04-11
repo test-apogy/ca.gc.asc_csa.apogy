@@ -273,7 +273,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@SuppressWarnings({ "rawtypes"})
 	public MeshWayPointPathPlanner getPathPlanner() 
 	{		
 		if(pathPlanner == null)

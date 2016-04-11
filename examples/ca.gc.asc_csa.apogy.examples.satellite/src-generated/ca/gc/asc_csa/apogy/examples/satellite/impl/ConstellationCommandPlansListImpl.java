@@ -3,7 +3,6 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -14,6 +13,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
 

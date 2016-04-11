@@ -15,8 +15,8 @@ package ca.gc.asc_csa.apogy.examples.satellite.apogy;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
+
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**

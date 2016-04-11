@@ -12,18 +12,15 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
  * <!-- begin-user-doc -->

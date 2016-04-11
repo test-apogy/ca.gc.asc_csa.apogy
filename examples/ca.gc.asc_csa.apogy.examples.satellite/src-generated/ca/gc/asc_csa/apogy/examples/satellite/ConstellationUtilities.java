@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  */
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
 
 import ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationUtilitiesImpl;
