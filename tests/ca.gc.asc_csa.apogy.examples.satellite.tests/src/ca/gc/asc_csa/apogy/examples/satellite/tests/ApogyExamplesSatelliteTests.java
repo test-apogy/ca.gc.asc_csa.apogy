@@ -36,6 +36,7 @@ public class ApogyExamplesSatelliteTests {
 		Assert.assertNotNull(constellationState);
 		
 		DefaultConstellationPlanner planner = (DefaultConstellationPlanner) constellationState.getConstellationPlanner();
+		planner.setMaxNumberThreads(1);
 		assertNotNull(planner);
 		
 		/* Invoke the planner. */

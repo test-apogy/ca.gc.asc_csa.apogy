@@ -482,11 +482,13 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		List<AbstractConstellationRequest> requestsList = getConstellationRequestsList().getConstellationRequests()
 				.stream().filter(p -> p instanceof ObservationConstellationRequest).collect(Collectors.toList());
 
-		final int numberThreads = getMaxNumberThreads() < 1 ? 
+		/* Determine the number of threads required / available for the passes processing. */
+		final int maxNumberOfThreads = getMaxNumberThreads() < 1 ? 
 				Runtime.getRuntime().availableProcessors() : getMaxNumberThreads();						
+		final int numberOfThreads = maxNumberOfThreads > requestsList.size() ? requestsList.size(): maxNumberOfThreads;
 
 		Logger.INSTANCE.log(Activator.ID,
-				"Constellation Planner: " + requestsList.size() + " observation requests to process using <" + numberThreads +"> threads.",
+				"Constellation Planner: " + requestsList.size() + " observation requests to process using <" + maxNumberThreads +"> threads.",
 				EventSeverity.INFO);
 
 		Logger.INSTANCE.log(Activator.ID,
@@ -496,8 +498,11 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				EventSeverity.INFO);		
 		
 		
-		JobGroup jobGroup = new JobGroup("Test", numberThreads, 1);
+		JobGroup jobGroup = new JobGroup("Test", maxNumberThreads, 1);
 		Job plannerJob = new Job("TestJob") {
+
+			/* Used to identify the threads in order to dispatch equally the requests. */
+			Integer threadId = 0;
 
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
@@ -512,50 +517,65 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 								
 				/*
 				 * Determine how to spawn the list of locations to be processed 
-				 */
-				int modulus = requestsList.size() / numberThreads;
-				int remainder = requestsList.size() % numberThreads;
-				int locationIndex = 0;
-				
-				for (int i = 0; i < numberThreads; i++){									
-					int extraLocation = remainder > 0 ? 1: 0;					
-					int locationStartIndex = locationIndex;
-					int threadId = i;
+				 */				
+				final int modulus = requestsList.size() / numberOfThreads;
+				final int remainder = requestsList.size() % numberOfThreads;
+				for (int i = 0; i < numberOfThreads; i++){									
+					Logger.INSTANCE.log(Activator.ID,
+							"Constellation Planner: Spawning thread " + (i+1) + " of " + numberOfThreads,
+							EventSeverity.INFO);	
 					
-					Job job = new Job("Constellation Planner: Thread <" + (threadId + 1) +">"){
+					Job job = new Job(""){						
 						@Override
-						protected IStatus run(IProgressMonitor monitor) {								
+						protected IStatus run(IProgressMonitor monitor) {
+							/*
+							 * Get the current thread id and figure what job to delegate to this thread.
+							 */
+							int currentThreadId;
+							synchronized (threadId) {
+								currentThreadId = threadId;
+								threadId++;
+							}							
+							int locationStartIndex = currentThreadId * modulus + (currentThreadId < remainder ? currentThreadId : remainder);
+							int locationEndIndex = locationStartIndex + modulus + (currentThreadId < remainder ? 1: 0) - 1; 
+							Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Thread <" + (currentThreadId+1) + "> Start=" + locationStartIndex + " End=" + locationEndIndex, EventSeverity.INFO);
+							
+							/*
+							 * Process the passes for all the satellites.
+							 */
 							for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
 								try {
 									Logger.INSTANCE.log(Activator.ID,
 											"Constellation Planner: Processing passes in Thread <"
-													+ (threadId + 1) + ">", EventSeverity.INFO);
-
+													+ (currentThreadId + 1) + ">", EventSeverity.INFO);
+									
 									List<VisibilityPass> passes = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE
 											.getTargetPasses(satellite.getOrbitModel(), 
-													         locations.subList(locationStartIndex, locationStartIndex + modulus + extraLocation),
+													         locations.subList(locationStartIndex, locationEndIndex),
 													getStartDate(), getEndDate(), getElevationMask(), monitor);
-									
+
 									Logger.INSTANCE.log(Activator.ID,
 											"Constellation Planner: <" + passes.size() + "> found in Thread <"
-													+ (threadId + 1) + ">", EventSeverity.INFO);
+													+ (currentThreadId + 1) + ">", EventSeverity.INFO);
 									
 									// Creates a Visibility Pass Based Satellite
 									// Command for each valid passes.
 									Iterator<VisibilityPass> passesIterator = passes.iterator();
-									while (passesIterator.hasNext()) {
-										VisibilityPass pass = passesIterator.next();
-										if (isValid(pass)){
-											synchronized (commands){
-												commands.add(createVisibilityPassBasedSatelliteCommand(locationMap.get(pass.getSurfaceLocation()), pass));
+									synchronized (commands){
+										while (passesIterator.hasNext()) {
+											VisibilityPass pass = passesIterator.next();
+											if (isValid(pass)){											
+												commands.add(createVisibilityPassBasedSatelliteCommand(locationMap.get(pass.getSurfaceLocation()), pass));											
 											}
-										}
-									}									
+										}		
+									}
+									Logger.INSTANCE.log(Activator.ID,
+											"Constellation Planner: Commands created in Thread <" + (currentThreadId + 1) + ">", EventSeverity.INFO);
 									
 								} catch (Exception e) {
 									Logger.INSTANCE.log(Activator.ID,
 											"Constellation Planner: Error while processing passes in Thread <"
-													+ (threadId + 1) + ">",
+													+ (currentThreadId + 1) + ">",
 											EventSeverity.ERROR, e);
 									return Status.CANCEL_STATUS;
 								}
@@ -565,19 +585,16 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 					};
 					job.setPriority(Job.LONG);
 					job.setJobGroup(jobGroup);					
-					job.schedule();				
-					
-					/* Reduce the remainder by one if not all dispatched. */
-					remainder = remainder > 0 ? remainder - 1 : 0;
-					locationIndex = locationIndex + modulus + remainder;
+					job.schedule();									
 				}
 				
 				return Status.OK_STATUS;
 			}
 		};
-		plannerJob.setPriority(Job.LONG);
-		plannerJob.setJobGroup(jobGroup);
+		plannerJob.setSystem(false);
 		plannerJob.setUser(true);
+		plannerJob.setPriority(Job.LONG);
+		plannerJob.setJobGroup(jobGroup);		
 		plannerJob.schedule();
 
 		/*
@@ -589,6 +606,10 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		 * Remove duplicates.
 		 */
 		if (!isCommandDuplicatesPreserved()) {
+			Logger.INSTANCE.log(Activator.ID,
+					"Constellation Planner: Removing Command Duplicates",
+					EventSeverity.INFO);
+						
 			TreeSet<AbstractRequestBasedSatelliteCommand> no_duplicate_commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(
 					new Comparator<AbstractRequestBasedSatelliteCommand>() {
 						@Override
