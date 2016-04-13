@@ -16,13 +16,9 @@
 <plugin>
    <extension
          point="org.eclipse.ui.views">
-      <category
-            id="ca.gc.asc_csa.apogy.examples.satellite.ui"
-            name="Constellation">
-      </category>
       <view
-            category="ca.gc.asc_csa.apogy.examples.satellite.ui"
-            class="ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationDashboardView"
+            category="ca.gc.asc_csa.apogy.examples.ui.category"
+            class="ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationStateDashboardView"
             icon="icons/sample.gif"
             id="ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationDashboard"
             name="Constellation Dashboard">
