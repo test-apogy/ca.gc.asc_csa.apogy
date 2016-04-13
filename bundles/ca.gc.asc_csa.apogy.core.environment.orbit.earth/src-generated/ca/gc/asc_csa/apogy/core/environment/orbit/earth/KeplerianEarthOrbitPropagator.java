@@ -13,8 +13,6 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer;
-import java.util.Date;
 import org.orekit.propagation.analytical.KeplerianPropagator;
 
 /**
@@ -26,69 +24,12 @@ import org.orekit.propagation.analytical.KeplerianPropagator;
  * Simple keplerian orbit propagator for Earth orbits.
  * <!-- end-model-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator#getValidFromDate <em>Valid From Date</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator#getValidToDate <em>Valid To Date</em>}</li>
- * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbitPropagator()
  * @model
  * @generated
  */
-public interface KeplerianEarthOrbitPropagator extends EarthOrbitPropagator, InitialOrbitContainer {
-	/**
-	 * Returns the value of the '<em><b>Valid From Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Defines the earliest data for which the propagator is valid.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Valid From Date</em>' attribute.
-	 * @see #setValidFromDate(Date)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbitPropagator_ValidFromDate()
-	 * @model unique="false" required="true"
-	 * @generated
-	 */
-	Date getValidFromDate();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator#getValidFromDate <em>Valid From Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Valid From Date</em>' attribute.
-	 * @see #getValidFromDate()
-	 * @generated
-	 */
-	void setValidFromDate(Date value);
-
-	/**
-	 * Returns the value of the '<em><b>Valid To Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Defines the latest data for which the propagator is valid.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Valid To Date</em>' attribute.
-	 * @see #setValidToDate(Date)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbitPropagator_ValidToDate()
-	 * @model unique="false" required="true"
-	 * @generated
-	 */
-	Date getValidToDate();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator#getValidToDate <em>Valid To Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Valid To Date</em>' attribute.
-	 * @see #getValidToDate()
-	 * @generated
-	 */
-	void setValidToDate(Date value);
-
+public interface KeplerianEarthOrbitPropagator extends EarthOrbitPropagator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

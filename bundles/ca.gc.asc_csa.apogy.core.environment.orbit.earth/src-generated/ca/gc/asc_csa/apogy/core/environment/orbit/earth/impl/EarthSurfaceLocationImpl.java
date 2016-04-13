@@ -13,18 +13,16 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import ca.gc.asc_csa.apogy.core.environment.impl.GeographicCoordinatesImpl;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,12 +34,11 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbi
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container implements EarthSurfaceLocation {
+public class EarthSurfaceLocationImpl extends GeographicCoordinatesImpl implements EarthSurfaceLocation {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,16 +78,6 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getGeographicalCoordinates() <em>Geographical Coordinates</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGeographicalCoordinates()
-	 * @generated
-	 * @ordered
-	 */
-	protected GeographicCoordinates geographicalCoordinates;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,81 +143,6 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public GeographicCoordinates getGeographicalCoordinates() 
-	{
-		GeographicCoordinates tmp = getGeographicalCoordinatesGen();
-		
-		if(tmp == null)
-		{
-			tmp = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-			setGeographicalCoordinates(tmp);
-		}
-		
-		return tmp;
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GeographicCoordinates getGeographicalCoordinatesGen() {
-		return geographicalCoordinates;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGeographicalCoordinates(GeographicCoordinates newGeographicalCoordinates, NotificationChain msgs) {
-		GeographicCoordinates oldGeographicalCoordinates = geographicalCoordinates;
-		geographicalCoordinates = newGeographicalCoordinates;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, oldGeographicalCoordinates, newGeographicalCoordinates);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGeographicalCoordinates(GeographicCoordinates newGeographicalCoordinates) {
-		if (newGeographicalCoordinates != geographicalCoordinates) {
-			NotificationChain msgs = null;
-			if (geographicalCoordinates != null)
-				msgs = ((InternalEObject)geographicalCoordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, null, msgs);
-			if (newGeographicalCoordinates != null)
-				msgs = ((InternalEObject)newGeographicalCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, null, msgs);
-			msgs = basicSetGeographicalCoordinates(newGeographicalCoordinates, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, newGeographicalCoordinates, newGeographicalCoordinates));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				return basicSetGeographicalCoordinates(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -240,8 +152,6 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 				return getName();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				return getDescription();
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				return getGeographicalCoordinates();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -259,9 +169,6 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 				return;
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				setDescription((String)newValue);
-				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				setGeographicalCoordinates((GeographicCoordinates)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -281,9 +188,6 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				setGeographicalCoordinates((GeographicCoordinates)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -300,8 +204,6 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-				return geographicalCoordinates != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -313,9 +215,20 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Named.class) {
+			switch (derivedFeatureID) {
+				case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME: return ApogyCommonEMFPackage.NAMED__NAME;
+				default: return -1;
+			}
+		}
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
 				case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		if (baseClass == AbstractSurfaceLocation.class) {
+			switch (derivedFeatureID) {
 				default: return -1;
 			}
 		}
@@ -329,9 +242,20 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Named.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.NAMED__NAME: return ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME;
+				default: return -1;
+			}
+		}
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
 				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		if (baseClass == AbstractSurfaceLocation.class) {
+			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}

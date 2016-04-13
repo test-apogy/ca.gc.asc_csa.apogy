@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.SortedSet;
 
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -39,17 +40,21 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEventType;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.InitialOrbitBasedEarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider;
@@ -58,9 +63,9 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
@@ -136,6 +141,20 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass earthOrbitModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass initialOrbitBasedEarthOrbitModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass earthOrbitEClass = null;
 
 	/**
@@ -185,7 +204,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tleEarthOrbitPropagatorEClass = null;
+	private EClass tleEarthOrbitModelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,13 +233,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	private EClass earthSurfaceLocationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass earthSurfaceLocationListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -304,7 +316,28 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass eclipseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eclipseEventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum ephemerisTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eclipseEventTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -333,6 +366,13 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	private EDataType sortedSetEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iProgressMonitorEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -617,15 +657,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEarthOrbitWorksite_EarthLocations() {
-		return (EReference)earthOrbitWorksiteEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getEarthOrbitSky() {
 		return earthOrbitSkyEClass;
 	}
@@ -680,8 +711,89 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEarthOrbitModel() {
+		return earthOrbitModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthOrbitModel__GetOreKitPropagator() {
+		return earthOrbitModelEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthOrbitModel__GetTargetPasses__EarthSurfaceLocation_Date_Date_ElevationMask() {
+		return earthOrbitModelEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthOrbitModel__GetGroundStationPasses__GroundStation_Date_Date() {
+		return earthOrbitModelEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthOrbitModel__GetEclipses__Date_Date() {
+		return earthOrbitModelEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInitialOrbitBasedEarthOrbitModel() {
+		return initialOrbitBasedEarthOrbitModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialOrbitBasedEarthOrbitModel_InitalOrbit() {
+		return (EReference)initialOrbitBasedEarthOrbitModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialOrbitBasedEarthOrbitModel_Propagator() {
+		return (EReference)initialOrbitBasedEarthOrbitModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEarthOrbit() {
 		return earthOrbitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEarthOrbit_InitialOrbitBasedEarthOrbitModel() {
+		return (EReference)earthOrbitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -860,6 +972,33 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getEarthOrbitPropagator_ValidFromDate() {
+		return (EAttribute)earthOrbitPropagatorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEarthOrbitPropagator_ValidToDate() {
+		return (EAttribute)earthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEarthOrbitPropagator_InitialOrbitBasedEarthOrbitModel() {
+		return (EReference)earthOrbitPropagatorEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getEarthOrbitPropagator__GetOreKitPropagator() {
 		return earthOrbitPropagatorEClass.getEOperations().get(0);
 	}
@@ -869,7 +1008,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitPropagator__GetTargetPasses__EarthSurfaceLocation_Date_Date_ElevationMask() {
+	public EOperation getEarthOrbitPropagator__Propagate__Date() {
 		return earthOrbitPropagatorEClass.getEOperations().get(1);
 	}
 
@@ -878,7 +1017,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitPropagator__GetGroundStationPasses__GroundStation_Date_Date() {
+	public EOperation getEarthOrbitPropagator__GetSpacecraftStates__Date_Date_double() {
 		return earthOrbitPropagatorEClass.getEOperations().get(2);
 	}
 
@@ -887,8 +1026,35 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitPropagator__GetInitialOrbit() {
+	public EOperation getEarthOrbitPropagator__GetTargetPasses__EarthSurfaceLocation_Date_Date_ElevationMask() {
 		return earthOrbitPropagatorEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthOrbitPropagator__GetGroundStationPasses__GroundStation_Date_Date() {
+		return earthOrbitPropagatorEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthOrbitPropagator__GetEclipses__Date_Date() {
+		return earthOrbitPropagatorEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthOrbitPropagator__GetInitialOrbit() {
+		return earthOrbitPropagatorEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -905,24 +1071,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getKeplerianEarthOrbitPropagator_ValidFromDate() {
-		return (EAttribute)keplerianEarthOrbitPropagatorEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKeplerianEarthOrbitPropagator_ValidToDate() {
-		return (EAttribute)keplerianEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getKeplerianEarthOrbitPropagator__GetOreKitKeplerianPropagator() {
 		return keplerianEarthOrbitPropagatorEClass.getEOperations().get(0);
 	}
@@ -932,8 +1080,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTLEEarthOrbitPropagator() {
-		return tleEarthOrbitPropagatorEClass;
+	public EClass getTLEEarthOrbitModel() {
+		return tleEarthOrbitModelEClass;
 	}
 
 	/**
@@ -941,8 +1089,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTLEEarthOrbitPropagator_Tle() {
-		return (EReference)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(0);
+	public EReference getTLEEarthOrbitModel_Tle() {
+		return (EReference)tleEarthOrbitModelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -950,26 +1098,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTLEEarthOrbitPropagator_ValidFromDate() {
-		return (EAttribute)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTLEEarthOrbitPropagator_ValidToDate() {
-		return (EAttribute)tleEarthOrbitPropagatorEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getTLEEarthOrbitPropagator__GetOreKitTLEPropagator() {
-		return tleEarthOrbitPropagatorEClass.getEOperations().get(0);
+	public EAttribute getTLEEarthOrbitModel_TleValidityPeriod() {
+		return (EAttribute)tleEarthOrbitModelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1202,33 +1332,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEarthSurfaceLocation_GeographicalCoordinates() {
-		return (EReference)earthSurfaceLocationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getEarthSurfaceLocationList() {
-		return earthSurfaceLocationListEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEarthSurfaceLocationList_EarthSurfaceLocations() {
-		return (EReference)earthSurfaceLocationListEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGroundStationReferencesList() {
 		return groundStationReferencesListEClass;
 	}
@@ -1391,7 +1494,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition() {
+	public EOperation getVisibilityPassSpacecraftPositionHistory__GetClosestRangePosition() {
 		return visibilityPassSpacecraftPositionHistoryEClass.getEOperations().get(0);
 	}
 
@@ -1400,7 +1503,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVisibilityPassSpacecraftPositionHistory__GetSmallestSpacecraftCrossTrackAnglePosition() {
+	public EOperation getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition() {
 		return visibilityPassSpacecraftPositionHistoryEClass.getEOperations().get(1);
 	}
 
@@ -1409,8 +1512,17 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVisibilityPassSpacecraftPositionHistory__UpdateHistory() {
+	public EOperation getVisibilityPassSpacecraftPositionHistory__GetSmallestSpacecraftCrossTrackAnglePosition() {
 		return visibilityPassSpacecraftPositionHistoryEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVisibilityPassSpacecraftPositionHistory__UpdateHistory() {
+		return visibilityPassSpacecraftPositionHistoryEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -1465,6 +1577,24 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 */
 	public EAttribute getVisibilityPassSpacecraftPosition_SpacecraftCrossTrackAngle() {
 		return (EAttribute)visibilityPassSpacecraftPositionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVisibilityPassSpacecraftPosition_SpacecraftAlongTrackAngle() {
+		return (EAttribute)visibilityPassSpacecraftPositionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVisibilityPassSpacecraftPosition_SpacecraftCoordinates() {
+		return (EReference)visibilityPassSpacecraftPositionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1850,7 +1980,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetSpacecraftStates__Propagator_Date_Date_double() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(20);
 	}
 
@@ -1859,7 +1989,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_EarthSurfaceLocation_Date_Date_ElevationMask() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(21);
 	}
 
@@ -1868,7 +1998,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_List_Date_Date_ElevationMask_IProgressMonitor() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(22);
 	}
 
@@ -1877,7 +2007,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_GroundStation_Date_Date() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(23);
 	}
 
@@ -1886,7 +2016,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__LoadTLE__String() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_List_Date_Date_IProgressMonitor() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(24);
 	}
 
@@ -1895,7 +2025,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportTLE__TLE_String() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetEclipses__EarthOrbitModel_Date_Date() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(25);
 	}
 
@@ -1904,8 +2034,134 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE() {
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List() {
 		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(26);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(27);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(28);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(29);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__LoadTLE__String() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(30);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportTLE__TLE_String() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(31);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitModel__TLE() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(32);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean() {
+		return apogyCoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(33);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEclipse() {
+		return eclipseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEclipse_PenumbraEntry() {
+		return (EReference)eclipseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEclipse_UmbraEntry() {
+		return (EReference)eclipseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEclipse_UmbraExit() {
+		return (EReference)eclipseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEclipse_PenumbraExit() {
+		return (EReference)eclipseEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEclipseEvent() {
+		return eclipseEventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEclipseEvent_Type() {
+		return (EAttribute)eclipseEventEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1915,6 +2171,15 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 */
 	public EEnum getEphemerisType() {
 		return ephemerisTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEclipseEventType() {
+		return eclipseEventTypeEEnum;
 	}
 
 	/**
@@ -1951,6 +2216,15 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 	 */
 	public EDataType getSortedSet() {
 		return sortedSetEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getIProgressMonitor() {
+		return iProgressMonitorEDataType;
 	}
 
 	/**
@@ -2165,7 +2439,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 
 		earthOrbitWorksiteEClass = createEClass(EARTH_ORBIT_WORKSITE);
 		createEReference(earthOrbitWorksiteEClass, EARTH_ORBIT_WORKSITE__SKY);
-		createEReference(earthOrbitWorksiteEClass, EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS);
 
 		earthOrbitSkyEClass = createEClass(EARTH_ORBIT_SKY);
 		createEReference(earthOrbitSkyEClass, EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE);
@@ -2174,7 +2447,18 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEOperation(earthOrbitSkyEClass, EARTH_ORBIT_SKY___GET_MOON_ANGULAR_DIAMETER);
 		createEOperation(earthOrbitSkyEClass, EARTH_ORBIT_SKY___GET_EARTH_ANGULAR_DIAMETER);
 
+		earthOrbitModelEClass = createEClass(EARTH_ORBIT_MODEL);
+		createEOperation(earthOrbitModelEClass, EARTH_ORBIT_MODEL___GET_ORE_KIT_PROPAGATOR);
+		createEOperation(earthOrbitModelEClass, EARTH_ORBIT_MODEL___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK);
+		createEOperation(earthOrbitModelEClass, EARTH_ORBIT_MODEL___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE);
+		createEOperation(earthOrbitModelEClass, EARTH_ORBIT_MODEL___GET_ECLIPSES__DATE_DATE);
+
+		initialOrbitBasedEarthOrbitModelEClass = createEClass(INITIAL_ORBIT_BASED_EARTH_ORBIT_MODEL);
+		createEReference(initialOrbitBasedEarthOrbitModelEClass, INITIAL_ORBIT_BASED_EARTH_ORBIT_MODEL__INITAL_ORBIT);
+		createEReference(initialOrbitBasedEarthOrbitModelEClass, INITIAL_ORBIT_BASED_EARTH_ORBIT_MODEL__PROPAGATOR);
+
 		earthOrbitEClass = createEClass(EARTH_ORBIT);
+		createEReference(earthOrbitEClass, EARTH_ORBIT__INITIAL_ORBIT_BASED_EARTH_ORBIT_MODEL);
 		createEOperation(earthOrbitEClass, EARTH_ORBIT___GET_ORE_KIT_ORBIT);
 
 		keplerianEarthOrbitEClass = createEClass(KEPLERIAN_EARTH_ORBIT);
@@ -2199,21 +2483,23 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEAttribute(constantElevationMaskEClass, CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION);
 
 		earthOrbitPropagatorEClass = createEClass(EARTH_ORBIT_PROPAGATOR);
+		createEAttribute(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE);
+		createEAttribute(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE);
+		createEReference(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR__INITIAL_ORBIT_BASED_EARTH_ORBIT_MODEL);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR);
+		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___PROPAGATE__DATE);
+		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE);
+		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_ECLIPSES__DATE_DATE);
 		createEOperation(earthOrbitPropagatorEClass, EARTH_ORBIT_PROPAGATOR___GET_INITIAL_ORBIT);
 
 		keplerianEarthOrbitPropagatorEClass = createEClass(KEPLERIAN_EARTH_ORBIT_PROPAGATOR);
-		createEAttribute(keplerianEarthOrbitPropagatorEClass, KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE);
-		createEAttribute(keplerianEarthOrbitPropagatorEClass, KEPLERIAN_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE);
 		createEOperation(keplerianEarthOrbitPropagatorEClass, KEPLERIAN_EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_KEPLERIAN_PROPAGATOR);
 
-		tleEarthOrbitPropagatorEClass = createEClass(TLE_EARTH_ORBIT_PROPAGATOR);
-		createEReference(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__TLE);
-		createEAttribute(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__VALID_FROM_DATE);
-		createEAttribute(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR__VALID_TO_DATE);
-		createEOperation(tleEarthOrbitPropagatorEClass, TLE_EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_TLE_PROPAGATOR);
+		tleEarthOrbitModelEClass = createEClass(TLE_EARTH_ORBIT_MODEL);
+		createEReference(tleEarthOrbitModelEClass, TLE_EARTH_ORBIT_MODEL__TLE);
+		createEAttribute(tleEarthOrbitModelEClass, TLE_EARTH_ORBIT_MODEL__TLE_VALIDITY_PERIOD);
 
 		urlBasedTLEEarthOrbitPropagatorEClass = createEClass(URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR);
 		createEAttribute(urlBasedTLEEarthOrbitPropagatorEClass, URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL);
@@ -2243,10 +2529,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEAttribute(tleEClass, TLE__SECOND_LINE);
 
 		earthSurfaceLocationEClass = createEClass(EARTH_SURFACE_LOCATION);
-		createEReference(earthSurfaceLocationEClass, EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES);
-
-		earthSurfaceLocationListEClass = createEClass(EARTH_SURFACE_LOCATION_LIST);
-		createEReference(earthSurfaceLocationListEClass, EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS);
 
 		groundStationReferencesListEClass = createEClass(GROUND_STATION_REFERENCES_LIST);
 		createEReference(groundStationReferencesListEClass, GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS);
@@ -2270,6 +2552,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEAttribute(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL);
 		createEReference(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS);
 		createEReference(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS);
+		createEOperation(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_CLOSEST_RANGE_POSITION);
 		createEOperation(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_HIGHEST_ELEVATION_POSITION);
 		createEOperation(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_SMALLEST_SPACECRAFT_CROSS_TRACK_ANGLE_POSITION);
 		createEOperation(visibilityPassSpacecraftPositionHistoryEClass, VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___UPDATE_HISTORY);
@@ -2280,6 +2563,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEAttribute(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE);
 		createEAttribute(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE);
 		createEAttribute(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE);
+		createEAttribute(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_ALONG_TRACK_ANGLE);
+		createEReference(visibilityPassSpacecraftPositionEClass, VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES);
 
 		spacecraftsVisibilitySetEClass = createEClass(SPACECRAFTS_VISIBILITY_SET);
 		createEAttribute(spacecraftsVisibilitySetEClass, SPACECRAFTS_VISIBILITY_SET__START_TIME);
@@ -2327,22 +2612,40 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_STATES__PROPAGATOR_DATE_DATE_DOUBLE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_TARGET_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_ELEVATIONMASK_IPROGRESSMONITOR);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_GROUNDSTATION_DATE_DATE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_GROUND_STATION_PASSES__EARTHORBITMODEL_LIST_DATE_DATE_IPROGRESSMONITOR);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_ECLIPSES__EARTHORBITMODEL_DATE_DATE);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING);
 		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_TLE__TLE_STRING);
-		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_MODEL__TLE);
+		createEOperation(apogyCoreEnvironmentOrbitEarthFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___EXPORT_AS_CSV__VISIBILITYPASSSPACECRAFTPOSITIONHISTORY_BOOLEAN);
+
+		eclipseEClass = createEClass(ECLIPSE);
+		createEReference(eclipseEClass, ECLIPSE__PENUMBRA_ENTRY);
+		createEReference(eclipseEClass, ECLIPSE__UMBRA_ENTRY);
+		createEReference(eclipseEClass, ECLIPSE__UMBRA_EXIT);
+		createEReference(eclipseEClass, ECLIPSE__PENUMBRA_EXIT);
+
+		eclipseEventEClass = createEClass(ECLIPSE_EVENT);
+		createEAttribute(eclipseEventEClass, ECLIPSE_EVENT__TYPE);
 
 		// Create enums
 		ephemerisTypeEEnum = createEEnum(EPHEMERIS_TYPE);
+		eclipseEventTypeEEnum = createEEnum(ECLIPSE_EVENT_TYPE);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
 		mapEDataType = createEDataType(MAP);
 		exceptionEDataType = createEDataType(EXCEPTION);
 		sortedSetEDataType = createEDataType(SORTED_SET);
+		iProgressMonitorEDataType = createEDataType(IPROGRESS_MONITOR);
 		rotationEDataType = createEDataType(ROTATION);
 		oreKitFrameEDataType = createEDataType(ORE_KIT_FRAME);
 		oreKitTimeStampedAngularCoordinatesEDataType = createEDataType(ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES);
@@ -2391,9 +2694,9 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		ApogyCoreEnvironmentOrbitPackage theApogyCoreEnvironmentOrbitPackage = (ApogyCoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitPackage.eNS_URI);
 		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
-		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -2410,21 +2713,20 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		nadirPointingAttitudeProviderEClass.getESuperTypes().add(this.getOreKitBackedAttitudeProvider());
 		earthOrbitWorksiteEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getOrbitWorksite());
 		earthOrbitSkyEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getSky());
+		earthOrbitModelEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getOrbitModel());
+		initialOrbitBasedEarthOrbitModelEClass.getESuperTypes().add(this.getEarthOrbitModel());
 		earthOrbitEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getOrbit());
 		keplerianEarthOrbitEClass.getESuperTypes().add(this.getEarthOrbit());
 		cartesianEarthOrbitEClass.getESuperTypes().add(this.getEarthOrbit());
 		constantElevationMaskEClass.getESuperTypes().add(this.getElevationMask());
-		earthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getAbstractOrbitPropagator());
-		earthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getInitialOrbitProvider());
+		earthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getValidityRangeProvider());
 		keplerianEarthOrbitPropagatorEClass.getESuperTypes().add(this.getEarthOrbitPropagator());
-		keplerianEarthOrbitPropagatorEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getInitialOrbitContainer());
-		tleEarthOrbitPropagatorEClass.getESuperTypes().add(this.getEarthOrbitPropagator());
-		urlBasedTLEEarthOrbitPropagatorEClass.getESuperTypes().add(this.getTLEEarthOrbitPropagator());
+		tleEarthOrbitModelEClass.getESuperTypes().add(this.getEarthOrbitModel());
+		tleEarthOrbitModelEClass.getESuperTypes().add(theApogyCoreEnvironmentOrbitPackage.getValidityRangeProvider());
+		urlBasedTLEEarthOrbitPropagatorEClass.getESuperTypes().add(this.getTLEEarthOrbitModel());
 		tleEClass.getESuperTypes().add(this.getAbstractTLE());
-		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		earthSurfaceLocationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		earthSurfaceLocationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
+		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCorePackage.getAbstractSurfaceLocation());
 		groundStationEClass.getESuperTypes().add(this.getEarthSurfaceLocation());
 		groundStationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		groundStationListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
@@ -2438,6 +2740,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		spacecraftSwathCorridorEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		spacecraftSwathCorridorEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		spacecraftSwathCorridorEClass.getESuperTypes().add(theApogyCorePackage.getUpdatable());
+		eclipseEventEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
+		eclipseEventEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(oreKitBackedSpacecraftStateEClass, OreKitBackedSpacecraftState.class, "OreKitBackedSpacecraftState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2454,8 +2758,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEClass(nadirPointingAttitudeProviderEClass, NadirPointingAttitudeProvider.class, "NadirPointingAttitudeProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(earthOrbitWorksiteEClass, EarthOrbitWorksite.class, "EarthOrbitWorksite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEarthOrbitWorksite_Sky(), this.getEarthOrbitSky(), this.getEarthOrbitSky_EarthOrbitWorksite(), "sky", null, 1, 1, EarthOrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEarthOrbitWorksite_EarthLocations(), this.getEarthSurfaceLocationList(), null, "earthLocations", null, 0, 1, EarthOrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEarthOrbitWorksite_Sky(), this.getEarthOrbitSky(), this.getEarthOrbitSky_EarthOrbitWorksite(), "sky", null, 0, 1, EarthOrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthOrbitSkyEClass, EarthOrbitSky.class, "EarthOrbitSky", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEarthOrbitSky_EarthOrbitWorksite(), this.getEarthOrbitWorksite(), this.getEarthOrbitWorksite_Sky(), "earthOrbitWorksite", null, 0, 1, EarthOrbitSky.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2466,7 +2769,46 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 
 		initEOperation(getEarthOrbitSky__GetEarthAngularDiameter(), theEcorePackage.getEDouble(), "getEarthAngularDiameter", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		initEClass(earthOrbitModelEClass, EarthOrbitModel.class, "EarthOrbitModel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getEarthOrbitModel__GetOreKitPropagator(), this.getOreKitPropagator(), "getOreKitPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		EOperation op = initEOperation(getEarthOrbitModel__GetTargetPasses__EarthSurfaceLocation_Date_Date_ElevationMask(), null, "getTargetPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthSurfaceLocation(), "earthSurfaceLocation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getElevationMask(), "elevationMask", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		EGenericType g1 = createEGenericType(this.getList());
+		EGenericType g2 = createEGenericType(this.getVisibilityPass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getEarthOrbitModel__GetGroundStationPasses__GroundStation_Date_Date(), null, "getGroundStationPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getGroundStation(), "groundStation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getVisibilityPass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getEarthOrbitModel__GetEclipses__Date_Date(), null, "getEclipses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getEclipse());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		initEClass(initialOrbitBasedEarthOrbitModelEClass, InitialOrbitBasedEarthOrbitModel.class, "InitialOrbitBasedEarthOrbitModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInitialOrbitBasedEarthOrbitModel_InitalOrbit(), this.getEarthOrbit(), this.getEarthOrbit_InitialOrbitBasedEarthOrbitModel(), "initalOrbit", null, 0, 1, InitialOrbitBasedEarthOrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialOrbitBasedEarthOrbitModel_Propagator(), this.getEarthOrbitPropagator(), this.getEarthOrbitPropagator_InitialOrbitBasedEarthOrbitModel(), "propagator", null, 0, 1, InitialOrbitBasedEarthOrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(earthOrbitEClass, EarthOrbit.class, "EarthOrbit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEarthOrbit_InitialOrbitBasedEarthOrbitModel(), this.getInitialOrbitBasedEarthOrbitModel(), this.getInitialOrbitBasedEarthOrbitModel_InitalOrbit(), "initialOrbitBasedEarthOrbitModel", null, 0, 1, EarthOrbit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getEarthOrbit__GetOreKitOrbit(), this.getOreKitOrbit(), "getOreKitOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -2488,7 +2830,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 
 		initEClass(elevationMaskEClass, ElevationMask.class, "ElevationMask", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getElevationMask__GetElevation__double(), theEcorePackage.getEDouble(), "getElevation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getElevationMask__GetElevation__double(), theEcorePackage.getEDouble(), "getElevation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "azimuth", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getElevationMask__GetOreKitElevationMask(), this.getOreKitElevationMask(), "getOreKitElevationMask", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -2497,8 +2839,25 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEAttribute(getConstantElevationMask_ConstantElevation(), theEcorePackage.getEDouble(), "constantElevation", "0", 0, 1, ConstantElevationMask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthOrbitPropagatorEClass, EarthOrbitPropagator.class, "EarthOrbitPropagator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEarthOrbitPropagator_ValidFromDate(), theEcorePackage.getEDate(), "validFromDate", null, 1, 1, EarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEarthOrbitPropagator_ValidToDate(), theEcorePackage.getEDate(), "validToDate", null, 1, 1, EarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEarthOrbitPropagator_InitialOrbitBasedEarthOrbitModel(), this.getInitialOrbitBasedEarthOrbitModel(), this.getInitialOrbitBasedEarthOrbitModel_Propagator(), "initialOrbitBasedEarthOrbitModel", null, 0, 1, EarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getEarthOrbitPropagator__GetOreKitPropagator(), this.getOreKitPropagator(), "getOreKitPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getEarthOrbitPropagator__Propagate__Date(), theApogyCoreEnvironmentOrbitPackage.getSpacecraftState(), "propagate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "targetDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+
+		op = initEOperation(getEarthOrbitPropagator__GetSpacecraftStates__Date_Date_double(), null, "getSpacecraftStates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "timeInterval", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(theApogyCoreEnvironmentOrbitPackage.getSpacecraftState());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
 
 		op = initEOperation(getEarthOrbitPropagator__GetTargetPasses__EarthSurfaceLocation_Date_Date_ElevationMask(), null, "getTargetPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthSurfaceLocation(), "earthSurfaceLocation", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -2506,8 +2865,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getElevationMask(), "elevationMask", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
-		EGenericType g1 = createEGenericType(this.getList());
-		EGenericType g2 = createEGenericType(this.getVisibilityPass());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getVisibilityPass());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
@@ -2521,20 +2880,24 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
+		op = initEOperation(getEarthOrbitPropagator__GetEclipses__Date_Date(), null, "getEclipses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getEclipse());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
 		initEOperation(getEarthOrbitPropagator__GetInitialOrbit(), theApogyCoreEnvironmentOrbitPackage.getOrbit(), "getInitialOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(keplerianEarthOrbitPropagatorEClass, KeplerianEarthOrbitPropagator.class, "KeplerianEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getKeplerianEarthOrbitPropagator_ValidFromDate(), theEcorePackage.getEDate(), "validFromDate", null, 1, 1, KeplerianEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKeplerianEarthOrbitPropagator_ValidToDate(), theEcorePackage.getEDate(), "validToDate", null, 1, 1, KeplerianEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getKeplerianEarthOrbitPropagator__GetOreKitKeplerianPropagator(), this.getOreKitKeplerianPropagator(), "getOreKitKeplerianPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(tleEarthOrbitPropagatorEClass, TLEEarthOrbitPropagator.class, "TLEEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTLEEarthOrbitPropagator_Tle(), this.getTLE(), null, "tle", null, 1, 1, TLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLEEarthOrbitPropagator_ValidFromDate(), theEcorePackage.getEDate(), "validFromDate", null, 1, 1, TLEEarthOrbitPropagator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTLEEarthOrbitPropagator_ValidToDate(), theEcorePackage.getEDate(), "validToDate", null, 1, 1, TLEEarthOrbitPropagator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getTLEEarthOrbitPropagator__GetOreKitTLEPropagator(), this.getOreKitTLEPropagator(), "getOreKitTLEPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEClass(tleEarthOrbitModelEClass, TLEEarthOrbitModel.class, "TLEEarthOrbitModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTLEEarthOrbitModel_Tle(), this.getTLE(), null, "tle", null, 1, 1, TLEEarthOrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTLEEarthOrbitModel_TleValidityPeriod(), theEcorePackage.getELong(), "tleValidityPeriod", "86400000", 0, 1, TLEEarthOrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(urlBasedTLEEarthOrbitPropagatorEClass, URLBasedTLEEarthOrbitPropagator.class, "URLBasedTLEEarthOrbitPropagator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getURLBasedTLEEarthOrbitPropagator_TleURL(), theEcorePackage.getEString(), "tleURL", null, 0, 1, URLBasedTLEEarthOrbitPropagator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2568,10 +2931,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEAttribute(getTLE_SecondLine(), theEcorePackage.getEString(), "secondLine", null, 1, 1, ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthSurfaceLocationEClass, EarthSurfaceLocation.class, "EarthSurfaceLocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEarthSurfaceLocation_GeographicalCoordinates(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "geographicalCoordinates", null, 0, 1, EarthSurfaceLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(earthSurfaceLocationListEClass, EarthSurfaceLocationList.class, "EarthSurfaceLocationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEarthSurfaceLocationList_EarthSurfaceLocations(), this.getEarthSurfaceLocation(), null, "earthSurfaceLocations", null, 0, -1, EarthSurfaceLocationList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groundStationReferencesListEClass, GroundStationReferencesList.class, "GroundStationReferencesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGroundStationReferencesList_GroundStations(), this.getGroundStation(), null, "groundStations", null, 0, -1, GroundStationReferencesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2584,7 +2943,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEReference(getGroundStationList_GroundStations(), this.getGroundStation(), null, "groundStations", null, 0, -1, GroundStationList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(visibilityPassEClass, VisibilityPass.class, "VisibilityPass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVisibilityPass_OrbitModel(), theApogyCoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, VisibilityPass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVisibilityPass_OrbitModel(), this.getEarthOrbitModel(), null, "orbitModel", null, 0, 1, VisibilityPass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVisibilityPass_SurfaceLocation(), this.getEarthSurfaceLocation(), null, "surfaceLocation", null, 0, 1, VisibilityPass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVisibilityPass_StartTime(), theEcorePackage.getEDate(), "startTime", null, 0, 1, VisibilityPass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVisibilityPass_EndTime(), theEcorePackage.getEDate(), "endTime", null, 0, 1, VisibilityPass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2595,6 +2954,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEAttribute(getVisibilityPassSpacecraftPositionHistory_TimeInterval(), theEcorePackage.getEDouble(), "timeInterval", "30.0", 0, 1, VisibilityPassSpacecraftPositionHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVisibilityPassSpacecraftPositionHistory_VisibilityPass(), this.getVisibilityPass(), this.getVisibilityPass_PositionHistory(), "visibilityPass", null, 0, 1, VisibilityPassSpacecraftPositionHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVisibilityPassSpacecraftPositionHistory_Positions(), this.getVisibilityPassSpacecraftPosition(), null, "positions", null, 0, -1, VisibilityPassSpacecraftPositionHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getVisibilityPassSpacecraftPositionHistory__GetClosestRangePosition(), this.getVisibilityPassSpacecraftPosition(), "getClosestRangePosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition(), this.getVisibilityPassSpacecraftPosition(), "getHighestElevationPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -2608,6 +2969,8 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		initEAttribute(getVisibilityPassSpacecraftPosition_Range(), theEcorePackage.getEDouble(), "range", "0", 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVisibilityPassSpacecraftPosition_RangeRate(), theEcorePackage.getEDouble(), "rangeRate", "0", 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVisibilityPassSpacecraftPosition_SpacecraftCrossTrackAngle(), theEcorePackage.getEDouble(), "spacecraftCrossTrackAngle", "0", 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVisibilityPassSpacecraftPosition_SpacecraftAlongTrackAngle(), theEcorePackage.getEDouble(), "spacecraftAlongTrackAngle", "0", 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVisibilityPassSpacecraftPosition_SpacecraftCoordinates(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "spacecraftCoordinates", null, 0, 1, VisibilityPassSpacecraftPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(spacecraftsVisibilitySetEClass, SpacecraftsVisibilitySet.class, "SpacecraftsVisibilitySet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSpacecraftsVisibilitySet_StartTime(), theEcorePackage.getEDate(), "startTime", null, 0, 1, SpacecraftsVisibilitySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2720,6 +3083,81 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		addEParameter(op, this.getOreKitBackedSpacecraftState(), "oreKitBackedSpacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetSpacecraftStates__Propagator_Date_Date_double(), null, "getSpacecraftStates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getOreKitPropagator(), "propagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "timeInterval", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(theApogyCoreEnvironmentOrbitPackage.getSpacecraftState());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_EarthSurfaceLocation_Date_Date_ElevationMask(), null, "getTargetPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthOrbitModel(), "earthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthSurfaceLocation(), "earthSurfaceLocation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getElevationMask(), "elevationMask", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getVisibilityPass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_List_Date_Date_ElevationMask_IProgressMonitor(), null, "getTargetPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthOrbitModel(), "earthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getEarthSurfaceLocation());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "earthSurfaceLocations", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getElevationMask(), "elevationMask", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getIProgressMonitor(), "monitor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getVisibilityPass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_GroundStation_Date_Date(), null, "getGroundStationPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthOrbitModel(), "earthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getGroundStation(), "groundStation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getVisibilityPass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_List_Date_Date_IProgressMonitor(), null, "getGroundStationPasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthOrbitModel(), "earthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getGroundStation());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "groundStations", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getIProgressMonitor(), "monitor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getVisibilityPass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetEclipses__EarthOrbitModel_Date_Date(), null, "getEclipses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthOrbitModel(), "earthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getEclipse());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
 		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List(), null, "getVisibilityPassSortedByStartDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getVisibilityPass());
@@ -2769,9 +3207,22 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		addEParameter(op, theEcorePackage.getEString(), "url", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE(), this.getTLEEarthOrbitPropagator(), "createTLEEarthOrbitPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitModel__TLE(), this.getTLEEarthOrbitModel(), "createTLEEarthOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTLE(), "tle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
+
+		op = initEOperation(getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean(), theEcorePackage.getEString(), "exportAsCSV", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVisibilityPassSpacecraftPositionHistory(), "visibilityPassSpacecraftPositionHistory", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "includeHeader", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(eclipseEClass, Eclipse.class, "Eclipse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEclipse_PenumbraEntry(), this.getEclipseEvent(), null, "penumbraEntry", null, 0, 1, Eclipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEclipse_UmbraEntry(), this.getEclipseEvent(), null, "umbraEntry", null, 0, 1, Eclipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEclipse_UmbraExit(), this.getEclipseEvent(), null, "umbraExit", null, 0, 1, Eclipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEclipse_PenumbraExit(), this.getEclipseEvent(), null, "penumbraExit", null, 0, 1, Eclipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eclipseEventEClass, EclipseEvent.class, "EclipseEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEclipseEvent_Type(), this.getEclipseEventType(), "type", null, 0, 1, EclipseEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ephemerisTypeEEnum, EphemerisType.class, "EphemerisType");
@@ -2782,11 +3233,18 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		addEEnumLiteral(ephemerisTypeEEnum, EphemerisType.SGP8);
 		addEEnumLiteral(ephemerisTypeEEnum, EphemerisType.SDP8);
 
+		initEEnum(eclipseEventTypeEEnum, EclipseEventType.class, "EclipseEventType");
+		addEEnumLiteral(eclipseEventTypeEEnum, EclipseEventType.PENUMBRA_ENTRY);
+		addEEnumLiteral(eclipseEventTypeEEnum, EclipseEventType.PENUMBRA_EXIT);
+		addEEnumLiteral(eclipseEventTypeEEnum, EclipseEventType.UMBRA_ENTRY);
+		addEEnumLiteral(eclipseEventTypeEEnum, EclipseEventType.UMBRA_EXIT);
+
 		// Initialize data types
 		initEDataType(listEDataType, List.class, "List", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(mapEDataType, Map.class, "Map", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(exceptionEDataType, Exception.class, "Exception", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(sortedSetEDataType, SortedSet.class, "SortedSet", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(iProgressMonitorEDataType, IProgressMonitor.class, "IProgressMonitor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(rotationEDataType, Rotation.class, "Rotation", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(oreKitFrameEDataType, Frame.class, "OreKitFrame", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(oreKitTimeStampedAngularCoordinatesEDataType, TimeStampedAngularCoordinates.class, "OreKitTimeStampedAngularCoordinates", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -2840,6 +3298,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.earth/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.earth.edit/src-generated",
+			 "testsDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.earth.tests/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.core.environment.orbit"
 		   });	
 		addAnnotation
@@ -2865,13 +3324,6 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "Defines a worksite in orbit. The reference frame used is inertial (J2000), with its origin at the current orbital position."
-		   });	
-		addAnnotation
-		  (getEarthOrbitWorksite_EarthLocations(), 
-		   source, 
-		   new String[] {
-			 "documentation", "The list of surface location associated with the site.",
-			 "children", "true"
 		   });	
 		addAnnotation
 		  (earthOrbitSkyEClass, 
@@ -2914,6 +3366,30 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   new String[] {
 			 "documentation", "The Earth in the sky.",
 			 "propertyCategory", "EARTH"
+		   });	
+		addAnnotation
+		  (getEarthOrbitModel__GetOreKitPropagator(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the OreKit propagator associated with the EarthOrbitModel."
+		   });	
+		addAnnotation
+		  (getEarthOrbitModel__GetTargetPasses__EarthSurfaceLocation_Date_Date_ElevationMask(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of passes for a given target."
+		   });	
+		addAnnotation
+		  (getEarthOrbitModel__GetGroundStationPasses__GroundStation_Date_Date(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of passes for a given Ground Station (and its Field Of View) during a specified interval."
+		   });	
+		addAnnotation
+		  (getEarthOrbitModel__GetEclipses__Date_Date(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of {@link Eclipse}."
 		   });	
 		addAnnotation
 		  (earthOrbitEClass, 
@@ -3019,6 +3495,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "documentation", "*\nReturns the list of passes for a given Ground Station (and its Field Of View) during a specified interval."
 		   });	
 		addAnnotation
+		  (getEarthOrbitPropagator__GetEclipses__Date_Date(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of {@link Eclipse}."
+		   });	
+		addAnnotation
 		  (getEarthOrbitPropagator__GetInitialOrbit(), 
 		   source, 
 		   new String[] {
@@ -3039,34 +3521,16 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "property", "Readonly"
 		   });	
 		addAnnotation
-		  (getKeplerianEarthOrbitPropagator_ValidFromDate(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Defines the earliest data for which the propagator is valid."
-		   });	
-		addAnnotation
-		  (getKeplerianEarthOrbitPropagator_ValidToDate(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Defines the latest data for which the propagator is valid."
-		   });	
-		addAnnotation
-		  (getTLEEarthOrbitPropagator_Tle(), 
+		  (getTLEEarthOrbitModel_Tle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The Two-Line Elements used by this propagator."
 		   });	
 		addAnnotation
-		  (getTLEEarthOrbitPropagator_ValidFromDate(), 
+		  (getTLEEarthOrbitModel_TleValidityPeriod(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Defines the earliest data for which the propagator is valid."
-		   });	
-		addAnnotation
-		  (getTLEEarthOrbitPropagator_ValidToDate(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Defines the latest data for which the propagator is valid."
+			 "documentation", "TLE Validity Period in ms."
 		   });	
 		addAnnotation
 		  (getURLBasedTLEEarthOrbitPropagator_TleURL(), 
@@ -3303,7 +3767,7 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		  (getVisibilityPass_OrbitModel(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The Orbit Model that was used to compute the visibility.",
+			 "documentation", "The Earth Orbit Model that was used to compute the visibility.",
 			 "notify", "true",
 			 "property", "Readonly"
 		   });	
@@ -3346,6 +3810,12 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		   new String[] {
 			 "documentation", "Pass duration, in seconds.",
 			 "apogy_units", "s"
+		   });	
+		addAnnotation
+		  (getVisibilityPassSpacecraftPositionHistory__GetClosestRangePosition(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Returns the VisibilityPassSpacecraftPosition with the smallest range in the position history.\n@return The VisibilityPassSpacecraftPosition with the smallest range, null if the history position is empty."
 		   });	
 		addAnnotation
 		  (getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition(), 
@@ -3432,10 +3902,27 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 		  (getVisibilityPassSpacecraftPosition_SpacecraftCrossTrackAngle(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The angle of the surface location relative to the spacecraft nadir.",
+			 "documentation", "The cross track angle of the surface location relative to the spacecraft nadir.",
 			 "notify", "true",
 			 "property", "Readonly",
 			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getVisibilityPassSpacecraftPosition_SpacecraftAlongTrackAngle(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The along track angle of the surface location relative to the spacecraft nadir.",
+			 "notify", "true",
+			 "property", "Readonly",
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getVisibilityPassSpacecraftPosition_SpacecraftCoordinates(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Spacecraft Geographical Coordinates.",
+			 "notify", "true",
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (getSpacecraftsVisibilitySet_StartTime(), 
@@ -3663,6 +4150,42 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "documentation", "Converts an OreKit SpacecraftState to GeographicCoordinates. The conversion uses the IERS_2010 frame with a WGS84 equatorial radius and earth flatenning.\n@param oreKitBackedSpacecraftState The OreKit SpacecraftState.\n@return the associated GeographicCoordinates."
 		   });	
 		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__GetSpacecraftStates__Propagator_Date_Date_double(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the list of spacecraft state a at given time interval.\n@param earthOrbitModel The EarthOrbitModel used.\n@param propagator The OreKit propagator to use.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@param timeInterval The time interval between spacecraft state evaluation, in seconds.\nThe list of SpacecraftState. Never null, but can be empty."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_EarthSurfaceLocation_Date_Date_ElevationMask(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of passes for a given target.\n@param earthOrbitModel The EarthOrbitModel used.\n@param propagator The OreKit propagator to use.\n@param earthSurfaceLocation The location of the target.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@param elevationMaks The elevation mask used to determine the visibility of the spacecraft at the target location.\n@param The list of VisibilityPass. Never null, but can be empty."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__GetTargetPasses__EarthOrbitModel_List_Date_Date_ElevationMask_IProgressMonitor(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of passes for a list of targets.\n@param earthOrbitModel The EarthOrbitModel used.\n@param propagator The OreKit propagator to use.\n@param earthSurfaceLocations The list of the targets.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@param elevationMaks The elevation mask used to determine the visibility of the spacecraft at the target locations.\n@param monitor A progress monitor, can be null.\n@return The list of VisibilityPass. Never null, but can be empty."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_GroundStation_Date_Date(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of passes for a given Ground Station (and its Field Of View) during a specified interval.\n@param propagator The OreKit propagator to use.\n@param groundStation The location of the target.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@return The list of VisibilityPass. Never null, but can be empty."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__GetGroundStationPasses__EarthOrbitModel_List_Date_Date_IProgressMonitor(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of passes for a list of Ground Station (and its Field Of View) during a specified interval.\n@param propagator The OreKit propagator to use.\n@param groundStation The list of targets.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@return The list of VisibilityPass. Never null, but can be empty."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__GetEclipses__EarthOrbitModel_Date_Date(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the list of {@link Eclipse} that will be experienced by the spacecraft within a specified time period.\n@param propagator The OreKit propagator to use.\n@param startDate The start time of the propagation.\n@param endDate The end time of the propagation.\n@return The list of Eclipse. Never null, but can be empty."
+		   });	
+		addAnnotation
 		  (getApogyCoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List(), 
 		   source, 
 		   new String[] {
@@ -3699,10 +4222,66 @@ public class ApogyCoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl impl
 			 "documentation", "Exports a TLE to a URL.\n@param tle The TLE to export\n@param url The URL as a String.\n@throws An exception if the export fails."
 		   });	
 		addAnnotation
-		  (getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE(), 
+		  (getApogyCoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitModel__TLE(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Create a TLEEarthOrbitPropagator using a TLE.\n@param tle The Two-Line Element defining the propagator.\n@return The TLEEarthOrbitPropagator."
+			 "documentation", "Create a TLEEarthOrbitModel using a TLE.\n@param tle The Two-Line Element defining the propagator.\n@return The TLEEarthOrbitModel."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentOrbitEarthFacade__ExportAsCSV__VisibilityPassSpacecraftPositionHistory_boolean(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nExports a VisibilityPassSpacecraftPositionHistory as a comma separated file (.csv).\n@param visibilityPassSpacecraftPositionHistory The VisibilityPassSpacecraftPositionHistory to export.\n@param includeHeader Whether or not to include a header line in the format."
+		   });	
+		addAnnotation
+		  (eclipseEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines an Eclipse for spacecrafts."
+		   });	
+		addAnnotation
+		  (getEclipse_PenumbraEntry(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Entry in Penumbra.",
+			 "notify", "true",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (getEclipse_UmbraEntry(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Entry in Umbra, can be null.",
+			 "notify", "true",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (getEclipse_UmbraExit(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Exit from Umbra, can be null.",
+			 "notify", "true",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (getEclipse_PenumbraExit(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Exit from Penumbra, can be null.",
+			 "notify", "true",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (eclipseEventEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Eclipse Event."
+		   });	
+		addAnnotation
+		  (eclipseEventTypeEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "Eclipse Event Type."
 		   });
 	}
 

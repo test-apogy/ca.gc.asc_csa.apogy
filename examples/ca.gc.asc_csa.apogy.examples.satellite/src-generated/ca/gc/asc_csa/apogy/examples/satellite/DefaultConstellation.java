@@ -20,7 +20,9 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Constellation Default Implementation Class.
+ * Default Constellation Implementation Class.
+ * 
+ * By default {@link AbstractConstellation#newUID} returns {@link DigitUID}.
  * <!-- end-model-doc -->
  *
  *
@@ -29,4 +31,7 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  * @generated
  */
 public interface DefaultConstellation extends AbstractConstellation {
+	
+	
+	
 } // DefaultConstellation

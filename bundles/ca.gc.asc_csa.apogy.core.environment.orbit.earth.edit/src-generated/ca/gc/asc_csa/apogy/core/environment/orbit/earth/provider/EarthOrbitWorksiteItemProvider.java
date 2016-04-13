@@ -72,7 +72,6 @@ public class EarthOrbitWorksiteItemProvider extends OrbitWorksiteItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__SKY);
-			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -129,7 +128,6 @@ public class EarthOrbitWorksiteItemProvider extends OrbitWorksiteItemProvider {
 
 		switch (notification.getFeatureID(EarthOrbitWorksite.class)) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -151,11 +149,6 @@ public class EarthOrbitWorksiteItemProvider extends OrbitWorksiteItemProvider {
 			(createChildParameter
 				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__SKY,
 				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthOrbitSky()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocationList()));
 	}
 
 }

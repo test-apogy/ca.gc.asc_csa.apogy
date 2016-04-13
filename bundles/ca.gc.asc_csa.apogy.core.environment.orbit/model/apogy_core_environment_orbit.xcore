@@ -60,7 +60,7 @@ abstract class OrbitWorksite extends Worksite
 	/*
 	 * The active OrbitModel to use to update the orbit worksite.
 	 */
-	refers AbstractOrbitModel activeOrbitModel
+	refers AbstractOrbitModel orbitModel
 }
 
 abstract class AbstractFrame extends Named, Described
@@ -169,12 +169,6 @@ class SpacecraftState extends Timed
 	 */
 	@GenModel(property="Readonly")
 	contains TimedStampedAngularCoordinates attitude
-	
-	/*
-	 * The spacecraft orbit at the specified time.
-	 */
-	@GenModel(property="Readonly")
-	contains Orbit orbit
 }
 
 /*
@@ -193,12 +187,12 @@ interface ValidityRangeProvider
 	/*
 	 * Defines the earliest date for which the data is valid.
 	 */
-	op 	EDate[1] getFromValidDate()
+	derived readonly transient volatile EDate[1] fromValidDate
 	
 	/*
 	 * Defines the latest date for which the data is valid.
 	 */
-	op EDate[1] getToValidDate()
+	derived readonly transient volatile EDate[1] toValidDate
 	
 	/*
 	 * Returns whether or not a specified date falls within the validity range.
@@ -206,11 +200,13 @@ interface ValidityRangeProvider
 	op boolean isDateInValidRange(EDate date)
 }
 
+
 /*
- * Defines a class that propagate an initial orbit through time.
+ * Class that defines an orbit model. An orbit model specifies both initial condition (through the initial Orbit), and 
+ * a propagation method (through the AbstractOrbitPropagator).
  */
-abstract class AbstractOrbitPropagator extends Named, Described, ValidityRangeProvider
-{		
+abstract class OrbitModel extends AbstractOrbitModel, ValidityRangeProvider
+{
 	/*
 	 * The frame in which the orbit is propagated.
 	 */
@@ -230,39 +226,14 @@ abstract class AbstractOrbitPropagator extends Named, Described, ValidityRangePr
 	 * Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.
 	 * @param timeInterval The time interval to get spacecraft states, in seconds.
 	 */
-	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(apogy_units="s") double timeInterval) throws Exception		
+	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(apogy_units="s") double timeInterval) throws Exception			
 }
-
-interface InitialOrbitProvider
-{
-	op Orbit getInitialOrbit()
-}
-
-/**
- * A class containing an initial orbit. Mainly used by some AbstractOrbitPropagator sub-classes.
- */
-class InitialOrbitContainer extends InitialOrbitProvider
-{
-	/*
-	 * The initial orbit to propagate in time. 
-	 */
-	refers Orbit[1] startOrbit	
-}
-
-/*
- * Class that defines an orbit model. An orbit model specifies both initial condition (through the initial Orbit), and 
- * a propagation method (through the AbstractOrbitPropagator).
- */
-class OrbitModel extends AbstractOrbitModel
-{
-	contains Orbit initialOrbit
-	contains AbstractOrbitPropagator propagator
-}
+// Add start + stop date.
 
 /*
  * A class providing utilities methods for Orbits.
  */
 class ApogyCoreEnvironmentOrbitFacade
 {
-	op OrbitModel createOrbitModelCopy(OrbitModel originalOrbitModel)
+	op boolean isDateInValidRange(EDate fromDate, EDate toDate, EDate date)
 }

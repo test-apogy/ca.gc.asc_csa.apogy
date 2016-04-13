@@ -16,13 +16,9 @@
 <plugin>
    <extension
          point="org.eclipse.ui.views">
-      <category
-            id="ca.gc.asc_csa.apogy.examples.satellite.ui"
-            name="Constellation">
-      </category>
       <view
-            category="ca.gc.asc_csa.apogy.examples.satellite.ui"
-            class="ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationDashboardView"
+            category="ca.gc.asc_csa.apogy.examples.ui.category"
+            class="ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationStateDashboardView"
             icon="icons/sample.gif"
             id="ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationDashboard"
             name="Constellation Dashboard">
@@ -35,5 +31,104 @@
             class="ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiPackage"
             genModel="model/apogy_examples_satellite_ui.xcore"/>
    </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
 
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ExportConstellationPlanCommand"
+            id="ca.gc.asc_csa.examples.satellite.ui.commands.ExportConstellationPlanCommand"
+            name="ExportConstellationPlanCommand">
+      </command>
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationRequestsCommand"
+            id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationRequestsCommand"
+            name="ImportConstellationRequestsCommand">
+      </command>
+
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
+            description="This command generates a plan based on the list of requests selected."
+            id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
+            name="GenerateConstellationCommandPlan">
+      </command>
+      
+   </extension>   
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationRequestsCommand"
+               label="Import Constellation Requests"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>         
+      </menuContribution>
+
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
+               label="Generate Constellation Command Plan"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>         
+      </menuContribution>
+
+      
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+
+         <command
+               commandId="ca.gc.asc_csa.examples.satellite.ui.commands.ExportConstellationPlanCommand"
+               label="Export Constellation Plan"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>         
+      </menuContribution>      
+   </extension>
 </plugin>

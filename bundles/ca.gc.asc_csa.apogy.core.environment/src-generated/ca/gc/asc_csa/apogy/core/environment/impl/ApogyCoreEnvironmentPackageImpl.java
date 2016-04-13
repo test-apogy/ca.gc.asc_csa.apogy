@@ -675,21 +675,12 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 
   /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWorksite_OrbitsModels() {
-		return (EReference)worksiteEClass.getEStructuralFeatures().get(1);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getWorksite_Environment()
   {
-		return (EReference)worksiteEClass.getEStructuralFeatures().get(2);
+		return (EReference)worksiteEClass.getEStructuralFeatures().get(1);
 	}
 
   /**
@@ -3218,7 +3209,6 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		// Create classes and their features
 		worksiteEClass = createEClass(WORKSITE);
 		createEReference(worksiteEClass, WORKSITE__WORKSITE_NODE);
-		createEReference(worksiteEClass, WORKSITE__ORBITS_MODELS);
 		createEReference(worksiteEClass, WORKSITE__ENVIRONMENT);
 
 		surfaceWorksiteEClass = createEClass(SURFACE_WORKSITE);
@@ -3649,8 +3639,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(worksiteEClass, Worksite.class, "Worksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWorksite_WorksiteNode(), this.getWorksiteNode(), null, "worksiteNode", null, 1, 1, Worksite.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getWorksite_OrbitsModels(), theApogyCorePackage.getAbstractOrbitModel(), null, "orbitsModels", null, 0, -1, Worksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorksite_WorksiteNode(), this.getWorksiteNode(), null, "worksiteNode", null, 0, 1, Worksite.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getWorksite_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Worksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(surfaceWorksiteEClass, SurfaceWorksite.class, "SurfaceWorksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4444,6 +4433,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		   source, 
 		   new String[] {
 			 "documentation", "The longitude, in radians. Longitude east of Greenwich, UK  are positive\nwhile those west of Greenwich are negative.",
+			 "propertyCategory", "GEOGRAPHIC_COORDINATES",
 			 "apogy_units", "rad"
 		   });	
 		addAnnotation
@@ -4451,6 +4441,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		   source, 
 		   new String[] {
 			 "documentation", "The latitude, in radians. Latitude north of the equator are positive while those\nsouth of the equator are negative.",
+			 "propertyCategory", "GEOGRAPHIC_COORDINATES",
 			 "apogy_units", "rad"
 		   });	
 		addAnnotation
@@ -4458,6 +4449,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		   source, 
 		   new String[] {
 			 "documentation", "Height above the Earth\'s sea level, in meters.",
+			 "propertyCategory", "GEOGRAPHIC_COORDINATES",
 			 "apogy_units", "m"
 		   });	
 		addAnnotation

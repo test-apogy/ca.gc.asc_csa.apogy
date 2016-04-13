@@ -129,7 +129,8 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyCorePackage.Literals.WORKSITES_LIST__WORKSITES);
-			childrenFeatures.add(ApogyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS);
+			childrenFeatures.add(ApogyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS_LISTS);
+			childrenFeatures.add(ApogyCorePackage.Literals.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS);
 		}
 		return childrenFeatures;
 	}
@@ -188,7 +189,8 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
-			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS_LISTS:
+			case ApogyCorePackage.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -209,8 +211,13 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS,
+				(ApogyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS_LISTS,
 				 ApogyCoreFactory.eINSTANCE.createOrbitModelsList()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCorePackage.Literals.WORKSITES_LIST__SURFACE_LOCATIONS_LISTS,
+				 ApogyCoreFactory.eINSTANCE.createSurfaceLocationsList()));
 	}
 
 	/**

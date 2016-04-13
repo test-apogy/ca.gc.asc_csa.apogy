@@ -21,12 +21,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
-
 import ca.gc.asc_csa.apogy.core.provider.ApogyInitializationDataItemProvider;
 
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
@@ -77,10 +73,7 @@ public class ConstellationDataItemProvider extends ApogyInitializationDataItemPr
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__SATELLITES_LIST);
-			childrenFeatures.add(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST);
-			childrenFeatures.add(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__DOWNLINKS_LISTS);
-			childrenFeatures.add(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST);
+			childrenFeatures.add(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -133,10 +126,7 @@ public class ConstellationDataItemProvider extends ApogyInitializationDataItemPr
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstellationData.class)) {
-			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__SATELLITES_LIST:
-			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
-			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
-			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,23 +146,8 @@ public class ConstellationDataItemProvider extends ApogyInitializationDataItemPr
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__SATELLITES_LIST,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellitesList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__DOWNLINKS_LISTS,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
+				(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_STATE,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationState()));
 	}
 
 }

@@ -41,20 +41,19 @@ import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Exception
 import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.common.emf.Timed
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel
-import ca.gc.asc_csa.apogy.core.AbstractWorksite
-import ca.gc.asc_csa.apogy.core.ConnectionPoint
-import ca.gc.asc_csa.apogy.core.FeatureOfInterestList
-import ca.gc.asc_csa.apogy.core.ApogySystem
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4
 import ca.gc.asc_csa.apogy.common.math.Tuple3d
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
-import org.eclipse.core.runtime.IProgressMonitor
-import ca.gc.asc_csa.apogy.common.topology.GroupNode
-import ca.gc.asc_csa.apogy.common.topology.TransformNode
-import ca.gc.asc_csa.apogy.common.topology.Node
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.topology.GroupNode
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.TransformNode
+import ca.gc.asc_csa.apogy.core.AbstractWorksite
+import ca.gc.asc_csa.apogy.core.ApogySystem
+import ca.gc.asc_csa.apogy.core.ConnectionPoint
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList
+import org.eclipse.core.runtime.IProgressMonitor
 
 // Types
 
@@ -71,10 +70,8 @@ abstract class Worksite extends AbstractWorksite
 {
 	
     @GenModel(property="None", children="true", notify="true")
-	refers derived transient readonly WorksiteNode[1] worksiteNode
+	refers derived transient readonly WorksiteNode[0..1] worksiteNode
 		
-	refers AbstractOrbitModel[0..*] orbitsModels
-	
 	contains Environment environment
 }
 
@@ -246,20 +243,20 @@ class GeographicCoordinates
 	 * The longitude, in radians. Longitude east of Greenwich, UK  are positive
 	 * while those west of Greenwich are negative.
 	 */
-	@GenModel(apogy_units="rad")
+	@GenModel(propertyCategory="GEOGRAPHIC_COORDINATES", apogy_units="rad")
 	double longitude
 	
 	/*
 	 * The latitude, in radians. Latitude north of the equator are positive while those
 	 * south of the equator are negative.
 	 */
-	@GenModel(apogy_units="rad")	
+	@GenModel(propertyCategory="GEOGRAPHIC_COORDINATES", apogy_units="rad")	
 	double latitude
 	
 	/*
 	 * Height above the Earth's sea level, in meters.
 	 */
-	@GenModel(apogy_units="m")
+	@GenModel(propertyCategory="GEOGRAPHIC_COORDINATES", apogy_units="m")
 	double elevation
 }
 

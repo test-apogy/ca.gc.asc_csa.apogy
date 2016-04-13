@@ -179,13 +179,22 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int EARTH_VIEW_CONFIGURATION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_CONFIGURATION___SELECTION_CHANGED__ISELECTION = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Earth View Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int EARTH_VIEW_CONFIGURATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl <em>Abstract World Wind Layer</em>}' class.
@@ -270,13 +279,22 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int ABSTRACT_WORLD_WIND_LAYER___DISPOSE = ApogyCorePackage.UPDATABLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION = ApogyCorePackage.UPDATABLE_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Abstract World Wind Layer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER_OPERATION_COUNT = ApogyCorePackage.UPDATABLE_OPERATION_COUNT + 1;
+	int ABSTRACT_WORLD_WIND_LAYER_OPERATION_COUNT = ApogyCorePackage.UPDATABLE_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl <em>Spacecraft Location World Wind Layer</em>}' class.
@@ -404,6 +422,15 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @ordered
 	 */
 	int SPACECRAFT_LOCATION_WORLD_WIND_LAYER___DISPOSE = ABSTRACT_WORLD_WIND_LAYER___DISPOSE;
+
+	/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPACECRAFT_LOCATION_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION = ABSTRACT_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION;
 
 	/**
 	 * The number of operations of the '<em>Spacecraft Location World Wind Layer</em>' class.
@@ -558,6 +585,15 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @ordered
 	 */
 	int ORBIT_MODEL_WORLD_WIND_LAYER___DISPOSE = ABSTRACT_WORLD_WIND_LAYER___DISPOSE;
+
+	/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBIT_MODEL_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION = ABSTRACT_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION;
 
 	/**
 	 * The number of operations of the '<em>Orbit Model World Wind Layer</em>' class.
@@ -741,6 +777,15 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int SPACECRAFT_SWATH_WORLD_WIND_LAYER___DISPOSE = ABSTRACT_WORLD_WIND_LAYER___DISPOSE;
 
 	/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPACECRAFT_SWATH_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION = ABSTRACT_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION;
+
+	/**
 	 * The number of operations of the '<em>Spacecraft Swath World Wind Layer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -848,6 +893,15 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @ordered
 	 */
 	int EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER___DISPOSE = ABSTRACT_WORLD_WIND_LAYER___DISPOSE;
+
+	/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION = ABSTRACT_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION;
 
 	/**
 	 * The number of operations of the '<em>Earth Surface Location World Wind Layer</em>' class.
@@ -977,6 +1031,15 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int GROUND_STATION_WORLD_WIND_LAYER___DISPOSE = EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER___DISPOSE;
 
 	/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUND_STATION_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION = EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION;
+
+	/**
 	 * The number of operations of the '<em>Ground Station World Wind Layer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -986,6 +1049,142 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int GROUND_STATION_WORLD_WIND_LAYER_OPERATION_COUNT = EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GeographicCoordinatesWorldWindLayerImpl <em>Geographic Coordinates World Wind Layer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GeographicCoordinatesWorldWindLayerImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getGeographicCoordinatesWorldWindLayer()
+	 * @generated
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER = 8;
+
+	/**
+	 * The feature id for the '<em><b>Updating</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__UPDATING = ABSTRACT_WORLD_WIND_LAYER__UPDATING;
+
+	/**
+	 * The feature id for the '<em><b>Auto Update Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__AUTO_UPDATE_ENABLED = ABSTRACT_WORLD_WIND_LAYER__AUTO_UPDATE_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__VISIBLE = ABSTRACT_WORLD_WIND_LAYER__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Renderable Layer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__RENDERABLE_LAYER = ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER;
+
+	/**
+	 * The feature id for the '<em><b>Geographic Coordinates List</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__GEOGRAPHIC_COORDINATES_LIST = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Lock Selection</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Display Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Displayed Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Geographic Coordinates World Wind Layer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER_FEATURE_COUNT = ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Get Default Auto Update Enabled</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER___GET_DEFAULT_AUTO_UPDATE_ENABLED = ABSTRACT_WORLD_WIND_LAYER___GET_DEFAULT_AUTO_UPDATE_ENABLED;
+
+	/**
+	 * The operation id for the '<em>Update</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER___UPDATE = ABSTRACT_WORLD_WIND_LAYER___UPDATE;
+
+	/**
+	 * The operation id for the '<em>Dispose</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER___DISPOSE = ABSTRACT_WORLD_WIND_LAYER___DISPOSE;
+
+	/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION = ABSTRACT_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION;
+
+	/**
+	 * The number of operations of the '<em>Geographic Coordinates World Wind Layer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER_OPERATION_COUNT = ABSTRACT_WORLD_WIND_LAYER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl <em>Spacecraft Visibility Pass View Configuration List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -993,7 +1192,7 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfigurationList()
 	 * @generated
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST = 8;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST = 9;
 
 	/**
 	 * The feature id for the '<em><b>Tools List</b></em>' container reference.
@@ -1039,7 +1238,7 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfiguration()
 	 * @generated
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION = 9;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1096,6 +1295,61 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewUtilitiesImpl <em>Earth View Utilities</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewUtilitiesImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewUtilities()
+	 * @generated
+	 */
+	int EARTH_VIEW_UTILITIES = 11;
+
+	/**
+	 * The number of structural features of the '<em>Earth View Utilities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Get Camera View Configuration Identifier</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__EARTHVIEWCONFIGURATION = 0;
+
+	/**
+	 * The operation id for the '<em>Get Active Earth View Configuration</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Get Active Earth View Configuration List</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION_LIST = 2;
+
+	/**
+	 * The number of operations of the '<em>Earth View Utilities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_VIEW_UTILITIES_OPERATION_COUNT = 3;
+
+	/**
 	 * The meta object id for the '<em>Renderable Layer</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1103,7 +1357,7 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getRenderableLayer()
 	 * @generated
 	 */
-	int RENDERABLE_LAYER = 10;
+	int RENDERABLE_LAYER = 12;
 
 
 	/**
@@ -1114,7 +1368,18 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 11;
+	int MAP = 13;
+
+
+	/**
+	 * The meta object id for the '<em>ISelection</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.jface.viewers.ISelection
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getISelection()
+	 * @generated
+	 */
+	int ISELECTION = 14;
 
 
 	/**
@@ -1160,6 +1425,16 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	EReference getEarthViewConfiguration_Layers();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration#selectionChanged(org.eclipse.jface.viewers.ISelection) <em>Selection Changed</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Selection Changed</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration#selectionChanged(org.eclipse.jface.viewers.ISelection)
+	 * @generated
+	 */
+	EOperation getEarthViewConfiguration__SelectionChanged__ISelection();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer <em>Abstract World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1200,6 +1475,16 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getAbstractWorldWindLayer__Dispose();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#selectionChanged(org.eclipse.jface.viewers.ISelection) <em>Selection Changed</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Selection Changed</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#selectionChanged(org.eclipse.jface.viewers.ISelection)
+	 * @generated
+	 */
+	EOperation getAbstractWorldWindLayer__SelectionChanged__ISelection();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer <em>Spacecraft Location World Wind Layer</em>}'.
@@ -1527,6 +1812,60 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	EAttribute getGroundStationWorldWindLayer_ReferenceAltitude();
 
 	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer <em>Geographic Coordinates World Wind Layer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Geographic Coordinates World Wind Layer</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer
+	 * @generated
+	 */
+	EClass getGeographicCoordinatesWorldWindLayer();
+
+	/**
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#getGeographicCoordinatesList <em>Geographic Coordinates List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Geographic Coordinates List</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#getGeographicCoordinatesList()
+	 * @see #getGeographicCoordinatesWorldWindLayer()
+	 * @generated
+	 */
+	EReference getGeographicCoordinatesWorldWindLayer_GeographicCoordinatesList();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#isLockSelection <em>Lock Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lock Selection</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#isLockSelection()
+	 * @see #getGeographicCoordinatesWorldWindLayer()
+	 * @generated
+	 */
+	EAttribute getGeographicCoordinatesWorldWindLayer_LockSelection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#isDisplayLocation <em>Display Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Display Location</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#isDisplayLocation()
+	 * @see #getGeographicCoordinatesWorldWindLayer()
+	 * @generated
+	 */
+	EAttribute getGeographicCoordinatesWorldWindLayer_DisplayLocation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#getDisplayedRadius <em>Displayed Radius</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Displayed Radius</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer#getDisplayedRadius()
+	 * @see #getGeographicCoordinatesWorldWindLayer()
+	 * @generated
+	 */
+	EAttribute getGeographicCoordinatesWorldWindLayer_DisplayedRadius();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList <em>Spacecraft Visibility Pass View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1580,6 +1919,46 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	EReference getSpacecraftVisibilityPassViewConfiguration_VisibilitySet();
 
 	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities <em>Earth View Utilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Earth View Utilities</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities
+	 * @generated
+	 */
+	EClass getEarthViewUtilities();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getCameraViewConfigurationIdentifier(ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration) <em>Get Camera View Configuration Identifier</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Camera View Configuration Identifier</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getCameraViewConfigurationIdentifier(ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration)
+	 * @generated
+	 */
+	EOperation getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getActiveEarthViewConfiguration(java.lang.String) <em>Get Active Earth View Configuration</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Active Earth View Configuration</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getActiveEarthViewConfiguration(java.lang.String)
+	 * @generated
+	 */
+	EOperation getEarthViewUtilities__GetActiveEarthViewConfiguration__String();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getActiveEarthViewConfigurationList() <em>Get Active Earth View Configuration List</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Active Earth View Configuration List</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities#getActiveEarthViewConfigurationList()
+	 * @generated
+	 */
+	EOperation getEarthViewUtilities__GetActiveEarthViewConfigurationList();
+
+	/**
 	 * Returns the meta object for data type '{@link gov.nasa.worldwind.layers.RenderableLayer <em>Renderable Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1600,6 +1979,17 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getMap();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.jface.viewers.ISelection <em>ISelection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ISelection</em>'.
+	 * @see org.eclipse.jface.viewers.ISelection
+	 * @model instanceClass="org.eclipse.jface.viewers.ISelection"
+	 * @generated
+	 */
+	EDataType getISelection();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1661,6 +2051,14 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EReference EARTH_VIEW_CONFIGURATION__LAYERS = eINSTANCE.getEarthViewConfiguration_Layers();
 
 		/**
+		 * The meta object literal for the '<em><b>Selection Changed</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EARTH_VIEW_CONFIGURATION___SELECTION_CHANGED__ISELECTION = eINSTANCE.getEarthViewConfiguration__SelectionChanged__ISelection();
+
+		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl <em>Abstract World Wind Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1693,6 +2091,14 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ABSTRACT_WORLD_WIND_LAYER___DISPOSE = eINSTANCE.getAbstractWorldWindLayer__Dispose();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection Changed</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION = eINSTANCE.getAbstractWorldWindLayer__SelectionChanged__ISelection();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl <em>Spacecraft Location World Wind Layer</em>}' class.
@@ -1945,6 +2351,48 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EAttribute GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE = eINSTANCE.getGroundStationWorldWindLayer_ReferenceAltitude();
 
 		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GeographicCoordinatesWorldWindLayerImpl <em>Geographic Coordinates World Wind Layer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GeographicCoordinatesWorldWindLayerImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getGeographicCoordinatesWorldWindLayer()
+		 * @generated
+		 */
+		EClass GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER = eINSTANCE.getGeographicCoordinatesWorldWindLayer();
+
+		/**
+		 * The meta object literal for the '<em><b>Geographic Coordinates List</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__GEOGRAPHIC_COORDINATES_LIST = eINSTANCE.getGeographicCoordinatesWorldWindLayer_GeographicCoordinatesList();
+
+		/**
+		 * The meta object literal for the '<em><b>Lock Selection</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION = eINSTANCE.getGeographicCoordinatesWorldWindLayer_LockSelection();
+
+		/**
+		 * The meta object literal for the '<em><b>Display Location</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION = eINSTANCE.getGeographicCoordinatesWorldWindLayer_DisplayLocation();
+
+		/**
+		 * The meta object literal for the '<em><b>Displayed Radius</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS = eINSTANCE.getGeographicCoordinatesWorldWindLayer_DisplayedRadius();
+
+		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl <em>Spacecraft Visibility Pass View Configuration List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1989,6 +2437,40 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EReference SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET = eINSTANCE.getSpacecraftVisibilityPassViewConfiguration_VisibilitySet();
 
 		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewUtilitiesImpl <em>Earth View Utilities</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewUtilitiesImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewUtilities()
+		 * @generated
+		 */
+		EClass EARTH_VIEW_UTILITIES = eINSTANCE.getEarthViewUtilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Camera View Configuration Identifier</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EARTH_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__EARTHVIEWCONFIGURATION = eINSTANCE.getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Active Earth View Configuration</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION__STRING = eINSTANCE.getEarthViewUtilities__GetActiveEarthViewConfiguration__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Active Earth View Configuration List</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION_LIST = eINSTANCE.getEarthViewUtilities__GetActiveEarthViewConfigurationList();
+
+		/**
 		 * The meta object literal for the '<em>Renderable Layer</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2007,6 +2489,16 @@ public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType MAP = eINSTANCE.getMap();
+
+		/**
+		 * The meta object literal for the '<em>ISelection</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.jface.viewers.ISelection
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getISelection()
+		 * @generated
+		 */
+		EDataType ISELECTION = eINSTANCE.getISelection();
 
 	}
 

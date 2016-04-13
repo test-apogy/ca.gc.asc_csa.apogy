@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
 
 import gov.nasa.worldwind.layers.RenderableLayer;
 
+import org.eclipse.jface.viewers.ISelection;
 import ca.gc.asc_csa.apogy.core.Updatable;
 
 /**
@@ -109,5 +110,19 @@ public interface AbstractWorldWindLayer extends Updatable {
 	 * @generated
 	 */
 	void dispose();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Method called when a selection is made by the user.
+	 * Sub-classes can override this method if applicable.
+	 * @param selection The new selection made.
+	 * <!-- end-model-doc -->
+	 * @model selectionDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ISelection" selectionUnique="false"
+	 * @generated
+	 */
+	void selectionChanged(ISelection selection);
 
 } // AbstractWorldWindLayer

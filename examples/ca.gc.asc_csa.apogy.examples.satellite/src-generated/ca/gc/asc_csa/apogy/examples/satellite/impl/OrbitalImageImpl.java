@@ -14,16 +14,14 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  */
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.common.images.impl.EImageImpl;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 
-import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
+import ca.gc.asc_csa.apogy.common.images.impl.EImageImpl;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +31,9 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl#getCoordinates <em>Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl#getLongitude <em>Longitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl#getLatitude <em>Latitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl#getElevation <em>Elevation</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl#getRollAngle <em>Roll Angle</em>}</li>
  * </ul>
  *
@@ -41,14 +41,64 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  */
 public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	/**
-	 * The cached value of the '{@link #getCoordinates() <em>Coordinates</em>}' containment reference.
+	 * The default value of the '{@link #getLongitude() <em>Longitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCoordinates()
+	 * @see #getLongitude()
 	 * @generated
 	 * @ordered
 	 */
-	protected GeographicCoordinates coordinates;
+	protected static final double LONGITUDE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getLongitude() <em>Longitude</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLongitude()
+	 * @generated
+	 * @ordered
+	 */
+	protected double longitude = LONGITUDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLatitude() <em>Latitude</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLatitude()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double LATITUDE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getLatitude() <em>Latitude</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLatitude()
+	 * @generated
+	 * @ordered
+	 */
+	protected double latitude = LATITUDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getElevation() <em>Elevation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElevation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double ELEVATION_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getElevation() <em>Elevation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElevation()
+	 * @generated
+	 * @ordered
+	 */
+	protected double elevation = ELEVATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRollAngle() <em>Roll Angle</em>}' attribute.
@@ -94,8 +144,8 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GeographicCoordinates getCoordinates() {
-		return coordinates;
+	public double getLongitude() {
+		return longitude;
 	}
 
 	/**
@@ -103,14 +153,11 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCoordinates(GeographicCoordinates newCoordinates, NotificationChain msgs) {
-		GeographicCoordinates oldCoordinates = coordinates;
-		coordinates = newCoordinates;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, oldCoordinates, newCoordinates);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public void setLongitude(double newLongitude) {
+		double oldLongitude = longitude;
+		longitude = newLongitude;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE, oldLongitude, longitude));
 	}
 
 	/**
@@ -118,18 +165,41 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCoordinates(GeographicCoordinates newCoordinates) {
-		if (newCoordinates != coordinates) {
-			NotificationChain msgs = null;
-			if (coordinates != null)
-				msgs = ((InternalEObject)coordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, null, msgs);
-			if (newCoordinates != null)
-				msgs = ((InternalEObject)newCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, null, msgs);
-			msgs = basicSetCoordinates(newCoordinates, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, newCoordinates, newCoordinates));
+	public double getLatitude() {
+		return latitude;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLatitude(double newLatitude) {
+		double oldLatitude = latitude;
+		latitude = newLatitude;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE, oldLatitude, latitude));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getElevation() {
+		return elevation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setElevation(double newElevation) {
+		double oldElevation = elevation;
+		elevation = newElevation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION, oldElevation, elevation));
 	}
 
 	/**
@@ -159,24 +229,14 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
-				return basicSetCoordinates(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
-				return getCoordinates();
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE:
+				return getLongitude();
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE:
+				return getLatitude();
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION:
+				return getElevation();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				return getRollAngle();
 		}
@@ -191,8 +251,14 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
-				setCoordinates((GeographicCoordinates)newValue);
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE:
+				setLongitude((Double)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE:
+				setLatitude((Double)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION:
+				setElevation((Double)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				setRollAngle((Double)newValue);
@@ -209,8 +275,14 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
-				setCoordinates((GeographicCoordinates)null);
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE:
+				setLongitude(LONGITUDE_EDEFAULT);
+				return;
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE:
+				setLatitude(LATITUDE_EDEFAULT);
+				return;
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION:
+				setElevation(ELEVATION_EDEFAULT);
 				return;
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				setRollAngle(ROLL_ANGLE_EDEFAULT);
@@ -227,8 +299,12 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
-				return coordinates != null;
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE:
+				return longitude != LONGITUDE_EDEFAULT;
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE:
+				return latitude != LATITUDE_EDEFAULT;
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION:
+				return elevation != ELEVATION_EDEFAULT;
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				return rollAngle != ROLL_ANGLE_EDEFAULT;
 		}
@@ -241,11 +317,53 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == GeographicCoordinates.class) {
+			switch (derivedFeatureID) {
+				case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
+				case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
+				case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == GeographicCoordinates.class) {
+			switch (baseFeatureID) {
+				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE: return ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE;
+				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE: return ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE;
+				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION: return ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (rollAngle: ");
+		result.append(" (longitude: ");
+		result.append(longitude);
+		result.append(", latitude: ");
+		result.append(latitude);
+		result.append(", elevation: ");
+		result.append(elevation);
+		result.append(", rollAngle: ");
 		result.append(rollAngle);
 		result.append(')');
 		return result.toString();

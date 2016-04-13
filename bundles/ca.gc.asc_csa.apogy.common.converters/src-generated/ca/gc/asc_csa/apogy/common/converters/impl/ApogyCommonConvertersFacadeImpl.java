@@ -190,7 +190,6 @@ public class ApogyCommonConvertersFacadeImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ApogyCommonConvertersPackage.APOGY_COMMON_CONVERTERS_FACADE___CONVERT__OBJECT_CLASS:

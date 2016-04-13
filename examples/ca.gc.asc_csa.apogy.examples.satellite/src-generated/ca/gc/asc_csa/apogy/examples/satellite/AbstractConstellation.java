@@ -13,12 +13,10 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.Date;
 import java.util.List;
-import org.eclipse.emf.ecore.EObject;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,159 +32,63 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesL
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationState <em>Constellation State</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation()
  * @model abstract="true"
  * @generated
  */
-public interface AbstractConstellation extends EObject {
+public interface AbstractConstellation extends Named, Described {
 	/**
-	 * Returns the value of the '<em><b>Satellites List</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Constellation State</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * List of the constellation {@link Satellite}.
+	 * Constellation State.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Satellites List</em>' containment reference.
-	 * @see #setSatellitesList(SatellitesList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_SatellitesList()
+	 * @return the value of the '<em>Constellation State</em>' containment reference.
+	 * @see #setConstellationState(ConstellationState)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_ConstellationState()
 	 * @model containment="true"
 	 * @generated
 	 */
-	SatellitesList getSatellitesList();
+	ConstellationState getConstellationState();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationState <em>Constellation State</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Satellites List</em>' containment reference.
-	 * @see #getSatellitesList()
+	 * @param value the new value of the '<em>Constellation State</em>' containment reference.
+	 * @see #getConstellationState()
 	 * @generated
 	 */
-	void setSatellitesList(SatellitesList value);
-
-	/**
-	 * Returns the value of the '<em><b>Ground Stations References List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * List of the {@link GroundStation}.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ground Stations References List</em>' containment reference.
-	 * @see #setGroundStationsReferencesList(GroundStationReferencesList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_GroundStationsReferencesList()
-	 * @model containment="true"
-	 * @generated
-	 */
-	GroundStationReferencesList getGroundStationsReferencesList();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ground Stations References List</em>' containment reference.
-	 * @see #getGroundStationsReferencesList()
-	 * @generated
-	 */
-	void setGroundStationsReferencesList(GroundStationReferencesList value);
-
-	/**
-	 * Returns the value of the '<em><b>Downlinks Lists</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Downlinks Lists</em>' containment reference.
-	 * @see #setDownlinksLists(ConstellationDownlinksList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_DownlinksLists()
-	 * @model containment="true"
-	 * @generated
-	 */
-	ConstellationDownlinksList getDownlinksLists();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Downlinks Lists</em>' containment reference.
-	 * @see #getDownlinksLists()
-	 * @generated
-	 */
-	void setDownlinksLists(ConstellationDownlinksList value);
-
-	/**
-	 * Returns the value of the '<em><b>Constellation Requests List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * List of {@link AbstractConstellationRequest}.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Constellation Requests List</em>' containment reference.
-	 * @see #setConstellationRequestsList(ConstellationRequestsList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_ConstellationRequestsList()
-	 * @model containment="true"
-	 * @generated
-	 */
-	ConstellationRequestsList getConstellationRequestsList();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constellation Requests List</em>' containment reference.
-	 * @see #getConstellationRequestsList()
-	 * @generated
-	 */
-	void setConstellationRequestsList(ConstellationRequestsList value);
+	void setConstellationState(ConstellationState value);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the list of {@link AbstractSatelliteCommand} required to process the constellation {@link AbstractConstellationRequest}
-	 * based on the available constellation satellites.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @return Reference to the {@link SatelliteCommandPlan}.
+	 * Exports the specified plan into the resource specified by the url.
+	 * @param plan Refers the plan to export.
+	 * @param url Specifies the location where the plan must be exported.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" startDateUnique="false" endDateUnique="false"
+	 * @model planUnique="false" urlUnique="false"
 	 * @generated
 	 */
-	ConstellationCommandPlan plan(Date startDate, Date endDate);
+	void export(AbstractConstellationCommandPlan plan, String url);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest}
-	 * based on the available constellation satellites.
-	 * @param requests Refers to the list of {@link AbstractConstellationRequest} to process.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @return Reference to the {@link SatelliteCommandPlan}.
+	 * Packages and commits the specified plan.
+	 * @param plan Reference to the {@link ConstellationCommandPlan}.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false" startDateUnique="false" endDateUnique="false"
+	 * @model planUnique="false"
 	 * @generated
 	 */
-	ConstellationCommandPlan plan(List<AbstractConstellationRequest> requests, Date startDate, Date endDate);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Packages and commits the list of {@link AbstractSatelliteCommand}.
-	 * @param satelliteCommands Reference to the list of {@link AbstractSatelliteCommand}.
-	 * <!-- end-model-doc -->
-	 * @model satelliteCommandsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand>" satelliteCommandsUnique="false" satelliteCommandsMany="false"
-	 * @generated
-	 */
-	void commit(List<AbstractSatelliteCommand> satelliteCommands);
+	void commit(AbstractConstellationCommandPlan plan);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -204,48 +106,25 @@ public interface AbstractConstellation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Adds the specified {@link AbstractConstellationRequest} to the constellation.
-	 * @param request Specifies the request to add to the {@link AbstractConstellation}.
+	 * Imports the {@link ConstellationDownlink} into the current {@link Constellation}.
+	 * @param url String that refers the resource that embeds a {@link ConstellationDownlink}.
 	 * <!-- end-model-doc -->
-	 * @model requestUnique="false"
+	 * @model urlUnique="false"
 	 * @generated
 	 */
-	void add(AbstractConstellationRequest request);
+	void importConstellationDownlink(String url);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Adds all the {@link AbstractConstellationRequest} specified in the list to the constellation.
-	 * @param requests Specifies the requests to add to the {@link AbstractConstellation}.
+	 * Imports the {@link AbstractConstellationRequest} contained in the resource specified by the {@link url}.
+	 * @param url URL that specifies the resource.
+	 * @return List of imported {@link AbstractConstellationRequest}.
 	 * <!-- end-model-doc -->
-	 * @model requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false" many="false" urlUnique="false"
 	 * @generated
 	 */
-	void addAll(List<AbstractConstellationRequest> requests);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Removes the specified {@link AbstractConstellationRequest} from the constellation.
-	 * @param request Specifies the request to remove from the {@link AbstractConstellation}.
-	 * <!-- end-model-doc -->
-	 * @model requestUnique="false"
-	 * @generated
-	 */
-	void remove(AbstractConstellationRequest request);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Removes all the {@link AbstractConstellationRequest} specified in the list from the constellation.
-	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
-	 * <!-- end-model-doc -->
-	 * @model requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
-	 * @generated
-	 */
-	void removeAll(List<AbstractConstellationRequest> requests);
+	List<AbstractConstellationRequest> importConstellationRequests(String url);
 
 } // AbstractConstellation

@@ -176,13 +176,10 @@ public class SpacecraftsVisibilitySetComposite extends Composite
 						 text += groundStation.getName();
 					 }
 					 
-					 if(groundStation.getGeographicalCoordinates() != null)
-					 {
-						 DecimalFormat decimalFormat = new DecimalFormat("0.00");
-						 text += " (lat " + decimalFormat.format(Math.toDegrees(groundStation.getGeographicalCoordinates().getLatitude())) + DEGREE_STRING;
-						 text += ", lon " + decimalFormat.format(Math.toDegrees(groundStation.getGeographicalCoordinates().getLongitude())) + DEGREE_STRING;
-						 text += ")";
-					 }
+					 DecimalFormat decimalFormat = new DecimalFormat("0.00");
+					 text += " (lat " + decimalFormat.format(Math.toDegrees(groundStation.getLatitude())) + DEGREE_STRING;
+					 text += ", lon " + decimalFormat.format(Math.toDegrees(groundStation.getLongitude())) + DEGREE_STRING;
+					 text += ")";
 					 
 					 return text;
 				 }

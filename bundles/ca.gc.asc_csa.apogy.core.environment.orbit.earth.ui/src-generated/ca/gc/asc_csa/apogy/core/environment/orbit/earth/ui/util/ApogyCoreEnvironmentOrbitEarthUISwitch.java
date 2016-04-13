@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.*;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
@@ -153,6 +154,14 @@ public class ApogyCoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER: {
+				GeographicCoordinatesWorldWindLayer geographicCoordinatesWorldWindLayer = (GeographicCoordinatesWorldWindLayer)theEObject;
+				T result = caseGeographicCoordinatesWorldWindLayer(geographicCoordinatesWorldWindLayer);
+				if (result == null) result = caseAbstractWorldWindLayer(geographicCoordinatesWorldWindLayer);
+				if (result == null) result = caseUpdatable(geographicCoordinatesWorldWindLayer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST: {
 				SpacecraftVisibilityPassViewConfigurationList spacecraftVisibilityPassViewConfigurationList = (SpacecraftVisibilityPassViewConfigurationList)theEObject;
 				T result = caseSpacecraftVisibilityPassViewConfigurationList(spacecraftVisibilityPassViewConfigurationList);
@@ -165,6 +174,12 @@ public class ApogyCoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 				T result = caseSpacecraftVisibilityPassViewConfiguration(spacecraftVisibilityPassViewConfiguration);
 				if (result == null) result = caseNamed(spacecraftVisibilityPassViewConfiguration);
 				if (result == null) result = caseDescribed(spacecraftVisibilityPassViewConfiguration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_UTILITIES: {
+				EarthViewUtilities earthViewUtilities = (EarthViewUtilities)theEObject;
+				T result = caseEarthViewUtilities(earthViewUtilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -293,6 +308,21 @@ public class ApogyCoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Geographic Coordinates World Wind Layer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Geographic Coordinates World Wind Layer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeographicCoordinatesWorldWindLayer(GeographicCoordinatesWorldWindLayer object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Spacecraft Visibility Pass View Configuration List</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -319,6 +349,21 @@ public class ApogyCoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSpacecraftVisibilityPassViewConfiguration(SpacecraftVisibilityPassViewConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Earth View Utilities</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Earth View Utilities</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEarthViewUtilities(EarthViewUtilities object) {
 		return null;
 	}
 

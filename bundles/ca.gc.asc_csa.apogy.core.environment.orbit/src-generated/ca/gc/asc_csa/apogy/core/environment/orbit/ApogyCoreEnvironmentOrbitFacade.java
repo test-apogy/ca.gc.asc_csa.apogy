@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit;
 
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitFacadeImpl;
+import java.util.Date;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,14 +33,14 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbit
  */
 public interface ApogyCoreEnvironmentOrbitFacade extends EObject 
 {
-	public static ApogyCoreEnvironmentOrbitFacade INSTANCE = ApogyCoreEnvironmentOrbitFacadeImpl.getInstance();
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" originalOrbitModelUnique="false"
+	 * @model unique="false" fromDateUnique="false" toDateUnique="false" dateUnique="false"
 	 * @generated
 	 */
-	OrbitModel createOrbitModelCopy(OrbitModel originalOrbitModel);
+	boolean isDateInValidRange(Date fromDate, Date toDate, Date date);
+
+	public static ApogyCoreEnvironmentOrbitFacade INSTANCE = ApogyCoreEnvironmentOrbitFacadeImpl.getInstance();
 
 } // ApogyCoreEnvironmentOrbitFacade

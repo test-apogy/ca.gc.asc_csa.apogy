@@ -24,12 +24,46 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
  * Defines an Orbit around the Earth.
  * <!-- end-model-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit#getInitialOrbitBasedEarthOrbitModel <em>Initial Orbit Based Earth Orbit Model</em>}</li>
+ * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbit()
  * @model abstract="true"
  * @generated
  */
 public interface EarthOrbit extends Orbit {
+
+	/**
+	 * Returns the value of the '<em><b>Initial Orbit Based Earth Orbit Model</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.InitialOrbitBasedEarthOrbitModel#getInitalOrbit <em>Inital Orbit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Initial Orbit Based Earth Orbit Model</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Initial Orbit Based Earth Orbit Model</em>' container reference.
+	 * @see #setInitialOrbitBasedEarthOrbitModel(InitialOrbitBasedEarthOrbitModel)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbit_InitialOrbitBasedEarthOrbitModel()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.InitialOrbitBasedEarthOrbitModel#getInitalOrbit
+	 * @model opposite="initalOrbit" transient="false"
+	 * @generated
+	 */
+	InitialOrbitBasedEarthOrbitModel getInitialOrbitBasedEarthOrbitModel();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit#getInitialOrbitBasedEarthOrbitModel <em>Initial Orbit Based Earth Orbit Model</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Initial Orbit Based Earth Orbit Model</em>' container reference.
+	 * @see #getInitialOrbitBasedEarthOrbitModel()
+	 * @generated
+	 */
+	void setInitialOrbitBasedEarthOrbitModel(InitialOrbitBasedEarthOrbitModel value);
 
 	/**
 	 * <!-- begin-user-doc -->

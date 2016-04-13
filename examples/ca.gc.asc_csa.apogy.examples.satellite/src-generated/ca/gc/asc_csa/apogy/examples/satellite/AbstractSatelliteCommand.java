@@ -15,8 +15,6 @@ package ca.gc.asc_csa.apogy.examples.satellite;
 
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Abstract Satellite Command</b></em>'.
@@ -30,15 +28,40 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getUid <em>Uid</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractSatelliteCommand()
- * @model
+ * @model abstract="true"
  * @generated
  */
-public interface AbstractSatelliteCommand extends GeographicCoordinates, Timed {
+public interface AbstractSatelliteCommand extends Timed {
+	/**
+	 * Returns the value of the '<em><b>Uid</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Request Unique Identifier.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Uid</em>' containment reference.
+	 * @see #setUid(AbstractUID)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractSatelliteCommand_Uid()
+	 * @model containment="true"
+	 * @generated
+	 */
+	AbstractUID getUid();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getUid <em>Uid</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Uid</em>' containment reference.
+	 * @see #getUid()
+	 * @generated
+	 */
+	void setUid(AbstractUID value);
+
 	/**
 	 * Returns the value of the '<em><b>Satellite</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -63,32 +86,5 @@ public interface AbstractSatelliteCommand extends GeographicCoordinates, Timed {
 	 * @generated
 	 */
 	void setSatellite(Satellite value);
-
-	/**
-	 * Returns the value of the '<em><b>Constellation Request</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getSatelliteCommand <em>Satellite Command</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Reference to the associated {@link AbstractConstellationRequest}.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Constellation Request</em>' container reference.
-	 * @see #setConstellationRequest(AbstractConstellationRequest)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractSatelliteCommand_ConstellationRequest()
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getSatelliteCommand
-	 * @model opposite="satelliteCommand" transient="false"
-	 * @generated
-	 */
-	AbstractConstellationRequest getConstellationRequest();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constellation Request</em>' container reference.
-	 * @see #getConstellationRequest()
-	 * @generated
-	 */
-	void setConstellationRequest(AbstractConstellationRequest value);
 
 } // AbstractSatelliteCommand

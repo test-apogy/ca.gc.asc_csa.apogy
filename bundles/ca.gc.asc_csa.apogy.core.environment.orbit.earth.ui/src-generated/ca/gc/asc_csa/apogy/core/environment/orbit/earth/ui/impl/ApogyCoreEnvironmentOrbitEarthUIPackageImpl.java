@@ -25,14 +25,18 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.jface.viewers.ISelection;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewUtilities;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
@@ -111,6 +115,13 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass geographicCoordinatesWorldWindLayerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass spacecraftVisibilityPassViewConfigurationListEClass = null;
 
 	/**
@@ -125,6 +136,13 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass earthViewUtilitiesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType renderableLayerEDataType = null;
 
 	/**
@@ -133,6 +151,13 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 * @generated
 	 */
 	private EDataType mapEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iSelectionEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -239,6 +264,15 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getEarthViewConfiguration__SelectionChanged__ISelection() {
+		return earthViewConfigurationEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbstractWorldWindLayer() {
 		return abstractWorldWindLayerEClass;
 	}
@@ -268,6 +302,15 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 */
 	public EOperation getAbstractWorldWindLayer__Dispose() {
 		return abstractWorldWindLayerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractWorldWindLayer__SelectionChanged__ISelection() {
+		return abstractWorldWindLayerEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -545,6 +588,51 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGeographicCoordinatesWorldWindLayer() {
+		return geographicCoordinatesWorldWindLayerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeographicCoordinatesWorldWindLayer_GeographicCoordinatesList() {
+		return (EReference)geographicCoordinatesWorldWindLayerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGeographicCoordinatesWorldWindLayer_LockSelection() {
+		return (EAttribute)geographicCoordinatesWorldWindLayerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGeographicCoordinatesWorldWindLayer_DisplayLocation() {
+		return (EAttribute)geographicCoordinatesWorldWindLayerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGeographicCoordinatesWorldWindLayer_DisplayedRadius() {
+		return (EAttribute)geographicCoordinatesWorldWindLayerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSpacecraftVisibilityPassViewConfigurationList() {
 		return spacecraftVisibilityPassViewConfigurationListEClass;
 	}
@@ -590,6 +678,42 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEarthViewUtilities() {
+		return earthViewUtilitiesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration() {
+		return earthViewUtilitiesEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthViewUtilities__GetActiveEarthViewConfiguration__String() {
+		return earthViewUtilitiesEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEarthViewUtilities__GetActiveEarthViewConfigurationList() {
+		return earthViewUtilitiesEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getRenderableLayer() {
 		return renderableLayerEDataType;
 	}
@@ -601,6 +725,15 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 	 */
 	public EDataType getMap() {
 		return mapEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getISelection() {
+		return iSelectionEDataType;
 	}
 
 	/**
@@ -636,11 +769,13 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 
 		earthViewConfigurationEClass = createEClass(EARTH_VIEW_CONFIGURATION);
 		createEReference(earthViewConfigurationEClass, EARTH_VIEW_CONFIGURATION__LAYERS);
+		createEOperation(earthViewConfigurationEClass, EARTH_VIEW_CONFIGURATION___SELECTION_CHANGED__ISELECTION);
 
 		abstractWorldWindLayerEClass = createEClass(ABSTRACT_WORLD_WIND_LAYER);
 		createEAttribute(abstractWorldWindLayerEClass, ABSTRACT_WORLD_WIND_LAYER__VISIBLE);
 		createEAttribute(abstractWorldWindLayerEClass, ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER);
 		createEOperation(abstractWorldWindLayerEClass, ABSTRACT_WORLD_WIND_LAYER___DISPOSE);
+		createEOperation(abstractWorldWindLayerEClass, ABSTRACT_WORLD_WIND_LAYER___SELECTION_CHANGED__ISELECTION);
 
 		spacecraftLocationWorldWindLayerEClass = createEClass(SPACECRAFT_LOCATION_WORLD_WIND_LAYER);
 		createEReference(spacecraftLocationWorldWindLayerEClass, SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL);
@@ -677,6 +812,12 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		createEReference(groundStationWorldWindLayerEClass, GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION);
 		createEAttribute(groundStationWorldWindLayerEClass, GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE);
 
+		geographicCoordinatesWorldWindLayerEClass = createEClass(GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER);
+		createEReference(geographicCoordinatesWorldWindLayerEClass, GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__GEOGRAPHIC_COORDINATES_LIST);
+		createEAttribute(geographicCoordinatesWorldWindLayerEClass, GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__LOCK_SELECTION);
+		createEAttribute(geographicCoordinatesWorldWindLayerEClass, GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAY_LOCATION);
+		createEAttribute(geographicCoordinatesWorldWindLayerEClass, GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER__DISPLAYED_RADIUS);
+
 		spacecraftVisibilityPassViewConfigurationListEClass = createEClass(SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST);
 		createEReference(spacecraftVisibilityPassViewConfigurationListEClass, SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS);
 
@@ -684,9 +825,15 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		createEReference(spacecraftVisibilityPassViewConfigurationEClass, SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST);
 		createEReference(spacecraftVisibilityPassViewConfigurationEClass, SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET);
 
+		earthViewUtilitiesEClass = createEClass(EARTH_VIEW_UTILITIES);
+		createEOperation(earthViewUtilitiesEClass, EARTH_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__EARTHVIEWCONFIGURATION);
+		createEOperation(earthViewUtilitiesEClass, EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION__STRING);
+		createEOperation(earthViewUtilitiesEClass, EARTH_VIEW_UTILITIES___GET_ACTIVE_EARTH_VIEW_CONFIGURATION_LIST);
+
 		// Create data types
 		renderableLayerEDataType = createEDataType(RENDERABLE_LAYER);
 		mapEDataType = createEDataType(MAP);
+		iSelectionEDataType = createEDataType(ISELECTION);
 	}
 
 	/**
@@ -719,6 +866,7 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		ApogyCoreEnvironmentOrbitPackage theApogyCoreEnvironmentOrbitPackage = (ApogyCoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitPackage.eNS_URI);
 		ApogyCoreEnvironmentOrbitEarthPackage theApogyCoreEnvironmentOrbitEarthPackage = (ApogyCoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitEarthPackage.eNS_URI);
+		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(mapEDataType, "K");
@@ -737,6 +885,7 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		spacecraftSwathWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
 		earthSurfaceLocationWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
 		groundStationWorldWindLayerEClass.getESuperTypes().add(this.getEarthSurfaceLocationWorldWindLayer());
+		geographicCoordinatesWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
 		spacecraftVisibilityPassViewConfigurationListEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getAbstractToolsListContainer());
 		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
@@ -748,11 +897,17 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		initEClass(earthViewConfigurationEClass, EarthViewConfiguration.class, "EarthViewConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEarthViewConfiguration_Layers(), this.getAbstractWorldWindLayer(), null, "layers", null, 0, -1, EarthViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		EOperation op = initEOperation(getEarthViewConfiguration__SelectionChanged__ISelection(), null, "selectionChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getISelection(), "selection", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(abstractWorldWindLayerEClass, AbstractWorldWindLayer.class, "AbstractWorldWindLayer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractWorldWindLayer_Visible(), theEcorePackage.getEBoolean(), "visible", "true", 0, 1, AbstractWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractWorldWindLayer_RenderableLayer(), this.getRenderableLayer(), "renderableLayer", null, 0, 1, AbstractWorldWindLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getAbstractWorldWindLayer__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getAbstractWorldWindLayer__SelectionChanged__ISelection(), null, "selectionChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getISelection(), "selection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(spacecraftLocationWorldWindLayerEClass, SpacecraftLocationWorldWindLayer.class, "SpacecraftLocationWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpacecraftLocationWorldWindLayer_OrbitModel(), theApogyCoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -789,6 +944,12 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		initEReference(getGroundStationWorldWindLayer_GroundStation(), theApogyCoreEnvironmentOrbitEarthPackage.getGroundStation(), null, "groundStation", null, 0, 1, GroundStationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroundStationWorldWindLayer_ReferenceAltitude(), theEcorePackage.getEDouble(), "referenceAltitude", "500", 0, 1, GroundStationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(geographicCoordinatesWorldWindLayerEClass, GeographicCoordinatesWorldWindLayer.class, "GeographicCoordinatesWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGeographicCoordinatesWorldWindLayer_GeographicCoordinatesList(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "geographicCoordinatesList", null, 0, -1, GeographicCoordinatesWorldWindLayer.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeographicCoordinatesWorldWindLayer_LockSelection(), theEcorePackage.getEBoolean(), "lockSelection", "false", 0, 1, GeographicCoordinatesWorldWindLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeographicCoordinatesWorldWindLayer_DisplayLocation(), theEcorePackage.getEBoolean(), "displayLocation", "true", 0, 1, GeographicCoordinatesWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeographicCoordinatesWorldWindLayer_DisplayedRadius(), theEcorePackage.getEDouble(), "displayedRadius", "50", 0, 1, GeographicCoordinatesWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(spacecraftVisibilityPassViewConfigurationListEClass, SpacecraftVisibilityPassViewConfigurationList.class, "SpacecraftVisibilityPassViewConfigurationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpacecraftVisibilityPassViewConfigurationList_Configurations(), this.getSpacecraftVisibilityPassViewConfiguration(), this.getSpacecraftVisibilityPassViewConfiguration_ConfigurationsList(), "configurations", null, 0, -1, SpacecraftVisibilityPassViewConfigurationList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -796,9 +957,20 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		initEReference(getSpacecraftVisibilityPassViewConfiguration_ConfigurationsList(), this.getSpacecraftVisibilityPassViewConfigurationList(), this.getSpacecraftVisibilityPassViewConfigurationList_Configurations(), "configurationsList", null, 0, 1, SpacecraftVisibilityPassViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpacecraftVisibilityPassViewConfiguration_VisibilitySet(), theApogyCoreEnvironmentOrbitEarthPackage.getSpacecraftsVisibilitySet(), null, "visibilitySet", null, 0, 1, SpacecraftVisibilityPassViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(earthViewUtilitiesEClass, EarthViewUtilities.class, "EarthViewUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration(), theEcorePackage.getEString(), "getCameraViewConfigurationIdentifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEarthViewConfiguration(), "earthViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getEarthViewUtilities__GetActiveEarthViewConfiguration__String(), this.getEarthViewConfiguration(), "getActiveEarthViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "identifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getEarthViewUtilities__GetActiveEarthViewConfigurationList(), this.getEarthViewConfigurationList(), "getActiveEarthViewConfigurationList", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		// Initialize data types
 		initEDataType(renderableLayerEDataType, RenderableLayer.class, "RenderableLayer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(mapEDataType, Map.class, "Map", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(iSelectionEDataType, ISelection.class, "ISelection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -836,6 +1008,12 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 			 "basePackage", "ca.gc.asc_csa.apogy.core.environment.orbit.earth"
 		   });	
 		addAnnotation
+		  (getEarthViewConfiguration__SelectionChanged__ISelection(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nMethod that notifies all AbstractWorldWindLayer of a new selection.\n@param selection The new selection made."
+		   });	
+		addAnnotation
 		  (getEarthViewConfiguration_Layers(), 
 		   source, 
 		   new String[] {
@@ -855,6 +1033,12 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 		   source, 
 		   new String[] {
 			 "documentation", "*\nMethod called when the layer is not longer\nneeded (i.e. when it gets deleted.)"
+		   });	
+		addAnnotation
+		  (getAbstractWorldWindLayer__SelectionChanged__ISelection(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nMethod called when a selection is made by the user.\nSub-classes can override this method if applicable.\n@param selection The new selection made."
 		   });	
 		addAnnotation
 		  (getAbstractWorldWindLayer_Visible(), 
@@ -1043,6 +1227,35 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 			 "apogy_units", "km"
 		   });	
 		addAnnotation
+		  (getGeographicCoordinatesWorldWindLayer_GeographicCoordinatesList(), 
+		   source, 
+		   new String[] {
+			 "notify", "true"
+		   });	
+		addAnnotation
+		  (getGeographicCoordinatesWorldWindLayer_LockSelection(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSpecifies whether or not the layer will respond to new selection.",
+			 "notify", "true"
+		   });	
+		addAnnotation
+		  (getGeographicCoordinatesWorldWindLayer_DisplayLocation(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSpecified wether or not to add the lat/lon/alt as aprt of the displayed text.",
+			 "notify", "true",
+			 "propertyCategory", "VISUALS"
+		   });	
+		addAnnotation
+		  (getGeographicCoordinatesWorldWindLayer_DisplayedRadius(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSpecifies the radius of the circle display at the target location.",
+			 "propertyCategory", "VISUALS",
+			 "apogy_units", "km"
+		   });	
+		addAnnotation
 		  (spacecraftVisibilityPassViewConfigurationListEClass, 
 		   source, 
 		   new String[] {
@@ -1067,6 +1280,24 @@ public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "chilrend", "true",
 			 "property", "None"
+		   });	
+		addAnnotation
+		  (getEarthViewUtilities__GetCameraViewConfigurationIdentifier__EarthViewConfiguration(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the identifier associated with a given EarthViewConfiguration.\n@param earthViewConfiguration The given EarthViewConfiguration.\n@return The identifier, null if none is found."
+		   });	
+		addAnnotation
+		  (getEarthViewUtilities__GetActiveEarthViewConfiguration__String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the EarthViewConfiguration (in the Active Session) with the specified identifier.\n@param identifier The EarthViewConfiguration identifier.\n@return The EarthViewConfiguration with the specified identifier, null if non is found."
+		   });	
+		addAnnotation
+		  (getEarthViewUtilities__GetActiveEarthViewConfigurationList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the EarthViewConfigurationList in the Active Session.\n@return The EarthViewConfigurationList in the Active Session, null if none is found."
 		   });
 	}
 

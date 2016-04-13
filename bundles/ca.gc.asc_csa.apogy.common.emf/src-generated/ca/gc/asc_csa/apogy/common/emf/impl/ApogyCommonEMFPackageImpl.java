@@ -43,6 +43,7 @@ import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.common.emf.Duration;
 import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
@@ -119,6 +120,13 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	private EClass startableEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass durationEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -864,6 +872,78 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDuration() {
+		return durationEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDuration_Value() {
+		return (EAttribute)durationEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDuration_Days() {
+		return (EAttribute)durationEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDuration_Hours() {
+		return (EAttribute)durationEClass.getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDuration_Minutes() {
+		return (EAttribute)durationEClass.getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDuration_Seconds() {
+		return (EAttribute)durationEClass.getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDuration_Milliseconds() {
+		return (EAttribute)durationEClass.getEStructuralFeatures().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDuration__GetDuration__Timed_Timed() {
+		return durationEClass.getEOperations().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTimeSource() {
 		return timeSourceEClass;
 	}
@@ -1563,6 +1643,15 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		startableEClass = createEClass(STARTABLE);
 		createEAttribute(startableEClass, STARTABLE__STARTED);
 
+		durationEClass = createEClass(DURATION);
+		createEAttribute(durationEClass, DURATION__VALUE);
+		createEAttribute(durationEClass, DURATION__DAYS);
+		createEAttribute(durationEClass, DURATION__HOURS);
+		createEAttribute(durationEClass, DURATION__MINUTES);
+		createEAttribute(durationEClass, DURATION__SECONDS);
+		createEAttribute(durationEClass, DURATION__MILLISECONDS);
+		createEOperation(durationEClass, DURATION___GET_DURATION__TIMED_TIMED);
+
 		timeSourceEClass = createEClass(TIME_SOURCE);
 		createEAttribute(timeSourceEClass, TIME_SOURCE__OFFSET);
 
@@ -1913,6 +2002,18 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 
 		initEClass(startableEClass, Startable.class, "Startable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStartable_Started(), theEcorePackage.getEBoolean(), "started", "false", 0, 1, Startable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(durationEClass, Duration.class, "Duration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDuration_Value(), theEcorePackage.getELong(), "value", null, 0, 1, Duration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDuration_Days(), theEcorePackage.getEByte(), "days", null, 0, 1, Duration.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDuration_Hours(), theEcorePackage.getEByte(), "hours", null, 0, 1, Duration.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDuration_Minutes(), theEcorePackage.getEByte(), "minutes", null, 0, 1, Duration.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDuration_Seconds(), theEcorePackage.getEByte(), "seconds", null, 0, 1, Duration.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDuration_Milliseconds(), theEcorePackage.getEInt(), "milliseconds", null, 0, 1, Duration.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getDuration__GetDuration__Timed_Timed(), this.getDuration(), "getDuration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getTimed(), "firstEvent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getTimed(), "secondEvent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(timeSourceEClass, TimeSource.class, "TimeSource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTimeSource_Offset(), theEcorePackage.getEInt(), "offset", "0", 0, 1, TimeSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

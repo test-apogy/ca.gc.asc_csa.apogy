@@ -14,6 +14,9 @@ package ca.gc.asc_csa.apogy.core.environment.orbit;
  */
 
 import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
+import java.util.Date;
+import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,66 +32,78 @@ import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getInitialOrbit <em>Initial Orbit</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getPropagator <em>Propagator</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getReferenceFrame <em>Reference Frame</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getAttitudeProvider <em>Attitude Provider</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitModel()
- * @model
+ * @model abstract="true"
  * @generated
  */
-public interface OrbitModel extends AbstractOrbitModel {
+public interface OrbitModel extends AbstractOrbitModel, ValidityRangeProvider {
 
 	/**
-	 * Returns the value of the '<em><b>Initial Orbit</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Reference Frame</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Initial Orbit</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Initial Orbit</em>' containment reference.
-	 * @see #setInitialOrbit(Orbit)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitModel_InitialOrbit()
+	 * <!-- begin-model-doc -->
+	 * The frame in which the orbit is propagated.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Reference Frame</em>' containment reference.
+	 * @see #setReferenceFrame(AbstractFrame)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitModel_ReferenceFrame()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Orbit getInitialOrbit();
+	AbstractFrame getReferenceFrame();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getInitialOrbit <em>Initial Orbit</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getReferenceFrame <em>Reference Frame</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Initial Orbit</em>' containment reference.
-	 * @see #getInitialOrbit()
+	 * @param value the new value of the '<em>Reference Frame</em>' containment reference.
+	 * @see #getReferenceFrame()
 	 * @generated
 	 */
-	void setInitialOrbit(Orbit value);
+	void setReferenceFrame(AbstractFrame value);
 
 	/**
-	 * Returns the value of the '<em><b>Propagator</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Attitude Provider</b></em>' containment reference list.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Propagator</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Propagator</em>' containment reference.
-	 * @see #setPropagator(AbstractOrbitPropagator)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitModel_Propagator()
+	 * <!-- begin-model-doc -->
+	 * The attitude provider. Can be used to specify an attitude control law.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Attitude Provider</em>' containment reference list.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitModel_AttitudeProvider()
 	 * @model containment="true"
 	 * @generated
 	 */
-	AbstractOrbitPropagator getPropagator();
+	EList<AttitudeProvider> getAttitudeProvider();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getPropagator <em>Propagator</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Propagator</em>' containment reference.
-	 * @see #getPropagator()
+	 * <!-- begin-model-doc -->
+	 * Propagate the current orbit to a specified time to get a Spacecraft state.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.Exception" targetDateUnique="false"
 	 * @generated
 	 */
-	void setPropagator(AbstractOrbitPropagator value);
+	SpacecraftState propagate(Date targetDate) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.
+	 * @param timeInterval The time interval to get spacecraft states, in seconds.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.List<ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.Exception" startDateUnique="false" endDateUnique="false" timeIntervalUnique="false"
+	 *        timeIntervalAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='s'"
+	 * @generated
+	 */
+	List<SpacecraftState> getSpacecraftStates(Date startDate, Date endDate, double timeInterval) throws Exception;
 
 } // OrbitModel

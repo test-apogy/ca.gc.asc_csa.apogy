@@ -27,10 +27,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.jface.viewers.ISelection;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
+import java.lang.reflect.InvocationTargetException;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
 
 /**
@@ -180,6 +182,26 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void selectionChanged(ISelection selection) 
+	{
+		for(AbstractWorldWindLayer layer : getLayers())
+		{
+			try
+			{
+				layer.selectionChanged(selection);
+			}
+			catch(Throwable t)
+			{
+				t.printStackTrace();
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -301,6 +323,21 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION___SELECTION_CHANGED__ISELECTION:
+				selectionChanged((ISelection)arguments.get(0));
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -27,22 +27,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.asc_csa.apogy.common.emf.Described;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.log.EventSeverity;
-import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.Updatable;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Activator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import org.orekit.bodies.BodyShape;
 import org.orekit.bodies.GeodeticPoint;
 import org.orekit.bodies.OneAxisEllipsoid;
@@ -56,6 +40,23 @@ import org.orekit.time.AbsoluteDate;
 import org.orekit.utils.Constants;
 import org.orekit.utils.IERSConventions;
 import org.orekit.utils.PVCoordinates;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Activator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
 
 /**
  * <!-- begin-user-doc -->
@@ -870,13 +871,13 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	{
 		try
 		{
-			EarthOrbitPropagator earthOrbitPropagator = (EarthOrbitPropagator) getOrbitModel().getPropagator();
-			Propagator propagator = earthOrbitPropagator.getOreKitPropagator();
+			EarthOrbitModel earthOrbitModel = (EarthOrbitModel) getOrbitModel();
+			Propagator propagator = earthOrbitModel.getOreKitPropagator();
 									
 			Corridor corridor = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCorridor();			
 			
 			// Checks that the specified dates falls within the propagator valid interval.
-			if(!earthOrbitPropagator.isDateInValidRange(getStartTime()))
+			if(!earthOrbitModel.isDateInValidRange(getStartTime()))
 			{
 				String message = "Start date is outside the validity range !";
 																
@@ -886,7 +887,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 				throw new Exception(message);
 			}
 			
-			if(!earthOrbitPropagator.isDateInValidRange(getEndTime()))
+			if(!earthOrbitModel.isDateInValidRange(getEndTime()))
 			{			
 				String message = "End date is outside the validity range !";
 				

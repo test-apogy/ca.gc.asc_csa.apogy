@@ -1,5 +1,4 @@
-package ca.gc.asc_csa.apogy.examples.satellite.impl;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -7,12 +6,14 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.SortedSet;
 
@@ -25,39 +26,44 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-
 import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
-
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-
-import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
-
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractRequestBasedSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
 import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
 import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
+import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,6 +77,34 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass abstractUIDEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringUIDEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass constellationCommandPlansListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass constellationStateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass abstractConstellationEClass = null;
 
 	/**
@@ -78,21 +112,35 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass constellationCommandPlanEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass constellationCommandPlanItemEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass defaultConstellationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractConstellationPlannerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass defaultConstellationPlannerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractConstellationCommandPlanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass defaultConstellationCommandPlanEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,6 +155,20 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	private EClass abstractConstellationRequestEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass simpleRequestEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass observationConstellationRequestEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,6 +197,20 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	private EClass abstractSatelliteCommandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractRequestBasedSatelliteCommandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass visibilityPassBasedSatelliteCommandEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,6 +290,13 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	private EDataType sortedSetEDataType = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType comparatorEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -282,6 +365,114 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAbstractUID() {
+		return abstractUIDEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStringUID() {
+		return stringUIDEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStringUID_Id() {
+		return (EAttribute)stringUIDEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConstellationCommandPlansList() {
+		return constellationCommandPlansListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationCommandPlansList_Plans() {
+		return (EReference)constellationCommandPlansListEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConstellationState() {
+		return constellationStateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationState_ConstellationCommandPlansList() {
+		return (EReference)constellationStateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationState_SatellitesList() {
+		return (EReference)constellationStateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationState_GroundStationsReferencesList() {
+		return (EReference)constellationStateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationState_DownlinksLists() {
+		return (EReference)constellationStateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationState_ConstellationRequestsList() {
+		return (EReference)constellationStateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationState_ConstellationPlanner() {
+		return (EReference)constellationStateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbstractConstellation() {
 		return abstractConstellationEClass;
 	}
@@ -291,7 +482,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractConstellation_SatellitesList() {
+	public EReference getAbstractConstellation_ConstellationState() {
 		return (EReference)abstractConstellationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -300,34 +491,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractConstellation_GroundStationsReferencesList() {
-		return (EReference)abstractConstellationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbstractConstellation_DownlinksLists() {
-		return (EReference)abstractConstellationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbstractConstellation_ConstellationRequestsList() {
-		return (EReference)abstractConstellationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractConstellation__Plan__Date_Date() {
+	public EOperation getAbstractConstellation__Export__AbstractConstellationCommandPlan_String() {
 		return abstractConstellationEClass.getEOperations().get(0);
 	}
 
@@ -336,7 +500,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__Plan__List_Date_Date() {
+	public EOperation getAbstractConstellation__Commit__AbstractConstellationCommandPlan() {
 		return abstractConstellationEClass.getEOperations().get(1);
 	}
 
@@ -345,7 +509,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__Commit__List() {
+	public EOperation getAbstractConstellation__Apply__ConstellationDownlink() {
 		return abstractConstellationEClass.getEOperations().get(2);
 	}
 
@@ -354,7 +518,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__Apply__ConstellationDownlink() {
+	public EOperation getAbstractConstellation__ImportConstellationDownlink__String() {
 		return abstractConstellationEClass.getEOperations().get(3);
 	}
 
@@ -363,80 +527,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__Add__AbstractConstellationRequest() {
+	public EOperation getAbstractConstellation__ImportConstellationRequests__String() {
 		return abstractConstellationEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractConstellation__AddAll__List() {
-		return abstractConstellationEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractConstellation__Remove__AbstractConstellationRequest() {
-		return abstractConstellationEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractConstellation__RemoveAll__List() {
-		return abstractConstellationEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getConstellationCommandPlan() {
-		return constellationCommandPlanEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstellationCommandPlan_ConstellationCommandPlanItems() {
-		return (EReference)constellationCommandPlanEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getConstellationCommandPlanItem() {
-		return constellationCommandPlanItemEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstellationCommandPlanItem_Request() {
-		return (EReference)constellationCommandPlanItemEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstellationCommandPlanItem_SatelliteCommand() {
-		return (EReference)constellationCommandPlanItemEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -446,6 +538,204 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 */
 	public EClass getDefaultConstellation() {
 		return defaultConstellationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbstractConstellationPlanner() {
+		return abstractConstellationPlannerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractConstellationPlanner_ConstellationState() {
+		return (EReference)abstractConstellationPlannerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractConstellationPlanner_StartDate() {
+		return (EAttribute)abstractConstellationPlannerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractConstellationPlanner_EndDate() {
+		return (EAttribute)abstractConstellationPlannerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractConstellationPlanner_ConstellationRequestsList() {
+		return (EReference)abstractConstellationPlannerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractConstellationPlanner_ConstellationCommandPlan() {
+		return (EReference)abstractConstellationPlannerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractConstellationPlanner_MaxNumberThreads() {
+		return (EAttribute)abstractConstellationPlannerEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractConstellationPlanner_CommandDuplicatesPreserved() {
+		return (EAttribute)abstractConstellationPlannerEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractConstellationPlanner_ElevationMask() {
+		return (EReference)abstractConstellationPlannerEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractConstellationPlanner__IsValid__VisibilityPass() {
+		return abstractConstellationPlannerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractConstellationPlanner__GetSatellite__EarthOrbitModel() {
+		return abstractConstellationPlannerEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractConstellationPlanner__Plan() {
+		return abstractConstellationPlannerEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractConstellationPlanner__Validate() {
+		return abstractConstellationPlannerEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractConstellationPlanner__GetRequestBasedSatelliteCommandsComparator() {
+		return abstractConstellationPlannerEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__ObservationConstellationRequest_VisibilityPass() {
+		return abstractConstellationPlannerEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDefaultConstellationPlanner() {
+		return defaultConstellationPlannerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDefaultConstellationPlanner_UmbraPassesValid() {
+		return (EAttribute)defaultConstellationPlannerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDefaultConstellationPlanner_SatelliteRollCommandValid() {
+		return (EAttribute)defaultConstellationPlannerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDefaultConstellationPlanner_SunHorizonAngleUmbraThreshold() {
+		return (EAttribute)defaultConstellationPlannerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbstractConstellationCommandPlan() {
+		return abstractConstellationCommandPlanEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractConstellationCommandPlan_ConstellationCommands() {
+		return (EReference)abstractConstellationCommandPlanEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDefaultConstellationCommandPlan() {
+		return defaultConstellationCommandPlanEClass;
 	}
 
 	/**
@@ -480,8 +770,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAbstractConstellationRequest_Uid() {
-		return (EAttribute)abstractConstellationRequestEClass.getEStructuralFeatures().get(0);
+	public EReference getAbstractConstellationRequest_Uid() {
+		return (EReference)abstractConstellationRequestEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -507,8 +797,26 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractConstellationRequest_SatelliteCommand() {
-		return (EReference)abstractConstellationRequestEClass.getEStructuralFeatures().get(3);
+	public EClass getSimpleRequest() {
+		return simpleRequestEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getObservationConstellationRequest() {
+		return observationConstellationRequestEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getObservationConstellationRequest_Location() {
+		return (EReference)observationConstellationRequestEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -570,17 +878,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSatellite_MaximumRollRate() {
-		return (EAttribute)satelliteEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getSatellite_MaximumRoll() {
-		return (EAttribute)satelliteEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)satelliteEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -597,7 +896,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractSatelliteCommand_Satellite() {
+	public EReference getAbstractSatelliteCommand_Uid() {
 		return (EReference)abstractSatelliteCommandEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -606,8 +905,44 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractSatelliteCommand_ConstellationRequest() {
+	public EReference getAbstractSatelliteCommand_Satellite() {
 		return (EReference)abstractSatelliteCommandEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbstractRequestBasedSatelliteCommand() {
+		return abstractRequestBasedSatelliteCommandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractRequestBasedSatelliteCommand_ConstellationRequest() {
+		return (EReference)abstractRequestBasedSatelliteCommandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVisibilityPassBasedSatelliteCommand() {
+		return visibilityPassBasedSatelliteCommandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVisibilityPassBasedSatelliteCommand_VisibilityPass() {
+		return (EReference)visibilityPassBasedSatelliteCommandEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -642,17 +977,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOrbitalImage_Coordinates() {
-		return (EReference)orbitalImageEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getOrbitalImage_RollAngle() {
-		return (EAttribute)orbitalImageEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)orbitalImageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -705,8 +1031,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAbstractConstellationDownlinkItem_RequestUID() {
-		return (EAttribute)abstractConstellationDownlinkItemEClass.getEStructuralFeatures().get(0);
+	public EReference getAbstractConstellationDownlinkItem_RequestUID() {
+		return (EReference)abstractConstellationDownlinkItemEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -741,8 +1067,35 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getConstellationUtilities__SortByPriority__List() {
+	public EOperation getConstellationUtilities__AddAllRequests__ConstellationRequestsList_List() {
 		return constellationUtilitiesEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getConstellationUtilities__AddRequest__ConstellationRequestsList_AbstractConstellationRequest() {
+		return constellationUtilitiesEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getConstellationUtilities__RemoveRequest__ConstellationRequestsList_AbstractConstellationRequest() {
+		return constellationUtilitiesEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getConstellationUtilities__RemoveAllRequests__ConstellationRequestsList_List() {
+		return constellationUtilitiesEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -786,6 +1139,15 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getComparator() {
+		return comparatorEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyExamplesSatelliteFactory getApogyExamplesSatelliteFactory() {
 		return (ApogyExamplesSatelliteFactory)getEFactoryInstance();
 	}
@@ -809,37 +1171,70 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		isCreated = true;
 
 		// Create classes and their features
+		abstractUIDEClass = createEClass(ABSTRACT_UID);
+
+		stringUIDEClass = createEClass(STRING_UID);
+		createEAttribute(stringUIDEClass, STRING_UID__ID);
+
+		constellationCommandPlansListEClass = createEClass(CONSTELLATION_COMMAND_PLANS_LIST);
+		createEReference(constellationCommandPlansListEClass, CONSTELLATION_COMMAND_PLANS_LIST__PLANS);
+
+		constellationStateEClass = createEClass(CONSTELLATION_STATE);
+		createEReference(constellationStateEClass, CONSTELLATION_STATE__CONSTELLATION_COMMAND_PLANS_LIST);
+		createEReference(constellationStateEClass, CONSTELLATION_STATE__SATELLITES_LIST);
+		createEReference(constellationStateEClass, CONSTELLATION_STATE__GROUND_STATIONS_REFERENCES_LIST);
+		createEReference(constellationStateEClass, CONSTELLATION_STATE__DOWNLINKS_LISTS);
+		createEReference(constellationStateEClass, CONSTELLATION_STATE__CONSTELLATION_REQUESTS_LIST);
+		createEReference(constellationStateEClass, CONSTELLATION_STATE__CONSTELLATION_PLANNER);
+
 		abstractConstellationEClass = createEClass(ABSTRACT_CONSTELLATION);
-		createEReference(abstractConstellationEClass, ABSTRACT_CONSTELLATION__SATELLITES_LIST);
-		createEReference(abstractConstellationEClass, ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST);
-		createEReference(abstractConstellationEClass, ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS);
-		createEReference(abstractConstellationEClass, ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST);
-		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___PLAN__DATE_DATE);
-		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE);
-		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___COMMIT__LIST);
+		createEReference(abstractConstellationEClass, ABSTRACT_CONSTELLATION__CONSTELLATION_STATE);
+		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___EXPORT__ABSTRACTCONSTELLATIONCOMMANDPLAN_STRING);
+		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___COMMIT__ABSTRACTCONSTELLATIONCOMMANDPLAN);
 		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK);
-		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST);
-		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___ADD_ALL__LIST);
-		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST);
-		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST);
-
-		constellationCommandPlanEClass = createEClass(CONSTELLATION_COMMAND_PLAN);
-		createEReference(constellationCommandPlanEClass, CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS);
-
-		constellationCommandPlanItemEClass = createEClass(CONSTELLATION_COMMAND_PLAN_ITEM);
-		createEReference(constellationCommandPlanItemEClass, CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST);
-		createEReference(constellationCommandPlanItemEClass, CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND);
+		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_DOWNLINK__STRING);
+		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_REQUESTS__STRING);
 
 		defaultConstellationEClass = createEClass(DEFAULT_CONSTELLATION);
+
+		abstractConstellationPlannerEClass = createEClass(ABSTRACT_CONSTELLATION_PLANNER);
+		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_STATE);
+		createEAttribute(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__START_DATE);
+		createEAttribute(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__END_DATE);
+		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_REQUESTS_LIST);
+		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__CONSTELLATION_COMMAND_PLAN);
+		createEAttribute(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__MAX_NUMBER_THREADS);
+		createEAttribute(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__COMMAND_DUPLICATES_PRESERVED);
+		createEReference(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER__ELEVATION_MASK);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___IS_VALID__VISIBILITYPASS);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_SATELLITE__EARTHORBITMODEL);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___PLAN);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___VALIDATE);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_REQUEST_BASED_SATELLITE_COMMANDS_COMPARATOR);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS);
+
+		defaultConstellationPlannerEClass = createEClass(DEFAULT_CONSTELLATION_PLANNER);
+		createEAttribute(defaultConstellationPlannerEClass, DEFAULT_CONSTELLATION_PLANNER__UMBRA_PASSES_VALID);
+		createEAttribute(defaultConstellationPlannerEClass, DEFAULT_CONSTELLATION_PLANNER__SATELLITE_ROLL_COMMAND_VALID);
+		createEAttribute(defaultConstellationPlannerEClass, DEFAULT_CONSTELLATION_PLANNER__SUN_HORIZON_ANGLE_UMBRA_THRESHOLD);
+
+		abstractConstellationCommandPlanEClass = createEClass(ABSTRACT_CONSTELLATION_COMMAND_PLAN);
+		createEReference(abstractConstellationCommandPlanEClass, ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS);
+
+		defaultConstellationCommandPlanEClass = createEClass(DEFAULT_CONSTELLATION_COMMAND_PLAN);
 
 		constellationRequestsListEClass = createEClass(CONSTELLATION_REQUESTS_LIST);
 		createEReference(constellationRequestsListEClass, CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS);
 
 		abstractConstellationRequestEClass = createEClass(ABSTRACT_CONSTELLATION_REQUEST);
-		createEAttribute(abstractConstellationRequestEClass, ABSTRACT_CONSTELLATION_REQUEST__UID);
+		createEReference(abstractConstellationRequestEClass, ABSTRACT_CONSTELLATION_REQUEST__UID);
 		createEAttribute(abstractConstellationRequestEClass, ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY);
 		createEAttribute(abstractConstellationRequestEClass, ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS);
-		createEReference(abstractConstellationRequestEClass, ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND);
+
+		simpleRequestEClass = createEClass(SIMPLE_REQUEST);
+
+		observationConstellationRequestEClass = createEClass(OBSERVATION_CONSTELLATION_REQUEST);
+		createEReference(observationConstellationRequestEClass, OBSERVATION_CONSTELLATION_REQUEST__LOCATION);
 
 		imageConstellationRequestEClass = createEClass(IMAGE_CONSTELLATION_REQUEST);
 		createEReference(imageConstellationRequestEClass, IMAGE_CONSTELLATION_REQUEST__IMAGE);
@@ -849,18 +1244,22 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 
 		satelliteEClass = createEClass(SATELLITE);
 		createEReference(satelliteEClass, SATELLITE__ORBIT_MODEL);
-		createEAttribute(satelliteEClass, SATELLITE__MAXIMUM_ROLL_RATE);
 		createEAttribute(satelliteEClass, SATELLITE__MAXIMUM_ROLL);
 
 		abstractSatelliteCommandEClass = createEClass(ABSTRACT_SATELLITE_COMMAND);
+		createEReference(abstractSatelliteCommandEClass, ABSTRACT_SATELLITE_COMMAND__UID);
 		createEReference(abstractSatelliteCommandEClass, ABSTRACT_SATELLITE_COMMAND__SATELLITE);
-		createEReference(abstractSatelliteCommandEClass, ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST);
+
+		abstractRequestBasedSatelliteCommandEClass = createEClass(ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND);
+		createEReference(abstractRequestBasedSatelliteCommandEClass, ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND__CONSTELLATION_REQUEST);
+
+		visibilityPassBasedSatelliteCommandEClass = createEClass(VISIBILITY_PASS_BASED_SATELLITE_COMMAND);
+		createEReference(visibilityPassBasedSatelliteCommandEClass, VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITY_PASS);
 
 		acquireImageSatelliteCommandEClass = createEClass(ACQUIRE_IMAGE_SATELLITE_COMMAND);
 		createEAttribute(acquireImageSatelliteCommandEClass, ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE);
 
 		orbitalImageEClass = createEClass(ORBITAL_IMAGE);
-		createEReference(orbitalImageEClass, ORBITAL_IMAGE__COORDINATES);
 		createEAttribute(orbitalImageEClass, ORBITAL_IMAGE__ROLL_ANGLE);
 
 		constellationDownlinksListEClass = createEClass(CONSTELLATION_DOWNLINKS_LIST);
@@ -870,13 +1269,16 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEReference(constellationDownlinkEClass, CONSTELLATION_DOWNLINK__DOWNLINK_ITEMS);
 
 		abstractConstellationDownlinkItemEClass = createEClass(ABSTRACT_CONSTELLATION_DOWNLINK_ITEM);
-		createEAttribute(abstractConstellationDownlinkItemEClass, ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID);
+		createEReference(abstractConstellationDownlinkItemEClass, ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID);
 
 		orbitalImageConstellationDownlinkItemEClass = createEClass(ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM);
 		createEReference(orbitalImageConstellationDownlinkItemEClass, ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE);
 
 		constellationUtilitiesEClass = createEClass(CONSTELLATION_UTILITIES);
-		createEOperation(constellationUtilitiesEClass, CONSTELLATION_UTILITIES___SORT_BY_PRIORITY__LIST);
+		createEOperation(constellationUtilitiesEClass, CONSTELLATION_UTILITIES___ADD_ALL_REQUESTS__CONSTELLATIONREQUESTSLIST_LIST);
+		createEOperation(constellationUtilitiesEClass, CONSTELLATION_UTILITIES___ADD_REQUEST__CONSTELLATIONREQUESTSLIST_ABSTRACTCONSTELLATIONREQUEST);
+		createEOperation(constellationUtilitiesEClass, CONSTELLATION_UTILITIES___REMOVE_REQUEST__CONSTELLATIONREQUESTSLIST_ABSTRACTCONSTELLATIONREQUEST);
+		createEOperation(constellationUtilitiesEClass, CONSTELLATION_UTILITIES___REMOVE_ALL_REQUESTS__CONSTELLATIONREQUESTSLIST_LIST);
 
 		// Create enums
 		constellationRequestPriorityEEnum = createEEnum(CONSTELLATION_REQUEST_PRIORITY);
@@ -885,6 +1287,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		// Create data types
 		listEDataType = createEDataType(LIST);
 		sortedSetEDataType = createEDataType(SORTED_SET);
+		comparatorEDataType = createEDataType(COMPARATOR);
 	}
 
 	/**
@@ -911,95 +1314,142 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		ApogyCoreEnvironmentOrbitEarthPackage theApogyCoreEnvironmentOrbitEarthPackage = (ApogyCoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitEarthPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
+		ApogyCoreEnvironmentOrbitEarthPackage theApogyCoreEnvironmentOrbitEarthPackage = (ApogyCoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitEarthPackage.eNS_URI);
 		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
-		ApogyCoreEnvironmentOrbitPackage theApogyCoreEnvironmentOrbitPackage = (ApogyCoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitPackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 		ApogyCommonImagesPackage theApogyCommonImagesPackage = (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
 		addETypeParameter(sortedSetEDataType, "T");
+		addETypeParameter(comparatorEDataType, "T");
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		stringUIDEClass.getESuperTypes().add(this.getAbstractUID());
+		abstractConstellationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractConstellationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		defaultConstellationEClass.getESuperTypes().add(this.getAbstractConstellation());
-		imageConstellationRequestEClass.getESuperTypes().add(this.getAbstractConstellationRequest());
-		imageConstellationRequestEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
+		defaultConstellationPlannerEClass.getESuperTypes().add(this.getAbstractConstellationPlanner());
+		abstractConstellationCommandPlanEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractConstellationCommandPlanEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		defaultConstellationCommandPlanEClass.getESuperTypes().add(this.getAbstractConstellationCommandPlan());
+		constellationRequestsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		constellationRequestsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		simpleRequestEClass.getESuperTypes().add(this.getAbstractConstellationRequest());
+		observationConstellationRequestEClass.getESuperTypes().add(this.getAbstractConstellationRequest());
+		imageConstellationRequestEClass.getESuperTypes().add(this.getObservationConstellationRequest());
 		satelliteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		abstractSatelliteCommandEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
 		abstractSatelliteCommandEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
-		acquireImageSatelliteCommandEClass.getESuperTypes().add(this.getAbstractSatelliteCommand());
+		abstractRequestBasedSatelliteCommandEClass.getESuperTypes().add(this.getAbstractSatelliteCommand());
+		visibilityPassBasedSatelliteCommandEClass.getESuperTypes().add(this.getAbstractRequestBasedSatelliteCommand());
+		acquireImageSatelliteCommandEClass.getESuperTypes().add(this.getAbstractRequestBasedSatelliteCommand());
+		acquireImageSatelliteCommandEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
 		orbitalImageEClass.getESuperTypes().add(theApogyCommonImagesPackage.getEImage());
+		orbitalImageEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
 		constellationDownlinksListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		constellationDownlinksListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		orbitalImageConstellationDownlinkItemEClass.getESuperTypes().add(this.getAbstractConstellationDownlinkItem());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(abstractUIDEClass, AbstractUID.class, "AbstractUID", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stringUIDEClass, StringUID.class, "StringUID", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringUID_Id(), theEcorePackage.getEString(), "id", null, 0, 1, StringUID.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(constellationCommandPlansListEClass, ConstellationCommandPlansList.class, "ConstellationCommandPlansList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConstellationCommandPlansList_Plans(), this.getAbstractConstellationCommandPlan(), null, "plans", null, 0, -1, ConstellationCommandPlansList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(constellationStateEClass, ConstellationState.class, "ConstellationState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConstellationState_ConstellationCommandPlansList(), this.getConstellationCommandPlansList(), null, "constellationCommandPlansList", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationState_SatellitesList(), this.getSatellitesList(), null, "satellitesList", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationState_GroundStationsReferencesList(), theApogyCoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationState_DownlinksLists(), this.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationState_ConstellationRequestsList(), this.getConstellationRequestsList(), null, "constellationRequestsList", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationState_ConstellationPlanner(), this.getAbstractConstellationPlanner(), this.getAbstractConstellationPlanner_ConstellationState(), "constellationPlanner", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(abstractConstellationEClass, AbstractConstellation.class, "AbstractConstellation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractConstellation_SatellitesList(), this.getSatellitesList(), null, "satellitesList", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractConstellation_GroundStationsReferencesList(), theApogyCoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractConstellation_DownlinksLists(), this.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractConstellation_ConstellationRequestsList(), this.getConstellationRequestsList(), null, "constellationRequestsList", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractConstellation_ConstellationState(), this.getConstellationState(), null, "constellationState", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getAbstractConstellation__Plan__Date_Date(), this.getConstellationCommandPlan(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getAbstractConstellation__Export__AbstractConstellationCommandPlan_String(), null, "export", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractConstellationCommandPlan(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "url", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getAbstractConstellation__Plan__List_Date_Date(), this.getConstellationCommandPlan(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		EGenericType g1 = createEGenericType(this.getList());
-		EGenericType g2 = createEGenericType(this.getAbstractConstellationRequest());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "requests", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getAbstractConstellation__Commit__List(), null, "commit", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(this.getAbstractSatelliteCommand());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "satelliteCommands", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getAbstractConstellation__Commit__AbstractConstellationCommandPlan(), null, "commit", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractConstellationCommandPlan(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getAbstractConstellation__Apply__ConstellationDownlink(), null, "apply", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getConstellationDownlink(), "downlink", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getAbstractConstellation__Add__AbstractConstellationRequest(), null, "add", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractConstellationRequest(), "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getAbstractConstellation__ImportConstellationDownlink__String(), null, "importConstellationDownlink", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "url", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getAbstractConstellation__AddAll__List(), null, "addAll", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(this.getAbstractConstellationRequest());
+		op = initEOperation(getAbstractConstellation__ImportConstellationRequests__String(), null, "importConstellationRequests", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "url", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EGenericType g1 = createEGenericType(this.getList());
+		EGenericType g2 = createEGenericType(this.getAbstractConstellationRequest());
 		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "requests", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getAbstractConstellation__Remove__AbstractConstellationRequest(), null, "remove", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractConstellationRequest(), "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getAbstractConstellation__RemoveAll__List(), null, "removeAll", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(this.getAbstractConstellationRequest());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "requests", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEClass(constellationCommandPlanEClass, ConstellationCommandPlan.class, "ConstellationCommandPlan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstellationCommandPlan_ConstellationCommandPlanItems(), this.getConstellationCommandPlanItem(), null, "constellationCommandPlanItems", null, 0, -1, ConstellationCommandPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(constellationCommandPlanItemEClass, ConstellationCommandPlanItem.class, "ConstellationCommandPlanItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstellationCommandPlanItem_Request(), this.getAbstractConstellationRequest(), null, "request", null, 1, 1, ConstellationCommandPlanItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstellationCommandPlanItem_SatelliteCommand(), this.getAbstractSatelliteCommand(), null, "satelliteCommand", null, 0, 1, ConstellationCommandPlanItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEOperation(op, g1);
 
 		initEClass(defaultConstellationEClass, DefaultConstellation.class, "DefaultConstellation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(abstractConstellationPlannerEClass, AbstractConstellationPlanner.class, "AbstractConstellationPlanner", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractConstellationPlanner_ConstellationState(), this.getConstellationState(), this.getConstellationState_ConstellationPlanner(), "constellationState", null, 0, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractConstellationPlanner_StartDate(), theEcorePackage.getEDate(), "startDate", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractConstellationPlanner_EndDate(), theEcorePackage.getEDate(), "endDate", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractConstellationPlanner_ConstellationRequestsList(), this.getConstellationRequestsList(), null, "constellationRequestsList", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractConstellationPlanner_ConstellationCommandPlan(), this.getAbstractConstellationCommandPlan(), null, "constellationCommandPlan", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractConstellationPlanner_MaxNumberThreads(), theEcorePackage.getEInt(), "maxNumberThreads", "0", 0, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractConstellationPlanner_CommandDuplicatesPreserved(), theEcorePackage.getEBoolean(), "commandDuplicatesPreserved", "false", 0, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractConstellationPlanner_ElevationMask(), theApogyCoreEnvironmentOrbitEarthPackage.getConstantElevationMask(), null, "elevationMask", null, 1, 1, AbstractConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getAbstractConstellationPlanner__IsValid__VisibilityPass(), theEcorePackage.getEBoolean(), "isValid", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), "visibilityPass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getAbstractConstellationPlanner__GetSatellite__EarthOrbitModel(), this.getSatellite(), "getSatellite", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getEarthOrbitModel(), "orbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getAbstractConstellationPlanner__Plan(), null, "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCorePackage.getException());
+
+		op = initEOperation(getAbstractConstellationPlanner__Validate(), null, "validate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCorePackage.getException());
+
+		op = initEOperation(getAbstractConstellationPlanner__GetRequestBasedSatelliteCommandsComparator(), null, "getRequestBasedSatelliteCommandsComparator", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getComparator());
+		g2 = createEGenericType(this.getAbstractRequestBasedSatelliteCommand());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__ObservationConstellationRequest_VisibilityPass(), this.getVisibilityPassBasedSatelliteCommand(), "createVisibilityPassBasedSatelliteCommand", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getObservationConstellationRequest(), "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), "visibilityPass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(defaultConstellationPlannerEClass, DefaultConstellationPlanner.class, "DefaultConstellationPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDefaultConstellationPlanner_UmbraPassesValid(), theEcorePackage.getEBoolean(), "umbraPassesValid", "false", 0, 1, DefaultConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDefaultConstellationPlanner_SatelliteRollCommandValid(), theEcorePackage.getEBoolean(), "satelliteRollCommandValid", "false", 0, 1, DefaultConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDefaultConstellationPlanner_SunHorizonAngleUmbraThreshold(), theEcorePackage.getEDouble(), "sunHorizonAngleUmbraThreshold", "5.0", 0, 1, DefaultConstellationPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abstractConstellationCommandPlanEClass, AbstractConstellationCommandPlan.class, "AbstractConstellationCommandPlan", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractConstellationCommandPlan_ConstellationCommands(), this.getAbstractSatelliteCommand(), null, "constellationCommands", null, 0, -1, AbstractConstellationCommandPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(defaultConstellationCommandPlanEClass, DefaultConstellationCommandPlan.class, "DefaultConstellationCommandPlan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(constellationRequestsListEClass, ConstellationRequestsList.class, "ConstellationRequestsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstellationRequestsList_ConstellationRequests(), this.getAbstractConstellationRequest(), null, "constellationRequests", null, 0, -1, ConstellationRequestsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractConstellationRequestEClass, AbstractConstellationRequest.class, "AbstractConstellationRequest", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAbstractConstellationRequest_Uid(), theEcorePackage.getELong(), "uid", "0", 0, 1, AbstractConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractConstellationRequest_Uid(), this.getAbstractUID(), null, "uid", null, 0, 1, AbstractConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractConstellationRequest_OrderPriority(), this.getConstellationRequestPriority(), "orderPriority", "NORMAL", 0, 1, AbstractConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractConstellationRequest_OrderStatus(), this.getConstellationRequestStatus(), "orderStatus", "NEW", 0, 1, AbstractConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractConstellationRequest_SatelliteCommand(), this.getAbstractSatelliteCommand(), this.getAbstractSatelliteCommand_ConstellationRequest(), "satelliteCommand", null, 0, 1, AbstractConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(simpleRequestEClass, SimpleRequest.class, "SimpleRequest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(observationConstellationRequestEClass, ObservationConstellationRequest.class, "ObservationConstellationRequest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getObservationConstellationRequest_Location(), theApogyCoreEnvironmentOrbitEarthPackage.getEarthSurfaceLocation(), null, "location", null, 0, 1, ObservationConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageConstellationRequestEClass, ImageConstellationRequest.class, "ImageConstellationRequest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImageConstellationRequest_Image(), this.getOrbitalImage(), null, "image", null, 0, 1, ImageConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1008,19 +1458,23 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEReference(getSatellitesList_Satellites(), this.getSatellite(), null, "satellites", null, 0, -1, SatellitesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(satelliteEClass, Satellite.class, "Satellite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSatellite_OrbitModel(), theApogyCoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, Satellite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSatellite_MaximumRollRate(), theEcorePackage.getEDouble(), "maximumRollRate", "0.017452778", 0, 1, Satellite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSatellite_MaximumRoll(), theEcorePackage.getEDouble(), "maximumRoll", "0.087", 0, 1, Satellite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSatellite_OrbitModel(), theApogyCoreEnvironmentOrbitEarthPackage.getEarthOrbitModel(), null, "orbitModel", null, 1, 1, Satellite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSatellite_MaximumRoll(), theEcorePackage.getEDouble(), "maximumRoll", "5.0", 0, 1, Satellite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(abstractSatelliteCommandEClass, AbstractSatelliteCommand.class, "AbstractSatelliteCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(abstractSatelliteCommandEClass, AbstractSatelliteCommand.class, "AbstractSatelliteCommand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractSatelliteCommand_Uid(), this.getAbstractUID(), null, "uid", null, 0, 1, AbstractSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractSatelliteCommand_Satellite(), this.getSatellite(), null, "satellite", null, 0, 1, AbstractSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractSatelliteCommand_ConstellationRequest(), this.getAbstractConstellationRequest(), this.getAbstractConstellationRequest_SatelliteCommand(), "constellationRequest", null, 0, 1, AbstractSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abstractRequestBasedSatelliteCommandEClass, AbstractRequestBasedSatelliteCommand.class, "AbstractRequestBasedSatelliteCommand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractRequestBasedSatelliteCommand_ConstellationRequest(), this.getAbstractConstellationRequest(), null, "constellationRequest", null, 0, 1, AbstractRequestBasedSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(visibilityPassBasedSatelliteCommandEClass, VisibilityPassBasedSatelliteCommand.class, "VisibilityPassBasedSatelliteCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVisibilityPassBasedSatelliteCommand_VisibilityPass(), theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), null, "visibilityPass", null, 0, 1, VisibilityPassBasedSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(acquireImageSatelliteCommandEClass, AcquireImageSatelliteCommand.class, "AcquireImageSatelliteCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAcquireImageSatelliteCommand_RollAngle(), theEcorePackage.getEDouble(), "rollAngle", "0.0", 0, 1, AcquireImageSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orbitalImageEClass, OrbitalImage.class, "OrbitalImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrbitalImage_Coordinates(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "coordinates", null, 1, 1, OrbitalImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrbitalImage_RollAngle(), theEcorePackage.getEDouble(), "rollAngle", "0.0", 0, 1, OrbitalImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constellationDownlinksListEClass, ConstellationDownlinksList.class, "ConstellationDownlinksList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1030,22 +1484,34 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEReference(getConstellationDownlink_DownlinkItems(), this.getAbstractConstellationDownlinkItem(), null, "downlinkItems", null, 0, -1, ConstellationDownlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractConstellationDownlinkItemEClass, AbstractConstellationDownlinkItem.class, "AbstractConstellationDownlinkItem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAbstractConstellationDownlinkItem_RequestUID(), theEcorePackage.getELong(), "requestUID", "0", 0, 1, AbstractConstellationDownlinkItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractConstellationDownlinkItem_RequestUID(), this.getAbstractUID(), null, "requestUID", null, 0, 1, AbstractConstellationDownlinkItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orbitalImageConstellationDownlinkItemEClass, OrbitalImageConstellationDownlinkItem.class, "OrbitalImageConstellationDownlinkItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOrbitalImageConstellationDownlinkItem_Image(), this.getOrbitalImage(), null, "image", null, 0, 1, OrbitalImageConstellationDownlinkItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constellationUtilitiesEClass, ConstellationUtilities.class, "ConstellationUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getConstellationUtilities__SortByPriority__List(), null, "sortByPriority", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getConstellationUtilities__AddAllRequests__ConstellationRequestsList_List(), null, "addAllRequests", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getConstellationRequestsList(), "container", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getAbstractConstellationRequest());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "requests", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getSortedSet());
+
+		op = initEOperation(getConstellationUtilities__AddRequest__ConstellationRequestsList_AbstractConstellationRequest(), null, "addRequest", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getConstellationRequestsList(), "container", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractConstellationRequest(), "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getConstellationUtilities__RemoveRequest__ConstellationRequestsList_AbstractConstellationRequest(), null, "removeRequest", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getConstellationRequestsList(), "container", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractConstellationRequest(), "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getConstellationUtilities__RemoveAllRequests__ConstellationRequestsList_List(), null, "removeAllRequests", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getConstellationRequestsList(), "container", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getAbstractConstellationRequest());
 		g1.getETypeArguments().add(g2);
-		initEOperation(op, g1);
+		addEParameter(op, g1, "requests", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(constellationRequestPriorityEEnum, ConstellationRequestPriority.class, "ConstellationRequestPriority");
@@ -1058,10 +1524,12 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		addEEnumLiteral(constellationRequestStatusEEnum, ConstellationRequestStatus.COMMITTED);
 		addEEnumLiteral(constellationRequestStatusEEnum, ConstellationRequestStatus.COMPLETED);
 		addEEnumLiteral(constellationRequestStatusEEnum, ConstellationRequestStatus.FAILED);
+		addEEnumLiteral(constellationRequestStatusEEnum, ConstellationRequestStatus.ABORTED);
 
 		// Initialize data types
 		initEDataType(listEDataType, List.class, "List", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(sortedSetEDataType, SortedSet.class, "SortedSet", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(comparatorEDataType, Comparator.class, "Comparator", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1085,7 +1553,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		   new String[] {
 			 "documentation", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca),\n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
 			 "prefix", "ApogyExamplesSatellite",
-			 "copyrightText", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation",
+			 "copyrightText", "Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\nCanadian Space Agency (CSA) - Initial API and implementation\n-Pierre Allard (Pierre.Allard@canada.ca),\n-Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n-Sebastien Gemme (Sebastien.Gemme@canada.ca)",
 			 "modelName", "ApogyExamplesSatellite",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
@@ -1097,10 +1565,64 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
-		  (listEDataType, 
+		  (abstractUIDEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "Basic Types."
+			 "documentation", "Abstract Unique Identifier.  This class is meant to be sub-classed."
+		   });	
+		addAnnotation
+		  (stringUIDEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Unique Identifier in string format (Default)."
+		   });	
+		addAnnotation
+		  (constellationCommandPlansListEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Class that contains list of {@link ConstellationCommandPlan}."
+		   });	
+		addAnnotation
+		  (constellationStateEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Class used to store the constellation state."
+		   });	
+		addAnnotation
+		  (getConstellationState_ConstellationCommandPlansList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "List of {@link ConstellationCommandPlan}s."
+		   });	
+		addAnnotation
+		  (getConstellationState_SatellitesList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "List of the constellation {@link Satellite}."
+		   });	
+		addAnnotation
+		  (getConstellationState_GroundStationsReferencesList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "List of the {@link GroundStation}."
+		   });	
+		addAnnotation
+		  (getConstellationState_DownlinksLists(), 
+		   source, 
+		   new String[] {
+			 "documentation", "List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}."
+		   });	
+		addAnnotation
+		  (getConstellationState_ConstellationRequestsList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "List of {@link AbstractConstellationRequest}."
+		   });	
+		addAnnotation
+		  (getConstellationState_ConstellationPlanner(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Constellation Planner."
 		   });	
 		addAnnotation
 		  (abstractConstellationEClass, 
@@ -1109,22 +1631,16 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "Represents a constellation of Satellites. It provides basic queries used to schedule\nimage acquisition and upload requests and downloads data from the satellites."
 		   });	
 		addAnnotation
-		  (getAbstractConstellation__Plan__Date_Date(), 
+		  (getAbstractConstellation__Export__AbstractConstellationCommandPlan_String(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Returns the list of {@link AbstractSatelliteCommand} required to process the constellation {@link AbstractConstellationRequest}\nbased on the available constellation satellites.\n@param startDate The start date of the period to be queried.\n@param endDate The end date of the period to be queried.\n@return Reference to the {@link SatelliteCommandPlan}."
+			 "documentation", "Exports the specified plan into the resource specified by the url.\n@param plan Refers the plan to export.\n@param url Specifies the location where the plan must be exported."
 		   });	
 		addAnnotation
-		  (getAbstractConstellation__Plan__List_Date_Date(), 
+		  (getAbstractConstellation__Commit__AbstractConstellationCommandPlan(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest}\nbased on the available constellation satellites.\n@param requests Refers to the list of {@link AbstractConstellationRequest} to process.\n@param startDate The start date of the period to be queried.\n@param endDate The end date of the period to be queried.\n@return Reference to the {@link SatelliteCommandPlan}."
-		   });	
-		addAnnotation
-		  (getAbstractConstellation__Commit__List(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Packages and commits the list of {@link AbstractSatelliteCommand}.\n@param satelliteCommands Reference to the list of {@link AbstractSatelliteCommand}."
+			 "documentation", "Packages and commits the specified plan.\n@param plan Reference to the {@link ConstellationCommandPlan}."
 		   });	
 		addAnnotation
 		  (getAbstractConstellation__Apply__ConstellationDownlink(), 
@@ -1133,88 +1649,171 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "Updates the {@link AbstractConstellationRequest} state based on the {@link ConstallationDownlink}.\n@param downlink Reference to the {@link ConstellationDownlink}."
 		   });	
 		addAnnotation
-		  (getAbstractConstellation__Add__AbstractConstellationRequest(), 
+		  (getAbstractConstellation__ImportConstellationDownlink__String(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Adds the specified {@link AbstractConstellationRequest} to the constellation.\n@param request Specifies the request to add to the {@link AbstractConstellation}."
+			 "documentation", "Imports the {@link ConstellationDownlink} into the current {@link Constellation}.\n@param url String that refers the resource that embeds a {@link ConstellationDownlink}."
 		   });	
 		addAnnotation
-		  (getAbstractConstellation__AddAll__List(), 
+		  (getAbstractConstellation__ImportConstellationRequests__String(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Adds all the {@link AbstractConstellationRequest} specified in the list to the constellation.\n@param requests Specifies the requests to add to the {@link AbstractConstellation}."
+			 "documentation", "Imports the {@link AbstractConstellationRequest} contained in the resource specified by the {@link url}.\n@param url URL that specifies the resource.\n@return List of imported {@link AbstractConstellationRequest}."
 		   });	
 		addAnnotation
-		  (getAbstractConstellation__Remove__AbstractConstellationRequest(), 
+		  (getAbstractConstellation_ConstellationState(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Removes the specified {@link AbstractConstellationRequest} from the constellation.\n@param request Specifies the request to remove from the {@link AbstractConstellation}."
-		   });	
-		addAnnotation
-		  (getAbstractConstellation__RemoveAll__List(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Removes all the {@link AbstractConstellationRequest} specified in the list from the constellation.\n@param request Specifies the requests to remove from the {@link AbstractConstellation}."
-		   });	
-		addAnnotation
-		  (getAbstractConstellation_SatellitesList(), 
-		   source, 
-		   new String[] {
-			 "documentation", "List of the constellation {@link Satellite}."
-		   });	
-		addAnnotation
-		  (getAbstractConstellation_GroundStationsReferencesList(), 
-		   source, 
-		   new String[] {
-			 "documentation", "List of the {@link GroundStation}."
-		   });	
-		addAnnotation
-		  (getAbstractConstellation_DownlinksLists(), 
-		   source, 
-		   new String[] {
-			 "documentation", "List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}."
-		   });	
-		addAnnotation
-		  (getAbstractConstellation_ConstellationRequestsList(), 
-		   source, 
-		   new String[] {
-			 "documentation", "List of {@link AbstractConstellationRequest}."
-		   });	
-		addAnnotation
-		  (constellationCommandPlanEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "This class contains a list of {@link SatelliteCommandPlanItem}.\nThe {@link AbstractConstellation#plan} produces {@link SatelliteCommandPlan}."
-		   });	
-		addAnnotation
-		  (getConstellationCommandPlan_ConstellationCommandPlanItems(), 
-		   source, 
-		   new String[] {
-			 "documentation", "List of {@link SatelliteCommandPlanItem}."
-		   });	
-		addAnnotation
-		  (constellationCommandPlanItemEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "This class specifies the link between an {@link AbstractConstellationRequest} and a {@link AbstractSatelliteCommand}."
-		   });	
-		addAnnotation
-		  (getConstellationCommandPlanItem_Request(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Reference to the {@link AbstractConstellationRequest}."
-		   });	
-		addAnnotation
-		  (getConstellationCommandPlanItem_SatelliteCommand(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Reference to the {@link AbstractSatelliteCommand} used/required to service the {@link AbstractConstellationRequest}."
+			 "documentation", "Constellation State."
 		   });	
 		addAnnotation
 		  (defaultConstellationEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "Constellation Default Implementation Class."
+			 "documentation", "Default Constellation Implementation Class.\n\nBy default {@link AbstractConstellation#newUID} returns {@link DigitUID}."
+		   });	
+		addAnnotation
+		  (abstractConstellationPlannerEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Abstract class that defines the concept of Constellation Planner.  A planner is used to process\na list of {@link AbstractConstellationRequest} and to generate a {@link ConstellationCommandPlan}."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner__IsValid__VisibilityPass(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Checks if the pass is valid."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner__GetSatellite__EarthOrbitModel(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the satellite associated with the specified {@link OrbitModel}.\n@param orbitModel The specified {@link OrbitModel}.\n@return The Satellite associated with the specified {@link OrbitModel}, null if none is found."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner__Plan(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest}\nbased on the available constellation satellites.  The plan is added to the list of plans."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner__Validate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Validates the planner properties."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner__GetRequestBasedSatelliteCommandsComparator(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Returns the comparator of {@link AbstractRequestBasedSatelliteCommand} used to sort them."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__ObservationConstellationRequest_VisibilityPass(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Creates a command to address the specified {@link ObservationConstellationRequest}.\n@param request Refers to the request.\n@param visibilityPass Visibility pass context."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner_ConstellationState(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers the {@link ConstellationState} that contains the planner.",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner_StartDate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the start date used by the planner.",
+			 "propertyCategory", "PLANNER_SETTINGS"
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner_EndDate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the end date used by the planner.",
+			 "propertyCategory", "PLANNER_SETTINGS"
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner_ConstellationRequestsList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the list of {@AbstractConstellationRequest} to be processed by the planner.",
+			 "propertyCategory", "PLANNER_SETTINGS"
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner_ConstellationCommandPlan(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies in which plan the planner will store its results.",
+			 "propertyCategory", "PLANNER_SETTINGS"
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner_MaxNumberThreads(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the maximum number of threads used by the planner.  0 (default) means the maximum available.",
+			 "propertyCategory", "PLANNER_SETTINGS"
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner_CommandDuplicatesPreserved(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Indicates if the duplicates are preserved.  False (default value) indicates only the first command that addresses a\n{@link ObservationConstellationRequest} will be preserved.  The commands that occur after in time will be deleted.  True means\nall the commands will be preserved.",
+			 "propertyCategory", "VISIBILITY_PASS_VALIDITY"
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner_ElevationMask(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the elevation mask used"
+		   });	
+		addAnnotation
+		  (defaultConstellationPlannerEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Default Implementation of {@link AbstractConstellationPlanner}."
+		   });	
+		addAnnotation
+		  (getDefaultConstellationPlanner_UmbraPassesValid(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Indicates if a pass that occurs in umbra must be considered by the planner.",
+			 "propertyCategory", "VISIBILITY_PASS_VALIDITY"
+		   });	
+		addAnnotation
+		  (getDefaultConstellationPlanner_SatelliteRollCommandValid(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Indicates if a pass that requires roll command to ensure coverage must be considered by the planner.",
+			 "propertyCategory", "VISIBILITY_PASS_VALIDITY"
+		   });	
+		addAnnotation
+		  (getDefaultConstellationPlanner_SunHorizonAngleUmbraThreshold(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the angle threshold value the planner uses to determine the umbra.",
+			 "propertyCategory", "VISIBILITY_PASS_VALIDITY",
+			 "apogy_units", "deg"
+		   });	
+		addAnnotation
+		  (abstractConstellationCommandPlanEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This class contains a list of {@link AbstractSatelliteCommand}.\nThe {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationCommandPlan_ConstellationCommands(), 
+		   source, 
+		   new String[] {
+			 "documentation", "List of {@link AbstractSatelliteCommand}."
+		   });	
+		addAnnotation
+		  (defaultConstellationCommandPlanEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "This class contains a list of {@link AbstractSatelliteCommand}.\nThe {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}."
 		   });	
 		addAnnotation
 		  (constellationRequestsListEClass, 
@@ -1253,10 +1852,22 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "Order Status."
 		   });	
 		addAnnotation
-		  (getAbstractConstellationRequest_SatelliteCommand(), 
+		  (simpleRequestEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "Reference to the {@link AbstractSatelliteCommand} associated to the {@link AbstractConstellationRequest}."
+			 "documentation", "Simple Request."
+		   });	
+		addAnnotation
+		  (observationConstellationRequestEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Class that defines a Earth Observation request."
+		   });	
+		addAnnotation
+		  (getObservationConstellationRequest_Location(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the location of the observation."
 		   });	
 		addAnnotation
 		  (imageConstellationRequestEClass, 
@@ -1301,18 +1912,11 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "Refers to the {@link OrbitModel}."
 		   });	
 		addAnnotation
-		  (getSatellite_MaximumRollRate(), 
-		   source, 
-		   new String[] {
-			 "documentation", "The satellite maximum roll rate.",
-			 "apogy_units", "rad/s"
-		   });	
-		addAnnotation
 		  (getSatellite_MaximumRoll(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The satellite maximum roll.",
-			 "apogy_units", "rad"
+			 "documentation", "Maximum Satellite Roll.",
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (abstractSatelliteCommandEClass, 
@@ -1321,16 +1925,34 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "Satellite Command."
 		   });	
 		addAnnotation
+		  (getAbstractSatelliteCommand_Uid(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Request Unique Identifier."
+		   });	
+		addAnnotation
 		  (getAbstractSatelliteCommand_Satellite(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Refers the {@link Satellite} associated with the {@link AbstractSatelliteCommand}."
 		   });	
 		addAnnotation
-		  (getAbstractSatelliteCommand_ConstellationRequest(), 
+		  (abstractRequestBasedSatelliteCommandEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "Reference to the associated {@link AbstractConstellationRequest}."
+			 "documentation", "Satellite Command that is linked to a specific {@link AbstractConstellationRequest}."
+		   });	
+		addAnnotation
+		  (getAbstractRequestBasedSatelliteCommand_ConstellationRequest(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers to the {@link AbstractConstellationRequest} managed by this command."
+		   });	
+		addAnnotation
+		  (getVisibilityPassBasedSatelliteCommand_VisibilityPass(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers the {@link VisibilityPass} associated to the command."
 		   });	
 		addAnnotation
 		  (acquireImageSatelliteCommandEClass, 
@@ -1387,10 +2009,28 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "Utilities class for the satellite example."
 		   });	
 		addAnnotation
-		  (getConstellationUtilities__SortByPriority__List(), 
+		  (getConstellationUtilities__AddAllRequests__ConstellationRequestsList_List(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Sorts the list of {@link AbstractConstellationRequest} based on {@link AbstractConstellationRequest#priority}.\n@param requests Specifies the list of {@link AbstractConstellationRequest} to sort."
+			 "documentation", "Adds all the specified requests into the specified container.\n@param container Refers to the destination list.\n@param requests List of {@link AbstractConstellationRequest} to be imported."
+		   });	
+		addAnnotation
+		  (getConstellationUtilities__AddRequest__ConstellationRequestsList_AbstractConstellationRequest(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Adds the specified {@link AbstractConstellationRequest} to the list of {@link ConstellationRequestsList}.\n@param container Refers to the destination list.\n@param request Specifies the request to add to the list."
+		   });	
+		addAnnotation
+		  (getConstellationUtilities__RemoveRequest__ConstellationRequestsList_AbstractConstellationRequest(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Removes the specified {@link AbstractConstellationRequest} from the specified {@link ConstellationRequestsList}.\n@param container Refers to the {@link ConstellationRequestsList}.\n@param request Specifies the request to remove from the list."
+		   });	
+		addAnnotation
+		  (getConstellationUtilities__RemoveAllRequests__ConstellationRequestsList_List(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Removes all the {@link AbstractConstellationRequest} specified from the list from the specified {@link ConstellationRequestsList}.\n@param container Refers to the {@link ConstellationRequestsList}.\n@param request Specifies the requests to remove from the {@link AbstractConstellation}."
 		   });
 	}
 

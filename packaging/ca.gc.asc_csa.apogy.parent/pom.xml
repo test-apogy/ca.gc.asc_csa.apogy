@@ -349,6 +349,7 @@
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.ui.edit</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.apogy</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.apogy.edit</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.tests</module>
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.ui</module>
 		

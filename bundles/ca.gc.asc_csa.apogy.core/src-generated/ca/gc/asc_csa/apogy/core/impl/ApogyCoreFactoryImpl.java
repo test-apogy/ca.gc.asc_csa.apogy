@@ -108,6 +108,7 @@ public class ApogyCoreFactoryImpl extends EFactoryImpl implements
 			case ApogyCorePackage.ABSOLUTE_POSE_PROVIDER: return createAbsolutePoseProvider();
 			case ApogyCorePackage.APOGY_INITIALIZATION_DATA: return createApogyInitializationData();
 			case ApogyCorePackage.WORKSITES_LIST: return createWorksitesList();
+			case ApogyCorePackage.SURFACE_LOCATIONS_LIST: return createSurfaceLocationsList();
 			case ApogyCorePackage.ORBIT_MODELS_LIST: return createOrbitModelsList();
 			case ApogyCorePackage.POSITIONED: return createPositioned();
 			case ApogyCorePackage.FEATURE_OF_INTEREST: return createFeatureOfInterest();
@@ -296,6 +297,16 @@ public class ApogyCoreFactoryImpl extends EFactoryImpl implements
 	public WorksitesList createWorksitesList() {
 		WorksitesListImpl worksitesList = new WorksitesListImpl();
 		return worksitesList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SurfaceLocationsList createSurfaceLocationsList() {
+		SurfaceLocationsListImpl surfaceLocationsList = new SurfaceLocationsListImpl();
+		return surfaceLocationsList;
 	}
 
 	/**

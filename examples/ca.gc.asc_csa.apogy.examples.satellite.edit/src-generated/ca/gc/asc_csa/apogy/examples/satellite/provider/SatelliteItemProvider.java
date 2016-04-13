@@ -35,7 +35,6 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-
 import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
@@ -77,7 +76,6 @@ public class SatelliteItemProvider
 
 			addNamePropertyDescriptor(object);
 			addOrbitModelPropertyDescriptor(object);
-			addMaximumRollRatePropertyDescriptor(object);
 			addMaximumRollPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -123,28 +121,6 @@ public class SatelliteItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Maximum Roll Rate feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMaximumRollRatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Satellite_maximumRollRate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maximumRollRate_feature", "_UI_Satellite_type"),
-				 ApogyExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL_RATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -210,7 +186,6 @@ public class SatelliteItemProvider
 
 		switch (notification.getFeatureID(Satellite.class)) {
 			case ApogyExamplesSatellitePackage.SATELLITE__NAME:
-			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
 			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

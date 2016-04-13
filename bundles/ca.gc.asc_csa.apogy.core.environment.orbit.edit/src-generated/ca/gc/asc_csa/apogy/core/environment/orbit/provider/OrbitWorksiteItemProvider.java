@@ -52,25 +52,25 @@ public class OrbitWorksiteItemProvider extends WorksiteItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addActiveOrbitModelPropertyDescriptor(object);
+			addOrbitModelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Active Orbit Model feature.
+	 * This adds a property descriptor for the Orbit Model feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addActiveOrbitModelPropertyDescriptor(Object object) {
+	protected void addOrbitModelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OrbitWorksite_activeOrbitModel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitWorksite_activeOrbitModel_feature", "_UI_OrbitWorksite_type"),
-				 ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL,
+				 getString("_UI_OrbitWorksite_orbitModel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitWorksite_orbitModel_feature", "_UI_OrbitWorksite_type"),
+				 ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_WORKSITE__ORBIT_MODEL,
 				 true,
 				 false,
 				 true,

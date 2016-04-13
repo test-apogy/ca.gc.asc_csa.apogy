@@ -40,12 +40,9 @@ import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
-import ca.gc.asc_csa.apogy.core.OrbitModelsList;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.util.ApogyCoreEnvironmentOrbitAdapterFactory;
-import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -242,52 +239,6 @@ public class ApogyCoreEnvironmentOrbitItemProviderAdapterFactory extends ApogyCo
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InitialOrbitContainerItemProvider initialOrbitContainerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitContainer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInitialOrbitContainerAdapter() {
-		if (initialOrbitContainerItemProvider == null) {
-			initialOrbitContainerItemProvider = new InitialOrbitContainerItemProvider(this);
-		}
-
-		return initialOrbitContainerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OrbitModelItemProvider orbitModelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrbitModelAdapter() {
-		if (orbitModelItemProvider == null) {
-			orbitModelItemProvider = new OrbitModelItemProvider(this);
-		}
-
-		return orbitModelItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -442,96 +393,7 @@ public class ApogyCoreEnvironmentOrbitItemProviderAdapterFactory extends ApogyCo
 		if (timedStampedAngularCoordinatesItemProvider != null) timedStampedAngularCoordinatesItemProvider.dispose();
 		if (spacecraftAttitudeItemProvider != null) spacecraftAttitudeItemProvider.dispose();
 		if (spacecraftStateItemProvider != null) spacecraftStateItemProvider.dispose();
-		if (initialOrbitContainerItemProvider != null) initialOrbitContainerItemProvider.dispose();
-		if (orbitModelItemProvider != null) orbitModelItemProvider.dispose();
 		if (apogyCoreEnvironmentOrbitFacadeItemProvider != null) apogyCoreEnvironmentOrbitFacadeItemProvider.dispose();
-	}
-
-	/**
-	 * A child creation extender for the {@link ApogyCorePackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class ApogyCoreChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends ApogyCoreSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseOrbitModelsList(OrbitModelsList object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS,
-						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return ApogyCoreEnvironmentOrbitEditPlugin.INSTANCE;
-		}
 	}
 
 	/**
@@ -614,16 +476,6 @@ public class ApogyCoreEnvironmentOrbitItemProviderAdapterFactory extends ApogyCo
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createInitialOrbitContainer()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createApogyCoreEnvironmentOrbitFacade()));
 
 				return null;
@@ -665,16 +517,6 @@ public class ApogyCoreEnvironmentOrbitItemProviderAdapterFactory extends ApogyCo
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createSpacecraftState()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createInitialOrbitContainer()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
 
 				newChildDescriptors.add
 					(createChildParameter

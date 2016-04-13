@@ -1,0 +1,64 @@
+/**
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
+ */
+package ca.gc.asc_csa.apogy.examples.satellite;
+
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Observation Constellation Request</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <!-- begin-model-doc -->
+ * Class that defines a Earth Observation request.
+ * <!-- end-model-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest#getLocation <em>Location</em>}</li>
+ * </ul>
+ *
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getObservationConstellationRequest()
+ * @model
+ * @generated
+ */
+public interface ObservationConstellationRequest extends AbstractConstellationRequest {
+	/**
+	 * Returns the value of the '<em><b>Location</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Specifies the location of the observation.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Location</em>' containment reference.
+	 * @see #setLocation(EarthSurfaceLocation)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getObservationConstellationRequest_Location()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EarthSurfaceLocation getLocation();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest#getLocation <em>Location</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Location</em>' containment reference.
+	 * @see #getLocation()
+	 * @generated
+	 */
+	void setLocation(EarthSurfaceLocation value);
+
+} // ObservationConstellationRequest

@@ -14,19 +14,16 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  */
 
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.List;
-import java.util.SortedSet;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,16 +51,50 @@ public class ConstellationUtilitiesImpl extends MinimalEObjectImpl.Container imp
 	protected EClass eStaticClass() {
 		return ApogyExamplesSatellitePackage.Literals.CONSTELLATION_UTILITIES;
 	}
+	
+	private static ConstellationUtilities instance = null;
+
+	public static ConstellationUtilities getInstance() {
+		if (instance == null) {
+			instance = new ConstellationUtilitiesImpl();
+		}
+		return instance;
+	}	
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public SortedSet<AbstractConstellationRequest> sortByPriority(List<AbstractConstellationRequest> requests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addAllRequests(ConstellationRequestsList container, List<AbstractConstellationRequest> requests) {
+		container.getConstellationRequests().addAll(requests);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void addRequest(ConstellationRequestsList container, AbstractConstellationRequest request) {
+		container.getConstellationRequests().add(request);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void removeRequest(ConstellationRequestsList container, AbstractConstellationRequest request) {
+		container.getConstellationRequests().remove(request);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void removeAllRequests(ConstellationRequestsList container, List<AbstractConstellationRequest> requests) {
+		container.getConstellationRequests().removeAll(requests);
 	}
 
 	/**
@@ -75,8 +106,18 @@ public class ConstellationUtilitiesImpl extends MinimalEObjectImpl.Container imp
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES___SORT_BY_PRIORITY__LIST:
-				return sortByPriority((List<AbstractConstellationRequest>)arguments.get(0));
+			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES___ADD_ALL_REQUESTS__CONSTELLATIONREQUESTSLIST_LIST:
+				addAllRequests((ConstellationRequestsList)arguments.get(0), (List<AbstractConstellationRequest>)arguments.get(1));
+				return null;
+			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES___ADD_REQUEST__CONSTELLATIONREQUESTSLIST_ABSTRACTCONSTELLATIONREQUEST:
+				addRequest((ConstellationRequestsList)arguments.get(0), (AbstractConstellationRequest)arguments.get(1));
+				return null;
+			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES___REMOVE_REQUEST__CONSTELLATIONREQUESTSLIST_ABSTRACTCONSTELLATIONREQUEST:
+				removeRequest((ConstellationRequestsList)arguments.get(0), (AbstractConstellationRequest)arguments.get(1));
+				return null;
+			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES___REMOVE_ALL_REQUESTS__CONSTELLATIONREQUESTSLIST_LIST:
+				removeAllRequests((ConstellationRequestsList)arguments.get(0), (List<AbstractConstellationRequest>)arguments.get(1));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -1,38 +1,29 @@
-package ca.gc.asc_csa.apogy.examples.satellite.provider;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
  * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-
-import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest} object.
@@ -40,7 +31,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ImageConstellationRequestItemProvider extends AbstractConstellationRequestItemProvider {
+public class ImageConstellationRequestItemProvider extends ObservationConstellationRequestItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -62,77 +53,8 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addLongitudePropertyDescriptor(object);
-			addLatitudePropertyDescriptor(object);
-			addElevationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Longitude feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLongitudePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_GeographicCoordinates_longitude_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_longitude_feature", "_UI_GeographicCoordinates_type"),
-				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Latitude feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLatitudePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_GeographicCoordinates_latitude_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_latitude_feature", "_UI_GeographicCoordinates_type"),
-				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Elevation feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addElevationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_GeographicCoordinates_elevation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_elevation_feature", "_UI_GeographicCoordinates_type"),
-				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -180,12 +102,16 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest)object;
-		return getString("_UI_ImageConstellationRequest_type") + " " + imageConstellationRequest.getUid();
+		return super.getText(object);
+	}
+	
+	@Override
+	public String getAbstractConstellationRequestTypeName() {
+		return getString("_UI_ImageConstellationRequest_type");
 	}
 	
 
@@ -201,11 +127,6 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageConstellationRequest.class)) {
-			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
-			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
-			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

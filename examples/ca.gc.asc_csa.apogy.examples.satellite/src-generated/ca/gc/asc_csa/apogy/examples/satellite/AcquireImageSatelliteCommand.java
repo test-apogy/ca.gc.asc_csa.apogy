@@ -13,6 +13,8 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +36,7 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  * @model
  * @generated
  */
-public interface AcquireImageSatelliteCommand extends AbstractSatelliteCommand {
+public interface AcquireImageSatelliteCommand extends AbstractRequestBasedSatelliteCommand, GeographicCoordinates {
 	/**
 	 * Returns the value of the '<em><b>Roll Angle</b></em>' attribute.
 	 * The default value is <code>"0.0"</code>.

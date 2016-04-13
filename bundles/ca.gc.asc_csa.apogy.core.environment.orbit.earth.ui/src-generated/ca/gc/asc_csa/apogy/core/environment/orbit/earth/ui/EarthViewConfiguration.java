@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
  */
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.jface.viewers.ISelection;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 
@@ -49,5 +50,18 @@ public interface EarthViewConfiguration extends Named, Described {
 	 * @generated
 	 */
 	EList<AbstractWorldWindLayer> getLayers();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Method that notifies all AbstractWorldWindLayer of a new selection.
+	 * @param selection The new selection made.
+	 * <!-- end-model-doc -->
+	 * @model selectionDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ISelection" selectionUnique="false"
+	 * @generated
+	 */
+	void selectionChanged(ISelection selection);
 
 } // EarthViewConfiguration

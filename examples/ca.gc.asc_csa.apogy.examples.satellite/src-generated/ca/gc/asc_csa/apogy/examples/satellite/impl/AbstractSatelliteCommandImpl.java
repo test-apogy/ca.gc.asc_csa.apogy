@@ -17,23 +17,15 @@ import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.emf.Timed;
-
-import ca.gc.asc_csa.apogy.core.environment.impl.GeographicCoordinatesImpl;
-
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
-import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,13 +36,13 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl#getUid <em>Uid</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl#getSatellite <em>Satellite</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl#getConstellationRequest <em>Constellation Request</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl implements AbstractSatelliteCommand {
+public abstract class AbstractSatelliteCommandImpl extends MinimalEObjectImpl.Container implements AbstractSatelliteCommand {
 	/**
 	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,6 +62,16 @@ public class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl impl
 	 * @ordered
 	 */
 	protected Date time = TIME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getUid() <em>Uid</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUid()
+	 * @generated
+	 * @ordered
+	 */
+	protected AbstractUID uid;
 
 	/**
 	 * The cached value of the '{@link #getSatellite() <em>Satellite</em>}' reference.
@@ -126,6 +128,49 @@ public class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AbstractUID getUid() {
+		return uid;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUid(AbstractUID newUid, NotificationChain msgs) {
+		AbstractUID oldUid = uid;
+		uid = newUid;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID, oldUid, newUid);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUid(AbstractUID newUid) {
+		if (newUid != uid) {
+			NotificationChain msgs = null;
+			if (uid != null)
+				msgs = ((InternalEObject)uid).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID, null, msgs);
+			if (newUid != null)
+				msgs = ((InternalEObject)newUid).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID, null, msgs);
+			msgs = basicSetUid(newUid, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID, newUid, newUid));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Satellite getSatellite() {
 		if (satellite != null && satellite.eIsProxy()) {
 			InternalEObject oldSatellite = (InternalEObject)satellite;
@@ -164,94 +209,13 @@ public class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractConstellationRequest getConstellationRequest() {
-		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST) return null;
-		return (AbstractConstellationRequest)eContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AbstractConstellationRequest basicGetConstellationRequest() {
-		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST) return null;
-		return (AbstractConstellationRequest)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetConstellationRequest(AbstractConstellationRequest newConstellationRequest, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newConstellationRequest, ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setConstellationRequest(AbstractConstellationRequest newConstellationRequest) {
-		if (newConstellationRequest != eInternalContainer() || (eContainerFeatureID() != ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST && newConstellationRequest != null)) {
-			if (EcoreUtil.isAncestor(this, newConstellationRequest))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newConstellationRequest != null)
-				msgs = ((InternalEObject)newConstellationRequest).eInverseAdd(this, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND, AbstractConstellationRequest.class, msgs);
-			msgs = basicSetConstellationRequest(newConstellationRequest, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST, newConstellationRequest, newConstellationRequest));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetConstellationRequest((AbstractConstellationRequest)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST:
-				return basicSetConstellationRequest(null, msgs);
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				return basicSetUid(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST:
-				return eInternalContainer().eInverseRemove(this, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND, AbstractConstellationRequest.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -264,12 +228,11 @@ public class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl impl
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
 				return getTime();
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				return getUid();
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__SATELLITE:
 				if (resolve) return getSatellite();
 				return basicGetSatellite();
-			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST:
-				if (resolve) return getConstellationRequest();
-				return basicGetConstellationRequest();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -285,11 +248,11 @@ public class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl impl
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
 				setTime((Date)newValue);
 				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				setUid((AbstractUID)newValue);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__SATELLITE:
 				setSatellite((Satellite)newValue);
-				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST:
-				setConstellationRequest((AbstractConstellationRequest)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -306,11 +269,11 @@ public class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl impl
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				setUid((AbstractUID)null);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__SATELLITE:
 				setSatellite((Satellite)null);
-				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST:
-				setConstellationRequest((AbstractConstellationRequest)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -326,44 +289,12 @@ public class AbstractSatelliteCommandImpl extends GeographicCoordinatesImpl impl
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__UID:
+				return uid != null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__SATELLITE:
 				return satellite != null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST:
-				return basicGetConstellationRequest() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Timed.class) {
-			switch (derivedFeatureID) {
-				case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME: return ApogyCommonEMFPackage.TIMED__TIME;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Timed.class) {
-			switch (baseFeatureID) {
-				case ApogyCommonEMFPackage.TIMED__TIME: return ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

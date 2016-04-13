@@ -33,22 +33,31 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	ApogyExamplesSatelliteFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatelliteFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Constellation Command Plan</em>'.
+	 * Returns a new object of class '<em>String UID</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constellation Command Plan</em>'.
+	 * @return a new object of class '<em>String UID</em>'.
 	 * @generated
 	 */
-	ConstellationCommandPlan createConstellationCommandPlan();
+	StringUID createStringUID();
 
 	/**
-	 * Returns a new object of class '<em>Constellation Command Plan Item</em>'.
+	 * Returns a new object of class '<em>Constellation Command Plans List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constellation Command Plan Item</em>'.
+	 * @return a new object of class '<em>Constellation Command Plans List</em>'.
 	 * @generated
 	 */
-	ConstellationCommandPlanItem createConstellationCommandPlanItem();
+	ConstellationCommandPlansList createConstellationCommandPlansList();
+
+	/**
+	 * Returns a new object of class '<em>Constellation State</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constellation State</em>'.
+	 * @generated
+	 */
+	ConstellationState createConstellationState();
 
 	/**
 	 * Returns a new object of class '<em>Default Constellation</em>'.
@@ -60,6 +69,24 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	DefaultConstellation createDefaultConstellation();
 
 	/**
+	 * Returns a new object of class '<em>Default Constellation Planner</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Default Constellation Planner</em>'.
+	 * @generated
+	 */
+	DefaultConstellationPlanner createDefaultConstellationPlanner();
+
+	/**
+	 * Returns a new object of class '<em>Default Constellation Command Plan</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Default Constellation Command Plan</em>'.
+	 * @generated
+	 */
+	DefaultConstellationCommandPlan createDefaultConstellationCommandPlan();
+
+	/**
 	 * Returns a new object of class '<em>Constellation Requests List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +94,24 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	 * @generated
 	 */
 	ConstellationRequestsList createConstellationRequestsList();
+
+	/**
+	 * Returns a new object of class '<em>Simple Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Request</em>'.
+	 * @generated
+	 */
+	SimpleRequest createSimpleRequest();
+
+	/**
+	 * Returns a new object of class '<em>Observation Constellation Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Observation Constellation Request</em>'.
+	 * @generated
+	 */
+	ObservationConstellationRequest createObservationConstellationRequest();
 
 	/**
 	 * Returns a new object of class '<em>Image Constellation Request</em>'.
@@ -96,13 +141,13 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	Satellite createSatellite();
 
 	/**
-	 * Returns a new object of class '<em>Abstract Satellite Command</em>'.
+	 * Returns a new object of class '<em>Visibility Pass Based Satellite Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abstract Satellite Command</em>'.
+	 * @return a new object of class '<em>Visibility Pass Based Satellite Command</em>'.
 	 * @generated
 	 */
-	AbstractSatelliteCommand createAbstractSatelliteCommand();
+	VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand();
 
 	/**
 	 * Returns a new object of class '<em>Acquire Image Satellite Command</em>'.

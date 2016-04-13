@@ -140,17 +140,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 		getEarthSurfaceLocationAdapter().unregisterFromAllObjects();
 		
 		setEarthSurfaceLocationGen(newEarthSurfaceLocation);
-		updateRenderableLayer();
-		
-		if(newEarthSurfaceLocation != null)
-		{
-			newEarthSurfaceLocation.eAdapters().add(getEarthSurfaceLocationAdapter());
-			
-			if(newEarthSurfaceLocation.getGeographicalCoordinates() != null)
-			{
-				newEarthSurfaceLocation.getGeographicalCoordinates().eAdapters().add(getEarthSurfaceLocationAdapter());
-			}
-		}				
+		updateRenderableLayer();		
 	}
 	
 	/**
@@ -313,9 +303,9 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 
 	protected void addRenderable(RenderableLayer layer)
 	{
-		if(getEarthSurfaceLocation() != null && getEarthSurfaceLocation().getGeographicalCoordinates() != null)
+		if(getEarthSurfaceLocation() != null)
 		{
-			GeographicCoordinates coord = getEarthSurfaceLocation().getGeographicalCoordinates();
+			GeographicCoordinates coord = getEarthSurfaceLocation();
 			
 			Angle latitude = Angle.fromRadiansLatitude(coord.getLatitude());
 	        Angle longitude = Angle.fromRadiansLongitude(coord.getLongitude());
@@ -367,12 +357,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 					if(eObject instanceof EarthSurfaceLocation)
 					{
 						EarthSurfaceLocation newEarthSurfaceLocation = (EarthSurfaceLocation) eObject;
-						newEarthSurfaceLocation.eAdapters().add(getEarthSurfaceLocationAdapter());
-						
-						if(newEarthSurfaceLocation.getGeographicalCoordinates() != null)
-						{
-							newEarthSurfaceLocation.getGeographicalCoordinates().eAdapters().add(getEarthSurfaceLocationAdapter());
-						}
+						newEarthSurfaceLocation.eAdapters().add(getEarthSurfaceLocationAdapter());						
 					}
 					else
 					{
@@ -391,22 +376,10 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME:
 								if(isAutoUpdateEnabled()) updateRenderableLayer();
 							break;
-							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
-								
-								if(msg.getOldValue() instanceof GeographicCoordinates)
-								{
-									GeographicCoordinates oldGeographicCoordinates = (GeographicCoordinates) msg.getOldValue();
-									oldGeographicCoordinates.eAdapters().remove(this);
-								}
-								
-								if(msg.getNewValue() instanceof GeographicCoordinates)
-								{
-									GeographicCoordinates newGeographicCoordinates = (GeographicCoordinates) msg.getNewValue();
-									newGeographicCoordinates.eAdapters().add(this);
-								}
-								
-								if(isAutoUpdateEnabled()) updateRenderableLayer();
-								
+							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION:
+							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE:
+							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE:								
+								if(isAutoUpdateEnabled()) updateRenderableLayer();								
 							break;
 
 							default:

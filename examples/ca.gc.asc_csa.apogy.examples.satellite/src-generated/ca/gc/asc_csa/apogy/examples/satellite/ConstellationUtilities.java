@@ -14,9 +14,10 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  */
 
 import java.util.List;
-import java.util.SortedSet;
 
 import org.eclipse.emf.ecore.EObject;
+
+import ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationUtilitiesImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,16 +34,63 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ConstellationUtilities extends EObject {
+	
+	/*
+	 * Returns the reference to the Utilities class (Singleton). 
+	 */
+	public ConstellationUtilities INSTANCE = ConstellationUtilitiesImpl.getInstance();
+
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Sorts the list of {@link AbstractConstellationRequest} based on {@link AbstractConstellationRequest#priority}.
-	 * @param requests Specifies the list of {@link AbstractConstellationRequest} to sort.
+	 * Adds all the specified requests into the specified container.
+	 * @param container Refers to the destination list.
+	 * @param requests List of {@link AbstractConstellationRequest} to be imported.
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.SortedSet<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
+	 * @model containerUnique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
 	 * @generated
 	 */
-	SortedSet<AbstractConstellationRequest> sortByPriority(List<AbstractConstellationRequest> requests);
+	void addAllRequests(ConstellationRequestsList container, List<AbstractConstellationRequest> requests);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Adds the specified {@link AbstractConstellationRequest} to the list of {@link ConstellationRequestsList}.
+	 * @param container Refers to the destination list.
+	 * @param request Specifies the request to add to the list.
+	 * <!-- end-model-doc -->
+	 * @model containerUnique="false" requestUnique="false"
+	 * @generated
+	 */
+	void addRequest(ConstellationRequestsList container, AbstractConstellationRequest request);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Removes the specified {@link AbstractConstellationRequest} from the specified {@link ConstellationRequestsList}.
+	 * @param container Refers to the {@link ConstellationRequestsList}.
+	 * @param request Specifies the request to remove from the list.
+	 * <!-- end-model-doc -->
+	 * @model containerUnique="false" requestUnique="false"
+	 * @generated
+	 */
+	void removeRequest(ConstellationRequestsList container, AbstractConstellationRequest request);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Removes all the {@link AbstractConstellationRequest} specified from the list from the specified {@link ConstellationRequestsList}.
+	 * @param container Refers to the {@link ConstellationRequestsList}.
+	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
+	 * <!-- end-model-doc -->
+	 * @model containerUnique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
+	 * @generated
+	 */
+	void removeAllRequests(ConstellationRequestsList container, List<AbstractConstellationRequest> requests);
 
 } // ConstellationUtilities

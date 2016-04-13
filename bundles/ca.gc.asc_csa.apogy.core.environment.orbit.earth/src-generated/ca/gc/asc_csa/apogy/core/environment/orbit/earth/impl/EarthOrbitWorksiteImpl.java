@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl;
 
@@ -33,7 +32,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getSky <em>Sky</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getEarthLocations <em>Earth Locations</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,16 +46,6 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	 * @ordered
 	 */
 	protected EarthOrbitSky sky;
-
-	/**
-	 * The cached value of the '{@link #getEarthLocations() <em>Earth Locations</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEarthLocations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EarthSurfaceLocationList earthLocations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,49 +114,6 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EarthSurfaceLocationList getEarthLocations() {
-		return earthLocations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEarthLocations(EarthSurfaceLocationList newEarthLocations, NotificationChain msgs) {
-		EarthSurfaceLocationList oldEarthLocations = earthLocations;
-		earthLocations = newEarthLocations;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, oldEarthLocations, newEarthLocations);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEarthLocations(EarthSurfaceLocationList newEarthLocations) {
-		if (newEarthLocations != earthLocations) {
-			NotificationChain msgs = null;
-			if (earthLocations != null)
-				msgs = ((InternalEObject)earthLocations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, null, msgs);
-			if (newEarthLocations != null)
-				msgs = ((InternalEObject)newEarthLocations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, null, msgs);
-			msgs = basicSetEarthLocations(newEarthLocations, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, newEarthLocations, newEarthLocations));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -190,8 +135,6 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				return basicSetSky(null, msgs);
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
-				return basicSetEarthLocations(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -206,8 +149,6 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				return getSky();
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
-				return getEarthLocations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -222,9 +163,6 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				setSky((EarthOrbitSky)newValue);
-				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
-				setEarthLocations((EarthSurfaceLocationList)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,9 +179,6 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				setSky((EarthOrbitSky)null);
 				return;
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
-				setEarthLocations((EarthSurfaceLocationList)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -258,8 +193,6 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				return sky != null;
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
-				return earthLocations != null;
 		}
 		return super.eIsSet(featureID);
 	}

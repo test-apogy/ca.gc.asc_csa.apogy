@@ -27,6 +27,7 @@ public class VisibilityPassSpacecraftPositionHistoryComposite extends Composite
 	private TabFolder tabFolder;
 	private VisibilityPassSpacecraftPositionHistoryAzElComposite azimuthElevationComposite;
 	private VisibilityPassSpacecraftPositionHistoryRangeComposite rangeComposite;
+	private VisibilityPassSpacecraftPositionHistoryAnglesComposite anglesComposite;
 	
 	public VisibilityPassSpacecraftPositionHistoryComposite(Composite parent, int style) 
 	{
@@ -46,6 +47,11 @@ public class VisibilityPassSpacecraftPositionHistoryComposite extends Composite
 		rangeTabItem.setText("Range");				
 		rangeComposite = new VisibilityPassSpacecraftPositionHistoryRangeComposite(tabFolder, SWT.NONE);
 		rangeTabItem.setControl(rangeComposite);
+		
+		TabItem anglesTabItem = new TabItem(tabFolder, SWT.NONE);		
+		anglesTabItem.setText("Along and Cross Track Angles");				
+		anglesComposite = new VisibilityPassSpacecraftPositionHistoryAnglesComposite(tabFolder, SWT.NONE);
+		anglesTabItem.setControl(anglesComposite);
 				
 		tabFolder.pack();
 	}
@@ -67,6 +73,11 @@ public class VisibilityPassSpacecraftPositionHistoryComposite extends Composite
 		if(rangeComposite != null && !rangeComposite.isDisposed())
 		{
 			rangeComposite.setPositionHistory(positionHistory);
+		}
+		
+		if(anglesComposite != null && !anglesComposite.isDisposed())
+		{
+			anglesComposite.setPositionHistory(positionHistory);
 		}
 	}
 

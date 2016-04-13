@@ -24,9 +24,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.provider.SpacecraftStateItemProvider;
 
@@ -141,16 +139,6 @@ public class OreKitBackedSpacecraftStateItemProvider extends SpacecraftStateItem
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit()));
 	}
 
 }

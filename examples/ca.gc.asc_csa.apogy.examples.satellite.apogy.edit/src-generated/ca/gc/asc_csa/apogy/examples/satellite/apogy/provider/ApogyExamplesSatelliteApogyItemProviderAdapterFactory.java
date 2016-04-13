@@ -53,7 +53,6 @@ import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
-
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
 

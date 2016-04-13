@@ -109,14 +109,23 @@ public class GroundStationItemProvider extends EarthSurfaceLocationItemProvider 
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((GroundStation)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_GroundStation_type") :
-			getString("_UI_GroundStation_type") + " " + label;
+	public String getText(Object object) 
+	{
+		GroundStation groundStation = (GroundStation) object;
+		
+		String label = groundStation.getName();
+		
+		if(label == null || label.length() == 0)
+		{
+			label = getString("_UI_GroundStation_type");
+		}
+		
+		label += getSuffix(groundStation);
+		
+		return label;
 	}
 	
 

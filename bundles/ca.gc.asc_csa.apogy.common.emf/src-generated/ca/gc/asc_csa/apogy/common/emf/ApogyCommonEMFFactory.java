@@ -70,6 +70,15 @@ public interface ApogyCommonEMFFactory extends EFactory
 	Startable createStartable();
 
 		/**
+	 * Returns a new object of class '<em>Duration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Duration</em>'.
+	 * @generated
+	 */
+	Duration createDuration();
+
+		/**
 	 * Returns a new object of class '<em>Fixed Time Source</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

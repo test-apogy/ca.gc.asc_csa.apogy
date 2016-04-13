@@ -25,7 +25,7 @@ import ca.gc.asc_csa.apogy.core.environment.Worksite;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getActiveOrbitModel <em>Active Orbit Model</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getOrbitModel <em>Orbit Model</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitWorksite()
@@ -35,31 +35,27 @@ import ca.gc.asc_csa.apogy.core.environment.Worksite;
 public interface OrbitWorksite extends Worksite {
 
 	/**
-	 * Returns the value of the '<em><b>Active Orbit Model</b></em>' reference.
+	 * Returns the value of the '<em><b>Orbit Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Active Orbit Model</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The active OrbitModel to use to update the orbit worksite.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Active Orbit Model</em>' reference.
-	 * @see #setActiveOrbitModel(AbstractOrbitModel)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitWorksite_ActiveOrbitModel()
+	 * @return the value of the '<em>Orbit Model</em>' reference.
+	 * @see #setOrbitModel(AbstractOrbitModel)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitWorksite_OrbitModel()
 	 * @model
 	 * @generated
 	 */
-	AbstractOrbitModel getActiveOrbitModel();
+	AbstractOrbitModel getOrbitModel();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getActiveOrbitModel <em>Active Orbit Model</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getOrbitModel <em>Orbit Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Active Orbit Model</em>' reference.
-	 * @see #getActiveOrbitModel()
+	 * @param value the new value of the '<em>Orbit Model</em>' reference.
+	 * @see #getOrbitModel()
 	 * @generated
 	 */
-	void setActiveOrbitModel(AbstractOrbitModel value);
+	void setOrbitModel(AbstractOrbitModel value);
 } // OrbitWorksite

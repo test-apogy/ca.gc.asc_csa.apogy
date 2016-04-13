@@ -537,7 +537,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 					{
 						try 
 						{				
-							SpacecraftState ss = getOrbitModel().getPropagator().propagate( getTimeSource().getTime());								
+							SpacecraftState ss = getOrbitModel().propagate( getTimeSource().getTime());								
 							GeographicCoordinates coord = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
 	
 							// Create latitude, longitude and elevation values.
@@ -579,6 +579,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 				    	        surfaceCircle.setVisible(true);
 				    	        layer.addRenderable(surfaceCircle);	    	        
 				            }
+				         
 						} 
 						catch (Exception e) 
 						{				
@@ -602,11 +603,14 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 		
 		if(isShowLatLon())
 		{
-			DecimalFormat format = new DecimalFormat("0.000");
+			DecimalFormat latLongDecimalFormat = new DecimalFormat("0.000");
 			double lat = Math.toDegrees(coord.getLatitude());
 			double lon = Math.toDegrees(coord.getLongitude());		
 			
-			text += "\n (lat " + format.format(lat) + DEGREE_STRING + " , lon " + format.format(lon) + DEGREE_STRING + ")";
+			DecimalFormat altitudeDecimalFormat = new DecimalFormat("0.0");
+			double altitude = coord.getElevation() * 0.001;
+			
+			text += "\n lat " + latLongDecimalFormat.format(lat) + DEGREE_STRING + ", lon " + latLongDecimalFormat.format(lon) + DEGREE_STRING + ", alt " +  altitudeDecimalFormat.format(altitude) + " km";
 			
 		}		
 		

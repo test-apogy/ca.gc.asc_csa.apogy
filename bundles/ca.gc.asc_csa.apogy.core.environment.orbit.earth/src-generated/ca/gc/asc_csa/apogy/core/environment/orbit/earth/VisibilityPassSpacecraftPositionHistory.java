@@ -118,6 +118,18 @@ public interface VisibilityPassSpacecraftPositionHistory extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Returns the VisibilityPassSpacecraftPosition with the smallest range in the position history.
+	 * @return The VisibilityPassSpacecraftPosition with the smallest range, null if the history position is empty.
+	 * <!-- end-model-doc -->
+	 * @model kind="operation" unique="false"
+	 * @generated
+	 */
+	VisibilityPassSpacecraftPosition getClosestRangePosition();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * Returns the VisibilityPassSpacecraftPosition with the highest elevation in the position history.
 	 * @return The VisibilityPassSpacecraftPosition with the highest elevation, null if the history position is empty.
 	 * <!-- end-model-doc -->
