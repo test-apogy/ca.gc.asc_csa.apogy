@@ -212,6 +212,8 @@ public class ApogyExamplesRoboticArmROSPackageImpl extends EPackageImpl implemen
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
+			 "dynamicTemplates", "true",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm.ros/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm.ros.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.robotic_arm"
