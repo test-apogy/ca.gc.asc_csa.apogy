@@ -26,6 +26,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 
 /**
@@ -154,7 +155,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 */
 	protected void addExtremitiesRadiusPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_extremitiesRadius_feature"),
@@ -198,7 +199,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 */
 	protected void addMinorTickSpacingPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickSpacing_feature"),
@@ -220,7 +221,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 */
 	protected void addMinorTickLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickLength_feature"),
@@ -264,7 +265,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 */
 	protected void addMajorTickSpacingPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickSpacing_feature"),
@@ -286,7 +287,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	 */
 	protected void addMajorTickLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickLength_feature"),

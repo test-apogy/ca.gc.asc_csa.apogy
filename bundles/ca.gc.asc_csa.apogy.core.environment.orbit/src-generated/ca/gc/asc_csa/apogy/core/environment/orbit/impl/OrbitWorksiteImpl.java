@@ -30,22 +30,21 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPacka
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl#getActiveOrbitModel <em>Active Orbit Model</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl#getOrbitModel <em>Orbit Model</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWorksite {
 	/**
-	 * The cached value of the '{@link #getActiveOrbitModel() <em>Active Orbit Model</em>}' reference.
+	 * The cached value of the '{@link #getOrbitModel() <em>Orbit Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActiveOrbitModel()
+	 * @see #getOrbitModel()
 	 * @generated
 	 * @ordered
 	 */
-	protected AbstractOrbitModel activeOrbitModel;
-
+	protected AbstractOrbitModel orbitModel;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,16 +69,16 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractOrbitModel getActiveOrbitModel() {
-		if (activeOrbitModel != null && activeOrbitModel.eIsProxy()) {
-			InternalEObject oldActiveOrbitModel = (InternalEObject)activeOrbitModel;
-			activeOrbitModel = (AbstractOrbitModel)eResolveProxy(oldActiveOrbitModel);
-			if (activeOrbitModel != oldActiveOrbitModel) {
+	public AbstractOrbitModel getOrbitModel() {
+		if (orbitModel != null && orbitModel.eIsProxy()) {
+			InternalEObject oldOrbitModel = (InternalEObject)orbitModel;
+			orbitModel = (AbstractOrbitModel)eResolveProxy(oldOrbitModel);
+			if (orbitModel != oldOrbitModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ORBIT_MODEL, oldOrbitModel, orbitModel));
 			}
 		}
-		return activeOrbitModel;
+		return orbitModel;
 	}
 
 	/**
@@ -87,8 +86,8 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractOrbitModel basicGetActiveOrbitModel() {
-		return activeOrbitModel;
+	public AbstractOrbitModel basicGetOrbitModel() {
+		return orbitModel;
 	}
 
 	/**
@@ -96,11 +95,11 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActiveOrbitModel(AbstractOrbitModel newActiveOrbitModel) {
-		AbstractOrbitModel oldActiveOrbitModel = activeOrbitModel;
-		activeOrbitModel = newActiveOrbitModel;
+	public void setOrbitModel(AbstractOrbitModel newOrbitModel) {
+		AbstractOrbitModel oldOrbitModel = orbitModel;
+		orbitModel = newOrbitModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ORBIT_MODEL, oldOrbitModel, orbitModel));
 	}
 
 	/**
@@ -111,9 +110,9 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
-				if (resolve) return getActiveOrbitModel();
-				return basicGetActiveOrbitModel();
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ORBIT_MODEL:
+				if (resolve) return getOrbitModel();
+				return basicGetOrbitModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -126,8 +125,8 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
-				setActiveOrbitModel((AbstractOrbitModel)newValue);
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ORBIT_MODEL:
+				setOrbitModel((AbstractOrbitModel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -141,8 +140,8 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
-				setActiveOrbitModel((AbstractOrbitModel)null);
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ORBIT_MODEL:
+				setOrbitModel((AbstractOrbitModel)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -156,8 +155,8 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
-				return activeOrbitModel != null;
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ORBIT_MODEL:
+				return orbitModel != null;
 		}
 		return super.eIsSet(featureID);
 	}

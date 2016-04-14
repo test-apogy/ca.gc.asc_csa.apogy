@@ -954,6 +954,42 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__LoadInvocatorSession__String() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(33);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__GetDataProductsByName__InvocatorSession_String() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(34);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__GetProgramByName__InvocatorSession_String() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(35);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(36);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -2967,6 +3003,10 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___LOAD_INVOCATOR_SESSION__STRING);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3441,6 +3481,22 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		op = initEOperation(getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType(), null, "notifyVariableListeners", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariableListenerEventType(), "event", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__LoadInvocatorSession__String(), this.getInvocatorSession(), "loadInvocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "uri", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCommonEMFPackage.getException());
+
+		op = initEOperation(getApogyCoreInvocatorFacade__GetDataProductsByName__InvocatorSession_String(), this.getDataProductsList(), "getDataProductsByName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__GetProgramByName__InvocatorSession_String(), this.getProgram(), "getProgramByName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String(), this.getContext(), "getContextByName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

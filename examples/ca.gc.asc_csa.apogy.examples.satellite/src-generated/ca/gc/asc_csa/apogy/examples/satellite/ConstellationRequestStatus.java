@@ -70,7 +70,15 @@ public enum ConstellationRequestStatus implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FAILED(3, "FAILED", "FAILED");
+	FAILED(3, "FAILED", "FAILED"), /**
+	 * The '<em><b>ABORTED</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ABORTED_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ABORTED(4, "ABORTED", "ABORTED");
 
 	/**
 	 * The '<em><b>NEW</b></em>' literal value.
@@ -133,6 +141,21 @@ public enum ConstellationRequestStatus implements Enumerator {
 	public static final int FAILED_VALUE = 3;
 
 	/**
+	 * The '<em><b>ABORTED</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>ABORTED</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ABORTED
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ABORTED_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>Constellation Request Status</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -144,6 +167,7 @@ public enum ConstellationRequestStatus implements Enumerator {
 			COMMITTED,
 			COMPLETED,
 			FAILED,
+			ABORTED,
 		};
 
 	/**
@@ -204,6 +228,7 @@ public enum ConstellationRequestStatus implements Enumerator {
 			case COMMITTED_VALUE: return COMMITTED;
 			case COMPLETED_VALUE: return COMPLETED;
 			case FAILED_VALUE: return FAILED;
+			case ABORTED_VALUE: return ABORTED;
 		}
 		return null;
 	}

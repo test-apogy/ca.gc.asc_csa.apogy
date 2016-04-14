@@ -26,10 +26,6 @@
             restorable="true">
       </view>
  
-      <category
-            id="ca.gc.asc_csa.apogy.examples.ui.category"
-            name="Apogy Examples">
-      </category>
    </extension>
    <extension
          point="ca.gc.asc_csa.apogy.common.converters">

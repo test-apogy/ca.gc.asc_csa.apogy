@@ -637,7 +637,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 								long duration =  Math.round(getBackwardPropagationDuration() * 1000.0);
 								Date startDate = new Date(getTimeSource().getTime().getTime() - duration);
 								Date endDate = getTimeSource().getTime();						
-								List<SpacecraftState> states = getOrbitModel().getPropagator().getSpacecraftStates(startDate, endDate, getTimeInterval());
+								List<SpacecraftState> states = getOrbitModel().getSpacecraftStates(startDate, endDate, getTimeInterval());
 								List<Polyline> polylines = WorldWindUtils.createPolyLineWithNoWrapAround(states);	
 								
 								if(isShowOrbit())
@@ -669,7 +669,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 								long duration =  Math.round(getForwardPropagationDuration() * 1000.0);
 								Date startDate = getTimeSource().getTime();										
 								Date endDate = new Date(getTimeSource().getTime().getTime() + duration);						
-								List<SpacecraftState> states = getOrbitModel().getPropagator().getSpacecraftStates(startDate, endDate, getTimeInterval());
+								List<SpacecraftState> states = getOrbitModel().getSpacecraftStates(startDate, endDate, getTimeInterval());
 								List<Polyline> polylines = WorldWindUtils.createPolyLineWithNoWrapAround(states);	
 								
 								if(isShowOrbit())

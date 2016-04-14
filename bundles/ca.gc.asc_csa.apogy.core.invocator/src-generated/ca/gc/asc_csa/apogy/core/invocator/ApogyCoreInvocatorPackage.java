@@ -421,13 +421,49 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	int APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = 32;
 
 		/**
+	 * The operation id for the '<em>Load Invocator Session</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___LOAD_INVOCATOR_SESSION__STRING = 33;
+
+		/**
+	 * The operation id for the '<em>Get Data Products By Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING = 34;
+
+		/**
+	 * The operation id for the '<em>Get Program By Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING = 35;
+
+		/**
+	 * The operation id for the '<em>Get Context By Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING = 36;
+
+		/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 33;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 37;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -4901,6 +4937,46 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	EOperation getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
 
 		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#loadInvocatorSession(java.lang.String) <em>Load Invocator Session</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Load Invocator Session</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#loadInvocatorSession(java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__LoadInvocatorSession__String();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getDataProductsByName(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession, java.lang.String) <em>Get Data Products By Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Data Products By Name</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getDataProductsByName(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__GetDataProductsByName__InvocatorSession_String();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getProgramByName(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession, java.lang.String) <em>Get Program By Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Program By Name</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getProgramByName(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__GetProgramByName__InvocatorSession_String();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getContextByName(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession, java.lang.String) <em>Get Context By Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Context By Name</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getContextByName(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7313,6 +7389,38 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = eINSTANCE.getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
+
+				/**
+		 * The meta object literal for the '<em><b>Load Invocator Session</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___LOAD_INVOCATOR_SESSION__STRING = eINSTANCE.getApogyCoreInvocatorFacade__LoadInvocatorSession__String();
+
+				/**
+		 * The meta object literal for the '<em><b>Get Data Products By Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING = eINSTANCE.getApogyCoreInvocatorFacade__GetDataProductsByName__InvocatorSession_String();
+
+				/**
+		 * The meta object literal for the '<em><b>Get Program By Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING = eINSTANCE.getApogyCoreInvocatorFacade__GetProgramByName__InvocatorSession_String();
+
+				/**
+		 * The meta object literal for the '<em><b>Get Context By Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING = eINSTANCE.getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.

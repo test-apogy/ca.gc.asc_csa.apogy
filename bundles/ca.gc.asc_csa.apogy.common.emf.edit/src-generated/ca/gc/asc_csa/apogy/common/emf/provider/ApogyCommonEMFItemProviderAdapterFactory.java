@@ -189,6 +189,29 @@ public class ApogyCommonEMFItemProviderAdapterFactory extends ApogyCommonEMFAdap
 	}
 
 		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.Duration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DurationItemProvider durationItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.Duration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDurationAdapter() {
+		if (durationItemProvider == null) {
+			durationItemProvider = new DurationItemProvider(this);
+		}
+
+		return durationItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.FixedTimeSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -562,6 +585,7 @@ public class ApogyCommonEMFItemProviderAdapterFactory extends ApogyCommonEMFAdap
 		if (eObjectReferenceItemProvider != null) eObjectReferenceItemProvider.dispose();
 		if (serverItemProvider != null) serverItemProvider.dispose();
 		if (startableItemProvider != null) startableItemProvider.dispose();
+		if (durationItemProvider != null) durationItemProvider.dispose();
 		if (fixedTimeSourceItemProvider != null) fixedTimeSourceItemProvider.dispose();
 		if (currentTimeSourceItemProvider != null) currentTimeSourceItemProvider.dispose();
 		if (browseableTimeSourceItemProvider != null) browseableTimeSourceItemProvider.dispose();

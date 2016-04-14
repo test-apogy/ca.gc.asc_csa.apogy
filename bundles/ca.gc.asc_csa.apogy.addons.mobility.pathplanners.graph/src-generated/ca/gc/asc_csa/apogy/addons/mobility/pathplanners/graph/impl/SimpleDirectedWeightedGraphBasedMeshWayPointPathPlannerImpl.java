@@ -702,7 +702,6 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 		} 
 		catch (IOException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

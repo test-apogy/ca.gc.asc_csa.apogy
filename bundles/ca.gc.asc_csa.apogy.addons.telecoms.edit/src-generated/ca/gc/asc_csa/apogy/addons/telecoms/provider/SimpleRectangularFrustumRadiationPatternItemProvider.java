@@ -25,6 +25,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
 
 /**
@@ -72,7 +73,7 @@ public class SimpleRectangularFrustumRadiationPatternItemProvider extends Abstra
 	 */
 	protected void addHorizontalFieldOfViewPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SimpleRectangularFrustumRadiationPattern_horizontalFieldOfView_feature"),
@@ -94,7 +95,7 @@ public class SimpleRectangularFrustumRadiationPatternItemProvider extends Abstra
 	 */
 	protected void addVerticalFieldOfViewPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SimpleRectangularFrustumRadiationPattern_verticalFieldOfView_feature"),

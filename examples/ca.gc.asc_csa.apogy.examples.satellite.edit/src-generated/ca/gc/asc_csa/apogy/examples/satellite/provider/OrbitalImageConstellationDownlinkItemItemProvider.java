@@ -110,8 +110,7 @@ public class OrbitalImageConstellationDownlinkItemItemProvider extends AbstractC
 	 */
 	@Override
 	public String getText(Object object) {
-		OrbitalImageConstellationDownlinkItem orbitalImageConstellationDownlinkItem = (OrbitalImageConstellationDownlinkItem)object;
-		return getString("_UI_OrbitalImageConstellationDownlinkItem_type") + " " + orbitalImageConstellationDownlinkItem.getRequestUID();
+		return getString("_UI_OrbitalImageConstellationDownlinkItem_type");
 	}
 	
 

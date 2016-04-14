@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
 import java.util.Collection;
 import java.util.List;
 
@@ -73,7 +74,10 @@ public class DefaultConstellationItemProvider extends AbstractConstellationItemP
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_DefaultConstellation_type");
+		String label = ((DefaultConstellation)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DefaultConstellation_type") :
+			getString("_UI_DefaultConstellation_type") + " " + label;
 	}
 	
 

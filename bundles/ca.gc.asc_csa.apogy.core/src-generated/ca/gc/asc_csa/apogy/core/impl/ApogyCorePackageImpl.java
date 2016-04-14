@@ -32,6 +32,7 @@ import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
 import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
+import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.AssemblyLinksList;
@@ -49,6 +50,7 @@ import ca.gc.asc_csa.apogy.core.Positioned;
 import ca.gc.asc_csa.apogy.core.PositionedResult;
 import ca.gc.asc_csa.apogy.core.ResultNode;
 import ca.gc.asc_csa.apogy.core.ResultsListNode;
+import ca.gc.asc_csa.apogy.core.SurfaceLocationsList;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
@@ -172,6 +174,20 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass abstractWorksiteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractSurfaceLocationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass surfaceLocationsListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -859,8 +875,17 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWorksitesList_OrbitsModels() {
+	public EReference getWorksitesList_OrbitsModelsLists() {
 		return (EReference)worksitesListEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorksitesList_SurfaceLocationsLists() {
+		return (EReference)worksitesListEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -877,6 +902,33 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 */
 	public EReference getAbstractWorksite_WorksitesList() {
 		return (EReference)abstractWorksiteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbstractSurfaceLocation() {
+		return abstractSurfaceLocationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSurfaceLocationsList() {
+		return surfaceLocationsListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSurfaceLocationsList_SurfaceLocations() {
+		return (EReference)surfaceLocationsListEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1256,10 +1308,16 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 
 		worksitesListEClass = createEClass(WORKSITES_LIST);
 		createEReference(worksitesListEClass, WORKSITES_LIST__WORKSITES);
-		createEReference(worksitesListEClass, WORKSITES_LIST__ORBITS_MODELS);
+		createEReference(worksitesListEClass, WORKSITES_LIST__ORBITS_MODELS_LISTS);
+		createEReference(worksitesListEClass, WORKSITES_LIST__SURFACE_LOCATIONS_LISTS);
 
 		abstractWorksiteEClass = createEClass(ABSTRACT_WORKSITE);
 		createEReference(abstractWorksiteEClass, ABSTRACT_WORKSITE__WORKSITES_LIST);
+
+		abstractSurfaceLocationEClass = createEClass(ABSTRACT_SURFACE_LOCATION);
+
+		surfaceLocationsListEClass = createEClass(SURFACE_LOCATIONS_LIST);
+		createEReference(surfaceLocationsListEClass, SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS);
 
 		orbitModelsListEClass = createEClass(ORBIT_MODELS_LIST);
 		createEReference(orbitModelsListEClass, ORBIT_MODELS_LIST__ORBIT_MODELS);
@@ -1365,6 +1423,10 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 		abstractWorksiteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		abstractWorksiteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		abstractWorksiteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
+		abstractSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		surfaceLocationsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		surfaceLocationsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		orbitModelsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		orbitModelsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		abstractOrbitModelEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
@@ -1491,10 +1553,16 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 
 		initEClass(worksitesListEClass, WorksitesList.class, "WorksitesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWorksitesList_Worksites(), this.getAbstractWorksite(), this.getAbstractWorksite_WorksitesList(), "worksites", null, 0, -1, WorksitesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorksitesList_OrbitsModels(), this.getOrbitModelsList(), null, "orbitsModels", null, 1, 1, WorksitesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorksitesList_OrbitsModelsLists(), this.getOrbitModelsList(), null, "orbitsModelsLists", null, 0, -1, WorksitesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorksitesList_SurfaceLocationsLists(), this.getSurfaceLocationsList(), null, "surfaceLocationsLists", null, 0, -1, WorksitesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractWorksiteEClass, AbstractWorksite.class, "AbstractWorksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractWorksite_WorksitesList(), this.getWorksitesList(), this.getWorksitesList_Worksites(), "worksitesList", null, 0, 1, AbstractWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abstractSurfaceLocationEClass, AbstractSurfaceLocation.class, "AbstractSurfaceLocation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(surfaceLocationsListEClass, SurfaceLocationsList.class, "SurfaceLocationsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSurfaceLocationsList_SurfaceLocations(), this.getAbstractSurfaceLocation(), null, "surfaceLocations", null, 0, -1, SurfaceLocationsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orbitModelsListEClass, OrbitModelsList.class, "OrbitModelsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOrbitModelsList_OrbitModels(), this.getAbstractOrbitModel(), this.getAbstractOrbitModel_OrbitModelsList(), "orbitModels", null, 0, -1, OrbitModelsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

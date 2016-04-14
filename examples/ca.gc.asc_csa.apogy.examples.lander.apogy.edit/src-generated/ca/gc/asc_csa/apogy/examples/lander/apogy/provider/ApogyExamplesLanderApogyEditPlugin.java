@@ -13,12 +13,22 @@ package ca.gc.asc_csa.apogy.examples.lander.apogy.provider;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.addons.geometry.paths.provider.ApogyAddonsGeometryPathsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.provider.ApogyAddonsMobilityPathplannersEditPlugin;
+import ca.gc.asc_csa.apogy.addons.provider.ApogyAddonsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.vehicle.provider.ApogyAddonsVehicleEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.images.provider.ApogyCommonImagesEditPlugin;
 import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider.ApogyCommonTopologyAddonsDynamicsEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentEditPlugin;
 import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 import ca.gc.asc_csa.apogy.core.provider.ApogyCoreEditPlugin;
 import ca.gc.asc_csa.apogy.examples.lander.provider.ApogyExamplesLanderEditPlugin;
@@ -64,6 +74,16 @@ public final class ApogyExamplesLanderApogyEditPlugin extends EMFPlugin
 		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
+		     ApogyAddonsVehicleEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonTopologyAddonsDynamicsEditPlugin.INSTANCE,
+		     ApogyAddonsEditPlugin.INSTANCE,
+		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
+		     ApogyAddonsMobilityPathplannersEditPlugin.INSTANCE,
+		     ApogyAddonsGeometryPathsEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCommonImagesEditPlugin.INSTANCE,
 		   });
 	}
 

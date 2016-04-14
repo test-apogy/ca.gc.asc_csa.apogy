@@ -35,18 +35,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import ca.gc.asc_csa.apogy.common.emf.Described;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.Updatable;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Activator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 
 /**
@@ -540,10 +541,10 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 							{
 								try
 								{
-									if(model.getPropagator() instanceof EarthOrbitPropagator)
-									{
-										EarthOrbitPropagator propagator = (EarthOrbitPropagator) model.getPropagator();
-										groundStationPasses.addAll(propagator.getGroundStationPasses(groundStation, getStartTime(), getEndTime()));
+									if(model instanceof EarthOrbitModel)
+									{										
+										EarthOrbitModel earthOrbitModel = (EarthOrbitModel) model;
+										groundStationPasses.addAll(earthOrbitModel.getGroundStationPasses(groundStation, getStartTime(), getEndTime()));
 									}
 								}
 								catch(Throwable t)

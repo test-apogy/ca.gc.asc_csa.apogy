@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.SortedSet;
 
@@ -20,12 +21,32 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import ca.gc.asc_csa.apogy.examples.satellite.*;
+import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
+import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,14 +92,19 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: return createConstellationCommandPlan();
-			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM: return createConstellationCommandPlanItem();
+			case ApogyExamplesSatellitePackage.STRING_UID: return createStringUID();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST: return createConstellationCommandPlansList();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE: return createConstellationState();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER: return createDefaultConstellationPlanner();
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_COMMAND_PLAN: return createDefaultConstellationCommandPlan();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
+			case ApogyExamplesSatellitePackage.SIMPLE_REQUEST: return createSimpleRequest();
+			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST: return createObservationConstellationRequest();
 			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
 			case ApogyExamplesSatellitePackage.SATELLITES_LIST: return createSatellitesList();
 			case ApogyExamplesSatellitePackage.SATELLITE: return createSatellite();
-			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND: return createAbstractSatelliteCommand();
+			case ApogyExamplesSatellitePackage.VISIBILITY_PASS_BASED_SATELLITE_COMMAND: return createVisibilityPassBasedSatelliteCommand();
 			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: return createAcquireImageSatelliteCommand();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE: return createOrbitalImage();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: return createConstellationDownlinksList();
@@ -106,6 +132,8 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 				return createListFromString(eDataType, initialValue);
 			case ApogyExamplesSatellitePackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
+			case ApogyExamplesSatellitePackage.COMPARATOR:
+				return createComparatorFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -127,6 +155,8 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 				return convertListToString(eDataType, instanceValue);
 			case ApogyExamplesSatellitePackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
+			case ApogyExamplesSatellitePackage.COMPARATOR:
+				return convertComparatorToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -137,9 +167,9 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstellationCommandPlan createConstellationCommandPlan() {
-		ConstellationCommandPlanImpl constellationCommandPlan = new ConstellationCommandPlanImpl();
-		return constellationCommandPlan;
+	public StringUID createStringUID() {
+		StringUIDImpl stringUID = new StringUIDImpl();
+		return stringUID;
 	}
 
 	/**
@@ -147,9 +177,19 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstellationCommandPlanItem createConstellationCommandPlanItem() {
-		ConstellationCommandPlanItemImpl constellationCommandPlanItem = new ConstellationCommandPlanItemImpl();
-		return constellationCommandPlanItem;
+	public ConstellationCommandPlansList createConstellationCommandPlansList() {
+		ConstellationCommandPlansListImpl constellationCommandPlansList = new ConstellationCommandPlansListImpl();
+		return constellationCommandPlansList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationState createConstellationState() {
+		ConstellationStateImpl constellationState = new ConstellationStateImpl();
+		return constellationState;
 	}
 
 	/**
@@ -167,9 +207,49 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DefaultConstellationPlanner createDefaultConstellationPlanner() {
+		DefaultConstellationPlannerImpl defaultConstellationPlanner = new DefaultConstellationPlannerImpl();
+		return defaultConstellationPlanner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DefaultConstellationCommandPlan createDefaultConstellationCommandPlan() {
+		DefaultConstellationCommandPlanImpl defaultConstellationCommandPlan = new DefaultConstellationCommandPlanImpl();
+		return defaultConstellationCommandPlan;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ConstellationRequestsList createConstellationRequestsList() {
 		ConstellationRequestsListImpl constellationRequestsList = new ConstellationRequestsListImpl();
 		return constellationRequestsList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleRequest createSimpleRequest() {
+		SimpleRequestImpl simpleRequest = new SimpleRequestImpl();
+		return simpleRequest;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ObservationConstellationRequest createObservationConstellationRequest() {
+		ObservationConstellationRequestImpl observationConstellationRequest = new ObservationConstellationRequestImpl();
+		return observationConstellationRequest;
 	}
 
 	/**
@@ -207,9 +287,9 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractSatelliteCommand createAbstractSatelliteCommand() {
-		AbstractSatelliteCommandImpl abstractSatelliteCommand = new AbstractSatelliteCommandImpl();
-		return abstractSatelliteCommand;
+	public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand() {
+		VisibilityPassBasedSatelliteCommandImpl visibilityPassBasedSatelliteCommand = new VisibilityPassBasedSatelliteCommandImpl();
+		return visibilityPassBasedSatelliteCommand;
 	}
 
 	/**
@@ -345,6 +425,24 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * @generated
 	 */
 	public String convertSortedSetToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Comparator<?> createComparatorFromString(EDataType eDataType, String initialValue) {
+		return (Comparator<?>)super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertComparatorToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
 	}
 

@@ -29,7 +29,6 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}</li>
  * </ul>
  *
@@ -37,33 +36,7 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
  * @model
  * @generated
  */
-public interface OrbitalImage extends EImage {
-	/**
-	 * Returns the value of the '<em><b>Coordinates</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Coordinates</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Coordinates</em>' containment reference.
-	 * @see #setCoordinates(GeographicCoordinates)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getOrbitalImage_Coordinates()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	GeographicCoordinates getCoordinates();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Coordinates</em>' containment reference.
-	 * @see #getCoordinates()
-	 * @generated
-	 */
-	void setCoordinates(GeographicCoordinates value);
-
+public interface OrbitalImage extends EImage, GeographicCoordinates {
 	/**
 	 * Returns the value of the '<em><b>Roll Angle</b></em>' attribute.
 	 * The default value is <code>"0.0"</code>.

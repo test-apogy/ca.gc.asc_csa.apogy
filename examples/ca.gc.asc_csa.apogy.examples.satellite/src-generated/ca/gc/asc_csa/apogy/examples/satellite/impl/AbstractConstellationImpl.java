@@ -14,29 +14,25 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  */
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
-import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,55 +42,59 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getSatellitesList <em>Satellites List</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getDownlinksLists <em>Downlinks Lists</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getConstellationState <em>Constellation State</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Container implements AbstractConstellation {
 	/**
-	 * The cached value of the '{@link #getSatellitesList() <em>Satellites List</em>}' containment reference.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSatellitesList()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected SatellitesList satellitesList;
-
+	protected static final String NAME_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getGroundStationsReferencesList() <em>Ground Stations References List</em>}' containment reference.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGroundStationsReferencesList()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected GroundStationReferencesList groundStationsReferencesList;
-
+	protected String name = NAME_EDEFAULT;
 	/**
-	 * The cached value of the '{@link #getDownlinksLists() <em>Downlinks Lists</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDownlinksLists()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected ConstellationDownlinksList downlinksLists;
-
+	protected static final String DESCRIPTION_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getConstellationRequestsList() <em>Constellation Requests List</em>}' containment reference.
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConstellationRequestsList()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected ConstellationRequestsList constellationRequestsList;
-
+	protected String description = DESCRIPTION_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getConstellationState() <em>Constellation State</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConstellationState()
+	 * @generated
+	 * @ordered
+	 */
+	protected ConstellationState constellationState;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,8 +119,8 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatellitesList getSatellitesList() {
-		return satellitesList;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -128,11 +128,53 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSatellitesList(SatellitesList newSatellitesList, NotificationChain msgs) {
-		SatellitesList oldSatellitesList = satellitesList;
-		satellitesList = newSatellitesList;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationState getConstellationState() {
+		return constellationState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConstellationState(ConstellationState newConstellationState, NotificationChain msgs) {
+		ConstellationState oldConstellationState = constellationState;
+		constellationState = newConstellationState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, oldSatellitesList, newSatellitesList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE, oldConstellationState, newConstellationState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -143,236 +185,61 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSatellitesList(SatellitesList newSatellitesList) {
-		if (newSatellitesList != satellitesList) {
+	public void setConstellationState(ConstellationState newConstellationState) {
+		if (newConstellationState != constellationState) {
 			NotificationChain msgs = null;
-			if (satellitesList != null)
-				msgs = ((InternalEObject)satellitesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, null, msgs);
-			if (newSatellitesList != null)
-				msgs = ((InternalEObject)newSatellitesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, null, msgs);
-			msgs = basicSetSatellitesList(newSatellitesList, msgs);
+			if (constellationState != null)
+				msgs = ((InternalEObject)constellationState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE, null, msgs);
+			if (newConstellationState != null)
+				msgs = ((InternalEObject)newConstellationState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE, null, msgs);
+			msgs = basicSetConstellationState(newConstellationState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, newSatellitesList, newSatellitesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE, newConstellationState, newConstellationState));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public GroundStationReferencesList getGroundStationsReferencesList() {
-		return groundStationsReferencesList;
-	}
+	abstract public AbstractUID newUID();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public NotificationChain basicSetGroundStationsReferencesList(GroundStationReferencesList newGroundStationsReferencesList, NotificationChain msgs) {
-		GroundStationReferencesList oldGroundStationsReferencesList = groundStationsReferencesList;
-		groundStationsReferencesList = newGroundStationsReferencesList;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, oldGroundStationsReferencesList, newGroundStationsReferencesList);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+	abstract public void export(AbstractConstellationCommandPlan plan, String url);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public void setGroundStationsReferencesList(GroundStationReferencesList newGroundStationsReferencesList) {
-		if (newGroundStationsReferencesList != groundStationsReferencesList) {
-			NotificationChain msgs = null;
-			if (groundStationsReferencesList != null)
-				msgs = ((InternalEObject)groundStationsReferencesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, null, msgs);
-			if (newGroundStationsReferencesList != null)
-				msgs = ((InternalEObject)newGroundStationsReferencesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, null, msgs);
-			msgs = basicSetGroundStationsReferencesList(newGroundStationsReferencesList, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, newGroundStationsReferencesList, newGroundStationsReferencesList));
-	}
+	abstract public void commit(AbstractConstellationCommandPlan plan);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public ConstellationDownlinksList getDownlinksLists() {
-		return downlinksLists;
-	}
+	abstract public void apply(ConstellationDownlink downlink);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public NotificationChain basicSetDownlinksLists(ConstellationDownlinksList newDownlinksLists, NotificationChain msgs) {
-		ConstellationDownlinksList oldDownlinksLists = downlinksLists;
-		downlinksLists = newDownlinksLists;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, oldDownlinksLists, newDownlinksLists);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+	abstract public void importConstellationDownlink(String url);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public void setDownlinksLists(ConstellationDownlinksList newDownlinksLists) {
-		if (newDownlinksLists != downlinksLists) {
-			NotificationChain msgs = null;
-			if (downlinksLists != null)
-				msgs = ((InternalEObject)downlinksLists).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, null, msgs);
-			if (newDownlinksLists != null)
-				msgs = ((InternalEObject)newDownlinksLists).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, null, msgs);
-			msgs = basicSetDownlinksLists(newDownlinksLists, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, newDownlinksLists, newDownlinksLists));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConstellationRequestsList getConstellationRequestsList() {
-		return constellationRequestsList;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetConstellationRequestsList(ConstellationRequestsList newConstellationRequestsList, NotificationChain msgs) {
-		ConstellationRequestsList oldConstellationRequestsList = constellationRequestsList;
-		constellationRequestsList = newConstellationRequestsList;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, oldConstellationRequestsList, newConstellationRequestsList);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setConstellationRequestsList(ConstellationRequestsList newConstellationRequestsList) {
-		if (newConstellationRequestsList != constellationRequestsList) {
-			NotificationChain msgs = null;
-			if (constellationRequestsList != null)
-				msgs = ((InternalEObject)constellationRequestsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, null, msgs);
-			if (newConstellationRequestsList != null)
-				msgs = ((InternalEObject)newConstellationRequestsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, null, msgs);
-			msgs = basicSetConstellationRequestsList(newConstellationRequestsList, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, newConstellationRequestsList, newConstellationRequestsList));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConstellationCommandPlan plan(Date startDate, Date endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConstellationCommandPlan plan(List<AbstractConstellationRequest> requests, Date startDate, Date endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void commit(List<AbstractSatelliteCommand> satelliteCommands) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void apply(ConstellationDownlink downlink) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void add(AbstractConstellationRequest request) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addAll(List<AbstractConstellationRequest> requests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void remove(AbstractConstellationRequest request) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeAll(List<AbstractConstellationRequest> requests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+	abstract public List<AbstractConstellationRequest> importConstellationRequests(String url);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -382,14 +249,8 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
-				return basicSetSatellitesList(null, msgs);
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
-				return basicSetGroundStationsReferencesList(null, msgs);
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
-				return basicSetDownlinksLists(null, msgs);
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
-				return basicSetConstellationRequestsList(null, msgs);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
+				return basicSetConstellationState(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -402,14 +263,12 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
-				return getSatellitesList();
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
-				return getGroundStationsReferencesList();
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
-				return getDownlinksLists();
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
-				return getConstellationRequestsList();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME:
+				return getName();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION:
+				return getDescription();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
+				return getConstellationState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -419,21 +278,17 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
-				setSatellitesList((SatellitesList)newValue);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME:
+				setName((String)newValue);
 				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
-				setGroundStationsReferencesList((GroundStationReferencesList)newValue);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
-				setDownlinksLists((ConstellationDownlinksList)newValue);
-				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
-				setConstellationRequestsList((ConstellationRequestsList)newValue);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
+				setConstellationState((ConstellationState)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -447,17 +302,14 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
-				setSatellitesList((SatellitesList)null);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME:
+				setName(NAME_EDEFAULT);
 				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
-				setGroundStationsReferencesList((GroundStationReferencesList)null);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
-				setDownlinksLists((ConstellationDownlinksList)null);
-				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
-				setConstellationRequestsList((ConstellationRequestsList)null);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
+				setConstellationState((ConstellationState)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -471,14 +323,12 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
-				return satellitesList != null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
-				return groundStationsReferencesList != null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
-				return downlinksLists != null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
-				return constellationRequestsList != null;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_STATE:
+				return constellationState != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -489,33 +339,74 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Described.class) {
+			switch (derivedFeatureID) {
+				case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Described.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__DATE_DATE:
-				return plan((Date)arguments.get(0), (Date)arguments.get(1));
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE:
-				return plan((List<AbstractConstellationRequest>)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___COMMIT__LIST:
-				commit((List<AbstractSatelliteCommand>)arguments.get(0));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___EXPORT__ABSTRACTCONSTELLATIONCOMMANDPLAN_STRING:
+				export((AbstractConstellationCommandPlan)arguments.get(0), (String)arguments.get(1));
+				return null;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___COMMIT__ABSTRACTCONSTELLATIONCOMMANDPLAN:
+				commit((AbstractConstellationCommandPlan)arguments.get(0));
 				return null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK:
 				apply((ConstellationDownlink)arguments.get(0));
 				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST:
-				add((AbstractConstellationRequest)arguments.get(0));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_DOWNLINK__STRING:
+				importConstellationDownlink((String)arguments.get(0));
 				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___ADD_ALL__LIST:
-				addAll((List<AbstractConstellationRequest>)arguments.get(0));
-				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST:
-				remove((AbstractConstellationRequest)arguments.get(0));
-				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST:
-				removeAll((List<AbstractConstellationRequest>)arguments.get(0));
-				return null;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_REQUESTS__STRING:
+				return importConstellationRequests((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", description: ");
+		result.append(description);
+		result.append(')');
+		return result.toString();
 	}
 
 } //AbstractConstellationImpl

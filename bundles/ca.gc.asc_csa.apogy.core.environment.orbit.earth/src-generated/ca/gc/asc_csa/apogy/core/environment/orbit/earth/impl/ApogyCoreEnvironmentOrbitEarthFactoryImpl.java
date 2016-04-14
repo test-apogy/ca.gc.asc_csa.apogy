@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -24,33 +25,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.*;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 import org.orekit.attitudes.AttitudeProvider;
 import org.orekit.frames.Frame;
 import org.orekit.orbits.CartesianOrbit;
@@ -118,15 +92,15 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 			case ApogyCoreEnvironmentOrbitEarthPackage.NADIR_POINTING_ATTITUDE_PROVIDER: return createNadirPointingAttitudeProvider();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE: return createEarthOrbitWorksite();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY: return createEarthOrbitSky();
+			case ApogyCoreEnvironmentOrbitEarthPackage.INITIAL_ORBIT_BASED_EARTH_ORBIT_MODEL: return createInitialOrbitBasedEarthOrbitModel();
 			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT: return createKeplerianEarthOrbit();
 			case ApogyCoreEnvironmentOrbitEarthPackage.CARTESIAN_EARTH_ORBIT: return createCartesianEarthOrbit();
 			case ApogyCoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK: return createConstantElevationMask();
 			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT_PROPAGATOR: return createKeplerianEarthOrbitPropagator();
-			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR: return createTLEEarthOrbitPropagator();
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_MODEL: return createTLEEarthOrbitModel();
 			case ApogyCoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR: return createURLBasedTLEEarthOrbitPropagator();
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE: return createTLE();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: return createEarthSurfaceLocation();
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST: return createEarthSurfaceLocationList();
 			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST: return createGroundStationReferencesList();
 			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION: return createGroundStation();
 			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST: return createGroundStationList();
@@ -138,6 +112,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR: return createCorridor();
 			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR: return createSpacecraftSwathCorridor();
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE: return createApogyCoreEnvironmentOrbitEarthFacade();
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE: return createEclipse();
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE_EVENT: return createEclipseEvent();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -153,6 +129,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EPHEMERIS_TYPE:
 				return createEphemerisTypeFromString(eDataType, initialValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE_EVENT_TYPE:
+				return createEclipseEventTypeFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.LIST:
 				return createListFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.MAP:
@@ -161,6 +139,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 				return createExceptionFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.IPROGRESS_MONITOR:
+				return createIProgressMonitorFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.ROTATION:
 				return createRotationFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_FRAME:
@@ -214,6 +194,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EPHEMERIS_TYPE:
 				return convertEphemerisTypeToString(eDataType, instanceValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.ECLIPSE_EVENT_TYPE:
+				return convertEclipseEventTypeToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.MAP:
@@ -222,6 +204,8 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 				return convertExceptionToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.IPROGRESS_MONITOR:
+				return convertIProgressMonitorToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.ROTATION:
 				return convertRotationToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_FRAME:
@@ -320,6 +304,16 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public InitialOrbitBasedEarthOrbitModel createInitialOrbitBasedEarthOrbitModel() {
+		InitialOrbitBasedEarthOrbitModelImpl initialOrbitBasedEarthOrbitModel = new InitialOrbitBasedEarthOrbitModelImpl();
+		return initialOrbitBasedEarthOrbitModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public KeplerianEarthOrbit createKeplerianEarthOrbit() {
 		KeplerianEarthOrbitImpl keplerianEarthOrbit = new KeplerianEarthOrbitImpl();
 		return keplerianEarthOrbit;
@@ -360,9 +354,9 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TLEEarthOrbitPropagator createTLEEarthOrbitPropagator() {
-		TLEEarthOrbitPropagatorImpl tleEarthOrbitPropagator = new TLEEarthOrbitPropagatorImpl();
-		return tleEarthOrbitPropagator;
+	public TLEEarthOrbitModel createTLEEarthOrbitModel() {
+		TLEEarthOrbitModelImpl tleEarthOrbitModel = new TLEEarthOrbitModelImpl();
+		return tleEarthOrbitModel;
 	}
 
 	/**
@@ -393,16 +387,6 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	public EarthSurfaceLocation createEarthSurfaceLocation() {
 		EarthSurfaceLocationImpl earthSurfaceLocation = new EarthSurfaceLocationImpl();
 		return earthSurfaceLocation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EarthSurfaceLocationList createEarthSurfaceLocationList() {
-		EarthSurfaceLocationListImpl earthSurfaceLocationList = new EarthSurfaceLocationListImpl();
-		return earthSurfaceLocationList;
 	}
 
 	/**
@@ -520,6 +504,26 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Eclipse createEclipse() {
+		EclipseImpl eclipse = new EclipseImpl();
+		return eclipse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EclipseEvent createEclipseEvent() {
+		EclipseEventImpl eclipseEvent = new EclipseEventImpl();
+		return eclipseEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EphemerisType createEphemerisTypeFromString(EDataType eDataType, String initialValue) {
 		EphemerisType result = EphemerisType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -532,6 +536,26 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 * @generated
 	 */
 	public String convertEphemerisTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EclipseEventType createEclipseEventTypeFromString(EDataType eDataType, String initialValue) {
+		EclipseEventType result = EclipseEventType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEclipseEventTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -605,6 +629,24 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	 */
 	public String convertSortedSetToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IProgressMonitor createIProgressMonitorFromString(EDataType eDataType, String initialValue) {
+		return (IProgressMonitor)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertIProgressMonitorToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

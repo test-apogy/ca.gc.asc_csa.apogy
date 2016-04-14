@@ -14,7 +14,10 @@ package ca.gc.asc_csa.apogy.examples.satellite.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -34,7 +37,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AcquireImageSatelliteCommandItemProvider extends AbstractSatelliteCommandItemProvider {
+public class AcquireImageSatelliteCommandItemProvider extends AbstractRequestBasedSatelliteCommandItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -56,9 +59,78 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractSatelliteC
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addLongitudePropertyDescriptor(object);
+			addLatitudePropertyDescriptor(object);
+			addElevationPropertyDescriptor(object);
 			addRollAnglePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Longitude feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLongitudePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GeographicCoordinates_longitude_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_longitude_feature", "_UI_GeographicCoordinates_type"),
+				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_GEOGRAPHIC_COORDINATESPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Latitude feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLatitudePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GeographicCoordinates_latitude_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_latitude_feature", "_UI_GeographicCoordinates_type"),
+				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_GEOGRAPHIC_COORDINATESPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Elevation feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addElevationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(new AbstractUnitItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GeographicCoordinates_elevation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_elevation_feature", "_UI_GeographicCoordinates_type"),
+				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI_GEOGRAPHIC_COORDINATESPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -102,8 +174,11 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractSatelliteC
 	 */
 	@Override
 	public String getText(Object object) {
-		AcquireImageSatelliteCommand acquireImageSatelliteCommand = (AcquireImageSatelliteCommand)object;
-		return getString("_UI_AcquireImageSatelliteCommand_type") + " " + acquireImageSatelliteCommand.getLongitude();
+		Date labelValue = ((AcquireImageSatelliteCommand)object).getTime();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_AcquireImageSatelliteCommand_type") :
+			getString("_UI_AcquireImageSatelliteCommand_type") + " " + label;
 	}
 	
 
@@ -119,6 +194,9 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractSatelliteC
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AcquireImageSatelliteCommand.class)) {
+			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LONGITUDE:
+			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LATITUDE:
+			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ELEVATION:
 			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

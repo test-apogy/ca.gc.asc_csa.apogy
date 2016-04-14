@@ -19,12 +19,10 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -54,6 +52,8 @@ public class AbstractConstellationRequestItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
+	private ComposedAdapterFactory composedAdapterFactory;
+
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -75,33 +75,10 @@ public class AbstractConstellationRequestItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUidPropertyDescriptor(object);
 			addOrderPriorityPropertyDescriptor(object);
 			addOrderStatusPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Uid feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUidPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractConstellationRequest_uid_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationRequest_uid_feature", "_UI_AbstractConstellationRequest_type"),
-				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -160,7 +137,7 @@ public class AbstractConstellationRequestItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID);
 		}
 		return childrenFeatures;
 	}
@@ -178,18 +155,40 @@ public class AbstractConstellationRequestItemProvider
 		return super.getChildFeature(object, child);
 	}
 
+	/*
+	 * Returns a singleton {@link ComposedAdapterFactory}.
+	 */
+	protected ComposedAdapterFactory getComposedAdapterFactory(){
+		if (composedAdapterFactory == null){
+			composedAdapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+		}
+		return composedAdapterFactory;
+	}
+	
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		AbstractConstellationRequest abstractConstellationRequest = (AbstractConstellationRequest)object;
-		return getString("_UI_AbstractConstellationRequest_type") + " " + abstractConstellationRequest.getUid();
+		AbstractConstellationRequest request = (AbstractConstellationRequest) object;		
+		String value = "<";
+		if (request.getUid() != null){			
+			IItemLabelProvider labelProvider = (IItemLabelProvider) getComposedAdapterFactory().adapt(request.getUid(), IItemLabelProvider.class);			
+			value = value + labelProvider.getText(request.getUid());
+		}
+		value = value + ">" + getAbstractConstellationRequestTypeName();
+		return value;
 	}
 	
+	/**
+	 * This method must be overriden.
+	 */
+	public String getAbstractConstellationRequestTypeName(){
+		return getString("_UI_AbstractConstellationRequest_type");
+	}
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -203,12 +202,11 @@ public class AbstractConstellationRequestItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractConstellationRequest.class)) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -228,13 +226,8 @@ public class AbstractConstellationRequestItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createStringUID()));
 	}
 
 	/**

@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.*;
 import gov.nasa.worldwind.layers.RenderableLayer;
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
@@ -21,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.jface.viewers.ISelection;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList;
@@ -84,8 +86,10 @@ public class ApogyCoreEnvironmentOrbitEarthUIFactoryImpl extends EFactoryImpl im
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER: return createSpacecraftSwathWorldWindLayer();
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER: return createEarthSurfaceLocationWorldWindLayer();
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER: return createGroundStationWorldWindLayer();
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GEOGRAPHIC_COORDINATES_WORLD_WIND_LAYER: return createGeographicCoordinatesWorldWindLayer();
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST: return createSpacecraftVisibilityPassViewConfigurationList();
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION: return createSpacecraftVisibilityPassViewConfiguration();
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_UTILITIES: return createEarthViewUtilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -103,6 +107,8 @@ public class ApogyCoreEnvironmentOrbitEarthUIFactoryImpl extends EFactoryImpl im
 				return createRenderableLayerFromString(eDataType, initialValue);
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.MAP:
 				return createMapFromString(eDataType, initialValue);
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ISELECTION:
+				return createISelectionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -120,6 +126,8 @@ public class ApogyCoreEnvironmentOrbitEarthUIFactoryImpl extends EFactoryImpl im
 				return convertRenderableLayerToString(eDataType, instanceValue);
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.MAP:
 				return convertMapToString(eDataType, instanceValue);
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ISELECTION:
+				return convertISelectionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -200,6 +208,16 @@ public class ApogyCoreEnvironmentOrbitEarthUIFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GeographicCoordinatesWorldWindLayer createGeographicCoordinatesWorldWindLayer() {
+		GeographicCoordinatesWorldWindLayerImpl geographicCoordinatesWorldWindLayer = new GeographicCoordinatesWorldWindLayerImpl();
+		return geographicCoordinatesWorldWindLayer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SpacecraftVisibilityPassViewConfigurationList createSpacecraftVisibilityPassViewConfigurationList() {
 		SpacecraftVisibilityPassViewConfigurationListImpl spacecraftVisibilityPassViewConfigurationList = new SpacecraftVisibilityPassViewConfigurationListImpl();
 		return spacecraftVisibilityPassViewConfigurationList;
@@ -213,6 +231,16 @@ public class ApogyCoreEnvironmentOrbitEarthUIFactoryImpl extends EFactoryImpl im
 	public SpacecraftVisibilityPassViewConfiguration createSpacecraftVisibilityPassViewConfiguration() {
 		SpacecraftVisibilityPassViewConfigurationImpl spacecraftVisibilityPassViewConfiguration = new SpacecraftVisibilityPassViewConfigurationImpl();
 		return spacecraftVisibilityPassViewConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EarthViewUtilities createEarthViewUtilities() {
+		EarthViewUtilitiesImpl earthViewUtilities = new EarthViewUtilitiesImpl();
+		return earthViewUtilities;
 	}
 
 	/**
@@ -249,6 +277,24 @@ public class ApogyCoreEnvironmentOrbitEarthUIFactoryImpl extends EFactoryImpl im
 	 */
 	public String convertMapToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ISelection createISelectionFromString(EDataType eDataType, String initialValue) {
+		return (ISelection)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertISelectionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

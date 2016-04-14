@@ -13,10 +13,13 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
@@ -36,6 +39,8 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraft
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl#getRange <em>Range</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl#getRangeRate <em>Range Rate</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl#getSpacecraftCrossTrackAngle <em>Spacecraft Cross Track Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl#getSpacecraftAlongTrackAngle <em>Spacecraft Along Track Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl#getSpacecraftCoordinates <em>Spacecraft Coordinates</em>}</li>
  * </ul>
  *
  * @generated
@@ -160,6 +165,36 @@ public class VisibilityPassSpacecraftPositionImpl extends MinimalEObjectImpl.Con
 	 * @ordered
 	 */
 	protected double spacecraftCrossTrackAngle = SPACECRAFT_CROSS_TRACK_ANGLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSpacecraftAlongTrackAngle() <em>Spacecraft Along Track Angle</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpacecraftAlongTrackAngle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double SPACECRAFT_ALONG_TRACK_ANGLE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getSpacecraftAlongTrackAngle() <em>Spacecraft Along Track Angle</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpacecraftAlongTrackAngle()
+	 * @generated
+	 * @ordered
+	 */
+	protected double spacecraftAlongTrackAngle = SPACECRAFT_ALONG_TRACK_ANGLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSpacecraftCoordinates() <em>Spacecraft Coordinates</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpacecraftCoordinates()
+	 * @generated
+	 * @ordered
+	 */
+	protected GeographicCoordinates spacecraftCoordinates;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -311,6 +346,84 @@ public class VisibilityPassSpacecraftPositionImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getSpacecraftAlongTrackAngle() {
+		return spacecraftAlongTrackAngle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSpacecraftAlongTrackAngle(double newSpacecraftAlongTrackAngle) {
+		double oldSpacecraftAlongTrackAngle = spacecraftAlongTrackAngle;
+		spacecraftAlongTrackAngle = newSpacecraftAlongTrackAngle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_ALONG_TRACK_ANGLE, oldSpacecraftAlongTrackAngle, spacecraftAlongTrackAngle));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeographicCoordinates getSpacecraftCoordinates() {
+		return spacecraftCoordinates;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSpacecraftCoordinates(GeographicCoordinates newSpacecraftCoordinates, NotificationChain msgs) {
+		GeographicCoordinates oldSpacecraftCoordinates = spacecraftCoordinates;
+		spacecraftCoordinates = newSpacecraftCoordinates;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES, oldSpacecraftCoordinates, newSpacecraftCoordinates);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSpacecraftCoordinates(GeographicCoordinates newSpacecraftCoordinates) {
+		if (newSpacecraftCoordinates != spacecraftCoordinates) {
+			NotificationChain msgs = null;
+			if (spacecraftCoordinates != null)
+				msgs = ((InternalEObject)spacecraftCoordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES, null, msgs);
+			if (newSpacecraftCoordinates != null)
+				msgs = ((InternalEObject)newSpacecraftCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES, null, msgs);
+			msgs = basicSetSpacecraftCoordinates(newSpacecraftCoordinates, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES, newSpacecraftCoordinates, newSpacecraftCoordinates));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES:
+				return basicSetSpacecraftCoordinates(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -326,6 +439,10 @@ public class VisibilityPassSpacecraftPositionImpl extends MinimalEObjectImpl.Con
 				return getRangeRate();
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE:
 				return getSpacecraftCrossTrackAngle();
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_ALONG_TRACK_ANGLE:
+				return getSpacecraftAlongTrackAngle();
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES:
+				return getSpacecraftCoordinates();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -355,6 +472,12 @@ public class VisibilityPassSpacecraftPositionImpl extends MinimalEObjectImpl.Con
 				return;
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE:
 				setSpacecraftCrossTrackAngle((Double)newValue);
+				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_ALONG_TRACK_ANGLE:
+				setSpacecraftAlongTrackAngle((Double)newValue);
+				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES:
+				setSpacecraftCoordinates((GeographicCoordinates)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -386,6 +509,12 @@ public class VisibilityPassSpacecraftPositionImpl extends MinimalEObjectImpl.Con
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE:
 				setSpacecraftCrossTrackAngle(SPACECRAFT_CROSS_TRACK_ANGLE_EDEFAULT);
 				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_ALONG_TRACK_ANGLE:
+				setSpacecraftAlongTrackAngle(SPACECRAFT_ALONG_TRACK_ANGLE_EDEFAULT);
+				return;
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES:
+				setSpacecraftCoordinates((GeographicCoordinates)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -410,6 +539,10 @@ public class VisibilityPassSpacecraftPositionImpl extends MinimalEObjectImpl.Con
 				return rangeRate != RANGE_RATE_EDEFAULT;
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE:
 				return spacecraftCrossTrackAngle != SPACECRAFT_CROSS_TRACK_ANGLE_EDEFAULT;
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_ALONG_TRACK_ANGLE:
+				return spacecraftAlongTrackAngle != SPACECRAFT_ALONG_TRACK_ANGLE_EDEFAULT;
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_COORDINATES:
+				return spacecraftCoordinates != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -436,6 +569,8 @@ public class VisibilityPassSpacecraftPositionImpl extends MinimalEObjectImpl.Con
 		result.append(rangeRate);
 		result.append(", spacecraftCrossTrackAngle: ");
 		result.append(spacecraftCrossTrackAngle);
+		result.append(", spacecraftAlongTrackAngle: ");
+		result.append(spacecraftAlongTrackAngle);
 		result.append(')');
 		return result.toString();
 	}

@@ -21,10 +21,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
@@ -55,7 +55,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected OrbitModel orbitModel;
+	protected EarthOrbitModel orbitModel;
 
 	/**
 	 * The cached value of the '{@link #getSurfaceLocation() <em>Surface Location</em>}' reference.
@@ -161,10 +161,10 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrbitModel getOrbitModel() {
+	public EarthOrbitModel getOrbitModel() {
 		if (orbitModel != null && orbitModel.eIsProxy()) {
 			InternalEObject oldOrbitModel = (InternalEObject)orbitModel;
-			orbitModel = (OrbitModel)eResolveProxy(oldOrbitModel);
+			orbitModel = (EarthOrbitModel)eResolveProxy(oldOrbitModel);
 			if (orbitModel != oldOrbitModel) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL, oldOrbitModel, orbitModel));
@@ -178,7 +178,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrbitModel basicGetOrbitModel() {
+	public EarthOrbitModel basicGetOrbitModel() {
 		return orbitModel;
 	}
 
@@ -187,8 +187,8 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrbitModel(OrbitModel newOrbitModel) {
-		OrbitModel oldOrbitModel = orbitModel;
+	public void setOrbitModel(EarthOrbitModel newOrbitModel) {
+		EarthOrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL, oldOrbitModel, orbitModel));
@@ -444,7 +444,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL:
-				setOrbitModel((OrbitModel)newValue);
+				setOrbitModel((EarthOrbitModel)newValue);
 				return;
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION:
 				setSurfaceLocation((EarthSurfaceLocation)newValue);
@@ -474,7 +474,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL:
-				setOrbitModel((OrbitModel)null);
+				setOrbitModel((EarthOrbitModel)null);
 				return;
 			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION:
 				setSurfaceLocation((EarthSurfaceLocation)null);

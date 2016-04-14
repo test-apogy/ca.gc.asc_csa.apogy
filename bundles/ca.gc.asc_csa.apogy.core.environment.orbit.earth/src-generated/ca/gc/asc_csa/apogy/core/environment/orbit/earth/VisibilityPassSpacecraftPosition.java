@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
  */
 
 import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 
 
 /**
@@ -30,6 +31,8 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRange <em>Range</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRangeRate <em>Range Rate</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftCrossTrackAngle <em>Spacecraft Cross Track Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftAlongTrackAngle <em>Spacecraft Along Track Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftCoordinates <em>Spacecraft Coordinates</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition()
@@ -151,7 +154,7 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The angle of the surface location relative to the spacecraft nadir.
+	 * The cross track angle of the surface location relative to the spacecraft nadir.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Spacecraft Cross Track Angle</em>' attribute.
 	 * @see #setSpacecraftCrossTrackAngle(double)
@@ -171,5 +174,58 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * @generated
 	 */
 	void setSpacecraftCrossTrackAngle(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Spacecraft Along Track Angle</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The along track angle of the surface location relative to the spacecraft nadir.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Spacecraft Along Track Angle</em>' attribute.
+	 * @see #setSpacecraftAlongTrackAngle(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_SpacecraftAlongTrackAngle()
+	 * @model default="0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='rad'"
+	 * @generated
+	 */
+	double getSpacecraftAlongTrackAngle();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftAlongTrackAngle <em>Spacecraft Along Track Angle</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Spacecraft Along Track Angle</em>' attribute.
+	 * @see #getSpacecraftAlongTrackAngle()
+	 * @generated
+	 */
+	void setSpacecraftAlongTrackAngle(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Spacecraft Coordinates</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Spacecraft Geographical Coordinates.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Spacecraft Coordinates</em>' containment reference.
+	 * @see #setSpacecraftCoordinates(GeographicCoordinates)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_SpacecraftCoordinates()
+	 * @model containment="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='None'"
+	 * @generated
+	 */
+	GeographicCoordinates getSpacecraftCoordinates();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftCoordinates <em>Spacecraft Coordinates</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Spacecraft Coordinates</em>' containment reference.
+	 * @see #getSpacecraftCoordinates()
+	 * @generated
+	 */
+	void setSpacecraftCoordinates(GeographicCoordinates value);
 
 } // VisibilityPassSpacecraftPosition

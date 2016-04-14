@@ -486,7 +486,7 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")	
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {

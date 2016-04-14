@@ -107,6 +107,10 @@ public class ApogyCommonEMFAdapterFactory extends AdapterFactoryImpl
 				return createStartableAdapter();
 			}
 			@Override
+			public Adapter caseDuration(Duration object) {
+				return createDurationAdapter();
+			}
+			@Override
 			public Adapter caseTimeSource(TimeSource object) {
 				return createTimeSourceAdapter();
 			}
@@ -293,6 +297,20 @@ public class ApogyCommonEMFAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createStartableAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Duration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Duration
+	 * @generated
+	 */
+	public Adapter createDurationAdapter() {
 		return null;
 	}
 

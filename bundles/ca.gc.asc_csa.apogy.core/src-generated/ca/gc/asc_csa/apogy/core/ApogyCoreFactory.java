@@ -156,6 +156,15 @@ public interface ApogyCoreFactory extends EFactory {
 	WorksitesList createWorksitesList();
 
 	/**
+	 * Returns a new object of class '<em>Surface Locations List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Surface Locations List</em>'.
+	 * @generated
+	 */
+	SurfaceLocationsList createSurfaceLocationsList();
+
+	/**
 	 * Returns a new object of class '<em>Orbit Models List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

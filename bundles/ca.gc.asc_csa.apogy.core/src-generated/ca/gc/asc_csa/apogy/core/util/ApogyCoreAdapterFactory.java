@@ -185,6 +185,14 @@ public class ApogyCoreAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractWorksiteAdapter();
 			}
 			@Override
+			public Adapter caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {
+				return createAbstractSurfaceLocationAdapter();
+			}
+			@Override
+			public Adapter caseSurfaceLocationsList(SurfaceLocationsList object) {
+				return createSurfaceLocationsListAdapter();
+			}
+			@Override
 			public Adapter caseOrbitModelsList(OrbitModelsList object) {
 				return createOrbitModelsListAdapter();
 			}
@@ -553,6 +561,34 @@ public class ApogyCoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstractWorksiteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation <em>Abstract Surface Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation
+	 * @generated
+	 */
+	public Adapter createAbstractSurfaceLocationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList <em>Surface Locations List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.SurfaceLocationsList
+	 * @generated
+	 */
+	public Adapter createSurfaceLocationsListAdapter() {
 		return null;
 	}
 

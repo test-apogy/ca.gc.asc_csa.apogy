@@ -485,4 +485,60 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	void notifyVariableListeners(Variable variable, VariableListenerEventType event);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Loads the content of the {@link InvocatorSession}.
+	 * @param uri Reference to the session file (e.g. "platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/sessions/RoverExampleSession.sym").
+	 * @return Reference to the session if successfully loaded.
+	 * @throw Exception Reference to the exception if problems occurred during the load.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.emf.Exception" uriUnique="false"
+	 * @generated
+	 */
+	InvocatorSession loadInvocatorSession(String uri) throws Exception;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Search and return the list that matches the specified name.
+	 * @param invocatorSession Reference to the session.
+	 * @param name Search criteria.
+	 * @return Reference to the list or null if not found.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" invocatorSessionUnique="false" nameUnique="false"
+	 * @generated
+	 */
+	DataProductsList getDataProductsByName(InvocatorSession invocatorSession, String name);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Search and return the program that matches the specified name.
+	 * @param invocatorSession Reference to the session.
+	 * @param name Search criteria.
+	 * @return Reference to the program or null if not found.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" invocatorSessionUnique="false" nameUnique="false"
+	 * @generated
+	 */
+	Program getProgramByName(InvocatorSession invocatorSession, String name);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Search and return the context that matches the specified name.
+	 * @param invocatorSession Reference to the session.
+	 * @param name Search criteria.
+	 * @return Reference to the context or null if not found.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" invocatorSessionUnique="false" nameUnique="false"
+	 * @generated
+	 */
+	Context getContextByName(InvocatorSession invocatorSession, String name);
+
 } // ApogyCoreInvocatorFacade

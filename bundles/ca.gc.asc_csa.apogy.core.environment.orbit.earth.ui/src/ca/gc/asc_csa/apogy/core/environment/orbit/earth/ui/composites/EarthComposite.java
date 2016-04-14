@@ -17,6 +17,8 @@ import gov.nasa.worldwind.BasicModel;
 import gov.nasa.worldwind.Configuration;
 import gov.nasa.worldwind.avlist.AVKey;
 import gov.nasa.worldwind.awt.WorldWindowGLJPanel;
+import gov.nasa.worldwind.event.SelectEvent;
+import gov.nasa.worldwind.event.SelectListener;
 import gov.nasa.worldwind.globes.Earth;
 import gov.nasa.worldwind.globes.EarthFlat;
 import gov.nasa.worldwind.view.orbit.BasicOrbitView;
@@ -64,12 +66,21 @@ public class EarthComposite extends Composite
 		worldFrame.add(panel);
 		panel.add(getWorldWindowGLJPanel(), BorderLayout.CENTER);
 		worldFrame.requestFocus();						
+		
+		// DEBUG
+		getWorldWindowGLJPanel().addSelectListener(new SelectListener() {
+			
+			@Override
+			public void selected(SelectEvent selectEvent) 
+			{				
+				selectEvent.getTopPickedObject();
+			}
+		});
+		// DEBUG
 	}
 	
 	public void setEarthViewConfiguration(EarthViewConfiguration newEarthViewConfiguration)
 	{
-		System.out.println("EarthComposite.setEarthViewConfiguration(" + newEarthViewConfiguration + ")");
-		
 		// Unregister listener from previous EarthViewConfiguration if applicable.
 		if(earthViewConfiguration != null)
 		{
@@ -120,6 +131,7 @@ public class EarthComposite extends Composite
 		getWorldWindowGLJPanel().redraw();
 		
 		// Re-initialize all layers.
+		removeAllLayers();
 		initializeEarthViewConfiguration(getEarthViewConfiguration());
 	}
 
@@ -128,7 +140,7 @@ public class EarthComposite extends Composite
 		if(abstractWorldWindLayer.getRenderableLayer() != null)
 		{
 			getWorldWindowGLJPanel().getModel().getLayers().add(abstractWorldWindLayer.getRenderableLayer());
-			getWorldWindowGLJPanel().redraw();
+			getWorldWindowGLJPanel().redraw();						
 		}
 		
 		layers.add(abstractWorldWindLayer);
@@ -177,6 +189,8 @@ public class EarthComposite extends Composite
 			{
 				addLayer(layer);
 			}
+			
+			updateAllLayers();
 		}
 	}
 	
@@ -218,6 +232,23 @@ public class EarthComposite extends Composite
 										}
 									break;
 									
+									case Notification.ADD_MANY:
+										try
+										{
+											@SuppressWarnings("unchecked")
+											List<AbstractWorldWindLayer> layers = (List<AbstractWorldWindLayer>) msg.getNewValue();
+											 
+											for(AbstractWorldWindLayer layer : layers)
+											{												
+												addLayer(layer);
+											}
+										}
+										catch(Throwable t)
+										{
+											t.printStackTrace();
+										}
+									break;
+									
 									case Notification.REMOVE:
 										if(msg.getOldValue() instanceof AbstractWorldWindLayer)
 										{
@@ -225,7 +256,22 @@ public class EarthComposite extends Composite
 										}										
 									break;
 									
-									// TODO : add other cases.
+									case Notification.REMOVE_MANY:
+										try
+										{
+											@SuppressWarnings("unchecked")
+											List<AbstractWorldWindLayer> layers = (List<AbstractWorldWindLayer>) msg.getOldValue();
+											 
+											for(AbstractWorldWindLayer layer : layers)
+											{												
+												removeLayer(layer);
+											}
+										}
+										catch(Throwable t)
+										{
+											t.printStackTrace();
+										}
+									break;									
 								}
 							}
 							break;

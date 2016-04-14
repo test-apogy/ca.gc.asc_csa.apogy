@@ -37,7 +37,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPro
  *
  * @generated
  */
-public class URLBasedTLEEarthOrbitPropagatorImpl extends TLEEarthOrbitPropagatorImpl implements URLBasedTLEEarthOrbitPropagator 
+public class URLBasedTLEEarthOrbitPropagatorImpl extends TLEEarthOrbitModelImpl implements URLBasedTLEEarthOrbitPropagator 
 {	
 	/**
 	 * The default value of the '{@link #getTleURL() <em>Tle URL</em>}' attribute.

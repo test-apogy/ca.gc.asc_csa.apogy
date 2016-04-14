@@ -82,6 +82,7 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 			case ApogyCommonEMFPackage.EOBJECT_REFERENCE: return createEObjectReference();
 			case ApogyCommonEMFPackage.SERVER: return createServer();
 			case ApogyCommonEMFPackage.STARTABLE: return createStartable();
+			case ApogyCommonEMFPackage.DURATION: return createDuration();
 			case ApogyCommonEMFPackage.FIXED_TIME_SOURCE: return createFixedTimeSource();
 			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE: return createCurrentTimeSource();
 			case ApogyCommonEMFPackage.BROWSEABLE_TIME_SOURCE: return createBrowseableTimeSource();
@@ -219,6 +220,16 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 	public Startable createStartable() {
 		StartableImpl startable = new StartableImpl();
 		return startable;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Duration createDuration() {
+		DurationImpl duration = new DurationImpl();
+		return duration;
 	}
 
 		/**

@@ -269,6 +269,38 @@ class ApogyCoreInvocatorFacade
 	  * @param event Refers to the {@link VariableListenerEventType}.
 	  */
 	 op void notifyVariableListeners(Variable variable, VariableListenerEventType event)	 
+	 
+	 /*
+	  * Loads the content of the {@link InvocatorSession}.
+	  * @param uri Reference to the session file (e.g. "platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/sessions/RoverExampleSession.sym").
+	  * @return Reference to the session if successfully loaded.
+	  * @throw Exception Reference to the exception if problems occurred during the load.
+	  */
+	 op InvocatorSession loadInvocatorSession(String uri) throws Exception
+	 
+	 /*
+	  * Search and return the list that matches the specified name.
+	  * @param invocatorSession Reference to the session.
+	  * @param name Search criteria.
+	  * @return Reference to the list or null if not found.
+	  */
+	 op DataProductsList getDataProductsByName(InvocatorSession invocatorSession, String name)
+	 
+	 /*
+	  * Search and return the program that matches the specified name.
+	  * @param invocatorSession Reference to the session.
+	  * @param name Search criteria.
+	  * @return Reference to the program or null if not found.
+	  */
+	 op Program getProgramByName(InvocatorSession invocatorSession, String name)
+	 
+	 /*
+	  * Search and return the context that matches the specified name.
+	  * @param invocatorSession Reference to the session.
+	  * @param name Search criteria.
+	  * @return Reference to the context or null if not found.
+	  */
+	 op Context getContextByName(InvocatorSession invocatorSession, String name)	 	 
 } 
 
 enum VariableListenerEventType{

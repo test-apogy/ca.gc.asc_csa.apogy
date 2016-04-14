@@ -15,10 +15,9 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 import java.util.Date;
 import java.util.List;
-
-import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.InitialOrbitProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider;
 import org.orekit.propagation.Propagator;
 
 /**
@@ -30,12 +29,100 @@ import org.orekit.propagation.Propagator;
  * Defines an Orbit propagator for Earth orbits.
  * <!-- end-model-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getValidFromDate <em>Valid From Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getValidToDate <em>Valid To Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getInitialOrbitBasedEarthOrbitModel <em>Initial Orbit Based Earth Orbit Model</em>}</li>
+ * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitPropagator()
  * @model abstract="true"
  * @generated
  */
-public interface EarthOrbitPropagator extends AbstractOrbitPropagator, InitialOrbitProvider {
+public interface EarthOrbitPropagator extends ValidityRangeProvider {
+
+	/**
+	 * Returns the value of the '<em><b>Valid From Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Valid From Date</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Valid From Date</em>' attribute.
+	 * @see #setValidFromDate(Date)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitPropagator_ValidFromDate()
+	 * @model unique="false" required="true"
+	 * @generated
+	 */
+	Date getValidFromDate();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getValidFromDate <em>Valid From Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Valid From Date</em>' attribute.
+	 * @see #getValidFromDate()
+	 * @generated
+	 */
+	void setValidFromDate(Date value);
+
+	/**
+	 * Returns the value of the '<em><b>Valid To Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Valid To Date</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Valid To Date</em>' attribute.
+	 * @see #setValidToDate(Date)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitPropagator_ValidToDate()
+	 * @model unique="false" required="true"
+	 * @generated
+	 */
+	Date getValidToDate();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getValidToDate <em>Valid To Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Valid To Date</em>' attribute.
+	 * @see #getValidToDate()
+	 * @generated
+	 */
+	void setValidToDate(Date value);
+
+	/**
+	 * Returns the value of the '<em><b>Initial Orbit Based Earth Orbit Model</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.InitialOrbitBasedEarthOrbitModel#getPropagator <em>Propagator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Initial Orbit Based Earth Orbit Model</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Initial Orbit Based Earth Orbit Model</em>' container reference.
+	 * @see #setInitialOrbitBasedEarthOrbitModel(InitialOrbitBasedEarthOrbitModel)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitPropagator_InitialOrbitBasedEarthOrbitModel()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.InitialOrbitBasedEarthOrbitModel#getPropagator
+	 * @model opposite="propagator" transient="false"
+	 * @generated
+	 */
+	InitialOrbitBasedEarthOrbitModel getInitialOrbitBasedEarthOrbitModel();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator#getInitialOrbitBasedEarthOrbitModel <em>Initial Orbit Based Earth Orbit Model</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Initial Orbit Based Earth Orbit Model</em>' container reference.
+	 * @see #getInitialOrbitBasedEarthOrbitModel()
+	 * @generated
+	 */
+	void setInitialOrbitBasedEarthOrbitModel(InitialOrbitBasedEarthOrbitModel value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,6 +131,22 @@ public interface EarthOrbitPropagator extends AbstractOrbitPropagator, InitialOr
 	 * @generated
 	 */
 	Propagator getOreKitPropagator();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" targetDateUnique="false"
+	 * @generated
+	 */
+	SpacecraftState propagate(Date targetDate) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" startDateUnique="false" endDateUnique="false" timeIntervalUnique="false"
+	 * @generated
+	 */
+	List<SpacecraftState> getSpacecraftStates(Date startDate, Date endDate, double timeInterval) throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,6 +171,18 @@ public interface EarthOrbitPropagator extends AbstractOrbitPropagator, InitialOr
 	 * @generated
 	 */
 	List<VisibilityPass> getGroundStationPasses(GroundStation groundStation, Date startDate, Date endDate) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns the list of {@link Eclipse}.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" startDateUnique="false" endDateUnique="false"
+	 * @generated
+	 */
+	List<Eclipse> getEclipses(Date startDate, Date endDate) throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->

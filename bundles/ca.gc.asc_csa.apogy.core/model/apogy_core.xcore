@@ -285,7 +285,10 @@ class WorksitesList extends Named, Described
 	contains AbstractWorksite[0..*] worksites opposite worksitesList
 	
 	@GenModel(children="true", notify="true", property="None")
-	contains OrbitModelsList[1] orbitsModels
+	contains OrbitModelsList[0..*] orbitsModelsLists	
+	
+	@GenModel(children="true", notify="true", property="None")
+	contains SurfaceLocationsList[0..*] surfaceLocationsLists
 }
 
 abstract class AbstractWorksite extends Named, Described, Timed
@@ -293,6 +296,19 @@ abstract class AbstractWorksite extends Named, Described, Timed
     @GenModel(property="None")
 	container WorksitesList worksitesList opposite worksites
 }
+
+/* -------------------------------------------------------------------------
+ * 
+ * Surface Location
+ * 
+ * ------------------------------------------------------------------------- */
+abstract class AbstractSurfaceLocation extends Named, Described{	
+}
+
+class SurfaceLocationsList extends Named, Described{
+	contains AbstractSurfaceLocation [0..*] surfaceLocations	
+}
+
 
 /* -------------------------------------------------------------------------
  * 
@@ -309,6 +325,7 @@ abstract class AbstractOrbitModel extends Named, Described
 {		
     @GenModel(property="None")
 	container OrbitModelsList orbitModelsList opposite orbitModels
+	
 }
 
 

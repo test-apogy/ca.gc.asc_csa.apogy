@@ -15,19 +15,18 @@ package ca.gc.asc_csa.apogy.examples.satellite.apogy.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
-import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
-
+import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.apogy.examples.satellite.apogy.*;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->

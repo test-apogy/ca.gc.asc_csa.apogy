@@ -19,10 +19,12 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.provider.OrbitItemProvider;
 
 /**
@@ -53,8 +55,31 @@ public class EarthOrbitItemProvider extends OrbitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addInitialOrbitBasedEarthOrbitModelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Initial Orbit Based Earth Orbit Model feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInitialOrbitBasedEarthOrbitModelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EarthOrbit_initialOrbitBasedEarthOrbitModel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EarthOrbit_initialOrbitBasedEarthOrbitModel_feature", "_UI_EarthOrbit_type"),
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT__INITIAL_ORBIT_BASED_EARTH_ORBIT_MODEL,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

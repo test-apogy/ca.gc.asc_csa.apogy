@@ -14,6 +14,8 @@ package ca.gc.asc_csa.apogy.examples.lander.apogy.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -108,6 +110,11 @@ public class LanderApogySystemApiAdapterItemProvider
   protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
   {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
+				 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 	}
 
   /**

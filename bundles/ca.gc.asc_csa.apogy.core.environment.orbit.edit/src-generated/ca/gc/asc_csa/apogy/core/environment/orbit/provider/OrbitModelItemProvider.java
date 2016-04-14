@@ -14,15 +14,17 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import ca.gc.asc_csa.apogy.core.provider.AbstractOrbitModelItemProvider;
 
 /**
@@ -54,8 +56,54 @@ public class OrbitModelItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addFromValidDatePropertyDescriptor(object);
+			addToValidDatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the From Valid Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFromValidDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ValidityRangeProvider_fromValidDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ValidityRangeProvider_fromValidDate_feature", "_UI_ValidityRangeProvider_type"),
+				 ApogyCoreEnvironmentOrbitPackage.Literals.VALIDITY_RANGE_PROVIDER__FROM_VALID_DATE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the To Valid Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addToValidDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ValidityRangeProvider_toValidDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ValidityRangeProvider_toValidDate_feature", "_UI_ValidityRangeProvider_type"),
+				 ApogyCoreEnvironmentOrbitPackage.Literals.VALIDITY_RANGE_PROVIDER__TO_VALID_DATE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -70,8 +118,8 @@ public class OrbitModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__INITIAL_ORBIT);
-			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__PROPAGATOR);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__REFERENCE_FRAME);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__ATTITUDE_PROVIDER);
 		}
 		return childrenFeatures;
 	}
@@ -87,17 +135,6 @@ public class OrbitModelItemProvider
 		// adding (see {@link AddCommand}) it as a child.
 
 		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns OrbitModel.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/OrbitModel"));
 	}
 
 	/**
@@ -127,8 +164,12 @@ public class OrbitModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OrbitModel.class)) {
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
-			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__FROM_VALID_DATE:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__TO_VALID_DATE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__REFERENCE_FRAME:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__ATTITUDE_PROVIDER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

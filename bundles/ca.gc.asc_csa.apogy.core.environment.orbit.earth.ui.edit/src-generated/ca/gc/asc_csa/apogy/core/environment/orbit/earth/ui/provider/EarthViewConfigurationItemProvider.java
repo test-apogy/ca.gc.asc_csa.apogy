@@ -236,6 +236,11 @@ public class EarthViewConfigurationItemProvider
 			(createChildParameter
 				(ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
 				 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
+				 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGeographicCoordinatesWorldWindLayer()));
 	}
 
 	/**

@@ -143,22 +143,13 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
   int WORKSITE__WORKSITE_NODE = ApogyCorePackage.ABSTRACT_WORKSITE_FEATURE_COUNT + 0;
 
   /**
-	 * The feature id for the '<em><b>Orbits Models</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITE__ORBITS_MODELS = ApogyCorePackage.ABSTRACT_WORKSITE_FEATURE_COUNT + 1;
-
-		/**
 	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE__ENVIRONMENT = ApogyCorePackage.ABSTRACT_WORKSITE_FEATURE_COUNT + 2;
+  int WORKSITE__ENVIRONMENT = ApogyCorePackage.ABSTRACT_WORKSITE_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Worksite</em>' class.
@@ -167,7 +158,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE_FEATURE_COUNT = ApogyCorePackage.ABSTRACT_WORKSITE_FEATURE_COUNT + 3;
+  int WORKSITE_FEATURE_COUNT = ApogyCorePackage.ABSTRACT_WORKSITE_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Worksite</em>' class.
@@ -235,15 +226,6 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
   int SURFACE_WORKSITE__WORKSITE_NODE = WORKSITE__WORKSITE_NODE;
 
   /**
-	 * The feature id for the '<em><b>Orbits Models</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SURFACE_WORKSITE__ORBITS_MODELS = WORKSITE__ORBITS_MODELS;
-
-		/**
 	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -344,15 +326,6 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
   int EARTH_SURFACE_WORKSITE__WORKSITE_NODE = SURFACE_WORKSITE__WORKSITE_NODE;
 
   /**
-	 * The feature id for the '<em><b>Orbits Models</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EARTH_SURFACE_WORKSITE__ORBITS_MODELS = SURFACE_WORKSITE__ORBITS_MODELS;
-
-		/**
 	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7317,17 +7290,6 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
   EReference getWorksite_WorksiteNode();
 
   /**
-	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.core.environment.Worksite#getOrbitsModels <em>Orbits Models</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Orbits Models</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.Worksite#getOrbitsModels()
-	 * @see #getWorksite()
-	 * @generated
-	 */
-	EReference getWorksite_OrbitsModels();
-
-		/**
 	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.Worksite#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -10109,13 +10071,6 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 		 */
     EReference WORKSITE__WORKSITE_NODE = eINSTANCE.getWorksite_WorksiteNode();
     /**
-		 * The meta object literal for the '<em><b>Orbits Models</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORKSITE__ORBITS_MODELS = eINSTANCE.getWorksite_OrbitsModels();
-				/**
 		 * The meta object literal for the '<em><b>Environment</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

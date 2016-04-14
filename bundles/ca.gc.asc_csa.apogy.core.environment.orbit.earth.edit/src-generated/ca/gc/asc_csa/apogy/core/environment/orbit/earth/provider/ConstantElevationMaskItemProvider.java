@@ -13,20 +13,20 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask} object.
@@ -34,7 +34,11 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbi
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider {
+public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider 
+{
+	public static final String DEGREE_STRING = "\u00b0";
+	protected DecimalFormat decimalFormat = new DecimalFormat("0.0");
+	
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -69,7 +73,7 @@ public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider
 	 */
 	protected void addConstantElevationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_ConstantElevationMask_constantElevation_feature"),
@@ -98,12 +102,15 @@ public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object) 
+	{
 		ConstantElevationMask constantElevationMask = (ConstantElevationMask)object;
-		return getString("_UI_ConstantElevationMask_type") + " " + constantElevationMask.getConstantElevation();
+		
+				
+		return getString("_UI_ConstantElevationMask_type") + " (" + decimalFormat.format(Math.toDegrees(constantElevationMask.getConstantElevation())) + DEGREE_STRING + ")";
 	}
 	
 

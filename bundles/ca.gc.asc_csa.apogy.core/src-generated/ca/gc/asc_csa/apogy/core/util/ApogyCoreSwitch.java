@@ -236,6 +236,22 @@ public class ApogyCoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCorePackage.ABSTRACT_SURFACE_LOCATION: {
+				AbstractSurfaceLocation abstractSurfaceLocation = (AbstractSurfaceLocation)theEObject;
+				T result = caseAbstractSurfaceLocation(abstractSurfaceLocation);
+				if (result == null) result = caseNamed(abstractSurfaceLocation);
+				if (result == null) result = caseDescribed(abstractSurfaceLocation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCorePackage.SURFACE_LOCATIONS_LIST: {
+				SurfaceLocationsList surfaceLocationsList = (SurfaceLocationsList)theEObject;
+				T result = caseSurfaceLocationsList(surfaceLocationsList);
+				if (result == null) result = caseNamed(surfaceLocationsList);
+				if (result == null) result = caseDescribed(surfaceLocationsList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCorePackage.ORBIT_MODELS_LIST: {
 				OrbitModelsList orbitModelsList = (OrbitModelsList)theEObject;
 				T result = caseOrbitModelsList(orbitModelsList);
@@ -595,6 +611,36 @@ public class ApogyCoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractWorksite(AbstractWorksite object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Surface Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Surface Location</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Surface Locations List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Surface Locations List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSurfaceLocationsList(SurfaceLocationsList object) {
 		return null;
 	}
 

@@ -19,10 +19,10 @@ which accompanies this distribution, and is available at
 http://www.eclipse.org/legal/epl-v10.html
 
 Contributors:
-    Pierre Allard (Pierre.Allard@canada.ca), 
-    Regent L'Archeveque (Regent.Larcheveque@canada.ca),
-    Sebastien Gemme (Sebastien.Gemme@canada.ca),
-    Canadian Space Agency (CSA) - Initial API and implementation",
+Canadian Space Agency (CSA) - Initial API and implementation
+-Pierre Allard (Pierre.Allard@canada.ca),
+-Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+-Sebastien Gemme (Sebastien.Gemme@canada.ca)",
 		  modelName="ApogyExamplesSatellite",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
@@ -38,21 +38,47 @@ import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.common.emf.Timed
 import ca.gc.asc_csa.apogy.common.images.EImage
+import ca.gc.asc_csa.apogy.core.Exception
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
-import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass
+
+type List<T> wraps java.util.List
+type SortedSet<T> wraps java.util.SortedSet 
+type Comparator<T> wraps java.util.Comparator 
+ 
+/*
+ * Abstract Unique Identifier.  This class is meant to be sub-classed.
+ */
+abstract class AbstractUID{
+}
 
 /*
- * Basic Types.
+ * Unique Identifier in string format (Default).
  */
- type List<T> wraps java.util.List
- type SortedSet<T> wraps java.util.SortedSet
+class StringUID extends AbstractUID{
+	String ^id
+}
 
 /*
- * Represents a constellation of Satellites. It provides basic queries used to schedule 
- * image acquisition and upload requests and downloads data from the satellites.
+ * Class that contains list of {@link ConstellationCommandPlan}.
  */
-abstract class AbstractConstellation{
+ class ConstellationCommandPlansList{
+ 	contains AbstractConstellationCommandPlan[0..*] plans
+ }
+ 
+ /*
+  * Class used to store the constellation state. 
+  */
+ class ConstellationState{
+ 	/*
+	 * List of {@link ConstellationCommandPlan}s.
+	 */	 
+	contains ConstellationCommandPlansList[0..1] constellationCommandPlansList
+	 
 	/*
 	 * List of the constellation {@link Satellite}. 
 	 */
@@ -67,36 +93,41 @@ abstract class AbstractConstellation{
 	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
 	 */
 	contains ConstellationDownlinksList[0..1] downlinksLists
-	
+		
 	/*
 	 * List of {@link AbstractConstellationRequest}.
 	 */
 	contains ConstellationRequestsList[0..1] constellationRequestsList
+	
+	/*
+	 * Constellation Planner.
+	 */
+	contains AbstractConstellationPlanner[0..1] constellationPlanner opposite constellationState	
+ }
 
+/*
+ * Represents a constellation of Satellites. It provides basic queries used to schedule 
+ * image acquisition and upload requests and downloads data from the satellites.
+ */
+abstract class AbstractConstellation extends Named, Described{
+		
 	/*
-	 * Returns the list of {@link AbstractSatelliteCommand} required to process the constellation {@link AbstractConstellationRequest} 
-	 * based on the available constellation satellites.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @return Reference to the {@link SatelliteCommandPlan}.
+	 * Constellation State.
 	 */
-	op ConstellationCommandPlan plan(Date startDate, Date endDate)
+	contains ConstellationState[0..1] constellationState
 	
 	/*
-	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest} 
-	 * based on the available constellation satellites.
-	 * @param requests Refers to the list of {@link AbstractConstellationRequest} to process.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @return Reference to the {@link SatelliteCommandPlan}.
+	 * Exports the specified plan into the resource specified by the url.
+	 * @param plan Refers the plan to export.
+	 * @param url Specifies the location where the plan must be exported.
 	 */
-	op ConstellationCommandPlan plan(List<AbstractConstellationRequest> requests, Date startDate, Date endDate)
+	op void export(AbstractConstellationCommandPlan plan, String url) 
 	
 	/*
-	 * Packages and commits the list of {@link AbstractSatelliteCommand}.  
-	 * @param satelliteCommands Reference to the list of {@link AbstractSatelliteCommand}.
+	 * Packages and commits the specified plan.  
+	 * @param plan Reference to the {@link ConstellationCommandPlan}.
 	 */
-	op void commit(List<AbstractSatelliteCommand> satelliteCommands)
+	op void commit(AbstractConstellationCommandPlan plan)
 
 	/* 
 	 * Updates the {@link AbstractConstellationRequest} state based on the {@link ConstallationDownlink}. 
@@ -105,66 +136,164 @@ abstract class AbstractConstellation{
 	op void apply(ConstellationDownlink downlink)
 	
 	/*
-	 * Adds the specified {@link AbstractConstellationRequest} to the constellation.
-	 * @param request Specifies the request to add to the {@link AbstractConstellation}.
+	 * Imports the {@link ConstellationDownlink} into the current {@link Constellation}.
+	 * @param url String that refers the resource that embeds a {@link ConstellationDownlink}. 
 	 */
-	op void add(AbstractConstellationRequest request)
+	op void importConstellationDownlink(String url)
 	
 	/*
-	 * Adds all the {@link AbstractConstellationRequest} specified in the list to the constellation.
-	 * @param requests Specifies the requests to add to the {@link AbstractConstellation}.
-	 */	
-	op void addAll(List<AbstractConstellationRequest> requests)
-	
-	/*
-	 * Removes the specified {@link AbstractConstellationRequest} from the constellation.
-	 * @param request Specifies the request to remove from the {@link AbstractConstellation}.
-	 */	
-	op void remove(AbstractConstellationRequest request)
-	
-	/*
-	 * Removes all the {@link AbstractConstellationRequest} specified in the list from the constellation.
-	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
-	 */		
-	op void removeAll(List<AbstractConstellationRequest> requests)	
+	 * Imports the {@link AbstractConstellationRequest} contained in the resource specified by the {@link url}.
+	 * @param url URL that specifies the resource.
+	 * @return List of imported {@link AbstractConstellationRequest}. 
+	 */
+	op List<AbstractConstellationRequest> importConstellationRequests(String url)	
 }
 
 /*
- * This class contains a list of {@link SatelliteCommandPlanItem}.
- * The {@link AbstractConstellation#plan} produces {@link SatelliteCommandPlan}. 
- */
-class ConstellationCommandPlan{
-	/*
-	 * List of {@link SatelliteCommandPlanItem}.
-	 */
-	contains ConstellationCommandPlanItem[0..*] constellationCommandPlanItems
-}
-
-/*
- * This class specifies the link between an {@link AbstractConstellationRequest} and a {@link AbstractSatelliteCommand}.
- */
-class ConstellationCommandPlanItem{
-	/*
-	 * Reference to the {@link AbstractConstellationRequest}.
-	 */	
-	refers AbstractConstellationRequest[1] request
-	
-	/*
-	 * Reference to the {@link AbstractSatelliteCommand} used/required to service the {@link AbstractConstellationRequest}.
-	 */
-	contains AbstractSatelliteCommand[0..1] satelliteCommand	
-}
-
-/*
- * Constellation Default Implementation Class.
+ * Default Constellation Implementation Class.
+ * 
+ * By default {@link AbstractConstellation#newUID} returns {@link DigitUID}.
  */
 class DefaultConstellation extends AbstractConstellation{	
 }
 
 /*
+ * Abstract class that defines the concept of Constellation Planner.  A planner is used to process
+ * a list of {@link AbstractConstellationRequest} and to generate a {@link ConstellationCommandPlan}.
+ */
+abstract class AbstractConstellationPlanner{
+
+	/*
+	 * Refers the {@link ConstellationState} that contains the planner.
+	 */	 
+    @GenModel(property="None")
+	container ConstellationState constellationState opposite constellationPlanner
+	
+	/*
+	 * Specifies the start date used by the planner.
+	 */
+	@GenModel(propertyCategory="PLANNER_SETTINGS")
+	Date[1] startDate
+
+	/*
+	 * Specifies the end date used by the planner.
+	 */
+    @GenModel(propertyCategory="PLANNER_SETTINGS")	 
+	Date[1] endDate
+	
+	/*
+	 * Specifies the list of {@AbstractConstellationRequest} to be processed by the planner.
+	 */
+    @GenModel(propertyCategory="PLANNER_SETTINGS")	 
+	refers ConstellationRequestsList[1] constellationRequestsList
+	
+	/*
+	 * Specifies in which plan the planner will store its results.
+	 */
+    @GenModel(propertyCategory="PLANNER_SETTINGS")	 	
+	refers AbstractConstellationCommandPlan[1] constellationCommandPlan
+	
+	/*
+	 * Specifies the maximum number of threads used by the planner.  0 (default) means the maximum available.
+	 */	 
+    @GenModel(propertyCategory="PLANNER_SETTINGS")	 	
+	int maxNumberThreads = "0"	
+	
+	/*
+	 * Indicates if the duplicates are preserved.  False (default value) indicates only the first command that addresses a
+	 * {@link ObservationConstellationRequest} will be preserved.  The commands that occur after in time will be deleted.  True means
+	 * all the commands will be preserved. 
+	 */
+	@GenModel(propertyCategory="VISIBILITY_PASS_VALIDITY")
+	boolean commandDuplicatesPreserved  = "false"	
+	
+	/*
+	 * Specifies the elevation mask used 
+	 */
+	contains ConstantElevationMask[1] elevationMask
+	
+	/*
+	 * Checks if the pass is valid.
+	 */
+	op boolean isValid(VisibilityPass visibilityPass)
+	
+	/**
+	 * Returns the satellite associated with the specified {@link OrbitModel}.
+	 * @param orbitModel The specified {@link OrbitModel}.
+	 * @return The Satellite associated with the specified {@link OrbitModel}, null if none is found.
+	 */	 
+	op Satellite getSatellite(EarthOrbitModel orbitModel)		
+		
+	/*
+	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest} 
+	 * based on the available constellation satellites.  The plan is added to the list of plans.
+	 */
+	op void plan() throws Exception	
+	
+	/*
+	 * Validates the planner properties.
+	 */
+	op void validate() throws Exception
+			
+	/*
+	 * Returns the comparator of {@link AbstractRequestBasedSatelliteCommand} used to sort them.
+	 */
+	op Comparator<AbstractRequestBasedSatelliteCommand> getRequestBasedSatelliteCommandsComparator()	
+	
+	/*
+	 * Creates a command to address the specified {@link ObservationConstellationRequest}.
+	 * @param request Refers to the request.
+	 * @param visibilityPass Visibility pass context.
+	 */
+	op VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(ObservationConstellationRequest request, VisibilityPass visibilityPass)	
+}
+
+/*
+ * Default Implementation of {@link AbstractConstellationPlanner}.
+ */
+class DefaultConstellationPlanner extends AbstractConstellationPlanner{
+	/*
+	 * Indicates if a pass that occurs in umbra must be considered by the planner.
+	 */	
+	@GenModel(propertyCategory="VISIBILITY_PASS_VALIDITY")
+	boolean umbraPassesValid = "false"
+	
+	/*
+	 * Indicates if a pass that requires roll command to ensure coverage must be considered by the planner. 
+	 */
+	@GenModel(propertyCategory="VISIBILITY_PASS_VALIDITY")
+	boolean satelliteRollCommandValid = "false"
+	
+	/*
+	 * Specifies the angle threshold value the planner uses to determine the umbra.
+	 */
+	@GenModel(propertyCategory="VISIBILITY_PASS_VALIDITY", apogy_units="deg")
+	double sunHorizonAngleUmbraThreshold = "5.0"	
+}
+
+/*
+ * This class contains a list of {@link AbstractSatelliteCommand}.
+ * The {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}. 
+ */
+abstract class AbstractConstellationCommandPlan extends Named, Described{
+	/*
+	 * List of {@link AbstractSatelliteCommand}.
+	 */
+	contains AbstractSatelliteCommand[0..*] constellationCommands
+}
+
+/*
+ * This class contains a list of {@link AbstractSatelliteCommand}.
+ * The {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}. 
+ */
+class DefaultConstellationCommandPlan extends AbstractConstellationCommandPlan{
+}
+
+
+/*
  * List that contains {@link AbstractConstellationRequest}.
  */
-class ConstellationRequestsList{	
+class ConstellationRequestsList extends Named, Described{	
 	/*
 	 * {@link AbstractConstellationRequest} container.
 	 */
@@ -178,7 +307,7 @@ abstract class AbstractConstellationRequest{
 	/*
 	 * Request Unique Identifier.
 	 */
-	long uid = "0"
+	contains AbstractUID uid
 	
 	/*
 	 * Request Priority.
@@ -188,20 +317,30 @@ abstract class AbstractConstellationRequest{
 	/*
 	 * Order Status.
 	 */
-	ConstellationRequestStatus orderStatus = "NEW"	
-	
+	ConstellationRequestStatus orderStatus = "NEW"		
+}
+
+/*
+ * Simple Request.
+ */
+class SimpleRequest extends AbstractConstellationRequest{
+}
+
+/*
+ * Class that defines a Earth Observation request. 
+ */
+class ObservationConstellationRequest extends AbstractConstellationRequest{
 	/*
-	 * Reference to the {@link AbstractSatelliteCommand} associated to the {@link AbstractConstellationRequest}.
+	 * Specifies the location of the observation.
 	 */
-	contains AbstractSatelliteCommand satelliteCommand opposite constellationRequest 	
+	contains EarthSurfaceLocation location
 }
 
 /*
  * Class that documents a request to take an orbital image at a specific location.  
  * It also serves to store the status and the image obtained if any. 
  */
-class ImageConstellationRequest extends AbstractConstellationRequest, GeographicCoordinates{
-	
+class ImageConstellationRequest extends ObservationConstellationRequest{	
 	/*
 	 * Contains the {@link OrbitalImage} if the {@link ImageConstellationRequest} was successfully processed and retrieved.
 	 */
@@ -224,7 +363,8 @@ enum ConstellationRequestStatus{
 	NEW = 0,
 	COMMITTED = 1,
 	COMPLETED = 2,
-	FAILED = 3
+	FAILED = 3,
+	ABORTED = 4
 }
 
 /*
@@ -241,40 +381,52 @@ class Satellite extends Named{
 	/*
 	 * Refers to the {@link OrbitModel}.
 	 */
-	refers OrbitModel orbitModel
+	refers EarthOrbitModel[1] orbitModel
 	
 	/*
-	 * The satellite maximum roll rate.
+	 * Maximum Satellite Roll.
 	 */
-	@GenModel(apogy_units="rad/s")
-	double maximumRollRate = "0.017452778"
-	
-	/*
-	 * The satellite maximum roll.
-	 */
-	@GenModel(apogy_units="rad")
-	double maximumRoll = "0.087"	
+	 @GenModel(apogy_units="deg")
+	 double maximumRoll = "5.0" 
 }
 
 /*
  * Satellite Command.
  */
-class AbstractSatelliteCommand extends GeographicCoordinates, Timed{	
+abstract class AbstractSatelliteCommand extends Timed{	
+	
+	/*
+	 * Request Unique Identifier.
+	 */
+	contains AbstractUID uid
+	
 	/*
 	 * Refers the {@link Satellite} associated with the {@link AbstractSatelliteCommand}. 
 	 */
 	refers Satellite satellite
+}
 
-	/* 
-	 * Reference to the associated {@link AbstractConstellationRequest}.
+/*
+ * Satellite Command that is linked to a specific {@link AbstractConstellationRequest}.
+ */
+abstract class AbstractRequestBasedSatelliteCommand extends AbstractSatelliteCommand{
+	/*
+	 * Refers to the {@link AbstractConstellationRequest} managed by this command.
 	 */
-	container AbstractConstellationRequest constellationRequest opposite satelliteCommand
+	refers AbstractConstellationRequest constellationRequest	
+}
+
+class VisibilityPassBasedSatelliteCommand extends AbstractRequestBasedSatelliteCommand{
+	/*
+	 * Refers the {@link VisibilityPass} associated to the command.
+	 */	
+	contains VisibilityPass [0..1] visibilityPass
 }
 
 /*
  * Satellite Command to Acquire OrbitalImage
  */
-class AcquireImageSatelliteCommand extends AbstractSatelliteCommand
+class AcquireImageSatelliteCommand extends AbstractRequestBasedSatelliteCommand, GeographicCoordinates
 {
 	/* 
 	 * The satellite is nadir looking, and can roll back and forth (+- X degrees) along its trajectory.
@@ -286,8 +438,7 @@ class AcquireImageSatelliteCommand extends AbstractSatelliteCommand
 /*
  * This class represents an orbital image.
  */
-class OrbitalImage extends EImage{
-	contains GeographicCoordinates[1] coordinates	
+class OrbitalImage extends EImage, GeographicCoordinates{
 	double rollAngle = "0.0"	
 }
 
@@ -312,7 +463,7 @@ abstract class AbstractConstellationDownlinkItem{
 	/*
 	 * Unique {@link AbstractConstellationRequest} identifier.
 	 */
-	long requestUID = "0"		
+	contains AbstractUID requestUID		
 }
 
 /*
@@ -326,9 +477,32 @@ class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlin
  * Utilities class for the satellite example.
  */
 class ConstellationUtilities{
+	
 	/*
-	 * Sorts the list of {@link AbstractConstellationRequest} based on {@link AbstractConstellationRequest#priority}.
-	 * @param requests Specifies the list of {@link AbstractConstellationRequest} to sort.
+	 * Adds all the specified requests into the specified container.
+	 * @param container Refers to the destination list.
+	 * @param requests List of {@link AbstractConstellationRequest} to be imported.
 	 */
-	op SortedSet<AbstractConstellationRequest> sortByPriority(List<AbstractConstellationRequest> requests)
+	op void addAllRequests(ConstellationRequestsList ^container, List<AbstractConstellationRequest> requests)
+	
+    /*
+	 * Adds the specified {@link AbstractConstellationRequest} to the list of {@link ConstellationRequestsList}.
+	 * @param container Refers to the destination list.
+	 * @param request Specifies the request to add to the list.
+	 */
+	op void addRequest(ConstellationRequestsList ^container, AbstractConstellationRequest request)
+	
+	/*
+	 * Removes the specified {@link AbstractConstellationRequest} from the specified {@link ConstellationRequestsList}.
+	 * @param container Refers to the {@link ConstellationRequestsList}. 
+	 * @param request Specifies the request to remove from the list.
+	 */	
+	op void removeRequest(ConstellationRequestsList ^container, AbstractConstellationRequest request)
+	
+	/*
+	 * Removes all the {@link AbstractConstellationRequest} specified from the list from the specified {@link ConstellationRequestsList}.
+	 * @param container Refers to the {@link ConstellationRequestsList}. 
+	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
+	 */		
+	op void removeAllRequests(ConstellationRequestsList ^container, List<AbstractConstellationRequest> requests)		
 }

@@ -78,6 +78,15 @@ public interface ApogyCoreEnvironmentOrbitEarthFactory extends EFactory {
 	EarthOrbitSky createEarthOrbitSky();
 
 	/**
+	 * Returns a new object of class '<em>Initial Orbit Based Earth Orbit Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Initial Orbit Based Earth Orbit Model</em>'.
+	 * @generated
+	 */
+	InitialOrbitBasedEarthOrbitModel createInitialOrbitBasedEarthOrbitModel();
+
+	/**
 	 * Returns a new object of class '<em>Keplerian Earth Orbit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,13 +123,13 @@ public interface ApogyCoreEnvironmentOrbitEarthFactory extends EFactory {
 	KeplerianEarthOrbitPropagator createKeplerianEarthOrbitPropagator();
 
 	/**
-	 * Returns a new object of class '<em>TLE Earth Orbit Propagator</em>'.
+	 * Returns a new object of class '<em>TLE Earth Orbit Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TLE Earth Orbit Propagator</em>'.
+	 * @return a new object of class '<em>TLE Earth Orbit Model</em>'.
 	 * @generated
 	 */
-	TLEEarthOrbitPropagator createTLEEarthOrbitPropagator();
+	TLEEarthOrbitModel createTLEEarthOrbitModel();
 
 	/**
 	 * Returns a new object of class '<em>URL Based TLE Earth Orbit Propagator</em>'.
@@ -148,15 +157,6 @@ public interface ApogyCoreEnvironmentOrbitEarthFactory extends EFactory {
 	 * @generated
 	 */
 	EarthSurfaceLocation createEarthSurfaceLocation();
-
-	/**
-	 * Returns a new object of class '<em>Earth Surface Location List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Earth Surface Location List</em>'.
-	 * @generated
-	 */
-	EarthSurfaceLocationList createEarthSurfaceLocationList();
 
 	/**
 	 * Returns a new object of class '<em>Ground Station References List</em>'.
@@ -256,6 +256,24 @@ public interface ApogyCoreEnvironmentOrbitEarthFactory extends EFactory {
 	 * @generated
 	 */
 	ApogyCoreEnvironmentOrbitEarthFacade createApogyCoreEnvironmentOrbitEarthFacade();
+
+	/**
+	 * Returns a new object of class '<em>Eclipse</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Eclipse</em>'.
+	 * @generated
+	 */
+	Eclipse createEclipse();
+
+	/**
+	 * Returns a new object of class '<em>Eclipse Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Eclipse Event</em>'.
+	 * @generated
+	 */
+	EclipseEvent createEclipseEvent();
 
 	/**
 	 * Returns the package supported by this factory.

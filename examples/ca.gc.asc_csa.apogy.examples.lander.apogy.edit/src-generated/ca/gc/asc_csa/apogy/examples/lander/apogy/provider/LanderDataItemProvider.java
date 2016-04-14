@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.lander.apogy.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -211,7 +212,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 */
 	protected void addCurrThrustLevelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_LanderData_currThrustLevel_feature"),
@@ -233,7 +234,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 */
 	protected void addMinThrustLevelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_LanderData_minThrustLevel_feature"),
@@ -255,7 +256,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 */
 	protected void addMaxThrustLevelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_LanderData_maxThrustLevel_feature"),
@@ -277,7 +278,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 */
 	protected void addXAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_LanderData_xAngularVelocity_feature"),
@@ -299,7 +300,7 @@ public class LanderDataItemProvider extends ApogyInitializationDataItemProvider 
 	 */
 	protected void addYAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_LanderData_yAngularVelocity_feature"),

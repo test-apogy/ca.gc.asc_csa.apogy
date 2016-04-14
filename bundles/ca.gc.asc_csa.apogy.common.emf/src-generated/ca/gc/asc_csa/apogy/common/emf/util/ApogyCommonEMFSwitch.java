@@ -122,6 +122,12 @@ public class ApogyCommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCommonEMFPackage.DURATION: {
+				Duration duration = (Duration)theEObject;
+				T result = caseDuration(duration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCommonEMFPackage.TIME_SOURCE: {
 				TimeSource timeSource = (TimeSource)theEObject;
 				T result = caseTimeSource(timeSource);
@@ -377,6 +383,21 @@ public class ApogyCommonEMFSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseStartable(Startable object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Duration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Duration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDuration(Duration object) {
 		return null;
 	}
 
