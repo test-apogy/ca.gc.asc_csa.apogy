@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.util.Date;
 import java.util.Iterator;
 
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -26,31 +27,38 @@ public class ApogyExamplesSatelliteTests {
 	public static final String VARIABLE_NAME = "constellation";
 	public static final String GENERATED_PLAN_NAME = "Generated";
 	
-	@Test
-	public void testDefaultConstellationPlanner() throws Exception {
+	/*
+	 * Tests the planner using a specified number of threads.
+	 * @param numberOfThreads Number of threads (0 means maximum available).
+	 */
+	public void plan(int numberOfThreads) throws Exception {
 		/* Load the session, constellation state and planner. */
-		InvocatorSession invocatorSession = ApogyCoreInvocatorFacade.INSTANCE.loadInvocatorSession(SESSION_URI);
+		InvocatorSession invocatorSession = EcoreUtil.copy(ApogyCoreInvocatorFacade.INSTANCE.loadInvocatorSession(SESSION_URI));
 		Assert.assertNotNull(invocatorSession);
 		
 		ConstellationState constellationState = getConstellationState(invocatorSession);
 		Assert.assertNotNull(constellationState);
-		
+				
 		DefaultConstellationPlanner planner = (DefaultConstellationPlanner) constellationState.getConstellationPlanner();
-		planner.setMaxNumberThreads(1);
 		assertNotNull(planner);
-		
-		/* Invoke the planner. */
-		planner.plan();
-		
-		/* 2 Commands (Visibility Passes) must be found. */
+
 		AbstractConstellationCommandPlan plan = getSatelliteCommandPlanByName(constellationState, GENERATED_PLAN_NAME);
-		assertEquals(2, plan.getConstellationCommands().size());
-		
-		/* 
-		 * Check the visibility passes. 
-		 */
 		AbstractSatelliteCommand command = null;
 		VisibilityPassBasedSatelliteCommand visibilityCommand = null;
+		
+		/* 
+		 * Invoke the planner and use max number of threads. 
+		 */		
+		plan.getConstellationCommands().clear();
+		assertEquals(0, plan.getConstellationCommands().size());
+		planner.setMaxNumberThreads(numberOfThreads);
+		planner.plan();
+		
+		
+		/* 2 Commands (Visibility Passes) must be found. */
+		assertEquals(2, plan.getConstellationCommands().size());
+		
+		/* Check the visibility passes. */
 		
 		/* Command 1. */
 		command = plan.getConstellationCommands().get(0);
@@ -62,8 +70,18 @@ public class ApogyExamplesSatelliteTests {
 		command = plan.getConstellationCommands().get(1);
 		assertTrue(command instanceof VisibilityPassBasedSatelliteCommand);
 		visibilityCommand = (VisibilityPassBasedSatelliteCommand) command;
-		assertEquals(new Date(1459423814159L), visibilityCommand.getTime());
+		assertEquals(new Date(1459423814159L), visibilityCommand.getTime());		
 	}
+
+	@Test
+	public void testDefaultConstellationPlannerMaxCores() throws Exception {
+		plan(0);
+	}
+	
+	@Test
+	public void testDefaultConstellationPlannerSingleCore() throws Exception {
+		plan(1);
+	}	
 	
 	/*
 	 * Returns the Stored {@link ConstellationState}.
