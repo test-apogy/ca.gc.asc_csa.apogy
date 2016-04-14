@@ -34,28 +34,33 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
-import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
-import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
-import ca.gc.asc_csa.apogy.core.PositionedResult;
-import ca.gc.asc_csa.apogy.core.ResultNode;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
-import ca.gc.asc_csa.apogy.core.ApogySystem;
-import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.ApogyTopology;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
+import ca.gc.asc_csa.apogy.core.ResultNode;
 import ca.gc.asc_csa.apogy.core.WorksitesList;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
@@ -64,8 +69,6 @@ import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
 import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 
@@ -358,6 +361,51 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	    writer.close();
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest) 
+	{
+		if(featureOfInterest != null)
+		{
+			if(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null)
+			{
+				InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+				if(session.getEnvironment() instanceof ApogyEnvironment)
+				{
+					ApogyEnvironment apogyEnvironment = (ApogyEnvironment) session.getEnvironment();
+					ApogyTopology apogyTopology = apogyEnvironment.getApogyTopology();
+					if(apogyTopology != null && apogyTopology.getRootNode() != null)
+					{
+						List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCorePackage.Literals.FEATURE_OF_INTEREST_NODE, apogyTopology.getRootNode());
+						
+						FeatureOfInterestNode featureOfInterestNode = null;
+						Iterator<Node> it = nodes.iterator();
+						while(it.hasNext() && featureOfInterestNode == null)
+						{
+							Node n = it.next();
+							
+							if(n instanceof FeatureOfInterestNode)
+							{
+								FeatureOfInterestNode foin = (FeatureOfInterestNode) n;
+								if(foin.getFeatureOfInterest() == featureOfInterest)
+								{
+									featureOfInterestNode = foin;
+								}
+							}
+						}
+						
+						return featureOfInterestNode;
+					}
+				}
+			}			
+		}
+		
+		return null;
+	}
+
 	private String convertToCSV(List<FeatureOfInterest> foiList)
 	{
 		String csvString = new String();
@@ -432,6 +480,8 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyCorePackage.APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST:
+				return getFeatureOfInterestNode((FeatureOfInterest)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

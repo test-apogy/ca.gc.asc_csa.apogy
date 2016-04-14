@@ -36,17 +36,21 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.addons
 
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath
 import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
-import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
-import ca.gc.asc_csa.apogy.core.invocator.Variable
-import ca.gc.asc_csa.apogy.core.FeatureOfInterestList
-import ca.gc.asc_csa.apogy.core.PoseProvider
 import ca.gc.asc_csa.apogy.common.math.Matrix4d
 import ca.gc.asc_csa.apogy.common.math.Tuple3d
-import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath
-import ca.gc.asc_csa.apogy.common.topology.Node
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.TransformNode
+import ca.gc.asc_csa.apogy.common.topology.URLNode
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode
+import ca.gc.asc_csa.apogy.core.PoseProvider
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
+import ca.gc.asc_csa.apogy.core.invocator.Variable
 
 type Color3f wraps javax.vecmath.Color3f
 
@@ -333,4 +337,50 @@ class TrajectoryPickingToolNode extends AggregateGroupNode
  class Trajectory3DToolNode extends AggregateGroupNode
  {
  	refers transient Trajectory3DTool trajectory3DTool opposite trajectory3DToolNode
+ }
+ 
+ /**
+  * A tool that allows a user to attach a geometry at a specified FeatureOfInterest
+  */
+ abstract class GeometryPlacementAtFeatureOfInterestTool extends Simple3DTool
+ {
+ 	/**
+ 	 * The selected feature of interest.
+ 	 */
+ 	refers FeatureOfInterest featureOfInterest
+ 	
+ 	/**
+ 	 * The FeatureOfInterestNode associated with the FeatureOfInterest. Updated whenever 
+ 	 * the featureOfInterest is changed.
+ 	 */
+ 	@GenModel(notify="true", children="false", property="Readonly")
+ 	refers transient FeatureOfInterestNode featureOfInterestNode
+ 	
+ 	/**
+ 	 * The TransformNode between the geometry and the selected feature of interest.
+ 	 */
+ 	@GenModel(notify="true", children="true", property="Readonly")
+ 	refers transient volatile readonly TransformNode transformNode
+ 	
+ 	/**
+ 	 * Operations that load the geometry. Sub-classes should overwrite this method.
+ 	 */
+ 	op Node loadGeometry() 	 	
+ }
+ 
+ /**
+  * A GeometryPlacementAtFeatureOfInterestTool that gets its geometry from a URL and creates a URLNode from it.
+  */
+ class URLNodeGeometryPlacementAtFeatureOfInterestTool extends GeometryPlacementAtFeatureOfInterestTool
+ {
+ 	/**
+ 	 * URL to the file containing the geometry to be displayed.
+ 	 */
+ 	String geometryURL
+ 	 	
+ 	/**
+ 	 * The URLNode containing the geometry.
+ 	 */
+ 	 @GenModel(notify="true", children="true", property="Readonly")
+ 	 refers transient derived volatile readonly URLNode urlNode 	
  }

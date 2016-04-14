@@ -424,6 +424,15 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreFacade__GetFeatureOfInterestNode__FeatureOfInterest() {
+		return apogyCoreFacadeEClass.getEOperations().get(6);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1183,6 +1192,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST);
+		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST);
 
 		apogyEnvironmentEClass = createEClass(APOGY_ENVIRONMENT);
 		createEReference(apogyEnvironmentEClass, APOGY_ENVIRONMENT__WORKSITES_LIST);
@@ -1411,6 +1421,9 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "foiList", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
+
+		op = initEOperation(getApogyCoreFacade__GetFeatureOfInterestNode__FeatureOfInterest(), this.getFeatureOfInterestNode(), "getFeatureOfInterestNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getFeatureOfInterest(), "featureOfInterest", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(apogyEnvironmentEClass, ApogyEnvironment.class, "ApogyEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApogyEnvironment_WorksitesList(), this.getWorksitesList(), null, "worksitesList", null, 0, 1, ApogyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

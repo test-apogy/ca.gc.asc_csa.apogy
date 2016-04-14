@@ -31,7 +31,6 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.environment.Atmosphere;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
@@ -91,7 +90,7 @@ public class AtmosphereItemProvider
   protected void addWindSpeedPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_windSpeed_feature"),
@@ -114,7 +113,7 @@ public class AtmosphereItemProvider
   protected void addWindDirectionPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_windDirection_feature"),
@@ -137,7 +136,7 @@ public class AtmosphereItemProvider
   protected void addTemperaturePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_temperature_feature"),
@@ -160,7 +159,7 @@ public class AtmosphereItemProvider
   protected void addSurfacePressurePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_surfacePressure_feature"),
@@ -183,7 +182,7 @@ public class AtmosphereItemProvider
   protected void addSurfaceDensityPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_surfaceDensity_feature"),

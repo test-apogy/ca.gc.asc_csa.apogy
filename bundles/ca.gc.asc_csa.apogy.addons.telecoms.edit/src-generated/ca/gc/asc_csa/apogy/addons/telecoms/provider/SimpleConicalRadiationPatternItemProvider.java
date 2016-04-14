@@ -26,7 +26,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern;
 import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern} object.
@@ -72,7 +71,7 @@ public class SimpleConicalRadiationPatternItemProvider extends AbstractAntennaRa
 	 */
 	protected void addApexAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SimpleConicalRadiationPattern_apexAngle_feature"),

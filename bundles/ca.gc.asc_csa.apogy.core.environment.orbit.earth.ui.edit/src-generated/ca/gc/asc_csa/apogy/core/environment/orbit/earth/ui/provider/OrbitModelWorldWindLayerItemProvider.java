@@ -23,7 +23,6 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
 
@@ -118,7 +117,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 	 */
 	protected void addTimeIntervalPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_timeInterval_feature"),
@@ -140,7 +139,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 	 */
 	protected void addForwardPropagationDurationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_forwardPropagationDuration_feature"),
@@ -162,7 +161,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 	 */
 	protected void addBackwardPropagationDurationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_backwardPropagationDuration_feature"),

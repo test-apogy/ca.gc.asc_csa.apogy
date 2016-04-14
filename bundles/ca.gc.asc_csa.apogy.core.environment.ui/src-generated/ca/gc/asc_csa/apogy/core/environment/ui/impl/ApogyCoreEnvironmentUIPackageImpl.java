@@ -1843,6 +1843,19 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 			 "apogy_units", "m"
 		   });	
 		addAnnotation
+		  (getFeatureOfInterestNodePresentation_PoleHeight(), 
+		   source, 
+		   new String[] {
+			 "propertyCategory", "FLAG",
+			 "apogy_units", "m"
+		   });	
+		addAnnotation
+		  (getFeatureOfInterestNodePresentation_FlagVisible(), 
+		   source, 
+		   new String[] {
+			 "propertyCategory", "FLAG"
+		   });	
+		addAnnotation
 		  (getEnvironmentUIUtilities__GetSunLightColor__double(), 
 		   source, 
 		   new String[] {

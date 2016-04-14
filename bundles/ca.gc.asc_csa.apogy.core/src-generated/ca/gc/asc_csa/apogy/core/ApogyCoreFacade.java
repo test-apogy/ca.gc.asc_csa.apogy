@@ -111,4 +111,18 @@ public interface ApogyCoreFacade extends EObject {
 	 */
 	void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception;
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Finds the FeatureOfInterestNode associated with a specified FeatureOfInterest in the active session.
+	 * @param featureOfInterest The specified FeatureOfInterest.
+	 * @return The FeatureOfInterestNode associated with the specified FeatureOfInterest, null if none is found.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" featureOfInterestUnique="false"
+	 * @generated
+	 */
+	FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest);
+
 } // ApogyCoreFacade

@@ -344,6 +344,29 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 	}
 
 		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createURLNodeGeometryPlacementAtFeatureOfInterestToolAdapter() {
+		if (urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider == null) {
+			urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider = new URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider(this);
+		}
+
+		return urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider;
+	}
+
+		/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -491,6 +514,7 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 		if (trajectoryPickingToolNodeItemProvider != null) trajectoryPickingToolNodeItemProvider.dispose();
 		if (trajectory3DToolItemProvider != null) trajectory3DToolItemProvider.dispose();
 		if (trajectory3DToolNodeItemProvider != null) trajectory3DToolNodeItemProvider.dispose();
+		if (urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider != null) urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider.dispose();
 	}
 
 		/**
@@ -798,6 +822,11 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsFactory.eINSTANCE.createURLNodeGeometryPlacementAtFeatureOfInterestTool()));
+
 				return null;
 			}
  
@@ -857,6 +886,11 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsFactory.eINSTANCE.createURLNodeGeometryPlacementAtFeatureOfInterestTool()));
 
 				return null;
 			}

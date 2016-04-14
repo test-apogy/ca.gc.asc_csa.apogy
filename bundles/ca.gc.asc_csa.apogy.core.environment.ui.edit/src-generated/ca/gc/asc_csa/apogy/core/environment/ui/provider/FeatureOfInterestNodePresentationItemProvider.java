@@ -81,7 +81,7 @@ public class FeatureOfInterestNodePresentationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_FLAGPropertyCategory"),
 				 null));
 	}
 
@@ -103,7 +103,7 @@ public class FeatureOfInterestNodePresentationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
+				 getString("_UI_FLAGPropertyCategory"),
 				 null));
 	}
 

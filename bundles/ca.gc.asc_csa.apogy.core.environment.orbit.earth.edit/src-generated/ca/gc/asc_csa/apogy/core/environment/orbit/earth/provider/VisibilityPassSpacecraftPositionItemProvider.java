@@ -33,7 +33,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 
@@ -112,7 +111,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 	 */
 	protected void addAzimuthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_azimuth_feature"),
@@ -134,7 +133,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 	 */
 	protected void addElevationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_elevation_feature"),
@@ -156,7 +155,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 	 */
 	protected void addRangePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_range_feature"),
@@ -178,7 +177,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 	 */
 	protected void addRangeRatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_rangeRate_feature"),
@@ -200,7 +199,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 	 */
 	protected void addSpacecraftCrossTrackAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_spacecraftCrossTrackAngle_feature"),

@@ -167,6 +167,11 @@ public class SimpleToolListItemProvider
 			(createChildParameter
 				(ApogyAddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
 				 ApogyAddonsFactory.eINSTANCE.createTrajectory3DTool()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyAddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+				 ApogyAddonsFactory.eINSTANCE.createURLNodeGeometryPlacementAtFeatureOfInterestTool()));
 	}
 
 }

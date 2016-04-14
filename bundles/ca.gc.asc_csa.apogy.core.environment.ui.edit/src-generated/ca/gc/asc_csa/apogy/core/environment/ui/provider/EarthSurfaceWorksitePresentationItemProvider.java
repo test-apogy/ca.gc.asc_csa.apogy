@@ -24,7 +24,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 import ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
@@ -105,7 +104,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
   protected void addAxisLengthPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_axisLength_feature"),
@@ -220,7 +219,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
   protected void addPlaneGridSizePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_planeGridSize_feature"),
@@ -243,7 +242,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
   protected void addPlaneSizePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_planeSize_feature"),

@@ -160,13 +160,22 @@ public interface ApogyCorePackage extends EPackage {
 	int APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = 5;
 
 	/**
+	 * The operation id for the '<em>Get Feature Of Interest Node</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST = 6;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE_OPERATION_COUNT = 6;
+	int APOGY_CORE_FACADE_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl <em>Apogy Environment</em>}' class.
@@ -2426,6 +2435,16 @@ public interface ApogyCorePackage extends EPackage {
 	EOperation getApogyCoreFacade__SaveFeatureOfInterestToFile__String_List();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getFeatureOfInterestNode(ca.gc.asc_csa.apogy.core.FeatureOfInterest) <em>Get Feature Of Interest Node</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Feature Of Interest Node</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getFeatureOfInterestNode(ca.gc.asc_csa.apogy.core.FeatureOfInterest)
+	 * @generated
+	 */
+	EOperation getApogyCoreFacade__GetFeatureOfInterestNode__FeatureOfInterest();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment <em>Apogy Environment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3396,6 +3415,14 @@ public interface ApogyCorePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = eINSTANCE.getApogyCoreFacade__SaveFeatureOfInterestToFile__String_List();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Feature Of Interest Node</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST = eINSTANCE.getApogyCoreFacade__GetFeatureOfInterestNode__FeatureOfInterest();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl <em>Apogy Environment</em>}' class.

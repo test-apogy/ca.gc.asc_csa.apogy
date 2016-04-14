@@ -21,8 +21,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
@@ -110,11 +108,6 @@ public class LanderApogySystemApiAdapterItemProvider
   protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
   {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
-				 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 	}
 
   /**

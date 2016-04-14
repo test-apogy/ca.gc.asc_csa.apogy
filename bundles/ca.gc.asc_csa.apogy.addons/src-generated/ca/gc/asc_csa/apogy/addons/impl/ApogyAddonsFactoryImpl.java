@@ -91,6 +91,7 @@ public class ApogyAddonsFactoryImpl extends EFactoryImpl implements ApogyAddonsF
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL_NODE: return createTrajectoryPickingToolNode();
 			case ApogyAddonsPackage.TRAJECTORY3_DTOOL: return createTrajectory3DTool();
 			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE: return createTrajectory3DToolNode();
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL: return createURLNodeGeometryPlacementAtFeatureOfInterestTool();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -228,6 +229,16 @@ public class ApogyAddonsFactoryImpl extends EFactoryImpl implements ApogyAddonsF
 	public Trajectory3DToolNode createTrajectory3DToolNode() {
 		Trajectory3DToolNodeImpl trajectory3DToolNode = new Trajectory3DToolNodeImpl();
 		return trajectory3DToolNode;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public URLNodeGeometryPlacementAtFeatureOfInterestTool createURLNodeGeometryPlacementAtFeatureOfInterestTool() {
+		URLNodeGeometryPlacementAtFeatureOfInterestToolImpl urlNodeGeometryPlacementAtFeatureOfInterestTool = new URLNodeGeometryPlacementAtFeatureOfInterestToolImpl();
+		return urlNodeGeometryPlacementAtFeatureOfInterestTool;
 	}
 
 		/**
