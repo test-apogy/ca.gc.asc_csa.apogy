@@ -13,12 +13,12 @@ package ca.gc.asc_csa.apogy.examples.lander.apogy.provider;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.common.EMFPlugin;
-import org.eclipse.emf.common.util.ResourceLocator;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.provider.ApogyAddonsGeometryPathsEditPlugin;
 import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.provider.ApogyAddonsMobilityPathplannersEditPlugin;
 import ca.gc.asc_csa.apogy.addons.provider.ApogyAddonsEditPlugin;
 import ca.gc.asc_csa.apogy.addons.vehicle.provider.ApogyAddonsVehicleEditPlugin;
+import org.eclipse.emf.common.EMFPlugin;
+import org.eclipse.emf.common.util.ResourceLocator;
 import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
 import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;

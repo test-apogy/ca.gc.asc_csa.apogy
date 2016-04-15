@@ -45,6 +45,7 @@ public interface FeatureOfInterestNodePresentation extends NodePresentation {
 	 * @see #setPoleHeight(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation_PoleHeight()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FLAG' apogy_units='m'"
 	 * @generated
 	 */
 	double getPoleHeight();
@@ -72,6 +73,7 @@ public interface FeatureOfInterestNodePresentation extends NodePresentation {
 	 * @see #setFlagVisible(boolean)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation_FlagVisible()
 	 * @model default="false" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FLAG'"
 	 * @generated
 	 */
 	boolean isFlagVisible();

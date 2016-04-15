@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.topology.bindings.*;
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -84,6 +85,9 @@ public class ApogyCommonTopologyBindingsFactoryImpl extends EFactoryImpl impleme
 			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING: return createRotationBinding();
 			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING: return createTranslationBinding();
 			case ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING: return createTransformMatrixBinding();
+			case ApogyCommonTopologyBindingsPackage.BOOLEAN_BINDING: return createBooleanBinding();
+			case ApogyCommonTopologyBindingsPackage.TRUE_BOOLEAN_CASE: return createTrueBooleanCase();
+			case ApogyCommonTopologyBindingsPackage.FALSE_BOOLEAN_CASE: return createFalseBooleanCase();
 			case ApogyCommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING: return createEnumerationSwitchBinding();
 			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE: return createEnumerationCase();
 			case ApogyCommonTopologyBindingsPackage.BINDINGS_LIST: return createBindingsList();
@@ -165,6 +169,36 @@ public class ApogyCommonTopologyBindingsFactoryImpl extends EFactoryImpl impleme
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BooleanBinding createBooleanBinding() {
+		BooleanBindingImpl booleanBinding = new BooleanBindingImpl();
+		return booleanBinding;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrueBooleanCase createTrueBooleanCase() {
+		TrueBooleanCaseImpl trueBooleanCase = new TrueBooleanCaseImpl();
+		return trueBooleanCase;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FalseBooleanCase createFalseBooleanCase() {
+		FalseBooleanCaseImpl falseBooleanCase = new FalseBooleanCaseImpl();
+		return falseBooleanCase;
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

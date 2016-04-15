@@ -87,11 +87,14 @@ public class ApogyCommonGeometryData3DFactoryImpl extends EFactoryImpl implement
 			case ApogyCommonGeometryData3DPackage.SPHERICAL_POLYGON: return createSphericalPolygon();
 			case ApogyCommonGeometryData3DPackage.SPHERICAL_TRIANGLE: return createSphericalTriangle();
 			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES: return createCartesianPositionCoordinates();
+			case ApogyCommonGeometryData3DPackage.RGBA_COLOR: return createRGBAColor();
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES: return createColoredCartesianPositionCoordinates();
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_TRIANGULAR_MESH: return createColoredCartesianTriangularMesh();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE: return createCartesianTriangularMeshColorizerBySlope();
 			case ApogyCommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES: return createCartesianOrientationCoordinates();
 			case ApogyCommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET: return createAbstractCartesianCoordinatesSet();
 			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET: return createCartesianCoordinatesSet();
-			case ApogyCommonGeometryData3DPackage.COLORED_COORDINATES_SET: return createColoredCoordinatesSet();
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_COORDINATES_SET: return createColoredCartesianCoordinatesSet();
 			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT: return createCartesianCoordinatesSetExtent();
 			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP: return createDigitalElevationMap();
 			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH: return createCartesianCoordinatesMesh();
@@ -297,9 +300,39 @@ public class ApogyCommonGeometryData3DFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public RGBAColor createRGBAColor() {
+		RGBAColorImpl rgbaColor = new RGBAColorImpl();
+		return rgbaColor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates() {
 		ColoredCartesianPositionCoordinatesImpl coloredCartesianPositionCoordinates = new ColoredCartesianPositionCoordinatesImpl();
 		return coloredCartesianPositionCoordinates;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ColoredCartesianTriangularMesh createColoredCartesianTriangularMesh() {
+		ColoredCartesianTriangularMeshImpl coloredCartesianTriangularMesh = new ColoredCartesianTriangularMeshImpl();
+		return coloredCartesianTriangularMesh;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CartesianTriangularMeshColorizerBySlope createCartesianTriangularMeshColorizerBySlope() {
+		CartesianTriangularMeshColorizerBySlopeImpl cartesianTriangularMeshColorizerBySlope = new CartesianTriangularMeshColorizerBySlopeImpl();
+		return cartesianTriangularMeshColorizerBySlope;
 	}
 
 	/**
@@ -337,9 +370,9 @@ public class ApogyCommonGeometryData3DFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ColoredCoordinatesSet createColoredCoordinatesSet() {
-		ColoredCoordinatesSetImpl coloredCoordinatesSet = new ColoredCoordinatesSetImpl();
-		return coloredCoordinatesSet;
+	public ColoredCartesianCoordinatesSet createColoredCartesianCoordinatesSet() {
+		ColoredCartesianCoordinatesSetImpl coloredCartesianCoordinatesSet = new ColoredCartesianCoordinatesSetImpl();
+		return coloredCartesianCoordinatesSet;
 	}
 
 	/**

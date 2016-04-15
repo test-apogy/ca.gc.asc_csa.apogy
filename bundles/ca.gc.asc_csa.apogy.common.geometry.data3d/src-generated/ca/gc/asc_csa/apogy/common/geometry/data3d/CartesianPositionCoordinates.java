@@ -53,7 +53,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * @see #setX(double)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPositionCoordinates_X()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Position' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getX();
@@ -80,7 +80,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * @see #setY(double)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPositionCoordinates_Y()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Position' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getY();
@@ -107,7 +107,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * @see #setZ(double)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPositionCoordinates_Z()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Position' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getZ();

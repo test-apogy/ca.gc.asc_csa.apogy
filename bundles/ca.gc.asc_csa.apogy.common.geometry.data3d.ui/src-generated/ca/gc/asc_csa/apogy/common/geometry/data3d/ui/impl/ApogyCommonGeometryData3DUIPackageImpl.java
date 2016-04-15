@@ -21,9 +21,11 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredCartesianCoordinatesSetPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredTriangularMeshPresentation;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIFactory;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
 import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
@@ -46,7 +48,21 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass triangularMeshPresentationEClass = null;
+	private EClass coloredCartesianCoordinatesSetPresentationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cartesianTriangularMeshPresentationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass coloredTriangularMeshPresentationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -155,8 +171,8 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTriangularMeshPresentation() {
-		return triangularMeshPresentationEClass;
+	public EClass getColoredCartesianCoordinatesSetPresentation() {
+		return coloredCartesianCoordinatesSetPresentationEClass;
 	}
 
 	/**
@@ -164,8 +180,8 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTriangularMeshPresentation_Mesh() {
-		return (EReference)triangularMeshPresentationEClass.getEStructuralFeatures().get(0);
+	public EAttribute getColoredCartesianCoordinatesSetPresentation_OverrideColor() {
+		return (EAttribute)coloredCartesianCoordinatesSetPresentationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -173,8 +189,8 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTriangularMeshPresentation_PointSize() {
-		return (EAttribute)triangularMeshPresentationEClass.getEStructuralFeatures().get(1);
+	public EReference getColoredCartesianCoordinatesSetPresentation_ColoredPointCloud() {
+		return (EReference)coloredCartesianCoordinatesSetPresentationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -182,8 +198,8 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTriangularMeshPresentation_NumberOfPoints() {
-		return (EAttribute)triangularMeshPresentationEClass.getEStructuralFeatures().get(2);
+	public EClass getCartesianTriangularMeshPresentation() {
+		return cartesianTriangularMeshPresentationEClass;
 	}
 
 	/**
@@ -191,8 +207,8 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTriangularMeshPresentation_NumberOfPolygons() {
-		return (EAttribute)triangularMeshPresentationEClass.getEStructuralFeatures().get(3);
+	public EReference getCartesianTriangularMeshPresentation_Mesh() {
+		return (EReference)cartesianTriangularMeshPresentationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -200,8 +216,8 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTriangularMeshPresentation_PresentationMode() {
-		return (EAttribute)triangularMeshPresentationEClass.getEStructuralFeatures().get(4);
+	public EAttribute getCartesianTriangularMeshPresentation_PointSize() {
+		return (EAttribute)cartesianTriangularMeshPresentationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -209,8 +225,8 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTriangularMeshPresentation_Transparency() {
-		return (EAttribute)triangularMeshPresentationEClass.getEStructuralFeatures().get(5);
+	public EAttribute getCartesianTriangularMeshPresentation_NumberOfPoints() {
+		return (EAttribute)cartesianTriangularMeshPresentationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -218,8 +234,8 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTriangularMeshPresentation_UseShading() {
-		return (EAttribute)triangularMeshPresentationEClass.getEStructuralFeatures().get(6);
+	public EAttribute getCartesianTriangularMeshPresentation_NumberOfPolygons() {
+		return (EAttribute)cartesianTriangularMeshPresentationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -227,8 +243,53 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTriangularMeshPresentation_TextureImage() {
-		return (EReference)triangularMeshPresentationEClass.getEStructuralFeatures().get(7);
+	public EAttribute getCartesianTriangularMeshPresentation_PresentationMode() {
+		return (EAttribute)cartesianTriangularMeshPresentationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCartesianTriangularMeshPresentation_Transparency() {
+		return (EAttribute)cartesianTriangularMeshPresentationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCartesianTriangularMeshPresentation_UseShading() {
+		return (EAttribute)cartesianTriangularMeshPresentationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCartesianTriangularMeshPresentation_TextureImage() {
+		return (EReference)cartesianTriangularMeshPresentationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getColoredTriangularMeshPresentation() {
+		return coloredTriangularMeshPresentationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getColoredTriangularMeshPresentation_OverrideColor() {
+		return (EAttribute)coloredTriangularMeshPresentationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -264,15 +325,22 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 		createEAttribute(cartesianCoordinatesSetPresentationEClass, CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE);
 		createEAttribute(cartesianCoordinatesSetPresentationEClass, CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS);
 
-		triangularMeshPresentationEClass = createEClass(TRIANGULAR_MESH_PRESENTATION);
-		createEReference(triangularMeshPresentationEClass, TRIANGULAR_MESH_PRESENTATION__MESH);
-		createEAttribute(triangularMeshPresentationEClass, TRIANGULAR_MESH_PRESENTATION__POINT_SIZE);
-		createEAttribute(triangularMeshPresentationEClass, TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS);
-		createEAttribute(triangularMeshPresentationEClass, TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS);
-		createEAttribute(triangularMeshPresentationEClass, TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE);
-		createEAttribute(triangularMeshPresentationEClass, TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY);
-		createEAttribute(triangularMeshPresentationEClass, TRIANGULAR_MESH_PRESENTATION__USE_SHADING);
-		createEReference(triangularMeshPresentationEClass, TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE);
+		coloredCartesianCoordinatesSetPresentationEClass = createEClass(COLORED_CARTESIAN_COORDINATES_SET_PRESENTATION);
+		createEAttribute(coloredCartesianCoordinatesSetPresentationEClass, COLORED_CARTESIAN_COORDINATES_SET_PRESENTATION__OVERRIDE_COLOR);
+		createEReference(coloredCartesianCoordinatesSetPresentationEClass, COLORED_CARTESIAN_COORDINATES_SET_PRESENTATION__COLORED_POINT_CLOUD);
+
+		cartesianTriangularMeshPresentationEClass = createEClass(CARTESIAN_TRIANGULAR_MESH_PRESENTATION);
+		createEReference(cartesianTriangularMeshPresentationEClass, CARTESIAN_TRIANGULAR_MESH_PRESENTATION__MESH);
+		createEAttribute(cartesianTriangularMeshPresentationEClass, CARTESIAN_TRIANGULAR_MESH_PRESENTATION__POINT_SIZE);
+		createEAttribute(cartesianTriangularMeshPresentationEClass, CARTESIAN_TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS);
+		createEAttribute(cartesianTriangularMeshPresentationEClass, CARTESIAN_TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS);
+		createEAttribute(cartesianTriangularMeshPresentationEClass, CARTESIAN_TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE);
+		createEAttribute(cartesianTriangularMeshPresentationEClass, CARTESIAN_TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY);
+		createEAttribute(cartesianTriangularMeshPresentationEClass, CARTESIAN_TRIANGULAR_MESH_PRESENTATION__USE_SHADING);
+		createEReference(cartesianTriangularMeshPresentationEClass, CARTESIAN_TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE);
+
+		coloredTriangularMeshPresentationEClass = createEClass(COLORED_TRIANGULAR_MESH_PRESENTATION);
+		createEAttribute(coloredTriangularMeshPresentationEClass, COLORED_TRIANGULAR_MESH_PRESENTATION__OVERRIDE_COLOR);
 	}
 
 	/**
@@ -310,7 +378,9 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 
 		// Add supertypes to classes
 		cartesianCoordinatesSetPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
-		triangularMeshPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		coloredCartesianCoordinatesSetPresentationEClass.getESuperTypes().add(this.getCartesianCoordinatesSetPresentation());
+		cartesianTriangularMeshPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		coloredTriangularMeshPresentationEClass.getESuperTypes().add(this.getCartesianTriangularMeshPresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(cartesianCoordinatesSetPresentationEClass, CartesianCoordinatesSetPresentation.class, "CartesianCoordinatesSetPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -318,15 +388,22 @@ public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl impleme
 		initEAttribute(getCartesianCoordinatesSetPresentation_PointSize(), theEcorePackage.getEInt(), "pointSize", "1", 0, 1, CartesianCoordinatesSetPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCartesianCoordinatesSetPresentation_NumberOfPoints(), theEcorePackage.getEInt(), "numberOfPoints", null, 0, 1, CartesianCoordinatesSetPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(triangularMeshPresentationEClass, TriangularMeshPresentation.class, "TriangularMeshPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTriangularMeshPresentation_Mesh(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTriangularMeshPresentation_PointSize(), theEcorePackage.getEInt(), "pointSize", "1", 0, 1, TriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTriangularMeshPresentation_NumberOfPoints(), theEcorePackage.getEInt(), "numberOfPoints", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTriangularMeshPresentation_NumberOfPolygons(), theEcorePackage.getEInt(), "numberOfPolygons", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTriangularMeshPresentation_PresentationMode(), theApogyCommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, TriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTriangularMeshPresentation_Transparency(), theEcorePackage.getEFloat(), "transparency", null, 0, 1, TriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTriangularMeshPresentation_UseShading(), theEcorePackage.getEBoolean(), "useShading", "true", 0, 1, TriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTriangularMeshPresentation_TextureImage(), theApogyCommonImagesPackage.getAbstractEImage(), null, "textureImage", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(coloredCartesianCoordinatesSetPresentationEClass, ColoredCartesianCoordinatesSetPresentation.class, "ColoredCartesianCoordinatesSetPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getColoredCartesianCoordinatesSetPresentation_OverrideColor(), theEcorePackage.getEBoolean(), "overrideColor", "false", 0, 1, ColoredCartesianCoordinatesSetPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getColoredCartesianCoordinatesSetPresentation_ColoredPointCloud(), theApogyCommonGeometryData3DPackage.getColoredCartesianCoordinatesSet(), null, "coloredPointCloud", null, 0, 1, ColoredCartesianCoordinatesSetPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cartesianTriangularMeshPresentationEClass, CartesianTriangularMeshPresentation.class, "CartesianTriangularMeshPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCartesianTriangularMeshPresentation_Mesh(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, CartesianTriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCartesianTriangularMeshPresentation_PointSize(), theEcorePackage.getEInt(), "pointSize", "1", 0, 1, CartesianTriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCartesianTriangularMeshPresentation_NumberOfPoints(), theEcorePackage.getEInt(), "numberOfPoints", null, 0, 1, CartesianTriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCartesianTriangularMeshPresentation_NumberOfPolygons(), theEcorePackage.getEInt(), "numberOfPolygons", null, 0, 1, CartesianTriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCartesianTriangularMeshPresentation_PresentationMode(), theApogyCommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, CartesianTriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCartesianTriangularMeshPresentation_Transparency(), theEcorePackage.getEFloat(), "transparency", null, 0, 1, CartesianTriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCartesianTriangularMeshPresentation_UseShading(), theEcorePackage.getEBoolean(), "useShading", "true", 0, 1, CartesianTriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCartesianTriangularMeshPresentation_TextureImage(), theApogyCommonImagesPackage.getAbstractEImage(), null, "textureImage", null, 0, 1, CartesianTriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(coloredTriangularMeshPresentationEClass, ColoredTriangularMeshPresentation.class, "ColoredTriangularMeshPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getColoredTriangularMeshPresentation_OverrideColor(), theEcorePackage.getEBoolean(), "overrideColor", "false", 0, 1, ColoredTriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

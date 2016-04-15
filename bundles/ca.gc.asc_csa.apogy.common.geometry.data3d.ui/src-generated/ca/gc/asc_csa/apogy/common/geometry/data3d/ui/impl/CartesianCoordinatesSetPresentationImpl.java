@@ -387,7 +387,7 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 		super.applyPreferences();		
 	}
 	
-	private IPropertyChangeListener getPreferencesListener()
+	protected IPropertyChangeListener getPreferencesListener()
 	{
 		if(preferencesListener == null)
 		{

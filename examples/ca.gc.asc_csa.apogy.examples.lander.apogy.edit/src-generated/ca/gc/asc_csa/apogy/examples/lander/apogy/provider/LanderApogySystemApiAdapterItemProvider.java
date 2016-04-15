@@ -14,6 +14,8 @@ package ca.gc.asc_csa.apogy.examples.lander.apogy.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -21,8 +23,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**

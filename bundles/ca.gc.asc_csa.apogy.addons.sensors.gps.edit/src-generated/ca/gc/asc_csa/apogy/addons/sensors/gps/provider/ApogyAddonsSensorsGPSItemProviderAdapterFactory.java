@@ -49,7 +49,6 @@ import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage;
 import ca.gc.asc_csa.apogy.addons.sensors.gps.util.ApogyAddonsSensorsGPSAdapterFactory;
 
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
-import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
@@ -465,21 +464,6 @@ public class ApogyAddonsSensorsGPSItemProviderAdapterFactory extends ApogyAddons
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyAddonsSensorsGPSFactory.eINSTANCE.createApogyAddonsSensorsGPSFacade()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseAggregateGroupNode(AggregateGroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 ApogyAddonsSensorsGPSFactory.eINSTANCE.createGPSPoseSensor()));
 
 				return null;
 			}

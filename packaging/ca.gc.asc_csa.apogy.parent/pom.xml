@@ -135,7 +135,11 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.edit</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.imaging</module>
-		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.imaging.edit</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.imaging.edit</module>		
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.data3d</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.data3d.edit</module>		
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.paths</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.paths.edit</module>		
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.messages</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.ros.ui</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.addons.sensors</module>
@@ -191,6 +195,7 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.emf.edit.utils</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.emf.ui</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.emf.ui.edit</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.common.emf.templates</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.file.csv</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.file.csv.edit</module>
@@ -327,8 +332,11 @@
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.edit</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.ros</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.ros.edit</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy</module>
-		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.edit</module>
+		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.edit</module>		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.robotic_arm.ui</module>
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.rover</module>
@@ -342,7 +350,7 @@
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.ui.edit</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.apogy</module>
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.apogy.edit</module>
-		<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.tests</module>
+		<!--<module>../../examples/ca.gc.asc_csa.apogy.examples.satellite.tests</module>-->
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.ui</module>
 		

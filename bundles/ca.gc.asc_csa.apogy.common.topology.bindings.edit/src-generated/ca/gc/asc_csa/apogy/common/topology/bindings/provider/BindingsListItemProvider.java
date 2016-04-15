@@ -191,6 +191,11 @@ public class BindingsListItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+				 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBooleanBinding()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
 				 ApogyCommonTopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
 	}
 

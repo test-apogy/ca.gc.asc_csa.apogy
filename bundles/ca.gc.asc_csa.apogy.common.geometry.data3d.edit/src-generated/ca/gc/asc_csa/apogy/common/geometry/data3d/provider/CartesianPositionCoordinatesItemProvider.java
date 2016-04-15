@@ -87,7 +87,7 @@ public class CartesianPositionCoordinatesItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_PositionPropertyCategory"),
 				 null));
 	}
 
@@ -109,7 +109,7 @@ public class CartesianPositionCoordinatesItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_PositionPropertyCategory"),
 				 null));
 	}
 
@@ -131,7 +131,7 @@ public class CartesianPositionCoordinatesItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_PositionPropertyCategory"),
 				 null));
 	}
 

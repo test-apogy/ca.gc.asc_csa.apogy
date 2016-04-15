@@ -75,12 +75,43 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public EList<Vector3d> computeNormals(CartesianTriangularMesh mesh) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<Vector3d> computeNormals(CartesianTriangularMesh mesh) 
+	{
+		List<Vector3d> normals = new ArrayList<Vector3d>();
+		
+		for(CartesianPositionCoordinates vertex : mesh.getPoints())
+		{
+			Vector3d normal = computeNormalAtVertex(mesh, vertex);
+			normals.add(normal);
+		}
+		
+		return normals;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public Vector3d computeNormalAtVertex(CartesianTriangularMesh mesh, CartesianPositionCoordinates vertex) 
+	{
+		Vector3d normal = new Vector3d();
+		
+		List<CartesianTriangle> polygons = mesh.getPolygonsSharingPoint(vertex);
+		
+		for(CartesianTriangle polygon : polygons)
+		{
+			double area = polygon.getSurface();			
+			Vector3d polygonNormal = polygon.getNormal();
+			polygonNormal.scale(area);
+			normal.add(polygonNormal);
+		}
+		
+		normal.normalize();
+		
+		return normal;
 	}
 
 	/**
@@ -334,6 +365,8 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 		switch (operationID) {
 			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_NORMALS__CARTESIANTRIANGULARMESH:
 				return computeNormals((CartesianTriangularMesh)arguments.get(0));
+			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_NORMAL_AT_VERTEX__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES:
+				return computeNormalAtVertex((CartesianTriangularMesh)arguments.get(0), (CartesianPositionCoordinates)arguments.get(1));
 			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CENTROID__LIST:
 				return computeCentroid((List<CartesianPositionCoordinates>)arguments.get(0));
 			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET:

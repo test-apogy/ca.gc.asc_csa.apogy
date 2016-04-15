@@ -51,7 +51,7 @@ public interface CartesianTriangularMeshURLMapLayer extends CartesianTriangularM
 	 * @see #setMesh(CartesianTriangularMesh)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshURLMapLayer_Mesh()
 	 * @model transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TRIANGULAR_MESH'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TRIANGULAR_MESH' children='true'"
 	 * @generated
 	 */
   CartesianTriangularMesh getMesh();

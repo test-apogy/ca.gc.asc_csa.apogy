@@ -29,7 +29,7 @@ Contributors:
 	      modelName="ApogyCommonTopologyAddonsPrimitives",
 	      suppressGenModelAnnotations="false",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.primitives/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.primitives.edit/src-generated")
 

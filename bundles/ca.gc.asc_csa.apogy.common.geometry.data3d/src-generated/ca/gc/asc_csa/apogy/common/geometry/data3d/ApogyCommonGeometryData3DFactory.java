@@ -78,6 +78,15 @@ public interface ApogyCommonGeometryData3DFactory extends EFactory {
 	CartesianPositionCoordinates createCartesianPositionCoordinates();
 
 	/**
+	 * Returns a new object of class '<em>RGBA Color</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>RGBA Color</em>'.
+	 * @generated
+	 */
+	RGBAColor createRGBAColor();
+
+	/**
 	 * Returns a new object of class '<em>Colored Cartesian Position Coordinates</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,6 +94,24 @@ public interface ApogyCommonGeometryData3DFactory extends EFactory {
 	 * @generated
 	 */
 	ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates();
+
+	/**
+	 * Returns a new object of class '<em>Colored Cartesian Triangular Mesh</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Colored Cartesian Triangular Mesh</em>'.
+	 * @generated
+	 */
+	ColoredCartesianTriangularMesh createColoredCartesianTriangularMesh();
+
+	/**
+	 * Returns a new object of class '<em>Cartesian Triangular Mesh Colorizer By Slope</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cartesian Triangular Mesh Colorizer By Slope</em>'.
+	 * @generated
+	 */
+	CartesianTriangularMeshColorizerBySlope createCartesianTriangularMeshColorizerBySlope();
 
 	/**
 	 * Returns a new object of class '<em>Cartesian Orientation Coordinates</em>'.
@@ -114,13 +141,13 @@ public interface ApogyCommonGeometryData3DFactory extends EFactory {
 	CartesianCoordinatesSet createCartesianCoordinatesSet();
 
 	/**
-	 * Returns a new object of class '<em>Colored Coordinates Set</em>'.
+	 * Returns a new object of class '<em>Colored Cartesian Coordinates Set</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Colored Coordinates Set</em>'.
+	 * @return a new object of class '<em>Colored Cartesian Coordinates Set</em>'.
 	 * @generated
 	 */
-	ColoredCoordinatesSet createColoredCoordinatesSet();
+	ColoredCartesianCoordinatesSet createColoredCartesianCoordinatesSet();
 
 	/**
 	 * Returns a new object of class '<em>Cartesian Coordinates Set Extent</em>'.

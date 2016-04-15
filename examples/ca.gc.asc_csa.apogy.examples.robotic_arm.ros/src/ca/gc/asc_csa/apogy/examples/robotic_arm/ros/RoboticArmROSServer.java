@@ -23,20 +23,17 @@ import org.ros.node.topic.Publisher;
 
 import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.MoveSpeed;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.RoboticArmTelemetry;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToRequest;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToResponse;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelRequest;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelResponse;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowRequest;
-import ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowResponse;
 
+/**
+ * This class is a ROS Node that is the server for the RoboticArmROS implementation of RoboticArm
+ * @author pallard
+ *
+ */
 public class RoboticArmROSServer extends AbstractNodeMain
 {
 	protected RoboticArm roboticArm = null;
 	
-	protected Publisher<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.RoboticArmTelemetry> telemetryPublisher = null;
+	protected Publisher<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmTelemetry> telemetryPublisher = null;
 	
 	protected boolean telemetryShouldRun = true;
 	protected Thread telemetryThread = null;
@@ -88,36 +85,50 @@ public class RoboticArmROSServer extends AbstractNodeMain
 	
 	private void initializeTopics()
 	{	
+		System.out.println("Initializing topics...");	
+		
 		// Creates the Publishers.
-		telemetryPublisher = this.rosNode.newPublisher(RoboticArmROSConstants.TOPIC_NAME_ROBOTIC_ARM_TELEMETRY, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.RoboticArmTelemetry._TYPE);
+		telemetryPublisher = this.rosNode.newPublisher(RoboticArmROSConstants.TOPIC_NAME_ROBOTIC_ARM_TELEMETRY, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmTelemetry._TYPE);
 	}
 	
 	private void initializeServices()
 	{
+		System.out.println("Initializing services...");	
+				
 		// MoveTo service
-		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_MOVE_TO, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveTo._TYPE, 
-				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdMoveToResponse>() 
+		System.out.println("Initializing " + RoboticArmROSConstants.SERVICE_NAME_INIT + " service...");
+		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_INIT, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdInit._TYPE, 
+				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdInitRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdInitResponse>() 
+		{
+										
+			@Override
+			public void build(cmdInitRequest request, cmdInitResponse response) throws ServiceException 
+			{			
+				System.out.println("------------>RoboticArmROSServer.init()");
+				
+				roboticArm.init();				
+				response.setResult(true);
+			}
+			
+		});
+		
+		
+		// MoveTo service
+		System.out.println("Initializing " + RoboticArmROSConstants.SERVICE_NAME_MOVE_TO + " service...");
+		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_MOVE_TO, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveTo._TYPE, 
+				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdMoveToResponse>() 
 		{
 
 			@Override
 			public void build(cmdMoveToRequest request, cmdMoveToResponse response) throws ServiceException 
 			{				
-				double turretAngle = request.getTurretAngle();
-				double shoulderAngle = request.getShoulderAngle();
-				double elbowAngle = request.getElbowAngle();
-				double wristAngle = request.getWristAngle();
+				// The ROS Service expects radians, but the RoboticArm moveTo expects degrees, so conversion is needed.
+				double turretAngle = Math.toDegrees(request.getTurretAngle());
+				double shoulderAngle = Math.toDegrees(request.getShoulderAngle());
+				double elbowAngle = Math.toDegrees(request.getElbowAngle());
+				double wristAngle = Math.toDegrees(request.getWristAngle());
 				
 				roboticArm.moveTo(turretAngle, shoulderAngle, elbowAngle, wristAngle);
-				
-				// Adds some delay here
-				try 
-				{
-					Thread.sleep(2000);
-				} 
-				catch (InterruptedException e) 
-				{				
-					e.printStackTrace();
-				}
 				
 				response.setResult(true);
 			}
@@ -125,29 +136,23 @@ public class RoboticArmROSServer extends AbstractNodeMain
 		});
 		
 		// Stow Arm Service
-		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStow._TYPE, 
-				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdStowResponse>() 
+		// MoveTo service
+		System.out.println("Initializing " + RoboticArmROSConstants.SERVICE_NAME_STOW_ARM + " service...");
+		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_STOW_ARM, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStow._TYPE, 
+				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStowRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdStowResponse>() 
 		{
 			@Override
 			public void build(cmdStowRequest request, cmdStowResponse response) throws ServiceException 
 			{				
-				roboticArm.stow();
-				
-				// Adds some delay here
-				try 
-				{
-					Thread.sleep(2000);
-				} 
-				catch (InterruptedException e) 
-				{				
-					e.printStackTrace();
-				}
+				roboticArm.stow();								
+				response.setResult(true);
 			}						
 		});
 		
-		//
-		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevel._TYPE, 
-				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.msgs.cmdSpeedLevelResponse>() 
+		// Move Speed Service
+		System.out.println("Initializing " + RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED + " service...");
+		this.rosNode.newServiceServer(RoboticArmROSConstants.SERVICE_NAME_SET_MOVE_SPEED, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevel._TYPE, 
+				new ServiceResponseBuilder<ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevelRequest, ca.gc.asc_csa.apogy.examples.robotic_arm.ros.cmdSpeedLevelResponse>() 
 		{
 			@Override
 			public void build(cmdSpeedLevelRequest request, cmdSpeedLevelResponse response) throws ServiceException 
@@ -155,8 +160,7 @@ public class RoboticArmROSServer extends AbstractNodeMain
 				roboticArm.setSpeed(MoveSpeedLevel.get(request.getSpeed().getSpeedStatus()));
 				
 				response.setResult(true);
-			}
-								
+			}							
 		});
 	}
 	
@@ -171,15 +175,16 @@ public class RoboticArmROSServer extends AbstractNodeMain
 			@Override
 			public void run() 
 			{
+				System.out.println("Robotic Arm ROS Server : Telemetry Update starts.");
 				while(telemetryShouldRun)
 				{
 					
 					RoboticArmTelemetry roboticArmTelemetry = rosNode.getTopicMessageFactory().newFromType(RoboticArmTelemetry._TYPE);
 					
-					roboticArmTelemetry.setElbowAngle((float) roboticArm.getElbowAngle());
-					roboticArmTelemetry.setShoulderAngle((float) roboticArm.getShoulderAngle());
-					roboticArmTelemetry.setTurretAngle((float) roboticArm.getTurretAngle());
-					roboticArmTelemetry.setWristAngle((float) roboticArm.getWristAngle());
+					roboticArmTelemetry.setElbowAngle((float) Math.toRadians(roboticArm.getElbowAngle()));
+					roboticArmTelemetry.setShoulderAngle((float) Math.toRadians(roboticArm.getShoulderAngle()));
+					roboticArmTelemetry.setTurretAngle((float) Math.toRadians(roboticArm.getTurretAngle()));
+					roboticArmTelemetry.setWristAngle((float) Math.toRadians(roboticArm.getWristAngle()));
 					
 					roboticArmTelemetry.setMoving(roboticArm.isArmMoving());
 					
@@ -187,7 +192,7 @@ public class RoboticArmROSServer extends AbstractNodeMain
 					moveSpeed.setSpeedStatus((byte) roboticArm.getSpeed().getValue()); 
 					roboticArmTelemetry.setSpeed(moveSpeed);
 					
-					// Publishes the telemetry.
+					// Publishes the telemetry.					
 					telemetryPublisher.publish(roboticArmTelemetry);
 					
 					// Wait for next update.

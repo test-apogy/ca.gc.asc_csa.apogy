@@ -80,6 +80,8 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 	@Override
 	public boolean init()
 	{
+		System.out.println("------>RoboticArmSimulatedImpl.init()");
+		
 		final String LOG_PREFIX = this.getClass().getSimpleName() + ".init(): ";
 		
 		// If the arm was initialized already

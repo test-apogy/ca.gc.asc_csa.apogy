@@ -638,6 +638,7 @@ public class ApogyCoreEnvironmentSwitch<T> extends Switch<T>
 			case ApogyCoreEnvironmentPackage.WORKSITE_NODE: {
 				WorksiteNode worksiteNode = (WorksiteNode)theEObject;
 				T result = caseWorksiteNode(worksiteNode);
+				if (result == null) result = caseAggregateGroupNode(worksiteNode);
 				if (result == null) result = caseGroupNode(worksiteNode);
 				if (result == null) result = caseNode(worksiteNode);
 				if (result == null) result = defaultCase(theEObject);
@@ -647,6 +648,7 @@ public class ApogyCoreEnvironmentSwitch<T> extends Switch<T>
 				SurfaceWorksiteNode surfaceWorksiteNode = (SurfaceWorksiteNode)theEObject;
 				T result = caseSurfaceWorksiteNode(surfaceWorksiteNode);
 				if (result == null) result = caseWorksiteNode(surfaceWorksiteNode);
+				if (result == null) result = caseAggregateGroupNode(surfaceWorksiteNode);
 				if (result == null) result = caseGroupNode(surfaceWorksiteNode);
 				if (result == null) result = caseNode(surfaceWorksiteNode);
 				if (result == null) result = defaultCase(theEObject);
@@ -657,6 +659,7 @@ public class ApogyCoreEnvironmentSwitch<T> extends Switch<T>
 				T result = caseEarthSurfaceWorksiteNode(earthSurfaceWorksiteNode);
 				if (result == null) result = caseSurfaceWorksiteNode(earthSurfaceWorksiteNode);
 				if (result == null) result = caseWorksiteNode(earthSurfaceWorksiteNode);
+				if (result == null) result = caseAggregateGroupNode(earthSurfaceWorksiteNode);
 				if (result == null) result = caseGroupNode(earthSurfaceWorksiteNode);
 				if (result == null) result = caseNode(earthSurfaceWorksiteNode);
 				if (result == null) result = defaultCase(theEObject);

@@ -29,7 +29,7 @@ Contributors:
 	      modelName="ApogyCommonGeometryData3D",
 	      suppressGenModelAnnotations="false",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.edit/src-generated")
 @GenModel(testsDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.tests/src-generated")
@@ -69,6 +69,9 @@ type IllegalArgumentException wraps java.lang.IllegalArgumentException
 type DoubleArrayOfArray wraps double[][]
 type IntArray wraps int[]
 
+/**
+ * Identifies an axis of the Cartesian frame of reference.
+ */
 enum CartesianAxis
 {
 	X as "X" = 0,
@@ -131,13 +134,13 @@ class SphericalTriangle extends SphericalPolygon
  */
 class CartesianPositionCoordinates extends Coordinates
 {	
-	@GenModel(notify="true", children="false", apogy_units="m")
+	@GenModel(notify="true", propertyCategory="Position", children="false", apogy_units="m")
 	double x
 	
-	@GenModel(notify="true", children="false", apogy_units="m")
+	@GenModel(notify="true", propertyCategory="Position", children="false", apogy_units="m")
 	double y
 	
-	@GenModel(notify="true", children="false", apogy_units="m")
+	@GenModel(notify="true", propertyCategory="Position", children="false", apogy_units="m")
 	double z
 	
 	/**
@@ -146,25 +149,75 @@ class CartesianPositionCoordinates extends Coordinates
 	op Point3d asPoint3d()
 }
 
-/**
- * A specialization of CartesianPositionCoordinates that assigns a color to the position.
- */
-class ColoredCartesianPositionCoordinates extends CartesianPositionCoordinates
+class RGBAColor
 {
+	/**
+	 * The alpha value.
+	 */
+	@GenModel(notify="true",propertyCategory="Color")
+	short alpha
+	
 	/**
 	 * The red component, between 0 and 255.
 	 */
+	@GenModel(notify="true",propertyCategory="Color")
 	short red
 	
 	/**
 	 * The green component, between 0 and 255.
 	 */
+	@GenModel(notify="true",propertyCategory="Color")
 	short green
 	
 	/**
 	 * The blue component, between 0 and 255.
 	 */
+	@GenModel(notify="true",propertyCategory="Color")
 	short blue
+}
+
+/**
+ * A specialization of CartesianPositionCoordinates that assigns a color to the position.
+ */
+class ColoredCartesianPositionCoordinates extends CartesianPositionCoordinates, RGBAColor
+{
+
+}
+
+/**
+ * Mesh for which each vertex has a color that is associated.
+ */
+class ColoredCartesianTriangularMesh extends CartesianTriangularMesh
+{	
+}
+
+/**
+ * A Processor that creates a colorized copy of an input Cartesian Triangular Mesh by providing color for each Cartesian 
+ * Triangular Mesh vertex.
+ */
+abstract class CartesianTriangularMeshColorizer extends Processor<CartesianTriangularMesh, ColoredCartesianTriangularMesh>
+{	
+	/**
+	 * This method provides the color that should be associated with the specified vertex that is part 
+	 * of the input CartesianTriangularMesh. This method must be overloaded by sub-classes.
+	 * @param mesh The mesh containing the point.
+	 * @param point The point for which to generate color.
+	 */
+	op RGBAColor computeColor(CartesianTriangularMesh mesh, CartesianPositionCoordinates point)
+}
+
+
+/**
+ * A specialization of CartesianTriangularMeshColorizer that colorize a mesh based on the normal at each vertex.
+ * This implementation compute the normal at a given vertex by computing the weighted average (by triangle area) of
+ * each triangle that share the specified point as a vertex.
+ */
+class CartesianTriangularMeshColorizerBySlope extends CartesianTriangularMeshColorizer
+{
+	/**
+	 * The axis against which to measure the local slope.
+	 */
+	CartesianAxis normalAxis
 }
 
 /**
@@ -172,13 +225,13 @@ class ColoredCartesianPositionCoordinates extends CartesianPositionCoordinates
  */
 class CartesianOrientationCoordinates extends Coordinates
 {
-	@GenModel(notify="true", children="false", apogy_units="rad")
+	@GenModel(notify="true", propertyCategory="Orientation", children="false", apogy_units="rad")
 	double xRotation
 	
-	@GenModel(notify="true", children="false", apogy_units="rad")
+	@GenModel(notify="true", propertyCategory="Orientation", children="false", apogy_units="rad")
 	double yRotation
 	
-	@GenModel(notify="true", children="false", apogy_units="rad")
+	@GenModel(notify="true", propertyCategory="Orientation", children="false", apogy_units="rad")
 	double zRotation
 }
 
@@ -201,7 +254,7 @@ class CartesianCoordinatesSet extends AbstractCartesianCoordinatesSet<CartesianP
 /**
  * A set containing ColoredCartesianPositionCoordinates. It represents a point cloud.
  */
-class ColoredCoordinatesSet extends AbstractCartesianCoordinatesSet<ColoredCartesianPositionCoordinates>
+class ColoredCartesianCoordinatesSet extends AbstractCartesianCoordinatesSet<ColoredCartesianPositionCoordinates>
 {
 		
 }
@@ -667,6 +720,10 @@ class ApogyCommonGeometryData3DFacade
 	op CartesianPositionCoordinates createCartesianPositionCoordinates(double x, double y, double z)
 	
 	op ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates(double x, double y, double z, short red, short green, short blue)
+
+	op ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates(double x, double y, double z, short alpha, short red, short green, short blue)
+	
+	op RGBAColor createRGBAColor(short alpha, short red, short green, short blue)
 	
 	op CartesianOrientationCoordinates createCartesianOrientationCoordinates(double xRotation, double yRotation, double zRotation)
 	
@@ -821,9 +878,20 @@ class Data3DIO
 	op void saveCoordinatesSetToCSV(CartesianCoordinatesSet coordinatesSet, OutputStream file) throws IOException
 }
 
+/**
+ * Utilities class.
+ */
 class Data3DUtils
 {
-	op EList<Vector3d> computeNormals(CartesianTriangularMesh mesh)
+	op List<Vector3d> computeNormals(CartesianTriangularMesh mesh)
+	
+	/**
+	 * Computes the normal at a given vertex in a mesh. The normal is the weighted average (by polygon area)
+	 * of all the polygons sharing the specified point.
+	 * @param mesh The mesh containing the point.
+	 * @param vertex The vertex contained in the mesh. 
+	 */
+	op Vector3d computeNormalAtVertex(CartesianTriangularMesh mesh, CartesianPositionCoordinates vertex)
 	
 	/**
 	 * Computes the position of the centroid of a list of CartesianPositionCoordinates.

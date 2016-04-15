@@ -1786,7 +1786,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.ui/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.ui.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.core.environment"
@@ -1841,6 +1841,19 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		   new String[] {
 			 "propertyCategory", "PLANE",
 			 "apogy_units", "m"
+		   });	
+		addAnnotation
+		  (getFeatureOfInterestNodePresentation_PoleHeight(), 
+		   source, 
+		   new String[] {
+			 "propertyCategory", "FLAG",
+			 "apogy_units", "m"
+		   });	
+		addAnnotation
+		  (getFeatureOfInterestNodePresentation_FlagVisible(), 
+		   source, 
+		   new String[] {
+			 "propertyCategory", "FLAG"
 		   });	
 		addAnnotation
 		  (getEnvironmentUIUtilities__GetSunLightColor__double(), 

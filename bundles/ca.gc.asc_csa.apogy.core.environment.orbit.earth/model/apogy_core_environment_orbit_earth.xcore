@@ -30,7 +30,7 @@ Contributors:
 		  complianceLevel="8.0",
 		  suppressGenModelAnnotations="false",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.orbit.earth/src-generated")
 @GenModel(editDirectory= "/ca.gc.asc_csa.apogy.core.environment.orbit.earth.edit/src-generated")
 @GenModel(testsDirectory="/ca.gc.asc_csa.apogy.core.environment.orbit.earth.tests/src-generated")

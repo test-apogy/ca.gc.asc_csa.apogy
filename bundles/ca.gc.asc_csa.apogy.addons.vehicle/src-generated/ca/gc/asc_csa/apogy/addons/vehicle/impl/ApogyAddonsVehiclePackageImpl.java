@@ -1477,7 +1477,7 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 			 "modelName", "ApogyAddonsVehicle",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.vehicle/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.vehicle.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"

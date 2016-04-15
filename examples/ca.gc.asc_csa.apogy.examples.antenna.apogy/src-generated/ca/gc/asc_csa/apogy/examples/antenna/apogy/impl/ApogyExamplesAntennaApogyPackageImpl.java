@@ -296,7 +296,7 @@ public class ApogyExamplesAntennaApogyPackageImpl extends EPackageImpl implement
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.antenna.apogy/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.antenna.apogy.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples.antenna"

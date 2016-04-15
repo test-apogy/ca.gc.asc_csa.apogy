@@ -108,8 +108,24 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 				return createCartesianPositionCoordinatesAdapter();
 			}
 			@Override
+			public Adapter caseRGBAColor(RGBAColor object) {
+				return createRGBAColorAdapter();
+			}
+			@Override
 			public Adapter caseColoredCartesianPositionCoordinates(ColoredCartesianPositionCoordinates object) {
 				return createColoredCartesianPositionCoordinatesAdapter();
+			}
+			@Override
+			public Adapter caseColoredCartesianTriangularMesh(ColoredCartesianTriangularMesh object) {
+				return createColoredCartesianTriangularMeshAdapter();
+			}
+			@Override
+			public Adapter caseCartesianTriangularMeshColorizer(CartesianTriangularMeshColorizer object) {
+				return createCartesianTriangularMeshColorizerAdapter();
+			}
+			@Override
+			public Adapter caseCartesianTriangularMeshColorizerBySlope(CartesianTriangularMeshColorizerBySlope object) {
+				return createCartesianTriangularMeshColorizerBySlopeAdapter();
 			}
 			@Override
 			public Adapter caseCartesianOrientationCoordinates(CartesianOrientationCoordinates object) {
@@ -124,8 +140,8 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 				return createCartesianCoordinatesSetAdapter();
 			}
 			@Override
-			public Adapter caseColoredCoordinatesSet(ColoredCoordinatesSet object) {
-				return createColoredCoordinatesSetAdapter();
+			public Adapter caseColoredCartesianCoordinatesSet(ColoredCartesianCoordinatesSet object) {
+				return createColoredCartesianCoordinatesSetAdapter();
 			}
 			@Override
 			public Adapter caseCartesianCoordinatesSetExtent(CartesianCoordinatesSetExtent object) {
@@ -288,6 +304,14 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 				return createMeshAdapter();
 			}
 			@Override
+			public Adapter caseMonitorable(Monitorable object) {
+				return createMonitorableAdapter();
+			}
+			@Override
+			public <I, O> Adapter caseProcessor(Processor<I, O> object) {
+				return createProcessorAdapter();
+			}
+			@Override
 			public Adapter caseSamplingShape(SamplingShape object) {
 				return createSamplingShapeAdapter();
 			}
@@ -298,14 +322,6 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 			@Override
 			public <CoordinatesType extends Coordinates, PolygonType extends Polygon<CoordinatesType>> Adapter casePolygonSamplingShape(PolygonSamplingShape<CoordinatesType, PolygonType> object) {
 				return createPolygonSamplingShapeAdapter();
-			}
-			@Override
-			public Adapter caseMonitorable(Monitorable object) {
-				return createMonitorableAdapter();
-			}
-			@Override
-			public <I, O> Adapter caseProcessor(Processor<I, O> object) {
-				return createProcessorAdapter();
 			}
 			@Override
 			public <T extends Coordinates> Adapter caseCoordinatesSetShapesSampler(CoordinatesSetShapesSampler<T> object) {
@@ -410,6 +426,20 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor <em>RGBA Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor
+	 * @generated
+	 */
+	public Adapter createRGBAColorAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates <em>Colored Cartesian Position Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -420,6 +450,48 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 	 * @generated
 	 */
 	public Adapter createColoredCartesianPositionCoordinatesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh <em>Colored Cartesian Triangular Mesh</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh
+	 * @generated
+	 */
+	public Adapter createColoredCartesianTriangularMeshAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer <em>Cartesian Triangular Mesh Colorizer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer
+	 * @generated
+	 */
+	public Adapter createCartesianTriangularMeshColorizerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizerBySlope <em>Cartesian Triangular Mesh Colorizer By Slope</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizerBySlope
+	 * @generated
+	 */
+	public Adapter createCartesianTriangularMeshColorizerBySlopeAdapter() {
 		return null;
 	}
 
@@ -466,16 +538,16 @@ public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl 
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet <em>Colored Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet <em>Colored Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet
 	 * @generated
 	 */
-	public Adapter createColoredCoordinatesSetAdapter() {
+	public Adapter createColoredCartesianCoordinatesSetAdapter() {
 		return null;
 	}
 

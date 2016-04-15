@@ -60,11 +60,34 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addAlphaPropertyDescriptor(object);
 			addRedPropertyDescriptor(object);
 			addGreenPropertyDescriptor(object);
 			addBluePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Alpha feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAlphaPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RGBAColor_alpha_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RGBAColor_alpha_feature", "_UI_RGBAColor_type"),
+				 ApogyCommonGeometryData3DPackage.Literals.RGBA_COLOR__ALPHA,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 getString("_UI_ColorPropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -78,14 +101,14 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ColoredCartesianPositionCoordinates_red_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ColoredCartesianPositionCoordinates_red_feature", "_UI_ColoredCartesianPositionCoordinates_type"),
-				 ApogyCommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__RED,
+				 getString("_UI_RGBAColor_red_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RGBAColor_red_feature", "_UI_RGBAColor_type"),
+				 ApogyCommonGeometryData3DPackage.Literals.RGBA_COLOR__RED,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_ColorPropertyCategory"),
 				 null));
 	}
 
@@ -100,14 +123,14 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ColoredCartesianPositionCoordinates_green_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ColoredCartesianPositionCoordinates_green_feature", "_UI_ColoredCartesianPositionCoordinates_type"),
-				 ApogyCommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN,
+				 getString("_UI_RGBAColor_green_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RGBAColor_green_feature", "_UI_RGBAColor_type"),
+				 ApogyCommonGeometryData3DPackage.Literals.RGBA_COLOR__GREEN,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_ColorPropertyCategory"),
 				 null));
 	}
 
@@ -122,14 +145,14 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ColoredCartesianPositionCoordinates_blue_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ColoredCartesianPositionCoordinates_blue_feature", "_UI_ColoredCartesianPositionCoordinates_type"),
-				 ApogyCommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE,
+				 getString("_UI_RGBAColor_blue_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RGBAColor_blue_feature", "_UI_RGBAColor_type"),
+				 ApogyCommonGeometryData3DPackage.Literals.RGBA_COLOR__BLUE,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI_ColorPropertyCategory"),
 				 null));
 	}
 
@@ -178,6 +201,7 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ColoredCartesianPositionCoordinates.class)) {
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__ALPHA:
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED:
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN:
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE:

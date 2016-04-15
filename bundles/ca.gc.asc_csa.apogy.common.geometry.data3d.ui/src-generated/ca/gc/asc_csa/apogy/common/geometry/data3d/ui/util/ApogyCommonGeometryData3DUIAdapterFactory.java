@@ -13,13 +13,11 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
@@ -83,8 +81,16 @@ public class ApogyCommonGeometryData3DUIAdapterFactory extends AdapterFactoryImp
 				return createCartesianCoordinatesSetPresentationAdapter();
 			}
 			@Override
-			public Adapter caseTriangularMeshPresentation(TriangularMeshPresentation object) {
-				return createTriangularMeshPresentationAdapter();
+			public Adapter caseColoredCartesianCoordinatesSetPresentation(ColoredCartesianCoordinatesSetPresentation object) {
+				return createColoredCartesianCoordinatesSetPresentationAdapter();
+			}
+			@Override
+			public Adapter caseCartesianTriangularMeshPresentation(CartesianTriangularMeshPresentation object) {
+				return createCartesianTriangularMeshPresentationAdapter();
+			}
+			@Override
+			public Adapter caseColoredTriangularMeshPresentation(ColoredTriangularMeshPresentation object) {
+				return createColoredTriangularMeshPresentationAdapter();
 			}
 			@Override
 			public Adapter caseNodePresentation(NodePresentation object) {
@@ -125,16 +131,44 @@ public class ApogyCommonGeometryData3DUIAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation <em>Triangular Mesh Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredCartesianCoordinatesSetPresentation <em>Colored Cartesian Coordinates Set Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredCartesianCoordinatesSetPresentation
 	 * @generated
 	 */
-	public Adapter createTriangularMeshPresentationAdapter() {
+	public Adapter createColoredCartesianCoordinatesSetPresentationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation <em>Cartesian Triangular Mesh Presentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianTriangularMeshPresentation
+	 * @generated
+	 */
+	public Adapter createCartesianTriangularMeshPresentationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredTriangularMeshPresentation <em>Colored Triangular Mesh Presentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ColoredTriangularMeshPresentation
+	 * @generated
+	 */
+	public Adapter createColoredTriangularMeshPresentationAdapter() {
 		return null;
 	}
 

@@ -13,15 +13,12 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIFactory;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +65,9 @@ public class ApogyCommonGeometryData3DUIFactoryImpl extends EFactoryImpl impleme
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION: return createCartesianCoordinatesSetPresentation();
-			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION: return createTriangularMeshPresentation();
+			case ApogyCommonGeometryData3DUIPackage.COLORED_CARTESIAN_COORDINATES_SET_PRESENTATION: return createColoredCartesianCoordinatesSetPresentation();
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_TRIANGULAR_MESH_PRESENTATION: return createCartesianTriangularMeshPresentation();
+			case ApogyCommonGeometryData3DUIPackage.COLORED_TRIANGULAR_MESH_PRESENTATION: return createColoredTriangularMeshPresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -89,9 +88,29 @@ public class ApogyCommonGeometryData3DUIFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TriangularMeshPresentation createTriangularMeshPresentation() {
-		TriangularMeshPresentationImpl triangularMeshPresentation = new TriangularMeshPresentationImpl();
-		return triangularMeshPresentation;
+	public ColoredCartesianCoordinatesSetPresentation createColoredCartesianCoordinatesSetPresentation() {
+		ColoredCartesianCoordinatesSetPresentationImpl coloredCartesianCoordinatesSetPresentation = new ColoredCartesianCoordinatesSetPresentationImpl();
+		return coloredCartesianCoordinatesSetPresentation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CartesianTriangularMeshPresentation createCartesianTriangularMeshPresentation() {
+		CartesianTriangularMeshPresentationImpl cartesianTriangularMeshPresentation = new CartesianTriangularMeshPresentationImpl();
+		return cartesianTriangularMeshPresentation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ColoredTriangularMeshPresentation createColoredTriangularMeshPresentation() {
+		ColoredTriangularMeshPresentationImpl coloredTriangularMeshPresentation = new ColoredTriangularMeshPresentationImpl();
+		return coloredTriangularMeshPresentation;
 	}
 
 	/**

@@ -57,10 +57,13 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinatesMesher;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizer;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshColorizerBySlope;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianTriangularMesh;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils;
@@ -79,6 +82,7 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates;
@@ -141,7 +145,35 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass rgbaColorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass coloredCartesianPositionCoordinatesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass coloredCartesianTriangularMeshEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cartesianTriangularMeshColorizerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cartesianTriangularMeshColorizerBySlopeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,7 +201,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass coloredCoordinatesSetEClass = null;
+	private EClass coloredCartesianCoordinatesSetEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -747,6 +779,51 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRGBAColor() {
+		return rgbaColorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRGBAColor_Alpha() {
+		return (EAttribute)rgbaColorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRGBAColor_Red() {
+		return (EAttribute)rgbaColorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRGBAColor_Green() {
+		return (EAttribute)rgbaColorEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRGBAColor_Blue() {
+		return (EAttribute)rgbaColorEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getColoredCartesianPositionCoordinates() {
 		return coloredCartesianPositionCoordinatesEClass;
 	}
@@ -756,8 +833,8 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getColoredCartesianPositionCoordinates_Red() {
-		return (EAttribute)coloredCartesianPositionCoordinatesEClass.getEStructuralFeatures().get(0);
+	public EClass getColoredCartesianTriangularMesh() {
+		return coloredCartesianTriangularMeshEClass;
 	}
 
 	/**
@@ -765,8 +842,8 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getColoredCartesianPositionCoordinates_Green() {
-		return (EAttribute)coloredCartesianPositionCoordinatesEClass.getEStructuralFeatures().get(1);
+	public EClass getCartesianTriangularMeshColorizer() {
+		return cartesianTriangularMeshColorizerEClass;
 	}
 
 	/**
@@ -774,8 +851,26 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getColoredCartesianPositionCoordinates_Blue() {
-		return (EAttribute)coloredCartesianPositionCoordinatesEClass.getEStructuralFeatures().get(2);
+	public EOperation getCartesianTriangularMeshColorizer__ComputeColor__CartesianTriangularMesh_CartesianPositionCoordinates() {
+		return cartesianTriangularMeshColorizerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCartesianTriangularMeshColorizerBySlope() {
+		return cartesianTriangularMeshColorizerBySlopeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCartesianTriangularMeshColorizerBySlope_NormalAxis() {
+		return (EAttribute)cartesianTriangularMeshColorizerBySlopeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -846,8 +941,8 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getColoredCoordinatesSet() {
-		return coloredCoordinatesSetEClass;
+	public EClass getColoredCartesianCoordinatesSet() {
+		return coloredCartesianCoordinatesSetEClass;
 	}
 
 	/**
@@ -1629,7 +1724,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateColoredCartesianPositionCoordinates__double_double_double_short_short_short_short() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(2);
 	}
 
@@ -1638,7 +1733,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateRGBAColor__short_short_short_short() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(3);
 	}
 
@@ -1647,7 +1742,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(4);
 	}
 
@@ -1656,7 +1751,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreatePose__Pose() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(5);
 	}
 
@@ -1665,7 +1760,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(6);
 	}
 
@@ -1674,7 +1769,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreatePose__Pose() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(7);
 	}
 
@@ -1683,7 +1778,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(8);
 	}
 
@@ -1692,7 +1787,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(9);
 	}
 
@@ -1701,7 +1796,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(10);
 	}
 
@@ -1710,7 +1805,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(11);
 	}
 
@@ -1719,7 +1814,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(12);
 	}
 
@@ -1728,7 +1823,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(13);
 	}
 
@@ -1737,7 +1832,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(14);
 	}
 
@@ -1746,7 +1841,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(15);
 	}
 
@@ -1755,7 +1850,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__List() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(16);
 	}
 
@@ -1764,7 +1859,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(17);
 	}
 
@@ -1773,7 +1868,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__List() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(18);
 	}
 
@@ -1782,7 +1877,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__List_Matrix4d() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(19);
 	}
 
@@ -1791,7 +1886,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d() {
+	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(20);
 	}
 
@@ -1800,7 +1895,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d() {
+	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__List_Matrix4d() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(21);
 	}
 
@@ -1809,7 +1904,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d() {
+	public EOperation getApogyCommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(22);
 	}
 
@@ -1818,7 +1913,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double() {
+	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(23);
 	}
 
@@ -1827,8 +1922,26 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonGeometryData3DFacade__ConcatenateTriangularMeshes__List() {
+	public EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d() {
 		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double() {
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonGeometryData3DFacade__ConcatenateTriangularMeshes__List() {
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(26);
 	}
 
 	/**
@@ -1980,7 +2093,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3DUtils__ComputeCentroid__List() {
+	public EOperation getData3DUtils__ComputeNormalAtVertex__CartesianTriangularMesh_CartesianPositionCoordinates() {
 		return data3DUtilsEClass.getEOperations().get(1);
 	}
 
@@ -1989,7 +2102,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3DUtils__ComputeCentroid__CartesianCoordinatesSet() {
+	public EOperation getData3DUtils__ComputeCentroid__List() {
 		return data3DUtilsEClass.getEOperations().get(2);
 	}
 
@@ -1998,7 +2111,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3DUtils__ComputeMinMaxValues__Point3d_Point3d_CartesianCoordinatesSet() {
+	public EOperation getData3DUtils__ComputeCentroid__CartesianCoordinatesSet() {
 		return data3DUtilsEClass.getEOperations().get(3);
 	}
 
@@ -2007,7 +2120,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3DUtils__ComputeCurvatureChange__PointLocator_int_double() {
+	public EOperation getData3DUtils__ComputeMinMaxValues__Point3d_Point3d_CartesianCoordinatesSet() {
 		return data3DUtilsEClass.getEOperations().get(4);
 	}
 
@@ -2016,8 +2129,17 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3DUtils__Extrude__List_CartesianAxis_double_boolean() {
+	public EOperation getData3DUtils__ComputeCurvatureChange__PointLocator_int_double() {
 		return data3DUtilsEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getData3DUtils__Extrude__List_CartesianAxis_double_boolean() {
+		return data3DUtilsEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -2254,10 +2376,21 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		createEAttribute(cartesianPositionCoordinatesEClass, CARTESIAN_POSITION_COORDINATES__Z);
 		createEOperation(cartesianPositionCoordinatesEClass, CARTESIAN_POSITION_COORDINATES___AS_POINT3D);
 
+		rgbaColorEClass = createEClass(RGBA_COLOR);
+		createEAttribute(rgbaColorEClass, RGBA_COLOR__ALPHA);
+		createEAttribute(rgbaColorEClass, RGBA_COLOR__RED);
+		createEAttribute(rgbaColorEClass, RGBA_COLOR__GREEN);
+		createEAttribute(rgbaColorEClass, RGBA_COLOR__BLUE);
+
 		coloredCartesianPositionCoordinatesEClass = createEClass(COLORED_CARTESIAN_POSITION_COORDINATES);
-		createEAttribute(coloredCartesianPositionCoordinatesEClass, COLORED_CARTESIAN_POSITION_COORDINATES__RED);
-		createEAttribute(coloredCartesianPositionCoordinatesEClass, COLORED_CARTESIAN_POSITION_COORDINATES__GREEN);
-		createEAttribute(coloredCartesianPositionCoordinatesEClass, COLORED_CARTESIAN_POSITION_COORDINATES__BLUE);
+
+		coloredCartesianTriangularMeshEClass = createEClass(COLORED_CARTESIAN_TRIANGULAR_MESH);
+
+		cartesianTriangularMeshColorizerEClass = createEClass(CARTESIAN_TRIANGULAR_MESH_COLORIZER);
+		createEOperation(cartesianTriangularMeshColorizerEClass, CARTESIAN_TRIANGULAR_MESH_COLORIZER___COMPUTE_COLOR__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES);
+
+		cartesianTriangularMeshColorizerBySlopeEClass = createEClass(CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE);
+		createEAttribute(cartesianTriangularMeshColorizerBySlopeEClass, CARTESIAN_TRIANGULAR_MESH_COLORIZER_BY_SLOPE__NORMAL_AXIS);
 
 		cartesianOrientationCoordinatesEClass = createEClass(CARTESIAN_ORIENTATION_COORDINATES);
 		createEAttribute(cartesianOrientationCoordinatesEClass, CARTESIAN_ORIENTATION_COORDINATES__XROTATION);
@@ -2269,7 +2402,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		cartesianCoordinatesSetEClass = createEClass(CARTESIAN_COORDINATES_SET);
 
-		coloredCoordinatesSetEClass = createEClass(COLORED_COORDINATES_SET);
+		coloredCartesianCoordinatesSetEClass = createEClass(COLORED_CARTESIAN_COORDINATES_SET);
 
 		cartesianCoordinatesSetExtentEClass = createEClass(CARTESIAN_COORDINATES_SET_EXTENT);
 		createEAttribute(cartesianCoordinatesSetExtentEClass, CARTESIAN_COORDINATES_SET_EXTENT__XMIN);
@@ -2390,6 +2523,8 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		apogyCommonGeometryData3DFacadeEClass = createEClass(APOGY_COMMON_GEOMETRY_DATA3_DFACADE);
 		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
 		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_COLORED_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE_SHORT_SHORT_SHORT);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_COLORED_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE_SHORT_SHORT_SHORT_SHORT);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_RGBA_COLOR__SHORT_SHORT_SHORT_SHORT);
 		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
 		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
 		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
@@ -2431,6 +2566,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		data3DUtilsEClass = createEClass(DATA3_DUTILS);
 		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_NORMALS__CARTESIANTRIANGULARMESH);
+		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_NORMAL_AT_VERTEX__CARTESIANTRIANGULARMESH_CARTESIANPOSITIONCOORDINATES);
 		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_CENTROID__LIST);
 		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET);
 		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_MIN_MAX_VALUES__POINT3D_POINT3D_CARTESIANCOORDINATESSET);
@@ -2524,6 +2660,15 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		sphericalTriangleEClass.getESuperTypes().add(this.getSphericalPolygon());
 		cartesianPositionCoordinatesEClass.getESuperTypes().add(theApogyCommonGeometryDataPackage.getCoordinates());
 		coloredCartesianPositionCoordinatesEClass.getESuperTypes().add(this.getCartesianPositionCoordinates());
+		coloredCartesianPositionCoordinatesEClass.getESuperTypes().add(this.getRGBAColor());
+		coloredCartesianTriangularMeshEClass.getESuperTypes().add(this.getCartesianTriangularMesh());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
+		g2 = createEGenericType(this.getCartesianTriangularMesh());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(this.getColoredCartesianTriangularMesh());
+		g1.getETypeArguments().add(g2);
+		cartesianTriangularMeshColorizerEClass.getEGenericSuperTypes().add(g1);
+		cartesianTriangularMeshColorizerBySlopeEClass.getESuperTypes().add(this.getCartesianTriangularMeshColorizer());
 		cartesianOrientationCoordinatesEClass.getESuperTypes().add(theApogyCommonGeometryDataPackage.getCoordinates());
 		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getCoordinatesSet());
 		g2 = createEGenericType(abstractCartesianCoordinatesSetEClass_T);
@@ -2536,7 +2681,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		g1 = createEGenericType(this.getAbstractCartesianCoordinatesSet());
 		g2 = createEGenericType(this.getColoredCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
-		coloredCoordinatesSetEClass.getEGenericSuperTypes().add(g1);
+		coloredCartesianCoordinatesSetEClass.getEGenericSuperTypes().add(g1);
 		digitalElevationMapEClass.getESuperTypes().add(this.getCartesianCoordinatesSet());
 		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getMesh());
 		g2 = createEGenericType(this.getCartesianPositionCoordinates());
@@ -2702,10 +2847,24 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		initEOperation(getCartesianPositionCoordinates__AsPoint3d(), this.getPoint3d(), "asPoint3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		initEClass(rgbaColorEClass, RGBAColor.class, "RGBAColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRGBAColor_Alpha(), theEcorePackage.getEShort(), "alpha", null, 0, 1, RGBAColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRGBAColor_Red(), theEcorePackage.getEShort(), "red", null, 0, 1, RGBAColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRGBAColor_Green(), theEcorePackage.getEShort(), "green", null, 0, 1, RGBAColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRGBAColor_Blue(), theEcorePackage.getEShort(), "blue", null, 0, 1, RGBAColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(coloredCartesianPositionCoordinatesEClass, ColoredCartesianPositionCoordinates.class, "ColoredCartesianPositionCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getColoredCartesianPositionCoordinates_Red(), theEcorePackage.getEShort(), "red", null, 0, 1, ColoredCartesianPositionCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getColoredCartesianPositionCoordinates_Green(), theEcorePackage.getEShort(), "green", null, 0, 1, ColoredCartesianPositionCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getColoredCartesianPositionCoordinates_Blue(), theEcorePackage.getEShort(), "blue", null, 0, 1, ColoredCartesianPositionCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(coloredCartesianTriangularMeshEClass, ColoredCartesianTriangularMesh.class, "ColoredCartesianTriangularMesh", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(cartesianTriangularMeshColorizerEClass, CartesianTriangularMeshColorizer.class, "CartesianTriangularMeshColorizer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = initEOperation(getCartesianTriangularMeshColorizer__ComputeColor__CartesianTriangularMesh_CartesianPositionCoordinates(), this.getRGBAColor(), "computeColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(cartesianTriangularMeshColorizerBySlopeEClass, CartesianTriangularMeshColorizerBySlope.class, "CartesianTriangularMeshColorizerBySlope", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCartesianTriangularMeshColorizerBySlope_NormalAxis(), this.getCartesianAxis(), "normalAxis", null, 0, 1, CartesianTriangularMeshColorizerBySlope.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cartesianOrientationCoordinatesEClass, CartesianOrientationCoordinates.class, "CartesianOrientationCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCartesianOrientationCoordinates_XRotation(), theEcorePackage.getEDouble(), "xRotation", null, 0, 1, CartesianOrientationCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2718,7 +2877,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		initEClass(cartesianCoordinatesSetEClass, CartesianCoordinatesSet.class, "CartesianCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(coloredCoordinatesSetEClass, ColoredCoordinatesSet.class, "ColoredCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(coloredCartesianCoordinatesSetEClass, ColoredCartesianCoordinatesSet.class, "ColoredCartesianCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(cartesianCoordinatesSetExtentEClass, CartesianCoordinatesSetExtent.class, "CartesianCoordinatesSetExtent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCartesianCoordinatesSetExtent_XMin(), theEcorePackage.getEDouble(), "xMin", null, 0, 1, CartesianCoordinatesSetExtent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2786,7 +2945,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		initEClass(pointLocatorEClass, PointLocator.class, "PointLocator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getPointLocator__GetPoints(), null, "getPoints", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getPointLocator__GetPoints(), null, "getPoints", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
@@ -2920,6 +3079,21 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEShort(), "red", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEShort(), "green", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEShort(), "blue", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonGeometryData3DFacade__CreateColoredCartesianPositionCoordinates__double_double_double_short_short_short_short(), this.getColoredCartesianPositionCoordinates(), "createColoredCartesianPositionCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEShort(), "alpha", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEShort(), "red", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEShort(), "green", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEShort(), "blue", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonGeometryData3DFacade__CreateRGBAColor__short_short_short_short(), this.getRGBAColor(), "createRGBAColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEShort(), "alpha", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEShort(), "red", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEShort(), "green", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEShort(), "blue", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3100,10 +3274,14 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 
 		op = initEOperation(getData3DUtils__ComputeNormals__CartesianTriangularMesh(), null, "computeNormals", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getEList());
+		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getVector3d());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
+
+		op = initEOperation(getData3DUtils__ComputeNormalAtVertex__CartesianTriangularMesh_CartesianPositionCoordinates(), this.getVector3d(), "computeNormalAtVertex", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCartesianPositionCoordinates(), "vertex", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getData3DUtils__ComputeCentroid__List(), this.getCartesianPositionCoordinates(), "computeCentroid", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
@@ -3194,11 +3372,17 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 			 "modelName", "ApogyCommonGeometryData3D",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.edit/src-generated",
 			 "testsDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.tests/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry"
+		   });	
+		addAnnotation
+		  (cartesianAxisEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nIdentifies an axis of the Cartesian frame of reference."
 		   });	
 		addAnnotation
 		  (cartesianPlaneEEnum, 
@@ -3256,6 +3440,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "notify", "true",
+			 "propertyCategory", "Position",
 			 "children", "false",
 			 "apogy_units", "m"
 		   });	
@@ -3264,6 +3449,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "notify", "true",
+			 "propertyCategory", "Position",
 			 "children", "false",
 			 "apogy_units", "m"
 		   });	
@@ -3272,8 +3458,41 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "notify", "true",
+			 "propertyCategory", "Position",
 			 "children", "false",
 			 "apogy_units", "m"
+		   });	
+		addAnnotation
+		  (getRGBAColor_Alpha(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe alpha value.",
+			 "notify", "true",
+			 "propertyCategory", "Color"
+		   });	
+		addAnnotation
+		  (getRGBAColor_Red(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe red component, between 0 and 255.",
+			 "notify", "true",
+			 "propertyCategory", "Color"
+		   });	
+		addAnnotation
+		  (getRGBAColor_Green(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe green component, between 0 and 255.",
+			 "notify", "true",
+			 "propertyCategory", "Color"
+		   });	
+		addAnnotation
+		  (getRGBAColor_Blue(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe blue component, between 0 and 255.",
+			 "notify", "true",
+			 "propertyCategory", "Color"
 		   });	
 		addAnnotation
 		  (coloredCartesianPositionCoordinatesEClass, 
@@ -3282,22 +3501,34 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 			 "documentation", "*\nA specialization of CartesianPositionCoordinates that assigns a color to the position."
 		   });	
 		addAnnotation
-		  (getColoredCartesianPositionCoordinates_Red(), 
+		  (coloredCartesianTriangularMeshEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nThe red component, between 0 and 255."
+			 "documentation", "*\nMesh for which each vertex has a color that is associated."
 		   });	
 		addAnnotation
-		  (getColoredCartesianPositionCoordinates_Green(), 
+		  (cartesianTriangularMeshColorizerEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nThe green component, between 0 and 255."
+			 "documentation", "*\nA Processor that creates a colorized copy of an input Cartesian Triangular Mesh by providing color for each Cartesian\nTriangular Mesh vertex."
 		   });	
 		addAnnotation
-		  (getColoredCartesianPositionCoordinates_Blue(), 
+		  (getCartesianTriangularMeshColorizer__ComputeColor__CartesianTriangularMesh_CartesianPositionCoordinates(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nThe blue component, between 0 and 255."
+			 "documentation", "*\nThis method provides the color that should be associated with the specified vertex that is part\nof the input CartesianTriangularMesh. This method must be overloaded by sub-classes.\n@param mesh The mesh containing the point.\n@param point The point for which to generate color."
+		   });	
+		addAnnotation
+		  (cartesianTriangularMeshColorizerBySlopeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA specialization of CartesianTriangularMeshColorizer that colorize a mesh based on the normal at each vertex.\nThis implementation compute the normal at a given vertex by computing the weighted average (by triangle area) of\neach triangle that share the specified point as a vertex."
+		   });	
+		addAnnotation
+		  (getCartesianTriangularMeshColorizerBySlope_NormalAxis(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe axis against which to measure the local slope."
 		   });	
 		addAnnotation
 		  (cartesianOrientationCoordinatesEClass, 
@@ -3310,6 +3541,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "notify", "true",
+			 "propertyCategory", "Orientation",
 			 "children", "false",
 			 "apogy_units", "rad"
 		   });	
@@ -3318,6 +3550,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "notify", "true",
+			 "propertyCategory", "Orientation",
 			 "children", "false",
 			 "apogy_units", "rad"
 		   });	
@@ -3326,6 +3559,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "notify", "true",
+			 "propertyCategory", "Orientation",
 			 "children", "false",
 			 "apogy_units", "rad"
 		   });	
@@ -3342,7 +3576,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 			 "documentation", "*\nA set containing CartesianPositionCoordinates. It represent a point cloud."
 		   });	
 		addAnnotation
-		  (coloredCoordinatesSetEClass, 
+		  (coloredCartesianCoordinatesSetEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "*\nA set containing ColoredCartesianPositionCoordinates. It represents a point cloud."
@@ -3883,6 +4117,18 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "*\nSaves a CartesianCoordinatesSet to an comma separated formatted file.\n@param coordinatesSet The CartesianCoordinatesSet to save.\n@param file The file path of the destination."
+		   });	
+		addAnnotation
+		  (data3DUtilsEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nUtilities class."
+		   });	
+		addAnnotation
+		  (getData3DUtils__ComputeNormalAtVertex__CartesianTriangularMesh_CartesianPositionCoordinates(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nComputes the normal at a given vertex in a mesh. The normal is the weighted average (by polygon area)\nof all the polygons sharing the specified point.\n@param mesh The mesh containing the point.\n@param vertex The vertex contained in the mesh."
 		   });	
 		addAnnotation
 		  (getData3DUtils__ComputeCentroid__List(), 

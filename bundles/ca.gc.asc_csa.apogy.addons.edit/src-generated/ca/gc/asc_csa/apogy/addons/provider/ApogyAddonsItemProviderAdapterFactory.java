@@ -40,11 +40,11 @@ import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 import ca.gc.asc_csa.apogy.addons.util.ApogyAddonsAdapterFactory;
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
-import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BooleanCase;
 import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
@@ -344,6 +344,29 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 	}
 
 		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createURLNodeGeometryPlacementAtFeatureOfInterestToolAdapter() {
+		if (urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider == null) {
+			urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider = new URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider(this);
+		}
+
+		return urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider;
+	}
+
+		/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -491,6 +514,7 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 		if (trajectoryPickingToolNodeItemProvider != null) trajectoryPickingToolNodeItemProvider.dispose();
 		if (trajectory3DToolItemProvider != null) trajectory3DToolItemProvider.dispose();
 		if (trajectory3DToolNodeItemProvider != null) trajectory3DToolNodeItemProvider.dispose();
+		if (urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider != null) urlNodeGeometryPlacementAtFeatureOfInterestToolItemProvider.dispose();
 	}
 
 		/**
@@ -619,6 +643,25 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseBooleanCase(BooleanCase object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
+
+				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->
@@ -779,6 +822,11 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsFactory.eINSTANCE.createURLNodeGeometryPlacementAtFeatureOfInterestTool()));
+
 				return null;
 			}
  
@@ -839,35 +887,10 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 ApogyAddonsFactory.eINSTANCE.createRuler3dToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsFactory.eINSTANCE.createURLNodeGeometryPlacementAtFeatureOfInterestTool()));
 
 				return null;
 			}

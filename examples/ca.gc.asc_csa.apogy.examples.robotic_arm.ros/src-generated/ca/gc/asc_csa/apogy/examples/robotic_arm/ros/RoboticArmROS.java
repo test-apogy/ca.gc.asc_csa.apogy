@@ -13,6 +13,13 @@ import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
  * A representation of the model object '<em><b>Robotic Arm ROS</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * This class is an implementation of RoboticArm that is a client
+ * of a Robot Operating System (ROS) server node. It shows one way
+ * of interfacing an Apogy System with an ROS implementation.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -20,7 +27,7 @@ import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
  *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.ros.RoboticArmROS#getRobotiocArmRosNode <em>Robotioc Arm Ros Node</em>}</li>
  * </ul>
  *
- * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmPackage#getRoboticArmROS()
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmROSPackage#getRoboticArmROS()
  * @model
  * @generated
  */
@@ -33,9 +40,12 @@ public interface RoboticArmROS extends RoboticArm, ROSInterface {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * The ROSNode used to manage the connection with ROS.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Robotioc Arm Ros Node</em>' containment reference.
 	 * @see #setRobotiocArmRosNode(ROSNode)
-	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmPackage#getRoboticArmROS_RobotiocArmRosNode()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ros.ApogyExamplesRoboticArmROSPackage#getRoboticArmROS_RobotiocArmRosNode()
 	 * @model containment="true"
 	 * @generated
 	 */

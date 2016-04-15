@@ -173,6 +173,11 @@ public class BasicCartesianTriangularMeshMapLayerItemProvider
 			(createChildParameter
 				(ApogyCoreEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH,
 				 ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH,
+				 ApogyCommonGeometryData3DFactory.eINSTANCE.createColoredCartesianTriangularMesh()));
 	}
 
 }

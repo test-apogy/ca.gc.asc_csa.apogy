@@ -154,6 +154,14 @@ public class ApogyAddonsAdapterFactory extends AdapterFactoryImpl
 				return createTrajectory3DToolNodeAdapter();
 			}
 			@Override
+			public Adapter caseGeometryPlacementAtFeatureOfInterestTool(GeometryPlacementAtFeatureOfInterestTool object) {
+				return createGeometryPlacementAtFeatureOfInterestToolAdapter();
+			}
+			@Override
+			public Adapter caseURLNodeGeometryPlacementAtFeatureOfInterestTool(URLNodeGeometryPlacementAtFeatureOfInterestTool object) {
+				return createURLNodeGeometryPlacementAtFeatureOfInterestToolAdapter();
+			}
+			@Override
 			public Adapter caseNamed(Named object) {
 				return createNamedAdapter();
 			}
@@ -392,6 +400,34 @@ public class ApogyAddonsAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createTrajectory3DToolNodeAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.GeometryPlacementAtFeatureOfInterestTool <em>Geometry Placement At Feature Of Interest Tool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.addons.GeometryPlacementAtFeatureOfInterestTool
+	 * @generated
+	 */
+	public Adapter createGeometryPlacementAtFeatureOfInterestToolAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool <em>URL Node Geometry Placement At Feature Of Interest Tool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool
+	 * @generated
+	 */
+	public Adapter createURLNodeGeometryPlacementAtFeatureOfInterestToolAdapter() {
 		return null;
 	}
 

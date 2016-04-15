@@ -124,6 +124,15 @@ public interface ApogyAddonsFactory extends EFactory
 	Trajectory3DToolNode createTrajectory3DToolNode();
 
 		/**
+	 * Returns a new object of class '<em>URL Node Geometry Placement At Feature Of Interest Tool</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>URL Node Geometry Placement At Feature Of Interest Tool</em>'.
+	 * @generated
+	 */
+	URLNodeGeometryPlacementAtFeatureOfInterestTool createURLNodeGeometryPlacementAtFeatureOfInterestTool();
+
+		/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

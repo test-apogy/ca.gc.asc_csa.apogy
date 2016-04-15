@@ -51,7 +51,7 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * @see #setXRotation(double)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianOrientationCoordinates_XRotation()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Orientation' children='false' apogy_units='rad'"
 	 * @generated
 	 */
 	double getXRotation();
@@ -78,7 +78,7 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * @see #setYRotation(double)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianOrientationCoordinates_YRotation()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Orientation' children='false' apogy_units='rad'"
 	 * @generated
 	 */
 	double getYRotation();
@@ -105,7 +105,7 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * @see #setZRotation(double)
 	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianOrientationCoordinates_ZRotation()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Orientation' children='false' apogy_units='rad'"
 	 * @generated
 	 */
 	double getZRotation();

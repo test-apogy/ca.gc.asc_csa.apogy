@@ -418,7 +418,7 @@ public class ApogyExamplesCameraPackageImpl extends EPackageImpl implements Apog
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.camera/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.camera.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"

@@ -81,16 +81,24 @@ public class CartesianTriangularMeshItemProvider
 		CartesianTriangularMesh mesh = (CartesianTriangularMesh) object;
 		
 		String label = getString("_UI_CartesianTriangularMesh_type");
-		if(mesh.getPoints().size() > 0 || mesh.getPolygons().size() > 0)
-		{
-			label += " (" + (mesh.getPoints().size() + " points, ");
-			label += mesh.getPolygons().size() + " triangles )";
-		}
-		
+		label += getCartesianTriangularMeshText(mesh);
 		
 		return label;
 	}
 
+	protected String getCartesianTriangularMeshText(CartesianTriangularMesh mesh)
+	{
+		String text = "";
+			
+		if(mesh.getPoints().size() > 0 || mesh.getPolygons().size() > 0)
+		{
+			text += " (" + (mesh.getPoints().size() + " points, ");
+			text += mesh.getPolygons().size() + " triangles )";
+		}
+		
+		return text;
+	}
+	
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.

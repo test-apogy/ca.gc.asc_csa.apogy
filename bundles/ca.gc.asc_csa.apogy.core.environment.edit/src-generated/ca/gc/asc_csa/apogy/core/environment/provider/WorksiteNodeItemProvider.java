@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
 import java.util.Collection;
 import java.util.List;
 
@@ -21,7 +22,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import ca.gc.asc_csa.apogy.common.topology.provider.GroupNodeItemProvider;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 
@@ -32,7 +32,7 @@ import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
  * @generated
  */
 public class WorksiteNodeItemProvider
-  extends GroupNodeItemProvider
+  extends AggregateGroupNodeItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.

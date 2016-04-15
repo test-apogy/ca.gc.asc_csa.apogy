@@ -3627,7 +3627,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		cartesianTriangularMeshURLMapLayerEClass.getESuperTypes().add(this.getURLMapLayer());
 		featuresOfInterestMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
 		featuresOfInterestMapLayerEClass.getESuperTypes().add(this.getRectangularRegionProvider());
-		worksiteNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
+		worksiteNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 		surfaceWorksiteNodeEClass.getESuperTypes().add(this.getWorksiteNode());
 		earthSurfaceWorksiteNodeEClass.getESuperTypes().add(this.getSurfaceWorksiteNode());
 		mapsListNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
@@ -4252,7 +4252,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.edit/src-generated",
 			 "testsDirectory", "/ca.gc.asc_csa.apogy.core.environment.tests/src-generated",
@@ -5639,7 +5639,8 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		   source, 
 		   new String[] {
 			 "property", "Readonly",
-			 "propertyCategory", "TRIANGULAR_MESH"
+			 "propertyCategory", "TRIANGULAR_MESH",
+			 "children", "true"
 		   });	
 		addAnnotation
 		  (featuresOfInterestMapLayerEClass, 

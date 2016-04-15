@@ -28,6 +28,7 @@ public class RoboticArmROSConstants
 	  public static final String TOPIC_NAME_ROBOTIC_ARM_TELEMETRY										 = ROBOTIC_ARM_TOPICS_PREFIX + "/Telemetry";
 	  
 	  // Services	  	
+	  public static final String SERVICE_NAME_INIT											 			 = ROBOTIC_ARM_SERVICE_PREFIX + "/cmdInit";
 	  public static final String SERVICE_NAME_SET_MOVE_SPEED											 = ROBOTIC_ARM_SERVICE_PREFIX + "/cmdMoveSpeed";
 	  public static final String SERVICE_NAME_MOVE_TO											 		 = ROBOTIC_ARM_SERVICE_PREFIX + "/cmdMoveTo";
 	  public static final String SERVICE_NAME_STOW_ARM													 = ROBOTIC_ARM_SERVICE_PREFIX + "/cmdStow";

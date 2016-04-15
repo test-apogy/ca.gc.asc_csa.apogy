@@ -98,6 +98,13 @@ class ApogyCoreFacade
 	 * @throws An Exception if the file could not be saved.
 	 */
 	op void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception
+	
+	/**
+	 * Finds the FeatureOfInterestNode associated with a specified FeatureOfInterest in the active session.
+	 * @param featureOfInterest The specified FeatureOfInterest.
+	 * @return The FeatureOfInterestNode associated with the specified FeatureOfInterest, null if none is found.
+	 */
+	op FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest)
 }
 
 /* -------------------------------------------------------------------------

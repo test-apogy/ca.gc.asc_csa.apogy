@@ -1,0 +1,60 @@
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
+@GenModel(prefix="ApogyAddonsROSData3d",
+		  modelName="ApogyAddonsROSData3d",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2016 Copyrights (c)")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.ros.data3d/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.ros.data3d.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.addons.ros.data3d
+
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianCoordinatesSet
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose
+
+type PointCloud2 wraps sensor_msgs.PointCloud2
+type ByteBuffer wraps java.nio.ByteBuffer
+type MessageFactory wraps org.ros.message.MessageFactory
+
+type ROSPoint wraps geometry_msgs.Point
+type ROSQuaternion wraps geometry_msgs.Quaternion
+type ROSPose wraps geometry_msgs.Pose
+
+/**
+ * A facade used ton convert to and from ROS Types for types defined in ca.gc.asc_csa.apogy.common.geometry.data3d.
+ */
+class ApogyAddonsROSData3dFacade
+{
+	op CartesianPositionCoordinates convertToCartesianPositionCoordinates(ROSPoint rosPoint)
+	op ROSPoint convertToROSPoint(CartesianPositionCoordinates point, MessageFactory messageFactory)
+	
+	op ROSQuaternion convertToROSQuaternion(CartesianOrientationCoordinates orientation)
+	op CartesianOrientationCoordinates convertToCartesianOrientationCoordinates(ROSQuaternion rosQuaternion)
+	
+	op Pose convertToPose(ROSPose rosPose)
+	op ROSPose convertToROSPose(Pose pose,  MessageFactory messageFactory)
+	
+ 	op ColoredCartesianCoordinatesSet rosPointCloudToCartesianCoordinateSet(PointCloud2 pointCloud2)
+ 	
+ 	op ColoredCartesianPositionCoordinates readRGBCartesianPositionCoordinates(ByteBuffer byteBuffer)
+ 	op CartesianPositionCoordinates readCartesianPositionCoordinates(ByteBuffer byteBuffer)
+ 	
+ 	op PointCloud2 cartesianCoordinateSetToRosPointCloud(CartesianCoordinatesSet map, MessageFactory messageFactory)
+}

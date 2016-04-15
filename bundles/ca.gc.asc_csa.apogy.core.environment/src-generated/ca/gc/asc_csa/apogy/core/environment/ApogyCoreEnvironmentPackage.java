@@ -50,7 +50,7 @@ import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreEnvironment' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyCoreEnvironment' complianceLevel='6.0' suppressGenModelAnnotations='false' dynamicTemplates='true' templateDirectory='platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates' modelDirectory='/ca.gc.asc_csa.apogy.core.environment/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.environment.edit/src-generated' testsDirectory='/ca.gc.asc_csa.apogy.core.environment.tests/src-generated' basePackage='ca.gc.asc_csa.apogy.core'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreEnvironment' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyCoreEnvironment' complianceLevel='6.0' suppressGenModelAnnotations='false' dynamicTemplates='true' templateDirectory='platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates' modelDirectory='/ca.gc.asc_csa.apogy.core.environment/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.environment.edit/src-generated' testsDirectory='/ca.gc.asc_csa.apogy.core.environment.tests/src-generated' basePackage='ca.gc.asc_csa.apogy.core'"
  * @generated
  */
 public interface ApogyCoreEnvironmentPackage extends EPackage
@@ -6417,7 +6417,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE_NODE__PARENT = ApogyCommonTopologyPackage.GROUP_NODE__PARENT;
+  int WORKSITE_NODE__PARENT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -6426,7 +6426,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE_NODE__DESCRIPTION = ApogyCommonTopologyPackage.GROUP_NODE__DESCRIPTION;
+  int WORKSITE_NODE__DESCRIPTION = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -6435,7 +6435,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE_NODE__NODE_ID = ApogyCommonTopologyPackage.GROUP_NODE__NODE_ID;
+  int WORKSITE_NODE__NODE_ID = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 		/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -6444,7 +6444,16 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE_NODE__CHILDREN = ApogyCommonTopologyPackage.GROUP_NODE__CHILDREN;
+  int WORKSITE_NODE__CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+
+		/**
+	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSITE_NODE__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		/**
 	 * The feature id for the '<em><b>Worksite</b></em>' reference.
@@ -6453,7 +6462,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE_NODE__WORKSITE = ApogyCommonTopologyPackage.GROUP_NODE_FEATURE_COUNT + 0;
+  int WORKSITE_NODE__WORKSITE = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Worksite Node</em>' class.
@@ -6462,7 +6471,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE_NODE_FEATURE_COUNT = ApogyCommonTopologyPackage.GROUP_NODE_FEATURE_COUNT + 1;
+  int WORKSITE_NODE_FEATURE_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -6471,7 +6480,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE_NODE___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.GROUP_NODE___ACCEPT__INODEVISITOR;
+  int WORKSITE_NODE___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Worksite Node</em>' class.
@@ -6480,7 +6489,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WORKSITE_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.GROUP_NODE_OPERATION_COUNT + 0;
+  int WORKSITE_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -6517,6 +6526,15 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @ordered
 	 */
   int SURFACE_WORKSITE_NODE__CHILDREN = WORKSITE_NODE__CHILDREN;
+
+		/**
+	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_WORKSITE_NODE__AGGREGATED_CHILDREN = WORKSITE_NODE__AGGREGATED_CHILDREN;
 
 		/**
 	 * The feature id for the '<em><b>Worksite</b></em>' reference.
@@ -6589,6 +6607,15 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @ordered
 	 */
   int EARTH_SURFACE_WORKSITE_NODE__CHILDREN = SURFACE_WORKSITE_NODE__CHILDREN;
+
+		/**
+	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_WORKSITE_NODE__AGGREGATED_CHILDREN = SURFACE_WORKSITE_NODE__AGGREGATED_CHILDREN;
 
 		/**
 	 * The feature id for the '<em><b>Worksite</b></em>' reference.

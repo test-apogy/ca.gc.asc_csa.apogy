@@ -490,7 +490,7 @@ public class ApogyAddonsActuatorsPackageImpl extends EPackageImpl implements Apo
 			 "modelName", "ApogyAddonsActuators",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.actuators/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.actuators.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"

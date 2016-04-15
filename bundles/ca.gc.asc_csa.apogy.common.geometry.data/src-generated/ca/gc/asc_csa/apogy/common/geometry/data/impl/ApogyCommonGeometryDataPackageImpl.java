@@ -795,7 +795,7 @@ public class ApogyCommonGeometryDataPackageImpl extends EPackageImpl implements 
 			 "modelName", "ApogyCommonGeometryData",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry"

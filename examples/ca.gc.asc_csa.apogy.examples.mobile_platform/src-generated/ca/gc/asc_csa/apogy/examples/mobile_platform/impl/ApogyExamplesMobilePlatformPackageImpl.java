@@ -550,7 +550,7 @@ public class ApogyExamplesMobilePlatformPackageImpl extends EPackageImpl impleme
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.mobile_platform/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.mobile_platform.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"

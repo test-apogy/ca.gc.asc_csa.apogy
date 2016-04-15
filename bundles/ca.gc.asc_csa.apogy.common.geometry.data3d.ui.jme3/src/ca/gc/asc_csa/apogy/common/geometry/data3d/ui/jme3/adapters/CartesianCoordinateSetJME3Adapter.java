@@ -21,6 +21,10 @@ import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Adapter;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject;
 
+/**
+ * JME3 Adapter for ContentNode<CartesianCoordinatesSet> nodes.
+ * @author pallard
+ */
 public class CartesianCoordinateSetJME3Adapter implements JME3Adapter 
 {
 

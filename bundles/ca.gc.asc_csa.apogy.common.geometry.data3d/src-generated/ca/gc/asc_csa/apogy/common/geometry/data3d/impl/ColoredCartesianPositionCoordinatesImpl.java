@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
@@ -30,6 +31,7 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPacka
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl#getAlpha <em>Alpha</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl#getRed <em>Red</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl#getGreen <em>Green</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl#getBlue <em>Blue</em>}</li>
@@ -38,6 +40,26 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPacka
  * @generated
  */
 public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCoordinatesImpl implements ColoredCartesianPositionCoordinates {
+	/**
+	 * The default value of the '{@link #getAlpha() <em>Alpha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlpha()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final short ALPHA_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getAlpha() <em>Alpha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlpha()
+	 * @generated
+	 * @ordered
+	 */
+	protected short alpha = ALPHA_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getRed() <em>Red</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -122,6 +144,27 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public short getAlpha() {
+		return alpha;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAlpha(short newAlpha) {
+		short oldAlpha = alpha;
+		alpha = newAlpha;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__ALPHA, oldAlpha, alpha));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public short getRed() {
 		return red;
 	}
@@ -188,6 +231,8 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__ALPHA:
+				return getAlpha();
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED:
 				return getRed();
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN:
@@ -206,6 +251,9 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__ALPHA:
+				setAlpha((Short)newValue);
+				return;
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED:
 				setRed((Short)newValue);
 				return;
@@ -227,6 +275,9 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__ALPHA:
+				setAlpha(ALPHA_EDEFAULT);
+				return;
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED:
 				setRed(RED_EDEFAULT);
 				return;
@@ -248,6 +299,8 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__ALPHA:
+				return alpha != ALPHA_EDEFAULT;
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED:
 				return red != RED_EDEFAULT;
 			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN:
@@ -264,11 +317,51 @@ public class ColoredCartesianPositionCoordinatesImpl extends CartesianPositionCo
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == RGBAColor.class) {
+			switch (derivedFeatureID) {
+				case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__ALPHA: return ApogyCommonGeometryData3DPackage.RGBA_COLOR__ALPHA;
+				case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED: return ApogyCommonGeometryData3DPackage.RGBA_COLOR__RED;
+				case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN: return ApogyCommonGeometryData3DPackage.RGBA_COLOR__GREEN;
+				case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE: return ApogyCommonGeometryData3DPackage.RGBA_COLOR__BLUE;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == RGBAColor.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonGeometryData3DPackage.RGBA_COLOR__ALPHA: return ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__ALPHA;
+				case ApogyCommonGeometryData3DPackage.RGBA_COLOR__RED: return ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED;
+				case ApogyCommonGeometryData3DPackage.RGBA_COLOR__GREEN: return ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN;
+				case ApogyCommonGeometryData3DPackage.RGBA_COLOR__BLUE: return ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (red: ");
+		result.append(" (alpha: ");
+		result.append(alpha);
+		result.append(", red: ");
 		result.append(red);
 		result.append(", green: ");
 		result.append(green);

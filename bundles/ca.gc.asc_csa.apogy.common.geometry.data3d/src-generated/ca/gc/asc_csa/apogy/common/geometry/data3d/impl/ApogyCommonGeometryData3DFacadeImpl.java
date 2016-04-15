@@ -46,6 +46,7 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
@@ -108,12 +109,23 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	 */
 	public ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates(double x, double y, double z, short red, short green, short blue) 
 	{
+		return createColoredCartesianPositionCoordinates(x, y, z,(short) 255, red, green, blue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates(double x, double y, double z, short alpha, short red, short green, short blue) 
+	{	
 		ColoredCartesianPositionCoordinates coord = ApogyCommonGeometryData3DFactory.eINSTANCE.createColoredCartesianPositionCoordinates();
 		
 		coord.setX(x);
 		coord.setY(y);
 		coord.setZ(z);
 		
+		coord.setAlpha(alpha);
 		coord.setRed(red);
 		coord.setGreen(green);
 		coord.setBlue(blue);
@@ -124,7 +136,7 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated NOT
+	 * @generated_NOT
 	 */
 	public CartesianOrientationCoordinates createCartesianOrientationCoordinates(
 			double xRotation, double yRotation, double zRotation) {
@@ -141,7 +153,7 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated NOT
+	 * @generated_NOT
 	 */
 	public SphericalCoordinates createSphericalCoordinates(double phi,
 			double theta, double r) {
@@ -158,7 +170,7 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated NOT
+	 * @generated_NOT
 	 */
 	public Pose createPose(double x, double y, double z, double xRotation,
 			double yRotation, double zRotation) {
@@ -178,7 +190,7 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated NOT
+	 * @generated_NOT
 	 */
 	public Pose createPose(Pose pose) {
 		return createPose(pose.getX(), pose.getY(), pose.getZ(), pose
@@ -188,7 +200,7 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated NOT
+	 * @generated_NOT
 	 */
 	public Pose createPose(CartesianPositionCoordinates position,
 			CartesianOrientationCoordinates orientation) {
@@ -853,6 +865,10 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 				return createCartesianPositionCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_COLORED_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE_SHORT_SHORT_SHORT:
 				return createColoredCartesianPositionCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Short)arguments.get(3), (Short)arguments.get(4), (Short)arguments.get(5));
+			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_COLORED_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE_SHORT_SHORT_SHORT_SHORT:
+				return createColoredCartesianPositionCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Short)arguments.get(3), (Short)arguments.get(4), (Short)arguments.get(5), (Short)arguments.get(6));
+			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_RGBA_COLOR__SHORT_SHORT_SHORT_SHORT:
+				return createRGBAColor((Short)arguments.get(0), (Short)arguments.get(1), (Short)arguments.get(2), (Short)arguments.get(3));
 			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
 				return createCartesianOrientationCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
@@ -939,5 +955,22 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 		}
 
 		return pointSet;
+	}
+
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public RGBAColor createRGBAColor(short alpha, short red, short green, short blue) 
+	{
+		RGBAColor rgbaColor = ApogyCommonGeometryData3DFactory.eINSTANCE.createRGBAColor();
+		
+		rgbaColor.setAlpha(alpha);
+		rgbaColor.setRed(red);
+		rgbaColor.setGreen(green);
+		rgbaColor.setBlue(blue);
+		return rgbaColor;
 	}
 } // ApogyCommonGeometryData3DFacadeImpl

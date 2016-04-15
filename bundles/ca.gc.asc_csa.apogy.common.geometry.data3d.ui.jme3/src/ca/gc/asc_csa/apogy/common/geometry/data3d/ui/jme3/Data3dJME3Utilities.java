@@ -45,7 +45,7 @@ public class Data3dJME3Utilities
 	 */
 	public static Mesh createMesh(final CartesianTriangularMesh cartesianTriangularMesh)
 	{
-		return createMesh(cartesianTriangularMesh, null);
+		return createMesh(cartesianTriangularMesh, true, null);
 	}
 	
 	/**
@@ -54,7 +54,7 @@ public class Data3dJME3Utilities
 	 * @param defaultVertexColor The color to assign to non-colored vertex. Can be null.
 	 * @return The JME3 mesh, null if the CartesianTriangularMesh is null contains no triangles or points.
 	 */
-	public static Mesh createMesh(final CartesianTriangularMesh cartesianTriangularMesh, ColorRGBA defaultVertexColor)
+	public static Mesh createMesh(final CartesianTriangularMesh cartesianTriangularMesh, boolean overrideColor, ColorRGBA defaultVertexColor)
 	{
 		Mesh mesh = new Mesh();
 		mesh.setMode(Mode.Triangles);
@@ -105,30 +105,48 @@ public class Data3dJME3Utilities
 				// Fills in the vertex color.
 				ColorRGBA pointColor = null;
 				
-				// If the point as associated color to it, use that color.
-				if(point instanceof ColoredCartesianPositionCoordinates)
-				{
-					ColoredCartesianPositionCoordinates coloredPoint = (ColoredCartesianPositionCoordinates) point;
-					float r = ((float) coloredPoint.getRed()) / 255.0f;
-					if(r > 1) r = 1;
-					
-					float g = ((float) coloredPoint.getGreen()) / 255.0f;
-					if(g > 1) g = 1;
-					
-					float b = ((float) coloredPoint.getBlue()) / 255.0f;
-					if(b > 1) b = 1;
-						
-					pointColor = new ColorRGBA(r,g,b,1.0f);
-				}
-				else
+				
+				if(overrideColor)
 				{
 					if(defaultVertexColor != null)
 					{
-						pointColor = defaultVertexColor.clone();
+						pointColor = new ColorRGBA(defaultVertexColor);
 					}
 					else
 					{
-						pointColor = new ColorRGBA(1,1,1,1);
+						pointColor = new ColorRGBA(1.0f, 1.0f, 1.0f, 1.0f);
+					}
+				}
+				else
+				{
+					// If the point as associated color to it, use that color.
+					if(point instanceof ColoredCartesianPositionCoordinates)
+					{
+						ColoredCartesianPositionCoordinates coloredPoint = (ColoredCartesianPositionCoordinates) point;
+						float r = ((float) coloredPoint.getRed()) / 255.0f;
+						if(r < 0) r = 0;
+						if(r > 1) r = 1;
+						
+						float g = ((float) coloredPoint.getGreen()) / 255.0f;
+						if(g < 0) g = 0;
+						if(g > 1) g = 1;
+						
+						float b = ((float) coloredPoint.getBlue()) / 255.0f;
+						if(b < 0) b = 0;
+						if(b > 1) b = 1;
+							
+						pointColor = new ColorRGBA(r,g,b,1.0f);					
+					}
+					else
+					{
+						if(defaultVertexColor != null)
+						{
+							pointColor = new ColorRGBA(defaultVertexColor);
+						}
+						else
+						{
+							pointColor = new ColorRGBA(1.0f, 1.0f, 1.0f, 1.0f);
+						}
 					}
 				}
 				
@@ -160,9 +178,10 @@ public class Data3dJME3Utilities
 			
 			if(verbose)
 			{
-				System.err.println("Position " + verticesArray.length);
-				System.err.println("Index " + indexesList.size());
-				System.err.println("Normal " + normalslList.size());
+				System.err.println("Position : " + verticesArray.length);
+				System.err.println("Index    : " + indexesList.size());
+				System.err.println("Normal   : " + normalslList.size());
+				System.err.println("Color    : " + pointColorList.size());
 			}
 			
 			mesh.setMode(Mode.Triangles);			

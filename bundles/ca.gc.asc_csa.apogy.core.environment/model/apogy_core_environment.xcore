@@ -30,7 +30,7 @@ Contributors:
 		  complianceLevel="6.0",
 		  suppressGenModelAnnotations="false",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.environment.edit/src-generated")
 @GenModel(testsDirectory="/ca.gc.asc_csa.apogy.core.environment.tests/src-generated")
@@ -1388,9 +1388,10 @@ class BasicCartesianTriangularMeshMapLayer extends CartesianTriangularMeshMapLay
  */
 class CartesianTriangularMeshURLMapLayer extends CartesianTriangularMeshMapLayer, URLMapLayer 
 {	
-	@GenModel(property="Readonly", propertyCategory="TRIANGULAR_MESH")
+	@GenModel(property="Readonly", propertyCategory="TRIANGULAR_MESH", children = "true")
 	refers transient CartesianTriangularMesh[0..1] mesh
 }
+
 
 /*
  * Map Layer that contains Feature Of Interest.
@@ -1402,7 +1403,7 @@ class FeaturesOfInterestMapLayer extends AbstractMapLayer, RectangularRegionProv
 
 // Specific Topology Nodes.
 
-class WorksiteNode extends GroupNode
+class WorksiteNode extends AggregateGroupNode
 {	
 	refers transient Worksite worksite	
 }

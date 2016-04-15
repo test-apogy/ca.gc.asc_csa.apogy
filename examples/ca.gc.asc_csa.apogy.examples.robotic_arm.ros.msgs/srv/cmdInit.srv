@@ -1,0 +1,6 @@
+# Command the robotic arm to initialize.
+
+---
+
+# Service result
+bool result

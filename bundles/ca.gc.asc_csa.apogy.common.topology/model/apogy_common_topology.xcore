@@ -117,6 +117,7 @@ class ReferencedGroupNode extends GroupNode
 
 class AggregateGroupNode extends GroupNode
 {
+	@GenModel(children="true", createChild="false")
 	contains Node [0..*] aggregatedChildren
 }
 

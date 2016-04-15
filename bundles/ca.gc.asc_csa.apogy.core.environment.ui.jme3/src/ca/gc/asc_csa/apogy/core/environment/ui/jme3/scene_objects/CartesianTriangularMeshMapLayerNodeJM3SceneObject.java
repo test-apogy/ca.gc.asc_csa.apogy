@@ -34,7 +34,7 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Data3dJME3Utilities;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.CartesianTriangularMeshSceneObject;
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
@@ -57,7 +57,7 @@ import com.jme3.scene.Mesh;
 import com.jme3.texture.Texture2D;
 import com.jme3.texture.plugins.AWTLoader;
 
-public class CartesianTriangularMeshMapLayerNodeJM3SceneObject extends DefaultJME3SceneObject<CartesianTriangularMeshMapLayerNode> implements TriangularMeshSceneObject
+public class CartesianTriangularMeshMapLayerNodeJM3SceneObject extends DefaultJME3SceneObject<CartesianTriangularMeshMapLayerNode> implements CartesianTriangularMeshSceneObject
 {	
 	private boolean useShading = true;
 	
