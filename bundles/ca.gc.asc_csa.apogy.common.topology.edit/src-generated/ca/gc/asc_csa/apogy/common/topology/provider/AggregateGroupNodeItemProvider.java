@@ -23,6 +23,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
@@ -155,6 +156,76 @@ public class AggregateGroupNodeItemProvider extends GroupNodeItemProvider {
 	protected void collectNewChildDescriptors(
 			Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createLeaf()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createURLNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createCADNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createContentNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createGroupNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createPositionNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createRotationNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createTransformNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
 }

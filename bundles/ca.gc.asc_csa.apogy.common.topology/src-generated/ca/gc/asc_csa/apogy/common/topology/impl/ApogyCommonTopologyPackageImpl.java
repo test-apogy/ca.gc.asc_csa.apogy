@@ -1258,7 +1258,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		   source, 
 		   new String[] {
 			 "children", "true",
-			 "createChild", "false"
+			 "createChild", "true"
 		   });	
 		addAnnotation
 		  (getPositionNode_Position(), 

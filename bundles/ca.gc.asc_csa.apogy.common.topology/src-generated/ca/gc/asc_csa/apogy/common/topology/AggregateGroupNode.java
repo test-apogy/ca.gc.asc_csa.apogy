@@ -44,7 +44,7 @@ public interface AggregateGroupNode extends GroupNode {
 	 * @return the value of the '<em>Aggregated Children</em>' containment reference list.
 	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getAggregateGroupNode_AggregatedChildren()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' createChild='false'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' createChild='true'"
 	 * @generated
 	 */
 	EList<Node> getAggregatedChildren();
