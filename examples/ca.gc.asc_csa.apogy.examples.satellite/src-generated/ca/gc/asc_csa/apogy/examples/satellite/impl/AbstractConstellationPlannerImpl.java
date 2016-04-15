@@ -464,110 +464,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * @generated_NOT
 	 */
 	public void plan() throws Exception {
-		planMultiCore();
-	}
 
-	/*
-	 * Single-core implementation of plan().
-	 */
-	protected void planSingleCore() throws Exception {
-		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Started", EventSeverity.INFO);
-
-		/* Validate the planner settings. */
-		validate();
-
-		/* Clear the command plan. */
-		getConstellationCommandPlan().getConstellationCommands().clear();
-
-		/* Create a set to sort the commands. */
-		TreeSet<AbstractRequestBasedSatelliteCommand> commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(
-				getRequestBasedSatelliteCommandsComparator());
-
-		/* Gets the observation requests. */
-		List<AbstractConstellationRequest> requestsList = getConstellationRequestsList().getConstellationRequests()
-				.stream().filter(p -> p instanceof ObservationConstellationRequest).collect(Collectors.toList());
-
-		Logger.INSTANCE.log(
-				Activator.ID, "Constellation Planner: " + requestsList.size()
-						+ " observation requests to process using <" + maxNumberThreads + "> threads.",
-				EventSeverity.INFO);
-
-		Logger.INSTANCE.log(Activator.ID,
-				"Constellation Planner: "
-						+ (getConstellationRequestsList().getConstellationRequests().size() - requestsList.size())
-						+ " requests are not observation requests and will not be processed.",
-				EventSeverity.INFO);
-
-		/* Creates a temporary map to bind the requests with their locations. */
-		Map<EarthSurfaceLocation, ObservationConstellationRequest> locationMap = new HashMap<EarthSurfaceLocation, ObservationConstellationRequest>();
-		for (AbstractConstellationRequest request : requestsList) {
-			locationMap.put(((ObservationConstellationRequest) request).getLocation(),
-					(ObservationConstellationRequest) request);
-		}
-		List<EarthSurfaceLocation> locations = new ArrayList<EarthSurfaceLocation>(locationMap.keySet());
-
-		/*
-		 * Process the passes for all the satellites.
-		 */
-		for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
-			try {
-				Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Processing passes", EventSeverity.INFO);
-
-				List<VisibilityPass> passes = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.getTargetPasses(
-						satellite.getOrbitModel(), locations, getStartDate(), getEndDate(), getElevationMask(), null);
-
-				Logger.INSTANCE.log(Activator.ID, "Constellation Planner: <" + passes.size() + "> found",
-						EventSeverity.INFO);
-
-				// Creates a Visibility Pass Based Satellite
-				// Command for each valid passes.
-				Iterator<VisibilityPass> passesIterator = passes.iterator();
-				synchronized (commands) {
-					while (passesIterator.hasNext()) {
-						VisibilityPass pass = passesIterator.next();
-						if (isValid(pass)) {
-							commands.add(createVisibilityPassBasedSatelliteCommand(
-									locationMap.get(pass.getSurfaceLocation()), pass));
-						}
-					}
-				}
-				Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Commands created", EventSeverity.INFO);
-
-			} catch (Exception e) {
-				Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Error while processing passes",
-						EventSeverity.ERROR, e);
-				throw (e);
-			}
-		}
-
-		/*
-		 * Remove duplicates.
-		 */
-		if (!isCommandDuplicatesPreserved()) {
-			Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Removing Command Duplicates", EventSeverity.INFO);
-
-			TreeSet<AbstractRequestBasedSatelliteCommand> no_duplicate_commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(
-					new Comparator<AbstractRequestBasedSatelliteCommand>() {
-						@Override
-						public int compare(AbstractRequestBasedSatelliteCommand o1,
-								AbstractRequestBasedSatelliteCommand o2) {
-							return o1.getConstellationRequest().equals(o2.getConstellationRequest()) ? 0
-									: getRequestBasedSatelliteCommandsComparator().compare(o1, o2);
-						}
-					});
-			no_duplicate_commands.addAll(commands);
-			getConstellationCommandPlan().getConstellationCommands().addAll(no_duplicate_commands);
-		} else {
-			getConstellationCommandPlan().getConstellationCommands().addAll(commands);
-		}
-
-		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Completed", EventSeverity.INFO);
-	}
-
-	/*
-	 * Multi-cores implementation of plan().
-	 */
-	protected void planMultiCore() throws Exception {
 		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Started", EventSeverity.INFO);
 
 		/* Validate the planner settings. */
@@ -1101,8 +998,11 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				while (passesIterator.hasNext()) {
 					VisibilityPass pass = passesIterator.next();
 					if (isValid(pass)) {
-						commands.add(createVisibilityPassBasedSatelliteCommand(
-								locationMap.get(pass.getSurfaceLocation()), pass));
+						VisibilityPassBasedSatelliteCommand command = createVisibilityPassBasedSatelliteCommand(
+								locationMap.get(pass.getSurfaceLocation()), pass);
+						if (command != null){
+							commands.add(command);
+						}
 					}
 				}
 			}
