@@ -1559,7 +1559,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.satellite/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"

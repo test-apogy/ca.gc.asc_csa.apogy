@@ -987,7 +987,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 			 "modelName", "ApogyCommonTopologyAddonsPrimitives",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.primitives/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.primitives.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.topology.addons"

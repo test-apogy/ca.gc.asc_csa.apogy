@@ -4252,7 +4252,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.edit/src-generated",
 			 "testsDirectory", "/ca.gc.asc_csa.apogy.core.environment.tests/src-generated",

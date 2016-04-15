@@ -417,7 +417,7 @@ public class ApogyExamplesRoboticArmPackageImpl extends EPackageImpl implements 
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"

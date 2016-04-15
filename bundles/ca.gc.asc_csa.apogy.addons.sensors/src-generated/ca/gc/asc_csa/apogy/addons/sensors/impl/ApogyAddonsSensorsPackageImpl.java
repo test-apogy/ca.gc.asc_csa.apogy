@@ -280,7 +280,7 @@ public class ApogyAddonsSensorsPackageImpl extends EPackageImpl implements Apogy
 			 "modelName", "ApogyAddonsSensors",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons"

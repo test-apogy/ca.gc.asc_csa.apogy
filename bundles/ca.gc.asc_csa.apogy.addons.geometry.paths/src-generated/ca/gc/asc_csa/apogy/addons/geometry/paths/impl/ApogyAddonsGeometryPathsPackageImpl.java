@@ -610,7 +610,7 @@ public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements
 			 "modelName", "ApogyAddonsGeometryPaths",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.geometry.paths/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.geometry.paths.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.addons.geometry"

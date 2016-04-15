@@ -1480,7 +1480,7 @@ public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl i
 			 "modelName", "ApogyCommonTopologyAddonsDynamics",
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
-			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates",
+			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.dynamics/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.dynamics.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.topology.addons"
