@@ -790,12 +790,7 @@ class ApogyCoreEnvironmentOrbitEarthFacade
 	 * @return The EarthSurfaceLocation.
 	 */
 	op EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, @GenModel(apogy_units = "rad") double longitude, @GenModel(apogy_units = "rad") double latitude, @GenModel(apogy_units = "m") double elevation)
-	
-	/*
-	 * Create an OreKitBackedFrame based on an OreKit frame.
-	 */
-	op OreKitBackedFrame createOreKitBackedFrame(OreKitFrame oreKitFrame)
-	
+		
 	/*
 	 * Returns the geographic sub-point for a given spacecraft state.
 	 */

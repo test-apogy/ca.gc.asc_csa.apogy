@@ -98,7 +98,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEventType;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitModel;
@@ -222,11 +221,11 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OreKitBackedFrame createOreKitBackedFrame(Frame oreKitFrame) {
+//	public OreKitBackedFrame createOreKitBackedFrame(Frame oreKitFrame) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+//		throw new UnsupportedOperationException();
+//	}
 
 
 	/**
@@ -1345,8 +1344,6 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 				return createDate((AbsoluteDate)arguments.get(0));
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE:
 				return createEarthSurfaceLocation((String)arguments.get(0), (String)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4));
-			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME:
-				return createOreKitBackedFrame((Frame)arguments.get(0));
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE:
 				try {
 					return getSpacecraftEarthSubPoint((OreKitBackedSpacecraftState)arguments.get(0));

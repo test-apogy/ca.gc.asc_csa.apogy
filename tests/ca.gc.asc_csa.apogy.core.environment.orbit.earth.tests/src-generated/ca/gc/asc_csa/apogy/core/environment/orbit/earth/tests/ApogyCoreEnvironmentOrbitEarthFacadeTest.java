@@ -47,7 +47,6 @@ import junit.textui.TestRunner;
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#createAbsoluteDate(java.util.Date) <em>Create Absolute Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#createDate(org.orekit.time.AbsoluteDate) <em>Create Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#createEarthSurfaceLocation(java.lang.String, java.lang.String, double, double, double) <em>Create Earth Surface Location</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#createOreKitBackedFrame(org.orekit.frames.Frame) <em>Create Ore Kit Backed Frame</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getSpacecraftEarthSubPoint(ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState) <em>Get Spacecraft Earth Sub Point</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getSpacecraftElevationAngle(ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState, ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Elevation Angle</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#getSpacecraftAzimuthAngle(ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState, ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Azimuth Angle</em>}</li>
@@ -199,19 +198,6 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeTest extends TestCase {
 	 * @generated
 	 */
 	public void testCreateEarthSurfaceLocation__String_String_double_double_double() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
-
-	/**
-	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#createOreKitBackedFrame(org.orekit.frames.Frame) <em>Create Ore Kit Backed Frame</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade#createOreKitBackedFrame(org.orekit.frames.Frame)
-	 * @generated
-	 */
-	public void testCreateOreKitBackedFrame__Frame() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
