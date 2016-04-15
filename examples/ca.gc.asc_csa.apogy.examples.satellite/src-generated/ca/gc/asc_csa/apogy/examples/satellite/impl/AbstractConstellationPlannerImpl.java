@@ -730,10 +730,13 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 					} else {
 						// Different request priorities, use the date to
 						// compare.
-						if (o1.getTime().getTime() == o2.getTime().getTime()) {
+						long time1 = o1.getTime() == null ? 0: o1.getTime().getTime();
+						long time2 = o2.getTime() == null ? 0: o2.getTime().getTime();
+						
+						if (time1 == time2) {
 							return 0;
 						} else {
-							return o1.getTime().getTime() < o2.getTime().getTime() ? -1 : 1;
+							return time1 < time2 ? -1 : 1;
 						}
 					}
 				}
