@@ -29,7 +29,7 @@ Contributors:
 		  modelName="ApogyAddonsSensorsFOVBindings",
 		  complianceLevel="6.0",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.fov.bindings/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.edit/src-generated")
 

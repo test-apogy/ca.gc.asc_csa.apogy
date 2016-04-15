@@ -29,7 +29,7 @@ Contributors:
 	      modelName="ApogyCommonGeometryData3D",
 	      suppressGenModelAnnotations="false",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.edit/src-generated")
 @GenModel(testsDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.tests/src-generated")

@@ -28,7 +28,7 @@ Contributors:
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.robotic_arm/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.robotic_arm.edit/src-generated")
 

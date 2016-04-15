@@ -29,7 +29,7 @@ Contributors:
 		  modelName="ApogyAddonsSensorsRangeUI",
 		  complianceLevel="6.0",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.range.ui/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.range.ui.edit/src-generated")
 

@@ -27,7 +27,7 @@ Contributors:
     Canadian Space Agency (CSA) - Initial API and implementation",
 		  modelName="ApogyAddonsVehicleUI",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.vehicle.ui/src-generated")
 @GenModel(editDirectory= "/ca.gc.asc_csa.apogy.addons.vehicle.ui.edit/src-generated")
 

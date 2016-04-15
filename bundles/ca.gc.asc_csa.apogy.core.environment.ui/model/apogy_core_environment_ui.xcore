@@ -30,7 +30,7 @@ Contributors:
 		  complianceLevel="6.0",
 		  suppressGenModelAnnotations="false",
 		  dynamicTemplates="true", 
-		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf/templates")
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.ui/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.environment.ui.edit/src-generated")
 
