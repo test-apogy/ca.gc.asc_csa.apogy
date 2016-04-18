@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.examples.rover.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -108,7 +107,7 @@ public class PowerSystemItemProvider
 	 */
 	protected void addCurrentVoltagePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PowerSystem_currentVoltage_feature"),
@@ -130,7 +129,7 @@ public class PowerSystemItemProvider
 	 */
 	protected void addCurrentCurrentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PowerSystem_currentCurrent_feature"),

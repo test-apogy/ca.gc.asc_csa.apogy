@@ -47,7 +47,6 @@ import org.eclipse.ui.forms.widgets.Section;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 
 public class ConstellationRequestsComposite extends Composite {
 
@@ -330,8 +329,8 @@ public class ConstellationRequestsComposite extends Composite {
 
 		private static final int UID_COLUMN_ID = 0;
 		private static final int PRIORITY_COLUMN_ID = 2;
-		private static final int STATUS_COLUMN_ID = 3;		
-		private static final int TYPE_COLUMN_ID = 4;
+//		private static final int STATUS_COLUMN_ID = 3;		
+//		private static final int TYPE_COLUMN_ID = 4;
 
 		@Override
 		public String getColumnText(Object object, int columnIndex) {

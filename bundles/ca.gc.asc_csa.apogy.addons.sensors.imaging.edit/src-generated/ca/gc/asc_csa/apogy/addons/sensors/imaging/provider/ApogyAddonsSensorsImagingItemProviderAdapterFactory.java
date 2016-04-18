@@ -41,6 +41,7 @@ import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingFacto
 import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
 import ca.gc.asc_csa.apogy.addons.sensors.imaging.util.ApogyAddonsSensorsImagingAdapterFactory;
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
@@ -407,6 +408,25 @@ public class ApogyAddonsSensorsImagingItemProviderAdapterFactory extends ApogyAd
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAggregateGroupNode(AggregateGroupNode object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

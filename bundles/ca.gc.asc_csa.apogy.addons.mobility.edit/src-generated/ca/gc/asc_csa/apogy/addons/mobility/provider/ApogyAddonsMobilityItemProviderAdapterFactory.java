@@ -41,6 +41,7 @@ import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityFactory;
 import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage;
 import ca.gc.asc_csa.apogy.addons.mobility.util.ApogyAddonsMobilityAdapterFactory;
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
@@ -370,6 +371,25 @@ public class ApogyAddonsMobilityItemProviderAdapterFactory extends ApogyAddonsMo
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAggregateGroupNode(AggregateGroupNode object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

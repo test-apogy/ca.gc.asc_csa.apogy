@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.addons.sensors.motion.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionFactory;
 import java.util.Collection;
 import java.util.List;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor;
 import ca.gc.asc_csa.apogy.addons.sensors.provider.SensorItemProvider;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor} object.
@@ -111,6 +113,26 @@ public class SelfMotionSensorItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
 	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
 	}
 
 }

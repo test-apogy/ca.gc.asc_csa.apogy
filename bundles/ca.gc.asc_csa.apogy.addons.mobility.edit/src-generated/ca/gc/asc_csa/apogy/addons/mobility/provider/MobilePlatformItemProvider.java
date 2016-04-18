@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.addons.mobility.provider;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityFactory;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -22,6 +23,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage;
 import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
 
@@ -159,6 +161,16 @@ public class MobilePlatformItemProvider extends AggregateGroupNodeItemProvider {
 	protected void collectNewChildDescriptors(
 			Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
 	}
 
 }

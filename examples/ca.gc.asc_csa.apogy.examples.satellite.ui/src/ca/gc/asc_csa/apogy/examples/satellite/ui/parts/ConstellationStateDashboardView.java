@@ -24,15 +24,9 @@ import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.ui.IMemento;
-import org.eclipse.ui.IViewSite;
-import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.progress.UIJob;
 
 import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.log.EventSeverity;
-import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 import ca.gc.asc_csa.apogy.examples.satellite.Activator;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
@@ -57,7 +51,7 @@ public class ConstellationStateDashboardView extends AbstractView implements IEd
 	private ConstellationState constellationState;
 
 	// Used to store the latest Constellation State.
-	private String configurationId;
+//	private String configurationId;
 
 	/*
 	 * The constructor.

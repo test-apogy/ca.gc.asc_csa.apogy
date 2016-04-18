@@ -49,6 +49,7 @@ import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 import ca.gc.asc_csa.apogy.addons.sensors.util.ApogyAddonsSensorsAdapterFactory;
 
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
@@ -366,6 +367,20 @@ public class ApogyAddonsSensorsItemProviderAdapterFactory extends ApogyAddonsSen
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAggregateGroupNode(AggregateGroupNode object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsFactory.eINSTANCE.createSensor()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

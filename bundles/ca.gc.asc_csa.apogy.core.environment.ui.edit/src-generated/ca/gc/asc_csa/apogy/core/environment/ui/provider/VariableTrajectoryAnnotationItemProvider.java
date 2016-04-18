@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.core.environment.ui.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -101,7 +100,7 @@ public class VariableTrajectoryAnnotationItemProvider
   protected void addAzimuthAnglePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_azimuthAngle_feature"),
@@ -124,7 +123,7 @@ public class VariableTrajectoryAnnotationItemProvider
   protected void addTrajectoryLengthPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_trajectoryLength_feature"),

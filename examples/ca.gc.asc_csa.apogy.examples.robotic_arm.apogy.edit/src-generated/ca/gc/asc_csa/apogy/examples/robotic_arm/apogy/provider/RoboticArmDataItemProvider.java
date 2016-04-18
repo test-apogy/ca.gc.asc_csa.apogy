@@ -24,7 +24,6 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.provider.ApogyInitializationDataItemProvider;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyPackage;
@@ -122,7 +121,7 @@ public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvi
 	 */
 	protected void addTurretAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_turretAngle_feature"),
@@ -145,7 +144,7 @@ public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvi
 	protected void addShoulderAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_shoulderAngle_feature"),
@@ -168,7 +167,7 @@ public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvi
 	protected void addElbowAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_elbowAngle_feature"),
@@ -191,7 +190,7 @@ public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvi
 	protected void addWristAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_wristAngle_feature"),

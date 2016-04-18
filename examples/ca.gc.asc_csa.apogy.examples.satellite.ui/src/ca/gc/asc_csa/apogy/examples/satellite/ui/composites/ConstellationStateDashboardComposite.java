@@ -342,11 +342,11 @@ public class ConstellationStateDashboardComposite extends Composite {
 		private static final int UID_COLUMN_ID = 0;
 		private static final int SATELLITE_COLUMN_ID = 1;
 		private static final int PRIORITY_COLUMN_ID = 2;
-		private static final int STATUS_COLUMN_ID = 3;
-		private static final int COMMANDED_LOCATION_COLUMN_ID = 4;
-		private static final int COMMANDED_TIME_COLUMN_ID = 5;		
-		private static final int ACTUAL_LOCATION_COLUMN_ID = 6;
-		private static final int ACTUAL_TIME_COLUMN_ID = 7;
+//		private static final int STATUS_COLUMN_ID = 3;
+//		private static final int COMMANDED_LOCATION_COLUMN_ID = 4;
+//		private static final int COMMANDED_TIME_COLUMN_ID = 5;		
+//		private static final int ACTUAL_LOCATION_COLUMN_ID = 6;
+//		private static final int ACTUAL_TIME_COLUMN_ID = 7;
 		
 
 		@Override
