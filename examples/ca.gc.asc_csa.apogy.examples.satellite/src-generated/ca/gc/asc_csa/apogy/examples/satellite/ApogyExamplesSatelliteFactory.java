@@ -213,15 +213,6 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	OrbitalImageConstellationDownlinkItem createOrbitalImageConstellationDownlinkItem();
 
 	/**
-	 * Returns a new object of class '<em>Constellation Utilities</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constellation Utilities</em>'.
-	 * @generated
-	 */
-	ConstellationUtilities createConstellationUtilities();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

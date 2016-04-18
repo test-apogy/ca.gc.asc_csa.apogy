@@ -25,30 +25,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
-import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
-import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan;
-import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
-import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
-import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
-import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
-import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
-import ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
-import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Factory</b>.
@@ -113,7 +89,6 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: return createConstellationDownlinksList();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINK: return createConstellationDownlink();
 			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM: return createOrbitalImageConstellationDownlinkItem();
-			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES: return createConstellationUtilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -363,16 +338,6 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	public OrbitalImageConstellationDownlinkItem createOrbitalImageConstellationDownlinkItem() {
 		OrbitalImageConstellationDownlinkItemImpl orbitalImageConstellationDownlinkItem = new OrbitalImageConstellationDownlinkItemImpl();
 		return orbitalImageConstellationDownlinkItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConstellationUtilities createConstellationUtilities() {
-		ConstellationUtilitiesImpl constellationUtilities = new ConstellationUtilitiesImpl();
-		return constellationUtilities;
 	}
 
 	/**

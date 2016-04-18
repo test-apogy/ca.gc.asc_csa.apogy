@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,6 +46,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesL
 public interface ConstellationState extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Constellation Command Plans List</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList#getConstellationState <em>Constellation State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -53,7 +55,8 @@ public interface ConstellationState extends EObject {
 	 * @return the value of the '<em>Constellation Command Plans List</em>' containment reference.
 	 * @see #setConstellationCommandPlansList(ConstellationCommandPlansList)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState_ConstellationCommandPlansList()
-	 * @model containment="true"
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList#getConstellationState
+	 * @model opposite="constellationState" containment="true"
 	 * @generated
 	 */
 	ConstellationCommandPlansList getConstellationCommandPlansList();
@@ -145,6 +148,7 @@ public interface ConstellationState extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Constellation Requests Lists Container</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer#getConstellationState <em>Constellation State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -153,7 +157,8 @@ public interface ConstellationState extends EObject {
 	 * @return the value of the '<em>Constellation Requests Lists Container</em>' containment reference.
 	 * @see #setConstellationRequestsListsContainer(ConstellationRequestsListsContainer)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState_ConstellationRequestsListsContainer()
-	 * @model containment="true"
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer#getConstellationState
+	 * @model opposite="constellationState" containment="true"
 	 * @generated
 	 */
 	ConstellationRequestsListsContainer getConstellationRequestsListsContainer();
@@ -194,5 +199,31 @@ public interface ConstellationState extends EObject {
 	 * @generated
 	 */
 	void setConstellationPlannersContainer(ConstellationPlannersContainer value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Imports the {@link AbstractConstellationRequest} contained in the resource specified by the {@link url}.
+	 * @param url URL that specifies the resource.
+	 * @return List of imported {@link AbstractConstellationRequest}.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false" many="false" urlUnique="false"
+	 * @generated
+	 */
+	List<AbstractConstellationRequest> importConstellationRequests(String url);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Exports the specified plan into the resource specified by the url.
+	 * @param plan Refers the plan to export.
+	 * @param url Specifies the location where the plan must be exported.
+	 * <!-- end-model-doc -->
+	 * @model planUnique="false" urlUnique="false"
+	 * @generated
+	 */
+	void export(AbstractConstellationCommandPlan plan, String url);
 
 } // ConstellationState

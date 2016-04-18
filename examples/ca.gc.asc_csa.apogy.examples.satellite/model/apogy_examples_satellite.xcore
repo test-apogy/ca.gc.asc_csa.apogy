@@ -67,7 +67,16 @@ class StringUID extends AbstractUID{
  * Class that contains list of {@link ConstellationCommandPlan}.
  */
  class ConstellationCommandPlansList{
- 	contains AbstractConstellationCommandPlan[0..*] plans
+ 	
+ 	/*
+ 	 * Refers to the container of this {@link ConstellationCommandPlansList}.
+ 	 */
+ 	container ConstellationState constellationState opposite constellationCommandPlansList
+ 	
+ 	/*
+ 	 * Contains the plan.
+ 	 */
+ 	contains AbstractConstellationCommandPlan[0..*] plans opposite commandPlansList
  }
  
  /*
@@ -77,13 +86,13 @@ class StringUID extends AbstractUID{
  	/*
 	 * List of {@link ConstellationCommandPlan}s.
 	 */	 
-	contains ConstellationCommandPlansList[0..1] constellationCommandPlansList
+	contains ConstellationCommandPlansList[0..1] constellationCommandPlansList opposite constellationState
 	 
 	/*
 	 * List of the constellation {@link Satellite}. 
 	 */
 	contains SatellitesList[0..1] satellitesList	
-	
+		
 	/*
 	 * List of the {@link GroundStation}.
 	 */
@@ -97,13 +106,27 @@ class StringUID extends AbstractUID{
 	/*
 	 * List of {@link ConstellationRequestsLists}.
 	 */
-	contains ConstellationRequestsListsContainer[0..1] constellationRequestsListsContainer
+	contains ConstellationRequestsListsContainer[0..1] constellationRequestsListsContainer opposite constellationState
 	
 	/*
 	 * Constellation Planners Container.
 	 */
 	contains ConstellationPlannersContainer[0..1] constellationPlannersContainer opposite constellationState
- }
+	
+	/*
+	 * Imports the {@link AbstractConstellationRequest} contained in the resource specified by the {@link url}.
+	 * @param url URL that specifies the resource.
+	 * @return List of imported {@link AbstractConstellationRequest}. 
+	 */
+	op List<AbstractConstellationRequest> importConstellationRequests(String url)
+		
+	/*
+	 * Exports the specified plan into the resource specified by the url.
+	 * @param plan Refers the plan to export.
+	 * @param url Specifies the location where the plan must be exported.
+	 */
+	op void export(AbstractConstellationCommandPlan plan, String url)	
+}
 
 /*
  * Represents a constellation of Satellites. It provides basic queries used to schedule 
@@ -115,38 +138,6 @@ abstract class AbstractConstellation extends Named, Described{
 	 * Constellation State.
 	 */
 	contains ConstellationState[0..1] constellationState
-	
-	/*
-	 * Exports the specified plan into the resource specified by the url.
-	 * @param plan Refers the plan to export.
-	 * @param url Specifies the location where the plan must be exported.
-	 */
-	op void export(AbstractConstellationCommandPlan plan, String url) 
-	
-	/*
-	 * Packages and commits the specified plan.  
-	 * @param plan Reference to the {@link ConstellationCommandPlan}.
-	 */
-	op void commit(AbstractConstellationCommandPlan plan)
-
-	/* 
-	 * Updates the {@link AbstractConstellationRequest} state based on the {@link ConstallationDownlink}. 
-	 * @param downlink Reference to the {@link ConstellationDownlink}.
-	 */
-	op void apply(ConstellationDownlink downlink)
-	
-	/*
-	 * Imports the {@link ConstellationDownlink} into the current {@link Constellation}.
-	 * @param url String that refers the resource that embeds a {@link ConstellationDownlink}. 
-	 */
-	op void importConstellationDownlink(String url)
-	
-	/*
-	 * Imports the {@link AbstractConstellationRequest} contained in the resource specified by the {@link url}.
-	 * @param url URL that specifies the resource.
-	 * @return List of imported {@link AbstractConstellationRequest}. 
-	 */
-	op List<AbstractConstellationRequest> importConstellationRequests(String url)	
 }
 
 /*
@@ -307,6 +298,28 @@ class DefaultConstellationPlanner extends AbstractConstellationPlanner{
  * The {@link AbstractConstellation#plan} produces {@link ConstellationCommandPlan}. 
  */
 abstract class AbstractConstellationCommandPlan extends Named, Described{
+	
+	/*
+	 * Refers the container of this {@link AbstractConstellationCommandPlan}.
+	 */
+	container ConstellationCommandPlansList commandPlansList opposite plans
+	
+	/*
+	 * Refers to the {@link ConstellationState} that contains the current plan.
+	 */
+	@GenModel(children="false", property="None")
+	refers local readonly volatile transient derived ConstellationState constellationState get
+	{
+		if (commandPlansList == null)
+		{
+			return null
+		}
+		else
+		{
+			return commandPlansList.constellationState
+		}
+	}			
+	
 	/*
 	 * List of {@link AbstractSatelliteCommand}.
 	 */
@@ -324,16 +337,44 @@ class DefaultConstellationCommandPlan extends AbstractConstellationCommandPlan{
  * Container of {@link ConstellationRequestsList}. 
  */
 class ConstellationRequestsListsContainer{
+	
+	/*
+	 * Refers to the container {@link ConstellationState}.
+	 */
+	container ConstellationState constellationState opposite constellationRequestsListsContainer
+	
 	/*
 	 * {@link ConstellationRequestsList} container.
 	 */
-	contains ConstellationRequestsList[0..*] constellationRequestsLists	
+	contains ConstellationRequestsList[0..*] constellationRequestsLists opposite constellationRequestsListsContainer	
 }
 
 /*
  * List that contains {@link AbstractConstellationRequest}.
  */
 class ConstellationRequestsList extends Named, Described{	
+	
+	/* 
+	 * Refers the container of this {@link ConstellationRequestsList}.
+	 */
+	container ConstellationRequestsListsContainer constellationRequestsListsContainer opposite constellationRequestsLists
+	
+	/*
+	 * Refers to the {@link ConstellationState} that contains the current list.
+	 */
+	@GenModel(children="false", property="None")
+	refers local readonly volatile transient derived ConstellationState constellationState get
+	{
+		if (constellationRequestsListsContainer == null)
+		{
+			return null
+		}
+		else
+		{
+			return constellationRequestsListsContainer.constellationState
+		}
+	}		
+	
 	/*
 	 * {@link AbstractConstellationRequest} container.
 	 */
@@ -511,38 +552,4 @@ abstract class AbstractConstellationDownlinkItem{
  */
 class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlinkItem{
 	contains OrbitalImage[0..1] image	
-}
-
-/*
- * Utilities class for the satellite example.
- */
-class ConstellationUtilities{
-	
-	/*
-	 * Adds all the specified requests into the specified container.
-	 * @param container Refers to the destination list.
-	 * @param requests List of {@link AbstractConstellationRequest} to be imported.
-	 */
-	op void addAllRequests(ConstellationRequestsList ^container, List<AbstractConstellationRequest> requests)
-	
-    /*
-	 * Adds the specified {@link AbstractConstellationRequest} to the list of {@link ConstellationRequestsList}.
-	 * @param container Refers to the destination list.
-	 * @param request Specifies the request to add to the list.
-	 */
-	op void addRequest(ConstellationRequestsList ^container, AbstractConstellationRequest request)
-	
-	/*
-	 * Removes the specified {@link AbstractConstellationRequest} from the specified {@link ConstellationRequestsList}.
-	 * @param container Refers to the {@link ConstellationRequestsList}. 
-	 * @param request Specifies the request to remove from the list.
-	 */	
-	op void removeRequest(ConstellationRequestsList ^container, AbstractConstellationRequest request)
-	
-	/*
-	 * Removes all the {@link AbstractConstellationRequest} specified from the list from the specified {@link ConstellationRequestsList}.
-	 * @param container Refers to the {@link ConstellationRequestsList}. 
-	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
-	 */		
-	op void removeAllRequests(ConstellationRequestsList ^container, List<AbstractConstellationRequest> requests)		
 }

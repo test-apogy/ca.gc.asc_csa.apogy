@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer#getConstellationState <em>Constellation State</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer#getConstellationRequestsLists <em>Constellation Requests Lists</em>}</li>
  * </ul>
  *
@@ -39,8 +40,36 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ConstellationRequestsListsContainer extends EObject {
 	/**
+	 * Returns the value of the '<em><b>Constellation State</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationRequestsListsContainer <em>Constellation Requests Lists Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers to the container {@link ConstellationState}.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Constellation State</em>' container reference.
+	 * @see #setConstellationState(ConstellationState)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationRequestsListsContainer_ConstellationState()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationRequestsListsContainer
+	 * @model opposite="constellationRequestsListsContainer" transient="false"
+	 * @generated
+	 */
+	ConstellationState getConstellationState();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer#getConstellationState <em>Constellation State</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Constellation State</em>' container reference.
+	 * @see #getConstellationState()
+	 * @generated
+	 */
+	void setConstellationState(ConstellationState value);
+
+	/**
 	 * Returns the value of the '<em><b>Constellation Requests Lists</b></em>' containment reference list.
 	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList#getConstellationRequestsListsContainer <em>Constellation Requests Lists Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -48,7 +77,8 @@ public interface ConstellationRequestsListsContainer extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constellation Requests Lists</em>' containment reference list.
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationRequestsListsContainer_ConstellationRequestsLists()
-	 * @model containment="true"
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList#getConstellationRequestsListsContainer
+	 * @model opposite="constellationRequestsListsContainer" containment="true"
 	 * @generated
 	 */
 	EList<ConstellationRequestsList> getConstellationRequestsLists();

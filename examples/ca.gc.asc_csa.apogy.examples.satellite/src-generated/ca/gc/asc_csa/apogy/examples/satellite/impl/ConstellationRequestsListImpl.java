@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
@@ -30,6 +31,9 @@ import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import com.google.common.base.Objects;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,6 +45,8 @@ import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationRequestsListImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationRequestsListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationRequestsListImpl#getConstellationRequestsListsContainer <em>Constellation Requests Lists Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationRequestsListImpl#getConstellationState <em>Constellation State</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationRequestsListImpl#getConstellationRequests <em>Constellation Requests</em>}</li>
  * </ul>
  *
@@ -159,6 +165,74 @@ public class ConstellationRequestsListImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConstellationRequestsListsContainer getConstellationRequestsListsContainer() {
+		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER) return null;
+		return (ConstellationRequestsListsContainer)eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationRequestsListsContainer basicGetConstellationRequestsListsContainer() {
+		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER) return null;
+		return (ConstellationRequestsListsContainer)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConstellationRequestsListsContainer(ConstellationRequestsListsContainer newConstellationRequestsListsContainer, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newConstellationRequestsListsContainer, ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConstellationRequestsListsContainer(ConstellationRequestsListsContainer newConstellationRequestsListsContainer) {
+		if (newConstellationRequestsListsContainer != eInternalContainer() || (eContainerFeatureID() != ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER && newConstellationRequestsListsContainer != null)) {
+			if (EcoreUtil.isAncestor(this, newConstellationRequestsListsContainer))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newConstellationRequestsListsContainer != null)
+				msgs = ((InternalEObject)newConstellationRequestsListsContainer).eInverseAdd(this, ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LISTS_CONTAINER__CONSTELLATION_REQUESTS_LISTS, ConstellationRequestsListsContainer.class, msgs);
+			msgs = basicSetConstellationRequestsListsContainer(newConstellationRequestsListsContainer, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER, newConstellationRequestsListsContainer, newConstellationRequestsListsContainer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationState getConstellationState() {
+		ConstellationRequestsListsContainer _constellationRequestsListsContainer = this.getConstellationRequestsListsContainer();
+		boolean _equals = Objects.equal(_constellationRequestsListsContainer, null);
+		if (_equals) {
+			return null;
+		}
+		else {
+			ConstellationRequestsListsContainer _constellationRequestsListsContainer_1 = this.getConstellationRequestsListsContainer();
+			return _constellationRequestsListsContainer_1.getConstellationState();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<AbstractConstellationRequest> getConstellationRequests() {
 		if (constellationRequests == null) {
 			constellationRequests = new EObjectContainmentEList<AbstractConstellationRequest>(AbstractConstellationRequest.class, this, ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS);
@@ -172,12 +246,44 @@ public class ConstellationRequestsListImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetConstellationRequestsListsContainer((ConstellationRequestsListsContainer)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER:
+				return basicSetConstellationRequestsListsContainer(null, msgs);
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS:
 				return ((InternalEList<?>)getConstellationRequests()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER:
+				return eInternalContainer().eInverseRemove(this, ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LISTS_CONTAINER__CONSTELLATION_REQUESTS_LISTS, ConstellationRequestsListsContainer.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -192,6 +298,11 @@ public class ConstellationRequestsListImpl extends MinimalEObjectImpl.Container 
 				return getName();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__DESCRIPTION:
 				return getDescription();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER:
+				if (resolve) return getConstellationRequestsListsContainer();
+				return basicGetConstellationRequestsListsContainer();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_STATE:
+				return getConstellationState();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS:
 				return getConstellationRequests();
 		}
@@ -212,6 +323,9 @@ public class ConstellationRequestsListImpl extends MinimalEObjectImpl.Container 
 				return;
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__DESCRIPTION:
 				setDescription((String)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER:
+				setConstellationRequestsListsContainer((ConstellationRequestsListsContainer)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS:
 				getConstellationRequests().clear();
@@ -235,6 +349,9 @@ public class ConstellationRequestsListImpl extends MinimalEObjectImpl.Container 
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER:
+				setConstellationRequestsListsContainer((ConstellationRequestsListsContainer)null);
+				return;
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS:
 				getConstellationRequests().clear();
 				return;
@@ -254,6 +371,10 @@ public class ConstellationRequestsListImpl extends MinimalEObjectImpl.Container 
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER:
+				return basicGetConstellationRequestsListsContainer() != null;
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_STATE:
+				return getConstellationState() != null;
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS:
 				return constellationRequests != null && !constellationRequests.isEmpty();
 		}

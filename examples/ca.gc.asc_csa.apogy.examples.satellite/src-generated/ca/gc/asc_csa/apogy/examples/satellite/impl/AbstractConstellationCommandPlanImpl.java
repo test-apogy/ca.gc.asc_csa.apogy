@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
@@ -29,6 +30,9 @@ import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import com.google.common.base.Objects;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,6 +44,8 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationCommandPlanImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationCommandPlanImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationCommandPlanImpl#getCommandPlansList <em>Command Plans List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationCommandPlanImpl#getConstellationState <em>Constellation State</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationCommandPlanImpl#getConstellationCommands <em>Constellation Commands</em>}</li>
  * </ul>
  *
@@ -162,6 +168,74 @@ public abstract class AbstractConstellationCommandPlanImpl extends MinimalEObjec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConstellationCommandPlansList getCommandPlansList() {
+		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST) return null;
+		return (ConstellationCommandPlansList)eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationCommandPlansList basicGetCommandPlansList() {
+		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST) return null;
+		return (ConstellationCommandPlansList)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCommandPlansList(ConstellationCommandPlansList newCommandPlansList, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newCommandPlansList, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCommandPlansList(ConstellationCommandPlansList newCommandPlansList) {
+		if (newCommandPlansList != eInternalContainer() || (eContainerFeatureID() != ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST && newCommandPlansList != null)) {
+			if (EcoreUtil.isAncestor(this, newCommandPlansList))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newCommandPlansList != null)
+				msgs = ((InternalEObject)newCommandPlansList).eInverseAdd(this, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST__PLANS, ConstellationCommandPlansList.class, msgs);
+			msgs = basicSetCommandPlansList(newCommandPlansList, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST, newCommandPlansList, newCommandPlansList));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationState getConstellationState() {
+		ConstellationCommandPlansList _commandPlansList = this.getCommandPlansList();
+		boolean _equals = Objects.equal(_commandPlansList, null);
+		if (_equals) {
+			return null;
+		}
+		else {
+			ConstellationCommandPlansList _commandPlansList_1 = this.getCommandPlansList();
+			return _commandPlansList_1.getConstellationState();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<AbstractSatelliteCommand> getConstellationCommands() {
 		if (constellationCommands == null) {
 			constellationCommands = new EObjectContainmentEList<AbstractSatelliteCommand>(AbstractSatelliteCommand.class, this, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS);
@@ -175,12 +249,44 @@ public abstract class AbstractConstellationCommandPlanImpl extends MinimalEObjec
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetCommandPlansList((ConstellationCommandPlansList)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST:
+				return basicSetCommandPlansList(null, msgs);
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
 				return ((InternalEList<?>)getConstellationCommands()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST:
+				return eInternalContainer().eInverseRemove(this, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST__PLANS, ConstellationCommandPlansList.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -195,6 +301,11 @@ public abstract class AbstractConstellationCommandPlanImpl extends MinimalEObjec
 				return getName();
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__DESCRIPTION:
 				return getDescription();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST:
+				if (resolve) return getCommandPlansList();
+				return basicGetCommandPlansList();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_STATE:
+				return getConstellationState();
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
 				return getConstellationCommands();
 		}
@@ -215,6 +326,9 @@ public abstract class AbstractConstellationCommandPlanImpl extends MinimalEObjec
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__DESCRIPTION:
 				setDescription((String)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST:
+				setCommandPlansList((ConstellationCommandPlansList)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
 				getConstellationCommands().clear();
@@ -238,6 +352,9 @@ public abstract class AbstractConstellationCommandPlanImpl extends MinimalEObjec
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST:
+				setCommandPlansList((ConstellationCommandPlansList)null);
+				return;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
 				getConstellationCommands().clear();
 				return;
@@ -257,6 +374,10 @@ public abstract class AbstractConstellationCommandPlanImpl extends MinimalEObjec
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST:
+				return basicGetCommandPlansList() != null;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_STATE:
+				return getConstellationState() != null;
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS:
 				return constellationCommands != null && !constellationCommands.isEmpty();
 		}

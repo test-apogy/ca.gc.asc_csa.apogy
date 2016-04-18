@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -85,7 +84,7 @@ public class TriangleEdgeLengthTriangularMeshFilterItemProvider
 	 */
 	protected void addMinimumRangePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_TriangleEdgeLengthTriangularMeshFilter_minimumRange_feature"),
@@ -107,7 +106,7 @@ public class TriangleEdgeLengthTriangularMeshFilterItemProvider
 	 */
 	protected void addMaximumRangePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_TriangleEdgeLengthTriangularMeshFilter_maximumRange_feature"),
@@ -129,7 +128,7 @@ public class TriangleEdgeLengthTriangularMeshFilterItemProvider
 	 */
 	protected void addMaximumEdgeLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_TriangleEdgeLengthTriangularMeshFilter_maximumEdgeLength_feature"),

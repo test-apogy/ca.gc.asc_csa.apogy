@@ -31,6 +31,8 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getCommandPlansList <em>Command Plans List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getConstellationState <em>Constellation State</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getConstellationCommands <em>Constellation Commands</em>}</li>
  * </ul>
  *
@@ -39,6 +41,48 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * @generated
  */
 public interface AbstractConstellationCommandPlan extends Named, Described {
+	/**
+	 * Returns the value of the '<em><b>Command Plans List</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList#getPlans <em>Plans</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers the container of this {@link AbstractConstellationCommandPlan}.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Command Plans List</em>' container reference.
+	 * @see #setCommandPlansList(ConstellationCommandPlansList)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationCommandPlan_CommandPlansList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList#getPlans
+	 * @model opposite="plans" transient="false"
+	 * @generated
+	 */
+	ConstellationCommandPlansList getCommandPlansList();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getCommandPlansList <em>Command Plans List</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Command Plans List</em>' container reference.
+	 * @see #getCommandPlansList()
+	 * @generated
+	 */
+	void setCommandPlansList(ConstellationCommandPlansList value);
+
+	/**
+	 * Returns the value of the '<em><b>Constellation State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers to the {@link ConstellationState} that contains the current plan.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Constellation State</em>' reference.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationCommandPlan_ConstellationState()
+	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList%> _commandPlansList = this.getCommandPlansList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_commandPlansList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList%> _commandPlansList_1 = this.getCommandPlansList();\n\treturn _commandPlansList_1.getConstellationState();\n}'"
+	 * @generated
+	 */
+	ConstellationState getConstellationState();
+
 	/**
 	 * Returns the value of the '<em><b>Constellation Commands</b></em>' containment reference list.
 	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand}.

@@ -589,29 +589,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConstellationUtilitiesItemProvider constellationUtilitiesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createConstellationUtilitiesAdapter() {
-		if (constellationUtilitiesItemProvider == null) {
-			constellationUtilitiesItemProvider = new ConstellationUtilitiesItemProvider(this);
-		}
-
-		return constellationUtilitiesItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -757,7 +734,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 		if (constellationDownlinksListItemProvider != null) constellationDownlinksListItemProvider.dispose();
 		if (constellationDownlinkItemProvider != null) constellationDownlinkItemProvider.dispose();
 		if (orbitalImageConstellationDownlinkItemItemProvider != null) orbitalImageConstellationDownlinkItemItemProvider.dispose();
-		if (constellationUtilitiesItemProvider != null) constellationUtilitiesItemProvider.dispose();
 	}
 
 	/**
@@ -1258,11 +1234,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImageConstellationDownlinkItem()));
 
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationUtilities()));
-
 				return null;
 			}
  
@@ -1372,11 +1343,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImageConstellationDownlinkItem()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationUtilities()));
 
 				return null;
 			}

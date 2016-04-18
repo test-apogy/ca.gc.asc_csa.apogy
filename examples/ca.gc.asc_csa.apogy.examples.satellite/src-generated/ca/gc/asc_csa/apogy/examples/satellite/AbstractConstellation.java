@@ -13,8 +13,6 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.List;
-
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 
@@ -64,67 +62,5 @@ public interface AbstractConstellation extends Named, Described {
 	 * @generated
 	 */
 	void setConstellationState(ConstellationState value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Exports the specified plan into the resource specified by the url.
-	 * @param plan Refers the plan to export.
-	 * @param url Specifies the location where the plan must be exported.
-	 * <!-- end-model-doc -->
-	 * @model planUnique="false" urlUnique="false"
-	 * @generated
-	 */
-	void export(AbstractConstellationCommandPlan plan, String url);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Packages and commits the specified plan.
-	 * @param plan Reference to the {@link ConstellationCommandPlan}.
-	 * <!-- end-model-doc -->
-	 * @model planUnique="false"
-	 * @generated
-	 */
-	void commit(AbstractConstellationCommandPlan plan);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Updates the {@link AbstractConstellationRequest} state based on the {@link ConstallationDownlink}.
-	 * @param downlink Reference to the {@link ConstellationDownlink}.
-	 * <!-- end-model-doc -->
-	 * @model downlinkUnique="false"
-	 * @generated
-	 */
-	void apply(ConstellationDownlink downlink);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Imports the {@link ConstellationDownlink} into the current {@link Constellation}.
-	 * @param url String that refers the resource that embeds a {@link ConstellationDownlink}.
-	 * <!-- end-model-doc -->
-	 * @model urlUnique="false"
-	 * @generated
-	 */
-	void importConstellationDownlink(String url);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Imports the {@link AbstractConstellationRequest} contained in the resource specified by the {@link url}.
-	 * @param url URL that specifies the resource.
-	 * @return List of imported {@link AbstractConstellationRequest}.
-	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false" many="false" urlUnique="false"
-	 * @generated
-	 */
-	List<AbstractConstellationRequest> importConstellationRequests(String url);
 
 } // AbstractConstellation

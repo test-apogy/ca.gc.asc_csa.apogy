@@ -13,12 +13,8 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -27,11 +23,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 
 /**
@@ -209,41 +202,6 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	abstract public void export(AbstractConstellationCommandPlan plan, String url);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	abstract public void commit(AbstractConstellationCommandPlan plan);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	abstract public void apply(ConstellationDownlink downlink);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	abstract public void importConstellationDownlink(String url);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	abstract public List<AbstractConstellationRequest> importConstellationRequests(String url);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -363,32 +321,6 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___EXPORT__ABSTRACTCONSTELLATIONCOMMANDPLAN_STRING:
-				export((AbstractConstellationCommandPlan)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___COMMIT__ABSTRACTCONSTELLATIONCOMMANDPLAN:
-				commit((AbstractConstellationCommandPlan)arguments.get(0));
-				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK:
-				apply((ConstellationDownlink)arguments.get(0));
-				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_DOWNLINK__STRING:
-				importConstellationDownlink((String)arguments.get(0));
-				return null;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___IMPORT_CONSTELLATION_REQUESTS__STRING:
-				return importConstellationRequests((String)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
