@@ -27,7 +27,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthFacadeImpl;
-import org.orekit.frames.Frame;
 import org.orekit.orbits.CartesianOrbit;
 import org.orekit.orbits.KeplerianOrbit;
 import org.orekit.propagation.Propagator;
@@ -116,7 +115,7 @@ public interface ApogyCoreEnvironmentOrbitEarthFacade extends EObject
 	 * @model unique="false" oreKitFrameDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitFrame" oreKitFrameUnique="false"
 	 * @generated
 	 */
-	OreKitBackedFrame createOreKitBackedFrame(Frame oreKitFrame);
+//	OreKitBackedFrame createOreKitBackedFrame(Frame oreKitFrame);
 
 	/**
 	 * <!-- begin-user-doc -->

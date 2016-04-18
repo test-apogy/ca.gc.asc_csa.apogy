@@ -131,8 +131,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 
 	/**
 	 * The default value of the '{@link #getMaxNumberThreads() <em>Max Number Threads</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getMaxNumberThreads()
 	 * @generated
 	 * @ordered
@@ -140,8 +140,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	protected static final int MAX_NUMBER_THREADS_EDEFAULT = 0;
 	/**
 	 * The cached value of the '{@link #getMaxNumberThreads() <em>Max Number Threads</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getMaxNumberThreads()
 	 * @generated
 	 * @ordered
@@ -351,8 +351,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public int getMaxNumberThreads() {
@@ -360,8 +359,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setMaxNumberThreads(int newMaxNumberThreads) {
@@ -466,6 +464,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	 * @generated_NOT
 	 */
 	public void plan() throws Exception {
+
 		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Started", EventSeverity.INFO);
 
 		/* Validate the planner settings. */
@@ -482,113 +481,76 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		List<AbstractConstellationRequest> requestsList = getConstellationRequestsList().getConstellationRequests()
 				.stream().filter(p -> p instanceof ObservationConstellationRequest).collect(Collectors.toList());
 
-		final int numberThreads = getMaxNumberThreads() < 1 ? 
-				Runtime.getRuntime().availableProcessors() : getMaxNumberThreads();						
+		/*
+		 * Determine the number of threads required / available for the passes
+		 * processing.
+		 */
+		final int maxNumberOfThreads = getMaxNumberThreads() < 1 ? Runtime.getRuntime().availableProcessors()
+				: getMaxNumberThreads();
+		final int numberOfThreads = maxNumberOfThreads > requestsList.size() ? requestsList.size() : maxNumberOfThreads;
 
-		Logger.INSTANCE.log(Activator.ID,
-				"Constellation Planner: " + requestsList.size() + " observation requests to process using <" + numberThreads +"> threads.",
+		Logger.INSTANCE.log(
+				Activator.ID, "Constellation Planner: " + requestsList.size()
+						+ " observation requests to process using <" + numberOfThreads + "> threads.",
 				EventSeverity.INFO);
 
 		Logger.INSTANCE.log(Activator.ID,
 				"Constellation Planner: "
 						+ (getConstellationRequestsList().getConstellationRequests().size() - requestsList.size())
 						+ " requests are not observation requests and will not be processed.",
-				EventSeverity.INFO);		
-		
-		
-		JobGroup jobGroup = new JobGroup("Test", numberThreads, 1);
-		Job plannerJob = new Job("TestJob") {
+				EventSeverity.INFO);
 
-			@Override
-			protected IStatus run(IProgressMonitor monitor) {
-				monitor.beginTask("Processinng requests", requestsList.size());
-
-				/* Creates a temporary map to bind the requests with their locations. */ 
-				Map<EarthSurfaceLocation, ObservationConstellationRequest> locationMap = new HashMap<EarthSurfaceLocation, ObservationConstellationRequest>();
-				for (AbstractConstellationRequest request : requestsList) {
-					locationMap.put(((ObservationConstellationRequest)request).getLocation(), (ObservationConstellationRequest) request);
-				}
-				List<EarthSurfaceLocation> locations = new ArrayList<EarthSurfaceLocation>(locationMap.keySet());
-								
-				/*
-				 * Determine how to spawn the list of locations to be processed 
-				 */
-				int modulus = requestsList.size() / numberThreads;
-				int remainder = requestsList.size() % numberThreads;
-				int locationIndex = 0;
-				
-				for (int i = 0; i < numberThreads; i++){									
-					int extraLocation = remainder > 0 ? 1: 0;					
-					int locationStartIndex = locationIndex;
-					int threadId = i;
-					
-					Job job = new Job("Constellation Planner: Thread <" + (threadId + 1) +">"){
-						@Override
-						protected IStatus run(IProgressMonitor monitor) {								
-							for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
-								try {
-									Logger.INSTANCE.log(Activator.ID,
-											"Constellation Planner: Processing passes in Thread <"
-													+ (threadId + 1) + ">", EventSeverity.INFO);
-
-									List<VisibilityPass> passes = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE
-											.getTargetPasses(satellite.getOrbitModel(), 
-													         locations.subList(locationStartIndex, locationStartIndex + modulus + extraLocation),
-													getStartDate(), getEndDate(), getElevationMask(), monitor);
-									
-									Logger.INSTANCE.log(Activator.ID,
-											"Constellation Planner: <" + passes.size() + "> found in Thread <"
-													+ (threadId + 1) + ">", EventSeverity.INFO);
-									
-									// Creates a Visibility Pass Based Satellite
-									// Command for each valid passes.
-									Iterator<VisibilityPass> passesIterator = passes.iterator();
-									while (passesIterator.hasNext()) {
-										VisibilityPass pass = passesIterator.next();
-										if (isValid(pass)){
-											synchronized (commands){
-												commands.add(createVisibilityPassBasedSatelliteCommand(locationMap.get(pass.getSurfaceLocation()), pass));
-											}
-										}
-									}									
-									
-								} catch (Exception e) {
-									Logger.INSTANCE.log(Activator.ID,
-											"Constellation Planner: Error while processing passes in Thread <"
-													+ (threadId + 1) + ">",
-											EventSeverity.ERROR, e);
-									return Status.CANCEL_STATUS;
-								}
-							}
-							return Status.OK_STATUS;
-						}						
-					};
-					job.setPriority(Job.LONG);
-					job.setJobGroup(jobGroup);					
-					job.schedule();				
-					
-					/* Reduce the remainder by one if not all dispatched. */
-					remainder = remainder > 0 ? remainder - 1 : 0;
-					locationIndex = locationIndex + modulus + remainder;
-				}
-				
-				return Status.OK_STATUS;
-			}
-		};
-		plannerJob.setPriority(Job.LONG);
-		plannerJob.setJobGroup(jobGroup);
-		plannerJob.setUser(true);
-		plannerJob.schedule();
+		JobGroup jobGroup = new JobGroup("Constellation Planner", numberOfThreads, 1);
 
 		/*
-		 * Wait for jobs to be completed.
+		 * Creates a temporary map to bind the requests with their locations.
 		 */
+		Map<EarthSurfaceLocation, ObservationConstellationRequest> locationMap = new HashMap<EarthSurfaceLocation, ObservationConstellationRequest>();
+		for (AbstractConstellationRequest request : requestsList) {
+			locationMap.put(((ObservationConstellationRequest) request).getLocation(),
+					(ObservationConstellationRequest) request);
+		}
+		List<EarthSurfaceLocation> locations = new ArrayList<EarthSurfaceLocation>(locationMap.keySet());
+
+		/*
+		 * Spawning the jobs.
+		 */
+		for (int threadId = 0; threadId < numberOfThreads; threadId++) {
+			Logger.INSTANCE.log(Activator.ID,
+					"Constellation Planner: Spawning Job " + (threadId + 1) + " of " + numberOfThreads,
+					EventSeverity.INFO);
+
+			/*
+			 * Determine how to split the work to be processed.
+			 */
+			int modulus = locations.size() / numberOfThreads;
+			int remainder = locations.size() % numberOfThreads;
+			int locationStartIndex = threadId * modulus + (threadId < remainder ? threadId : remainder);
+			int locationEndIndex = locationStartIndex + modulus + (threadId < remainder ? 1 : 0);
+
+			/*
+			 * Spawn the job.
+			 */
+			Job job = new ConstellationPlannerVisibilityPassesJob("Constellation Planner: Job <" + (threadId + 1) + ">",
+					threadId, locations, locationStartIndex, locationEndIndex, commands, locationMap);
+			job.setSystem(false);
+			job.setUser(threadId == 0);
+			job.setPriority(Job.LONG);
+			job.setJobGroup(jobGroup);
+			job.schedule();
+		}
+
+		// Wait for jobs to be completed.
+		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Waiting for jobs completion", EventSeverity.INFO);
 		jobGroup.join(0, null);
-		
+		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Jobs completed", EventSeverity.INFO);
+
 		/*
 		 * Remove duplicates.
 		 */
 		if (!isCommandDuplicatesPreserved()) {
+			Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Removing Command Duplicates", EventSeverity.INFO);
+
 			TreeSet<AbstractRequestBasedSatelliteCommand> no_duplicate_commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(
 					new Comparator<AbstractRequestBasedSatelliteCommand>() {
 						@Override
@@ -603,7 +565,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		} else {
 			getConstellationCommandPlan().getConstellationCommands().addAll(commands);
 		}
-		
+
 		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Completed", EventSeverity.INFO);
 	}
 
@@ -665,10 +627,13 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 					} else {
 						// Different request priorities, use the date to
 						// compare.
-						if (o1.getTime().getTime() == o2.getTime().getTime()) {
+						long time1 = o1.getTime() == null ? 0: o1.getTime().getTime();
+						long time2 = o2.getTime() == null ? 0: o2.getTime().getTime();
+						
+						if (time1 == time2) {
 							return 0;
 						} else {
-							return o1.getTime().getTime() < o2.getTime().getTime() ? -1 : 1;
+							return time1 < time2 ? -1 : 1;
 						}
 					}
 				}
@@ -923,4 +888,129 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		return result.toString();
 	}
 
+	/*
+	 * 
+	 * Job used to dispatch a subset of the locations to be processed.
+	 * 
+	 */
+	protected class ConstellationPlannerVisibilityPassesJob extends Job {
+		private int threadId;
+		private List<EarthSurfaceLocation> locations;
+		private TreeSet<AbstractRequestBasedSatelliteCommand> commands;
+		private Map<EarthSurfaceLocation, ObservationConstellationRequest> locationMap;
+		private int locationStartIndex;
+		private int locationEndIndex;
+
+		/*
+		 * Do not use this constructor.
+		 * 
+		 * @see ConstellationPlannerVisibilityPassesJob(String, int,
+		 * List<EarthSurfaceLocation>, int, int,
+		 * TreeSet<AbstractRequestBasedSatelliteCommand>,
+		 * Map<EarthSurfaceLocation, ObservationConstellationRequest>)
+		 */
+		public ConstellationPlannerVisibilityPassesJob(String name) {
+			super(name);
+		}
+
+		/*
+		 * Use this constructor.
+		 * 
+		 * @param name Name of the job.
+		 * 
+		 * @param threadId Thread identifier.
+		 * 
+		 * @param locations Locations to be processed.
+		 * 
+		 * @param locationStartIndex Index position that identifies the first
+		 * location to process.
+		 * 
+		 * @param locationEndIndex Index position that identifies the last
+		 * location to process.
+		 * 
+		 * @param commands List of commands to add commands to address the
+		 * observation required for a specific location.
+		 * 
+		 * @param locationMap Map that makes the links between the location and
+		 * the requests.
+		 */
+		public ConstellationPlannerVisibilityPassesJob(String name, int threadId, List<EarthSurfaceLocation> locations,
+				int locationStartIndex, int locationEndIndex, TreeSet<AbstractRequestBasedSatelliteCommand> commands,
+				Map<EarthSurfaceLocation, ObservationConstellationRequest> locationMap) {
+			this(name);
+			this.threadId = threadId;
+			this.locations = locations;
+			this.locationStartIndex = locationStartIndex;
+			this.locationEndIndex = locationEndIndex;
+			this.commands = commands;
+			this.locationMap = locationMap;
+		}
+
+		@Override
+		protected IStatus run(IProgressMonitor monitor) {
+
+			int totalWork = getConstellationState().getSatellitesList().getSatellites().size();
+			monitor.beginTask("Processing", totalWork);
+
+			Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Processing passes in job <" + (threadId + 1)
+					+ "> Start=" + locationStartIndex + " End=" + locationEndIndex, EventSeverity.INFO);
+
+			List<VisibilityPass> allPasses = new ArrayList<VisibilityPass>();
+
+			/*
+			 * Process the passes for all the satellites.
+			 */
+			for (Satellite satellite : getConstellationState().getSatellitesList().getSatellites()) {
+				try {
+					List<VisibilityPass> passes = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.getTargetPasses(
+							satellite.getOrbitModel(), locations.subList(locationStartIndex, locationEndIndex),
+							getStartDate(), getEndDate(), getElevationMask(), monitor);
+
+					if (monitor.isCanceled()) {
+						return Status.CANCEL_STATUS;
+					}
+
+					allPasses.addAll(passes);
+
+					monitor.worked(1);
+
+					Logger.INSTANCE.log(
+							Activator.ID, "Constellation Planner: <" + passes.size() + "> found in job <"
+									+ (threadId + 1) + "> for satellite <" + satellite.getName() + ">",
+							EventSeverity.INFO);
+				} catch (Exception e) {
+					Logger.INSTANCE.log(
+							Activator.ID, "Constellation Planner: Error while processing passes in job <"
+									+ (threadId + 1) + "> for satellite <" + satellite.getName() + ">",
+							EventSeverity.ERROR, e);
+					return Status.CANCEL_STATUS;
+				}
+			}
+
+			Logger.INSTANCE.log(Activator.ID,
+					"Constellation Planner: A total of " + allPasses.size() + " found in job <" + (threadId + 1) + ">",
+					EventSeverity.INFO);
+
+			// Creates a Visibility Pass Based Satellite
+			// Command for each valid passes.
+			Iterator<VisibilityPass> passesIterator = allPasses.iterator();
+			synchronized (commands) {
+				while (passesIterator.hasNext()) {
+					VisibilityPass pass = passesIterator.next();
+					if (isValid(pass)) {
+						VisibilityPassBasedSatelliteCommand command = createVisibilityPassBasedSatelliteCommand(
+								locationMap.get(pass.getSurfaceLocation()), pass);
+						if (command != null){
+							commands.add(command);
+						}
+					}
+				}
+			}
+			Logger.INSTANCE.log(Activator.ID,
+					"Constellation Planner: " + allPasses.size() + " commands created in job <" + (threadId + 1) + ">",
+					EventSeverity.INFO);
+
+			return Status.OK_STATUS;
+		}
+	}
 } // AbstractConstellationPlannerImpl
