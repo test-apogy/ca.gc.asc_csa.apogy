@@ -49,7 +49,6 @@
         </mapsList>
         <geographicalCoordinates xmi:id="_Ca1SkArPEeW4-_ONWXXiAw" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
       </worksites>
-      <orbitsModels xmi:id="_Ca4V4ArPEeW4-_ONWXXiAw"/>
     </worksitesList>
     <timeSourcesList xmi:id="_Ca4V4QrPEeW4-_ONWXXiAw">
       <timeSources xsi:type="emf:CurrentTimeSource" xmi:id="_Ca4V4grPEeW4-_ONWXXiAw" name="Current Time" time="2016-02-29T13:15:59.930-0500"/>

@@ -37,7 +37,6 @@
         </mapsList>
         <geographicalCoordinates xmi:id="_Mehc8ngbEeWKP8VylKhlAA" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
       </worksites>
-      <orbitsModels xmi:id="_Mehc83gbEeWKP8VylKhlAA"/>
     </worksitesList>
     <timeSourcesList xmi:id="_Mehc9HgbEeWKP8VylKhlAA">
       <timeSources xsi:type="emf:CurrentTimeSource" xmi:id="_Mehc9XgbEeWKP8VylKhlAA" time="2015-04-13T08:53:27.536-0400"/>
