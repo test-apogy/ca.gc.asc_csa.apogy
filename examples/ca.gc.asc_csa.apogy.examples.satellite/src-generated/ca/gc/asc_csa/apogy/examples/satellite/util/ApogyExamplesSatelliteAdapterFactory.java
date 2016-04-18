@@ -24,6 +24,7 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 import ca.gc.asc_csa.apogy.common.images.EImage;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.examples.satellite.*;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
@@ -134,6 +135,10 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createDefaultConstellationAdapter();
 			}
 			@Override
+			public Adapter caseConstellationPlannersContainer(ConstellationPlannersContainer object) {
+				return createConstellationPlannersContainerAdapter();
+			}
+			@Override
 			public Adapter caseAbstractConstellationPlanner(AbstractConstellationPlanner object) {
 				return createAbstractConstellationPlannerAdapter();
 			}
@@ -148,6 +153,10 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDefaultConstellationCommandPlan(DefaultConstellationCommandPlan object) {
 				return createDefaultConstellationCommandPlanAdapter();
+			}
+			@Override
+			public Adapter caseConstellationRequestsListsContainer(ConstellationRequestsListsContainer object) {
+				return createConstellationRequestsListsContainerAdapter();
 			}
 			@Override
 			public Adapter caseConstellationRequestsList(ConstellationRequestsList object) {
@@ -346,6 +355,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer <em>Constellation Planners Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer
+	 * @generated
+	 */
+	public Adapter createConstellationPlannersContainerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner <em>Abstract Constellation Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -398,6 +421,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDefaultConstellationCommandPlanAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer <em>Constellation Requests Lists Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer
+	 * @generated
+	 */
+	public Adapter createConstellationRequestsListsContainerAdapter() {
 		return null;
 	}
 

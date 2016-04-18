@@ -12,11 +12,10 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite;
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import java.util.Comparator;
 import java.util.Date;
-
-import org.eclipse.emf.ecore.EObject;
-
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
@@ -36,6 +35,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationPlannersContainer <em>Constellation Planners Container</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationState <em>Constellation State</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getEndDate <em>End Date</em>}</li>
@@ -50,35 +50,50 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
  * @model abstract="true"
  * @generated
  */
-public interface AbstractConstellationPlanner extends EObject {
+public interface AbstractConstellationPlanner extends Named, Described {
 
 	/**
-	 * Returns the value of the '<em><b>Constellation State</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlanner <em>Constellation Planner</em>}'.
+	 * Returns the value of the '<em><b>Constellation Planners Container</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer#getConstellationPlanners <em>Constellation Planners</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Refers the {@link ConstellationState} that contains the planner.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Constellation State</em>' container reference.
-	 * @see #setConstellationState(ConstellationState)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationState()
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlanner
-	 * @model opposite="constellationPlanner" transient="false"
+	 * @return the value of the '<em>Constellation Planners Container</em>' container reference.
+	 * @see #setConstellationPlannersContainer(ConstellationPlannersContainer)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationPlannersContainer()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer#getConstellationPlanners
+	 * @model opposite="constellationPlanners" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
-	ConstellationState getConstellationState();
+	ConstellationPlannersContainer getConstellationPlannersContainer();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationState <em>Constellation State</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationPlannersContainer <em>Constellation Planners Container</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constellation State</em>' container reference.
-	 * @see #getConstellationState()
+	 * @param value the new value of the '<em>Constellation Planners Container</em>' container reference.
+	 * @see #getConstellationPlannersContainer()
 	 * @generated
 	 */
-	void setConstellationState(ConstellationState value);
+	void setConstellationPlannersContainer(ConstellationPlannersContainer value);
+
+	/**
+	 * Returns the value of the '<em><b>Constellation State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers to the {@link ConstellationState} that contains the current planner.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Constellation State</em>' reference.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationPlanner_ConstellationState()
+	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer%> _constellationPlannersContainer = this.getConstellationPlannersContainer();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_constellationPlannersContainer, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer%> _constellationPlannersContainer_1 = this.getConstellationPlannersContainer();\n\treturn _constellationPlannersContainer_1.getConstellationState();\n}'"
+	 * @generated
+	 */
+	ConstellationState getConstellationState();
 
 	/**
 	 * Returns the value of the '<em><b>Start Date</b></em>' attribute.

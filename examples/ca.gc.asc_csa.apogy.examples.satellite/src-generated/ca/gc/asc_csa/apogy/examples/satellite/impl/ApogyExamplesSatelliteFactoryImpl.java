@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.examples.satellite.*;
 import java.util.Comparator;
 import java.util.List;
 import java.util.SortedSet;
@@ -96,8 +97,10 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST: return createConstellationCommandPlansList();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE: return createConstellationState();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_PLANNERS_CONTAINER: return createConstellationPlannersContainer();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER: return createDefaultConstellationPlanner();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_COMMAND_PLAN: return createDefaultConstellationCommandPlan();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LISTS_CONTAINER: return createConstellationRequestsListsContainer();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
 			case ApogyExamplesSatellitePackage.SIMPLE_REQUEST: return createSimpleRequest();
 			case ApogyExamplesSatellitePackage.OBSERVATION_CONSTELLATION_REQUEST: return createObservationConstellationRequest();
@@ -207,6 +210,16 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConstellationPlannersContainer createConstellationPlannersContainer() {
+		ConstellationPlannersContainerImpl constellationPlannersContainer = new ConstellationPlannersContainerImpl();
+		return constellationPlannersContainer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DefaultConstellationPlanner createDefaultConstellationPlanner() {
 		DefaultConstellationPlannerImpl defaultConstellationPlanner = new DefaultConstellationPlannerImpl();
 		return defaultConstellationPlanner;
@@ -220,6 +233,16 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	public DefaultConstellationCommandPlan createDefaultConstellationCommandPlan() {
 		DefaultConstellationCommandPlanImpl defaultConstellationCommandPlan = new DefaultConstellationCommandPlanImpl();
 		return defaultConstellationCommandPlan;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationRequestsListsContainer createConstellationRequestsListsContainer() {
+		ConstellationRequestsListsContainerImpl constellationRequestsListsContainer = new ConstellationRequestsListsContainerImpl();
+		return constellationRequestsListsContainer;
 	}
 
 	/**

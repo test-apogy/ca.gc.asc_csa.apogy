@@ -23,6 +23,7 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 import ca.gc.asc_csa.apogy.common.images.EImage;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.examples.satellite.*;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
@@ -151,9 +152,17 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyExamplesSatellitePackage.CONSTELLATION_PLANNERS_CONTAINER: {
+				ConstellationPlannersContainer constellationPlannersContainer = (ConstellationPlannersContainer)theEObject;
+				T result = caseConstellationPlannersContainer(constellationPlannersContainer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER: {
 				AbstractConstellationPlanner abstractConstellationPlanner = (AbstractConstellationPlanner)theEObject;
 				T result = caseAbstractConstellationPlanner(abstractConstellationPlanner);
+				if (result == null) result = caseNamed(abstractConstellationPlanner);
+				if (result == null) result = caseDescribed(abstractConstellationPlanner);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -161,6 +170,8 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				DefaultConstellationPlanner defaultConstellationPlanner = (DefaultConstellationPlanner)theEObject;
 				T result = caseDefaultConstellationPlanner(defaultConstellationPlanner);
 				if (result == null) result = caseAbstractConstellationPlanner(defaultConstellationPlanner);
+				if (result == null) result = caseNamed(defaultConstellationPlanner);
+				if (result == null) result = caseDescribed(defaultConstellationPlanner);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -178,6 +189,12 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = caseAbstractConstellationCommandPlan(defaultConstellationCommandPlan);
 				if (result == null) result = caseNamed(defaultConstellationCommandPlan);
 				if (result == null) result = caseDescribed(defaultConstellationCommandPlan);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LISTS_CONTAINER: {
+				ConstellationRequestsListsContainer constellationRequestsListsContainer = (ConstellationRequestsListsContainer)theEObject;
+				T result = caseConstellationRequestsListsContainer(constellationRequestsListsContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -401,6 +418,21 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constellation Planners Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constellation Planners Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstellationPlannersContainer(ConstellationPlannersContainer object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Constellation Planner</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -457,6 +489,21 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDefaultConstellationCommandPlan(DefaultConstellationCommandPlan object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constellation Requests Lists Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constellation Requests Lists Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstellationRequestsListsContainer(ConstellationRequestsListsContainer object) {
 		return null;
 	}
 

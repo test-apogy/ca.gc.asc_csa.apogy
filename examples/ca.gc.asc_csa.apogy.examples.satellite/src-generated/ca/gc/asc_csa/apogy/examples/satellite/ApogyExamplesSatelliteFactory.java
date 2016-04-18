@@ -69,6 +69,15 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	DefaultConstellation createDefaultConstellation();
 
 	/**
+	 * Returns a new object of class '<em>Constellation Planners Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constellation Planners Container</em>'.
+	 * @generated
+	 */
+	ConstellationPlannersContainer createConstellationPlannersContainer();
+
+	/**
 	 * Returns a new object of class '<em>Default Constellation Planner</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,6 +94,15 @@ public interface ApogyExamplesSatelliteFactory extends EFactory {
 	 * @generated
 	 */
 	DefaultConstellationCommandPlan createDefaultConstellationCommandPlan();
+
+	/**
+	 * Returns a new object of class '<em>Constellation Requests Lists Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constellation Requests Lists Container</em>'.
+	 * @generated
+	 */
+	ConstellationRequestsListsContainer createConstellationRequestsListsContainer();
 
 	/**
 	 * Returns a new object of class '<em>Constellation Requests List</em>'.

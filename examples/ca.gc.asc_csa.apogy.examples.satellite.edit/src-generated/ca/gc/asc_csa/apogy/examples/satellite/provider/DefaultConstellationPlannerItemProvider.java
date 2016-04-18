@@ -17,7 +17,6 @@ import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDes
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -148,8 +147,7 @@ public class DefaultConstellationPlannerItemProvider extends AbstractConstellati
 	 */
 	@Override
 	public String getText(Object object) {
-		Date labelValue = ((DefaultConstellationPlanner)object).getStartDate();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((DefaultConstellationPlanner)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_DefaultConstellationPlanner_type") :
 			getString("_UI_DefaultConstellationPlanner_type") + " " + label;

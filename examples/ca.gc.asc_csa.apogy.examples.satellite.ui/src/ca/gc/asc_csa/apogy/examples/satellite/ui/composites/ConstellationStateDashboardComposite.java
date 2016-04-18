@@ -305,7 +305,7 @@ public class ConstellationStateDashboardComposite extends Composite {
 			downlinksViewer.setInput(constellationState.getDownlinksLists());
 
 			/* Requests. */
-			requestsViewer.setInput(constellationState.getConstellationRequestsList());
+//			requestsViewer.setInput(constellationState.getConstellationRequestsList());
 		}
 
 		return bindingContext;

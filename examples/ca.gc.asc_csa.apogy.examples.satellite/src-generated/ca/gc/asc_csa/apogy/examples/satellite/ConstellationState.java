@@ -34,8 +34,8 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesL
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getSatellitesList <em>Satellites List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getDownlinksLists <em>Downlinks Lists</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlanner <em>Constellation Planner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationRequestsListsContainer <em>Constellation Requests Lists Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlannersContainer <em>Constellation Planners Container</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState()
@@ -144,55 +144,55 @@ public interface ConstellationState extends EObject {
 	void setDownlinksLists(ConstellationDownlinksList value);
 
 	/**
-	 * Returns the value of the '<em><b>Constellation Requests List</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Constellation Requests Lists Container</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * List of {@link AbstractConstellationRequest}.
+	 * List of {@link ConstellationRequestsLists}.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Constellation Requests List</em>' containment reference.
-	 * @see #setConstellationRequestsList(ConstellationRequestsList)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState_ConstellationRequestsList()
+	 * @return the value of the '<em>Constellation Requests Lists Container</em>' containment reference.
+	 * @see #setConstellationRequestsListsContainer(ConstellationRequestsListsContainer)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState_ConstellationRequestsListsContainer()
 	 * @model containment="true"
 	 * @generated
 	 */
-	ConstellationRequestsList getConstellationRequestsList();
+	ConstellationRequestsListsContainer getConstellationRequestsListsContainer();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationRequestsList <em>Constellation Requests List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationRequestsListsContainer <em>Constellation Requests Lists Container</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constellation Requests List</em>' containment reference.
-	 * @see #getConstellationRequestsList()
+	 * @param value the new value of the '<em>Constellation Requests Lists Container</em>' containment reference.
+	 * @see #getConstellationRequestsListsContainer()
 	 * @generated
 	 */
-	void setConstellationRequestsList(ConstellationRequestsList value);
+	void setConstellationRequestsListsContainer(ConstellationRequestsListsContainer value);
 
 	/**
-	 * Returns the value of the '<em><b>Constellation Planner</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationState <em>Constellation State</em>}'.
+	 * Returns the value of the '<em><b>Constellation Planners Container</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer#getConstellationState <em>Constellation State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Constellation Planner.
+	 * Constellation Planners Container.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Constellation Planner</em>' containment reference.
-	 * @see #setConstellationPlanner(AbstractConstellationPlanner)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState_ConstellationPlanner()
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#getConstellationState
+	 * @return the value of the '<em>Constellation Planners Container</em>' containment reference.
+	 * @see #setConstellationPlannersContainer(ConstellationPlannersContainer)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState_ConstellationPlannersContainer()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer#getConstellationState
 	 * @model opposite="constellationState" containment="true"
 	 * @generated
 	 */
-	AbstractConstellationPlanner getConstellationPlanner();
+	ConstellationPlannersContainer getConstellationPlannersContainer();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlanner <em>Constellation Planner</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlannersContainer <em>Constellation Planners Container</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Constellation Planner</em>' containment reference.
-	 * @see #getConstellationPlanner()
+	 * @param value the new value of the '<em>Constellation Planners Container</em>' containment reference.
+	 * @see #getConstellationPlannersContainer()
 	 * @generated
 	 */
-	void setConstellationPlanner(AbstractConstellationPlanner value);
+	void setConstellationPlannersContainer(ConstellationPlannersContainer value);
 
 } // ConstellationState

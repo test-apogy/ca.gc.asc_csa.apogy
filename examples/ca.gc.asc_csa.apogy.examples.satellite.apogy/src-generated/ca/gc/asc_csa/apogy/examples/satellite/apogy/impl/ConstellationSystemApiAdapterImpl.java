@@ -67,12 +67,12 @@ public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 		AbstractConstellation constellation = (AbstractConstellation) getInstance();						
 		ConstellationState constellationState = EcoreUtil.copy(constellation.getConstellationState());
 		
-		data.getConstellationState().setConstellationRequestsList(constellationState.getConstellationRequestsList());
+		data.getConstellationState().setConstellationRequestsListsContainer(constellationState.getConstellationRequestsListsContainer());
 		data.getConstellationState().setConstellationCommandPlansList(constellationState.getConstellationCommandPlansList());
 		data.getConstellationState().setDownlinksLists(constellationState.getDownlinksLists());
 		data.getConstellationState().setGroundStationsReferencesList(constellationState.getGroundStationsReferencesList());
 		data.getConstellationState().setSatellitesList(constellationState.getSatellitesList());
-		data.getConstellationState().setConstellationPlanner(constellationState.getConstellationPlanner());
+		data.getConstellationState().setConstellationPlannersContainer(constellationState.getConstellationPlannersContainer());
 	}
 	
 	@Override
@@ -85,11 +85,11 @@ public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 		
 		if (data.getConstellationState() != null){
 			constellation.getConstellationState().setConstellationCommandPlansList(data.getConstellationState().getConstellationCommandPlansList());
-			constellation.getConstellationState().setConstellationRequestsList(data.getConstellationState().getConstellationRequestsList());
+			constellation.getConstellationState().setConstellationRequestsListsContainer(data.getConstellationState().getConstellationRequestsListsContainer());
 			constellation.getConstellationState().setDownlinksLists(data.getConstellationState().getDownlinksLists());
 			constellation.getConstellationState().setGroundStationsReferencesList(data.getConstellationState().getGroundStationsReferencesList());
 			constellation.getConstellationState().setSatellitesList(data.getConstellationState().getSatellitesList());
-			constellation.getConstellationState().setConstellationPlanner(data.getConstellationState().getConstellationPlanner());
+			constellation.getConstellationState().setConstellationPlannersContainer(data.getConstellationState().getConstellationPlannersContainer());
 		}
 	}
 	

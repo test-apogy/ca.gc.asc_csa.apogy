@@ -95,14 +95,14 @@ class StringUID extends AbstractUID{
 	contains ConstellationDownlinksList[0..1] downlinksLists
 		
 	/*
-	 * List of {@link AbstractConstellationRequest}.
+	 * List of {@link ConstellationRequestsLists}.
 	 */
-	contains ConstellationRequestsList[0..1] constellationRequestsList
+	contains ConstellationRequestsListsContainer[0..1] constellationRequestsListsContainer
 	
 	/*
-	 * Constellation Planner.
+	 * Constellation Planners Container.
 	 */
-	contains AbstractConstellationPlanner[0..1] constellationPlanner opposite constellationState	
+	contains ConstellationPlannersContainer[0..1] constellationPlannersContainer opposite constellationState
  }
 
 /*
@@ -110,7 +110,7 @@ class StringUID extends AbstractUID{
  * image acquisition and upload requests and downloads data from the satellites.
  */
 abstract class AbstractConstellation extends Named, Described{
-		
+				
 	/*
 	 * Constellation State.
 	 */
@@ -158,16 +158,47 @@ class DefaultConstellation extends AbstractConstellation{
 }
 
 /*
+ * Container of {@link AbstractConstellationPlanner}.
+ */
+class ConstellationPlannersContainer{
+	/*
+	 * Refers to the {@link ConstellationState} that contains this container.
+	 */
+	container ConstellationState constellationState opposite constellationPlannersContainer
+	
+	/*
+	 * Constellation Planners.
+	 */
+	contains AbstractConstellationPlanner[0..*] constellationPlanners opposite constellationPlannersContainer
+}
+
+/*
  * Abstract class that defines the concept of Constellation Planner.  A planner is used to process
  * a list of {@link AbstractConstellationRequest} and to generate a {@link ConstellationCommandPlan}.
  */
-abstract class AbstractConstellationPlanner{
+abstract class AbstractConstellationPlanner extends Named, Described{
 
 	/*
 	 * Refers the {@link ConstellationState} that contains the planner.
 	 */	 
     @GenModel(property="None")
-	container ConstellationState constellationState opposite constellationPlanner
+	container ConstellationPlannersContainer constellationPlannersContainer opposite constellationPlanners
+	
+	/*
+	 * Refers to the {@link ConstellationState} that contains the current planner.
+	 */
+	@GenModel(children="false", property="None")
+	refers local readonly volatile transient derived ConstellationState constellationState get
+	{
+		if (constellationPlannersContainer == null)
+		{
+			return null
+		}
+		else
+		{
+			return constellationPlannersContainer.constellationState
+		}
+	}	
 	
 	/*
 	 * Specifies the start date used by the planner.
@@ -289,6 +320,15 @@ abstract class AbstractConstellationCommandPlan extends Named, Described{
 class DefaultConstellationCommandPlan extends AbstractConstellationCommandPlan{
 }
 
+/*
+ * Container of {@link ConstellationRequestsList}. 
+ */
+class ConstellationRequestsListsContainer{
+	/*
+	 * {@link ConstellationRequestsList} container.
+	 */
+	contains ConstellationRequestsList[0..*] constellationRequestsLists	
+}
 
 /*
  * List that contains {@link AbstractConstellationRequest}.

@@ -1,5 +1,4 @@
-package ca.gc.asc_csa.apogy.examples.satellite.provider;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -7,11 +6,41 @@ package ca.gc.asc_csa.apogy.examples.satellite.provider;
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ * Canadian Space Agency (CSA) - Initial API and implementation
+ * -Pierre Allard (Pierre.Allard@canada.ca),
+ * -Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ * -Sebastien Gemme (Sebastien.Gemme@canada.ca)
  */
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
+
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.ImagesAlbum;
+
+import ca.gc.asc_csa.apogy.common.images.util.ApogyCommonImagesSwitch;
+
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.util.ApogyCoreEnvironmentOrbitEarthSwitch;
+
+import ca.gc.asc_csa.apogy.core.environment.util.ApogyCoreEnvironmentSwitch;
+
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+
+import ca.gc.asc_csa.apogy.examples.satellite.util.ApogyExamplesSatelliteAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,28 +71,6 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
-import ca.gc.asc_csa.apogy.common.images.ImagesAlbum;
-import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
-
-import ca.gc.asc_csa.apogy.common.images.util.ApogyCommonImagesSwitch;
-import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
-import ca.gc.asc_csa.apogy.common.topology.ContentNode;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
-import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.util.ApogyCoreEnvironmentOrbitEarthSwitch;
-import ca.gc.asc_csa.apogy.core.environment.util.ApogyCoreEnvironmentSwitch;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-
-import ca.gc.asc_csa.apogy.examples.satellite.util.ApogyExamplesSatelliteAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -214,6 +221,29 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConstellationPlannersContainerItemProvider constellationPlannersContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConstellationPlannersContainerAdapter() {
+		if (constellationPlannersContainerItemProvider == null) {
+			constellationPlannersContainerItemProvider = new ConstellationPlannersContainerItemProvider(this);
+		}
+
+		return constellationPlannersContainerItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -257,6 +287,29 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 		}
 
 		return defaultConstellationCommandPlanItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConstellationRequestsListsContainerItemProvider constellationRequestsListsContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConstellationRequestsListsContainerAdapter() {
+		if (constellationRequestsListsContainerItemProvider == null) {
+			constellationRequestsListsContainerItemProvider = new ConstellationRequestsListsContainerItemProvider(this);
+		}
+
+		return constellationRequestsListsContainerItemProvider;
 	}
 
 	/**
@@ -688,8 +741,10 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 		if (constellationCommandPlansListItemProvider != null) constellationCommandPlansListItemProvider.dispose();
 		if (constellationStateItemProvider != null) constellationStateItemProvider.dispose();
 		if (defaultConstellationItemProvider != null) defaultConstellationItemProvider.dispose();
+		if (constellationPlannersContainerItemProvider != null) constellationPlannersContainerItemProvider.dispose();
 		if (defaultConstellationPlannerItemProvider != null) defaultConstellationPlannerItemProvider.dispose();
 		if (defaultConstellationCommandPlanItemProvider != null) defaultConstellationCommandPlanItemProvider.dispose();
+		if (constellationRequestsListsContainerItemProvider != null) constellationRequestsListsContainerItemProvider.dispose();
 		if (constellationRequestsListItemProvider != null) constellationRequestsListItemProvider.dispose();
 		if (simpleRequestItemProvider != null) simpleRequestItemProvider.dispose();
 		if (observationConstellationRequestItemProvider != null) observationConstellationRequestItemProvider.dispose();
@@ -764,6 +819,7 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
@@ -915,6 +971,7 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
@@ -1124,12 +1181,22 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationPlannersContainer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationCommandPlan()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsListsContainer()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1229,12 +1296,22 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationPlannersContainer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellationCommandPlan()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsListsContainer()));
 
 				newChildDescriptors.add
 					(createChildParameter

@@ -39,7 +39,7 @@ public class ApogyExamplesSatelliteTests {
 		ConstellationState constellationState = getConstellationState(invocatorSession);
 		Assert.assertNotNull(constellationState);
 				
-		DefaultConstellationPlanner planner = (DefaultConstellationPlanner) constellationState.getConstellationPlanner();
+		DefaultConstellationPlanner planner = (DefaultConstellationPlanner) constellationState.getConstellationPlannersContainer().getConstellationPlanners().get(0);
 		assertNotNull(planner);
 
 		AbstractConstellationCommandPlan plan = getSatelliteCommandPlanByName(constellationState, GENERATED_PLAN_NAME);
@@ -48,7 +48,7 @@ public class ApogyExamplesSatelliteTests {
 		
 		/* 
 		 * Invoke the planner and use max number of threads. 
-		 */		
+		 */			
 		plan.getConstellationCommands().clear();
 		assertEquals(0, plan.getConstellationCommands().size());
 		planner.setMaxNumberThreads(numberOfThreads);
