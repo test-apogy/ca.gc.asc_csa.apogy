@@ -6,5 +6,5 @@ mvn clean install
 --------------------
 2) Deploy to bintray
 --------------------
-cd bundles/ca.gc.asc_csa.apogy.ots.repository
+cd bundles/ca.gc.asc_csa.apogy.repository
 mvn verify -Pdeploy-to-bintray -Dbintray.repo=Releases
