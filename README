@@ -1,0 +1,10 @@
+--------
+1) build
+--------
+mvn clean install
+
+--------------------
+2) Deploy to bintray
+--------------------
+cd bundles/ca.gc.asc_csa.apogy.ots.repository
+mvn verify -Pdeploy-to-bintray -Dbintray.repo=Releases
