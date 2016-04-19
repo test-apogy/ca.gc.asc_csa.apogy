@@ -3,6 +3,11 @@
 == Table Of Contents ==
 __TOC__
 
+== Prequisites ==
+Apogy is built on top of Eclipse Framework ([https://www.eclipse.org https://www.eclipse.org]), the Eclipse Modeling Framework (EMF).  Apogy uses EMF XCore technology to define EMF meta-models.  To have a proper understanding of the architecture and to facilitate contributions we highly recommend the developers to take a look at the following resources:
+# Eclipse EMF Tutorial ([http://www.vogella.com/tutorials/EclipseEMF/article.html http://www.vogella.com/tutorials/EclipseEMF/article.html])
+# EMF XCore Wiki [https://wiki.eclipse.org/Xcore https://wiki.eclipse.org/Xcore]
+# Eclipse Rich Client Platform ([http://www.vogella.com/tutorials/EclipseRCP/article.html http://www.vogella.com/tutorials/EclipseRCP/article.html]
 == Apogy Architecture ==
 
 * Based on the Eclipse Modeling Framework (EMF);
