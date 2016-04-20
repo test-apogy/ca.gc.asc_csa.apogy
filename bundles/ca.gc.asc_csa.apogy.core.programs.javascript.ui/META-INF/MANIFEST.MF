@@ -14,7 +14,8 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.apogy.core,
  org.eclipse.emf.ecore,
  ca.gc.asc_csa.apogy.examples.rover,
- ca.gc.asc_csa.apogy.common.emf
+ ca.gc.asc_csa.apogy.common.emf,
+ org.eclipse.wst.jsdt.core
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.core.programs.javascript.ui.commands

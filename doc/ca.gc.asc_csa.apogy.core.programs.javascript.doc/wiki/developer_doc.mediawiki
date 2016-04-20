@@ -31,7 +31,7 @@ Right-click on the ''JavaScriptProgram'', select ''Apogy'', then ''Invoke''.
 
 = Installation Requirements =
 
-* ''Eclipse Web Developer Tools'' (3.7.1+) available from the Eclipse Mars update site.
+* ''JavaScript Development Tools SDK'' (1.6) available from the http://download.eclipse.org/webtools/repository/mars/ update site.
 
 
 = Plugins =

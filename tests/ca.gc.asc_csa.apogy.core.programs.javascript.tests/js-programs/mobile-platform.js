@@ -1,11 +1,14 @@
-/*
+/**
  * Mobile Platform Example Program
+ * 
+ * This JavaScript program shows how to get attributes and execute operations on
+ * a mobile platform and its subsystems. The "mobilePlatform" variable is
+ * injected as a global variable.
  *
- *  This JavaScript program shows how to get attributes and execute operations on a mobile platform and its subsystems.
- *  The "mobilePlatform" variable is injected as a global variable.
+ * @variable mobilePlatform mobilePlatform
  */
 
-function main() {
+function main(mobilePlatform) {
 	// Initialize the mobile platform. All operations are invoked through the
 	// facade.
 	mobilePlatform.init();
@@ -23,5 +26,3 @@ function main() {
 	java.lang.System.out.println("Position: " + position.x + ", " + position.y
 			+ ", " + position.theta);
 }
-
-main();

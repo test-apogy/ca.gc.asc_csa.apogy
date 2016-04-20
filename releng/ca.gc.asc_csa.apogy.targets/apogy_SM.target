@@ -19,8 +19,8 @@
 <repository location="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="ca.gc.asc_csa.apogy.ots.feature.feature.group" version="0.1.0.201602242005"/>
-<repository location="ftp://ftp.asc-csa.gc.ca/users/apogy/pub/apogy_ots/repository/latest/"/>
+<unit id="ca.gc.asc_csa.apogy.ots.feature.feature.group" version="0.1.0.201604191705"/>
+<repository location="https://dl.bintray.com/apogy/OTS/0.1/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.ecp.sdk.feature.feature.group" version="1.7.0.20150914-1619"/>
