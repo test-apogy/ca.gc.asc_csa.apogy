@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
 import ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFFacadeImpl;
 
@@ -418,5 +419,18 @@ public interface ApogyCommonEMFFacade extends EObject
 	 * @generated
 	 */
 	String getID(EObject eObject);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Searches the ResourceSet for an EObject with the specified id.
+	 * @param resourceSet Reference to the resourceSet
+	 * @param id Object identifier.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" resourceSetDataType="ca.gc.asc_csa.apogy.common.emf.ResourceSet" resourceSetUnique="false" idUnique="false"
+	 * @generated
+	 */
+	EObject getEObjectById(ResourceSet resourceSet, String id);
 
 } // ApogyCommonEMFFacade

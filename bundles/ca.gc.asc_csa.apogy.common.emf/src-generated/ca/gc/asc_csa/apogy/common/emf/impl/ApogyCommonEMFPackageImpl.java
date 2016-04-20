@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
@@ -344,6 +345,13 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	private EDataType jobEDataType = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType resourceSetEDataType = null;
 
 		/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -751,6 +759,15 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 */
 	public EOperation getApogyCommonEMFFacade__GetID__EObject() {
 		return apogyCommonEMFFacadeEClass.getEOperations().get(36);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFFacade__GetEObjectById__ResourceSet_String() {
+		return apogyCommonEMFFacadeEClass.getEOperations().get(37);
 	}
 
 		/**
@@ -1562,6 +1579,15 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getResourceSet() {
+		return resourceSetEDataType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCommonEMFFactory getApogyCommonEMFFactory() {
 		return (ApogyCommonEMFFactory)getEFactoryInstance();
 	}
@@ -1624,6 +1650,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___SORT_TIMED__COLLECTION);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_TIME_SPAN__COLLECTION);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ID__EOBJECT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING);
 
 		eObjectReferenceEClass = createEClass(EOBJECT_REFERENCE);
 		createEReference(eObjectReferenceEClass, EOBJECT_REFERENCE__EOBJECT);
@@ -1737,6 +1764,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		eListEDataType = createEDataType(ELIST);
 		uriEDataType = createEDataType(URI);
 		jobEDataType = createEDataType(JOB);
+		resourceSetEDataType = createEDataType(RESOURCE_SET);
 	}
 
   /**
@@ -1985,6 +2013,10 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		op = initEOperation(getApogyCommonEMFFacade__GetID__EObject(), theEcorePackage.getEString(), "getID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCommonEMFFacade__GetEObjectById__ResourceSet_String(), theEcorePackage.getEObject(), "getEObjectById", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getResourceSet(), "resourceSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "id", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(eObjectReferenceEClass, EObjectReference.class, "EObjectReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEObjectReference_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, EObjectReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2119,6 +2151,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		initEDataType(eListEDataType, EList.class, "EList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(uriEDataType, org.eclipse.emf.common.util.URI.class, "URI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(jobEDataType, Job.class, "Job", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(resourceSetEDataType, ResourceSet.class, "ResourceSet", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

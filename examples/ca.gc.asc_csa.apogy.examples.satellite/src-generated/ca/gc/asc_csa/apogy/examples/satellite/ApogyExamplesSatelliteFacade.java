@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Apogy Examples Satellite Facade.
+ * Class that provides utility methods.
  * <!-- end-model-doc -->
  *
  *

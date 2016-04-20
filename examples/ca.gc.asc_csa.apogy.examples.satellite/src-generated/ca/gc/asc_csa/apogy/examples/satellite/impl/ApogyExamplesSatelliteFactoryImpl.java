@@ -69,6 +69,7 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ApogyExamplesSatellitePackage.APOGY_EXAMPLES_SATELLITE_FACADE: return createApogyExamplesSatelliteFacade();
 			case ApogyExamplesSatellitePackage.STRING_UID: return createStringUID();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLANS_LIST: return createConstellationCommandPlansList();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE: return createConstellationState();
@@ -138,6 +139,16 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ApogyExamplesSatelliteFacade createApogyExamplesSatelliteFacade() {
+		ApogyExamplesSatelliteFacadeImpl apogyExamplesSatelliteFacade = new ApogyExamplesSatelliteFacadeImpl();
+		return apogyExamplesSatelliteFacade;
 	}
 
 	/**
