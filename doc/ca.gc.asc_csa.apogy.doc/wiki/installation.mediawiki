@@ -21,6 +21,6 @@ Apogy is based on Eclipse platform [https://www.eclipse.org https://www.eclipse.
 ## Stable: [https://dl.bintray.com/apogy/Releases/0.5/ https://dl.bintray.com/apogy/Releases/0.5/] '''OR'''
 ## Latest: [https://dl.bintray.com/apogy/Develop/0.5/ https://dl.bintray.com/apogy/Develop/0.5/]
 # Install the following packages:
-#* Apogy
+#* Apogy\Apogy SDK (You must select Apogy SDK only).
 = Known Issues =
 # export SWT_GTK3=0
