@@ -24,12 +24,18 @@ import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.ui.IMemento;
+import org.eclipse.ui.IViewSite;
+import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.progress.UIJob;
 
 import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.examples.satellite.Activator;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer;
 import ca.gc.asc_csa.apogy.examples.satellite.ui.composites.ConstellationRequestsComposite;
 
 public class ConstellationRequestsView extends AbstractView implements IEditingDomainProvider {
@@ -38,8 +44,8 @@ public class ConstellationRequestsView extends AbstractView implements IEditingD
 	public static final String ID = "ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationRequestsView";
 
 	// Used to store the last selection.
-	public static final String VIEW_CONFIG = Activator.ID + "."
-			+ "CONSTELLATION_REQUESTS_CONFIG";
+	private static final String VIEW_CONFIG_ID = Activator.ID + "."
+			+ "CONSTELLATION_REQUESTS_VIEW_CONFIG";
 
 	// Part Name.
 	public static final String PART_NAME = "Constellation Requests";
@@ -47,8 +53,10 @@ public class ConstellationRequestsView extends AbstractView implements IEditingD
 	// Reference to the composite.
 	private ConstellationRequestsComposite constellationRequestsComposite;
 
-	// Constellation State.
-	private ConstellationRequestsList constellationRequestsList;
+	// Constellation Requests Lists.
+	private ConstellationRequestsListsContainer constellationRequestsListsContainer;
+
+	private String constellationRequestsListsContainerId;
 
 	/*
 	 * The constructor.
@@ -63,19 +71,27 @@ public class ConstellationRequestsView extends AbstractView implements IEditingD
 	public void createPartControl(Composite parent) {
 		super.createPartControl(parent);
 		constellationRequestsComposite = new ConstellationRequestsComposite(parent, SWT.NONE);
+		
+		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		if(session != null && constellationRequestsListsContainerId != null){
+			constellationRequestsListsContainer = (ConstellationRequestsListsContainer) ApogyCommonEMFFacade.INSTANCE.getEObjectById(session.eResource().getResourceSet(), constellationRequestsListsContainerId);
+			if (constellationRequestsListsContainer != null){
+				setConstellationRequestsListsContainer(constellationRequestsListsContainer);
+			}
+		}
 	}
 
 	/*
 	 * Update the {@link ConstellationRequestsComposite}.
 	 * @param constellationRequestsList Constellation Requests List.
 	 */
-	private void setConstellationRequests(ConstellationRequestsList constellationRequestsList) {
-		if (constellationRequestsList != null) {
+	private void setConstellationRequestsListsContainer(ConstellationRequestsListsContainer constellationRequestsListsContainer) {
+		if (constellationRequestsListsContainer != null) {
 			/* Displays the active constellation. */
-			new UIJob("Update Constellation Dashboard Input") {
+			new UIJob("Update Constellation Requests List Composite") {
 				@Override
 				public IStatus runInUIThread(IProgressMonitor monitor) {
-					constellationRequestsComposite.setConstellationRequests(constellationRequestsList);
+					constellationRequestsComposite.setConstellationRequestsListsContainer(constellationRequestsListsContainer);
 					return Status.OK_STATUS;
 				}
 			}.schedule();
@@ -95,17 +111,34 @@ public class ConstellationRequestsView extends AbstractView implements IEditingD
 	@Override
 	public void updateSelection(ISelection selection) {
 
-		List<Object> constellationRequestsLists = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection,
-				ConstellationRequestsList.class);
+		List<Object> constellationRequestsListsContainers = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection,
+				ConstellationRequestsListsContainer.class);
 
-		if (!constellationRequestsLists.isEmpty()) {
-			constellationRequestsList = (ConstellationRequestsList) constellationRequestsLists.get(0);
-			setConstellationRequests(constellationRequestsList);
+		if (!constellationRequestsListsContainers.isEmpty()) {
+			constellationRequestsListsContainer = (ConstellationRequestsListsContainer) constellationRequestsListsContainers.get(0);
+			setConstellationRequestsListsContainer(constellationRequestsListsContainer);
 		}
 	}
 
 	@Override
 	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(constellationRequestsList);
+		return AdapterFactoryEditingDomain.getEditingDomainFor(constellationRequestsListsContainer);
+	}
+	
+	@Override
+	public void init(IViewSite site, IMemento memento) throws PartInitException {
+		super.init(site, memento);
+		if (memento != null){
+			constellationRequestsListsContainerId = memento.getString(VIEW_CONFIG_ID);
+		}
+	}
+	
+	@Override
+	public void saveState(IMemento memento) {
+		if (constellationRequestsListsContainer != null){
+			constellationRequestsListsContainerId = ApogyCommonEMFFacade.INSTANCE.getID(constellationRequestsListsContainer);
+			memento.putString(VIEW_CONFIG_ID, constellationRequestsListsContainerId);
+		}
+		super.saveState(memento);
 	}
 }

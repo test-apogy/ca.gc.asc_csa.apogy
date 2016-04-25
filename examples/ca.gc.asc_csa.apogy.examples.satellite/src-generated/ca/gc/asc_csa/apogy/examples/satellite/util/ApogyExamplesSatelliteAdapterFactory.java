@@ -83,6 +83,10 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	protected ApogyExamplesSatelliteSwitch<Adapter> modelSwitch =
 		new ApogyExamplesSatelliteSwitch<Adapter>() {
 			@Override
+			public Adapter caseApogyExamplesSatelliteFacade(ApogyExamplesSatelliteFacade object) {
+				return createApogyExamplesSatelliteFacadeAdapter();
+			}
+			@Override
 			public Adapter caseAbstractUID(AbstractUID object) {
 				return createAbstractUIDAdapter();
 			}
@@ -237,6 +241,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade <em>Facade</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade
+	 * @generated
+	 */
+	public Adapter createApogyExamplesSatelliteFacadeAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractUID <em>Abstract UID</em>}'.

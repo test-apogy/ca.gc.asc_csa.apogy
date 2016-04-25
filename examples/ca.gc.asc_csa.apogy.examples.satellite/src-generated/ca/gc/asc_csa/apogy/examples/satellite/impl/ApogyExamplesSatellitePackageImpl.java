@@ -42,6 +42,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.AbstractRequestBasedSatelliteComma
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
@@ -73,6 +74,13 @@ import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteComman
  * @generated
  */
 public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements ApogyExamplesSatellitePackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass apogyExamplesSatelliteFacadeEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -366,6 +374,15 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ApogyExamplesSatellitePackage.eNS_URI, theApogyExamplesSatellitePackage);
 		return theApogyExamplesSatellitePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getApogyExamplesSatelliteFacade() {
+		return apogyExamplesSatelliteFacadeEClass;
 	}
 
 	/**
@@ -1215,6 +1232,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		isCreated = true;
 
 		// Create classes and their features
+		apogyExamplesSatelliteFacadeEClass = createEClass(APOGY_EXAMPLES_SATELLITE_FACADE);
+
 		abstractUIDEClass = createEClass(ABSTRACT_UID);
 
 		stringUIDEClass = createEClass(STRING_UID);
@@ -1406,6 +1425,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		orbitalImageConstellationDownlinkItemEClass.getESuperTypes().add(this.getAbstractConstellationDownlinkItem());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(apogyExamplesSatelliteFacadeEClass, ApogyExamplesSatelliteFacade.class, "ApogyExamplesSatelliteFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(abstractUIDEClass, AbstractUID.class, "AbstractUID", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(stringUIDEClass, StringUID.class, "StringUID", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1595,6 +1616,12 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.satellite/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.examples"
+		   });	
+		addAnnotation
+		  (apogyExamplesSatelliteFacadeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Class that provides utility methods."
 		   });	
 		addAnnotation
 		  (abstractUIDEClass, 

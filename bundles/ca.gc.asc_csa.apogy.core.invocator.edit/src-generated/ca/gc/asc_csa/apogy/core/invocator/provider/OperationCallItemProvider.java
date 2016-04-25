@@ -320,8 +320,6 @@ public class OperationCallItemProvider extends
 				} else if (parameter.getEType() instanceof EDataType) {
 					
 					Class<?> clazz = parameter.getEType().getInstanceClass();
-					System.out.println("OperationCallItemProvider.createSetCommand()");
-					
 					
 					if (clazz.isAssignableFrom(boolean.class) || clazz.isAssignableFrom(Boolean.class)) {
 						argument = ApogyCoreInvocatorFactory.eINSTANCE.createBooleanEDataTypeArgument();

@@ -51,6 +51,12 @@ type SortedSet<T> wraps java.util.SortedSet
 type Comparator<T> wraps java.util.Comparator 
  
 /*
+ * Class that provides utility methods.
+ */
+class ApogyExamplesSatelliteFacade{
+}
+ 
+/*
  * Abstract Unique Identifier.  This class is meant to be sub-classed.
  */
 abstract class AbstractUID{

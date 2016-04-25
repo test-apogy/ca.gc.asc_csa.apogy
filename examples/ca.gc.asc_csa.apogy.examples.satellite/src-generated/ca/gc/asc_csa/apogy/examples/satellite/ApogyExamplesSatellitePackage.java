@@ -88,6 +88,34 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	ApogyExamplesSatellitePackage eINSTANCE = ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatelliteFacadeImpl <em>Facade</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatelliteFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getApogyExamplesSatelliteFacade()
+	 * @generated
+	 */
+	int APOGY_EXAMPLES_SATELLITE_FACADE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EXAMPLES_SATELLITE_FACADE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EXAMPLES_SATELLITE_FACADE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractUIDImpl <em>Abstract UID</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,7 +123,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractUID()
 	 * @generated
 	 */
-	int ABSTRACT_UID = 0;
+	int ABSTRACT_UID = 1;
 
 	/**
 	 * The number of structural features of the '<em>Abstract UID</em>' class.
@@ -123,7 +151,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getStringUID()
 	 * @generated
 	 */
-	int STRING_UID = 1;
+	int STRING_UID = 2;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -160,7 +188,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationCommandPlansList()
 	 * @generated
 	 */
-	int CONSTELLATION_COMMAND_PLANS_LIST = 2;
+	int CONSTELLATION_COMMAND_PLANS_LIST = 3;
 
 	/**
 	 * The feature id for the '<em><b>Constellation State</b></em>' container reference.
@@ -206,7 +234,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationState()
 	 * @generated
 	 */
-	int CONSTELLATION_STATE = 3;
+	int CONSTELLATION_STATE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Constellation Command Plans List</b></em>' containment reference.
@@ -306,7 +334,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellation()
 	 * @generated
 	 */
-	int ABSTRACT_CONSTELLATION = 4;
+	int ABSTRACT_CONSTELLATION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -361,7 +389,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getDefaultConstellation()
 	 * @generated
 	 */
-	int DEFAULT_CONSTELLATION = 5;
+	int DEFAULT_CONSTELLATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -416,7 +444,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationPlannersContainer()
 	 * @generated
 	 */
-	int CONSTELLATION_PLANNERS_CONTAINER = 6;
+	int CONSTELLATION_PLANNERS_CONTAINER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Constellation State</b></em>' container reference.
@@ -462,7 +490,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellationPlanner()
 	 * @generated
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER = 7;
+	int ABSTRACT_CONSTELLATION_PLANNER = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -643,7 +671,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getDefaultConstellationPlanner()
 	 * @generated
 	 */
-	int DEFAULT_CONSTELLATION_PLANNER = 8;
+	int DEFAULT_CONSTELLATION_PLANNER = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -851,7 +879,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellationCommandPlan()
 	 * @generated
 	 */
-	int ABSTRACT_CONSTELLATION_COMMAND_PLAN = 9;
+	int ABSTRACT_CONSTELLATION_COMMAND_PLAN = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -924,7 +952,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getDefaultConstellationCommandPlan()
 	 * @generated
 	 */
-	int DEFAULT_CONSTELLATION_COMMAND_PLAN = 10;
+	int DEFAULT_CONSTELLATION_COMMAND_PLAN = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -997,7 +1025,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestsListsContainer()
 	 * @generated
 	 */
-	int CONSTELLATION_REQUESTS_LISTS_CONTAINER = 11;
+	int CONSTELLATION_REQUESTS_LISTS_CONTAINER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Constellation State</b></em>' container reference.
@@ -1043,7 +1071,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestsList()
 	 * @generated
 	 */
-	int CONSTELLATION_REQUESTS_LIST = 12;
+	int CONSTELLATION_REQUESTS_LIST = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1116,7 +1144,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellationRequest()
 	 * @generated
 	 */
-	int ABSTRACT_CONSTELLATION_REQUEST = 13;
+	int ABSTRACT_CONSTELLATION_REQUEST = 14;
 
 	/**
 	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
@@ -1171,7 +1199,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSimpleRequest()
 	 * @generated
 	 */
-	int SIMPLE_REQUEST = 14;
+	int SIMPLE_REQUEST = 15;
 
 	/**
 	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
@@ -1226,7 +1254,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getObservationConstellationRequest()
 	 * @generated
 	 */
-	int OBSERVATION_CONSTELLATION_REQUEST = 15;
+	int OBSERVATION_CONSTELLATION_REQUEST = 16;
 
 	/**
 	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
@@ -1290,7 +1318,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getImageConstellationRequest()
 	 * @generated
 	 */
-	int IMAGE_CONSTELLATION_REQUEST = 16;
+	int IMAGE_CONSTELLATION_REQUEST = 17;
 
 	/**
 	 * The feature id for the '<em><b>Uid</b></em>' containment reference.
@@ -1363,7 +1391,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSatellitesList()
 	 * @generated
 	 */
-	int SATELLITES_LIST = 17;
+	int SATELLITES_LIST = 18;
 
 	/**
 	 * The feature id for the '<em><b>Satellites</b></em>' containment reference list.
@@ -1400,7 +1428,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSatellite()
 	 * @generated
 	 */
-	int SATELLITE = 18;
+	int SATELLITE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1455,7 +1483,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractSatelliteCommand()
 	 * @generated
 	 */
-	int ABSTRACT_SATELLITE_COMMAND = 19;
+	int ABSTRACT_SATELLITE_COMMAND = 20;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1510,7 +1538,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractRequestBasedSatelliteCommand()
 	 * @generated
 	 */
-	int ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND = 20;
+	int ABSTRACT_REQUEST_BASED_SATELLITE_COMMAND = 21;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1574,7 +1602,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getVisibilityPassBasedSatelliteCommand()
 	 * @generated
 	 */
-	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND = 21;
+	int VISIBILITY_PASS_BASED_SATELLITE_COMMAND = 22;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1647,7 +1675,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAcquireImageSatelliteCommand()
 	 * @generated
 	 */
-	int ACQUIRE_IMAGE_SATELLITE_COMMAND = 22;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND = 23;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1747,7 +1775,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getOrbitalImage()
 	 * @generated
 	 */
-	int ORBITAL_IMAGE = 23;
+	int ORBITAL_IMAGE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -1847,7 +1875,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationDownlinksList()
 	 * @generated
 	 */
-	int CONSTELLATION_DOWNLINKS_LIST = 24;
+	int CONSTELLATION_DOWNLINKS_LIST = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1902,7 +1930,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationDownlink()
 	 * @generated
 	 */
-	int CONSTELLATION_DOWNLINK = 25;
+	int CONSTELLATION_DOWNLINK = 26;
 
 	/**
 	 * The feature id for the '<em><b>Downlink Items</b></em>' containment reference list.
@@ -1939,7 +1967,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellationDownlinkItem()
 	 * @generated
 	 */
-	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM = 26;
+	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM = 27;
 
 	/**
 	 * The feature id for the '<em><b>Request UID</b></em>' containment reference.
@@ -1976,7 +2004,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getOrbitalImageConstellationDownlinkItem()
 	 * @generated
 	 */
-	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM = 27;
+	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM = 28;
 
 	/**
 	 * The feature id for the '<em><b>Request UID</b></em>' containment reference.
@@ -2022,7 +2050,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestPriority()
 	 * @generated
 	 */
-	int CONSTELLATION_REQUEST_PRIORITY = 28;
+	int CONSTELLATION_REQUEST_PRIORITY = 29;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}' enum.
@@ -2032,7 +2060,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestStatus()
 	 * @generated
 	 */
-	int CONSTELLATION_REQUEST_STATUS = 29;
+	int CONSTELLATION_REQUEST_STATUS = 30;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -2042,7 +2070,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 30;
+	int LIST = 31;
 
 	/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -2052,7 +2080,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSortedSet()
 	 * @generated
 	 */
-	int SORTED_SET = 31;
+	int SORTED_SET = 32;
 
 
 	/**
@@ -2063,8 +2091,18 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getComparator()
 	 * @generated
 	 */
-	int COMPARATOR = 32;
+	int COMPARATOR = 33;
 
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade <em>Facade</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade
+	 * @generated
+	 */
+	EClass getApogyExamplesSatelliteFacade();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractUID <em>Abstract UID</em>}'.
@@ -3052,6 +3090,16 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatelliteFacadeImpl <em>Facade</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatelliteFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getApogyExamplesSatelliteFacade()
+		 * @generated
+		 */
+		EClass APOGY_EXAMPLES_SATELLITE_FACADE = eINSTANCE.getApogyExamplesSatelliteFacade();
+
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractUIDImpl <em>Abstract UID</em>}' class.
 		 * <!-- begin-user-doc -->

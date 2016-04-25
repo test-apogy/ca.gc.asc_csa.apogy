@@ -23,7 +23,14 @@
             id="ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationDashboard"
             name="Constellation Dashboard">
       </view>
-   </extension>
+      <view
+            category="ca.gc.asc_csa.apogy.examples.ui.category"
+            class="ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationRequestsView"
+            icon="icons/sample.gif"
+            id="ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationRequestsView"
+            name="Constellation Requests">
+      </view>      
+   </extension>   
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated apogy_examples_satellite_ui -->
       <package
