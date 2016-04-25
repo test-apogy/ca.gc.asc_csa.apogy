@@ -438,13 +438,22 @@ public interface ApogyCommonEMFPackage extends EPackage
 	int APOGY_COMMON_EMF_FACADE___GET_ID__EOBJECT = 36;
 
 		/**
+	 * The operation id for the '<em>Get EObject By Id</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING = 37;
+
+		/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 37;
+	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 38;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -2174,6 +2183,17 @@ public interface ApogyCommonEMFPackage extends EPackage
 
 
 		/**
+	 * The meta object id for the '<em>Resource Set</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.resource.ResourceSet
+	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getResourceSet()
+	 * @generated
+	 */
+	int RESOURCE_SET = 39;
+
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2552,6 +2572,16 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @generated
 	 */
 	EOperation getApogyCommonEMFFacade__GetID__EObject();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getEObjectById(org.eclipse.emf.ecore.resource.ResourceSet, java.lang.String) <em>Get EObject By Id</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get EObject By Id</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getEObjectById(org.eclipse.emf.ecore.resource.ResourceSet, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFFacade__GetEObjectById__ResourceSet_String();
 
 		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference <em>EObject Reference</em>}'.
@@ -3452,6 +3482,17 @@ public interface ApogyCommonEMFPackage extends EPackage
 	EDataType getJob();
 
 		/**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.ecore.resource.ResourceSet <em>Resource Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Resource Set</em>'.
+	 * @see org.eclipse.emf.ecore.resource.ResourceSet
+	 * @model instanceClass="org.eclipse.emf.ecore.resource.ResourceSet"
+	 * @generated
+	 */
+	EDataType getResourceSet();
+
+		/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3780,6 +3821,14 @@ public interface ApogyCommonEMFPackage extends EPackage
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_EMF_FACADE___GET_ID__EOBJECT = eINSTANCE.getApogyCommonEMFFacade__GetID__EObject();
+
+				/**
+		 * The meta object literal for the '<em><b>Get EObject By Id</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING = eINSTANCE.getApogyCommonEMFFacade__GetEObjectById__ResourceSet_String();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -4536,6 +4585,16 @@ public interface ApogyCommonEMFPackage extends EPackage
 		 * @generated
 		 */
 		EDataType JOB = eINSTANCE.getJob();
+
+				/**
+		 * The meta object literal for the '<em>Resource Set</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.ecore.resource.ResourceSet
+		 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getResourceSet()
+		 * @generated
+		 */
+		EDataType RESOURCE_SET = eINSTANCE.getResourceSet();
 
   }
 

@@ -129,6 +129,29 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ApogyExamplesSatelliteFacadeItemProvider apogyExamplesSatelliteFacadeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createApogyExamplesSatelliteFacadeAdapter() {
+		if (apogyExamplesSatelliteFacadeItemProvider == null) {
+			apogyExamplesSatelliteFacadeItemProvider = new ApogyExamplesSatelliteFacadeItemProvider(this);
+		}
+
+		return apogyExamplesSatelliteFacadeItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.StringUID} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -714,6 +737,7 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 	 * @generated
 	 */
 	public void dispose() {
+		if (apogyExamplesSatelliteFacadeItemProvider != null) apogyExamplesSatelliteFacadeItemProvider.dispose();
 		if (stringUIDItemProvider != null) stringUIDItemProvider.dispose();
 		if (constellationCommandPlansListItemProvider != null) constellationCommandPlansListItemProvider.dispose();
 		if (constellationStateItemProvider != null) constellationStateItemProvider.dispose();
@@ -1137,6 +1161,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createApogyExamplesSatelliteFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createStringUID()));
 
 				newChildDescriptors.add
@@ -1244,6 +1273,11 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 			 */
 			@Override
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createApogyExamplesSatelliteFacade()));
+
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,

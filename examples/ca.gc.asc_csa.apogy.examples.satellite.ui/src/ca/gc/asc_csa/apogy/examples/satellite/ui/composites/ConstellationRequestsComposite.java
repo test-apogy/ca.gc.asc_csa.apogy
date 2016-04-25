@@ -19,12 +19,10 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.ITableLabelProvider;
-import org.eclipse.jface.viewers.TableViewer;
-import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.ViewerComparator;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -32,33 +30,25 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.forms.widgets.Section;
 
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer;
 
 public class ConstellationRequestsComposite extends Composite {
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
-	private TableViewer plansViewer;
-	private TreeViewer downlinksViewer;
-	private TableViewer requestsViewer;
+	private TreeViewer requestsViewer;
 	private AdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 	private DataBindingContext m_bindingContext;
-	private Label lblLoadingStatus;
-	private ConstellationRequestsList constellationRequestsList;
+	private ConstellationRequestsListsContainer constellationRequestsListsContainer;
 
 	/**
 	 * Create the composite.
@@ -79,149 +69,36 @@ public class ConstellationRequestsComposite extends Composite {
 		toolkit.paintBordersFor(this);
 		setLayout(new GridLayout(1, false));
 
-		Section sctnOverview = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
-		sctnOverview.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
-		toolkit.paintBordersFor(sctnOverview);
-		sctnOverview.setText("Overview");
-
-		Composite compositeOverview = new Composite(sctnOverview, SWT.NONE);
-		toolkit.adapt(compositeOverview);
-		toolkit.paintBordersFor(compositeOverview);
-		sctnOverview.setClient(compositeOverview);
-		compositeOverview.setLayout(new RowLayout(SWT.HORIZONTAL));
-
-		lblLoadingStatus = new Label(compositeOverview, SWT.NONE);
-		toolkit.adapt(lblLoadingStatus, true, true);
-		lblLoadingStatus.setText("NOT LOADED");
-
-		SashForm sashForm = new SashForm(this, SWT.BORDER | SWT.SMOOTH);
-		sashForm.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		toolkit.adapt(sashForm);
-		toolkit.paintBordersFor(sashForm);
-
-		Composite compositeLeft = toolkit.createComposite(sashForm, SWT.NONE);
-		toolkit.paintBordersFor(compositeLeft);
-		compositeLeft.setLayout(new GridLayout(1, false));
-
-		/*
-		 * Plans Section.
-		 */
-		Section sctnPlans = toolkit.createSection(compositeLeft, Section.EXPANDED | Section.TITLE_BAR);
-		sctnPlans.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		toolkit.paintBordersFor(sctnPlans);
-		sctnPlans.setText("Plans");
-		plansViewer = new TableViewer(sctnPlans, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
-		plansViewer.setUseHashlookup(true);
-		Table tablePlans = plansViewer.getTable();
-		tablePlans.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		tablePlans.setLinesVisible(true);
-		sctnPlans.setClient(tablePlans);
-		plansViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
-		plansViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
-
-		/*
-		 * Downlinks Section.
-		 */
-		Section sctnDownlinks = toolkit.createSection(compositeLeft, Section.EXPANDED | Section.TITLE_BAR);
-		sctnDownlinks.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		sctnDownlinks.setBounds(0, 0, 117, 23);
-		toolkit.paintBordersFor(sctnDownlinks);
-		sctnDownlinks.setText("Downlinks");
-		downlinksViewer = new TreeViewer(sctnDownlinks, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
-		downlinksViewer.setUseHashlookup(true);
-		Tree treeDownlinks = downlinksViewer.getTree();
-		treeDownlinks.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		treeDownlinks.setLinesVisible(true);
-		sctnDownlinks.setClient(treeDownlinks);
-		downlinksViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory) {
-			@Override
-			public boolean hasChildren(Object object) {
-				return object instanceof ConstellationDownlinksList ? super.hasChildren(object) : false;
-			}
-
-			@Override
-			public Object[] getChildren(Object object) {
-				return hasChildren(object) ? super.getChildren(object) : null;
-			}
-		});
-		downlinksViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
-
-		Composite compositeRight = toolkit.createComposite(sashForm, SWT.NONE);
-		toolkit.paintBordersFor(compositeRight);
-		compositeRight.setLayout(new GridLayout(1, false));
-
-		/*
-		 * Requests Section
-		 */
-		Section sctnRequests = toolkit.createSection(compositeRight, Section.EXPANDED | Section.TITLE_BAR);
-		sctnRequests.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		toolkit.paintBordersFor(sctnRequests);
-		sctnRequests.setText("Requests");
-
-		requestsViewer = new TableViewer(sctnRequests, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+		requestsViewer = new TreeViewer(this, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		requestsViewer.setUseHashlookup(true);
-		Table tableRequests = requestsViewer.getTable();
-		tableRequests.setHeaderVisible(true);
-		tableRequests.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		tableRequests.setLinesVisible(true);
-		sctnRequests.setClient(tableRequests);
+		Tree treeRequests = requestsViewer.getTree();
+		treeRequests.setHeaderVisible(true);
+		treeRequests.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		treeRequests.setLinesVisible(true);
 
-		TableViewerColumn tableViewerColumnUID = new TableViewerColumn(requestsViewer, SWT.NONE);
-		TableColumn tblclmnUID = tableViewerColumnUID.getColumn();
-		tblclmnUID.setWidth(80);
-		tblclmnUID.setText("UID");
-		tblclmnUID.setToolTipText("Refers to the constellation Request Unique Identifier.");
+		TreeViewerColumn treeViewerColumnUID = new TreeViewerColumn(requestsViewer, SWT.NONE);
+		TreeColumn treeclmnUID = treeViewerColumnUID.getColumn();
+		treeclmnUID.setWidth(80);
+		treeclmnUID.setText("UID");
+		treeclmnUID.setToolTipText("Refers to the constellation Request Unique Identifier.");
 
-		TableViewerColumn tableViewerSatellite = new TableViewerColumn(requestsViewer, SWT.NONE);
-		TableColumn tblclmnSatellite = tableViewerSatellite.getColumn();
-		tblclmnSatellite.setWidth(150);
-		tblclmnSatellite.setText("Satellite");
-		tblclmnSatellite.setToolTipText("Specifies the satellite that will process the constellation request.");
+		TreeViewerColumn treeViewerSatellite = new TreeViewerColumn(requestsViewer, SWT.NONE);
+		TreeColumn treeclmnSatellite = treeViewerSatellite.getColumn();
+		treeclmnSatellite.setWidth(150);
+		treeclmnSatellite.setText("Satellite");
+		treeclmnSatellite.setToolTipText("Specifies the satellite that will process the constellation request.");
 
-		TableViewerColumn tableViewerPriority = new TableViewerColumn(requestsViewer, SWT.NONE);
-		TableColumn tblclmnPriority = tableViewerPriority.getColumn();
-		tblclmnPriority.setWidth(150);
-		tblclmnPriority.setText("Priority");
-		tblclmnPriority.setToolTipText("Specifies the priority level the constellation request.");
+		TreeViewerColumn treeViewerPriority = new TreeViewerColumn(requestsViewer, SWT.NONE);
+		TreeColumn treeclmnPriority = treeViewerPriority.getColumn();
+		treeclmnPriority.setWidth(150);
+		treeclmnPriority.setText("Priority");
+		treeclmnPriority.setToolTipText("Specifies the priority level the constellation request.");
 		
-		TableViewerColumn tableViewerColumnStatus = new TableViewerColumn(requestsViewer, SWT.NONE);
-		TableColumn tblclmnStatus = tableViewerColumnStatus.getColumn();
-		tblclmnStatus.setWidth(100);
-		tblclmnStatus.setText("Status");
-		tblclmnStatus.setToolTipText("Actual execution status of the constellation Request.");
-
-		TableViewerColumn tableViewerColumnLocation = new TableViewerColumn(requestsViewer, SWT.NONE);
-		TableColumn tblclmnLocation = tableViewerColumnLocation.getColumn();
-		tblclmnLocation.setWidth(150);
-		tblclmnLocation.setText("CMD Location");
-		tblclmnLocation.setToolTipText("Requested location where to perform the request.");
-
-		TableViewerColumn tableViewerColumnScheduleTime = new TableViewerColumn(requestsViewer, SWT.NONE);
-		TableColumn tblclmnScheduleTime = tableViewerColumnScheduleTime.getColumn();
-		tblclmnScheduleTime.setWidth(150);
-		tblclmnScheduleTime.setText("CMD Time");
-		tblclmnScheduleTime
-				.setToolTipText("Time at which the command associated to the constellation request will be executed.");
-
-		TableViewerColumn tableViewerCompletionTime = new TableViewerColumn(requestsViewer, SWT.NONE);
-		TableColumn tblclmnCompletionTime = tableViewerCompletionTime.getColumn();
-		tblclmnCompletionTime.setWidth(150);
-		tblclmnCompletionTime.setText("ACT Time");
-		tblclmnCompletionTime.setToolTipText(
-				"Time at which the command associated to the constellation request was effectively executed.");
-
-		TableViewerColumn tableViewerColumnActualLocation = new TableViewerColumn(requestsViewer, SWT.NONE);
-		TableColumn tblclmnActualLocation = tableViewerColumnActualLocation.getColumn();
-		tblclmnActualLocation.setWidth(150);
-		tblclmnActualLocation.setText("Actual Location");
-		tblclmnActualLocation.setToolTipText(
-				"Specifies the location where the command associated to the constellation request was executed.");
-
-		TableViewerColumn tableViewerResult = new TableViewerColumn(requestsViewer, SWT.NONE);
-		TableColumn tblclmnResult = tableViewerResult.getColumn();
-		tblclmnResult.setWidth(50);
-		tblclmnResult.setText("Data");
-		tblclmnResult.setToolTipText("Indicates if the constellation request has a result.");
+		TreeViewerColumn treeViewerColumnStatus = new TreeViewerColumn(requestsViewer, SWT.NONE);
+		TreeColumn treeclmnStatus = treeViewerColumnStatus.getColumn();
+		treeclmnStatus.setWidth(100);
+		treeclmnStatus.setText("Status");
+		treeclmnStatus.setToolTipText("Actual execution status of the constellation Request.");
 
 		requestsViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 		requestsViewer.setLabelProvider(new RequestsLabelProvider(adapterFactory));
@@ -229,9 +106,9 @@ public class ConstellationRequestsComposite extends Composite {
 		/*
 		 * Show/Hide Column Menu Items.
 		 */
-		Menu contextMenu = new Menu(tableRequests);
-		requestsViewer.getTable().setMenu(contextMenu);
-		for (TableColumn tableColumn : requestsViewer.getTable().getColumns()) {
+		Menu contextMenu = new Menu(treeRequests);
+		requestsViewer.getTree().setMenu(contextMenu);
+		for (TreeColumn tableColumn : requestsViewer.getTree().getColumns()) {
 
 			final MenuItem itemName = new MenuItem(contextMenu, SWT.CHECK);
 			itemName.setText(tableColumn.getText());
@@ -249,24 +126,21 @@ public class ConstellationRequestsComposite extends Composite {
 				}
 			});
 		}
-
-		sashForm.setWeights(new int[] { 1, 2 });
 	}
 
 	/*
-	 * Sets the constellation state reference.
-	 * 
-	 * @param constellationState Constellation state reference.
+	 * Sets the constellation requests lists container
+	 * @param constellationRequestsListsContainer Constellation requests lists container.
 	 */
-	public void setConstellationRequests(ConstellationRequestsList constellationRequestsList) {
-		this.constellationRequestsList = constellationRequestsList;
+	public void setConstellationRequestsListsContainer(ConstellationRequestsListsContainer constellationRequestsListsContainer) {
+		this.constellationRequestsListsContainer = constellationRequestsListsContainer;
 
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
 		}
 
-		if (this.constellationRequestsList != null) {
+		if (this.constellationRequestsListsContainer != null) {
 			m_bindingContext = initDataBindings();
 		}
 	}
@@ -292,8 +166,8 @@ public class ConstellationRequestsComposite extends Composite {
 	private DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
 
-		if (constellationRequestsList != null) {
-			requestsViewer.setInput(constellationRequestsList);
+		if (constellationRequestsListsContainer != null) {
+			requestsViewer.setInput(constellationRequestsListsContainer);
 		}
 
 		return bindingContext;
@@ -329,26 +203,38 @@ public class ConstellationRequestsComposite extends Composite {
 
 		private static final int UID_COLUMN_ID = 0;
 		private static final int PRIORITY_COLUMN_ID = 2;
-//		private static final int STATUS_COLUMN_ID = 3;		
-//		private static final int TYPE_COLUMN_ID = 4;
+		private static final int STATUS_COLUMN_ID = 3;		
+		private static final int TYPE_COLUMN_ID = 4;
 
 		@Override
 		public String getColumnText(Object object, int columnIndex) {
 			String str = "<undefined>";
-			AbstractConstellationRequest request = (AbstractConstellationRequest) object;
-
-			switch (columnIndex) {
-			case UID_COLUMN_ID:
-				if (request.getUid() != null){
-					str = request.getUid().toString();
+			
+			if (object instanceof AbstractConstellationRequest){
+				AbstractConstellationRequest request = (AbstractConstellationRequest) object;
+	
+				switch (columnIndex) {
+				case UID_COLUMN_ID:
+					if (request.getUid() != null){
+						str = request.getUid().toString();
+					}
+					break;			
+	
+				case PRIORITY_COLUMN_ID:
+					str = request.getOrderPriority().getName();
+					break;
+					
+				case STATUS_COLUMN_ID:
+					str = request.getOrderStatus().getName();
+					break;
+					
+				case TYPE_COLUMN_ID:
+					str = request.eClass().getName();
+					break;
+					
+				default:
+					break;
 				}
-				break;			
-			case PRIORITY_COLUMN_ID:
-				str = request.getOrderPriority().getName();
-				break;
-
-			default:
-				break;
 			}
 
 			return str;

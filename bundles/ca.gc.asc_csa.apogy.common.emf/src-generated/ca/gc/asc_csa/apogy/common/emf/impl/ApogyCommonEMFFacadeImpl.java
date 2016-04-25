@@ -32,6 +32,7 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EClass;
@@ -44,6 +45,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
@@ -188,6 +190,8 @@ ApogyCommonEMFFacade {
 				return getTimeSpan((Collection<Timed>)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ID__EOBJECT:
 				return getID((EObject)arguments.get(0));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING:
+				return getEObjectById((ResourceSet)arguments.get(0), (String)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1225,6 +1229,26 @@ ApogyCommonEMFFacade {
 		}
 		
 		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public EObject getEObjectById(ResourceSet resourceSet, String id) {
+		EObject result = null;
+		TreeIterator<Object> objects = EcoreUtil.getAllContents(resourceSet, true);
+		while(objects.hasNext() && result == null){
+			Object object = objects.next();
+			if (object instanceof EObject){
+				EObject eObject = (EObject) object;
+				if (getID(eObject).equals(id)){
+					result = eObject;
+				}
+			}
+		}		
+		return result;
 	}
 
 	/**
