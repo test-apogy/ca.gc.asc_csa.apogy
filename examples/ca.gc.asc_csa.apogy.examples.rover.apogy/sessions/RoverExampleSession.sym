@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camera="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:images="ca.gc.asc_csa.apogy.common.images" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmlns:mobile_platform="ca.gc.asc_csa.apogy.examples.mobile_platform" xmi:id="_CaxBIArPEeW4-_ONWXXiAw" name="">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camera="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:images="ca.gc.asc_csa.apogy.common.images" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmlns:javascript="ca.gc.asc_csa.apogy.core.programs.javascript" xmlns:mobile_platform="ca.gc.asc_csa.apogy.examples.mobile_platform" xmi:id="_CaxBIArPEeW4-_ONWXXiAw" name="">
   <environment xsi:type="core:ApogyEnvironment" xmi:id="_CaxBIQrPEeW4-_ONWXXiAw" name="Rover Example" description="This is an example session, illustrating how to use the mobile platform example." activeContext="_CaxoMgrPEeW4-_ONWXXiAw" time="2016-02-29T13:15:59.930-0500" activeWorksite="_CaxoOQrPEeW4-_ONWXXiAw" activeTimeSource="_Ca4V4grPEeW4-_ONWXXiAw">
     <typesList xmi:id="_CaxBIgrPEeW4-_ONWXXiAw">
       <localTypes xmi:id="_CaxBIwrPEeW4-_ONWXXiAw"/>
@@ -383,6 +383,7 @@
         </argumentsList>
       </operationCalls>
     </programs>
+    <programs xsi:type="javascript:JavaScriptProgram" xmi:id="_E8RqgAr6EeaEj-JyoPM1Mg" name="Rover Example Scenario" description="" scriptPath="/js/RoverExampleScenario.js"/>
   </programsList>
   <dataProductsListContainer xmi:id="_Ca7ZMQrPEeW4-_ONWXXiAw">
     <dataProductsList xmi:id="_Ca7ZMgrPEeW4-_ONWXXiAw" name="Simulated Data" description="The list of data products associated with the mobile platform's simulated implementation">
@@ -399,7 +400,7 @@
           <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <overlayList xmi:id="_5kP9IN8ZEeW_hc0ZHRC9Fw">
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_ENEV8N8aEeW_hc0ZHRC9Fw" name="Arm Turret" overlayAlignment="Upper Left" fontSize="16" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="44">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_ENEV8N8aEeW_hc0ZHRC9Fw" name="Arm Turret" overlayAlignment="Upper Left" fontSize="16" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="51">
             <variableFeatureReference xmi:id="_ENP8IN8aEeW_hc0ZHRC9Fw" name="Arm Turret Angle" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_FdSnsN8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
@@ -412,7 +413,7 @@
               </featureRoot>
             </variableFeatureReference>
           </overlays>
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_OHKAgN8aEeW_hc0ZHRC9Fw" name="Arm Shoulder" overlayAlignment="Upper Left" fontSize="16" verticalOffset="25" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="44">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_OHKAgN8aEeW_hc0ZHRC9Fw" name="Arm Shoulder" overlayAlignment="Upper Left" fontSize="16" verticalOffset="25" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="51">
             <variableFeatureReference xmi:id="_OHTKcN8aEeW_hc0ZHRC9Fw" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_PxO8sN8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
@@ -425,7 +426,7 @@
               </featureRoot>
             </variableFeatureReference>
           </overlays>
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_Vx9wEN8aEeW_hc0ZHRC9Fw" name="Arm Elbow" overlayAlignment="Upper Left" fontSize="16" verticalOffset="40" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="44">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_Vx9wEN8aEeW_hc0ZHRC9Fw" name="Arm Elbow" overlayAlignment="Upper Left" fontSize="16" verticalOffset="40" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="51">
             <variableFeatureReference xmi:id="_VyJWQN8aEeW_hc0ZHRC9Fw" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_ZXo2QN8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
@@ -438,7 +439,7 @@
               </featureRoot>
             </variableFeatureReference>
           </overlays>
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_eLvecN8aEeW_hc0ZHRC9Fw" name="Arm Wrist" overlayAlignment="Upper Left" fontSize="16" verticalOffset="55" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="44">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_eLvecN8aEeW_hc0ZHRC9Fw" name="Arm Wrist" overlayAlignment="Upper Left" fontSize="16" verticalOffset="55" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="51">
             <variableFeatureReference xmi:id="_eL-vAN8aEeW_hc0ZHRC9Fw" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_f-dZQN8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
@@ -451,7 +452,7 @@
               </featureRoot>
             </variableFeatureReference>
           </overlays>
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_jbuKUN8aEeW_hc0ZHRC9Fw" name="Arm Moving" overlayAlignment="Lower Left" fontSize="16" textColor="1.0,0.0,1.0" variableFeatureReferenceChangeCount="44">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_jbuKUN8aEeW_hc0ZHRC9Fw" name="Arm Moving" overlayAlignment="Lower Left" fontSize="16" textColor="1.0,0.0,1.0" variableFeatureReferenceChangeCount="51">
             <variableFeatureReference xmi:id="_jb37UN8aEeW_hc0ZHRC9Fw" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_mP2e0N8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>

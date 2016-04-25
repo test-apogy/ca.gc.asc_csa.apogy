@@ -5,17 +5,25 @@ __TOC__
 
 A ''JavaScriptProgram'' allows you to invoke <code>Operation Calls</code> on Apogy Variables - and get their attributes - directly from JavaScript.
 
-Each Apogy Variable defined in a Apogy Session is exposed as a global variable in a <code>JavaScriptProgram</code>. For example, if you define the ''rover'' variable in Apogy, the global variable ''rover'' will be injected into the <code>JavaScriptProgram</code>. Below is a <code>JavaScriptProgram</code> example:
+The entry point of a JavaScript program is the main function. Below is a <code>JavaScriptProgram</code> example. The ''@variable'' tag defines the mapping between an Apogy variable and an argument of the main function.
+
+ /**
+  * @param {ca.gc.asc_csa.apogy.examples.rover.Rover}
+  *            rover
+  * Syntax: variable <apogy variable> <argument>
+  * @variable rover r
+  */
+ function main(r) {
+   if (!r.initialized) {
+     r.init();
+   }
+
+   r.cmdLinearVelocity(0.1);
 
 
- if (!rover.initialized) {
-     rover.init();
+   var snapshot = r.centerCamera.takeSnapshot();
+   java.lang.System.out.println(snapshot.image.width + ", " + snapshot.image.height);
  }
-
- rover.cmdLinearVelocity(0.1);
-
- var snapshot = rover.centerCamera.takeSnapshot();
- java.lang.System.out.println(snapshot.image.width + ", " + snapshot.image.height);
 
 
 == Invoking a <code>JavaScriptProgram</code> ==
@@ -33,6 +41,10 @@ Right-click on the ''JavaScriptProgram'', select ''Apogy'', then ''Invoke''.
 
 * ''JavaScript Development Tools SDK'' (1.6) available from the http://download.eclipse.org/webtools/repository/mars/ update site.
 
+
+= Importing Rover Example =
+
+The ''ca.gc.asc_csa.apogy.examples.rover.apogy'' plugin contains a session with the JavaScriptProgram ''Rover Example Scenario''. The script path of ''Rover Example Scenario'' points to ''js/RoverExampleScenario.js'' which doesn't exist. You should copy the content of ''ca.gc.asc_csa.apogy.examples.rover.apogy/js/RoverExampleScenario.js'' to ''js/RoverExampleScenario.js''.
 
 = Plugins =
 
