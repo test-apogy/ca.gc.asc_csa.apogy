@@ -72,5 +72,11 @@
             type="java.lang.Object">
       </propertyTester>
    </extension>
+   <extension
+         point="org.eclipse.wst.jsdt.core.inferrenceSupport">
+      <inferenceProvider
+            class="ca.gc.asc_csa.apogy.core.programs.javascript.ui.ApogyInferrenceProvider">
+      </inferenceProvider>
+   </extension>
 
 </plugin>

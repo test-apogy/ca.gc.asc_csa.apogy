@@ -24,6 +24,9 @@
 				<a href="#Installation_Requirements">Installation Requirements</a>
 			</li>
 			<li>
+				<a href="#Importing_Rover_Example">Importing Rover Example</a>
+			</li>
+			<li>
 				<a href="#Plugins">Plugins</a>
 				<ol style="list-style: none;">
 					<li>
@@ -72,18 +75,25 @@
 		<p>A 
 			<i>JavaScriptProgram</i> allows you to invoke <code>Operation Calls</code> on Apogy Variables - and get their attributes - directly from JavaScript.
 		</p>
-		<p>Each Apogy Variable defined in a Apogy Session is exposed as a global variable in a <code>JavaScriptProgram</code>. For example, if you define the 
-			<i>rover</i> variable in Apogy, the global variable 
-			<i>rover</i> will be injected into the <code>JavaScriptProgram</code>. Below is a <code>JavaScriptProgram</code> example:
+		<p>The entry point of a JavaScript program is the main function. Below is a <code>JavaScriptProgram</code> example. The 
+			<i>@variable</i> tag defines the mapping between an Apogy variable and an argument of the main function.
 		</p>
-		<pre>if (!rover.initialized) {
-    rover.init();
+		<pre>/**
+ * @param {ca.gc.asc_csa.apogy.examples.rover.Rover}
+ *            rover
+ * Syntax: variable &lt;apogy variable&gt; &lt;argument&gt;
+ * @variable rover r
+ */
+function main&#174; {
+  if (!r.initialized) {
+    r.init();
+  }
+</pre>
+		<pre>  r.cmdLinearVelocity(0.1);
+</pre>
+		<pre>  var snapshot = r.centerCamera.takeSnapshot();
+  java.lang.System.out.println(snapshot.image.width + ", " + snapshot.image.height);
 }
-</pre>
-		<pre>rover.cmdLinearVelocity(0.1);
-</pre>
-		<pre>var snapshot = rover.centerCamera.takeSnapshot();
-java.lang.System.out.println(snapshot.image.width + ", " + snapshot.image.height);
 </pre>
 		<h2 id="Invoking_a_JavaScriptProgram">Invoking a <code>JavaScriptProgram</code></h2>
 		<p>Right-click on the 
@@ -105,9 +115,19 @@ java.lang.System.out.println(snapshot.image.width + ", " + snapshot.image.height
 		<h1 id="Installation_Requirements">Installation Requirements</h1>
 		<ul>
 			<li>
-				<i>Eclipse Web Developer Tools</i> (3.7.1+) available from the Eclipse Mars update site.
+				<i>JavaScript Development Tools SDK</i> (1.6) available from the 
+				<a href="http://download.eclipse.org/webtools/repository/mars/">http://download.eclipse.org/webtools/repository/mars/</a> update site.
 			</li>
 		</ul>
+		<h1 id="Importing_Rover_Example">Importing Rover Example</h1>
+		<p>The 
+			<i>ca.gc.asc_csa.apogy.examples.rover.apogy</i> plugin contains a session with the JavaScriptProgram 
+			<i>Rover Example Scenario</i>. The script path of 
+			<i>Rover Example Scenario</i> points to 
+			<i>js/RoverExampleScenario.js</i> which doesn't exist. You should copy the content of 
+			<i>ca.gc.asc_csa.apogy.examples.rover.apogy/js/RoverExampleScenario.js</i> to 
+			<i>js/RoverExampleScenario.js</i>.
+		</p>
 		<h1 id="Plugins">Plugins</h1>
 		<p>Since an operation on an object must be invoked through the 
 			<i>ApogyCoreInvocatorFacade</i>, it cannot be directly exposed in JavaScript. Instead, the object is wrapped in a proxy that automatically calls the 

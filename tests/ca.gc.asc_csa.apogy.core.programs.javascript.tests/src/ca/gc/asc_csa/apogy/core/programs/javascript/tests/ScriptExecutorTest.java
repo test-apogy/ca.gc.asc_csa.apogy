@@ -56,8 +56,9 @@ public class ScriptExecutorTest {
 		JavaScriptProgram program = (JavaScriptProgram) getProgramByName(invocatorSession, "Rover Demo");
 		URL url = new URL(program.getScriptPath());
 		BufferedReader in = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
+		BufferedReader in2 = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
 
-		ScriptExecutor.execute(program, in, false);
+		ScriptExecutor.execute(program, in, in2, false);
 
 		List<ExpectedOperationCall> expectedOperationCalls = new ArrayList<>();
 		ExpectedOperationCall expectedOperationCall;
@@ -110,8 +111,9 @@ public class ScriptExecutorTest {
 		JavaScriptProgram program = (JavaScriptProgram) getProgramByName(invocatorSession, "Mobile Platform Demo");
 		URL url = new URL(program.getScriptPath());
 		BufferedReader in = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
+		BufferedReader in2 = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
 
-		ScriptExecutor.execute(program, in, false);
+		ScriptExecutor.execute(program, in, in2, false);
 
 		List<ExpectedOperationCall> expectedOperationCalls = new ArrayList<>();
 		ExpectedOperationCall expectedOperationCall;
