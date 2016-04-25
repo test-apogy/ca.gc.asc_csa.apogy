@@ -11,7 +11,7 @@ As an example, integrating a rover in **Apogy** is as simple as creating an EMF 
 Description                    | URL          | Notes
 ------------------------------ | -------------|-------------------------
 Stable                         | [https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/) | [Changes](https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/master/CHANGES), [Version](https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/master/VERSION)
-Latest                         | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/) | [Changes](https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/develop/CHANGES), [Version](https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/develop/VERSION)
+Latest                         | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/) | 
 
 # Documentation #
 Description                    | URL
