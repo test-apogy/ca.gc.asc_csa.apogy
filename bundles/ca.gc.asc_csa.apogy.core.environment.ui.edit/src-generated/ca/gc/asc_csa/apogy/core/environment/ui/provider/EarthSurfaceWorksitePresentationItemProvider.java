@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.ui.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -104,7 +105,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
   protected void addAxisLengthPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_axisLength_feature"),
@@ -219,7 +220,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
   protected void addPlaneGridSizePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_planeGridSize_feature"),
@@ -242,7 +243,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
   protected void addPlaneSizePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_planeSize_feature"),

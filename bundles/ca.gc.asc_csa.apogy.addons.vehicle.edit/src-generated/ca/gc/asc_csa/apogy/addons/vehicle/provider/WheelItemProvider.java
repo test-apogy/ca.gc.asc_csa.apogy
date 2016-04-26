@@ -29,6 +29,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
 import ca.gc.asc_csa.apogy.addons.vehicle.Wheel;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider.PhysicalBodyItemProvider;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
@@ -81,7 +82,7 @@ extends PhysicalBodyItemProvider
 	protected void addRadiusPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Wheel_radius_feature"),
@@ -104,7 +105,7 @@ extends PhysicalBodyItemProvider
 	protected void addLengthPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Wheel_length_feature"),

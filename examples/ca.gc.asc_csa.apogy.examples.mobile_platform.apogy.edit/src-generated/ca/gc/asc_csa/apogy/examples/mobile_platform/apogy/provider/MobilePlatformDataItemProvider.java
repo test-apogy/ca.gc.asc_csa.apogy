@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -115,7 +116,7 @@ public class MobilePlatformDataItemProvider extends ApogyInitializationDataItemP
 	 */
 	protected void addLinearVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_linearVelocity_feature"),
@@ -137,7 +138,7 @@ public class MobilePlatformDataItemProvider extends ApogyInitializationDataItemP
 	 */
 	protected void addAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_angularVelocity_feature"),

@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -88,7 +89,7 @@ public class SphereSamplingShapeItemProvider
 	protected void addRadiusPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SphereSamplingShape_radius_feature"),

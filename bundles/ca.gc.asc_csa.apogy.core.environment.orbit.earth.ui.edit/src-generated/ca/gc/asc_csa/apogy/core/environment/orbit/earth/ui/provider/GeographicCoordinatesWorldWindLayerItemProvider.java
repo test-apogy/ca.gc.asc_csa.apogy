@@ -14,6 +14,7 @@
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.provider;
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer;
 
@@ -138,7 +139,7 @@ public class GeographicCoordinatesWorldWindLayerItemProvider extends AbstractWor
 	 */
 	protected void addDisplayedRadiusPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinatesWorldWindLayer_displayedRadius_feature"),
