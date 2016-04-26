@@ -74,7 +74,7 @@ public class ConstellationRequestsView extends AbstractView implements IEditingD
 		
 		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if(session != null && constellationRequestsListsContainerId != null){
-			constellationRequestsListsContainer = (ConstellationRequestsListsContainer) ApogyCommonEMFFacade.INSTANCE.getEObjectById(session.eResource().getResourceSet(), constellationRequestsListsContainerId);
+//			constellationRequestsListsContainer = (ConstellationRequestsListsContainer) ApogyCommonEMFFacade.INSTANCE.getEObjectById(session.eResource().getResourceSet(), constellationRequestsListsContainerId);
 			if (constellationRequestsListsContainer != null){
 				setConstellationRequestsListsContainer(constellationRequestsListsContainer);
 			}

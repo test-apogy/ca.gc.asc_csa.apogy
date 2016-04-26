@@ -723,6 +723,15 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getAbstractConstellationPlanner__PopulateVisibilityPassBasedSatelliteCommand__VisibilityPassBasedSatelliteCommand_ObservationConstellationRequest_VisibilityPass() {
+		return abstractConstellationPlannerEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDefaultConstellationPlanner() {
 		return defaultConstellationPlannerEClass;
 	}
@@ -1278,6 +1287,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___VALIDATE);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___GET_REQUEST_BASED_SATELLITE_COMMANDS_COMPARATOR);
 		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS);
+		createEOperation(abstractConstellationPlannerEClass, ABSTRACT_CONSTELLATION_PLANNER___POPULATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITYPASSBASEDSATELLITECOMMAND_OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS);
 
 		defaultConstellationPlannerEClass = createEClass(DEFAULT_CONSTELLATION_PLANNER);
 		createEAttribute(defaultConstellationPlannerEClass, DEFAULT_CONSTELLATION_PLANNER__UMBRA_PASSES_VALID);
@@ -1494,6 +1504,11 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEOperation(op, g1);
 
 		op = initEOperation(getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__ObservationConstellationRequest_VisibilityPass(), this.getVisibilityPassBasedSatelliteCommand(), "createVisibilityPassBasedSatelliteCommand", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getObservationConstellationRequest(), "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), "visibilityPass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getAbstractConstellationPlanner__PopulateVisibilityPassBasedSatelliteCommand__VisibilityPassBasedSatelliteCommand_ObservationConstellationRequest_VisibilityPass(), null, "populateVisibilityPassBasedSatelliteCommand", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVisibilityPassBasedSatelliteCommand(), "command", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getObservationConstellationRequest(), "request", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreEnvironmentOrbitEarthPackage.getVisibilityPass(), "visibilityPass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1783,7 +1798,13 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		  (getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__ObservationConstellationRequest_VisibilityPass(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Creates a command to address the specified {@link ObservationConstellationRequest}.\n@param request Refers to the request.\n@param visibilityPass Visibility pass context."
+			 "documentation", "Instantiates and returns a command instance to address the specified {@link ObservationConstellationRequest}.\n@param request Refers to the request.\n@param visibilityPass Visibility pass context."
+		   });	
+		addAnnotation
+		  (getAbstractConstellationPlanner__PopulateVisibilityPassBasedSatelliteCommand__VisibilityPassBasedSatelliteCommand_ObservationConstellationRequest_VisibilityPass(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Populates the content of the command to address the specified {@link ObservationConstellationRequest}.\n@param command Command to populate.\n@param request Refers to the request.\n@param visibilityPass Visibility pass context."
 		   });	
 		addAnnotation
 		  (getAbstractConstellationPlanner_ConstellationPlannersContainer(), 

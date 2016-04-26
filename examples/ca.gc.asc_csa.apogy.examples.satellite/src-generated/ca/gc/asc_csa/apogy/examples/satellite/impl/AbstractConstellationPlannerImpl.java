@@ -12,8 +12,6 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.emf.Described;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -38,6 +36,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
+import com.google.common.base.Objects;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
@@ -58,7 +61,6 @@ import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
 import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
-import com.google.common.base.Objects;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -616,7 +618,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 			locationMap.put(((ObservationConstellationRequest) request).getLocation(),
 					(ObservationConstellationRequest) request);
 		}
-		List<EarthSurfaceLocation> locations = new ArrayList<EarthSurfaceLocation>(locationMap.keySet());
+		List<EarthSurfaceLocation> locations = new ArrayList<EarthSurfaceLocation>(locationMap.keySet());	
 
 		/*
 		 * Spawning the jobs.
@@ -722,9 +724,8 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 			constellationRequestComparator = new Comparator<AbstractRequestBasedSatelliteCommand>() {
 				@Override
 				public int compare(AbstractRequestBasedSatelliteCommand o1, AbstractRequestBasedSatelliteCommand o2) {
-					/*
-					 * Check the request priority.
-					 */
+					
+					/* Check the request priority. */
 					if (o1.getConstellationRequest().getOrderPriority() != o2.getConstellationRequest()
 							.getOrderPriority()) {
 						// Use the request priorities to compare.
@@ -735,10 +736,10 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 						// compare.
 						long time1 = o1.getTime() == null ? 0: o1.getTime().getTime();
 						long time2 = o2.getTime() == null ? 0: o2.getTime().getTime();
-						
-						if (time1 == time2) {
-							return 0;
-						} else {
+
+						if (time1 == time2){						
+							return System.identityHashCode(o1) < System.identityHashCode(o2) ? -1 : 1; 
+						}else{						
 							return time1 < time2 ? -1 : 1;
 						}
 					}
@@ -757,15 +758,22 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(
 			ObservationConstellationRequest request, VisibilityPass visibilityPass) {
 
-		VisibilityPassBasedSatelliteCommand command = null;
-		command = ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand();
-		command.setConstellationRequest(request);
-		command.setUid(EcoreUtil.copy(request.getUid()));
-		command.setTime(visibilityPass.getStartTime());
-		command.setSatellite(getSatellite(visibilityPass.getOrbitModel()));
-		command.setVisibilityPass(EcoreUtil.copy(visibilityPass));
+		return ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand();
+	}
 
-		return command;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void populateVisibilityPassBasedSatelliteCommand(VisibilityPassBasedSatelliteCommand command, ObservationConstellationRequest request, VisibilityPass visibilityPass) {
+		if (command != null){
+			command.setConstellationRequest(request);
+			command.setUid(EcoreUtil.copy(request.getUid()));
+			command.setTime(visibilityPass.getStartTime());
+			command.setSatellite(getSatellite(visibilityPass.getOrbitModel()));
+			command.setVisibilityPass(EcoreUtil.copy(visibilityPass));
+		}
 	}
 
 	/**
@@ -1025,6 +1033,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				return getRequestBasedSatelliteCommandsComparator();
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS:
 				return createVisibilityPassBasedSatelliteCommand((ObservationConstellationRequest)arguments.get(0), (VisibilityPass)arguments.get(1));
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_PLANNER___POPULATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITYPASSBASEDSATELLITECOMMAND_OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS:
+				populateVisibilityPassBasedSatelliteCommand((VisibilityPassBasedSatelliteCommand)arguments.get(0), (ObservationConstellationRequest)arguments.get(1), (VisibilityPass)arguments.get(2));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1119,7 +1130,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 			monitor.beginTask("Processing", totalWork);
 
 			Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Processing passes in job <" + (threadId + 1)
-					+ "> Start=" + locationStartIndex + " End=" + locationEndIndex, EventSeverity.INFO);
+					+ "> [" + locationStartIndex + ".." + locationEndIndex + "]", EventSeverity.INFO);
 
 			List<VisibilityPass> allPasses = new ArrayList<VisibilityPass>();
 
@@ -1141,7 +1152,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 					monitor.worked(1);
 
 					Logger.INSTANCE.log(
-							Activator.ID, "Constellation Planner: <" + passes.size() + "> found in job <"
+							Activator.ID, "Constellation Planner: " + passes.size() + " passes found in job <"
 									+ (threadId + 1) + "> for satellite <" + satellite.getName() + ">",
 							EventSeverity.INFO);
 				} catch (Exception e) {
@@ -1154,7 +1165,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 			}
 
 			Logger.INSTANCE.log(Activator.ID,
-					"Constellation Planner: A total of " + allPasses.size() + " found in job <" + (threadId + 1) + ">",
+					"Constellation Planner: A total of " + allPasses.size() + " passes found in job <" + (threadId + 1) + ">",
 					EventSeverity.INFO);
 
 			// Creates a Visibility Pass Based Satellite
@@ -1164,14 +1175,16 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 				while (passesIterator.hasNext()) {
 					VisibilityPass pass = passesIterator.next();
 					if (isValid(pass)) {
-						VisibilityPassBasedSatelliteCommand command = createVisibilityPassBasedSatelliteCommand(
-								locationMap.get(pass.getSurfaceLocation()), pass);
+						ObservationConstellationRequest observationConstellationRequest = locationMap.get(pass.getSurfaceLocation());						
+						VisibilityPassBasedSatelliteCommand command = createVisibilityPassBasedSatelliteCommand(observationConstellationRequest, pass);
+						populateVisibilityPassBasedSatelliteCommand(command, observationConstellationRequest, pass);						
 						if (command != null){
 							commands.add(command);
 						}
 					}
 				}
 			}
+			
 			Logger.INSTANCE.log(Activator.ID,
 					"Constellation Planner: " + allPasses.size() + " commands created in job <" + (threadId + 1) + ">",
 					EventSeverity.INFO);
