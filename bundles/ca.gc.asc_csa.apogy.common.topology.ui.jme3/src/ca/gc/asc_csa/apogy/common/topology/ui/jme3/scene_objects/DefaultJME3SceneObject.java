@@ -21,6 +21,15 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Tuple3d;
 
 import org.eclipse.swt.graphics.RGB;
+
+import com.jme3.app.Application;
+import com.jme3.asset.plugins.FileLocator;
+import com.jme3.bounding.BoundingBox;
+import com.jme3.bounding.BoundingSphere;
+import com.jme3.bounding.BoundingVolume;
+import com.jme3.math.Vector3f;
+import com.jme3.scene.Geometry;
+
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.topology.Node;
@@ -31,20 +40,14 @@ import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
-import com.jme3.app.Application;
-import com.jme3.asset.plugins.FileLocator;
-import com.jme3.bounding.BoundingBox;
-import com.jme3.bounding.BoundingSphere;
-import com.jme3.bounding.BoundingVolume;
-import com.jme3.math.Vector3f;
-import com.jme3.scene.Geometry;
-
 public abstract class DefaultJME3SceneObject<T extends Node> implements JME3SceneObject 
 {
 	private T topologyNode;
 	private com.jme3.scene.Node root;
 	private com.jme3.scene.Node attachmentNode;
 	
+	protected boolean busy = false;
+		
 	protected ShadowMode shadowMode = ShadowMode.INHERIT;	
 	protected JME3RenderEngineDelegate jme3RenderEngineDelegate;
 	protected JME3Application jme3Application = null;
@@ -109,8 +112,7 @@ public abstract class DefaultJME3SceneObject<T extends Node> implements JME3Scen
 
 	@Override
 	public void setShadowMode(ShadowMode shadowMode) 
-	{	
-		
+	{			
 		Logger.INSTANCE.log(Activator.ID, this, "Setting Shadow Mode to <" + shadowMode + ">...", EventSeverity.INFO);
 		this.shadowMode = shadowMode;
 		

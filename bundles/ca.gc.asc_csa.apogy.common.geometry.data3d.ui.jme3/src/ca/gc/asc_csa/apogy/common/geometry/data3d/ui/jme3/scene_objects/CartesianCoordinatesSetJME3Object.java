@@ -56,7 +56,7 @@ import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3Scen
 public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet> extends DefaultJME3SceneObject<ContentNode<T>> implements
 		CartesianCoordinatesSetSceneObject 
 		{
-		
+			
 	private ColorRGBA pointsColor = getDefaultPointColor();
 	private RGB rgb = getDefaultRGBPointColor();
 	
@@ -217,50 +217,70 @@ public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet
 			}
 		});
 	}
+	
 	private void updateGeometryInternal(CartesianCoordinatesSet points)
-	{			
-		if(meshGeometry != null)
+	{	
+		try
 		{
-			getAttachmentNode().detachChild(meshGeometry);
-		}				
-		
-		List<Vector3f> verticesList = new ArrayList<Vector3f>();
-		List<Integer> indexesList = new ArrayList<Integer>();
-		List<ColorRGBA> pointColorList = new ArrayList<ColorRGBA>();
-		
-		int index = 0;
-		for(CartesianPositionCoordinates point : points.getPoints())
-		{
-			verticesList.add(new Vector3f((float) point.getX(), (float) point.getY(), (float) point.getZ()));
-			indexesList.add(new Integer(index));						
-			pointColorList.add(pointsColor.clone());
-						
-			index++;
-		}
-									
-		jme3mMesh = new Mesh();
-		jme3mMesh.setMode(Mode.Points);
-		jme3mMesh.setPointSize(getPointSize());		
-		jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Position, 3, BufferUtils.createFloatBuffer(JME3Utilities.convertToFloatArray(verticesList)));
-		jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Index, 1, BufferUtils.createIntBuffer(JME3Utilities.convertToIntArray(indexesList)));
-		jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Color, 4, BufferUtils.createFloatBuffer(JME3Utilities.convertRGBAListToFloatArray(pointColorList)));
-				
-		jme3mMesh.updateBound();
-		jme3mMesh.updateCounts();
-		
-		
-		if(getTopologyNode().getNodeId() != null)
-		{
-			meshGeometry = new Geometry(getTopologyNode().getNodeId(), jme3mMesh);
-		}
-		else
-		{
-			meshGeometry = new Geometry("CartesianCoordinatesSet", jme3mMesh);
-		}
-		meshGeometry.setMaterial(createMaterial());				
-		
-		getAttachmentNode().attachChild(meshGeometry);
+			// Busy starts.
+			busy = true;
 			
+			// First, create a local list to avoid concurrent modifications.
+			List<CartesianPositionCoordinates> pointsInternal = new ArrayList<CartesianPositionCoordinates>();
+			pointsInternal.addAll(points.getPoints());
+					
+			if(meshGeometry != null)
+			{
+				getAttachmentNode().detachChild(meshGeometry);
+			}				
+			
+			List<Vector3f> verticesList = new ArrayList<Vector3f>();
+			List<Integer> indexesList = new ArrayList<Integer>();
+			List<ColorRGBA> pointColorList = new ArrayList<ColorRGBA>();
+			
+			int index = 0;
+			for(CartesianPositionCoordinates point : pointsInternal)
+			{
+				verticesList.add(new Vector3f((float) point.getX(), (float) point.getY(), (float) point.getZ()));
+				indexesList.add(new Integer(index));						
+				pointColorList.add(pointsColor.clone());
+							
+				index++;
+			}
+										
+			jme3mMesh = new Mesh();
+			jme3mMesh.setMode(Mode.Points);
+			jme3mMesh.setPointSize(getPointSize());		
+			jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Position, 3, BufferUtils.createFloatBuffer(JME3Utilities.convertToFloatArray(verticesList)));
+			jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Index, 1, BufferUtils.createIntBuffer(JME3Utilities.convertToIntArray(indexesList)));
+			jme3mMesh.setBuffer(com.jme3.scene.VertexBuffer.Type.Color, 4, BufferUtils.createFloatBuffer(JME3Utilities.convertRGBAListToFloatArray(pointColorList)));
+					
+			jme3mMesh.updateBound();
+			jme3mMesh.updateCounts();
+			
+			
+			if(getTopologyNode().getNodeId() != null)
+			{
+				meshGeometry = new Geometry(getTopologyNode().getNodeId(), jme3mMesh);
+			}
+			else
+			{
+				meshGeometry = new Geometry("CartesianCoordinatesSet", jme3mMesh);
+			}
+			meshGeometry.setMaterial(createMaterial());				
+			
+			getAttachmentNode().attachChild(meshGeometry);
+				
+			pointsInternal.clear();
+			pointsInternal = null;
+			
+			// Not busy anymore.
+			busy = false;
+		}
+		catch(Throwable t)
+		{
+			busy = false;
+		}
 	}
 	
 	private static RGB getDefaultRGBPointColor()
@@ -318,17 +338,20 @@ public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet
 								case Notification.ADD_MANY:
 								case Notification.REMOVE:
 								case Notification.REMOVE_MANY:
-									Job job = new Job("CartesianCoordinatesSetJME3Object : Updating geometry")
+									if(!busy)
 									{
-										@Override
-										protected IStatus run(IProgressMonitor monitor) 
+										busy = true;
+										Job job = new Job("CartesianCoordinatesSetJME3Object : Updating geometry")
 										{
-											updateGeometry(points);
-											
-											return Status.OK_STATUS;
-										}
-									};
-									job.schedule();
+											@Override
+											protected IStatus run(IProgressMonitor monitor) 
+											{												
+												updateGeometry(points);												
+												return Status.OK_STATUS;
+											}
+										};
+										job.schedule();
+									}
 								break;
 								default:
 								break;								

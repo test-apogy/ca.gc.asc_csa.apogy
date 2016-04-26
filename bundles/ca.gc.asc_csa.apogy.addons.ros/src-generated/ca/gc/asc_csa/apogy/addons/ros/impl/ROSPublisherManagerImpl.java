@@ -407,6 +407,7 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
