@@ -14,6 +14,8 @@ package ca.gc.asc_csa.apogy.core.programs.javascript;
 
 import java.io.FileReader;
 import java.io.Reader;
+import java.lang.reflect.Field;
+import java.net.ServerSocket;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,7 +26,12 @@ import java.util.Set;
 
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.wst.jsdt.debug.internal.rhino.debugger.DebugSessionManager;
+import org.eclipse.wst.jsdt.debug.internal.rhino.debugger.DebugSessionManager.DebugSessionThread;
+import org.eclipse.wst.jsdt.debug.internal.rhino.debugger.RhinoDebuggerImpl;
+import org.eclipse.wst.jsdt.debug.internal.rhino.transport.RhinoTransportService;
 import org.eclipse.wst.jsdt.debug.rhino.debugger.RhinoDebugger;
+import org.eclipse.wst.jsdt.debug.transport.ListenerKey;
 import org.mozilla.javascript.CompilerEnvirons;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ContextFactory;
@@ -43,9 +50,16 @@ import ca.gc.asc_csa.apogy.core.invocator.Variable;
  * Executes a {@link JavaScriptProgram}.
  *
  */
+@SuppressWarnings("restriction")
 public class ScriptExecutor {
+	private static final String LOCALHOST = "127.0.0.1";
 
-	public static void execute(JavaScriptProgram program, boolean debug) throws Exception {
+	
+	public static void execute(JavaScriptProgram program) throws Exception {
+		execute(program, null);
+	}
+
+	public static void execute(JavaScriptProgram program, RhinoDebuggerFrontend debug) throws Exception {
 		String relativePath = program.getScriptPath();
 		IPath absolutePath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append(relativePath);
 		execute(program, new FileReader(absolutePath.toOSString()), new FileReader(absolutePath.toOSString()), debug);
@@ -58,12 +72,26 @@ public class ScriptExecutor {
 	 *            The program to execute
 	 * @param reader
 	 *            The content file of the program
-	 * @param debug
-	 *            Set to true to start a {@link RhinoDebugger}
 	 * @throws Exception
 	 *             might throw if debugger.start() fails
 	 */
-	public static void execute(JavaScriptProgram program, Reader reader1, Reader reader2, boolean debug) throws Exception {
+	public static void execute(JavaScriptProgram program, Reader reader1, Reader reader2) throws Exception {
+		execute(program, reader1, reader2, null);
+	}
+
+	/**
+	 * Executes a {@link JavaScriptProgram}.
+	 *
+	 * @param program
+	 *            The program to execute
+	 * @param reader
+	 *            The content file of the program
+	 * @param debuggerFrontend
+	 *            Rhino debugger frontend
+	 * @throws Exception
+	 *             might throw if debugger.start() fails
+	 */
+	private static void execute(JavaScriptProgram program, Reader reader1, Reader reader2, RhinoDebuggerFrontend debuggerFrontend) throws Exception {
 		String relativePath = program.getScriptPath();
 		IPath absolutePath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append(relativePath);
 
@@ -78,11 +106,14 @@ public class ScriptExecutor {
 
 		ContextFactory factory = new ContextFactory();
 
-		RhinoDebugger debugger = null;
-		if (debug) {
-			debugger = new RhinoDebugger("transport=socket,suspend=y,address=9000");
-			factory.addListener(debugger);
-			debugger.start();
+		RhinoDebugger debuggerBackend = null;
+		if (debuggerFrontend != null) {
+			// address=0 chooses a random available port see {@link
+			// ServerSocket}
+			debuggerBackend = new RhinoDebugger("transport=socket,suspend=n,address=0");
+			factory.addListener(debuggerBackend);
+			debuggerBackend.start();
+			debuggerFrontend.start(LOCALHOST, getPort(debuggerBackend));
 		}
 
 		try {
@@ -99,10 +130,74 @@ public class ScriptExecutor {
 				Context.exit();
 			}
 		} finally {
-			if (debug) {
-				debugger.stop();
+			if (debuggerFrontend != null) {
+				debuggerBackend.stop();
 			}
 		}
+	}
+
+	/**
+	 * Gets the allocated port of the debugger backend.
+	 * 
+	 * This functions traverses a chain of private attributes to get the
+	 * ServerSocket.
+	 * 
+	 * @param debuggerBackend
+	 *            Rhino debugger backend
+	 * @return Allocated port
+	 * @throws NoSuchFieldException
+	 * @throws IllegalAccessException
+	 * @throws InterruptedException
+	 */
+	private static int getPort(RhinoDebugger debuggerBackend) throws NoSuchFieldException, IllegalAccessException, InterruptedException {
+		// RhinoDebugger debuggerBackend => RhinoDebuggerImpl impl
+		Field implField = RhinoDebugger.class.getDeclaredField("impl");
+		implField.setAccessible(true);
+		RhinoDebuggerImpl impl = (RhinoDebuggerImpl) implField.get(debuggerBackend);
+
+		// RhinoDebuggerImpl impl => DebugSessionManager sessionManager
+		Field sessionManagerField = RhinoDebuggerImpl.class.getDeclaredField("sessionManager");
+		sessionManagerField.setAccessible(true);
+		DebugSessionManager sessionManager = (DebugSessionManager) sessionManagerField.get(impl);
+
+		// DebugSessionManager sessionManager => DebugSessionThread
+		// debugSessionThread
+		Field debugSessionThreadField = DebugSessionManager.class.getDeclaredField("debuggerThread");
+		debugSessionThreadField.setAccessible(true);
+		DebugSessionThread debugSessionThread = (DebugSessionThread) debugSessionThreadField.get(sessionManager);
+
+		// DebugSessionThread debugSessionThread => ListenerKey listenerKey
+		Field listenerKeyField = DebugSessionThread.class.getDeclaredField("listenerKey");
+		listenerKeyField.setAccessible(true);
+		ListenerKey listenerKey = null;
+
+		// The listenerKey might not have been set at this point. So we try a
+		// few times.
+		//
+		// Note that writes to and reads of references are always atomic,
+		// regardless of whether they are implemented as 32-bit or 64-bit
+		// values.
+		//
+		// Source:
+		// http://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.7
+		for (int i = 0; i < 100 && listenerKey == null; i++) {
+			Thread.sleep(100);
+			listenerKey = (ListenerKey) listenerKeyField.get(debugSessionThread);
+		}
+
+		if (listenerKey == null) {
+			return 0;
+		}
+
+		// DebugSessionManager sessionManager => RhinoTransportService
+		// transportService
+		Field transportServiceField = DebugSessionManager.class.getDeclaredField("transportService");
+		transportServiceField.setAccessible(true);
+		RhinoTransportService transportService = (RhinoTransportService) transportServiceField.get(sessionManager);
+
+		ServerSocket serverSocket = transportService.getServerSocket(listenerKey);
+
+		return serverSocket.getLocalPort();
 	}
 
 	/**
