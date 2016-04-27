@@ -269,11 +269,19 @@ abstract class AbstractConstellationPlanner extends Named, Described{
 	op Comparator<AbstractRequestBasedSatelliteCommand> getRequestBasedSatelliteCommandsComparator()	
 	
 	/*
-	 * Creates a command to address the specified {@link ObservationConstellationRequest}.
+	 * Instantiates and returns a command instance to address the specified {@link ObservationConstellationRequest}.
 	 * @param request Refers to the request.
 	 * @param visibilityPass Visibility pass context.
 	 */
-	op VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(ObservationConstellationRequest request, VisibilityPass visibilityPass)	
+	op VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(ObservationConstellationRequest request, VisibilityPass visibilityPass)
+	
+	/*
+	 * Populates the content of the command to address the specified {@link ObservationConstellationRequest}.
+	 * @param command Command to populate.
+	 * @param request Refers to the request.
+	 * @param visibilityPass Visibility pass context.
+	 */
+	op void populateVisibilityPassBasedSatelliteCommand(VisibilityPassBasedSatelliteCommand command, ObservationConstellationRequest request, VisibilityPass visibilityPass)			
 }
 
 /*

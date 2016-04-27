@@ -359,7 +359,7 @@ public interface AbstractConstellationPlanner extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Creates a command to address the specified {@link ObservationConstellationRequest}.
+	 * Instantiates and returns a command instance to address the specified {@link ObservationConstellationRequest}.
 	 * @param request Refers to the request.
 	 * @param visibilityPass Visibility pass context.
 	 * <!-- end-model-doc -->
@@ -367,4 +367,18 @@ public interface AbstractConstellationPlanner extends Named, Described {
 	 * @generated
 	 */
 	VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(ObservationConstellationRequest request, VisibilityPass visibilityPass);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Populates the content of the command to address the specified {@link ObservationConstellationRequest}.
+	 * @param command Command to populate.
+	 * @param request Refers to the request.
+	 * @param visibilityPass Visibility pass context.
+	 * <!-- end-model-doc -->
+	 * @model commandUnique="false" requestUnique="false" visibilityPassUnique="false"
+	 * @generated
+	 */
+	void populateVisibilityPassBasedSatelliteCommand(VisibilityPassBasedSatelliteCommand command, ObservationConstellationRequest request, VisibilityPass visibilityPass);
 } // AbstractConstellationPlanner

@@ -655,13 +655,22 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Populate Visibility Pass Based Satellite Command</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_PLANNER___POPULATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITYPASSBASEDSATELLITECOMMAND_OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 6;
+
+	/**
 	 * The number of operations of the '<em>Abstract Constellation Planner</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_PLANNER_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 6;
+	int ABSTRACT_CONSTELLATION_PLANNER_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationPlannerImpl <em>Default Constellation Planner</em>}' class.
@@ -861,6 +870,15 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int DEFAULT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS = ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS;
+
+	/**
+	 * The operation id for the '<em>Populate Visibility Pass Based Satellite Command</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION_PLANNER___POPULATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITYPASSBASEDSATELLITECOMMAND_OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS = ABSTRACT_CONSTELLATION_PLANNER___POPULATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITYPASSBASEDSATELLITECOMMAND_OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS;
 
 	/**
 	 * The number of operations of the '<em>Default Constellation Planner</em>' class.
@@ -2496,6 +2514,16 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EOperation getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__ObservationConstellationRequest_VisibilityPass();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#populateVisibilityPassBasedSatelliteCommand(ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand, ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest, ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass) <em>Populate Visibility Pass Based Satellite Command</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Populate Visibility Pass Based Satellite Command</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner#populateVisibilityPassBasedSatelliteCommand(ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand, ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest, ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass)
+	 * @generated
+	 */
+	EOperation getAbstractConstellationPlanner__PopulateVisibilityPassBasedSatelliteCommand__VisibilityPassBasedSatelliteCommand_ObservationConstellationRequest_VisibilityPass();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner <em>Default Constellation Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3411,6 +3439,14 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ABSTRACT_CONSTELLATION_PLANNER___CREATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS = eINSTANCE.getAbstractConstellationPlanner__CreateVisibilityPassBasedSatelliteCommand__ObservationConstellationRequest_VisibilityPass();
+
+		/**
+		 * The meta object literal for the '<em><b>Populate Visibility Pass Based Satellite Command</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION_PLANNER___POPULATE_VISIBILITY_PASS_BASED_SATELLITE_COMMAND__VISIBILITYPASSBASEDSATELLITECOMMAND_OBSERVATIONCONSTELLATIONREQUEST_VISIBILITYPASS = eINSTANCE.getAbstractConstellationPlanner__PopulateVisibilityPassBasedSatelliteCommand__VisibilityPassBasedSatelliteCommand_ObservationConstellationRequest_VisibilityPass();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationPlannerImpl <em>Default Constellation Planner</em>}' class.
