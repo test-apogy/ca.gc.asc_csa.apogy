@@ -141,7 +141,6 @@
 								<plugin id="ca.gc.asc_csa.apogy.doc" />
 								<plugin id="org.apache.commons.collections" />
 								<plugin id="ca.gc.asc_csa.apogy.common.emf.templates" />
-								<plugin id="ca.gc.asc_csa.apogy.ots.feature"/>
 								<feature id="org.eclipse.sirius.runtime"/>
 								<feature id="org.eclipse.nebula.widgets.gallery.feature"/>
 								<feature id="org.eclipse.wst.jsdt.feature"/>
