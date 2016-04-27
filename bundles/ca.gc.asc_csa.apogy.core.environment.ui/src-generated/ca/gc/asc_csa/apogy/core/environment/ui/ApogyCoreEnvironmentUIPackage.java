@@ -731,13 +731,22 @@ public interface ApogyCoreEnvironmentUIPackage extends EPackage
   int EARTH_SKY_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
+	 * The feature id for the '<em><b>Horizon Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SKY_PRESENTATION__HORIZON_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+
+		/**
 	 * The number of structural features of the '<em>Earth Sky Presentation</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int EARTH_SKY_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Earth Sky Presentation</em>' class.
@@ -3126,6 +3135,17 @@ public interface ApogyCoreEnvironmentUIPackage extends EPackage
   EClass getEarthSkyPresentation();
 
   /**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation#isHorizonVisible <em>Horizon Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Horizon Visible</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation#isHorizonVisible()
+	 * @see #getEarthSkyPresentation()
+	 * @generated
+	 */
+	EAttribute getEarthSkyPresentation_HorizonVisible();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation <em>Moon Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4165,6 +4185,14 @@ public interface ApogyCoreEnvironmentUIPackage extends EPackage
     EClass EARTH_SKY_PRESENTATION = eINSTANCE.getEarthSkyPresentation();
 
     /**
+		 * The meta object literal for the '<em><b>Horizon Visible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EARTH_SKY_PRESENTATION__HORIZON_VISIBLE = eINSTANCE.getEarthSkyPresentation_HorizonVisible();
+
+				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MoonPresentationImpl <em>Moon Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

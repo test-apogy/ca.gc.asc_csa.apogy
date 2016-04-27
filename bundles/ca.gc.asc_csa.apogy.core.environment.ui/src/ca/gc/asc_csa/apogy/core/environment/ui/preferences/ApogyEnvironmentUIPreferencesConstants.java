@@ -63,5 +63,8 @@ public class ApogyEnvironmentUIPreferencesConstants
 	public static final String DEFAULT_EARTH_SURFACE_WORKSITE_PLANE_SIZE_ID = "DEFAULT_EARTH_SURFACE_WORSITE_PLANE_SIZE_ID";
 	public static final double DEFAULT_EARTH_SURFACE_WORKSITE_PLANE_SIZE = 20.0;
 
-	
+	// Earth Sky Settings
+	public static final String DEFAULT_EARTH_SKY_HORIZON_VISIBLE_ID = "DEFAULT_EARTH_SKY_HORIZON_VISIBLE_ID";
+	public static final boolean DEFAULT_EARTH_SKY_HORIZON_VISIBLE = true;
+
 }

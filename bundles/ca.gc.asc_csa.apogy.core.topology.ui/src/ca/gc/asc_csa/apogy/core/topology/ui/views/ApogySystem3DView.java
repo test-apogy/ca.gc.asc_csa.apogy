@@ -217,9 +217,7 @@ public class ApogySystem3DView extends AbstractApogy3DView implements IPropertyC
 					@Override
 					protected void initLighting() 
 					{						
-						AmbientLight ambLight = new AmbientLight();
-						ambLight.setColor(new ColorRGBA(0.5f, 0.5f, 0.5f,1f));										
-						rootNode.addLight(ambLight);
+						super.initLighting();
 						
 						DirectionalLight lightXPos = new DirectionalLight();
 						lightXPos.setColor(new ColorRGBA(0.5f, 0.5f, 0.5f,1f));		

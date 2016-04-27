@@ -16,9 +16,9 @@ package ca.gc.asc_csa.apogy.core.environment.ui.adapters;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
-import ca.gc.asc_csa.apogy.core.environment.EarthSky;
-import ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
 import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation;
 
 public class EarthSkyPresentationAdapter implements NodePresentationAdapter
 {
@@ -29,13 +29,13 @@ public class EarthSkyPresentationAdapter implements NodePresentationAdapter
 	@Override
 	public Class<?> getAdaptedClass()
 	{		
-		return EarthSky.class;
+		return EarthSkyNode.class;
 	}
 
 	@Override
 	public boolean isAdapterFor(Node obj)
 	{
-		boolean isAdapter = obj instanceof EarthSky;	
+		boolean isAdapter = obj instanceof EarthSkyNode;	
 		return isAdapter;
 	}
 

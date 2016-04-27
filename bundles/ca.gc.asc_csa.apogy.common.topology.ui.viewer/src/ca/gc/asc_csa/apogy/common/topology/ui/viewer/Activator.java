@@ -14,15 +14,17 @@ package ca.gc.asc_csa.apogy.common.topology.ui.viewer;
  */
 
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
-import ca.gc.asc_csa.apogy.common.log.EventSeverity;
-import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerFactory;
-import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry;
-import ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesConstants;
+import org.eclipse.swt.graphics.RGB;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerLightingPreferenceConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesConstants;
 
 /**
  * This is the central singleton for the TopologyUi editor plugin. <!--
@@ -38,8 +40,11 @@ public final class Activator extends AbstractUIPlugin implements BundleActivator
 
 	private static TopologyViewerRegistry topologyViewerRegistry = null;
 	
-	private boolean antialiasing = true;
+	private boolean antialiasing = true;	
 	private int maximumFrameRate = 15;
+	
+	private boolean ambientLight = false;
+	private RGB ambientLightColor = new RGB(255,255,255);
 	
 	private double navigationLinearLowSpeedFactor = 1.0;
 	private double navigationLinearHighSpeedFactor = 10.0;
@@ -112,6 +117,16 @@ public final class Activator extends AbstractUIPlugin implements BundleActivator
 		return antialiasing;
 	}
 
+	public boolean isAmbientLightEnabled()
+	{
+		return ambientLight;
+	}
+	
+	public RGB getAmbinetLightColor()
+	{
+		return ambientLightColor;
+	}
+	
 	@Override
 	public void propertyChange(org.eclipse.jface.util.PropertyChangeEvent event) 
 	{
@@ -139,6 +154,16 @@ public final class Activator extends AbstractUIPlugin implements BundleActivator
 			{
 				navigationLinearLowSpeedFactor = store.getDouble(TopologyViewerPreferencesConstants.DEFAULT_LINEAR_LOW_SPEED_FACTOR_ID);
 				Logger.INSTANCE.log(Activator.ID, this, "Updated Linear Low Speed to   <"+ navigationLinearLowSpeedFactor + ">.", EventSeverity.INFO);
+			}
+			else if(propertyID.equals(TopologyViewerLightingPreferenceConstants.AMBIENT_LIGHT_ENABLED_ID))
+			{
+				ambientLight = store.getBoolean(TopologyViewerLightingPreferenceConstants.AMBIENT_LIGHT_ENABLED_ID);
+				Logger.INSTANCE.log(Activator.ID, this, "Updated Ambient Light Enabled to   <"+ ambientLight + ">.", EventSeverity.INFO);
+			}
+			else if(propertyID.equals(TopologyViewerLightingPreferenceConstants.AMBIENT_LIGHT_COLOR_ID))
+			{
+				ambientLightColor = PreferenceConverter.getColor(getPreferenceStore(), TopologyViewerLightingPreferenceConstants.AMBIENT_LIGHT_COLOR_ID);
+				Logger.INSTANCE.log(Activator.ID, this, "Updated Ambient Light Color to   <"+ ambientLightColor + ">.", EventSeverity.INFO);
 			}
 		} 
 		catch (Throwable t) 

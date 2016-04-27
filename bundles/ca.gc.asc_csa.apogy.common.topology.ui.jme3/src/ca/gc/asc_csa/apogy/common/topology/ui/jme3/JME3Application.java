@@ -15,16 +15,28 @@ package ca.gc.asc_csa.apogy.common.topology.ui.jme3;
 
 import java.awt.Frame;
 import java.awt.image.BufferedImage;
+import java.util.Iterator;
 import java.util.concurrent.Callable;
-
-import javax.vecmath.Color3f;
 
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.awt.SWT_AWT;
 import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.FocusListener;
+import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Composite;
+
+import com.jme3.app.SimpleApplication;
+import com.jme3.asset.AssetManager;
+import com.jme3.light.AmbientLight;
+import com.jme3.light.Light;
+import com.jme3.math.ColorRGBA;
+import com.jme3.math.Quaternion;
+import com.jme3.math.Vector3f;
+import com.jme3.system.AppSettings;
+import com.jme3.system.JmeContext;
+import com.jme3.system.lwjgl.LwjglCanvas;
+
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.CreateSceneGraphHTMLActionListener;
@@ -32,17 +44,6 @@ import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.CustomCameraControl;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.CustomScreenshotAppState;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.ICameraControl;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.MousePickListener;
-
-import com.jme3.app.SimpleApplication;
-import com.jme3.asset.AssetManager;
-import com.jme3.light.AmbientLight;
-import com.jme3.light.DirectionalLight;
-import com.jme3.math.ColorRGBA;
-import com.jme3.math.Quaternion;
-import com.jme3.math.Vector3f;
-import com.jme3.system.AppSettings;
-import com.jme3.system.JmeContext;
-import com.jme3.system.lwjgl.LwjglCanvas;
 
 public class JME3Application extends SimpleApplication
 {
@@ -54,10 +55,8 @@ public class JME3Application extends SimpleApplication
 	private Composite jme3Window;
 	private Frame jme3awtFrame;
 	
-	private DirectionalLight keyLight;
-	private DirectionalLight fillLight;
-	private DirectionalLight backLight;
-	private DirectionalLight headLight;
+	private boolean ambientLightEnabled = ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().isAmbientLightEnabled();
+	private AmbientLight ambientLight;	
 	
 	// Scene nodes.
 	private com.jme3.scene.Node sceneCentreTransform;
@@ -238,6 +237,41 @@ public class JME3Application extends SimpleApplication
 		setSettings(settings);
 	}
 	
+	public void setAmbientLightEnabled(boolean enable) 
+	{		
+		Logger.INSTANCE.log(Activator.ID, this, "Setting Ambient Light Enabled to <" + enable + "> .", EventSeverity.INFO);
+		this.ambientLightEnabled = enable;
+		
+		if(ambientLight != null)
+		{
+			if(enable)
+			{	
+				// Check if the light has been already added.
+				boolean lightAttached = false;
+				Iterator<Light> it = rootNode.getLocalLightList().iterator();
+				while(it.hasNext() && !lightAttached)
+				{
+					lightAttached = (it.next() == ambientLight);
+				}
+					
+				if(!lightAttached) rootNode.addLight(ambientLight);
+			}
+			else
+			{
+				rootNode.removeLight(ambientLight);
+			}
+		}
+	}
+	
+	public void setAmbientLightColor(int red, int green, int blue) 
+	{			
+		Logger.INSTANCE.log(Activator.ID, this, "Setting Ambient Light Color to <" + red + ", " + green + ", " + blue + "> .", EventSeverity.INFO);
+		if(ambientLight != null)
+		{
+			ambientLight.setColor(new ColorRGBA(red / 255.0f, green / 255.0f, blue / 255.0f, 1f));	
+		}		
+	}
+	
 	public BufferedImage takeScreenshot() 
 	{				
 		getCustomScreenshotAppState().takeSnapshot();
@@ -343,47 +377,22 @@ public class JME3Application extends SimpleApplication
 	}
 	
 	protected void initLighting() 
-	{
-		float ambLightRBG = 0.25f;
-		AmbientLight ambLight = new AmbientLight();
-		ambLight.setColor(new ColorRGBA(ambLightRBG, ambLightRBG, ambLightRBG, 1f));
-
-		// Directions
-		javax.vecmath.Vector3f keyLightDirection = new javax.vecmath.Vector3f(1,0,0);
-		javax.vecmath.Vector3f fillLightDirection = new javax.vecmath.Vector3f(1,0,0);
-		javax.vecmath.Vector3f backLightDirection = new javax.vecmath.Vector3f(1,0,0);
-
-		Color3f keyLightColor = new Color3f(1, 1, 1);
-		Color3f fillLightColor = new Color3f(1, 1, 1);
-		Color3f backLightColor = new Color3f(1, 1, 1);
-		Color3f headLightColor = new Color3f(1, 1, 1);
-
-		keyLight = new DirectionalLight();
-		keyLight.setColor(JME3TypeFactory.INSTANCE.createColorRGBA(keyLightColor));
-		keyLight.setDirection(JME3TypeFactory.INSTANCE.createVector3f(keyLightDirection));
-
-		fillLight = new DirectionalLight();
-		fillLight.setColor(JME3TypeFactory.INSTANCE.createColorRGBA(fillLightColor));
-		fillLight.setDirection(JME3TypeFactory.INSTANCE.createVector3f(fillLightDirection));
-
-		backLight = new DirectionalLight();
-		backLight.setColor(JME3TypeFactory.INSTANCE.createColorRGBA(backLightColor));
-		backLight.setDirection(JME3TypeFactory.INSTANCE.createVector3f(backLightDirection));
-
-		headLight = new DirectionalLight();
-		headLight.setColor(JME3TypeFactory.INSTANCE.createColorRGBA(headLightColor));
-		headLight.setDirection(new Vector3f(0f, 0f, -1f));
-
-		rootNode.addLight(keyLight);
-		rootNode.addLight(fillLight);
-		rootNode.addLight(backLight);
-		rootNode.addLight(headLight);
-
-		AmbientLight al = new AmbientLight();
-        al.setColor(ColorRGBA.White.mult(1.0f));
-        rootNode.addLight(al);
-		
-		// registerLightingPreferenceListener();
+	{		
+		ambientLight = new AmbientLight();
+		if(ambientLightEnabled)
+		{
+			RGB rgb = ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getAmbinetLightColor();
+			if(rgb != null)
+			{
+				ambientLight.setColor(new ColorRGBA(rgb.red / 255f, rgb.green / 255f, rgb.blue / 255f, 1f));
+			}	
+			else
+			{
+				ambientLight.setColor(new ColorRGBA(1f, 1f, 1f, 1f));		
+			}
+			
+			rootNode.addLight(ambientLight);
+		}		
 	}
 			
 	public com.jme3.scene.Node getSceneRoot() 

@@ -23,18 +23,20 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
+
+import ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 
 
 public class ApogyEnvironmentUIJME3PreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	private BooleanFieldEditor earthSkyBloomEnableEditor;
-	private StringFieldEditor earthSkyShadowMapSizeEditor;	
+	private StringFieldEditor  earthSkyShadowMapSizeEditor;	
 	private BooleanFieldEditor earthSkySunCastShadowsEnableEditor;
 	private BooleanFieldEditor earthSkyMoonCastShadowsEnableEditor;
-
+	private BooleanFieldEditor earthSkyHorizonVisibleEditor;
 	
 	/**
 	 * Create the preference page.
@@ -79,6 +81,13 @@ public class ApogyEnvironmentUIJME3PreferencesPage extends PreferencePage implem
 		earthSkyMoonCastShadowsEnableLabel.setText("Moon Cast Shadows Enable");
 		earthSkyMoonCastShadowsEnableEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID, "");
 		
+		Label earthSkyHorizonVisibleLabel = new Label(earthSkyGroup, SWT.NONE);
+		earthSkyHorizonVisibleLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
+		earthSkyHorizonVisibleLabel.setText("Horizon Visible");
+		earthSkyHorizonVisibleEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SKY_HORIZON_VISIBLE_ID, "");
+		earthSkyHorizonVisibleEditor.setPreferenceStore(ca.gc.asc_csa.apogy.core.environment.ui.Activator.getDefault().getPreferenceStore());
+		earthSkyHorizonVisibleEditor.load();
+		
 		return container;
 	}
 		
@@ -110,6 +119,7 @@ public class ApogyEnvironmentUIJME3PreferencesPage extends PreferencePage implem
 		earthSkyShadowMapSizeEditor.loadDefault();
 		earthSkySunCastShadowsEnableEditor.loadDefault();
 		earthSkyMoonCastShadowsEnableEditor.loadDefault();
+		earthSkyHorizonVisibleEditor.loadDefault();
 		
 		super.performDefaults();
 	}
@@ -150,5 +160,6 @@ public class ApogyEnvironmentUIJME3PreferencesPage extends PreferencePage implem
 		earthSkyShadowMapSizeEditor.store();		
 		earthSkySunCastShadowsEnableEditor.store();
 		earthSkyMoonCastShadowsEnableEditor.store();
+		earthSkyHorizonVisibleEditor.store();
 	}
 }

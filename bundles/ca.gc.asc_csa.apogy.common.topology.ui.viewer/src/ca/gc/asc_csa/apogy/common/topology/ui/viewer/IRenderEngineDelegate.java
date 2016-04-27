@@ -68,6 +68,20 @@ public interface IRenderEngineDelegate
 	public void setMaximumFrameRate(int maximumFrameRate);
 	
 	/**
+	 * Sets whether or not ambient lighting is enabled.
+	 * @param enable True to enable ambient lighting, false to disable ambient lighting.
+	 */ 
+	public void setAmbientLightEnabled(boolean enable);
+	
+	/**
+	 * Sets the color of the ambient light.
+	 * @param red
+	 * @param green
+	 * @param blue
+	 */
+	public void setAmbientLightColor(int red, int green, int blue);
+	
+	/**
 	 * Sets whether or not anti-aliasing should be used for rendering.
 	 * @param True to enable anti-aliasing, false to disable anti-aliasing.
 	 */

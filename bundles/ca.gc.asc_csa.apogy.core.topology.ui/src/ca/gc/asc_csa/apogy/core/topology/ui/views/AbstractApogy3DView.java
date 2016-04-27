@@ -30,7 +30,7 @@ public abstract class AbstractApogy3DView extends AbstractTopology3DView
 		jme3RenderEngineDelegate.setMaximumFrameRate(viewer.getMaximumFrameRate());
 		jme3RenderEngineDelegate.setVerbose(viewer.isVerbose());		
 		jme3RenderEngineDelegate.setAntiAliasing(viewer.isAntiAliasingEnabled());
-		jme3RenderEngineDelegate.setShowStatisticsEnabled(viewer.isShowStatisticsEnabled());
+		jme3RenderEngineDelegate.setShowStatisticsEnabled(viewer.isShowStatisticsEnabled());		
 		
 		return viewer;
 	}

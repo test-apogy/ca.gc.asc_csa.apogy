@@ -24,6 +24,9 @@ public class ApogyEnvironmentUIPreferencesInitializer extends AbstractPreference
 	{			
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		
+		// Initailize the Earth Sky
+		store.setDefault(ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SKY_HORIZON_VISIBLE_ID, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SKY_HORIZON_VISIBLE);
+		
 		// Initialize Earth Surface Worksite
 		store.setDefault(ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_VISIBLE_ID, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_VISIBLE);
 		store.setDefault(ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGTH_ID, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGTH);

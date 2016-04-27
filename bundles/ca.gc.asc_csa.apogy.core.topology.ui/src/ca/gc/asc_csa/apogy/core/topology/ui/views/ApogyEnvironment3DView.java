@@ -162,24 +162,7 @@ public class ApogyEnvironment3DView extends AbstractApogy3DView
 	@Override
 	protected JME3RenderEngineDelegate createJME3RenderEngineDelegate() 
 	{
-		JME3RenderEngineDelegate jme3RenderEngineDelegate = new JME3RenderEngineDelegate()
-		{
-			@Override
-			protected JME3Application createJME3Application(Composite parent) 
-			{			
-				JME3Application app = new JME3Application(parent)
-				{
-					@Override
-					protected void initLighting() 
-					{		
-						// Disable all lights !
-					}
-				};
-				app.setJMERenderEngineDelegate(this);
-				return app;								
-			}
-		};		
-	
+		JME3RenderEngineDelegate jme3RenderEngineDelegate = new JME3RenderEngineDelegate();
 		return jme3RenderEngineDelegate;
 	}
 

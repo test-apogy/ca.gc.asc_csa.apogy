@@ -316,6 +316,16 @@ public class JME3RenderEngineDelegate  implements IRenderEngineDelegate
 	}
 
 	@Override
+	public void setAmbientLightEnabled(boolean enable) {
+		jme3Application.setAmbientLightEnabled(enable);
+	}
+
+	@Override
+	public void setAmbientLightColor(int red, int green, int blue) {		
+		jme3Application.setAmbientLightColor(red,green,blue);
+	}
+	
+	@Override
 	public void setAntiAliasing(boolean enable) 
 	{
 		jme3Application.setAntiAliasing(enable);

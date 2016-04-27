@@ -104,8 +104,8 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	private boolean azimuthVisible = true;
 	private boolean azimuthLinesVisible = true;
 	private boolean elevationLinesVisible = true;
-	
 
+	
 	private Map<Double, String> labelMap;	
 		
 	private AssetManager assetManager;	

@@ -21,6 +21,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.util.SafeRunnable;
@@ -28,14 +29,17 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
-import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerLightingPreferenceConstants;
 import ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesConstants;
 
 public class TopologyViewer implements ITopologyViewer
@@ -225,6 +229,26 @@ public class TopologyViewer implements ITopologyViewer
 		iRenderEngineDelegate.setMaximumFrameRate(maximumFrameRate);		
 	}
 
+	/**
+	 * Sets whether or not ambient lighting is enabled.
+	 * @param enable True to enable ambient lighting, false to disable ambient lighting.
+	 */ 
+	public void setAmbientLightEnabled(boolean enable)
+	{
+		iRenderEngineDelegate.setAmbientLightEnabled(enable);
+	}
+	
+	/**
+	 * Sets the color of the ambient light.
+	 * @param red
+	 * @param green
+	 * @param blue
+	 */
+	public void setAmbientLightColor(int red, int green, int blue)
+	{
+		iRenderEngineDelegate.setAmbientLightColor(red, green, blue);
+	}
+		
 	@Override
 	public int getMaximumFrameRate() 
 	{
@@ -536,8 +560,14 @@ public class TopologyViewer implements ITopologyViewer
 		Boolean antiAliasing = store.getBoolean(TopologyViewerPreferencesConstants.VIEWER_ANTI_ALIASING_ID);
 		if(antiAliasing != null) setAntiAliasing(antiAliasing);
 		
+		Boolean ambientLigthEnabled = store.getBoolean(TopologyViewerLightingPreferenceConstants.AMBIENT_LIGHT_ENABLED_ID);
+		if(ambientLigthEnabled != null) setAmbientLightEnabled(ambientLigthEnabled);
+		
+		RGB rgb = PreferenceConverter.getColor(store, TopologyViewerLightingPreferenceConstants.AMBIENT_LIGHT_COLOR_ID);
+		if(rgb != null) setAmbientLightColor(rgb.red, rgb.green, rgb.blue);
+		
 		Boolean verbose = store.getBoolean(TopologyViewerPreferencesConstants.VIEWER_VERBOSE_ID);
-		if(verbose != null) setVerbose(verbose);
+		if(verbose != null) setVerbose(verbose);					
 	}
 
 	

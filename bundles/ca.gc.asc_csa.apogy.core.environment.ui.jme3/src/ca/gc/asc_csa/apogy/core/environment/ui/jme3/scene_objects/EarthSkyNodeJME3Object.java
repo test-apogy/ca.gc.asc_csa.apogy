@@ -29,20 +29,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
-import ca.gc.asc_csa.apogy.common.log.EventSeverity;
-import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
-import ca.gc.asc_csa.apogy.common.topology.TransformNode;
-import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import ca.gc.asc_csa.apogy.core.environment.EarthSky;
-import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
-import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
-import ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator;
-import ca.gc.asc_csa.apogy.core.environment.ui.jme3.preferences.ApogyEnvironmentUIJME3PreferencesConstants;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.asset.plugins.FileLocator;
@@ -64,7 +50,23 @@ import com.jme3.shadow.DirectionalLightShadowFilter;
 import com.jme3.shadow.DirectionalLightShadowRenderer;
 import com.jme3.shadow.EdgeFilteringMode;
 
-public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode> implements IPropertyChangeListener
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSkySceneObject;
+import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.jme3.preferences.ApogyEnvironmentUIJME3PreferencesConstants;
+
+public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode> implements IPropertyChangeListener, EarthSkySceneObject
 {							
 	private Adapter sunAdapter;
 	private Adapter moonAdapter;
@@ -83,6 +85,9 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	
 	//private static ColorRGBA HORIZON_COLOR = new ColorRGBA(0.588f, 0.294f, 0f, 1.0f);
 
+	// Horizon
+	private boolean horizonVisible = true;
+	
 	// Sun
 	private Node sunTransform= null;	
 	private Geometry sunSphere;	
@@ -242,6 +247,37 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 		geometries.add(sunSphere);
 		geometries.add(moonSphere);
 		return geometries;
+	}
+	
+	@Override
+	public void setHorizonVisible(final boolean newHorizonVisible) 
+	{		
+		this.horizonVisible = newHorizonVisible;
+		
+		Logger.INSTANCE.log(Activator.ID, this, "Setting Horizon visibility to <" + newHorizonVisible + ">", EventSeverity.INFO);
+		jme3Application.enqueue(new Callable<Object>() 
+		{
+			@Override
+			public Object call() throws Exception 
+			{		
+				if(getAttachmentNode() != null) 
+				{
+					if(horizonVisible)
+					{
+						getAttachmentNode().attachChild(getHorizon());
+					}
+					else
+					{
+						getAttachmentNode().detachChild(getHorizon());
+					}
+				}
+				else
+				{
+					Logger.INSTANCE.log(Activator.ID, this, "Failed to set Horizon visibility to <" + newHorizonVisible + ">", EventSeverity.ERROR);
+				}
+				return null;
+			}	
+		});		
 	}
 	
 	/**

@@ -69,17 +69,14 @@ type ChartComposite wraps org.jfree.experimental.chart.swt.ChartComposite
 type JFreeChart wraps org.jfree.chart.JFreeChart
 
 // Classes
-
 class StarFieldPresentation extends NodePresentation
 {	
 	float cutOffMagnitude = "6.0"
 }
 
 class SunPresentation extends NodePresentation
-{
-	
+{	
 }
-
 
 class EarthSurfaceWorksitePresentation extends NodePresentation
 {
@@ -110,7 +107,8 @@ class EarthSurfaceWorksitePresentation extends NodePresentation
 
 class EarthSkyPresentation extends NodePresentation
 {
-	
+	@GenModel(propertyCategory="Horizon")
+	boolean horizonVisible = "true"
 }
 
 class MoonPresentation extends NodePresentation

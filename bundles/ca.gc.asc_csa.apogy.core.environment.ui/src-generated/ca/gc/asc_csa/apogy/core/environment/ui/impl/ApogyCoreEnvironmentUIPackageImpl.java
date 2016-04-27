@@ -513,6 +513,15 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEarthSkyPresentation_HorizonVisible() {
+		return (EAttribute)earthSkyPresentationEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1389,6 +1398,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		createEAttribute(earthSurfaceWorksitePresentationEClass, EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE);
 
 		earthSkyPresentationEClass = createEClass(EARTH_SKY_PRESENTATION);
+		createEAttribute(earthSkyPresentationEClass, EARTH_SKY_PRESENTATION__HORIZON_VISIBLE);
 
 		moonPresentationEClass = createEClass(MOON_PRESENTATION);
 
@@ -1581,6 +1591,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		initEAttribute(getEarthSurfaceWorksitePresentation_PlaneSize(), theEcorePackage.getEDouble(), "planeSize", "10.0", 0, 1, EarthSurfaceWorksitePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthSkyPresentationEClass, EarthSkyPresentation.class, "EarthSkyPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEarthSkyPresentation_HorizonVisible(), theEcorePackage.getEBoolean(), "horizonVisible", "true", 0, 1, EarthSkyPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moonPresentationEClass, MoonPresentation.class, "MoonPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1841,6 +1852,12 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		   new String[] {
 			 "propertyCategory", "PLANE",
 			 "apogy_units", "m"
+		   });	
+		addAnnotation
+		  (getEarthSkyPresentation_HorizonVisible(), 
+		   source, 
+		   new String[] {
+			 "propertyCategory", "Horizon"
 		   });	
 		addAnnotation
 		  (getFeatureOfInterestNodePresentation_PoleHeight(), 

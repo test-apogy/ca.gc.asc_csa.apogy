@@ -318,6 +318,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON:
