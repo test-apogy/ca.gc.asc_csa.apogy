@@ -37,6 +37,7 @@ import com.jme3.renderer.queue.RenderQueue.ShadowMode;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Mesh;
 
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
@@ -56,8 +57,6 @@ import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3Scen
 public class CartesianTriangularMeshJM3SceneObject extends DefaultJME3SceneObject<ContentNode<CartesianTriangularMesh>> implements CartesianTriangularMeshSceneObject
 {	
 	private boolean useShading = true;
-	
-	private boolean updatingGeometry = false;
 	
 	private ColorRGBA meshColor = getDefaultMeshColor();
 	private RGB rgb;
@@ -92,8 +91,11 @@ public class CartesianTriangularMeshJM3SceneObject extends DefaultJME3SceneObjec
 			@Override
 			protected IStatus run(IProgressMonitor monitor) 
 			{					
+				// Makes a local copy of the mesh to prevent concurrent modification.
+				CartesianTriangularMesh meshCopy = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(mesh);
+				
 				// Creates the new mesh.
-				final Mesh newMesh = Data3dJME3Utilities.createMesh(mesh, true, meshColor);
+				final Mesh newMesh = Data3dJME3Utilities.createMesh(meshCopy, true, meshColor);
 				
 				jme3Application.enqueue(new Callable<Object>() 
 				{
@@ -207,8 +209,7 @@ public class CartesianTriangularMeshJM3SceneObject extends DefaultJME3SceneObjec
 			mesh.eAdapters().remove(getPointsAdapter());
 			mesh.eAdapters().remove(getPolygonsAdapter());
 		}		
-		
-		
+				
 		// Removes references.
 		this.assetManager = null;
 		this.centroid = null;
@@ -339,9 +340,9 @@ public class CartesianTriangularMeshJM3SceneObject extends DefaultJME3SceneObjec
 	{	
 		try
 		{
-			if(!updatingGeometry)
+			if(!busy)
 			{
-				updatingGeometry = true;
+				busy = true;
 				
 				// Invalidate the centroid.
 				centroid = null;
@@ -372,7 +373,7 @@ public class CartesianTriangularMeshJM3SceneObject extends DefaultJME3SceneObjec
 					getAttachmentNode().attachChild(meshGeometry);
 				}
 				
-				updatingGeometry = false;
+				busy = false;
 			}
 		}
 		catch(Throwable t)
@@ -508,7 +509,15 @@ public class CartesianTriangularMeshJM3SceneObject extends DefaultJME3SceneObjec
 								// Register listeners to new mesh.
 								mesh.eAdapters().add(getPointsAdapter());
 								mesh.eAdapters().add(getPolygonsAdapter());
-								updateGeometry();
+								
+								if(!busy)
+								{
+									updateGeometry();
+								}
+								else
+								{
+									Logger.INSTANCE.log(Activator.ID, this, "CartesianTriangularMeshJM3SceneObject busy !", EventSeverity.WARNING);
+								}
 							} 
 							else 
 							{

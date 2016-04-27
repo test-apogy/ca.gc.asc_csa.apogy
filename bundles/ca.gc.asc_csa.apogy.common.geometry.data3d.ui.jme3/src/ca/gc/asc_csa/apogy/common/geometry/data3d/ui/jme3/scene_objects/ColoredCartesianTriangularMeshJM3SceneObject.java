@@ -58,9 +58,7 @@ import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3Scen
 public class ColoredCartesianTriangularMeshJM3SceneObject extends DefaultJME3SceneObject<ContentNode<ColoredCartesianTriangularMesh>> implements CartesianTriangularMeshSceneObject, ColoredCartesianTriangularMeshSceneObject
 {	
 	private boolean useShading = true;
-	private boolean overrideColor = false;
-	
-	private boolean updatingGeometry = false;
+	private boolean overrideColor = false;	
 	
 	private ColorRGBA meshColor = getDefaultMeshColor();
 	private RGB rgb;
@@ -364,9 +362,9 @@ public class ColoredCartesianTriangularMeshJM3SceneObject extends DefaultJME3Sce
 	{	
 		try
 		{
-			if(!updatingGeometry)
+			if(!busy)
 			{
-				updatingGeometry = true;
+				busy = true;
 				
 				// Invalidate the centroid.
 				centroid = null;
@@ -397,7 +395,7 @@ public class ColoredCartesianTriangularMeshJM3SceneObject extends DefaultJME3Sce
 					getAttachmentNode().attachChild(meshGeometry);
 				}
 				
-				updatingGeometry = false;
+				busy = false;
 			}
 		}
 		catch(Throwable t)
@@ -535,7 +533,15 @@ public class ColoredCartesianTriangularMeshJM3SceneObject extends DefaultJME3Sce
 								// Register listeners to new mesh.
 								mesh.eAdapters().add(getPointsAdapter());
 								mesh.eAdapters().add(getPolygonsAdapter());
-								updateGeometry();
+								
+								if(!busy)
+								{
+									updateGeometry();
+								}
+								else
+								{
+									Logger.INSTANCE.log(Activator.ID, this, "ColoredCartesianTriangularMeshJM3SceneObject busy !", EventSeverity.WARNING);
+								}
 							} 
 							else 
 							{
@@ -545,7 +551,7 @@ public class ColoredCartesianTriangularMeshJM3SceneObject extends DefaultJME3Sce
 						} 
 						catch (Exception e) 
 						{
-							Logger.INSTANCE.log(Activator.ID, this, "Failed to update content of CartesianTriangularMesh !", EventSeverity.ERROR, e);
+							Logger.INSTANCE.log(Activator.ID, this, "Failed to update content of ColoredCartesianTriangularMesh !", EventSeverity.ERROR, e);
 						}
 					}
 				}
