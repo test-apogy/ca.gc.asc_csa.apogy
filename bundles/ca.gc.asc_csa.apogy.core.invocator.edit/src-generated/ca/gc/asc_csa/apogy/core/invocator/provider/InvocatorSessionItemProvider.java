@@ -142,6 +142,7 @@ public class InvocatorSessionItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT);
 			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__PROGRAMS_LIST);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST);
 			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER);
 			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__TOOLS_LIST);
 		}
@@ -208,6 +209,7 @@ public class InvocatorSessionItemProvider
 				return;
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__ENVIRONMENT:
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST:
+			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST:
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER:
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -237,6 +239,11 @@ public class InvocatorSessionItemProvider
 			(createChildParameter
 				(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__PROGRAMS_LIST,
 				 ApogyCoreInvocatorFactory.eINSTANCE.createProgramsList()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createProgramRuntimesList()));
 
 		newChildDescriptors.add
 			(createChildParameter

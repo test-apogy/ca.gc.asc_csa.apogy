@@ -24,6 +24,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
@@ -40,6 +41,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl#getProgramsList <em>Programs List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl#getProgramRuntimesList <em>Program Runtimes List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl#getDataProductsListContainer <em>Data Products List Container</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl#getToolsList <em>Tools List</em>}</li>
  * </ul>
@@ -109,6 +111,16 @@ public class InvocatorSessionImpl extends MinimalEObjectImpl.Container implement
   protected ProgramsList programsList;
 
   /**
+	 * The cached value of the '{@link #getProgramRuntimesList() <em>Program Runtimes List</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProgramRuntimesList()
+	 * @generated
+	 * @ordered
+	 */
+	protected ProgramRuntimesList programRuntimesList;
+
+		/**
 	 * The cached value of the '{@link #getDataProductsListContainer() <em>Data Products List Container</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -289,6 +301,49 @@ public class InvocatorSessionImpl extends MinimalEObjectImpl.Container implement
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProgramRuntimesList getProgramRuntimesList() {
+		return programRuntimesList;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetProgramRuntimesList(ProgramRuntimesList newProgramRuntimesList, NotificationChain msgs) {
+		ProgramRuntimesList oldProgramRuntimesList = programRuntimesList;
+		programRuntimesList = newProgramRuntimesList;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST, oldProgramRuntimesList, newProgramRuntimesList);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProgramRuntimesList(ProgramRuntimesList newProgramRuntimesList) {
+		if (newProgramRuntimesList != programRuntimesList) {
+			NotificationChain msgs = null;
+			if (programRuntimesList != null)
+				msgs = ((InternalEObject)programRuntimesList).eInverseRemove(this, ApogyCoreInvocatorPackage.PROGRAM_RUNTIMES_LIST__SESSION, ProgramRuntimesList.class, msgs);
+			if (newProgramRuntimesList != null)
+				msgs = ((InternalEObject)newProgramRuntimesList).eInverseAdd(this, ApogyCoreInvocatorPackage.PROGRAM_RUNTIMES_LIST__SESSION, ProgramRuntimesList.class, msgs);
+			msgs = basicSetProgramRuntimesList(newProgramRuntimesList, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST, newProgramRuntimesList, newProgramRuntimesList));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -396,6 +451,10 @@ public class InvocatorSessionImpl extends MinimalEObjectImpl.Container implement
 				if (programsList != null)
 					msgs = ((InternalEObject)programsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST, null, msgs);
 				return basicSetProgramsList((ProgramsList)otherEnd, msgs);
+			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST:
+				if (programRuntimesList != null)
+					msgs = ((InternalEObject)programRuntimesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST, null, msgs);
+				return basicSetProgramRuntimesList((ProgramRuntimesList)otherEnd, msgs);
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER:
 				if (dataProductsListContainer != null)
 					msgs = ((InternalEObject)dataProductsListContainer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER, null, msgs);
@@ -421,6 +480,8 @@ public class InvocatorSessionImpl extends MinimalEObjectImpl.Container implement
 				return basicSetEnvironment(null, msgs);
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST:
 				return basicSetProgramsList(null, msgs);
+			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST:
+				return basicSetProgramRuntimesList(null, msgs);
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER:
 				return basicSetDataProductsListContainer(null, msgs);
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST:
@@ -446,6 +507,8 @@ public class InvocatorSessionImpl extends MinimalEObjectImpl.Container implement
 				return getEnvironment();
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST:
 				return getProgramsList();
+			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST:
+				return getProgramRuntimesList();
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER:
 				return getDataProductsListContainer();
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST:
@@ -474,6 +537,9 @@ public class InvocatorSessionImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST:
 				setProgramsList((ProgramsList)newValue);
+				return;
+			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST:
+				setProgramRuntimesList((ProgramRuntimesList)newValue);
 				return;
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER:
 				setDataProductsListContainer((DataProductsListsContainer)newValue);
@@ -506,6 +572,9 @@ public class InvocatorSessionImpl extends MinimalEObjectImpl.Container implement
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST:
 				setProgramsList((ProgramsList)null);
 				return;
+			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST:
+				setProgramRuntimesList((ProgramRuntimesList)null);
+				return;
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER:
 				setDataProductsListContainer((DataProductsListsContainer)null);
 				return;
@@ -533,6 +602,8 @@ public class InvocatorSessionImpl extends MinimalEObjectImpl.Container implement
 				return environment != null;
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST:
 				return programsList != null;
+			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST:
+				return programRuntimesList != null;
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER:
 				return dataProductsListContainer != null;
 			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST:

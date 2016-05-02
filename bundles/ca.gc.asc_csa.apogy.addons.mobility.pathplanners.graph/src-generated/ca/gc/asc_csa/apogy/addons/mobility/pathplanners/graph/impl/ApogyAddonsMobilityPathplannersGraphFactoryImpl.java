@@ -222,7 +222,6 @@ public class ApogyAddonsMobilityPathplannersGraphFactoryImpl extends EFactoryImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	public DirectedGraph<?, ?> createDirectedGraphFromString(EDataType eDataType, String initialValue) {
 		return (DirectedGraph<?, ?>)super.createFromString(initialValue);
 	}
@@ -239,9 +238,8 @@ public class ApogyAddonsMobilityPathplannersGraphFactoryImpl extends EFactoryImp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	@SuppressWarnings("unchecked")
 	public SimpleDirectedWeightedGraph<?, ?> createSimpleDirectedWeightedGraphFromString(EDataType eDataType, String initialValue) {
 		return (SimpleDirectedWeightedGraph<?, ?>)super.createFromString(initialValue);
 	}

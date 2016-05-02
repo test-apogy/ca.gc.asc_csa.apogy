@@ -321,6 +321,14 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 				return createEClassArgumentAdapter();
 			}
 			@Override
+			public Adapter caseProgramRuntimesList(ProgramRuntimesList object) {
+				return createProgramRuntimesListAdapter();
+			}
+			@Override
+			public Adapter caseAbstractProgramRuntime(AbstractProgramRuntime object) {
+				return createAbstractProgramRuntimeAdapter();
+			}
+			@Override
 			public Adapter caseResultsList(ResultsList object) {
 				return createResultsListAdapter();
 			}
@@ -1090,6 +1098,34 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList <em>Program Runtimes List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList
+	 * @generated
+	 */
+	public Adapter createProgramRuntimesListAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime <em>Abstract Program Runtime</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime
+	 * @generated
+	 */
+	public Adapter createAbstractProgramRuntimeAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList <em>Results List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;

@@ -933,6 +933,29 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProgramRuntimesListItemProvider programRuntimesListItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProgramRuntimesListAdapter() {
+		if (programRuntimesListItemProvider == null) {
+			programRuntimesListItemProvider = new ProgramRuntimesListItemProvider(this);
+		}
+
+		return programRuntimesListItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1342,6 +1365,7 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (stringEDataTypeArgumentItemProvider != null) stringEDataTypeArgumentItemProvider.dispose();
 		if (eEnumArgumentItemProvider != null) eEnumArgumentItemProvider.dispose();
 		if (eClassArgumentItemProvider != null) eClassArgumentItemProvider.dispose();
+		if (programRuntimesListItemProvider != null) programRuntimesListItemProvider.dispose();
 		if (operationCallResultsListItemProvider != null) operationCallResultsListItemProvider.dispose();
 		if (recordingResultsListItemProvider != null) recordingResultsListItemProvider.dispose();
 		if (operationCallResultItemProvider != null) operationCallResultItemProvider.dispose();

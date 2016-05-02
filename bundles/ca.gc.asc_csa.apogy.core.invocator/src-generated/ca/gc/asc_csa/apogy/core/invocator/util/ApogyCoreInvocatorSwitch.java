@@ -452,6 +452,20 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreInvocatorPackage.PROGRAM_RUNTIMES_LIST: {
+				ProgramRuntimesList programRuntimesList = (ProgramRuntimesList)theEObject;
+				T result = caseProgramRuntimesList(programRuntimesList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.ABSTRACT_PROGRAM_RUNTIME: {
+				AbstractProgramRuntime abstractProgramRuntime = (AbstractProgramRuntime)theEObject;
+				T result = caseAbstractProgramRuntime(abstractProgramRuntime);
+				if (result == null) result = caseNamed(abstractProgramRuntime);
+				if (result == null) result = caseDescribed(abstractProgramRuntime);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreInvocatorPackage.RESULTS_LIST: {
 				ResultsList resultsList = (ResultsList)theEObject;
 				T result = caseResultsList(resultsList);
@@ -1285,6 +1299,36 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Program Runtimes List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Program Runtimes List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProgramRuntimesList(ProgramRuntimesList object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Program Runtime</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Program Runtime</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractProgramRuntime(AbstractProgramRuntime object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Results List</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

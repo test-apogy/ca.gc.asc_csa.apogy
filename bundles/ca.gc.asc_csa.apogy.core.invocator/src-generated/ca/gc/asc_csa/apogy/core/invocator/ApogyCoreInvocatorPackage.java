@@ -512,13 +512,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int INVOCATOR_SESSION__PROGRAMS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
+	 * The feature id for the '<em><b>Program Runtimes List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+
+		/**
 	 * The feature id for the '<em><b>Data Products List Container</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Tools List</b></em>' containment reference.
@@ -527,7 +536,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__TOOLS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+  int INVOCATOR_SESSION__TOOLS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of structural features of the '<em>Invocator Session</em>' class.
@@ -536,7 +545,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
+  int INVOCATOR_SESSION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
   /**
 	 * The number of operations of the '<em>Invocator Session</em>' class.
@@ -3371,6 +3380,179 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int ECLASS_ARGUMENT_OPERATION_COUNT = ARGUMENT_OPERATION_COUNT + 0;
 
   /**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramRuntimesListImpl <em>Program Runtimes List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ProgramRuntimesListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramRuntimesList()
+	 * @generated
+	 */
+	int PROGRAM_RUNTIMES_LIST = 44;
+
+		/**
+	 * The feature id for the '<em><b>Session</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM_RUNTIMES_LIST__SESSION = 0;
+
+		/**
+	 * The feature id for the '<em><b>Program Runtimes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM_RUNTIMES_LIST__PROGRAM_RUNTIMES = 1;
+
+		/**
+	 * The number of structural features of the '<em>Program Runtimes List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM_RUNTIMES_LIST_FEATURE_COUNT = 2;
+
+		/**
+	 * The number of operations of the '<em>Program Runtimes List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM_RUNTIMES_LIST_OPERATION_COUNT = 0;
+
+		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractProgramRuntimeImpl <em>Abstract Program Runtime</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractProgramRuntimeImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractProgramRuntime()
+	 * @generated
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME = 45;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME__NAME = ApogyCommonEMFPackage.NAMED__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+
+		/**
+	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME__STATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+
+		/**
+	 * The feature id for the '<em><b>Program</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME__PROGRAM = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+
+		/**
+	 * The number of structural features of the '<em>Abstract Program Runtime</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+
+		/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME___INIT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+
+		/**
+	 * The operation id for the '<em>Terminate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME___TERMINATE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
+
+		/**
+	 * The operation id for the '<em>Resume</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME___RESUME = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 2;
+
+		/**
+	 * The operation id for the '<em>Suspend</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME___SUSPEND = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 3;
+
+		/**
+	 * The operation id for the '<em>Step Into</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME___STEP_INTO = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 4;
+
+		/**
+	 * The operation id for the '<em>Step Over</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME___STEP_OVER = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 5;
+
+		/**
+	 * The operation id for the '<em>Step Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 6;
+
+		/**
+	 * The number of operations of the '<em>Abstract Program Runtime</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_PROGRAM_RUNTIME_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 7;
+
+		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList <em>Results List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3378,7 +3560,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getResultsList()
 	 * @generated
 	 */
-  int RESULTS_LIST = 44;
+  int RESULTS_LIST = 46;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3442,7 +3624,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsList()
 	 * @generated
 	 */
-  int OPERATION_CALL_RESULTS_LIST = 45;
+  int OPERATION_CALL_RESULTS_LIST = 47;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3524,7 +3706,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingResultsList()
 	 * @generated
 	 */
-  int RECORDING_RESULTS_LIST = 46;
+  int RECORDING_RESULTS_LIST = 48;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3606,7 +3788,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResult()
 	 * @generated
 	 */
-  int ABSTRACT_RESULT = 47;
+  int ABSTRACT_RESULT = 49;
 
   /**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -3688,7 +3870,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResultValue()
 	 * @generated
 	 */
-  int ABSTRACT_RESULT_VALUE = 48;
+  int ABSTRACT_RESULT_VALUE = 50;
 
   /**
 	 * The feature id for the '<em><b>Result</b></em>' container reference.
@@ -3725,7 +3907,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResult()
 	 * @generated
 	 */
-  int OPERATION_CALL_RESULT = 49;
+  int OPERATION_CALL_RESULT = 51;
 
   /**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -3843,7 +4025,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getExceptionContainer()
 	 * @generated
 	 */
-  int EXCEPTION_CONTAINER = 50;
+  int EXCEPTION_CONTAINER = 52;
 
   /**
 	 * The feature id for the '<em><b>Exception</b></em>' attribute.
@@ -3880,7 +4062,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeResultValue()
 	 * @generated
 	 */
-  int ATTRIBUTE_RESULT_VALUE = 51;
+  int ATTRIBUTE_RESULT_VALUE = 53;
 
   /**
 	 * The feature id for the '<em><b>Result</b></em>' container reference.
@@ -3926,7 +4108,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeValue()
 	 * @generated
 	 */
-  int ATTRIBUTE_VALUE = 52;
+  int ATTRIBUTE_VALUE = 54;
 
   /**
 	 * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -3963,7 +4145,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getReferenceResultValue()
 	 * @generated
 	 */
-  int REFERENCE_RESULT_VALUE = 53;
+  int REFERENCE_RESULT_VALUE = 55;
 
   /**
 	 * The feature id for the '<em><b>Result</b></em>' container reference.
@@ -4009,7 +4191,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingToolsContainer()
 	 * @generated
 	 */
-	int RECORDING_TOOLS_CONTAINER = 54;
+	int RECORDING_TOOLS_CONTAINER = 56;
 
 		/**
 	 * The feature id for the '<em><b>Tools List</b></em>' container reference.
@@ -4073,7 +4255,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getChannelsList()
 	 * @generated
 	 */
-	int CHANNELS_LIST = 55;
+	int CHANNELS_LIST = 57;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4137,7 +4319,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractChannel()
 	 * @generated
 	 */
-	int ABSTRACT_CHANNEL = 56;
+	int ABSTRACT_CHANNEL = 58;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4192,7 +4374,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractRecorder()
 	 * @generated
 	 */
-  int ABSTRACT_RECORDER = 57;
+  int ABSTRACT_RECORDER = 59;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4247,7 +4429,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractPlayer()
 	 * @generated
 	 */
-  int ABSTRACT_PLAYER = 58;
+  int ABSTRACT_PLAYER = 60;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4302,7 +4484,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsListTimeSource()
 	 * @generated
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 59;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 61;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4519,7 +4701,17 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableListenerEventType()
 	 * @generated
 	 */
-	int VARIABLE_LISTENER_EVENT_TYPE = 60;
+	int VARIABLE_LISTENER_EVENT_TYPE = 62;
+
+		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState <em>Program Runtime State</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramRuntimeState()
+	 * @generated
+	 */
+	int PROGRAM_RUNTIME_STATE = 63;
 
 		/**
 	 * The meta object id for the '<em>Throwable</em>' data type.
@@ -4529,7 +4721,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getThrowable()
 	 * @generated
 	 */
-  int THROWABLE = 61;
+  int THROWABLE = 64;
 
   /**
 	 * The meta object id for the '<em>Notification</em>' data type.
@@ -4539,7 +4731,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNotification()
 	 * @generated
 	 */
-  int NOTIFICATION = 62;
+  int NOTIFICATION = 65;
 
 
   /**
@@ -4550,7 +4742,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
 	 * @generated
 	 */
-  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 63;
+  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 66;
 
 
   /**
@@ -4560,7 +4752,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMembersArray()
 	 * @generated
 	 */
-	int TYPE_MEMBERS_ARRAY = 64;
+	int TYPE_MEMBERS_ARRAY = 67;
 
 
 		/**
@@ -4571,7 +4763,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getIVariableListener()
 	 * @generated
 	 */
-	int IVARIABLE_LISTENER = 65;
+	int IVARIABLE_LISTENER = 68;
 
 
 		/**
@@ -5009,6 +5201,17 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   EReference getInvocatorSession_ProgramsList();
 
   /**
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getProgramRuntimesList <em>Program Runtimes List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Program Runtimes List</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getProgramRuntimesList()
+	 * @see #getInvocatorSession()
+	 * @generated
+	 */
+	EReference getInvocatorSession_ProgramRuntimesList();
+
+		/**
 	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getDataProductsListContainer <em>Data Products List Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6568,6 +6771,140 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   EReference getEClassArgument_Value();
 
   /**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList <em>Program Runtimes List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Program Runtimes List</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList
+	 * @generated
+	 */
+	EClass getProgramRuntimesList();
+
+		/**
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList#getSession <em>Session</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Session</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList#getSession()
+	 * @see #getProgramRuntimesList()
+	 * @generated
+	 */
+	EReference getProgramRuntimesList_Session();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList#getProgramRuntimes <em>Program Runtimes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Program Runtimes</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList#getProgramRuntimes()
+	 * @see #getProgramRuntimesList()
+	 * @generated
+	 */
+	EReference getProgramRuntimesList_ProgramRuntimes();
+
+		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime <em>Abstract Program Runtime</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Program Runtime</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime
+	 * @generated
+	 */
+	EClass getAbstractProgramRuntime();
+
+		/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#getState <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>State</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#getState()
+	 * @see #getAbstractProgramRuntime()
+	 * @generated
+	 */
+	EAttribute getAbstractProgramRuntime_State();
+
+		/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#getProgram <em>Program</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Program</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#getProgram()
+	 * @see #getAbstractProgramRuntime()
+	 * @generated
+	 */
+	EReference getAbstractProgramRuntime_Program();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#init() <em>Init</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Init</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#init()
+	 * @generated
+	 */
+	EOperation getAbstractProgramRuntime__Init();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#terminate() <em>Terminate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Terminate</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#terminate()
+	 * @generated
+	 */
+	EOperation getAbstractProgramRuntime__Terminate();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#resume() <em>Resume</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Resume</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#resume()
+	 * @generated
+	 */
+	EOperation getAbstractProgramRuntime__Resume();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#suspend() <em>Suspend</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Suspend</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#suspend()
+	 * @generated
+	 */
+	EOperation getAbstractProgramRuntime__Suspend();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#stepInto() <em>Step Into</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Step Into</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#stepInto()
+	 * @generated
+	 */
+	EOperation getAbstractProgramRuntime__StepInto();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#stepOver() <em>Step Over</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Step Over</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#stepOver()
+	 * @generated
+	 */
+	EOperation getAbstractProgramRuntime__StepOver();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#stepReturn() <em>Step Return</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Step Return</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime#stepReturn()
+	 * @generated
+	 */
+	EOperation getAbstractProgramRuntime__StepReturn();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList <em>Results List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7023,6 +7360,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	EEnum getVariableListenerEventType();
 
 		/**
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState <em>Program Runtime State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Program Runtime State</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState
+	 * @generated
+	 */
+	EEnum getProgramRuntimeState();
+
+		/**
 	 * Returns the meta object for data type '{@link java.lang.Throwable <em>Throwable</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7449,6 +7796,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage
     EReference INVOCATOR_SESSION__PROGRAMS_LIST = eINSTANCE.getInvocatorSession_ProgramsList();
 
     /**
+		 * The meta object literal for the '<em><b>Program Runtimes List</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST = eINSTANCE.getInvocatorSession_ProgramRuntimesList();
+
+				/**
 		 * The meta object literal for the '<em><b>Data Products List Container</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8709,6 +9064,114 @@ public interface ApogyCoreInvocatorPackage extends EPackage
     EReference ECLASS_ARGUMENT__VALUE = eINSTANCE.getEClassArgument_Value();
 
     /**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramRuntimesListImpl <em>Program Runtimes List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ProgramRuntimesListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramRuntimesList()
+		 * @generated
+		 */
+		EClass PROGRAM_RUNTIMES_LIST = eINSTANCE.getProgramRuntimesList();
+
+				/**
+		 * The meta object literal for the '<em><b>Session</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROGRAM_RUNTIMES_LIST__SESSION = eINSTANCE.getProgramRuntimesList_Session();
+
+				/**
+		 * The meta object literal for the '<em><b>Program Runtimes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROGRAM_RUNTIMES_LIST__PROGRAM_RUNTIMES = eINSTANCE.getProgramRuntimesList_ProgramRuntimes();
+
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractProgramRuntimeImpl <em>Abstract Program Runtime</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractProgramRuntimeImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractProgramRuntime()
+		 * @generated
+		 */
+		EClass ABSTRACT_PROGRAM_RUNTIME = eINSTANCE.getAbstractProgramRuntime();
+
+				/**
+		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_PROGRAM_RUNTIME__STATE = eINSTANCE.getAbstractProgramRuntime_State();
+
+				/**
+		 * The meta object literal for the '<em><b>Program</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_PROGRAM_RUNTIME__PROGRAM = eINSTANCE.getAbstractProgramRuntime_Program();
+
+				/**
+		 * The meta object literal for the '<em><b>Init</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_PROGRAM_RUNTIME___INIT = eINSTANCE.getAbstractProgramRuntime__Init();
+
+				/**
+		 * The meta object literal for the '<em><b>Terminate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_PROGRAM_RUNTIME___TERMINATE = eINSTANCE.getAbstractProgramRuntime__Terminate();
+
+				/**
+		 * The meta object literal for the '<em><b>Resume</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_PROGRAM_RUNTIME___RESUME = eINSTANCE.getAbstractProgramRuntime__Resume();
+
+				/**
+		 * The meta object literal for the '<em><b>Suspend</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_PROGRAM_RUNTIME___SUSPEND = eINSTANCE.getAbstractProgramRuntime__Suspend();
+
+				/**
+		 * The meta object literal for the '<em><b>Step Into</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_PROGRAM_RUNTIME___STEP_INTO = eINSTANCE.getAbstractProgramRuntime__StepInto();
+
+				/**
+		 * The meta object literal for the '<em><b>Step Over</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_PROGRAM_RUNTIME___STEP_OVER = eINSTANCE.getAbstractProgramRuntime__StepOver();
+
+				/**
+		 * The meta object literal for the '<em><b>Step Return</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN = eINSTANCE.getAbstractProgramRuntime__StepReturn();
+
+				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList <em>Results List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9085,6 +9548,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
 		EEnum VARIABLE_LISTENER_EVENT_TYPE = eINSTANCE.getVariableListenerEventType();
+
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState <em>Program Runtime State</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramRuntimeState()
+		 * @generated
+		 */
+		EEnum PROGRAM_RUNTIME_STATE = eINSTANCE.getProgramRuntimeState();
 
 				/**
 		 * The meta object literal for the '<em>Throwable</em>' data type.

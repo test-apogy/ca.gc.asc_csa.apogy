@@ -27,11 +27,19 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.ui.IViewReference;
+import org.eclipse.ui.IViewSite;
+import org.eclipse.ui.IWorkbenchPartReference;
+
+import com.jme3.light.DirectionalLight;
+import com.jme3.math.ColorRGBA;
+import com.jme3.math.Vector3f;
+
 import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
-import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
 import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
@@ -39,14 +47,6 @@ import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.topology.ui.Activator;
-import org.eclipse.ui.IViewReference;
-import org.eclipse.ui.IViewSite;
-import org.eclipse.ui.IWorkbenchPartReference;
-
-import com.jme3.light.AmbientLight;
-import com.jme3.light.DirectionalLight;
-import com.jme3.math.ColorRGBA;
-import com.jme3.math.Vector3f;
 
 public class ApogySystem3DView extends AbstractApogy3DView implements IPropertyChangeListener
 {

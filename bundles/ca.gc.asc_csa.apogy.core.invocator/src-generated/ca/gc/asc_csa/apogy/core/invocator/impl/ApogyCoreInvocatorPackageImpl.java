@@ -30,6 +30,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
@@ -67,6 +68,8 @@ import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
 import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
@@ -410,6 +413,20 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass programRuntimesListEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractProgramRuntimeEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -526,6 +543,13 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	private EEnum variableListenerEventTypeEEnum = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum programRuntimeStateEEnum = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -1020,12 +1044,21 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInvocatorSession_ProgramRuntimesList() {
+		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getInvocatorSession_DataProductsListContainer()
   {
-		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(2);
+		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(3);
 	}
 
   /**
@@ -1035,7 +1068,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 */
   public EReference getInvocatorSession_ToolsList()
   {
-		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(3);
+		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(4);
 	}
 
   /**
@@ -2483,6 +2516,123 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProgramRuntimesList() {
+		return programRuntimesListEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgramRuntimesList_Session() {
+		return (EReference)programRuntimesListEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgramRuntimesList_ProgramRuntimes() {
+		return (EReference)programRuntimesListEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbstractProgramRuntime() {
+		return abstractProgramRuntimeEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractProgramRuntime_State() {
+		return (EAttribute)abstractProgramRuntimeEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractProgramRuntime_Program() {
+		return (EReference)abstractProgramRuntimeEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractProgramRuntime__Init() {
+		return abstractProgramRuntimeEClass.getEOperations().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractProgramRuntime__Terminate() {
+		return abstractProgramRuntimeEClass.getEOperations().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractProgramRuntime__Resume() {
+		return abstractProgramRuntimeEClass.getEOperations().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractProgramRuntime__Suspend() {
+		return abstractProgramRuntimeEClass.getEOperations().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractProgramRuntime__StepInto() {
+		return abstractProgramRuntimeEClass.getEOperations().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractProgramRuntime__StepOver() {
+		return abstractProgramRuntimeEClass.getEOperations().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractProgramRuntime__StepReturn() {
+		return abstractProgramRuntimeEClass.getEOperations().get(6);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -2892,6 +3042,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getProgramRuntimeState() {
+		return programRuntimeStateEEnum;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -3011,6 +3170,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__PROGRAMS_LIST);
+		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__PROGRAM_RUNTIMES_LIST);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__TOOLS_LIST);
 
@@ -3201,6 +3361,21 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		eClassArgumentEClass = createEClass(ECLASS_ARGUMENT);
 		createEReference(eClassArgumentEClass, ECLASS_ARGUMENT__VALUE);
 
+		programRuntimesListEClass = createEClass(PROGRAM_RUNTIMES_LIST);
+		createEReference(programRuntimesListEClass, PROGRAM_RUNTIMES_LIST__SESSION);
+		createEReference(programRuntimesListEClass, PROGRAM_RUNTIMES_LIST__PROGRAM_RUNTIMES);
+
+		abstractProgramRuntimeEClass = createEClass(ABSTRACT_PROGRAM_RUNTIME);
+		createEAttribute(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME__STATE);
+		createEReference(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME__PROGRAM);
+		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___INIT);
+		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___TERMINATE);
+		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___RESUME);
+		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___SUSPEND);
+		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_INTO);
+		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_OVER);
+		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN);
+
 		resultsListEClass = createEClass(RESULTS_LIST);
 		createEReference(resultsListEClass, RESULTS_LIST__RESULTS);
 		createEOperation(resultsListEClass, RESULTS_LIST___GET_INVOCATOR_SESSION);
@@ -3261,6 +3436,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		// Create enums
 		variableListenerEventTypeEEnum = createEEnum(VARIABLE_LISTENER_EVENT_TYPE);
+		programRuntimeStateEEnum = createEEnum(PROGRAM_RUNTIME_STATE);
 
 		// Create data types
 		throwableEDataType = createEDataType(THROWABLE);
@@ -3340,6 +3516,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		stringEDataTypeArgumentEClass.getESuperTypes().add(this.getEDataTypeArgument());
 		eEnumArgumentEClass.getESuperTypes().add(this.getArgument());
 		eClassArgumentEClass.getESuperTypes().add(this.getArgument());
+		abstractProgramRuntimeEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractProgramRuntimeEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		resultsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		resultsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		operationCallResultsListEClass.getESuperTypes().add(this.getResultsList());
@@ -3501,6 +3679,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInvocatorSession_ProgramsList(), this.getProgramsList(), this.getProgramsList_InvocatorSession(), "programsList", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInvocatorSession_ProgramRuntimesList(), this.getProgramRuntimesList(), this.getProgramRuntimesList_Session(), "programRuntimesList", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInvocatorSession_DataProductsListContainer(), this.getDataProductsListsContainer(), this.getDataProductsListsContainer_InvocatorSession(), "dataProductsListContainer", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInvocatorSession_ToolsList(), this.getToolsList(), this.getToolsList_InvocatorSession(), "toolsList", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3728,6 +3907,28 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEClass(eClassArgumentEClass, EClassArgument.class, "EClassArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEClassArgument_Value(), theEcorePackage.getEObject(), null, "value", null, 0, 1, EClassArgument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(programRuntimesListEClass, ProgramRuntimesList.class, "ProgramRuntimesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProgramRuntimesList_Session(), this.getInvocatorSession(), this.getInvocatorSession_ProgramRuntimesList(), "session", null, 0, 1, ProgramRuntimesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgramRuntimesList_ProgramRuntimes(), this.getAbstractProgramRuntime(), null, "programRuntimes", null, 0, -1, ProgramRuntimesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abstractProgramRuntimeEClass, AbstractProgramRuntime.class, "AbstractProgramRuntime", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAbstractProgramRuntime_State(), this.getProgramRuntimeState(), "state", "Not Initialized", 0, 1, AbstractProgramRuntime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractProgramRuntime_Program(), this.getProgram(), null, "program", null, 0, 1, AbstractProgramRuntime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getAbstractProgramRuntime__Init(), null, "init", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAbstractProgramRuntime__Terminate(), null, "terminate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAbstractProgramRuntime__Resume(), null, "resume", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAbstractProgramRuntime__Suspend(), null, "suspend", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAbstractProgramRuntime__StepInto(), null, "stepInto", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAbstractProgramRuntime__StepOver(), null, "stepOver", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAbstractProgramRuntime__StepReturn(), null, "stepReturn", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(resultsListEClass, ResultsList.class, "ResultsList", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResultsList_Results(), this.getAbstractResult(), this.getAbstractResult_ResultsList(), "results", null, 0, -1, ResultsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3791,6 +3992,14 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEEnum(variableListenerEventTypeEEnum, VariableListenerEventType.class, "VariableListenerEventType");
 		addEEnumLiteral(variableListenerEventTypeEEnum, VariableListenerEventType.NEW);
 		addEEnumLiteral(variableListenerEventTypeEEnum, VariableListenerEventType.CLEAR);
+
+		initEEnum(programRuntimeStateEEnum, ProgramRuntimeState.class, "ProgramRuntimeState");
+		addEEnumLiteral(programRuntimeStateEEnum, ProgramRuntimeState.NOT_INITIALIZED);
+		addEEnumLiteral(programRuntimeStateEEnum, ProgramRuntimeState.INITIALIZED);
+		addEEnumLiteral(programRuntimeStateEEnum, ProgramRuntimeState.RUNNING);
+		addEEnumLiteral(programRuntimeStateEEnum, ProgramRuntimeState.SUSPENDED);
+		addEEnumLiteral(programRuntimeStateEEnum, ProgramRuntimeState.TERMINATED);
+		addEEnumLiteral(programRuntimeStateEEnum, ProgramRuntimeState.FAILED);
 
 		// Initialize data types
 		initEDataType(throwableEDataType, Throwable.class, "Throwable", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

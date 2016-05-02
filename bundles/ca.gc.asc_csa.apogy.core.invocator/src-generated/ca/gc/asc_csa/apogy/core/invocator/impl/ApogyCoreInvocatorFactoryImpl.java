@@ -106,6 +106,7 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.STRING_EDATA_TYPE_ARGUMENT: return createStringEDataTypeArgument();
 			case ApogyCoreInvocatorPackage.EENUM_ARGUMENT: return createEEnumArgument();
 			case ApogyCoreInvocatorPackage.ECLASS_ARGUMENT: return createEClassArgument();
+			case ApogyCoreInvocatorPackage.PROGRAM_RUNTIMES_LIST: return createProgramRuntimesList();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST: return createOperationCallResultsList();
 			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST: return createRecordingResultsList();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULT: return createOperationCallResult();
@@ -132,6 +133,8 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
 				return createVariableListenerEventTypeFromString(eDataType, initialValue);
+			case ApogyCoreInvocatorPackage.PROGRAM_RUNTIME_STATE:
+				return createProgramRuntimeStateFromString(eDataType, initialValue);
 			case ApogyCoreInvocatorPackage.THROWABLE:
 				return createThrowableFromString(eDataType, initialValue);
 			case ApogyCoreInvocatorPackage.NOTIFICATION:
@@ -158,6 +161,8 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
 				return convertVariableListenerEventTypeToString(eDataType, instanceValue);
+			case ApogyCoreInvocatorPackage.PROGRAM_RUNTIME_STATE:
+				return convertProgramRuntimeStateToString(eDataType, instanceValue);
 			case ApogyCoreInvocatorPackage.THROWABLE:
 				return convertThrowableToString(eDataType, instanceValue);
 			case ApogyCoreInvocatorPackage.NOTIFICATION:
@@ -556,6 +561,16 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProgramRuntimesList createProgramRuntimesList() {
+		ProgramRuntimesListImpl programRuntimesList = new ProgramRuntimesListImpl();
+		return programRuntimesList;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -678,6 +693,26 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 	 * @generated
 	 */
 	public String convertVariableListenerEventTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProgramRuntimeState createProgramRuntimeStateFromString(EDataType eDataType, String initialValue) {
+		ProgramRuntimeState result = ProgramRuntimeState.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertProgramRuntimeStateToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -148,9 +148,8 @@ public class ApogyCommonEMFUIFactoryImpl extends EFactoryImpl implements ApogyCo
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-		@SuppressWarnings("unchecked")
 		public Unit<?> createUnitFromString(EDataType eDataType, String initialValue)
   {
 		return (Unit<?>)super.createFromString(initialValue);

@@ -36,6 +36,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getProgramsList <em>Programs List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getProgramRuntimesList <em>Program Runtimes List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getDataProductsListContainer <em>Data Products List Container</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getToolsList <em>Tools List</em>}</li>
  * </ul>
@@ -103,6 +104,34 @@ public interface InvocatorSession extends Named, Described
   void setProgramsList(ProgramsList value);
 
   /**
+	 * Returns the value of the '<em><b>Program Runtimes List</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList#getSession <em>Session</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Program Runtimes List</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Program Runtimes List</em>' containment reference.
+	 * @see #setProgramRuntimesList(ProgramRuntimesList)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getInvocatorSession_ProgramRuntimesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList#getSession
+	 * @model opposite="session" containment="true"
+	 * @generated
+	 */
+	ProgramRuntimesList getProgramRuntimesList();
+
+		/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getProgramRuntimesList <em>Program Runtimes List</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Program Runtimes List</em>' containment reference.
+	 * @see #getProgramRuntimesList()
+	 * @generated
+	 */
+	void setProgramRuntimesList(ProgramRuntimesList value);
+
+		/**
 	 * Returns the value of the '<em><b>Data Products List Container</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->

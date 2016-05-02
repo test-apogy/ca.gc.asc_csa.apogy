@@ -51,6 +51,48 @@
             id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
             name="SetActiveInvocatorSessionCommand">
       </command>            
+
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeInitCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeInitCommand"
+            name="ProgramRuntimeInitCommand">
+      </command>            
+
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeTerminateCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeTerminateCommand"
+            name="ProgramRuntimeTerminateCommand">
+      </command>            
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeResumeCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeResumeCommand"
+            name="ProgramRuntimeResumeCommand">
+      </command>            
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeSuspendCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeSuspendCommand"
+            name="ProgramRuntimeSuspendCommand">
+      </command>            
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeStepIntoCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeStepIntoCommand"
+            name="ProgramRuntimeStepIntoCommand">
+      </command>            
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeStepOverCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeStepOverCommand"
+            name="ProgramRuntimeStepOverCommand">
+      </command>            
+      
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeStepReturnCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeStepReturnCommand"
+            name="ProgramRuntimeStepReturnCommand">
+      </command>            
       
    </extension>
    <extension
@@ -188,6 +230,163 @@
                </with>
             </visibleWhen>
          </command>
+         
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeInitCommand"
+               label="Init"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                    variable="activeMenuSelection">
+                <and>
+                   <count value="1"/>
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                        <instanceof
+                            value="ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime">
+                        </instanceof>
+                   </iterate>
+                </and>
+               </with>
+            </visibleWhen>
+         </command>
+         
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeTerminateCommand"
+               label="Terminate"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                    variable="activeMenuSelection">
+                <and>
+                   <count value="1"/>
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                        <instanceof
+                            value="ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime">
+                        </instanceof>
+                   </iterate>
+                </and>
+               </with>
+            </visibleWhen>
+         </command>
+         
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeResumeCommand"
+               label="Resume"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                    variable="activeMenuSelection">
+                <and>
+                   <count value="1"/>
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                        <instanceof
+                            value="ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime">
+                        </instanceof>
+                   </iterate>
+                </and>
+               </with>
+            </visibleWhen>
+         </command>
+         
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeSuspendCommand"
+               label="Suspend"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                    variable="activeMenuSelection">
+                <and>
+                   <count value="1"/>
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                        <instanceof
+                            value="ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime">
+                        </instanceof>
+                   </iterate>
+                </and>
+               </with>
+            </visibleWhen>
+         </command>
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeStepIntoCommand"
+               label="Step Into"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                    variable="activeMenuSelection">
+                <and>
+                   <count value="1"/>
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                        <instanceof
+                            value="ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime">
+                        </instanceof>
+                   </iterate>
+                </and>
+               </with>
+            </visibleWhen>
+         </command>
+         
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeStepOverCommand"
+               label="Step Over"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                    variable="activeMenuSelection">
+                <and>
+                   <count value="1"/>
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                        <instanceof
+                            value="ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime">
+                        </instanceof>
+                   </iterate>
+                </and>
+               </with>
+            </visibleWhen>
+         </command>
+
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ProgramRuntimeStepReturnCommand"
+               label="Step Return"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                    variable="activeMenuSelection">
+                <and>
+                   <count value="1"/>
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                        <instanceof
+                            value="ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime">
+                        </instanceof>
+                   </iterate>
+                </and>
+               </with>
+            </visibleWhen>
+         </command>
+                  
+                  
       </menuContribution>
    </extension>
    <extension

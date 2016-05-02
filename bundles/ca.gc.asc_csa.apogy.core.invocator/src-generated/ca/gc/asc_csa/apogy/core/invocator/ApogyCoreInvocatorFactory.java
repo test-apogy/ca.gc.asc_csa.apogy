@@ -349,6 +349,15 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   EClassArgument createEClassArgument();
 
   /**
+	 * Returns a new object of class '<em>Program Runtimes List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Program Runtimes List</em>'.
+	 * @generated
+	 */
+	ProgramRuntimesList createProgramRuntimesList();
+
+		/**
 	 * Returns a new object of class '<em>Operation Call Results List</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

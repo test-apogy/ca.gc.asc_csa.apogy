@@ -26,6 +26,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Variable;
  *
  * <!-- begin-model-doc -->
  * The program runtimes must use this to interact with the EMF invocator Singleton.
+ * FIXME Move under invocator meta-model.
  * <!-- end-model-doc -->
  *
  * <p>
