@@ -67,6 +67,7 @@ import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsListProgramRuntime;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList;
@@ -424,6 +425,13 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	private EClass abstractProgramRuntimeEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass operationCallsListProgramRuntimeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -2633,6 +2641,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOperationCallsListProgramRuntime() {
+		return operationCallsListProgramRuntimeEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -3376,6 +3393,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_OVER);
 		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN);
 
+		operationCallsListProgramRuntimeEClass = createEClass(OPERATION_CALLS_LIST_PROGRAM_RUNTIME);
+
 		resultsListEClass = createEClass(RESULTS_LIST);
 		createEReference(resultsListEClass, RESULTS_LIST__RESULTS);
 		createEOperation(resultsListEClass, RESULTS_LIST___GET_INVOCATOR_SESSION);
@@ -3518,6 +3537,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		eClassArgumentEClass.getESuperTypes().add(this.getArgument());
 		abstractProgramRuntimeEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		abstractProgramRuntimeEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		operationCallsListProgramRuntimeEClass.getESuperTypes().add(this.getAbstractProgramRuntime());
 		resultsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		resultsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		operationCallResultsListEClass.getESuperTypes().add(this.getResultsList());
@@ -3928,6 +3948,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEOperation(getAbstractProgramRuntime__StepOver(), null, "stepOver", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getAbstractProgramRuntime__StepReturn(), null, "stepReturn", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(operationCallsListProgramRuntimeEClass, OperationCallsListProgramRuntime.class, "OperationCallsListProgramRuntime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(resultsListEClass, ResultsList.class, "ResultsList", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResultsList_Results(), this.getAbstractResult(), this.getAbstractResult_ResultsList(), "results", null, 0, -1, ResultsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

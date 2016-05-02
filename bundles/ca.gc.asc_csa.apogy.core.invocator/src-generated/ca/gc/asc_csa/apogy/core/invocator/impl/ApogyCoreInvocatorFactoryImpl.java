@@ -107,6 +107,7 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.EENUM_ARGUMENT: return createEEnumArgument();
 			case ApogyCoreInvocatorPackage.ECLASS_ARGUMENT: return createEClassArgument();
 			case ApogyCoreInvocatorPackage.PROGRAM_RUNTIMES_LIST: return createProgramRuntimesList();
+			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST_PROGRAM_RUNTIME: return createOperationCallsListProgramRuntime();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST: return createOperationCallResultsList();
 			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST: return createRecordingResultsList();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULT: return createOperationCallResult();
@@ -567,6 +568,16 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 	public ProgramRuntimesList createProgramRuntimesList() {
 		ProgramRuntimesListImpl programRuntimesList = new ProgramRuntimesListImpl();
 		return programRuntimesList;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperationCallsListProgramRuntime createOperationCallsListProgramRuntime() {
+		OperationCallsListProgramRuntimeImpl operationCallsListProgramRuntime = new OperationCallsListProgramRuntimeImpl();
+		return operationCallsListProgramRuntime;
 	}
 
 		/**

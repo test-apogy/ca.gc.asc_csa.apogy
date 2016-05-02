@@ -34,14 +34,14 @@ public class ProgramRuntimeResumeCommand extends AbstractHandler implements
 	@Override
 	public Object execute(final ExecutionEvent event) throws ExecutionException {
 
-		new Job("ApogyCoreInvocator: Program Runtime Step Return") {
+		new Job("ApogyCoreInvocator: Program Runtime Resume") {
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				final Iterator<?> selections = ((IStructuredSelection) HandlerUtil
 						.getActiveMenuSelection(event)).iterator();
 
 				final AbstractProgramRuntime programRuntime = (AbstractProgramRuntime) selections.next();
-				programRuntime.stepReturn();
+				programRuntime.resume();
 				return Status.OK_STATUS;
 			}
 		}.schedule();

@@ -466,6 +466,15 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST_PROGRAM_RUNTIME: {
+				OperationCallsListProgramRuntime operationCallsListProgramRuntime = (OperationCallsListProgramRuntime)theEObject;
+				T result = caseOperationCallsListProgramRuntime(operationCallsListProgramRuntime);
+				if (result == null) result = caseAbstractProgramRuntime(operationCallsListProgramRuntime);
+				if (result == null) result = caseNamed(operationCallsListProgramRuntime);
+				if (result == null) result = caseDescribed(operationCallsListProgramRuntime);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreInvocatorPackage.RESULTS_LIST: {
 				ResultsList resultsList = (ResultsList)theEObject;
 				T result = caseResultsList(resultsList);
@@ -1325,6 +1334,21 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseAbstractProgramRuntime(AbstractProgramRuntime object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operation Calls List Program Runtime</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operation Calls List Program Runtime</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperationCallsListProgramRuntime(OperationCallsListProgramRuntime object) {
 		return null;
 	}
 

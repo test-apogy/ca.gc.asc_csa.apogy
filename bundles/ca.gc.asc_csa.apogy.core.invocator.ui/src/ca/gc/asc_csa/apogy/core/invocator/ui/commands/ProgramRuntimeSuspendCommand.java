@@ -34,14 +34,14 @@ public class ProgramRuntimeSuspendCommand extends AbstractHandler implements
 	@Override
 	public Object execute(final ExecutionEvent event) throws ExecutionException {
 
-		new Job("ApogyCoreInvocator: Program Runtime Resume") {
+		new Job("ApogyCoreInvocator: Program Runtime Suspend") {
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				final Iterator<?> selections = ((IStructuredSelection) HandlerUtil
 						.getActiveMenuSelection(event)).iterator();
 
 				final AbstractProgramRuntime programRuntime = (AbstractProgramRuntime) selections.next();
-				programRuntime.resume();
+				programRuntime.suspend();
 				return Status.OK_STATUS;
 			}
 		}.schedule();

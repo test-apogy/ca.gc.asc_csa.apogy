@@ -14,6 +14,7 @@
 package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList;
 
@@ -161,6 +162,11 @@ public class ProgramRuntimesListItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreInvocatorPackage.Literals.PROGRAM_RUNTIMES_LIST__PROGRAM_RUNTIMES,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallsListProgramRuntime()));
 	}
 
 	/**

@@ -34,14 +34,14 @@ public class ProgramRuntimeStepOverCommand extends AbstractHandler implements
 	@Override
 	public Object execute(final ExecutionEvent event) throws ExecutionException {
 
-		new Job("ApogyCoreInvocator: Program Runtime Resume") {
+		new Job("ApogyCoreInvocator: Program Runtime Step Over") {
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				final Iterator<?> selections = ((IStructuredSelection) HandlerUtil
 						.getActiveMenuSelection(event)).iterator();
 
 				final AbstractProgramRuntime programRuntime = (AbstractProgramRuntime) selections.next();
-				programRuntime.resume();
+				programRuntime.stepOver();
 				return Status.OK_STATUS;
 			}
 		}.schedule();

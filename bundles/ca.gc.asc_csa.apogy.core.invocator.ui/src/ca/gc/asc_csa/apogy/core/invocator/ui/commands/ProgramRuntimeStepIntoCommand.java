@@ -34,14 +34,14 @@ public class ProgramRuntimeStepIntoCommand extends AbstractHandler implements
 	@Override
 	public Object execute(final ExecutionEvent event) throws ExecutionException {
 
-		new Job("ApogyCoreInvocator: Program Runtime Resume") {
+		new Job("ApogyCoreInvocator: Program Runtime Step Into") {
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				final Iterator<?> selections = ((IStructuredSelection) HandlerUtil
 						.getActiveMenuSelection(event)).iterator();
 
 				final AbstractProgramRuntime programRuntime = (AbstractProgramRuntime) selections.next();
-				programRuntime.resume();
+				programRuntime.stepInto();
 				return Status.OK_STATUS;
 			}
 		}.schedule();

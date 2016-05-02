@@ -1003,6 +1003,14 @@ abstract class AbstractProgramRuntime extends Named, Described
 	op void stepReturn()
 }
 
+
+/*
+ * This class provides the {@link AbstractProgramRuntime} for the {@link OperationCallResultsList}.
+ */
+class OperationCallsListProgramRuntime extends AbstractProgramRuntime{	
+} 
+
+
 /* ------------------------------------------------------------------------- 
  * Operation Call Results 
  * ------------------------------------------------------------------------- */

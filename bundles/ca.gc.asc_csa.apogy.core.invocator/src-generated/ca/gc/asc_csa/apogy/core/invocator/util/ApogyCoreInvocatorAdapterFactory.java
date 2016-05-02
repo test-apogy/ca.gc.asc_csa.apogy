@@ -329,6 +329,10 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 				return createAbstractProgramRuntimeAdapter();
 			}
 			@Override
+			public Adapter caseOperationCallsListProgramRuntime(OperationCallsListProgramRuntime object) {
+				return createOperationCallsListProgramRuntimeAdapter();
+			}
+			@Override
 			public Adapter caseResultsList(ResultsList object) {
 				return createResultsListAdapter();
 			}
@@ -1122,6 +1126,20 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createAbstractProgramRuntimeAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsListProgramRuntime <em>Operation Calls List Program Runtime</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallsListProgramRuntime
+	 * @generated
+	 */
+	public Adapter createOperationCallsListProgramRuntimeAdapter() {
 		return null;
 	}
 
