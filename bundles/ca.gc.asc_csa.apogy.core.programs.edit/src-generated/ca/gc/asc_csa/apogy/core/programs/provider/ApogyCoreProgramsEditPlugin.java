@@ -50,8 +50,8 @@ public final class ApogyCoreProgramsEditPlugin extends EMFPlugin {
 	public ApogyCoreProgramsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		   });
 	}
 

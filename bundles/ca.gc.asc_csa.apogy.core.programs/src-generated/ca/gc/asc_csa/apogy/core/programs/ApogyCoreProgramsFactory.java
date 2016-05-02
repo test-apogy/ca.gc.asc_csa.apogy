@@ -42,15 +42,6 @@ public interface ApogyCoreProgramsFactory extends EFactory {
 	ApogyCoreProgramsFacade createApogyCoreProgramsFacade();
 
 	/**
-	 * Returns a new object of class '<em>Time Interval</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Time Interval</em>'.
-	 * @generated
-	 */
-	TimeInterval createTimeInterval();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

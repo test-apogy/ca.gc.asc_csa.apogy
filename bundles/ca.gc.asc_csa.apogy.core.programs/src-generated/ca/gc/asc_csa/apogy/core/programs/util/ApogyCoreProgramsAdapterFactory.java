@@ -76,16 +76,8 @@ public class ApogyCoreProgramsAdapterFactory extends AdapterFactoryImpl {
 	protected ApogyCoreProgramsSwitch<Adapter> modelSwitch =
 		new ApogyCoreProgramsSwitch<Adapter>() {
 			@Override
-			public Adapter caseAbstractProgramRuntime(AbstractProgramRuntime object) {
-				return createAbstractProgramRuntimeAdapter();
-			}
-			@Override
 			public Adapter caseApogyCoreProgramsFacade(ApogyCoreProgramsFacade object) {
 				return createApogyCoreProgramsFacadeAdapter();
-			}
-			@Override
-			public Adapter caseTimeInterval(TimeInterval object) {
-				return createTimeIntervalAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -108,20 +100,6 @@ public class ApogyCoreProgramsAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime <em>Abstract Program Runtime</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime
-	 * @generated
-	 */
-	public Adapter createAbstractProgramRuntimeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -132,20 +110,6 @@ public class ApogyCoreProgramsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApogyCoreProgramsFacadeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval <em>Time Interval</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.programs.TimeInterval
-	 * @generated
-	 */
-	public Adapter createTimeIntervalAdapter() {
 		return null;
 	}
 

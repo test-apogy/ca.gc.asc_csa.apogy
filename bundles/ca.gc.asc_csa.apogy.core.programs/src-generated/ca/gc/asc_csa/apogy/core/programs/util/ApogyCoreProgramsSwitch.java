@@ -75,41 +75,14 @@ public class ApogyCoreProgramsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME: {
-				AbstractProgramRuntime abstractProgramRuntime = (AbstractProgramRuntime)theEObject;
-				T result = caseAbstractProgramRuntime(abstractProgramRuntime);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE: {
 				ApogyCoreProgramsFacade apogyCoreProgramsFacade = (ApogyCoreProgramsFacade)theEObject;
 				T result = caseApogyCoreProgramsFacade(apogyCoreProgramsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreProgramsPackage.TIME_INTERVAL: {
-				TimeInterval timeInterval = (TimeInterval)theEObject;
-				T result = caseTimeInterval(timeInterval);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Program Runtime</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Program Runtime</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAbstractProgramRuntime(AbstractProgramRuntime object) {
-		return null;
 	}
 
 	/**
@@ -124,21 +97,6 @@ public class ApogyCoreProgramsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApogyCoreProgramsFacade(ApogyCoreProgramsFacade object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Time Interval</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Time Interval</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTimeInterval(TimeInterval object) {
 		return null;
 	}
 

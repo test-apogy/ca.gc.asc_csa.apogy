@@ -65,7 +65,6 @@ public class ApogyCoreProgramsFactoryImpl extends EFactoryImpl implements ApogyC
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE: return createApogyCoreProgramsFacade();
-			case ApogyCoreProgramsPackage.TIME_INTERVAL: return createTimeInterval();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -79,16 +78,6 @@ public class ApogyCoreProgramsFactoryImpl extends EFactoryImpl implements ApogyC
 	public ApogyCoreProgramsFacade createApogyCoreProgramsFacade() {
 		ApogyCoreProgramsFacadeImpl apogyCoreProgramsFacade = new ApogyCoreProgramsFacadeImpl();
 		return apogyCoreProgramsFacade;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TimeInterval createTimeInterval() {
-		TimeIntervalImpl timeInterval = new TimeIntervalImpl();
-		return timeInterval;
 	}
 
 	/**

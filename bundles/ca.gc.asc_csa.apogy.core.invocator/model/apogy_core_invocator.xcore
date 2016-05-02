@@ -317,7 +317,8 @@ enum VariableListenerEventType{
 class InvocatorSession extends Named, Described
 {
 	contains Environment[0..1] environment opposite invocatorSession
-	contains ProgramsList[0..1] programsList opposite invocatorSession	
+	contains ProgramsList[0..1] programsList opposite invocatorSession
+	contains ProgramRuntimesList[0..1] programRuntimesList opposite session
 	contains DataProductsListsContainer[0..1] dataProductsListContainer opposite invocatorSession
 	contains ToolsList[0..1] toolsList opposite invocatorSession
 }
@@ -917,6 +918,89 @@ class EClassArgument extends Argument
 {
     @GenModel(property="Editable")
 	contains EObject value
+}
+
+/* ------------------------------------------------------------------------
+ * 
+ * Program Runtime
+ * 
+ * ------------------------------------------------------------------------ */
+ 
+/* 
+ * Program Runtime State Definitions. 
+ */
+enum ProgramRuntimeState{	
+	NOT_INITIALIZED as "Not Initialized" = 0, 
+	INITIALIZED as "Initialized" = 1,
+	RUNNING as "Running" = 2,
+	SUSPENDED as "Suspended" = 3,
+	TERMINATED as "Terminated" = 4
+	FAILED as "Failed" = 5
+}
+
+/*
+ * This class is a container of {@link AbstractProgramRuntime}.
+ */
+class ProgramRuntimesList{
+	
+	/*
+	 * Refers the session that contains the list.
+	 */
+	@GenModel(property="None", notify="true")
+	container InvocatorSession session opposite programRuntimesList
+	
+	/*
+	 * List that contains runtimes.
+	 */
+	contains AbstractProgramRuntime[0..*] programRuntimes
+}
+
+/*
+ * This class provides the runtime context used while running a {@link Program}.
+ */
+abstract class AbstractProgramRuntime extends Named, Described
+{
+	/* Actual state of the runtime. */
+	ProgramRuntimeState state = "Not Initialized"
+	
+	/* Refers the program to execute and monitor. */
+	refers Program program
+	
+	/* 
+	 * Initializes the runtime.
+	 */
+	op void init()
+	
+	/* 
+	 * Clears and terminates the runtime.
+	 */	
+	op void terminate()
+	
+	/*
+	 * Resumes the execution.
+	 */
+	op void resume()
+	
+	/*
+	 * Suspends the execution.
+	 */
+	op void suspend()
+		
+	/*
+	 * Steps into the next function/operation/program call at the currently executing piece of code. 
+	 */
+	op void stepInto()
+	
+	/*
+	 * Steps over the next function/operation/program call at the currently executing piece of code. 
+	 */	
+	op void stepOver()
+		
+	/*
+	 * Returns from a method/operation/program which has been stepped into. Even though we return from the method, 
+	 * the remainder of the code inside the method will be executed normally.
+	 */	
+	op void stepReturn()
 }
 
 /* ------------------------------------------------------------------------- 

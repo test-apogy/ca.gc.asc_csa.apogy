@@ -118,29 +118,6 @@ public class ApogyCoreProgramsItemProviderAdapterFactory extends ApogyCoreProgra
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.TimeInterval} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TimeIntervalItemProvider timeIntervalItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.TimeInterval}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTimeIntervalAdapter() {
-		if (timeIntervalItemProvider == null) {
-			timeIntervalItemProvider = new TimeIntervalItemProvider(this);
-		}
-
-		return timeIntervalItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -267,7 +244,6 @@ public class ApogyCoreProgramsItemProviderAdapterFactory extends ApogyCoreProgra
 	 */
 	public void dispose() {
 		if (apogyCoreProgramsFacadeItemProvider != null) apogyCoreProgramsFacadeItemProvider.dispose();
-		if (timeIntervalItemProvider != null) timeIntervalItemProvider.dispose();
 	}
 
 }

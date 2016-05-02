@@ -13,7 +13,6 @@ package ca.gc.asc_csa.apogy.core.programs.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -22,11 +21,9 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime;
 import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFactory;
 import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
 import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade;
-import ca.gc.asc_csa.apogy.core.programs.TimeInterval;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,20 +37,7 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass abstractProgramRuntimeEClass = null;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass apogyCoreProgramsFacadeEClass = null;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass timeIntervalEClass = null;
-
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -123,78 +107,6 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAbstractProgramRuntime() {
-		return abstractProgramRuntimeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbstractProgramRuntime_Program() {
-		return (EReference)abstractProgramRuntimeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractProgramRuntime__Resume() {
-		return abstractProgramRuntimeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractProgramRuntime__Suspend() {
-		return abstractProgramRuntimeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractProgramRuntime__Terminate() {
-		return abstractProgramRuntimeEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractProgramRuntime__StepInto() {
-		return abstractProgramRuntimeEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractProgramRuntime__StepOver() {
-		return abstractProgramRuntimeEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbstractProgramRuntime__StepReturn() {
-		return abstractProgramRuntimeEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getApogyCoreProgramsFacade() {
 		return apogyCoreProgramsFacadeEClass;
 	}
@@ -231,42 +143,6 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTimeInterval() {
-		return timeIntervalEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTimeInterval_StartTime() {
-		return (EAttribute)timeIntervalEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTimeInterval_EndTime() {
-		return (EAttribute)timeIntervalEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTimeInterval_Duration() {
-		return (EAttribute)timeIntervalEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ApogyCoreProgramsFactory getApogyCoreProgramsFactory() {
 		return (ApogyCoreProgramsFactory)getEFactoryInstance();
 	}
@@ -290,24 +166,10 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 		isCreated = true;
 
 		// Create classes and their features
-		abstractProgramRuntimeEClass = createEClass(ABSTRACT_PROGRAM_RUNTIME);
-		createEReference(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME__PROGRAM);
-		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___RESUME);
-		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___SUSPEND);
-		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___TERMINATE);
-		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_INTO);
-		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_OVER);
-		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN);
-
 		apogyCoreProgramsFacadeEClass = createEClass(APOGY_CORE_PROGRAMS_FACADE);
 		createEReference(apogyCoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__SESSION);
 		createEReference(apogyCoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__VARIABLES);
 		createEOperation(apogyCoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL);
-
-		timeIntervalEClass = createEClass(TIME_INTERVAL);
-		createEAttribute(timeIntervalEClass, TIME_INTERVAL__START_TIME);
-		createEAttribute(timeIntervalEClass, TIME_INTERVAL__END_TIME);
-		createEAttribute(timeIntervalEClass, TIME_INTERVAL__DURATION);
 	}
 
 	/**
@@ -345,21 +207,6 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(abstractProgramRuntimeEClass, AbstractProgramRuntime.class, "AbstractProgramRuntime", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractProgramRuntime_Program(), theApogyCoreInvocatorPackage.getProgram(), null, "program", null, 0, 1, AbstractProgramRuntime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getAbstractProgramRuntime__Resume(), null, "resume", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getAbstractProgramRuntime__Suspend(), null, "suspend", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getAbstractProgramRuntime__Terminate(), null, "terminate", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getAbstractProgramRuntime__StepInto(), null, "stepInto", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getAbstractProgramRuntime__StepOver(), null, "stepOver", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getAbstractProgramRuntime__StepReturn(), null, "stepReturn", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
 		initEClass(apogyCoreProgramsFacadeEClass, ApogyCoreProgramsFacade.class, "ApogyCoreProgramsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApogyCoreProgramsFacade_Session(), theApogyCoreInvocatorPackage.getInvocatorSession(), null, "session", null, 0, 1, ApogyCoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyCoreProgramsFacade_Variables(), theApogyCoreInvocatorPackage.getVariable(), null, "variables", null, 0, -1, ApogyCoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -367,11 +214,6 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 		EOperation op = initEOperation(getApogyCoreProgramsFacade__Exec__OperationCall(), theEcorePackage.getEJavaObject(), "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreInvocatorPackage.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCommonEMFPackage.getException());
-
-		initEClass(timeIntervalEClass, TimeInterval.class, "TimeInterval", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTimeInterval_StartTime(), theEcorePackage.getELong(), "startTime", null, 0, 1, TimeInterval.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTimeInterval_EndTime(), theEcorePackage.getELong(), "endTime", null, 0, 1, TimeInterval.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTimeInterval_Duration(), theEcorePackage.getELong(), "duration", null, 0, 1, TimeInterval.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
