@@ -10,6 +10,9 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.emf.common.command.IdentityCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
@@ -32,6 +35,10 @@ public class GenerateConstellationCommandPlan extends AbstractHandler implements
 					protected IStatus run(IProgressMonitor monitor) {
 						try {
 							planner.plan();
+							EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(planner);
+							if (domain != null){
+								domain.getCommandStack().execute(IdentityCommand.INSTANCE);
+							}														
 						} catch (Exception e) {
 							Logger.INSTANCE.log(Activator.PLUGIN_ID, e.getMessage(), EventSeverity.ERROR, e);
 						}

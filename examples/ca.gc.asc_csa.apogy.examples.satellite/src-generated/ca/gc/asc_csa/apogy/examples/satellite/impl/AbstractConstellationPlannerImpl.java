@@ -758,7 +758,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 	public VisibilityPassBasedSatelliteCommand createVisibilityPassBasedSatelliteCommand(
 			ObservationConstellationRequest request, VisibilityPass visibilityPass) {
 
-		return ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand();
+		VisibilityPassBasedSatelliteCommand command = ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand();
+		populateVisibilityPassBasedSatelliteCommand(command, request, visibilityPass);		
+		return command;
 	}
 
 	/**
@@ -1176,8 +1178,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 					VisibilityPass pass = passesIterator.next();
 					if (isValid(pass)) {
 						ObservationConstellationRequest observationConstellationRequest = locationMap.get(pass.getSurfaceLocation());						
-						VisibilityPassBasedSatelliteCommand command = createVisibilityPassBasedSatelliteCommand(observationConstellationRequest, pass);
-						populateVisibilityPassBasedSatelliteCommand(command, observationConstellationRequest, pass);						
+						VisibilityPassBasedSatelliteCommand command = createVisibilityPassBasedSatelliteCommand(observationConstellationRequest, pass);					
 						if (command != null){
 							commands.add(command);
 						}
