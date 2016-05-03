@@ -444,5 +444,15 @@
             class="ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage"
             genModel="model/apogy_core_invocator_ui.xcore"/>
    </extension>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="ca.gc.asc_csa.apogy.core.invocator.ui.commands.OperationCallsListDelegate"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.OperationCallListsLaunch"
+            modes="debug"
+            name="Operation Call Lists"
+            public="false">
+      </launchConfigurationType>
+   </extension>
 
 </plugin>
