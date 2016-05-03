@@ -39,6 +39,7 @@ package ca.gc.asc_csa.apogy.addons
 import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath
 import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4
 import ca.gc.asc_csa.apogy.common.math.Matrix4d
 import ca.gc.asc_csa.apogy.common.math.Tuple3d
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
@@ -363,24 +364,55 @@ class TrajectoryPickingToolNode extends AggregateGroupNode
  	refers transient volatile readonly TransformNode transformNode
  	
  	/**
- 	 * Operations that load the geometry. Sub-classes should overwrite this method.
+ 	 * Operations that load the geometry. The resulting node is attached under the transformNode.
+ 	 * Sub-classes should overwrite this method.
  	 */
  	op Node loadGeometry() 	 	
  }
  
  /**
-  * A GeometryPlacementAtFeatureOfInterestTool that gets its geometry from a URL and creates a URLNode from it.
+  * Specialization of GeometryPlacementAtFeatureOfInterestTool that attaches a geometry to the specified FOI.
   */
- class URLNodeGeometryPlacementAtFeatureOfInterestTool extends GeometryPlacementAtFeatureOfInterestTool
+ abstract class AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool extends GeometryPlacementAtFeatureOfInterestTool
  {
  	/**
- 	 * URL to the file containing the geometry to be displayed.
+ 	 * Return the offset transformation to be applied between the transformNode and the geometry.
+ 	 */ 	
+ 	op Matrix4x4 getGeometryOffsets() 	
+ 	
+ 	/**
+ 	 * Return the URL where the geometry is to be found.
  	 */
- 	String geometryURL
- 	 	
+ 	op String getGeometryURL()
+ 	
+ 	/**
+ 	 * The TransformNode applying the geometry offsets between the tool transform and the geometry.
+ 	 */
+ 	 @GenModel(notify="true", children="true", property="Readonly")
+ 	 refers transient derived volatile readonly TransformNode cadTransformNode
+ 	
  	/**
  	 * The URLNode containing the geometry.
  	 */
  	 @GenModel(notify="true", children="true", property="Readonly")
- 	 refers transient derived volatile readonly URLNode urlNode 	
+ 	 refers transient derived volatile readonly URLNode urlNode 	  	
+ }
+ 
+ 
+ /**
+  * A simple GeometryPlacementAtFeatureOfInterestTool that contains attributes that are returned by the 
+  * getGeometryOffsets() and getGeometryURL() methods.
+  */
+ class URLNodeGeometryPlacementAtFeatureOfInterestTool extends AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool
+ {
+ 	/**
+ 	 * URL to the file containing the geometry to be displayed.
+ 	 */
+ 	String URL
+ 	 	 	
+ 	/**
+ 	 * The transform required between the tool transformNode and the URLNode.This can be used to offset the 
+ 	 * geometry on the URLNode to center it on the tool origin.
+ 	 */
+ 	contains Matrix4x4 cadToToolTransform
  }

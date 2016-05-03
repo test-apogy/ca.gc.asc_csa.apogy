@@ -14,15 +14,14 @@
 package ca.gc.asc_csa.apogy.addons.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 import ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
-import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.common.topology.URLNode;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,35 +31,42 @@ import ca.gc.asc_csa.apogy.common.topology.URLNode;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.URLNodeGeometryPlacementAtFeatureOfInterestToolImpl#getGeometryURL <em>Geometry URL</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.URLNodeGeometryPlacementAtFeatureOfInterestToolImpl#getUrlNode <em>Url Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.URLNodeGeometryPlacementAtFeatureOfInterestToolImpl#getURL <em>URL</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.URLNodeGeometryPlacementAtFeatureOfInterestToolImpl#getCadToToolTransform <em>Cad To Tool Transform</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends GeometryPlacementAtFeatureOfInterestToolImpl implements URLNodeGeometryPlacementAtFeatureOfInterestTool 
+public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolImpl implements URLNodeGeometryPlacementAtFeatureOfInterestTool 
 {		
-	private URLNode urlNode = null;
+	/**
+	 * The default value of the '{@link #getURL() <em>URL</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getURL()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URL_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getURL() <em>URL</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getURL()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
 	
 	/**
-	 * The default value of the '{@link #getGeometryURL() <em>Geometry URL</em>}' attribute.
+	 * The cached value of the '{@link #getCadToToolTransform() <em>Cad To Tool Transform</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGeometryURL()
+	 * @see #getCadToToolTransform()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String GEOMETRY_URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getGeometryURL() <em>Geometry URL</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGeometryURL()
-	 * @generated
-	 * @ordered
-	 */
-	protected String geometryURL = GEOMETRY_URL_EDEFAULT;
+	protected Matrix4x4 cadToToolTransform;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,21 +92,19 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends Geometr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getGeometryURL() {
-		return geometryURL;
+	public String getURL() {
+		return url;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public void setGeometryURL(String newGeometryURL) 
+	public void setURL(String newURL) 
 	{
-		setGeometryURLGen(newGeometryURL);
-		
-		// Updates the URLNode.
-		getUrlNode().setUrl(newGeometryURL);
+		setURLGen(newURL);			
+		getUrlNode().setUrl(newURL);
 	}
 	
 	/**
@@ -108,11 +112,11 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends Geometr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGeometryURLGen(String newGeometryURL) {
-		String oldGeometryURL = geometryURL;
-		geometryURL = newGeometryURL;
+	public void setURLGen(String newURL) {
+		String oldURL = url;
+		url = newURL;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__GEOMETRY_URL, oldGeometryURL, geometryURL));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL, oldURL, url));
 	}
 
 	/**
@@ -120,20 +124,23 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends Geometr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public URLNode getUrlNode()
-	{
-		URLNode urlNode = basicGetUrlNode();
-		return urlNode != null && urlNode.eIsProxy() ? (URLNode)eResolveProxy((InternalEObject)urlNode) : urlNode;
+	public Matrix4x4 getCadToToolTransform() {
+		return cadToToolTransform;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public URLNode getUrlNodeGen() {
-		URLNode urlNode = basicGetUrlNode();
-		return urlNode != null && urlNode.eIsProxy() ? (URLNode)eResolveProxy((InternalEObject)urlNode) : urlNode;
+	public NotificationChain basicSetCadToToolTransform(Matrix4x4 newCadToToolTransform, NotificationChain msgs) {
+		Matrix4x4 oldCadToToolTransform = cadToToolTransform;
+		cadToToolTransform = newCadToToolTransform;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM, oldCadToToolTransform, newCadToToolTransform);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -141,15 +148,47 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends Geometr
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public URLNode basicGetUrlNode() 
+	public void setCadToToolTransform(Matrix4x4 newCadToToolTransform) 
 	{
-		if(urlNode == null)
-		{
-			urlNode = ApogyCommonTopologyFactory.eINSTANCE.createURLNode();
-			urlNode.setUrl(getGeometryURL());
-		}
+		setCadToToolTransformGen(newCadToToolTransform);
 		
-		return urlNode;
+		if(newCadToToolTransform != null)
+		{
+			getCadTransformNode().setTransformation(newCadToToolTransform.asMatrix4d());
+		}
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCadToToolTransformGen(Matrix4x4 newCadToToolTransform) {
+		if (newCadToToolTransform != cadToToolTransform) {
+			NotificationChain msgs = null;
+			if (cadToToolTransform != null)
+				msgs = ((InternalEObject)cadToToolTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM, null, msgs);
+			if (newCadToToolTransform != null)
+				msgs = ((InternalEObject)newCadToToolTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM, null, msgs);
+			msgs = basicSetCadToToolTransform(newCadToToolTransform, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM, newCadToToolTransform, newCadToToolTransform));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM:
+				return basicSetCadToToolTransform(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -160,11 +199,10 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends Geometr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__GEOMETRY_URL:
-				return getGeometryURL();
-			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE:
-				if (resolve) return getUrlNode();
-				return basicGetUrlNode();
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL:
+				return getURL();
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM:
+				return getCadToToolTransform();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -177,8 +215,11 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends Geometr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__GEOMETRY_URL:
-				setGeometryURL((String)newValue);
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL:
+				setURL((String)newValue);
+				return;
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM:
+				setCadToToolTransform((Matrix4x4)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,8 +233,11 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends Geometr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__GEOMETRY_URL:
-				setGeometryURL(GEOMETRY_URL_EDEFAULT);
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL:
+				setURL(URL_EDEFAULT);
+				return;
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM:
+				setCadToToolTransform((Matrix4x4)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -207,10 +251,10 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends Geometr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__GEOMETRY_URL:
-				return GEOMETRY_URL_EDEFAULT == null ? geometryURL != null : !GEOMETRY_URL_EDEFAULT.equals(geometryURL);
-			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE:
-				return basicGetUrlNode() != null;
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL:
+				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
+			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM:
+				return cadToToolTransform != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -225,16 +269,21 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolImpl extends Geometr
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (geometryURL: ");
-		result.append(geometryURL);
+		result.append(" (URL: ");
+		result.append(url);
 		result.append(')');
 		return result.toString();
 	}
 
 	@Override
-	public Node loadGeometry() 
+	public String getGeometryURL() 
 	{
-		return getUrlNode();
+		return getURL();
 	}
-	
+
+	@Override
+	public Matrix4x4 getGeometryOffsets() 
+	{		
+		return getCadToToolTransform();
+	}
 } //URLNodeGeometryPlacementAtFeatureOfInterestToolImpl

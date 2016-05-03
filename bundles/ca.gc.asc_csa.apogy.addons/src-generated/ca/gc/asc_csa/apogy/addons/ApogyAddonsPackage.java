@@ -2158,14 +2158,14 @@ public interface ApogyAddonsPackage extends EPackage
 	int GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_OPERATION_COUNT = SIMPLE3_DTOOL_OPERATION_COUNT + 1;
 
 		/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.URLNodeGeometryPlacementAtFeatureOfInterestToolImpl <em>URL Node Geometry Placement At Feature Of Interest Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolImpl <em>Abstract URL Node Geometry Placement At Feature Of Interest Tool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.addons.impl.URLNodeGeometryPlacementAtFeatureOfInterestToolImpl
-	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getURLNodeGeometryPlacementAtFeatureOfInterestTool()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool()
 	 * @generated
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = 15;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = 15;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2174,7 +2174,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__NAME = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__NAME;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__NAME = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2183,7 +2183,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DESCRIPTION = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DESCRIPTION;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DESCRIPTION = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Tool List</b></em>' container reference.
@@ -2192,7 +2192,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TOOL_LIST = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TOOL_LIST;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TOOL_LIST = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TOOL_LIST;
 
 		/**
 	 * The feature id for the '<em><b>Active</b></em>' attribute.
@@ -2201,7 +2201,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ACTIVE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ACTIVE;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ACTIVE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ACTIVE;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -2210,7 +2210,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DISPOSED = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DISPOSED;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DISPOSED = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DISPOSED;
 
 		/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -2219,7 +2219,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__VISIBLE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__VISIBLE;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__VISIBLE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__VISIBLE;
 
 		/**
 	 * The feature id for the '<em><b>Root Node</b></em>' reference.
@@ -2228,7 +2228,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ROOT_NODE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ROOT_NODE;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ROOT_NODE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ROOT_NODE;
 
 		/**
 	 * The feature id for the '<em><b>Feature Of Interest</b></em>' reference.
@@ -2237,7 +2237,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST;
 
 		/**
 	 * The feature id for the '<em><b>Feature Of Interest Node</b></em>' reference.
@@ -2246,7 +2246,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST_NODE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST_NODE;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST_NODE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST_NODE;
 
 		/**
 	 * The feature id for the '<em><b>Transform Node</b></em>' reference.
@@ -2255,16 +2255,16 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TRANSFORM_NODE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TRANSFORM_NODE;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TRANSFORM_NODE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TRANSFORM_NODE;
 
 		/**
-	 * The feature id for the '<em><b>Geometry URL</b></em>' attribute.
+	 * The feature id for the '<em><b>Cad Transform Node</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__GEOMETRY_URL = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT + 0;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Url Node</b></em>' reference.
@@ -2273,16 +2273,16 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT + 1;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT + 1;
 
 		/**
-	 * The number of structural features of the '<em>URL Node Geometry Placement At Feature Of Interest Tool</em>' class.
+	 * The number of structural features of the '<em>Abstract URL Node Geometry Placement At Feature Of Interest Tool</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT + 2;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Initialise</em>' operation.
@@ -2291,7 +2291,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___INITIALISE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___INITIALISE;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___INITIALISE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___INITIALISE;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -2300,7 +2300,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___DISPOSE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___DISPOSE;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___DISPOSE = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Selection Changed</em>' operation.
@@ -2309,7 +2309,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___SELECTION_CHANGED__NODESELECTION = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___SELECTION_CHANGED__NODESELECTION;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___SELECTION_CHANGED__NODESELECTION = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___SELECTION_CHANGED__NODESELECTION;
 
 		/**
 	 * The operation id for the '<em>Load Geometry</em>' operation.
@@ -2318,7 +2318,233 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___LOAD_GEOMETRY = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___LOAD_GEOMETRY;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___LOAD_GEOMETRY = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___LOAD_GEOMETRY;
+
+		/**
+	 * The operation id for the '<em>Get Geometry Offsets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_OFFSETS = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_OPERATION_COUNT + 0;
+
+		/**
+	 * The operation id for the '<em>Get Geometry URL</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_URL = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_OPERATION_COUNT + 1;
+
+		/**
+	 * The number of operations of the '<em>Abstract URL Node Geometry Placement At Feature Of Interest Tool</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_OPERATION_COUNT = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_OPERATION_COUNT + 2;
+
+		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.URLNodeGeometryPlacementAtFeatureOfInterestToolImpl <em>URL Node Geometry Placement At Feature Of Interest Tool</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.addons.impl.URLNodeGeometryPlacementAtFeatureOfInterestToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getURLNodeGeometryPlacementAtFeatureOfInterestTool()
+	 * @generated
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = 16;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__NAME = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DESCRIPTION = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DESCRIPTION;
+
+		/**
+	 * The feature id for the '<em><b>Tool List</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TOOL_LIST = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TOOL_LIST;
+
+		/**
+	 * The feature id for the '<em><b>Active</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ACTIVE = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ACTIVE;
+
+		/**
+	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DISPOSED = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__DISPOSED;
+
+		/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__VISIBLE = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__VISIBLE;
+
+		/**
+	 * The feature id for the '<em><b>Root Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ROOT_NODE = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__ROOT_NODE;
+
+		/**
+	 * The feature id for the '<em><b>Feature Of Interest</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST;
+
+		/**
+	 * The feature id for the '<em><b>Feature Of Interest Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST_NODE = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__FEATURE_OF_INTEREST_NODE;
+
+		/**
+	 * The feature id for the '<em><b>Transform Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TRANSFORM_NODE = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TRANSFORM_NODE;
+
+		/**
+	 * The feature id for the '<em><b>Cad Transform Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE;
+
+		/**
+	 * The feature id for the '<em><b>Url Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE;
+
+		/**
+	 * The feature id for the '<em><b>URL</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT + 0;
+
+		/**
+	 * The feature id for the '<em><b>Cad To Tool Transform</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT + 1;
+
+		/**
+	 * The number of structural features of the '<em>URL Node Geometry Placement At Feature Of Interest Tool</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_FEATURE_COUNT + 2;
+
+		/**
+	 * The operation id for the '<em>Initialise</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___INITIALISE = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___INITIALISE;
+
+		/**
+	 * The operation id for the '<em>Dispose</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___DISPOSE = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___DISPOSE;
+
+		/**
+	 * The operation id for the '<em>Selection Changed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___SELECTION_CHANGED__NODESELECTION = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___SELECTION_CHANGED__NODESELECTION;
+
+		/**
+	 * The operation id for the '<em>Load Geometry</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___LOAD_GEOMETRY = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___LOAD_GEOMETRY;
+
+		/**
+	 * The operation id for the '<em>Get Geometry Offsets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_OFFSETS = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_OFFSETS;
+
+		/**
+	 * The operation id for the '<em>Get Geometry URL</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_URL = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_URL;
 
 		/**
 	 * The number of operations of the '<em>URL Node Geometry Placement At Feature Of Interest Tool</em>' class.
@@ -2327,7 +2553,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_OPERATION_COUNT = GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_OPERATION_COUNT + 0;
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_OPERATION_COUNT = ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '<em>Color3f</em>' data type.
@@ -2337,7 +2563,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getColor3f()
 	 * @generated
 	 */
-	int COLOR3F = 16;
+	int COLOR3F = 17;
 
 
 		/**
@@ -2348,7 +2574,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getNodeSelection()
 	 * @generated
 	 */
-	int NODE_SELECTION = 17;
+	int NODE_SELECTION = 18;
 
 
 		/**
@@ -3079,6 +3305,58 @@ public interface ApogyAddonsPackage extends EPackage
 	EOperation getGeometryPlacementAtFeatureOfInterestTool__LoadGeometry();
 
 		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool <em>Abstract URL Node Geometry Placement At Feature Of Interest Tool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract URL Node Geometry Placement At Feature Of Interest Tool</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool
+	 * @generated
+	 */
+	EClass getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool();
+
+		/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool#getCadTransformNode <em>Cad Transform Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Cad Transform Node</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool#getCadTransformNode()
+	 * @see #getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool()
+	 * @generated
+	 */
+	EReference getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_CadTransformNode();
+
+		/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool#getUrlNode <em>Url Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Url Node</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool#getUrlNode()
+	 * @see #getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool()
+	 * @generated
+	 */
+	EReference getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool#getGeometryOffsets() <em>Get Geometry Offsets</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Geometry Offsets</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool#getGeometryOffsets()
+	 * @generated
+	 */
+	EOperation getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryOffsets();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool#getGeometryURL() <em>Get Geometry URL</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Geometry URL</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool#getGeometryURL()
+	 * @generated
+	 */
+	EOperation getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryURL();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool <em>URL Node Geometry Placement At Feature Of Interest Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3089,26 +3367,26 @@ public interface ApogyAddonsPackage extends EPackage
 	EClass getURLNodeGeometryPlacementAtFeatureOfInterestTool();
 
 		/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getGeometryURL <em>Geometry URL</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getURL <em>URL</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Geometry URL</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getGeometryURL()
+	 * @return the meta object for the attribute '<em>URL</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getURL()
 	 * @see #getURLNodeGeometryPlacementAtFeatureOfInterestTool()
 	 * @generated
 	 */
-	EAttribute getURLNodeGeometryPlacementAtFeatureOfInterestTool_GeometryURL();
+	EAttribute getURLNodeGeometryPlacementAtFeatureOfInterestTool_URL();
 
 		/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getUrlNode <em>Url Node</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getCadToToolTransform <em>Cad To Tool Transform</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Url Node</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getUrlNode()
+	 * @return the meta object for the containment reference '<em>Cad To Tool Transform</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getCadToToolTransform()
 	 * @see #getURLNodeGeometryPlacementAtFeatureOfInterestTool()
 	 * @generated
 	 */
-	EReference getURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode();
+	EReference getURLNodeGeometryPlacementAtFeatureOfInterestTool_CadToToolTransform();
 
 		/**
 	 * Returns the meta object for data type '{@link javax.vecmath.Color3f <em>Color3f</em>}'.
@@ -3751,6 +4029,43 @@ public interface ApogyAddonsPackage extends EPackage
 		 */
 		EOperation GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___LOAD_GEOMETRY = eINSTANCE.getGeometryPlacementAtFeatureOfInterestTool__LoadGeometry();
 				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolImpl <em>Abstract URL Node Geometry Placement At Feature Of Interest Tool</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.addons.impl.AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool()
+		 * @generated
+		 */
+		EClass ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = eINSTANCE.getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool();
+				/**
+		 * The meta object literal for the '<em><b>Cad Transform Node</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE = eINSTANCE.getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_CadTransformNode();
+				/**
+		 * The meta object literal for the '<em><b>Url Node</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE = eINSTANCE.getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode();
+				/**
+		 * The meta object literal for the '<em><b>Get Geometry Offsets</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_OFFSETS = eINSTANCE.getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryOffsets();
+				/**
+		 * The meta object literal for the '<em><b>Get Geometry URL</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_URL = eINSTANCE.getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryURL();
+				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.URLNodeGeometryPlacementAtFeatureOfInterestToolImpl <em>URL Node Geometry Placement At Feature Of Interest Tool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3760,19 +4075,19 @@ public interface ApogyAddonsPackage extends EPackage
 		 */
 		EClass URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = eINSTANCE.getURLNodeGeometryPlacementAtFeatureOfInterestTool();
 				/**
-		 * The meta object literal for the '<em><b>Geometry URL</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>URL</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__GEOMETRY_URL = eINSTANCE.getURLNodeGeometryPlacementAtFeatureOfInterestTool_GeometryURL();
+		EAttribute URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL = eINSTANCE.getURLNodeGeometryPlacementAtFeatureOfInterestTool_URL();
 				/**
-		 * The meta object literal for the '<em><b>Url Node</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Cad To Tool Transform</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE = eINSTANCE.getURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode();
+		EReference URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM = eINSTANCE.getURLNodeGeometryPlacementAtFeatureOfInterestTool_CadToToolTransform();
 				/**
 		 * The meta object literal for the '<em>Color3f</em>' data type.
 		 * <!-- begin-user-doc -->

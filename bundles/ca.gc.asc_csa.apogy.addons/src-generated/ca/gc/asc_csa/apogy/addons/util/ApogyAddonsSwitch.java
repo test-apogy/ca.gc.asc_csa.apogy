@@ -243,9 +243,22 @@ public class ApogyAddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyAddonsPackage.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL: {
+				AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool abstractURLNodeGeometryPlacementAtFeatureOfInterestTool = (AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool)theEObject;
+				T result = caseAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool(abstractURLNodeGeometryPlacementAtFeatureOfInterestTool);
+				if (result == null) result = caseGeometryPlacementAtFeatureOfInterestTool(abstractURLNodeGeometryPlacementAtFeatureOfInterestTool);
+				if (result == null) result = caseSimple3DTool(abstractURLNodeGeometryPlacementAtFeatureOfInterestTool);
+				if (result == null) result = caseSimpleTool(abstractURLNodeGeometryPlacementAtFeatureOfInterestTool);
+				if (result == null) result = caseAbstractTool(abstractURLNodeGeometryPlacementAtFeatureOfInterestTool);
+				if (result == null) result = caseNamed(abstractURLNodeGeometryPlacementAtFeatureOfInterestTool);
+				if (result == null) result = caseDescribed(abstractURLNodeGeometryPlacementAtFeatureOfInterestTool);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL: {
 				URLNodeGeometryPlacementAtFeatureOfInterestTool urlNodeGeometryPlacementAtFeatureOfInterestTool = (URLNodeGeometryPlacementAtFeatureOfInterestTool)theEObject;
 				T result = caseURLNodeGeometryPlacementAtFeatureOfInterestTool(urlNodeGeometryPlacementAtFeatureOfInterestTool);
+				if (result == null) result = caseAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool(urlNodeGeometryPlacementAtFeatureOfInterestTool);
 				if (result == null) result = caseGeometryPlacementAtFeatureOfInterestTool(urlNodeGeometryPlacementAtFeatureOfInterestTool);
 				if (result == null) result = caseSimple3DTool(urlNodeGeometryPlacementAtFeatureOfInterestTool);
 				if (result == null) result = caseSimpleTool(urlNodeGeometryPlacementAtFeatureOfInterestTool);
@@ -482,6 +495,21 @@ public class ApogyAddonsSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseGeometryPlacementAtFeatureOfInterestTool(GeometryPlacementAtFeatureOfInterestTool object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract URL Node Geometry Placement At Feature Of Interest Tool</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract URL Node Geometry Placement At Feature Of Interest Tool</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool(AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool object) {
 		return null;
 	}
 

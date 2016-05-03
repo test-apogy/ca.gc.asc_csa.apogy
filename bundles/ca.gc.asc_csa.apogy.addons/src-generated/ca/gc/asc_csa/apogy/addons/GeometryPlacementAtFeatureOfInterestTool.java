@@ -118,7 +118,8 @@ public interface GeometryPlacementAtFeatureOfInterestTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * *
-	 * Operations that load the geometry. Sub-classes should overwrite this method.
+	 * Operations that load the geometry. The resulting node is attached under the transformNode.
+	 * Sub-classes should overwrite this method.
 	 * <!-- end-model-doc -->
 	 * @model unique="false"
 	 * @generated

@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.addons.AbstractTool;
 import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
+import ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool;
 import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
 import ca.gc.asc_csa.apogy.addons.GeometryPlacementAtFeatureOfInterestTool;
 import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
@@ -160,6 +161,13 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * @generated
 	 */
 	private EClass geometryPlacementAtFeatureOfInterestToolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -936,6 +944,51 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool() {
+		return abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_CadTransformNode() {
+		return (EReference)abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode() {
+		return (EReference)abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryOffsets() {
+		return abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryURL() {
+		return abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getURLNodeGeometryPlacementAtFeatureOfInterestTool() {
 		return urlNodeGeometryPlacementAtFeatureOfInterestToolEClass;
 	}
@@ -945,7 +998,7 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getURLNodeGeometryPlacementAtFeatureOfInterestTool_GeometryURL() {
+	public EAttribute getURLNodeGeometryPlacementAtFeatureOfInterestTool_URL() {
 		return (EAttribute)urlNodeGeometryPlacementAtFeatureOfInterestToolEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -954,7 +1007,7 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode() {
+	public EReference getURLNodeGeometryPlacementAtFeatureOfInterestTool_CadToToolTransform() {
 		return (EReference)urlNodeGeometryPlacementAtFeatureOfInterestToolEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1095,9 +1148,15 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		createEReference(geometryPlacementAtFeatureOfInterestToolEClass, GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__TRANSFORM_NODE);
 		createEOperation(geometryPlacementAtFeatureOfInterestToolEClass, GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___LOAD_GEOMETRY);
 
+		abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass = createEClass(ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL);
+		createEReference(abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass, ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE);
+		createEReference(abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass, ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE);
+		createEOperation(abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass, ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_OFFSETS);
+		createEOperation(abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass, ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL___GET_GEOMETRY_URL);
+
 		urlNodeGeometryPlacementAtFeatureOfInterestToolEClass = createEClass(URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL);
-		createEAttribute(urlNodeGeometryPlacementAtFeatureOfInterestToolEClass, URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__GEOMETRY_URL);
-		createEReference(urlNodeGeometryPlacementAtFeatureOfInterestToolEClass, URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE);
+		createEAttribute(urlNodeGeometryPlacementAtFeatureOfInterestToolEClass, URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL);
+		createEReference(urlNodeGeometryPlacementAtFeatureOfInterestToolEClass, URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM);
 
 		// Create data types
 		color3fEDataType = createEDataType(COLOR3F);
@@ -1157,7 +1216,8 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		trajectory3DToolEClass.getESuperTypes().add(this.getSimple3DTool());
 		trajectory3DToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 		geometryPlacementAtFeatureOfInterestToolEClass.getESuperTypes().add(this.getSimple3DTool());
-		urlNodeGeometryPlacementAtFeatureOfInterestToolEClass.getESuperTypes().add(this.getGeometryPlacementAtFeatureOfInterestTool());
+		abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass.getESuperTypes().add(this.getGeometryPlacementAtFeatureOfInterestTool());
+		urlNodeGeometryPlacementAtFeatureOfInterestToolEClass.getESuperTypes().add(this.getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractToolEClass, AbstractTool.class, "AbstractTool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1259,9 +1319,17 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 
 		initEOperation(getGeometryPlacementAtFeatureOfInterestTool__LoadGeometry(), theApogyCommonTopologyPackage.getNode(), "loadGeometry", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		initEClass(abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass, AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool.class, "AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_CadTransformNode(), theApogyCommonTopologyPackage.getTransformNode(), null, "cadTransformNode", null, 0, 1, AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode(), theApogyCommonTopologyPackage.getURLNode(), null, "urlNode", null, 0, 1, AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryOffsets(), theApogyCommonMathPackage.getMatrix4x4(), "getGeometryOffsets", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryURL(), theEcorePackage.getEString(), "getGeometryURL", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(urlNodeGeometryPlacementAtFeatureOfInterestToolEClass, URLNodeGeometryPlacementAtFeatureOfInterestTool.class, "URLNodeGeometryPlacementAtFeatureOfInterestTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getURLNodeGeometryPlacementAtFeatureOfInterestTool_GeometryURL(), theEcorePackage.getEString(), "geometryURL", null, 0, 1, URLNodeGeometryPlacementAtFeatureOfInterestTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode(), theApogyCommonTopologyPackage.getURLNode(), null, "urlNode", null, 0, 1, URLNodeGeometryPlacementAtFeatureOfInterestTool.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getURLNodeGeometryPlacementAtFeatureOfInterestTool_URL(), theEcorePackage.getEString(), "URL", null, 0, 1, URLNodeGeometryPlacementAtFeatureOfInterestTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getURLNodeGeometryPlacementAtFeatureOfInterestTool_CadToToolTransform(), theApogyCommonMathPackage.getMatrix4x4(), null, "cadToToolTransform", null, 0, 1, URLNodeGeometryPlacementAtFeatureOfInterestTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(color3fEDataType, Color3f.class, "Color3f", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1784,7 +1852,7 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		  (getGeometryPlacementAtFeatureOfInterestTool__LoadGeometry(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nOperations that load the geometry. Sub-classes should overwrite this method."
+			 "documentation", "*\nOperations that load the geometry. The resulting node is attached under the transformNode.\nSub-classes should overwrite this method."
 		   });	
 		addAnnotation
 		  (getGeometryPlacementAtFeatureOfInterestTool_FeatureOfInterest(), 
@@ -1811,25 +1879,58 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 			 "property", "Readonly"
 		   });	
 		addAnnotation
-		  (urlNodeGeometryPlacementAtFeatureOfInterestToolEClass, 
+		  (abstractURLNodeGeometryPlacementAtFeatureOfInterestToolEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nA GeometryPlacementAtFeatureOfInterestTool that gets its geometry from a URL and creates a URLNode from it."
+			 "documentation", "*\nSpecialization of GeometryPlacementAtFeatureOfInterestTool that attaches a geometry to the specified FOI."
 		   });	
 		addAnnotation
-		  (getURLNodeGeometryPlacementAtFeatureOfInterestTool_GeometryURL(), 
+		  (getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryOffsets(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nURL to the file containing the geometry to be displayed."
+			 "documentation", "*\nReturn the offset transformation to be applied between the transformNode and the geometry."
 		   });	
 		addAnnotation
-		  (getURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode(), 
+		  (getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool__GetGeometryURL(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the URL where the geometry is to be found."
+		   });	
+		addAnnotation
+		  (getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_CadTransformNode(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe TransformNode applying the geometry offsets between the tool transform and the geometry.",
+			 "notify", "true",
+			 "children", "true",
+			 "property", "Readonly"
+		   });	
+		addAnnotation
+		  (getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode(), 
 		   source, 
 		   new String[] {
 			 "documentation", "*\nThe URLNode containing the geometry.",
 			 "notify", "true",
 			 "children", "true",
 			 "property", "Readonly"
+		   });	
+		addAnnotation
+		  (urlNodeGeometryPlacementAtFeatureOfInterestToolEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA simple GeometryPlacementAtFeatureOfInterestTool that contains attributes that are returned by the\ngetGeometryOffsets() and getGeometryURL() methods."
+		   });	
+		addAnnotation
+		  (getURLNodeGeometryPlacementAtFeatureOfInterestTool_URL(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nURL to the file containing the geometry to be displayed."
+		   });	
+		addAnnotation
+		  (getURLNodeGeometryPlacementAtFeatureOfInterestTool_CadToToolTransform(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe transform required between the tool transformNode and the URLNode.This can be used to offset the\ngeometry on the URLNode to center it on the tool origin."
 		   });
 	}
 

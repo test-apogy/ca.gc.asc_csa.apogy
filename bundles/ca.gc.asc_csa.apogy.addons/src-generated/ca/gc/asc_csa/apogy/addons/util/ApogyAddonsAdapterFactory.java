@@ -158,6 +158,10 @@ public class ApogyAddonsAdapterFactory extends AdapterFactoryImpl
 				return createGeometryPlacementAtFeatureOfInterestToolAdapter();
 			}
 			@Override
+			public Adapter caseAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool(AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool object) {
+				return createAbstractURLNodeGeometryPlacementAtFeatureOfInterestToolAdapter();
+			}
+			@Override
 			public Adapter caseURLNodeGeometryPlacementAtFeatureOfInterestTool(URLNodeGeometryPlacementAtFeatureOfInterestTool object) {
 				return createURLNodeGeometryPlacementAtFeatureOfInterestToolAdapter();
 			}
@@ -414,6 +418,20 @@ public class ApogyAddonsAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createGeometryPlacementAtFeatureOfInterestToolAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool <em>Abstract URL Node Geometry Placement At Feature Of Interest Tool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool
+	 * @generated
+	 */
+	public Adapter createAbstractURLNodeGeometryPlacementAtFeatureOfInterestToolAdapter() {
 		return null;
 	}
 

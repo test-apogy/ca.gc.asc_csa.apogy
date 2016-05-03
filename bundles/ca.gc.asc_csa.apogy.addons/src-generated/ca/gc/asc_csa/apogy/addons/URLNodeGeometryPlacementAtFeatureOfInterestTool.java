@@ -13,7 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.addons;
 
-import ca.gc.asc_csa.apogy.common.topology.URLNode;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 
 
 /**
@@ -23,62 +23,74 @@ import ca.gc.asc_csa.apogy.common.topology.URLNode;
  *
  * <!-- begin-model-doc -->
  * *
- * A GeometryPlacementAtFeatureOfInterestTool that gets its geometry from a URL and creates a URLNode from it.
+ * A simple GeometryPlacementAtFeatureOfInterestTool that contains attributes that are returned by the
+ * getGeometryOffsets() and getGeometryURL() methods.
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getGeometryURL <em>Geometry URL</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getUrlNode <em>Url Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getURL <em>URL</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getCadToToolTransform <em>Cad To Tool Transform</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getURLNodeGeometryPlacementAtFeatureOfInterestTool()
  * @model
  * @generated
  */
-public interface URLNodeGeometryPlacementAtFeatureOfInterestTool extends GeometryPlacementAtFeatureOfInterestTool {
+public interface URLNodeGeometryPlacementAtFeatureOfInterestTool extends AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool {
 	/**
-	 * Returns the value of the '<em><b>Geometry URL</b></em>' attribute.
+	 * Returns the value of the '<em><b>URL</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * *
 	 * URL to the file containing the geometry to be displayed.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Geometry URL</em>' attribute.
-	 * @see #setGeometryURL(String)
-	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getURLNodeGeometryPlacementAtFeatureOfInterestTool_GeometryURL()
+	 * @return the value of the '<em>URL</em>' attribute.
+	 * @see #setURL(String)
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getURLNodeGeometryPlacementAtFeatureOfInterestTool_URL()
 	 * @model unique="false"
 	 * @generated
 	 */
-	String getGeometryURL();
+	String getURL();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getGeometryURL <em>Geometry URL</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getURL <em>URL</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Geometry URL</em>' attribute.
-	 * @see #getGeometryURL()
+	 * @param value the new value of the '<em>URL</em>' attribute.
+	 * @see #getURL()
 	 * @generated
 	 */
-	void setGeometryURL(String value);
+	void setURL(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Url Node</b></em>' reference.
+	 * Returns the value of the '<em><b>Cad To Tool Transform</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * *
-	 * The URLNode containing the geometry.
+	 * The transform required between the tool transformNode and the URLNode.This can be used to offset the
+	 * geometry on the URLNode to center it on the tool origin.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Url Node</em>' reference.
-	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='true' property='Readonly'"
+	 * @return the value of the '<em>Cad To Tool Transform</em>' containment reference.
+	 * @see #setCadToToolTransform(Matrix4x4)
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getURLNodeGeometryPlacementAtFeatureOfInterestTool_CadToToolTransform()
+	 * @model containment="true"
 	 * @generated
 	 */
-	URLNode getUrlNode();
+	Matrix4x4 getCadToToolTransform();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool#getCadToToolTransform <em>Cad To Tool Transform</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cad To Tool Transform</em>' containment reference.
+	 * @see #getCadToToolTransform()
+	 * @generated
+	 */
+	void setCadToToolTransform(Matrix4x4 value);
 
 } // URLNodeGeometryPlacementAtFeatureOfInterestTool

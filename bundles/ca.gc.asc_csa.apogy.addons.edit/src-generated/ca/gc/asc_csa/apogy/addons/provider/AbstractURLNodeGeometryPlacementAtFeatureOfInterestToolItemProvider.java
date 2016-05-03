@@ -14,10 +14,9 @@
 package ca.gc.asc_csa.apogy.addons.provider;
 
 
+import ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
-import ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool;
 
-import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
 import java.util.Collection;
 import java.util.List;
 
@@ -25,25 +24,25 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.URLNodeGeometryPlacementAtFeatureOfInterestTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider extends AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider {
+public class AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider extends GeometryPlacementAtFeatureOfInterestToolItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider(AdapterFactory adapterFactory) {
+	public AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -58,29 +57,53 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider extends
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addURLPropertyDescriptor(object);
+			addCadTransformNodePropertyDescriptor(object);
+			addUrlNodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
+	
 	/**
-	 * This adds a property descriptor for the URL feature.
+	 * This adds a property descriptor for the Cad Transform Node feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addURLPropertyDescriptor(Object object) {
+	protected void addCadTransformNodePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_URLNodeGeometryPlacementAtFeatureOfInterestTool_URL_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_URLNodeGeometryPlacementAtFeatureOfInterestTool_URL_feature", "_UI_URLNodeGeometryPlacementAtFeatureOfInterestTool_type"),
-				 ApogyAddonsPackage.Literals.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL,
-				 true,
+				 getString("_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_cadTransformNode_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_cadTransformNode_feature", "_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_type"),
+				 ApogyAddonsPackage.Literals.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Url Node feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlNodePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_urlNode_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_urlNode_feature", "_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_type"),
+				 ApogyAddonsPackage.Literals.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE,
+				 false,
+				 false,
+				 false,
+				 null,
 				 null,
 				 null));
 	}
@@ -97,7 +120,8 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider extends
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyAddonsPackage.Literals.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM);
+			childrenFeatures.add(ApogyAddonsPackage.Literals.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE);
+			childrenFeatures.add(ApogyAddonsPackage.Literals.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -116,40 +140,17 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider extends
 	}
 
 	/**
-	 * This returns URLNodeGeometryPlacementAtFeatureOfInterestTool.gif.
+	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/URLNodeGeometryPlacementAtFeatureOfInterestTool"));
-	}
-
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	@Override
-	public String getText(Object object) 	
-	{
-		URLNodeGeometryPlacementAtFeatureOfInterestTool tool = (URLNodeGeometryPlacementAtFeatureOfInterestTool) object;
-		
-		String label = null;
-		
-		if(tool.getName() != null && tool.getName().length() > 0)
-		{
-			label = tool.getName();
-		}
-		else
-		{
-			label = getString("_UI_URLNodeGeometryPlacementAtFeatureOfInterestTool_type");
-		}
-				
-		label += " (" + getSimple3DToolText(tool) + ")";
-		return label;	
+	public String getText(Object object) {
+		String label = ((AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_type") :
+			getString("_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_type") + " " + label;
 	}
 	
 
@@ -164,11 +165,9 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider extends
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(URLNodeGeometryPlacementAtFeatureOfInterestTool.class)) {
-			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ApogyAddonsPackage.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM:
+		switch (notification.getFeatureID(AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool.class)) {
+			case ApogyAddonsPackage.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE:
+			case ApogyAddonsPackage.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -185,11 +184,6 @@ public class URLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider extends
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyAddonsPackage.Literals.URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TO_TOOL_TRANSFORM,
-				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 }
