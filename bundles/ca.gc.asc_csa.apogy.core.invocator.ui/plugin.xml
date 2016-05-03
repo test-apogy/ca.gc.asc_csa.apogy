@@ -33,6 +33,11 @@
             id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ExecuteOperationCallCommand"
             name="ExecuteOperationCallCommand">
       </command>
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.DebugOperationCallCommand"
+            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.DebugOperationCallCommand"
+            name="DebugOperationCallCommand">
+      </command>
       
       <command
             defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
@@ -185,6 +190,29 @@
                        </iterate>
                     </and>
                  </or>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.DebugOperationCallCommand"
+               label="Debug"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                     variable="activeMenuSelection">
+                 <and>
+                    <count
+                          value="1">
+                    </count>
+                    <iterate
+                          ifEmpty="false"
+                          operator="or">
+                       <instanceof
+                             value="ca.gc.asc_csa.apogy.core.invocator.OperationCallsList">
+                       </instanceof>
+                    </iterate>
+                 </and>
                </with>
             </visibleWhen>
          </command>

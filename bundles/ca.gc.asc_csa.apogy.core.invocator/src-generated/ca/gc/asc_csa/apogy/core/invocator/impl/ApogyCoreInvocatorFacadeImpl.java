@@ -146,7 +146,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getInitVariableInstancesDate() {
+	@Override
+    public Date getInitVariableInstancesDate() {
 		return initVariableInstancesDate;
 	}
 
@@ -155,7 +156,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInitVariableInstancesDate(Date newInitVariableInstancesDate) {
+	@Override
+    public void setInitVariableInstancesDate(Date newInitVariableInstancesDate) {
 		Date oldInitVariableInstancesDate = initVariableInstancesDate;
 		initVariableInstancesDate = newInitVariableInstancesDate;
 		if (eNotificationRequired())
@@ -167,7 +169,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InvocatorSession getActiveInvocatorSession() {
+	@Override
+    public InvocatorSession getActiveInvocatorSession() {
 		if (activeInvocatorSession != null && activeInvocatorSession.eIsProxy()) {
 			InternalEObject oldActiveInvocatorSession = (InternalEObject)activeInvocatorSession;
 			activeInvocatorSession = (InvocatorSession)eResolveProxy(oldActiveInvocatorSession);
@@ -193,7 +196,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActiveInvocatorSession(InvocatorSession newActiveInvocatorSession) {
+	@Override
+    public void setActiveInvocatorSession(InvocatorSession newActiveInvocatorSession) {
 		InvocatorSession oldActiveInvocatorSession = activeInvocatorSession;
 		activeInvocatorSession = newActiveInvocatorSession;
 		if (eNotificationRequired())
@@ -205,7 +209,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public OperationCallResult exec(OperationCall operationCall, boolean saveResult) {
+	@Override
+    public OperationCallResult exec(OperationCall operationCall, boolean saveResult) {
 
 		OperationCallResult result = null;
 		
@@ -260,7 +265,10 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public OperationCallResult exec(OperationCall operationCall) {
+	@Override
+    public OperationCallResult exec(OperationCall operationCall) {
+        // TODO ajouter ici l'attente du "step over" ou "resume"
+        Logger.INSTANCE.log(Activator.ID, this, "Debug OperationCall: " + operationCall.getName(), EventSeverity.INFO);
 		return exec(operationCall, true);
 	}
 
@@ -269,7 +277,10 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public void exec(OperationCallsList operationCallsList) {
+	@Override
+    public void exec(OperationCallsList operationCallsList) {
+        // TODO ajouter ici l'attente du "step over" ou "resume"
+        Logger.INSTANCE.log(Activator.ID, this, "Debug OperationCallList: " + operationCallsList.getName(), EventSeverity.INFO);
 		for (OperationCall operationCall : operationCallsList
 				.getOperationCalls()) {
 			exec(operationCall);
@@ -281,7 +292,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public Object getValue(OperationCallResult operationCallResult) {
+	@Override
+    public Object getValue(OperationCallResult operationCallResult) {
 		Object value = null;
 		AbstractResultValue abstractValue = operationCallResult.getResultValue();
 
@@ -301,7 +313,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public AbstractResultValue createAbstractResultValue(Object value) {
+	@Override
+    public AbstractResultValue createAbstractResultValue(Object value) {
 		if (value instanceof EObject && value != null) {
 			ReferenceResultValue resultValue = ApogyCoreInvocatorFactory.eINSTANCE
 					.createReferenceResultValue();
@@ -325,7 +338,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public EObject getInstance(Variable variable) {
+	@Override
+    public EObject getInstance(Variable variable) {
 		EObject eObject = null;
 
 		Environment environment = variable.getEnvironment();
@@ -346,7 +360,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public EClass getInstanceClass(Variable variable) {
+	@Override
+    public EClass getInstanceClass(Variable variable) {
 		return variable.getVariableType().getInterfaceClass();
 	}
 
@@ -355,7 +370,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public TypeApiAdapter getTypeApiAdapter(VariableFeatureReference variableFeatureReference) 
+	@Override
+    public TypeApiAdapter getTypeApiAdapter(VariableFeatureReference variableFeatureReference) 
 	{
 		TypeApiAdapter typeApiAdapter = null;
 		
@@ -429,7 +445,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		typeApiAdapter = context.getVariableImplementationsList().getVariableImplementation(variable).getAdapterInstance();
 		
 		// Sets source object to variable instance as default.
-		EObject sourceEObject = (EObject) getInstance (variable);
+		EObject sourceEObject = getInstance (variable);
 
 		// Goes through the list of features.
 		AbstractTypeImplementation rootATI = context.getVariableImplementationsList().getVariableImplementation(variable);
@@ -616,7 +632,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public EObject getInstance(VariableFeatureReference variableFeatureReference) {
+	@Override
+    public EObject getInstance(VariableFeatureReference variableFeatureReference) {
 		EObject eObjectInstance = null;
 
 		if (variableFeatureReference.getVariable() != null) 
@@ -654,7 +671,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public EObject getTypeMemberInstance(
+	@Override
+    public EObject getTypeMemberInstance(
 			VariableFeatureReference variableFeatureReference) {
 		EObject typeMemberInstance = null;
 
@@ -697,7 +715,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public Object getEMFFeatureValue(
+	@Override
+    public Object getEMFFeatureValue(
 			VariableFeatureReference variableFeatureReference) {
 		Object featureValue = null;
 
@@ -725,7 +744,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public EClass getInstanceClass(VariableFeatureReference variableFeatureReference) 
+	@Override
+    public EClass getInstanceClass(VariableFeatureReference variableFeatureReference) 
 	{
 		EClass eClass = null;
 		Variable variable = variableFeatureReference.getVariable();
@@ -760,7 +780,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public AbstractTypeImplementation getTypeImplementation(OperationCall operationCall) 
+	@Override
+    public AbstractTypeImplementation getTypeImplementation(OperationCall operationCall) 
 	{				
 		AbstractTypeImplementation result = null;
 
@@ -817,7 +838,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		AbstractTypeImplementation result = context.getVariableImplementationsList().getVariableImplementation(variable);
 						
 		// Gets the source EObject		
-		EObject source = (EObject) getInstance (variable);
+		EObject source = getInstance (variable);
 		
 		// Traverse the Feature List until no API is found.
 		ListRootNode rootNode = operationCall.getFeatureRoot();		
@@ -872,7 +893,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public AbstractTypeImplementation getTypeImplementation(Variable variable,
+	@Override
+    public AbstractTypeImplementation getTypeImplementation(Variable variable,
 			AbstractType elementType) {
 		AbstractTypeImplementation result = null;
 		Environment environment = variable.getEnvironment();
@@ -896,7 +918,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public AbstractTypeImplementation getTypeImplementation(Variable variable) {
+	@Override
+    public AbstractTypeImplementation getTypeImplementation(Variable variable) {
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
 		return context.getVariableImplementationsList()
@@ -908,7 +931,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public List<Variable> getVariableByName(InvocatorSession session, String name) {
+	@Override
+    public List<Variable> getVariableByName(InvocatorSession session, String name) {
 		List<Variable> result = new ArrayList<Variable>();
 		
 		Environment environment = session.getEnvironment();
@@ -951,7 +975,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public TypeMemberReferenceListElement createTypeMemberReferences(TypeMember[] typeMembers) {
+	@Override
+    public TypeMemberReferenceListElement createTypeMemberReferences(TypeMember[] typeMembers) {
 		TypeMemberReferenceListElement currentElement = null;
 		for (int i = 0; i < typeMembers.length; i++) {
 			TypeMemberReferenceListElement newElement = ApogyCoreInvocatorFactory.eINSTANCE
@@ -970,7 +995,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public AbstractTypeImplementation getTypeImplementation(
+	@Override
+    public AbstractTypeImplementation getTypeImplementation(
 			Environment environment, String fullyQualifiedName) {
 		AbstractTypeImplementation result = null;
 		String[] tokens = fullyQualifiedName.split("\\.");
@@ -1035,7 +1061,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public String getFullyQualifiedName(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement) 
+	@Override
+    public String getFullyQualifiedName(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement) 
 	{
 		if (typeMemberReferenceTreeElement != null) 
 		{
@@ -1071,7 +1098,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public String getFullyQualifiedName(AbstractFeatureNode abstractFeatureNode) {
+	@Override
+    public String getFullyQualifiedName(AbstractFeatureNode abstractFeatureNode) {
 		if (abstractFeatureNode != null) 
 		{
 			String fullyQualifiedName = new String();
@@ -1097,7 +1125,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public List<TypeMemberImplementation> createTypeMemberImplementations(
+	@Override
+    public List<TypeMemberImplementation> createTypeMemberImplementations(
 			Type variableType) {
 		List<TypeMemberImplementation> typeMemberImplementations = new ArrayList<TypeMemberImplementation>();
 
@@ -1126,7 +1155,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public void initVariableInstances(Environment environment) {
+	@Override
+    public void initVariableInstances(Environment environment) {
 		Iterator<Variable> variables = environment.getVariablesList()
 				.getVariables().iterator();
 
@@ -1154,7 +1184,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public void disposeVariableInstances(Environment environment) {
+	@Override
+    public void disposeVariableInstances(Environment environment) {
 
 		Iterator<Variable> variables = environment.getVariablesList()
 				.getVariables().iterator();
@@ -1179,7 +1210,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public OperationCall getOperationCallContainer(
+	@Override
+    public OperationCall getOperationCallContainer(
 			TypeMemberReferenceListElement typeMemberReferenceListElement) {
 		OperationCall operationCall = null;
 		if (typeMemberReferenceListElement.isRoot()) {
@@ -1197,7 +1229,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public void applyInitializationData(Environment environment) {
+	@Override
+    public void applyInitializationData(Environment environment) {
 		for (Variable variable : environment.getVariablesList().getVariables()) {
 			applyInitializationData(variable);
 		}
@@ -1208,7 +1241,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public void collectInitializationData(Environment environment) {
+	@Override
+    public void collectInitializationData(Environment environment) {
 		for (Variable variable : environment.getVariablesList().getVariables()) {
 			collectInitializationData(variable);
 		}
@@ -1219,7 +1253,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public void applyInitializationData(Variable variable) {
+	@Override
+    public void applyInitializationData(Variable variable) {
 		InvocatorDelegate delegate = InvocatorDelegateRegistry.getInstance()
 				.getInvocatorDelegate(variable.getVariableType().getClass());
 
@@ -1239,7 +1274,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public void collectInitializationData(Variable variable) {
+	@Override
+    public void collectInitializationData(Variable variable) {
 
 		InvocatorDelegate delegate = InvocatorDelegateRegistry.getInstance()
 				.getInvocatorDelegate(variable.getVariableType().getClass());
@@ -1261,7 +1297,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public void loadRegisteredTypes(InvocatorSession session) {
+	@Override
+    public void loadRegisteredTypes(InvocatorSession session) {
 		Environment environment = session.getEnvironment();
 		if (environment != null){
 			TypesList typesList = environment.getTypesList();
@@ -1279,7 +1316,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public List<Type> getAllTypes(Environment environment) {
+	@Override
+    public List<Type> getAllTypes(Environment environment) {
 		List<Type> types = new ArrayList<Type>();
 		
 		TypesList typesList = environment.getTypesList();
@@ -1304,7 +1342,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public void addVariableListener(IVariableListener listener) {
+	@Override
+    public void addVariableListener(IVariableListener listener) {
 		getVariableListenersSet().add(listener);
 	}
 
@@ -1320,7 +1359,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public void removeVariableListener(IVariableListener listener) {
+	@Override
+    public void removeVariableListener(IVariableListener listener) {
 		getVariableListenersSet().remove(listener);
 	}
 
@@ -1329,7 +1369,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public void notifyVariableListeners(Variable variable, VariableListenerEventType event) {
+	@Override
+    public void notifyVariableListeners(Variable variable, VariableListenerEventType event) {
 		for(IVariableListener listener: getVariableListenersSet()){
 			listener.variableListenerNotification(variable, event);
 		}
