@@ -13,12 +13,11 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->

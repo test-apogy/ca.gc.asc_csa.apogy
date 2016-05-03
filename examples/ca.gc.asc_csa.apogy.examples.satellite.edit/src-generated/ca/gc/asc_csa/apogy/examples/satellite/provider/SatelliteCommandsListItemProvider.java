@@ -4,6 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
+ * 
  * Contributors:
  * Canadian Space Agency (CSA) - Initial API and implementation
  * -Pierre Allard (Pierre.Allard@canada.ca),
@@ -13,11 +14,9 @@
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-
-import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.SatelliteCommandsList;
 
 import java.util.Collection;
 import java.util.List;
@@ -29,7 +28,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -37,17 +35,16 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.SatelliteCommandsList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AbstractConstellationCommandPlanItemProvider 
+public class SatelliteCommandsListItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -61,7 +58,7 @@ public class AbstractConstellationCommandPlanItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractConstellationCommandPlanItemProvider(AdapterFactory adapterFactory) {
+	public SatelliteCommandsListItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -76,77 +73,8 @@ public class AbstractConstellationCommandPlanItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
-			addCommandPlansListPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Named_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Described_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Command Plans List feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCommandPlansListPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractConstellationCommandPlan_commandPlansList_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationCommandPlan_commandPlansList_feature", "_UI_AbstractConstellationCommandPlan_type"),
-				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -161,7 +89,7 @@ public class AbstractConstellationCommandPlanItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_COMMAND_PLAN__SATELLITE_COMMANDS_LIST);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.SATELLITE_COMMANDS_LIST__CONSTELLATION_COMMANDS);
 		}
 		return childrenFeatures;
 	}
@@ -180,6 +108,17 @@ public class AbstractConstellationCommandPlanItemProvider
 	}
 
 	/**
+	 * This returns SatelliteCommandsList.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SatelliteCommandsList"));
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,10 +126,7 @@ public class AbstractConstellationCommandPlanItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((AbstractConstellationCommandPlan)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_AbstractConstellationCommandPlan_type") :
-			getString("_UI_AbstractConstellationCommandPlan_type") + " " + label;
+		return getString("_UI_SatelliteCommandsList_type");
 	}
 	
 
@@ -205,12 +141,8 @@ public class AbstractConstellationCommandPlanItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(AbstractConstellationCommandPlan.class)) {
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__NAME:
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__DESCRIPTION:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_COMMAND_PLAN__SATELLITE_COMMANDS_LIST:
+		switch (notification.getFeatureID(SatelliteCommandsList.class)) {
+			case ApogyExamplesSatellitePackage.SATELLITE_COMMANDS_LIST__CONSTELLATION_COMMANDS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -230,8 +162,13 @@ public class AbstractConstellationCommandPlanItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_COMMAND_PLAN__SATELLITE_COMMANDS_LIST,
-				 ApogyExamplesSatelliteFactory.eINSTANCE.createSatelliteCommandsList()));
+				(ApogyExamplesSatellitePackage.Literals.SATELLITE_COMMANDS_LIST__CONSTELLATION_COMMANDS,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createVisibilityPassBasedSatelliteCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyExamplesSatellitePackage.Literals.SATELLITE_COMMANDS_LIST__CONSTELLATION_COMMANDS,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 	}
 
 	/**

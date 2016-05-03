@@ -13,7 +13,6 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.examples.satellite.*;
 import java.util.Comparator;
 import java.util.List;
 import java.util.SortedSet;
@@ -24,6 +23,33 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFacade;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellationPlanner;
+import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.SatelliteCommandsList;
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
+import ca.gc.asc_csa.apogy.examples.satellite.VisibilityPassBasedSatelliteCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,6 +102,7 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_PLANNERS_CONTAINER: return createConstellationPlannersContainer();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_PLANNER: return createDefaultConstellationPlanner();
+			case ApogyExamplesSatellitePackage.SATELLITE_COMMANDS_LIST: return createSatelliteCommandsList();
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_COMMAND_PLAN: return createDefaultConstellationCommandPlan();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LISTS_CONTAINER: return createConstellationRequestsListsContainer();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
@@ -209,6 +236,16 @@ public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements A
 	public DefaultConstellationPlanner createDefaultConstellationPlanner() {
 		DefaultConstellationPlannerImpl defaultConstellationPlanner = new DefaultConstellationPlannerImpl();
 		return defaultConstellationPlanner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SatelliteCommandsList createSatelliteCommandsList() {
+		SatelliteCommandsListImpl satelliteCommandsList = new SatelliteCommandsListImpl();
+		return satelliteCommandsList;
 	}
 
 	/**

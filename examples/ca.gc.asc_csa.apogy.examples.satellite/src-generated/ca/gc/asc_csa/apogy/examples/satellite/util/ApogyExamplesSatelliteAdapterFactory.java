@@ -127,6 +127,10 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractConstellationCommandPlanAdapter();
 			}
 			@Override
+			public Adapter caseSatelliteCommandsList(SatelliteCommandsList object) {
+				return createSatelliteCommandsListAdapter();
+			}
+			@Override
 			public Adapter caseDefaultConstellationCommandPlan(DefaultConstellationCommandPlan object) {
 				return createDefaultConstellationCommandPlanAdapter();
 			}
@@ -393,6 +397,20 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstractConstellationCommandPlanAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.SatelliteCommandsList <em>Satellite Commands List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.SatelliteCommandsList
+	 * @generated
+	 */
+	public Adapter createSatelliteCommandsListAdapter() {
 		return null;
 	}
 

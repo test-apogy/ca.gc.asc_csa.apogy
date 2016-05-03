@@ -579,7 +579,7 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 		validate();
 
 		/* Clear the command plan. */
-		getConstellationCommandPlan().getConstellationCommands().clear();
+		getConstellationCommandPlan().setSatelliteCommandsList(ApogyExamplesSatelliteFactory.eINSTANCE.createSatelliteCommandsList());
 
 		/* Create a set to sort the commands. */
 		TreeSet<AbstractRequestBasedSatelliteCommand> commands = new TreeSet<AbstractRequestBasedSatelliteCommand>(
@@ -669,9 +669,9 @@ public abstract class AbstractConstellationPlannerImpl extends MinimalEObjectImp
 						}
 					});
 			no_duplicate_commands.addAll(commands);
-			getConstellationCommandPlan().getConstellationCommands().addAll(no_duplicate_commands);
+			getConstellationCommandPlan().getSatelliteCommandsList().getConstellationCommands().addAll(no_duplicate_commands);
 		} else {
-			getConstellationCommandPlan().getConstellationCommands().addAll(commands);
+			getConstellationCommandPlan().getSatelliteCommandsList().getConstellationCommands().addAll(commands);
 		}
 
 		Logger.INSTANCE.log(Activator.ID, "Constellation Planner: Completed", EventSeverity.INFO);

@@ -161,6 +161,12 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyExamplesSatellitePackage.SATELLITE_COMMANDS_LIST: {
+				SatelliteCommandsList satelliteCommandsList = (SatelliteCommandsList)theEObject;
+				T result = caseSatelliteCommandsList(satelliteCommandsList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION_COMMAND_PLAN: {
 				DefaultConstellationCommandPlan defaultConstellationCommandPlan = (DefaultConstellationCommandPlan)theEObject;
 				T result = caseDefaultConstellationCommandPlan(defaultConstellationCommandPlan);
@@ -461,6 +467,21 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractConstellationCommandPlan(AbstractConstellationCommandPlan object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Satellite Commands List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Satellite Commands List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSatelliteCommandsList(SatelliteCommandsList object) {
 		return null;
 	}
 

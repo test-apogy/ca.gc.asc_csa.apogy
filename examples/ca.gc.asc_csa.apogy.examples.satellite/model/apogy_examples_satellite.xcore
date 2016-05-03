@@ -335,9 +335,19 @@ abstract class AbstractConstellationCommandPlan extends Named, Described{
 	}			
 	
 	/*
+	 * Container of {@link AbstractSatelliteCommand}.
+	 */
+	contains SatelliteCommandsList[0..1] satelliteCommandsList
+}
+
+/*
+ * List of {@link AbstractSatelliteCommand}.
+ */
+class SatelliteCommandsList{
+	/*
 	 * List of {@link AbstractSatelliteCommand}.
 	 */
-	contains AbstractSatelliteCommand[0..*] constellationCommands
+	contains AbstractSatelliteCommand[0..*] constellationCommands	
 }
 
 /*

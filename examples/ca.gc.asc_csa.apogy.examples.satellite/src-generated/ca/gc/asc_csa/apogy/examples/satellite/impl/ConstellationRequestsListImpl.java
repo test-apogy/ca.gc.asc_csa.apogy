@@ -26,6 +26,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import com.google.common.base.Objects;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
@@ -33,7 +35,6 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
-import com.google.common.base.Objects;
 
 /**
  * <!-- begin-user-doc -->

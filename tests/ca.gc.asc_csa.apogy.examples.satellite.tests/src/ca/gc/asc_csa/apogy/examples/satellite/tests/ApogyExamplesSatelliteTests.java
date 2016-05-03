@@ -49,25 +49,23 @@ public class ApogyExamplesSatelliteTests {
 		/* 
 		 * Invoke the planner and use max number of threads. 
 		 */			
-		plan.getConstellationCommands().clear();
-		assertEquals(0, plan.getConstellationCommands().size());
 		planner.setMaxNumberThreads(numberOfThreads);
 		planner.plan();
 		
 		
 		/* 2 Commands (Visibility Passes) must be found. */
-		assertEquals(2, plan.getConstellationCommands().size());
+		assertEquals(2, plan.getSatelliteCommandsList().getConstellationCommands().size());
 		
 		/* Check the visibility passes. */
 		
 		/* Command 1. */
-		command = plan.getConstellationCommands().get(0);
+		command = plan.getSatelliteCommandsList().getConstellationCommands().get(0);
 		assertTrue(command instanceof VisibilityPassBasedSatelliteCommand);
 		visibilityCommand = (VisibilityPassBasedSatelliteCommand) command;
 		assertEquals(new Date(1459405555300L), visibilityCommand.getTime());
 		
 		/* Command 2. */
-		command = plan.getConstellationCommands().get(1);
+		command = plan.getSatelliteCommandsList().getConstellationCommands().get(1);
 		assertTrue(command instanceof VisibilityPassBasedSatelliteCommand);
 		visibilityCommand = (VisibilityPassBasedSatelliteCommand) command;
 		assertEquals(new Date(1459423814159L), visibilityCommand.getTime());		

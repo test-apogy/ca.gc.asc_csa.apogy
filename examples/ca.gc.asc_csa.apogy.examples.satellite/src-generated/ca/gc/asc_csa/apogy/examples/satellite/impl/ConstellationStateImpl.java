@@ -12,6 +12,9 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -30,8 +33,6 @@ import ca.gc.asc_csa.apogy.examples.satellite.ConstellationPlannersContainer;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
-import java.lang.reflect.InvocationTargetException;
-import java.util.List;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

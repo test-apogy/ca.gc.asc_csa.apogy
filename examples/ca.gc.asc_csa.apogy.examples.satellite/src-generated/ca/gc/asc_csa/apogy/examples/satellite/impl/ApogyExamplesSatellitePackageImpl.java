@@ -62,6 +62,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
 import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
 import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.SatelliteCommandsList;
 import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
 import ca.gc.asc_csa.apogy.examples.satellite.SimpleRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.StringUID;
@@ -150,6 +151,13 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	private EClass abstractConstellationCommandPlanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass satelliteCommandsListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -795,8 +803,26 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractConstellationCommandPlan_ConstellationCommands() {
+	public EReference getAbstractConstellationCommandPlan_SatelliteCommandsList() {
 		return (EReference)abstractConstellationCommandPlanEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSatelliteCommandsList() {
+		return satelliteCommandsListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSatelliteCommandsList_ConstellationCommands() {
+		return (EReference)satelliteCommandsListEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1297,7 +1323,10 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		abstractConstellationCommandPlanEClass = createEClass(ABSTRACT_CONSTELLATION_COMMAND_PLAN);
 		createEReference(abstractConstellationCommandPlanEClass, ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST);
 		createEReference(abstractConstellationCommandPlanEClass, ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_STATE);
-		createEReference(abstractConstellationCommandPlanEClass, ABSTRACT_CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMANDS);
+		createEReference(abstractConstellationCommandPlanEClass, ABSTRACT_CONSTELLATION_COMMAND_PLAN__SATELLITE_COMMANDS_LIST);
+
+		satelliteCommandsListEClass = createEClass(SATELLITE_COMMANDS_LIST);
+		createEReference(satelliteCommandsListEClass, SATELLITE_COMMANDS_LIST__CONSTELLATION_COMMANDS);
 
 		defaultConstellationCommandPlanEClass = createEClass(DEFAULT_CONSTELLATION_COMMAND_PLAN);
 
@@ -1520,7 +1549,10 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEClass(abstractConstellationCommandPlanEClass, AbstractConstellationCommandPlan.class, "AbstractConstellationCommandPlan", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractConstellationCommandPlan_CommandPlansList(), this.getConstellationCommandPlansList(), this.getConstellationCommandPlansList_Plans(), "commandPlansList", null, 0, 1, AbstractConstellationCommandPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractConstellationCommandPlan_ConstellationState(), this.getConstellationState(), null, "constellationState", null, 0, 1, AbstractConstellationCommandPlan.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractConstellationCommandPlan_ConstellationCommands(), this.getAbstractSatelliteCommand(), null, "constellationCommands", null, 0, -1, AbstractConstellationCommandPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractConstellationCommandPlan_SatelliteCommandsList(), this.getSatelliteCommandsList(), null, "satelliteCommandsList", null, 0, 1, AbstractConstellationCommandPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(satelliteCommandsListEClass, SatelliteCommandsList.class, "SatelliteCommandsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSatelliteCommandsList_ConstellationCommands(), this.getAbstractSatelliteCommand(), null, "constellationCommands", null, 0, -1, SatelliteCommandsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(defaultConstellationCommandPlanEClass, DefaultConstellationCommandPlan.class, "DefaultConstellationCommandPlan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1920,7 +1952,19 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "get", "<%ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList%> _commandPlansList = this.getCommandPlansList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_commandPlansList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList%> _commandPlansList_1 = this.getCommandPlansList();\n\treturn _commandPlansList_1.getConstellationState();\n}"
 		   });	
 		addAnnotation
-		  (getAbstractConstellationCommandPlan_ConstellationCommands(), 
+		  (getAbstractConstellationCommandPlan_SatelliteCommandsList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Container of {@link AbstractSatelliteCommand}."
+		   });	
+		addAnnotation
+		  (satelliteCommandsListEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "List of {@link AbstractSatelliteCommand}."
+		   });	
+		addAnnotation
+		  (getSatelliteCommandsList_ConstellationCommands(), 
 		   source, 
 		   new String[] {
 			 "documentation", "List of {@link AbstractSatelliteCommand}."

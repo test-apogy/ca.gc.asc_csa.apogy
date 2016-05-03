@@ -12,8 +12,6 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite;
 
-import org.eclipse.emf.common.util.EList;
-
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 
@@ -33,7 +31,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getCommandPlansList <em>Command Plans List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getConstellationState <em>Constellation State</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getConstellationCommands <em>Constellation Commands</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getSatelliteCommandsList <em>Satellite Commands List</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationCommandPlan()
@@ -84,18 +82,28 @@ public interface AbstractConstellationCommandPlan extends Named, Described {
 	ConstellationState getConstellationState();
 
 	/**
-	 * Returns the value of the '<em><b>Constellation Commands</b></em>' containment reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand}.
+	 * Returns the value of the '<em><b>Satellite Commands List</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * List of {@link AbstractSatelliteCommand}.
+	 * Container of {@link AbstractSatelliteCommand}.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Constellation Commands</em>' containment reference list.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationCommandPlan_ConstellationCommands()
+	 * @return the value of the '<em>Satellite Commands List</em>' containment reference.
+	 * @see #setSatelliteCommandsList(SatelliteCommandsList)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationCommandPlan_SatelliteCommandsList()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<AbstractSatelliteCommand> getConstellationCommands();
+	SatelliteCommandsList getSatelliteCommandsList();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan#getSatelliteCommandsList <em>Satellite Commands List</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Satellite Commands List</em>' containment reference.
+	 * @see #getSatelliteCommandsList()
+	 * @generated
+	 */
+	void setSatelliteCommandsList(SatelliteCommandsList value);
 
 } // AbstractConstellationCommandPlan
