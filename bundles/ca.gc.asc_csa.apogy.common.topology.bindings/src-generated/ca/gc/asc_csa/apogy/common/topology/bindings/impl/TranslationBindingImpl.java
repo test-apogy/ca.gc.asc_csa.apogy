@@ -54,7 +54,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 {
   private static Unit<?> METERS = Unit.valueOf("m");
 		
-  /** The conversion factor to use to convert from the feature value to radians.*/
+  /** The conversion factor to use to convert from the feature value to meters.*/
   private double featureToMetersConversionFactor = 1.0;
 	
   /**
