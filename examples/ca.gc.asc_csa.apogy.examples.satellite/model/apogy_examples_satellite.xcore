@@ -161,6 +161,7 @@ class ConstellationPlannersContainer{
 	/*
 	 * Refers to the {@link ConstellationState} that contains this container.
 	 */
+    @GenModel(property="None")	 
 	container ConstellationState constellationState opposite constellationPlannersContainer
 	
 	/*
@@ -316,6 +317,7 @@ abstract class AbstractConstellationCommandPlan extends Named, Described{
 	/*
 	 * Refers the container of this {@link AbstractConstellationCommandPlan}.
 	 */
+	@GenModel(property="None")
 	container ConstellationCommandPlansList commandPlansList opposite plans
 	
 	/*
@@ -365,6 +367,7 @@ class ConstellationRequestsListsContainer{
 	/*
 	 * Refers to the container {@link ConstellationState}.
 	 */
+	@GenModel(property="None")
 	container ConstellationState constellationState opposite constellationRequestsListsContainer
 	
 	/*
@@ -381,6 +384,7 @@ class ConstellationRequestsList extends Named, Described{
 	/* 
 	 * Refers the container of this {@link ConstellationRequestsList}.
 	 */
+    @GenModel(property="None")	 
 	container ConstellationRequestsListsContainer constellationRequestsListsContainer opposite constellationRequestsLists
 	
 	/*

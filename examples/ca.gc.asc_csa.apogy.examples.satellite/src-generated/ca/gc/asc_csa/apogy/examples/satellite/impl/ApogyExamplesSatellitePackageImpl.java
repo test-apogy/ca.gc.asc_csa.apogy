@@ -1782,7 +1782,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		  (getConstellationPlannersContainer_ConstellationState(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Refers to the {@link ConstellationState} that contains this container."
+			 "documentation", "Refers to the {@link ConstellationState} that contains this container.",
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (getConstellationPlannersContainer_ConstellationPlanners(), 
@@ -1940,7 +1941,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		  (getAbstractConstellationCommandPlan_CommandPlansList(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Refers the container of this {@link AbstractConstellationCommandPlan}."
+			 "documentation", "Refers the container of this {@link AbstractConstellationCommandPlan}.",
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (getAbstractConstellationCommandPlan_ConstellationState(), 
@@ -1985,7 +1987,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		  (getConstellationRequestsListsContainer_ConstellationState(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Refers to the container {@link ConstellationState}."
+			 "documentation", "Refers to the container {@link ConstellationState}.",
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (getConstellationRequestsListsContainer_ConstellationRequestsLists(), 
@@ -2003,7 +2006,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		  (getConstellationRequestsList_ConstellationRequestsListsContainer(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Refers the container of this {@link ConstellationRequestsList}."
+			 "documentation", "Refers the container of this {@link ConstellationRequestsList}.",
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (getConstellationRequestsList_ConstellationState(), 

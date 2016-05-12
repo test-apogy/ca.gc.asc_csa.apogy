@@ -78,7 +78,6 @@ public class AbstractConstellationCommandPlanItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addCommandPlansListPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -123,28 +122,6 @@ public class AbstractConstellationCommandPlanItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Command Plans List feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCommandPlansListPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractConstellationCommandPlan_commandPlansList_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationCommandPlan_commandPlansList_feature", "_UI_AbstractConstellationCommandPlan_type"),
-				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_COMMAND_PLAN__COMMAND_PLANS_LIST,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

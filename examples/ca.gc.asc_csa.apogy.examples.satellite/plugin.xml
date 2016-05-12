@@ -24,5 +24,11 @@
             class="ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage"
             genModel="model/apogy_examples_satellite.xcore"/>
    </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.converters">
+      <new_element
+            Class="ca.gc.asc_csa.apogy.examples.satellite.converters.ConstellationStateToConstellationRequestsListsContainerConverter">
+      </new_element>
+   </extension>
 
 </plugin>

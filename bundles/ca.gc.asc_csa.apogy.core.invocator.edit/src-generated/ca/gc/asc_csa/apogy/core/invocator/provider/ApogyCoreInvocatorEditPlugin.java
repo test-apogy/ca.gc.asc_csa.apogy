@@ -15,7 +15,6 @@ package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
 
 /**
@@ -53,7 +52,6 @@ public final class ApogyCoreInvocatorEditPlugin extends EMFPlugin {
 	public ApogyCoreInvocatorEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EcoreEditPlugin.INSTANCE,
 		     ApogyCommonEMFEditPlugin.INSTANCE,
 		   });
 	}

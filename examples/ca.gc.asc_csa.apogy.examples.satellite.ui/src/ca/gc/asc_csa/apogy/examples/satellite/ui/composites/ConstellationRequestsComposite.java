@@ -80,13 +80,19 @@ public class ConstellationRequestsComposite extends Composite {
 
 		TreeViewerColumn treeViewerColumnUID = new TreeViewerColumn(requestsViewer, SWT.NONE);
 		TreeColumn treeclmnUID = treeViewerColumnUID.getColumn();
-		treeclmnUID.setWidth(80);
+		treeclmnUID.setWidth(150);
 		treeclmnUID.setText("UID");
 		treeclmnUID.setToolTipText("Refers to the constellation Request Unique Identifier.");
-
+		
+		TreeViewerColumn treeViewerColumnType = new TreeViewerColumn(requestsViewer, SWT.NONE);
+		TreeColumn treeclmnType = treeViewerColumnType.getColumn();
+		treeclmnType.setWidth(150);
+		treeclmnType.setText("Type");
+		treeclmnType.setToolTipText("Refers to the constellation Request type.");
+		
 		TreeViewerColumn treeViewerPriority = new TreeViewerColumn(requestsViewer, SWT.NONE);
 		TreeColumn treeclmnPriority = treeViewerPriority.getColumn();
-		treeclmnPriority.setWidth(150);
+		treeclmnPriority.setWidth(100);
 		treeclmnPriority.setText("Priority");
 		treeclmnPriority.setToolTipText("Specifies the priority level the constellation request.");
 		
@@ -239,9 +245,9 @@ public class ConstellationRequestsComposite extends Composite {
 		}
 
 		private static final int UID_COLUMN_ID = 0;
-		private static final int PRIORITY_COLUMN_ID = 1;
-		private static final int STATUS_COLUMN_ID = 2;		
-		private static final int TYPE_COLUMN_ID = 3;
+		private static final int TYPE_COLUMN_ID = 1;
+		private static final int PRIORITY_COLUMN_ID = 2;
+		private static final int STATUS_COLUMN_ID = 3;		
 		private static final int LONGITUDE_COLUMN_ID = 4;
 		private static final int LATITUDE_COLUMN_ID = 5;
 		private static final int ELEVATION_COLUMN_ID = 6;
@@ -252,7 +258,13 @@ public class ConstellationRequestsComposite extends Composite {
 			
 			if (object instanceof ConstellationRequestsList){
 				ConstellationRequestsList list = (ConstellationRequestsList) object;
-				str = columnIndex == UID_COLUMN_ID ? list.getName() : ""; 
+				if (columnIndex == UID_COLUMN_ID){
+					if (list.getName() != null){
+						str = list.getName();	
+					}					 
+				}else{
+					str = "";
+				}
 			}
 			
 			if (object instanceof AbstractConstellationRequest){
