@@ -47,6 +47,7 @@ import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
@@ -332,7 +333,8 @@ public class OperationCallItemProvider extends
 							   clazz.isAssignableFrom(double.class)){						
 						argument = ApogyCoreInvocatorFactory.eINSTANCE.createNumericEDataTypeArgument();
 					} else{
-						argument = ApogyCoreInvocatorFactory.eINSTANCE.createStringEDataTypeArgument();						
+						argument = ApogyCoreInvocatorFactory.eINSTANCE.createStringEDataTypeArgument();	
+						((StringEDataTypeArgument)argument).setValue("HELLO");
 					}
 					
 					Object defaultValue = parameter.getEType()
