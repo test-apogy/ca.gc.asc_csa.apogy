@@ -75,7 +75,7 @@ public class ConstellationRequestsComposite extends Composite {
 		toolkit.paintBordersFor(this);
 		setLayout(new GridLayout(1, false));
 
-		requestsViewer = new TreeViewer(this, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+		requestsViewer = new TreeViewer(this, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.MULTI);
 		requestsViewer.setUseHashlookup(true);
 		Tree treeRequests = requestsViewer.getTree();
 		treeRequests.setHeaderVisible(true);
