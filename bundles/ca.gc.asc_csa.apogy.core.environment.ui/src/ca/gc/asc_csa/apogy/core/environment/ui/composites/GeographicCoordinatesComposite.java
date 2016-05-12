@@ -20,6 +20,7 @@ import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
@@ -53,14 +54,7 @@ public class GeographicCoordinatesComposite extends Composite
 	
 	public GeographicCoordinatesComposite(Composite parent, int style) 
 	{
-		this(parent, style, null);		
-	}
-
-	public GeographicCoordinatesComposite(Composite parent, int style, EditingDomain editingDomain)
-	{
-		super(parent, style);
-		this.editingDomain = editingDomain;
-		
+		super(parent, style);		
 		setLayout(new GridLayout(3, true));
 
 		Label latitudeLabel = new Label(this, SWT.NONE);
@@ -152,6 +146,7 @@ public class GeographicCoordinatesComposite extends Composite
 
 	public void setGeographicCoordinates(GeographicCoordinates newGeographicCoordinates, boolean update) {
 		geographicCoordinates = newGeographicCoordinates;
+		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(geographicCoordinates);
 		if (update) 
 		{
 			if (m_bindingContext != null) 
