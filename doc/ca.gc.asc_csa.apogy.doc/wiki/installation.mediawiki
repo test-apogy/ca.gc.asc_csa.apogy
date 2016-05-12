@@ -16,9 +16,6 @@ Apogy is based on Eclipse platform [https://www.eclipse.org https://www.eclipse.
 # Save your changes.
 # Launch the '''<ECLIPSE_HOME>/eclipse'''.
 # The '''Workspace Launcher''' dialog will prompt.  Select the location of a new or an existing workspace.  The workspace will contain the information related to your Apogy session.
-= Eclipse Addons Bundles =
-# Add the following tools:
-## Modeling\EMF - Eclipse Modeling Framework Xcore SDK
 = Apogy =
 # Add the '''Apogy''' P2 Site:
 ## Stable: [https://dl.bintray.com/apogy/Releases/0.5/ https://dl.bintray.com/apogy/Releases/0.5/] '''OR'''
