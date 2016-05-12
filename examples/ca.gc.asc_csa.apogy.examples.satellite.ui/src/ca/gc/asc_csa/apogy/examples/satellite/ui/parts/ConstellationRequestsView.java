@@ -70,7 +70,12 @@ public class ConstellationRequestsView extends AbstractView implements IEditingD
 	 */
 	public void createPartControl(Composite parent) {
 		super.createPartControl(parent);
-		constellationRequestsComposite = new ConstellationRequestsComposite(parent, SWT.NONE);
+		constellationRequestsComposite = new ConstellationRequestsComposite(parent, SWT.NONE){
+			@Override
+			protected void newSelection(ISelection selection) {
+				getSelectionProvider().setSelection(selection);
+			}
+		};
 		
 		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if(session != null && constellationRequestsListsContainerId != null){

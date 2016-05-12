@@ -18,7 +18,10 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.ViewerComparator;
@@ -51,6 +54,7 @@ public class ConstellationRequestsComposite extends Composite {
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 	private DataBindingContext m_bindingContext;
 	private ConstellationRequestsListsContainer constellationRequestsListsContainer;
+	private ISelectionChangedListener requestsViewerListener;
 
 	/**
 	 * Create the composite.
@@ -122,6 +126,7 @@ public class ConstellationRequestsComposite extends Composite {
 				
 		requestsViewer.setContentProvider(new RequestsContentProvider(adapterFactory));
 		requestsViewer.setLabelProvider(new RequestsLabelProvider(adapterFactory));
+		requestsViewer.addSelectionChangedListener(getViewerListener());		
 
 		/*
 		 * Show/Hide Column Menu Items.
@@ -195,13 +200,38 @@ public class ConstellationRequestsComposite extends Composite {
 
 	@Override
 	public void dispose() {
-		super.dispose();
+		super.dispose();		
 
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
 		}
+		
+		requestsViewer.removeSelectionChangedListener(getViewerListener());		
 	}
+	
+	/**
+	 * This method is called when a new selection is made in the composite.
+	 * @param selection Reference to the selection.
+	 */
+	protected void newSelection(ISelection selection) {
+	}
+	
+	/**
+	 * Listener used to listen {{@link #requestsViewer} selection changes.
+ 	 * @return Reference to the listener (Lazy Loaded).
+	 */
+	private ISelectionChangedListener getViewerListener() {
+		if (requestsViewerListener == null){
+			requestsViewerListener = new ISelectionChangedListener() {				
+				@Override
+				public void selectionChanged(SelectionChangedEvent event) {
+					newSelection(event.getSelection());
+				}
+			};
+		}		
+		return requestsViewerListener;
+	}	
 
 	public class ActivitiesViewerComparator extends ViewerComparator {
 		/*

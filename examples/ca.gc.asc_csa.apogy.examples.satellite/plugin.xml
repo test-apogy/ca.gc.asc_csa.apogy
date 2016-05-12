@@ -29,6 +29,9 @@
       <new_element
             Class="ca.gc.asc_csa.apogy.examples.satellite.converters.ConstellationStateToConstellationRequestsListsContainerConverter">
       </new_element>
+      <new_element
+            Class="ca.gc.asc_csa.apogy.examples.satellite.converters.ObservationConstellationRequestToEarthSurfaceLocationConverter">
+      </new_element>
    </extension>
 
 </plugin>
