@@ -139,6 +139,18 @@ This Agreement is governed by the laws of the State of New York and the intellec
          id="org.eclipse.wst.jsdt.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.egit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore.xcore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore.xcore.ui"
+         version="0.0.0"/>
+
    <plugin
          id="org.apache.commons.pool"
          download-size="0"
