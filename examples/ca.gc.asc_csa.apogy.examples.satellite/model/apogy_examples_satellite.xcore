@@ -442,6 +442,7 @@ class ObservationConstellationRequest extends AbstractConstellationRequest{
 	/*
 	 * Specifies the location of the observation.
 	 */
+    @GenModel(children="false", createChild="false")
 	contains EarthSurfaceLocation location
 }
 

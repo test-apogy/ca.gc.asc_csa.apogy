@@ -15,6 +15,8 @@ package ca.gc.asc_csa.apogy.examples.satellite.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
@@ -39,8 +41,10 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer;
@@ -55,6 +59,7 @@ public class ConstellationRequestsComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 	private ConstellationRequestsListsContainer constellationRequestsListsContainer;
 	private ISelectionChangedListener requestsViewerListener;
+	private EContentAdapter eContentAdapter;
 
 	/**
 	 * Create the composite.
@@ -158,6 +163,12 @@ public class ConstellationRequestsComposite extends Composite {
 	 * @param constellationRequestsListsContainer Constellation requests lists container.
 	 */
 	public void setConstellationRequestsListsContainer(ConstellationRequestsListsContainer constellationRequestsListsContainer) {
+		
+		if (this.constellationRequestsListsContainer != null){
+			getEContentAdapter().setTarget(null);
+			this.constellationRequestsListsContainer.eAdapters().remove(getEContentAdapter());
+		}
+		
 		this.constellationRequestsListsContainer = constellationRequestsListsContainer;
 
 		if (m_bindingContext != null) {
@@ -166,8 +177,39 @@ public class ConstellationRequestsComposite extends Composite {
 		}
 
 		if (this.constellationRequestsListsContainer != null) {
-			m_bindingContext = initDataBindings();
+			m_bindingContext = initDataBindings();			
 		}
+		
+		if (this.constellationRequestsListsContainer != null){
+			getEContentAdapter().setTarget(constellationRequestsListsContainer);
+			this.constellationRequestsListsContainer.eAdapters().add(getEContentAdapter());
+		}
+	}
+	
+	/*
+	 * Content adapter used to listen sub-element changes.
+	 */
+	private EContentAdapter getEContentAdapter(){
+		if (eContentAdapter == null){
+			eContentAdapter = new EContentAdapter(){
+				@Override
+				public void notifyChanged(Notification notification) {
+					Object notifier = notification.getNotifier(); 
+					if (notifier instanceof EarthSurfaceLocation){
+						ObservationConstellationRequest observationConstellationRequest = (ObservationConstellationRequest) ((EarthSurfaceLocation)notifier).eContainer();
+						if (observationConstellationRequest != null){						
+							PlatformUI.getWorkbench().getDisplay().asyncExec(new Runnable() {							
+								@Override
+								public void run() {
+									requestsViewer.refresh(observationConstellationRequest, true);
+								}
+							});
+						}
+					}					
+				}
+			};			
+		}
+		return eContentAdapter;
 	}
 
 	/**
@@ -205,6 +247,11 @@ public class ConstellationRequestsComposite extends Composite {
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
+		}
+		
+		if (this.constellationRequestsListsContainer != null){
+			getEContentAdapter().setTarget(null);
+			this.constellationRequestsListsContainer.eAdapters().remove(getEContentAdapter());
 		}
 		
 		requestsViewer.removeSelectionChangedListener(getViewerListener());		
@@ -322,14 +369,14 @@ public class ConstellationRequestsComposite extends Composite {
 				case LONGITUDE_COLUMN_ID:
 					if (request instanceof ObservationConstellationRequest){
 						ObservationConstellationRequest observationRequest = (ObservationConstellationRequest) request;
-						str = observationRequest.getLocation() == null? "N/A" : Double.toString((observationRequest.getLocation().getLongitude()));
+						str = observationRequest.getLocation() == null? "N/A" : Double.toString((Math.toDegrees(observationRequest.getLocation().getLongitude())));
 					}
 					break;
 
 				case LATITUDE_COLUMN_ID:
 					if (request instanceof ObservationConstellationRequest){
 						ObservationConstellationRequest observationRequest = (ObservationConstellationRequest) request;
-						str = observationRequest.getLocation() == null? "N/A" : Double.toString((observationRequest.getLocation().getLatitude()));
+						str = observationRequest.getLocation() == null? "N/A" : Double.toString((Math.toDegrees(observationRequest.getLocation().getLatitude())));
 					}
 					break;
 

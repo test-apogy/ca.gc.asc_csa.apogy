@@ -14,22 +14,19 @@
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
-
-import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
-import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
-import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest} object.
@@ -160,5 +157,4 @@ public class ObservationConstellationRequestItemProvider extends AbstractConstel
 				(ApogyExamplesSatellitePackage.Literals.OBSERVATION_CONSTELLATION_REQUEST__LOCATION,
 				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 	}
-
 }
