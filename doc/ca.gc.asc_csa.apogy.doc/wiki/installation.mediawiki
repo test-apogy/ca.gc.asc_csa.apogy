@@ -17,10 +17,19 @@ Apogy is based on Eclipse platform [https://www.eclipse.org https://www.eclipse.
 # Launch the '''<ECLIPSE_HOME>/eclipse'''.
 # The '''Workspace Launcher''' dialog will prompt.  Select the location of a new or an existing workspace.  The workspace will contain the information related to your Apogy session.
 = Apogy =
-# Add the '''Apogy''' P2 Site:
+# Select Help->Install New Software...
+# On the Install Dialog, Click on Add...
+# Set the name to '''Apogy SDK'''
+# Set the Location to one of the following update site.
 ## Stable: [https://dl.bintray.com/apogy/Releases/0.5/ https://dl.bintray.com/apogy/Releases/0.5/] '''OR'''
 ## Latest: [https://dl.bintray.com/apogy/Develop/0.5/ https://dl.bintray.com/apogy/Develop/0.5/]
-# Install the following packages:
-## Apogy\Apogy SDK (You must select Apogy SDK only).
+# Click on '''OK'''
+# Expand Apogy and select the following packages
+## Apogy\Apogy SDK
+## Apogy\Apogy SDK Developer Resources
+## IMPORTANT NOTE! DO NOT SELECT Apogy\Apogy
+# Click on '''Next>'''
+# On '''Install Details''' page, click on '''Next>'''
+# On '''Review Licenses''' page, select '''Accept''' then click on '''Finish''' 
 = Known Issues =
 # export SWT_GTK3=0
