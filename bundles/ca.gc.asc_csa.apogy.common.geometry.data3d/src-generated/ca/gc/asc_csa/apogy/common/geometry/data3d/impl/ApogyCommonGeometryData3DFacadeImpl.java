@@ -52,7 +52,6 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 
@@ -878,10 +877,17 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 				
 				Vector3d u = new Vector3d(p1);
 				u.sub(p0);
-							
+				
+				Vector3d p0p2 = new Vector3d(p2);
+				p0p2.sub(p0);
+								
 				Vector3d v = new Vector3d();
 				v.cross(normal, u);
-					
+								
+				// Makes v as long as p0p2.
+				v.normalize();
+				v.scale(p0p2.length());
+								
 				double s = 0;
 				double t = 0;
 				

@@ -901,9 +901,9 @@ public class ApogyCommonGeometryData3DFacadeTest extends TestCase {
 		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 		
 		CartesianPositionCoordinates p0 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
-		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(0.3, 0, 0);
-		CartesianPositionCoordinates p2 = getFixture().createCartesianPositionCoordinates(0.3, 0.3, 1E-9);
-		CartesianPositionCoordinates p3 = getFixture().createCartesianPositionCoordinates(0, 0.3, 1E-4);
+		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(0.5, 0, 0);
+		CartesianPositionCoordinates p2 = getFixture().createCartesianPositionCoordinates(0.5, 1, 1E-9);
+		CartesianPositionCoordinates p3 = getFixture().createCartesianPositionCoordinates(0, 1, 1E-4);
 		
 		mesh.getPoints().add(p0);
 		mesh.getPoints().add(p1);
