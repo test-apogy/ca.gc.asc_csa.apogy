@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -900,9 +901,9 @@ public class ApogyCommonGeometryData3DFacadeTest extends TestCase {
 		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 		
 		CartesianPositionCoordinates p0 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
-		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(1, 0, 0);
-		CartesianPositionCoordinates p2 = getFixture().createCartesianPositionCoordinates(1, 1, 0);
-		CartesianPositionCoordinates p3 = getFixture().createCartesianPositionCoordinates(0, 1, 0);
+		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(0.3, 0, 0);
+		CartesianPositionCoordinates p2 = getFixture().createCartesianPositionCoordinates(0.3, 0.3, 1E-9);
+		CartesianPositionCoordinates p3 = getFixture().createCartesianPositionCoordinates(0, 0.3, 1E-4);
 		
 		mesh.getPoints().add(p0);
 		mesh.getPoints().add(p1);
@@ -916,17 +917,17 @@ public class ApogyCommonGeometryData3DFacadeTest extends TestCase {
 		mesh.getPolygons().add(t1);
 		
 		
-		CartesianCoordinatesSet pointCloud = getFixture().generatePointCloud(mesh, 0.01);
-		
-			
+		CartesianCoordinatesSet pointCloud = getFixture().generatePointCloud(mesh, 0.001);
+					
 		try 
 		{
 			// Export the point cloud to file.	
-			FileOutputStream fos = new FileOutputStream("/home/pallard/generatePointCloud.xyz");
+			System.out.println(System.getProperty("user.dir"));
+			FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir") + File.separator + "generatePointCloudPoints.xyz");
 			Data3DIO.INSTANCE.saveCoordinatesSetToXYZ(pointCloud, fos);
 		
 			// Export the mesh to file.
-			Data3DIO.INSTANCE.saveTriangularMeshAsASCII(mesh, "/home/pallard/mesh");			
+			Data3DIO.INSTANCE.saveTriangularMeshAsASCII(mesh, System.getProperty("user.dir") + File.separator + "generatePointCloudMesh");			
 		} 
 		catch (Exception e) 
 		{

@@ -52,6 +52,9 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -861,7 +864,7 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	public CartesianCoordinatesSet generatePointCloud(CartesianTriangularMesh cartesianCoordinatesMesh, double resolution) 
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
-		double pointGenerationResolution = resolution / 2.0;
+		double pointGenerationResolution = resolution;
 		for(CartesianTriangle triangle : cartesianCoordinatesMesh.getPolygons())
 		{
 			try
@@ -885,17 +888,17 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 				double deltaS = pointGenerationResolution / u.length();
 				double deltaT = pointGenerationResolution / v.length();
 				
-				while(s <= 1.0)
+				while(s <= (1.0 + deltaS))
 				{
 					Vector3d vs = new Vector3d(u);
 					vs.scale(s);
 					t = 0;
 					
-					while(t <= 1.0)
+					while(t <= (1.0 + deltaT))
 					{
 						Vector3d vt = new Vector3d(v);
 						vt.scale(t);					
-						vt.add(vs);
+						vt.add(vs);						
 						vt.add(p0);
 						
 						// Finds the projection of vt onto the triangle.
@@ -915,6 +918,11 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 					
 					s += deltaS;
 				}
+				
+				// Generates point on the edges.								
+				points.addAll(generatePointsOnSegment(p0, p1, resolution));
+				points.addAll(generatePointsOnSegment(p1, p2, resolution));
+				points.addAll(generatePointsOnSegment(p2, p0, resolution));								
 			}
 			catch(Throwable t)
 			{
@@ -925,29 +933,58 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 		CartesianCoordinatesSet pointCloud = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		pointCloud.getPoints().addAll(points);
 		
-//		// TODO : Subsample the point cloud using voxels.
+		Logger.INSTANCE.log(this.getClass().getName(), "Generated <" +  pointCloud.getPoints().size() + "> raw points.", EventSeverity.INFO);
+		return pointCloud;
+		
+//		// Subsample the point cloud using voxels.
 //		VoxelBased3DPointCloudResampler subSampler = ApogyCommonGeometryData3DFactory.eINSTANCE.createVoxelBased3DPointCloudResampler();
 //		subSampler.setResolutionX(resolution);
 //		subSampler.setResolutionY(resolution);
 //		subSampler.setResolutionZ(resolution);
-//		subSampler.setMinimumNumberOfPointPerVoxel(2);
+//		subSampler.setMinimumNumberOfPointPerVoxel(1);
 //		subSampler.setTileResolution(resolution);
 //		subSampler.setInput(pointCloud);		
 //		
 //		CartesianCoordinatesSet result = null;
 //		try 
 //		{
-//			result = subSampler.process(pointCloud);
+//			result = subSampler.process(pointCloud);			
 //		} 
 //		catch (Exception e) 
 //		{
 //			e.printStackTrace();
 //		}
-//		return result;
-		
-		return pointCloud;
+//		
+//		Logger.INSTANCE.log(this.getClass().getName(), "Generated <" +  result.getPoints().size() + "> final points.", EventSeverity.INFO);
+//		
+//		return result;				
 	}
 
+	private List<CartesianPositionCoordinates> generatePointsOnSegment(Point3d p0, Point3d p1, double resolution)
+	{
+		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
+		
+		Vector3d v = new Vector3d(p1);
+		v.sub(p0);
+		
+		double t = 0;
+		double deltaT = resolution / v.length();
+		
+		while(t <= (1.0 + deltaT))
+		{
+			Vector3d w = new Vector3d(v);
+			w.scale(deltaT);
+			w.add(p0);
+			
+			CartesianPositionCoordinates p = createCartesianPositionCoordinates(w.getX(), w.getY(), w.getZ());
+			points.add(p);
+			
+			t+= deltaT;
+		}
+		
+		return points;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
