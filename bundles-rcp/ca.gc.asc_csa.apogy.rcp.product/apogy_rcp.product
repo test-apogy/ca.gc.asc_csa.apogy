@@ -6,9 +6,7 @@
    <aboutInfo>
       <image path="/ca.gc.asc_csa.apogy.rcp/icons/about.gif"/>
       <text>
-         Symphony
-
-Apogy v0.5
+         Apogy v0.5
 
 Copyrights (c) Agence spatiale canadienne / Canadian Space Agency 2011-2016.  All rights reserved.
       </text>
@@ -26,10 +24,11 @@ Copyrights (c) Agence spatiale canadienne / Canadian Space Agency 2011-2016.  Al
       </vmArgsMac>
    </launcherArgs>
 
-   <windowImages i16="/ca.gc.asc_csa.apogy.rcp/icons/symphony_icon_16x16.gif" i32="/ca.gc.asc_csa.apogy.rcp/icons/symphony_icon_32x32.gif"/>
+   <windowImages i16="/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" i32="/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_32x32.gif"/>
 
    <splash
       location="ca.gc.asc_csa.apogy.rcp"
+      startupProgressRect="5,275,445,15"
       startupMessageRect="8,252,445,20"
       startupForegroundColor="7F7F7F" />
    <launcher>

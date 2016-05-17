@@ -6,31 +6,35 @@
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-            name="Apogy"
-            application="org.eclipse.e4.ui.workbench.swt.E4Application">
-         <property
-               name="lifeCycleURI"
-               value="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.E4LifeCycle">
-         </property>
-         <property
-               name="appName"
-               value="Apogy">
-         </property>
-         <property
-               name="aboutText"
-               value="Symphony&#x0A;&#x0A;Apogy v0.5&#x0A;&#x0A;Copyrights (c) Agence spatiale canadienne / Canadian Space Agency 2011-2016.  All rights reserved.">
-         </property>
+            application="org.eclipse.e4.ui.workbench.swt.E4Application"
+            name="Apogy">
          <property
                name="windowImages"
                value="icons/apogy_icon_16x16.gif,icons/apogy_icon_32x32.gif">
+         </property>
+         <property
+               name="aboutText"
+               value="Apogy v0.5&#x0A;&#x0A;Copyrights (c) Agence spatiale canadienne / Canadian Space Agency 2011-2016.  All rights reserved.">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/about.gif">
          </property>
          <property
                name="startupForegroundColor"
                value="7F7F7F">
          </property>
          <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
                name="startupMessageRect"
                value="8,252,445,20">
+         </property>
+         <property
+               name="appName"
+               value="Apogy">
          </property>
          <property
                name="preferenceCustomization"
