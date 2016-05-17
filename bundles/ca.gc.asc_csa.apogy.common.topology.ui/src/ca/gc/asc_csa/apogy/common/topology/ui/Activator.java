@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -108,6 +109,30 @@ public class Activator extends AbstractUIPlugin {
 	public static Activator getDefault() 
 	{
 		return plugin;
+	}
+	
+	public GraphicsContext getGraphicsContextForObject(Object object)
+	{
+		GraphicsContext adapter = null;
+		
+		Iterator<GraphicsContextAdapter> it = getRegisteredGraphicsContextAdapters().iterator();
+		while(it.hasNext() && adapter == null)
+		{
+			try
+			{
+				GraphicsContextAdapter gca = it.next();
+				if(gca.isAdapterFor(object))
+				{
+					adapter = gca.getAdapter(object, null);
+				}
+			}
+			catch(Throwable t)
+			{
+				t.printStackTrace();
+			}
+		}
+		
+		return adapter;
 	}
 	
 	public AdapterFactory<NodePresentationAdapter, NodePresentation, Node, Object> getNodePresentationAdapterFactory() 

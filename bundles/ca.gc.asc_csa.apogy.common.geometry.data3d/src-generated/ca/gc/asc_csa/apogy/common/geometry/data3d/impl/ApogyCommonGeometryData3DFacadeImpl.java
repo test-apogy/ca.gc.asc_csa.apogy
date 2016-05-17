@@ -34,6 +34,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
@@ -48,9 +52,6 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.RGBAColor;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -855,6 +856,101 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public CartesianCoordinatesSet generatePointCloud(CartesianTriangularMesh cartesianCoordinatesMesh, double resolution) 
+	{
+		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
+		double pointGenerationResolution = resolution / 2.0;
+		for(CartesianTriangle triangle : cartesianCoordinatesMesh.getPolygons())
+		{
+			try
+			{
+				// Gets the normal of the triangle.
+				Vector3d normal = triangle.getNormal();
+				
+				Point3d p0 = triangle.getVertices().get(0).asPoint3d();
+				Point3d p1 = triangle.getVertices().get(1).asPoint3d();
+				Point3d p2 = triangle.getVertices().get(2).asPoint3d();
+				
+				Vector3d u = new Vector3d(p1);
+				u.sub(p0);
+							
+				Vector3d v = new Vector3d();
+				v.cross(normal, u);
+					
+				double s = 0;
+				double t = 0;
+				
+				double deltaS = pointGenerationResolution / u.length();
+				double deltaT = pointGenerationResolution / v.length();
+				
+				while(s <= 1.0)
+				{
+					Vector3d vs = new Vector3d(u);
+					vs.scale(s);
+					t = 0;
+					
+					while(t <= 1.0)
+					{
+						Vector3d vt = new Vector3d(v);
+						vt.scale(t);					
+						vt.add(vs);
+						vt.add(p0);
+						
+						// Finds the projection of vt onto the triangle.
+						CartesianPositionCoordinates p = createCartesianPositionCoordinates(vt.getX(), vt.getY(), vt.getZ());
+						CartesianPositionCoordinates point = Geometry3DUtilities.getProjectionInPolygonPlane(p, triangle);
+						
+						if(point != null)
+						{
+							if(Geometry3DUtilities.isInsidePolygon(point, triangle))
+							{							
+								points.add(point);
+							}
+						}
+																		
+						t+= deltaT;
+					}
+					
+					s += deltaS;
+				}
+			}
+			catch(Throwable t)
+			{
+				t.printStackTrace();
+			}	
+		}
+		
+		CartesianCoordinatesSet pointCloud = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		pointCloud.getPoints().addAll(points);
+		
+//		// TODO : Subsample the point cloud using voxels.
+//		VoxelBased3DPointCloudResampler subSampler = ApogyCommonGeometryData3DFactory.eINSTANCE.createVoxelBased3DPointCloudResampler();
+//		subSampler.setResolutionX(resolution);
+//		subSampler.setResolutionY(resolution);
+//		subSampler.setResolutionZ(resolution);
+//		subSampler.setMinimumNumberOfPointPerVoxel(2);
+//		subSampler.setTileResolution(resolution);
+//		subSampler.setInput(pointCloud);		
+//		
+//		CartesianCoordinatesSet result = null;
+//		try 
+//		{
+//			result = subSampler.process(pointCloud);
+//		} 
+//		catch (Exception e) 
+//		{
+//			e.printStackTrace();
+//		}
+//		return result;
+		
+		return pointCloud;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -917,6 +1013,8 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 				return null;
 			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST:
 				return concatenateTriangularMeshes((List<CartesianTriangularMesh>)arguments.get(0));
+			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE___GENERATE_POINT_CLOUD__CARTESIANTRIANGULARMESH_DOUBLE:
+				return generatePointCloud((CartesianTriangularMesh)arguments.get(0), (Double)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
