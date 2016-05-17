@@ -10,7 +10,6 @@ Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.jgrapht;bundle-version="0.8.2";visibility:=reexport,
- org.eclipse.ui;bundle-version="3.106.1";visibility:=reexport,
  ca.gc.asc_csa.apogy.common.log,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
