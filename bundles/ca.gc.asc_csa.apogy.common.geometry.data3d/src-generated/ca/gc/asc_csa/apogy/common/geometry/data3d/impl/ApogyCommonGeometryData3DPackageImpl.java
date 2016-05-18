@@ -1949,6 +1949,15 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCommonGeometryData3DFacade__GeneratePointCloud__CartesianTriangularMesh_double() {
+		return apogyCommonGeometryData3DFacadeEClass.getEOperations().get(27);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getData3DIO() {
 		return data3DIOEClass;
 	}
@@ -2548,6 +2557,7 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D);
 		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE);
 		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST);
+		createEOperation(apogyCommonGeometryData3DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DFACADE___GENERATE_POINT_CLOUD__CARTESIANTRIANGULARMESH_DOUBLE);
 
 		data3DIOEClass = createEClass(DATA3_DIO);
 		createEOperation(data3DIOEClass, DATA3_DIO___LOAD_TRIANGULAR_MESH__STRING);
@@ -3207,6 +3217,10 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		g2 = createEGenericType(this.getCartesianTriangularMesh());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "listOfTriangularMeshes", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonGeometryData3DFacade__GeneratePointCloud__CartesianTriangularMesh_double(), this.getCartesianCoordinatesSet(), "generatePointCloud", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCartesianTriangularMesh(), "cartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "resolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(data3DIOEClass, Data3DIO.class, "Data3DIO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4033,6 +4047,12 @@ public class ApogyCommonGeometryData3DPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "*\n@aparam xyzData The array of n points organize as [0..n][x,y,z]."
+		   });	
+		addAnnotation
+		  (getApogyCommonGeometryData3DFacade__GeneratePointCloud__CartesianTriangularMesh_double(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nGenerate a point cloud from a CartesianTriangularMesh at a given resolution.\n@param cartesianCoordinatesMesh The Cartesian Triangular Mesh.\n@param resolution The target resolution of the point cloud.\n@return A CartesianCoordinatesSet containing the points."
 		   });	
 		addAnnotation
 		  (data3DIOEClass, 

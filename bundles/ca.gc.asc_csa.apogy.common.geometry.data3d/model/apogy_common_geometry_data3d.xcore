@@ -773,6 +773,15 @@ class ApogyCommonGeometryData3DFacade
 	op void updateCartesianCoordinatesSet(CartesianCoordinatesSet cartesianCoordinatesSet, DoubleArrayOfArray xyzData)
 	
 	op CartesianTriangularMesh concatenateTriangularMeshes(List<CartesianTriangularMesh> listOfTriangularMeshes)
+	
+	/**
+	 * Generate a point cloud from a CartesianTriangularMesh at a given resolution.
+	 * @param cartesianCoordinatesMesh The Cartesian Triangular Mesh.
+	 * @param resolution The target resolution of the point cloud.
+	 * @return A CartesianCoordinatesSet containing the points.
+	 */
+	op CartesianCoordinatesSet generatePointCloud(CartesianTriangularMesh cartesianCoordinatesMesh, double resolution)
+	
 }
 
 /**

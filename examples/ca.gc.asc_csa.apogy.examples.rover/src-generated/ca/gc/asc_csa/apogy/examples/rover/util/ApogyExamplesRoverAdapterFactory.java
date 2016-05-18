@@ -18,6 +18,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.examples.rover.*;
 
 /**
@@ -102,6 +103,10 @@ public class ApogyExamplesRoverAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseDisposable(Disposable object) {
 				return createDisposableAdapter();
+			}
+			@Override
+			public Adapter caseNamed(Named object) {
+				return createNamedAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -207,6 +212,20 @@ public class ApogyExamplesRoverAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createDisposableAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
+	 * @generated
+	 */
+	public Adapter createNamedAdapter() {
 		return null;
 	}
 

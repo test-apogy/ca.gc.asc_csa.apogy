@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.common.topology.ui.jme3.views;
 
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
@@ -70,10 +71,19 @@ public class JME3Topology3DView extends AbstractTopology3DView
 	@Override
 	public void updateSelection(ISelection selection) 
 	{
-		GraphicsContext gc = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(createTestTopology());
-		getTopologyViewer().setInput(gc);		
+		if(selection instanceof IStructuredSelection)
+		{
+			IStructuredSelection ss = (IStructuredSelection) selection;
+			
+			GraphicsContext gc = ca.gc.asc_csa.apogy.common.topology.ui.Activator.getDefault().getGraphicsContextForObject(ss.getFirstElement());
+			
+			if(gc != null)
+			{
+				getTopologyViewer().setInput(gc);
+			}
 		
-		updatePartName();
+			updatePartName();
+		}
 	}
 
 	@Override
