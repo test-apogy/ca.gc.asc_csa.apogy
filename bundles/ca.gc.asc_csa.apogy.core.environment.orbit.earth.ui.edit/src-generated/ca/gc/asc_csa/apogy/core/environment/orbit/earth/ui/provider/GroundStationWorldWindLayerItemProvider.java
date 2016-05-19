@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -91,7 +90,7 @@ public class GroundStationWorldWindLayerItemProvider extends EarthSurfaceLocatio
 	 */
 	protected void addReferenceAltitudePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_GroundStationWorldWindLayer_referenceAltitude_feature"),

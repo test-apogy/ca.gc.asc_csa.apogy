@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -75,7 +74,7 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 	 */
 	protected void addResolutionXPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VoxelBased3DPointCloudResampler_resolutionX_feature"),
@@ -97,7 +96,7 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 	 */
 	protected void addResolutionYPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VoxelBased3DPointCloudResampler_resolutionY_feature"),
@@ -119,7 +118,7 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 	 */
 	protected void addResolutionZPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VoxelBased3DPointCloudResampler_resolutionZ_feature"),
@@ -163,7 +162,7 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 	 */
 	protected void addTileResolutionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VoxelBased3DPointCloudResampler_tileResolution_feature"),

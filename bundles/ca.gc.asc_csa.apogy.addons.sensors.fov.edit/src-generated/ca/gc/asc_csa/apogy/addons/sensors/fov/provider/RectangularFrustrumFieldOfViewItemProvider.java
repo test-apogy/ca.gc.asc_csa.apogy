@@ -27,7 +27,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView} object.
@@ -77,7 +76,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 	protected void addHorizontalFieldOfViewAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RectangularFrustrumFieldOfView_horizontalFieldOfViewAngle_feature"),
@@ -100,7 +99,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 	protected void addVerticalFieldOfViewAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RectangularFrustrumFieldOfView_verticalFieldOfViewAngle_feature"),

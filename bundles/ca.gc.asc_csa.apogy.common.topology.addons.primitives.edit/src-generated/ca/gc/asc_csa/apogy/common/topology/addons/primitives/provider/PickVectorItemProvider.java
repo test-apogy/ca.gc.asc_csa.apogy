@@ -26,8 +26,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector;
 import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector} object.
  * <!-- begin-user-doc -->
@@ -74,7 +72,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 	 */
 	protected void addIntersectionDistancePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PickVector_intersectionDistance_feature"),

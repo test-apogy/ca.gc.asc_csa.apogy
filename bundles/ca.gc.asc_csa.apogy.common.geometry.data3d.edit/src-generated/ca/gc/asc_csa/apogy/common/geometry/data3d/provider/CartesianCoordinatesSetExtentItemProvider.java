@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -91,7 +90,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 	 */
 	protected void addXMinPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_xMin_feature"),
@@ -113,7 +112,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 	 */
 	protected void addXMaxPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_xMax_feature"),
@@ -135,7 +134,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 	 */
 	protected void addYMinPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_yMin_feature"),
@@ -157,7 +156,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 	 */
 	protected void addYMaxPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_yMax_feature"),
@@ -179,7 +178,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 	 */
 	protected void addZMinPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_zMin_feature"),
@@ -201,7 +200,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 	 */
 	protected void addZMaxPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_zMax_feature"),
@@ -223,7 +222,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 	 */
 	protected void addXDimensionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_xDimension_feature"),
@@ -245,7 +244,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 	 */
 	protected void addYDimensionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_yDimension_feature"),
@@ -267,7 +266,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 	 */
 	protected void addZDimensionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_zDimension_feature"),

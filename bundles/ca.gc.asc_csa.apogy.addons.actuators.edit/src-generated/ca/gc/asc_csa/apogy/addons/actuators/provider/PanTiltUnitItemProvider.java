@@ -26,7 +26,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
 import ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit} object.
@@ -80,7 +79,7 @@ public class PanTiltUnitItemProvider
   protected void addCurrentPanAnglePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_currentPanAngle_feature"),
@@ -103,7 +102,7 @@ public class PanTiltUnitItemProvider
   protected void addCurrentTiltAnglePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_currentTiltAngle_feature"),
@@ -126,7 +125,7 @@ public class PanTiltUnitItemProvider
   protected void addCommandedPanAnglePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_commandedPanAngle_feature"),
@@ -149,7 +148,7 @@ public class PanTiltUnitItemProvider
   protected void addCommandedTiltAnglePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_commandedTiltAngle_feature"),

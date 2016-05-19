@@ -26,7 +26,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 
 /**
@@ -104,7 +103,7 @@ public class SunVector3DToolItemProvider
 	 */
 	protected void addVectorLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_vectorLength_feature"),
@@ -126,7 +125,7 @@ public class SunVector3DToolItemProvider
 	 */
 	protected void addEndPointRadiusPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_endPointRadius_feature"),
@@ -148,7 +147,7 @@ public class SunVector3DToolItemProvider
 	 */
 	protected void addSunIntensityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_sunIntensity_feature"),
@@ -170,7 +169,7 @@ public class SunVector3DToolItemProvider
 	 */
 	protected void addCurrentDayMaximumSunIntensityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_currentDayMaximumSunIntensity_feature"),
@@ -192,7 +191,7 @@ public class SunVector3DToolItemProvider
 	 */
 	protected void addCurrentSunIntensityPercentagePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_currentSunIntensityPercentage_feature"),
