@@ -27,9 +27,7 @@
          </property>
          <property
                name="aboutText"
-               value="Apogy v0.5
-
-Copyrights (c) Agence spatiale canadienne / Canadian Space Agency 2011-2016.  All rights reserved.">
+               value="Apogy v0.5">
          </property>
          <property
                name="aboutImage"
@@ -46,6 +44,10 @@ Copyrights (c) Agence spatiale canadienne / Canadian Space Agency 2011-2016.  Al
          <property
                name="startupMessageRect"
                value="8,252,445,20">
+         </property>
+         <property
+               name="appName"
+               value="Apogy">
          </property>
          <property
                name="preferenceCustomization"
