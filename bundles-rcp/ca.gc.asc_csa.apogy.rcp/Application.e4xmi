@@ -40,6 +40,7 @@
                 </menus>
                 <toolbar xmi:id="_qp3gYh4CEeaG7shzS10V6g" elementId="org.eclipse.ui.views.ProblemView"/>
               </children>
+              <children xsi:type="basic:Part" xmi:id="_hjYBQB6XEeaG7shzS10V6g" elementId="ca.gc.asc_csa.apogy.rcp.part.SamplePart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.parts.SamplePart" label="Sample"/>
             </children>
           </children>
         </children>

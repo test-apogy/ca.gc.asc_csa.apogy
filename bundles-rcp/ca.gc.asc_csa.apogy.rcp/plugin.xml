@@ -16,6 +16,16 @@
 <plugin>
 
    <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="ca.gc.asc_csa.apogy.rcp.Application">
+         </run>
+      </application>
+   </extension>
+
+   <extension
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
@@ -49,10 +59,18 @@
                name="appName"
                value="Apogy">
          </property>
-         <property
-               name="preferenceCustomization"
-               value="plugin_customization.ini">
-         </property>
+		 <property 
+		 		name="applicationXMI" 
+		 		value="ca.gc.asc_csa.apogy.rcp/Application.e4xmi"> 
+		 </property>
+   <property
+         name="preferenceCustomization"
+         value="plugin_customization.ini">
+   </property>
+         <!--<property
+		       name="cssTheme"
+		       value="org.eclipse.e4.ui.css.theme.e4_default">
+		 </property>-->
       </product>
    </extension>
 
