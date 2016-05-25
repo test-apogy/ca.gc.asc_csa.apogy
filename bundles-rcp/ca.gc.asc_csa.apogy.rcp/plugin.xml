@@ -28,10 +28,23 @@
 -->
 
    <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="ca.gc.asc_csa.apogy.rcp.Perspective"
+            id="ca.gc.asc_csa.apogy.rcp.perspective">
+      </perspective>
+   </extension>
+
+   <extension
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
+<<<<<<< HEAD
             application="org.eclipse.ui.ide.workbench"
+=======
+            application="ca.gc.asc_csa.apogy.rcp.application"
+>>>>>>> branch 'feature-apogy_rcp' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
             name="Apogy">
          <property
                name="windowImages"
@@ -68,11 +81,24 @@
 <!--		 <property 
 		 		name="applicationXMI" 
 		 		value="ca.gc.asc_csa.apogy.rcp/Application.e4xmi"> 
+<<<<<<< HEAD
 		 </property>-->
          <!--<property
+=======
+		 </property>
+         <property
+>>>>>>> branch 'feature-apogy_rcp' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
 		       name="cssTheme"
 		       value="org.eclipse.e4.ui.css.theme.e4_default">
-		 </property>-->
+		 </property>
+<property
+    name="applicationCSS"
+    value="platform:/plugin/org.eclipse.e4.ui.examples.legacy.workbench/css/xp-silver-legacy.css">
+</property>
+<property
+      name="preferenceCustomization"
+      value="plugin_customization.ini">
+</property>
       </product>
    </extension>
 
