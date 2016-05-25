@@ -26,9 +26,9 @@
 
    <splash
       location="ca.gc.asc_csa.apogy.rcp"
-      startupProgressRect="5,275,445,15"
-      startupMessageRect="8,252,445,20"
-      startupForegroundColor="7F7F7F" />
+      startupProgressRect="30,275,395,4"
+      startupMessageRect="30,250,395,20"
+      startupForegroundColor="2E3436" />
    <launcher>
       <linux icon="/ca.gc.asc_csa.apogy.rcp.product/icons/apogy_icon.xpm"/>
       <solaris/>
