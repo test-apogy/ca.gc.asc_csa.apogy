@@ -35,16 +35,11 @@
             id="ca.gc.asc_csa.apogy.rcp.perspective">
       </perspective>
    </extension>
-
    <extension
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-<<<<<<< HEAD
             application="org.eclipse.ui.ide.workbench"
-=======
-            application="ca.gc.asc_csa.apogy.rcp.application"
->>>>>>> branch 'feature-apogy_rcp' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
             name="Apogy">
          <property
                name="windowImages"
@@ -74,31 +69,21 @@
                name="appName"
                value="Apogy">
          </property>
-         <property
-               name="preferenceCustomization"
-               value="plugin_customization.ini">
-         </property>
-<!--		 <property 
-		 		name="applicationXMI" 
-		 		value="ca.gc.asc_csa.apogy.rcp/Application.e4xmi"> 
-<<<<<<< HEAD
-		 </property>-->
-         <!--<property
-=======
-		 </property>
-         <property
->>>>>>> branch 'feature-apogy_rcp' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
-		       name="cssTheme"
-		       value="org.eclipse.e4.ui.css.theme.e4_default">
-		 </property>
-<property
-    name="applicationCSS"
-    value="platform:/plugin/org.eclipse.e4.ui.examples.legacy.workbench/css/xp-silver-legacy.css">
-</property>
-<property
-      name="preferenceCustomization"
-      value="plugin_customization.ini">
-</property>
+		  <property
+				name="cssTheme"
+				value="org.eclipse.e4.ui.css.theme.e4_default">
+		  </property>
+          <property
+                name="buildIdLocation"
+                value="10,160">
+          </property>
+          <property
+                name="buildIdSize"
+                value="404,40">
+          </property>		
+ 		  <!-- <property name="eclipse.buildId" value="${unqualifiedVersion}.${buildQualifier}" />-->
+ 		  <property name="eclipse.buildId" value="0.5" />-->
+                     
       </product>
    </extension>
 

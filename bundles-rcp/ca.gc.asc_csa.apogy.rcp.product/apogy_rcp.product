@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<<<<<<< HEAD
 <product name="Apogy" uid="apogy_rcp.product" id="ca.gc.asc_csa.apogy.rcp.product" application="org.eclipse.ui.ide.workbench" version="0.5.0.qualifier" useFeatures="true" includeLaunchers="true">
-=======
-<product name="Apogy" uid="apogy_rcp.product" id="ca.gc.asc_csa.apogy.rcp.product" application="ca.gc.asc_csa.apogy.rcp.application" version="0.5.0.qualifier" useFeatures="true" includeLaunchers="true">
->>>>>>> branch 'feature-apogy_rcp' of git@bitbucket.org:apogy/ca.gc.asc_csa.apogy.git
 
    <aboutInfo>
       <image path="/ca.gc.asc_csa.apogy.rcp/icons/about.gif"/>
@@ -146,6 +142,7 @@
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <property name="eclipse.buildId" value="${unqualifiedVersion}.${buildQualifier}" />
    </configurations>
 
 </product>
