@@ -52,10 +52,14 @@
 				name="applicationXMI"
 				value="ca.gc.asc_csa.apogy.rcp/Application.e4xmi">
 		  </property>         
-		  <property
+<!--		  <property
 				name="cssTheme"
 				value="org.eclipse.e4.ui.css.theme.e4_default">
-		  </property>
+		  </property>-->
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/ca.gc.asc_csa.apogy.rcp/css/default.css">
+         </property>		  
           <property
                 name="buildIdLocation"
                 value="10,160">
