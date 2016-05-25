@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.window.main" label="Apogy" width="500" height="400">
-    <children xsi:type="advanced:PerspectiveStack" xmi:id="_6wlLkMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.ide.perspectivestack">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_6wlLkMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.ide.perspectivestack" selectedElement="_6wlLkcgZEeSyMNYR5xypkQ">
       <children xsi:type="advanced:Perspective" xmi:id="_6wlLkcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.perspective.overview" label="Overview">
         <children xsi:type="basic:PartSashContainer" xmi:id="_XuI6UB6_Eea0FN5nav8bqQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.0" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_08EpkB6-Eea0FN5nav8bqQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.0">
             <children xsi:type="advanced:Placeholder" xmi:id="_Ccik8B6_Eea0FN5nav8bqQ" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_GzU_AB6_Eea0FN5nav8bqQ"/>
             <children xsi:type="basic:Part" xmi:id="_0YvysB7BEea0FN5nav8bqQ" elementId="ca.gc.asc_csa.apogy.rcp.part.sample" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.parts.SamplePart" label="Sample" closeable="true"/>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_PpUA4B7CEea0FN5nav8bqQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.1"/>
+          <children xsi:type="basic:PartStack" xmi:id="_PpUA4B7CEea0FN5nav8bqQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.1">
+            <children xsi:type="basic:Part" xmi:id="_gGKvYCKoEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.part.sample" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.parts.SamplePart" label="Sample"/>
+          </children>
         </children>
       </children>
     </children>
