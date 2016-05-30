@@ -62,7 +62,7 @@ public class ScriptExecutorHandler extends AbstractHandler {
 				JavaScriptProgram jsProgram = getJavaScriptProgram(event);
 
 				try {
-					ScriptExecutor.execute(jsProgram);
+					ScriptExecutor.executeProgram(jsProgram);
 				} catch (Exception e) {
 					Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage()));
 				}

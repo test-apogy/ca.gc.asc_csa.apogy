@@ -83,7 +83,7 @@ public class ScriptExecutorDebugHandler extends AbstractHandler {
 				ApogyRhinoDebuggerFrontend debug = new ApogyRhinoDebuggerFrontend(projectName);
 
 				try {
-					ScriptExecutor.execute(jsProgram, debug);
+					ScriptExecutor.executeProgram(jsProgram, debug);
 				} catch (Exception e) {
 					Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage()));
 				}

@@ -13,7 +13,6 @@
 package ca.gc.asc_csa.apogy.core.programs.javascript;
 
 import java.io.FileReader;
-import java.io.Reader;
 import java.lang.reflect.Field;
 import java.net.ServerSocket;
 import java.text.MessageFormat;
@@ -24,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.commons.io.IOUtils;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.wst.jsdt.debug.internal.rhino.debugger.DebugSessionManager;
@@ -54,15 +54,15 @@ import ca.gc.asc_csa.apogy.core.invocator.Variable;
 public class ScriptExecutor {
 	private static final String LOCALHOST = "127.0.0.1";
 
-	
-	public static void execute(JavaScriptProgram program) throws Exception {
-		execute(program, null);
+	public static void executeProgram(JavaScriptProgram program) throws Exception {
+		executeProgram(program, null);
 	}
-
-	public static void execute(JavaScriptProgram program, RhinoDebuggerFrontend debug) throws Exception {
+	
+	public static void executeProgram(JavaScriptProgram program, RhinoDebuggerFrontend debug) throws Exception {
 		String relativePath = program.getScriptPath();
 		IPath absolutePath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append(relativePath);
-		execute(program, new FileReader(absolutePath.toOSString()), new FileReader(absolutePath.toOSString()), debug);
+		String source = IOUtils.toString(new FileReader(absolutePath.toOSString()));
+		executeString(program, source, debug);
 	}
 
 	/**
@@ -75,8 +75,8 @@ public class ScriptExecutor {
 	 * @throws Exception
 	 *             might throw if debugger.start() fails
 	 */
-	public static void execute(JavaScriptProgram program, Reader reader1, Reader reader2) throws Exception {
-		execute(program, reader1, reader2, null);
+	public static void executeString(JavaScriptProgram program, String source) throws Exception {
+		executeString(program, source, null);
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class ScriptExecutor {
 	 * @throws Exception
 	 *             might throw if debugger.start() fails
 	 */
-	private static void execute(JavaScriptProgram program, Reader reader1, Reader reader2, RhinoDebuggerFrontend debuggerFrontend) throws Exception {
+	private static void executeString(JavaScriptProgram program, String source, RhinoDebuggerFrontend debuggerFrontend) throws Exception {
 		String relativePath = program.getScriptPath();
 		IPath absolutePath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append(relativePath);
 
@@ -101,7 +101,7 @@ public class ScriptExecutor {
 		env.setRecordingLocalJsDocComments(true);
 		env.setAllowSharpComments(true);
 		env.setRecordingComments(true);
-		AstRoot root = new Parser(env).parse(reader1, absolutePath.toOSString(), 1);
+		AstRoot root = new Parser(env).parse(source, absolutePath.toOSString(), 1);
 		variables = getVariableOrder(root, variables);
 
 		ContextFactory factory = new ContextFactory();
@@ -122,7 +122,7 @@ public class ScriptExecutor {
 				Scriptable scope = context.initStandardObjects();
 				List<VariableProxy> proxies = createJavaScriptProxies(variables, scope, program);
 
-				context.evaluateReader(scope, reader2, absolutePath.toOSString(), 1, null);
+				context.evaluateString(scope, source, absolutePath.toOSString(), 1, null);
 
 				Function main = (Function) scope.get("main", scope);
 				main.call(context, scope, scope, proxies.toArray());

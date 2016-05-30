@@ -12,12 +12,11 @@
 
 package ca.gc.asc_csa.apogy.core.programs.javascript.tests;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.io.IOUtils;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.junit.Assert;
@@ -55,10 +54,9 @@ public class ScriptExecutorTest {
 		InvocatorSession invocatorSession = loadInvocatorSession("platform:/plugin/ca.gc.asc_csa.apogy.core.programs.javascript.tests/sessions/rover.sym", ROVER_DATA_PRODUCTS_LIST_NAME);
 		JavaScriptProgram program = (JavaScriptProgram) getProgramByName(invocatorSession, "Rover Demo");
 		URL url = new URL(program.getScriptPath());
-		BufferedReader in = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
-		BufferedReader in2 = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
+		String source = IOUtils.toString(url.openStream());
 
-		ScriptExecutor.execute(program, in, in2);
+		ScriptExecutor.executeString(program, source);
 
 		List<ExpectedOperationCall> expectedOperationCalls = new ArrayList<>();
 		ExpectedOperationCall expectedOperationCall;
@@ -110,10 +108,9 @@ public class ScriptExecutorTest {
 				MOBILE_PLATFORM_DATA_PRODUCTS_LIST_NAME);
 		JavaScriptProgram program = (JavaScriptProgram) getProgramByName(invocatorSession, "Mobile Platform Demo");
 		URL url = new URL(program.getScriptPath());
-		BufferedReader in = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
-		BufferedReader in2 = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
+		String source = IOUtils.toString(url.openStream());
 
-		ScriptExecutor.execute(program, in, in2);
+		ScriptExecutor.executeString(program, source);
 
 		List<ExpectedOperationCall> expectedOperationCalls = new ArrayList<>();
 		ExpectedOperationCall expectedOperationCall;
