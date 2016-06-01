@@ -70,10 +70,10 @@
           </property>		          
  		  <!-- <property name="eclipse.buildId" value="${unqualifiedVersion}.${buildQualifier}" />-->
  		  <property name="eclipse.buildId" value="0.5" />
-          <property
-              name="preferenceCustomization"
-              value="plugin_customization.ini">
-          </property>
+     <property
+           name="preferenceCustomization"
+           value="plugin_customization.ini">
+     </property>
                      
       </product>
    </extension>

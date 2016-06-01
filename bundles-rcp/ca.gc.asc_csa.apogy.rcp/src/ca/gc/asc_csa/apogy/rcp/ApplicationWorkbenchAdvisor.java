@@ -2,6 +2,8 @@ package ca.gc.asc_csa.apogy.rcp;
 
 import java.net.URL;
 
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.application.IWorkbenchConfigurer;
@@ -21,6 +23,11 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 	
     public WorkbenchWindowAdvisor createWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
         return new ApplicationWorkbenchWindowAdvisor(configurer);
+    }
+    
+    @Override
+    public IAdaptable getDefaultPageInput() {
+    	return ResourcesPlugin.getWorkspace().getRoot();
     }
 
 	public String getInitialWindowPerspectiveId() {
