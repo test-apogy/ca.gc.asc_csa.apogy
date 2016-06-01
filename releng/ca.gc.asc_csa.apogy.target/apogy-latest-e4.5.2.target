@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="Apogy Latest Eclipse 4.5.2" sequenceNumber="4">
+<locations>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="ca.gc.asc_csa.apogy.sdk.feature.feature.group" version="0.5.0.201605251638"/>
+<unit id="ca.gc.asc_csa.apogy.sdk.feature.source.feature.group" version="0.5.0.201605251638"/>
+<repository location="https://dl.bintray.com/apogy/Develop/0.5/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.sdk.ide" version="4.5.2.M20160212-1500"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.5/R-4.5.2-201602121500/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.emf.ecore.xcore.sdk.feature.group" version="1.3.2.v20160209-0349"/>
+<repository location="http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/"/>
+</location>
+</locations>
+</target>
