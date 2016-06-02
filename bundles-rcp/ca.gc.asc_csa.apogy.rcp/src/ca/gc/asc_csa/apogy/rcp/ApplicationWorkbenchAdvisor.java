@@ -25,6 +25,12 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
         return new ApplicationWorkbenchWindowAdvisor(configurer);
     }
     
+    /*
+     * (non-Javadoc)
+     * @see org.eclipse.ui.application.WorkbenchAdvisor#getDefaultPageInput()
+     * This is method is overridden to ensure the Project Explorer view displays 
+     * the content of the workspace once started.
+     */
     @Override
     public IAdaptable getDefaultPageInput() {
     	return ResourcesPlugin.getWorkspace().getRoot();
@@ -33,7 +39,12 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 	public String getInitialWindowPerspectiveId() {
 		return "ca.gc.asc_csa.apogy.rcp.perspective.overview";
 	} 
-	
+
+	/*
+	 * (non-Javadoc)
+	 * @see org.eclipse.ui.application.WorkbenchAdvisor#initialize(org.eclipse.ui.application.IWorkbenchConfigurer)
+	 * This is method is overridden to ensure the icons appear properly in the Project Explorer view.
+	 */
 	@Override
 	public void initialize(IWorkbenchConfigurer configurer) {
 	    super.initialize(configurer);
@@ -48,7 +59,7 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 	    declareWorkbenchImage(configurer, ideBundle,
 	        IDE.SharedImages.IMG_OBJ_PROJECT, PATH_OBJECT + "prj_obj.gif", true);
 	    declareWorkbenchImage(configurer, ideBundle,
-	        IDE.SharedImages.IMG_OBJ_PROJECT_CLOSED, PATH_OBJECT + "cprj_obj.gif", true);
+	        IDE.SharedImages.IMG_OBJ_PROJECT_CLOSED, PATH_OBJECT + "cprj_obj.gif", true);	    
 	}
 	 
 	private void declareWorkbenchImage(IWorkbenchConfigurer configurer_p,

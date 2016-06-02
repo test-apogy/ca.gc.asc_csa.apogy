@@ -25,23 +25,25 @@
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_6wlLisgZEeSyMNYR5xypkQ" elementId="file" label="File">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_vkpqQB4AEeaLw4lnv3trQg" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.new" label="New" command="_C4Fq0B32EeaqJNPAWI4oCw"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLi8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.file.open" label="Open" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/sample.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjMgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.save" label="Save" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/save_edit.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.quit" label="Quit" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.quit" label="Quit" command="_WnJ38CjiEeaYVMfJA5sKMA"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_PvYPQCgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.menu.window" label="Window">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_Zf348CgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.showview" label="Show View" command="_CZNp8CgcEeau5bAVKAeRVA"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_jJQOACgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.showperspective" label="Show Perspective" command="_hSHGMCgbEeau5bAVKAeRVA"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_2vSSACjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.3"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_3R_WcCjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.preferences" label="Preferences" command="_WnLtICjiEeaYVMfJA5sKMA"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_6wlLjsgZEeSyMNYR5xypkQ" elementId="help_" label="Help">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLj8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.about" label="About" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_JfZ-kCjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.helpcontents" label="Help Contents" command="_Wm-RwCjiEeaYVMfJA5sKMA"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_spIW4CgdEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.1"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_X0KBICjjEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.update" label="Update" command="_R7XBwCjjEeaYVMfJA5sKMA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_-RQOoCjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.installationdetails" label="Installation Details..." command="_R7bTMCjjEeaYVMfJA5sKMA"/>
         <children xsi:type="menu:MenuSeparator" xmi:id="_N0OxMCgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.0"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_EFzkECgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.update" label="Update" command="_CBjNUCgbEeau5bAVKAeRVA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLj8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.about" label="About Apogy" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
       </children>
     </mainMenu>
     <sharedElements xsi:type="basic:Part" xmi:id="_Ds6rMCckEeaypqkzSmS_xw" elementId="org.eclipse.ui.views.PropertySheet" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views//icons/full/eview16/prop_ps.gif" tooltip="platform:/plugin/org.eclipse.ui.views//icons/full/eview16/prop_ps.gif" closeable="true"/>
-    <sharedElements xsi:type="basic:Part" xmi:id="_C1hTsCclEeaypqkzSmS_xw" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.views.markers.ProblemsView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/$nl$/icons/full/eview16/problems_view.png" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_C1hTsCclEeaypqkzSmS_xw" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/$nl$/icons/full/eview16/problems_view.png" closeable="true">
       <tags>View</tags>
       <tags>categoryTag:org.eclipse.ui</tags>
       <menus xmi:id="_C1hTsSclEeaypqkzSmS_xw" elementId="org.eclipse.ui.views.ProblemView">
@@ -70,7 +72,6 @@
     </sharedElements>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_Cn3ZkCciEeaypqkzSmS_xw" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.0" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/sample.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
         <children xsi:type="menu:ToolControl" xmi:id="_PlNBACK0Eea6ZMxs3EryPg" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl"/>
         <children xsi:type="menu:ToolControl" xmi:id="_QERioCK0Eea6ZMxs3EryPg" elementId="Spacer Glue" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl"/>
         <children xsi:type="menu:ToolControl" xmi:id="_QuTXECK0Eea6ZMxs3EryPg" elementId="PerspectiveSwitcher" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.perspectiveswitcher/org.eclipse.e4.ui.workbench.perspectiveswitcher.tools.PerspectiveSwitcherSwtTrim"/>
@@ -119,6 +120,13 @@
   <commands xmi:id="_CE7RcCgbEeau5bAVKAeRVA" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="%InstallationDetails.command"/>
   <commands xmi:id="_hSHGMCgbEeau5bAVKAeRVA" elementId="org.eclipse.ui.perspectives.showPerspective" commandName="%command.showPerspective.name" description="%command.showPerspective.description"/>
   <commands xmi:id="_CZNp8CgcEeau5bAVKAeRVA" elementId="org.eclipse.ui.views.showView" commandName="%command.showView.name" description="%command.showView.description"/>
+  <commands xmi:id="_Wm-RwCjiEeaYVMfJA5sKMA" elementId="org.eclipse.ui.help.helpContents" commandName="%command.helpContents.name" description="%command.helpContents.description"/>
+  <commands xmi:id="_WnB8ICjiEeaYVMfJA5sKMA" elementId="org.eclipse.ui.help.aboutAction" commandName="%command.aboutAction.name" description="%command.aboutAction.description"/>
+  <commands xmi:id="_WnHbsCjiEeaYVMfJA5sKMA" elementId="org.eclipse.ui.help.installationDialog" commandName="%command.installationDialog.name" description="%command.installationDialog.description"/>
+  <commands xmi:id="_WnJ38CjiEeaYVMfJA5sKMA" elementId="org.eclipse.ui.file.exit" commandName="%command.exit.name" description="%command.exit.description"/>
+  <commands xmi:id="_WnLtICjiEeaYVMfJA5sKMA" elementId="org.eclipse.ui.window.preferences" commandName="%command.preferences.name" description="%command.preferences.description"/>
+  <commands xmi:id="_R7XBwCjjEeaYVMfJA5sKMA" elementId="org.eclipse.equinox.p2.ui.sdk.update" commandName="%Update.command"/>
+  <commands xmi:id="_R7bTMCjjEeaYVMfJA5sKMA" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="%InstallationDetails.command"/>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

@@ -10,12 +10,13 @@ import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
 public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 
-	public ApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
+	public ApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {		
 		super(configurer);
 	}
-
+	
     @Override
     public void postWindowCreate() {
+    	System.out.println("ApplicationWorkbenchWindowAdvisor.postWindowCreate()");
         // remove unwanted menu entries
 	List<String> unwantedItems = Arrays.asList(
 		"org.eclipse.ui.openLocalFile", 
@@ -26,7 +27,8 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		"org.eclipse.ui.externaltools.ExternalToolMenuDelegateMenu" ,
 		"navigate" ,
 		"org.eclipse.search.menu", 
-		"org.eclipse.ui.run"
+		"org.eclipse.ui.run",
+		"org.eclipse.debug.ui"
 	);
 	
         IMenuManager menuManager = getWindowConfigurer().getActionBarConfigurer().getMenuManager();
@@ -35,12 +37,15 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
     }
     
     private void removeUnwantedItems(final List<String> unwantedItems, final IMenuManager menuManager) {
+    	System.out.println("ApplicationWorkbenchWindowAdvisor.removeUnwantedItems()");
 	IContributionItem[] items = menuManager.getItems();
 	
 	for (IContributionItem item : items) {
 	    if (item instanceof IMenuManager) {
 		removeUnwantedItems(unwantedItems, (IMenuManager) item);
 	    }
+	    
+	    System.out.println("ApplicationWorkbenchWindowAdvisor.removeUnwantedItems() item id = " + item.getId());
 	    
 	    if (unwantedItems.contains(item.getId())) {
 		menuManager.remove(item);
