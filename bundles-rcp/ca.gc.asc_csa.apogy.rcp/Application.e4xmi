@@ -2,7 +2,7 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.window.main" label="Apogy" width="500" height="400">
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_6wlLkMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.ide.perspectivestack" selectedElement="_6wlLkcgZEeSyMNYR5xypkQ">
-      <children xsi:type="advanced:Perspective" xmi:id="_6wlLkcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.perspective.overview" label="Overview">
+      <children xsi:type="advanced:Perspective" xmi:id="_6wlLkcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.perspective.overview" label="Overview" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogySystem.gif">
         <children xsi:type="basic:PartSashContainer" xmi:id="_GtgccCcmEeaypqkzSmS_xw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.2">
           <children xsi:type="basic:PartSashContainer" xmi:id="_Xo9Q8CcmEeaypqkzSmS_xw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.3" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_08EpkB6-Eea0FN5nav8bqQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.0">
@@ -17,27 +17,28 @@
           </children>
         </children>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment"/>
-      <children xsi:type="advanced:Perspective" xmi:id="_ypkYICKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.programs" label="Programs"/>
-      <children xsi:type="advanced:Perspective" xmi:id="_3_Z0YCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.data" label="Data"/>
-      <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital"/>
-      <children xsi:type="advanced:Perspective" xmi:id="_8W6f0CK2Eea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.advanced" label="Advanced"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_ypkYICKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.programs" label="Programs" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/ProgramsList.gif">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_GRop8CkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.0">
+          <children xsi:type="basic:PartStack" xmi:id="_HwKdcCkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.1"/>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_3_Z0YCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.data" label="Data" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/DataProductsList.gif"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_8W6f0CK2Eea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.advanced" label="Advanced" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif"/>
     </children>
+    <handlers xmi:id="_DmHtoCj7EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handler.1"/>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_6wlLisgZEeSyMNYR5xypkQ" elementId="file" label="File">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.quit" label="Quit" command="_WnJ38CjiEeaYVMfJA5sKMA"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_PvYPQCgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.menu.window" label="Window">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_Zf348CgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.showview" label="Show View" command="_CZNp8CgcEeau5bAVKAeRVA"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_jJQOACgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.showperspective" label="Show Perspective" command="_hSHGMCgbEeau5bAVKAeRVA"/>
         <children xsi:type="menu:MenuSeparator" xmi:id="_2vSSACjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.3"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_3R_WcCjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.preferences" label="Preferences" command="_WnLtICjiEeaYVMfJA5sKMA"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_6wlLjsgZEeSyMNYR5xypkQ" elementId="help_" label="Help">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_JfZ-kCjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.helpcontents" label="Help Contents" command="_Wm-RwCjiEeaYVMfJA5sKMA"/>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_spIW4CgdEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.1"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_X0KBICjjEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.update" label="Update" command="_R7XBwCjjEeaYVMfJA5sKMA"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_-RQOoCjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.installationdetails" label="Installation Details..." command="_R7bTMCjjEeaYVMfJA5sKMA"/>
         <children xsi:type="menu:MenuSeparator" xmi:id="_N0OxMCgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.0"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLj8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.about" label="About Apogy" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
       </children>
@@ -72,16 +73,16 @@
     </sharedElements>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
-        <children xsi:type="menu:ToolControl" xmi:id="_PlNBACK0Eea6ZMxs3EryPg" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl"/>
-        <children xsi:type="menu:ToolControl" xmi:id="_QERioCK0Eea6ZMxs3EryPg" elementId="Spacer Glue" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl"/>
-        <children xsi:type="menu:ToolControl" xmi:id="_QuTXECK0Eea6ZMxs3EryPg" elementId="PerspectiveSwitcher" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.perspectiveswitcher/org.eclipse.e4.ui.workbench.perspectiveswitcher.tools.PerspectiveSwitcherSwtTrim"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.test2" label="Overview" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogySystem.gif" command="_C4Fq0B32EeaqJNPAWI4oCw">
+          <parameters xmi:id="_2yJIACj-EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.parameter.1" name="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveId" value="ca.gc.asc_csa.apogy.rcp.perspective.overview"/>
+        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ZdueoCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.test" label="Programs" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/ProgramsList.gif" command="_C4Fq0B32EeaqJNPAWI4oCw">
+          <parameters xmi:id="_y6GZECj2EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.parameter.0" name="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveId" value="ca.gc.asc_csa.apogy.rcp.perspective.programs"/>
+        </children>
       </children>
     </trimBars>
   </children>
-  <handlers xmi:id="_6wlLfcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handler.quitCommand" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.QuitHandler" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handler.openCommand" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.OpenHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handler.saveCommand" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handler.aboutCommand" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_0cimwCj3EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handler.0" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.SwitchPerspectiveHandler" command="_C4Fq0B32EeaqJNPAWI4oCw"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
@@ -110,7 +111,9 @@
     </menus>
     <toolbar xmi:id="_nrCCAigZEeau5bAVKAeRVA" elementId="org.eclipse.ui.navigator.ProjectExplorer"/>
   </descriptors>
-  <commands xmi:id="_C4Fq0B32EeaqJNPAWI4oCw" elementId="org.eclipse.ui.file.newQuickMenu" commandName="newCommand"/>
+  <commands xmi:id="_C4Fq0B32EeaqJNPAWI4oCw" elementId="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommand" commandName="switchPerspective">
+    <parameters xmi:id="_W6jrYCj-EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveId" name="id" typeId=""/>
+  </commands>
   <commands xmi:id="_6wlLgMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.open" commandName="openCommand"/>
   <commands xmi:id="_6wlLg8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_6wlLhsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
