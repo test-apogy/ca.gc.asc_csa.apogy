@@ -18,9 +18,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.addons.GeometryPlacementAtFeatureOfInterestTool;
-import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
-import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
-import ca.gc.asc_csa.apogy.common.math.ui.composites.RotationMatrixComposite;
+import ca.gc.asc_csa.apogy.addons.ui.composites.GeometryPlacementAtFeatureOfInterestToolPoseComposite;
 import ca.gc.asc_csa.apogy.common.ui.properties.sections.AbstractExtendedPropertySection;
 
 public class GeometryPlacementAtFeatureOfInterestToolPropertySection extends AbstractExtendedPropertySection {
@@ -30,17 +28,13 @@ public class GeometryPlacementAtFeatureOfInterestToolPropertySection extends Abs
 	{
 		GeometryPlacementAtFeatureOfInterestTool tool = (GeometryPlacementAtFeatureOfInterestTool) eObject; 
 		
-		Matrix3x3 rotationMatrix = ApogyCommonMathFacade.INSTANCE.createIdentityMatrix3x3();
-		if(tool.getTransformNode() != null)
-		{
-			rotationMatrix = tool.getTransformNode().getRotationMatrix();
-		}
-		
-		((RotationMatrixComposite) getComposite()).setMatrix3x3(rotationMatrix);		
+		GeometryPlacementAtFeatureOfInterestToolPoseComposite composite = (GeometryPlacementAtFeatureOfInterestToolPoseComposite) getComposite();
+		composite.setGeometryPlacementAtFeatureOfInterestTool(tool);			
 	}
 
 	@Override
-	protected Composite createComposite(Composite parent) {
-		return new RotationMatrixComposite(parent, SWT.NONE, getEditingDomain());
+	protected Composite createComposite(Composite parent) 
+	{
+		return new GeometryPlacementAtFeatureOfInterestToolPoseComposite(parent, SWT.NONE, getEditingDomain());
 	}
 }

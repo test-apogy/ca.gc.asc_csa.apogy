@@ -198,7 +198,7 @@
          <propertyTab
                category="ca.gc.asc_csa.apogy.addons.property.category.Default"
                id=" ca.gc.asc_csa.apogy.addons.ui.property.tab.GeometryPlacement"
-               label="Geometry Rotation">
+               label="Geometry Transform">
          </propertyTab>
       </propertyTabs>
    </extension>
