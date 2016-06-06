@@ -864,8 +864,11 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		double pointGenerationResolution = resolution;
+		int i = 0;
 		for(CartesianTriangle triangle : cartesianCoordinatesMesh.getPolygons())
 		{
+			System.out.println("Triangle <" + i + "> of " + cartesianCoordinatesMesh.getPolygons().size());
+			i++;
 			try
 			{
 				// Gets the normal of the triangle.
@@ -891,38 +894,62 @@ public class ApogyCommonGeometryData3DFacadeImpl extends MinimalEObjectImpl.Cont
 				double s = 0;
 				double t = 0;
 				
-				double deltaS = pointGenerationResolution / u.length();
-				double deltaT = pointGenerationResolution / v.length();
+				double deltaS = 1.0;
+				double deltaT = 1.0;
 				
-				while(s <= (1.0 + deltaS))
+				if(u.length() <= pointGenerationResolution)
 				{
-					Vector3d vs = new Vector3d(u);
-					vs.scale(s);
-					t = 0;
-					
-					while(t <= (1.0 + deltaT))
+					deltaS = 0.5;
+				}
+				else
+				{
+					deltaS = pointGenerationResolution / u.length();
+				}
+				
+				if(v.length() <= pointGenerationResolution)
+				{
+					deltaT = 0.5;
+				}
+				else
+				{
+					deltaT = pointGenerationResolution / v.length();
+				}
+				
+				System.out.println("deltaS = " + deltaS);
+				System.out.println("deltaT = " + deltaT);
+				
+				if(deltaS != 0 && deltaT != 0)
+				{
+					while(s <= (1.0 + deltaS))
 					{
-						Vector3d vt = new Vector3d(v);
-						vt.scale(t);					
-						vt.add(vs);						
-						vt.add(p0);
+						Vector3d vs = new Vector3d(u);
+						vs.scale(s);
+						t = 0;
 						
-						// Finds the projection of vt onto the triangle.
-						CartesianPositionCoordinates p = createCartesianPositionCoordinates(vt.getX(), vt.getY(), vt.getZ());
-						CartesianPositionCoordinates point = Geometry3DUtilities.getProjectionInPolygonPlane(p, triangle);
-						
-						if(point != null)
+						while(t <= (1.0 + deltaT))
 						{
-							if(Geometry3DUtilities.isInsidePolygon(point, triangle))
-							{							
-								points.add(point);
+							Vector3d vt = new Vector3d(v);
+							vt.scale(t);					
+							vt.add(vs);						
+							vt.add(p0);
+							
+							// Finds the projection of vt onto the triangle.
+							CartesianPositionCoordinates p = createCartesianPositionCoordinates(vt.getX(), vt.getY(), vt.getZ());
+							CartesianPositionCoordinates point = Geometry3DUtilities.getProjectionInPolygonPlane(p, triangle);
+							
+							if(point != null)
+							{
+								if(Geometry3DUtilities.isInsidePolygon(point, triangle))
+								{							
+									points.add(point);
+								}
 							}
+																			
+							t+= deltaT;
 						}
-																		
-						t+= deltaT;
+						
+						s += deltaS;
 					}
-					
-					s += deltaS;
 				}
 				
 				// Generates point on the edges.								

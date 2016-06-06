@@ -898,40 +898,41 @@ public class ApogyCommonGeometryData3DFacadeTest extends TestCase {
 	 */
 	public void testGeneratePointCloud__CartesianTriangularMesh_double() 
 	{
-		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
-		
-		CartesianPositionCoordinates p0 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
-		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(0.5, 0, 0);
-		CartesianPositionCoordinates p2 = getFixture().createCartesianPositionCoordinates(0.5, 1, 1E-9);
-		CartesianPositionCoordinates p3 = getFixture().createCartesianPositionCoordinates(0, 1, 1E-4);
-		
-		mesh.getPoints().add(p0);
-		mesh.getPoints().add(p1);
-		mesh.getPoints().add(p2);
-		mesh.getPoints().add(p3);
-		
-		CartesianTriangle t0 = getFixture().createCartesianTriangle(p0, p1, p2);
-		CartesianTriangle t1 = getFixture().createCartesianTriangle(p0, p2, p3);
-		
-		mesh.getPolygons().add(t0);
-		mesh.getPolygons().add(t1);
-		
-		
-		CartesianCoordinatesSet pointCloud = getFixture().generatePointCloud(mesh, 0.001);
-					
+//		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+//		
+//		CartesianPositionCoordinates p0 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
+//		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(0.5, 0, 0);
+//		CartesianPositionCoordinates p2 = getFixture().createCartesianPositionCoordinates(0.5, 1, 1E-9);
+//		CartesianPositionCoordinates p3 = getFixture().createCartesianPositionCoordinates(0, 1, 1E-4);
+//		
+//		mesh.getPoints().add(p0);
+//		mesh.getPoints().add(p1);
+//		mesh.getPoints().add(p2);
+//		mesh.getPoints().add(p3);
+//		
+//		CartesianTriangle t0 = getFixture().createCartesianTriangle(p0, p1, p2);
+//		CartesianTriangle t1 = getFixture().createCartesianTriangle(p0, p2, p3);
+//		
+//		mesh.getPolygons().add(t0);
+//		mesh.getPolygons().add(t1);
 		try 
-		{
+		{		
+			CartesianTriangularMesh mesh = Data3DIO.INSTANCE.loadTriangularMeshFromASCII("/home/pallard/MAV_REV_B");
+			System.out.println("testGeneratePointCloud__CartesianTriangularMesh_double : Mesh contains <" + mesh.getPolygons().size() +"> polygons.");
+			
+			CartesianCoordinatesSet pointCloud = getFixture().generatePointCloud(mesh, 1.0);				
+	
 			// Export the point cloud to file.	
 			System.out.println(System.getProperty("user.dir"));
 			FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir") + File.separator + "generatePointCloudPoints.xyz");
 			Data3DIO.INSTANCE.saveCoordinatesSetToXYZ(pointCloud, fos);
 		
 			// Export the mesh to file.
-			Data3DIO.INSTANCE.saveTriangularMeshAsASCII(mesh, System.getProperty("user.dir") + File.separator + "generatePointCloudMesh");			
+			// Data3DIO.INSTANCE.saveTriangularMeshAsASCII(mesh, System.getProperty("user.dir") + File.separator + "generatePointCloudMesh");			
 		} 
 		catch (Exception e) 
 		{
-			e.printStackTrace();
+			fail(e.getMessage());
 		}					
 	}
 
