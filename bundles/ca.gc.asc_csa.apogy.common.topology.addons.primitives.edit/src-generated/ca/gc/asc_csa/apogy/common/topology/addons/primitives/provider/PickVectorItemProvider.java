@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -72,7 +73,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 	 */
 	protected void addIntersectionDistancePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PickVector_intersectionDistance_feature"),

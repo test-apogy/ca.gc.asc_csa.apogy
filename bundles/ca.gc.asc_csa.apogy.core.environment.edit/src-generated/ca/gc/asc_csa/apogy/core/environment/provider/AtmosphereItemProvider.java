@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -90,7 +91,7 @@ public class AtmosphereItemProvider
   protected void addWindSpeedPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_windSpeed_feature"),
@@ -113,7 +114,7 @@ public class AtmosphereItemProvider
   protected void addWindDirectionPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_windDirection_feature"),
@@ -136,7 +137,7 @@ public class AtmosphereItemProvider
   protected void addTemperaturePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_temperature_feature"),
@@ -159,7 +160,7 @@ public class AtmosphereItemProvider
   protected void addSurfacePressurePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_surfacePressure_feature"),
@@ -182,7 +183,7 @@ public class AtmosphereItemProvider
   protected void addSurfaceDensityPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Atmosphere_surfaceDensity_feature"),

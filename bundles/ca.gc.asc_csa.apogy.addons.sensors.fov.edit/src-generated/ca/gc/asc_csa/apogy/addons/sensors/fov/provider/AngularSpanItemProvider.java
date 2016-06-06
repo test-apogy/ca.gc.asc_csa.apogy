@@ -34,6 +34,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan;
 import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan} object.
@@ -92,7 +93,7 @@ public class AngularSpanItemProvider
 	protected void addMinimumAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AngularSpan_minimumAngle_feature"),
@@ -115,7 +116,7 @@ public class AngularSpanItemProvider
 	protected void addMaximumAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AngularSpan_maximumAngle_feature"),
@@ -138,7 +139,7 @@ public class AngularSpanItemProvider
 	protected void addSpanningAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AngularSpan_spanningAngle_feature"),
@@ -161,7 +162,7 @@ public class AngularSpanItemProvider
 	protected void addCenterAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AngularSpan_centerAngle_feature"),

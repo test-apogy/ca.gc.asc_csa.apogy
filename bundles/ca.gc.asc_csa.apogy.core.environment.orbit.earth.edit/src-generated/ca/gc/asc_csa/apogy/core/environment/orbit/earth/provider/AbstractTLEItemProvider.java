@@ -4,6 +4,7 @@
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbstractTLE;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
@@ -199,7 +200,7 @@ public class AbstractTLEItemProvider
 	 */
 	protected void addInclinationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AbstractTLE_inclination_feature"),
@@ -221,7 +222,7 @@ public class AbstractTLEItemProvider
 	 */
 	protected void addMeanAnomalyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AbstractTLE_meanAnomaly_feature"),
@@ -243,7 +244,7 @@ public class AbstractTLEItemProvider
 	 */
 	protected void addMeanMotionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AbstractTLE_meanMotion_feature"),
@@ -265,7 +266,7 @@ public class AbstractTLEItemProvider
 	 */
 	protected void addRevolutionPerDayPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AbstractTLE_revolutionPerDay_feature"),
@@ -287,7 +288,7 @@ public class AbstractTLEItemProvider
 	 */
 	protected void addMeanMotionFirstDerivativePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AbstractTLE_meanMotionFirstDerivative_feature"),
@@ -309,7 +310,7 @@ public class AbstractTLEItemProvider
 	 */
 	protected void addMeanMotionSecondDerivativePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AbstractTLE_meanMotionSecondDerivative_feature"),
@@ -331,7 +332,7 @@ public class AbstractTLEItemProvider
 	 */
 	protected void addArgumentOfPerigeePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AbstractTLE_argumentOfPerigee_feature"),
@@ -353,7 +354,7 @@ public class AbstractTLEItemProvider
 	 */
 	protected void addRightAscentionOfAscendingNodePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new AbstractUnitItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_AbstractTLE_rightAscentionOfAscendingNode_feature"),
