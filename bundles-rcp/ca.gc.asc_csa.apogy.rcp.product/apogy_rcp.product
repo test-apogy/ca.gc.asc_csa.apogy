@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Apogy" uid="apogy_rcp.product" id="org.eclipse.platform.ide" application="org.eclipse.ui.ide.workbench" version="0.5.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Apogy" uid="apogy_rcp.product" id="ca.gc.asc_csa.apogy.rcp.product" application="ca.gc.asc_csa.apogy.rcp.Application" version="0.5.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="/ca.gc.asc_csa.apogy.rcp/icons/about.gif"/>
@@ -26,9 +26,9 @@
 
    <splash
       location="ca.gc.asc_csa.apogy.rcp"
-      startupProgressRect="5,275,445,15"
-      startupMessageRect="8,252,445,20"
-      startupForegroundColor="7F7F7F" />
+      startupProgressRect="30,275,395,4"
+      startupMessageRect="30,250,395,20"
+      startupForegroundColor="2E3436" />
    <launcher>
       <linux icon="/ca.gc.asc_csa.apogy.rcp.product/icons/apogy_icon.xpm"/>
       <solaris/>
@@ -37,7 +37,6 @@
          <bmp/>
       </win>
    </launcher>
-
 
    <vm>
    </vm>
@@ -137,12 +136,13 @@
    </features>
 
    <configurations>
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <property name="eclipse.buildId" value="${unqualifiedVersion}.${buildQualifier}" />
    </configurations>
 
 </product>
