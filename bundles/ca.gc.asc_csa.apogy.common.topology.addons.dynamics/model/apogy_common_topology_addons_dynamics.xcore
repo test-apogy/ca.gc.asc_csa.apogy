@@ -82,8 +82,8 @@ class PhysicalBody extends AggregateGroupNode
 {
 	/*
 	 * The physical properties of the body.
-	 */
-	contains PhysicalProperties [1] physicalProperties
+	 */	 
+	contains PhysicalProperties [0..1] physicalProperties
 	
 	/*
 	 * The list of constraints associated with this body.

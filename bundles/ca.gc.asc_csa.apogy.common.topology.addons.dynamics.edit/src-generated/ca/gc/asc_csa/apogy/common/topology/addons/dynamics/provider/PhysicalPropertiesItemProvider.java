@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -85,7 +84,7 @@ public class PhysicalPropertiesItemProvider
 	 */
 	protected void addMassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PhysicalProperties_mass_feature"),

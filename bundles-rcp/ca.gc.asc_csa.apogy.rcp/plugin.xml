@@ -14,12 +14,11 @@
      Canadian Space Agency (CSA) - Initial API and implementation
 -->
 <plugin>
-
    <extension
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-            application="org.eclipse.e4.ui.workbench.swt.E4Application"
+            application="ca.gc.asc_csa.apogy.rcp.Application"
             name="Apogy">
          <property
                name="windowImages"
@@ -27,9 +26,7 @@
          </property>
          <property
                name="aboutText"
-               value="Apogy v0.5
-
-Copyrights (c) Agence spatiale canadienne / Canadian Space Agency 2011-2016.  All rights reserved.">
+               value="Apogy v0.5">
          </property>
          <property
                name="aboutImage"
@@ -37,21 +34,60 @@ Copyrights (c) Agence spatiale canadienne / Canadian Space Agency 2011-2016.  Al
          </property>
          <property
                name="startupForegroundColor"
-               value="7F7F7F">
+               value="2E3436">
          </property>
          <property
                name="startupProgressRect"
-               value="5,275,445,15">
+               value="30,275,395,4">
          </property>
          <property
                name="startupMessageRect"
-               value="8,252,445,20">
+               value="30,250,395,20">
          </property>
          <property
-               name="preferenceCustomization"
-               value="plugin_customization.ini">
+               name="appName"
+               value="Apogy">
          </property>
+		  <property
+				name="applicationXMI"
+				value="ca.gc.asc_csa.apogy.rcp/Application.e4xmi">
+		  </property>         
+<!--		  <property
+				name="cssTheme"
+				value="org.eclipse.e4.ui.css.theme.e4_default">
+		  </property>-->
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/ca.gc.asc_csa.apogy.rcp/css/default.css">
+         </property>		  
+          <property
+                name="buildIdLocation"
+                value="10,160">
+          </property>
+          <property
+                name="buildIdSize"
+                value="404,40">
+          </property>		          
+ 		  <!-- <property name="eclipse.buildId" value="${unqualifiedVersion}.${buildQualifier}" />-->
+ 		  <property name="eclipse.buildId" value="0.5" />
+     <property
+           name="preferenceCustomization"
+           value="plugin_customization.ini">
+     </property>
+                     
       </product>
+   </extension>
+   <extension
+         id="Application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="ca.gc.asc_csa.apogy.rcp.Application">
+         </run>
+      </application>
    </extension>
 
 </plugin>
