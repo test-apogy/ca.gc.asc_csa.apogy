@@ -124,6 +124,8 @@ public abstract class CartesianTriangularMeshColorizerImpl extends ProcessorImpl
 				getProgressMonitor().worked(workPerformed);
 				workPerformed = 0;
 			}
+			
+			if(getProgressMonitor().isCanceled()) return null;
 		}
 		
 		if(workPerformed > 0) getProgressMonitor().worked(workPerformed);
@@ -145,6 +147,8 @@ public abstract class CartesianTriangularMeshColorizerImpl extends ProcessorImpl
 				{
 					newTriangle.getVertices().add(cc);
 				}
+				
+				if(getProgressMonitor().isCanceled()) return null;
 			}
 			
 			mesh.getPolygons().add(newTriangle);
