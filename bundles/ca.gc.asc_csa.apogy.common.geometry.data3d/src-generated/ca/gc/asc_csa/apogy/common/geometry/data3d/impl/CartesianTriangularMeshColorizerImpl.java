@@ -99,22 +99,43 @@ public abstract class CartesianTriangularMeshColorizerImpl extends ProcessorImpl
 		// Sets the input.
 		setInput(input);
 		
-		getProgressMonitor().beginTask("Colorizing mesh", input.getPoints().size());
+		// Compute the total work units.
+		int workUnits = input.getPoints().size() + input.getPolygons().size();
+		int workUnitIncrement = (int) Math.floor((float) workUnits / 100.0f);
+				
+		getProgressMonitor().beginTask("Colorizing mesh", workUnits);
 		
 		// Gets the color assigned to each point.
 		Map<CartesianPositionCoordinates, ColoredCartesianPositionCoordinates> originalToColoredPointMap = new HashMap<CartesianPositionCoordinates, ColoredCartesianPositionCoordinates>();
+		int workPerformed = 0;
+		
+		getProgressMonitor().subTask("Computing vertex colors...");
 		for(CartesianPositionCoordinates point : input.getPoints())
 		{
 			RGBAColor color = computeColor(input, point);
 			
 			ColoredCartesianPositionCoordinates coloredPoint = ApogyCommonGeometryData3DFacade.INSTANCE.createColoredCartesianPositionCoordinates(point.getX(), point.getY(), point.getZ(), color.getRed(), color.getGreen(), color.getBlue());
 			originalToColoredPointMap.put(point, coloredPoint);
+			
+			// Updates work performed only a every workUnitIncrement.
+			workPerformed++;
+			if(workPerformed >= workUnitIncrement)
+			{
+				getProgressMonitor().worked(workPerformed);
+				workPerformed = 0;
+			}
+			
+			if(getProgressMonitor().isCanceled()) return null;
 		}
+		
+		if(workPerformed > 0) getProgressMonitor().worked(workPerformed);
+		workPerformed = 0;
 		
 		// Create a new mesh with the colored point.
 		ColoredCartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createColoredCartesianTriangularMesh();
 		mesh.getPoints().addAll(originalToColoredPointMap.values());
 		
+		getProgressMonitor().subTask("Creating colored mesh...");
 		for(CartesianTriangle triangle : input.getPolygons())
 		{
 			CartesianTriangle newTriangle = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
@@ -126,12 +147,22 @@ public abstract class CartesianTriangularMeshColorizerImpl extends ProcessorImpl
 				{
 					newTriangle.getVertices().add(cc);
 				}
+				
+				if(getProgressMonitor().isCanceled()) return null;
 			}
 			
 			mesh.getPolygons().add(newTriangle);
+			
+			// Updates work performed only a every workUnitIncrement.
+			workPerformed++;
+			if(workPerformed >= workUnitIncrement)
+			{
+				getProgressMonitor().worked(workPerformed);
+				workPerformed = 0;
+			}
 		}
-		
-		
+		if(workPerformed > 0) getProgressMonitor().worked(workPerformed);
+						
 		setOutput(mesh);
 		return mesh;
 	}

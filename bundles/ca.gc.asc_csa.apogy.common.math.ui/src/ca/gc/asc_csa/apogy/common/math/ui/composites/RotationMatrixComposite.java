@@ -39,6 +39,9 @@ public class RotationMatrixComposite extends Composite {
 	private Matrix3x3 matrix;
 	private Tuple3dComposite rotationComposite;	 
 	private Tuple3d orientationTuple3d;
+	
+	private RotationMatrixSlidersComposite rotationMatrixSlidersComposite;
+	
 	private Adapter matrixAdapter;
 	private boolean disableEvent = false;
 	
@@ -64,14 +67,18 @@ public class RotationMatrixComposite extends Composite {
 		grpRotation.setLayout(new FillLayout(SWT.HORIZONTAL));
 		grpRotation.setText("Rotation (rx,ry,rz)");		
 		rotationComposite = new Tuple3dComposite(grpRotation, SWT.NONE);		
+		
+		rotationMatrixSlidersComposite = new RotationMatrixSlidersComposite(this, SWT.NONE, this.editingDomain);
+		rotationMatrixSlidersComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 	}
 
 	public void setMatrix3x3(Matrix3x3 matrix) 
 	{
 		getOrientationTuple3d().eAdapters().remove(getOrientationTuple3dAdapter());
 
-		if (getMatrix() != null){
-			getMatrix().eAdapters().remove(getMatrixAdapter());
+		if (getMatrix() != null)
+		{
+			getMatrix().eAdapters().remove(getMatrixAdapter());			
 		}
 		
 		this.matrix = matrix;
@@ -79,6 +86,7 @@ public class RotationMatrixComposite extends Composite {
 		if (getMatrix() != null)
 		{			
 			rotationComposite.setTuple3d(getOrientationTuple3d());
+			rotationMatrixSlidersComposite.setMatrix3x3(matrix);
 			
 			updateOrientationTuples(getMatrix(), getOrientationTuple3d());
 			
@@ -128,7 +136,8 @@ public class RotationMatrixComposite extends Composite {
 		// Disable the check that prevents subclassing of SWT components
 	}
 	
-	private Tuple3d getOrientationTuple3d() {
+	private Tuple3d getOrientationTuple3d() 
+	{
 		if (orientationTuple3d == null){
 			orientationTuple3d = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 		}

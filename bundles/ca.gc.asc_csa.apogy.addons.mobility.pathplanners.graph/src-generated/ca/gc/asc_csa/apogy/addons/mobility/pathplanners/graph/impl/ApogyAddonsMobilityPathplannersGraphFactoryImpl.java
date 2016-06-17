@@ -220,9 +220,8 @@ public class ApogyAddonsMobilityPathplannersGraphFactoryImpl extends EFactoryImp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	@SuppressWarnings("unchecked")
 	public DirectedGraph<?, ?> createDirectedGraphFromString(EDataType eDataType, String initialValue) {
 		return (DirectedGraph<?, ?>)super.createFromString(initialValue);
 	}

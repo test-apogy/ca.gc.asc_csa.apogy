@@ -388,7 +388,7 @@ class TrajectoryPickingToolNode extends AggregateGroupNode
  	/**
  	 * The TransformNode applying the geometry offsets between the tool transform and the geometry.
  	 */
- 	 @GenModel(notify="true", children="true", property="Readonly")
+ 	 @GenModel(notify="true", children="false", property="None")
  	 refers transient derived volatile readonly TransformNode cadTransformNode
  	
  	/**
@@ -398,7 +398,7 @@ class TrajectoryPickingToolNode extends AggregateGroupNode
  	 refers transient derived volatile readonly URLNode urlNode 	  	
  }
  
- 
+
  /**
   * A simple GeometryPlacementAtFeatureOfInterestTool that contains attributes that are returned by the 
   * getGeometryOffsets() and getGeometryURL() methods.
