@@ -337,6 +337,11 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.sdk.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.repository</module>
 		
+		<!-- Apogy RCP -->
+		<module>../../bundles/ca.gc.asc_csa.apogy.rcp</module>
+		<!-- <module>../../bundles/ca.gc.asc_csa.apogy.rcp.feature</module> -->
+		<module>../../bundles/org.eclipse.e4.ui.workbench.perspectiveswitcher</module>
+		
 		<!-- JavaScript -->
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.edit</module>
@@ -399,6 +404,7 @@
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.ui</module>
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.worksites.surface</module>
+			
 		
 		<!-- Tests -->
 		<!-- <module>../../tests/ca.gc.asc_csa.apogy.common.converters.tests</module> -->
