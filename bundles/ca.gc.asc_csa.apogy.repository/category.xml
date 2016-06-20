@@ -6,5 +6,11 @@
    <feature url="features/ca.gc.asc_csa.apogy.sdk.feature.source_0.5.0.qualifier.jar" id="ca.gc.asc_csa.apogy.sdk.feature.source" version="0.5.0.qualifier">
       <category name="ca.gc.asc_csa.apogy"/>
    </feature>
+   <feature url="features/ca.gc.asc_csa.apogy.rcp.feature_0.5.0.qualifier.jar" id="ca.gc.asc_csa.apogy.rcp.feature" version="0.5.0.qualifier">
+      <category name="ca.gc.asc_csa.apogy"/>
+   </feature>
+   <!--<feature url="features/ca.gc.asc_csa.apogy.rcp.feature.source_0.5.0.qualifier.jar" id="ca.gc.asc_csa.apogy.rcp.feature.source" version="0.5.0.qualifier">
+      <category name="ca.gc.asc_csa.apogy"/>
+   </feature>-->   
    <category-def name="ca.gc.asc_csa.apogy" label="Apogy"/>
 </site>
