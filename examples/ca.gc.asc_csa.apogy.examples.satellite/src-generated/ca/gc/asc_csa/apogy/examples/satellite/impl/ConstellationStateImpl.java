@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList;
@@ -398,6 +399,17 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<AbstractConstellationDownlinkItem> importConstellationDownlinkItems(String url) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -560,6 +572,8 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE___EXPORT__ABSTRACTCONSTELLATIONCOMMANDPLAN_STRING:
 				export((AbstractConstellationCommandPlan)arguments.get(0), (String)arguments.get(1));
 				return null;
+			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE___IMPORT_CONSTELLATION_DOWNLINK_ITEMS__STRING:
+				return importConstellationDownlinkItems((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

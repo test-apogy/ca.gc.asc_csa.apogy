@@ -125,13 +125,20 @@ class StringUID extends AbstractUID{
 	 * @return List of imported {@link AbstractConstellationRequest}. 
 	 */
 	op List<AbstractConstellationRequest> importConstellationRequests(String url)
-		
+				
 	/*
 	 * Exports the specified plan into the resource specified by the url.
 	 * @param plan Refers the plan to export.
 	 * @param url Specifies the location where the plan must be exported.
 	 */
-	op void export(AbstractConstellationCommandPlan plan, String url)	
+	op void export(AbstractConstellationCommandPlan plan, String url)
+	
+	/*
+	 * Imports the {@link AbstractConstellationDownlinkItem} contained in the resource specified by the {@link url}.
+	 * @param url URL that specifies the resource.
+	 * @return List of imported {@link AbstractConstellationDownlinkItem}. 
+	 */
+	op List<AbstractConstellationDownlinkItem> importConstellationDownlinkItems(String url)		
 }
 
 /*
@@ -572,7 +579,12 @@ abstract class AbstractConstellationDownlinkItem{
 	/*
 	 * Unique {@link AbstractConstellationRequest} identifier.
 	 */
-	contains AbstractUID requestUID		
+	contains AbstractUID requestUID
+	
+	/*
+	 * Refers to the request that is the owner of this item.
+	 */
+	refers AbstractConstellationRequest [0..1] request	
 }
 
 /*

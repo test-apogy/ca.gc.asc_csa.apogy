@@ -226,4 +226,17 @@ public interface ConstellationState extends EObject {
 	 */
 	void export(AbstractConstellationCommandPlan plan, String url);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Imports the {@link AbstractConstellationDownlinkItem} contained in the resource specified by the {@link url}.
+	 * @param url URL that specifies the resource.
+	 * @return List of imported {@link AbstractConstellationDownlinkItem}.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem>" unique="false" many="false" urlUnique="false"
+	 * @generated
+	 */
+	List<AbstractConstellationDownlinkItem> importConstellationDownlinkItems(String url);
+
 } // ConstellationState
