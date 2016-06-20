@@ -1145,8 +1145,17 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConstellationDownlinksList_Downlinks() {
+	public EReference getConstellationDownlinksList_ConstellationState() {
 		return (EReference)constellationDownlinksListEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationDownlinksList_Downlinks() {
+		return (EReference)constellationDownlinksListEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1163,8 +1172,17 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConstellationDownlink_DownlinkItems() {
+	public EReference getConstellationDownlink_ConstellationDownlinksList() {
 		return (EReference)constellationDownlinkEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationDownlink_DownlinkItems() {
+		return (EReference)constellationDownlinkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1395,9 +1413,11 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEAttribute(orbitalImageEClass, ORBITAL_IMAGE__ROLL_ANGLE);
 
 		constellationDownlinksListEClass = createEClass(CONSTELLATION_DOWNLINKS_LIST);
+		createEReference(constellationDownlinksListEClass, CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE);
 		createEReference(constellationDownlinksListEClass, CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS);
 
 		constellationDownlinkEClass = createEClass(CONSTELLATION_DOWNLINK);
+		createEReference(constellationDownlinkEClass, CONSTELLATION_DOWNLINK__CONSTELLATION_DOWNLINKS_LIST);
 		createEReference(constellationDownlinkEClass, CONSTELLATION_DOWNLINK__DOWNLINK_ITEMS);
 
 		abstractConstellationDownlinkItemEClass = createEClass(ABSTRACT_CONSTELLATION_DOWNLINK_ITEM);
@@ -1499,7 +1519,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEReference(getConstellationState_ConstellationCommandPlansList(), this.getConstellationCommandPlansList(), this.getConstellationCommandPlansList_ConstellationState(), "constellationCommandPlansList", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstellationState_SatellitesList(), this.getSatellitesList(), null, "satellitesList", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstellationState_GroundStationsReferencesList(), theApogyCoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstellationState_DownlinksLists(), this.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationState_DownlinksLists(), this.getConstellationDownlinksList(), this.getConstellationDownlinksList_ConstellationState(), "downlinksLists", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstellationState_ConstellationRequestsListsContainer(), this.getConstellationRequestsListsContainer(), this.getConstellationRequestsListsContainer_ConstellationState(), "constellationRequestsListsContainer", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstellationState_ConstellationPlannersContainer(), this.getConstellationPlannersContainer(), this.getConstellationPlannersContainer_ConstellationState(), "constellationPlannersContainer", null, 0, 1, ConstellationState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1629,9 +1649,11 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEAttribute(getOrbitalImage_RollAngle(), theEcorePackage.getEDouble(), "rollAngle", "0.0", 0, 1, OrbitalImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constellationDownlinksListEClass, ConstellationDownlinksList.class, "ConstellationDownlinksList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstellationDownlinksList_Downlinks(), this.getConstellationDownlink(), null, "downlinks", null, 0, -1, ConstellationDownlinksList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationDownlinksList_ConstellationState(), this.getConstellationState(), this.getConstellationState_DownlinksLists(), "constellationState", null, 0, 1, ConstellationDownlinksList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationDownlinksList_Downlinks(), this.getConstellationDownlink(), this.getConstellationDownlink_ConstellationDownlinksList(), "downlinks", null, 0, -1, ConstellationDownlinksList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constellationDownlinkEClass, ConstellationDownlink.class, "ConstellationDownlink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConstellationDownlink_ConstellationDownlinksList(), this.getConstellationDownlinksList(), this.getConstellationDownlinksList_Downlinks(), "constellationDownlinksList", null, 0, 1, ConstellationDownlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstellationDownlink_DownlinkItems(), this.getAbstractConstellationDownlinkItem(), null, "downlinkItems", null, 0, -1, ConstellationDownlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractConstellationDownlinkItemEClass, AbstractConstellationDownlinkItem.class, "AbstractConstellationDownlinkItem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2210,10 +2232,35 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 			 "documentation", "This class represents a list of {@link ConstellationDownlink}."
 		   });	
 		addAnnotation
+		  (getConstellationDownlinksList_ConstellationState(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers to the container {@link ConstellationState}.",
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (getConstellationDownlinksList_Downlinks(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Contains the {@link ConstellationDownlink}."
+		   });	
+		addAnnotation
 		  (constellationDownlinkEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "A {@link ConstellationDownlink} class contains the {@link AbstractConstellationDownlinkItem}."
+		   });	
+		addAnnotation
+		  (getConstellationDownlink_ConstellationDownlinksList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers he container {@link ConstellationDownlinksList}."
+		   });	
+		addAnnotation
+		  (getConstellationDownlink_DownlinkItems(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Contains the {@link AbstractConstellationDownlinkItem}."
 		   });	
 		addAnnotation
 		  (abstractConstellationDownlinkItemEClass, 

@@ -1960,13 +1960,22 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Constellation State</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Downlinks</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Constellation Downlinks List</em>' class.
@@ -1975,7 +1984,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DOWNLINKS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int CONSTELLATION_DOWNLINKS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Constellation Downlinks List</em>' class.
@@ -1997,13 +2006,22 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int CONSTELLATION_DOWNLINK = 27;
 
 	/**
+	 * The feature id for the '<em><b>Constellation Downlinks List</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_DOWNLINK__CONSTELLATION_DOWNLINKS_LIST = 0;
+
+	/**
 	 * The feature id for the '<em><b>Downlink Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DOWNLINK__DOWNLINK_ITEMS = 0;
+	int CONSTELLATION_DOWNLINK__DOWNLINK_ITEMS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Constellation Downlink</em>' class.
@@ -2012,7 +2030,7 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DOWNLINK_FEATURE_COUNT = 1;
+	int CONSTELLATION_DOWNLINK_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Constellation Downlink</em>' class.
@@ -3064,6 +3082,17 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EClass getConstellationDownlinksList();
 
 	/**
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getConstellationState <em>Constellation State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Constellation State</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getConstellationState()
+	 * @see #getConstellationDownlinksList()
+	 * @generated
+	 */
+	EReference getConstellationDownlinksList_ConstellationState();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getDownlinks <em>Downlinks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3083,6 +3112,17 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getConstellationDownlink();
+
+	/**
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getConstellationDownlinksList <em>Constellation Downlinks List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Constellation Downlinks List</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getConstellationDownlinksList()
+	 * @see #getConstellationDownlink()
+	 * @generated
+	 */
+	EReference getConstellationDownlink_ConstellationDownlinksList();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getDownlinkItems <em>Downlink Items</em>}'.
@@ -3951,6 +3991,14 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		EClass CONSTELLATION_DOWNLINKS_LIST = eINSTANCE.getConstellationDownlinksList();
 
 		/**
+		 * The meta object literal for the '<em><b>Constellation State</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE = eINSTANCE.getConstellationDownlinksList_ConstellationState();
+
+		/**
 		 * The meta object literal for the '<em><b>Downlinks</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3967,6 +4015,14 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONSTELLATION_DOWNLINK = eINSTANCE.getConstellationDownlink();
+
+		/**
+		 * The meta object literal for the '<em><b>Constellation Downlinks List</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTELLATION_DOWNLINK__CONSTELLATION_DOWNLINKS_LIST = eINSTANCE.getConstellationDownlink_ConstellationDownlinksList();
 
 		/**
 		 * The meta object literal for the '<em><b>Downlink Items</b></em>' containment reference list feature.

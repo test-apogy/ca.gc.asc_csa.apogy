@@ -285,9 +285,9 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 		if (newDownlinksLists != downlinksLists) {
 			NotificationChain msgs = null;
 			if (downlinksLists != null)
-				msgs = ((InternalEObject)downlinksLists).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_STATE__DOWNLINKS_LISTS, null, msgs);
+				msgs = ((InternalEObject)downlinksLists).eInverseRemove(this, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE, ConstellationDownlinksList.class, msgs);
 			if (newDownlinksLists != null)
-				msgs = ((InternalEObject)newDownlinksLists).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_STATE__DOWNLINKS_LISTS, null, msgs);
+				msgs = ((InternalEObject)newDownlinksLists).eInverseAdd(this, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE, ConstellationDownlinksList.class, msgs);
 			msgs = basicSetDownlinksLists(newDownlinksLists, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -401,12 +401,11 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public List<AbstractConstellationDownlinkItem> importConstellationDownlinkItems(String url) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<AbstractConstellationDownlinkItem> importConstellationDownlinkItems(String url){
+		System.out.println("ConstellationStateImpl.importConstellationDownlinkItems(): " + url);
+		return null;
 	}
 
 	/**
@@ -420,6 +419,10 @@ public class ConstellationStateImpl extends MinimalEObjectImpl.Container impleme
 				if (constellationCommandPlansList != null)
 					msgs = ((InternalEObject)constellationCommandPlansList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_COMMAND_PLANS_LIST, null, msgs);
 				return basicSetConstellationCommandPlansList((ConstellationCommandPlansList)otherEnd, msgs);
+			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE__DOWNLINKS_LISTS:
+				if (downlinksLists != null)
+					msgs = ((InternalEObject)downlinksLists).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_STATE__DOWNLINKS_LISTS, null, msgs);
+				return basicSetDownlinksLists((ConstellationDownlinksList)otherEnd, msgs);
 			case ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_REQUESTS_LISTS_CONTAINER:
 				if (constellationRequestsListsContainer != null)
 					msgs = ((InternalEObject)constellationRequestsListsContainer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_STATE__CONSTELLATION_REQUESTS_LISTS_CONTAINER, null, msgs);

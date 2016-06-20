@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getConstellationDownlinksList <em>Constellation Downlinks List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getDownlinkItems <em>Downlink Items</em>}</li>
  * </ul>
  *
@@ -38,6 +39,33 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ConstellationDownlink extends EObject {
 	/**
+	 * Returns the value of the '<em><b>Constellation Downlinks List</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getDownlinks <em>Downlinks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers he container {@link ConstellationDownlinksList}.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Constellation Downlinks List</em>' container reference.
+	 * @see #setConstellationDownlinksList(ConstellationDownlinksList)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationDownlink_ConstellationDownlinksList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getDownlinks
+	 * @model opposite="downlinks" transient="false"
+	 * @generated
+	 */
+	ConstellationDownlinksList getConstellationDownlinksList();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getConstellationDownlinksList <em>Constellation Downlinks List</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Constellation Downlinks List</em>' container reference.
+	 * @see #getConstellationDownlinksList()
+	 * @generated
+	 */
+	void setConstellationDownlinksList(ConstellationDownlinksList value);
+
+	/**
 	 * Returns the value of the '<em><b>Downlink Items</b></em>' containment reference list.
 	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem}.
 	 * <!-- begin-user-doc -->
@@ -46,6 +74,9 @@ public interface ConstellationDownlink extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains the {@link AbstractConstellationDownlinkItem}.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Downlink Items</em>' containment reference list.
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationDownlink_DownlinkItems()
 	 * @model containment="true"

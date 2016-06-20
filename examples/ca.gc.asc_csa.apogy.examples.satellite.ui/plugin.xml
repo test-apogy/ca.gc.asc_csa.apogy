@@ -60,6 +60,14 @@
             id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
             name="GenerateConstellationCommandPlan">
       </command>
+
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationDownlinkItems"
+            description="This command imports constellation downlink items."
+            id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationDownlinkItems"
+            name="ImportConstellationDownlinkItems">
+      </command>
+
       
    </extension>   
    
@@ -86,6 +94,24 @@
                   </iterate>
                </with>
             </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationDownlinkItems"
+               label="Import Downlink Items"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>               
          </command>         
       </menuContribution>
 

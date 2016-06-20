@@ -107,7 +107,7 @@ class StringUID extends AbstractUID{
 	/*
 	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
 	 */
-	contains ConstellationDownlinksList[0..1] downlinksLists
+	contains ConstellationDownlinksList[0..1] downlinksLists opposite constellationState
 		
 	/*
 	 * List of {@link ConstellationRequestsLists}.
@@ -562,13 +562,31 @@ class OrbitalImage extends EImage, GeographicCoordinates{
  * This class represents a list of {@link ConstellationDownlink}.
  */
 class ConstellationDownlinksList extends Named, Described{	
-	contains ConstellationDownlink[0..*] downlinks
+	
+	/*
+	 * Refers to the container {@link ConstellationState}.
+	 */
+	@GenModel(property="None")
+	container ConstellationState constellationState opposite downlinksLists
+	
+	/*
+	 * Contains the {@link ConstellationDownlink}.
+	 */
+	contains ConstellationDownlink[0..*] downlinks opposite constellationDownlinksList
 }
 
 /* 
  * A {@link ConstellationDownlink} class contains the {@link AbstractConstellationDownlinkItem}.
  */
 class ConstellationDownlink{
+	/*
+	 * Refers he container {@link ConstellationDownlinksList}.
+	 */
+	container ConstellationDownlinksList constellationDownlinksList opposite downlinks
+	
+	/*
+	 * Contains the {@link AbstractConstellationDownlinkItem}.
+	 */
 	contains AbstractConstellationDownlinkItem[0..*] downlinkItems
 }
 
