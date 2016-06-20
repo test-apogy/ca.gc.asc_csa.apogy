@@ -1226,8 +1226,8 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOrbitalImageConstellationDownlinkItem_Image() {
-		return (EReference)orbitalImageConstellationDownlinkItemEClass.getEStructuralFeatures().get(0);
+	public EAttribute getOrbitalImageConstellationDownlinkItem_ImageURL() {
+		return (EAttribute)orbitalImageConstellationDownlinkItemEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1425,7 +1425,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		createEReference(abstractConstellationDownlinkItemEClass, ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST);
 
 		orbitalImageConstellationDownlinkItemEClass = createEClass(ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM);
-		createEReference(orbitalImageConstellationDownlinkItemEClass, ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE);
+		createEAttribute(orbitalImageConstellationDownlinkItemEClass, ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE_URL);
 
 		// Create enums
 		constellationRequestPriorityEEnum = createEEnum(CONSTELLATION_REQUEST_PRIORITY);
@@ -1661,7 +1661,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEReference(getAbstractConstellationDownlinkItem_Request(), this.getAbstractConstellationRequest(), null, "request", null, 0, 1, AbstractConstellationDownlinkItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orbitalImageConstellationDownlinkItemEClass, OrbitalImageConstellationDownlinkItem.class, "OrbitalImageConstellationDownlinkItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrbitalImageConstellationDownlinkItem_Image(), this.getOrbitalImage(), null, "image", null, 0, 1, OrbitalImageConstellationDownlinkItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOrbitalImageConstellationDownlinkItem_ImageURL(), theEcorePackage.getEString(), "imageURL", null, 0, 1, OrbitalImageConstellationDownlinkItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(constellationRequestPriorityEEnum, ConstellationRequestPriority.class, "ConstellationRequestPriority");
@@ -2285,6 +2285,12 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		   source, 
 		   new String[] {
 			 "documentation", "This class represents a {@link AbstractDownlinkItem} that contains an {@link OrbitalImage}."
+		   });	
+		addAnnotation
+		  (getOrbitalImageConstellationDownlinkItem_ImageURL(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers to the image."
 		   });
 	}
 

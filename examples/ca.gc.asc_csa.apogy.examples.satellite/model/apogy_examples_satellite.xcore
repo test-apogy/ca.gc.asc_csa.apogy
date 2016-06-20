@@ -609,5 +609,8 @@ abstract class AbstractConstellationDownlinkItem{
  * This class represents a {@link AbstractDownlinkItem} that contains an {@link OrbitalImage}.
  */
 class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlinkItem{
-	contains OrbitalImage[0..1] image	
+	/*
+	 * Refers to the image.
+	 */
+	String imageURL	
 }

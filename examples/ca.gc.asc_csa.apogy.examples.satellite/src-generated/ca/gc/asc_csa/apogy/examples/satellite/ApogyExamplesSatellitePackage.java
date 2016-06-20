@@ -2116,13 +2116,13 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__REQUEST = ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST;
 
 	/**
-	 * The feature id for the '<em><b>Image</b></em>' containment reference.
+	 * The feature id for the '<em><b>Image URL</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE = ABSTRACT_CONSTELLATION_DOWNLINK_ITEM_FEATURE_COUNT + 0;
+	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE_URL = ABSTRACT_CONSTELLATION_DOWNLINK_ITEM_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Orbital Image Constellation Downlink Item</em>' class.
@@ -3178,15 +3178,15 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 	EClass getOrbitalImageConstellationDownlinkItem();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImageURL <em>Image URL</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Image</em>'.
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage()
+	 * @return the meta object for the attribute '<em>Image URL</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImageURL()
 	 * @see #getOrbitalImageConstellationDownlinkItem()
 	 * @generated
 	 */
-	EReference getOrbitalImageConstellationDownlinkItem_Image();
+	EAttribute getOrbitalImageConstellationDownlinkItem_ImageURL();
 
 	/**
 	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}'.
@@ -4069,12 +4069,12 @@ public interface ApogyExamplesSatellitePackage extends EPackage {
 		EClass ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM = eINSTANCE.getOrbitalImageConstellationDownlinkItem();
 
 		/**
-		 * The meta object literal for the '<em><b>Image</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Image URL</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE = eINSTANCE.getOrbitalImageConstellationDownlinkItem_Image();
+		EAttribute ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE_URL = eINSTANCE.getOrbitalImageConstellationDownlinkItem_ImageURL();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}' enum.
