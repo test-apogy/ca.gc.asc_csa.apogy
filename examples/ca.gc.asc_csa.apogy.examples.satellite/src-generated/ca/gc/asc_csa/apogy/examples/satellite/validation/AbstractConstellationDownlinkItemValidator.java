@@ -4,6 +4,7 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.validation;
 
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 
 /**
@@ -16,4 +17,6 @@ public interface AbstractConstellationDownlinkItemValidator {
 	boolean validate();
 
 	boolean validateRequestUID(AbstractUID value);
+
+	boolean validateRequest(AbstractConstellationRequest value);
 }

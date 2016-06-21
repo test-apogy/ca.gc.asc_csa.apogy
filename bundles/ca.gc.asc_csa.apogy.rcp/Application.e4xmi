@@ -28,21 +28,21 @@
       <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif" tooltip="Orbital">
         <children xsi:type="basic:PartSashContainer" xmi:id="_WkvXkDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.1">
           <children xsi:type="basic:PartSashContainer" xmi:id="_YIwvEDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.4" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="__IprIDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.4">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_QcOkYDdUEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.6">
               <children xsi:type="advanced:Placeholder" xmi:id="_9aBmIDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_qta08CgZEeau5bAVKAeRVA"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_L_h28DdREeaqBcDQbmA3aw" elementId="org.eclipse.ui.editorss" ref="_5QgEwCclEeaypqkzSmS_xw"/>
             </children>
-            <children xsi:type="advanced:Placeholder" xmi:id="_L_h28DdREeaqBcDQbmA3aw" elementId="org.eclipse.ui.editorss" ref="_5QgEwCclEeaypqkzSmS_xw"/>
+            <children xsi:type="advanced:Placeholder" xmi:id="_pFKJUDdREeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.earthView" ref="_eVPC8DdREeaqBcDQbmA3aw"/>
           </children>
           <children xsi:type="basic:PartSashContainer" xmi:id="_qPdj0DdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.5" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_ZUKLMDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.3">
-              <children xsi:type="advanced:Placeholder" xmi:id="_krKfsDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.views.ProblemView" ref="_C1hTsCclEeaypqkzSmS_xw"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_n8yBcDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.properties" ref="_Ds6rMCckEeaypqkzSmS_xw"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_krKfsDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.views.ProblemView" ref="_C1hTsCclEeaypqkzSmS_xw"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_3f0RgDdQEeaqBcDQbmA3aw" elementId="org.eclipse.pde.runtime.LogView" ref="_pJ6bsCclEeaypqkzSmS_xw"/>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_r4BdEDdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.5">
               <children xsi:type="advanced:Placeholder" xmi:id="_tAxN0DdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.0" ref="_nM7m8DdSEeaqBcDQbmA3aw"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_uYG0MDdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.1" ref="_nNLekDdSEeaqBcDQbmA3aw"/>
-              <children xsi:type="advanced:Placeholder" xmi:id="_pFKJUDdREeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.earthView" ref="_eVPC8DdREeaqBcDQbmA3aw"/>
             </children>
           </children>
         </children>

@@ -56,15 +56,13 @@
 
       <command
             defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
-            description="This command generates a plan based on the list of requests selected."
             id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
             name="GenerateConstellationCommandPlan">
       </command>
 
       <command
-            defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationDownlinkItems"
-            description="This command imports constellation downlink items."
-            id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationDownlinkItems"
+            defaultHandler="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationDownlinkItemsCommand"
+            id="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationDownlinkItemsCommand"
             name="ImportConstellationDownlinkItems">
       </command>
 
@@ -96,29 +94,23 @@
             </visibleWhen>
          </command>
          <command
-               commandId="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationDownlinkItems"
+               commandId="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.ImportConstellationDownlinkItemsCommand"
                label="Import Downlink Items"
                style="push">
             <visibleWhen
                   checkEnabled="false">
                <with
-                    variable="activeMenuSelection">
+                     variable="activeMenuSelection">
                   <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
+                        ifEmpty="false"
+                        operator="or">
+                     <instanceof
                            value="ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink">
-                       </instanceof>
+                     </instanceof>
                   </iterate>
                </with>
-            </visibleWhen>               
-         </command>         
-      </menuContribution>
-
-      <menuContribution
-            allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
-
+            </visibleWhen>
+         </command>
          <command
                commandId="ca.gc.asc_csa.apogy.examples.satellite.ui.commands.GenerateConstellationCommandPlan"
                label="Generate Constellation Command Plan"
@@ -126,24 +118,17 @@
             <visibleWhen
                   checkEnabled="false">
                <with
-                    variable="activeMenuSelection">
+                     variable="activeMenuSelection">
                   <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
+                        ifEmpty="false"
+                        operator="or">
+                     <instanceof
                            value="ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationPlanner">
-                       </instanceof>
+                     </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
-         </command>         
-      </menuContribution>
-
-      
-      <menuContribution
-            allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
-
+         </command>
          <command
                commandId="ca.gc.asc_csa.examples.satellite.ui.commands.ExportConstellationPlanCommand"
                label="Export Constellation Plan"
@@ -151,17 +136,22 @@
             <visibleWhen
                   checkEnabled="false">
                <with
-                    variable="activeMenuSelection">
+                     variable="activeMenuSelection">
                   <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
+                        ifEmpty="false"
+                        operator="or">
+                     <instanceof
                            value="ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan">
-                       </instanceof>
+                     </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
-         </command>         
-      </menuContribution>      
+         </command>       
+      </menuContribution>
+
+
+
+
+      
    </extension>
 </plugin>

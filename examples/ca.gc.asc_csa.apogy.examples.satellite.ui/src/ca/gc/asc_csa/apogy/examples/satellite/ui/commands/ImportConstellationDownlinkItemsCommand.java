@@ -28,7 +28,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
 import ca.gc.asc_csa.apogy.examples.satellite.ui.Activator;
 import ca.gc.asc_csa.apogy.examples.satellite.ui.Constants;
 
-public class ImportConstellationDownlinkItems extends AbstractHandler implements IHandler {
+public class ImportConstellationDownlinkItemsCommand extends AbstractHandler implements IHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
