@@ -29,8 +29,10 @@
         <children xsi:type="basic:PartSashContainer" xmi:id="_WkvXkDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.1">
           <children xsi:type="basic:PartSashContainer" xmi:id="_YIwvEDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.4" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_QcOkYDdUEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.6">
-              <children xsi:type="advanced:Placeholder" xmi:id="_9aBmIDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_qta08CgZEeau5bAVKAeRVA"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_L_h28DdREeaqBcDQbmA3aw" elementId="org.eclipse.ui.editorss" ref="_5QgEwCclEeaypqkzSmS_xw"/>
+              <children xsi:type="basic:PartStack" xmi:id="_KM3FUDiXEeafNNjwzIlosA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.4">
+                <children xsi:type="advanced:Placeholder" xmi:id="_9aBmIDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_qta08CgZEeau5bAVKAeRVA"/>
+              </children>
             </children>
             <children xsi:type="advanced:Placeholder" xmi:id="_pFKJUDdREeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.earthView" ref="_eVPC8DdREeaqBcDQbmA3aw"/>
           </children>
@@ -83,7 +85,12 @@
       <toolbar xmi:id="_pJ6bsiclEeaypqkzSmS_xw" elementId="org.eclipse.pde.runtime.LogView"/>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_5QgEwCclEeaypqkzSmS_xw" elementId="org.eclipse.ui.editorss" selectedElement="_9-e20CclEeaypqkzSmS_xw" label="Editors">
-      <children xsi:type="basic:PartStack" xmi:id="_9-e20CclEeaypqkzSmS_xw" elementId="org.eclipse.e4.primaryDataStack"/>
+      <children xsi:type="basic:PartStack" xmi:id="_9-e20CclEeaypqkzSmS_xw" elementId="org.eclipse.e4.primaryDataStack">
+        <tags>newtablook</tags>
+        <tags>org.eclipse.e4.primaryDataStack</tags>
+        <tags>EditorStack</tags>
+        <tags>NoAutoCollapse</tags>
+      </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_qta08CgZEeau5bAVKAeRVA" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/$nl$/icons/full/eview16/resource_persp.gif" closeable="true">
       <tags>View</tags>
