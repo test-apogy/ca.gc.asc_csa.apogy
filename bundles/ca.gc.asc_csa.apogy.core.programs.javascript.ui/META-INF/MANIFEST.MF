@@ -17,7 +17,15 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.apogy.common.emf,
  org.eclipse.wst.jsdt.core,
  org.eclipse.debug.core,
- org.eclipse.wst.jsdt.debug.core
+ org.eclipse.wst.jsdt.debug.core,
+ org.eclipse.dltk.core,
+ org.eclipse.dltk.javascript.core,
+ org.eclipse.dltk.javascript.ui,
+ org.eclipse.dltk.ui,
+ org.eclipse.jface.text,
+ org.eclipse.wst.jsdt.ui,
+ org.apache.commons.lang,
+ ca.gc.asc_csa.apogy.core.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.core.programs.javascript.ui.commands

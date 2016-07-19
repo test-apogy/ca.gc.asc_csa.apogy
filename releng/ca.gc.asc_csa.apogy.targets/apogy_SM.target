@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="apogy_SM" sequenceNumber="60">
+<?pde version="3.8"?><target name="apogy_SM" sequenceNumber="72">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.collections.source" version="3.2.0.v2013030210310"/>
@@ -8,8 +8,12 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.widgets.gallery.feature.feature.group" version="1.0.0.201601121647"/>
-<repository location="http://download.eclipse.org/technology/nebula/archives/Q42015/release/"/>
+<unit id="org.eclipse.wst.jsdt_sdk.feature.feature.group" version="1.6.200.v201505071819"/>
+<repository location="http://download.eclipse.org/webtools/repository/mars/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.nebula.examples.release.feature.feature.group" version="1.0.4.201605182147"/>
+<repository location="http://archive.eclipse.org/nebula/Q22016/release/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.sirius.runtime.source.feature.group" version="3.1.1.201510291439"/>
@@ -19,7 +23,8 @@
 <repository location="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="ca.gc.asc_csa.apogy.ots.feature.feature.group" version="0.1.0.201604191705"/>
+<unit id="ca.gc.asc_csa.apogy.ots.feature.feature.group" version="0.1.0.201605251557"/>
+<unit id="ca.gc.asc_csa.apogy.ots.feature.source.feature.group" version="0.1.0.201605251557"/>
 <repository location="https://dl.bintray.com/apogy/OTS/0.1/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
@@ -33,8 +38,9 @@
 <repository location="http://download.eclipse.org/releases/mars"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.wst.jsdt_sdk.feature.feature.group" version="1.6.200.v201505071819"/>
-<repository location="http://download.eclipse.org/webtools/repository/mars/"/>
+<unit id="org.eclipse.dltk.javascript.feature.group" version="5.5.0.201605241149"/>
+<unit id="org.eclipse.dltk.core.feature.group" version="5.5.0.201605241149"/>
+<repository location="http://download.eclipse.org/technology/dltk/updates-dev/5.5/"/>
 </location>
 </locations>
 </target>

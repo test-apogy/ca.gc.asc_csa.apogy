@@ -14,5 +14,19 @@
             class="ca.gc.asc_csa.apogy.core.programs.javascript.ApogyCoreJavaScriptProgramsPackage"
             genModel="model/apogy_core_javascript_programs.xcore"/>
    </extension>
+   <extension
+         point="org.eclipse.dltk.javascript.core.typeinfo">
+      <provider
+            class="ca.gc.asc_csa.apogy.core.programs.javascript.ApogyTypeProvider">
+      </provider>
+   </extension>
+   <extension
+         point="org.eclipse.dltk.core.language">
+      <language
+            class="org.eclipse.dltk.javascript.core.JavaScriptLanguageToolkit$Factory"
+            nature="ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature"
+            priority="0">
+      </language>
+   </extension>
 
 </plugin>
