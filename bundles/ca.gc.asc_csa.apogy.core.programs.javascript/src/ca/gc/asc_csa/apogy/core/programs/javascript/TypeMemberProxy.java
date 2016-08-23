@@ -169,7 +169,9 @@ public class TypeMemberProxy extends ScriptableObject {
 			TypeMemberReferenceListElement typeMemberReferenceListElement = ApogyCoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceListElement();
 			typeMemberReferenceListElement.setTypeMember(typeMember);
 			subVariableFeatureReference.setTypeMemberReferenceListElement(typeMemberReferenceListElement);
-			return new TypeMemberProxy(subVariableFeatureReference, program);
+			TypeMemberProxy object = new TypeMemberProxy(subVariableFeatureReference, program);
+			object.setParentScope(TypeMemberProxy.this);
+			return object;
 		}
 	}
 }
