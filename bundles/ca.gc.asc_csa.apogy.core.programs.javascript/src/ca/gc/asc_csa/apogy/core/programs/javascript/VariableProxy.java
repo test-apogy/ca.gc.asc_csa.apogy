@@ -101,11 +101,6 @@ public class VariableProxy extends ScriptableObject {
 		return "Proxy";
 	}
 
-	public String getName() {
-		return variable.getName();
-	}
-
-
 	/**
 	 * Gets a reference of the EObject wrapped by {@link VariableProxy}
 	 *
