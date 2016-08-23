@@ -72,6 +72,7 @@ public class OperationCallInvoker extends BaseFunction {
 	 */
 	private OperationCall createOperationCall(ArgumentsList argumentsList) {
 		OperationCall opCall = VariableFeatureReferenceUtil.toOperationCall(variableFeatureReference);
+		opCall.setName(operation.getName());
 		opCall.setEOperation(operation);
 		opCall.setArgumentsList(argumentsList);
 		program.getOperationCalls().add(opCall);
