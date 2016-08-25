@@ -27,6 +27,7 @@
          </enabledWhen>
       </handler>
    </extension>
+
    <extension
          point="org.eclipse.ui.commands">
       <command
@@ -40,6 +41,7 @@
             name="Debug script">
       </command>
    </extension>
+
    <extension
          point="org.eclipse.ui.menus">
       <menuContribution
@@ -62,6 +64,7 @@
          </command>
       </menuContribution>
    </extension>
+
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
@@ -72,6 +75,7 @@
             type="java.lang.Object">
       </propertyTester>
    </extension>
+
    <extension
          id="ca.gc.asc_csa.apogy.core.programs.javascript.ui.ApogyCompletionProposalComputer"
          point="org.eclipse.wst.jsdt.ui.javaCompletionProposalComputer">
@@ -82,4 +86,31 @@
       </javaCompletionProposalComputer>
    </extension>
 
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            
+         <propertySection
+               class="ca.gc.asc_csa.apogy.core.programs.javascript.ui.properties.ScriptSection"
+               id="ca.gc.asc_csa.apogy.core.programs.javascript.ui.properties.ScriptSection"
+               tab="ca.gc.asc_csa.apogy.core.programs.javascript.ui.propertyTabs.Script">
+            <input
+                  type="ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram">
+            </input>
+         </propertySection>
+      </propertySections>
+	</extension>
+
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.asc_csa.apogy.common.emf.ui"
+               id="ca.gc.asc_csa.apogy.core.programs.javascript.ui.propertyTabs.Script"
+               label="Script Location">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
 </plugin>

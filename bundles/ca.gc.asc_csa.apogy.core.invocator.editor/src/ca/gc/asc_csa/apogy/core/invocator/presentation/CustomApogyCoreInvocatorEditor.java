@@ -55,6 +55,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.ISharedImages;
@@ -473,7 +474,7 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
 					}
 				}, PlatformUI.getWorkbench().getDecoratorManager()
 						.getLabelDecorator()));
-		
+
 		selectionViewer.getTree().setLinesVisible(true);
 
         selectionViewer.addDoubleClickListener(new IDoubleClickListener() {
@@ -482,6 +483,7 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
              * Double click listener that only reacts on JavaScriptProgram model
              * element and open the referenced JavaScript File in the default
              * editor.
+             * If no JavaScript file selected opens Properties view.
              */
             @Override
             public void doubleClick(DoubleClickEvent event) {
@@ -490,9 +492,12 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
                     Object firstElement = treeSelection.getFirstElement();
                     if (firstElement instanceof EObject && "JavaScriptProgramImpl".equals(firstElement.getClass().getSimpleName())) { //$NON-NLS-1$
                         openJavaScriptEditor((EObject) firstElement);
+
+                        // refresh selection to render the content of the Properties view
+                        selectionViewer.getControl().setFocus();
+                        selectionViewer.setSelection(event.getSelection(), true);
                     }
                 }
-
             }
         });
 
@@ -511,6 +516,8 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
 		String relativePath = (String) javaScriptProgram.eGet(javaScriptProgram.eClass().getEStructuralFeature("scriptPath")); //$NON-NLS-1$
 
 		if (relativePath == null || !relativePath.endsWith(".js")) { //$NON-NLS-1$
+			// The file path is not set, open the properties view
+			openProperties();
 			return;
 		}
 
@@ -523,7 +530,9 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
 
 		if (!(fileToOpen.exists() && fileToOpen.isFile())) {
 			// The file does not exist and need to be created
-			createJavaScriptFile(relativePath, fileToOpen);
+			// open the properties view
+			openProperties();
+			return;
 		}
 
 		if (fileToOpen.exists() && fileToOpen.isFile()) {
@@ -539,34 +548,10 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
 		}
 	}
 
-	/**
-	 * Creation of the JavaScript file if non existing.
-	 * 
-	 * @param scriptPath
-	 *            path of the JavaScript file given in the model element
-	 * @param fileToOpen
-	 *            the JavaScript File
-	 */
-	private void createJavaScriptFile(String scriptPath, File fileToOpen) {
+	private void openProperties() {
 		try {
-			File parent = fileToOpen.getParentFile();
-			if (parent != null) {
-				parent.mkdirs();
-			}
-			fileToOpen.createNewFile();
-			// The project need to be refreshed once the file is created in
-			// order to be visible to the user.
-			IProject[] projects = ResourcesPlugin.getWorkspace().getRoot().getProjects();
-			for (IProject iProject : projects) {
-				if (scriptPath.startsWith(iProject.getLocation().lastSegment())) {
-					try {
-						iProject.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
-					} catch (CoreException e) {
-						ApogyCoreInvocatorEditorPlugin.INSTANCE.log(e);
-					}
-				}
-			}
-		} catch (IOException e) {
+			PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(IPageLayout.ID_PROP_SHEET);
+		} catch (PartInitException e) {
 			ApogyCoreInvocatorEditorPlugin.INSTANCE.log(e);
 		}
 	}

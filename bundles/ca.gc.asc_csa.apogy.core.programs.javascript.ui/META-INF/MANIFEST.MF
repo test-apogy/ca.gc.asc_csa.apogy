@@ -25,7 +25,13 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jface.text,
  org.eclipse.wst.jsdt.ui,
  org.apache.commons.lang,
- ca.gc.asc_csa.apogy.core.ui
+ ca.gc.asc_csa.apogy.core.ui,
+ org.eclipse.core.databinding.property,
+ org.eclipse.jface.databinding,
+ ca.gc.asc_csa.apogy.common.converters,
+ org.eclipse.emf.databinding.edit,
+ org.eclipse.core.filesystem,
+ ca.gc.asc_csa.apogy.core.programs.javascript.edit
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.core.programs.javascript.ui.commands
