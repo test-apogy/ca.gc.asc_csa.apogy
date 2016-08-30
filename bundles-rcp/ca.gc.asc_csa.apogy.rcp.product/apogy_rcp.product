@@ -29,7 +29,7 @@
       startupProgressRect="30,275,395,4"
       startupMessageRect="30,250,395,20"
       startupForegroundColor="2E3436" />
-   <launcher>
+   <launcher name="apogy">
       <linux icon="/ca.gc.asc_csa.apogy.rcp.product/icons/apogy_icon.xpm"/>
       <solaris/>
       <win useIco="true">
@@ -132,7 +132,7 @@
    </plugins>
 
    <features>
-      <feature id="ca.gc.asc_csa.apogy.rcp.feature" version="0.5.0.qualifier"/>
+      <feature id="ca.gc.asc_csa.apogy.rcp.feature"/>
    </features>
 
    <configurations>

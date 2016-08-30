@@ -107,7 +107,7 @@ class StringUID extends AbstractUID{
 	/*
 	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
 	 */
-	contains ConstellationDownlinksList[0..1] downlinksLists
+	contains ConstellationDownlinksList[0..1] downlinksLists opposite constellationState
 		
 	/*
 	 * List of {@link ConstellationRequestsLists}.
@@ -125,13 +125,20 @@ class StringUID extends AbstractUID{
 	 * @return List of imported {@link AbstractConstellationRequest}. 
 	 */
 	op List<AbstractConstellationRequest> importConstellationRequests(String url)
-		
+				
 	/*
 	 * Exports the specified plan into the resource specified by the url.
 	 * @param plan Refers the plan to export.
 	 * @param url Specifies the location where the plan must be exported.
 	 */
-	op void export(AbstractConstellationCommandPlan plan, String url)	
+	op void export(AbstractConstellationCommandPlan plan, String url)
+	
+	/*
+	 * Imports the {@link AbstractConstellationDownlinkItem} contained in the resource specified by the {@link url}.
+	 * @param url URL that specifies the resource.
+	 * @return List of imported {@link AbstractConstellationDownlinkItem}. 
+	 */
+	op List<AbstractConstellationDownlinkItem> importConstellationDownlinkItems(String url)		
 }
 
 /*
@@ -555,13 +562,31 @@ class OrbitalImage extends EImage, GeographicCoordinates{
  * This class represents a list of {@link ConstellationDownlink}.
  */
 class ConstellationDownlinksList extends Named, Described{	
-	contains ConstellationDownlink[0..*] downlinks
+	
+	/*
+	 * Refers to the container {@link ConstellationState}.
+	 */
+	@GenModel(property="None")
+	container ConstellationState constellationState opposite downlinksLists
+	
+	/*
+	 * Contains the {@link ConstellationDownlink}.
+	 */
+	contains ConstellationDownlink[0..*] downlinks opposite constellationDownlinksList
 }
 
 /* 
  * A {@link ConstellationDownlink} class contains the {@link AbstractConstellationDownlinkItem}.
  */
 class ConstellationDownlink{
+	/*
+	 * Refers he container {@link ConstellationDownlinksList}.
+	 */
+	container ConstellationDownlinksList constellationDownlinksList opposite downlinks
+	
+	/*
+	 * Contains the {@link AbstractConstellationDownlinkItem}.
+	 */
 	contains AbstractConstellationDownlinkItem[0..*] downlinkItems
 }
 
@@ -572,12 +597,20 @@ abstract class AbstractConstellationDownlinkItem{
 	/*
 	 * Unique {@link AbstractConstellationRequest} identifier.
 	 */
-	contains AbstractUID requestUID		
+	contains AbstractUID requestUID
+	
+	/*
+	 * Refers to the request that is the owner of this item.
+	 */
+	refers AbstractConstellationRequest [0..1] request	
 }
 
 /*
  * This class represents a {@link AbstractDownlinkItem} that contains an {@link OrbitalImage}.
  */
 class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlinkItem{
-	contains OrbitalImage[0..1] image	
+	/*
+	 * Refers to the image.
+	 */
+	String imageURL	
 }

@@ -140,10 +140,6 @@ This Agreement is governed by the laws of the State of New York and the intellec
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.egit"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.ecore.xcore"
          version="0.0.0"/>
 

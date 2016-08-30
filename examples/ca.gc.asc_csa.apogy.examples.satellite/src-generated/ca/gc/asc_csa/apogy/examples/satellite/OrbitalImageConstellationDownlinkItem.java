@@ -27,7 +27,7 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImageURL <em>Image URL</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getOrbitalImageConstellationDownlinkItem()
@@ -36,29 +36,32 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  */
 public interface OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlinkItem {
 	/**
-	 * Returns the value of the '<em><b>Image</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Image URL</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Image</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Image URL</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Image</em>' containment reference.
-	 * @see #setImage(OrbitalImage)
-	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getOrbitalImageConstellationDownlinkItem_Image()
-	 * @model containment="true"
+	 * <!-- begin-model-doc -->
+	 * Refers to the image.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Image URL</em>' attribute.
+	 * @see #setImageURL(String)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getOrbitalImageConstellationDownlinkItem_ImageURL()
+	 * @model unique="false"
 	 * @generated
 	 */
-	OrbitalImage getImage();
+	String getImageURL();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImageURL <em>Image URL</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Image</em>' containment reference.
-	 * @see #getImage()
+	 * @param value the new value of the '<em>Image URL</em>' attribute.
+	 * @see #getImageURL()
 	 * @generated
 	 */
-	void setImage(OrbitalImage value);
+	void setImageURL(String value);
 
 } // OrbitalImageConstellationDownlinkItem

@@ -15,5 +15,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
 public interface OrbitalImageConstellationDownlinkItemValidator {
 	boolean validate();
 
+	boolean validateImageURL(String value);
+
 	boolean validateImage(OrbitalImage value);
 }

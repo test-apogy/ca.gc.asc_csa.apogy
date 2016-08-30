@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/ca.gc.asc_csa.apogy.sdk.feature_0.5.0.qualifier.jar" id="ca.gc.asc_csa.apogy.sdk.feature" version="0.5.0.qualifier">
-      <category name="ca.gc.asc_csa.apogy"/>
-   </feature>
    <feature url="features/ca.gc.asc_csa.apogy.sdk.feature.source_0.5.0.qualifier.jar" id="ca.gc.asc_csa.apogy.sdk.feature.source" version="0.5.0.qualifier">
       <category name="ca.gc.asc_csa.apogy"/>
    </feature>

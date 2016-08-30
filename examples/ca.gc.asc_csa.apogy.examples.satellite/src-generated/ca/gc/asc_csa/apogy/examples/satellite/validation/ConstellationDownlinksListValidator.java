@@ -6,6 +6,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.validation;
 
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
 
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -16,6 +17,8 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface ConstellationDownlinksListValidator {
 	boolean validate();
+
+	boolean validateConstellationState(ConstellationState value);
 
 	boolean validateDownlinks(EList<ConstellationDownlink> value);
 }

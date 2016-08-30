@@ -114,8 +114,6 @@
 		</plugins>
 	</build>
 	<modules>
-	<module>../ca.gc.asc_csa.apogy.rcp</module>
-	<module>../ca.gc.asc_csa.apogy.rcp.feature</module>
 	<module>../ca.gc.asc_csa.apogy.rcp.product</module>
 	</modules>
 </project>

@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequest <em>Request</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationDownlinkItem()
@@ -60,5 +61,30 @@ public interface AbstractConstellationDownlinkItem extends EObject {
 	 * @generated
 	 */
 	void setRequestUID(AbstractUID value);
+
+	/**
+	 * Returns the value of the '<em><b>Request</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers to the request that is the owner of this item.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Request</em>' reference.
+	 * @see #setRequest(AbstractConstellationRequest)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationDownlinkItem_Request()
+	 * @model
+	 * @generated
+	 */
+	AbstractConstellationRequest getRequest();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequest <em>Request</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Request</em>' reference.
+	 * @see #getRequest()
+	 * @generated
+	 */
+	void setRequest(AbstractConstellationRequest value);
 
 } // AbstractConstellationDownlinkItem

@@ -27,6 +27,7 @@ Package satellite <ca.gc.asc_csa.apogy.examples.satellite>
     Reference constellationPlannersContainer : ConstellationPlannersContainer
     Operation importConstellationRequests(EString) : List
     Operation export(AbstractConstellationCommandPlan, EString) : void
+    Operation importConstellationDownlinkItems(EString) : List
 
   Class AbstractConstellation -> Named, Described
     Reference constellationState : ConstellationState
@@ -116,16 +117,19 @@ Package satellite <ca.gc.asc_csa.apogy.examples.satellite>
     Attribute rollAngle : EDouble
 
   Class ConstellationDownlinksList -> Named, Described
+    Reference constellationState : ConstellationState
     Reference downlinks : ConstellationDownlink<<0..*>>
 
   Class ConstellationDownlink
+    Reference constellationDownlinksList : ConstellationDownlinksList
     Reference downlinkItems : AbstractConstellationDownlinkItem<<0..*>>
 
   Class AbstractConstellationDownlinkItem
     Reference requestUID : AbstractUID
+    Reference request : AbstractConstellationRequest
 
   Class OrbitalImageConstellationDownlinkItem -> AbstractConstellationDownlinkItem
-    Reference image : OrbitalImage
+    Attribute imageURL : EString
 
   Enum ConstellationRequestPriority
     Literal LOW = 0

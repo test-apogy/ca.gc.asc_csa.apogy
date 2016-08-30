@@ -25,7 +25,30 @@
         </children>
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_3_Z0YCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.data" label="Data" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/DataProductsList.gif" tooltip="Data"/>
-      <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif" tooltip="Orbital"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif" tooltip="Orbital">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_WkvXkDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.1">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_YIwvEDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.4" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_QcOkYDdUEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.6">
+              <children xsi:type="advanced:Placeholder" xmi:id="_L_h28DdREeaqBcDQbmA3aw" elementId="org.eclipse.ui.editorss" ref="_5QgEwCclEeaypqkzSmS_xw"/>
+              <children xsi:type="basic:PartStack" xmi:id="_KM3FUDiXEeafNNjwzIlosA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.4">
+                <children xsi:type="advanced:Placeholder" xmi:id="_9aBmIDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_qta08CgZEeau5bAVKAeRVA"/>
+              </children>
+            </children>
+            <children xsi:type="advanced:Placeholder" xmi:id="_pFKJUDdREeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.earthView" ref="_eVPC8DdREeaqBcDQbmA3aw"/>
+          </children>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_qPdj0DdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.5" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_ZUKLMDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.3">
+              <children xsi:type="advanced:Placeholder" xmi:id="_n8yBcDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.properties" ref="_Ds6rMCckEeaypqkzSmS_xw"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_krKfsDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.views.ProblemView" ref="_C1hTsCclEeaypqkzSmS_xw"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_3f0RgDdQEeaqBcDQbmA3aw" elementId="org.eclipse.pde.runtime.LogView" ref="_pJ6bsCclEeaypqkzSmS_xw"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_r4BdEDdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.5">
+              <children xsi:type="advanced:Placeholder" xmi:id="_tAxN0DdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.0" ref="_nM7m8DdSEeaqBcDQbmA3aw"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_uYG0MDdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.1" ref="_nNLekDdSEeaqBcDQbmA3aw"/>
+            </children>
+          </children>
+        </children>
+      </children>
       <children xsi:type="advanced:Perspective" xmi:id="_8W6f0CK2Eea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.advanced" label="Advanced" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Advanced"/>
     </children>
     <handlers xmi:id="_DmHtoCj7EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handler.1"/>
@@ -61,8 +84,13 @@
       </menus>
       <toolbar xmi:id="_pJ6bsiclEeaypqkzSmS_xw" elementId="org.eclipse.pde.runtime.LogView"/>
     </sharedElements>
-    <sharedElements xsi:type="advanced:Area" xmi:id="_5QgEwCclEeaypqkzSmS_xw" elementId="org.eclipse.ui.editorss" selectedElement="_9-e20CclEeaypqkzSmS_xw">
-      <children xsi:type="basic:PartStack" xmi:id="_9-e20CclEeaypqkzSmS_xw" elementId="org.eclipse.e4.primaryDataStack"/>
+    <sharedElements xsi:type="advanced:Area" xmi:id="_5QgEwCclEeaypqkzSmS_xw" elementId="org.eclipse.ui.editorss" selectedElement="_9-e20CclEeaypqkzSmS_xw" label="Editors">
+      <children xsi:type="basic:PartStack" xmi:id="_9-e20CclEeaypqkzSmS_xw" elementId="org.eclipse.e4.primaryDataStack">
+        <tags>newtablook</tags>
+        <tags>org.eclipse.e4.primaryDataStack</tags>
+        <tags>EditorStack</tags>
+        <tags>NoAutoCollapse</tags>
+      </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_qta08CgZEeau5bAVKAeRVA" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/$nl$/icons/full/eview16/resource_persp.gif" closeable="true">
       <tags>View</tags>
@@ -71,6 +99,30 @@
         <tags>ViewMenu</tags>
       </menus>
       <toolbar xmi:id="_qta08igZEeau5bAVKAeRVA" elementId="org.eclipse.ui.navigator.ProjectExplorer"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_eVPC8DdREeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.view1" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Earth View" iconURI="" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
+      <menus xmi:id="_eVPC8TdREeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.view1">
+        <tags>ViewMenu</tags>
+      </menus>
+      <toolbar xmi:id="_eVPC8jdREeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.view1"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_nM7m8DdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Spacecraft Visibility" iconURI="" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
+      <menus xmi:id="_nM7m8TdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView">
+        <tags>ViewMenu</tags>
+      </menus>
+      <toolbar xmi:id="_nM7m8jdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_nNLekDdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Visibility Pass View" iconURI="" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
+      <menus xmi:id="_nNLekTdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView">
+        <tags>ViewMenu</tags>
+      </menus>
+      <toolbar xmi:id="_nNLekjdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"/>
     </sharedElements>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">

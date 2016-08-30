@@ -31,6 +31,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getConstellationState <em>Constellation State</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getDownlinks <em>Downlinks</em>}</li>
  * </ul>
  *
@@ -40,17 +41,50 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  */
 public interface ConstellationDownlinksList extends Named, Described {
 	/**
+	 * Returns the value of the '<em><b>Constellation State</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getDownlinksLists <em>Downlinks Lists</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers to the container {@link ConstellationState}.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Constellation State</em>' container reference.
+	 * @see #setConstellationState(ConstellationState)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationDownlinksList_ConstellationState()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getDownlinksLists
+	 * @model opposite="downlinksLists" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
+	 * @generated
+	 */
+	ConstellationState getConstellationState();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getConstellationState <em>Constellation State</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Constellation State</em>' container reference.
+	 * @see #getConstellationState()
+	 * @generated
+	 */
+	void setConstellationState(ConstellationState value);
+
+	/**
 	 * Returns the value of the '<em><b>Downlinks</b></em>' containment reference list.
 	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getConstellationDownlinksList <em>Constellation Downlinks List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Downlinks</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains the {@link ConstellationDownlink}.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Downlinks</em>' containment reference list.
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationDownlinksList_Downlinks()
-	 * @model containment="true"
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getConstellationDownlinksList
+	 * @model opposite="constellationDownlinksList" containment="true"
 	 * @generated
 	 */
 	EList<ConstellationDownlink> getDownlinks();
