@@ -44,5 +44,11 @@
             Class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.converters.ReferenceResultValueToImageSnapshotConverter">
       </new_element>
    </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
+      <Class
+            Class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentationAdapter">
+      </Class>
+   </extension>
 
 </plugin>

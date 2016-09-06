@@ -45,14 +45,18 @@ type Point3d wraps javax.vecmath.Point3d
 type Vector3d wraps javax.vecmath.Vector3d
 
 class Vector extends Node
-{
+{	
+	@GenModel(apogy_units="rad")
 	double xRotation = "0.0"
 	
+	@GenModel(apogy_units="rad")
 	double yRotation = "0.0"
 	
+	@GenModel(apogy_units="rad")
 	double zRotation = "0.0"
 	
-	double length
+	@GenModel(apogy_units="m")
+	double length = "1.0"
 	
 	readonly transient volatile derived Point3d endPoint
 }
