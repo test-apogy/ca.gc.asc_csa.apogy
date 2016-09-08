@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="apogy_sdk_mars" sequenceNumber="64">
+<?pde version="3.8"?><target name="apogy_sdk_4.5.2" sequenceNumber="68">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.collections.source" version="3.2.0.v2013030210310"/>
@@ -30,7 +30,7 @@
 <repository location="http://download.eclipse.org/releases/mars"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.widgets.gallery.feature.feature.group" version="1.0.0.201608221242"/>
+<unit id="org.eclipse.nebula.widgets.gallery.feature.feature.group" version="1.0.0.201609051542"/>
 <repository location="http://download.eclipse.org/technology/nebula/snapshot"/>
 </location>
 </locations>
