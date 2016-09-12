@@ -12,7 +12,6 @@
 
 package ca.gc.asc_csa.apogy.core.programs.javascript.ui.commands;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,8 +20,10 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.debug.core.DebugPlugin;
@@ -39,8 +40,8 @@ import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.wst.jsdt.debug.internal.core.Constants;
 import org.eclipse.wst.jsdt.debug.internal.core.launching.ILaunchConstants;
 
-import ca.gc.asc_csa.apogy.core.programs.javascript.RhinoDebuggerFrontend;
 import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram;
+import ca.gc.asc_csa.apogy.core.programs.javascript.RhinoDebuggerFrontend;
 import ca.gc.asc_csa.apogy.core.programs.javascript.ScriptExecutor;
 import ca.gc.asc_csa.apogy.core.programs.javascript.ui.Activator;
 
@@ -159,10 +160,7 @@ public class ScriptExecutorDebugHandler extends AbstractHandler {
 			return null;
 		}
 
-		File file = new File(scriptPath);
-		while (file.getParentFile() != null && file.getParentFile().getParentFile() != null) {
-			file = file.getParentFile();
-		}
-		return file.getName();
+		IPath path = new Path(scriptPath);
+		return path.segment(0);
 	}
 }
