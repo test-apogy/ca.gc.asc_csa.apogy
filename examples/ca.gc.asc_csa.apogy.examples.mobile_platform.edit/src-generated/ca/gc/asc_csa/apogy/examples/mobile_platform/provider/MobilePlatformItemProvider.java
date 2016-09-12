@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.examples.mobile_platform.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
@@ -147,7 +146,7 @@ IItemPropertySource
 	protected void addPositionErrorPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_positionError_feature"),
@@ -169,7 +168,7 @@ IItemPropertySource
 	 */
 	protected void addLinearVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_linearVelocity_feature"),
@@ -191,7 +190,7 @@ IItemPropertySource
 	 */
 	protected void addAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_angularVelocity_feature"),
@@ -214,7 +213,7 @@ IItemPropertySource
 	protected void addLeftWheelPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_leftWheelPosition_feature"),
@@ -237,7 +236,7 @@ IItemPropertySource
 	protected void addRightWheelPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_rightWheelPosition_feature"),

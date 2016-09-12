@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.examples.antenna.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -74,7 +73,7 @@ public class PTUDishAntennaItemProvider extends DishAntennaItemProvider
 	protected void addPanAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntenna_panAngle_feature"),
@@ -97,7 +96,7 @@ public class PTUDishAntennaItemProvider extends DishAntennaItemProvider
 	protected void addTiltAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntenna_tiltAngle_feature"),

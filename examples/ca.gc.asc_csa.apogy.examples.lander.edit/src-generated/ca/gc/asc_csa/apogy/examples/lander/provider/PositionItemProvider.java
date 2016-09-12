@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.examples.lander.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
@@ -93,7 +92,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 	protected void addXPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Position_x_feature"),
@@ -116,7 +115,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 	protected void addYPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Position_y_feature"),
@@ -139,7 +138,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 	protected void addZPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Position_z_feature"),

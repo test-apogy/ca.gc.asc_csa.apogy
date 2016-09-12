@@ -27,7 +27,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.CartesianCoordinatesSetItemProvider;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
@@ -150,7 +149,7 @@ public class WayPointPathItemProvider
 	 */
 	protected void addLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_WayPointPath_length_feature"),
