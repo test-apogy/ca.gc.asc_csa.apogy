@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/ca.gc.asc_csa.apogy.core.feature_0.5.0.qualifier.jar" id="ca.gc.asc_csa.apogy.core.feature" version="0.5.0.qualifier">
-      <category name="ca.gc.asc_csa.apogy"/>
-   </feature>
    <feature url="features/ca.gc.asc_csa.apogy.doc.feature_0.5.0.qualifier.jar" id="ca.gc.asc_csa.apogy.doc.feature" version="0.5.0.qualifier">
       <category name="ca.gc.asc_csa.apogy"/>
    </feature>
@@ -12,11 +9,14 @@
    <feature url="features/ca.gc.asc_csa.apogy.rcp.feature_0.5.0.qualifier.jar" id="ca.gc.asc_csa.apogy.rcp.feature" version="0.5.0.qualifier">
       <category name="ca.gc.asc_csa.apogy"/>
    </feature>
+   <feature url="features/ca.gc.asc_csa.apogy.feature_0.5.0.qualifier.jar" id="ca.gc.asc_csa.apogy.feature" version="0.5.0.qualifier">
+      <category name="ca.gc.asc_csa.apogy"/>
+   </feature>
    <category-def name="ca.gc.asc_csa.apogy" label="Apogy"/>
    <repository-reference location="http://download.eclipse.org/releases/mars" enabled="true" />
    <repository-reference location="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars" enabled="true" />
    <repository-reference location="http://download.eclipse.org/technology/nebula/snapshot" enabled="true" />
    <repository-reference location="http://download.eclipse.org/tools/orbit/downloads" enabled="true" />
-   <repository-reference location="http://https://dl.bintray.com/apogy/OTS/0.1/" enabled="true" />
    <repository-reference location="http://download.eclipse.org/eclipse/updates/4.5" enabled="true" />
+   <repository-reference location="http://dl.bintray.com/apogy/OTS/0.1/" enabled="true" />
 </site>

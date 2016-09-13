@@ -143,13 +143,18 @@
 							<excludes>
 								<plugin id="ca.gc.asc_csa.apogy.core.programs.javascript.doc"/>
 								<plugin id="ca.gc.asc_csa.apogy.doc"/>
-								<plugin id="ca.gc.asc_csa.apogy.rcp.feature"/>
 								<plugin id="org.apache.commons.collections"/>
 								<plugin id="ca.gc.asc_csa.apogy.common.emf.templates"/>
 								<plugin id="org.apache.ws.commons.util"/>
  								<plugin id="org.eclipse.emf"/>
 								<plugin id="org.eclipse.wst.jsdt.debug.ui"/>
 								<plugin id="org.eclipse.swt"/>
+
+								<feature id="ca.gc.asc_csa.apogy.rcp.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.core.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.common.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.addons.feature"/>
 								
 								<feature id="org.eclipse.sirius.runtime"/>
 								<feature id="org.eclipse.nebula.widgets.gallery.feature"/>
