@@ -18,5 +18,5 @@
    <repository-reference location="http://download.eclipse.org/technology/nebula/snapshot" enabled="true" />
    <repository-reference location="http://download.eclipse.org/tools/orbit/downloads" enabled="true" />
    <repository-reference location="http://download.eclipse.org/eclipse/updates/4.5" enabled="true" />
-   <repository-reference location="http://https://dl.bintray.com/apogy/OTS/0.1/" enabled="true" />
+   <repository-reference location="http://dl.bintray.com/apogy/OTS/0.1/" enabled="true" />
 </site>
