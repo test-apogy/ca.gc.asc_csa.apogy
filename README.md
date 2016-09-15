@@ -16,7 +16,7 @@ Develop (Latest)               | [https://dl.bintray.com/apogy/Develop/0.5/](htt
 # Documentation #
 Description                    | URL
 ------------------------------ | ---
-Main Guide                     | [https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/develop/doc/ca.gc.asc_csa.apogy.doc/wiki/main.html](https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/develop/doc/ca.gc.asc_csa.apogy.doc/wiki/main.html)
+Main Guide                     | [https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/develop/doc/ca.gc.asc_csa.apogy.doc/wiki/main.html?fileviewer=file-view-default](https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/develop/doc/ca.gc.asc_csa.apogy.doc/wiki/main.html?fileviewer=file-view-default)
 Main Guide                     | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/main.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/main.html)
 Installation                   | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html)
 Simple Way To Start            | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/simple_way_to_start.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/simple_way_to_start.html)
