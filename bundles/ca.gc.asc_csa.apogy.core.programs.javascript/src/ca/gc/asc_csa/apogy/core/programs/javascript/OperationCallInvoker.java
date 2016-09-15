@@ -12,7 +12,10 @@
 
 package ca.gc.asc_csa.apogy.core.programs.javascript;
 
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.ui.statushandlers.StatusManager;
 import org.mozilla.javascript.BaseFunction;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
@@ -88,14 +91,21 @@ public class OperationCallInvoker extends BaseFunction {
 	 * @param args Arguments of the method called
 	 * @return the value of the {@link OperationCallResult}
 	 */
-	@Override
-	public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] args) {
-		ArgumentsList argumentsList = createArgumentsList(args);
-		OperationCall opCall = createOperationCall(argumentsList);
+    @Override
+    public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] args) {
+        ArgumentsList argumentsList = createArgumentsList(args);
+        OperationCall opCall = createOperationCall(argumentsList);
 
-		OperationCallResult opCallResult = ApogyCoreInvocatorFacade.INSTANCE.exec(opCall, true);
-		Object value = ApogyCoreInvocatorFacade.INSTANCE.getValue(opCallResult);
+        try {
+            OperationCallResult opCallResult = ApogyCoreInvocatorFacade.INSTANCE.exec(opCall, true);
+            Object value = ApogyCoreInvocatorFacade.INSTANCE.getValue(opCallResult);
 
-		return Context.javaToJS(value, scope);
-	}
+            return Context.javaToJS(value, scope);
+        } catch (Exception e) {
+            String message = String.format("Apogy operation call failed: %s(%s)", opCall.getName(), argumentsList.getArgumentValues());
+            IStatus status = new Status(IStatus.ERROR, ApogyCoreJavaScriptProgramsPackage.eNS_URI, message, e);
+            StatusManager.getManager().handle(status, StatusManager.LOG | StatusManager.SHOW);
+            throw new IllegalStateException(message);
+        }
+    }
 }

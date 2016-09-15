@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="ca.gc.asc_csa.apogy.core.programs.javascript.ui.commands.ScriptExecutorHandler"
+            class="ca.gc.asc_csa.apogy.core.programs.javascript.ui.commands.ScriptExecutorRunHandler"
             commandId="ca.gc.asc_csa.apogy.core.programs.javascript.ui.scriptExecutor">
          <enabledWhen>
             <test
@@ -112,5 +112,48 @@
                label="Script Location">
          </propertyTab>
       </propertyTabs>
+   </extension>
+   
+  <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            id="ca.gc.asc_csa.apogy.core.programs.javascript.launchConfigurationType"
+            modes="run,debug"
+            name="Apogy JavaScript Run Configuration"
+            public="true">
+      </launchConfigurationType>
+   </extension>
+   
+  <extension
+         point="org.eclipse.debug.core.launchDelegates">
+      <launchDelegate
+            delegate="ca.gc.asc_csa.apogy.core.programs.javascript.ui.launching.ApogyJavaScriptLaunchDelegate"
+            delegateDescription="Apogy JavaScript"
+            id="ca.gc.asc_csa.apogy.core.programs.javascript.remoteLaunchDelegate"
+            modes="run,debug"
+            name="Apogy JavaScript Launch Delegate"
+            sourceLocatorId="org.eclipse.wst.jsdt.debug.core.sourceLocator"
+            sourcePathComputerId="org.eclipse.wst.jsdt.debug.core.source.path.computer"
+            type="ca.gc.asc_csa.apogy.core.programs.javascript.launchConfigurationType">
+      </launchDelegate>
+   </extension>
+   
+  <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="ca.gc.asc_csa.apogy.core.programs.javascript.launchConfigurationType"
+            icon="icons/apogy_logo_16x16.gif"
+            id="ca.gc.asc_csa.apogy.core.programs.javascript.launchConfigurationTypeImage">
+      </launchConfigurationTypeImage>
+   </extension>
+   
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="ca.gc.asc_csa.apogy.core.programs.javascript.ui.launching.ApogyTabGroup"
+            description="Apogy Script"
+            id="ca.gc.asc_csa.apogy.core.programs.javascript.launchConfigurationTabGroup"
+            type="ca.gc.asc_csa.apogy.core.programs.javascript.launchConfigurationType">
+      </launchConfigurationTabGroup>
    </extension>
 </plugin>

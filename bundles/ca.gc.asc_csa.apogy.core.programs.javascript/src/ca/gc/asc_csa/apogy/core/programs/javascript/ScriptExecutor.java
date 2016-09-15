@@ -13,6 +13,7 @@
 package ca.gc.asc_csa.apogy.core.programs.javascript;
 
 import java.io.FileReader;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.net.ServerSocket;
 import java.text.MessageFormat;
@@ -25,7 +26,10 @@ import java.util.Set;
 
 import org.apache.commons.io.IOUtils;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.wst.jsdt.debug.internal.rhino.debugger.DebugSessionManager;
 import org.eclipse.wst.jsdt.debug.internal.rhino.debugger.DebugSessionManager.DebugSessionThread;
 import org.eclipse.wst.jsdt.debug.internal.rhino.debugger.RhinoDebuggerImpl;
@@ -45,25 +49,69 @@ import org.mozilla.javascript.ast.Name;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
-
+import static ca.gc.asc_csa.apogy.core.programs.javascript.ApogyCoreJavaScriptProgramsPackage.*;
 /**
  * Executes a {@link JavaScriptProgram}.
  *
  */
 @SuppressWarnings("restriction")
 public class ScriptExecutor {
-	private static final String LOCALHOST = "127.0.0.1";
 
-	public static void executeProgram(JavaScriptProgram program) throws Exception {
-		executeProgram(program, null);
+	public static void executeProgram(JavaScriptProgram program) throws CoreException {
+		executeProgram(program, new ContextFactory());
 	}
 	
-	public static void executeProgram(JavaScriptProgram program, RhinoDebuggerFrontend debug) throws Exception {
+	public static void executeProgram(JavaScriptProgram program,
+			ContextFactory contextFactory) throws CoreException {
 		String relativePath = program.getScriptPath();
 		IPath absolutePath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append(relativePath);
-		String source = IOUtils.toString(new FileReader(absolutePath.toOSString()));
-		executeString(program, source, debug);
+		String source;
+        try {
+            source = IOUtils.toString(new FileReader(absolutePath.toOSString()));
+        } catch (IOException e) {
+            throw new CoreException(new Status(IStatus.ERROR, eNS_URI, "Failed to locate javascript file: " + absolutePath.toOSString(), e));
+        }
+		executeString(program, source, contextFactory);
 	}
+
+	/**
+	 * Executes a {@link JavaScriptProgram}.
+	 *
+	 * @param program
+	 *            The program to execute
+	 * @param source
+	 *            The content of the program
+	 * @throws Exception
+	 *             throws if variables mapping or code execution failed
+	 */
+	public static void executeString(JavaScriptProgram program, String source) throws CoreException {
+		executeString(program, source, new ContextFactory());
+	}
+
+	/**
+	 * Creates a rhino backend and starts it
+	 * 
+	 * @param contextFactory
+	 *            the context factory to listen to
+	 * @return the started debugger
+	 * @throws Exception
+	 *             might throw if debugger.start() fails
+	 */
+    public static RhinoDebugger startRhinoBackend(ContextFactory contextFactory) throws CoreException  {
+        // address=0 chooses a random available port see ServerSocket
+        RhinoDebugger debuggerBackend = new RhinoDebugger("transport=socket,suspend=n,address=0");
+        
+        // attach to context factory if present
+        if (contextFactory != null) {
+            contextFactory.addListener(debuggerBackend);
+        }
+        try {
+            debuggerBackend.start();
+        } catch (Exception e) {
+            throw new CoreException(new Status(IStatus.ERROR, eNS_URI, "Failed to start Rhino backend", e));
+        }
+        return debuggerBackend;
+    }
 
 	/**
 	 * Executes a {@link JavaScriptProgram}.
@@ -72,26 +120,14 @@ public class ScriptExecutor {
 	 *            The program to execute
 	 * @param reader
 	 *            The content file of the program
+	 * @param contextFactory
+	 *            The configured Rhino context factory with or without attached
+	 *            debugger
 	 * @throws Exception
-	 *             might throw if debugger.start() fails
+	 *             throws if variables mapping or code execution failed
 	 */
-	public static void executeString(JavaScriptProgram program, String source) throws Exception {
-		executeString(program, source, null);
-	}
-
-	/**
-	 * Executes a {@link JavaScriptProgram}.
-	 *
-	 * @param program
-	 *            The program to execute
-	 * @param reader
-	 *            The content file of the program
-	 * @param debuggerFrontend
-	 *            Rhino debugger frontend
-	 * @throws Exception
-	 *             might throw if debugger.start() fails
-	 */
-	private static void executeString(JavaScriptProgram program, String source, RhinoDebuggerFrontend debuggerFrontend) throws Exception {
+	private static void executeString(JavaScriptProgram program, String source,
+			ContextFactory contextFactory) throws CoreException {
 		String relativePath = program.getScriptPath();
 		IPath absolutePath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append(relativePath);
 
@@ -102,37 +138,24 @@ public class ScriptExecutor {
 		env.setAllowSharpComments(true);
 		env.setRecordingComments(true);
 		AstRoot root = new Parser(env).parse(source, absolutePath.toOSString(), 1);
-		variables = getVariableOrder(root, variables);
 
-		ContextFactory factory = new ContextFactory();
-
-		RhinoDebugger debuggerBackend = null;
-		if (debuggerFrontend != null) {
-			// address=0 chooses a random available port see {@link
-			// ServerSocket}
-			debuggerBackend = new RhinoDebugger("transport=socket,suspend=n,address=0");
-			factory.addListener(debuggerBackend);
-			debuggerBackend.start();
-			debuggerFrontend.start(LOCALHOST, getPort(debuggerBackend));
-		}
-
+		Context context = contextFactory.enterContext();
 		try {
-			Context context = factory.enterContext();
-			try {
-				Scriptable scope = context.initStandardObjects();
-				List<VariableProxy> proxies = createJavaScriptProxies(variables, scope, program);
+		    variables = getVariableOrder(root, variables);
+		    
+			Scriptable scope = context.initStandardObjects();
+			List<VariableProxy> proxies = createJavaScriptProxies(variables,
+					scope, program);
 
-				context.evaluateString(scope, source, absolutePath.toOSString(), 1, null);
+			context.evaluateString(scope, source, absolutePath.toOSString(), 1,
+					null);
 
-				Function main = (Function) scope.get("main", scope);
-				main.call(context, scope, scope, proxies.toArray());
-			} finally {
-				Context.exit();
-			}
-		} finally {
-			if (debuggerFrontend != null) {
-				debuggerBackend.stop();
-			}
+			Function main = (Function) scope.get("main", scope);
+			main.call(context, scope, scope, proxies.toArray());
+		} catch (Exception e) {
+		    throw new CoreException(new Status(IStatus.ERROR, eNS_URI, "Failed to execute Apogy javascript", e));
+        } finally {
+			Context.exit();
 		}
 	}
 
@@ -149,55 +172,59 @@ public class ScriptExecutor {
 	 * @throws IllegalAccessException
 	 * @throws InterruptedException
 	 */
-	private static int getPort(RhinoDebugger debuggerBackend) throws NoSuchFieldException, IllegalAccessException, InterruptedException {
-		// RhinoDebugger debuggerBackend => RhinoDebuggerImpl impl
-		Field implField = RhinoDebugger.class.getDeclaredField("impl");
-		implField.setAccessible(true);
-		RhinoDebuggerImpl impl = (RhinoDebuggerImpl) implField.get(debuggerBackend);
+    public static int getPort(RhinoDebugger debuggerBackend) throws CoreException {
+		try {
+            // RhinoDebugger debuggerBackend => RhinoDebuggerImpl impl
+            Field implField = RhinoDebugger.class.getDeclaredField("impl");
+            implField.setAccessible(true);
+            RhinoDebuggerImpl impl = (RhinoDebuggerImpl) implField.get(debuggerBackend);
 
-		// RhinoDebuggerImpl impl => DebugSessionManager sessionManager
-		Field sessionManagerField = RhinoDebuggerImpl.class.getDeclaredField("sessionManager");
-		sessionManagerField.setAccessible(true);
-		DebugSessionManager sessionManager = (DebugSessionManager) sessionManagerField.get(impl);
+            // RhinoDebuggerImpl impl => DebugSessionManager sessionManager
+            Field sessionManagerField = RhinoDebuggerImpl.class.getDeclaredField("sessionManager");
+            sessionManagerField.setAccessible(true);
+            DebugSessionManager sessionManager = (DebugSessionManager) sessionManagerField.get(impl);
 
-		// DebugSessionManager sessionManager => DebugSessionThread
-		// debugSessionThread
-		Field debugSessionThreadField = DebugSessionManager.class.getDeclaredField("debuggerThread");
-		debugSessionThreadField.setAccessible(true);
-		DebugSessionThread debugSessionThread = (DebugSessionThread) debugSessionThreadField.get(sessionManager);
+            // DebugSessionManager sessionManager => DebugSessionThread
+            // debugSessionThread
+            Field debugSessionThreadField = DebugSessionManager.class.getDeclaredField("debuggerThread");
+            debugSessionThreadField.setAccessible(true);
+            DebugSessionThread debugSessionThread = (DebugSessionThread) debugSessionThreadField.get(sessionManager);
 
-		// DebugSessionThread debugSessionThread => ListenerKey listenerKey
-		Field listenerKeyField = DebugSessionThread.class.getDeclaredField("listenerKey");
-		listenerKeyField.setAccessible(true);
-		ListenerKey listenerKey = null;
+            // DebugSessionThread debugSessionThread => ListenerKey listenerKey
+            Field listenerKeyField = DebugSessionThread.class.getDeclaredField("listenerKey");
+            listenerKeyField.setAccessible(true);
+            ListenerKey listenerKey = null;
 
-		// The listenerKey might not have been set at this point. So we try a
-		// few times.
-		//
-		// Note that writes to and reads of references are always atomic,
-		// regardless of whether they are implemented as 32-bit or 64-bit
-		// values.
-		//
-		// Source:
-		// http://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.7
-		for (int i = 0; i < 100 && listenerKey == null; i++) {
-			Thread.sleep(100);
-			listenerKey = (ListenerKey) listenerKeyField.get(debugSessionThread);
-		}
+            // The listenerKey might not have been set at this point. So we try a
+            // few times.
+            //
+            // Note that writes to and reads of references are always atomic,
+            // regardless of whether they are implemented as 32-bit or 64-bit
+            // values.
+            //
+            // Source:
+            // http://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.7
+            for (int i = 0; i < 100 && listenerKey == null; i++) {
+            	Thread.sleep(100);
+            	listenerKey = (ListenerKey) listenerKeyField.get(debugSessionThread);
+            }
 
-		if (listenerKey == null) {
-			return 0;
-		}
+            if (listenerKey == null) {
+            	return 0;
+            }
 
-		// DebugSessionManager sessionManager => RhinoTransportService
-		// transportService
-		Field transportServiceField = DebugSessionManager.class.getDeclaredField("transportService");
-		transportServiceField.setAccessible(true);
-		RhinoTransportService transportService = (RhinoTransportService) transportServiceField.get(sessionManager);
+            // DebugSessionManager sessionManager => RhinoTransportService
+            // transportService
+            Field transportServiceField = DebugSessionManager.class.getDeclaredField("transportService");
+            transportServiceField.setAccessible(true);
+            RhinoTransportService transportService = (RhinoTransportService) transportServiceField.get(sessionManager);
 
-		ServerSocket serverSocket = transportService.getServerSocket(listenerKey);
+            ServerSocket serverSocket = transportService.getServerSocket(listenerKey);
 
-		return serverSocket.getLocalPort();
+            return serverSocket.getLocalPort();
+        } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException | InterruptedException e) {
+            throw new CoreException(new Status(IStatus.ERROR, eNS_URI, "Failed to get Rhino backend port", e));
+        }
 	}
 
 	/**
@@ -212,14 +239,18 @@ public class ScriptExecutor {
 	 * @throws NoSuchMethodException
 	 * @throws SecurityException
 	 */
-	private static List<VariableProxy> createJavaScriptProxies(List<Variable> variables, Scriptable topLevelScope, JavaScriptProgram program) throws NoSuchMethodException, SecurityException {
-		List<VariableProxy> proxies = new ArrayList<>();
-		for (Variable variable : variables) {
-			VariableProxy proxy = new VariableProxy(variable, program);
-			proxy.setParentScope(topLevelScope);
-			proxies.add(proxy);
-		}
-		return proxies;
+    private static List<VariableProxy> createJavaScriptProxies(List<Variable> variables, Scriptable topLevelScope, JavaScriptProgram program) throws CoreException {
+		try {
+            List<VariableProxy> proxies = new ArrayList<>();
+            for (Variable variable : variables) {
+            	VariableProxy proxy = new VariableProxy(variable, program);
+            	proxy.setParentScope(topLevelScope);
+            	proxies.add(proxy);
+            }
+            return proxies;
+        } catch (NoSuchMethodException | SecurityException e) {
+            throw new CoreException(new Status(IStatus.ERROR, eNS_URI, "Failed to create Rhino variables proxies", e));
+        }
 	}
 
 	/**

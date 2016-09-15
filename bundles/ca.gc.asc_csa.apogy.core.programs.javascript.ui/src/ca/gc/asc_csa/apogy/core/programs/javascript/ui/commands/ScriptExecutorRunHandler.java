@@ -7,7 +7,6 @@
  * 
  * Contributors:
  *     Mathieu Larose (mathieu.larose@savoirfairelinux.com)
- *     Alexey Balyberdin (alexey.balyberdin@savoirfairelinux.com)
  *     Savoir-faire Linux - Initial API and implementation
  */
 
@@ -27,13 +26,12 @@ import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram;
 import ca.gc.asc_csa.apogy.core.programs.javascript.ui.Activator;
 
 /**
- * Handler of the Debug context menu item.
+ * Handler of the Execute context menu item.
  */
-@SuppressWarnings("restriction")
-public class ScriptExecutorDebugHandler extends ScriptExecutorHandler {
+public class ScriptExecutorRunHandler extends ScriptExecutorHandler {
 
     /**
-     * Debugs a {@link JavaScriptProgram}.
+     * Runs a {@link JavaScriptProgram}.
      */
     @Override
     public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -49,9 +47,9 @@ public class ScriptExecutorDebugHandler extends ScriptExecutorHandler {
                         configuration = createConfiguration(jsProgram);
                     }
 
-                    configuration.launch(ILaunchManager.DEBUG_MODE, null);
+                    configuration.launch(ILaunchManager.RUN_MODE, null);
                 } catch (CoreException e) {
-                    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Debug launch failed", e));
+                    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Run launch failed", e));
                 }
 
                 return Status.OK_STATUS;
