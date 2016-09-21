@@ -39,3 +39,4 @@ Eclipse Conference 2016 Speaker Pitch   | https://youtu.be/-zb8EgQdXdc
 5. Implement Live Dashboard Designer using Sirius
 6. Support Telemetry Recording and Display
 7. Integrate Virtual Reality Module
+8. Improve Documentation
