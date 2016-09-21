@@ -30,3 +30,12 @@ Eclipse Conference 2016 Presentation      | [https://www.eclipsecon.org/na2016/s
 Description                    | URL
 ------------------------------ | ---
 Eclipse Conference 2016 Speaker Pitch   | https://youtu.be/-zb8EgQdXdc
+
+# Development Priorities #
+1. Provide Apogy E4 RCP framework
+2. Improve User Experience (UX) (Sirius 4, NEON etc)
+3. Support Shared Session using CDO
+4. Implement Remote Application Platform (RAP)
+5. Implement Live Dashboard Designer using Sirius
+6. Support Telemetry Recording and Display
+7. Integrate Virtual Reality Module
