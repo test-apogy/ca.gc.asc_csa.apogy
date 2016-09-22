@@ -352,7 +352,7 @@
 		
 		<module>../../bundles/ca.gc.asc_csa.apogy.ui</module>		
 		<module>../../bundles/ca.gc.asc_csa.apogy.feature</module>
-		<module>../../bundles/ca.gc.asc_csa.apogy.sdk.feature</module>
+		<!--<module>../../bundles/ca.gc.asc_csa.apogy.sdk.feature</module>-->
 		<module>../../bundles/ca.gc.asc_csa.apogy.repository</module>
 		
 		<!-- Apogy RCP -->
