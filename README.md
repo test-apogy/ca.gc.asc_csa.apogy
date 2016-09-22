@@ -16,13 +16,12 @@ Develop (Latest)               | [https://dl.bintray.com/apogy/Develop/0.5/](htt
 # Documentation #
 Description                    | URL
 ------------------------------ | ---
-Main Guide                     | [http://htmlpreview.github.io/?https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/develop/doc/ca.gc.asc_csa.apogy.doc/wiki/main.html?fileviewer=file-view-default](http://htmlpreview.github.io/?https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/develop/doc/ca.gc.asc_csa.apogy.doc/wiki/main.html?fileviewer=file-view-default)
-Main Guide                     | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/main.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/main.html)
-Installation                   | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html)
-Simple Way To Start            | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/simple_way_to_start.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/simple_way_to_start.html)
-Tutorials                      | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tutorials.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tutorials.html)
-User                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html)
-Development                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html)
+Main Guide                     | [http://apogy.bitbucket.org/wiki/main.html](http://apogy.bitbucket.org/wiki/main.html)
+Installation                   | [http://apogy.bitbucket.org/wiki/installation.html](http://apogy.bitbucket.org/wiki/installation.html)
+Simple Way To Start            | [http://apogy.bitbucket.org/wiki/simple_way_to_start.html](http://apogy.bitbucket.org/wiki/simple_way_to_start.html)
+Tutorials                      | [http://apogy.bitbucket.org/wiki/tutorials.html](http://apogy.bitbucket.org/wiki/tutorials.html)
+User                    | [http://apogy.bitbucket.org/wiki/user.html](http://apogy.bitbucket.org/wiki/user.html)
+Development                    | [http://apogy.bitbucket.org/wiki/dev.html](http://apogy.bitbucket.org/wiki/dev.html)
 Eclipse Proposal               | [https://projects.eclipse.org/proposals/apogy](https://projects.eclipse.org/proposals/apogy)
 Eclipse Conference 2016 Presentation      | [https://www.eclipsecon.org/na2016/sites/default/files/slides/apogy_eclipsecon2016_0.pdf](https://www.eclipsecon.org/na2016/sites/default/files/slides/apogy_eclipsecon2016_0.pdf)
 
