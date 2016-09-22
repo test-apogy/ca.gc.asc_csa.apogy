@@ -1,5 +1,3 @@
-# News #
-Release 0.5.14 available 2016.05.03-1800EDT ([Download](https://dl.bintray.com/apogy/Develop/0.5/0.5.0.201606211526/))
 # Background #
 **Apogy** is a multi-mission operations and planning software framework. **Apogy** uses Eclipse Modeling Framework models to define the systems being controlled, the environment in which these systems are operated, the operations being carried out and the corresponding data produced during operations.
 
@@ -10,7 +8,7 @@ As an example, integrating a rover in **Apogy** is as simple as creating an EMF 
 # Eclipse Update Sites #
 Description                    | URL          | Notes
 ------------------------------ | -------------|-------------------------
-Develop (Stable)               | [https://dl.bintray.com/apogy/Develop/0.5/0.5.0.201606211526/](https://dl.bintray.com/apogy/Develop/0.5/0.5.0.201606211526/) | 
+~~Develop (Stable)~~               | ~~[https://dl.bintray.com/apogy/Develop/0.5/0.5.0.201606211526/](https://dl.bintray.com/apogy/Develop/0.5/0.5.0.201606211526/)~~ | 
 Develop (Latest)               | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/) | 
 
 # Documentation #
