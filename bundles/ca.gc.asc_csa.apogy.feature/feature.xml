@@ -140,4 +140,8 @@ This Agreement is governed by the laws of the State of New York and the intellec
          id="ca.gc.asc_csa.apogy.core.programs.javascript.feature"
          version="0.0.0"/>
 
+   <includes
+         id="ca.gc.asc_csa.apogy.ots.feature"
+         version="0.0.0"/>
+
 </feature>
