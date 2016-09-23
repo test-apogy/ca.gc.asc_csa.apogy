@@ -1,3 +1,6 @@
+# IMPORTANT NOTE #
+2016-09-23-13h45: Maintenance on the Apogy update site.  Issues may be encountered.
+
 # Background #
 **Apogy** is a multi-mission operations and planning software framework. **Apogy** uses Eclipse Modeling Framework models to define the systems being controlled, the environment in which these systems are operated, the operations being carried out and the corresponding data produced during operations.
 
