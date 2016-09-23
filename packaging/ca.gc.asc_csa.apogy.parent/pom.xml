@@ -39,12 +39,6 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/eclipse/updates/${eclipse.updates.version}</url>
 		</repository>
-
-		<repository>
-			<id>Nebula</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/technology/nebula/releases/1.0.0</url>
-		</repository>
 		
 		<repository>
 			<id>Orbit</id>

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="apogy_sdk_4.6" sequenceNumber="104">
+<?pde version="3.8"?><target name="apogy_sdk_4.6" sequenceNumber="105">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.platform.ide" version="4.6.0.I20160606-1100"/>
 <unit id="org.eclipse.rcp.feature.group" version="4.6.0.v20160606-1342"/>
 <unit id="org.eclipse.rcp.source.feature.group" version="4.6.0.v20160606-1342"/>
 <repository location="http://download.eclipse.org/eclipse/updates/4.6"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.sirius.runtime.feature.group" version="4.0.0.201605311157"/>
+<unit id="org.eclipse.sirius.runtime.acceleo.feature.group" version="4.0.0.201605311157"/>
+<repository location="http://download.eclipse.org/sirius/updates/releases/4.0.0/neon"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.ecore.xcore.sdk.feature.group" version="1.4.0.v20160526-0606"/>
@@ -23,11 +28,6 @@
 <repository location="http://download.eclipse.org/releases/neon"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.sirius.runtime.feature.group" version="4.0.0.201605311157"/>
-<unit id="org.eclipse.sirius.runtime.acceleo.feature.group" version="4.0.0.201605311157"/>
-<repository location="http://download.eclipse.org/sirius/updates/releases/4.0.0/neon"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.collections.source" version="3.2.0.v2013030210310"/>
 <unit id="org.apache.commons.io" version="2.2.0.v201405211200"/>
 <unit id="org.apache.commons.net" version="3.2.0.v201305141515"/>
@@ -40,10 +40,6 @@
 <unit id="ca.gc.asc_csa.apogy.ots.feature.feature.group" version="0.1.0.201605251557"/>
 <unit id="ca.gc.asc_csa.apogy.ots.feature.source.feature.group" version="0.1.0.201605251557"/>
 <repository location="https://dl.bintray.com/apogy/OTS/0.1/"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.widgets.gallery.feature.feature.group" version="1.0.0.201605312033"/>
-<repository location="http://download.eclipse.org/technology/nebula/releases/1.0.0"/>
 </location>
 </locations>
 </target>
