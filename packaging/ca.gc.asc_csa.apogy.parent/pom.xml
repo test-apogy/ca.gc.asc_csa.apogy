@@ -43,7 +43,7 @@
 		<repository>
 			<id>Orbit</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/</url>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160221192158/repository/</url>
 		</repository>		
 		
 		<repository>
