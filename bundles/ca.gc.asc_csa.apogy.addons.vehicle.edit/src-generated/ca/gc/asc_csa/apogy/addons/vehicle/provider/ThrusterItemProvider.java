@@ -26,7 +26,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
 import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
 
 /**
@@ -81,7 +80,7 @@ public class ThrusterItemProvider
 	 */
 	protected void addMinimumThrustPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Thruster_minimumThrust_feature"),
@@ -103,7 +102,7 @@ public class ThrusterItemProvider
 	 */
 	protected void addMaximumThrustPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Thruster_maximumThrust_feature"),
@@ -125,7 +124,7 @@ public class ThrusterItemProvider
 	 */
 	protected void addCurrentThrustPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Thruster_currentThrust_feature"),
@@ -148,7 +147,7 @@ public class ThrusterItemProvider
   protected void addPlumeAnglePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Thruster_plumeAngle_feature"),

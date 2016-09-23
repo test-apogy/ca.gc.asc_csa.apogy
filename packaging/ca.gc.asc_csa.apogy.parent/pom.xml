@@ -143,13 +143,18 @@
 							<excludes>
 								<plugin id="ca.gc.asc_csa.apogy.core.programs.javascript.doc"/>
 								<plugin id="ca.gc.asc_csa.apogy.doc"/>
-								<plugin id="ca.gc.asc_csa.apogy.rcp.feature"/>
 								<plugin id="org.apache.commons.collections"/>
 								<plugin id="ca.gc.asc_csa.apogy.common.emf.templates"/>
 								<plugin id="org.apache.ws.commons.util"/>
  								<plugin id="org.eclipse.emf"/>
 								<plugin id="org.eclipse.wst.jsdt.debug.ui"/>
 								<plugin id="org.eclipse.swt"/>
+
+								<feature id="ca.gc.asc_csa.apogy.rcp.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.core.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.common.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.addons.feature"/>
 								
 								<feature id="org.eclipse.sirius.runtime"/>
 								<feature id="org.eclipse.nebula.widgets.gallery.feature"/>
@@ -347,7 +352,7 @@
 		
 		<module>../../bundles/ca.gc.asc_csa.apogy.ui</module>		
 		<module>../../bundles/ca.gc.asc_csa.apogy.feature</module>
-		<module>../../bundles/ca.gc.asc_csa.apogy.sdk.feature</module>
+		<!--<module>../../bundles/ca.gc.asc_csa.apogy.sdk.feature</module>-->
 		<module>../../bundles/ca.gc.asc_csa.apogy.repository</module>
 		
 		<!-- Apogy RCP -->
@@ -361,7 +366,7 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.ui</module>
 		<module>../../doc/ca.gc.asc_csa.apogy.core.programs.javascript.doc</module>
-		<module>../../tests/ca.gc.asc_csa.apogy.core.programs.javascript.tests</module>
+		<!--<module>../../tests/ca.gc.asc_csa.apogy.core.programs.javascript.tests</module>-->
 		
 
 		<!-- Examples -->

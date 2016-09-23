@@ -13,7 +13,6 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
@@ -72,7 +71,7 @@ public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider
 	 */
 	protected void addConstantElevationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_ConstantElevationMask_constantElevation_feature"),

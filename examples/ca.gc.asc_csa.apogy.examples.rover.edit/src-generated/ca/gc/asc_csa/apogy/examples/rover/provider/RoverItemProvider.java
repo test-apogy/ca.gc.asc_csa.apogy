@@ -16,7 +16,6 @@ package ca.gc.asc_csa.apogy.examples.rover.provider;
 
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -209,7 +208,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 	 */
 	protected void addLinearVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Rover_linearVelocity_feature"),
@@ -231,7 +230,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 	 */
 	protected void addAngularVelocityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Rover_angularVelocity_feature"),
