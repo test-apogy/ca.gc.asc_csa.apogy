@@ -97,15 +97,16 @@ echo "Update $repo_dir/repository/content.jar and $repo_dir/repository/artifacts
 cd $DIR
 
 #
+# DISABLED.
 # Fix ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip
 #
-echo "Update ${APOGY_REPO}-0.5.0-SNAPSHOT.zip started"
-unzip ${APOGY_REPO}-0.5.0-SNAPSHOT.zip -d ${APOGY_REPO}
-cp -f $repo_dir/repository/content.jar ${APOGY_REPO}/.
-cp -f $repo_dir/repository/artifacts.jar ${APOGY_REPO}/.
-rm -f ${APOGY_REPO}-0.5.0-SNAPSHOT.zip
-zip ${APOGY_REPO}-0.5.0-SNAPSHOT.zip ${APOGY_REPO}
-echo "Update ${APOGY_REPO}-0.5.0-SNAPSHOT.zip completed"
+#echo "Update ${APOGY_REPO}-0.5.0-SNAPSHOT.zip started"
+#unzip ${APOGY_REPO}-0.5.0-SNAPSHOT.zip -d ${APOGY_REPO}
+#cp -f $repo_dir/repository/content.jar ${APOGY_REPO}/.
+#cp -f $repo_dir/repository/artifacts.jar ${APOGY_REPO}/.
+#rm -f ${APOGY_REPO}-0.5.0-SNAPSHOT.zip
+#zip ${APOGY_REPO}-0.5.0-SNAPSHOT.zip ${APOGY_REPO}
+#echo "Update ${APOGY_REPO}-0.5.0-SNAPSHOT.zip completed"
 
 # Delete .xml
 rm $repo_dir/repository/content.xml $repo_dir/repository/artifacts.xml
