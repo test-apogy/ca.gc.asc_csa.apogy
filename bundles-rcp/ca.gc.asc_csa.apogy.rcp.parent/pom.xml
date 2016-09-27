@@ -42,13 +42,13 @@
 		<repository>
 			<id>Nebula</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/technology/nebula/snapshot</url>
+			<url>http://download.eclipse.org/technology/nebula/releases/1.1.0</url>
 		</repository>
 		
 		<repository>
 			<id>Orbit</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/</url>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160221192158/repository/</url>
 		</repository>		
 		
 		<repository>
@@ -58,16 +58,10 @@
 		</repository>		
 		
 		<repository>
-			<id>Apogy-OTS</id>
-			<layout>p2</layout>
-			<url>https://dl.bintray.com/apogy/OTS/0.1/</url>
-		</repository>
-		
-		<repository>
 			<id>Apogy</id>
 			<layout>p2</layout>
 			<url>https://dl.bintray.com/apogy/Develop/0.5/</url>
-		</repository>
+		</repository>		
 	</repositories>
 
 	<build>
@@ -95,11 +89,13 @@
 							<ws>gtk</ws>
 							<arch>x86</arch>
 						</environment>-->
+						
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
 							<arch>x86_64</arch>
 						</environment>
+						
 					</environments>
 				</configuration>
 			</plugin>
@@ -114,6 +110,6 @@
 		</plugins>
 	</build>
 	<modules>
-	<module>../ca.gc.asc_csa.apogy.rcp.product</module>
+		<module>../ca.gc.asc_csa.apogy.rcp.product</module>
 	</modules>
 </project>

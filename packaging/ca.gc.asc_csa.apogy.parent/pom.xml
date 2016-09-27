@@ -352,14 +352,13 @@
 		
 		<module>../../bundles/ca.gc.asc_csa.apogy.ui</module>		
 		<module>../../bundles/ca.gc.asc_csa.apogy.feature</module>
-		<!--<module>../../bundles/ca.gc.asc_csa.apogy.sdk.feature</module>-->
 		<module>../../bundles/ca.gc.asc_csa.apogy.repository</module>
-		
-		<!-- Apogy RCP -->
-		<module>../../bundles/ca.gc.asc_csa.apogy.rcp</module>
+				
+		<!-- RCP -->Please 
+		<module>../../bundles/ca.gc.asc_csa.apogy.rcp</module>				
 		<module>../../bundles/ca.gc.asc_csa.apogy.rcp.feature</module>
-		<module>../../bundles/org.eclipse.e4.ui.workbench.perspectiveswitcher</module>
-		
+		<module>../../bundles/org.eclipse.e4.ui.workbench.perspectiveswitcher</module>		
+				
 		<!-- JavaScript -->
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.edit</module>
