@@ -60,10 +60,22 @@
 		</sequential>
 	</macrodef>
 
+
 	<target name="push-to-bintray" >
+		<antcall target="tweak-p2-repo"/>
 		<antcall target="push-p2-repo-to-bintray" />
 		<antcall target="push-main-composite-to-bintray" />
 	</target>
+
+	<target name="tweak-p2-repo">
+		<exec executable="/bin/bash">
+
+			<arg value="./fix_p2.sh"/>
+
+			<arg value="${local.p2.repository}/../"/>
+
+		</exec>
+	</target> 
 
 	<target name="push-p2-repo-to-bintray">
 		<echo message="Pushing ${local.p2.repository} to bintray at https://api.bintray.com/content/${bintray.owner}/${bintray.repo}/${bintray.releases.target.path}/*;bt_package=${bintray.package};bt_version=${bintray.package.version};publish=1"/>
