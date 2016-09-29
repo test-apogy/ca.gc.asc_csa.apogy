@@ -1220,7 +1220,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		environment.getActiveContext().setInstancesDisposalDate(new Date());
 		
 		/* Variables are disposed. */
-		setVariablesInstantiated(true);
+		setVariablesInstantiated(false);
 	}
 
 	/**
