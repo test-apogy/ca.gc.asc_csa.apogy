@@ -186,6 +186,11 @@ class ApogyCoreInvocatorFacade
 	op List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType)		
 	
 	/*
+	 * Indicates if the variables are instantiated (initialized)
+	 */	 	 
+	transient boolean variablesInstantiated = "false"
+	
+	/*
 	 * Resets the variable instances.
 	 */
 	op void initVariableInstances(Environment environment)

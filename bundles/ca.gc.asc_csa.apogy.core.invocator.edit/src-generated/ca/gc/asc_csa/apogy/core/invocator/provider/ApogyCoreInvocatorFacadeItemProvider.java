@@ -15,7 +15,6 @@ package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -73,6 +72,7 @@ public class ApogyCoreInvocatorFacadeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addVariablesInstantiatedPropertyDescriptor(object);
 			addInitVariableInstancesDatePropertyDescriptor(object);
 			addActiveInvocatorSessionPropertyDescriptor(object);
 		}
@@ -80,6 +80,28 @@ public class ApogyCoreInvocatorFacadeItemProvider
 	}
 
   /**
+	 * This adds a property descriptor for the Variables Instantiated feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVariablesInstantiatedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyCoreInvocatorFacade_variablesInstantiated_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreInvocatorFacade_variablesInstantiated_feature", "_UI_ApogyCoreInvocatorFacade_type"),
+				 ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
 	 * This adds a property descriptor for the Init Variable Instances Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -144,11 +166,8 @@ public class ApogyCoreInvocatorFacadeItemProvider
   @Override
   public String getText(Object object)
   {
-		Date labelValue = ((ApogyCoreInvocatorFacade)object).getInitVariableInstancesDate();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ApogyCoreInvocatorFacade_type") :
-			getString("_UI_ApogyCoreInvocatorFacade_type") + " " + label;
+		ApogyCoreInvocatorFacade apogyCoreInvocatorFacade = (ApogyCoreInvocatorFacade)object;
+		return getString("_UI_ApogyCoreInvocatorFacade_type") + " " + apogyCoreInvocatorFacade.isVariablesInstantiated();
 	}
 
   /**
@@ -164,6 +183,7 @@ public class ApogyCoreInvocatorFacadeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ApogyCoreInvocatorFacade.class)) {
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED:
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

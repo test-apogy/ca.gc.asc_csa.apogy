@@ -674,7 +674,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getApogyCoreInvocatorFacade_InitVariableInstancesDate() {
+	public EAttribute getApogyCoreInvocatorFacade_VariablesInstantiated() {
 		return (EAttribute)apogyCoreInvocatorFacadeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -683,8 +683,17 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getApogyCoreInvocatorFacade_InitVariableInstancesDate() {
+		return (EAttribute)apogyCoreInvocatorFacadeEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getApogyCoreInvocatorFacade_ActiveInvocatorSession() {
-		return (EReference)apogyCoreInvocatorFacadeEClass.getEStructuralFeatures().get(1);
+		return (EReference)apogyCoreInvocatorFacadeEClass.getEStructuralFeatures().get(2);
 	}
 
 		/**
@@ -3144,6 +3153,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		// Create classes and their features
 		apogyCoreInvocatorFacadeEClass = createEClass(APOGY_CORE_INVOCATOR_FACADE);
+		createEAttribute(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED);
 		createEAttribute(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE);
 		createEReference(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL);
@@ -3561,6 +3571,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyCoreInvocatorFacadeEClass, ApogyCoreInvocatorFacade.class, "ApogyCoreInvocatorFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getApogyCoreInvocatorFacade_VariablesInstantiated(), theEcorePackage.getEBoolean(), "variablesInstantiated", "false", 0, 1, ApogyCoreInvocatorFacade.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApogyCoreInvocatorFacade_InitVariableInstancesDate(), theEcorePackage.getEDate(), "initVariableInstancesDate", null, 0, 1, ApogyCoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyCoreInvocatorFacade_ActiveInvocatorSession(), this.getInvocatorSession(), null, "activeInvocatorSession", null, 0, 1, ApogyCoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

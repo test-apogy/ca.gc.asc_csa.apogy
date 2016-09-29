@@ -97,13 +97,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	int APOGY_CORE_INVOCATOR_FACADE = 0;
 
 		/**
+	 * The feature id for the '<em><b>Variables Instantiated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED = 0;
+
+		/**
 	 * The feature id for the '<em><b>Init Variable Instances Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE = 0;
+	int APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE = 1;
 
 		/**
 	 * The feature id for the '<em><b>Active Invocator Session</b></em>' reference.
@@ -112,7 +121,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = 1;
+	int APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = 2;
 
 		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -121,7 +130,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_FEATURE_COUNT = 2;
+	int APOGY_CORE_INVOCATOR_FACADE_FEATURE_COUNT = 3;
 
 		/**
 	 * The operation id for the '<em>Exec</em>' operation.
@@ -4904,6 +4913,17 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	EClass getApogyCoreInvocatorFacade();
 
 		/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#isVariablesInstantiated <em>Variables Instantiated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Variables Instantiated</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#isVariablesInstantiated()
+	 * @see #getApogyCoreInvocatorFacade()
+	 * @generated
+	 */
+	EAttribute getApogyCoreInvocatorFacade_VariablesInstantiated();
+
+		/**
 	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7593,6 +7613,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
 		EClass APOGY_CORE_INVOCATOR_FACADE = eINSTANCE.getApogyCoreInvocatorFacade();
+
+			/**
+		 * The meta object literal for the '<em><b>Variables Instantiated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED = eINSTANCE.getApogyCoreInvocatorFacade_VariablesInstantiated();
 
 			/**
 		 * The meta object literal for the '<em><b>Init Variable Instances Date</b></em>' attribute feature.

@@ -40,6 +40,7 @@ import ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#isVariablesInstantiated <em>Variables Instantiated</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
@@ -50,6 +51,32 @@ import ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl;
  */
 public interface ApogyCoreInvocatorFacade extends EObject
 {
+	/**
+	 * Returns the value of the '<em><b>Variables Instantiated</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Indicates if the variables are instantiated (initialized)
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Variables Instantiated</em>' attribute.
+	 * @see #setVariablesInstantiated(boolean)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getApogyCoreInvocatorFacade_VariablesInstantiated()
+	 * @model default="false" unique="false" transient="true"
+	 * @generated
+	 */
+	boolean isVariablesInstantiated();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#isVariablesInstantiated <em>Variables Instantiated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Variables Instantiated</em>' attribute.
+	 * @see #isVariablesInstantiated()
+	 * @generated
+	 */
+	void setVariablesInstantiated(boolean value);
+
 	/**
 	 * Returns the value of the '<em><b>Init Variable Instances Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -82,6 +82,7 @@ import ca.gc.asc_csa.apogy.core.invocator.delegates.InvocatorDelegateRegistry;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl#isVariablesInstantiated <em>Variables Instantiated</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
@@ -90,6 +91,24 @@ import ca.gc.asc_csa.apogy.core.invocator.delegates.InvocatorDelegateRegistry;
  */
 public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		implements ApogyCoreInvocatorFacade {
+	/**
+	 * The default value of the '{@link #isVariablesInstantiated() <em>Variables Instantiated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isVariablesInstantiated()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean VARIABLES_INSTANTIATED_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isVariablesInstantiated() <em>Variables Instantiated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isVariablesInstantiated()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean variablesInstantiated = VARIABLES_INSTANTIATED_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getInitVariableInstancesDate() <em>Init Variable Instances Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -142,6 +161,27 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	protected EClass eStaticClass() {
 		return ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isVariablesInstantiated() {
+		return variablesInstantiated;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVariablesInstantiated(boolean newVariablesInstantiated) {
+		boolean oldVariablesInstantiated = variablesInstantiated;
+		variablesInstantiated = newVariablesInstantiated;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED, oldVariablesInstantiated, variablesInstantiated));
 	}
 
 	/**
@@ -1150,6 +1190,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		environment.getActiveContext().setInstancesCreationDate(date);
 		setInitVariableInstancesDate(date);
 		environment.getActiveContext().setInstancesDisposalDate(null);
+		
+		/* Variables are instantiated. */
+		setVariablesInstantiated(true);
 	}
 
 	/**
@@ -1175,6 +1218,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		}
 
 		environment.getActiveContext().setInstancesDisposalDate(new Date());
+		
+		/* Variables are disposed. */
+		setVariablesInstantiated(true);
 	}
 
 	/**
@@ -1400,6 +1446,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED:
+				return isVariablesInstantiated();
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				return getInitVariableInstancesDate();
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
@@ -1417,6 +1465,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED:
+				setVariablesInstantiated((Boolean)newValue);
+				return;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				setInitVariableInstancesDate((Date)newValue);
 				return;
@@ -1435,6 +1486,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED:
+				setVariablesInstantiated(VARIABLES_INSTANTIATED_EDEFAULT);
+				return;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				setInitVariableInstancesDate(INIT_VARIABLE_INSTANCES_DATE_EDEFAULT);
 				return;
@@ -1453,6 +1507,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED:
+				return variablesInstantiated != VARIABLES_INSTANTIATED_EDEFAULT;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				return INIT_VARIABLE_INSTANCES_DATE_EDEFAULT == null ? initVariableInstancesDate != null : !INIT_VARIABLE_INSTANCES_DATE_EDEFAULT.equals(initVariableInstancesDate);
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
@@ -1573,7 +1629,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (initVariableInstancesDate: ");
+		result.append(" (variablesInstantiated: ");
+		result.append(variablesInstantiated);
+		result.append(", initVariableInstancesDate: ");
 		result.append(initVariableInstancesDate);
 		result.append(')');
 		return result.toString();
