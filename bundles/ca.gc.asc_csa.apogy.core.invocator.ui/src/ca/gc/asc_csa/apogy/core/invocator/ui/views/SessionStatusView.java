@@ -24,6 +24,8 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.composites.SessionStatusComposite;
 
 public class SessionStatusView extends AbstractView
 {
+	public SessionStatusView() {
+	}
 	/**
 	 * The ID of the view as specified by the extension.
 	 */
