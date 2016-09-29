@@ -53,7 +53,7 @@ public class SessionStatusComposite extends Composite {
 
 	private static final String NO_ACTIVE_SESSION_STR = "No Active Session";
 	private static final String SESSION_ACTIVE_STR = "Session Active";
-	private static final String INITIALIZED_STR = "Variables initialized";
+	private static final String INITIALIZED_STR = "Variables instantiated";
 	private static final String DISPOSED_STR = "Variables disposed";
 
 	private DataBindingContext m_bindingContext;
@@ -147,10 +147,13 @@ public class SessionStatusComposite extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
-					if (ApogyCoreInvocatorFacade.INSTANCE.isVariablesInstantiated()){
-						ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+					if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+							.getActiveContext().isVariablesInstantiated()) {
+						ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances(
+								ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
 					}
-					ApogyCoreInvocatorFacade.INSTANCE.initVariableInstances(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+					ApogyCoreInvocatorFacade.INSTANCE.initVariableInstances(
+							ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
 				}
 			}
 		});
@@ -262,7 +265,8 @@ public class SessionStatusComposite extends Composite {
 				.observeDetail(invocatorFacadeBinder);
 		
 		m_bindingContext.bindValue(observeComboContextSingleSelectionIndexObserveWidget,
-				invocatorFacadeEnvironmentActiveContextObserveValue, new UpdateValueStrategy().setConverter(new Converter(Integer.class, Context.class){
+				invocatorFacadeEnvironmentActiveContextObserveValue,
+				new UpdateValueStrategy().setConverter(new Converter(Integer.class, Context.class) {
 
 					@Override
 					public Object convert(Object fromObject) {
@@ -275,9 +279,8 @@ public class SessionStatusComposite extends Composite {
 							return null;
 						}
 					}
-					
-				}),
-				new UpdateValueStrategy().setConverter(new Converter(Context.class, Integer.class) {
+
+				}), new UpdateValueStrategy().setConverter(new Converter(Context.class, Integer.class) {
 					@Override
 					public Object convert(Object arg0) {
 						for (int i = 0; i < comboContext.getItemCount(); i++) {
@@ -292,7 +295,11 @@ public class SessionStatusComposite extends Composite {
 		IObservableValue observeTextInstanceStatusObserveWidget = WidgetProperties.text().observe(txtInstanceStatus);
 		IObservableValue observeBackgroundInstanceStatusObserveWidget = WidgetProperties.background().observe(txtInstanceStatus);
 		IObservableValue invocatorFacadeActiveContextCreationDateValue = EMFProperties
-				.value(ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__VARIABLES_INSTANTIATED)					
+				.value(FeaturePath.fromList(
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT,
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.CONTEXT__VARIABLES_INSTANTIATED))					
 				.observeDetail(invocatorFacadeBinder);
 		m_bindingContext.bindValue(observeTextInstanceStatusObserveWidget,
 				invocatorFacadeActiveContextCreationDateValue, null,
@@ -304,14 +311,18 @@ public class SessionStatusComposite extends Composite {
 				}));
 		m_bindingContext.bindValue(observeBackgroundInstanceStatusObserveWidget,
 				invocatorFacadeActiveContextCreationDateValue, null,
-				new UpdateValueStrategy().setConverter(new Converter(Boolean.class, Color.class) {
+				new UpdateValueStrategy().setConverter(new Converter(Context.class, Color.class) {
 					@Override
 					public Object convert(Object fromObject) {
-						return ((Boolean)fromObject).booleanValue() ? SWTResourceManager.getColor(SWT.COLOR_GREEN): SWTResourceManager.getColor(SWT.COLOR_RED);
+						if (((ApogyCoreInvocatorFacade) invocatorFacadeBinder.getValue()).getActiveInvocatorSession()
+								.getEnvironment().getActiveContext().isVariablesInstantiated()) {
+							return SWTResourceManager.getColor(SWT.COLOR_GREEN);
+						} else {
+							return SWTResourceManager.getColor(SWT.COLOR_RED);
+						}
 					}
 				}));
-		
-		
+
 		return m_bindingContext;
 	}
 	

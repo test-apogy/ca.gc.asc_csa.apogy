@@ -184,12 +184,7 @@ class ApogyCoreInvocatorFacade
 	 * @return List of TypeMemberImplementation.
 	 */
 	op List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType)		
-	
-	/*
-	 * Indicates if the variables are instantiated (initialized)
-	 */	 	 
-	transient boolean variablesInstantiated = "false"
-	
+		
 	/*
 	 * Resets the variable instances.
 	 */
@@ -654,6 +649,11 @@ abstract class Context extends Named
 		
   	@GenModel(property="Readonly")		
 	Date instancesDisposalDate 
+	
+	/*
+	 * Indicates if the variables are instantiated (initialized)
+	 */	 	 
+	transient boolean variablesInstantiated = "false"
 }
 
 class BasicContext extends Context

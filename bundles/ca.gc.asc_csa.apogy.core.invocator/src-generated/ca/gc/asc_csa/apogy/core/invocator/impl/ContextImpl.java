@@ -52,6 +52,7 @@ import com.google.common.base.Objects;
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#getDataProductsList <em>Data Products List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#getInstancesCreationDate <em>Instances Creation Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#getInstancesDisposalDate <em>Instances Disposal Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#isVariablesInstantiated <em>Variables Instantiated</em>}</li>
  * </ul>
  *
  * @generated
@@ -139,6 +140,26 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   protected Date instancesDisposalDate = INSTANCES_DISPOSAL_DATE_EDEFAULT;
 
   /**
+	 * The default value of the '{@link #isVariablesInstantiated() <em>Variables Instantiated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isVariablesInstantiated()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean VARIABLES_INSTANTIATED_EDEFAULT = false;
+
+		/**
+	 * The cached value of the '{@link #isVariablesInstantiated() <em>Variables Instantiated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isVariablesInstantiated()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean variablesInstantiated = VARIABLES_INSTANTIATED_EDEFAULT;
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -418,6 +439,27 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isVariablesInstantiated() {
+		return variablesInstantiated;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVariablesInstantiated(boolean newVariablesInstantiated) {
+		boolean oldVariablesInstantiated = variablesInstantiated;
+		variablesInstantiated = newVariablesInstantiated;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.CONTEXT__VARIABLES_INSTANTIATED, oldVariablesInstantiated, variablesInstantiated));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -490,6 +532,8 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 				return getInstancesCreationDate();
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				return getInstancesDisposalDate();
+			case ApogyCoreInvocatorPackage.CONTEXT__VARIABLES_INSTANTIATED:
+				return isVariablesInstantiated();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -520,6 +564,9 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				setInstancesDisposalDate((Date)newValue);
+				return;
+			case ApogyCoreInvocatorPackage.CONTEXT__VARIABLES_INSTANTIATED:
+				setVariablesInstantiated((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -552,6 +599,9 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				setInstancesDisposalDate(INSTANCES_DISPOSAL_DATE_EDEFAULT);
 				return;
+			case ApogyCoreInvocatorPackage.CONTEXT__VARIABLES_INSTANTIATED:
+				setVariablesInstantiated(VARIABLES_INSTANTIATED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -579,6 +629,8 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 				return INSTANCES_CREATION_DATE_EDEFAULT == null ? instancesCreationDate != null : !INSTANCES_CREATION_DATE_EDEFAULT.equals(instancesCreationDate);
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				return INSTANCES_DISPOSAL_DATE_EDEFAULT == null ? instancesDisposalDate != null : !INSTANCES_DISPOSAL_DATE_EDEFAULT.equals(instancesDisposalDate);
+			case ApogyCoreInvocatorPackage.CONTEXT__VARIABLES_INSTANTIATED:
+				return variablesInstantiated != VARIABLES_INSTANTIATED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -600,6 +652,8 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		result.append(instancesCreationDate);
 		result.append(", instancesDisposalDate: ");
 		result.append(instancesDisposalDate);
+		result.append(", variablesInstantiated: ");
+		result.append(variablesInstantiated);
 		result.append(')');
 		return result.toString();
 	}
