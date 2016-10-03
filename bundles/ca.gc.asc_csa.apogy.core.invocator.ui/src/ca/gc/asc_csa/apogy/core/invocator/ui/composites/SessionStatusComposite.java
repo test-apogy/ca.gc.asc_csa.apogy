@@ -26,6 +26,7 @@ import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -37,23 +38,20 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.ui.forms.widgets.TableWrapData;
+import org.eclipse.ui.forms.widgets.TableWrapLayout;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.ui.forms.widgets.TableWrapLayout;
-import org.eclipse.ui.forms.widgets.TableWrapData;
-import org.eclipse.ui.forms.widgets.ScrolledForm;
 
-public class SessionStatusComposite extends Composite {
+public class SessionStatusComposite extends ScrolledComposite {
 
 	private static final String NO_ACTIVE_SESSION_STR = "No Active Session";
 	private static final String SESSION_ACTIVE_STR = "Session Active";
@@ -71,10 +69,10 @@ public class SessionStatusComposite extends Composite {
 	private Text txtInstanceStatus;
 	private Section sctnInstance;
 	private Section sctnContext;
-	private Composite composite_2;
-	private Composite composite;
-	private Composite composite_1;
-	private ScrolledForm scrldfrmNewScrolledform;
+	private Composite compositeConnexion;
+	private Composite compositeInstance;
+	private Composite compositeContext;
+	private ScrolledForm scrolledForm;
 
 	/**
 	 * Create the composite.
@@ -83,7 +81,8 @@ public class SessionStatusComposite extends Composite {
 	 * @param style
 	 */
 	public SessionStatusComposite(Composite parent, int style) {
-		super(parent, style);
+		super(parent, SWT.H_SCROLL | SWT.V_SCROLL);
+		
 
 		this.addDisposeListener(new DisposeListener()
 
@@ -98,100 +97,108 @@ public class SessionStatusComposite extends Composite {
 			TableWrapLayout tableWrapLayout = new TableWrapLayout();
 			setLayout(tableWrapLayout);
 		}
-																								
-																								scrldfrmNewScrolledform = formToolKit.createScrolledForm(this);
-																								scrldfrmNewScrolledform.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
-																								formToolKit.paintBordersFor(scrldfrmNewScrolledform);
-																								scrldfrmNewScrolledform.setText("New ScrolledForm");
-																								scrldfrmNewScrolledform.getBody().setLayout(new GridLayout(1, false));
-																												
-																														Section sctnSessionStatus = formToolKit.createSection(scrldfrmNewScrolledform.getBody(), Section.TITLE_BAR);
-																														sctnSessionStatus.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-																														formToolKit.paintBordersFor(sctnSessionStatus);
-																														sctnSessionStatus.setText("Session");
-																														
-																														composite_2 = formToolKit.createComposite(sctnSessionStatus, SWT.NONE);
-																														formToolKit.paintBordersFor(composite_2);
-																														sctnSessionStatus.setClient(composite_2);
-																														composite_2.setLayout(new GridLayout(2, false));
-																														new Label(composite_2, SWT.NONE);
-																														
-																																txtStatusConnexion = new Text(composite_2, SWT.NONE);
-																																txtStatusConnexion.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-																																txtStatusConnexion.setText(NO_ACTIVE_SESSION_STR);
-																																txtStatusConnexion.setBackground(SWTResourceManager.getColor(SWT.COLOR_RED));
-																																formToolKit.adapt(txtStatusConnexion, true, true);
-																																txtStatusConnexion.setEditable(false);
-																																		
-																																		sctnContext = formToolKit.createSection(scrldfrmNewScrolledform.getBody(), Section.TITLE_BAR);
-																																		sctnContext.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-																																		formToolKit.paintBordersFor(sctnContext);
-																																		sctnContext.setText("Context");
-																																		
-																																		composite_1 = formToolKit.createComposite(sctnContext, SWT.NONE);
-																																		formToolKit.paintBordersFor(composite_1);
-																																		sctnContext.setClient(composite_1);
-																																		composite_1.setLayout(new GridLayout(1, false));
-																																		
-																																				comboContext = new Combo(composite_1, SWT.NONE);
-																																				comboContext.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-																																				formToolKit.adapt(comboContext);
-																																				formToolKit.paintBordersFor(comboContext);
-																																				comboContext.setText("Context");
-																																										
-																																										sctnInstance = formToolKit.createSection(scrldfrmNewScrolledform.getBody(), Section.TITLE_BAR);
-																																										sctnInstance.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-																																										formToolKit.paintBordersFor(sctnInstance);
-																																										sctnInstance.setText("Status");
-																																										
-																																										composite = formToolKit.createComposite(sctnInstance, SWT.NONE);
-																																										formToolKit.paintBordersFor(composite);
-																																										sctnInstance.setClient(composite);
-																																										composite.setLayout(new GridLayout(2, false));
-																																										
-																																												txtInstanceStatus = formToolKit.createText(composite, "New Text", SWT.CENTER);
-																																												txtInstanceStatus.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
-																																												txtInstanceStatus.setText("Status");
-																																												txtInstanceStatus.setEditable(false);
-																																												
-																																														btnResetInstances = new Button(composite, SWT.NONE);
-																																														btnResetInstances.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-																																														formToolKit.adapt(btnResetInstances, true, true);
-																																														btnResetInstances.setText("Reset Instances");
-																																														
-																																																btnClearInstance = new Button(composite, SWT.NONE);
-																																																btnClearInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
-																																																formToolKit.adapt(btnClearInstance, true, true);
-																																																btnClearInstance.setText("Clear Instances");
-																																																// Create the listener that disposes the variables of the environment
-																																																// when the button is selected. This is to clear the instances
-																																																btnClearInstance.addSelectionListener(new SelectionAdapter() {
-																																																	@Override
-																																																	public void widgetSelected(SelectionEvent e) {				
-																																																		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
-																																																			if (!ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList().getVariables().isEmpty()){
-																																																				ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
-																																																			}
-																																																		}
-																																																	}
-																																																});
-																																																
-																																																// Create the listener that initiates the variables of the environment
-																																																// when the button is selected. This is to reset the instances.
-																																																btnResetInstances.addSelectionListener(new SelectionAdapter() {
-																																																	@Override
-																																																	public void widgetSelected(SelectionEvent e) {
-																																																		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
-																																																			if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
-																																																					.getActiveContext().isVariablesInstantiated()) {
-																																																				ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances(
-																																																						ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
-																																																			}
-																																																			ApogyCoreInvocatorFacade.INSTANCE.initVariableInstances(
-																																																					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
-																																																		}
-																																																	}
-																																																});
+
+
+		scrolledForm = formToolKit.createScrolledForm(this);
+		scrolledForm.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
+		formToolKit.paintBordersFor(scrolledForm);
+		scrolledForm.getBody().setLayout(new GridLayout(1, false));
+		
+
+		Section sctnSessionStatus = formToolKit.createSection(scrolledForm.getBody(), Section.TITLE_BAR);
+		sctnSessionStatus.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+		formToolKit.paintBordersFor(sctnSessionStatus);
+		sctnSessionStatus.setText("Session");
+
+		compositeConnexion = formToolKit.createComposite(sctnSessionStatus, SWT.NONE);
+		formToolKit.paintBordersFor(compositeConnexion);
+		sctnSessionStatus.setClient(compositeConnexion);
+		compositeConnexion.setLayout(new GridLayout(2, false));
+
+		txtStatusConnexion = new Text(compositeConnexion, SWT.NONE);
+		txtStatusConnexion.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
+		txtStatusConnexion.setText(NO_ACTIVE_SESSION_STR);
+		txtStatusConnexion.setBackground(SWTResourceManager.getColor(SWT.COLOR_RED));
+		formToolKit.adapt(txtStatusConnexion, true, true);
+		txtStatusConnexion.setEditable(false);
+
+		sctnContext = formToolKit.createSection(scrolledForm.getBody(), Section.TITLE_BAR);
+		sctnContext.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+		formToolKit.paintBordersFor(sctnContext);
+		sctnContext.setText("Context");
+
+		compositeContext = formToolKit.createComposite(sctnContext, SWT.NONE);
+		formToolKit.paintBordersFor(compositeContext);
+		sctnContext.setClient(compositeContext);
+		compositeContext.setLayout(new GridLayout(1, false));
+
+		comboContext = new Combo(compositeContext, SWT.NONE);
+		comboContext.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		formToolKit.adapt(comboContext);
+		formToolKit.paintBordersFor(comboContext);
+		comboContext.setText("Context");
+
+		sctnInstance = formToolKit.createSection(scrolledForm.getBody(), Section.TITLE_BAR);
+		sctnInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+		formToolKit.paintBordersFor(sctnInstance);
+		sctnInstance.setText("Status");
+
+		compositeInstance = formToolKit.createComposite(sctnInstance, SWT.NONE);
+		formToolKit.paintBordersFor(compositeInstance);
+		sctnInstance.setClient(compositeInstance);
+		compositeInstance.setLayout(new GridLayout(2, false));
+
+		txtInstanceStatus = formToolKit.createText(compositeInstance, "New Text", SWT.CENTER);
+		txtInstanceStatus.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
+		txtInstanceStatus.setText("Status");
+		txtInstanceStatus.setEditable(false);
+
+		btnResetInstances = new Button(compositeInstance, SWT.NONE);
+		btnResetInstances.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		formToolKit.adapt(btnResetInstances, true, true);
+		btnResetInstances.setText("Reset Instances");
+
+		btnClearInstance = new Button(compositeInstance, SWT.NONE);
+		btnClearInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+		formToolKit.adapt(btnClearInstance, true, true);
+		btnClearInstance.setText("Clear Instances");
+
+		// Create the listener that disposes the variables of the environment
+		// when the button is selected. This is to clear the instances
+		btnClearInstance.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
+					if (!ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+							.getVariablesList().getVariables().isEmpty()) {
+						ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances(
+								ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+					}
+				}
+			}
+		});
+
+		// Create the listener that initiates the variables of the environment
+		// when the button is selected. This is to reset the instances.
+		btnResetInstances.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
+					if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+							.getActiveContext().isVariablesInstantiated()) {
+						ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances(
+								ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+					}
+					ApogyCoreInvocatorFacade.INSTANCE.initVariableInstances(
+							ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+				}
+			}
+		});
+		
+		this.setExpandHorizontal(true);
+		this.setExpandVertical(true);
+		this.setContent(scrolledForm);
+		this.setMinSize(scrolledForm.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 
 		m_bindingContext = customInitDataBindings();
 	}
