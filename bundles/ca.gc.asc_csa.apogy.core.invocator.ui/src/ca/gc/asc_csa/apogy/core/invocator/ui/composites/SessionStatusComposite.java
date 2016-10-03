@@ -81,7 +81,7 @@ public class SessionStatusComposite extends ScrolledComposite {
 	 * @param style
 	 */
 	public SessionStatusComposite(Composite parent, int style) {
-		super(parent, SWT.H_SCROLL | SWT.V_SCROLL);
+		super(parent, style);
 		
 
 		this.addDisposeListener(new DisposeListener()

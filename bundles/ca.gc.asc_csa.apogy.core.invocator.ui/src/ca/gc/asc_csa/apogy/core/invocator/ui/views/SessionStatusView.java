@@ -43,7 +43,7 @@ public class SessionStatusView extends AbstractView
 		super.createPartControl(parent);
 		
 		// Create the control composite
-		new SessionStatusComposite(parent, SWT.NONE);		
+		new SessionStatusComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);		
 	}
 
 	@Override
