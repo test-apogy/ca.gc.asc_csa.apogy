@@ -10,6 +10,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.llarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -111,9 +112,55 @@ public class VariableImplementationsComposite extends Composite {
 		toolkit.paintBordersFor(this);
 		setLayout(new GridLayout(1, true));
 
+		Section sctnTable = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
+		sctnTable.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		toolkit.paintBordersFor(sctnTable);
+		sctnTable.setText("List");
+		sctnTable.setExpanded(true);
+
+		variableImplementationsViewer = new TreeViewer(sctnTable,
+				SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
+
+		ColumnViewerToolTipSupport.enableFor(variableImplementationsViewer, ToolTip.NO_RECREATE);
+		treeVariableImplementations = variableImplementationsViewer.getTree();
+		treeVariableImplementations.setLinesVisible(true);
+		treeVariableImplementations.setHeaderVisible(true);
+		toolkit.paintBordersFor(treeVariableImplementations);
+
+		TreeViewerColumn treeViewerColumnFeature = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
+		TreeColumn columnFeature = treeViewerColumnFeature.getColumn();
+		columnFeature.setWidth(200);
+		columnFeature.setText("Feature");
+
+		TreeViewerColumn treeViewerColumnInterface = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
+		TreeColumn columnInterface = treeViewerColumnInterface.getColumn();
+		columnInterface.setWidth(200);
+		columnInterface.setText("Interface");
+
+		TreeViewerColumn treeViewerColumnImplementation = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
+		TreeColumn columnImplementation = treeViewerColumnImplementation.getColumn();
+		columnImplementation.setWidth(200);
+		columnImplementation.setText("Implementation");
+		EditingSupport editingSupport = new VariableImplementationEditingSupport(
+				treeViewerColumnImplementation.getViewer());
+		treeViewerColumnImplementation.setEditingSupport(editingSupport);
+
+		TreeViewerEditor.create(variableImplementationsViewer,
+				new ColumnViewerEditorActivationStrategy(variableImplementationsViewer) {
+					@Override
+					protected boolean isEditorActivationEvent(ColumnViewerEditorActivationEvent event) {
+						return event.eventType == ColumnViewerEditorActivationEvent.MOUSE_CLICK_SELECTION;
+					}
+				}, SWT.NONE);
+
+		variableImplementationsViewer.setContentProvider(new VariableImplementationContentProvider());
+		variableImplementationsViewer.setLabelProvider(new VariableImplementationLabelProvider(adapterFactory));
+		sctnTable.setClient(treeVariableImplementations);
+
+		variableImplementationsViewer.addSelectionChangedListener(getVariableImplementationsViewerListener());
+
 		Section sctnDetails = toolkit.createSection(this, Section.TITLE_BAR | Section.EXPANDED);
-		sctnDetails.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,
-				false, 1, 1));
+		sctnDetails.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		toolkit.paintBordersFor(sctnDetails);
 		sctnDetails.setText("Details");
 		sctnDetails.setExpanded(true);
@@ -146,65 +193,6 @@ public class VariableImplementationsComposite extends Composite {
 				SWT.READ_ONLY);
 		txtImplementation.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
 				true, false, 1, 1));
-
-		Section sctnTable = toolkit.createSection(this, Section.EXPANDED
-				| Section.TITLE_BAR);
-		sctnTable.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1,
-				1));
-		toolkit.paintBordersFor(sctnTable);
-		sctnTable.setText("List");
-		sctnTable.setExpanded(true);
-
-		variableImplementationsViewer = new TreeViewer(sctnTable, SWT.BORDER
-				| SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
-
-		ColumnViewerToolTipSupport.enableFor(variableImplementationsViewer,
-				ToolTip.NO_RECREATE);
-		treeVariableImplementations = variableImplementationsViewer.getTree();
-		treeVariableImplementations.setLinesVisible(true);
-		treeVariableImplementations.setHeaderVisible(true);
-		toolkit.paintBordersFor(treeVariableImplementations);
-
-		TreeViewerColumn treeViewerColumnFeature = new TreeViewerColumn(
-				variableImplementationsViewer, SWT.NONE);
-		TreeColumn columnFeature = treeViewerColumnFeature.getColumn();
-		columnFeature.setWidth(200);
-		columnFeature.setText("Feature");
-
-		TreeViewerColumn treeViewerColumnInterface = new TreeViewerColumn(
-				variableImplementationsViewer, SWT.NONE);
-		TreeColumn columnInterface = treeViewerColumnInterface.getColumn();
-		columnInterface.setWidth(200);
-		columnInterface.setText("Interface");
-
-		TreeViewerColumn treeViewerColumnImplementation = new TreeViewerColumn(
-				variableImplementationsViewer, SWT.NONE);
-		TreeColumn columnImplementation = treeViewerColumnImplementation
-				.getColumn();
-		columnImplementation.setWidth(200);
-		columnImplementation.setText("Implementation");
-		EditingSupport editingSupport = new VariableImplementationEditingSupport(
-				treeViewerColumnImplementation.getViewer());
-		treeViewerColumnImplementation.setEditingSupport(editingSupport);
-
-		TreeViewerEditor.create(variableImplementationsViewer,
-				new ColumnViewerEditorActivationStrategy(
-						variableImplementationsViewer) {
-					@Override
-					protected boolean isEditorActivationEvent(
-							ColumnViewerEditorActivationEvent event) {
-						return event.eventType == ColumnViewerEditorActivationEvent.MOUSE_CLICK_SELECTION;
-					}
-				}, SWT.NONE);
-
-		variableImplementationsViewer
-				.setContentProvider(new VariableImplementationContentProvider());
-		variableImplementationsViewer
-				.setLabelProvider(new VariableImplementationLabelProvider(
-						adapterFactory));
-		sctnTable.setClient(treeVariableImplementations);
-		
-		variableImplementationsViewer.addSelectionChangedListener(getVariableImplementationsViewerListener());
 	}
 
 	/**
