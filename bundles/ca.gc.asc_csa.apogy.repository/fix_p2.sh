@@ -5,8 +5,6 @@
 #    https://bugs.eclipse.org/bugs/show_bug.cgi?id=453708
 # @author 
 #    pallard, rlarcheveque
-# @history
-#    2016-09-14: First version
 # -----------------------------------------------------------------------
 
 # Check if the command line is consistent.
@@ -50,10 +48,10 @@ fi
 echo "Checking P2 repository consistency done..."
 
 # Added repos(content.xml). No new lines permitted here !
-UPDATED_CONTENT_XML='\n <references><repository uri="http://download.eclipse.org/releases/mars" type="0" options="1" /> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars" type="0" options="1"/> \n <repository uri="http://download.eclipse.org/tools/orbit/downloads/drops/R20151221205849/repository" type="0" options="1" /> \n <repository uri="http://download.eclipse.org/eclipse/updates/4.5" type="0" options="1" /></references>'
+UPDATED_CONTENT_XML='\n <references><repository uri="http://download.eclipse.org/releases/mars" type="0" options="1" /> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/4.0.0/neon" type="0" options="1"/> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars" type="0" options="1"/> \n <repository uri="http://download.eclipse.org/tools/orbit/downloads/drops/R20151221205849/repository" type="0" options="1" /> \n <repository uri="http://download.eclipse.org/eclipse/updates/4.5" type="0" options="1" /></references>'
 
 # Added repos(artifacts.xml). No new lines permitted here !
-UPDATED_ARTIFACTS_XML='\n <references><repository uri="http://download.eclipse.org/releases/mars" type="1" options="1" /> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars" type="1" options="1"/> \n <repository uri="http://download.eclipse.org/tools/orbit/downloads/drops/R20151221205849/repository" type="1" options="1" /> \n <repository uri="http://download.eclipse.org/eclipse/updates/4.5" type="1" options="1" /></references>'
+UPDATED_ARTIFACTS_XML='\n <references><repository uri="http://download.eclipse.org/releases/mars" type="1" options="1" /> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/4.0.0/neon" type="1" options="1"/> <repository uri="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars" type="1" options="1"/> \n <repository uri="http://download.eclipse.org/tools/orbit/downloads/drops/R20151221205849/repository" type="1" options="1" /> \n <repository uri="http://download.eclipse.org/eclipse/updates/4.5" type="1" options="1" /></references>'
 
 # Unzip JAR files.
 unzip $repo_dir/repository/content.jar -d $repo_dir/repository
@@ -95,18 +93,6 @@ zip -r content.jar content.xml
 zip -r artifacts.jar artifacts.xml
 echo "Update $repo_dir/repository/content.jar and $repo_dir/repository/artifacts.jar completed..."
 cd $DIR
-
-#
-# DISABLED.
-# Fix ca.gc.asc_csa.apogy.repository-0.5.0-SNAPSHOT.zip
-#
-#echo "Update ${APOGY_REPO}-0.5.0-SNAPSHOT.zip started"
-#unzip ${APOGY_REPO}-0.5.0-SNAPSHOT.zip -d ${APOGY_REPO}
-#cp -f $repo_dir/repository/content.jar ${APOGY_REPO}/.
-#cp -f $repo_dir/repository/artifacts.jar ${APOGY_REPO}/.
-#rm -f ${APOGY_REPO}-0.5.0-SNAPSHOT.zip
-#zip ${APOGY_REPO}-0.5.0-SNAPSHOT.zip ${APOGY_REPO}
-#echo "Update ${APOGY_REPO}-0.5.0-SNAPSHOT.zip completed"
 
 # Delete .xml
 rm $repo_dir/repository/content.xml $repo_dir/repository/artifacts.xml
