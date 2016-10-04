@@ -79,6 +79,7 @@ public class ContextItemProvider
 			addDataProductsListPropertyDescriptor(object);
 			addInstancesCreationDatePropertyDescriptor(object);
 			addInstancesDisposalDatePropertyDescriptor(object);
+			addVariablesInstantiatedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -176,6 +177,28 @@ public class ContextItemProvider
 	}
 
   /**
+	 * This adds a property descriptor for the Variables Instantiated feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVariablesInstantiatedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Context_variablesInstantiated_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Context_variablesInstantiated_feature", "_UI_Context_type"),
+				 ApogyCoreInvocatorPackage.Literals.CONTEXT__VARIABLES_INSTANTIATED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -239,6 +262,7 @@ public class ContextItemProvider
 			case ApogyCoreInvocatorPackage.CONTEXT__NAME:
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
+			case ApogyCoreInvocatorPackage.CONTEXT__VARIABLES_INSTANTIATED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ApogyCoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
