@@ -10,29 +10,46 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.llarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateListStrategy;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.beans.BeanProperties;
+import org.eclipse.core.databinding.conversion.Converter;
+import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.databinding.FeaturePath;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
+import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
+import org.eclipse.jface.internal.databinding.viewers.ViewerCheckedElementsProperty;
 import org.eclipse.jface.viewers.CheckStateChangedEvent;
 import org.eclipse.jface.viewers.CheckboxTableViewer;
 import org.eclipse.jface.viewers.ICheckStateListener;
 import org.eclipse.jface.viewers.ICheckStateProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -51,10 +68,15 @@ import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class ContextsListComposite extends Composite {
 	private DataBindingContext m_bindingContext;
+	private WritableValue environmentBinder;
+	private ObservableListContentProvider listContentProvider;
+	private LabelProvider labelProvider;
 
 	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
@@ -72,17 +94,17 @@ public class ContextsListComposite extends Composite {
 		return contextsListViewer;
 	}
 
-	private AdapterImpl environmentAdapter;
+	private AdapterImpl sessionAdapter;
 
 	private EditingDomain editingDomain;
 
 	private ISelectionChangedListener contextsListViewerSelectionListener;
 
-	public ContextsListComposite(Composite parent, int style,
+	/*public ContextsListComposite(Composite parent, int style,
 			ContextsList contextsList) {
 		this(parent, style);
 		setContextsList(contextsList);
-	}
+	}*/
 
 	/**
 	 * Creates the composite.
@@ -106,7 +128,7 @@ public class ContextsListComposite extends Composite {
 		contextsListViewer = CheckboxTableViewer.newCheckList(this, SWT.BORDER
 				| SWT.SINGLE | SWT.FULL_SELECTION);
 		contextsListViewer.getTable().setLinesVisible(true);
-		contextsListViewer.setCheckStateProvider(new ICheckStateProvider() {
+		/*contextsListViewer.setCheckStateProvider(new ICheckStateProvider() {
 			@Override
 			public boolean isGrayed(Object element) {
 				return false;
@@ -134,7 +156,10 @@ public class ContextsListComposite extends Composite {
 					editingDomain.getCommandStack().execute(command);
 				}
 			}
-		});
+		});*/
+		
+		listContentProvider = new ObservableListContentProvider();
+		contextsListViewer.setContentProvider(listContentProvider);
 
 		tableContexts = contextsListViewer.getTable();
 		tableContexts.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true,
@@ -184,6 +209,8 @@ public class ContextsListComposite extends Composite {
 		btnDelete.setEnabled(false);
 		btnDelete.setText("Delete");
 		toolkit.adapt(btnDelete, true, true);
+		
+		m_bindingContext = initDataBindingsCustom();
 	}
 
 	/**
@@ -192,7 +219,11 @@ public class ContextsListComposite extends Composite {
 	 * @return Reference to the environment.
 	 */
 	private Environment getEnvironment() {
-		return contextsList == null ? null : contextsList.getEnvironment();
+		if(environmentBinder != null && environmentBinder.getValue() != null){
+			return (Environment) environmentBinder.getValue();
+		}
+		return null;
+		//return contextsList == null ? null : contextsList.getEnvironment();
 	}
 
 	/**
@@ -201,8 +232,17 @@ public class ContextsListComposite extends Composite {
 	 * @param context
 	 *            Reference to the list of contexts.
 	 */
-	public void setContextsList(ContextsList contextsList) {
+	/*public void setContextsList(ContextsList contextsList) {
 		setContextsList(contextsList, true);
+	}*/
+	
+	public void setEnvironment(Environment environment){
+		if(environmentBinder == null){
+			environmentBinder = new WritableValue();
+			environmentBinder.setValue(environment);
+		}
+		environmentBinder.setValue(environment);
+		
 	}
 
 	/**
@@ -213,7 +253,7 @@ public class ContextsListComposite extends Composite {
 	 * @param update
 	 *            If true then data bindings are created.
 	 */
-	private void setContextsList(ContextsList contextsList, boolean update) {
+	/*private void setContextsList(ContextsList contextsList, boolean update) {
 		this.contextsList = contextsList;
 		editingDomain = AdapterFactoryEditingDomain
 				.getEditingDomainFor(contextsList);
@@ -227,7 +267,7 @@ public class ContextsListComposite extends Composite {
 				m_bindingContext = initDataBindings();
 			}
 		}
-	}
+	}*/
 
 	/**
 	 * Use this to prevent Window Pro Builder code analysis to fail with the
@@ -248,45 +288,70 @@ public class ContextsListComposite extends Composite {
 	 * @return Reference to the data bindings context.
 	 */
 	private DataBindingContext initDataBindingsCustom() {
-		DataBindingContext bindingContext = new DataBindingContext();
+		DataBindingContext m_bindingContext = new DataBindingContext();
+		
+		if(environmentBinder == null){
+			environmentBinder = new WritableValue();
+		}
+			
+		/**
+		 * Bind contexts list.
+		 */
+		IObservableList invocatorFacadeEnvironmentContextsListContextsObserveValue = EMFProperties
+				.list(FeaturePath.fromList(
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST,
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS))
+				.observeDetail(environmentBinder);
+		
+		ViewerSupport.bind(contextsListViewer, invocatorFacadeEnvironmentContextsListContextsObserveValue,
+				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
+
+		
+		
+		IObservableValue observeContextListViewerSelectionObserveWidget = ViewerProperties.singleSelection()
+				.observe((ISelectionProvider)contextsListViewer);
+		IObservableValue invocatorFacadeEnvironmentActiveContextObserveValue = EMFProperties
+				.value(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT).observeDetail(environmentBinder);	
+		m_bindingContext.bindValue(invocatorFacadeEnvironmentActiveContextObserveValue,
+				observeContextListViewerSelectionObserveWidget, null, new UpdateValueStrategy());
+
+		
 
 		/**
 		 * Bind contexts list.
 		 */
-		ViewerSupport.bind(contextsListViewer, EMFObservables.observeList(
+		/*ViewerSupport.bind(contextsListViewer, EMFObservables.observeList(
 				contextsList,
 				ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
-				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
+				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));*/
 
 		/**
 		 * Set the default selection to the active context if any or the first
 		 * item.
 		 */
-		Context defaultSelectedContext = getEnvironment().getActiveContext();
+		/*Context defaultSelectedContext = getEnvironment().getActiveContext();
 		if (defaultSelectedContext == null
 				&& getEnvironment().getContextsList().getContexts().isEmpty()) {
 			defaultSelectedContext = getEnvironment().getContextsList()
 					.getContexts().get(0);
 		}
 		contextsListViewer.setSelection(new StructuredSelection(
-				defaultSelectedContext), true);
+				defaultSelectedContext), true);*/
 
 		/**
 		 * Listens to selection changed.
 		 */
-		contextsListViewer
+		/*contextsListViewer
 		.removeSelectionChangedListener(getContextsListViewerSelectionListener());
 		contextsListViewer
-				.addSelectionChangedListener(getContextsListViewerSelectionListener());
+				.addSelectionChangedListener(getContextsListViewerSelectionListener());*/
 
-		/** Listens to changes to the environment. */
-		getEnvironment().eAdapters().remove(getEnvironmentAdapter());
-		getEnvironment().eAdapters().add(getEnvironmentAdapter());
-
-		return bindingContext;
+		
+		return m_bindingContext;
 	}
 
-	private ISelectionChangedListener getContextsListViewerSelectionListener() {
+	/* TODO: CHANGE LISTENER
+	 private ISelectionChangedListener getContextsListViewerSelectionListener() {
 		if (contextsListViewerSelectionListener == null) {
 			contextsListViewerSelectionListener = new ISelectionChangedListener() {
 				@Override
@@ -296,7 +361,7 @@ public class ContextsListComposite extends Composite {
 			};
 		}
 		return contextsListViewerSelectionListener;
-	}
+	}*/
 
 	/**
 	 * This method is called when a new selection is made in the composite.
@@ -322,18 +387,19 @@ public class ContextsListComposite extends Composite {
 	 * 
 	 * @return Reference to the adapter.
 	 */
-	private Adapter getEnvironmentAdapter() {
-		if (environmentAdapter == null) {
-			environmentAdapter = new AdapterImpl() {
+	private Adapter getInvocatorSessionAdapter() {
+		if (sessionAdapter == null) {
+			sessionAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(Environment.class) == ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT) {
+					if (msg.getFeatureID(InvocatorSession.class) == ApogyCoreInvocatorPackage.INVOCATOR_SESSION__ENVIRONMENT) {
+						//environmentBinder.setValue(msg.getFeature());
 						contextsListViewer.refresh();
 					}
 				}
 			};
 		}
-		return environmentAdapter;
+		return sessionAdapter;
 	}
 
 //	private final class ContextsListEditingSupport extends
@@ -438,8 +504,8 @@ public class ContextsListComposite extends Composite {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
 		}
-		getEnvironment().eAdapters().remove(getEnvironmentAdapter());
-		contextsListViewer
-				.removeSelectionChangedListener(getContextsListViewerSelectionListener());
+		getEnvironment().eAdapters().remove(getInvocatorSessionAdapter());
+		/*contextsListViewer TODO: Change listener
+				.removeSelectionChangedListener(getContextsListViewerSelectionListener());*/
 	}
 }
