@@ -76,6 +76,7 @@ public class ContextItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addArchivedPropertyDescriptor(object);
 			addDataProductsListPropertyDescriptor(object);
 			addInstancesCreationDatePropertyDescriptor(object);
 			addInstancesDisposalDatePropertyDescriptor(object);
@@ -107,6 +108,28 @@ public class ContextItemProvider
 	}
 
   /**
+	 * This adds a property descriptor for the Archived feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArchivedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Context_archived_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Context_archived_feature", "_UI_Context_type"),
+				 ApogyCoreInvocatorPackage.Literals.CONTEXT__ARCHIVED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
 	 * This adds a property descriptor for the Data Products List feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -237,6 +260,7 @@ public class ContextItemProvider
 
 		switch (notification.getFeatureID(Context.class)) {
 			case ApogyCoreInvocatorPackage.CONTEXT__NAME:
+			case ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED:
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

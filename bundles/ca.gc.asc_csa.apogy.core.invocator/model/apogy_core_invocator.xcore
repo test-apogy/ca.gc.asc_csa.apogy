@@ -631,8 +631,11 @@ class ContextsList
 
 abstract class Context extends Named
 {
+	boolean archived = "false"
+	
 	@GenModel(property="None")
 	container ContextsList contextsList opposite contexts	
+			
 	contains VariableImplementationsList[0..1] variableImplementationsList
 
     @GenModel(children="false", property="None")

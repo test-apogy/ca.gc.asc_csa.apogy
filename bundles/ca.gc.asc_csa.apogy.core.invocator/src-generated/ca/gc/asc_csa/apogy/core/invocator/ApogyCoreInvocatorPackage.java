@@ -1692,13 +1692,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int CONTEXT__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__ARCHIVED = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+
+		/**
 	 * The feature id for the '<em><b>Contexts List</b></em>' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__CONTEXTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int CONTEXT__CONTEXTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Variable Implementations List</b></em>' containment reference.
@@ -1707,7 +1716,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -1716,7 +1725,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__ENVIRONMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int CONTEXT__ENVIRONMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Data Products List</b></em>' reference.
@@ -1725,7 +1734,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__DATA_PRODUCTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int CONTEXT__DATA_PRODUCTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Instances Creation Date</b></em>' attribute.
@@ -1734,7 +1743,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__INSTANCES_CREATION_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+  int CONTEXT__INSTANCES_CREATION_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The feature id for the '<em><b>Instances Disposal Date</b></em>' attribute.
@@ -1743,7 +1752,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__INSTANCES_DISPOSAL_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
+  int CONTEXT__INSTANCES_DISPOSAL_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
   /**
 	 * The number of structural features of the '<em>Context</em>' class.
@@ -1752,7 +1761,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 6;
+  int CONTEXT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 7;
 
   /**
 	 * The number of operations of the '<em>Context</em>' class.
@@ -1783,6 +1792,15 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int BASIC_CONTEXT__NAME = CONTEXT__NAME;
 
   /**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_CONTEXT__ARCHIVED = CONTEXT__ARCHIVED;
+
+		/**
 	 * The feature id for the '<em><b>Contexts List</b></em>' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6148,6 +6166,17 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   EClass getContext();
 
   /**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.Context#isArchived <em>Archived</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Archived</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#isArchived()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EAttribute getContext_Archived();
+
+		/**
 	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getContextsList <em>Contexts List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8587,6 +8616,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage
     EClass CONTEXT = eINSTANCE.getContext();
 
     /**
+		 * The meta object literal for the '<em><b>Archived</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTEXT__ARCHIVED = eINSTANCE.getContext_Archived();
+
+				/**
 		 * The meta object literal for the '<em><b>Contexts List</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
