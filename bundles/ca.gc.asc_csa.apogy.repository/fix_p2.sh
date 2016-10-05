@@ -48,10 +48,10 @@ fi
 echo "Checking P2 repository consistency done..."
 
 # Added repos(content.xml). No new lines permitted here !
-UPDATED_CONTENT_XML='\n <references><repository uri="http://download.eclipse.org/releases/mars" type="0" options="1" /> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/4.0.0/neon" type="0" options="1"/> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars" type="0" options="1"/> \n <repository uri="http://download.eclipse.org/tools/orbit/downloads/drops/R20151221205849/repository" type="0" options="1" /> \n <repository uri="http://download.eclipse.org/eclipse/updates/4.5" type="0" options="1" /></references>'
+UPDATED_CONTENT_XML='\n <references><repository uri="http://download.eclipse.org/releases/mars" type="0" options="1" /> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/4.0.0/neon" type="0" options="1"/> \n <repository uri="http://download.eclipse.org/tools/orbit/downloads/drops/R20151221205849/repository" type="0" options="1" /> \n <repository uri="http://download.eclipse.org/eclipse/updates/4.5" type="0" options="1" /></references>'
 
 # Added repos(artifacts.xml). No new lines permitted here !
-UPDATED_ARTIFACTS_XML='\n <references><repository uri="http://download.eclipse.org/releases/mars" type="1" options="1" /> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/4.0.0/neon" type="1" options="1"/> <repository uri="http://download.eclipse.org/sirius/updates/releases/3.1.1/mars" type="1" options="1"/> \n <repository uri="http://download.eclipse.org/tools/orbit/downloads/drops/R20151221205849/repository" type="1" options="1" /> \n <repository uri="http://download.eclipse.org/eclipse/updates/4.5" type="1" options="1" /></references>'
+UPDATED_ARTIFACTS_XML='\n <references><repository uri="http://download.eclipse.org/releases/mars" type="1" options="1" /> \n <repository uri="http://download.eclipse.org/sirius/updates/releases/4.0.0/neon" type="1" options="1"/> \n <repository uri="http://download.eclipse.org/tools/orbit/downloads/drops/R20151221205849/repository" type="1" options="1" /> \n <repository uri="http://download.eclipse.org/eclipse/updates/4.5" type="1" options="1" /></references>'
 
 # Unzip JAR files.
 unzip $repo_dir/repository/content.jar -d $repo_dir/repository
