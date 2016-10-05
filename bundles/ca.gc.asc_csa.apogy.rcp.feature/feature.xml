@@ -53,15 +53,15 @@
       <import feature="org.eclipse.equinox.p2.user.ui" version="2.2.102.v20160129-0947"/>
       <import feature="org.eclipse.gef" version="3.10.1.201508170204"/>
       <import feature="org.eclipse.gmf" version="1.9.0.201506060219"/>
-      <import feature="org.eclipse.sirius.runtime" version="3.1.1.201510291439"/>
+      <import feature="org.eclipse.sirius.runtime" version="3.1.1.201510291439" match="greaterOrEqual"/>
       <import feature="org.eclipse.gmf.runtime.notation" version="1.9.0.201505312221"/>
       <import feature="org.eclipse.help" version="2.1.2.v20160212-1500"/>
       <import feature="org.eclipse.ocl" version="3.5.0.v20150525-1635"/>
       <import feature="org.eclipse.platform" version="4.5.2.v20160212-1500"/>
       <import feature="org.eclipse.rcp" version="4.5.2.v20160212-1500"/>
-      <import feature="org.eclipse.sirius.runtime.acceleo" version="3.1.1.201510291439"/>
+      <import feature="org.eclipse.sirius.runtime.acceleo" version="3.1.1.201510291439" match="greaterOrEqual"/>
       <import feature="org.eclipse.wst.jsdt.feature" version="1.6.201.v201512010225"/>
-      <import feature="ca.gc.asc_csa.apogy.feature" version="0.5.0.qualifier"/>
+      <import feature="ca.gc.asc_csa.apogy.feature" version="0.5.0"/>
       <import plugin="org.eclipse.xtext.xbase.lib" version="0.0.0"/>
       <import plugin="com.google.guava" version="0.0.0"/>
       <import plugin="org.eclipse.xtend.lib" version="0.0.0"/>
@@ -69,12 +69,12 @@
       <import plugin="org.eclipse.xtend.lib.macro" version="0.0.0"/>
       <import plugin="org.apache.commons.codec" version="0.0.0"/>
       <import plugin="org.apache.commons.lang" version="0.0.0"/>
-      <import plugin="org.apache.commons.io" version="0.0.0"/>            
-      <import plugin="org.apache.ws.commons.util" version="0.0.0"/>            
-      <import plugin="org.apache.commons.httpclient" version="0.0.0"/>            
-      <import plugin="org.eclipse.acceleo.engine" version="0.0.0"/>            
-      <import plugin="org.eclipse.acceleo.common" version="0.0.0"/>            
-      <import plugin="org.eclipse.acceleo.model" version="0.0.0"/>            
+      <import plugin="org.apache.commons.io" version="0.0.0"/>
+      <import plugin="org.apache.ws.commons.util" version="0.0.0"/>
+      <import plugin="org.apache.commons.httpclient" version="0.0.0"/>
+      <import plugin="org.eclipse.acceleo.engine" version="0.0.0"/>
+      <import plugin="org.eclipse.acceleo.common" version="0.0.0"/>
+      <import plugin="org.eclipse.acceleo.model" version="0.0.0"/>
       <import plugin="org.eclipse.acceleo.profiler" version="0.0.0"/>
       <import plugin="org.eclipse.acceleo.parser" version="0.0.0"/>
       <import plugin="org.eclipse.emf" version="0.0.0"/>
