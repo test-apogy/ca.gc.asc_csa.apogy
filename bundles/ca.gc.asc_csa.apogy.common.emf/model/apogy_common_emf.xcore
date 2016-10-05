@@ -42,6 +42,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.emf.ecore.EReference
 
 /* ------------------------------------------------------------------------------------------
  * 
@@ -214,6 +215,12 @@ class ApogyCommonEMFFacade
 	 * @param id Object identifier.
 	 */	
 	op EObject getEObjectById(ResourceSet resourceSet, String ^id)
+	       
+	/*
+	 * Generates and returns a default name for a specific feature container. 
+	 * FIXME: OLIVIER
+	 */	 
+	op String getDefaultName(EObject eObject, EReference eReference)
 }
 
 /**
