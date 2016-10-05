@@ -1256,17 +1256,19 @@ ApogyCommonEMFFacade {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_not
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public String getDefaultName(EObject eObject, EReference eReference) {
-		String name = eReference.getEReferenceType().getName();	
 
+		String name = eReference.getEReferenceType().getName();
 		eObject.eGet(eReference);
-		
+
+		// If the container is a list
 		if (eReference.isMany()) {
 			int j = 1;
+			// Find a name that is unique
 			for (int i = 0; i < eObject.eContents().size(); i++) {
 				Named named = (Named) eObject.eContents().get(i);
 				if (named.getName().equals(name + "_" + Integer.toString(j))) {
@@ -1279,7 +1281,6 @@ ApogyCommonEMFFacade {
 
 		return name;
 	}
-
 
 	/**
 	 * Returns the string value found in the EAnnotation GenModel for a given
