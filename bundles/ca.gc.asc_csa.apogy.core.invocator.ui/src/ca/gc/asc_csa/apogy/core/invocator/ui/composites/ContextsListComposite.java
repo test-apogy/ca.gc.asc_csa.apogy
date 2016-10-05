@@ -14,50 +14,32 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.EventObject;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.UpdateListStrategy;
-import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.BeanProperties;
-import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.list.IObservableList;
-import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
-import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
-import org.eclipse.jface.internal.databinding.viewers.ViewerCheckedElementsProperty;
 import org.eclipse.jface.viewers.CheckStateChangedEvent;
 import org.eclipse.jface.viewers.CheckboxTableViewer;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.ICheckStateListener;
 import org.eclipse.jface.viewers.ICheckStateProvider;
-import org.eclipse.jface.viewers.ICheckable;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
-import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -70,31 +52,23 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
+import org.eclipse.ui.forms.widgets.FormToolkit;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
-import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
-
-import org.eclipse.ui.forms.widgets.FormToolkit;
+import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewContextWizard;
 
 public class ContextsListComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 	private WritableValue environmentBinder;
 	private ObservableListContentProvider listContentProvider;
-	private LabelProvider labelProvider;
 
 	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
-	private ContextsList contextsList;
 	private Table tableContexts;
 
 	private CheckboxTableViewer contextsListViewer;
@@ -214,8 +188,10 @@ public class ContextsListComposite extends Composite {
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				WizardDialog dialog = new WizardDialog(getShell(), new NewContextWizard());
+				dialog.open();
 
-				Context basicContext = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
+				/*Context basicContext = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
 				basicContext.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getContextsList(),
 						ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
 
@@ -241,7 +217,7 @@ public class ContextsListComposite extends Composite {
 					editingDomain.getCommandStack().execute(command);
 					
 					basicContext.setDataProductsList(productList);
-				}
+				}*/
 		
 				/*DataProductsList productList = ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList();
 				productList.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(productList,
@@ -254,14 +230,14 @@ public class ContextsListComposite extends Composite {
 				
 				basicContext.setDataProductsList(productList);*/
 				
-				//EditingDomain contextListEditingDomain = getEditingDomain(getContextsList());
+				/*//EditingDomain contextListEditingDomain = getEditingDomain(getContextsList());
 				AddCommand command = new AddCommand(editingDomain, getContextsList(),
 						ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS, basicContext);
 				editingDomain.getCommandStack().execute(command);
 				
 				if(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() == null){
 					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().setActiveContext(basicContext);
-				}
+				}*/
 			}
 		});
 		btnNew.setText("New");
@@ -364,9 +340,9 @@ public class ContextsListComposite extends Composite {
 	 * @return Reference to the data bindings context.
 	 * @see ContextsListComposite#initDataBindingsCustom()
 	 */
-	private DataBindingContext initDataBindings() {
-		return initDataBindingsCustom();
-	}
+//	private DataBindingContext initDataBindings() {
+//		return initDataBindingsCustom();
+//	}
 
 	/**
 	 * Creates and returns the data bindings context that takes care of the
