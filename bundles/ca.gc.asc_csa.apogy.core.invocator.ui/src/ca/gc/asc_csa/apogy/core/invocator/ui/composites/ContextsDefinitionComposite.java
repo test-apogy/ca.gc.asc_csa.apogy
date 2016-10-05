@@ -26,7 +26,6 @@ import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
-import org.omg.CORBA.ContextList;
 
 public class ContextsDefinitionComposite extends Composite {
 	private DataBindingContext m_bindingContext;
