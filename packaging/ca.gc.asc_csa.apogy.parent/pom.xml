@@ -47,12 +47,6 @@
 		</repository>		
 		
 		<repository>
-			<id>Sirius3</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/sirius/updates/releases/3.1.1/mars</url>
-		</repository>		
-
-		<repository>
 			<id>Sirius4</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/sirius/updates/releases/4.0.0/neon</url>
