@@ -30,12 +30,6 @@ if [ ! -e $repo_dir/repository ] || [ ! -d $repo_dir/repository ]; then
   exit 1
 fi
 
-
-if [ ! -e $repo_dir/${APOGY_REPO}-0.5.0-SNAPSHOT.zip ]; then
-  echo "The file $repo_dir/${APOGY_REPO}-0.5.0-SNAPSHOT.zip does not exist."
-  exit 1
-fi
-
 if [ ! -e $repo_dir/repository/content.jar ]; then
   echo "The file $repo_dir/repository/content.jar does not exist."
   exit 1
