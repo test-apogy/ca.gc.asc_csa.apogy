@@ -63,6 +63,10 @@
       </children>
       <children xsi:type="menu:Menu" xmi:id="_6wlLjsgZEeSyMNYR5xypkQ" elementId="help_" label="Help">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_JfZ-kCjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.helpcontents" label="Help Contents" command="_Wm-RwCjiEeaYVMfJA5sKMA"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_NBSDYIwKEeagBK84clz7Sg" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.1"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_PDqK0IwKEeagBK84clz7Sg" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.checkforupdates" label="Check For Updates" command="_nYfdIIwJEeagBK84clz7Sg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Wsb6EIwKEeagBK84clz7Sg" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.installnewsoftware" label="Install New Software..." command="_CE41MCgbEeau5bAVKAeRVA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_b-BIcIwKEeagBK84clz7Sg" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.installationdetails" label="Installation Details" command="_CE7RcCgbEeau5bAVKAeRVA"/>
         <children xsi:type="menu:MenuSeparator" xmi:id="_N0OxMCgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.0"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLj8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.about" label="About Apogy" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
       </children>
@@ -190,6 +194,9 @@
   <commands xmi:id="_WnLtICjiEeaYVMfJA5sKMA" elementId="org.eclipse.ui.window.preferences" commandName="%command.preferences.name" description="%command.preferences.description"/>
   <commands xmi:id="_R7XBwCjjEeaYVMfJA5sKMA" elementId="org.eclipse.equinox.p2.ui.sdk.update" commandName="%Update.command"/>
   <commands xmi:id="_R7bTMCjjEeaYVMfJA5sKMA" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="%InstallationDetails.command"/>
+  <commands xmi:id="_nYfdIIwJEeagBK84clz7Sg" elementId="org.eclipse.equinox.p2.ui.sdk.update" commandName="%Update.command"/>
+  <commands xmi:id="_nZOc8IwJEeagBK84clz7Sg" elementId="org.eclipse.equinox.p2.ui.sdk.install" commandName="%Install.command"/>
+  <commands xmi:id="_nZuzQIwJEeagBK84clz7Sg" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="%InstallationDetails.command"/>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
