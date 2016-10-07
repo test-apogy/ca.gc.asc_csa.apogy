@@ -208,7 +208,7 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 					.createContextsList());
 
 			/** Create a default Context */
-			context = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
+			context = ApogyCoreInvocatorFactory.eINSTANCE.createContext();
 			context.setName("Default");
 			environment.getContextsList().getContexts().add(context);
 			environment.setActiveContext(context);

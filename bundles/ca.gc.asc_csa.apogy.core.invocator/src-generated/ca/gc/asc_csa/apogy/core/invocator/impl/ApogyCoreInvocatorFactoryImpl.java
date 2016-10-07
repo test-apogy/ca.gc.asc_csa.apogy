@@ -89,7 +89,7 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.VARIABLES_LIST: return createVariablesList();
 			case ApogyCoreInvocatorPackage.VARIABLE: return createVariable();
 			case ApogyCoreInvocatorPackage.CONTEXTS_LIST: return createContextsList();
-			case ApogyCoreInvocatorPackage.BASIC_CONTEXT: return createBasicContext();
+			case ApogyCoreInvocatorPackage.CONTEXT: return createContext();
 			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST: return createVariableImplementationsList();
 			case ApogyCoreInvocatorPackage.INITIALIZATION_DATA: return createInitializationData();
 			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATION: return createVariableImplementation();
@@ -378,16 +378,15 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public BasicContext createBasicContext()
-  {
-		BasicContextImpl basicContext = new BasicContextImpl();
-		return basicContext;
+	public Context createContext() {
+		ContextImpl context = new ContextImpl();
+		return context;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

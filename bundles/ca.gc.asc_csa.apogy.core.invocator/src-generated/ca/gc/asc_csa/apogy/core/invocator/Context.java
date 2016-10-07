@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import java.util.Date;
 
 import ca.gc.asc_csa.apogy.common.emf.Named;
@@ -36,10 +37,10 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext()
- * @model abstract="true"
+ * @model
  * @generated
  */
-public interface Context extends Named
+public interface Context extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Archived</b></em>' attribute.

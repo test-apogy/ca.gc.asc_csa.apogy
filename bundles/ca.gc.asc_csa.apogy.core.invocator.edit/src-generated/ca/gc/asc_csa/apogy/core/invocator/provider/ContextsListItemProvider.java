@@ -167,7 +167,7 @@ public class ContextsListItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS,
-				 ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext()));
+				 ApogyCoreInvocatorFactory.eINSTANCE.createContext()));
 	}
 
   /**

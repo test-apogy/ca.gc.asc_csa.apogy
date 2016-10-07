@@ -196,15 +196,15 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   ContextsList createContextsList();
 
   /**
-	 * Returns a new object of class '<em>Basic Context</em>'.
+	 * Returns a new object of class '<em>Context</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Basic Context</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Context</em>'.
 	 * @generated
 	 */
-  BasicContext createBasicContext();
+	Context createContext();
 
-  /**
+		/**
 	 * Returns a new object of class '<em>Variable Implementations List</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

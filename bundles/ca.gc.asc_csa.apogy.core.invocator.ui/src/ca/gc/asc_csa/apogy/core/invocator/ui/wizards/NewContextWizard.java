@@ -189,7 +189,7 @@ public class NewContextWizard extends Wizard{//implements INewWizard {
 	 */
 	protected Context getContext() {
 		if (context == null) {
-			context = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
+			context = ApogyCoreInvocatorFactory.eINSTANCE.createContext();
 			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getEnvironment().getContextsList(),
 					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
 			

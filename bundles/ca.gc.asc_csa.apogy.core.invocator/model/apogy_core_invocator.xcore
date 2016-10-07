@@ -302,7 +302,13 @@ class ApogyCoreInvocatorFacade
 	  */
 	 op Context getContextByName(InvocatorSession invocatorSession, String name)
 	 
-//	 op Context createContext(Varia)	 	 
+	 /*
+	  * Creates a new context and populates the {@link VariableImplementations}.  
+	  * The context is not fully initialized (e.g. Name and description are not set).
+	  * @param variablesList List of variables for which the context is built.
+	  * @return Reference to the new context. 
+	  */
+	 op Context createContext(VariablesList variablesList)	 
 } 
 
 enum VariableListenerEventType{
@@ -631,7 +637,7 @@ class ContextsList
  	contains Context[0..*] contexts opposite contextsList
 }
 
-abstract class Context extends Named
+class Context extends Named, Described
 {
 	boolean archived = "false"
 	
@@ -654,11 +660,6 @@ abstract class Context extends Named
 		
   	@GenModel(property="Readonly")		
 	Date instancesDisposalDate 
-}
-
-class BasicContext extends Context
-{
-	
 }
 
 /* ------------------------------------------------------------------------- 

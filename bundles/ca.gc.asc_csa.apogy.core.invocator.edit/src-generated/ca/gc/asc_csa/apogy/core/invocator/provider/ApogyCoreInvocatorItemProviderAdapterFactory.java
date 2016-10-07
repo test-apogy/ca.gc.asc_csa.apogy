@@ -528,30 +528,29 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.BasicContext} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.Context} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected BasicContextItemProvider basicContextItemProvider;
+	protected ContextItemProvider contextItemProvider;
 
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.BasicContext}.
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Context}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createBasicContextAdapter()
-  {
-		if (basicContextItemProvider == null) {
-			basicContextItemProvider = new BasicContextItemProvider(this);
+	@Override
+	public Adapter createContextAdapter() {
+		if (contextItemProvider == null) {
+			contextItemProvider = new ContextItemProvider(this);
 		}
 
-		return basicContextItemProvider;
+		return contextItemProvider;
 	}
 
-  /**
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1371,7 +1370,7 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (variablesListItemProvider != null) variablesListItemProvider.dispose();
 		if (variableItemProvider != null) variableItemProvider.dispose();
 		if (contextsListItemProvider != null) contextsListItemProvider.dispose();
-		if (basicContextItemProvider != null) basicContextItemProvider.dispose();
+		if (contextItemProvider != null) contextItemProvider.dispose();
 		if (variableImplementationsListItemProvider != null) variableImplementationsListItemProvider.dispose();
 		if (initializationDataItemProvider != null) initializationDataItemProvider.dispose();
 		if (variableImplementationItemProvider != null) variableImplementationItemProvider.dispose();

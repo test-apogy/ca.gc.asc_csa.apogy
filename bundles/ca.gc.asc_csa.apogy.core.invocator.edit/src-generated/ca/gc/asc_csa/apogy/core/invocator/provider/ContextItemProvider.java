@@ -76,6 +76,7 @@ public class ContextItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 			addArchivedPropertyDescriptor(object);
 			addDataProductsListPropertyDescriptor(object);
 			addInstancesCreationDatePropertyDescriptor(object);
@@ -108,6 +109,28 @@ public class ContextItemProvider
 	}
 
   /**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Described_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
 	 * This adds a property descriptor for the Archived feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -232,6 +255,17 @@ public class ContextItemProvider
 	}
 
   /**
+	 * This returns Context.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Context"));
+	}
+
+		/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -260,6 +294,7 @@ public class ContextItemProvider
 
 		switch (notification.getFeatureID(Context.class)) {
 			case ApogyCoreInvocatorPackage.CONTEXT__NAME:
+			case ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION:
 			case ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED:
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:

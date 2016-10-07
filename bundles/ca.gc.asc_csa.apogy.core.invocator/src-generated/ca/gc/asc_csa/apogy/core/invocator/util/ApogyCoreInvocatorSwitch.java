@@ -25,64 +25,6 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.core.invocator.*;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractType;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.Argument;
-import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
-import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
-import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
-import ca.gc.asc_csa.apogy.core.invocator.BasicContext;
-import ca.gc.asc_csa.apogy.core.invocator.ChannelsList;
-import ca.gc.asc_csa.apogy.core.invocator.Context;
-import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
-import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
-import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
-import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.Environment;
-import ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer;
-import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
-import ca.gc.asc_csa.apogy.core.invocator.Program;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
-import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
-import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
-import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
-import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
-import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
-import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
-import ca.gc.asc_csa.apogy.core.invocator.Type;
-import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement;
-import ca.gc.asc_csa.apogy.core.invocator.TypesList;
-import ca.gc.asc_csa.apogy.core.invocator.Value;
-import ca.gc.asc_csa.apogy.core.invocator.ValuesList;
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
-import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
-import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
-import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 
 /**
  * <!-- begin-user-doc -->
@@ -286,14 +228,7 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				Context context = (Context)theEObject;
 				T result = caseContext(context);
 				if (result == null) result = caseNamed(context);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.BASIC_CONTEXT: {
-				BasicContext basicContext = (BasicContext)theEObject;
-				T result = caseBasicContext(basicContext);
-				if (result == null) result = caseContext(basicContext);
-				if (result == null) result = caseNamed(basicContext);
+				if (result == null) result = caseDescribed(context);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -938,22 +873,6 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	 * @generated
 	 */
   public T caseContext(Context object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Basic Context</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Basic Context</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseBasicContext(BasicContext object)
   {
 		return null;
 	}

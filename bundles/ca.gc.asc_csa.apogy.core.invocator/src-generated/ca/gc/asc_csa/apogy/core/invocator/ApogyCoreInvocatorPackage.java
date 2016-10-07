@@ -457,13 +457,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	int APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING = 36;
 
 		/**
+	 * The operation id for the '<em>Create Context</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__VARIABLESLIST = 37;
+
+		/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 37;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 38;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -1692,13 +1701,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int CONTEXT__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+
+		/**
 	 * The feature id for the '<em><b>Archived</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT__ARCHIVED = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int CONTEXT__ARCHIVED = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Contexts List</b></em>' container reference.
@@ -1707,7 +1725,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__CONTEXTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int CONTEXT__CONTEXTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Variable Implementations List</b></em>' containment reference.
@@ -1716,7 +1734,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -1725,7 +1743,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__ENVIRONMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int CONTEXT__ENVIRONMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Data Products List</b></em>' reference.
@@ -1734,7 +1752,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__DATA_PRODUCTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+  int CONTEXT__DATA_PRODUCTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The feature id for the '<em><b>Instances Creation Date</b></em>' attribute.
@@ -1743,7 +1761,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__INSTANCES_CREATION_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
+  int CONTEXT__INSTANCES_CREATION_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
   /**
 	 * The feature id for the '<em><b>Instances Disposal Date</b></em>' attribute.
@@ -1752,7 +1770,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__INSTANCES_DISPOSAL_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 6;
+  int CONTEXT__INSTANCES_DISPOSAL_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 7;
 
   /**
 	 * The number of structural features of the '<em>Context</em>' class.
@@ -1761,7 +1779,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 7;
+  int CONTEXT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 8;
 
   /**
 	 * The number of operations of the '<em>Context</em>' class.
@@ -1773,106 +1791,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int CONTEXT_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl <em>Basic Context</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getBasicContext()
-	 * @generated
-	 */
-  int BASIC_CONTEXT = 21;
-
-  /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BASIC_CONTEXT__NAME = CONTEXT__NAME;
-
-  /**
-	 * The feature id for the '<em><b>Archived</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BASIC_CONTEXT__ARCHIVED = CONTEXT__ARCHIVED;
-
-		/**
-	 * The feature id for the '<em><b>Contexts List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BASIC_CONTEXT__CONTEXTS_LIST = CONTEXT__CONTEXTS_LIST;
-
-  /**
-	 * The feature id for the '<em><b>Variable Implementations List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BASIC_CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST;
-
-  /**
-	 * The feature id for the '<em><b>Environment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BASIC_CONTEXT__ENVIRONMENT = CONTEXT__ENVIRONMENT;
-
-  /**
-	 * The feature id for the '<em><b>Data Products List</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BASIC_CONTEXT__DATA_PRODUCTS_LIST = CONTEXT__DATA_PRODUCTS_LIST;
-
-  /**
-	 * The feature id for the '<em><b>Instances Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BASIC_CONTEXT__INSTANCES_CREATION_DATE = CONTEXT__INSTANCES_CREATION_DATE;
-
-  /**
-	 * The feature id for the '<em><b>Instances Disposal Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BASIC_CONTEXT__INSTANCES_DISPOSAL_DATE = CONTEXT__INSTANCES_DISPOSAL_DATE;
-
-  /**
-	 * The number of structural features of the '<em>Basic Context</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BASIC_CONTEXT_FEATURE_COUNT = CONTEXT_FEATURE_COUNT + 0;
-
-  /**
-	 * The number of operations of the '<em>Basic Context</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BASIC_CONTEXT_OPERATION_COUNT = CONTEXT_OPERATION_COUNT + 0;
-
-  /**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationsListImpl <em>Variable Implementations List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1880,7 +1798,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableImplementationsList()
 	 * @generated
 	 */
-  int VARIABLE_IMPLEMENTATIONS_LIST = 22;
+  int VARIABLE_IMPLEMENTATIONS_LIST = 21;
 
   /**
 	 * The feature id for the '<em><b>Variable Implementations</b></em>' containment reference list.
@@ -1935,7 +1853,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractInitializationData()
 	 * @generated
 	 */
-  int ABSTRACT_INITIALIZATION_DATA = 23;
+  int ABSTRACT_INITIALIZATION_DATA = 22;
 
   /**
 	 * The number of structural features of the '<em>Abstract Initialization Data</em>' class.
@@ -1963,7 +1881,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getInitializationData()
 	 * @generated
 	 */
-  int INITIALIZATION_DATA = 24;
+  int INITIALIZATION_DATA = 23;
 
   /**
 	 * The number of structural features of the '<em>Initialization Data</em>' class.
@@ -1991,7 +1909,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractTypeImplementation()
 	 * @generated
 	 */
-  int ABSTRACT_TYPE_IMPLEMENTATION = 25;
+  int ABSTRACT_TYPE_IMPLEMENTATION = 24;
 
   /**
 	 * The feature id for the '<em><b>Type Member Implementations</b></em>' containment reference list.
@@ -2091,7 +2009,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableImplementation()
 	 * @generated
 	 */
-  int VARIABLE_IMPLEMENTATION = 26;
+  int VARIABLE_IMPLEMENTATION = 25;
 
   /**
 	 * The feature id for the '<em><b>Type Member Implementations</b></em>' containment reference list.
@@ -2209,7 +2127,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementation()
 	 * @generated
 	 */
-  int TYPE_MEMBER_IMPLEMENTATION = 27;
+  int TYPE_MEMBER_IMPLEMENTATION = 26;
 
   /**
 	 * The feature id for the '<em><b>Type Member Implementations</b></em>' containment reference list.
@@ -2318,7 +2236,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getValuesList()
 	 * @generated
 	 */
-  int VALUES_LIST = 28;
+  int VALUES_LIST = 27;
 
   /**
 	 * The feature id for the '<em><b>Values</b></em>' containment reference list.
@@ -2355,7 +2273,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getValue()
 	 * @generated
 	 */
-  int VALUE = 29;
+  int VALUE = 28;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2401,7 +2319,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramsList()
 	 * @generated
 	 */
-  int PROGRAMS_LIST = 30;
+  int PROGRAMS_LIST = 29;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' container reference.
@@ -2447,7 +2365,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgram()
 	 * @generated
 	 */
-  int PROGRAM = 31;
+  int PROGRAM = 30;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2520,7 +2438,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallContainer()
 	 * @generated
 	 */
-  int OPERATION_CALL_CONTAINER = 32;
+  int OPERATION_CALL_CONTAINER = 31;
 
   /**
 	 * The feature id for the '<em><b>Operation Calls</b></em>' containment reference list.
@@ -2566,7 +2484,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallsList()
 	 * @generated
 	 */
-  int OPERATION_CALLS_LIST = 33;
+  int OPERATION_CALLS_LIST = 32;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2657,7 +2575,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableFeatureReference()
 	 * @generated
 	 */
-  int VARIABLE_FEATURE_REFERENCE = 34;
+  int VARIABLE_FEATURE_REFERENCE = 33;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2721,7 +2639,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCall()
 	 * @generated
 	 */
-  int OPERATION_CALL = 35;
+  int OPERATION_CALL = 34;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2839,7 +2757,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getArgumentsList()
 	 * @generated
 	 */
-  int ARGUMENTS_LIST = 36;
+  int ARGUMENTS_LIST = 35;
 
   /**
 	 * The feature id for the '<em><b>Operation Call</b></em>' container reference.
@@ -2894,7 +2812,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getArgument()
 	 * @generated
 	 */
-  int ARGUMENT = 37;
+  int ARGUMENT = 36;
 
   /**
 	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
@@ -2958,7 +2876,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEDataTypeArgument()
 	 * @generated
 	 */
-  int EDATA_TYPE_ARGUMENT = 38;
+  int EDATA_TYPE_ARGUMENT = 37;
 
   /**
 	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
@@ -3031,7 +2949,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getBooleanEDataTypeArgument()
 	 * @generated
 	 */
-	int BOOLEAN_EDATA_TYPE_ARGUMENT = 39;
+	int BOOLEAN_EDATA_TYPE_ARGUMENT = 38;
 
 		/**
 	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
@@ -3104,7 +3022,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNumericEDataTypeArgument()
 	 * @generated
 	 */
-	int NUMERIC_EDATA_TYPE_ARGUMENT = 40;
+	int NUMERIC_EDATA_TYPE_ARGUMENT = 39;
 
 		/**
 	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
@@ -3177,7 +3095,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getStringEDataTypeArgument()
 	 * @generated
 	 */
-	int STRING_EDATA_TYPE_ARGUMENT = 41;
+	int STRING_EDATA_TYPE_ARGUMENT = 40;
 
 		/**
 	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
@@ -3250,7 +3168,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEEnumArgument()
 	 * @generated
 	 */
-  int EENUM_ARGUMENT = 42;
+  int EENUM_ARGUMENT = 41;
 
   /**
 	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
@@ -3332,7 +3250,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEClassArgument()
 	 * @generated
 	 */
-  int ECLASS_ARGUMENT = 43;
+  int ECLASS_ARGUMENT = 42;
 
   /**
 	 * The feature id for the '<em><b>Arguments List</b></em>' container reference.
@@ -3405,7 +3323,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramRuntimesList()
 	 * @generated
 	 */
-	int PROGRAM_RUNTIMES_LIST = 44;
+	int PROGRAM_RUNTIMES_LIST = 43;
 
 		/**
 	 * The feature id for the '<em><b>Session</b></em>' container reference.
@@ -3451,7 +3369,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractProgramRuntime()
 	 * @generated
 	 */
-	int ABSTRACT_PROGRAM_RUNTIME = 45;
+	int ABSTRACT_PROGRAM_RUNTIME = 44;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3578,7 +3496,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallsListProgramRuntime()
 	 * @generated
 	 */
-	int OPERATION_CALLS_LIST_PROGRAM_RUNTIME = 46;
+	int OPERATION_CALLS_LIST_PROGRAM_RUNTIME = 45;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3705,7 +3623,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getResultsList()
 	 * @generated
 	 */
-  int RESULTS_LIST = 47;
+  int RESULTS_LIST = 46;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3769,7 +3687,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsList()
 	 * @generated
 	 */
-  int OPERATION_CALL_RESULTS_LIST = 48;
+  int OPERATION_CALL_RESULTS_LIST = 47;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3851,7 +3769,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingResultsList()
 	 * @generated
 	 */
-  int RECORDING_RESULTS_LIST = 49;
+  int RECORDING_RESULTS_LIST = 48;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3933,7 +3851,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResult()
 	 * @generated
 	 */
-  int ABSTRACT_RESULT = 50;
+  int ABSTRACT_RESULT = 49;
 
   /**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -4015,7 +3933,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResultValue()
 	 * @generated
 	 */
-  int ABSTRACT_RESULT_VALUE = 51;
+  int ABSTRACT_RESULT_VALUE = 50;
 
   /**
 	 * The feature id for the '<em><b>Result</b></em>' container reference.
@@ -4052,7 +3970,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResult()
 	 * @generated
 	 */
-  int OPERATION_CALL_RESULT = 52;
+  int OPERATION_CALL_RESULT = 51;
 
   /**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -4170,7 +4088,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getExceptionContainer()
 	 * @generated
 	 */
-  int EXCEPTION_CONTAINER = 53;
+  int EXCEPTION_CONTAINER = 52;
 
   /**
 	 * The feature id for the '<em><b>Exception</b></em>' attribute.
@@ -4207,7 +4125,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeResultValue()
 	 * @generated
 	 */
-  int ATTRIBUTE_RESULT_VALUE = 54;
+  int ATTRIBUTE_RESULT_VALUE = 53;
 
   /**
 	 * The feature id for the '<em><b>Result</b></em>' container reference.
@@ -4253,7 +4171,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeValue()
 	 * @generated
 	 */
-  int ATTRIBUTE_VALUE = 55;
+  int ATTRIBUTE_VALUE = 54;
 
   /**
 	 * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -4290,7 +4208,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getReferenceResultValue()
 	 * @generated
 	 */
-  int REFERENCE_RESULT_VALUE = 56;
+  int REFERENCE_RESULT_VALUE = 55;
 
   /**
 	 * The feature id for the '<em><b>Result</b></em>' container reference.
@@ -4336,7 +4254,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingToolsContainer()
 	 * @generated
 	 */
-	int RECORDING_TOOLS_CONTAINER = 57;
+	int RECORDING_TOOLS_CONTAINER = 56;
 
 		/**
 	 * The feature id for the '<em><b>Tools List</b></em>' container reference.
@@ -4400,7 +4318,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getChannelsList()
 	 * @generated
 	 */
-	int CHANNELS_LIST = 58;
+	int CHANNELS_LIST = 57;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4464,7 +4382,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractChannel()
 	 * @generated
 	 */
-	int ABSTRACT_CHANNEL = 59;
+	int ABSTRACT_CHANNEL = 58;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4519,7 +4437,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractRecorder()
 	 * @generated
 	 */
-  int ABSTRACT_RECORDER = 60;
+  int ABSTRACT_RECORDER = 59;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4574,7 +4492,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractPlayer()
 	 * @generated
 	 */
-  int ABSTRACT_PLAYER = 61;
+  int ABSTRACT_PLAYER = 60;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4629,7 +4547,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsListTimeSource()
 	 * @generated
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 62;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 61;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4846,7 +4764,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableListenerEventType()
 	 * @generated
 	 */
-	int VARIABLE_LISTENER_EVENT_TYPE = 63;
+	int VARIABLE_LISTENER_EVENT_TYPE = 62;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState <em>Program Runtime State</em>}' enum.
@@ -4856,7 +4774,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramRuntimeState()
 	 * @generated
 	 */
-	int PROGRAM_RUNTIME_STATE = 64;
+	int PROGRAM_RUNTIME_STATE = 63;
 
 		/**
 	 * The meta object id for the '<em>Throwable</em>' data type.
@@ -4866,7 +4784,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getThrowable()
 	 * @generated
 	 */
-  int THROWABLE = 65;
+  int THROWABLE = 64;
 
   /**
 	 * The meta object id for the '<em>Notification</em>' data type.
@@ -4876,7 +4794,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNotification()
 	 * @generated
 	 */
-  int NOTIFICATION = 66;
+  int NOTIFICATION = 65;
 
 
   /**
@@ -4887,7 +4805,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
 	 * @generated
 	 */
-  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 67;
+  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 66;
 
 
   /**
@@ -4897,7 +4815,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMembersArray()
 	 * @generated
 	 */
-	int TYPE_MEMBERS_ARRAY = 68;
+	int TYPE_MEMBERS_ARRAY = 67;
 
 
 		/**
@@ -4908,7 +4826,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getIVariableListener()
 	 * @generated
 	 */
-	int IVARIABLE_LISTENER = 69;
+	int IVARIABLE_LISTENER = 68;
 
 
 		/**
@@ -5312,6 +5230,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 */
 	EOperation getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createContext(ca.gc.asc_csa.apogy.core.invocator.VariablesList) <em>Create Context</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Context</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createContext(ca.gc.asc_csa.apogy.core.invocator.VariablesList)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__CreateContext__VariablesList();
 
 		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
@@ -6241,16 +6169,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 */
   EAttribute getContext_InstancesDisposalDate();
-
-  /**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.BasicContext <em>Basic Context</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Basic Context</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.BasicContext
-	 * @generated
-	 */
-  EClass getBasicContext();
 
   /**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList <em>Variable Implementations List</em>}'.
@@ -7936,6 +7854,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING = eINSTANCE.getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String();
 
 				/**
+		 * The meta object literal for the '<em><b>Create Context</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__VARIABLESLIST = eINSTANCE.getApogyCoreInvocatorFacade__CreateContext__VariablesList();
+
+				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8670,16 +8596,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
     EAttribute CONTEXT__INSTANCES_DISPOSAL_DATE = eINSTANCE.getContext_InstancesDisposalDate();
-
-    /**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl <em>Basic Context</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getBasicContext()
-		 * @generated
-		 */
-    EClass BASIC_CONTEXT = eINSTANCE.getBasicContext();
 
     /**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationsListImpl <em>Variable Implementations List</em>}' class.
