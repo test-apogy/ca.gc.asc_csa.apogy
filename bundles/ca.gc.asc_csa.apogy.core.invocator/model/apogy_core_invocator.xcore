@@ -300,7 +300,9 @@ class ApogyCoreInvocatorFacade
 	  * @param name Search criteria.
 	  * @return Reference to the context or null if not found.
 	  */
-	 op Context getContextByName(InvocatorSession invocatorSession, String name)	 	 
+	 op Context getContextByName(InvocatorSession invocatorSession, String name)
+	 
+//	 op Context createContext(Varia)	 	 
 } 
 
 enum VariableListenerEventType{

@@ -13,35 +13,35 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.ecore.EObject;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
+import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
-import org.eclipse.ui.INewWizard;
-import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchWizard;
-import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 public class NewContextWizard extends Wizard{//implements INewWizard {
 	
+	private Environment environment;
 	private Context context;
-	private NameContextWizardPage nameContextWizardPage;
+	private DataProductsListsContainer dataProductsListsContainer;
+	private NewContextWizardPage newContextWizardPage;
+	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private ContextDefinitionWizardPage contextDefinitionWizardPage;
 	private DataProductsListWizardPage dataProductsListWizardPage;
 	
@@ -55,6 +55,7 @@ public class NewContextWizard extends Wizard{//implements INewWizard {
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
 				Activator.ID, "icons/wizban/apogy_new_context.png");
 		setDefaultPageImageDescriptor(image);		
+		setEnvironment(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
 	}
 
 	/** TODO: See if needed
@@ -70,26 +71,49 @@ public class NewContextWizard extends Wizard{//implements INewWizard {
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		if(getNameContextWizardPage() != null){
+		/*if(getNameContextWizardPage() != null){
 			addPage(getNameContextWizardPage());
+		}*/
+		if(getNamedDescribedWizardPage() != null){
+			addPage(getNamedDescribedWizardPage());
 		}
 		if(getContextDefinitionWizardPage() != null){
 			addPage(getContextDefinitionWizardPage());
 		}
-		if(getDataProductsListWizardPage() != null){
-			addPage(getDataProductsListWizardPage());
-		}
+		/*if(getDataProductsListWizardPage() != null){
+			addPage(getDataProductsListWizardPage(getDataProductsListContainer()));
+		}*/
 	}
+	
+	public void setEnvironment(Environment environment){
+		this.environment = environment;
+	}
+	
+	public Environment getEnvironment(){
+		return environment;
+	}
+
+	/**
+	 * Returns the {@link NewContextWizardPage}.  If null is returned, the page is not added to the wizard.
+	 * @return Reference to the page.
+	 */
+	protected NewContextWizardPage getNameContextWizardPage(){
+		if (newContextWizardPage == null){
+			newContextWizardPage = new NewContextWizardPage(getContext(), getEnvironment()); 
+		}		
+		return newContextWizardPage;
+	}
+	
 
 	/**
 	 * Returns the {@link NameContextWizardPage}.  If null is returned, the page is not added to the wizard.
 	 * @return Reference to the page.
 	 */
-	protected NameContextWizardPage getNameContextWizardPage(){
-		if (nameContextWizardPage == null){
-			nameContextWizardPage = new NameContextWizardPage(); 
+	protected NamedDescribedWizardPage getNamedDescribedWizardPage(){
+		if (namedDescribedWizardPage == null){
+			namedDescribedWizardPage = new NamedDescribedWizardPage(getContext(), getContext().getEnvironment());  // TODO: Context described?
 		}		
-		return nameContextWizardPage;
+		return namedDescribedWizardPage;
 	}
 	
 	/**
@@ -98,7 +122,7 @@ public class NewContextWizard extends Wizard{//implements INewWizard {
 	 */
 	protected ContextDefinitionWizardPage getContextDefinitionWizardPage(){
 		if (contextDefinitionWizardPage == null){
-			contextDefinitionWizardPage = new ContextDefinitionWizardPage();
+			contextDefinitionWizardPage = new ContextDefinitionWizardPage(getContext());
 		}		
 		return contextDefinitionWizardPage;
 	}
@@ -116,6 +140,15 @@ public class NewContextWizard extends Wizard{//implements INewWizard {
 
 	@Override
 	public boolean performFinish() {
+		
+		EditingDomain editingDomain = AdapterFactoryEditingDomain
+				.getEditingDomainFor(environment);
+		AddCommand command = new AddCommand(
+				editingDomain,
+				getEnvironment().getContextsList(),
+				ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+				getContext());
+		editingDomain.getCommandStack().execute(command);		
 		
 //		OperationCallsList operationCallsList = null;// TODO = getContextDefinitionWizardPage().getSelectedOperationCallsList();		
 //		EditingDomain editingDomain = AdapterFactoryEditingDomain
@@ -157,14 +190,63 @@ public class NewContextWizard extends Wizard{//implements INewWizard {
 	protected Context getContext() {
 		if (context == null) {
 			context = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
-			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
-					(EObject) ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
-							.getContextsList().getContexts(),
+			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getEnvironment().getContextsList(),
 					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
+			
+			EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(environment.getContextsList());
+			AddCommand command = new AddCommand(editingDomain, getEnvironment().getContextsList(),
+					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS, context);
+			
+			editingDomain.getCommandStack().execute(command);
+			
+			
+			/*Timer timer = new Timer();
+			timer.schedule(new TimerTask() {
+				
+				@Override
+				public void run() {
+					System.out.println("NewContextWizard.getContext().new TimerTask() {...}.run() " + environment.getActiveContext());
+					
+				}
+			}, 500, 1000);*/
+			
 		}
 		return context;
 	}
 	
+	
+	/** 
+	 * Create and returns the instance of the {@link Context} to be set within the several wizard pages.  
+	 * @return Reference to the {@link Context}. 
+	 */
+//	protected DataProductsListsContainer getdataProductsListCon() {
+//		dataProductsLists = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getDataProductsListContainer().get;
+//		if (dataProductsList == null) {
+//			dataProductsList = ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList();
+//			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getEnvironment().getContextsList(),
+//					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
+//			
+//			EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(environment.getContextsList());
+//			AddCommand command = new AddCommand(editingDomain, getEnvironment().getContextsList(),
+//					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS, context);
+//			
+//			editingDomain.getCommandStack().execute(command);
+//			
+//			
+//			Timer timer = new Timer();
+//			timer.schedule(new TimerTask() {
+//				
+//				@Override
+//				public void run() {
+//					System.out.println("NewContextWizard.getContext().new TimerTask() {...}.run() " + environment.getActiveContext());
+//					
+//				}
+//			}, 500, 1000);
+//			
+//		}
+//		return dataProductsList;
+//	}
+//	
 	/** 
 	 * Returns the {@link VariablesList}.  
 	 * @return Reference to the {@link VariablesList}. 

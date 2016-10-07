@@ -23,6 +23,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -51,15 +52,21 @@ import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewContextWizard;
 
 public class ContextsListComposite extends Composite {
@@ -188,10 +195,17 @@ public class ContextsListComposite extends Composite {
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				
+				NewContextWizard newContextWizard = new NewContextWizard();
+				newContextWizard.setEnvironment(getEnvironment());
 				WizardDialog dialog = new WizardDialog(getShell(), new NewContextWizard());
+			
 				dialog.open();
+				
 
-				/*Context basicContext = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
+				
+				/*  TODO
+				Context basicContext = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
 				basicContext.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getContextsList(),
 						ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
 
@@ -217,7 +231,7 @@ public class ContextsListComposite extends Composite {
 					editingDomain.getCommandStack().execute(command);
 					
 					basicContext.setDataProductsList(productList);
-				}*/
+				}
 		
 				/*DataProductsList productList = ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList();
 				productList.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(productList,

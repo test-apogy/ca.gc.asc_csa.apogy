@@ -14,8 +14,14 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  */
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.databinding.FeaturePath;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
@@ -23,11 +29,15 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage.Literals;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
@@ -41,11 +51,11 @@ public class NewContextComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 
 	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
-
-	private Environment environment;
 	private WritableValue environmentBinder;
+	private WritableValue namedBinder;
 	private EditingDomain editingDomain;
 	private Text textName;
+	//private Button btnCheckActive;
 
 	public NewContextComposite(Composite parent, int style,
 			Context context,
@@ -90,15 +100,28 @@ public class NewContextComposite extends Composite {
 		
 		textName = new Text(compositeNewContext, SWT.NONE);
 		textName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		textName.setText("Name");
 		toolkit.adapt(textName, true, true);
 		
-		Button btnCheckActive = new Button(compositeNewContext, SWT.CHECK);
+		/*btnCheckActive = new Button(compositeNewContext, SWT.CHECK);
 		btnCheckActive.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
 		toolkit.adapt(btnCheckActive, true, true);
+		btnCheckActive.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent event) {
+		        if(event.detail == SWT.CHECK) {
+		        	SetCommand command = new SetCommand(editingDomain, getEnvironment(),
+							ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST, productList);
+				
+		        } else { //Otherwise, unset the saved value
+		           
+		        }
+		    	editingDomain.getCommandStack().execute(command);
+		    }
+		});
 		
 		Label lblSetActive = new Label(compositeNewContext, SWT.NONE);
 		toolkit.adapt(lblSetActive, true, true);
-		lblSetActive.setText("Set new context as active");
+		lblSetActive.setText("Set new context as active");*/
 				
 		/** Perform a layout otherwise the VariableImplementation Content is not displayed without resize. */
 		layout(true, true);
@@ -122,8 +145,30 @@ public class NewContextComposite extends Composite {
 			environmentBinder = new WritableValue();
 		}
 		environmentBinder.setValue(environment);
-		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(environment.getContextsList());		
+		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(environment);		
+		
+		/*if(environment != null && environment.getContextsList().getContexts().size() == 1){
+			btnCheckActive.setEnabled(false);
+		}*/
 		//setEnvironment(environment, true);			
+	}
+	
+	public Environment getEnvironment(){
+		if(environmentBinder == null || environmentBinder.getValue() == null){
+			return null;
+		}else{
+			return (Environment)environmentBinder.getValue();
+		}
+	}
+	
+	public void setNamed(Named named) {
+		if (namedBinder == null) {
+			namedBinder = new WritableValue();
+		}
+		namedBinder.setValue(named);
+		/*if(named == ((Environment)environmentBinder.getValue()).getActiveContext()){
+			btnCheckActive.setSelection(true);
+		}*/
 	}
 
 	/**
@@ -131,8 +176,8 @@ public class NewContextComposite extends Composite {
 	 * @param environment Reference to the environment.
 	 * @param update If true then data bindings are created.
 	 */
-	private void setEnvironment(Environment environment, boolean update) {
-		this.environment = environment;
+	/*private void setEnvironment(Environment environment, boolean update) {
+		this.environmentBinder.setValue(environment); 
 		if (update) {
 			if (m_bindingContext != null) {
 				m_bindingContext.dispose();
@@ -143,7 +188,7 @@ public class NewContextComposite extends Composite {
 				m_bindingContext = initDataBindings();
 			}
 		}
-	}
+	}*/
 
 	/**
 	 * Use this to prevent Window Pro Builder code analysis to fail with the
@@ -164,27 +209,40 @@ public class NewContextComposite extends Composite {
 	 * @return Reference to the data bindings context.
 	 */
 	private DataBindingContext initDataBindingsCustom() {
-		DataBindingContext bindingContext = new DataBindingContext();
+		DataBindingContext m_bindingContext = new DataBindingContext();
 		if (environmentBinder == null) {
 			environmentBinder = new WritableValue();
 		}
-		
-		/*IObservableValue observeTextNameObserveWidget = WidgetProperties.text().observe(textName);	
-		IObservableValue contextNameObserveValue = EMFProperties
-				.value( ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
-				.observeDetail(invocatorFacadeBinder);
-		
-		m_bindingContext.bindValue(observeTextStatusConnexionObserveWidget,
-				invocatorFacadeActiveInvocatorSessionObserveValue, null,
-				new UpdateValueStrategy().setConverter(new Converter(InvocatorSession.class, String.class) {
+		if (namedBinder == null) {
+			namedBinder = new WritableValue();
+		}
+
+		IObservableValue observeTextNameObserveWidget = WidgetProperties.text().observe(textName);
+		IObservableValue contextNameObserveValue = EMFProperties.value(Literals.NAMED__NAME).observeDetail(namedBinder);
+		m_bindingContext.bindValue(observeTextNameObserveWidget, contextNameObserveValue);
+
+		/*IObservableValue observeSelectionBtnCheckActiveWidget = WidgetProperties.selection().observe(btnCheckActive);
+		IObservableValue environmentActiveContextObserveValue = EMFProperties
+				.value(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT).observeDetail(environmentBinder);
+
+		m_bindingContext.bindValue(observeSelectionBtnCheckActiveWidget, environmentActiveContextObserveValue,
+				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
+				.setConverter(new Converter(Boolean.class, Context.class) {
 					@Override
-					public Object convert(Object fromObject) {
-						return fromObject == null ? NO_ACTIVE_SESSION_STR : SESSION_ACTIVE_STR;
-
+					public Object convert(Object arg0) {
+						if (((Boolean)arg0).booleanValue()) {
+							return namedBinder.getValue();
+						} else {
+							if(getEnvironment().getContextsList() == null || getEnvironment().getContextsList().getContexts().isEmpty()){
+								return null;
+							}else{
+								return getEnvironment().getContextsList().getContexts().get(0);
+							}
+						}
 					}
-				}));*/
-
-		return bindingContext;
+				}), null);*/
+				
+		return m_bindingContext;
 	}
 
 	@Override
