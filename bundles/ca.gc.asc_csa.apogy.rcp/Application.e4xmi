@@ -141,6 +141,22 @@
       <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
       <toolbar xmi:id="_WZTdEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.1"/>
     </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_oepiwIyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Session Status" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/Instance.gif" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
+      <menus xmi:id="_oepiwYyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView">
+        <tags>ViewMenu</tags>
+      </menus>
+      <toolbar xmi:id="_oepiwoyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_WS2HYIykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Apogy Camera View" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/icons/CameraView.gif" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.addons.ui.category</tags>
+      <menus xmi:id="_WS2HYYykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView">
+        <tags>ViewMenu</tags>
+      </menus>
+      <toolbar xmi:id="_WS2HYoykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"/>
+    </sharedElements>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.test2" label="Apogy" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="" command="_C4Fq0B32EeaqJNPAWI4oCw">
@@ -186,6 +202,18 @@
       <tags>ViewMenu</tags>
     </menus>
     <toolbar xmi:id="_nrCCAigZEeau5bAVKAeRVA" elementId="org.eclipse.ui.navigator.ProjectExplorer"/>
+  </descriptors>
+  <descriptors xmi:id="_jlrBoIyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView" label="Session Status" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/Instance.gif" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <menus xmi:id="_jlrBoYyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView">
+      <tags>ViewMenu</tags>
+    </menus>
+    <toolbar xmi:id="_jlrBooyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView"/>
+  </descriptors>
+  <descriptors xmi:id="_TuZNoIykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView" label="Apogy Camera View" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/icons/CameraView.gif" closeable="true">
+    <menus xmi:id="_TuZNoYykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView">
+      <tags>ViewMenu</tags>
+    </menus>
+    <toolbar xmi:id="_TuZNooykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"/>
   </descriptors>
   <commands xmi:id="_C4Fq0B32EeaqJNPAWI4oCw" elementId="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommand" commandName="switchPerspective">
     <parameters xmi:id="_W6jrYCj-EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveId" name="id" typeId="" optional="false"/>
