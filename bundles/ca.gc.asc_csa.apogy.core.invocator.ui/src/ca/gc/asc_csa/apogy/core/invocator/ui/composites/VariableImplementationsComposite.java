@@ -62,15 +62,17 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.ScrolledForm;
+import org.eclipse.ui.forms.widgets.Section;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
-import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.forms.widgets.Section;
 
 public class VariableImplementationsComposite extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -111,35 +113,45 @@ public class VariableImplementationsComposite extends Composite {
 		toolkit.adapt(this);
 		toolkit.paintBordersFor(this);
 		setLayout(new GridLayout(1, true));
+		
+		ScrolledForm scrolledform = toolkit.createScrolledForm(this);
+		scrolledform.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		toolkit.paintBordersFor(scrolledform);
+		scrolledform.getBody().setLayout(new GridLayout(1, false));
 
-		Section sctnTable = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
-		sctnTable.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		Section sctnTable = toolkit.createSection(scrolledform.getBody(), Section.EXPANDED | Section.TITLE_BAR);
+		GridData gd_sctnTable = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+		gd_sctnTable.widthHint = 1;
+		gd_sctnTable.heightHint = 1;
+		sctnTable.setLayoutData(gd_sctnTable);
+		sctnTable.setSize(440, 0);
 		toolkit.paintBordersFor(sctnTable);
 		sctnTable.setText("List");
-		sctnTable.setExpanded(true);
 
 		variableImplementationsViewer = new TreeViewer(sctnTable,
 				SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
+	
 
 		ColumnViewerToolTipSupport.enableFor(variableImplementationsViewer, ToolTip.NO_RECREATE);
 		treeVariableImplementations = variableImplementationsViewer.getTree();
+		treeVariableImplementations.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		treeVariableImplementations.setLinesVisible(true);
 		treeVariableImplementations.setHeaderVisible(true);
-		toolkit.paintBordersFor(treeVariableImplementations);
+		toolkit.paintBordersFor	(treeVariableImplementations);
 
 		TreeViewerColumn treeViewerColumnFeature = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
 		TreeColumn columnFeature = treeViewerColumnFeature.getColumn();
-		columnFeature.setWidth(200);
+		columnFeature.setWidth(150);
 		columnFeature.setText("Feature");
 
 		TreeViewerColumn treeViewerColumnInterface = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
 		TreeColumn columnInterface = treeViewerColumnInterface.getColumn();
-		columnInterface.setWidth(200);
+		columnInterface.setWidth(150);
 		columnInterface.setText("Interface");
 
 		TreeViewerColumn treeViewerColumnImplementation = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
 		TreeColumn columnImplementation = treeViewerColumnImplementation.getColumn();
-		columnImplementation.setWidth(200);
+		columnImplementation.setWidth(150);
 		columnImplementation.setText("Implementation");
 		EditingSupport editingSupport = new VariableImplementationEditingSupport(
 				treeViewerColumnImplementation.getViewer());
@@ -155,12 +167,13 @@ public class VariableImplementationsComposite extends Composite {
 
 		variableImplementationsViewer.setContentProvider(new VariableImplementationContentProvider());
 		variableImplementationsViewer.setLabelProvider(new VariableImplementationLabelProvider(adapterFactory));
-		sctnTable.setClient(treeVariableImplementations);
 
 		variableImplementationsViewer.addSelectionChangedListener(getVariableImplementationsViewerListener());
-
-		Section sctnDetails = toolkit.createSection(this, Section.TITLE_BAR | Section.EXPANDED);
+		sctnTable.setClient(treeVariableImplementations);
+		
+		Section sctnDetails = toolkit.createSection(scrolledform.getBody(), Section.TITLE_BAR | Section.EXPANDED);
 		sctnDetails.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		//sctnDetails.setSize(440, 127);
 		toolkit.paintBordersFor(sctnDetails);
 		sctnDetails.setText("Details");
 		sctnDetails.setExpanded(true);
@@ -174,25 +187,18 @@ public class VariableImplementationsComposite extends Composite {
 		lblName.setSize(69, 21);
 
 		txtName = toolkit.createText(composite, "", SWT.READ_ONLY);
-		txtName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false,
-				1, 1));
+		txtName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
-		toolkit.createLabel(composite, "Interface:",
-				SWT.NONE);
+		toolkit.createLabel(composite, "Interface:", SWT.NONE);
 
 		txtInterface = toolkit.createText(composite, "", SWT.READ_ONLY);
-		txtInterface.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,
-				false, 1, 1));
+		txtInterface.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
-		Label lblImplementation = toolkit.createLabel(composite,
-				"Implementation:", SWT.NONE);
-		lblImplementation.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER,
-				false, false, 1, 1));
+		Label lblImplementation = toolkit.createLabel(composite, "Implementation:", SWT.NONE);
+		lblImplementation.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 
-		txtImplementation = toolkit.createText(composite, "",
-				SWT.READ_ONLY);
-		txtImplementation.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
-				true, false, 1, 1));
+		txtImplementation = toolkit.createText(composite, "", SWT.READ_ONLY);
+		txtImplementation.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 	}
 
 	/**
