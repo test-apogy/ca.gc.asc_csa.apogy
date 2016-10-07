@@ -11,14 +11,14 @@
       </variables>
     </variablesList>
     <contextsList xmi:id="_CaxoMQrPEeW4-_ONWXXiAw">
-      <contexts xsi:type="invocator:BasicContext" xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw" instancesCreationDate="2016-02-29T16:15:02.071-0500">
+      <contexts xsi:type="invocator:Context" xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw" instancesCreationDate="2016-02-29T16:15:02.071-0500">
         <variableImplementationsList xmi:id="_CaxoMwrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_o7X3oN8fEeWGXORI7LDzhQ" variable="_CaxoMArPEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.lander#//LanderSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
-      <contexts xsi:type="invocator:BasicContext" xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:Context" xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_CaxoNgrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_q3SxwN8fEeWGXORI7LDzhQ" variable="_CaxoMArPEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.lander#//LanderStub"/>

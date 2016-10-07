@@ -11,7 +11,7 @@
       </variables>
     </variablesList>
     <contextsList xmi:id="_wVmd49ATEeW12rm8vWp96w">
-      <contexts xsi:type="invocator:BasicContext" xmi:id="_2BlKINQBEeWIC-guB7Dopw" name="Default" dataProductsList="_DJVqkNQCEeWIC-guB7Dopw" instancesCreationDate="2016-04-18T11:24:39.133-0400">
+      <contexts xsi:type="invocator:Context" xmi:id="_2BlKINQBEeWIC-guB7Dopw" name="Default" dataProductsList="_DJVqkNQCEeWIC-guB7Dopw" instancesCreationDate="2016-04-18T11:24:39.133-0400">
         <variableImplementationsList xmi:id="_2DICQNQBEeWIC-guB7Dopw">
           <variableImplementations xmi:id="_2DJQYNQBEeWIC-guB7Dopw" variable="_0dgHYNATEeW12rm8vWp96w">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.satellite#//DefaultConstellation"/>
