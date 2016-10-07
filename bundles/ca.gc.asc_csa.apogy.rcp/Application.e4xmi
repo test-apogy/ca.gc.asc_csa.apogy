@@ -18,13 +18,21 @@
           </children>
         </children>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Environment"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Environment">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_Sj4c8IyREeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7"/>
+      </children>
       <children xsi:type="advanced:Perspective" xmi:id="_ypkYICKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.programs" label="Programs" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/ProgramsList.gif" tooltip="Programs">
         <children xsi:type="basic:PartSashContainer" xmi:id="_GRop8CkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.0">
           <children xsi:type="basic:PartStack" xmi:id="_HwKdcCkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.1"/>
         </children>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_3_Z0YCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.data" label="Data" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/DataProductsList.gif" tooltip="Data"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_3_Z0YCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.data" label="Data" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/DataProductsList.gif" tooltip="Data">
+        <children xsi:type="basic:PartSashContainer" xmi:id="__oleUIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.8">
+          <children xsi:type="basic:PartStack" xmi:id="___LZYIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
+            <children xsi:type="advanced:Placeholder" xmi:id="_RLIvEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.2" ref="_En_XkIyWEeajju10_PNlwQ"/>
+          </children>
+        </children>
+      </children>
       <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif" tooltip="Orbital">
         <children xsi:type="basic:PartSashContainer" xmi:id="_WkvXkDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.1">
           <children xsi:type="basic:PartSashContainer" xmi:id="_YIwvEDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.4" horizontal="true">
@@ -127,6 +135,11 @@
         <tags>ViewMenu</tags>
       </menus>
       <toolbar xmi:id="_nNLekjdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_En_XkIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.core.topology.ui.views.Apogy3DView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="3D Viewer" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
+      <toolbar xmi:id="_WZTdEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.1"/>
     </sharedElements>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
