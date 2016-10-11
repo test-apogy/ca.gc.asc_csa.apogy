@@ -90,7 +90,7 @@ public class ContextsDefinitionComposite extends Composite {
 		gd_sctnVariableImplementations.minimumWidth = 300;
 		sctnVariableImplementations.setLayoutData(gd_sctnVariableImplementations);
 		toolkit.paintBordersFor(sctnVariableImplementations);
-		sctnVariableImplementations.setText("Variable Implementations");		
+		sctnVariableImplementations.setText("Implementation");		
 		
 		variableImplementationsComposite = new VariableImplementationsComposite(sctnVariableImplementations, SWT.NONE){
 			@Override

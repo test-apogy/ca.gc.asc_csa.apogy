@@ -14,8 +14,13 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.List;
+
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -23,12 +28,15 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
+import org.eclipse.jface.fieldassist.ControlDecoration;
+import org.eclipse.jface.fieldassist.FieldDecoration;
+import org.eclipse.jface.fieldassist.FieldDecorationRegistry;
 import org.eclipse.jface.viewers.CheckStateChangedEvent;
 import org.eclipse.jface.viewers.CheckboxTableViewer;
 import org.eclipse.jface.viewers.DoubleClickEvent;
@@ -52,24 +60,21 @@ import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewContextWizard;
 
 public class ContextsListComposite extends Composite {
+	private final String DECORATION_STR = "No variable available";
+	
 	private DataBindingContext m_bindingContext;
 	private WritableValue environmentBinder;
 	private ObservableListContentProvider listContentProvider;
@@ -79,6 +84,8 @@ public class ContextsListComposite extends Composite {
 	private Table tableContexts;
 
 	private CheckboxTableViewer contextsListViewer;
+	private Button btnNew; 
+	private Composite composite;
 
 	/**
 	 * Returns the {@link Context} list viewer.
@@ -94,6 +101,7 @@ public class ContextsListComposite extends Composite {
 	private EditingDomain editingDomain;
 	
 	private ISelectionChangedListener contextsListViewerSelectionListener;
+	private ControlDecoration controlDecoration;
 
 	/*
 	 * public ContextsListComposite(Composite parent, int style, ContextsList
@@ -186,12 +194,14 @@ public class ContextsListComposite extends Composite {
 		// }
 		// }, SWT.NONE);
 
-		Composite composite = new Composite(this, SWT.NONE);
+		composite = new Composite(this, SWT.NONE);
 		toolkit.adapt(composite);
 		toolkit.paintBordersFor(composite);
-		composite.setLayout(new RowLayout(SWT.HORIZONTAL));
+		RowLayout rl_composite = new RowLayout(SWT.HORIZONTAL);
+		rl_composite.marginLeft = 8;
+		composite.setLayout(rl_composite);
 
-		Button btnNew = new Button(composite, SWT.NONE);
+		btnNew = new Button(composite, SWT.NONE);
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -256,6 +266,13 @@ public class ContextsListComposite extends Composite {
 		});
 		btnNew.setText("New");
 		toolkit.adapt(btnNew, true, true);
+		
+		if(getEnvironment() != null 
+				&& getEnvironment().getVariablesList() != null 
+				&& getEnvironment().getVariablesList().getVariables() != null 
+				&& getEnvironment().getVariablesList().getVariables().size() < 1){
+			replaceControlDecoration();
+		}
 
 		Button btnDelete = new Button(composite, SWT.NONE);
 		btnDelete.setToolTipText("Not implemented yet!!!");
@@ -382,7 +399,32 @@ public class ContextsListComposite extends Composite {
 
 		ViewerSupport.bind(contextsListViewer, invocatorFacadeEnvironmentContextsListContextsObserveValue,
 				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
+		
+		IObservableValue observeBtnCreateEnabledObserveWidget = WidgetProperties.enabled().observe(btnNew);
+		IObservableValue environmentVariablesListVariablesObserveValue = EMFProperties
+				.value(FeaturePath.fromList(
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST,
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES))
+				.observeDetail(environmentBinder);
+		m_bindingContext.bindValue(observeBtnCreateEnabledObserveWidget, environmentVariablesListVariablesObserveValue, 
+				null, 
+				new UpdateValueStrategy().setConverter(new Converter(List.class, Boolean.class) {
+					@SuppressWarnings("rawtypes")
+					@Override
+					public Object convert(Object arg0) {
+						if(((List)arg0).size() < 1){
+							replaceControlDecoration();
+							return false;
+						}else{
+							if(controlDecoration != null){
+								controlDecoration.hide();
+						}
+						return true;
+						}
+					}
+				}));
 
+		
 		/**
 		 * Bind contexts list.
 		 */
@@ -398,8 +440,17 @@ public class ContextsListComposite extends Composite {
 		 * item.
 		 */
 		
+		/*Context defaultSelectedContext = getEnvironment().getActiveContext();
+		if (defaultSelectedContext == null
+				&& getEnvironment().getContextsList().getContexts().isEmpty()) {
+			defaultSelectedContext = getEnvironment().getContextsList()
+					.getContexts().get(0);
+		}
+		contextsListViewer.setSelection(new StructuredSelection(
+				defaultSelectedContext), true);
+		*/
 		if(environmentBinder.getValue() != null){
-			if(getEnvironment().getActiveContext() == null && getContextsList().getContexts().isEmpty()){
+			if(getEnvironment().getActiveContext() == null && !getContextsList().getContexts().isEmpty()){
 				contextsListViewer.setSelection(new StructuredSelection(getContextsList().getContexts().get(0)));
 			}
 			contextsListViewer.setSelection(new StructuredSelection(getEnvironment().getActiveContext()));
@@ -417,6 +468,17 @@ public class ContextsListComposite extends Composite {
 		contextsListViewer.addSelectionChangedListener(getContextsListViewerSelectionListener());
 
 		return m_bindingContext;
+	}
+	
+	private void replaceControlDecoration(){
+		controlDecoration = new ControlDecoration(composite, SWT.LEFT | SWT.TOP);
+		ControlDecoration controlDecoration = new ControlDecoration(btnNew, SWT.LEFT | SWT.TOP);
+		controlDecoration.setDescriptionText(DECORATION_STR);
+		FieldDecoration fieldDecoration = FieldDecorationRegistry.getDefault()
+				.getFieldDecoration(FieldDecorationRegistry.DEC_ERROR);
+		controlDecoration.setImage(fieldDecoration.getImage());
+		controlDecoration.setShowOnlyOnFocus(false);
+		controlDecoration.show();
 	}
 
 	private ISelectionChangedListener getContextsListViewerSelectionListener() {

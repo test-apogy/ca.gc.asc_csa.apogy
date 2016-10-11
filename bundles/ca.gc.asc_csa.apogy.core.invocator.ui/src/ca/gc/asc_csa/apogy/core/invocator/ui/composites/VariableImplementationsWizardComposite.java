@@ -73,9 +73,10 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
 
-public class VariableImplementationsComposite extends Composite {
+public class VariableImplementationsWizardComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 
 	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
@@ -102,7 +103,7 @@ public class VariableImplementationsComposite extends Composite {
 	 * @param parent
 	 * @param style
 	 */
-	public VariableImplementationsComposite(Composite parent, int style) {
+	public VariableImplementationsWizardComposite(Composite parent, int style) {
 		super(parent, SWT.NONE);
 
 		addDisposeListener(new DisposeListener() {
@@ -172,35 +173,6 @@ public class VariableImplementationsComposite extends Composite {
 
 		variableImplementationsViewer.addSelectionChangedListener(getVariableImplementationsViewerListener());
 		sctnTable.setClient(treeVariableImplementations);
-		
-		Section sctnDetails = toolkit.createSection(scrolledform.getBody(), Section.TITLE_BAR | Section.EXPANDED);
-		sctnDetails.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		//sctnDetails.setSize(440, 127);
-		toolkit.paintBordersFor(sctnDetails);
-		sctnDetails.setText("Details");
-		sctnDetails.setExpanded(true);
-
-		Composite composite = toolkit.createComposite(sctnDetails, SWT.NONE);
-		toolkit.paintBordersFor(composite);
-		sctnDetails.setClient(composite);
-		composite.setLayout(new GridLayout(2, false));
-
-		Label lblName = toolkit.createLabel(composite, "Name:", SWT.NONE);
-		lblName.setSize(69, 21);
-
-		txtName = toolkit.createText(composite, "", SWT.READ_ONLY);
-		txtName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-
-		toolkit.createLabel(composite, "Interface:", SWT.NONE);
-
-		txtInterface = toolkit.createText(composite, "", SWT.READ_ONLY);
-		txtInterface.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-
-		Label lblImplementation = toolkit.createLabel(composite, "Implementation:", SWT.NONE);
-		lblImplementation.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-
-		txtImplementation = toolkit.createText(composite, "", SWT.READ_ONLY);
-		txtImplementation.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 	}
 	
 
@@ -249,60 +221,6 @@ public class VariableImplementationsComposite extends Composite {
 	 */
 	private DataBindingContext initDataBindingsCustom() {	
 		DataBindingContext bindingContext = new DataBindingContext();
-
-		/**
-		 * Bind Viewer Selection
-		 */
-		IObservableValue observeSingleSelectionVariableImplementationsViewer = ViewerProperties.singleSelection()
-				.observe(variableImplementationsViewer);
-		
-		/** 
-		 * Bind Name.
-		 */
-		IObservableValue observeTextTxtNameObserveWidget = WidgetProperties
-				.text().observe(txtName);
-		
-		bindingContext.bindValue(observeTextTxtNameObserveWidget,
-				observeSingleSelectionVariableImplementationsViewer, null, 
-				new UpdateValueStrategy()
-				.setConverter(new Converter(AbstractTypeImplementation.class, String.class) {					
-					@Override
-					public Object convert(Object fromObject) {					
-						return EMFEcoreInvocatorEditUtilities.getName((AbstractTypeImplementation) fromObject);						
-					}
-				}));
-		
-		/** 
-		 * Bind Interface.
-		 */
-		IObservableValue observeTextTxtInterfaceObserveWidget = WidgetProperties
-				.text().observe(txtInterface);
-		
-		bindingContext.bindValue(observeTextTxtInterfaceObserveWidget,
-				observeSingleSelectionVariableImplementationsViewer, null, 
-				new UpdateValueStrategy()
-				.setConverter(new Converter(AbstractTypeImplementation.class, String.class) {					
-					@Override
-					public Object convert(Object fromObject) {		
-						return EMFEcoreInvocatorEditUtilities.getInterfaceName((AbstractTypeImplementation) fromObject, true);					}
-				}));
-
-		/** 
-		 * Bind Implementation.
-		 */
-		IObservableValue observeTextTxtImplementationObserveWidget = WidgetProperties
-				.text().observe(txtImplementation);
-		
-		bindingContext.bindValue(observeTextTxtImplementationObserveWidget,
-				observeSingleSelectionVariableImplementationsViewer, null, 
-				new UpdateValueStrategy()
-				.setConverter(new Converter(AbstractTypeImplementation.class, String.class) {					
-					@Override
-					public Object convert(Object fromObject) {		
-						return EMFEcoreInvocatorEditUtilities.getImplementationName((AbstractTypeImplementation) fromObject, true);					
-					}
-				}));		
-		
 		
 		/**
 		 * Set the content of the list.
@@ -536,15 +454,17 @@ public class VariableImplementationsComposite extends Composite {
 			EClass eClass = (EClass) value;
 			AbstractTypeImplementation implementation = (AbstractTypeImplementation) element;
 
-			SetCommand command = new SetCommand(
+			implementation.setImplementationClass(eClass);
+			System.out
+					.println("VariableImplementationsWizardComposite.VariableImplementationEditingSupport.setValue()");
+			/*SetCommand command = new SetCommand(
 					editingDomain,
 					implementation,
 					ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
 					eClass);
-			editingDomain.getCommandStack().execute(command);
+			editingDomain.getCommandStack().execute(command);*/
 
 			this.viewer.refresh();
-			txtImplementation.setText(EMFEcoreInvocatorEditUtilities.getImplementationName(implementation, true));
 		}
 	}
 }

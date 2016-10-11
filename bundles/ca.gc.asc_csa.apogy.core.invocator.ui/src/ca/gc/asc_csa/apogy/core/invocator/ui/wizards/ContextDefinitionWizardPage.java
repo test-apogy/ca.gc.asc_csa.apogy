@@ -19,39 +19,20 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.ui.forms.widgets.Form;
-import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.forms.widgets.ScrolledForm;
-import org.eclipse.ui.forms.widgets.Section;
-import org.eclipse.ui.forms.widgets.TableWrapData;
-import org.eclipse.ui.forms.widgets.TableWrapLayout;
 
-import ca.gc.asc_csa.apogy.common.emf.Named;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
-import ca.gc.asc_csa.apogy.core.invocator.Environment;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableFeatureReferenceComposite;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableImplementationsComposite;
-import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.graphics.Point;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableImplementationsWizardComposite;
 
 public class ContextDefinitionWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.ContextDefinitionWizardPage";
-	private VariableImplementationsComposite variableImplementationsComposite;
-	private FormToolkit formToolKit = new FormToolkit(Display.getCurrent());
+	private VariableImplementationsWizardComposite variableImplementationsWizardComposite;
 	private Adapter adapter; 
 	private Context context;
-//	private ScrolledForm form;
-//	private ScrolledComposite composite;
-	private Form form;
-	private Composite composite;
 	
 	/**
 	 * Constructor for the WizardPage.
@@ -61,8 +42,8 @@ public class ContextDefinitionWizardPage extends WizardPage {
 	 */
 	public ContextDefinitionWizardPage() {
 		super(WIZARD_PAGE_ID);
-		setTitle("Name and activate");
-		setDescription("TODO");
+		setTitle("Variable implementation");
+		setDescription("Select a variable implementation");
 	}
 
 	public ContextDefinitionWizardPage(Context context) {
@@ -73,7 +54,7 @@ public class ContextDefinitionWizardPage extends WizardPage {
 		}		
 		this.context = context;
 	
-		context.eAdapters().add(getAdapter());
+		context.getVariableImplementationsList().getVariableImplementations().get(0).eAdapters().add(getAdapter());
 	}
 
 	private Adapter getAdapter() {
@@ -92,9 +73,11 @@ public class ContextDefinitionWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */	
 	public void createControl(Composite parent) {
-		variableImplementationsComposite = new VariableImplementationsComposite(parent, SWT.None);
-		variableImplementationsComposite.setContext(context);
-		setControl(variableImplementationsComposite);
+		variableImplementationsWizardComposite = new VariableImplementationsWizardComposite(parent, SWT.None);
+		variableImplementationsWizardComposite.setContext(context);
+		variableImplementationsWizardComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
+		
+		setControl(variableImplementationsWizardComposite);
 		validate();
 	}
 	
@@ -112,8 +95,8 @@ public class ContextDefinitionWizardPage extends WizardPage {
 	protected void validate() {
 		String errorVariableStr = null;
 				
-		if (context == null || context.getVariableImplementationsList() == null){
-			errorVariableStr = "A variable implementation must be provided";
+		if (context.getVariableImplementationsList().getVariableImplementations().get(0).getImplementationClass() == null){
+			errorVariableStr = "A variable implementation must be selected";
 		}	
 
 		setErrorMessage(errorVariableStr);

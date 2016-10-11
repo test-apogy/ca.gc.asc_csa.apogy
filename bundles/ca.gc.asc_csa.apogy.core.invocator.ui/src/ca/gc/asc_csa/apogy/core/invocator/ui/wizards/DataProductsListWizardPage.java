@@ -26,15 +26,18 @@ import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.DescribedComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.DataProductsListsContainerComposite;
 
 public class DataProductsListWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NamedDescribedWizardPage";
-	private NamedComposite namedComposite;
-	private DescribedComposite describedComposite;
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.DataProductsListWizardPage";
+	private DataProductsListsContainerComposite dataProductsListsContainerComposite;
 	private Adapter adapter; 
-	private Named named;
-	private Described described;
+	private Context context;
+	private DataProductsListsContainer dataProductsListsContainer;
 	
 	/**
 	 * Constructor for the WizardPage.
@@ -43,26 +46,22 @@ public class DataProductsListWizardPage extends WizardPage {
 	 */
 	public DataProductsListWizardPage() {
 		super(WIZARD_PAGE_ID);
-		setTitle("Name and Description");
-		setDescription("Enter a name and a description (optional).");
+		setTitle("Data Products List");
+		setDescription("Set a data product list.");
 	}
 
 	public DataProductsListWizardPage(
-			Named name, Described description) {
+			Context context, DataProductsListsContainer dataProductsListsContainer) {
 		this();
-		if (this.named != null){
-			this.named.eAdapters().remove(getAdapter());
+		if (this.context != null){
+			this.context.eAdapters().remove(getAdapter());
+		}
+		if (this.dataProductsListsContainer != null){
+			this.dataProductsListsContainer.eAdapters().remove(getAdapter());
 		}
 		
-		if (this.described != null){
-			this.described.eAdapters().remove(getAdapter());
-		}
-		
-		this.named = name;
-		this.described = description;
-		
-		name.eAdapters().add(getAdapter());
-		description.eAdapters().add(getAdapter());
+		this.dataProductsListsContainer = dataProductsListsContainer;
+		this.context = context;
 	}
 
 	private Adapter getAdapter() {
@@ -84,17 +83,12 @@ public class DataProductsListWizardPage extends WizardPage {
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new GridLayout(1, false));
 
-		namedComposite = new NamedComposite(container, SWT.None);
-		namedComposite.setNamed(named);		
-		namedComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
-		
-		describedComposite = new DescribedComposite(container, SWT.None);
-		describedComposite.setDescribed(described);
-		describedComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));	
+		dataProductsListsContainerComposite = new DataProductsListsContainerComposite(container, SWT.None);
+		dataProductsListsContainerComposite.setContext(context);
+		dataProductsListsContainerComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
+		dataProductsListsContainerComposite.setDataProductsListsContainer(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getDataProductsListContainer());
 		
 		setControl(container);
-		
-		namedComposite.setFocus();
 		
 		validate();
 	}
@@ -102,31 +96,31 @@ public class DataProductsListWizardPage extends WizardPage {
 	@Override
 	public void dispose() {
 		super.dispose();
-		if (this.named != null){
-			this.named.eAdapters().remove(getAdapter());
+		if (this.context != null){
+			this.context.eAdapters().remove(getAdapter());
+		}	
+		if (this.dataProductsListsContainer != null){
+			this.dataProductsListsContainer.eAdapters().remove(getAdapter());
 		}
-		if (this.described != null){
-			this.described.eAdapters().remove(getAdapter());
-		}		
 	}
 	
 	/** 
 	 * This method is invoked to validate the content. 
 	 */
 	protected void validate() {
-		String errorStr = null;
-		String infoStr = null;
+		String errorStr1 = null;
+		String errorStr2 = null;
 		
-		if (named == null || named.getName() == null || named.getName().isEmpty()){
-			errorStr = "A name must be provided.";
+		if (context.getDataProductsList() == null){
+			errorStr1 = "A Data Products List must be selected.";
 		}
 		
-		if (described == null || described.getDescription() == null || described.getDescription().isEmpty()){
-			infoStr = "It is recommended to enter a description.";
-		}	
+		/*if (dataProductsListsContainer != null || dataProductsListsContainer.getDataProductsList().size() < 1){
+			errorStr2 = "A Data Products List must be created.";
+		}	*/
 
-		setMessage(infoStr);
-		setErrorMessage(errorStr);
-		setPageComplete(errorStr == null);
+		//setMessage(errorStr1);
+		setErrorMessage(errorStr1);
+		setPageComplete(errorStr1 == null);
 	}
 }
