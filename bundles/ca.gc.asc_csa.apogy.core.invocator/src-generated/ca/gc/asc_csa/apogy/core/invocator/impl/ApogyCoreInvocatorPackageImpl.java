@@ -1017,7 +1017,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__CreateContext__VariablesList() {
+	public EOperation getApogyCoreInvocatorFacade__CreateContext__InvocatorSession() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(37);
 	}
 
@@ -3183,7 +3183,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__VARIABLESLIST);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3696,8 +3696,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCoreInvocatorFacade__CreateContext__VariablesList(), this.getContext(), "createContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVariablesList(), "variablesList", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreInvocatorFacade__CreateContext__InvocatorSession(), this.getContext(), "createContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3846,7 +3846,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEReference(getAbstractTypeImplementation_AbstractInitializationData(), this.getAbstractInitializationData(), null, "abstractInitializationData", null, 0, 1, AbstractTypeImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractTypeImplementation_Instance(), theEcorePackage.getEObject(), null, "instance", null, 0, 1, AbstractTypeImplementation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractTypeImplementation_AdapterInstance(), this.getTypeApiAdapter(), null, "adapterInstance", null, 0, 1, AbstractTypeImplementation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTypeImplementation_HandlingType(), this.getType(), null, "handlingType", null, 0, 1, AbstractTypeImplementation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTypeImplementation_HandlingType(), this.getType(), null, "handlingType", null, 1, 1, AbstractTypeImplementation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getAbstractTypeImplementation__GetTypeMemberImplementation__String(), this.getTypeMemberImplementation(), "getTypeMemberImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);

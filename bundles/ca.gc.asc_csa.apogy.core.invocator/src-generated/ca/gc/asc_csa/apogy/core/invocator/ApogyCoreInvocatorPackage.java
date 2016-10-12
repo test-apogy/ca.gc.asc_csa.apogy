@@ -463,7 +463,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__VARIABLESLIST = 37;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION = 37;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -5232,14 +5232,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	EOperation getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createContext(ca.gc.asc_csa.apogy.core.invocator.VariablesList) <em>Create Context</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createContext(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession) <em>Create Context</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Context</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createContext(ca.gc.asc_csa.apogy.core.invocator.VariablesList)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createContext(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession)
 	 * @generated
 	 */
-	EOperation getApogyCoreInvocatorFacade__CreateContext__VariablesList();
+	EOperation getApogyCoreInvocatorFacade__CreateContext__InvocatorSession();
 
 		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
@@ -7859,7 +7859,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__VARIABLESLIST = eINSTANCE.getApogyCoreInvocatorFacade__CreateContext__VariablesList();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION = eINSTANCE.getApogyCoreInvocatorFacade__CreateContext__InvocatorSession();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.

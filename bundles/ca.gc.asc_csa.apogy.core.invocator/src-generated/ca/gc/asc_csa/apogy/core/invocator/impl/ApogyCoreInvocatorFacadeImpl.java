@@ -1064,6 +1064,11 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 			TypeMemberImplementation typeMemberImplementation = ApogyCoreInvocatorFactory.eINSTANCE
 					.createTypeMemberImplementation();
 			typeMemberImplementation.setTypeMember(typeMember);
+			
+			List<EClass> eClasses = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(typeMemberImplementation.getHandlingType().getInterfaceClass());
+			if (!eClasses.isEmpty()){
+				typeMemberImplementation.setImplementationClass(eClasses.get(0));
+			}
 
 			/** Check sub-type members. */
 			List<TypeMemberImplementation> subTypeMemberImplementations = createTypeMemberImplementations(
@@ -1344,7 +1349,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * 
 	 * @generated_NOT
 	 */
-	public Context createContext(VariablesList variablesList) {
+	public Context createContext(InvocatorSession invocatorSession) {
 
 		Context context = ApogyCoreInvocatorFactory.eINSTANCE.createContext();
 		VariableImplementationsList variableImplementationsList = ApogyCoreInvocatorFactory.eINSTANCE
@@ -1354,12 +1359,17 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 		/**
 		 * Instantiate the variable implementations.
 		 */
-		Iterator<Variable> variables = variablesList.getVariables().iterator();
+		Iterator<Variable> variables = invocatorSession.getEnvironment().getVariablesList().getVariables().iterator();
 		while (variables.hasNext()) {
 			Variable variable = variables.next();
 			VariableImplementation variableImplementation = ApogyCoreInvocatorFactory.eINSTANCE
 					.createVariableImplementation();
 			variableImplementation.setVariable(variable);
+			
+			List<EClass> eClasses = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(variableImplementation.getHandlingType().getInterfaceClass());
+			if (!eClasses.isEmpty()){
+				variableImplementation.setImplementationClass(eClasses.get(0));
+			}
 
 			/** Create TypeMemberImplementations. */
 			variableImplementation.getTypeMemberImplementations().addAll(
@@ -1532,8 +1542,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return getProgramByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING:
 				return getContextByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__VARIABLESLIST:
-				return createContext((VariablesList)arguments.get(0));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION:
+				return createContext((InvocatorSession)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
