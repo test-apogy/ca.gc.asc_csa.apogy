@@ -10,13 +10,13 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.llarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
 import java.util.Iterator;
-import java.util.Timer;
-import java.util.TimerTask;
 
+import org.eclipse.emf.common.command.StrictCompoundCommand;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -29,71 +29,55 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
-import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
-import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
-public class NewContextWizard extends Wizard{//implements INewWizard {
+public class NewContextWizard extends Wizard{
 	
-	private Environment environment;
+	private InvocatorSession invocatorSession;
 	private Context context;
 	private NamedDescribedWizardPage namedDescribedWizardPage;
-	private ContextDefinitionWizardPage contextDefinitionWizardPage;
+	private VariableImplementationsWizardPage variableImplementationWizardPage;
 	private DataProductsListWizardPage dataProductsListWizardPage;
 	private VariableImplementationsList variableImplementationsList;
 	
 	/**
 	 * Constructor for NewContextWizard.
 	 */
-	public NewContextWizard() {
+	public NewContextWizard(InvocatorSession invocatorSession) {
 		super();
 		setWindowTitle("New Context");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
 				Activator.ID, "icons/wizban/apogy_new_context.png");
 		setDefaultPageImageDescriptor(image);		
-		setEnvironment(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+		this.invocatorSession = invocatorSession;
 	}
-
-	/** TODO: See if needed
-	 * We will accept the selection in the workbench to see if we can initialize
-	 * from it.
-	 * 
-	 * @see IWorkbenchWizard#init(IWorkbench, IStructuredSelection)
-	 */ 
-	/*public void init(IWorkbench workbench, IStructuredSelection selection) {
-	}*/
-
+	
 	/**
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		/*if(getNameContextWizardPage() != null){
-			addPage(getNameContextWizardPage());
-		}*/
 		if(getNamedDescribedWizardPage() != null){
 			addPage(getNamedDescribedWizardPage());
 		}
-		if(getContextDefinitionWizardPage() != null){
-			addPage(getContextDefinitionWizardPage());
+		if(getVariableImplementationWizardPage() != null){
+			addPage(getVariableImplementationWizardPage());
 		}
 		if(getDataProductsListWizardPage() != null){
 			addPage(getDataProductsListWizardPage());
 		}
 	}
 	
-	public void setEnvironment(Environment environment){
-		this.environment = environment;
+	public void setInvocatorSession(InvocatorSession invocatorSession){
+		this.invocatorSession = invocatorSession;
 	}
 	
-	public Environment getEnvironment(){
-		return environment;
+	public InvocatorSession getInvocatorSession(){
+		return invocatorSession;
 	}
 	
 
@@ -109,14 +93,14 @@ public class NewContextWizard extends Wizard{//implements INewWizard {
 	}
 	
 	/**
-	 * Returns the {@link ContextDefinitionWizardPage}.  If null is returned, the page is not added to the wizard.
+	 * Returns the {@link VariableImplementationsWizardPage}.  If null is returned, the page is not added to the wizard.
 	 * @return Reference to the page.
 	 */
-	protected ContextDefinitionWizardPage getContextDefinitionWizardPage(){
-		if (contextDefinitionWizardPage == null){
-			contextDefinitionWizardPage = new ContextDefinitionWizardPage(getContext());
+	protected VariableImplementationsWizardPage getVariableImplementationWizardPage(){
+		if (variableImplementationWizardPage == null){
+			variableImplementationWizardPage  = new VariableImplementationsWizardPage(getContext());
 		}		
-		return contextDefinitionWizardPage;
+		return variableImplementationWizardPage ;
 	}
 	
 	/**
@@ -125,7 +109,7 @@ public class NewContextWizard extends Wizard{//implements INewWizard {
 	 */
 	protected DataProductsListWizardPage getDataProductsListWizardPage(){
 		if (dataProductsListWizardPage == null){
-			dataProductsListWizardPage = new DataProductsListWizardPage(getContext(), getDataProductisListContainer());
+			dataProductsListWizardPage = new DataProductsListWizardPage(getContext(), getInvocatorSession());
 		}		
 		return dataProductsListWizardPage ;
 	}	
@@ -133,141 +117,101 @@ public class NewContextWizard extends Wizard{//implements INewWizard {
 	@Override
 	public boolean performFinish() {
 		
+		/*
+		 *  Create a compound command to execute addContext and the addDataProducts if needed
+		 */
+		StrictCompoundCommand compoundCommand = new StrictCompoundCommand();
+		
+		/*
+		 * Create the command to add the new context
+		 */
 		EditingDomain editingDomain = AdapterFactoryEditingDomain
-				.getEditingDomainFor(environment.getContextsList());		
-		AddCommand command = new AddCommand(editingDomain, getEnvironment().getContextsList(),
+				.getEditingDomainFor(getInvocatorSession().getEnvironment().getContextsList());			
+		AddCommand addContextcommand = new AddCommand(editingDomain, getInvocatorSession().getEnvironment().getContextsList(),
 				ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS, context);
+		compoundCommand.append(addContextcommand);
 		
-		editingDomain.getCommandStack().execute(command);
+		/*
+		 * Verify if the context's dataProductsList is in the invocatorSession's
+		 * dataProductsListsContainer to know if the DataProductsList is already
+		 * existing or a new one
+		 */
+		boolean newDataProductsList = false;
+		for(int i = 0; i < invocatorSession.getDataProductsListContainer().getDataProductsList().size(); i++){
+			if(context.getDataProductsList() == invocatorSession.getDataProductsListContainer().getDataProductsList().get(i)){
+				newDataProductsList = true;
+			}
+		}
 		
-//		OperationCallsList operationCallsList = null;// TODO = getContextDefinitionWizardPage().getSelectedOperationCallsList();		
-//		EditingDomain editingDomain = AdapterFactoryEditingDomain
-//				.getEditingDomainFor(operationCallsList);
-//		
-//		/** Check if there is a domain. */
-//		if (editingDomain == null){
-//			/** No Domain */
-//			operationCallsList.getOperationCalls().add(getOperationCall());	
-//		}else{
-//			/** Use the command stack. */
-//			AddCommand command = new AddCommand(
-//					editingDomain,
-//					operationCallsList,
-//					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-//					getOperationCall());
-//			editingDomain.getCommandStack().execute(command);			
-//		}
-				
+		/*
+		 * If the dataProductsList was not found in the invocatorSession's
+		 * dataProductsListsContainer
+		 */
+		if(!newDataProductsList){
+			/*
+			 * Create the command to add the new DataProductsList
+			 */
+			editingDomain = AdapterFactoryEditingDomain
+					.getEditingDomainFor(getInvocatorSession());			
+			AddCommand addDataProductsListCommand = new AddCommand(editingDomain, getInvocatorSession().getDataProductsListContainer(),
+					ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER, context.getDataProductsList());
+			compoundCommand.append(addDataProductsListCommand);
+		}
+		
+		/*
+		 * Execure the command
+		 */
+		editingDomain.getCommandStack().execute(compoundCommand);
+						
 		return true;
 	}
-		
-	/** 
-	 * Returns the list of programs to display.  Override this method to provide custom getter implementation.  The default 
-	 * implementation returns the list of programs available in the active session.
-	 * @return List of programs.
-	 */
-	protected ProgramsList getProgramsList(){
-		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? 
-				null : 
-				ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
-	}
-
-	
-	/** 
-	 * Create and returns the instance of the {@link Context} to be set within the several wizard pages.  
-	 * This method uses the lazy loading pattern.
-	 * @return Reference to the {@link Context}. 
+			
+	/**
+	 * Create and returns the instance of the {@link Context} to be set within
+	 * the wizard pages. This method uses the lazy loading pattern.
+	 * 
+	 * @return Reference to the {@link Context}.
 	 */
 	protected Context getContext() {
 		if (context == null) {
-			context = ApogyCoreInvocatorFacade.INSTANCE.createContext(environment.getVariablesList());
-			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getEnvironment().getContextsList(),
-					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));			
-			/*EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(environment.getContextsList());
-			AddCommand command = new AddCommand(editingDomain, getEnvironment().getContextsList(),
-					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS, context);
-			
-			editingDomain.getCommandStack().execute(command);
-			*/
+			context = ApogyCoreInvocatorFacade.INSTANCE.createContext(getInvocatorSession());
+			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
+					getInvocatorSession().getEnvironment().getContextsList(),
+					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
 		}
 		return context;
 	}
-	
+
 	/**
 	 * Create and returns the instance of the
 	 * {@link VariableImplementationsList} to be set within the variable
-	 * implementation wizard pages. This method uses the lazy loading pattern.
+	 * implementation wizard pages for the context. This method uses the lazy
+	 * loading pattern.
 	 * 
 	 * @return Reference to the {@link VariableImplementationsList}.
 	 */
 	protected VariableImplementationsList getVariableImplementationsList() {
 		if (variableImplementationsList == null) {
 			variableImplementationsList = ApogyCoreInvocatorFactory.eINSTANCE.createVariableImplementationsList();
-			  
-			  /**
-			   * Instantiate the variable implementations.
-			   */
-			  Iterator<Variable> variables = getEnvironment().getVariablesList().getVariables().iterator();
-			  while (variables.hasNext()){
-				  Variable variable = variables.next();
-				  VariableImplementation variableImplementation = ApogyCoreInvocatorFactory.eINSTANCE.createVariableImplementation();
-				  variableImplementation.setVariable(variable);
-				  
-				  /** Create TypeMemberImplementations. */
-				  variableImplementation.getTypeMemberImplementations().addAll(ApogyCoreInvocatorFacade.INSTANCE.createTypeMemberImplementations(variable.getVariableType()));			  
-				  
-				  variableImplementationsList.getVariableImplementations().add(variableImplementation);
-			  }
+
+			/**
+			 * Instantiate the variable implementations.
+			 */
+			Iterator<Variable> variables = getInvocatorSession().getEnvironment().getVariablesList().getVariables()
+					.iterator();
+			while (variables.hasNext()) {
+				Variable variable = variables.next();
+				VariableImplementation variableImplementation = ApogyCoreInvocatorFactory.eINSTANCE
+						.createVariableImplementation();
+				variableImplementation.setVariable(variable);
+
+				/** Create TypeMemberImplementations. */
+				variableImplementation.getTypeMemberImplementations().addAll(
+						ApogyCoreInvocatorFacade.INSTANCE.createTypeMemberImplementations(variable.getVariableType()));
+
+				variableImplementationsList.getVariableImplementations().add(variableImplementation);
+			}
 		}
 		return variableImplementationsList;
-	}
-	
-	protected DataProductsListsContainer getDataProductisListContainer(){
-		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getDataProductsListContainer();
-	}
-	
-	/** 
-	 * Create and returns the instance of the {@link Context} to be set within the several wizard pages.  
-	 * @return Reference to the {@link Context}. 
-	 */
-//	protected DataProductsListsContainer getdataProductsListCon() {
-//		dataProductsLists = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getDataProductsListContainer().get;
-//		if (dataProductsList == null) {
-//			dataProductsList = ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList();
-//			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getEnvironment().getContextsList(),
-//					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
-//			
-//			EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(environment.getContextsList());
-//			AddCommand command = new AddCommand(editingDomain, getEnvironment().getContextsList(),
-//					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS, context);
-//			
-//			editingDomain.getCommandStack().execute(command);
-//			
-//			
-//			Timer timer = new Timer();
-//			timer.schedule(new TimerTask() {
-//				
-//				@Override
-//				public void run() {
-//					System.out.println("NewContextWizard.getContext().new TimerTask() {...}.run() " + environment.getActiveContext());
-//					
-//				}
-//			}, 500, 1000);
-//			
-//		}
-//		return dataProductsList;
-//	}
-//	
-	/** 
-	 * Returns the {@link VariablesList}.  
-	 * @return Reference to the {@link VariablesList}. 
-	 */
-	protected VariablesList getVariablesList(){
-		VariablesList variablesList = null;
-		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
-		if (session != null){
-			variablesList = session.getEnvironment() == null ? null : session.getEnvironment().getVariablesList();			
-		}
-		return variablesList;
 	}
 }

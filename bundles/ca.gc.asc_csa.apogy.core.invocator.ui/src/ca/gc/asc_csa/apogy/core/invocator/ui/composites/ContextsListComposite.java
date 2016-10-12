@@ -69,7 +69,6 @@ import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewContextWizard;
 
 public class ContextsListComposite extends Composite {
@@ -102,11 +101,6 @@ public class ContextsListComposite extends Composite {
 	
 	private ISelectionChangedListener contextsListViewerSelectionListener;
 	private ControlDecoration controlDecoration;
-
-	/*
-	 * public ContextsListComposite(Composite parent, int style, ContextsList
-	 * contextsList) { this(parent, style); setContextsList(contextsList); }
-	 */
 
 	/**
 	 * Creates the composite.
@@ -178,22 +172,6 @@ public class ContextsListComposite extends Composite {
 		tableContexts.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		toolkit.paintBordersFor(tableContexts);
 
-		// EditingSupport editingSupport = new ContextsListEditingSupport(
-		// contextsListViewer);
-		//
-		// tableContexts.getColumns()[0].setEditingSupport(editingSupport);
-
-		// ListViewerEditor.create(contextsListViewer,
-		// new ColumnViewerEditorActivationStrategy(
-		// contextsListViewer) {
-		// @Override
-		// protected boolean isEditorActivationEvent(
-		// ColumnViewerEditorActivationEvent event) {
-		// return event.eventType ==
-		// ColumnViewerEditorActivationEvent.MOUSE_DOUBLE_CLICK_SELECTION;
-		// }
-		// }, SWT.NONE);
-
 		composite = new Composite(this, SWT.NONE);
 		toolkit.adapt(composite);
 		toolkit.paintBordersFor(composite);
@@ -201,72 +179,29 @@ public class ContextsListComposite extends Composite {
 		rl_composite.marginLeft = 8;
 		composite.setLayout(rl_composite);
 
+		/**
+		 * Adds a selection listener to the newContext button
+		 */
 		btnNew = new Button(composite, SWT.NONE);
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				
-				NewContextWizard newContextWizard = new NewContextWizard();
-				newContextWizard.setEnvironment(getEnvironment());
-				WizardDialog dialog = new WizardDialog(getShell(), new NewContextWizard());
+				/**
+				 * Creates and opens the wizard to create a valid context
+				 */
+				NewContextWizard newContextWizard = new NewContextWizard(getEnvironment().getInvocatorSession());
+				WizardDialog dialog = new WizardDialog(getShell(), newContextWizard);
 			
 				dialog.open();
-				
-
-				
-				/*  TODO
-				Context basicContext = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
-				basicContext.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getContextsList(),
-						ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
-
-				if(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()
-						.getDataProductsListContainer().getDataProductsList().size() != 0){
-					basicContext.setDataProductsList(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()
-							.getDataProductsListContainer().getDataProductsList().get(0));
-				}else{
-					DataProductsList productList = ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList();
-					productList.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList(),
-							ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST));
-					
-					OperationCallResultsList opsCallResultList = ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallResultsList();
-					productList.setOperationCallResultsList(opsCallResultList);
-					opsCallResultList.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(opsCallResultList,
-							ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST));
-					
-
-					//EditingDomain dataProductListEditingDomain  = getEditingDomain(getContextsList().getEnvironment().getInvocatorSession().getDataProductsListContainer());
-
-					AddCommand command = new AddCommand(editingDomain, getContextsList().getEnvironment().getInvocatorSession().getDataProductsListContainer(),
-							ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST, productList);
-					editingDomain.getCommandStack().execute(command);
-					
-					basicContext.setDataProductsList(productList);
-				}
-		
-				/*DataProductsList productList = ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList();
-				productList.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(productList,
-						ApogyCoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST));
-				
-				OperationCallResultsList opsCallResultList = ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallResultsList();
-				productList.setOperationCallResultsList(opsCallResultList);
-				opsCallResultList.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(opsCallResultList,
-						ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST));
-				
-				basicContext.setDataProductsList(productList);*/
-				
-				/*//EditingDomain contextListEditingDomain = getEditingDomain(getContextsList());
-				AddCommand command = new AddCommand(editingDomain, getContextsList(),
-						ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS, basicContext);
-				editingDomain.getCommandStack().execute(command);
-				
-				if(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() == null){
-					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().setActiveContext(basicContext);
-				}*/
 			}
 		});
 		btnNew.setText("New");
 		toolkit.adapt(btnNew, true, true);
 		
+		/**
+		 * Adds a control decoration if there is no variable
+		 */
 		if(getEnvironment() != null 
 				&& getEnvironment().getVariablesList() != null 
 				&& getEnvironment().getVariablesList().getVariables() != null 
@@ -275,7 +210,7 @@ public class ContextsListComposite extends Composite {
 		}
 
 		Button btnDelete = new Button(composite, SWT.NONE);
-		btnDelete.setToolTipText("Not implemented yet!!!");
+		btnDelete.setToolTipText("Not implemented yet!!!"); // TODO: Delete Button
 		btnDelete.setEnabled(false);
 		btnDelete.setText("Delete");
 		toolkit.adapt(btnDelete, true, true);
@@ -326,16 +261,11 @@ public class ContextsListComposite extends Composite {
 	}
 
 	/**
-	 * Binds the {@link ContextsList} with the composite.
+	 * Sets the {@link Environment}.
 	 * 
-	 * @param context
-	 *            Reference to the list of contexts.
+	 * @param Environment
+	 *            Reference to the Environment.
 	 */
-	/*
-	 * public void setContextsList(ContextsList contextsList) {
-	 * setContextsList(contextsList, true); }
-	 */
-
 	public void setEnvironment(Environment environment) {
 		if (environmentBinder == null) {
 			environmentBinder = new WritableValue();
@@ -344,36 +274,6 @@ public class ContextsListComposite extends Composite {
 		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(environment.getContextsList());
 
 	}
-
-	/**
-	 * Sets the {@link ContextsList}.
-	 * 
-	 * @param contextsList
-	 *            Reference to the list of context.
-	 * @param update
-	 *            If true then data bindings are created.
-	 */
-	/*
-	 * private void setContextsList(ContextsList contextsList, boolean update) {
-	 * this.contextsList = contextsList; editingDomain =
-	 * AdapterFactoryEditingDomain .getEditingDomainFor(contextsList); if
-	 * (update) { if (m_bindingContext != null) { m_bindingContext.dispose();
-	 * m_bindingContext = null; }
-	 * 
-	 * if (contextsList != null) { m_bindingContext = initDataBindings(); } } }
-	 */
-
-	/**
-	 * Use this to prevent Window Pro Builder code analysis to fail with the
-	 * complex data bindings code. Invokes
-	 * {@link ContextsListComposite#initDataBindingsCustom()}.
-	 * 
-	 * @return Reference to the data bindings context.
-	 * @see ContextsListComposite#initDataBindingsCustom()
-	 */
-//	private DataBindingContext initDataBindings() {
-//		return initDataBindingsCustom();
-//	}
 
 	/**
 	 * Creates and returns the data bindings context that takes care of the
@@ -400,6 +300,9 @@ public class ContextsListComposite extends Composite {
 		ViewerSupport.bind(contextsListViewer, invocatorFacadeEnvironmentContextsListContextsObserveValue,
 				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
 		
+		/**
+		 * Bind variable list with the newContext button
+		 */
 		IObservableValue observeBtnCreateEnabledObserveWidget = WidgetProperties.enabled().observe(btnNew);
 		IObservableValue environmentVariablesListVariablesObserveValue = EMFProperties
 				.value(FeaturePath.fromList(
@@ -412,9 +315,15 @@ public class ContextsListComposite extends Composite {
 					@SuppressWarnings("rawtypes")
 					@Override
 					public Object convert(Object arg0) {
-						if(((List)arg0).size() < 1){
+						/**
+						 * If there is no variable
+						 */
+						if(((List)arg0).isEmpty()){
 							replaceControlDecoration();
 							return false;
+						/**
+						 * Otherwise if there is a variable
+						 */
 						}else{
 							if(controlDecoration != null){
 								controlDecoration.hide();
@@ -424,42 +333,15 @@ public class ContextsListComposite extends Composite {
 					}
 				}));
 
-		
 		/**
-		 * Bind contexts list.
+		 * Selects the first context if there is no active context TODO
 		 */
-		/*
-		 * ViewerSupport.bind(contextsListViewer, EMFObservables.observeList(
-		 * contextsList,
-		 * ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
-		 * EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
-		 */
-
-		/**
-		 * Set the default selection to the active context if any or the first
-		 * item.
-		 */
-		
-		/*Context defaultSelectedContext = getEnvironment().getActiveContext();
-		if (defaultSelectedContext == null
-				&& getEnvironment().getContextsList().getContexts().isEmpty()) {
-			defaultSelectedContext = getEnvironment().getContextsList()
-					.getContexts().get(0);
-		}
-		contextsListViewer.setSelection(new StructuredSelection(
-				defaultSelectedContext), true);
-		*/
 		if(environmentBinder.getValue() != null){
 			if(getEnvironment().getActiveContext() == null && !getContextsList().getContexts().isEmpty()){
 				contextsListViewer.setSelection(new StructuredSelection(getContextsList().getContexts().get(0)));
 			}
 			contextsListViewer.setSelection(new StructuredSelection(getEnvironment().getActiveContext()));
 		}
-		/*Context defaultSelectedContext = getEnvironment().getActiveContext();
-		if (defaultSelectedContext == null && getEnvironment().getContextsList().getContexts().isEmpty()) {
-			defaultSelectedContext = getEnvironment().getContextsList().getContexts().get(0);
-		}
-		contextsListViewer.setSelection(new StructuredSelection(defaultSelectedContext), true);*/
 
 		/**
 		 * Listens to selection changed.
@@ -544,106 +426,7 @@ public class ContextsListComposite extends Composite {
 		}
 		return sessionAdapter;
 	}
-
-	// private final class ContextsListEditingSupport extends
-	// EditingSupport {
-	//
-	// private ColumnViewer viewer = null;
-	//
-	// private IBaseLabelProvider labelProvider = new LabelProvider();
-	//
-	// private IStructuredContentProvider contentProvider = new
-	// IStructuredContentProvider() {
-	//
-	// @Override
-	// public void inputChanged(Viewer viewer, Object oldInput,
-	// Object newInput) {
-	// }
-	//
-	// @Override
-	// public void dispose() {
-	// }
-	//
-	// @Override
-	// public Object[] getElements(Object inputElement) {
-	// Object[] elements = null;
-	// if (inputElement instanceof VariableImplementation) {
-	// VariableImplementation variableImplementation = (VariableImplementation)
-	// inputElement;
-	//
-	// if (variableImplementation.getVariable().getVariableType() != null) {
-	// EClass interfaceClass = variableImplementation
-	// .getVariable().getVariableType()
-	// .getInterfaceClass();
-	// elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
-	// interfaceClass).toArray();
-	// }
-	// }
-	// if (inputElement instanceof TypeMemberImplementation) {
-	// TypeMemberImplementation typeMemberImplementation =
-	// (TypeMemberImplementation) inputElement;
-	//
-	// if (typeMemberImplementation.getTypeMember()
-	// .getMemberType() != null) {
-	// EClass interfaceClass = typeMemberImplementation
-	// .getTypeMember().getMemberType()
-	// .getInterfaceClass();
-	// elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
-	// interfaceClass).toArray();
-	// }
-	// }
-	//
-	// return elements;
-	// }
-	// };
-	//
-	// public ContextsListEditingSupport(ColumnViewer viewer) {
-	// super(viewer);
-	// this.viewer = viewer;
-	// }
-	//
-	// @Override
-	// protected CellEditor getCellEditor(Object element) {
-	// ComboBoxViewerCellEditor cellEditor = null;
-	// cellEditor = new ComboBoxViewerCellEditor((Composite) getViewer()
-	// .getControl(), SWT.READ_ONLY);
-	// cellEditor.setLabelProvider(labelProvider);
-	// cellEditor.setContentProvider(contentProvider);
-	// cellEditor.setInput(element);
-	// return cellEditor;
-	// }
-	//
-	// @Override
-	// protected boolean canEdit(Object element) {
-	// return true;
-	// }
-	//
-	// @Override
-	// protected Object getValue(Object element) {
-	// AbstractTypeImplementation implementation = (AbstractTypeImplementation)
-	// element;
-	// return implementation.getImplementationClass() == null ? null
-	// : implementation.getImplementationClass()
-	// .getInstanceTypeName();
-	// }
-	//
-	// @Override
-	// protected void setValue(Object element, Object value) {
-	// EClass eClass = (EClass) value;
-	// AbstractTypeImplementation implementation = (AbstractTypeImplementation)
-	// element;
-	//
-	// SetCommand command = new SetCommand(
-	// editingDomain,
-	// implementation,
-	// ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
-	// eClass);
-	// editingDomain.getCommandStack().execute(command);
-	//
-	// this.viewer.refresh();
-	// }
-	// }
-	//
+	
 	@Override
 	public void dispose() {
 		super.dispose();
@@ -653,10 +436,5 @@ public class ContextsListComposite extends Composite {
 			m_bindingContext = null;
 		}
 		getEnvironment().eAdapters().remove(getInvocatorSessionAdapter());
-		/*
-		 * contextsListViewer TODO: Change listener
-		 * .removeSelectionChangedListener(
-		 * getContextsListViewerSelectionListener());
-		 */
 	}
 }

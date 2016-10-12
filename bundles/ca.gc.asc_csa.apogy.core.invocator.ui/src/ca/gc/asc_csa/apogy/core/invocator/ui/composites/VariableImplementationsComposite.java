@@ -121,22 +121,24 @@ public class VariableImplementationsComposite extends Composite {
 		scrolledform.getBody().setLayout(new GridLayout(1, false));
 		
 
-		Section sctnTable = toolkit.createSection(scrolledform.getBody(), Section.NO_TITLE);
+		/*Section sctnTable = toolkit.createSection(scrolledform.getBody(), Section.NO_TITLE);
 		GridData gd_sctnTable = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
 		gd_sctnTable.widthHint = 1;
 		gd_sctnTable.heightHint = 1;
 		sctnTable.setLayoutData(gd_sctnTable);
 		sctnTable.setSize(440, 0);
 		toolkit.paintBordersFor(sctnTable);
-		
+		*/
 
-		variableImplementationsViewer = new TreeViewer(sctnTable,
+		variableImplementationsViewer = new TreeViewer(scrolledform.getBody(),
 				SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
 	
 
 		ColumnViewerToolTipSupport.enableFor(variableImplementationsViewer, ToolTip.NO_RECREATE);
 		treeVariableImplementations = variableImplementationsViewer.getTree();
-		treeVariableImplementations.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		GridData gd_treeVariableImplementations = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+		gd_treeVariableImplementations.heightHint = 100;
+		treeVariableImplementations.setLayoutData(gd_treeVariableImplementations);
 		treeVariableImplementations.setLinesVisible(true);
 		treeVariableImplementations.setHeaderVisible(true);
 		toolkit.paintBordersFor	(treeVariableImplementations);
@@ -171,7 +173,7 @@ public class VariableImplementationsComposite extends Composite {
 		variableImplementationsViewer.setLabelProvider(new VariableImplementationLabelProvider(adapterFactory));
 
 		variableImplementationsViewer.addSelectionChangedListener(getVariableImplementationsViewerListener());
-		sctnTable.setClient(treeVariableImplementations);
+		//sctnTable.setClient(treeVariableImplementations);
 		
 		Section sctnDetails = toolkit.createSection(scrolledform.getBody(), Section.TITLE_BAR | Section.EXPANDED);
 		sctnDetails.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
@@ -313,7 +315,7 @@ public class VariableImplementationsComposite extends Composite {
 		/** Select the first element by default. */
 
 		if (context.getVariableImplementationsList().getVariableImplementations() != null && 
-			!context.getVariableImplementationsList().getVariableImplementations().isEmpty()){
+			context.getVariableImplementationsList().getVariableImplementations().isEmpty()){
 		
 			TreePath treePath = new TreePath(new Object[]{context.getVariableImplementationsList().getVariableImplementations().get(0)});		
 			ITreeSelection defaultElementSelected = new TreeSelection(treePath);

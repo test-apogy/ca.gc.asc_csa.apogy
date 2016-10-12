@@ -10,25 +10,24 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.llarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import ca.gc.asc_csa.apogy.common.emf.Described;
-import ca.gc.asc_csa.apogy.common.emf.Named;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.DescribedComposite;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+
 import ca.gc.asc_csa.apogy.core.invocator.Context;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.DataProductsListsContainerComposite;
 
 public class DataProductsListWizardPage extends WizardPage {
@@ -37,7 +36,7 @@ public class DataProductsListWizardPage extends WizardPage {
 	private DataProductsListsContainerComposite dataProductsListsContainerComposite;
 	private Adapter adapter; 
 	private Context context;
-	private DataProductsListsContainer dataProductsListsContainer;
+	private InvocatorSession invocatorSession;
 	
 	/**
 	 * Constructor for the WizardPage.
@@ -51,17 +50,20 @@ public class DataProductsListWizardPage extends WizardPage {
 	}
 
 	public DataProductsListWizardPage(
-			Context context, DataProductsListsContainer dataProductsListsContainer) {
+			Context context, InvocatorSession invocatorSession) {
 		this();
 		if (this.context != null){
 			this.context.eAdapters().remove(getAdapter());
 		}
-		if (this.dataProductsListsContainer != null){
-			this.dataProductsListsContainer.eAdapters().remove(getAdapter());
+		if (this.invocatorSession != null){
+			this.invocatorSession.eAdapters().remove(getAdapter());
 		}
 		
-		this.dataProductsListsContainer = dataProductsListsContainer;
+		this.invocatorSession = invocatorSession;
 		this.context = context;
+		
+		invocatorSession.eAdapters().add(getAdapter());
+		context.eAdapters().add(getAdapter());
 	}
 
 	private Adapter getAdapter() {
@@ -85,9 +87,9 @@ public class DataProductsListWizardPage extends WizardPage {
 
 		dataProductsListsContainerComposite = new DataProductsListsContainerComposite(container, SWT.None);
 		dataProductsListsContainerComposite.setContext(context);
+		dataProductsListsContainerComposite.setInvocatorSession(invocatorSession);
 		dataProductsListsContainerComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
-		dataProductsListsContainerComposite.setDataProductsListsContainer(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getDataProductsListContainer());
-		
+	
 		setControl(container);
 		
 		validate();
@@ -99,8 +101,8 @@ public class DataProductsListWizardPage extends WizardPage {
 		if (this.context != null){
 			this.context.eAdapters().remove(getAdapter());
 		}	
-		if (this.dataProductsListsContainer != null){
-			this.dataProductsListsContainer.eAdapters().remove(getAdapter());
+		if (this.invocatorSession != null){
+			this.invocatorSession.eAdapters().remove(getAdapter());
 		}
 	}
 	
@@ -108,19 +110,25 @@ public class DataProductsListWizardPage extends WizardPage {
 	 * This method is invoked to validate the content. 
 	 */
 	protected void validate() {
-		String errorStr1 = null;
-		String errorStr2 = null;
+		String errorContextStr = null;
+		//String errorDataProductsListStr = null;
 		
-		if (context.getDataProductsList() == null){
-			errorStr1 = "A Data Products List must be selected.";
-		}
+		Diagnostic diagnosticContext = Diagnostician.INSTANCE.validate(context);
+		//Diagnostic diagnosticDataProductsList = Diagnostician.INSTANCE.validate(invocatorSession.getDataProductsListContainer());
 		
-		/*if (dataProductsListsContainer != null || dataProductsListsContainer.getDataProductsList().size() < 1){
-			errorStr2 = "A Data Products List must be created.";
+		if (diagnosticContext.getSeverity() != Diagnostic.OK){
+			errorContextStr = "A variable Data Products List must be selected";
+		}	
+		/*if (diagnosticDataProductsList.getSeverity() != Diagnostic.OK){
+			System.out.println("DataProductsListWizardPage.validate()" + diagnosticDataProductsList);
+			errorDataProductsListStr = "A variable Data Products List must be created";
 		}	*/
 
-		//setMessage(errorStr1);
-		setErrorMessage(errorStr1);
-		setPageComplete(errorStr1 == null);
+		setErrorMessage(errorContextStr);
+		setPageComplete(errorContextStr == null);
+		
+		/*setMessage(errorContextStr);
+		setErrorMessage(errorDataProductsListStr);
+		setPageComplete(errorContextStr == null && errorDataProductsListStr == null);*/
 	}
 }

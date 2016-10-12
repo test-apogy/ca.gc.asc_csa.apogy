@@ -15,18 +15,10 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  */
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.conversion.Converter;
-import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.edit.command.SetCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ColumnViewer;
 import org.eclipse.jface.viewers.ColumnViewerEditorActivationEvent;
@@ -58,8 +50,6 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
@@ -68,12 +58,9 @@ import org.eclipse.ui.forms.widgets.Section;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
 
 public class VariableImplementationsWizardComposite extends Composite {
@@ -85,14 +72,8 @@ public class VariableImplementationsWizardComposite extends Composite {
 
 	private TreeViewer variableImplementationsViewer;
 
-	private EditingDomain editingDomain;
-
 	final private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
-	private Tree treeVariableImplementations;
-	private Text txtName;
-	private Text txtInterface;
-	private Text txtImplementation;
 
 	private ISelectionChangedListener variableImplementationsViewerListener;
 
@@ -136,7 +117,7 @@ public class VariableImplementationsWizardComposite extends Composite {
 	
 
 		ColumnViewerToolTipSupport.enableFor(variableImplementationsViewer, ToolTip.NO_RECREATE);
-		treeVariableImplementations = variableImplementationsViewer.getTree();
+		Tree treeVariableImplementations = variableImplementationsViewer.getTree();
 		treeVariableImplementations.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		treeVariableImplementations.setLinesVisible(true);
 		treeVariableImplementations.setHeaderVisible(true);
@@ -196,8 +177,6 @@ public class VariableImplementationsWizardComposite extends Composite {
 	 */
 	private void setContext(Context context, boolean update) {
 		this.context = context;
-		editingDomain = AdapterFactoryEditingDomain
-				.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
 		if (update) {
 			if (m_bindingContext != null) {
 				m_bindingContext.dispose();
@@ -229,15 +208,13 @@ public class VariableImplementationsWizardComposite extends Composite {
 		variableImplementationsViewer.expandAll();
 		
 		/** Select the first element by default. */
-
-		if (context.getVariableImplementationsList().getVariableImplementations() != null && 
-			!context.getVariableImplementationsList().getVariableImplementations().isEmpty()){
+		if (context.getVariableImplementationsList().getVariableImplementations() != null
+				&&	!context.getVariableImplementationsList().getVariableImplementations().isEmpty()){
 		
 			TreePath treePath = new TreePath(new Object[]{context.getVariableImplementationsList().getVariableImplementations().get(0)});		
 			ITreeSelection defaultElementSelected = new TreeSelection(treePath);
 			variableImplementationsViewer.setSelection(defaultElementSelected, true);
 		}
-				
 		return bindingContext;
 	}
 
@@ -284,9 +261,7 @@ public class VariableImplementationsWizardComposite extends Composite {
 	}
 
 	/**
-	 * 
-	 * 
-	 *
+	 * Label provider for the tree
 	 */
 	private class VariableImplementationLabelProvider extends
 			AdapterFactoryLabelProvider implements ITableLabelProvider{

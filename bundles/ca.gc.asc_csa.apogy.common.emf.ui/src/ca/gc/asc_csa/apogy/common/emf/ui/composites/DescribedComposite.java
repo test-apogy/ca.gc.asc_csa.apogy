@@ -50,7 +50,7 @@ public class DescribedComposite extends Composite {
 	}
 
 	public DescribedComposite(Composite parent, int style) {
-		super(parent, style);
+		super(parent, SWT.NONE);
 		
 		toolkit.adapt(this);
 		toolkit.paintBordersFor(this);
@@ -61,8 +61,8 @@ public class DescribedComposite extends Composite {
 		label.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
 
 		descriptionText = toolkit.createText(this, "", SWT.BORDER | SWT.V_SCROLL | SWT.MULTI);
-		GridData layoutData = new GridData(SWT.FILL, SWT.CENTER, true, false);
-		layoutData.heightHint = DESCRIPTION_TEXT_NUMBER_OF_LINES * descriptionText.getLineHeight();
+		GridData layoutData = new GridData(SWT.FILL, SWT.FILL, true, true);
+		layoutData.heightHint = 50;
 		descriptionText.setLayoutData(layoutData);
 				
 

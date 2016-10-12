@@ -10,12 +10,15 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.llarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
@@ -23,14 +26,13 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.Context;
-import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableImplementationsComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableImplementationsWizardComposite;
 
-public class ContextDefinitionWizardPage extends WizardPage {
+public class VariableImplementationsWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.ContextDefinitionWizardPage";
-	private VariableImplementationsWizardComposite variableImplementationsWizardComposite;
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableImplementationsWizardPage";
+	private VariableImplementationsComposite variableImplementationsComposite;
 	private Adapter adapter; 
 	private Context context;
 	
@@ -40,13 +42,13 @@ public class ContextDefinitionWizardPage extends WizardPage {
 	 * @param pageName
 	 * @wbp.parser.constructor
 	 */
-	public ContextDefinitionWizardPage() {
+	public VariableImplementationsWizardPage() {
 		super(WIZARD_PAGE_ID);
 		setTitle("Variable implementation");
 		setDescription("Select a variable implementation");
 	}
 
-	public ContextDefinitionWizardPage(Context context) {
+	public VariableImplementationsWizardPage(Context context) {
 		this();
 		
 		if (this.context != null){
@@ -73,11 +75,11 @@ public class ContextDefinitionWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */	
 	public void createControl(Composite parent) {
-		variableImplementationsWizardComposite = new VariableImplementationsWizardComposite(parent, SWT.None);
-		variableImplementationsWizardComposite.setContext(context);
-		variableImplementationsWizardComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
+		variableImplementationsComposite = new VariableImplementationsComposite(parent, SWT.None);
+		variableImplementationsComposite.setContext(context);
+		variableImplementationsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
 		
-		setControl(variableImplementationsWizardComposite);
+		setControl(variableImplementationsComposite);
 		validate();
 	}
 	
@@ -95,7 +97,11 @@ public class ContextDefinitionWizardPage extends WizardPage {
 	protected void validate() {
 		String errorVariableStr = null;
 				
-		if (context.getVariableImplementationsList().getVariableImplementations().get(0).getImplementationClass() == null){
+		VariableImplementationsList variableImplementationsList = context.getVariableImplementationsList();		
+		
+		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(variableImplementationsList);
+		
+		if (diagnostic.getSeverity() != Diagnostic.OK){
 			errorVariableStr = "A variable implementation must be selected";
 		}	
 
