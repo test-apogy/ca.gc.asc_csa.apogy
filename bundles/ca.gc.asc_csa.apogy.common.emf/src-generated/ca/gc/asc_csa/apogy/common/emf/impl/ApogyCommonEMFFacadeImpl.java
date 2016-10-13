@@ -1268,7 +1268,6 @@ ApogyCommonEMFFacade {
 		if (eReference.isMany()) {
 			int j = 1;
 			// Find a name that is unique
-			System.out.println("ApogyCommonEMFFacadeImpl.getDefaultName()" + Integer.toString(eObject.eContents().size())) ;
 			for (int i = 0; i < eObject.eContents().size(); i++) {
 				Named named = (Named) eObject.eContents().get(i);
 				if (named.getName().equals(name + "_" + Integer.toString(j))) {

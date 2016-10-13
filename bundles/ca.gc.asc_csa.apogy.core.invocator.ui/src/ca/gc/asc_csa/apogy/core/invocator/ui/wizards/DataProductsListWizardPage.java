@@ -87,7 +87,6 @@ public class DataProductsListWizardPage extends WizardPage {
 
 		dataProductsListsContainerComposite = new DataProductsListsContainerComposite(container, SWT.None);
 		dataProductsListsContainerComposite.setContext(context);
-		dataProductsListsContainerComposite.setInvocatorSession(invocatorSession);
 		dataProductsListsContainerComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
 	
 		setControl(container);
@@ -111,24 +110,12 @@ public class DataProductsListWizardPage extends WizardPage {
 	 */
 	protected void validate() {
 		String errorContextStr = null;
-		//String errorDataProductsListStr = null;
 		
 		Diagnostic diagnosticContext = Diagnostician.INSTANCE.validate(context);
-		//Diagnostic diagnosticDataProductsList = Diagnostician.INSTANCE.validate(invocatorSession.getDataProductsListContainer());
-		
 		if (diagnosticContext.getSeverity() != Diagnostic.OK){
 			errorContextStr = "A variable Data Products List must be selected";
 		}	
-		/*if (diagnosticDataProductsList.getSeverity() != Diagnostic.OK){
-			System.out.println("DataProductsListWizardPage.validate()" + diagnosticDataProductsList);
-			errorDataProductsListStr = "A variable Data Products List must be created";
-		}	*/
-
 		setErrorMessage(errorContextStr);
 		setPageComplete(errorContextStr == null);
-		
-		/*setMessage(errorContextStr);
-		setErrorMessage(errorDataProductsListStr);
-		setPageComplete(errorContextStr == null && errorDataProductsListStr == null);*/
 	}
 }

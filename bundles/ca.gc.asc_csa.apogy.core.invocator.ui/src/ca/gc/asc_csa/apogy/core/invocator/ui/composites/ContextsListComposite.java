@@ -147,8 +147,6 @@ public class ContextsListComposite extends Composite {
 					contextsListViewer.setChecked(element, false);
 					setCheckedElements(element, false);
 				} else {
-					System.out.println(
-							"ContextsListComposite.ContextsListComposite(...).new IDoubleClickListener() {...}.doubleClick()");
 					contextsListViewer.setChecked(element, true);
 					setCheckedElements(element, true);
 				}
@@ -220,9 +218,6 @@ public class ContextsListComposite extends Composite {
 	
 	private void setCheckedElements(Object object, boolean checked){
 		
-		System.out.println(
-				"ContextsListComposite.ContextsListComposite(...).new ICheckStateListener() {...}.checkStateChanged()"
-						+ getEnvironment().getActiveContext());
 		if (checked) {
 			SetCommand command = new SetCommand(editingDomain, getEnvironment(),
 					ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT, object);
@@ -240,11 +235,7 @@ public class ContextsListComposite extends Composite {
 			SetCommand command = new SetCommand(editingDomain, getEnvironment(),
 					ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT, null);
 			editingDomain.getCommandStack().execute(command);
-		}
-		System.out.println(
-				"ContextsListComposite.ContextsListComposite(...).new ICheckStateListener() {...}.checkStateChanged()"
-						+ getEnvironment().getActiveContext());
-		
+		}	
 	}
 
 	/**
@@ -334,13 +325,18 @@ public class ContextsListComposite extends Composite {
 				}));
 
 		/**
-		 * Selects the first context if there is no active context TODO
+		 * Selects the first context if there is no active context
 		 */
-		if(environmentBinder.getValue() != null){
-			if(getEnvironment().getActiveContext() == null && !getContextsList().getContexts().isEmpty()){
-				contextsListViewer.setSelection(new StructuredSelection(getContextsList().getContexts().get(0)));
+		if(getEnvironment() != null){
+			Context defaultSelectedContext = getEnvironment().getActiveContext();
+			if (defaultSelectedContext == null
+					&& getEnvironment().getContextsList().getContexts().isEmpty()) {
+				defaultSelectedContext = getEnvironment().getContextsList()
+						.getContexts().get(0);
 			}
-			contextsListViewer.setSelection(new StructuredSelection(getEnvironment().getActiveContext()));
+			contextsListViewer.setSelection(new StructuredSelection(
+					defaultSelectedContext), true);
+			
 		}
 
 		/**
@@ -394,16 +390,6 @@ public class ContextsListComposite extends Composite {
 		IStructuredSelection selection = (IStructuredSelection) contextsListViewer.getSelection();
 		return (Context) selection.getFirstElement();
 	}
-
-	private ContextsList getContextsList() {
-		if (environmentBinder == null || environmentBinder.getValue() == null
-				|| ((Environment) environmentBinder.getValue()).getContextsList() == null) {
-			return null;
-		} else {
-			return ((Environment) environmentBinder.getValue()).getContextsList();
-		}
-	}
-	
 
 
 	/**
