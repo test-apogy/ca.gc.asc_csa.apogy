@@ -61,6 +61,7 @@ import ca.gc.asc_csa.apogy.core.WorksitesList;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
@@ -209,7 +210,9 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 
 			/** Create a default Context */
 			context = ApogyCoreInvocatorFactory.eINSTANCE.createContext();
-			context.setName("Default");
+			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
+					environment.getContextsList(),
+					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
 			environment.getContextsList().getContexts().add(context);
 			environment.setActiveContext(context);
 			
