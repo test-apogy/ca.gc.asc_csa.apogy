@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
@@ -30,6 +31,7 @@ import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationState;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,6 +43,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl#getConstellationState <em>Constellation State</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl#getDownlinks <em>Downlinks</em>}</li>
  * </ul>
  *
@@ -163,11 +166,81 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConstellationState getConstellationState() {
+		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE) return null;
+		return (ConstellationState)eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationState basicGetConstellationState() {
+		if (eContainerFeatureID() != ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE) return null;
+		return (ConstellationState)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConstellationState(ConstellationState newConstellationState, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newConstellationState, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConstellationState(ConstellationState newConstellationState) {
+		if (newConstellationState != eInternalContainer() || (eContainerFeatureID() != ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE && newConstellationState != null)) {
+			if (EcoreUtil.isAncestor(this, newConstellationState))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newConstellationState != null)
+				msgs = ((InternalEObject)newConstellationState).eInverseAdd(this, ApogyExamplesSatellitePackage.CONSTELLATION_STATE__DOWNLINKS_LISTS, ConstellationState.class, msgs);
+			msgs = basicSetConstellationState(newConstellationState, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE, newConstellationState, newConstellationState));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<ConstellationDownlink> getDownlinks() {
 		if (downlinks == null) {
-			downlinks = new EObjectContainmentEList<ConstellationDownlink>(ConstellationDownlink.class, this, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS);
+			downlinks = new EObjectContainmentWithInverseEList<ConstellationDownlink>(ConstellationDownlink.class, this, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINK__CONSTELLATION_DOWNLINKS_LIST);
 		}
 		return downlinks;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetConstellationState((ConstellationState)otherEnd, msgs);
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDownlinks()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -178,10 +251,26 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE:
+				return basicSetConstellationState(null, msgs);
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				return ((InternalEList<?>)getDownlinks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE:
+				return eInternalContainer().eInverseRemove(this, ApogyExamplesSatellitePackage.CONSTELLATION_STATE__DOWNLINKS_LISTS, ConstellationState.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -196,6 +285,9 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 				return getName();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
 				return getDescription();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE:
+				if (resolve) return getConstellationState();
+				return basicGetConstellationState();
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				return getDownlinks();
 		}
@@ -216,6 +308,9 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 				return;
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
 				setDescription((String)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE:
+				setConstellationState((ConstellationState)newValue);
 				return;
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				getDownlinks().clear();
@@ -239,6 +334,9 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE:
+				setConstellationState((ConstellationState)null);
+				return;
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				getDownlinks().clear();
 				return;
@@ -258,6 +356,8 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__CONSTELLATION_STATE:
+				return basicGetConstellationState() != null;
 			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				return downlinks != null && !downlinks.isEmpty();
 		}

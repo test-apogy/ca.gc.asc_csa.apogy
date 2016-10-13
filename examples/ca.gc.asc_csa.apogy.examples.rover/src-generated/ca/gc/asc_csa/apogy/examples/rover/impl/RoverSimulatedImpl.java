@@ -449,4 +449,9 @@ public class RoverSimulatedImpl extends RoverImpl implements RoverSimulated
 			this.getMobilePlatform().cmdVelocities(linearVelocity, angularVelocity);
 		}
 	}
+
+	@Override
+	public void cmdChangeName(String name) {
+		setName(name);		
+	}
 } //RoverSimulatedImpl

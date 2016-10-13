@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.examples.rover;
  */
 
 import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.examples.camera.PTUCamera;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform;
 import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
@@ -48,7 +49,7 @@ import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
  * @model abstract="true"
  * @generated
  */
-public interface Rover extends Disposable
+public interface Rover extends Disposable, Named
 {
 
   /**
@@ -312,6 +313,18 @@ public interface Rover extends Disposable
   boolean init();
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * This operation is used to change the name of the rover.
+	 * @param name New name.
+	 * <!-- end-model-doc -->
+	 * @model nameUnique="false"
+	 * @generated
+	 */
+	void cmdChangeName(String name);
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

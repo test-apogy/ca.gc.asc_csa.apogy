@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.examples.camera.apogy.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -73,7 +72,7 @@ public class PTUCameraDataItemProvider
 	 */
 	protected void addPanAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PTUCameraData_panAngle_feature"),
@@ -95,7 +94,7 @@ public class PTUCameraDataItemProvider
 	 */
 	protected void addTiltAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PTUCameraData_tiltAngle_feature"),

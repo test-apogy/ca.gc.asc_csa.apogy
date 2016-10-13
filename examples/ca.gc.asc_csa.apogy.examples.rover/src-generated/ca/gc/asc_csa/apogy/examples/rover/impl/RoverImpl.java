@@ -13,6 +13,8 @@ package ca.gc.asc_csa.apogy.examples.rover.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -40,6 +42,7 @@ import com.google.common.base.Objects;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverImpl#getRoboticArm <em>Robotic Arm</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverImpl#getMobilePlatform <em>Mobile Platform</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverImpl#getArmCamera <em>Arm Camera</em>}</li>
@@ -55,6 +58,24 @@ import com.google.common.base.Objects;
  */
 public abstract class RoverImpl extends MinimalEObjectImpl.Container implements Rover
 {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getRoboticArm() <em>Robotic Arm</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -173,6 +194,27 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	protected EClass eStaticClass()
 	{
 		return ApogyExamplesRoverPackage.Literals.ROVER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoverPackage.ROVER__NAME, oldName, name));
 	}
 
 	/**
@@ -481,6 +523,13 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	abstract public boolean init();
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	abstract public void cmdChangeName(String name);
+
+	/**
 	 * This operation is used to dispose of the given rover, shutting down
 	 * and releasing the rover's resources; this implicitly means that the
 	 * rover will not be available after calling this method.
@@ -569,6 +618,8 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
+			case ApogyExamplesRoverPackage.ROVER__NAME:
+				return getName();
 			case ApogyExamplesRoverPackage.ROVER__ROBOTIC_ARM:
 				if (resolve) return getRoboticArm();
 				return basicGetRoboticArm();
@@ -604,6 +655,9 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
+			case ApogyExamplesRoverPackage.ROVER__NAME:
+				setName((String)newValue);
+				return;
 			case ApogyExamplesRoverPackage.ROVER__ROBOTIC_ARM:
 				setRoboticArm((RoboticArm)newValue);
 				return;
@@ -638,6 +692,9 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
+			case ApogyExamplesRoverPackage.ROVER__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case ApogyExamplesRoverPackage.ROVER__ROBOTIC_ARM:
 				setRoboticArm((RoboticArm)null);
 				return;
@@ -672,6 +729,8 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
+			case ApogyExamplesRoverPackage.ROVER__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApogyExamplesRoverPackage.ROVER__ROBOTIC_ARM:
 				return roboticArm != null;
 			case ApogyExamplesRoverPackage.ROVER__MOBILE_PLATFORM:
@@ -700,11 +759,46 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Named.class) {
+			switch (derivedFeatureID) {
+				case ApogyExamplesRoverPackage.ROVER__NAME: return ApogyCommonEMFPackage.NAMED__NAME;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Named.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.NAMED__NAME: return ApogyExamplesRoverPackage.ROVER__NAME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
 			case ApogyExamplesRoverPackage.ROVER___INIT:
 				return init();
+			case ApogyExamplesRoverPackage.ROVER___CMD_CHANGE_NAME__STRING:
+				cmdChangeName((String)arguments.get(0));
+				return null;
 			case ApogyExamplesRoverPackage.ROVER___CMD_LINEAR_VELOCITY__DOUBLE:
 				cmdLinearVelocity((Double)arguments.get(0));
 				return null;
@@ -731,7 +825,9 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (initialized: ");
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", initialized: ");
 		result.append(initialized);
 		result.append(", disposed: ");
 		result.append(disposed);

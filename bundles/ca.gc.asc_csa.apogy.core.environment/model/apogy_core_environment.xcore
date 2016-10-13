@@ -33,7 +33,7 @@ Contributors:
 		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.environment.edit/src-generated")
-@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.core.environment.tests/src-generated")
+//@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.core.environment.tests/src-generated")
 
 package ca.gc.asc_csa.apogy.core.environment
 

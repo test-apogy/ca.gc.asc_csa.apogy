@@ -24,7 +24,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
 import ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub;
@@ -119,7 +118,7 @@ public class PTUCameraStubItemProvider extends CameraStubItemProvider {
 	 */
 	protected void addCurrentPanAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_currentPanAngle_feature"),
@@ -141,7 +140,7 @@ public class PTUCameraStubItemProvider extends CameraStubItemProvider {
 	 */
 	protected void addCurrentTiltAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_currentTiltAngle_feature"),
@@ -163,7 +162,7 @@ public class PTUCameraStubItemProvider extends CameraStubItemProvider {
 	 */
 	protected void addCommandedPanAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_commandedPanAngle_feature"),
@@ -185,7 +184,7 @@ public class PTUCameraStubItemProvider extends CameraStubItemProvider {
 	 */
 	protected void addCommandedTiltAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_commandedTiltAngle_feature"),

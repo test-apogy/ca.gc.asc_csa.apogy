@@ -38,6 +38,7 @@ import ca.gc.asc_csa.apogy.common.emf.Disposable
 import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm
 import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform
 import ca.gc.asc_csa.apogy.examples.camera.PTUCamera
+import ca.gc.asc_csa.apogy.common.emf.Named
 
 /*
  * This class represents a battery in the rover's
@@ -162,7 +163,7 @@ class PowerSystem
  * its relevant state (e.g. component parts) as well as the
  * operations that it can perform.
  */
-abstract class Rover extends Disposable
+abstract class Rover extends Disposable, Named
 {	
 	/*
 	 * A robotic arm used by the rover assembly to interact
@@ -296,6 +297,12 @@ abstract class Rover extends Disposable
 	 * @return Whether or not the rover assembly was successfully initialized
 	 */
 	op boolean init()
+	
+	/* 
+	 * This operation is used to change the name of the rover.
+	 * @param name New name.
+	 */
+	op void cmdChangeName(String name)	
 	
 	/* 
 	 * This operation is used to change the linear velocity of the rover

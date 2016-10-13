@@ -17,10 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-public class Activator extends AbstractUIPlugin {
+public class Activator implements BundleActivator {
 
 	// The plug-in ID
 	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.bindings"; //$NON-NLS-1$

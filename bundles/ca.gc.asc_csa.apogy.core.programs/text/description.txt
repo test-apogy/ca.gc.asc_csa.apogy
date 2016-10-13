@@ -7,21 +7,7 @@ This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator
 
 Package programs <ca.gc.asc_csa.apogy.core.programs>
 
-  Class AbstractProgramRuntime
-    Reference program : Program
-    Operation resume() : void
-    Operation suspend() : void
-    Operation terminate() : void
-    Operation stepInto() : void
-    Operation stepOver() : void
-    Operation stepReturn() : void
-
   Class ApogyCoreProgramsFacade
     Reference session : InvocatorSession
     Reference variables : Variable<<0..*>>
     Operation exec(OperationCall) : EJavaObject
-
-  Class TimeInterval
-    Attribute startTime : ELong
-    Attribute endTime : ELong
-    Attribute /duration : ELong

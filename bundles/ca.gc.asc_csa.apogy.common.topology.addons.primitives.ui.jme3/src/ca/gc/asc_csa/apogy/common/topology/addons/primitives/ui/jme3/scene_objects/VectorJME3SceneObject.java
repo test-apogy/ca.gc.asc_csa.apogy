@@ -72,28 +72,35 @@ public class VectorJME3SceneObject extends DefaultJME3SceneObject<Vector> implem
 	@Override
 	public void setColor(RGB rgb) 
 	{
-		vectorColor = JME3Utilities.convertToColorRGBA(rgb);
-		jme3Application.enqueue(new Callable<Object>() 
+		if(rgb != null)
 		{
-			@Override
-			public Object call() throws Exception 
+			vectorColor = JME3Utilities.convertToColorRGBA(rgb);
+			jme3Application.enqueue(new Callable<Object>() 
 			{
-				try
-				{					
-					if(vectorGeometry != null)
-					{
-						Material mat = createVectorMaterial();						 			
-						vectorGeometry.setMaterial(mat);
-					}
-				}
-				catch(Throwable t)
+				@Override
+				public Object call() throws Exception 
 				{
-					Logger.INSTANCE.log(Activator.ID, this, "Failed to set color to <" + rgb + ">!", EventSeverity.ERROR, t);
+					try
+					{					
+						if(vectorGeometry != null)
+						{
+							Material mat = createVectorMaterial();						 			
+							vectorGeometry.setMaterial(mat);
+						}
+					}
+					catch(Throwable t)
+					{
+						Logger.INSTANCE.log(Activator.ID, this, "Failed to set color to <" + rgb + ">!", EventSeverity.ERROR, t);
+					}
+					
+					return null;
 				}
-				
-				return null;
-			}
-		});
+			});
+		}
+		else
+		{
+			Logger.INSTANCE.log(Activator.ID, this, "Failed to set color to <" + rgb + ">!", EventSeverity.ERROR);
+		}
 	}
 	
 	@Override

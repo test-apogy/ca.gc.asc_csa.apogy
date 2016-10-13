@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -122,7 +121,7 @@ public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvi
 	 */
 	protected void addTurretAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_turretAngle_feature"),
@@ -145,7 +144,7 @@ public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvi
 	protected void addShoulderAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_shoulderAngle_feature"),
@@ -168,7 +167,7 @@ public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvi
 	protected void addElbowAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_elbowAngle_feature"),
@@ -191,7 +190,7 @@ public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvi
 	protected void addWristAnglePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_wristAngle_feature"),

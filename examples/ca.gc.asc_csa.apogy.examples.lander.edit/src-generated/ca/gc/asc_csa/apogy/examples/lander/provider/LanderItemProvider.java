@@ -35,7 +35,6 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderFactory;
 import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
 import ca.gc.asc_csa.apogy.examples.lander.Lander;
@@ -111,7 +110,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 	protected void addLegAPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Lander_legAPosition_feature"),
@@ -157,7 +156,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 	protected void addLegBPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Lander_legBPosition_feature"),
@@ -203,7 +202,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 	protected void addLegCPositionPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Lander_legCPosition_feature"),
@@ -249,7 +248,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 	protected void addXAngularVelocityPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Lander_xAngularVelocity_feature"),
@@ -272,7 +271,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 	protected void addYAngularVelocityPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Lander_yAngularVelocity_feature"),
@@ -294,7 +293,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 	 */
 	protected void addMassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Lander_mass_feature"),
@@ -316,7 +315,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 	 */
 	protected void addFuelMassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Lander_fuelMass_feature"),
@@ -338,7 +337,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 	 */
 	protected void addGravitationalPullPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Lander_gravitationalPull_feature"),

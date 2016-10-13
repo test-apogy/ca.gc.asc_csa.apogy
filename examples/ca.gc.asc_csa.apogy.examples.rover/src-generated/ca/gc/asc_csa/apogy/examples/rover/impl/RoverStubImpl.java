@@ -194,4 +194,9 @@ public class RoverStubImpl extends RoverImpl implements RoverStub
 		// Log the stub message
 		Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.INFO);
 	}
+
+	@Override
+	public void cmdChangeName(String name) {
+		setName(name);
+	}
 } //RoverStubImpl

@@ -181,7 +181,7 @@ public class ApogyCoreInvocatorActionBarContributor
 	 * as well as the sub-menus for object creation items.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
   @Override
   public void contributeToMenu(IMenuManager menuManager)
@@ -189,7 +189,12 @@ public class ApogyCoreInvocatorActionBarContributor
 		super.contributeToMenu(menuManager);
 
 		IMenuManager submenuManager = new MenuManager(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ApogyCoreInvocatorEditor_menu"), "ca.gc.asc_csa.apogy.core.invocatorMenuID");
-		menuManager.insertAfter("additions", submenuManager);
+
+		// See bug https://bugs.eclipse.org/bugs/show_bug.cgi?id=409283
+		//		menuManager.insertAfter("additions", submenuManager);
+		menuManager.add(submenuManager);
+		
+		
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
 		submenuManager.add(new Separator("additions"));

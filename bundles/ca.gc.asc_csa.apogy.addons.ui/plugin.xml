@@ -183,5 +183,38 @@
             name="Apogy Addons">
       </category>
    </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyCategory
+               category="ca.gc.asc_csa.apogy.addons.property.category.Default"></propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.asc_csa.apogy.addons.property.category.Default"
+               id=" ca.gc.asc_csa.apogy.addons.ui.property.tab.GeometryPlacement"
+               label="Geometry Transform">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertySection
+               class="ca.gc.asc_csa.apogy.addons.ui.properties.sections.GeometryPlacementAtFeatureOfInterestToolPropertySection"
+               id=" ca.gc.asc_csa.apogy.addons.ui.property.section.GeometryPlacement"
+               tab=" ca.gc.asc_csa.apogy.addons.ui.property.tab.GeometryPlacement">
+            <input
+                  type="ca.gc.asc_csa.apogy.addons.GeometryPlacementAtFeatureOfInterestTool">
+            </input>
+         </propertySection>
+      </propertySections>
+   </extension>
 
 </plugin>

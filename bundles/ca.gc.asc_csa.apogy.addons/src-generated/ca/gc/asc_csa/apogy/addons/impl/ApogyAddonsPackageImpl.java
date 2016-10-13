@@ -1902,8 +1902,8 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		   new String[] {
 			 "documentation", "*\nThe TransformNode applying the geometry offsets between the tool transform and the geometry.",
 			 "notify", "true",
-			 "children", "true",
-			 "property", "Readonly"
+			 "children", "false",
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_UrlNode(), 

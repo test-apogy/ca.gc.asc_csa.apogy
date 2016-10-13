@@ -51,6 +51,7 @@ public interface Vector extends Node {
 	 * @see #setXRotation(double)
 	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getVector_XRotation()
 	 * @model default="0.0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getXRotation();
@@ -78,6 +79,7 @@ public interface Vector extends Node {
 	 * @see #setYRotation(double)
 	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getVector_YRotation()
 	 * @model default="0.0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getYRotation();
@@ -105,6 +107,7 @@ public interface Vector extends Node {
 	 * @see #setZRotation(double)
 	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getVector_ZRotation()
 	 * @model default="0.0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getZRotation();
@@ -121,6 +124,7 @@ public interface Vector extends Node {
 
 	/**
 	 * Returns the value of the '<em><b>Length</b></em>' attribute.
+	 * The default value is <code>"1.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Length</em>' attribute isn't clear,
@@ -130,7 +134,8 @@ public interface Vector extends Node {
 	 * @return the value of the '<em>Length</em>' attribute.
 	 * @see #setLength(double)
 	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getVector_Length()
-	 * @model unique="false"
+	 * @model default="1.0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	double getLength();

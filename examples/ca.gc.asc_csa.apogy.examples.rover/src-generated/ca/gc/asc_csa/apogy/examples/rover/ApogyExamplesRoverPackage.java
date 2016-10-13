@@ -241,13 +241,22 @@ public interface ApogyExamplesRoverPackage extends EPackage
   int ROVER = 2;
 
   /**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROVER__NAME = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
+
+		/**
 	 * The feature id for the '<em><b>Robotic Arm</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER__ROBOTIC_ARM = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
+  int ROVER__ROBOTIC_ARM = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Mobile Platform</b></em>' reference.
@@ -256,7 +265,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER__MOBILE_PLATFORM = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
+  int ROVER__MOBILE_PLATFORM = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Arm Camera</b></em>' reference.
@@ -265,7 +274,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__ARM_CAMERA = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
+	int ROVER__ARM_CAMERA = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
 
 		/**
 	 * The feature id for the '<em><b>Center Camera</b></em>' reference.
@@ -274,7 +283,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__CENTER_CAMERA = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
+	int ROVER__CENTER_CAMERA = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
 
 		/**
 	 * The feature id for the '<em><b>Power System</b></em>' containment reference.
@@ -283,7 +292,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__POWER_SYSTEM = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
+	int ROVER__POWER_SYSTEM = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
 
 		/**
 	 * The feature id for the '<em><b>Linear Velocity</b></em>' attribute.
@@ -292,7 +301,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__LINEAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
+	int ROVER__LINEAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
 
 		/**
 	 * The feature id for the '<em><b>Angular Velocity</b></em>' attribute.
@@ -301,7 +310,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__ANGULAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
+	int ROVER__ANGULAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
 
 		/**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -310,7 +319,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__INITIALIZED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
+	int ROVER__INITIALIZED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -319,7 +328,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__DISPOSED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
+	int ROVER__DISPOSED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 9;
 
 		/**
 	 * The number of structural features of the '<em>Rover</em>' class.
@@ -328,7 +337,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_FEATURE_COUNT = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 9;
+  int ROVER_FEATURE_COUNT = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 10;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -349,13 +358,22 @@ public interface ApogyExamplesRoverPackage extends EPackage
   int ROVER___INIT = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
 
   /**
+	 * The operation id for the '<em>Cmd Change Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROVER___CMD_CHANGE_NAME__STRING = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
+
+		/**
 	 * The operation id for the '<em>Cmd Linear Velocity</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___CMD_LINEAR_VELOCITY__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
+	int ROVER___CMD_LINEAR_VELOCITY__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Cmd Angular Velocity</em>' operation.
@@ -364,7 +382,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___CMD_ANGULAR_VELOCITY__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
+	int ROVER___CMD_ANGULAR_VELOCITY__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
 
 		/**
 	 * The operation id for the '<em>Cmd Velocities</em>' operation.
@@ -373,7 +391,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
+	int ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
 
 		/**
 	 * The number of operations of the '<em>Rover</em>' class.
@@ -382,7 +400,7 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_OPERATION_COUNT = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
+  int ROVER_OPERATION_COUNT = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 5;
 
   /**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverStubImpl <em>Rover Stub</em>}' class.
@@ -395,6 +413,15 @@ public interface ApogyExamplesRoverPackage extends EPackage
   int ROVER_STUB = 3;
 
   /**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROVER_STUB__NAME = ROVER__NAME;
+
+		/**
 	 * The feature id for the '<em><b>Robotic Arm</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -503,6 +530,15 @@ public interface ApogyExamplesRoverPackage extends EPackage
   int ROVER_STUB___INIT = ROVER___INIT;
 
 		/**
+	 * The operation id for the '<em>Cmd Change Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROVER_STUB___CMD_CHANGE_NAME__STRING = ROVER___CMD_CHANGE_NAME__STRING;
+
+		/**
 	 * The operation id for the '<em>Cmd Linear Velocity</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -547,6 +583,15 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @generated
 	 */
 	int ROVER_SIMULATED = 4;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROVER_SIMULATED__NAME = ROVER__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Robotic Arm</b></em>' reference.
@@ -655,6 +700,15 @@ public interface ApogyExamplesRoverPackage extends EPackage
 	 * @ordered
 	 */
 	int ROVER_SIMULATED___INIT = ROVER___INIT;
+
+		/**
+	 * The operation id for the '<em>Cmd Change Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROVER_SIMULATED___CMD_CHANGE_NAME__STRING = ROVER___CMD_CHANGE_NAME__STRING;
 
 		/**
 	 * The operation id for the '<em>Cmd Linear Velocity</em>' operation.
@@ -939,6 +993,16 @@ public interface ApogyExamplesRoverPackage extends EPackage
   EOperation getRover__Init();
 
   /**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#cmdChangeName(java.lang.String) <em>Cmd Change Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Cmd Change Name</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#cmdChangeName(java.lang.String)
+	 * @generated
+	 */
+	EOperation getRover__CmdChangeName__String();
+
+		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#cmdLinearVelocity(double) <em>Cmd Linear Velocity</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1203,6 +1267,14 @@ public interface ApogyExamplesRoverPackage extends EPackage
     EOperation ROVER___INIT = eINSTANCE.getRover__Init();
 
     /**
+		 * The meta object literal for the '<em><b>Cmd Change Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROVER___CMD_CHANGE_NAME__STRING = eINSTANCE.getRover__CmdChangeName__String();
+
+				/**
 		 * The meta object literal for the '<em><b>Cmd Linear Velocity</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

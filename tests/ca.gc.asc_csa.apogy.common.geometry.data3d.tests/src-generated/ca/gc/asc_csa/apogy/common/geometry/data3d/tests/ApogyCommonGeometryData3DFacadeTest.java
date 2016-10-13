@@ -13,6 +13,8 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +22,8 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
@@ -27,13 +31,11 @@ import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
-
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
@@ -71,6 +73,7 @@ import junit.textui.TestRunner;
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#updateCartesianCoordinatesSet(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, double[][]) <em>Update Cartesian Coordinates Set</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#concatenateTriangularMeshes(java.util.List) <em>Concatenate Triangular Meshes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#generatePointCloud(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, double) <em>Generate Point Cloud</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -886,6 +889,53 @@ public class ApogyCommonGeometryData3DFacadeTest extends TestCase {
 		assertEquals(mesh1.getPolygons().size() + mesh2.getPolygons().size(), concatenatedMesh.getPolygons().size());
 	}
 	
+	/**
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#generatePointCloud(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, double) <em>Generate Point Cloud</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#generatePointCloud(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, double)
+	 * @generated_NOT
+	 */
+	public void testGeneratePointCloud__CartesianTriangularMesh_double() 
+	{
+//		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+//		
+//		CartesianPositionCoordinates p0 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
+//		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(0.5, 0, 0);
+//		CartesianPositionCoordinates p2 = getFixture().createCartesianPositionCoordinates(0.5, 1, 1E-9);
+//		CartesianPositionCoordinates p3 = getFixture().createCartesianPositionCoordinates(0, 1, 1E-4);
+//		
+//		mesh.getPoints().add(p0);
+//		mesh.getPoints().add(p1);
+//		mesh.getPoints().add(p2);
+//		mesh.getPoints().add(p3);
+//		
+//		CartesianTriangle t0 = getFixture().createCartesianTriangle(p0, p1, p2);
+//		CartesianTriangle t1 = getFixture().createCartesianTriangle(p0, p2, p3);
+//		
+//		mesh.getPolygons().add(t0);
+//		mesh.getPolygons().add(t1);
+		try 
+		{		
+			CartesianTriangularMesh mesh = Data3DIO.INSTANCE.loadTriangularMeshFromASCII("/home/pallard/MAV_REV_B");
+			System.out.println("testGeneratePointCloud__CartesianTriangularMesh_double : Mesh contains <" + mesh.getPolygons().size() +"> polygons.");
+			
+			CartesianCoordinatesSet pointCloud = getFixture().generatePointCloud(mesh, 1.0);				
+	
+			// Export the point cloud to file.	
+			System.out.println(System.getProperty("user.dir"));
+			FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir") + File.separator + "generatePointCloudPoints.xyz");
+			Data3DIO.INSTANCE.saveCoordinatesSetToXYZ(pointCloud, fos);
+		
+			// Export the mesh to file.
+			// Data3DIO.INSTANCE.saveTriangularMeshAsASCII(mesh, System.getProperty("user.dir") + File.separator + "generatePointCloudMesh");			
+		} 
+		catch (Exception e) 
+		{
+			fail(e.getMessage());
+		}					
+	}
+
 	private CartesianTriangularMesh createCartesianTriangularMesh()
 	{
 		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();

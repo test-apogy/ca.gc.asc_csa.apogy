@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -90,7 +89,7 @@ public class VisibilityPassSpacecraftPositionHistoryItemProvider
 	 */
 	protected void addTimeIntervalPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPositionHistory_timeInterval_feature"),

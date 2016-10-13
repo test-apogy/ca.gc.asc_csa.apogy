@@ -15,15 +15,16 @@ package ca.gc.asc_csa.apogy.common.topology.ui.jme3.views;
 
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Composite;
+
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
-import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.common.topology.URLNode;
 import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
-import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewer;
 import ca.gc.asc_csa.apogy.common.topology.ui.viewer.actions.NewAbstractTopology3DViewAction;
@@ -70,10 +71,19 @@ public class JME3Topology3DView extends AbstractTopology3DView
 	@Override
 	public void updateSelection(ISelection selection) 
 	{
-		GraphicsContext gc = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(createTestTopology());
-		getTopologyViewer().setInput(gc);		
+		if(selection instanceof IStructuredSelection)
+		{
+			IStructuredSelection ss = (IStructuredSelection) selection;
+			
+			GraphicsContext gc = ca.gc.asc_csa.apogy.common.topology.ui.Activator.getDefault().getGraphicsContextForObject(ss.getFirstElement());
+			
+			if(gc != null)
+			{
+				getTopologyViewer().setInput(gc);
+			}
 		
-		updatePartName();
+			updatePartName();
+		}
 	}
 
 	@Override
@@ -88,6 +98,7 @@ public class JME3Topology3DView extends AbstractTopology3DView
 		return "TEST";
 	}
 		
+	@SuppressWarnings("unused")
 	private Node createTestTopology()
 	{
 		AggregateGroupNode root = ApogyCommonTopologyFactory.eINSTANCE.createAggregateGroupNode();

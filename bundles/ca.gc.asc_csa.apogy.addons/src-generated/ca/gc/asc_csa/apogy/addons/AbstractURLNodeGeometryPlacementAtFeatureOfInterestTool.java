@@ -52,7 +52,7 @@ public interface AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool extends
 	 * @return the value of the '<em>Cad Transform Node</em>' reference.
 	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_CadTransformNode()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='true' property='Readonly'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='None'"
 	 * @generated
 	 */
 	TransformNode getCadTransformNode();
