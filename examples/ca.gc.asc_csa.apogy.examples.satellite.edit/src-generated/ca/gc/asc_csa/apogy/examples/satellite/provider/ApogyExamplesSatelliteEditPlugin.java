@@ -30,7 +30,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider.ApogyCoreEnviro
 import ca.gc.asc_csa.apogy.core.environment.orbit.provider.ApogyCoreEnvironmentOrbitEditPlugin;
 
 import ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentEditPlugin;
-
 import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 import ca.gc.asc_csa.apogy.core.provider.ApogyCoreEditPlugin;
 

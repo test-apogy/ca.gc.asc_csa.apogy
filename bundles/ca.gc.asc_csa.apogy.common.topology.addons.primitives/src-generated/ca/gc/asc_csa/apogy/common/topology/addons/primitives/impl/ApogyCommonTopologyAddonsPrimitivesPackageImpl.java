@@ -837,7 +837,7 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 		initEAttribute(getVector_XRotation(), theEcorePackage.getEDouble(), "xRotation", "0.0", 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVector_YRotation(), theEcorePackage.getEDouble(), "yRotation", "0.0", 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVector_ZRotation(), theEcorePackage.getEDouble(), "zRotation", "0.0", 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVector_Length(), theEcorePackage.getEDouble(), "length", null, 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVector_Length(), theEcorePackage.getEDouble(), "length", "1.0", 0, 1, Vector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVector_EndPoint(), this.getPoint3d(), "endPoint", null, 0, 1, Vector.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(pickVectorEClass, PickVector.class, "PickVector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -991,6 +991,30 @@ public class ApogyCommonTopologyAddonsPrimitivesPackageImpl extends EPackageImpl
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.primitives/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.primitives.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.topology.addons"
+		   });	
+		addAnnotation
+		  (getVector_XRotation(), 
+		   source, 
+		   new String[] {
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getVector_YRotation(), 
+		   source, 
+		   new String[] {
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getVector_ZRotation(), 
+		   source, 
+		   new String[] {
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getVector_Length(), 
+		   source, 
+		   new String[] {
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getPickVector_IntersectionDistance(), 

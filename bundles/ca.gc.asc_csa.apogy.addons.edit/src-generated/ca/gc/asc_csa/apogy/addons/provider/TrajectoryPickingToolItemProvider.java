@@ -19,7 +19,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 import ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool} object.
@@ -67,7 +66,7 @@ public class TrajectoryPickingToolItemProvider extends Simple3DToolItemProvider
 	 */
 	protected void addAltitudeOffsetPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryPickingTool_altitudeOffset_feature"),

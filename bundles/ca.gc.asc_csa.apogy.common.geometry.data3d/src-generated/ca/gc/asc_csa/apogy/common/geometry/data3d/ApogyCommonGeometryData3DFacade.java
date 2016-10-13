@@ -253,4 +253,19 @@ public interface ApogyCommonGeometryData3DFacade extends EObject {
 	 */
 	CartesianTriangularMesh concatenateTriangularMeshes(List<CartesianTriangularMesh> listOfTriangularMeshes);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Generate a point cloud from a CartesianTriangularMesh at a given resolution.
+	 * @param cartesianCoordinatesMesh The Cartesian Triangular Mesh.
+	 * @param resolution The target resolution of the point cloud.
+	 * @return A CartesianCoordinatesSet containing the points.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" cartesianCoordinatesMeshUnique="false" resolutionUnique="false"
+	 * @generated
+	 */
+	CartesianCoordinatesSet generatePointCloud(CartesianTriangularMesh cartesianCoordinatesMesh, double resolution);
+
 } // ApogyCommonGeometryData3DFacade

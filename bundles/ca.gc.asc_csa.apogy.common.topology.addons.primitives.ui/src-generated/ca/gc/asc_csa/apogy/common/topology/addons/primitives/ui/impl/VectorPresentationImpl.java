@@ -16,6 +16,8 @@ package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.swt.graphics.RGB;
+
 import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage;
 import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.VectorPresentation;
 import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.VectorSceneObject;
@@ -74,6 +76,18 @@ public class VectorPresentationImpl extends NodePresentationImpl implements Vect
 		return ApogyCommonTopologyAddonsPrimitivesUIPackage.Literals.VECTOR_PRESENTATION;
 	}
 
+	@Override
+	public RGB getColor() 
+	{	
+		RGB rgb = super.getColor();
+		if(rgb == null)
+		{
+			rgb = new RGB(255, 255, 255);
+			setColor(rgb);
+		}
+		return rgb;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,7 +189,34 @@ public class VectorPresentationImpl extends NodePresentationImpl implements Vect
 		VectorSceneObject vectorSceneObject = ((VectorSceneObject) sceneObject);
 		vectorSceneObject.initialize();
 		vectorSceneObject.setLineWidth(getLineWidth());
+		
 		super.initialSceneObject();
+	}
+	
+	@Override
+	protected void updateSceneObject(Notification notification) 
+	{
+		if (sceneObject != null) 
+		{
+			VectorSceneObject vectorSceneObject = (VectorSceneObject) sceneObject;
+		
+			if(notification.getNotifier() instanceof VectorPresentation)
+			{
+				int featureID = notification.getFeatureID(VectorPresentation.class);
+				switch (featureID) 
+				{
+					case ApogyCommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__COLOR:
+						vectorSceneObject.setColor(getColor());					
+					break;
+
+					case ApogyCommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__LINE_WIDTH:
+						vectorSceneObject.setLineWidth(getLineWidth());					
+					default:
+					break;
+				}
+			}
+		}
+		super.updateSceneObject(notification);
 	}
 
 } //VectorPresentationImpl

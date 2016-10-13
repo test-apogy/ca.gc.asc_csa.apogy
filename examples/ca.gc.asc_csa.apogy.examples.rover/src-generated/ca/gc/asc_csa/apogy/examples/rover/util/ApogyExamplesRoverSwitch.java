@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.examples.rover.*;
 
 /**
@@ -96,6 +97,7 @@ public class ApogyExamplesRoverSwitch<T> extends Switch<T>
 				Rover rover = (Rover)theEObject;
 				T result = caseRover(rover);
 				if (result == null) result = caseDisposable(rover);
+				if (result == null) result = caseNamed(rover);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -104,6 +106,7 @@ public class ApogyExamplesRoverSwitch<T> extends Switch<T>
 				T result = caseRoverStub(roverStub);
 				if (result == null) result = caseRover(roverStub);
 				if (result == null) result = caseDisposable(roverStub);
+				if (result == null) result = caseNamed(roverStub);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,6 +115,7 @@ public class ApogyExamplesRoverSwitch<T> extends Switch<T>
 				T result = caseRoverSimulated(roverSimulated);
 				if (result == null) result = caseRover(roverSimulated);
 				if (result == null) result = caseDisposable(roverSimulated);
+				if (result == null) result = caseNamed(roverSimulated);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -208,6 +212,21 @@ public class ApogyExamplesRoverSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseDisposable(Disposable object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamed(Named object) {
 		return null;
 	}
 

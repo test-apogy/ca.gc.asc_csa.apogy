@@ -52,6 +52,7 @@ public interface ConstellationPlannersContainer extends EObject {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationPlannersContainer_ConstellationState()
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationPlannersContainer
 	 * @model opposite="constellationPlannersContainer" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	ConstellationState getConstellationState();

@@ -111,7 +111,7 @@ public class VectorImpl extends NodeImpl implements Vector
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double LENGTH_EDEFAULT = 0.0;
+	protected static final double LENGTH_EDEFAULT = 1.0;
 
 	/**
 	 * The cached value of the '{@link #getLength() <em>Length</em>}' attribute.

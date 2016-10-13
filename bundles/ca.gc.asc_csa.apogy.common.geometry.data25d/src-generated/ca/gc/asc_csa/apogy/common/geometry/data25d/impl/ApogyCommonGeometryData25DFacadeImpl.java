@@ -126,6 +126,7 @@ public class ApogyCommonGeometryData25DFacadeImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ApogyCommonGeometryData25DPackage.APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D:

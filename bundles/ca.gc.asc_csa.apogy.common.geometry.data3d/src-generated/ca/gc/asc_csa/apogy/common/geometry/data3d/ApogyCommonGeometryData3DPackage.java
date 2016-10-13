@@ -50,7 +50,7 @@ import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonGeometryData3D' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyCommonGeometryData3D' suppressGenModelAnnotations='false' dynamicTemplates='true' templateDirectory='platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates' modelDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.edit/src-generated' testsDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.tests/src-generated' basePackage='ca.gc.asc_csa.apogy.common.geometry'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonGeometryData3D' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyCommonGeometryData3D' suppressGenModelAnnotations='false' dynamicTemplates='true' templateDirectory='platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates' modelDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.geometry'"
  * @generated
  */
 public interface ApogyCommonGeometryData3DPackage extends EPackage {
@@ -3762,13 +3762,22 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = 26;
 
 	/**
+	 * The operation id for the '<em>Generate Point Cloud</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___GENERATE_POINT_CLOUD__CARTESIANTRIANGULARMESH_DOUBLE = 27;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE_OPERATION_COUNT = 27;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE_OPERATION_COUNT = 28;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.
@@ -5685,6 +5694,16 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	EOperation getApogyCommonGeometryData3DFacade__ConcatenateTriangularMeshes__List();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#generatePointCloud(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, double) <em>Generate Point Cloud</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Point Cloud</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#generatePointCloud(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, double)
+	 * @generated
+	 */
+	EOperation getApogyCommonGeometryData3DFacade__GeneratePointCloud__CartesianTriangularMesh_double();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO <em>Data3 DIO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7385,6 +7404,14 @@ public interface ApogyCommonGeometryData3DPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = eINSTANCE.getApogyCommonGeometryData3DFacade__ConcatenateTriangularMeshes__List();
+
+		/**
+		 * The meta object literal for the '<em><b>Generate Point Cloud</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___GENERATE_POINT_CLOUD__CARTESIANTRIANGULARMESH_DOUBLE = eINSTANCE.getApogyCommonGeometryData3DFacade__GeneratePointCloud__CartesianTriangularMesh_double();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.

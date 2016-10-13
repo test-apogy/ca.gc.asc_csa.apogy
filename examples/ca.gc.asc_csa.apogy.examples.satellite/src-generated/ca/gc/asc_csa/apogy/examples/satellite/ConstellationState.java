@@ -123,6 +123,7 @@ public interface ConstellationState extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Downlinks Lists</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getConstellationState <em>Constellation State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -131,7 +132,8 @@ public interface ConstellationState extends EObject {
 	 * @return the value of the '<em>Downlinks Lists</em>' containment reference.
 	 * @see #setDownlinksLists(ConstellationDownlinksList)
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationState_DownlinksLists()
-	 * @model containment="true"
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getConstellationState
+	 * @model opposite="constellationState" containment="true"
 	 * @generated
 	 */
 	ConstellationDownlinksList getDownlinksLists();
@@ -225,5 +227,18 @@ public interface ConstellationState extends EObject {
 	 * @generated
 	 */
 	void export(AbstractConstellationCommandPlan plan, String url);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Imports the {@link AbstractConstellationDownlinkItem} contained in the resource specified by the {@link url}.
+	 * @param url URL that specifies the resource.
+	 * @return List of imported {@link AbstractConstellationDownlinkItem}.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem>" unique="false" many="false" urlUnique="false"
+	 * @generated
+	 */
+	List<AbstractConstellationDownlinkItem> importConstellationDownlinkItems(String url);
 
 } // ConstellationState

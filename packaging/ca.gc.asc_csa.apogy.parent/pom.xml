@@ -39,23 +39,17 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/eclipse/updates/${eclipse.updates.version}</url>
 		</repository>
-
-		<repository>
-			<id>Nebula</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/technology/nebula/snapshot</url>
-		</repository>
 		
 		<repository>
 			<id>Orbit</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/</url>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160221192158/repository/</url>
 		</repository>		
 		
 		<repository>
-			<id>Sirius</id>
+			<id>Sirius4</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/sirius/updates/releases/3.1.1/mars</url>
+			<url>http://download.eclipse.org/sirius/updates/releases/4.0.0/neon</url>
 		</repository>		
 		
 		<repository>
@@ -74,7 +68,7 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho.version}</version>
 				<configuration>
-					<environments>
+					<environments>									
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
@@ -89,7 +83,7 @@
 							<os>linux</os>
 							<ws>gtk</ws>
 							<arch>x86</arch>
-						</environment>
+						</environment>					
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
@@ -137,13 +131,27 @@
 						</goals>
 						<configuration>
 							<excludes>
-								<plugin id="ca.gc.asc_csa.apogy.core.programs.javascript.doc" />
-								<plugin id="ca.gc.asc_csa.apogy.doc" />
-								<plugin id="org.apache.commons.collections" />
-								<plugin id="ca.gc.asc_csa.apogy.common.emf.templates" />
+								<plugin id="ca.gc.asc_csa.apogy.core.programs.javascript.doc"/>
+								<plugin id="ca.gc.asc_csa.apogy.doc"/>
+								<plugin id="org.apache.commons.collections"/>
+								<plugin id="ca.gc.asc_csa.apogy.common.emf.templates"/>
+								<plugin id="org.apache.ws.commons.util"/>
+ 								<plugin id="org.eclipse.emf"/>
+								<plugin id="org.eclipse.wst.jsdt.debug.ui"/>
+								<plugin id="org.eclipse.swt"/>
+
+								<feature id="ca.gc.asc_csa.apogy.rcp.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.core.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.common.feature"/>
+								<feature id="ca.gc.asc_csa.apogy.addons.feature"/>
+								
 								<feature id="org.eclipse.sirius.runtime"/>
 								<feature id="org.eclipse.nebula.widgets.gallery.feature"/>
 								<feature id="org.eclipse.wst.jsdt.feature"/>
+								<feature id="org.eclipse.ecf.core.feature"/>
+								<feature id="org.eclipse.ecf.filetransfer.feature"/>
+								
 							</excludes>
 						</configuration>
 					</execution>
@@ -334,16 +342,20 @@
 		
 		<module>../../bundles/ca.gc.asc_csa.apogy.ui</module>		
 		<module>../../bundles/ca.gc.asc_csa.apogy.feature</module>
-		<module>../../bundles/ca.gc.asc_csa.apogy.sdk.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.repository</module>
-		
+				
+		<!-- RCP -->
+		<module>../../bundles/ca.gc.asc_csa.apogy.rcp</module>				
+		<module>../../bundles/ca.gc.asc_csa.apogy.rcp.feature</module>
+		<module>../../bundles/org.eclipse.e4.ui.workbench.perspectiveswitcher</module>		
+				
 		<!-- JavaScript -->
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.edit</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.javascript.ui</module>
 		<module>../../doc/ca.gc.asc_csa.apogy.core.programs.javascript.doc</module>
-		<module>../../tests/ca.gc.asc_csa.apogy.core.programs.javascript.tests</module>
+		<!--<module>../../tests/ca.gc.asc_csa.apogy.core.programs.javascript.tests</module>-->
 		
 
 		<!-- Examples -->
@@ -399,6 +411,7 @@
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.ui</module>
 		
 		<module>../../examples/ca.gc.asc_csa.apogy.examples.worksites.surface</module>
+			
 		
 		<!-- Tests -->
 		<!-- <module>../../tests/ca.gc.asc_csa.apogy.common.converters.tests</module> -->

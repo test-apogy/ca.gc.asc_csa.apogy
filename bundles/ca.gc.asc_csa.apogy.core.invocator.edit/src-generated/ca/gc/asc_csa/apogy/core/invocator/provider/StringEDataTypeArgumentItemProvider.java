@@ -21,12 +21,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.edit.descriptors.ENumberDataTypeArgumentItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument} object.
@@ -60,23 +55,6 @@ public class StringEDataTypeArgumentItemProvider extends EDataTypeArgumentItemPr
 		return itemPropertyDescriptors;
 	}
 	
-	@Override
-	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(new ENumberDataTypeArgumentItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_EDataTypeArgument_value_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_EDataTypeArgument_value_feature",
-								"_UI_EDataTypeArgument_type"),
-						ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-						null));
-	}
-
 	/**
 	 * This returns StringEDataTypeArgument.gif.
 	 * <!-- begin-user-doc -->

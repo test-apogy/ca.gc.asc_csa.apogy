@@ -18,7 +18,10 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.ViewerComparator;
@@ -39,7 +42,9 @@ import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
 import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer;
+import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 
 public class ConstellationRequestsComposite extends Composite {
 
@@ -49,6 +54,7 @@ public class ConstellationRequestsComposite extends Composite {
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 	private DataBindingContext m_bindingContext;
 	private ConstellationRequestsListsContainer constellationRequestsListsContainer;
+	private ISelectionChangedListener requestsViewerListener;
 
 	/**
 	 * Create the composite.
@@ -78,19 +84,19 @@ public class ConstellationRequestsComposite extends Composite {
 
 		TreeViewerColumn treeViewerColumnUID = new TreeViewerColumn(requestsViewer, SWT.NONE);
 		TreeColumn treeclmnUID = treeViewerColumnUID.getColumn();
-		treeclmnUID.setWidth(80);
+		treeclmnUID.setWidth(150);
 		treeclmnUID.setText("UID");
 		treeclmnUID.setToolTipText("Refers to the constellation Request Unique Identifier.");
-
-		TreeViewerColumn treeViewerSatellite = new TreeViewerColumn(requestsViewer, SWT.NONE);
-		TreeColumn treeclmnSatellite = treeViewerSatellite.getColumn();
-		treeclmnSatellite.setWidth(150);
-		treeclmnSatellite.setText("Satellite");
-		treeclmnSatellite.setToolTipText("Specifies the satellite that will process the constellation request.");
-
+		
+		TreeViewerColumn treeViewerColumnType = new TreeViewerColumn(requestsViewer, SWT.NONE);
+		TreeColumn treeclmnType = treeViewerColumnType.getColumn();
+		treeclmnType.setWidth(150);
+		treeclmnType.setText("Type");
+		treeclmnType.setToolTipText("Refers to the constellation Request type.");
+		
 		TreeViewerColumn treeViewerPriority = new TreeViewerColumn(requestsViewer, SWT.NONE);
 		TreeColumn treeclmnPriority = treeViewerPriority.getColumn();
-		treeclmnPriority.setWidth(150);
+		treeclmnPriority.setWidth(100);
 		treeclmnPriority.setText("Priority");
 		treeclmnPriority.setToolTipText("Specifies the priority level the constellation request.");
 		
@@ -100,8 +106,27 @@ public class ConstellationRequestsComposite extends Composite {
 		treeclmnStatus.setText("Status");
 		treeclmnStatus.setToolTipText("Actual execution status of the constellation Request.");
 
-		requestsViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
+		TreeViewerColumn treeViewerLongitude = new TreeViewerColumn(requestsViewer, SWT.NONE);
+		TreeColumn treeclmnLongitude = treeViewerLongitude.getColumn();
+		treeclmnLongitude.setWidth(150);
+		treeclmnLongitude.setText("Longitude (°)");
+		treeclmnLongitude.setToolTipText("Specifies the observation request longitude.");
+		
+		TreeViewerColumn treeViewerLatitude = new TreeViewerColumn(requestsViewer, SWT.NONE);
+		TreeColumn treeclmnLatitude = treeViewerLatitude.getColumn();
+		treeclmnLatitude.setWidth(150);
+		treeclmnLatitude.setText("Latitude (°)");
+		treeclmnLatitude.setToolTipText("Specifies the observation request latitude in degrees.");
+
+		TreeViewerColumn treeViewerElevation = new TreeViewerColumn(requestsViewer, SWT.NONE);
+		TreeColumn treeclmnElevation = treeViewerElevation.getColumn();
+		treeclmnElevation.setWidth(150);
+		treeclmnElevation.setText("Elevation (m)");
+		treeclmnElevation.setToolTipText("Specifies the observation request altitude in meters.");
+				
+		requestsViewer.setContentProvider(new RequestsContentProvider(adapterFactory));
 		requestsViewer.setLabelProvider(new RequestsLabelProvider(adapterFactory));
+		requestsViewer.addSelectionChangedListener(getViewerListener());		
 
 		/*
 		 * Show/Hide Column Menu Items.
@@ -175,13 +200,38 @@ public class ConstellationRequestsComposite extends Composite {
 
 	@Override
 	public void dispose() {
-		super.dispose();
+		super.dispose();		
 
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
 		}
+		
+		requestsViewer.removeSelectionChangedListener(getViewerListener());		
 	}
+	
+	/**
+	 * This method is called when a new selection is made in the composite.
+	 * @param selection Reference to the selection.
+	 */
+	protected void newSelection(ISelection selection) {
+	}
+	
+	/**
+	 * Listener used to listen {{@link #requestsViewer} selection changes.
+ 	 * @return Reference to the listener (Lazy Loaded).
+	 */
+	private ISelectionChangedListener getViewerListener() {
+		if (requestsViewerListener == null){
+			requestsViewerListener = new ISelectionChangedListener() {				
+				@Override
+				public void selectionChanged(SelectionChangedEvent event) {
+					newSelection(event.getSelection());
+				}
+			};
+		}		
+		return requestsViewerListener;
+	}	
 
 	public class ActivitiesViewerComparator extends ViewerComparator {
 		/*
@@ -190,6 +240,29 @@ public class ConstellationRequestsComposite extends Composite {
 		 */
 	}
 
+	private class RequestsContentProvider extends AdapterFactoryContentProvider{
+
+		public RequestsContentProvider(AdapterFactory adapterFactory) {
+			super(adapterFactory);
+		}		
+		
+		@Override
+		public Object[] getChildren(Object object) {
+			
+			Object[] children = null;
+			
+			if (object instanceof ConstellationRequestsList){
+				children = super.getChildren(object);
+			}
+			return children;
+		}
+		
+		@Override
+		public boolean hasChildren(Object object) {		
+			return object instanceof ConstellationRequestsList ? super.hasChildren(object) : false;
+		}
+	}
+	
 	/*
 	 * 
 	 * Requests Label Provider
@@ -202,13 +275,27 @@ public class ConstellationRequestsComposite extends Composite {
 		}
 
 		private static final int UID_COLUMN_ID = 0;
+		private static final int TYPE_COLUMN_ID = 1;
 		private static final int PRIORITY_COLUMN_ID = 2;
 		private static final int STATUS_COLUMN_ID = 3;		
-		private static final int TYPE_COLUMN_ID = 4;
+		private static final int LONGITUDE_COLUMN_ID = 4;
+		private static final int LATITUDE_COLUMN_ID = 5;
+		private static final int ELEVATION_COLUMN_ID = 6;
 
 		@Override
 		public String getColumnText(Object object, int columnIndex) {
 			String str = "<undefined>";
+			
+			if (object instanceof ConstellationRequestsList){
+				ConstellationRequestsList list = (ConstellationRequestsList) object;
+				if (columnIndex == UID_COLUMN_ID){
+					if (list.getName() != null){
+						str = list.getName();	
+					}					 
+				}else{
+					str = "";
+				}
+			}
 			
 			if (object instanceof AbstractConstellationRequest){
 				AbstractConstellationRequest request = (AbstractConstellationRequest) object;
@@ -231,7 +318,28 @@ public class ConstellationRequestsComposite extends Composite {
 				case TYPE_COLUMN_ID:
 					str = request.eClass().getName();
 					break;
-					
+
+				case LONGITUDE_COLUMN_ID:
+					if (request instanceof ObservationConstellationRequest){
+						ObservationConstellationRequest observationRequest = (ObservationConstellationRequest) request;
+						str = observationRequest.getLocation() == null? "N/A" : Double.toString((observationRequest.getLocation().getLongitude()));
+					}
+					break;
+
+				case LATITUDE_COLUMN_ID:
+					if (request instanceof ObservationConstellationRequest){
+						ObservationConstellationRequest observationRequest = (ObservationConstellationRequest) request;
+						str = observationRequest.getLocation() == null? "N/A" : Double.toString((observationRequest.getLocation().getLatitude()));
+					}
+					break;
+
+				case ELEVATION_COLUMN_ID:
+					if (request instanceof ObservationConstellationRequest){
+						ObservationConstellationRequest observationRequest = (ObservationConstellationRequest) request;
+						str = observationRequest.getLocation() == null? "N/A" : Double.toString((observationRequest.getLocation().getElevation()));
+					}
+					break;
+										
 				default:
 					break;
 				}

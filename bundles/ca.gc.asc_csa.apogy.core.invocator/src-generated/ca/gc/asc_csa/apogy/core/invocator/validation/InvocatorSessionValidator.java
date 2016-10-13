@@ -6,6 +6,7 @@ package ca.gc.asc_csa.apogy.core.invocator.validation;
 
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 
@@ -20,6 +21,8 @@ public interface InvocatorSessionValidator {
 
 	boolean validateEnvironment(Environment value);
 	boolean validateProgramsList(ProgramsList value);
+	boolean validateProgramRuntimesList(ProgramRuntimesList value);
+
 	boolean validateDataProductsListContainer(DataProductsListsContainer value);
 	boolean validateToolsList(ToolsList value);
 }

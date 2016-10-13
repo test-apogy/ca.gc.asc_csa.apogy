@@ -484,8 +484,13 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 
 		// x with j and y with i
 		int imax = (int) Math.ceil(sidey / coarseresolution);
+		if(imax == 0) imax = 1;
+		
 		int jmax = (int) Math.ceil(sidex / coarseresolution);
+		if(jmax == 0) jmax = 1;
+		
 		int kmax = (int) Math.ceil(sidez / coarseresolution);
+		if(kmax == 0) kmax = 1;
 
 		Vector<Vector<Point3d>> coarse3Dgrid = new Vector<Vector<Point3d>>(imax	* jmax * kmax);
 		

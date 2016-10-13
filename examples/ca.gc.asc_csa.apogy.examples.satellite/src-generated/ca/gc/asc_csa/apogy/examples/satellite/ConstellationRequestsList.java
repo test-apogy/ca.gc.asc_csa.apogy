@@ -54,6 +54,7 @@ public interface ConstellationRequestsList extends Named, Described {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationRequestsList_ConstellationRequestsListsContainer()
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsListsContainer#getConstellationRequestsLists
 	 * @model opposite="constellationRequestsLists" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	ConstellationRequestsListsContainer getConstellationRequestsListsContainer();

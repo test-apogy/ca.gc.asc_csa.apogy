@@ -57,35 +57,12 @@ public class AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addCadTransformNodePropertyDescriptor(object);
 			addUrlNodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	
-	/**
-	 * This adds a property descriptor for the Cad Transform Node feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCadTransformNodePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_cadTransformNode_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_cadTransformNode_feature", "_UI_AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool_type"),
-				 ApogyAddonsPackage.Literals.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE,
-				 false,
-				 false,
-				 false,
-				 null,
-				 null,
-				 null));
-	}
-
 	/**
 	 * This adds a property descriptor for the Url Node feature.
 	 * <!-- begin-user-doc -->
@@ -120,7 +97,6 @@ public class AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyAddonsPackage.Literals.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE);
 			childrenFeatures.add(ApogyAddonsPackage.Literals.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE);
 		}
 		return childrenFeatures;
@@ -167,6 +143,8 @@ public class AbstractURLNodeGeometryPlacementAtFeatureOfInterestToolItemProvider
 
 		switch (notification.getFeatureID(AbstractURLNodeGeometryPlacementAtFeatureOfInterestTool.class)) {
 			case ApogyAddonsPackage.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__CAD_TRANSFORM_NODE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case ApogyAddonsPackage.ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL__URL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

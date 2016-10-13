@@ -1,0 +1,31 @@
+!SESSION 2016-05-12 15:49:08.220 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.ui 4 4 2016-05-12 15:49:29.169
+!MESSAGE Conflicting handlers for ca.gc.asc_csa.apogy.core.environment.commands.UpdateImageMapLayerCommandHandler: {ca.gc.asc_csa.apogy.core.environment.commands.UpdateImageMapLayerCommandHandler} vs {ca.gc.asc_csa.apogy.core.environment.commands.UpdateImageMapLayerCommandHandler}
+
+!ENTRY ca.gc.asc_csa.apogy.core.invocator 0 0 2016-05-12 15:49:29.233
+!MESSAGE SessionContributorsRegistry: Found <9> registered Session Providers.
+
+!ENTRY org.eclipse.ui 4 4 2016-05-12 15:49:29.238
+!MESSAGE Conflicting handlers for ca.gc.asc_csa.esm.sma.apogy.commands.CreateGotoStandOffPoseCommand: {ca.gc.asc_csa.esm.sma.symphony.commands.CreateGotoStandOffPoseCommand} vs {ca.gc.asc_csa.esm.sma.symphony.commands.CreateGotoStandOffPoseCommand}
+
+!ENTRY org.orekit 1 0 2016-05-12 15:49:40.732
+!MESSAGE Activator : Loading OreKit data...
+
+!ENTRY org.orekit 0 0 2016-05-12 15:49:41.078
+!MESSAGE Activator : Sucessfully loaded OreKit data.
+
+!ENTRY gov.nasa.worldwind 1 0 2016-05-12 15:49:41.160
+!MESSAGE Extract native libraries for linux.x86_64 started.
+
+!ENTRY gov.nasa.worldwind 1 0 2016-05-12 15:49:41.181
+!MESSAGE Extract native libraries for linux.x86_64 completed.
+
+!ENTRY ca.gc.asc_csa.apogy.common.emf 1 0 2016-05-12 15:49:49.837
+!MESSAGE Activator: EMF Class Definitions loaded

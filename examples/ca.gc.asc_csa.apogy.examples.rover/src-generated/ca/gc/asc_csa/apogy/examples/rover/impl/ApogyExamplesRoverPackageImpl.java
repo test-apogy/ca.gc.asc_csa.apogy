@@ -358,7 +358,7 @@ public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRover__CmdLinearVelocity__double() {
+	public EOperation getRover__CmdChangeName__String() {
 		return roverEClass.getEOperations().get(1);
 	}
 
@@ -367,7 +367,7 @@ public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRover__CmdAngularVelocity__double() {
+	public EOperation getRover__CmdLinearVelocity__double() {
 		return roverEClass.getEOperations().get(2);
 	}
 
@@ -376,8 +376,17 @@ public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRover__CmdVelocities__double_double() {
+	public EOperation getRover__CmdAngularVelocity__double() {
 		return roverEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRover__CmdVelocities__double_double() {
+		return roverEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -451,6 +460,7 @@ public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements Apogy
 		createEAttribute(roverEClass, ROVER__INITIALIZED);
 		createEAttribute(roverEClass, ROVER__DISPOSED);
 		createEOperation(roverEClass, ROVER___INIT);
+		createEOperation(roverEClass, ROVER___CMD_CHANGE_NAME__STRING);
 		createEOperation(roverEClass, ROVER___CMD_LINEAR_VELOCITY__DOUBLE);
 		createEOperation(roverEClass, ROVER___CMD_ANGULAR_VELOCITY__DOUBLE);
 		createEOperation(roverEClass, ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE);
@@ -496,6 +506,7 @@ public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements Apogy
 
 		// Add supertypes to classes
 		roverEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDisposable());
+		roverEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		roverStubEClass.getESuperTypes().add(this.getRover());
 		roverSimulatedEClass.getESuperTypes().add(this.getRover());
 
@@ -530,6 +541,9 @@ public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements Apogy
 		initEAttribute(getRover_Disposed(), theEcorePackage.getEBoolean(), "disposed", "false", 0, 1, Rover.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getRover__Init(), theEcorePackage.getEBoolean(), "init", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getRover__CmdChangeName__String(), null, "cmdChangeName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getRover__CmdLinearVelocity__double(), null, "cmdLinearVelocity", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "linearVelocity", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -679,6 +693,12 @@ public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements Apogy
 		   source, 
 		   new String[] {
 			 "documentation", "This operation is used to perform the required initialization functions\non the rover assembly; this may involve bootstrapping the components\nof the rover (e.g. mobile platform, cameras, etc.)\n@return Whether or not the rover assembly was successfully initialized"
+		   });	
+		addAnnotation
+		  (getRover__CmdChangeName__String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "This operation is used to change the name of the rover.\n@param name New name."
 		   });	
 		addAnnotation
 		  (getRover__CmdLinearVelocity__double(), 

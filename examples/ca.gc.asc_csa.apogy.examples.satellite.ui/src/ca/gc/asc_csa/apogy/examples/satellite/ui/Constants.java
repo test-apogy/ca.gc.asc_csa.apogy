@@ -16,4 +16,5 @@ public class Constants {
 
 	public static final String DEFAULT_IMPORT_REQUESTS_URL = "DEFAULT_IMPORT_REQUESTS_URL";
 	public static final String DEFAULT_EXPORT_PLAN_URL = "DEFAULT_EXPORT_PLAN_URL";
+	public static final String DEFAULT_IMPORT_DOWNLINK_ITEMS_URL = "DEFAULT_IMPORT_DOWNLINK_ITEMS_URL";
 }

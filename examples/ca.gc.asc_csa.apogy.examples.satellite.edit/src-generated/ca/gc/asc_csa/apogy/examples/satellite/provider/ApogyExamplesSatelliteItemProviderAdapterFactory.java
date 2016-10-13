@@ -17,13 +17,10 @@ import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 import ca.gc.asc_csa.apogy.common.images.ImagesAlbum;
 
 import ca.gc.asc_csa.apogy.common.images.util.ApogyCommonImagesSwitch;
-
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
-
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
-
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;

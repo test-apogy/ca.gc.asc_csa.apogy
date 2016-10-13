@@ -12,6 +12,7 @@ Export-Package: ca.gc.asc_csa.apogy.addons.ui,
  ca.gc.asc_csa.apogy.addons.ui.commands,
  ca.gc.asc_csa.apogy.addons.ui.impl,
  ca.gc.asc_csa.apogy.addons.ui.preferences,
+ ca.gc.asc_csa.apogy.addons.ui.properties.sections,
  ca.gc.asc_csa.apogy.addons.ui.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
@@ -23,6 +24,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.topology.ui;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
  org.eclipse.swt,
- ca.gc.asc_csa.apogy.addons;visibility:=reexport
+ ca.gc.asc_csa.apogy.addons;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math.ui;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.apogy.addons.ui.Activator

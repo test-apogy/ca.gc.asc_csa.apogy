@@ -3,9 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.math.quickhull3d
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.apogy.common.math.quickhull3d.Activator
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
+Require-Bundle: org.eclipse.core.runtime,
  javax.vecmath;bundle-version="1.5.2";visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.common.math.quickhull3d

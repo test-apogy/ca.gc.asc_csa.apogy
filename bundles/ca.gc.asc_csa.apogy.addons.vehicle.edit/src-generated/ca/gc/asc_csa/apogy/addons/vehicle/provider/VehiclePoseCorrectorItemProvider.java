@@ -29,7 +29,6 @@ import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
 import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
 import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
 import ca.gc.asc_csa.apogy.addons.vehicle.ZCorrectionMode;
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.apogy.core.provider.PoseCorrectorItemProvider;
 
 /**
@@ -179,7 +178,7 @@ public class VehiclePoseCorrectorItemProvider
   protected void addZCorrectionPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_VehiclePoseCorrector_zCorrection_feature"),

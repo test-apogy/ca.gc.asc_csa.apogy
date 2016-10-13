@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.core.environment.ui.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -75,7 +74,7 @@ public class PoseVariableAnnotationItemProvider
   protected void addVectorlengthPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_PoseVariableAnnotation_vectorlength_feature"),

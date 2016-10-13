@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractUID;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
@@ -33,6 +34,7 @@ import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationDownlinkItemImpl#getRequestUID <em>Request UID</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationDownlinkItemImpl#getRequest <em>Request</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,6 +49,16 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 	 * @ordered
 	 */
 	protected AbstractUID requestUID;
+
+	/**
+	 * The cached value of the '{@link #getRequest() <em>Request</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequest()
+	 * @generated
+	 * @ordered
+	 */
+	protected AbstractConstellationRequest request;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,6 +127,44 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AbstractConstellationRequest getRequest() {
+		if (request != null && request.eIsProxy()) {
+			InternalEObject oldRequest = (InternalEObject)request;
+			request = (AbstractConstellationRequest)eResolveProxy(oldRequest);
+			if (request != oldRequest) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST, oldRequest, request));
+			}
+		}
+		return request;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractConstellationRequest basicGetRequest() {
+		return request;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRequest(AbstractConstellationRequest newRequest) {
+		AbstractConstellationRequest oldRequest = request;
+		request = newRequest;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST, oldRequest, request));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -134,6 +184,9 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID:
 				return getRequestUID();
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST:
+				if (resolve) return getRequest();
+				return basicGetRequest();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -148,6 +201,9 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID:
 				setRequestUID((AbstractUID)newValue);
+				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST:
+				setRequest((AbstractConstellationRequest)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -164,6 +220,9 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID:
 				setRequestUID((AbstractUID)null);
 				return;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST:
+				setRequest((AbstractConstellationRequest)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -178,6 +237,8 @@ public abstract class AbstractConstellationDownlinkItemImpl extends MinimalEObje
 		switch (featureID) {
 			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID:
 				return requestUID != null;
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST:
+				return request != null;
 		}
 		return super.eIsSet(featureID);
 	}

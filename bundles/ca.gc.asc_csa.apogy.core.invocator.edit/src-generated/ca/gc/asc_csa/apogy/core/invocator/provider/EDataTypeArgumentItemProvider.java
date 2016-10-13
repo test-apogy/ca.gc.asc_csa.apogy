@@ -22,9 +22,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.edit.descriptors.ENumberDataTypeArgumentItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument} object.
@@ -78,68 +78,6 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Value feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	protected void addValuePropertyDescriptor1(Object object) {
-		EDataTypeArgument argument = (EDataTypeArgument) object;
-		Class<?> clazz = argument.getEParameter().getEGenericType()
-				.getEClassifier().getInstanceClass();
-
-		System.out.println("EDataTypeArgumentItemProvider.addValuePropertyDescriptor()");
-		
-		if (clazz.isAssignableFrom(boolean.class) || clazz.isAssignableFrom(Boolean.class)) {
-			
-	
-		} else if (clazz.isAssignableFrom(Number.class) ||
-				   clazz.isAssignableFrom(byte.class) || 
-				   clazz.isAssignableFrom(short.class) ||
-				   clazz.isAssignableFrom(int.class) ||
-				   clazz.isAssignableFrom(long.class) ||
-				   clazz.isAssignableFrom(float.class) ||
-				   clazz.isAssignableFrom(double.class)){
-			
-			/**
-			 * Number Elements.
-			 */
-			itemPropertyDescriptors
-					.add(new ENumberDataTypeArgumentItemPropertyDescriptor(
-							((ComposeableAdapterFactory) adapterFactory)
-									.getRootAdapterFactory(),
-							getResourceLocator(),
-							getString("_UI_EDataTypeArgument_value_feature"),
-							getString("_UI_PropertyDescriptor_description",
-									"_UI_EDataTypeArgument_value_feature",
-									"_UI_EDataTypeArgument_type"),
-							ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
-							true, false, false,
-							ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-							null));
-		}else{
-			
-			/**
-			 * Other EDataType (e.g. EDate).
-			 */
-			
-			itemPropertyDescriptors
-			.add(createItemPropertyDescriptor(
-					((ComposeableAdapterFactory) adapterFactory)
-							.getRootAdapterFactory(),
-					getResourceLocator(),
-					getString("_UI_EDataTypeArgument_value_feature"),
-					getString("_UI_PropertyDescriptor_description",
-							"_UI_EDataTypeArgument_value_feature",
-							"_UI_EDataTypeArgument_type"),
-					ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
-					true, false, false,
-					ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-					null));
-		}
 	}
 
 	/**

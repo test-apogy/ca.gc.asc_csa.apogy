@@ -21,18 +21,15 @@ import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 public class ImageSnapshotPresentationAdapter implements NodePresentationAdapter
 {
 
-
 	public Class<?> getAdaptedClass()
 	{		
 		return ImageSnapshot.class;
 	}
 
-
 	public boolean isAdapterFor(Node node)
 	{		
 		return (node instanceof ImageSnapshot);
 	}
-
 	
 	public NodePresentation getAdapter(Node obj, Object context) 
 	{

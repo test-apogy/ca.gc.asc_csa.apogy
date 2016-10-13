@@ -52,6 +52,7 @@ public interface AbstractConstellationCommandPlan extends Named, Described {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationCommandPlan_CommandPlansList()
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlansList#getPlans
 	 * @model opposite="plans" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	ConstellationCommandPlansList getCommandPlansList();

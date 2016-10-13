@@ -51,6 +51,7 @@ Package invocator <ca.gc.asc_csa.apogy.core.invocator>
   Class InvocatorSession -> Named, Described
     Reference environment : Environment
     Reference programsList : ProgramsList
+    Reference programRuntimesList : ProgramRuntimesList
     Reference dataProductsListContainer : DataProductsListsContainer
     Reference toolsList : ToolsList
 
@@ -241,6 +242,23 @@ Package invocator <ca.gc.asc_csa.apogy.core.invocator>
   Class EClassArgument -> Argument
     Reference value : EObject
 
+  Class ProgramRuntimesList
+    Reference session : InvocatorSession
+    Reference programRuntimes : AbstractProgramRuntime<<0..*>>
+
+  Class AbstractProgramRuntime -> Named, Described
+    Attribute state : ProgramRuntimeState
+    Reference program : Program
+    Operation init() : void
+    Operation terminate() : void
+    Operation resume() : void
+    Operation suspend() : void
+    Operation stepInto() : void
+    Operation stepOver() : void
+    Operation stepReturn() : void
+
+  Class OperationCallsListProgramRuntime -> AbstractProgramRuntime
+
   Class ResultsList -> Named, Described
     Reference results : AbstractResult<<0..*>>
     Operation getInvocatorSession() : InvocatorSession
@@ -302,6 +320,14 @@ Package invocator <ca.gc.asc_csa.apogy.core.invocator>
   Enum VariableListenerEventType
     Literal NEW = 0
     Literal CLEAR = 0
+
+  Enum ProgramRuntimeState
+    Literal NOT_INITIALIZED = 0
+    Literal INITIALIZED = 1
+    Literal RUNNING = 2
+    Literal SUSPENDED = 3
+    Literal TERMINATED = 4
+    Literal FAILED = 5
 
   DataType Throwable <java.lang.Throwable>
 

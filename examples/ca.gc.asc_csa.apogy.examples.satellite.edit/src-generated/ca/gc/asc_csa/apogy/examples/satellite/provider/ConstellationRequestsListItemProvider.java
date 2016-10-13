@@ -78,7 +78,6 @@ public class ConstellationRequestsListItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addConstellationRequestsListsContainerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -123,28 +122,6 @@ public class ConstellationRequestsListItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Constellation Requests Lists Container feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConstellationRequestsListsContainerPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ConstellationRequestsList_constellationRequestsListsContainer_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ConstellationRequestsList_constellationRequestsListsContainer_feature", "_UI_ConstellationRequestsList_type"),
-				 ApogyExamplesSatellitePackage.Literals.CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS_LISTS_CONTAINER,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

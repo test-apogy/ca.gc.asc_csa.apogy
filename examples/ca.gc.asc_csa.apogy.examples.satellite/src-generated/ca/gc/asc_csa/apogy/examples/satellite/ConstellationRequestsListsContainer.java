@@ -52,6 +52,7 @@ public interface ConstellationRequestsListsContainer extends EObject {
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationRequestsListsContainer_ConstellationState()
 	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationState#getConstellationRequestsListsContainer
 	 * @model opposite="constellationRequestsListsContainer" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	ConstellationState getConstellationState();

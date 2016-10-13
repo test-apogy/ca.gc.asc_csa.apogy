@@ -53,7 +53,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * @return the value of the '<em>Physical Properties</em>' containment reference.
 	 * @see #setPhysicalProperties(PhysicalProperties)
 	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPhysicalBody_PhysicalProperties()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	PhysicalProperties getPhysicalProperties();

@@ -8,22 +8,25 @@ Apogy is based on Eclipse platform [https://www.eclipse.org https://www.eclipse.
 = Java Virtual Machine =
 # Ensure a proper Java Runtime Environment (JRE) is installed on your system (1.8 or higher).  You can download JRE from [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html].  
 # The virtual machine must be accessible in the PATH.  Type the following commands in a system shell to verify the installed java version.<pre>java -version&#10;java version "1.8.0_60"&#10;Java(TM) SE Runtime Environment (build 1.8.0_60-b27)&#10;Java(TM) SE Runtime Environment (build 1.8.0_60-b27)</pre>
-= Eclipse Modeling Tools Package =
-# Get the '''Eclipse Modeling Tools Package''' from [https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/mars2 https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/mars2]
+= Eclipse Project Package =
+# Get the '''Eclipse Project Package''' from [http://download.eclipse.org/eclipse/downloads/ http://download.eclipse.org/eclipse/downloads/] (Latest Release).
 # Extract the archive under '''<ECLIPSE_INSTALLER_HOME>'''.
 # Copy '''<JRE_HOME>''' directory into '''<ECLIPSE_INSTALLER_HOME>''' directory. You may also use a symbolic link.  <pre>eclipse&#10;  configuration&#10;  eclipse&#10;  eclipse.ini&#10;  features&#10;  plugins&#10;  jre      <<<< must include /bin/java&#10;  ...</pre>
 # Edit '''<ECLIPSE_HOME>/eclipse.ini''' and change the following lines that set VM memory parameters (see below).  <pre>-Xms256m                              <<<< Replace by -Xms2048m &#10;-Xmx1024m                             <<<< Replace by -Xmx2048m</pre>
 # Save your changes.
 # Launch the '''<ECLIPSE_HOME>/eclipse'''.
 # The '''Workspace Launcher''' dialog will prompt.  Select the location of a new or an existing workspace.  The workspace will contain the information related to your Apogy session.
-= Eclipse Addons Bundles =
-# Add the following tools:
-## Modeling\EMF - Eclipse Modeling Framework Xcore SDK
 = Apogy =
-# Add the '''Apogy''' P2 Site:
+# Select Help->Install New Software...
+# On the Install Dialog, Click on Add...
+# Set the name to '''Apogy'''
+# Set the Location to one of the following update site.
 ## Stable: [https://dl.bintray.com/apogy/Releases/0.5/ https://dl.bintray.com/apogy/Releases/0.5/] '''OR'''
 ## Latest: [https://dl.bintray.com/apogy/Develop/0.5/ https://dl.bintray.com/apogy/Develop/0.5/]
-# Install the following packages:
-## Apogy\Apogy SDK (You must select Apogy SDK only).
+# Click on '''OK'''
+# Select Apogy package
+# Click on '''Next>'''
+# On '''Install Details''' page, click on '''Next>'''
+# On '''Review Licenses''' page, select '''Accept''' then click on '''Finish''' 
 = Known Issues =
 # export SWT_GTK3=0

@@ -102,6 +102,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Tree;
 import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFItemProviderAdapterFactory;
+import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
 import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorItemProviderAdapterFactory;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
@@ -121,7 +122,6 @@ import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
-import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
 
 
 /**
