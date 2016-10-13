@@ -1258,10 +1258,9 @@ ApogyCommonEMFFacade {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	public String getDefaultName(EObject eObject, EReference eReference) {
-
 		String name = eReference.getEReferenceType().getName();
 		eObject.eGet(eReference);
 
