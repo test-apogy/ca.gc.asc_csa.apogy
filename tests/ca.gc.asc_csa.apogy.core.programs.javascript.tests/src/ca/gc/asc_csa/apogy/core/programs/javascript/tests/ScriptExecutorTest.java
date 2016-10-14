@@ -30,7 +30,6 @@ import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
-import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram;
 import ca.gc.asc_csa.apogy.core.programs.javascript.ScriptExecutor;
 
@@ -53,7 +52,7 @@ public class ScriptExecutorTest {
 		final String ROVER_DATA_PRODUCTS_LIST_NAME = "Simulated Data";
 
 		InvocatorSession invocatorSession = loadInvocatorSession("platform:/plugin/ca.gc.asc_csa.apogy.core.programs.javascript.tests/sessions/rover.sym", ROVER_DATA_PRODUCTS_LIST_NAME);
-		JavaScriptProgram program = (JavaScriptProgram) getProgramByName(invocatorSession, "Rover Demo");
+		JavaScriptProgram program = (JavaScriptProgram) ApogyCoreInvocatorFacade.INSTANCE.getProgramByName(invocatorSession, "Rover Demo");
 		URL url = new URL(program.getScriptPath());
 		BufferedReader in = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
 		BufferedReader in2 = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
@@ -108,7 +107,7 @@ public class ScriptExecutorTest {
 
 		InvocatorSession invocatorSession = loadInvocatorSession("platform:/plugin/ca.gc.asc_csa.apogy.core.programs.javascript.tests/sessions/mobile-platform.sym",
 				MOBILE_PLATFORM_DATA_PRODUCTS_LIST_NAME);
-		JavaScriptProgram program = (JavaScriptProgram) getProgramByName(invocatorSession, "Mobile Platform Demo");
+		JavaScriptProgram program = (JavaScriptProgram) ApogyCoreInvocatorFacade.INSTANCE.getProgramByName(invocatorSession, "Mobile Platform Demo");
 		URL url = new URL(program.getScriptPath());
 		BufferedReader in = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
 		BufferedReader in2 = new BufferedReader(new InputStreamReader(url.openConnection().getInputStream()));
@@ -169,15 +168,6 @@ public class ScriptExecutorTest {
 		for (DataProductsList dataProductsList : invocatorSession.getDataProductsListContainer().getDataProductsList()) {
 			if (dataProductsList.getName().equals(name)) {
 				return dataProductsList;
-			}
-		}
-		return null;
-	}
-
-	private static Program getProgramByName(InvocatorSession invocatorSession, String name) {
-		for (Program program : invocatorSession.getProgramsList().getPrograms()) {
-			if (program.getName().equals(name)) {
-				return program;
 			}
 		}
 		return null;

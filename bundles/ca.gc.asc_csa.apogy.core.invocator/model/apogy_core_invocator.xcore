@@ -300,13 +300,26 @@ class ApogyCoreInvocatorFacade
 	  * @param name Search criteria.
 	  * @return Reference to the context or null if not found.
 	  */
-	 op Context getContextByName(InvocatorSession invocatorSession, String name)	 	 
+	 op Context getContextByName(InvocatorSession invocatorSession, String name)
+	 
+	 /*
+	  * Returns all the {@link ScriptBasedProgram} programs contained in the list.
+	  * @param programsList Refers to the list that contains all the programs.
+	  * @param filter Determine if the program should be considered as a valid program. 
+	  * @return List of programs.
+	  */
+	 op List<Program> getAllScriptBasedPrograms(ProgramsList programsList)	 	 
 } 
 
 enum VariableListenerEventType{
 	NEW,
 	CLEAR
 }
+
+
+//interface ProgramFilter{
+//	op boolean isValid(Program program)
+//}
 
 /* -------------------------------------------------------------------------
  * 
@@ -757,9 +770,20 @@ class Value extends Named
 class ProgramsList
 {	
 	@GenModel(property="None")
-	container InvocatorSession invocatorSession opposite programsList
-	
-	contains Program[0..*] programs opposite programsList
+	container InvocatorSession invocatorSession opposite programsList	
+	contains ProgramsGroup[0..*] programsGroups opposite programsList
+}
+
+class ProgramsGroup extends Named, Described{
+	@GenModel(property="None")
+	container ProgramsList programsList opposite programsGroups 
+
+    @GenModel(children="false", property="None")
+	refers local readonly volatile transient derived InvocatorSession invocatorSession get
+	{
+		if (programsList == null) return null else return programsList.invocatorSession
+	}	
+	contains Program[0..*] programs opposite programsGroup
 }
 
 
@@ -769,19 +793,19 @@ class ProgramsList
 abstract class Program extends Named, Described
 {
  	@GenModel(property="None")
-	container ProgramsList programsList opposite programs
+	container ProgramsGroup programsGroup opposite programs
 	
     @GenModel(children="false", property="None")
 	refers local readonly volatile transient derived InvocatorSession invocatorSession get
 	{
-		if (programsList == null) return null else return programsList.invocatorSession
-	} 	
-		
-	/* 
-	 * Contains values that could be used as parameter values in the operation 
-	 * calls.
-	 */
-	contains ValuesList[0..1] valuesList
+		if (programsGroup == null) return null else return programsGroup.invocatorSession
+	}
+}
+
+abstract class ScriptBasedProgram extends Program{	
+} 
+
+abstract class TriggeredBasedProgram extends Program{	
 }
 
 interface OperationCallContainer
@@ -791,7 +815,7 @@ interface OperationCallContainer
 	op InvocatorSession getInvocatorSession()
 }
 
-class OperationCallsList extends Program, OperationCallContainer
+class OperationCallsList extends ScriptBasedProgram, OperationCallContainer
 {
 	
 }

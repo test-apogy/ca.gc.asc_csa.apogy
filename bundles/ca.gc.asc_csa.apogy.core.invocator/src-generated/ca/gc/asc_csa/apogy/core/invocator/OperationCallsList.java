@@ -24,6 +24,6 @@ package ca.gc.asc_csa.apogy.core.invocator;
  * @model
  * @generated
  */
-public interface OperationCallsList extends Program, OperationCallContainer
+public interface OperationCallsList extends ScriptBasedProgram, OperationCallContainer
 {
 } // OperationCallsList

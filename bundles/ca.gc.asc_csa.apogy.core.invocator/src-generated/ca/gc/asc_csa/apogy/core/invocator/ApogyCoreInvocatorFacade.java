@@ -541,4 +541,18 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	Context getContextByName(InvocatorSession invocatorSession, String name);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns all the {@link ScriptBasedProgram} programs contained in the list.
+	 * @param programsList Refers to the list that contains all the programs.
+	 * @param filter Determine if the program should be considered as a valid program.
+	 * @return List of programs.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.core.invocator.Program>" unique="false" many="false" programsListUnique="false"
+	 * @generated
+	 */
+	List<Program> getAllScriptBasedPrograms(ProgramsList programsList);
+
 } // ApogyCoreInvocatorFacade

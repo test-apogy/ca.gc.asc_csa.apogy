@@ -6,8 +6,7 @@ package ca.gc.asc_csa.apogy.core.programs.javascript.impl;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
-import ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl;
-
+import ca.gc.asc_csa.apogy.core.invocator.impl.ScriptBasedProgramImpl;
 import ca.gc.asc_csa.apogy.core.programs.javascript.ApogyCoreJavaScriptProgramsPackage;
 import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram;
 
@@ -37,7 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class JavaScriptProgramImpl extends ProgramImpl implements JavaScriptProgram {
+public class JavaScriptProgramImpl extends ScriptBasedProgramImpl implements JavaScriptProgram {
 	/**
 	 * The cached value of the '{@link #getOperationCalls() <em>Operation Calls</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -33,7 +33,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
  * @generated
  */
 public class OperationCallsListItemProvider
-  extends ProgramItemProvider
+  extends ScriptBasedProgramItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.

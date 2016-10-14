@@ -4,8 +4,7 @@
 package ca.gc.asc_csa.apogy.core.programs.javascript.provider;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
-
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
 
 import ca.gc.asc_csa.apogy.core.programs.javascript.ApogyCoreJavaScriptProgramsFactory;
@@ -297,15 +296,14 @@ public class ApogyCoreJavaScriptProgramsItemProviderAdapterFactory extends Apogy
 			 * @generated
 			 */
 			@Override
-			public Object caseProgramsList(ProgramsList object) {
+			public Object caseProgramsGroup(ProgramsGroup object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS,
+						(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS,
 						 ApogyCoreJavaScriptProgramsFactory.eINSTANCE.createJavaScriptProgram()));
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

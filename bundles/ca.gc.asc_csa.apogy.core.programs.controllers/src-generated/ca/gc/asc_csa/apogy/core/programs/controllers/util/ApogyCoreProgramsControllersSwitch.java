@@ -23,6 +23,7 @@ import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.TriggeredBasedProgram;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.programs.controllers.*;
 
@@ -92,8 +93,9 @@ public class ApogyCoreProgramsControllersSwitch<T> extends Switch<T> {
 			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION: {
 				ControllersConfiguration controllersConfiguration = (ControllersConfiguration)theEObject;
 				T result = caseControllersConfiguration(controllersConfiguration);
-				if (result == null) result = caseProgram(controllersConfiguration);
+				if (result == null) result = caseTriggeredBasedProgram(controllersConfiguration);
 				if (result == null) result = caseOperationCallContainer(controllersConfiguration);
+				if (result == null) result = caseProgram(controllersConfiguration);
 				if (result == null) result = caseNamed(controllersConfiguration);
 				if (result == null) result = caseDescribed(controllersConfiguration);
 				if (result == null) result = defaultCase(theEObject);
@@ -586,6 +588,21 @@ public class ApogyCoreProgramsControllersSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProgram(Program object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Triggered Based Program</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Triggered Based Program</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTriggeredBasedProgram(TriggeredBasedProgram object) {
 		return null;
 	}
 

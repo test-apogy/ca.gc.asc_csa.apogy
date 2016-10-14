@@ -158,7 +158,7 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLERS_CONFIGURATION__NAME = ApogyCoreInvocatorPackage.PROGRAM__NAME;
+	int CONTROLLERS_CONFIGURATION__NAME = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -167,16 +167,16 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLERS_CONFIGURATION__DESCRIPTION = ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION;
+	int CONTROLLERS_CONFIGURATION__DESCRIPTION = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Programs List</b></em>' container reference.
+	 * The feature id for the '<em><b>Programs Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLERS_CONFIGURATION__PROGRAMS_LIST = ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST;
+	int CONTROLLERS_CONFIGURATION__PROGRAMS_GROUP = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM__PROGRAMS_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -185,16 +185,7 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLERS_CONFIGURATION__INVOCATOR_SESSION = ApogyCoreInvocatorPackage.PROGRAM__INVOCATOR_SESSION;
-
-	/**
-	 * The feature id for the '<em><b>Values List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROLLERS_CONFIGURATION__VALUES_LIST = ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST;
+	int CONTROLLERS_CONFIGURATION__INVOCATOR_SESSION = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM__INVOCATOR_SESSION;
 
 	/**
 	 * The feature id for the '<em><b>Operation Calls</b></em>' containment reference list.
@@ -203,7 +194,7 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLERS_CONFIGURATION__OPERATION_CALLS = ApogyCoreInvocatorPackage.PROGRAM_FEATURE_COUNT + 0;
+	int CONTROLLERS_CONFIGURATION__OPERATION_CALLS = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Active</b></em>' attribute.
@@ -212,7 +203,7 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLERS_CONFIGURATION__ACTIVE = ApogyCoreInvocatorPackage.PROGRAM_FEATURE_COUNT + 1;
+	int CONTROLLERS_CONFIGURATION__ACTIVE = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Controllers Configuration</em>' class.
@@ -221,7 +212,7 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLERS_CONFIGURATION_FEATURE_COUNT = ApogyCoreInvocatorPackage.PROGRAM_FEATURE_COUNT + 2;
+	int CONTROLLERS_CONFIGURATION_FEATURE_COUNT = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Invocator Session</em>' operation.
@@ -230,7 +221,7 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLERS_CONFIGURATION___GET_INVOCATOR_SESSION = ApogyCoreInvocatorPackage.PROGRAM_OPERATION_COUNT + 0;
+	int CONTROLLERS_CONFIGURATION___GET_INVOCATOR_SESSION = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Controllers Configuration</em>' class.
@@ -239,7 +230,7 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLERS_CONFIGURATION_OPERATION_COUNT = ApogyCoreInvocatorPackage.PROGRAM_OPERATION_COUNT + 1;
+	int CONTROLLERS_CONFIGURATION_OPERATION_COUNT = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.OperationCallControllerBindingImpl <em>Operation Call Controller Binding</em>}' class.

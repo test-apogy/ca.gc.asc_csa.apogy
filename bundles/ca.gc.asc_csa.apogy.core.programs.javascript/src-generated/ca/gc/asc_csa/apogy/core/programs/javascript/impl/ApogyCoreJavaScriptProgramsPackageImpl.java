@@ -174,7 +174,7 @@ public class ApogyCoreJavaScriptProgramsPackageImpl extends EPackageImpl impleme
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		javaScriptProgramEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getProgram());
+		javaScriptProgramEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getScriptBasedProgram());
 		javaScriptProgramEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getOperationCallContainer());
 
 		// Initialize classes, features, and operations; add parameters

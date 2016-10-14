@@ -71,14 +71,17 @@ import ca.gc.asc_csa.apogy.core.invocator.OperationCallsListProgramRuntime;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
 import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
 import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 import ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.core.invocator.TriggeredBasedProgram;
 import ca.gc.asc_csa.apogy.core.invocator.Type;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
@@ -323,12 +326,33 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass programsGroupEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   private EClass programEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass scriptBasedProgramEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass triggeredBasedProgramEClass = null;
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1018,6 +1042,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(36);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__GetAllScriptBasedPrograms__ProgramsList() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(37);
 	}
 
 		/**
@@ -2157,15 +2190,50 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getProgramsList_Programs()
-  {
+	public EReference getProgramsList_ProgramsGroups() {
 		return (EReference)programsListEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProgramsGroup() {
+		return programsGroupEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgramsGroup_ProgramsList() {
+		return (EReference)programsGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgramsGroup_InvocatorSession() {
+		return (EReference)programsGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgramsGroup_Programs() {
+		return (EReference)programsGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -2177,15 +2245,14 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getProgram_ProgramsList()
-  {
+	public EReference getProgram_ProgramsGroup() {
 		return (EReference)programEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -2200,8 +2267,17 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProgram_ValuesList() {
-		return (EReference)programEClass.getEStructuralFeatures().get(2);
+	public EClass getScriptBasedProgram() {
+		return scriptBasedProgramEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTriggeredBasedProgram() {
+		return triggeredBasedProgramEClass;
 	}
 
 		/**
@@ -3192,6 +3268,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3336,12 +3413,20 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		programsListEClass = createEClass(PROGRAMS_LIST);
 		createEReference(programsListEClass, PROGRAMS_LIST__INVOCATOR_SESSION);
-		createEReference(programsListEClass, PROGRAMS_LIST__PROGRAMS);
+		createEReference(programsListEClass, PROGRAMS_LIST__PROGRAMS_GROUPS);
+
+		programsGroupEClass = createEClass(PROGRAMS_GROUP);
+		createEReference(programsGroupEClass, PROGRAMS_GROUP__PROGRAMS_LIST);
+		createEReference(programsGroupEClass, PROGRAMS_GROUP__INVOCATOR_SESSION);
+		createEReference(programsGroupEClass, PROGRAMS_GROUP__PROGRAMS);
 
 		programEClass = createEClass(PROGRAM);
-		createEReference(programEClass, PROGRAM__PROGRAMS_LIST);
+		createEReference(programEClass, PROGRAM__PROGRAMS_GROUP);
 		createEReference(programEClass, PROGRAM__INVOCATOR_SESSION);
-		createEReference(programEClass, PROGRAM__VALUES_LIST);
+
+		scriptBasedProgramEClass = createEClass(SCRIPT_BASED_PROGRAM);
+
+		triggeredBasedProgramEClass = createEClass(TRIGGERED_BASED_PROGRAM);
 
 		operationCallContainerEClass = createEClass(OPERATION_CALL_CONTAINER);
 		createEReference(operationCallContainerEClass, OPERATION_CALL_CONTAINER__OPERATION_CALLS);
@@ -3531,9 +3616,13 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		variableImplementationEClass.getESuperTypes().add(this.getAbstractTypeImplementation());
 		typeMemberImplementationEClass.getESuperTypes().add(this.getAbstractTypeImplementation());
 		valueEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		programsGroupEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		programsGroupEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		programEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		programEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		operationCallsListEClass.getESuperTypes().add(this.getProgram());
+		scriptBasedProgramEClass.getESuperTypes().add(this.getProgram());
+		triggeredBasedProgramEClass.getESuperTypes().add(this.getProgram());
+		operationCallsListEClass.getESuperTypes().add(this.getScriptBasedProgram());
 		operationCallsListEClass.getESuperTypes().add(this.getOperationCallContainer());
 		variableFeatureReferenceEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		operationCallEClass.getESuperTypes().add(this.getVariableFeatureReference());
@@ -3705,6 +3794,13 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		op = initEOperation(getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String(), this.getContext(), "getContextByName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__GetAllScriptBasedPrograms__ProgramsList(), null, "getAllScriptBasedPrograms", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getProgramsList(), "programsList", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(theApogyCommonEMFPackage.getList());
+		g2 = createEGenericType(this.getProgram());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
 
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3878,12 +3974,20 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		initEClass(programsListEClass, ProgramsList.class, "ProgramsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProgramsList_InvocatorSession(), this.getInvocatorSession(), this.getInvocatorSession_ProgramsList(), "invocatorSession", null, 0, 1, ProgramsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProgramsList_Programs(), this.getProgram(), this.getProgram_ProgramsList(), "programs", null, 0, -1, ProgramsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgramsList_ProgramsGroups(), this.getProgramsGroup(), this.getProgramsGroup_ProgramsList(), "programsGroups", null, 0, -1, ProgramsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(programsGroupEClass, ProgramsGroup.class, "ProgramsGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProgramsGroup_ProgramsList(), this.getProgramsList(), this.getProgramsList_ProgramsGroups(), "programsList", null, 0, 1, ProgramsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgramsGroup_InvocatorSession(), this.getInvocatorSession(), null, "invocatorSession", null, 0, 1, ProgramsGroup.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getProgramsGroup_Programs(), this.getProgram(), this.getProgram_ProgramsGroup(), "programs", null, 0, -1, ProgramsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(programEClass, Program.class, "Program", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProgram_ProgramsList(), this.getProgramsList(), this.getProgramsList_Programs(), "programsList", null, 0, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgram_ProgramsGroup(), this.getProgramsGroup(), this.getProgramsGroup_Programs(), "programsGroup", null, 0, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProgram_InvocatorSession(), this.getInvocatorSession(), null, "invocatorSession", null, 0, 1, Program.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getProgram_ValuesList(), this.getValuesList(), null, "valuesList", null, 0, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(scriptBasedProgramEClass, ScriptBasedProgram.class, "ScriptBasedProgram", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(triggeredBasedProgramEClass, TriggeredBasedProgram.class, "TriggeredBasedProgram", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(operationCallContainerEClass, OperationCallContainer.class, "OperationCallContainer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationCallContainer_OperationCalls(), this.getOperationCall(), this.getOperationCall_OperationCallContainer(), "operationCalls", null, 0, -1, OperationCallContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

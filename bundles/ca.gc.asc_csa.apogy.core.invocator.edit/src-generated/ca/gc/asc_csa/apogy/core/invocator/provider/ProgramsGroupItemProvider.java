@@ -1,14 +1,24 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2016 Copyrights (c)
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *      Pierre Allard (Pierre.Allard@canada.ca), 
+ *      Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *      Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *      Canadian Space Agency (CSA) - Initial API and implementation
  */
-package ca.gc.asc_csa.apogy.core.programs.javascript.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.provider.ScriptBasedProgramItemProvider;
-import ca.gc.asc_csa.apogy.core.programs.javascript.ApogyCoreJavaScriptProgramsPackage;
-import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 
 import java.util.Collection;
 import java.util.List;
@@ -16,26 +26,43 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class JavaScriptProgramItemProvider extends ScriptBasedProgramItemProvider {
+public class ProgramsGroupItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JavaScriptProgramItemProvider(AdapterFactory adapterFactory) {
+	public ProgramsGroupItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -50,25 +77,48 @@ public class JavaScriptProgramItemProvider extends ScriptBasedProgramItemProvide
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addScriptPathPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Script Path feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addScriptPathPropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_JavaScriptProgram_scriptPath_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_JavaScriptProgram_scriptPath_feature", "_UI_JavaScriptProgram_type"),
-				 ApogyCoreJavaScriptProgramsPackage.Literals.JAVA_SCRIPT_PROGRAM__SCRIPT_PATH,
+				 getString("_UI_Named_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Described_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -89,7 +139,7 @@ public class JavaScriptProgramItemProvider extends ScriptBasedProgramItemProvide
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS);
 		}
 		return childrenFeatures;
 	}
@@ -108,14 +158,14 @@ public class JavaScriptProgramItemProvider extends ScriptBasedProgramItemProvide
 	}
 
 	/**
-	 * This returns JavaScriptProgram.gif.
+	 * This returns ProgramsGroup.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/JavaScriptProgram"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ProgramsGroup"));
 	}
 
 	/**
@@ -126,10 +176,10 @@ public class JavaScriptProgramItemProvider extends ScriptBasedProgramItemProvide
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((JavaScriptProgram)object).getName();
+		String label = ((ProgramsGroup)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_JavaScriptProgram_type") :
-			getString("_UI_JavaScriptProgram_type") + " " + label;
+			getString("_UI_ProgramsGroup_type") :
+			getString("_UI_ProgramsGroup_type") + " " + label;
 	}
 	
 
@@ -144,11 +194,12 @@ public class JavaScriptProgramItemProvider extends ScriptBasedProgramItemProvide
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(JavaScriptProgram.class)) {
-			case ApogyCoreJavaScriptProgramsPackage.JAVA_SCRIPT_PROGRAM__SCRIPT_PATH:
+		switch (notification.getFeatureID(ProgramsGroup.class)) {
+			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP__NAME:
+			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ApogyCoreJavaScriptProgramsPackage.JAVA_SCRIPT_PROGRAM__OPERATION_CALLS:
+			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP__PROGRAMS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -168,8 +219,19 @@ public class JavaScriptProgramItemProvider extends ScriptBasedProgramItemProvide
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-				 ApogyCoreInvocatorFactory.eINSTANCE.createOperationCall()));
+				(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallsList()));
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

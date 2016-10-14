@@ -14,7 +14,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers;
  */
 
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
-import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.TriggeredBasedProgram;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Program;
  * @model
  * @generated
  */
-public interface ControllersConfiguration extends Program, OperationCallContainer
+public interface ControllersConfiguration extends TriggeredBasedProgram, OperationCallContainer
 {
   /**
 	 * Returns the value of the '<em><b>Active</b></em>' attribute.

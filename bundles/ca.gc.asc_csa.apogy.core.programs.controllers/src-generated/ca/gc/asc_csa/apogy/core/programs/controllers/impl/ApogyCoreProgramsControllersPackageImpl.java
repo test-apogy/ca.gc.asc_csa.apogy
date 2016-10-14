@@ -981,7 +981,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		controllersConfigurationEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getProgram());
+		controllersConfigurationEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getTriggeredBasedProgram());
 		controllersConfigurationEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getOperationCallContainer());
 		operationCallControllerBindingEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getOperationCall());
 		triggerEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());

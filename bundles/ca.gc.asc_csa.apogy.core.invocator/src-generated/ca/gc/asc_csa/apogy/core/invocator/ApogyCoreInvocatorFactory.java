@@ -268,6 +268,15 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   ProgramsList createProgramsList();
 
   /**
+	 * Returns a new object of class '<em>Programs Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Programs Group</em>'.
+	 * @generated
+	 */
+	ProgramsGroup createProgramsGroup();
+
+		/**
 	 * Returns a new object of class '<em>Operation Calls List</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

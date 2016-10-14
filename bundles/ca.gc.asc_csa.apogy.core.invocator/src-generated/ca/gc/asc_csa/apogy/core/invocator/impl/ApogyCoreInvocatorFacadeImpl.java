@@ -57,8 +57,11 @@ import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 import ca.gc.asc_csa.apogy.core.invocator.Type;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
@@ -1375,10 +1378,12 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public Program getProgramByName(InvocatorSession invocatorSession, String name) {
-		for (Program program : invocatorSession.getProgramsList().getPrograms()) {
-			if (program.getName().equals(name)) {
-				return program;
+	public Program getProgramByName(InvocatorSession invocatorSession, String name) {		
+		for (ProgramsGroup programsGroup : invocatorSession.getProgramsList().getProgramsGroups()) {		
+			for (Program program : programsGroup.getPrograms()) {
+				if (program.getName().equals(name)) {
+					return program;
+				}
 			}
 		}
 		return null;
@@ -1396,6 +1401,27 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			}
 		}
 		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<Program> getAllScriptBasedPrograms(ProgramsList programsList) {
+		List<Program> list = new ArrayList<Program>();
+		
+		for (ProgramsGroup programsGroup: programsList.getProgramsGroups()){
+			Iterator<Program> programs = programsGroup.getPrograms().iterator();
+			
+			while (programs.hasNext()){
+				Program program = programs.next();
+				if (program instanceof ScriptBasedProgram){
+					list.add(program);
+				}
+			}				
+		}
+		return list;
 	}
 
 	/**
@@ -1565,6 +1591,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 				return getProgramByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING:
 				return getContextByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST:
+				return getAllScriptBasedPrograms((ProgramsList)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

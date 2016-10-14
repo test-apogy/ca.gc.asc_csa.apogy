@@ -9,6 +9,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 
+import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 import ca.gc.asc_csa.apogy.core.programs.javascript.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -91,6 +92,10 @@ public class ApogyCoreJavaScriptProgramsAdapterFactory extends AdapterFactoryImp
 				return createProgramAdapter();
 			}
 			@Override
+			public Adapter caseScriptBasedProgram(ScriptBasedProgram object) {
+				return createScriptBasedProgramAdapter();
+			}
+			@Override
 			public Adapter caseOperationCallContainer(OperationCallContainer object) {
 				return createOperationCallContainerAdapter();
 			}
@@ -167,6 +172,20 @@ public class ApogyCoreJavaScriptProgramsAdapterFactory extends AdapterFactoryImp
 	 * @generated
 	 */
 	public Adapter createProgramAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram <em>Script Based Program</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram
+	 * @generated
+	 */
+	public Adapter createScriptBasedProgramAdapter() {
 		return null;
 	}
 

@@ -24,10 +24,8 @@ import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ValuesList;
-
 import com.google.common.base.Objects;
 
 
@@ -41,9 +39,8 @@ import com.google.common.base.Objects;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getProgramsList <em>Programs List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getProgramsGroup <em>Programs Group</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getValuesList <em>Values List</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,16 +88,6 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getValuesList() <em>Values List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValuesList()
-	 * @generated
-	 * @ordered
-	 */
-	protected ValuesList valuesList;
-
-		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -169,121 +156,74 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public ProgramsList getProgramsList()
-  {
-		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST) return null;
-		return (ProgramsList)eContainer();
+	public ProgramsGroup getProgramsGroup() {
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP) return null;
+		return (ProgramsGroup)eContainer();
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public ProgramsList basicGetProgramsList()
-  {
-		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST) return null;
-		return (ProgramsList)eInternalContainer();
+	public ProgramsGroup basicGetProgramsGroup() {
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP) return null;
+		return (ProgramsGroup)eInternalContainer();
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public NotificationChain basicSetProgramsList(ProgramsList newProgramsList, NotificationChain msgs)
-  {
-		msgs = eBasicSetContainer((InternalEObject)newProgramsList, ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST, msgs);
+	public NotificationChain basicSetProgramsGroup(ProgramsGroup newProgramsGroup, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newProgramsGroup, ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP, msgs);
 		return msgs;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setProgramsList(ProgramsList newProgramsList)
-  {
-		if (newProgramsList != eInternalContainer() || (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST && newProgramsList != null)) {
-			if (EcoreUtil.isAncestor(this, newProgramsList))
+	public void setProgramsGroup(ProgramsGroup newProgramsGroup) {
+		if (newProgramsGroup != eInternalContainer() || (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP && newProgramsGroup != null)) {
+			if (EcoreUtil.isAncestor(this, newProgramsGroup))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
-			if (newProgramsList != null)
-				msgs = ((InternalEObject)newProgramsList).eInverseAdd(this, ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS, ProgramsList.class, msgs);
-			msgs = basicSetProgramsList(newProgramsList, msgs);
+			if (newProgramsGroup != null)
+				msgs = ((InternalEObject)newProgramsGroup).eInverseAdd(this, ApogyCoreInvocatorPackage.PROGRAMS_GROUP__PROGRAMS, ProgramsGroup.class, msgs);
+			msgs = basicSetProgramsGroup(newProgramsGroup, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST, newProgramsList, newProgramsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP, newProgramsGroup, newProgramsGroup));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   public InvocatorSession getInvocatorSession()
   {
-		ProgramsList _programsList = this.getProgramsList();
-		boolean _equals = Objects.equal(_programsList, null);
+		ProgramsGroup _programsGroup = this.getProgramsGroup();
+		boolean _equals = Objects.equal(_programsGroup, null);
 		if (_equals) {
 			return null;
 		}
 		else {
-			ProgramsList _programsList_1 = this.getProgramsList();
-			return _programsList_1.getInvocatorSession();
+			ProgramsGroup _programsGroup_1 = this.getProgramsGroup();
+			return _programsGroup_1.getInvocatorSession();
 		}
 	}
 
   /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ValuesList getValuesList() {
-		return valuesList;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetValuesList(ValuesList newValuesList, NotificationChain msgs) {
-		ValuesList oldValuesList = valuesList;
-		valuesList = newValuesList;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST, oldValuesList, newValuesList);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValuesList(ValuesList newValuesList) {
-		if (newValuesList != valuesList) {
-			NotificationChain msgs = null;
-			if (valuesList != null)
-				msgs = ((InternalEObject)valuesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST, null, msgs);
-			if (newValuesList != null)
-				msgs = ((InternalEObject)newValuesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST, null, msgs);
-			msgs = basicSetValuesList(newValuesList, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST, newValuesList, newValuesList));
-	}
-
-		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -292,10 +232,10 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetProgramsList((ProgramsList)otherEnd, msgs);
+				return basicSetProgramsGroup((ProgramsGroup)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -309,10 +249,8 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
-				return basicSetProgramsList(null, msgs);
-			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
-				return basicSetValuesList(null, msgs);
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
+				return basicSetProgramsGroup(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -326,8 +264,8 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
-				return eInternalContainer().eInverseRemove(this, ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS, ProgramsList.class, msgs);
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreInvocatorPackage.PROGRAMS_GROUP__PROGRAMS, ProgramsGroup.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -345,13 +283,11 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 				return getName();
 			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				return getDescription();
-			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
-				if (resolve) return getProgramsList();
-				return basicGetProgramsList();
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
+				if (resolve) return getProgramsGroup();
+				return basicGetProgramsGroup();
 			case ApogyCoreInvocatorPackage.PROGRAM__INVOCATOR_SESSION:
 				return getInvocatorSession();
-			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
-				return getValuesList();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -371,11 +307,8 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
-				setProgramsList((ProgramsList)newValue);
-				return;
-			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
-				setValuesList((ValuesList)newValue);
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
+				setProgramsGroup((ProgramsGroup)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -396,11 +329,8 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
-				setProgramsList((ProgramsList)null);
-				return;
-			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
-				setValuesList((ValuesList)null);
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
+				setProgramsGroup((ProgramsGroup)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -419,12 +349,10 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
-				return basicGetProgramsList() != null;
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
+				return basicGetProgramsGroup() != null;
 			case ApogyCoreInvocatorPackage.PROGRAM__INVOCATOR_SESSION:
 				return getInvocatorSession() != null;
-			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
-				return valuesList != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -20,6 +20,7 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
@@ -36,10 +37,13 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 
-public class ProgramsListComposite extends Composite
+public class ScriptBasedProgramsListComposite extends Composite
 {
 	private DataBindingContext m_currentDataBindings;
 	
@@ -50,7 +54,7 @@ public class ProgramsListComposite extends Composite
 
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
 
-	public ProgramsListComposite( Composite parent, int style )
+	public ScriptBasedProgramsListComposite( Composite parent, int style )
 	{
 		super( parent, style );
 		setLayout( new GridLayout( 1, true ) );
@@ -66,54 +70,7 @@ public class ProgramsListComposite extends Composite
 		trclmnItem.setWidth(200);
 		trclmnItem.setText("Name");
 		
-		TreeViewerColumn treeViewerColumnItem_Description = new TreeViewerColumn(treeViewer, SWT.NONE);
-		TreeColumn trclmnCurrent = treeViewerColumnItem_Description.getColumn();
-		trclmnCurrent.setWidth(100);
-		trclmnCurrent.setText("Description");
-		
-		treeViewer.setContentProvider(new ITreeContentProvider(){
-
-			@Override
-			public void dispose() {
-			}
-
-			@Override
-			public void inputChanged(Viewer viewer, Object oldInput,
-					Object newInput) {
-			}
-
-			@Override
-			public Object[] getElements(Object inputElement) {
-				List<Program> programs = new ArrayList<Program>();
-				
-				if (inputElement instanceof ProgramsList){
-					Iterator<Program> iterator = ((ProgramsList)inputElement).getPrograms().iterator();
-					while (iterator.hasNext()){
-						Program program = iterator.next();
-						if (isApplicable(program)){
-							programs.add(program);
-						}
-					}
-				}						
-				return programs.toArray();
-			}
-
-			@Override
-			public Object[] getChildren(Object parentElement) {
-				return null;
-			}
-
-			@Override
-			public Object getParent(Object element) {
-				return programsList;
-			}
-
-			@Override
-			public boolean hasChildren(Object element) {
-				return false;
-			}
-			
-		});			
+		treeViewer.setContentProvider(new ProgramsListsContentProvider(adapterFactory));
 		treeViewer.setLabelProvider(new ProgramsListsLabelProvider(adapterFactory));
 	}
 	
@@ -133,7 +90,7 @@ public class ProgramsListComposite extends Composite
 				
 				@Override
 				public void selectionChanged(SelectionChangedEvent event) {
-					ProgramsListComposite.this.newSelection((TreeSelection)event.getSelection());
+					ScriptBasedProgramsListComposite.this.newSelection((TreeSelection)event.getSelection());
 				}
 			};
 		}
@@ -156,6 +113,19 @@ public class ProgramsListComposite extends Composite
 		return (Program) selection.getFirstElement();
 	}	
 	
+	
+	private class ProgramsListsContentProvider extends AdapterFactoryContentProvider{
+
+		public ProgramsListsContentProvider(AdapterFactory adapterFactory) {
+			super(adapterFactory);
+		}
+		
+		@Override
+		public Object[] getChildren(Object object) {
+			return (object instanceof ProgramsList || object instanceof ProgramsGroup) ? super.getChildren(object) : null;
+		}
+	}
+	
 	private class ProgramsListsLabelProvider extends AdapterFactoryLabelProvider implements ITableLabelProvider{
 
 		private final static int NAME_COLUMN_ID = 0;
@@ -170,25 +140,21 @@ public class ProgramsListComposite extends Composite
 			String str = "<undefined>";
 			
 			/** Program */
-			Program program = (Program) object;
+			Named named = (Named) object;
 			
 			switch (columnIndex) {
 			case NAME_COLUMN_ID:
-				str = program.getName() == null ? "<unnamed>" : program.getName();
-				break;
-
-			case DESCRIPTION_COLUMN_ID:
-				str = program.getDescription();
+				str = named.getName() == null ? "<unnamed>" : named.getName();
 				break;
 			}
 			
 			return str;
 		}	
 		
-		@Override
-		public Image getColumnImage(Object object, int columnIndex) {
-			return null;
-		}
+//		@Override
+//		public Image getColumnImage(Object object, int columnIndex) {
+//			return null;
+//		}
 	}
 	
 	public void setProgramsList(ProgramsList programsList){
