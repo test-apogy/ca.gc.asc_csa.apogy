@@ -2,7 +2,20 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.window.main" label="Apogy" width="500" height="400">
     <tags>shellMaximized</tags>
-    <children xsi:type="advanced:PerspectiveStack" xmi:id="_6wlLkMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.ide.perspectivestack" selectedElement="_6wlLkcgZEeSyMNYR5xypkQ">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_6wlLkMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.ide.perspectivestack">
+      <children xsi:type="advanced:Perspective" xmi:id="_MJCyUJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.perspective.welcome" label="Welcome" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Welcome">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_j20PMJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7">
+          <children xsi:type="basic:PartStack" xmi:id="_TSorMJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
+            <children xsi:type="basic:Part" xmi:id="_4uWh8JI5EeawCfS-XYP3Tg" elementId="ca.gc.asc_csa.apogy.rcp.parts.introPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.parts.IntroPart" label="Welcome" iconURI="">
+              <tags>View</tags>
+              <tags>categoryTag:org.eclipse.ui</tags>
+              <menus xmi:id="_4uWh8ZI5EeawCfS-XYP3Tg" elementId="org.eclipse.ui.internal.introview">
+                <tags>ViewMenu</tags>
+              </menus>
+            </children>
+          </children>
+        </children>
+      </children>
       <children xsi:type="advanced:Perspective" xmi:id="_6wlLkcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.perspective.systems" label="Systems" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogySystem.gif" tooltip="Systems">
         <children xsi:type="basic:PartSashContainer" xmi:id="_GtgccCcmEeaypqkzSmS_xw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.2">
           <children xsi:type="basic:PartSashContainer" xmi:id="_Xo9Q8CcmEeaypqkzSmS_xw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.3" horizontal="true">
@@ -51,7 +64,6 @@
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_8W6f0CK2Eea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.advanced" label="Advanced" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Advanced"/>
     </children>
-    <handlers xmi:id="_DmHtoCj7EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handler.1"/>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_6wlLisgZEeSyMNYR5xypkQ" elementId="file" label="File">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.quit" label="Quit" command="_WnJ38CjiEeaYVMfJA5sKMA"/>
@@ -126,9 +138,9 @@
     </sharedElements>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.test2" label="Apogy" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="" command="_C4Fq0B32EeaqJNPAWI4oCw">
-          <parameters xmi:id="_2yJIACj-EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.parameter.1" name="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveId" value="ca.gc.asc_csa.apogy.rcp.perspective.systems"/>
-          <parameters xmi:id="_Ntw0ICmMEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.parameter.2" name="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveLabel" value="Systems"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.switchPerspective" label="Apogy" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="" command="_C4Fq0B32EeaqJNPAWI4oCw">
+          <parameters xmi:id="_2yJIACj-EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.parameter.1" name="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveId" value="ca.gc.asc_csa.apogy.rcp.perspective.welcome"/>
+          <parameters xmi:id="_Ntw0ICmMEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.parameter.2" name="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveLabel" value="Welcome"/>
         </children>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_t6MqICmyEeaErYjgnAFhag" elementId="ca.gc.asc_csa.apogy.rcp.toolbarseparator.0"/>
         <children xsi:type="menu:ToolControl" xmi:id="_0s-3cCmwEeaErYjgnAFhag" elementId="ca.gc.asc_csa.apogy.rcp.toolcontrol.PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
