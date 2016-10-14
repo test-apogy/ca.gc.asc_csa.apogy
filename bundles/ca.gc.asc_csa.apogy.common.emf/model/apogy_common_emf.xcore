@@ -240,6 +240,14 @@ interface Described
 	String description
 }
 
+/*
+ * Archivable Element.
+ */
+interface Archivable
+{
+	boolean archived = "false"
+}
+
 
  /* -------------------------------------------------------------------------
  * Timed.
