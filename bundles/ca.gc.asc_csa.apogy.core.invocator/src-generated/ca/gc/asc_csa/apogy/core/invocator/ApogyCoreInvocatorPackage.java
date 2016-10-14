@@ -2550,13 +2550,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int PROGRAM__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM__ARCHIVED = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+
+		/**
 	 * The feature id for the '<em><b>Programs Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__PROGRAMS_GROUP = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int PROGRAM__PROGRAMS_GROUP = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -2565,7 +2574,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM__INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int PROGRAM__INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of structural features of the '<em>Program</em>' class.
@@ -2574,7 +2583,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int PROGRAM_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The number of operations of the '<em>Program</em>' class.
@@ -2612,6 +2621,15 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @ordered
 	 */
 	int SCRIPT_BASED_PROGRAM__DESCRIPTION = PROGRAM__DESCRIPTION;
+
+		/**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPT_BASED_PROGRAM__ARCHIVED = PROGRAM__ARCHIVED;
 
 		/**
 	 * The feature id for the '<em><b>Programs Group</b></em>' container reference.
@@ -2676,6 +2694,15 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @ordered
 	 */
 	int TRIGGERED_BASED_PROGRAM__DESCRIPTION = PROGRAM__DESCRIPTION;
+
+		/**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRIGGERED_BASED_PROGRAM__ARCHIVED = PROGRAM__ARCHIVED;
 
 		/**
 	 * The feature id for the '<em><b>Programs Group</b></em>' container reference.
@@ -2788,6 +2815,15 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int OPERATION_CALLS_LIST__DESCRIPTION = SCRIPT_BASED_PROGRAM__DESCRIPTION;
 
   /**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_CALLS_LIST__ARCHIVED = SCRIPT_BASED_PROGRAM__ARCHIVED;
+
+		/**
 	 * The feature id for the '<em><b>Programs Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

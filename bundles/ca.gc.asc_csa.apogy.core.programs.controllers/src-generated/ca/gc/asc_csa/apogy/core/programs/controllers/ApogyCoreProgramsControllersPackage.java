@@ -170,6 +170,15 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	int CONTROLLERS_CONFIGURATION__DESCRIPTION = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLERS_CONFIGURATION__ARCHIVED = ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM__ARCHIVED;
+
+	/**
 	 * The feature id for the '<em><b>Programs Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

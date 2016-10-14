@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -98,6 +99,7 @@ public class ApogyCoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = caseProgram(controllersConfiguration);
 				if (result == null) result = caseNamed(controllersConfiguration);
 				if (result == null) result = caseDescribed(controllersConfiguration);
+				if (result == null) result = caseArchivable(controllersConfiguration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -573,6 +575,21 @@ public class ApogyCoreProgramsControllersSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDescribed(Described object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArchivable(Archivable object) {
 		return null;
 	}
 

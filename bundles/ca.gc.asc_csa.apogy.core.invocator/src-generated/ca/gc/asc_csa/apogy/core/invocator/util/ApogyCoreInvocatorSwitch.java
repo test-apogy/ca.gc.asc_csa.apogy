@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.invocator.util;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -368,6 +369,7 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				T result = caseProgram(program);
 				if (result == null) result = caseNamed(program);
 				if (result == null) result = caseDescribed(program);
+				if (result == null) result = caseArchivable(program);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -377,6 +379,7 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = caseProgram(scriptBasedProgram);
 				if (result == null) result = caseNamed(scriptBasedProgram);
 				if (result == null) result = caseDescribed(scriptBasedProgram);
+				if (result == null) result = caseArchivable(scriptBasedProgram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -386,6 +389,7 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = caseProgram(triggeredBasedProgram);
 				if (result == null) result = caseNamed(triggeredBasedProgram);
 				if (result == null) result = caseDescribed(triggeredBasedProgram);
+				if (result == null) result = caseArchivable(triggeredBasedProgram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -403,6 +407,7 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = caseProgram(operationCallsList);
 				if (result == null) result = caseNamed(operationCallsList);
 				if (result == null) result = caseDescribed(operationCallsList);
+				if (result == null) result = caseArchivable(operationCallsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1703,6 +1708,21 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseDescribed(Described object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArchivable(Archivable object) {
 		return null;
 	}
 

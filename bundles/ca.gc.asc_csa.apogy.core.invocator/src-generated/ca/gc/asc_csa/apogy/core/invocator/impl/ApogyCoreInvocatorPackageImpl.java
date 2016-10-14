@@ -3620,6 +3620,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		programsGroupEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		programEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		programEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		programEClass.getESuperTypes().add(theApogyCommonEMFPackage.getArchivable());
 		scriptBasedProgramEClass.getESuperTypes().add(this.getProgram());
 		triggeredBasedProgramEClass.getESuperTypes().add(this.getProgram());
 		operationCallsListEClass.getESuperTypes().add(this.getScriptBasedProgram());

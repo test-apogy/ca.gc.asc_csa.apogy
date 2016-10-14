@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
@@ -39,6 +40,7 @@ import com.google.common.base.Objects;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#isArchived <em>Archived</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getProgramsGroup <em>Programs Group</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getInvocatorSession <em>Invocator Session</em>}</li>
  * </ul>
@@ -88,6 +90,26 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
+	 * The default value of the '{@link #isArchived() <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isArchived()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ARCHIVED_EDEFAULT = false;
+
+		/**
+	 * The cached value of the '{@link #isArchived() <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isArchived()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean archived = ARCHIVED_EDEFAULT;
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -155,6 +177,27 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isArchived() {
+		return archived;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setArchived(boolean newArchived) {
+		boolean oldArchived = archived;
+		archived = newArchived;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__ARCHIVED, oldArchived, archived));
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -283,6 +326,8 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 				return getName();
 			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				return getDescription();
+			case ApogyCoreInvocatorPackage.PROGRAM__ARCHIVED:
+				return isArchived();
 			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
 				if (resolve) return getProgramsGroup();
 				return basicGetProgramsGroup();
@@ -307,6 +352,9 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
+			case ApogyCoreInvocatorPackage.PROGRAM__ARCHIVED:
+				setArchived((Boolean)newValue);
+				return;
 			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
 				setProgramsGroup((ProgramsGroup)newValue);
 				return;
@@ -329,6 +377,9 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case ApogyCoreInvocatorPackage.PROGRAM__ARCHIVED:
+				setArchived(ARCHIVED_EDEFAULT);
+				return;
 			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
 				setProgramsGroup((ProgramsGroup)null);
 				return;
@@ -349,6 +400,8 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ApogyCoreInvocatorPackage.PROGRAM__ARCHIVED:
+				return archived != ARCHIVED_EDEFAULT;
 			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_GROUP:
 				return basicGetProgramsGroup() != null;
 			case ApogyCoreInvocatorPackage.PROGRAM__INVOCATOR_SESSION:
@@ -371,6 +424,12 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 				default: return -1;
 			}
 		}
+		if (baseClass == Archivable.class) {
+			switch (derivedFeatureID) {
+				case ApogyCoreInvocatorPackage.PROGRAM__ARCHIVED: return ApogyCommonEMFPackage.ARCHIVABLE__ARCHIVED;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -385,6 +444,12 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
 				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		if (baseClass == Archivable.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.ARCHIVABLE__ARCHIVED: return ApogyCoreInvocatorPackage.PROGRAM__ARCHIVED;
 				default: return -1;
 			}
 		}
@@ -406,6 +471,8 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", archived: ");
+		result.append(archived);
 		result.append(')');
 		return result.toString();
 	}

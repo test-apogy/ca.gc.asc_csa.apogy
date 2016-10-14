@@ -3,6 +3,7 @@
  */
 package ca.gc.asc_csa.apogy.core.programs.javascript.util;
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 
@@ -82,6 +83,7 @@ public class ApogyCoreJavaScriptProgramsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseProgram(javaScriptProgram);
 				if (result == null) result = caseNamed(javaScriptProgram);
 				if (result == null) result = caseDescribed(javaScriptProgram);
+				if (result == null) result = caseArchivable(javaScriptProgram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -131,6 +133,21 @@ public class ApogyCoreJavaScriptProgramsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDescribed(Described object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArchivable(Archivable object) {
 		return null;
 	}
 

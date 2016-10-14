@@ -99,6 +99,15 @@ public interface ApogyCoreJavaScriptProgramsPackage extends EPackage {
 	int JAVA_SCRIPT_PROGRAM__DESCRIPTION = ApogyCoreInvocatorPackage.SCRIPT_BASED_PROGRAM__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SCRIPT_PROGRAM__ARCHIVED = ApogyCoreInvocatorPackage.SCRIPT_BASED_PROGRAM__ARCHIVED;
+
+	/**
 	 * The feature id for the '<em><b>Programs Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

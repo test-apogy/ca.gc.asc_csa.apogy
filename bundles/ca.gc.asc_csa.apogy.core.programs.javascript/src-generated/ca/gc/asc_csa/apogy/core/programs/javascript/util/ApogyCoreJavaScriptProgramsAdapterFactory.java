@@ -3,6 +3,7 @@
  */
 package ca.gc.asc_csa.apogy.core.programs.javascript.util;
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 
@@ -88,6 +89,10 @@ public class ApogyCoreJavaScriptProgramsAdapterFactory extends AdapterFactoryImp
 				return createDescribedAdapter();
 			}
 			@Override
+			public Adapter caseArchivable(Archivable object) {
+				return createArchivableAdapter();
+			}
+			@Override
 			public Adapter caseProgram(Program object) {
 				return createProgramAdapter();
 			}
@@ -158,6 +163,20 @@ public class ApogyCoreJavaScriptProgramsAdapterFactory extends AdapterFactoryImp
 	 * @generated
 	 */
 	public Adapter createDescribedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Archivable <em>Archivable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Archivable
+	 * @generated
+	 */
+	public Adapter createArchivableAdapter() {
 		return null;
 	}
 

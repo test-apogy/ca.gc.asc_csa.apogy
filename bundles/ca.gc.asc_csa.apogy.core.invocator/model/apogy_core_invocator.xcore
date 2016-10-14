@@ -51,6 +51,7 @@ import org.eclipse.emf.ecore.EEnumLiteral
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EOperation
 import org.eclipse.emf.ecore.EParameter
+import ca.gc.asc_csa.apogy.common.emf.Archivable
 
 /* -------------------------------------------------------------------------
  * 
@@ -790,7 +791,7 @@ class ProgramsGroup extends Named, Described{
 /* -------------------------------------------------------------------------
  * Program.
  * ------------------------------------------------------------------------- */
-abstract class Program extends Named, Described
+abstract class Program extends Named, Described, Archivable
 {
  	@GenModel(property="None")
 	container ProgramsGroup programsGroup opposite programs

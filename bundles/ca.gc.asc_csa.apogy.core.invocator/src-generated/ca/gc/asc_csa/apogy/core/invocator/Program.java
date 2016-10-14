@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 
@@ -40,7 +41,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * @model abstract="true"
  * @generated
  */
-public interface Program extends Named, Described
+public interface Program extends Named, Described, Archivable
 {
   /**
 	 * Returns the value of the '<em><b>Programs Group</b></em>' container reference.
