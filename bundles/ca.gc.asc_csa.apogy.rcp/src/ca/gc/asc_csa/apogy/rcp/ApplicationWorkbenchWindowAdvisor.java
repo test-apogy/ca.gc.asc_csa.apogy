@@ -16,7 +16,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 	
     @Override
     public void postWindowCreate() {
-    	System.out.println("ApplicationWorkbenchWindowAdvisor.postWindowCreate()");
+//    	System.out.println("ApplicationWorkbenchWindowAdvisor.postWindowCreate()");
         // remove unwanted menu entries
 	List<String> unwantedItems = Arrays.asList(
 		"org.eclipse.ui.openLocalFile", 
@@ -37,7 +37,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
     }
     
     private void removeUnwantedItems(final List<String> unwantedItems, final IMenuManager menuManager) {
-    	System.out.println("ApplicationWorkbenchWindowAdvisor.removeUnwantedItems()");
+//    	System.out.println("ApplicationWorkbenchWindowAdvisor.removeUnwantedItems()");
 	IContributionItem[] items = menuManager.getItems();
 	
 	for (IContributionItem item : items) {
@@ -45,7 +45,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		removeUnwantedItems(unwantedItems, (IMenuManager) item);
 	    }
 	    
-	    System.out.println("ApplicationWorkbenchWindowAdvisor.removeUnwantedItems() item id = " + item.getId());
+//	    System.out.println("ApplicationWorkbenchWindowAdvisor.removeUnwantedItems() item id = " + item.getId());
 	    
 	    if (unwantedItems.contains(item.getId())) {
 		menuManager.remove(item);

@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import java.util.Date;
 
 import ca.gc.asc_csa.apogy.common.emf.Named;
@@ -26,6 +27,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#isArchived <em>Archived</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getContextsList <em>Contexts List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getVariableImplementationsList <em>Variable Implementations List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getEnvironment <em>Environment</em>}</li>
@@ -36,12 +38,39 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext()
- * @model abstract="true"
+ * @model
  * @generated
  */
-public interface Context extends Named
+public interface Context extends Named, Described
 {
   /**
+	 * Returns the value of the '<em><b>Archived</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Archived</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Archived</em>' attribute.
+	 * @see #setArchived(boolean)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext_Archived()
+	 * @model default="false" unique="false"
+	 * @generated
+	 */
+	boolean isArchived();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Context#isArchived <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Archived</em>' attribute.
+	 * @see #isArchived()
+	 * @generated
+	 */
+	void setArchived(boolean value);
+
+		/**
 	 * Returns the value of the '<em><b>Contexts List</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ContextsList#getContexts <em>Contexts</em>}'.
 	 * <!-- begin-user-doc -->

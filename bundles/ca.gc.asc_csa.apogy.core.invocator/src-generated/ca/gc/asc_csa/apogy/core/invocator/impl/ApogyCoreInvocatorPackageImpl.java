@@ -41,7 +41,6 @@ import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
-import ca.gc.asc_csa.apogy.core.invocator.BasicContext;
 import ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.ChannelsList;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
@@ -250,13 +249,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
   private EClass contextEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass basicContextEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -1018,6 +1010,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(36);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__CreateContext__InvocatorSession() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(37);
 	}
 
 		/**
@@ -1818,20 +1819,19 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContext_ContextsList()
-  {
-		return (EReference)contextEClass.getEStructuralFeatures().get(0);
+	public EAttribute getContext_Archived() {
+		return (EAttribute)contextEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContext_VariableImplementationsList()
+  public EReference getContext_ContextsList()
   {
 		return (EReference)contextEClass.getEStructuralFeatures().get(1);
 	}
@@ -1841,7 +1841,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContext_Environment()
+  public EReference getContext_VariableImplementationsList()
   {
 		return (EReference)contextEClass.getEStructuralFeatures().get(2);
 	}
@@ -1851,7 +1851,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContext_DataProductsList()
+  public EReference getContext_Environment()
   {
 		return (EReference)contextEClass.getEStructuralFeatures().get(3);
 	}
@@ -1861,9 +1861,9 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getContext_InstancesCreationDate()
+  public EReference getContext_DataProductsList()
   {
-		return (EAttribute)contextEClass.getEStructuralFeatures().get(4);
+		return (EReference)contextEClass.getEStructuralFeatures().get(4);
 	}
 
   /**
@@ -1871,7 +1871,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getContext_InstancesDisposalDate()
+  public EAttribute getContext_InstancesCreationDate()
   {
 		return (EAttribute)contextEClass.getEStructuralFeatures().get(5);
 	}
@@ -1890,12 +1890,21 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getBasicContext()
+  public EAttribute getContext_InstancesDisposalDate()
   {
-		return basicContextEClass;
+		return (EAttribute)contextEClass.getEStructuralFeatures().get(6);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getContext_VariablesInstantiated() {
+		return (EAttribute)contextEClass.getEStructuralFeatures().get(7);
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -3192,6 +3201,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3292,6 +3302,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEReference(contextsListEClass, CONTEXTS_LIST__CONTEXTS);
 
 		contextEClass = createEClass(CONTEXT);
+		createEAttribute(contextEClass, CONTEXT__ARCHIVED);
 		createEReference(contextEClass, CONTEXT__CONTEXTS_LIST);
 		createEReference(contextEClass, CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST);
 		createEReference(contextEClass, CONTEXT__ENVIRONMENT);
@@ -3299,8 +3310,11 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEAttribute(contextEClass, CONTEXT__INSTANCES_CREATION_DATE);
 		createEAttribute(contextEClass, CONTEXT__INSTANCES_DISPOSAL_DATE);
 		createEAttribute(contextEClass, CONTEXT__VARIABLES_INSTANTIATED);
+<<<<<<< HEAD
+=======
 
 		basicContextEClass = createEClass(BASIC_CONTEXT);
+>>>>>>> refs/heads/master
 
 		variableImplementationsListEClass = createEClass(VARIABLE_IMPLEMENTATIONS_LIST);
 		createEReference(variableImplementationsListEClass, VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS);
@@ -3526,7 +3540,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		typeMemberReferenceTreeElementEClass.getESuperTypes().add(this.getTypeMemberReference());
 		variableEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		contextEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		basicContextEClass.getESuperTypes().add(this.getContext());
+		contextEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		initializationDataEClass.getESuperTypes().add(this.getAbstractInitializationData());
 		variableImplementationEClass.getESuperTypes().add(this.getAbstractTypeImplementation());
 		typeMemberImplementationEClass.getESuperTypes().add(this.getAbstractTypeImplementation());
@@ -3706,6 +3720,9 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCoreInvocatorFacade__CreateContext__InvocatorSession(), this.getContext(), "createContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInvocatorSession_ProgramsList(), this.getProgramsList(), this.getProgramsList_InvocatorSession(), "programsList", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3825,7 +3842,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEReference(getContextsList_Environment(), this.getEnvironment(), this.getEnvironment_ContextsList(), "environment", null, 0, 1, ContextsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContextsList_Contexts(), this.getContext(), this.getContext_ContextsList(), "contexts", null, 0, -1, ContextsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(contextEClass, Context.class, "Context", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getContext_Archived(), theEcorePackage.getEBoolean(), "archived", "false", 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_ContextsList(), this.getContextsList(), this.getContextsList_Contexts(), "contextsList", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_VariableImplementationsList(), this.getVariableImplementationsList(), null, "variableImplementationsList", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Context.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -3833,8 +3851,11 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEAttribute(getContext_InstancesCreationDate(), theEcorePackage.getEDate(), "instancesCreationDate", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContext_InstancesDisposalDate(), theEcorePackage.getEDate(), "instancesDisposalDate", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContext_VariablesInstantiated(), theEcorePackage.getEBoolean(), "variablesInstantiated", "false", 0, 1, Context.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+<<<<<<< HEAD
+=======
 
 		initEClass(basicContextEClass, BasicContext.class, "BasicContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+>>>>>>> refs/heads/master
 
 		initEClass(variableImplementationsListEClass, VariableImplementationsList.class, "VariableImplementationsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableImplementationsList_VariableImplementations(), this.getVariableImplementation(), this.getVariableImplementation_VariableImplementationsList(), "variableImplementations", null, 0, -1, VariableImplementationsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3855,7 +3876,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEReference(getAbstractTypeImplementation_AbstractInitializationData(), this.getAbstractInitializationData(), null, "abstractInitializationData", null, 0, 1, AbstractTypeImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractTypeImplementation_Instance(), theEcorePackage.getEObject(), null, "instance", null, 0, 1, AbstractTypeImplementation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractTypeImplementation_AdapterInstance(), this.getTypeApiAdapter(), null, "adapterInstance", null, 0, 1, AbstractTypeImplementation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTypeImplementation_HandlingType(), this.getType(), null, "handlingType", null, 0, 1, AbstractTypeImplementation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTypeImplementation_HandlingType(), this.getType(), null, "handlingType", null, 1, 1, AbstractTypeImplementation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getAbstractTypeImplementation__GetTypeMemberImplementation__String(), this.getTypeMemberImplementation(), "getTypeMemberImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);

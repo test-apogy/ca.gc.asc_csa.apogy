@@ -25,6 +25,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -432,5 +433,19 @@ public interface ApogyCommonEMFFacade extends EObject
 	 * @generated
 	 */
 	EObject getEObjectById(ResourceSet resourceSet, String id);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Generates and returns a default name for a specific feature container.
+	 * @param eObject The instance of the container.
+	 * @param eReference The reference of the object to name.
+	 * @return A unique name.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" eObjectUnique="false" eReferenceUnique="false"
+	 * @generated
+	 */
+	String getDefaultName(EObject eObject, EReference eReference);
 
 } // ApogyCommonEMFFacade

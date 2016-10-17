@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -60,6 +61,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.EMFAnnotationConstants;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Ranges;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;
@@ -192,6 +194,8 @@ ApogyCommonEMFFacade {
 				return getID((EObject)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING:
 				return getEObjectById((ResourceSet)arguments.get(0), (String)arguments.get(1));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE:
+				return getDefaultName((EObject)arguments.get(0), (EReference)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1249,6 +1253,32 @@ ApogyCommonEMFFacade {
 			}
 		}		
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String getDefaultName(EObject eObject, EReference eReference) {
+		String name = eReference.getEReferenceType().getName();
+		eObject.eGet(eReference);
+
+		// If the container is a list
+		if (eReference.isMany()) {
+			int j = 1;
+			// Find a name that is unique
+			for (int i = 0; i < eObject.eContents().size(); i++) {
+				Named named = (Named) eObject.eContents().get(i);
+				if (named.getName().equals(name + "_" + Integer.toString(j))) {
+					j++;
+					i = 0;
+				}
+			}
+			return name + "_" + Integer.toString(j);
+		}
+
+		return name;
 	}
 
 	/**

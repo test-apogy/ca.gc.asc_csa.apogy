@@ -541,4 +541,18 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	Context getContextByName(InvocatorSession invocatorSession, String name);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Creates a new context and populates the {@link VariableImplementations}.
+	 * The context is not fully initialized (e.g. Name and description are not set).
+	 * @param invocatorSession the session for which the context is built.
+	 * @return Reference to the new context.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" invocatorSessionUnique="false"
+	 * @generated
+	 */
+	Context createContext(InvocatorSession invocatorSession);
+
 } // ApogyCoreInvocatorFacade

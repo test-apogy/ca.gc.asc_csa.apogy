@@ -1,4 +1,3 @@
-package ca.gc.asc_csa.apogy.core.invocator;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -12,18 +11,15 @@ package ca.gc.asc_csa.apogy.core.invocator;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.doc;
 
-
-/**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Basic Context</b></em>'.
- * <!-- end-user-doc -->
- *
- *
- * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getBasicContext()
- * @model
- * @generated
+/*
+ * The following class contains Apogy Documentation Constants.
  */
-public interface BasicContext extends Context
-{
-} // BasicContext
+public class Constants {
+	private Constants(){		
+	}
+	
+	public static final String APOGY_DOC_TOC_LOCATION = "/" + Activator.ID + "wiki/main.html"; 
+	public static final String APOGY_DOC_TUTORIALS_LOCATION = "/" + Activator.ID + "wiki/tutorials.html";
+}

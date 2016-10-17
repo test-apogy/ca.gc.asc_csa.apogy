@@ -1,5 +1,3 @@
-# News #
-Release 0.5.14 available 2016.05.03-1800EDT ([Download](https://dl.bintray.com/apogy/Releases/0.5/))
 # Background #
 **Apogy** is a multi-mission operations and planning software framework. **Apogy** uses Eclipse Modeling Framework models to define the systems being controlled, the environment in which these systems are operated, the operations being carried out and the corresponding data produced during operations.
 
@@ -10,18 +8,18 @@ As an example, integrating a rover in **Apogy** is as simple as creating an EMF 
 # Eclipse Update Sites #
 Description                    | URL          | Notes
 ------------------------------ | -------------|-------------------------
-Stable (Official Releases)     | [https://dl.bintray.com/apogy/Releases/0.5/](https://dl.bintray.com/apogy/Releases/0.5/) | [Changes](https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/master/CHANGES), [Version](https://bitbucket.org/apogy/ca.gc.asc_csa.apogy/src/master/VERSION)
-Latest (Develop)               | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/) | 
+Develop (Stable)               | [https://dl.bintray.com/apogy/Develop/0.5/0.5.0.201610041554/](https://dl.bintray.com/apogy/Develop/0.5/0.5.0.201610041554/) | 
+Develop (Latest)               | [https://dl.bintray.com/apogy/Develop/0.5/](https://dl.bintray.com/apogy/Develop/0.5/) | 
 
 # Documentation #
 Description                    | URL
 ------------------------------ | ---
-Main Guide                     | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/main.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/main.html)
-Installation                   | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/installation.html)
-Simple Way To Start            | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/simple_way_to_start.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/simple_way_to_start.html)
-Tutorials                      | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tutorials.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/tutorials.html)
-User                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/user.html)
-Development                    | [ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html](ftp://ftp.asc-csa.gc.ca/users/apogy/pub/doc/dev.html)
+Main Guide                     | [http://apogy.bitbucket.org/wiki/main.html](http://apogy.bitbucket.org/wiki/main.html)
+Installation                   | [http://apogy.bitbucket.org/wiki/installation.html](http://apogy.bitbucket.org/wiki/installation.html)
+Simple Way To Start            | [http://apogy.bitbucket.org/wiki/simple_way_to_start.html](http://apogy.bitbucket.org/wiki/simple_way_to_start.html)
+Tutorials                      | [http://apogy.bitbucket.org/wiki/tutorials.html](http://apogy.bitbucket.org/wiki/tutorials.html)
+User                    | [http://apogy.bitbucket.org/wiki/user.html](http://apogy.bitbucket.org/wiki/user.html)
+Development                    | [http://apogy.bitbucket.org/wiki/dev.html](http://apogy.bitbucket.org/wiki/dev.html)
 Eclipse Proposal               | [https://projects.eclipse.org/proposals/apogy](https://projects.eclipse.org/proposals/apogy)
 Eclipse Conference 2016 Presentation      | [https://www.eclipsecon.org/na2016/sites/default/files/slides/apogy_eclipsecon2016_0.pdf](https://www.eclipsecon.org/na2016/sites/default/files/slides/apogy_eclipsecon2016_0.pdf)
 
@@ -29,3 +27,13 @@ Eclipse Conference 2016 Presentation      | [https://www.eclipsecon.org/na2016/s
 Description                    | URL
 ------------------------------ | ---
 Eclipse Conference 2016 Speaker Pitch   | https://youtu.be/-zb8EgQdXdc
+
+# Development Priorities #
+1. Provide Apogy E4 RCP framework
+2. Improve User Experience (UX) (Sirius 4, NEON etc)
+3. Support Shared Session using CDO
+4. Implement Remote Application Platform (RAP)
+5. Implement Live Dashboard Designer using Sirius
+6. Support Telemetry Recording and Display
+7. Integrate Virtual Reality Module
+8. Improve Documentation

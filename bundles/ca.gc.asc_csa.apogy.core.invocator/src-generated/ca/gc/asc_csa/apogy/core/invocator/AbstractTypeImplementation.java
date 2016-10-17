@@ -173,7 +173,7 @@ public interface AbstractTypeImplementation extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Handling Type</em>' reference.
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractTypeImplementation_HandlingType()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
   Type getHandlingType();

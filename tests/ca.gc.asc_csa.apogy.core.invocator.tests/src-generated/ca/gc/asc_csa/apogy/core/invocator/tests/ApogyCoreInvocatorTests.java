@@ -49,7 +49,7 @@ public class ApogyCoreInvocatorTests extends TestSuite {
 		suite.addTestSuite(TypeMemberReferenceListElementTest.class);
 		suite.addTestSuite(TypeMemberReferenceTreeElementTest.class);
 		suite.addTestSuite(VariableTest.class);
-		suite.addTestSuite(BasicContextTest.class);
+		suite.addTestSuite(ContextTest.class);
 		suite.addTestSuite(VariableImplementationsListTest.class);
 		suite.addTestSuite(VariableImplementationTest.class);
 		suite.addTestSuite(TypeMemberImplementationTest.class);

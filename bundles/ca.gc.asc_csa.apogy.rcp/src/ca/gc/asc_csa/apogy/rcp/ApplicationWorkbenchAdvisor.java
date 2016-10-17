@@ -37,7 +37,8 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
     }
 
 	public String getInitialWindowPerspectiveId() {
-		return "ca.gc.asc_csa.apogy.rcp.perspective.overview";
+		System.out.println("ApplicationWorkbenchAdvisor.getInitialWindowPerspectiveId()");
+		return "ca.gc.asc_csa.apogy.rcp.perspective.welcome";
 	} 
 
 	/*
