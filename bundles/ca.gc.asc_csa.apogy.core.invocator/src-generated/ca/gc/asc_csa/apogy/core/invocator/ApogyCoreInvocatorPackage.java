@@ -1773,13 +1773,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int CONTEXT__INSTANCES_DISPOSAL_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 7;
 
   /**
+	 * The feature id for the '<em><b>Variables Instantiated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__VARIABLES_INSTANTIATED = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 8;
+
+		/**
 	 * The number of structural features of the '<em>Context</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 8;
+  int CONTEXT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 9;
 
   /**
 	 * The number of operations of the '<em>Context</em>' class.
@@ -6171,6 +6180,17 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   EAttribute getContext_InstancesDisposalDate();
 
   /**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.Context#isVariablesInstantiated <em>Variables Instantiated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Variables Instantiated</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#isVariablesInstantiated()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EAttribute getContext_VariablesInstantiated();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList <em>Variable Implementations List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8598,6 +8618,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage
     EAttribute CONTEXT__INSTANCES_DISPOSAL_DATE = eINSTANCE.getContext_InstancesDisposalDate();
 
     /**
+		 * The meta object literal for the '<em><b>Variables Instantiated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTEXT__VARIABLES_INSTANTIATED = eINSTANCE.getContext_VariablesInstantiated();
+
+				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationsListImpl <em>Variable Implementations List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
