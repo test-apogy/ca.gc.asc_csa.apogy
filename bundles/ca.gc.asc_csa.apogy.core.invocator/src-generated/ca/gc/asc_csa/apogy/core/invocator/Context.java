@@ -34,6 +34,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getDataProductsList <em>Data Products List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesCreationDate <em>Instances Creation Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesDisposalDate <em>Instances Disposal Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#isVariablesInstantiated <em>Variables Instantiated</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext()
@@ -220,5 +221,31 @@ public interface Context extends Named, Described
 	 * @generated
 	 */
   void setInstancesDisposalDate(Date value);
+
+		/**
+	 * Returns the value of the '<em><b>Variables Instantiated</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Indicates if the variables are instantiated (initialized)
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Variables Instantiated</em>' attribute.
+	 * @see #setVariablesInstantiated(boolean)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext_VariablesInstantiated()
+	 * @model default="false" unique="false" transient="true"
+	 * @generated
+	 */
+	boolean isVariablesInstantiated();
+
+		/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Context#isVariablesInstantiated <em>Variables Instantiated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Variables Instantiated</em>' attribute.
+	 * @see #isVariablesInstantiated()
+	 * @generated
+	 */
+	void setVariablesInstantiated(boolean value);
 
 } // Context

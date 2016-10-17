@@ -660,6 +660,11 @@ class Context extends Named, Described
 		
   	@GenModel(property="Readonly")		
 	Date instancesDisposalDate 
+	
+	/*
+	 * Indicates if the variables are instantiated (initialized)
+	 */	 	 
+	transient boolean variablesInstantiated = "false"
 }
 
 /* ------------------------------------------------------------------------- 
