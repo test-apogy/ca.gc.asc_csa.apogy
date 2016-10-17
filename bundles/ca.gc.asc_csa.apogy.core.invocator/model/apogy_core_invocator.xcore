@@ -184,7 +184,7 @@ class ApogyCoreInvocatorFacade
 	 * @return List of TypeMemberImplementation.
 	 */
 	op List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType)		
-	
+		
 	/*
 	 * Resets the variable instances.
 	 */
@@ -660,7 +660,7 @@ class Context extends Named, Described
 		
   	@GenModel(property="Readonly")		
 	Date instancesDisposalDate 
-	
+
 	/*
 	 * Indicates if the variables are instantiated (initialized)
 	 */	 	 

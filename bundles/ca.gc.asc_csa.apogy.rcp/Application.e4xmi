@@ -31,13 +31,21 @@
           </children>
         </children>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Environment"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Environment">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_Sj4c8IyREeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7"/>
+      </children>
       <children xsi:type="advanced:Perspective" xmi:id="_ypkYICKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.programs" label="Programs" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/ProgramsList.gif" tooltip="Programs">
         <children xsi:type="basic:PartSashContainer" xmi:id="_GRop8CkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.0">
           <children xsi:type="basic:PartStack" xmi:id="_HwKdcCkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.1"/>
         </children>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_3_Z0YCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.data" label="Data" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/DataProductsList.gif" tooltip="Data"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_3_Z0YCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.data" label="Data" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/DataProductsList.gif" tooltip="Data">
+        <children xsi:type="basic:PartSashContainer" xmi:id="__oleUIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.8">
+          <children xsi:type="basic:PartStack" xmi:id="___LZYIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
+            <children xsi:type="advanced:Placeholder" xmi:id="_RLIvEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.2" ref="_En_XkIyWEeajju10_PNlwQ"/>
+          </children>
+        </children>
+      </children>
       <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif" tooltip="Orbital">
         <children xsi:type="basic:PartSashContainer" xmi:id="_WkvXkDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.1">
           <children xsi:type="basic:PartSashContainer" xmi:id="_YIwvEDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.4" horizontal="true">
@@ -75,6 +83,10 @@
       </children>
       <children xsi:type="menu:Menu" xmi:id="_6wlLjsgZEeSyMNYR5xypkQ" elementId="help_" label="Help">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_JfZ-kCjiEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.helpcontents" label="Help Contents" command="_Wm-RwCjiEeaYVMfJA5sKMA"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_NBSDYIwKEeagBK84clz7Sg" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.1"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_PDqK0IwKEeagBK84clz7Sg" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.checkforupdates" label="Check For Updates" command="_nYfdIIwJEeagBK84clz7Sg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Wsb6EIwKEeagBK84clz7Sg" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.installnewsoftware" label="Install New Software..." command="_CE41MCgbEeau5bAVKAeRVA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_b-BIcIwKEeagBK84clz7Sg" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.installationdetails" label="Installation Details" command="_CE7RcCgbEeau5bAVKAeRVA"/>
         <children xsi:type="menu:MenuSeparator" xmi:id="_N0OxMCgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.menuseparator.0"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLj8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.about" label="About Apogy" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
       </children>
@@ -136,6 +148,27 @@
       </menus>
       <toolbar xmi:id="_nNLekjdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"/>
     </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_En_XkIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.core.topology.ui.views.Apogy3DView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="3D Viewer" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
+      <toolbar xmi:id="_WZTdEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.1"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_oepiwIyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Session Status" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/Instance.gif" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
+      <menus xmi:id="_oepiwYyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView">
+        <tags>ViewMenu</tags>
+      </menus>
+      <toolbar xmi:id="_oepiwoyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_WS2HYIykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Apogy Camera View" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/icons/CameraView.gif" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.addons.ui.category</tags>
+      <menus xmi:id="_WS2HYYykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView">
+        <tags>ViewMenu</tags>
+      </menus>
+      <toolbar xmi:id="_WS2HYoykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"/>
+    </sharedElements>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.switchPerspective" label="Apogy" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="" command="_C4Fq0B32EeaqJNPAWI4oCw">
@@ -182,6 +215,18 @@
     </menus>
     <toolbar xmi:id="_nrCCAigZEeau5bAVKAeRVA" elementId="org.eclipse.ui.navigator.ProjectExplorer"/>
   </descriptors>
+  <descriptors xmi:id="_jlrBoIyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView" label="Session Status" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/Instance.gif" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <menus xmi:id="_jlrBoYyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView">
+      <tags>ViewMenu</tags>
+    </menus>
+    <toolbar xmi:id="_jlrBooyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView"/>
+  </descriptors>
+  <descriptors xmi:id="_TuZNoIykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView" label="Apogy Camera View" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/icons/CameraView.gif" closeable="true">
+    <menus xmi:id="_TuZNoYykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView">
+      <tags>ViewMenu</tags>
+    </menus>
+    <toolbar xmi:id="_TuZNooykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"/>
+  </descriptors>
   <commands xmi:id="_C4Fq0B32EeaqJNPAWI4oCw" elementId="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommand" commandName="switchPerspective">
     <parameters xmi:id="_W6jrYCj-EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveId" name="id" typeId="" optional="false"/>
     <parameters xmi:id="__3wtoCmLEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveLabel" name="label" optional="false"/>
@@ -202,6 +247,9 @@
   <commands xmi:id="_WnLtICjiEeaYVMfJA5sKMA" elementId="org.eclipse.ui.window.preferences" commandName="%command.preferences.name" description="%command.preferences.description"/>
   <commands xmi:id="_R7XBwCjjEeaYVMfJA5sKMA" elementId="org.eclipse.equinox.p2.ui.sdk.update" commandName="%Update.command"/>
   <commands xmi:id="_R7bTMCjjEeaYVMfJA5sKMA" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="%InstallationDetails.command"/>
+  <commands xmi:id="_nYfdIIwJEeagBK84clz7Sg" elementId="org.eclipse.equinox.p2.ui.sdk.update" commandName="%Update.command"/>
+  <commands xmi:id="_nZOc8IwJEeagBK84clz7Sg" elementId="org.eclipse.equinox.p2.ui.sdk.install" commandName="%Install.command"/>
+  <commands xmi:id="_nZuzQIwJEeagBK84clz7Sg" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="%InstallationDetails.command"/>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

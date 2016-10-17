@@ -1779,7 +1779,11 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
+<<<<<<< HEAD
 	int CONTEXT__VARIABLES_INSTANTIATED = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 8;
+=======
+	int CONTEXT__VARIABLES_INSTANTIATED = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 6;
+>>>>>>> refs/heads/master
 
 		/**
 	 * The number of structural features of the '<em>Context</em>' class.
@@ -1788,7 +1792,11 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
+<<<<<<< HEAD
   int CONTEXT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 9;
+=======
+  int CONTEXT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 7;
+>>>>>>> refs/heads/master
 
   /**
 	 * The number of operations of the '<em>Context</em>' class.
@@ -1800,6 +1808,109 @@ public interface ApogyCoreInvocatorPackage extends EPackage
   int CONTEXT_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
+<<<<<<< HEAD
+=======
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl <em>Basic Context</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getBasicContext()
+	 * @generated
+	 */
+  int BASIC_CONTEXT = 21;
+
+  /**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BASIC_CONTEXT__NAME = CONTEXT__NAME;
+
+  /**
+	 * The feature id for the '<em><b>Contexts List</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BASIC_CONTEXT__CONTEXTS_LIST = CONTEXT__CONTEXTS_LIST;
+
+  /**
+	 * The feature id for the '<em><b>Variable Implementations List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BASIC_CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST;
+
+  /**
+	 * The feature id for the '<em><b>Environment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BASIC_CONTEXT__ENVIRONMENT = CONTEXT__ENVIRONMENT;
+
+  /**
+	 * The feature id for the '<em><b>Data Products List</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BASIC_CONTEXT__DATA_PRODUCTS_LIST = CONTEXT__DATA_PRODUCTS_LIST;
+
+  /**
+	 * The feature id for the '<em><b>Instances Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BASIC_CONTEXT__INSTANCES_CREATION_DATE = CONTEXT__INSTANCES_CREATION_DATE;
+
+  /**
+	 * The feature id for the '<em><b>Instances Disposal Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BASIC_CONTEXT__INSTANCES_DISPOSAL_DATE = CONTEXT__INSTANCES_DISPOSAL_DATE;
+
+  /**
+	 * The feature id for the '<em><b>Variables Instantiated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_CONTEXT__VARIABLES_INSTANTIATED = CONTEXT__VARIABLES_INSTANTIATED;
+
+		/**
+	 * The number of structural features of the '<em>Basic Context</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BASIC_CONTEXT_FEATURE_COUNT = CONTEXT_FEATURE_COUNT + 0;
+
+  /**
+	 * The number of operations of the '<em>Basic Context</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BASIC_CONTEXT_OPERATION_COUNT = CONTEXT_OPERATION_COUNT + 0;
+
+  /**
+>>>>>>> refs/heads/master
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationsListImpl <em>Variable Implementations List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6181,6 +6292,20 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 
   /**
 	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.Context#isVariablesInstantiated <em>Variables Instantiated</em>}'.
+<<<<<<< HEAD
+=======
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Variables Instantiated</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#isVariablesInstantiated()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EAttribute getContext_VariablesInstantiated();
+
+		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.BasicContext <em>Basic Context</em>}'.
+>>>>>>> refs/heads/master
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Variables Instantiated</em>'.
@@ -8619,6 +8744,17 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 
     /**
 		 * The meta object literal for the '<em><b>Variables Instantiated</b></em>' attribute feature.
+<<<<<<< HEAD
+=======
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTEXT__VARIABLES_INSTANTIATED = eINSTANCE.getContext_VariablesInstantiated();
+
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl <em>Basic Context</em>}' class.
+>>>>>>> refs/heads/master
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -47,12 +47,6 @@
 		</repository>		
 		
 		<repository>
-			<id>Sirius3</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/sirius/updates/releases/3.1.1/mars</url>
-		</repository>		
-
-		<repository>
 			<id>Sirius4</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/sirius/updates/releases/4.0.0/neon</url>
@@ -74,26 +68,22 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho.version}</version>
 				<configuration>
-					<environments>
-					
-<!--					
+					<environments>									
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
 							<arch>x86</arch>
 						</environment>
--->
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
 							<arch>x86_64</arch>
 						</environment>
-<!--						<environment>
+						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
 							<arch>x86</arch>
-						</environment>
--->						
+						</environment>					
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>

@@ -1878,6 +1878,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getContext_VariablesInstantiated() {
+		return (EAttribute)contextEClass.getEStructuralFeatures().get(6);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -3301,6 +3310,11 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEAttribute(contextEClass, CONTEXT__INSTANCES_CREATION_DATE);
 		createEAttribute(contextEClass, CONTEXT__INSTANCES_DISPOSAL_DATE);
 		createEAttribute(contextEClass, CONTEXT__VARIABLES_INSTANTIATED);
+<<<<<<< HEAD
+=======
+
+		basicContextEClass = createEClass(BASIC_CONTEXT);
+>>>>>>> refs/heads/master
 
 		variableImplementationsListEClass = createEClass(VARIABLE_IMPLEMENTATIONS_LIST);
 		createEReference(variableImplementationsListEClass, VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS);
@@ -3837,6 +3851,11 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEAttribute(getContext_InstancesCreationDate(), theEcorePackage.getEDate(), "instancesCreationDate", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContext_InstancesDisposalDate(), theEcorePackage.getEDate(), "instancesDisposalDate", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContext_VariablesInstantiated(), theEcorePackage.getEBoolean(), "variablesInstantiated", "false", 0, 1, Context.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+<<<<<<< HEAD
+=======
+
+		initEClass(basicContextEClass, BasicContext.class, "BasicContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+>>>>>>> refs/heads/master
 
 		initEClass(variableImplementationsListEClass, VariableImplementationsList.class, "VariableImplementationsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableImplementationsList_VariableImplementations(), this.getVariableImplementation(), this.getVariableImplementation_VariableImplementationsList(), "variableImplementations", null, 0, -1, VariableImplementationsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
