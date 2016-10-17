@@ -28,7 +28,8 @@ Require-Bundle: javax.inject;bundle-version="0.0.0",
  org.eclipse.e4.core.commands;bundle-version="0.11.0",
  org.eclipse.e4.core.services;bundle-version="2.0.0",
  org.eclipse.ui.intro;bundle-version="3.5.0",
- ca.gc.asc_csa.apogy.doc;bundle-version="0.5.0"
+ ca.gc.asc_csa.apogy.doc;bundle-version="0.5.0",
+ ca.gc.asc_csa.apogy.core.ui;bundle-version="0.5.0"
 Bundle-ManifestVersion: 2
 Bundle-Activator: ca.gc.asc_csa.apogy.rcp.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

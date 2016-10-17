@@ -20,6 +20,6 @@ public class Constants {
 	private Constants(){		
 	}
 	
-	public static final String APOGY_DOC_TOC_LOCATION = "/" + Activator.ID + "wiki/toc.xml"; 
+	public static final String APOGY_DOC_TOC_LOCATION = "/" + Activator.ID + "wiki/main.html"; 
 	public static final String APOGY_DOC_TUTORIALS_LOCATION = "/" + Activator.ID + "wiki/tutorials.html";
 }
