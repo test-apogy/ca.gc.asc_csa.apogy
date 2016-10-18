@@ -11,14 +11,14 @@
       </variables>
     </variablesList>
     <contextsList xmi:id="_2irY1wrOEeW4-_ONWXXiAw">
-      <contexts xsi:type="invocator:Context" xmi:id="_2irY2ArOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_2ism_grOEeW4-_ONWXXiAw">
+      <contexts xmi:id="_2irY2ArOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_2ism_grOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_2irY2QrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_2irY2grOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.camera#//CameraSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
-      <contexts xsi:type="invocator:Context" xmi:id="_2irY2wrOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_2isnAArOEeW4-_ONWXXiAw">
+      <contexts xmi:id="_2irY2wrOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_2isnAArOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_2irY3ArOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_2irY3QrOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.camera#//CameraStub"/>
@@ -43,8 +43,9 @@
     </timeSourcesList>
   </environment>
   <programsList xmi:id="_2ism9grOEeW4-_ONWXXiAw">
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_2ism9wrOEeW4-_ONWXXiAw">
-      <operationCalls xmi:id="_2ism-ArOEeW4-_ONWXXiAw" name="Init" variable="_2irY1grOEeW4-_ONWXXiAw">
+    <programsGroups xmi:id="_VzYT8JVGEeak_eGfxSDIhA" name="Default">
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_H2rTEJVHEeak_eGfxSDIhA">
+         <operationCalls xmi:id="_2ism-ArOEeW4-_ONWXXiAw" name="Init" variable="_2irY1grOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/init"/>
       </operationCalls>
       <operationCalls xmi:id="_2ism-QrOEeW4-_ONWXXiAw" name="Take Snapshot" variable="_2irY1grOEeW4-_ONWXXiAw">
@@ -56,7 +57,8 @@
           <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_2ism_ArOEeW4-_ONWXXiAw" value="1.0"/>
         </argumentsList>
       </operationCalls>
-    </programs>
+      </programs>
+    </programsGroups>
   </programsList>
   <dataProductsListContainer xmi:id="_2ism_QrOEeW4-_ONWXXiAw">
     <dataProductsList xmi:id="_2ism_grOEeW4-_ONWXXiAw" name="Simulated Data Product Set" description="The list of data products associated with the camera's simulated implementation">
