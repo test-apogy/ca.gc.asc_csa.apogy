@@ -1106,11 +1106,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 		environment.getActiveContext().setInstancesCreationDate(date);
 		setInitVariableInstancesDate(date);
 		environment.getActiveContext().setInstancesDisposalDate(null);
-<<<<<<< HEAD
-=======
-		
+
 		/* Variables are instantiated. */
->>>>>>> refs/heads/master
 		environment.getActiveContext().setVariablesInstantiated(true);
 	}
 
@@ -1135,11 +1132,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 		}
 
 		environment.getActiveContext().setInstancesDisposalDate(new Date());
-<<<<<<< HEAD
-=======
-		
+
 		/* Variables are disposed. */
->>>>>>> refs/heads/master
 		environment.getActiveContext().setVariablesInstantiated(false);
 	}
 
