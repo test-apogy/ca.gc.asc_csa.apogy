@@ -17,9 +17,9 @@ import java.util.Arrays;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -44,18 +44,15 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
@@ -102,7 +99,8 @@ public class ScriptBasedProgramsListComposite extends Composite
 		tree.setHeaderVisible(true);
 		tree.setLinesVisible(true);
 		ColumnViewerToolTipSupport.enableFor(treeViewer);
-		
+		treeViewer.addSelectionChangedListener(getTreeViewerSelectionChangedListener());
+				
 		TreeViewerColumn treeViewerColumnItem_Name = new TreeViewerColumn(treeViewer, SWT.NONE);
 		TreeColumn trclmnItemName = treeViewerColumnItem_Name.getColumn();
 		trclmnItemName.setWidth(200);
@@ -156,12 +154,13 @@ public class ScriptBasedProgramsListComposite extends Composite
 
 				SetCommand command = new SetCommand(editingDomain, getSelectedProgram(),
 						ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED, true);
-				editingDomain.getCommandStack().execute(command);
+				editingDomain.getCommandStack().execute(command);			
+//				treeViewer.refresh();
 
-				if (m_currentDataBindings != null) {
-					m_currentDataBindings.dispose();
-				}
-				m_currentDataBindings = initDataBindings();
+//				if (m_currentDataBindings != null) {
+//					m_currentDataBindings.dispose();
+//				}
+//				m_currentDataBindings = initDataBindings();
 			}
 		});
 		
@@ -240,7 +239,16 @@ public class ScriptBasedProgramsListComposite extends Composite
 		}
 		
 		@Override
+		public void notifyChanged(Notification notification) {
+			System.out.println("ScriptBasedProgramsListComposite.ProgramsListsContentProvider.notifyChanged()");
+			super.notifyChanged(notification);
+			
+//			treeViewer.refresh();
+		}
+		
+		@Override
 		public Object[] getChildren(Object object) {
+			System.out.println("ScriptBasedProgramsListComposite.ProgramsListsContentProvider.getChildren()");
 			if(object instanceof ProgramsList || object instanceof ProgramsGroup){
 				
 				if(object instanceof Archivable){
@@ -254,8 +262,13 @@ public class ScriptBasedProgramsListComposite extends Composite
 				children = ApogyCoreInvocatorFacade.INSTANCE.filterArchived(children);
 				return children.toArray();
 			}
-			return null;
-			
+			return null;			
+		}
+		
+		@Override
+		public boolean hasChildren(Object object) {
+			System.out.println("ScriptBasedProgramsListComposite.ProgramsListsContentProvider.hasChildren()");
+			return getChildren(object) != null;
 		}
 	}
 	
@@ -271,12 +284,16 @@ public class ScriptBasedProgramsListComposite extends Composite
 		public String getColumnText(Object object, int columnIndex) {
 			String str = "<undefined>";		
 			
+			
+			if (object instanceof Named){
+			
 			Named named = (Named) object;
 			
 			switch (columnIndex) {
 			case NAME_COLUMN_ID:
 				str = named.getName() == null ? "<unnamed>" : named.getName();
 				break;
+			}
 			}
 			
 			return str;
@@ -314,8 +331,6 @@ public class ScriptBasedProgramsListComposite extends Composite
 				treeViewer.expandAll();
 			}
 		}		
-		treeViewer.addSelectionChangedListener(getTreeViewerSelectionChangedListener());
-		
 		return bindingContext;
 	}
 	

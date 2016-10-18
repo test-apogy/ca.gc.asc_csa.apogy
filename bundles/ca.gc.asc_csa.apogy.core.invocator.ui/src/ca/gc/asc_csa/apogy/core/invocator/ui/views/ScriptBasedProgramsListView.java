@@ -15,6 +15,9 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.views;
  **/
 
 
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
@@ -24,7 +27,7 @@ import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ScriptBasedProgramsListComposite;
 
-public class ScriptBasedProgramsListView extends AbstractView
+public class ScriptBasedProgramsListView extends AbstractView implements IEditingDomainProvider
 {
 	private ScriptBasedProgramsListComposite composite;
 
@@ -58,5 +61,10 @@ public class ScriptBasedProgramsListView extends AbstractView
 
 	@Override
 	public void updateSelection(ISelection arg0) {
-	}			
+	}		
+	
+	@Override
+	public EditingDomain getEditingDomain() {
+		return AdapterFactoryEditingDomain.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList());
+	}	
 }

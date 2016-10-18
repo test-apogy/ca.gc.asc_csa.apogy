@@ -44,7 +44,7 @@
   </environment>
   <programsList xmi:id="_wcQ0MwrOEeW4-_ONWXXiAw">
     <programsGroups xmi:id="_JXfvMJIeEeaWhYL_roqerw" name="Default">
-      <programs xsi:type="invocator:OperationCallsList" xmi:id="_KAAgsJIeEeaWhYL_roqerw" name="Simple">
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_KAAgsJIeEeaWhYL_roqerw" name="Simple2">
         <operationCalls xmi:id="_wcZ-IArOEeW4-_ONWXXiAw" name="Init" variable="_wazbpgrOEeW4-_ONWXXiAw">
           <eOperation href="ca.gc.asc_csa.apogy.examples.antenna#//Antenna/init"/>
         </operationCalls>
