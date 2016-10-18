@@ -309,7 +309,14 @@ class ApogyCoreInvocatorFacade
 	  * @param filter Determine if the program should be considered as a valid program. 
 	  * @return List of programs.
 	  */
-	 op List<Program> getAllScriptBasedPrograms(ProgramsList programsList)	 	 
+	 op List<Program> getAllScriptBasedPrograms(ProgramsList programsList)	 	
+	 
+	 /*
+	  * Returns only the objects that are not archived
+	  * @param objects Refers to the array containing the objects to filter
+	  * @return Array of filtered objects
+	  */
+	 op Object[] filterArchived(Object[] objects)
 } 
 
 enum VariableListenerEventType{
@@ -775,7 +782,7 @@ class ProgramsList
 	contains ProgramsGroup[0..*] programsGroups opposite programsList
 }
 
-class ProgramsGroup extends Named, Described{
+class ProgramsGroup extends Named, Described, Archivable{
 	@GenModel(property="None")
 	container ProgramsList programsList opposite programsGroups 
 

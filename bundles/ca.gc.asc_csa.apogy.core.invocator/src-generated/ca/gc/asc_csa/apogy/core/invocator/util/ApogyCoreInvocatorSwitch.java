@@ -361,6 +361,7 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				T result = caseProgramsGroup(programsGroup);
 				if (result == null) result = caseNamed(programsGroup);
 				if (result == null) result = caseDescribed(programsGroup);
+				if (result == null) result = caseArchivable(programsGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

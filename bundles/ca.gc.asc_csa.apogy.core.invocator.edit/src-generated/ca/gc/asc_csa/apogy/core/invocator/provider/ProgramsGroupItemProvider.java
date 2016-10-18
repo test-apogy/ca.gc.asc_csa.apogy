@@ -79,6 +79,7 @@ public class ProgramsGroupItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addArchivedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -123,6 +124,28 @@ public class ProgramsGroupItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Archived feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArchivedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Archivable_archived_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Archivable_archived_feature", "_UI_Archivable_type"),
+				 ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -197,6 +220,7 @@ public class ProgramsGroupItemProvider
 		switch (notification.getFeatureID(ProgramsGroup.class)) {
 			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP__NAME:
 			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP__ARCHIVED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP__PROGRAMS:

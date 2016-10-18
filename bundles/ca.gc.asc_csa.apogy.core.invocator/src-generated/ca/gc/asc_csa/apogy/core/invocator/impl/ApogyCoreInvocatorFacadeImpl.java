@@ -19,7 +19,6 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
@@ -29,12 +28,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
@@ -1427,6 +1426,27 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public EList<Object> filterArchived(EList<Object> objects) {	
+		System.out.println("ApogyCoreInvocatorFacadeImpl.filterArchived()" + objects);
+		if(!objects.isEmpty()){
+			for(Iterator<Object> iter = objects.iterator(); iter.hasNext();){
+				Object object = iter.next();
+				if(object instanceof Archivable){
+					if(((Archivable) object).isArchived()){
+						iter.remove();
+					}
+				}
+			}
+		}
+		System.out.println("ApogyCoreInvocatorFacadeImpl.filterArchived()" + objects);
+		return objects;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1593,6 +1613,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 				return getContextByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST:
 				return getAllScriptBasedPrograms((ProgramsList)arguments.get(0));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___FILTER_ARCHIVED__ELIST:
+				return filterArchived((EList<Object>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

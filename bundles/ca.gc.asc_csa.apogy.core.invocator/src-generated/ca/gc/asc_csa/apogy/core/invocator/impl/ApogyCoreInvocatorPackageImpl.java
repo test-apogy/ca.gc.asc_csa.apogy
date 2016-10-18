@@ -1055,6 +1055,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__FilterArchived__EList() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(38);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -3269,6 +3278,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___FILTER_ARCHIVED__ELIST);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3618,6 +3628,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		valueEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		programsGroupEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		programsGroupEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		programsGroupEClass.getESuperTypes().add(theApogyCommonEMFPackage.getArchivable());
 		programEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		programEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		programEClass.getESuperTypes().add(theApogyCommonEMFPackage.getArchivable());
@@ -3802,6 +3813,9 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		g2 = createEGenericType(this.getProgram());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__FilterArchived__EList(), theEcorePackage.getEJavaObject(), "filterArchived", 0, -1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEJavaObject(), "objects", 0, -1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

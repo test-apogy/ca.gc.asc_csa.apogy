@@ -13,8 +13,16 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Arrays;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.edit.command.AddCommand;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
@@ -36,17 +44,23 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewProgramsGroupWizard;
+import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewScriptBasedProgramWizard;
 
 public class ScriptBasedProgramsListComposite extends Composite
 {
@@ -116,16 +130,38 @@ public class ScriptBasedProgramsListComposite extends Composite
 		
 		Button btnNewProgram = formToolkit.createButton(compositeProgramsList, "New Program", SWT.NONE);
 		btnNewProgram.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+		btnNewProgram.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				
+				/**
+				 * Creates and opens the wizard to create a valid context
+				 */
+				NewScriptBasedProgramWizard newScriptBasedProgramWizard = new NewScriptBasedProgramWizard(getSelectedProgramsGroup());
+				WizardDialog dialog = new WizardDialog(getShell(), newScriptBasedProgramWizard);
+			
+				dialog.open();
+			}
+		});
 		
 		
 		Button btnDelete = new Button(compositeProgramsList, SWT.NONE);
 		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		formToolkit.adapt(btnDelete, true, true);
 		btnDelete.setText("Delete");
-		btnNewGroup.addSelectionListener(new SelectionAdapter() {
+		btnDelete.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				getSelectedProgram().setArchived(true);
+				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(programsList);
+
+				SetCommand command = new SetCommand(editingDomain, getSelectedProgram(),
+						ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED, true);
+				editingDomain.getCommandStack().execute(command);
+
+				if (m_currentDataBindings != null) {
+					m_currentDataBindings.dispose();
+				}
+				m_currentDataBindings = initDataBindings();
 			}
 		});
 		
@@ -180,8 +216,21 @@ public class ScriptBasedProgramsListComposite extends Composite
 	 */
 	public Program getSelectedProgram() {
 		TreeSelection selection = (TreeSelection) treeViewer.getSelection();
-		return (Program) selection.getFirstElement();
+		if(selection.getFirstElement() instanceof Program){
+			return (Program) selection.getFirstElement();
+		}
+		return null;
 	}	
+	
+	public ProgramsGroup getSelectedProgramsGroup() {
+		TreeSelection selection = (TreeSelection) treeViewer.getSelection();
+		if (selection.getFirstElement() instanceof ProgramsGroup) {
+			return (ProgramsGroup) selection.getFirstElement();
+		} else if (selection.getFirstElement() instanceof Program) {
+			return ((Program) selection.getFirstElement()).getProgramsGroup();
+		}
+		return null;
+	}
 	
 	
 	private class ProgramsListsContentProvider extends AdapterFactoryContentProvider{
@@ -192,16 +241,20 @@ public class ScriptBasedProgramsListComposite extends Composite
 		
 		@Override
 		public Object[] getChildren(Object object) {
-			/*if(object instanceof ProgramsList){
-				Archivable[] archivable = new Archivable[super.getChildren(object).length];
-				for(Object child: super.getChildren(object)){
-					archivable[i] = (Archivable) super.getChildren(object)[i];
+			if(object instanceof ProgramsList || object instanceof ProgramsGroup){
+				
+				if(object instanceof Archivable){
+					if(((Archivable)object).isArchived()){
+						return null;
+					}
 				}
-				if(((Archivable[]) super.getChildren(object)).isArchived()){
-					
-				}*/
-				return (object instanceof ProgramsList || object instanceof ProgramsGroup) ? super.getChildren(object) : null;
-			//}
+				
+				EList<Object> children = new BasicEList<>();
+				children.addAll(Arrays.asList(super.getChildren(object)));
+				children = ApogyCoreInvocatorFacade.INSTANCE.filterArchived(children);
+				return children.toArray();
+			}
+			return null;
 			
 		}
 	}

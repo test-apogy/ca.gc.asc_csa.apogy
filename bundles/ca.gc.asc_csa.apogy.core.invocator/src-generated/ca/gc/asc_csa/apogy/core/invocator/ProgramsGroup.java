@@ -13,6 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.core.invocator;
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 
@@ -36,7 +37,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ProgramsGroup extends Named, Described {
+public interface ProgramsGroup extends Named, Described, Archivable {
 	/**
 	 * Returns the value of the '<em><b>Programs List</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getProgramsGroups <em>Programs Groups</em>}'.

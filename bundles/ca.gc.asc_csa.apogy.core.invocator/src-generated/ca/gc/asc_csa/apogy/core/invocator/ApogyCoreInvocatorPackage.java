@@ -466,13 +466,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST = 37;
 
 		/**
+	 * The operation id for the '<em>Filter Archived</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___FILTER_ARCHIVED__ELIST = 38;
+
+		/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 38;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 39;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -2477,13 +2486,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	int PROGRAMS_GROUP__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 		/**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAMS_GROUP__ARCHIVED = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+
+		/**
 	 * The feature id for the '<em><b>Programs List</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMS_GROUP__PROGRAMS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int PROGRAMS_GROUP__PROGRAMS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -2492,7 +2510,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMS_GROUP__INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int PROGRAMS_GROUP__INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 		/**
 	 * The feature id for the '<em><b>Programs</b></em>' containment reference list.
@@ -2501,7 +2519,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMS_GROUP__PROGRAMS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+	int PROGRAMS_GROUP__PROGRAMS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 		/**
 	 * The number of structural features of the '<em>Programs Group</em>' class.
@@ -2510,7 +2528,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMS_GROUP_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+	int PROGRAMS_GROUP_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
 		/**
 	 * The number of operations of the '<em>Programs Group</em>' class.
@@ -5552,6 +5570,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 	EOperation getApogyCoreInvocatorFacade__GetAllScriptBasedPrograms__ProgramsList();
 
 		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#filterArchived(org.eclipse.emf.common.util.EList) <em>Filter Archived</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Filter Archived</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#filterArchived(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__FilterArchived__EList();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8232,6 +8260,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST = eINSTANCE.getApogyCoreInvocatorFacade__GetAllScriptBasedPrograms__ProgramsList();
+
+				/**
+		 * The meta object literal for the '<em><b>Filter Archived</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___FILTER_ARCHIVED__ELIST = eINSTANCE.getApogyCoreInvocatorFacade__FilterArchived__EList();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
