@@ -111,11 +111,11 @@ public class JavaScriptProgramItemProvider extends ScriptBasedProgramItemProvide
 	 * This returns JavaScriptProgram.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/JavaScriptProgram"));
+		return super.getImage(object);
 	}
 
 	/**

@@ -210,4 +210,8 @@ public class ProgramItemProvider
 		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
+  @Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Program"));
+	}
 }
