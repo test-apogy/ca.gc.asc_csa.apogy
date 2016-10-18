@@ -11,7 +11,7 @@
       </variables>
     </variablesList>
     <contextsList xmi:id="_CaxoMQrPEeW4-_ONWXXiAw">
-      <contexts xsi:type="invocator:Context" xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw" instancesCreationDate="2016-02-29T14:54:10.364-0500">
+      <contexts xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw" instancesCreationDate="2016-02-29T14:54:10.364-0500">
         <variableImplementationsList xmi:id="_CaxoMwrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_uj61gN8UEeW7wsHj6HEw3w" variable="_CaxoMArPEeW4-_ONWXXiAw">
             <typeMemberImplementations xmi:id="_vC0YAN8UEeW7wsHj6HEw3w">
@@ -34,7 +34,7 @@
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
-      <contexts xsi:type="invocator:Context" xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
+      <contexts xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_CaxoNgrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_y7ZMEN8UEeW7wsHj6HEw3w" variable="_CaxoMArPEeW4-_ONWXXiAw">
             <typeMemberImplementations xmi:id="_zbtq4N8UEeW7wsHj6HEw3w">
@@ -92,297 +92,299 @@
     </timeSourcesList>
   </environment>
   <programsList xmi:id="_Ca4V4wrPEeW4-_ONWXXiAw">
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_B6d5oN74EeWUu90KVuiwJg" name="Setup" description="Sets up the rover and its subsystems.">
-      <operationCalls xmi:id="_C4EEIN8VEeW7wsHj6HEw3w" name="Initialize" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.rover#//Rover/init"/>
-      </operationCalls>
-      <operationCalls xmi:id="_AN41gN8YEeW_hc0ZHRC9Fw" name="Clear Position Error." variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_BAR7wN8YEeW_hc0ZHRC9Fw">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
-      </operationCalls>
-    </programs>
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_UOVSkN74EeWUu90KVuiwJg" name="Navigate" description="Operations used to command the rover to navigate around.">
-      <operationCalls xmi:id="_Ca4V6grPEeW4-_ONWXXiAw" name="Change Linear Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the linear velocity component only.">
-        <typeMemberReferenceListElement xmi:id="_Lu13kN8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdLinearVelocity"/>
-        <argumentsList xmi:id="_M1unIN8VEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_M1unId8VEeW7wsHj6HEw3w" value="0.5"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_Ca4V5wrPEeW4-_ONWXXiAw" name="Change Angular Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the angular velocity component only.">
-        <typeMemberReferenceListElement xmi:id="_PBSfwN8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdAngularVelocity"/>
-        <argumentsList xmi:id="_PuC4EN8VEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_PuC4Ed8VEeW7wsHj6HEw3w" value="0.17453292519943295"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_Ca4V7QrPEeW4-_ONWXXiAw" name="Move Forward" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
-        <typeMemberReferenceListElement xmi:id="_RmoxYN8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
-        <argumentsList xmi:id="_SfgTEN8VEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_SfgTEd8VEeW7wsHj6HEw3w" value="0.5"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_SfgTEt8VEeW7wsHj6HEw3w" value="0.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_29CO0N8PEeWkAptrmJWICw" name="Move Reverse" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure reverse motion.">
-        <typeMemberReferenceListElement xmi:id="_UQCckN8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
-        <argumentsList xmi:id="_Uw7jIN8VEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Uw7jId8VEeW7wsHj6HEw3w" value="-0.5"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Uw7jIt8VEeW7wsHj6HEw3w" value="0.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_sn3KwN8PEeWkAptrmJWICw" name="Turn Left" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
-        <typeMemberReferenceListElement xmi:id="_WiQ94N8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
-        <argumentsList xmi:id="_XJD4IN8VEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_XJD4Id8VEeW7wsHj6HEw3w" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_XJD4It8VEeW7wsHj6HEw3w" value="0.17453292519943295"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_xH9R0N8PEeWkAptrmJWICw" name="Turn Right" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
-        <typeMemberReferenceListElement xmi:id="_Ykab0N8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
-        <argumentsList xmi:id="_ZHPcEN8VEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_ZHPcEd8VEeW7wsHj6HEw3w" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_ZHPcEt8VEeW7wsHj6HEw3w" value="-0.17453292519943295"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_Ca7ZMArPEeW4-_ONWXXiAw" name="Stop" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_aoCgcN8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/stop"/>
-      </operationCalls>
-      <operationCalls xmi:id="_zBnZkN74EeWUu90KVuiwJg" name="Reset position to start position." variable="_CaxoMArPEeW4-_ONWXXiAw" description="Resets the position to start position.">
-        <typeMemberReferenceListElement xmi:id="_cSQmkN8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/resetPosition"/>
-        <argumentsList xmi:id="_dPrREN8VEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:EClassArgument" xmi:id="_dPrREd8VEeW7wsHj6HEw3w">
-            <value xsi:type="mobile_platform:Position" xmi:id="_eBqusN8VEeW7wsHj6HEw3w"/>
-          </arguments>
-        </argumentsList>
-      </operationCalls>
-    </programs>
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_gB7WQN8VEeW7wsHj6HEw3w" name="Unstow Arm" description="Commands sequence used to unstow the arm.">
-      <operationCalls xmi:id="_jVtbMN8VEeW7wsHj6HEw3w" name="Move To Pan Tilt 0,0" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Orients the arm camera to ensure it is in a safe configuration for the unstow.">
-        <typeMemberReferenceListElement xmi:id="_n3HJ0N8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
-        <argumentsList xmi:id="_ZdfRgN8YEeW_hc0ZHRC9Fw">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_ZdfRgd8YEeW_hc0ZHRC9Fw" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_ZdfRgt8YEeW_hc0ZHRC9Fw" value="0.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_sZjaQN8VEeW7wsHj6HEw3w" name="Move Arm" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Move the arm to an unstow configuration.">
-        <typeMemberReferenceListElement xmi:id="_s36KMN8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
-        <argumentsList xmi:id="_uX7LcN8VEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_uX7Lcd8VEeW7wsHj6HEw3w" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_uX7Lct8VEeW7wsHj6HEw3w" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_uX7Lc98VEeW7wsHj6HEw3w" value="-1.5707963267948966"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_uX7LdN8VEeW7wsHj6HEw3w" value="0.0"/>
-        </argumentsList>
-      </operationCalls>
-    </programs>
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_z2OAIN8VEeW7wsHj6HEw3w" name="Stow Arm" description="Commands sequence used to stow the arm.">
-      <operationCalls xmi:id="_z2OAId8VEeW7wsHj6HEw3w" name="Move To Pan Tilt 0,0" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Orients the arm camera to ensure it is in a safe configuration for the stow.">
-        <typeMemberReferenceListElement xmi:id="_z2OAIt8VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
-        <argumentsList xmi:id="_X4LgkN8YEeW_hc0ZHRC9Fw">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_X4Lgkd8YEeW_hc0ZHRC9Fw" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_X4Lgkt8YEeW_hc0ZHRC9Fw" value="0.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_ml1AwN8YEeW_hc0ZHRC9Fw" name="Move to Pre-Stow" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Stows the arm.">
-        <typeMemberReferenceListElement xmi:id="_ml1Awd8YEeW_hc0ZHRC9Fw">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
-        <argumentsList xmi:id="_nTEhQN8YEeW_hc0ZHRC9Fw">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_nTEhQd8YEeW_hc0ZHRC9Fw" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_nTEhQt8YEeW_hc0ZHRC9Fw" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_nTEhQ98YEeW_hc0ZHRC9Fw" value="-1.5707963267948966"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_nTEhRN8YEeW_hc0ZHRC9Fw" value="0.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_z2OAJt8VEeW7wsHj6HEw3w" name="Stow Arm" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Stows the arm.">
-        <typeMemberReferenceListElement xmi:id="_z2OAJ98VEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/stow"/>
-      </operationCalls>
-    </programs>
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_VA_i8N8WEeW7wsHj6HEw3w" name="Enable Image Streaming">
-      <operationCalls xmi:id="_Xk308N8WEeW7wsHj6HEw3w" name="Arm Camera Enable Streaming" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_YRki4N8WEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
-        <argumentsList xmi:id="_cfWK4N8WEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_cfWK4d8WEeW7wsHj6HEw3w" value="true"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_gGrd8N8WEeW7wsHj6HEw3w" name="Rover Camera Enable Streaming" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_gp_mYN8WEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
-        <argumentsList xmi:id="_hczjYN8WEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_hczjYd8WEeW7wsHj6HEw3w" value="true"/>
-        </argumentsList>
-      </operationCalls>
-    </programs>
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_mEDbUN8WEeW7wsHj6HEw3w" name="Disables Image Streaming">
-      <operationCalls xmi:id="_mEDbUd8WEeW7wsHj6HEw3w" name="Arm Camera Enable Streaming" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_mEDbUt8WEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
-        <argumentsList xmi:id="_mEDbU98WEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_mEDbVN8WEeW7wsHj6HEw3w" value="false"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_mEDbVd8WEeW7wsHj6HEw3w" name="Rover Camera Enable Streaming" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_mEDbVt8WEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
-        <argumentsList xmi:id="_mEDbV98WEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_mEDbWN8WEeW7wsHj6HEw3w" value="false"/>
-        </argumentsList>
-      </operationCalls>
-    </programs>
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_rOzo8N8WEeW7wsHj6HEw3w" name="Move Cameras">
-      <operationCalls xmi:id="_x7p7cN8WEeW7wsHj6HEw3w" name="Arm Camera Move" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_zohF4N8WEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
-        <argumentsList xmi:id="_0s9lcN8WEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_0s9lcd8WEeW7wsHj6HEw3w" value="0.7853981633974483"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_0s9lct8WEeW7wsHj6HEw3w" value="-0.5235987755982988"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_2zjegN8WEeW7wsHj6HEw3w" name="Rover Camera Move" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_3ZnY8N8WEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
-        <argumentsList xmi:id="_4gW-kN8WEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_4gW-kd8WEeW7wsHj6HEw3w" value="-0.5235987755982988"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_4gW-kt8WEeW7wsHj6HEw3w" value="-0.7853981633974483"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_9UW5EN8WEeW7wsHj6HEw3w" name="Arm Camera Zoom 2x" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_AfTLEN8XEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
-        <argumentsList xmi:id="_B4tOAN8XEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_B4tOAd8XEeW7wsHj6HEw3w" value="2.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_DkL4YN8XEeW7wsHj6HEw3w" name="Rover Camera Zoom x3" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_DkL4Yd8XEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
-        <argumentsList xmi:id="_FyRgkN8XEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_FyRgkd8XEeW7wsHj6HEw3w" value="3.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_HMusYN8XEeW7wsHj6HEw3w" name="Arm Camera Zoom Out" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_HMusYd8XEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
-        <argumentsList xmi:id="_HMusYt8XEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_HMusY98XEeW7wsHj6HEw3w" value="1.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_HMusZN8XEeW7wsHj6HEw3w" name="Rover Camera Zoom Out" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_HMusZd8XEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
-        <argumentsList xmi:id="_HMusZt8XEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_HMusZ98XEeW7wsHj6HEw3w" value="1.0"/>
-        </argumentsList>
-      </operationCalls>
-    </programs>
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_NLS8kN8XEeW7wsHj6HEw3w" name="Move Arm to Ground">
-      <operationCalls xmi:id="_OOllkN8XEeW7wsHj6HEw3w" name="Set Speed to High" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_O8miIN8XEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/cmdMoveSpeedLevel"/>
-        <argumentsList xmi:id="_PhcUkN8XEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:EEnumArgument" xmi:id="_PhcUkd8XEeW7wsHj6HEw3w">
-            <eEnumLiteral href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel/FAST"/>
-            <eEnum href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel"/>
-          </arguments>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_T7lkoN8XEeW7wsHj6HEw3w" name="Move High Hover Position" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_UUNgAN8XEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
-        <argumentsList xmi:id="_VAsykN8XEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_VAsykd8XEeW7wsHj6HEw3w" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_VAsykt8XEeW7wsHj6HEw3w" value="-0.7853981633974483"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_VAsyk98XEeW7wsHj6HEw3w" value="-1.5707963267948966"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_VAsylN8XEeW7wsHj6HEw3w" value="-0.7853981633974483"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_Vt2McN8XEeW7wsHj6HEw3w" name="Set Speed to Low" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_Vt2Mcd8XEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/cmdMoveSpeedLevel"/>
-        <argumentsList xmi:id="_Vt2Mct8XEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:EEnumArgument" xmi:id="_Vt2Mc98XEeW7wsHj6HEw3w">
-            <eEnumLiteral href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel/SLOW"/>
-            <eEnum href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel"/>
-          </arguments>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_WHyWcN8XEeW7wsHj6HEw3w" name="Move to Ground" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <typeMemberReferenceListElement xmi:id="_WHyWcd8XEeW7wsHj6HEw3w">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
-        </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
-        <argumentsList xmi:id="_WHyWct8XEeW7wsHj6HEw3w">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_WHyWc98XEeW7wsHj6HEw3w" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_WHyWdN8XEeW7wsHj6HEw3w" value="-1.3264502315156905"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_WHyWdd8XEeW7wsHj6HEw3w" value="-1.5707963267948966"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_WHyWdt8XEeW7wsHj6HEw3w" value="-0.24434609527920614"/>
-        </argumentsList>
-      </operationCalls>
-    </programs>
-    <programs xsi:type="javascript:JavaScriptProgram" xmi:id="_E8RqgAr6EeaEj-JyoPM1Mg" name="Rover Example Scenario" description="" scriptPath="/js/RoverExampleScenario.js"/>
+    <programsGroups xmi:id="_wEGHUJVJEeak_eGfxSDIhA" name="Default">
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_B6d5oN74EeWUu90KVuiwJg" name="Setup" description="Sets up the rover and its subsystems.">
+        <operationCalls xmi:id="_C4EEIN8VEeW7wsHj6HEw3w" name="Initialize" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.rover#//Rover/init"/>
+        </operationCalls>
+        <operationCalls xmi:id="_AN41gN8YEeW_hc0ZHRC9Fw" name="Clear Position Error." variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_BAR7wN8YEeW_hc0ZHRC9Fw">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
+        </operationCalls>
+      </programs>
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_UOVSkN74EeWUu90KVuiwJg" name="Navigate" description="Operations used to command the rover to navigate around.">
+        <operationCalls xmi:id="_Ca4V6grPEeW4-_ONWXXiAw" name="Change Linear Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the linear velocity component only.">
+          <typeMemberReferenceListElement xmi:id="_Lu13kN8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdLinearVelocity"/>
+          <argumentsList xmi:id="_M1unIN8VEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_M1unId8VEeW7wsHj6HEw3w" value="0.5"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_Ca4V5wrPEeW4-_ONWXXiAw" name="Change Angular Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the angular velocity component only.">
+          <typeMemberReferenceListElement xmi:id="_PBSfwN8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdAngularVelocity"/>
+          <argumentsList xmi:id="_PuC4EN8VEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_PuC4Ed8VEeW7wsHj6HEw3w" value="0.17453292519943295"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_Ca4V7QrPEeW4-_ONWXXiAw" name="Move Forward" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
+          <typeMemberReferenceListElement xmi:id="_RmoxYN8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+          <argumentsList xmi:id="_SfgTEN8VEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_SfgTEd8VEeW7wsHj6HEw3w" value="0.5"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_SfgTEt8VEeW7wsHj6HEw3w" value="0.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_29CO0N8PEeWkAptrmJWICw" name="Move Reverse" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure reverse motion.">
+          <typeMemberReferenceListElement xmi:id="_UQCckN8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+          <argumentsList xmi:id="_Uw7jIN8VEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Uw7jId8VEeW7wsHj6HEw3w" value="-0.5"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Uw7jIt8VEeW7wsHj6HEw3w" value="0.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_sn3KwN8PEeWkAptrmJWICw" name="Turn Left" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
+          <typeMemberReferenceListElement xmi:id="_WiQ94N8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+          <argumentsList xmi:id="_XJD4IN8VEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_XJD4Id8VEeW7wsHj6HEw3w" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_XJD4It8VEeW7wsHj6HEw3w" value="0.17453292519943295"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_xH9R0N8PEeWkAptrmJWICw" name="Turn Right" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
+          <typeMemberReferenceListElement xmi:id="_Ykab0N8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+          <argumentsList xmi:id="_ZHPcEN8VEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_ZHPcEd8VEeW7wsHj6HEw3w" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_ZHPcEt8VEeW7wsHj6HEw3w" value="-0.17453292519943295"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_Ca7ZMArPEeW4-_ONWXXiAw" name="Stop" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_aoCgcN8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/stop"/>
+        </operationCalls>
+        <operationCalls xmi:id="_zBnZkN74EeWUu90KVuiwJg" name="Reset position to start position." variable="_CaxoMArPEeW4-_ONWXXiAw" description="Resets the position to start position.">
+          <typeMemberReferenceListElement xmi:id="_cSQmkN8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/resetPosition"/>
+          <argumentsList xmi:id="_dPrREN8VEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:EClassArgument" xmi:id="_dPrREd8VEeW7wsHj6HEw3w">
+              <value xsi:type="mobile_platform:Position" xmi:id="_eBqusN8VEeW7wsHj6HEw3w"/>
+            </arguments>
+          </argumentsList>
+        </operationCalls>
+      </programs>
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_gB7WQN8VEeW7wsHj6HEw3w" name="Unstow Arm" description="Commands sequence used to unstow the arm.">
+        <operationCalls xmi:id="_jVtbMN8VEeW7wsHj6HEw3w" name="Move To Pan Tilt 0,0" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Orients the arm camera to ensure it is in a safe configuration for the unstow.">
+          <typeMemberReferenceListElement xmi:id="_n3HJ0N8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
+          <argumentsList xmi:id="_ZdfRgN8YEeW_hc0ZHRC9Fw">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_ZdfRgd8YEeW_hc0ZHRC9Fw" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_ZdfRgt8YEeW_hc0ZHRC9Fw" value="0.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_sZjaQN8VEeW7wsHj6HEw3w" name="Move Arm" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Move the arm to an unstow configuration.">
+          <typeMemberReferenceListElement xmi:id="_s36KMN8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
+          <argumentsList xmi:id="_uX7LcN8VEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_uX7Lcd8VEeW7wsHj6HEw3w" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_uX7Lct8VEeW7wsHj6HEw3w" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_uX7Lc98VEeW7wsHj6HEw3w" value="-1.5707963267948966"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_uX7LdN8VEeW7wsHj6HEw3w" value="0.0"/>
+          </argumentsList>
+        </operationCalls>
+      </programs>
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_z2OAIN8VEeW7wsHj6HEw3w" name="Stow Arm" description="Commands sequence used to stow the arm.">
+        <operationCalls xmi:id="_z2OAId8VEeW7wsHj6HEw3w" name="Move To Pan Tilt 0,0" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Orients the arm camera to ensure it is in a safe configuration for the stow.">
+          <typeMemberReferenceListElement xmi:id="_z2OAIt8VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
+          <argumentsList xmi:id="_X4LgkN8YEeW_hc0ZHRC9Fw">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_X4Lgkd8YEeW_hc0ZHRC9Fw" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_X4Lgkt8YEeW_hc0ZHRC9Fw" value="0.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_ml1AwN8YEeW_hc0ZHRC9Fw" name="Move to Pre-Stow" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Stows the arm.">
+          <typeMemberReferenceListElement xmi:id="_ml1Awd8YEeW_hc0ZHRC9Fw">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
+          <argumentsList xmi:id="_nTEhQN8YEeW_hc0ZHRC9Fw">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_nTEhQd8YEeW_hc0ZHRC9Fw" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_nTEhQt8YEeW_hc0ZHRC9Fw" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_nTEhQ98YEeW_hc0ZHRC9Fw" value="-1.5707963267948966"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_nTEhRN8YEeW_hc0ZHRC9Fw" value="0.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_z2OAJt8VEeW7wsHj6HEw3w" name="Stow Arm" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Stows the arm.">
+          <typeMemberReferenceListElement xmi:id="_z2OAJ98VEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/stow"/>
+        </operationCalls>
+      </programs>
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_VA_i8N8WEeW7wsHj6HEw3w" name="Enable Image Streaming">
+        <operationCalls xmi:id="_Xk308N8WEeW7wsHj6HEw3w" name="Arm Camera Enable Streaming" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_YRki4N8WEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
+          <argumentsList xmi:id="_cfWK4N8WEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_cfWK4d8WEeW7wsHj6HEw3w" value="true"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_gGrd8N8WEeW7wsHj6HEw3w" name="Rover Camera Enable Streaming" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_gp_mYN8WEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
+          <argumentsList xmi:id="_hczjYN8WEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_hczjYd8WEeW7wsHj6HEw3w" value="true"/>
+          </argumentsList>
+        </operationCalls>
+      </programs>
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_mEDbUN8WEeW7wsHj6HEw3w" name="Disables Image Streaming">
+        <operationCalls xmi:id="_mEDbUd8WEeW7wsHj6HEw3w" name="Arm Camera Enable Streaming" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_mEDbUt8WEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
+          <argumentsList xmi:id="_mEDbU98WEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_mEDbVN8WEeW7wsHj6HEw3w" value="false"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_mEDbVd8WEeW7wsHj6HEw3w" name="Rover Camera Enable Streaming" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_mEDbVt8WEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/commandStreaming"/>
+          <argumentsList xmi:id="_mEDbV98WEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:BooleanEDataTypeArgument" xmi:id="_mEDbWN8WEeW7wsHj6HEw3w" value="false"/>
+          </argumentsList>
+        </operationCalls>
+      </programs>
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_rOzo8N8WEeW7wsHj6HEw3w" name="Move Cameras">
+        <operationCalls xmi:id="_x7p7cN8WEeW7wsHj6HEw3w" name="Arm Camera Move" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_zohF4N8WEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
+          <argumentsList xmi:id="_0s9lcN8WEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_0s9lcd8WEeW7wsHj6HEw3w" value="0.7853981633974483"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_0s9lct8WEeW7wsHj6HEw3w" value="-0.5235987755982988"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_2zjegN8WEeW7wsHj6HEw3w" name="Rover Camera Move" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_3ZnY8N8WEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
+          <argumentsList xmi:id="_4gW-kN8WEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_4gW-kd8WEeW7wsHj6HEw3w" value="-0.5235987755982988"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_4gW-kt8WEeW7wsHj6HEw3w" value="-0.7853981633974483"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_9UW5EN8WEeW7wsHj6HEw3w" name="Arm Camera Zoom 2x" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_AfTLEN8XEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
+          <argumentsList xmi:id="_B4tOAN8XEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_B4tOAd8XEeW7wsHj6HEw3w" value="2.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_DkL4YN8XEeW7wsHj6HEw3w" name="Rover Camera Zoom x3" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_DkL4Yd8XEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
+          <argumentsList xmi:id="_FyRgkN8XEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_FyRgkd8XEeW7wsHj6HEw3w" value="3.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_HMusYN8XEeW7wsHj6HEw3w" name="Arm Camera Zoom Out" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_HMusYd8XEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
+          <argumentsList xmi:id="_HMusYt8XEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_HMusY98XEeW7wsHj6HEw3w" value="1.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_HMusZN8XEeW7wsHj6HEw3w" name="Rover Camera Zoom Out" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_HMusZd8XEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
+          <argumentsList xmi:id="_HMusZt8XEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_HMusZ98XEeW7wsHj6HEw3w" value="1.0"/>
+          </argumentsList>
+        </operationCalls>
+      </programs>
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_NLS8kN8XEeW7wsHj6HEw3w" name="Move Arm to Ground">
+        <operationCalls xmi:id="_OOllkN8XEeW7wsHj6HEw3w" name="Set Speed to High" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_O8miIN8XEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/cmdMoveSpeedLevel"/>
+          <argumentsList xmi:id="_PhcUkN8XEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:EEnumArgument" xmi:id="_PhcUkd8XEeW7wsHj6HEw3w">
+              <eEnumLiteral href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel/FAST"/>
+              <eEnum href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel"/>
+            </arguments>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_T7lkoN8XEeW7wsHj6HEw3w" name="Move High Hover Position" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_UUNgAN8XEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
+          <argumentsList xmi:id="_VAsykN8XEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_VAsykd8XEeW7wsHj6HEw3w" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_VAsykt8XEeW7wsHj6HEw3w" value="-0.7853981633974483"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_VAsyk98XEeW7wsHj6HEw3w" value="-1.5707963267948966"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_VAsylN8XEeW7wsHj6HEw3w" value="-0.7853981633974483"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_Vt2McN8XEeW7wsHj6HEw3w" name="Set Speed to Low" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_Vt2Mcd8XEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/cmdMoveSpeedLevel"/>
+          <argumentsList xmi:id="_Vt2Mct8XEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:EEnumArgument" xmi:id="_Vt2Mc98XEeW7wsHj6HEw3w">
+              <eEnumLiteral href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel/SLOW"/>
+              <eEnum href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel"/>
+            </arguments>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_WHyWcN8XEeW7wsHj6HEw3w" name="Move to Ground" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <typeMemberReferenceListElement xmi:id="_WHyWcd8XEeW7wsHj6HEw3w">
+            <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+          </typeMemberReferenceListElement>
+          <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
+          <argumentsList xmi:id="_WHyWct8XEeW7wsHj6HEw3w">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_WHyWc98XEeW7wsHj6HEw3w" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_WHyWdN8XEeW7wsHj6HEw3w" value="-1.3264502315156905"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_WHyWdd8XEeW7wsHj6HEw3w" value="-1.5707963267948966"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_WHyWdt8XEeW7wsHj6HEw3w" value="-0.24434609527920614"/>
+          </argumentsList>
+        </operationCalls>
+      </programs>
+      <programs xsi:type="javascript:JavaScriptProgram" xmi:id="_E8RqgAr6EeaEj-JyoPM1Mg" name="Rover Example Scenario" description="" scriptPath="/js/RoverExampleScenario.js"/>
+    </programsGroups>
   </programsList>
   <dataProductsListContainer xmi:id="_Ca7ZMQrPEeW4-_ONWXXiAw">
     <dataProductsList xmi:id="_Ca7ZMgrPEeW4-_ONWXXiAw" name="Simulated Data" description="The list of data products associated with the mobile platform's simulated implementation">
@@ -399,7 +401,7 @@
           <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <overlayList xmi:id="_5kP9IN8ZEeW_hc0ZHRC9Fw">
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_ENEV8N8aEeW_hc0ZHRC9Fw" name="Arm Turret" overlayAlignment="Upper Left" fontSize="16" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="51">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_ENEV8N8aEeW_hc0ZHRC9Fw" name="Arm Turret" overlayAlignment="Upper Left" fontSize="16" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="58">
             <variableFeatureReference xmi:id="_ENP8IN8aEeW_hc0ZHRC9Fw" name="Arm Turret Angle" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_FdSnsN8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
@@ -412,7 +414,7 @@
               </featureRoot>
             </variableFeatureReference>
           </overlays>
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_OHKAgN8aEeW_hc0ZHRC9Fw" name="Arm Shoulder" overlayAlignment="Upper Left" fontSize="16" verticalOffset="25" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="51">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_OHKAgN8aEeW_hc0ZHRC9Fw" name="Arm Shoulder" overlayAlignment="Upper Left" fontSize="16" verticalOffset="25" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="58">
             <variableFeatureReference xmi:id="_OHTKcN8aEeW_hc0ZHRC9Fw" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_PxO8sN8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
@@ -425,7 +427,7 @@
               </featureRoot>
             </variableFeatureReference>
           </overlays>
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_Vx9wEN8aEeW_hc0ZHRC9Fw" name="Arm Elbow" overlayAlignment="Upper Left" fontSize="16" verticalOffset="40" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="51">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_Vx9wEN8aEeW_hc0ZHRC9Fw" name="Arm Elbow" overlayAlignment="Upper Left" fontSize="16" verticalOffset="40" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="58">
             <variableFeatureReference xmi:id="_VyJWQN8aEeW_hc0ZHRC9Fw" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_ZXo2QN8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
@@ -438,7 +440,7 @@
               </featureRoot>
             </variableFeatureReference>
           </overlays>
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_eLvecN8aEeW_hc0ZHRC9Fw" name="Arm Wrist" overlayAlignment="Upper Left" fontSize="16" verticalOffset="55" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="51">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_eLvecN8aEeW_hc0ZHRC9Fw" name="Arm Wrist" overlayAlignment="Upper Left" fontSize="16" verticalOffset="55" textColor="1.0,0.0,0.0" variableFeatureReferenceChangeCount="58">
             <variableFeatureReference xmi:id="_eL-vAN8aEeW_hc0ZHRC9Fw" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_f-dZQN8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
@@ -451,7 +453,7 @@
               </featureRoot>
             </variableFeatureReference>
           </overlays>
-          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_jbuKUN8aEeW_hc0ZHRC9Fw" name="Arm Moving" overlayAlignment="Lower Left" fontSize="16" textColor="1.0,0.0,1.0" variableFeatureReferenceChangeCount="51">
+          <overlays xsi:type="camera:EMFFeatureOverlay" xmi:id="_jbuKUN8aEeW_hc0ZHRC9Fw" name="Arm Moving" overlayAlignment="Lower Left" fontSize="16" textColor="1.0,0.0,1.0" variableFeatureReferenceChangeCount="58">
             <variableFeatureReference xmi:id="_jb37UN8aEeW_hc0ZHRC9Fw" variable="_CaxoMArPEeW4-_ONWXXiAw">
               <typeMemberReferenceListElement xmi:id="_mP2e0N8aEeW_hc0ZHRC9Fw">
                 <typeMember href="platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/model/RoverApogySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>

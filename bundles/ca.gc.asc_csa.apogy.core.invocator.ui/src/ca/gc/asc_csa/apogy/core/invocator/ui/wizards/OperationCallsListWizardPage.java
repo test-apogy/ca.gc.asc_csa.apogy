@@ -21,13 +21,13 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ProgramsListComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ScriptBasedProgramsListComposite;
 
 public class OperationCallsListWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallsListWizardPage";
 	private ProgramsList programsList;
-	private ProgramsListComposite programsListComposite; 
+	private ScriptBasedProgramsListComposite programsListComposite; 
 	
 	/**
 	 * Constructor for the WizardPage.
@@ -49,7 +49,7 @@ public class OperationCallsListWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {		
-		programsListComposite = new ProgramsListComposite(parent, SWT.None){
+		programsListComposite = new ScriptBasedProgramsListComposite(parent, SWT.None){
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				validate();

@@ -50,6 +50,7 @@ import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
 import ca.gc.asc_csa.apogy.common.emf.FixedTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
@@ -102,6 +103,13 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
   private EClass describedEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass archivableEClass = null;
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -838,6 +846,24 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArchivable() {
+		return archivableEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArchivable_Archived() {
+		return (EAttribute)archivableEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1671,6 +1697,9 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		describedEClass = createEClass(DESCRIBED);
 		createEAttribute(describedEClass, DESCRIBED__DESCRIPTION);
 
+		archivableEClass = createEClass(ARCHIVABLE);
+		createEAttribute(archivableEClass, ARCHIVABLE__ARCHIVED);
+
 		timedEClass = createEClass(TIMED);
 		createEAttribute(timedEClass, TIMED__TIME);
 
@@ -2039,6 +2068,9 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 
 		initEClass(describedEClass, Described.class, "Described", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDescribed_Description(), theEcorePackage.getEString(), "description", null, 0, 1, Described.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(archivableEClass, Archivable.class, "Archivable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArchivable_Archived(), theEcorePackage.getEBoolean(), "archived", "false", 0, 1, Archivable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timedEClass, Timed.class, "Timed", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTimed_Time(), theEcorePackage.getEDate(), "time", null, 0, 1, Timed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

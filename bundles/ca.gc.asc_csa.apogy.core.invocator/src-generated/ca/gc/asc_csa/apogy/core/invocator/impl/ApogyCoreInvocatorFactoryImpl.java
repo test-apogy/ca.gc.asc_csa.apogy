@@ -97,6 +97,7 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.VALUES_LIST: return createValuesList();
 			case ApogyCoreInvocatorPackage.VALUE: return createValue();
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST: return createProgramsList();
+			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP: return createProgramsGroup();
 			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST: return createOperationCallsList();
 			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE: return createVariableFeatureReference();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL: return createOperationCall();
@@ -464,6 +465,16 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProgramsGroup createProgramsGroup() {
+		ProgramsGroupImpl programsGroup = new ProgramsGroupImpl();
+		return programsGroup;
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

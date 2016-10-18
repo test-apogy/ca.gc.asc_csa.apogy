@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.provider.ProgramItemProvider;
+import ca.gc.asc_csa.apogy.core.invocator.provider.TriggeredBasedProgramItemProvider;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
@@ -36,7 +36,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsController
  * @generated
  */
 public class ControllersConfigurationItemProvider
-  extends ProgramItemProvider
+  extends TriggeredBasedProgramItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.

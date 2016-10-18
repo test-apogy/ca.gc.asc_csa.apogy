@@ -21,13 +21,13 @@
 
 package ca.gc.asc_csa.apogy.core.programs.javascript
 
-import ca.gc.asc_csa.apogy.core.invocator.Program
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer
+import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram
 
 /*
  * A JavaScriptProgram is an entity that invokes Operation Calls on Variables through a JavaScript program file.
  */
-class JavaScriptProgram extends Program, OperationCallContainer
+class JavaScriptProgram extends ScriptBasedProgram, OperationCallContainer
 {
 	String scriptPath
 }

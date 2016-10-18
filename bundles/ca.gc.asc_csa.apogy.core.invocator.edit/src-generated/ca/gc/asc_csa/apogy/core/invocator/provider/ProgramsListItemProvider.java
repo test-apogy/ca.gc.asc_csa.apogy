@@ -89,7 +89,7 @@ public class ProgramsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS);
 		}
 		return childrenFeatures;
 	}
@@ -145,7 +145,7 @@ public class ProgramsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ProgramsList.class)) {
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -166,8 +166,8 @@ public class ProgramsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS,
-				 ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallsList()));
+				(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createProgramsGroup()));
 	}
 
   /**

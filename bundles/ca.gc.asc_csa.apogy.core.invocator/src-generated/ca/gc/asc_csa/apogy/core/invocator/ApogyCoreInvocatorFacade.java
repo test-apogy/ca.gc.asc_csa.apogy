@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.core.invocator;
 import java.util.Date;
 import java.util.List;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -545,6 +546,30 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Returns all the {@link ScriptBasedProgram} programs contained in the list.
+	 * @param programsList Refers to the list that contains all the programs.
+	 * @param filter Determine if the program should be considered as a valid program.
+	 * @return List of programs.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.core.invocator.Program>" unique="false" many="false" programsListUnique="false"
+	 * @generated
+	 */
+	List<Program> getAllScriptBasedPrograms(ProgramsList programsList);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns only the objects that are not archived
+	 * @param objects Refers to the array containing the objects to filter
+	 * @return Array of filtered objects
+	 * <!-- end-model-doc -->
+	 * @model unique="false" objectsUnique="false" objectsMany="true"
+	 * @generated
+	 */
+	EList<Object> filterArchived(EList<Object> objects);
+
+	/**
 	 * Creates a new context and populates the {@link VariableImplementations}.
 	 * The context is not fully initialized (e.g. Name and description are not set).
 	 * @param invocatorSession the session for which the context is built.
@@ -554,5 +579,4 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @generated
 	 */
 	Context createContext(InvocatorSession invocatorSession);
-
 } // ApogyCoreInvocatorFacade

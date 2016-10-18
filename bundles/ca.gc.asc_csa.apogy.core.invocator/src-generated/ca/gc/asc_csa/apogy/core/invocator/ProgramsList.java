@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getPrograms <em>Programs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getProgramsGroups <em>Programs Groups</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getProgramsList()
@@ -73,21 +73,21 @@ public interface ProgramsList extends EObject
   void setInvocatorSession(InvocatorSession value);
 
   /**
-	 * Returns the value of the '<em><b>Programs</b></em>' containment reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.Program}.
-	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.Program#getProgramsList <em>Programs List</em>}'.
+	 * Returns the value of the '<em><b>Programs Groups</b></em>' containment reference list.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup#getProgramsList <em>Programs List</em>}'.
 	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Programs</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Programs</em>' containment reference list.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getProgramsList_Programs()
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Program#getProgramsList
+	 * <p>
+	 * If the meaning of the '<em>Programs Groups</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Programs Groups</em>' containment reference list.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getProgramsList_ProgramsGroups()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup#getProgramsList
 	 * @model opposite="programsList" containment="true"
 	 * @generated
 	 */
-  EList<Program> getPrograms();
+	EList<ProgramsGroup> getProgramsGroups();
 
 } // ProgramsList

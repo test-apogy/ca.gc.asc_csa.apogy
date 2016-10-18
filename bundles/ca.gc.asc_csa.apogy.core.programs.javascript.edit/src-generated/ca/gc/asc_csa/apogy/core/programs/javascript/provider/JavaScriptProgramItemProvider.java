@@ -6,8 +6,7 @@ package ca.gc.asc_csa.apogy.core.programs.javascript.provider;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.provider.ProgramItemProvider;
-
+import ca.gc.asc_csa.apogy.core.invocator.provider.ScriptBasedProgramItemProvider;
 import ca.gc.asc_csa.apogy.core.programs.javascript.ApogyCoreJavaScriptProgramsPackage;
 import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class JavaScriptProgramItemProvider extends ProgramItemProvider {
+public class JavaScriptProgramItemProvider extends ScriptBasedProgramItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -112,11 +111,11 @@ public class JavaScriptProgramItemProvider extends ProgramItemProvider {
 	 * This returns JavaScriptProgram.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/JavaScriptProgram"));
+		return super.getImage(object);
 	}
 
 	/**

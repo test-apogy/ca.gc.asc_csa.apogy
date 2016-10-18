@@ -39,7 +39,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
  *
  * @generated
  */
-public class OperationCallsListImpl extends ProgramImpl implements OperationCallsList
+public class OperationCallsListImpl extends ScriptBasedProgramImpl implements OperationCallsList
 {
   /**
 	 * The cached value of the '{@link #getOperationCalls() <em>Operation Calls</em>}' containment reference list.

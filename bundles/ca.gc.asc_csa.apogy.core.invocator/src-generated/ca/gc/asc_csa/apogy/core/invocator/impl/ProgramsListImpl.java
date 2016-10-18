@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
@@ -39,7 +39,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl#getPrograms <em>Programs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl#getProgramsGroups <em>Programs Groups</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,16 +47,15 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 public class ProgramsListImpl extends MinimalEObjectImpl.Container implements ProgramsList
 {
   /**
-	 * The cached value of the '{@link #getPrograms() <em>Programs</em>}' containment reference list.
+	 * The cached value of the '{@link #getProgramsGroups() <em>Programs Groups</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getPrograms()
+	 * <!-- end-user-doc -->
+	 * @see #getProgramsGroups()
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<Program> programs;
-
-  /**
+	protected EList<ProgramsGroup> programsGroups;
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -134,18 +133,17 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<Program> getPrograms()
-  {
-		if (programs == null) {
-			programs = new EObjectContainmentWithInverseEList<Program>(Program.class, this, ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS, ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST);
+	public EList<ProgramsGroup> getProgramsGroups() {
+		if (programsGroups == null) {
+			programsGroups = new EObjectContainmentWithInverseEList<ProgramsGroup>(ProgramsGroup.class, this, ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS, ApogyCoreInvocatorPackage.PROGRAMS_GROUP__PROGRAMS_LIST);
 		}
-		return programs;
+		return programsGroups;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -159,8 +157,8 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetInvocatorSession((InvocatorSession)otherEnd, msgs);
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPrograms()).basicAdd(otherEnd, msgs);
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProgramsGroups()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -176,8 +174,8 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				return basicSetInvocatorSession(null, msgs);
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
-				return ((InternalEList<?>)getPrograms()).basicRemove(otherEnd, msgs);
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
+				return ((InternalEList<?>)getProgramsGroups()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -209,8 +207,8 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				if (resolve) return getInvocatorSession();
 				return basicGetInvocatorSession();
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
-				return getPrograms();
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
+				return getProgramsGroups();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -228,9 +226,9 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)newValue);
 				return;
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
-				getPrograms().clear();
-				getPrograms().addAll((Collection<? extends Program>)newValue);
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
+				getProgramsGroups().clear();
+				getProgramsGroups().addAll((Collection<? extends ProgramsGroup>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -248,8 +246,8 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)null);
 				return;
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
-				getPrograms().clear();
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
+				getProgramsGroups().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -266,8 +264,8 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				return basicGetInvocatorSession() != null;
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
-				return programs != null && !programs.isEmpty();
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
+				return programsGroups != null && !programsGroups.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

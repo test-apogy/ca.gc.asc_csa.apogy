@@ -35,14 +35,13 @@ package ca.gc.asc_csa.apogy.core.programs.controllers
 
 import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
-
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier
 import ca.gc.asc_csa.apogy.core.invocator.Argument
 import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer
-import ca.gc.asc_csa.apogy.core.invocator.Program
-import ca.gc.asc_csa.apogy.common.io.jinput.EComponent
-import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier
+import ca.gc.asc_csa.apogy.core.invocator.TriggeredBasedProgram
 import org.eclipse.emf.ecore.EParameter
 
 /* -------------------------------------------------------------------------
@@ -75,7 +74,7 @@ class ApogyCoreProgramsControllersFacade
  * 
  * ------------------------------------------------------------------------- */
 
-class ControllersConfiguration extends Program, OperationCallContainer 
+class ControllersConfiguration extends TriggeredBasedProgram, OperationCallContainer 
 {	
 	transient boolean active = "false"
 }

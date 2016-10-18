@@ -103,6 +103,12 @@ public class ApogyCommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCommonEMFPackage.ARCHIVABLE: {
+				Archivable archivable = (Archivable)theEObject;
+				T result = caseArchivable(archivable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCommonEMFPackage.TIMED: {
 				Timed timed = (Timed)theEObject;
 				T result = caseTimed(timed);
@@ -341,6 +347,21 @@ public class ApogyCommonEMFSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArchivable(Archivable object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Timed</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

@@ -719,6 +719,29 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProgramsGroupItemProvider programsGroupItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProgramsGroupAdapter() {
+		if (programsGroupItemProvider == null) {
+			programsGroupItemProvider = new ProgramsGroupItemProvider(this);
+		}
+
+		return programsGroupItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1378,6 +1401,7 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (valuesListItemProvider != null) valuesListItemProvider.dispose();
 		if (valueItemProvider != null) valueItemProvider.dispose();
 		if (programsListItemProvider != null) programsListItemProvider.dispose();
+		if (programsGroupItemProvider != null) programsGroupItemProvider.dispose();
 		if (operationCallsListItemProvider != null) operationCallsListItemProvider.dispose();
 		if (variableFeatureReferenceItemProvider != null) variableFeatureReferenceItemProvider.dispose();
 		if (operationCallItemProvider != null) operationCallItemProvider.dispose();

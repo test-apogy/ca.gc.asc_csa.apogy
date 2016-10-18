@@ -3,12 +3,14 @@
  */
 package ca.gc.asc_csa.apogy.core.programs.javascript.util;
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 
+import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 import ca.gc.asc_csa.apogy.core.programs.javascript.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -76,10 +78,12 @@ public class ApogyCoreJavaScriptProgramsSwitch<T> extends Switch<T> {
 			case ApogyCoreJavaScriptProgramsPackage.JAVA_SCRIPT_PROGRAM: {
 				JavaScriptProgram javaScriptProgram = (JavaScriptProgram)theEObject;
 				T result = caseJavaScriptProgram(javaScriptProgram);
-				if (result == null) result = caseProgram(javaScriptProgram);
+				if (result == null) result = caseScriptBasedProgram(javaScriptProgram);
 				if (result == null) result = caseOperationCallContainer(javaScriptProgram);
+				if (result == null) result = caseProgram(javaScriptProgram);
 				if (result == null) result = caseNamed(javaScriptProgram);
 				if (result == null) result = caseDescribed(javaScriptProgram);
+				if (result == null) result = caseArchivable(javaScriptProgram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -133,6 +137,21 @@ public class ApogyCoreJavaScriptProgramsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArchivable(Archivable object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Program</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -144,6 +163,21 @@ public class ApogyCoreJavaScriptProgramsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProgram(Program object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Script Based Program</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Script Based Program</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseScriptBasedProgram(ScriptBasedProgram object) {
 		return null;
 	}
 
