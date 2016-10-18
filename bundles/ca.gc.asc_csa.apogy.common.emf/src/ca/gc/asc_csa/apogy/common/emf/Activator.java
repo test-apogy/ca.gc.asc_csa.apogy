@@ -32,6 +32,11 @@ public class Activator implements BundleActivator
 {
 	public static final String ID = "ca.gc.asc_csa.apogy.common.emf";
 	
+	/*
+	 * Refers to the default Editing Domain.
+	 */
+	public static final String APOGY_DEFAULT_EDITING_DOMAIN_ID = ID + ".editingDomain";
+	
 	// Adds some aliases to units.
 	static
 	{
