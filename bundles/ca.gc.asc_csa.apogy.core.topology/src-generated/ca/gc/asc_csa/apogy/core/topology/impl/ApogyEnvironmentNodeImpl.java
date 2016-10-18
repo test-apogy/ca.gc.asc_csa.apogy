@@ -620,7 +620,7 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 					}
 					else if(msg.getNotifier() instanceof Context)
 					{
-						if(msg.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.BASIC_CONTEXT__DATA_PRODUCTS_LIST)						
+						if(msg.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST)						
 						{
 							// ResultsList has changed.								
 							ResultsList oldResultsList = (ResultsList) msg.getOldValue();

@@ -11,14 +11,14 @@
       </variables>
     </variablesList>
     <contextsList xmi:id="_wa0CsArOEeW4-_ONWXXiAw">
-      <contexts xsi:type="invocator:BasicContext" xmi:id="_wa0CsQrOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_wcgr1grOEeW4-_ONWXXiAw" instancesCreationDate="2016-10-14T10:57:16.050-0400">
+      <contexts xsi:type="invocator:Context" xmi:id="_wa0CsQrOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_wcgr1grOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_wa0CsgrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_wa0CswrOEeW4-_ONWXXiAw" variable="_wazbpgrOEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.antenna#//PTUDishAntennaSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
-      <contexts xsi:type="invocator:BasicContext" xmi:id="_wa0CtArOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_wcgr2ArOEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:Context" xmi:id="_wa0CtArOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_wcgr2ArOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_wa0CtQrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_wa0CtgrOEeW4-_ONWXXiAw" variable="_wazbpgrOEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.antenna#//PTUDishAntennaStub"/>

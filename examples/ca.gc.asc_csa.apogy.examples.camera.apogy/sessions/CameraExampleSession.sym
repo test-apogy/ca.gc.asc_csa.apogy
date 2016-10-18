@@ -11,14 +11,14 @@
       </variables>
     </variablesList>
     <contextsList xmi:id="_2irY1wrOEeW4-_ONWXXiAw">
-      <contexts xsi:type="invocator:BasicContext" xmi:id="_2irY2ArOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_2ism_grOEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:Context" xmi:id="_2irY2ArOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_2ism_grOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_2irY2QrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_2irY2grOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.camera#//CameraSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
-      <contexts xsi:type="invocator:BasicContext" xmi:id="_2irY2wrOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_2isnAArOEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:Context" xmi:id="_2irY2wrOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_2isnAArOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_2irY3ArOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_2irY3QrOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.camera#//CameraStub"/>

@@ -90,12 +90,11 @@ import ca.gc.asc_csa.apogy.core.invocator.delegates.InvocatorDelegateRegistry;
  *
  * @generated
  */
-public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
-		implements ApogyCoreInvocatorFacade {
+public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreInvocatorFacade {
 	/**
 	 * The default value of the '{@link #getInitVariableInstancesDate() <em>Init Variable Instances Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
 	 * @see #getInitVariableInstancesDate()
 	 * @generated
 	 * @ordered
@@ -103,8 +102,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	protected static final Date INIT_VARIABLE_INSTANCES_DATE_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getInitVariableInstancesDate() <em>Init Variable Instances Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
 	 * @see #getInitVariableInstancesDate()
 	 * @generated
 	 * @ordered
@@ -147,8 +146,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Date getInitVariableInstancesDate() {
@@ -156,8 +154,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setInitVariableInstancesDate(Date newInitVariableInstancesDate) {
@@ -168,8 +165,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InvocatorSession getActiveInvocatorSession() {
@@ -185,8 +181,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InvocatorSession basicGetActiveInvocatorSession() {
@@ -194,8 +189,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setActiveInvocatorSession(InvocatorSession newActiveInvocatorSession) {
@@ -213,7 +207,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	public OperationCallResult exec(OperationCall operationCall, boolean saveResult) {
 
 		OperationCallResult result = null;
-		
+
 		/**
 		 * 
 		 * Select the proper delegate.
@@ -222,8 +216,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		Variable variable = operationCall.getVariable();
 		Type variableType = variable.getVariableType();
 		if (operationCall.getTypeMemberReferenceListElement() != null) {
-			variableType = operationCall.getTypeMemberReferenceListElement()
-					.getLeafElement().getTypeMember().getMemberType();
+			variableType = operationCall.getTypeMemberReferenceListElement().getLeafElement().getTypeMember()
+					.getMemberType();
 		}
 
 		InvocatorDelegate delegate = InvocatorDelegateRegistry.getInstance()
@@ -243,20 +237,18 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		 */
 		if (instance == null) {
 			Logger.INSTANCE.log(Activator.ID, this, "The instance (or sub-instance) of variable <"
-					+ operationCall.getVariable().getName() + "> is null !",
-					EventSeverity.ERROR);
+					+ operationCall.getVariable().getName() + "> is null !", EventSeverity.ERROR);
 		} else {
 			// If no delegate, fail.
 			if (delegate == null) {
 				Logger.INSTANCE.log(Activator.ID, this,
-						"Cannot find an InvocatorDelegate for instance of type <"
-								+ instance.getClass() + "> !",
+						"Cannot find an InvocatorDelegate for instance of type <" + instance.getClass() + "> !",
 						EventSeverity.ERROR);
 			} else {
 				result = delegate.execute(instance, operationCall, saveResult);
 			}
 		}
-		
+
 		return result;
 	}
 
@@ -275,15 +267,14 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * @generated_NOT
 	 */
 	public void exec(OperationCallsList operationCallsList) {
-		for (OperationCall operationCall : operationCallsList
-				.getOperationCalls()) {
+		for (OperationCall operationCall : operationCallsList.getOperationCalls()) {
 			exec(operationCall);
 		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public Object getValue(OperationCallResult operationCallResult) {
@@ -292,9 +283,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 
 		if (abstractValue instanceof AttributeResultValue) {
 			AttributeResultValue attributeResultValue = (AttributeResultValue) abstractValue;
-			if (attributeResultValue.getValue() != null){
-				value = attributeResultValue.getValue().getObject();	
-			}			
+			if (attributeResultValue.getValue() != null) {
+				value = attributeResultValue.getValue().getObject();
+			}
 		} else if (abstractValue instanceof ReferenceResultValue) {
 			value = ((ReferenceResultValue) abstractValue).getValue();
 		}
@@ -308,16 +299,13 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	public AbstractResultValue createAbstractResultValue(Object value) {
 		if (value instanceof EObject && value != null) {
-			ReferenceResultValue resultValue = ApogyCoreInvocatorFactory.eINSTANCE
-					.createReferenceResultValue();
+			ReferenceResultValue resultValue = ApogyCoreInvocatorFactory.eINSTANCE.createReferenceResultValue();
 			resultValue.setValue((EObject) value);
 			return resultValue;
 		} else if (value instanceof Object || value == null) {
-			AttributeValue attributeValue = ApogyCoreInvocatorFactory.eINSTANCE
-					.createAttributeValue();
+			AttributeValue attributeValue = ApogyCoreInvocatorFactory.eINSTANCE.createAttributeValue();
 			attributeValue.setObject(value);
-			AttributeResultValue resultValue = ApogyCoreInvocatorFactory.eINSTANCE
-					.createAttributeResultValue();
+			AttributeResultValue resultValue = ApogyCoreInvocatorFactory.eINSTANCE.createAttributeResultValue();
 			resultValue.setValue(attributeValue);
 			return resultValue;
 		} else {
@@ -337,8 +325,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		if (environment != null) {
 			Context context = environment.getActiveContext();
 			if (context != null) {
-				VariableImplementation variableImplementation = context.getVariableImplementationsList().getVariableImplementation(variable);
-				
+				VariableImplementation variableImplementation = context.getVariableImplementationsList()
+						.getVariableImplementation(variable);
+
 				eObject = variableImplementation == null ? null : variableImplementation.getInstance();
 			}
 		}
@@ -356,263 +345,262 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	public TypeApiAdapter getTypeApiAdapter(VariableFeatureReference variableFeatureReference) 
-	{
+	public TypeApiAdapter getTypeApiAdapter(VariableFeatureReference variableFeatureReference) {
 		TypeApiAdapter typeApiAdapter = null;
-		
+
 		Variable variable = variableFeatureReference.getVariable();
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
-		
-		if(variable != null && environment != null && context != null)
-		{			
-			if(variableFeatureReference.getFeatureRoot() == null && variableFeatureReference.getTypeMemberReferenceListElement() == null)
-			{
+
+		if (variable != null && environment != null && context != null) {
+			if (variableFeatureReference.getFeatureRoot() == null
+					&& variableFeatureReference.getTypeMemberReferenceListElement() == null) {
 				typeApiAdapter = getTypeApiAdapterForNullFeatureRootAndNullTypeMember(variableFeatureReference);
-			}
-			else if(variableFeatureReference.getFeatureRoot() != null && variableFeatureReference.getTypeMemberReferenceListElement() == null)
-			{
+			} else if (variableFeatureReference.getFeatureRoot() != null
+					&& variableFeatureReference.getTypeMemberReferenceListElement() == null) {
 				typeApiAdapter = getTypeApiAdapterForFeatureRootAndNullTypeMember(variableFeatureReference);
-			}
-			else if(variableFeatureReference.getFeatureRoot() == null && variableFeatureReference.getTypeMemberReferenceListElement() != null)
-			{
+			} else if (variableFeatureReference.getFeatureRoot() == null
+					&& variableFeatureReference.getTypeMemberReferenceListElement() != null) {
 				typeApiAdapter = getTypeApiAdapterForNullFeatureRootAndTypeMember(variableFeatureReference);
-			}
-			else if(variableFeatureReference.getFeatureRoot() != null && variableFeatureReference.getTypeMemberReferenceListElement() != null)
-			{
+			} else if (variableFeatureReference.getFeatureRoot() != null
+					&& variableFeatureReference.getTypeMemberReferenceListElement() != null) {
 				typeApiAdapter = getTypeApiAdapterForFeatureRootAndTypeMember(variableFeatureReference);
 			}
 		}
-		
+
 		return typeApiAdapter;
 	}
-	
+
 	/**
-	 * Finds the TypeApiAdapter for a VariableFeatureReference having both FeatureRoot and TypeMemberReferenceListElement being null.
-	 * This is the case where the VariableFeatureReference is referring only to the variable.
-	 * @param variableFeatureReference The Variable Feature.
+	 * Finds the TypeApiAdapter for a VariableFeatureReference having both
+	 * FeatureRoot and TypeMemberReferenceListElement being null. This is the
+	 * case where the VariableFeatureReference is referring only to the
+	 * variable.
+	 * 
+	 * @param variableFeatureReference
+	 *            The Variable Feature.
 	 * @return The TypeApiAdapter to use, null if none is found.
 	 */
-	private TypeApiAdapter getTypeApiAdapterForNullFeatureRootAndNullTypeMember(VariableFeatureReference variableFeatureReference)
-	{
+	private TypeApiAdapter getTypeApiAdapterForNullFeatureRootAndNullTypeMember(
+			VariableFeatureReference variableFeatureReference) {
 		TypeApiAdapter typeApiAdapter = null;
-		
+
 		Variable variable = variableFeatureReference.getVariable();
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
-		
-		try
-		{
-			typeApiAdapter = context.getVariableImplementationsList().getVariableImplementation(variable).getAdapterInstance();
+
+		try {
+			typeApiAdapter = context.getVariableImplementationsList().getVariableImplementation(variable)
+					.getAdapterInstance();
+		} catch (Throwable t) {
 		}
-		catch(Throwable t)
-		{
-		}
-		
+
 		return typeApiAdapter;
 	}
-	
+
 	/**
-	 * Finds the TypeApiAdapter for a VariableFeatureReference having the TypeMemberReferenceListElement being null.
-	 * This is the case where the VariableFeatureReference is referring to a feature of the variable.
-	 * @param variableFeatureReference The Variable Feature.
+	 * Finds the TypeApiAdapter for a VariableFeatureReference having the
+	 * TypeMemberReferenceListElement being null. This is the case where the
+	 * VariableFeatureReference is referring to a feature of the variable.
+	 * 
+	 * @param variableFeatureReference
+	 *            The Variable Feature.
 	 * @return The TypeApiAdapter to use, null if none is found.
 	 */
-	private TypeApiAdapter getTypeApiAdapterForFeatureRootAndNullTypeMember(VariableFeatureReference variableFeatureReference)
-	{
+	private TypeApiAdapter getTypeApiAdapterForFeatureRootAndNullTypeMember(
+			VariableFeatureReference variableFeatureReference) {
 		TypeApiAdapter typeApiAdapter = null;
-		
+
 		Variable variable = variableFeatureReference.getVariable();
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
-		
-		// Set the typeApi initially to the one associated with the variable. 
-		typeApiAdapter = context.getVariableImplementationsList().getVariableImplementation(variable).getAdapterInstance();
-		
+
+		// Set the typeApi initially to the one associated with the variable.
+		typeApiAdapter = context.getVariableImplementationsList().getVariableImplementation(variable)
+				.getAdapterInstance();
+
 		// Sets source object to variable instance as default.
-		EObject sourceEObject = (EObject) getInstance (variable);
+		EObject sourceEObject = (EObject) getInstance(variable);
 
 		// Goes through the list of features.
-		AbstractTypeImplementation rootATI = context.getVariableImplementationsList().getVariableImplementation(variable);
-		
+		AbstractTypeImplementation rootATI = context.getVariableImplementationsList()
+				.getVariableImplementation(variable);
+
 		// Traverse the Feature List until no API is found.
-		ListRootNode rootNode = variableFeatureReference.getFeatureRoot();		
+		ListRootNode rootNode = variableFeatureReference.getFeatureRoot();
 		AbstractFeatureListNode currentNode = rootNode;
-		
-		while(currentNode != null)
-		{
+
+		while (currentNode != null) {
 			Object object = ApogyCommonEMFFacade.INSTANCE.resolve(sourceEObject, currentNode);
-			
-			if(object instanceof EObject)
-			{
+
+			if (object instanceof EObject) {
 				EObject eObject = (EObject) object;
-				
-				// Check to see if the eObject has an TypeApiAdapter provided for it.							
+
+				// Check to see if the eObject has an TypeApiAdapter provided
+				// for it.
 				Iterator<TypeMemberImplementation> it = rootATI.getTypeMemberImplementations().iterator();
-				while(it.hasNext())
-				{
+				while (it.hasNext()) {
 					AbstractTypeImplementation ati = it.next();
-					if(ati.getInstance() == eObject)
-					{
-						if(ati.getAdapterInstance() != null)
-						{
+					if (ati.getInstance() == eObject) {
+						if (ati.getAdapterInstance() != null) {
 							typeApiAdapter = ati.getAdapterInstance();
 						}
 					}
 				}
-			}						
+			}
 			currentNode = currentNode.getChild();
 		}
-		
+
 		return typeApiAdapter;
 	}
-	
+
 	/**
-	 * Finds the TypeApiAdapter for a VariableFeatureReference having a null FeatureRoot and a not null TypeMemberReferenceListElement.
-	 * This is the case where the VariableFeatureReference is referring only to a variable's type member.
-	 * @param variableFeatureReference The Variable Feature.
+	 * Finds the TypeApiAdapter for a VariableFeatureReference having a null
+	 * FeatureRoot and a not null TypeMemberReferenceListElement. This is the
+	 * case where the VariableFeatureReference is referring only to a variable's
+	 * type member.
+	 * 
+	 * @param variableFeatureReference
+	 *            The Variable Feature.
 	 * @return The TypeApiAdapter to use, null if none is found.
 	 */
-	private TypeApiAdapter getTypeApiAdapterForNullFeatureRootAndTypeMember(VariableFeatureReference variableFeatureReference)
-	{
+	private TypeApiAdapter getTypeApiAdapterForNullFeatureRootAndTypeMember(
+			VariableFeatureReference variableFeatureReference) {
 		TypeApiAdapter typeApiAdapter = null;
-			
+
 		Variable variable = variableFeatureReference.getVariable();
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
-		
-		TypeMemberReferenceListElement currentTypeMemberReferenceListElement = variableFeatureReference.getTypeMemberReferenceListElement();
-		
-		// Goes down the list of typeMember, keeping the most specific TypeApiAdapter.
+
+		TypeMemberReferenceListElement currentTypeMemberReferenceListElement = variableFeatureReference
+				.getTypeMemberReferenceListElement();
+
+		// Goes down the list of typeMember, keeping the most specific
+		// TypeApiAdapter.
 		TypeMemberImplementation currentTypeMemberImplementation = null;
-		if(context != null)
-		{			
-			VariableImplementationsList variableImplementationsList = context.getVariableImplementationsList() ;
-			if(variableImplementationsList!= null)
-			{
-				VariableImplementation variableImplementation = variableImplementationsList.getVariableImplementation(variable);
-				if(variableImplementation != null)
-				{
-					currentTypeMemberImplementation = variableImplementation.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
+		if (context != null) {
+			VariableImplementationsList variableImplementationsList = context.getVariableImplementationsList();
+			if (variableImplementationsList != null) {
+				VariableImplementation variableImplementation = variableImplementationsList
+						.getVariableImplementation(variable);
+				if (variableImplementation != null) {
+					currentTypeMemberImplementation = variableImplementation
+							.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
 				}
 			}
 		}
-//		TypeMemberImplementation currentTypeMemberImplementation = context
-//				.getVariableImplementationsList()
-//				.getVariableImplementation(variable)
-//				.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
+		// TypeMemberImplementation currentTypeMemberImplementation = context
+		// .getVariableImplementationsList()
+		// .getVariableImplementation(variable)
+		// .getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
 
-
-		if(currentTypeMemberImplementation != null)
-		{
+		if (currentTypeMemberImplementation != null) {
 			TypeApiAdapter currentTypeApiAdapter = currentTypeMemberImplementation.getAdapterInstance();
-			if(currentTypeApiAdapter != null) 
-			{
+			if (currentTypeApiAdapter != null) {
 				typeApiAdapter = currentTypeApiAdapter;
 			}
-			
-			while (!currentTypeMemberReferenceListElement.isLeaf()) 
-			{
+
+			while (!currentTypeMemberReferenceListElement.isLeaf()) {
 				currentTypeMemberReferenceListElement = currentTypeMemberReferenceListElement.getChild();
-				currentTypeMemberImplementation = currentTypeMemberImplementation.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
-				
+				currentTypeMemberImplementation = currentTypeMemberImplementation
+						.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
+
 				currentTypeApiAdapter = currentTypeMemberImplementation.getAdapterInstance();
-				if(currentTypeApiAdapter != null) 
-				{
-					typeApiAdapter = currentTypeApiAdapter;						
+				if (currentTypeApiAdapter != null) {
+					typeApiAdapter = currentTypeApiAdapter;
 				}
-			}	
+			}
 		}
 		return typeApiAdapter;
 	}
-	
+
 	/**
-	 * Finds the TypeApiAdapter for a VariableFeatureReference having both a FeatureRoot and a TypeMemberReferenceListElement defined.
-	 * This is the case where the VariableFeatureReference is referring to a variable's type member feature.
-	 * @param variableFeatureReference The Variable Feature.
+	 * Finds the TypeApiAdapter for a VariableFeatureReference having both a
+	 * FeatureRoot and a TypeMemberReferenceListElement defined. This is the
+	 * case where the VariableFeatureReference is referring to a variable's type
+	 * member feature.
+	 * 
+	 * @param variableFeatureReference
+	 *            The Variable Feature.
 	 * @return The TypeApiAdapter to use, null if none is found.
 	 */
-	private TypeApiAdapter getTypeApiAdapterForFeatureRootAndTypeMember(VariableFeatureReference variableFeatureReference)
-	{
+	private TypeApiAdapter getTypeApiAdapterForFeatureRootAndTypeMember(
+			VariableFeatureReference variableFeatureReference) {
 		TypeApiAdapter typeApiAdapter = null;
-		
+
 		Variable variable = variableFeatureReference.getVariable();
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
-		
+
 		EObject sourceEObject = null;
-		
-		// First, finds the TypeApiAdapter referenced by the TypeMemberReferenceList.
-		
-		TypeMemberReferenceListElement currentTypeMemberReferenceListElement = variableFeatureReference.getTypeMemberReferenceListElement();
-		
-		// Goes down the list of typeMember, keeping the most specific TypeApiAdapter.
-		TypeMemberImplementation currentTypeMemberImplementation = context
-				.getVariableImplementationsList()
+
+		// First, finds the TypeApiAdapter referenced by the
+		// TypeMemberReferenceList.
+
+		TypeMemberReferenceListElement currentTypeMemberReferenceListElement = variableFeatureReference
+				.getTypeMemberReferenceListElement();
+
+		// Goes down the list of typeMember, keeping the most specific
+		// TypeApiAdapter.
+		TypeMemberImplementation currentTypeMemberImplementation = context.getVariableImplementationsList()
 				.getVariableImplementation(variable)
 				.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
 
 		TypeApiAdapter currentTypeApiAdapter = currentTypeMemberImplementation.getAdapterInstance();
-		if(currentTypeApiAdapter != null) 
-		{
+		if (currentTypeApiAdapter != null) {
 			typeApiAdapter = currentTypeApiAdapter;
 			sourceEObject = typeApiAdapter.getInstance();
 		}
-						
-		while (!currentTypeMemberReferenceListElement.isLeaf()) 
-		{
+
+		while (!currentTypeMemberReferenceListElement.isLeaf()) {
 			currentTypeMemberReferenceListElement = currentTypeMemberReferenceListElement.getChild();
-			currentTypeMemberImplementation = currentTypeMemberImplementation.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
-			
+			currentTypeMemberImplementation = currentTypeMemberImplementation
+					.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
+
 			currentTypeApiAdapter = currentTypeMemberImplementation.getAdapterInstance();
-			if(currentTypeApiAdapter != null) 
-			{
-				typeApiAdapter = currentTypeApiAdapter;	
-				
+			if (currentTypeApiAdapter != null) {
+				typeApiAdapter = currentTypeApiAdapter;
+
 				sourceEObject = typeApiAdapter.getInstance();
 			}
-		}	
-				
+		}
+
 		// Then finds the TypeApiAdapter associated with the source object.
-		if(sourceEObject != null)
-		{
+		if (sourceEObject != null) {
 			// Goes through the list of features.
-			AbstractTypeImplementation rootATI = context.getVariableImplementationsList().getVariableImplementation(variable);
-			
+			AbstractTypeImplementation rootATI = context.getVariableImplementationsList()
+					.getVariableImplementation(variable);
+
 			// Traverse the Feature List until no API is found.
-			ListRootNode rootNode = variableFeatureReference.getFeatureRoot();		
+			ListRootNode rootNode = variableFeatureReference.getFeatureRoot();
 			AbstractFeatureListNode currentNode = rootNode;
-			
-			while(currentNode != null)
-			{
+
+			while (currentNode != null) {
 				Object object = ApogyCommonEMFFacade.INSTANCE.resolve(sourceEObject, currentNode);
-				
-				if(object instanceof EObject)
-				{
+
+				if (object instanceof EObject) {
 					EObject eObject = (EObject) object;
-					
-					// Check to see if the eObject has an TypeApiAdapter provided for it.							
+
+					// Check to see if the eObject has an TypeApiAdapter
+					// provided for it.
 					Iterator<TypeMemberImplementation> it = rootATI.getTypeMemberImplementations().iterator();
-					while(it.hasNext())
-					{
+					while (it.hasNext()) {
 						AbstractTypeImplementation ati = it.next();
-						if(ati.getInstance() == eObject)
-						{
-							if(ati.getAdapterInstance() != null)
-							{
+						if (ati.getInstance() == eObject) {
+							if (ati.getAdapterInstance() != null) {
 								typeApiAdapter = ati.getAdapterInstance();
 							}
 						}
 					}
-				}						
+				}
 				currentNode = currentNode.getChild();
-			}			
+			}
 		}
-				
+
 		return typeApiAdapter;
 	}
 
@@ -624,27 +612,20 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	public EObject getInstance(VariableFeatureReference variableFeatureReference) {
 		EObject eObjectInstance = null;
 
-		if (variableFeatureReference.getVariable() != null) 
-		{
+		if (variableFeatureReference.getVariable() != null) {
 			Variable variable = variableFeatureReference.getVariable();
-			if (variableFeatureReference.getTypeMemberReferenceListElement() != null) 
-			{
+			if (variableFeatureReference.getTypeMemberReferenceListElement() != null) {
 				eObjectInstance = getTypeMemberInstance(variableFeatureReference);
-			} 
-			else 
-			{
+			} else {
 				eObjectInstance = getInstance(variable);
 			}
-			
-			if (eObjectInstance != null){
-				if (variableFeatureReference.getFeatureRoot() != null) 
-				{
-					Object tmpObject = ApogyCommonEMFFacade.INSTANCE.resolve(
-								eObjectInstance, ApogyCommonEMFFacade.INSTANCE
-										.getLeaf(variableFeatureReference
-												.getFeatureRoot()));
-					
-					if (tmpObject instanceof EObject){
+
+			if (eObjectInstance != null) {
+				if (variableFeatureReference.getFeatureRoot() != null) {
+					Object tmpObject = ApogyCommonEMFFacade.INSTANCE.resolve(eObjectInstance,
+							ApogyCommonEMFFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot()));
+
+					if (tmpObject instanceof EObject) {
 						eObjectInstance = (EObject) tmpObject;
 					}
 				}
@@ -659,8 +640,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public EObject getTypeMemberInstance(
-			VariableFeatureReference variableFeatureReference) {
+	public EObject getTypeMemberInstance(VariableFeatureReference variableFeatureReference) {
 		EObject typeMemberInstance = null;
 
 		if (variableFeatureReference.getTypeMemberReferenceListElement() != null) {
@@ -673,21 +653,22 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 				Context context = environment.getActiveContext();
 				if (context != null) {
 					VariableImplementationsList variableImplementationsList = context.getVariableImplementationsList();
-					
-					if (variableImplementationsList != null){
-						VariableImplementation variableImplementation = variableImplementationsList.getVariableImplementation(variable);
-						if (variableImplementation != null && currentTypeMemberReferenceListElement != null){
-							TypeMemberImplementation currentTypeMemberImplementation = variableImplementation.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
+
+					if (variableImplementationsList != null) {
+						VariableImplementation variableImplementation = variableImplementationsList
+								.getVariableImplementation(variable);
+						if (variableImplementation != null && currentTypeMemberReferenceListElement != null) {
+							TypeMemberImplementation currentTypeMemberImplementation = variableImplementation
+									.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
 
 							while (!currentTypeMemberReferenceListElement.isLeaf()) {
 								currentTypeMemberReferenceListElement = currentTypeMemberReferenceListElement
 										.getChild();
 								currentTypeMemberImplementation = currentTypeMemberImplementation
-										.getTypeMemberImplementation(currentTypeMemberReferenceListElement
-												.getTypeMember());
+										.getTypeMemberImplementation(
+												currentTypeMemberReferenceListElement.getTypeMember());
 							}
-							typeMemberInstance = currentTypeMemberImplementation
-									.getInstance();						
+							typeMemberInstance = currentTypeMemberImplementation.getInstance();
 						}
 					}
 				}
@@ -702,12 +683,10 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public Object getEMFFeatureValue(
-			VariableFeatureReference variableFeatureReference) {
+	public Object getEMFFeatureValue(VariableFeatureReference variableFeatureReference) {
 		Object featureValue = null;
 
-		if (variableFeatureReference.getVariable() != null
-				&& variableFeatureReference.getFeatureRoot() != null) {
+		if (variableFeatureReference.getVariable() != null && variableFeatureReference.getFeatureRoot() != null) {
 			Variable variable = variableFeatureReference.getVariable();
 			EObject eObject = getTypeMemberInstance(variableFeatureReference);
 			if (eObject == null) {
@@ -716,9 +695,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 
 			if (eObject != null) {
 				featureValue = ApogyCommonEMFFacade.INSTANCE.resolve(eObject,
-						ApogyCommonEMFFacade.INSTANCE
-								.getLeaf(variableFeatureReference
-										.getFeatureRoot()));
+						ApogyCommonEMFFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot()));
 			}
 		}
 
@@ -726,37 +703,38 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	public EClass getInstanceClass(VariableFeatureReference variableFeatureReference) 
-	{
+	public EClass getInstanceClass(VariableFeatureReference variableFeatureReference) {
 		EClass eClass = null;
 		Variable variable = variableFeatureReference.getVariable();
-		TypeMemberReferenceListElement currentTypeMemberReferenceListElement = variableFeatureReference.getTypeMemberReferenceListElement();
-		AbstractFeatureListNode featureNode = ApogyCommonEMFFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot());
-		
-		if (featureNode != null && featureNode instanceof AbstractFeatureSpecifier){
+		TypeMemberReferenceListElement currentTypeMemberReferenceListElement = variableFeatureReference
+				.getTypeMemberReferenceListElement();
+		AbstractFeatureListNode featureNode = ApogyCommonEMFFacade.INSTANCE
+				.getLeaf(variableFeatureReference.getFeatureRoot());
+
+		if (featureNode != null && featureNode instanceof AbstractFeatureSpecifier) {
 			AbstractFeatureSpecifier featureSpecifier = (AbstractFeatureSpecifier) featureNode;
 			EClassifier eClassifier = featureSpecifier.getStructuralFeature().getEType();
-			if (eClassifier instanceof EClass){
-				eClass = (EClass) eClassifier;	
-			}						
+			if (eClassifier instanceof EClass) {
+				eClass = (EClass) eClassifier;
+			}
 		}
-		
-		if(eClass == null && 
-			   currentTypeMemberReferenceListElement != null &&
-			   currentTypeMemberReferenceListElement.getLeafElement() != null &&
-			   currentTypeMemberReferenceListElement.getLeafElement().getTypeMember() != null &&
-			   currentTypeMemberReferenceListElement.getLeafElement().getTypeMember().getMemberType() != null){
-			eClass = currentTypeMemberReferenceListElement.getLeafElement().getTypeMember().getMemberType().getInterfaceClass();
+
+		if (eClass == null && currentTypeMemberReferenceListElement != null
+				&& currentTypeMemberReferenceListElement.getLeafElement() != null
+				&& currentTypeMemberReferenceListElement.getLeafElement().getTypeMember() != null
+				&& currentTypeMemberReferenceListElement.getLeafElement().getTypeMember().getMemberType() != null) {
+			eClass = currentTypeMemberReferenceListElement.getLeafElement().getTypeMember().getMemberType()
+					.getInterfaceClass();
 		}
-		
-		if (eClass == null){
+
+		if (eClass == null) {
 			eClass = getInstanceClass(variable);
 		}
-				
+
 		return eClass;
 	}
 
@@ -765,133 +743,127 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public AbstractTypeImplementation getTypeImplementation(OperationCall operationCall) 
-	{				
+	public AbstractTypeImplementation getTypeImplementation(OperationCall operationCall) {
 		AbstractTypeImplementation result = null;
 
 		Variable variable = operationCall.getVariable();
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
 
-		TypeMemberReferenceListElement currentTypeMemberReferenceListElement = operationCall.getTypeMemberReferenceListElement();
-		
-		// If not Type Member is defined.
-		if (currentTypeMemberReferenceListElement == null) 
-		{
-			if(operationCall.getFeatureRoot() != null)
-			{						
-				AbstractTypeImplementation ati = getAbstractTypeImplementationForTypeAttribute(operationCall);
-				
-				if(ati != null) return ati;			
-			}
-			result = context.getVariableImplementationsList().getVariableImplementation(variable);						
-		} 
-		else 
-		{
-			/* Get the TypeMemberImplementation. */
-			TypeMemberImplementation currentTypeMemberImplementation = context
-					.getVariableImplementationsList()
-					.getVariableImplementation(variable)
-					.getTypeMemberImplementation(
-							currentTypeMemberReferenceListElement
-									.getTypeMember());
+		TypeMemberReferenceListElement currentTypeMemberReferenceListElement = operationCall
+				.getTypeMemberReferenceListElement();
 
-			while (!currentTypeMemberReferenceListElement.isLeaf()) 
-			{
+		// If not Type Member is defined.
+		if (currentTypeMemberReferenceListElement == null) {
+			if (operationCall.getFeatureRoot() != null) {
+				AbstractTypeImplementation ati = getAbstractTypeImplementationForTypeAttribute(operationCall);
+
+				if (ati != null)
+					return ati;
+			}
+			result = context.getVariableImplementationsList().getVariableImplementation(variable);
+		} else {
+			/* Get the TypeMemberImplementation. */
+			TypeMemberImplementation currentTypeMemberImplementation = context.getVariableImplementationsList()
+					.getVariableImplementation(variable)
+					.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
+
+			while (!currentTypeMemberReferenceListElement.isLeaf()) {
 				currentTypeMemberReferenceListElement = currentTypeMemberReferenceListElement.getChild();
-				currentTypeMemberImplementation = currentTypeMemberImplementation.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
+				currentTypeMemberImplementation = currentTypeMemberImplementation
+						.getTypeMemberImplementation(currentTypeMemberReferenceListElement.getTypeMember());
 			}
 			result = currentTypeMemberImplementation;
 		}
 		return result;
-	}	
-	
+	}
 
 	/**
-	 * Attempts to find an AbstractTypeImplementation associated with a specified OperationCall that target an attribute of a type.
-	 * @param operationCall The OperationCall.	 
+	 * Attempts to find an AbstractTypeImplementation associated with a
+	 * specified OperationCall that target an attribute of a type.
+	 * 
+	 * @param operationCall
+	 *            The OperationCall.
 	 * @return The AbstractTypeImplementation, null if none is found.
 	 */
-	private AbstractTypeImplementation getAbstractTypeImplementationForTypeAttribute(OperationCall operationCall)
-	{		
-		Variable variable = operationCall.getVariable();	
+	private AbstractTypeImplementation getAbstractTypeImplementationForTypeAttribute(OperationCall operationCall) {
+		Variable variable = operationCall.getVariable();
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
-		
-		// Initialize the result with the AbstractTypeImplementation associated with the variable.
-		AbstractTypeImplementation result = context.getVariableImplementationsList().getVariableImplementation(variable);
-						
-		// Gets the source EObject		
-		EObject source = (EObject) getInstance (variable);
-		
+
+		// Initialize the result with the AbstractTypeImplementation associated
+		// with the variable.
+		AbstractTypeImplementation result = context.getVariableImplementationsList()
+				.getVariableImplementation(variable);
+
+		// Gets the source EObject
+		EObject source = (EObject) getInstance(variable);
+
 		// Traverse the Feature List until no API is found.
-		ListRootNode rootNode = operationCall.getFeatureRoot();		
+		ListRootNode rootNode = operationCall.getFeatureRoot();
 		AbstractFeatureListNode currentNode = rootNode;
 		VariableImplementation vi = context.getVariableImplementationsList().getVariableImplementation(variable);
-		
-		while(currentNode != null)
-		{			
+
+		while (currentNode != null) {
 			Object object = ApogyCommonEMFFacade.INSTANCE.resolve(source, currentNode);
-			
-			if(object instanceof EObject)
-			{
-				EObject eObject = (EObject) object;				
+
+			if (object instanceof EObject) {
+				EObject eObject = (EObject) object;
 				AbstractTypeImplementation ati = findAbstractTypeImplementation(vi, eObject);
-				if(ati != null) result = ati;				
+				if (ati != null)
+					result = ati;
 			}
-			
+
 			currentNode = currentNode.getChild();
 		}
-		
+
 		return result;
 	}
-	
+
 	/**
-	 * Attempts to find an AbstractTypeImplementation associated with a specified EObject instance.
-	 * @param typeImplementation The root typeImplementation.
-	 * @param eObjectInstance The EObject instance.
+	 * Attempts to find an AbstractTypeImplementation associated with a
+	 * specified EObject instance.
+	 * 
+	 * @param typeImplementation
+	 *            The root typeImplementation.
+	 * @param eObjectInstance
+	 *            The EObject instance.
 	 * @return The AbstractTypeImplementation, null if none is found.
 	 */
-	protected AbstractTypeImplementation findAbstractTypeImplementation(AbstractTypeImplementation typeImplementation, final EObject eObjectInstance)
-	{		
-		if(typeImplementation.getInstance() == eObjectInstance)
-		{
+	protected AbstractTypeImplementation findAbstractTypeImplementation(AbstractTypeImplementation typeImplementation,
+			final EObject eObjectInstance) {
+		if (typeImplementation.getInstance() == eObjectInstance) {
 			return typeImplementation;
-		}
-		else
-		{
+		} else {
 			AbstractTypeImplementation result = null;
 			Iterator<TypeMemberImplementation> it = typeImplementation.getTypeMemberImplementations().iterator();
-			while(result == null && it.hasNext())
-			{
+			while (result == null && it.hasNext()) {
 				AbstractTypeImplementation ti = it.next();
-				
+
 				result = findAbstractTypeImplementation(ti, eObjectInstance);
 			}
 			return result;
-		}				
+		}
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
 	 */
-	public AbstractTypeImplementation getTypeImplementation(Variable variable,
-			AbstractType elementType) {
+	public AbstractTypeImplementation getTypeImplementation(Variable variable, AbstractType elementType) {
 		AbstractTypeImplementation result = null;
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
 
-		VariableImplementation variableImplementation = context
-				.getVariableImplementationsList().getVariableImplementation(
-						variable);
+		VariableImplementation variableImplementation = context.getVariableImplementationsList()
+				.getVariableImplementation(variable);
 
 		if (variableImplementation.getHandlingType() == elementType) {
 			result = variableImplementation;
 		} else {
-			result = getTypeMemberImplementation(variableImplementation
-					.getTypeMemberImplementations().iterator(), elementType);
+			result = getTypeMemberImplementation(variableImplementation.getTypeMemberImplementations().iterator(),
+					elementType);
 		}
 		return result;
 	}
@@ -904,24 +876,23 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	public AbstractTypeImplementation getTypeImplementation(Variable variable) {
 		Environment environment = variable.getEnvironment();
 		Context context = environment.getActiveContext();
-		return context.getVariableImplementationsList()
-				.getVariableImplementation(variable);
+		return context.getVariableImplementationsList().getVariableImplementation(variable);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public List<Variable> getVariableByName(InvocatorSession session, String name) {
 		List<Variable> result = new ArrayList<Variable>();
-		
+
 		Environment environment = session.getEnvironment();
-		if (environment != null){
+		if (environment != null) {
 			VariablesList variablesList = environment.getVariablesList();
-			if (variablesList != null){
+			if (variablesList != null) {
 				for (Variable variable : variablesList.getVariables()) {
-					if (variable.getName().equals(name)){
+					if (variable.getName().equals(name)) {
 						result.add(variable);
 					}
 				}
@@ -931,29 +902,29 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public Variable getVariableByName(String name) {
 		Variable variable = null;
 
 		InvocatorSession session = getActiveInvocatorSession();
-		if (session != null){
+		if (session != null) {
 			Iterator<Variable> variables = session.getEnvironment().getVariablesList().getVariables().iterator();
-			while (variables.hasNext() && variable == null){
-				Variable current = variables.next();				
-				if (current.getName().equals(name)){
-					variable = current; 
+			while (variables.hasNext() && variable == null) {
+				Variable current = variables.next();
+				if (current.getName().equals(name)) {
+					variable = current;
 				}
 			}
-		}		
+		}
 		return variable;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public TypeMemberReferenceListElement createTypeMemberReferences(TypeMember[] typeMembers) {
@@ -975,21 +946,18 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public AbstractTypeImplementation getTypeImplementation(
-			Environment environment, String fullyQualifiedName) {
+	public AbstractTypeImplementation getTypeImplementation(Environment environment, String fullyQualifiedName) {
 		AbstractTypeImplementation result = null;
 		String[] tokens = fullyQualifiedName.split("\\.");
 
 		// Get the variable first.
 		VariableImplementation variableImplementation = null;
 		if (environment.getActiveContext() != null) {
-			VariableImplementationsList variableImplementationsList = environment
-					.getActiveContext().getVariableImplementationsList();
+			VariableImplementationsList variableImplementationsList = environment.getActiveContext()
+					.getVariableImplementationsList();
 			if (variableImplementationsList != null) {
-				String variableName = tokens.length == 0 ? fullyQualifiedName
-						: tokens[0];
-				variableImplementation = variableImplementationsList
-						.getVariableImplementation(variableName);
+				String variableName = tokens.length == 0 ? fullyQualifiedName : tokens[0];
+				variableImplementation = variableImplementationsList.getVariableImplementation(variableName);
 			}
 		}
 
@@ -1001,15 +969,12 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			// Search recursively the tokens.
 			int tokenCounter = 1; // 0 means the variable.
 			AbstractTypeImplementation currentTypeImplementation = variableImplementation;
-			while (tokenCounter < tokens.length
-					&& currentTypeImplementation != null) {
-				currentTypeImplementation = currentTypeImplementation
-						.getTypeMemberImplementation(tokens[tokenCounter]);
+			while (tokenCounter < tokens.length && currentTypeImplementation != null) {
+				currentTypeImplementation = currentTypeImplementation.getTypeMemberImplementation(tokens[tokenCounter]);
 				tokenCounter++;
 			}
 
-			if (currentTypeImplementation != null
-					&& tokenCounter == tokens.length) {
+			if (currentTypeImplementation != null && tokenCounter == tokens.length) {
 				result = currentTypeImplementation;
 			}
 		}
@@ -1018,18 +983,16 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	protected TypeMemberImplementation getTypeMemberImplementation(
-			Iterator<TypeMemberImplementation> typeMemberImplementations,
-			AbstractType elementType) {
+			Iterator<TypeMemberImplementation> typeMemberImplementations, AbstractType elementType) {
 		TypeMemberImplementation result = null;
 
 		while (typeMemberImplementations.hasNext() && result == null) {
-			TypeMemberImplementation typeMemberImplementation = typeMemberImplementations
-					.next();
+			TypeMemberImplementation typeMemberImplementation = typeMemberImplementations.next();
 			if (typeMemberImplementation.getTypeMember() == elementType) {
 				result = typeMemberImplementation;
 			} else {
-				result = getTypeMemberImplementation(typeMemberImplementation
-						.getTypeMemberImplementations().iterator(), elementType);
+				result = getTypeMemberImplementation(typeMemberImplementation.getTypeMemberImplementations().iterator(),
+						elementType);
 			}
 		}
 		return result;
@@ -1040,10 +1003,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public String getFullyQualifiedName(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement) 
-	{
-		if (typeMemberReferenceTreeElement != null) 
-		{
+	public String getFullyQualifiedName(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement) {
+		if (typeMemberReferenceTreeElement != null) {
 			String fullyQualifiedName = new String();
 			List<TypeMemberReferenceTreeElement> lineage = new ArrayList<TypeMemberReferenceTreeElement>();
 
@@ -1054,8 +1015,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			}
 
 			Iterator<TypeMemberReferenceTreeElement> it = lineage.iterator();
-			while (it.hasNext()) 
-			{
+			while (it.hasNext()) {
 				TypeMemberReferenceTreeElement element = it.next();
 				fullyQualifiedName += element.getTypeMember().getName();
 				if (it.hasNext())
@@ -1063,9 +1023,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			}
 
 			return fullyQualifiedName;
-		} 
-		else 
-		{
+		} else {
 			return null;
 		}
 
@@ -1077,22 +1035,19 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * @generated_NOT
 	 */
 	public String getFullyQualifiedName(AbstractFeatureNode abstractFeatureNode) {
-		if (abstractFeatureNode != null) 
-		{
+		if (abstractFeatureNode != null) {
 			String fullyQualifiedName = new String();
 			AbstractRootNode root = ApogyCommonEMFFacade.INSTANCE.getFeatureRoot(abstractFeatureNode);
-				
-			if (root.eContainer() instanceof TypeMemberReferenceTreeElement) 
-			{
-				TypeMemberReferenceTreeElement typeMemberReferenceTreeElement = (TypeMemberReferenceTreeElement) root.eContainer();
+
+			if (root.eContainer() instanceof TypeMemberReferenceTreeElement) {
+				TypeMemberReferenceTreeElement typeMemberReferenceTreeElement = (TypeMemberReferenceTreeElement) root
+						.eContainer();
 				fullyQualifiedName = getFullyQualifiedName(typeMemberReferenceTreeElement);
-				fullyQualifiedName += "."+ ApogyCommonEMFFacade.INSTANCE.getAncestriesString(abstractFeatureNode);
+				fullyQualifiedName += "." + ApogyCommonEMFFacade.INSTANCE.getAncestriesString(abstractFeatureNode);
 			}
 
 			return fullyQualifiedName;
-		} 
-		else 
-		{
+		} else {
 			return null;
 		}
 	}
@@ -1102,8 +1057,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public List<TypeMemberImplementation> createTypeMemberImplementations(
-			Type variableType) {
+	public List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType) {
 		List<TypeMemberImplementation> typeMemberImplementations = new ArrayList<TypeMemberImplementation>();
 
 		Iterator<TypeMember> typeMembers = variableType.getMembers().iterator();
@@ -1112,13 +1066,17 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			TypeMemberImplementation typeMemberImplementation = ApogyCoreInvocatorFactory.eINSTANCE
 					.createTypeMemberImplementation();
 			typeMemberImplementation.setTypeMember(typeMember);
+			
+			List<EClass> eClasses = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(typeMemberImplementation.getHandlingType().getInterfaceClass());
+			if (!eClasses.isEmpty()){
+				typeMemberImplementation.setImplementationClass(eClasses.get(0));
+			}
 
 			/** Check sub-type members. */
-			List<TypeMemberImplementation> subTypeMemberImplementations = createTypeMemberImplementations(typeMember
-					.getMemberType());
+			List<TypeMemberImplementation> subTypeMemberImplementations = createTypeMemberImplementations(
+					typeMember.getMemberType());
 			if (!subTypeMemberImplementations.isEmpty()) {
-				typeMemberImplementation.getTypeMemberImplementations().addAll(
-						subTypeMemberImplementations);
+				typeMemberImplementation.getTypeMemberImplementations().addAll(subTypeMemberImplementations);
 			}
 
 			typeMemberImplementations.add(typeMemberImplementation);
@@ -1132,17 +1090,15 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * @generated_NOT
 	 */
 	public void initVariableInstances(Environment environment) {
-		Iterator<Variable> variables = environment.getVariablesList()
-				.getVariables().iterator();
+		Iterator<Variable> variables = environment.getVariablesList().getVariables().iterator();
 
 		while (variables.hasNext()) {
 			Variable variable = variables.next();
-			InvocatorDelegate invocatorDelegate = InvocatorDelegateRegistry
-					.getInstance().getInvocatorDelegate(
-							variable.getVariableType().getClass());
+			InvocatorDelegate invocatorDelegate = InvocatorDelegateRegistry.getInstance()
+					.getInvocatorDelegate(variable.getVariableType().getClass());
 
 			invocatorDelegate.newInstance(environment, variable);
-			
+
 			/* Notifies the listener a new instance has been instantiated. */
 			notifyVariableListeners(variable, VariableListenerEventType.NEW);
 		}
@@ -1152,7 +1108,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		environment.getActiveContext().setInstancesCreationDate(date);
 		setInitVariableInstancesDate(date);
 		environment.getActiveContext().setInstancesDisposalDate(null);
-		
+
 		/* Variables are instantiated. */
 		environment.getActiveContext().setVariablesInstantiated(true);
 	}
@@ -1164,23 +1120,21 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	public void disposeVariableInstances(Environment environment) {
 
-		Iterator<Variable> variables = environment.getVariablesList()
-				.getVariables().iterator();
+		Iterator<Variable> variables = environment.getVariablesList().getVariables().iterator();
 
 		while (variables.hasNext()) {
 			Variable variable = variables.next();
-			InvocatorDelegate invocatorDelegate = InvocatorDelegateRegistry
-					.getInstance().getInvocatorDelegate(
-							variable.getVariableType().getClass());
+			InvocatorDelegate invocatorDelegate = InvocatorDelegateRegistry.getInstance()
+					.getInvocatorDelegate(variable.getVariableType().getClass());
 
 			invocatorDelegate.dispose(environment, variable);
 
 			/* Notifies the listener a new instance has been cleared. */
-			notifyVariableListeners(variable, VariableListenerEventType.CLEAR);			
+			notifyVariableListeners(variable, VariableListenerEventType.CLEAR);
 		}
 
 		environment.getActiveContext().setInstancesDisposalDate(new Date());
-		
+
 		/* Variables are disposed. */
 		environment.getActiveContext().setVariablesInstantiated(false);
 	}
@@ -1190,8 +1144,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public OperationCall getOperationCallContainer(
-			TypeMemberReferenceListElement typeMemberReferenceListElement) {
+	public OperationCall getOperationCallContainer(TypeMemberReferenceListElement typeMemberReferenceListElement) {
 		OperationCall operationCall = null;
 		if (typeMemberReferenceListElement.isRoot()) {
 			EObject container = typeMemberReferenceListElement.eContainer();
@@ -1237,8 +1190,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		// If no delegate, fail.
 		if (delegate == null) {
 			Logger.INSTANCE.log(Activator.ID, this,
-					"Cannot find an InvocatorDelegate for instance of type <"
-							+ instance.getClass() + "> !",
+					"Cannot find an InvocatorDelegate for instance of type <" + instance.getClass() + "> !",
 					EventSeverity.ERROR);
 		} else {
 			delegate.applyInitializationData(variable);
@@ -1258,8 +1210,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		// If no delegate, fail.
 		if (delegate == null) {
 			Logger.INSTANCE.log(Activator.ID, this,
-					"Cannot find an InvocatorDelegate for instance of type <"
-							+ instance.getClass() + "> !",
+					"Cannot find an InvocatorDelegate for instance of type <" + instance.getClass() + "> !",
 					EventSeverity.ERROR);
 		} else {
 			delegate.collectInitializationData(variable);
@@ -1268,17 +1219,17 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public void loadRegisteredTypes(InvocatorSession session) {
 		Environment environment = session.getEnvironment();
-		if (environment != null){
+		if (environment != null) {
 			TypesList typesList = environment.getTypesList();
-			if (typesList != null){
+			if (typesList != null) {
 				RegisteredTypesList registeredTypesList = typesList.getRegisteredTypes();
-				if (registeredTypesList != null){
+				if (registeredTypesList != null) {
 					registeredTypesList.getTypes();
 				}
 			}
@@ -1286,33 +1237,33 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public List<Type> getAllTypes(Environment environment) {
 		List<Type> types = new ArrayList<Type>();
-		
+
 		TypesList typesList = environment.getTypesList();
-		
-		if (typesList != null){
+
+		if (typesList != null) {
 			LocalTypesList localTypesList = typesList.getLocalTypes();
-			if (localTypesList != null){
+			if (localTypesList != null) {
 				types.addAll(localTypesList.getTypes());
 			}
 
 			RegisteredTypesList registeredTypesList = typesList.getRegisteredTypes();
-			if (registeredTypesList != null){
+			if (registeredTypesList != null) {
 				types.addAll(registeredTypesList.getTypes());
 			}
 		}
-		
+
 		return types;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public void addVariableListener(IVariableListener listener) {
@@ -1320,15 +1271,15 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	private HashSet<IVariableListener> getVariableListenersSet() {
-		if (variableListenersSet == null){
+		if (variableListenersSet == null) {
 			variableListenersSet = new HashSet<IVariableListener>();
 		}
 		return variableListenersSet;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public void removeVariableListener(IVariableListener listener) {
@@ -1336,19 +1287,19 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public void notifyVariableListeners(Variable variable, VariableListenerEventType event) {
-		for(IVariableListener listener: getVariableListenersSet()){
+		for (IVariableListener listener : getVariableListenersSet()) {
 			listener.variableListenerNotification(variable, event);
 		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public InvocatorSession loadInvocatorSession(String uri) throws Exception {
@@ -1359,12 +1310,13 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public DataProductsList getDataProductsByName(InvocatorSession invocatorSession, String name) {
-		for (DataProductsList dataProductsList : invocatorSession.getDataProductsListContainer().getDataProductsList()) {
+		for (DataProductsList dataProductsList : invocatorSession.getDataProductsListContainer()
+				.getDataProductsList()) {
 			if (dataProductsList.getName().equals(name)) {
 				return dataProductsList;
 			}
@@ -1373,8 +1325,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public Program getProgramByName(InvocatorSession invocatorSession, String name) {		
@@ -1389,8 +1341,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public Context getContextByName(InvocatorSession invocatorSession, String name) {
@@ -1445,8 +1397,43 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public Context createContext(InvocatorSession invocatorSession) {
+
+		Context context = ApogyCoreInvocatorFactory.eINSTANCE.createContext();
+		VariableImplementationsList variableImplementationsList = ApogyCoreInvocatorFactory.eINSTANCE
+				.createVariableImplementationsList();
+		context.setVariableImplementationsList(variableImplementationsList);
+
+		/**
+		 * Instantiate the variable implementations.
+		 */
+		Iterator<Variable> variables = invocatorSession.getEnvironment().getVariablesList().getVariables().iterator();
+		while (variables.hasNext()) {
+			Variable variable = variables.next();
+			VariableImplementation variableImplementation = ApogyCoreInvocatorFactory.eINSTANCE
+					.createVariableImplementation();
+			variableImplementation.setVariable(variable);
+			
+			List<EClass> eClasses = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(variableImplementation.getHandlingType().getInterfaceClass());
+			if (!eClasses.isEmpty()){
+				variableImplementation.setImplementationClass(eClasses.get(0));
+			}
+
+			/** Create TypeMemberImplementations. */
+			variableImplementation.getTypeMemberImplementations().addAll(
+					ApogyCoreInvocatorFacade.INSTANCE.createTypeMemberImplementations(variable.getVariableType()));
+
+			variableImplementationsList.getVariableImplementations().add(variableImplementation);
+		}
+		return context;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1462,8 +1449,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1480,8 +1466,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1498,8 +1483,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1518,8 +1502,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments)
-			throws InvocationTargetException {
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL:
 				return exec((OperationCall)arguments.get(0));
@@ -1615,13 +1598,14 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 				return getAllScriptBasedPrograms((ProgramsList)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___FILTER_ARCHIVED__ELIST:
 				return filterArchived((EList<Object>)arguments.get(0));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION:
+				return createContext((InvocatorSession)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override

@@ -11,7 +11,7 @@
       </variables>
     </variablesList>
     <contextsList xmi:id="_CaxoMQrPEeW4-_ONWXXiAw">
-      <contexts xsi:type="invocator:BasicContext" xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw" instancesCreationDate="2016-02-29T14:54:10.364-0500">
+      <contexts xsi:type="invocator:Context" xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw" instancesCreationDate="2016-02-29T14:54:10.364-0500">
         <variableImplementationsList xmi:id="_CaxoMwrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_uj61gN8UEeW7wsHj6HEw3w" variable="_CaxoMArPEeW4-_ONWXXiAw">
             <typeMemberImplementations xmi:id="_vC0YAN8UEeW7wsHj6HEw3w">
@@ -34,7 +34,7 @@
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
-      <contexts xsi:type="invocator:BasicContext" xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:Context" xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_CaxoNgrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_y7ZMEN8UEeW7wsHj6HEw3w" variable="_CaxoMArPEeW4-_ONWXXiAw">
             <typeMemberImplementations xmi:id="_zbtq4N8UEeW7wsHj6HEw3w">

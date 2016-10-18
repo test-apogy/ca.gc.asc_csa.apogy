@@ -447,13 +447,22 @@ public interface ApogyCommonEMFPackage extends EPackage
 	int APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING = 37;
 
 		/**
+	 * The operation id for the '<em>Get Default Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE = 38;
+
+		/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 38;
+	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 39;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -2621,6 +2630,16 @@ public interface ApogyCommonEMFPackage extends EPackage
 	EOperation getApogyCommonEMFFacade__GetEObjectById__ResourceSet_String();
 
 		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference) <em>Get Default Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Default Name</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFFacade__GetDefaultName__EObject_EReference();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference <em>EObject Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3887,6 +3906,14 @@ public interface ApogyCommonEMFPackage extends EPackage
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING = eINSTANCE.getApogyCommonEMFFacade__GetEObjectById__ResourceSet_String();
+
+				/**
+		 * The meta object literal for the '<em><b>Get Default Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE = eINSTANCE.getApogyCommonEMFFacade__GetDefaultName__EObject_EReference();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.

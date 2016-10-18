@@ -302,7 +302,7 @@ class ApogyCoreInvocatorFacade
 	  * @return Reference to the context or null if not found.
 	  */
 	 op Context getContextByName(InvocatorSession invocatorSession, String name)
-	 
+	 		 	 
 	 /*
 	  * Returns all the {@link ScriptBasedProgram} programs contained in the list.
 	  * @param programsList Refers to the list that contains all the programs.
@@ -317,6 +317,14 @@ class ApogyCoreInvocatorFacade
 	  * @return Array of filtered objects
 	  */
 	 op Object[] filterArchived(Object[] objects)
+
+	/*
+	  * Creates a new context and populates the {@link VariableImplementations}.  
+	  * The context is not fully initialized (e.g. Name and description are not set).
+	  * @param invocatorSession the session for which the context is built.
+	  * @return Reference to the new context. 
+	  */
+	 op Context createContext(InvocatorSession invocatorSession)	 
 } 
 
 enum VariableListenerEventType{
@@ -650,10 +658,13 @@ class ContextsList
  	contains Context[0..*] contexts opposite contextsList
 }
 
-abstract class Context extends Named
+class Context extends Named, Described
 {
+	boolean archived = "false"
+	
 	@GenModel(property="None")
 	container ContextsList contextsList opposite contexts	
+			
 	contains VariableImplementationsList[0..1] variableImplementationsList
 
     @GenModel(children="false", property="None")
@@ -670,16 +681,11 @@ abstract class Context extends Named
 		
   	@GenModel(property="Readonly")		
 	Date instancesDisposalDate 
-	
+
 	/*
 	 * Indicates if the variables are instantiated (initialized)
 	 */	 	 
 	transient boolean variablesInstantiated = "false"
-}
-
-class BasicContext extends Context
-{
-	
 }
 
 /* ------------------------------------------------------------------------- 
@@ -730,6 +736,8 @@ abstract class AbstractTypeImplementation
 
     @GenModel(notify="true")
 	refers EClass [0..1] implementationClass
+	
+	//op boolean hasValidImplementationClass(DiagnosticChain chain, Map<?, ?> context)
 		
 	@GenModel(children="true", notify="true")
 	contains AbstractInitializationData [0..1] abstractInitializationData
@@ -740,7 +748,7 @@ abstract class AbstractTypeImplementation
 	@GenModel(children="true", notify="true")
 	refers transient TypeApiAdapter [0..1] adapterInstance
 	
-	refers transient readonly derived volatile Type handlingType
+	refers transient readonly derived volatile Type [1] handlingType
 }
 
 class VariableImplementation extends AbstractTypeImplementation

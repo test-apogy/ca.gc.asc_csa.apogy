@@ -1,32 +1,20 @@
-package ca.gc.asc_csa.apogy.core.invocator.impl;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *      Pierre Allard (Pierre.Allard@canada.ca), 
+ *      Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *      Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *      Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EGenericType;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
-import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+
 import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
@@ -37,11 +25,13 @@ import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractType;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
-import ca.gc.asc_csa.apogy.core.invocator.BasicContext;
 import ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.ChannelsList;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
@@ -51,9 +41,6 @@ import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer;
 import ca.gc.asc_csa.apogy.core.invocator.IVariableListener;
@@ -99,526 +86,534 @@ import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
  * @generated
  */
-public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements ApogyCoreInvocatorPackage
-{
-  /**
+public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements ApogyCoreInvocatorPackage {
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass apogyCoreInvocatorFacadeEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass invocatorSessionEClass = null;
+	private EClass invocatorSessionEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass environmentEClass = null;
+	private EClass environmentEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass dataProductsListsContainerEClass = null;
+	private EClass dataProductsListsContainerEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass dataProductsListEClass = null;
+	private EClass dataProductsListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass toolsListEClass = null;
+	private EClass toolsListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractToolsListContainerEClass = null;
+	private EClass abstractToolsListContainerEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass typesListEClass = null;
+	private EClass typesListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass localTypesListEClass = null;
+	private EClass localTypesListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass registeredTypesListEClass = null;
+	private EClass registeredTypesListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractTypeEClass = null;
+	private EClass abstractTypeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass typeEClass = null;
+	private EClass typeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass typeApiAdapterEClass = null;
+	private EClass typeApiAdapterEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass typeMemberEClass = null;
+	private EClass typeMemberEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass typeMemberReferenceEClass = null;
+	private EClass typeMemberReferenceEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass typeMemberReferenceListElementEClass = null;
+	private EClass typeMemberReferenceListElementEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass typeMemberReferenceTreeElementEClass = null;
+	private EClass typeMemberReferenceTreeElementEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass variablesListEClass = null;
+	private EClass variablesListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass variableEClass = null;
+	private EClass variableEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass contextsListEClass = null;
+	private EClass contextsListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass contextEClass = null;
+	private EClass contextEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass basicContextEClass = null;
+	private EClass variableImplementationsListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass variableImplementationsListEClass = null;
+	private EClass abstractInitializationDataEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractInitializationDataEClass = null;
+	private EClass initializationDataEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass initializationDataEClass = null;
+	private EClass abstractTypeImplementationEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractTypeImplementationEClass = null;
+	private EClass variableImplementationEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass variableImplementationEClass = null;
+	private EClass typeMemberImplementationEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass typeMemberImplementationEClass = null;
+	private EClass valuesListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass valuesListEClass = null;
+	private EClass valueEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass valueEClass = null;
+	private EClass programsListEClass = null;
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass programsListEClass = null;
-
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass programsGroupEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass programEClass = null;
+	private EClass programEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass scriptBasedProgramEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass triggeredBasedProgramEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass operationCallContainerEClass = null;
+	private EClass operationCallContainerEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass operationCallsListEClass = null;
+	private EClass operationCallsListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass variableFeatureReferenceEClass = null;
+	private EClass variableFeatureReferenceEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass operationCallEClass = null;
+	private EClass operationCallEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass argumentsListEClass = null;
+	private EClass argumentsListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass argumentEClass = null;
+	private EClass argumentEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass eDataTypeArgumentEClass = null;
+	private EClass eDataTypeArgumentEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass booleanEDataTypeArgumentEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass numericEDataTypeArgumentEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass stringEDataTypeArgumentEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass eEnumArgumentEClass = null;
+	private EClass eEnumArgumentEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass eClassArgumentEClass = null;
+	private EClass eClassArgumentEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass programRuntimesListEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass abstractProgramRuntimeEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass operationCallsListProgramRuntimeEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass resultsListEClass = null;
+	private EClass resultsListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass operationCallResultsListEClass = null;
+	private EClass operationCallResultsListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass recordingResultsListEClass = null;
+	private EClass recordingResultsListEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractResultEClass = null;
+	private EClass abstractResultEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractResultValueEClass = null;
+	private EClass abstractResultValueEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass operationCallResultEClass = null;
+	private EClass operationCallResultEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass exceptionContainerEClass = null;
+	private EClass exceptionContainerEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass attributeResultValueEClass = null;
+	private EClass attributeResultValueEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass attributeValueEClass = null;
+	private EClass attributeValueEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass referenceResultValueEClass = null;
+	private EClass referenceResultValueEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass recordingToolsContainerEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass channelsListEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass abstractChannelEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractRecorderEClass = null;
+	private EClass abstractRecorderEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractPlayerEClass = null;
+	private EClass abstractPlayerEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass operationCallResultsListTimeSourceEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum variableListenerEventTypeEEnum = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum programRuntimeStateEEnum = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType throwableEDataType = null;
+	private EDataType throwableEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType notificationEDataType = null;
+	private EDataType notificationEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType typeMemberImplementationsEListEDataType = null;
+	private EDataType typeMemberImplementationsEListEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType typeMembersArrayEDataType = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType iVariableListenerEDataType = null;
 
-		/**
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -627,38 +622,36 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * initialization of the package, or returns the registered package,
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private ApogyCoreInvocatorPackageImpl()
-  {
+	private ApogyCoreInvocatorPackageImpl() {
 		super(eNS_URI, ApogyCoreInvocatorFactory.eINSTANCE);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private static boolean isInited = false;
+	private static boolean isInited = false;
 
-  /**
+	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
 	 * <p>This method is used to initialize {@link ApogyCoreInvocatorPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static ApogyCoreInvocatorPackage init()
-  {
+	public static ApogyCoreInvocatorPackage init() {
 		if (isInited) return (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
 
 		// Obtain or create and register package
@@ -684,7 +677,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return theApogyCoreInvocatorPackage;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -693,7 +686,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -702,7 +695,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EAttribute)apogyCoreInvocatorFacadeEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -711,7 +704,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)apogyCoreInvocatorFacadeEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -720,7 +713,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -729,7 +722,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +731,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -747,7 +740,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(3);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -756,7 +749,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(4);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -765,7 +758,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(5);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -774,7 +767,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(6);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -783,7 +776,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(7);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -792,7 +785,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(8);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -801,7 +794,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(9);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -810,7 +803,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(10);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -819,7 +812,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(11);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -828,7 +821,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(12);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -837,7 +830,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(13);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -846,7 +839,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(14);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -855,7 +848,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(15);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -864,7 +857,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(16);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -873,7 +866,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(17);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -882,7 +875,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(18);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -891,7 +884,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(19);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -900,7 +893,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(20);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -909,7 +902,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(21);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -918,7 +911,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(22);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -927,7 +920,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(23);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -936,7 +929,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(24);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -945,7 +938,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(25);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -954,7 +947,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(26);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -963,7 +956,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(27);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -972,7 +965,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(28);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -981,7 +974,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(29);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -990,7 +983,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(30);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -999,7 +992,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(31);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1008,7 +1001,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(32);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1017,7 +1010,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(33);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1026,7 +1019,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(34);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1035,7 +1028,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(35);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1044,7 +1037,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(36);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1053,7 +1046,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(37);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1062,37 +1055,43 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(38);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getInvocatorSession()
-  {
+	public EOperation getApogyCoreInvocatorFacade__CreateContext__InvocatorSession() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(39);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInvocatorSession() {
 		return invocatorSessionEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getInvocatorSession_Environment()
-  {
+	public EReference getInvocatorSession_Environment() {
 		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getInvocatorSession_ProgramsList()
-  {
+	public EReference getInvocatorSession_ProgramsList() {
 		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1101,157 +1100,142 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getInvocatorSession_DataProductsListContainer()
-  {
+	public EReference getInvocatorSession_DataProductsListContainer() {
 		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getInvocatorSession_ToolsList()
-  {
+	public EReference getInvocatorSession_ToolsList() {
 		return (EReference)invocatorSessionEClass.getEStructuralFeatures().get(4);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getEnvironment()
-  {
+	public EClass getEnvironment() {
 		return environmentEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEnvironment_InvocatorSession()
-  {
+	public EReference getEnvironment_InvocatorSession() {
 		return (EReference)environmentEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEnvironment_TypesList()
-  {
+	public EReference getEnvironment_TypesList() {
 		return (EReference)environmentEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEnvironment_VariablesList()
-  {
+	public EReference getEnvironment_VariablesList() {
 		return (EReference)environmentEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEnvironment_ContextsList()
-  {
+	public EReference getEnvironment_ContextsList() {
 		return (EReference)environmentEClass.getEStructuralFeatures().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEnvironment_ActiveContext()
-  {
+	public EReference getEnvironment_ActiveContext() {
 		return (EReference)environmentEClass.getEStructuralFeatures().get(4);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getDataProductsListsContainer()
-  {
+	public EClass getDataProductsListsContainer() {
 		return dataProductsListsContainerEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getDataProductsListsContainer_InvocatorSession()
-  {
+	public EReference getDataProductsListsContainer_InvocatorSession() {
 		return (EReference)dataProductsListsContainerEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getDataProductsListsContainer_DataProductsList()
-  {
+	public EReference getDataProductsListsContainer_DataProductsList() {
 		return (EReference)dataProductsListsContainerEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getDataProductsList()
-  {
+	public EClass getDataProductsList() {
 		return dataProductsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getDataProductsList_DataProductsListsContainer()
-  {
+	public EReference getDataProductsList_DataProductsListsContainer() {
 		return (EReference)dataProductsListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getDataProductsList_OperationCallResultsList()
-  {
+	public EReference getDataProductsList_OperationCallResultsList() {
 		return (EReference)dataProductsListEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getDataProductsList_RecordingResultsList()
-  {
+	public EReference getDataProductsList_RecordingResultsList() {
 		return (EReference)dataProductsListEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1260,277 +1244,250 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)dataProductsListEClass.getEStructuralFeatures().get(3);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getToolsList()
-  {
+	public EClass getToolsList() {
 		return toolsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getToolsList_InvocatorSession()
-  {
+	public EReference getToolsList_InvocatorSession() {
 		return (EReference)toolsListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getToolsList_ToolsListContainers()
-  {
+	public EReference getToolsList_ToolsListContainers() {
 		return (EReference)toolsListEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractToolsListContainer()
-  {
+	public EClass getAbstractToolsListContainer() {
 		return abstractToolsListContainerEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractToolsListContainer_ToolsList()
-  {
+	public EReference getAbstractToolsListContainer_ToolsList() {
 		return (EReference)abstractToolsListContainerEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTypesList()
-  {
+	public EClass getTypesList() {
 		return typesListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypesList_LocalTypes()
-  {
+	public EReference getTypesList_LocalTypes() {
 		return (EReference)typesListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypesList_RegisteredTypes()
-  {
+	public EReference getTypesList_RegisteredTypes() {
 		return (EReference)typesListEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getLocalTypesList()
-  {
+	public EClass getLocalTypesList() {
 		return localTypesListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getLocalTypesList_Types()
-  {
+	public EReference getLocalTypesList_Types() {
 		return (EReference)localTypesListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getRegisteredTypesList()
-  {
+	public EClass getRegisteredTypesList() {
 		return registeredTypesListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getRegisteredTypesList_Types()
-  {
+	public EReference getRegisteredTypesList_Types() {
 		return (EReference)registeredTypesListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractType()
-  {
+	public EClass getAbstractType() {
 		return abstractTypeEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getType()
-  {
+	public EClass getType() {
 		return typeEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getType_Members()
-  {
+	public EReference getType_Members() {
 		return (EReference)typeEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getType_InterfaceClass()
-  {
+	public EReference getType_InterfaceClass() {
 		return (EReference)typeEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getType_TypeApiAdapterClass()
-  {
+	public EReference getType_TypeApiAdapterClass() {
 		return (EReference)typeEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTypeApiAdapter()
-  {
+	public EClass getTypeApiAdapter() {
 		return typeApiAdapterEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeApiAdapter_Environment()
-  {
+	public EReference getTypeApiAdapter_Environment() {
 		return (EReference)typeApiAdapterEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeApiAdapter_Instance()
-  {
+	public EReference getTypeApiAdapter_Instance() {
 		return (EReference)typeApiAdapterEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeApiAdapter_ElementType()
-  {
+	public EReference getTypeApiAdapter_ElementType() {
 		return (EReference)typeApiAdapterEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getTypeApiAdapter__Init__Environment_Type_EObject()
-  {
+	public EOperation getTypeApiAdapter__Init__Environment_Type_EObject() {
 		return typeApiAdapterEClass.getEOperations().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getTypeApiAdapter__Apply__AbstractInitializationData()
-  {
+	public EOperation getTypeApiAdapter__Apply__AbstractInitializationData() {
 		return typeApiAdapterEClass.getEOperations().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getTypeApiAdapter__CreateInitializationData()
-  {
+	public EOperation getTypeApiAdapter__CreateInitializationData() {
 		return typeApiAdapterEClass.getEOperations().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getTypeApiAdapter__Collect__AbstractInitializationData()
-  {
+	public EOperation getTypeApiAdapter__Collect__AbstractInitializationData() {
 		return typeApiAdapterEClass.getEOperations().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getTypeApiAdapter__CreateResult__OperationCall()
-  {
+	public EOperation getTypeApiAdapter__CreateResult__OperationCall() {
 		return typeApiAdapterEClass.getEOperations().get(4);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getTypeApiAdapter__CreateResult__OperationCall_long_Object_Exception()
-  {
+	public EOperation getTypeApiAdapter__CreateResult__OperationCall_long_Object_Exception() {
 		return typeApiAdapterEClass.getEOperations().get(5);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1539,137 +1496,124 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return typeApiAdapterEClass.getEOperations().get(6);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getTypeApiAdapter__Dispose()
-  {
+	public EOperation getTypeApiAdapter__Dispose() {
 		return typeApiAdapterEClass.getEOperations().get(7);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTypeMember()
-  {
+	public EClass getTypeMember() {
 		return typeMemberEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMember_MemberType()
-  {
+	public EReference getTypeMember_MemberType() {
 		return (EReference)typeMemberEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMember_TypeFeatureRootNode()
-  {
+	public EReference getTypeMember_TypeFeatureRootNode() {
 		return (EReference)typeMemberEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTypeMemberReference()
-  {
+	public EClass getTypeMemberReference() {
 		return typeMemberReferenceEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberReference_TypeMember()
-  {
+	public EReference getTypeMemberReference_TypeMember() {
 		return (EReference)typeMemberReferenceEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTypeMemberReferenceListElement()
-  {
+	public EClass getTypeMemberReferenceListElement() {
 		return typeMemberReferenceListElementEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberReferenceListElement_Child()
-  {
+	public EReference getTypeMemberReferenceListElement_Child() {
 		return (EReference)typeMemberReferenceListElementEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberReferenceListElement_Parent()
-  {
+	public EReference getTypeMemberReferenceListElement_Parent() {
 		return (EReference)typeMemberReferenceListElementEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTypeMemberReferenceListElement_Root()
-  {
+	public EAttribute getTypeMemberReferenceListElement_Root() {
 		return (EAttribute)typeMemberReferenceListElementEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberReferenceListElement_RootElement()
-  {
+	public EReference getTypeMemberReferenceListElement_RootElement() {
 		return (EReference)typeMemberReferenceListElementEClass.getEStructuralFeatures().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberReferenceListElement_LeafElement()
-  {
+	public EReference getTypeMemberReferenceListElement_LeafElement() {
 		return (EReference)typeMemberReferenceListElementEClass.getEStructuralFeatures().get(4);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTypeMemberReferenceListElement_Leaf()
-  {
+	public EAttribute getTypeMemberReferenceListElement_Leaf() {
 		return (EAttribute)typeMemberReferenceListElementEClass.getEStructuralFeatures().get(5);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1678,526 +1622,475 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EAttribute)typeMemberReferenceListElementEClass.getEStructuralFeatures().get(6);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTypeMemberReferenceTreeElement()
-  {
+	public EClass getTypeMemberReferenceTreeElement() {
 		return typeMemberReferenceTreeElementEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberReferenceTreeElement_Child()
-  {
+	public EReference getTypeMemberReferenceTreeElement_Child() {
 		return (EReference)typeMemberReferenceTreeElementEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberReferenceTreeElement_Parent()
-  {
+	public EReference getTypeMemberReferenceTreeElement_Parent() {
 		return (EReference)typeMemberReferenceTreeElementEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberReferenceTreeElement_FeatureRootNode()
-  {
+	public EReference getTypeMemberReferenceTreeElement_FeatureRootNode() {
 		return (EReference)typeMemberReferenceTreeElementEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTypeMemberReferenceTreeElement_Root()
-  {
+	public EAttribute getTypeMemberReferenceTreeElement_Root() {
 		return (EAttribute)typeMemberReferenceTreeElementEClass.getEStructuralFeatures().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberReferenceTreeElement_RootElement()
-  {
+	public EReference getTypeMemberReferenceTreeElement_RootElement() {
 		return (EReference)typeMemberReferenceTreeElementEClass.getEStructuralFeatures().get(4);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTypeMemberReferenceTreeElement_Leaf()
-  {
+	public EAttribute getTypeMemberReferenceTreeElement_Leaf() {
 		return (EAttribute)typeMemberReferenceTreeElementEClass.getEStructuralFeatures().get(5);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getVariablesList()
-  {
+	public EClass getVariablesList() {
 		return variablesListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariablesList_Environment()
-  {
+	public EReference getVariablesList_Environment() {
 		return (EReference)variablesListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariablesList_Variables()
-  {
+	public EReference getVariablesList_Variables() {
 		return (EReference)variablesListEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getVariable()
-  {
+	public EClass getVariable() {
 		return variableEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariable_VariablesList()
-  {
+	public EReference getVariable_VariablesList() {
 		return (EReference)variableEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariable_VariableType()
-  {
+	public EReference getVariable_VariableType() {
 		return (EReference)variableEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariable_Environment()
-  {
+	public EReference getVariable_Environment() {
 		return (EReference)variableEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getContextsList()
-  {
+	public EClass getContextsList() {
 		return contextsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContextsList_Environment()
-  {
+	public EReference getContextsList_Environment() {
 		return (EReference)contextsListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContextsList_Contexts()
-  {
+	public EReference getContextsList_Contexts() {
 		return (EReference)contextsListEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getContext()
-  {
+	public EClass getContext() {
 		return contextEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContext_ContextsList()
-  {
-		return (EReference)contextEClass.getEStructuralFeatures().get(0);
+	public EAttribute getContext_Archived() {
+		return (EAttribute)contextEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContext_VariableImplementationsList()
-  {
+	public EReference getContext_ContextsList() {
 		return (EReference)contextEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContext_Environment()
-  {
+	public EReference getContext_VariableImplementationsList() {
 		return (EReference)contextEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getContext_DataProductsList()
-  {
+	public EReference getContext_Environment() {
 		return (EReference)contextEClass.getEStructuralFeatures().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getContext_InstancesCreationDate()
-  {
-		return (EAttribute)contextEClass.getEStructuralFeatures().get(4);
+	public EReference getContext_DataProductsList() {
+		return (EReference)contextEClass.getEStructuralFeatures().get(4);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getContext_InstancesDisposalDate()
-  {
+	public EAttribute getContext_InstancesCreationDate() {
 		return (EAttribute)contextEClass.getEStructuralFeatures().get(5);
 	}
 
-  /**
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getContext_InstancesDisposalDate() {
+		return (EAttribute)contextEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getContext_VariablesInstantiated() {
-		return (EAttribute)contextEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)contextEClass.getEStructuralFeatures().get(7);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getBasicContext()
-  {
-		return basicContextEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getVariableImplementationsList()
-  {
+	public EClass getVariableImplementationsList() {
 		return variableImplementationsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariableImplementationsList_VariableImplementations()
-  {
+	public EReference getVariableImplementationsList_VariableImplementations() {
 		return (EReference)variableImplementationsListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getVariableImplementationsList__GetVariableImplementation__Variable()
-  {
+	public EOperation getVariableImplementationsList__GetVariableImplementation__Variable() {
 		return variableImplementationsListEClass.getEOperations().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getVariableImplementationsList__GetVariableImplementation__String()
-  {
+	public EOperation getVariableImplementationsList__GetVariableImplementation__String() {
 		return variableImplementationsListEClass.getEOperations().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractInitializationData()
-  {
+	public EClass getAbstractInitializationData() {
 		return abstractInitializationDataEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getInitializationData()
-  {
+	public EClass getInitializationData() {
 		return initializationDataEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractTypeImplementation()
-  {
+	public EClass getAbstractTypeImplementation() {
 		return abstractTypeImplementationEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractTypeImplementation_TypeMemberImplementations()
-  {
+	public EReference getAbstractTypeImplementation_TypeMemberImplementations() {
 		return (EReference)abstractTypeImplementationEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractTypeImplementation_ImplementationClass()
-  {
+	public EReference getAbstractTypeImplementation_ImplementationClass() {
 		return (EReference)abstractTypeImplementationEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractTypeImplementation_AbstractInitializationData()
-  {
+	public EReference getAbstractTypeImplementation_AbstractInitializationData() {
 		return (EReference)abstractTypeImplementationEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractTypeImplementation_Instance()
-  {
+	public EReference getAbstractTypeImplementation_Instance() {
 		return (EReference)abstractTypeImplementationEClass.getEStructuralFeatures().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractTypeImplementation_AdapterInstance()
-  {
+	public EReference getAbstractTypeImplementation_AdapterInstance() {
 		return (EReference)abstractTypeImplementationEClass.getEStructuralFeatures().get(4);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractTypeImplementation_HandlingType()
-  {
+	public EReference getAbstractTypeImplementation_HandlingType() {
 		return (EReference)abstractTypeImplementationEClass.getEStructuralFeatures().get(5);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getAbstractTypeImplementation__GetTypeMemberImplementation__String()
-  {
+	public EOperation getAbstractTypeImplementation__GetTypeMemberImplementation__String() {
 		return abstractTypeImplementationEClass.getEOperations().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getAbstractTypeImplementation__GetTypeMemberImplementation__TypeMember()
-  {
+	public EOperation getAbstractTypeImplementation__GetTypeMemberImplementation__TypeMember() {
 		return abstractTypeImplementationEClass.getEOperations().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getVariableImplementation()
-  {
+	public EClass getVariableImplementation() {
 		return variableImplementationEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariableImplementation_VariableImplementationsList()
-  {
+	public EReference getVariableImplementation_VariableImplementationsList() {
 		return (EReference)variableImplementationEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariableImplementation_Variable()
-  {
+	public EReference getVariableImplementation_Variable() {
 		return (EReference)variableImplementationEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTypeMemberImplementation()
-  {
+	public EClass getTypeMemberImplementation() {
 		return typeMemberImplementationEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTypeMemberImplementation_TypeMember()
-  {
+	public EReference getTypeMemberImplementation_TypeMember() {
 		return (EReference)typeMemberImplementationEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getValuesList()
-  {
+	public EClass getValuesList() {
 		return valuesListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getValuesList_Values()
-  {
+	public EReference getValuesList_Values() {
 		return (EReference)valuesListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getValue()
-  {
+	public EClass getValue() {
 		return valueEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getValue_Value()
-  {
+	public EReference getValue_Value() {
 		return (EReference)valueEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getProgramsList()
-  {
+	public EClass getProgramsList() {
 		return programsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getProgramsList_InvocatorSession()
-  {
+	public EReference getProgramsList_InvocatorSession() {
 		return (EReference)programsListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2206,7 +2099,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)programsListEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2215,7 +2108,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return programsGroupEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2224,7 +2117,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)programsGroupEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2233,7 +2126,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)programsGroupEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2242,17 +2135,16 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)programsGroupEClass.getEStructuralFeatures().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getProgram()
-  {
+	public EClass getProgram() {
 		return programEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2261,17 +2153,16 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)programEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getProgram_InvocatorSession()
-  {
+	public EReference getProgram_InvocatorSession() {
 		return (EReference)programEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2280,7 +2171,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return scriptBasedProgramEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2289,257 +2180,232 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return triggeredBasedProgramEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getOperationCallContainer()
-  {
+	public EClass getOperationCallContainer() {
 		return operationCallContainerEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getOperationCallContainer_OperationCalls()
-  {
+	public EReference getOperationCallContainer_OperationCalls() {
 		return (EReference)operationCallContainerEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getOperationCallContainer__GetInvocatorSession()
-  {
+	public EOperation getOperationCallContainer__GetInvocatorSession() {
 		return operationCallContainerEClass.getEOperations().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getOperationCallsList()
-  {
+	public EClass getOperationCallsList() {
 		return operationCallsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getVariableFeatureReference()
-  {
+	public EClass getVariableFeatureReference() {
 		return variableFeatureReferenceEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariableFeatureReference_Variable()
-  {
+	public EReference getVariableFeatureReference_Variable() {
 		return (EReference)variableFeatureReferenceEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariableFeatureReference_TypeMemberReferenceListElement()
-  {
+	public EReference getVariableFeatureReference_TypeMemberReferenceListElement() {
 		return (EReference)variableFeatureReferenceEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVariableFeatureReference_FeatureRoot()
-  {
+	public EReference getVariableFeatureReference_FeatureRoot() {
 		return (EReference)variableFeatureReferenceEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getOperationCall()
-  {
+	public EClass getOperationCall() {
 		return operationCallEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getOperationCall_EOperation()
-  {
+	public EReference getOperationCall_EOperation() {
 		return (EReference)operationCallEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getOperationCall_ArgumentsList()
-  {
+	public EReference getOperationCall_ArgumentsList() {
 		return (EReference)operationCallEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getOperationCall_OperationCallContainer()
-  {
+	public EReference getOperationCall_OperationCallContainer() {
 		return (EReference)operationCallEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getOperationCall_InvocatorSession()
-  {
+	public EReference getOperationCall_InvocatorSession() {
 		return (EReference)operationCallEClass.getEStructuralFeatures().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getOperationCall_Environment()
-  {
+	public EReference getOperationCall_Environment() {
 		return (EReference)operationCallEClass.getEStructuralFeatures().get(4);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getArgumentsList()
-  {
+	public EClass getArgumentsList() {
 		return argumentsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getArgumentsList_OperationCall()
-  {
+	public EReference getArgumentsList_OperationCall() {
 		return (EReference)argumentsListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getArgumentsList_Arguments()
-  {
+	public EReference getArgumentsList_Arguments() {
 		return (EReference)argumentsListEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getArgumentsList__GetArgumentValues()
-  {
+	public EOperation getArgumentsList__GetArgumentValues() {
 		return argumentsListEClass.getEOperations().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getArgument()
-  {
+	public EClass getArgument() {
 		return argumentEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getArgument_ArgumentsList()
-  {
+	public EReference getArgument_ArgumentsList() {
 		return (EReference)argumentEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getArgument_OperationCall()
-  {
+	public EReference getArgument_OperationCall() {
 		return (EReference)argumentEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getArgument__GetEParameter()
-  {
+	public EOperation getArgument__GetEParameter() {
 		return argumentEClass.getEOperations().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getArgument__GetParameterValue()
-  {
+	public EOperation getArgument__GetParameterValue() {
 		return argumentEClass.getEOperations().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getEDataTypeArgument()
-  {
+	public EClass getEDataTypeArgument() {
 		return eDataTypeArgumentEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getEDataTypeArgument_Value()
-  {
+	public EAttribute getEDataTypeArgument_Value() {
 		return (EAttribute)eDataTypeArgumentEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2548,7 +2414,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return booleanEDataTypeArgumentEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2557,7 +2423,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return numericEDataTypeArgumentEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2566,57 +2432,52 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return stringEDataTypeArgumentEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getEEnumArgument()
-  {
+	public EClass getEEnumArgument() {
 		return eEnumArgumentEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEEnumArgument_EEnumLiteral()
-  {
+	public EReference getEEnumArgument_EEnumLiteral() {
 		return (EReference)eEnumArgumentEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEEnumArgument_EEnum()
-  {
+	public EReference getEEnumArgument_EEnum() {
 		return (EReference)eEnumArgumentEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getEClassArgument()
-  {
+	public EClass getEClassArgument() {
 		return eClassArgumentEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEClassArgument_Value()
-  {
+	public EReference getEClassArgument_Value() {
 		return (EReference)eClassArgumentEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2625,7 +2486,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return programRuntimesListEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2634,7 +2495,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)programRuntimesListEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2643,7 +2504,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)programRuntimesListEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2652,7 +2513,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return abstractProgramRuntimeEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2661,7 +2522,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EAttribute)abstractProgramRuntimeEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2670,7 +2531,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)abstractProgramRuntimeEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2679,7 +2540,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return abstractProgramRuntimeEClass.getEOperations().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2688,7 +2549,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return abstractProgramRuntimeEClass.getEOperations().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2697,7 +2558,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return abstractProgramRuntimeEClass.getEOperations().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2706,7 +2567,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return abstractProgramRuntimeEClass.getEOperations().get(3);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2715,7 +2576,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return abstractProgramRuntimeEClass.getEOperations().get(4);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2724,7 +2585,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return abstractProgramRuntimeEClass.getEOperations().get(5);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2733,7 +2594,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return abstractProgramRuntimeEClass.getEOperations().get(6);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2742,27 +2603,25 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return operationCallsListProgramRuntimeEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getResultsList()
-  {
+	public EClass getResultsList() {
 		return resultsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getResultsList_Results()
-  {
+	public EReference getResultsList_Results() {
 		return (EReference)resultsListEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2771,17 +2630,16 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return resultsListEClass.getEOperations().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getOperationCallResultsList()
-  {
+	public EClass getOperationCallResultsList() {
 		return operationCallResultsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2790,7 +2648,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)operationCallResultsListEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2799,17 +2657,16 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)operationCallResultsListEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getRecordingResultsList()
-  {
+	public EClass getRecordingResultsList() {
 		return recordingResultsListEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2818,7 +2675,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)recordingResultsListEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2827,17 +2684,16 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)recordingResultsListEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractResult()
-  {
+	public EClass getAbstractResult() {
 		return abstractResultEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2846,7 +2702,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)abstractResultEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2855,157 +2711,142 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)abstractResultEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractResult_Context()
-  {
+	public EReference getAbstractResult_Context() {
 		return (EReference)abstractResultEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractResult_ResultValue()
-  {
+	public EReference getAbstractResult_ResultValue() {
 		return (EReference)abstractResultEClass.getEStructuralFeatures().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractResultValue()
-  {
+	public EClass getAbstractResultValue() {
 		return abstractResultValueEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractResultValue_Result()
-  {
+	public EReference getAbstractResultValue_Result() {
 		return (EReference)abstractResultValueEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getOperationCallResult()
-  {
+	public EClass getOperationCallResult() {
 		return operationCallResultEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getOperationCallResult_OperationCall()
-  {
+	public EReference getOperationCallResult_OperationCall() {
 		return (EReference)operationCallResultEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getOperationCallResult_ExceptionContainer()
-  {
+	public EReference getOperationCallResult_ExceptionContainer() {
 		return (EReference)operationCallResultEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getExceptionContainer()
-  {
+	public EClass getExceptionContainer() {
 		return exceptionContainerEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getExceptionContainer_Exception()
-  {
+	public EAttribute getExceptionContainer_Exception() {
 		return (EAttribute)exceptionContainerEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAttributeResultValue()
-  {
+	public EClass getAttributeResultValue() {
 		return attributeResultValueEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAttributeResultValue_Value()
-  {
+	public EReference getAttributeResultValue_Value() {
 		return (EReference)attributeResultValueEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAttributeValue()
-  {
+	public EClass getAttributeValue() {
 		return attributeValueEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getAttributeValue_Object()
-  {
+	public EAttribute getAttributeValue_Object() {
 		return (EAttribute)attributeValueEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getReferenceResultValue()
-  {
+	public EClass getReferenceResultValue() {
 		return referenceResultValueEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getReferenceResultValue_Value()
-  {
+	public EReference getReferenceResultValue_Value() {
 		return (EReference)referenceResultValueEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3014,7 +2855,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return recordingToolsContainerEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3023,7 +2864,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)recordingToolsContainerEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3032,7 +2873,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)recordingToolsContainerEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3041,7 +2882,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)recordingToolsContainerEClass.getEStructuralFeatures().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3050,7 +2891,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return channelsListEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3059,7 +2900,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)channelsListEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3068,7 +2909,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)channelsListEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3077,7 +2918,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return abstractChannelEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3086,17 +2927,16 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)abstractChannelEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractRecorder()
-  {
+	public EClass getAbstractRecorder() {
 		return abstractRecorderEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3105,17 +2945,16 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)abstractRecorderEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractPlayer()
-  {
+	public EClass getAbstractPlayer() {
 		return abstractPlayerEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3124,7 +2963,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)abstractPlayerEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3133,7 +2972,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return operationCallResultsListTimeSourceEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3142,7 +2981,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (EReference)operationCallResultsListTimeSourceEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3151,7 +2990,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return variableListenerEventTypeEEnum;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3160,37 +2999,34 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return programRuntimeStateEEnum;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getThrowable()
-  {
+	public EDataType getThrowable() {
 		return throwableEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getNotification()
-  {
+	public EDataType getNotification() {
 		return notificationEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getTypeMemberImplementationsEList()
-  {
+	public EDataType getTypeMemberImplementationsEList() {
 		return typeMemberImplementationsEListEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3199,7 +3035,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return typeMembersArrayEDataType;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3208,7 +3044,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return iVariableListenerEDataType;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3217,22 +3053,21 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		return (ApogyCoreInvocatorFactory)getEFactoryInstance();
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private boolean isCreated = false;
+	private boolean isCreated = false;
 
-  /**
+	/**
 	 * Creates the meta-model objects for the package.  This method is
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void createPackageContents()
-  {
+	public void createPackageContents() {
 		if (isCreated) return;
 		isCreated = true;
 
@@ -3279,6 +3114,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___FILTER_ARCHIVED__ELIST);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3379,6 +3215,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEReference(contextsListEClass, CONTEXTS_LIST__CONTEXTS);
 
 		contextEClass = createEClass(CONTEXT);
+		createEAttribute(contextEClass, CONTEXT__ARCHIVED);
 		createEReference(contextEClass, CONTEXT__CONTEXTS_LIST);
 		createEReference(contextEClass, CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST);
 		createEReference(contextEClass, CONTEXT__ENVIRONMENT);
@@ -3386,8 +3223,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEAttribute(contextEClass, CONTEXT__INSTANCES_CREATION_DATE);
 		createEAttribute(contextEClass, CONTEXT__INSTANCES_DISPOSAL_DATE);
 		createEAttribute(contextEClass, CONTEXT__VARIABLES_INSTANTIATED);
-
-		basicContextEClass = createEClass(BASIC_CONTEXT);
 
 		variableImplementationsListEClass = createEClass(VARIABLE_IMPLEMENTATIONS_LIST);
 		createEReference(variableImplementationsListEClass, VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS);
@@ -3570,22 +3405,21 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		iVariableListenerEDataType = createEDataType(IVARIABLE_LISTENER);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private boolean isInitialized = false;
+	private boolean isInitialized = false;
 
-  /**
+	/**
 	 * Complete the initialization of the package and its meta-model.  This
 	 * method is guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void initializePackageContents()
-  {
+	public void initializePackageContents() {
 		if (isInitialized) return;
 		isInitialized = true;
 
@@ -3621,7 +3455,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		typeMemberReferenceTreeElementEClass.getESuperTypes().add(this.getTypeMemberReference());
 		variableEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		contextEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		basicContextEClass.getESuperTypes().add(this.getContext());
+		contextEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		initializationDataEClass.getESuperTypes().add(this.getAbstractInitializationData());
 		variableImplementationEClass.getESuperTypes().add(this.getAbstractTypeImplementation());
 		typeMemberImplementationEClass.getESuperTypes().add(this.getAbstractTypeImplementation());
@@ -3817,6 +3651,9 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		op = initEOperation(getApogyCoreInvocatorFacade__FilterArchived__EList(), theEcorePackage.getEJavaObject(), "filterArchived", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "objects", 0, -1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCoreInvocatorFacade__CreateContext__InvocatorSession(), this.getContext(), "createContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInvocatorSession_ProgramsList(), this.getProgramsList(), this.getProgramsList_InvocatorSession(), "programsList", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3936,7 +3773,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEReference(getContextsList_Environment(), this.getEnvironment(), this.getEnvironment_ContextsList(), "environment", null, 0, 1, ContextsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContextsList_Contexts(), this.getContext(), this.getContext_ContextsList(), "contexts", null, 0, -1, ContextsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(contextEClass, Context.class, "Context", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getContext_Archived(), theEcorePackage.getEBoolean(), "archived", "false", 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_ContextsList(), this.getContextsList(), this.getContextsList_Contexts(), "contextsList", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_VariableImplementationsList(), this.getVariableImplementationsList(), null, "variableImplementationsList", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Context.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -3944,8 +3782,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEAttribute(getContext_InstancesCreationDate(), theEcorePackage.getEDate(), "instancesCreationDate", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContext_InstancesDisposalDate(), theEcorePackage.getEDate(), "instancesDisposalDate", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContext_VariablesInstantiated(), theEcorePackage.getEBoolean(), "variablesInstantiated", "false", 0, 1, Context.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(basicContextEClass, BasicContext.class, "BasicContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(variableImplementationsListEClass, VariableImplementationsList.class, "VariableImplementationsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableImplementationsList_VariableImplementations(), this.getVariableImplementation(), this.getVariableImplementation_VariableImplementationsList(), "variableImplementations", null, 0, -1, VariableImplementationsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3966,7 +3802,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEReference(getAbstractTypeImplementation_AbstractInitializationData(), this.getAbstractInitializationData(), null, "abstractInitializationData", null, 0, 1, AbstractTypeImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractTypeImplementation_Instance(), theEcorePackage.getEObject(), null, "instance", null, 0, 1, AbstractTypeImplementation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractTypeImplementation_AdapterInstance(), this.getTypeApiAdapter(), null, "adapterInstance", null, 0, 1, AbstractTypeImplementation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTypeImplementation_HandlingType(), this.getType(), null, "handlingType", null, 0, 1, AbstractTypeImplementation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTypeImplementation_HandlingType(), this.getType(), null, "handlingType", null, 1, 1, AbstractTypeImplementation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getAbstractTypeImplementation__GetTypeMemberImplementation__String(), this.getTypeMemberImplementation(), "getTypeMemberImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);

@@ -11,14 +11,14 @@
       </variables>
     </variablesList>
     <contextsList xmi:id="__IXcQArOEeW4-_ONWXXiAw">
-      <contexts xsi:type="invocator:BasicContext" xmi:id="__IXcQQrOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="__Idi8ArOEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:Context" xmi:id="__IXcQQrOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="__Idi8ArOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="__IXcQgrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="__IXcQwrOEeW4-_ONWXXiAw" variable="__IW1NgrOEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.lidar#//LidarSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
-      <contexts xsi:type="invocator:BasicContext" xmi:id="__IXcRArOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="__Idi8grOEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:Context" xmi:id="__IXcRArOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="__Idi8grOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="__IXcRQrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="__IXcRgrOEeW4-_ONWXXiAw" variable="__IW1NgrOEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.lidar#//LidarStub"/>

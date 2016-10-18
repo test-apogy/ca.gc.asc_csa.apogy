@@ -10,6 +10,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.llarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -61,15 +62,18 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.ScrolledForm;
+import org.eclipse.ui.forms.widgets.Section;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
-import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.forms.widgets.Section;
 
 public class VariableImplementationsComposite extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -110,10 +114,70 @@ public class VariableImplementationsComposite extends Composite {
 		toolkit.adapt(this);
 		toolkit.paintBordersFor(this);
 		setLayout(new GridLayout(1, true));
+		
+		ScrolledForm scrolledform = toolkit.createScrolledForm(this);
+		scrolledform.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		toolkit.paintBordersFor(scrolledform);
+		scrolledform.getBody().setLayout(new GridLayout(1, false));
+		
 
-		Section sctnDetails = toolkit.createSection(this, Section.TITLE_BAR | Section.EXPANDED);
-		sctnDetails.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,
-				false, 1, 1));
+		/*Section sctnTable = toolkit.createSection(scrolledform.getBody(), Section.NO_TITLE);
+		GridData gd_sctnTable = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+		gd_sctnTable.widthHint = 1;
+		gd_sctnTable.heightHint = 1;
+		sctnTable.setLayoutData(gd_sctnTable);
+		sctnTable.setSize(440, 0);
+		toolkit.paintBordersFor(sctnTable);
+		*/
+
+		variableImplementationsViewer = new TreeViewer(scrolledform.getBody(),
+				SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
+	
+
+		ColumnViewerToolTipSupport.enableFor(variableImplementationsViewer, ToolTip.NO_RECREATE);
+		treeVariableImplementations = variableImplementationsViewer.getTree();
+		GridData gd_treeVariableImplementations = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+		gd_treeVariableImplementations.heightHint = 100;
+		treeVariableImplementations.setLayoutData(gd_treeVariableImplementations);
+		treeVariableImplementations.setLinesVisible(true);
+		treeVariableImplementations.setHeaderVisible(true);
+		toolkit.paintBordersFor	(treeVariableImplementations);
+
+		TreeViewerColumn treeViewerColumnFeature = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
+		TreeColumn columnFeature = treeViewerColumnFeature.getColumn();
+		columnFeature.setWidth(150);
+		columnFeature.setText("Feature");
+
+		TreeViewerColumn treeViewerColumnInterface = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
+		TreeColumn columnInterface = treeViewerColumnInterface.getColumn();
+		columnInterface.setWidth(150);
+		columnInterface.setText("Interface");
+
+		TreeViewerColumn treeViewerColumnImplementation = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
+		TreeColumn columnImplementation = treeViewerColumnImplementation.getColumn();
+		columnImplementation.setWidth(150);
+		columnImplementation.setText("Implementation");
+		EditingSupport editingSupport = new VariableImplementationEditingSupport(
+				treeViewerColumnImplementation.getViewer());
+		treeViewerColumnImplementation.setEditingSupport(editingSupport);
+
+		TreeViewerEditor.create(variableImplementationsViewer,
+				new ColumnViewerEditorActivationStrategy(variableImplementationsViewer) {
+					@Override
+					protected boolean isEditorActivationEvent(ColumnViewerEditorActivationEvent event) {
+						return event.eventType == ColumnViewerEditorActivationEvent.MOUSE_CLICK_SELECTION;
+					}
+				}, SWT.NONE);
+
+		variableImplementationsViewer.setContentProvider(new VariableImplementationContentProvider());
+		variableImplementationsViewer.setLabelProvider(new VariableImplementationLabelProvider(adapterFactory));
+
+		variableImplementationsViewer.addSelectionChangedListener(getVariableImplementationsViewerListener());
+		//sctnTable.setClient(treeVariableImplementations);
+		
+		Section sctnDetails = toolkit.createSection(scrolledform.getBody(), Section.TITLE_BAR | Section.EXPANDED);
+		sctnDetails.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		//sctnDetails.setSize(440, 127);
 		toolkit.paintBordersFor(sctnDetails);
 		sctnDetails.setText("Details");
 		sctnDetails.setExpanded(true);
@@ -127,85 +191,20 @@ public class VariableImplementationsComposite extends Composite {
 		lblName.setSize(69, 21);
 
 		txtName = toolkit.createText(composite, "", SWT.READ_ONLY);
-		txtName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false,
-				1, 1));
+		txtName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
-		toolkit.createLabel(composite, "Interface:",
-				SWT.NONE);
+		toolkit.createLabel(composite, "Interface:", SWT.NONE);
 
 		txtInterface = toolkit.createText(composite, "", SWT.READ_ONLY);
-		txtInterface.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,
-				false, 1, 1));
+		txtInterface.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
-		Label lblImplementation = toolkit.createLabel(composite,
-				"Implementation:", SWT.NONE);
-		lblImplementation.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER,
-				false, false, 1, 1));
+		Label lblImplementation = toolkit.createLabel(composite, "Implementation:", SWT.NONE);
+		lblImplementation.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 
-		txtImplementation = toolkit.createText(composite, "",
-				SWT.READ_ONLY);
-		txtImplementation.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
-				true, false, 1, 1));
-
-		Section sctnTable = toolkit.createSection(this, Section.EXPANDED
-				| Section.TITLE_BAR);
-		sctnTable.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1,
-				1));
-		toolkit.paintBordersFor(sctnTable);
-		sctnTable.setText("List");
-		sctnTable.setExpanded(true);
-
-		variableImplementationsViewer = new TreeViewer(sctnTable, SWT.BORDER
-				| SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
-
-		ColumnViewerToolTipSupport.enableFor(variableImplementationsViewer,
-				ToolTip.NO_RECREATE);
-		treeVariableImplementations = variableImplementationsViewer.getTree();
-		treeVariableImplementations.setLinesVisible(true);
-		treeVariableImplementations.setHeaderVisible(true);
-		toolkit.paintBordersFor(treeVariableImplementations);
-
-		TreeViewerColumn treeViewerColumnFeature = new TreeViewerColumn(
-				variableImplementationsViewer, SWT.NONE);
-		TreeColumn columnFeature = treeViewerColumnFeature.getColumn();
-		columnFeature.setWidth(200);
-		columnFeature.setText("Feature");
-
-		TreeViewerColumn treeViewerColumnInterface = new TreeViewerColumn(
-				variableImplementationsViewer, SWT.NONE);
-		TreeColumn columnInterface = treeViewerColumnInterface.getColumn();
-		columnInterface.setWidth(200);
-		columnInterface.setText("Interface");
-
-		TreeViewerColumn treeViewerColumnImplementation = new TreeViewerColumn(
-				variableImplementationsViewer, SWT.NONE);
-		TreeColumn columnImplementation = treeViewerColumnImplementation
-				.getColumn();
-		columnImplementation.setWidth(200);
-		columnImplementation.setText("Implementation");
-		EditingSupport editingSupport = new VariableImplementationEditingSupport(
-				treeViewerColumnImplementation.getViewer());
-		treeViewerColumnImplementation.setEditingSupport(editingSupport);
-
-		TreeViewerEditor.create(variableImplementationsViewer,
-				new ColumnViewerEditorActivationStrategy(
-						variableImplementationsViewer) {
-					@Override
-					protected boolean isEditorActivationEvent(
-							ColumnViewerEditorActivationEvent event) {
-						return event.eventType == ColumnViewerEditorActivationEvent.MOUSE_CLICK_SELECTION;
-					}
-				}, SWT.NONE);
-
-		variableImplementationsViewer
-				.setContentProvider(new VariableImplementationContentProvider());
-		variableImplementationsViewer
-				.setLabelProvider(new VariableImplementationLabelProvider(
-						adapterFactory));
-		sctnTable.setClient(treeVariableImplementations);
-		
-		variableImplementationsViewer.addSelectionChangedListener(getVariableImplementationsViewerListener());
+		txtImplementation = toolkit.createText(composite, "", SWT.READ_ONLY);
+		txtImplementation.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 	}
+	
 
 	/**
 	 * Binds the {@link Context} with the composite.
@@ -228,7 +227,7 @@ public class VariableImplementationsComposite extends Composite {
 	private void setContext(Context context, boolean update) {
 		this.context = context;
 		editingDomain = AdapterFactoryEditingDomain
-				.getEditingDomainFor(context);
+				.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
 		if (update) {
 			if (m_bindingContext != null) {
 				m_bindingContext.dispose();
@@ -250,16 +249,20 @@ public class VariableImplementationsComposite extends Composite {
 	 * 
 	 * @return Reference to the data bindings.
 	 */
-	private DataBindingContext initDataBindingsCustom() {
+	private DataBindingContext initDataBindingsCustom() {	
 		DataBindingContext bindingContext = new DataBindingContext();
 
+		/**
+		 * Bind Viewer Selection
+		 */
+		IObservableValue observeSingleSelectionVariableImplementationsViewer = ViewerProperties.singleSelection()
+				.observe(variableImplementationsViewer);
+		
 		/** 
 		 * Bind Name.
 		 */
 		IObservableValue observeTextTxtNameObserveWidget = WidgetProperties
 				.text().observe(txtName);
-		IObservableValue observeSingleSelectionVariableImplementationsViewer = ViewerProperties
-				.singleSelection().observe(variableImplementationsViewer);
 		
 		bindingContext.bindValue(observeTextTxtNameObserveWidget,
 				observeSingleSelectionVariableImplementationsViewer, null, 
@@ -302,6 +305,7 @@ public class VariableImplementationsComposite extends Composite {
 					}
 				}));		
 		
+		
 		/**
 		 * Set the content of the list.
 		 */
@@ -311,7 +315,7 @@ public class VariableImplementationsComposite extends Composite {
 		/** Select the first element by default. */
 
 		if (context.getVariableImplementationsList().getVariableImplementations() != null && 
-			!context.getVariableImplementationsList().getVariableImplementations().isEmpty()){
+			context.getVariableImplementationsList().getVariableImplementations().isEmpty()){
 		
 			TreePath treePath = new TreePath(new Object[]{context.getVariableImplementationsList().getVariableImplementations().get(0)});		
 			ITreeSelection defaultElementSelected = new TreeSelection(treePath);
@@ -320,6 +324,7 @@ public class VariableImplementationsComposite extends Composite {
 				
 		return bindingContext;
 	}
+
 
 	@Override
 	public void dispose() {
@@ -462,7 +467,7 @@ public class VariableImplementationsComposite extends Composite {
 		};
 
 		private IStructuredContentProvider contentProvider = new IStructuredContentProvider() {
-
+						
 			@Override
 			public void inputChanged(Viewer viewer, Object oldInput,
 					Object newInput) {
@@ -498,7 +503,6 @@ public class VariableImplementationsComposite extends Composite {
 								interfaceClass).toArray();
 					}
 				}
-
 				return elements;
 			}
 		};
@@ -511,8 +515,7 @@ public class VariableImplementationsComposite extends Composite {
 		@Override
 		protected CellEditor getCellEditor(Object element) {
 			ComboBoxViewerCellEditor cellEditor = null;
-			cellEditor = new ComboBoxViewerCellEditor((Composite) getViewer()
-					.getControl(), SWT.READ_ONLY);
+			cellEditor = new ComboBoxViewerCellEditor((Composite) getViewer().getControl(), SWT.READ_ONLY);
 			cellEditor.setLabelProvider(labelProvider);
 			cellEditor.setContentProvider(contentProvider);
 			cellEditor.setInput(element);
@@ -543,6 +546,7 @@ public class VariableImplementationsComposite extends Composite {
 			editingDomain.getCommandStack().execute(command);
 
 			this.viewer.refresh();
+			txtImplementation.setText(EMFEcoreInvocatorEditUtilities.getImplementationName(implementation, true));
 		}
 	}
 }

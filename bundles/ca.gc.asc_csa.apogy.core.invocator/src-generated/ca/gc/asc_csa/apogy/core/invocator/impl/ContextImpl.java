@@ -13,9 +13,9 @@ package ca.gc.asc_csa.apogy.core.invocator.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import java.util.Date;
-import java.util.Iterator;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -26,12 +26,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
-import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 
 import com.google.common.base.Objects;
@@ -46,6 +42,8 @@ import com.google.common.base.Objects;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#isArchived <em>Archived</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#getContextsList <em>Contexts List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#getVariableImplementationsList <em>Variable Implementations List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl#getEnvironment <em>Environment</em>}</li>
@@ -57,7 +55,7 @@ import com.google.common.base.Objects;
  *
  * @generated
  */
-public abstract class ContextImpl extends MinimalEObjectImpl.Container implements Context
+public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 {
   /**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -80,6 +78,46 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   protected String name = NAME_EDEFAULT;
 
   /**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
+
+		/**
+	 * The default value of the '{@link #isArchived() <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isArchived()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ARCHIVED_EDEFAULT = false;
+
+		/**
+	 * The cached value of the '{@link #isArchived() <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isArchived()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean archived = ARCHIVED_EDEFAULT;
+
+		/**
 	 * The cached value of the '{@link #getVariableImplementationsList() <em>Variable Implementations List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -205,6 +243,48 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION, oldDescription, description));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isArchived() {
+		return archived;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setArchived(boolean newArchived) {
+		boolean oldArchived = archived;
+		archived = newArchived;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED, oldArchived, archived));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -263,38 +343,10 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public VariableImplementationsList getVariableImplementationsListGen()
+  public VariableImplementationsList getVariableImplementationsList()
   {
 		return variableImplementationsList;
 	}
-
-  /**
-   * @generated_NOT
-   */
-  public VariableImplementationsList getVariableImplementationsList()
-  {
-	  VariableImplementationsList list = getVariableImplementationsListGen();
-	  if (list == null){
-		  list = ApogyCoreInvocatorFactory.eINSTANCE.createVariableImplementationsList();
-		  setVariableImplementationsList(list);
-		  
-		  /**
-		   * Instantiate the variable implementations.
-		   */
-		  Iterator<Variable> variables = getEnvironment().getVariablesList().getVariables().iterator();
-		  while (variables.hasNext()){
-			  Variable variable = variables.next();
-			  VariableImplementation variableImplementation = ApogyCoreInvocatorFactory.eINSTANCE.createVariableImplementation();
-			  variableImplementation.setVariable(variable);
-			  
-			  /** Create TypeMemberImplementations. */
-			  variableImplementation.getTypeMemberImplementations().addAll(ApogyCoreInvocatorFacade.INSTANCE.createTypeMemberImplementations(variable.getVariableType()));			  
-			  
-			  list.getVariableImplementations().add(variableImplementation);
-		  }
-	  }
-    return list;
-  }
     
   /**
 	 * <!-- begin-user-doc -->
@@ -518,6 +570,10 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.CONTEXT__NAME:
 				return getName();
+			case ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION:
+				return getDescription();
+			case ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED:
+				return isArchived();
 			case ApogyCoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				if (resolve) return getContextsList();
 				return basicGetContextsList();
@@ -549,6 +605,12 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.CONTEXT__NAME:
 				setName((String)newValue);
+				return;
+			case ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED:
+				setArchived((Boolean)newValue);
 				return;
 			case ApogyCoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				setContextsList((ContextsList)newValue);
@@ -584,6 +646,12 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 			case ApogyCoreInvocatorPackage.CONTEXT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED:
+				setArchived(ARCHIVED_EDEFAULT);
+				return;
 			case ApogyCoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				setContextsList((ContextsList)null);
 				return;
@@ -617,6 +685,10 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.CONTEXT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED:
+				return archived != ARCHIVED_EDEFAULT;
 			case ApogyCoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				return basicGetContextsList() != null;
 			case ApogyCoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
@@ -637,6 +709,38 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Described.class) {
+			switch (derivedFeatureID) {
+				case ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Described.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -648,6 +752,10 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", archived: ");
+		result.append(archived);
 		result.append(", instancesCreationDate: ");
 		result.append(instancesCreationDate);
 		result.append(", instancesDisposalDate: ");

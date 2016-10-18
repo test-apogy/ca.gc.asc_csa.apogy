@@ -90,7 +90,7 @@ public class ContextsDefinitionComposite extends Composite {
 		gd_sctnVariableImplementations.minimumWidth = 300;
 		sctnVariableImplementations.setLayoutData(gd_sctnVariableImplementations);
 		toolkit.paintBordersFor(sctnVariableImplementations);
-		sctnVariableImplementations.setText("Variable Implementations");		
+		sctnVariableImplementations.setText("Implementation");		
 		
 		variableImplementationsComposite = new VariableImplementationsComposite(sctnVariableImplementations, SWT.NONE){
 			@Override
@@ -161,7 +161,8 @@ public class ContextsDefinitionComposite extends Composite {
 	private DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
 
-		contextsListComposite.setContextsList(environment.getContextsList());
+		// TODO contextsListComposite.setContextsList(environment.getContextsList());
+		contextsListComposite.setEnvironment(environment);
 		variableImplementationsComposite.setContext(contextsListComposite.getSelectedContext());
 		
 		return bindingContext;
