@@ -21,9 +21,6 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<tycho.version>0.24.0</tycho.version>
-		<eclipse.version>mars</eclipse.version>
-		<eclipse.updates.version>4.5</eclipse.updates.version>
 	</properties>
 
 	<repositories>
