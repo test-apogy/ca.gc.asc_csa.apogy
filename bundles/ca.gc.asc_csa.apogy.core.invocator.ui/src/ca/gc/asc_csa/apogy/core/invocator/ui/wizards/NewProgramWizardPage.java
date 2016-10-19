@@ -27,8 +27,8 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NewProgramComposite;
 
 public class NewProgramWizardPage extends WizardPage {
@@ -36,7 +36,6 @@ public class NewProgramWizardPage extends WizardPage {
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewProgramWizardPage";
 	private NewProgramComposite newProgramComposite;
 	private Adapter adapter; 
-	//private ProgramsList programsList;
 	private ProgramsGroup programsGroup;
 	private EClass programSuperClass;
 	private EClass programsType;
@@ -53,7 +52,7 @@ public class NewProgramWizardPage extends WizardPage {
 	}
 
 	public NewProgramWizardPage(
-			ProgramsGroup programsGroup, EClass programSuperClass, EClass programsType) {
+			ProgramsGroup programsGroup, EClass programSuperClass) {
 		this();
 		if (this.programsGroup != null){
 			this.programsGroup.eAdapters().remove(getAdapter());
@@ -62,9 +61,7 @@ public class NewProgramWizardPage extends WizardPage {
 			this.programSuperClass.eAdapters().remove(getAdapter());
 		}
 		
-		this.programsType = programsType;
 		this.programSuperClass = programSuperClass;
-	
 		programSuperClass.eAdapters().add(getAdapter());
 		
 		if(programsGroup != null){
@@ -84,6 +81,14 @@ public class NewProgramWizardPage extends WizardPage {
 		}				
 		return adapter;
 	}
+	
+	public EClass getProgramType(){
+		return this.programsType;
+	}
+	
+	public ProgramsGroup getProgramsGroup(){
+		return this.programsGroup;
+	}
 
 	/**
 	 * @see IDialogPage#createControl(Composite)
@@ -93,7 +98,11 @@ public class NewProgramWizardPage extends WizardPage {
 		container.setLayout(new GridLayout(1, false));
 
 		newProgramComposite = new NewProgramComposite(container, SWT.None);
-		newProgramComposite.setProgramsList(programsGroup.getProgramsList(), programsGroup);		
+		if(programsGroup != null){
+			newProgramComposite.setProgramsList(programsGroup.getProgramsList(), programsGroup);
+		}else{
+			newProgramComposite.setProgramsList(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList(), null);
+		}
 		newProgramComposite.setProgramSuperClass(programSuperClass);
 		newProgramComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
 		newProgramComposite.getComboProgramsGroups().addSelectionChangedListener(new ISelectionChangedListener() {

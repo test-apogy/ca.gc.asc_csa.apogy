@@ -177,7 +177,7 @@ public class NewContextWizard extends Wizard{
 			context = ApogyCoreInvocatorFacade.INSTANCE.createContext(getInvocatorSession());
 			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
 					getInvocatorSession().getEnvironment().getContextsList(),
-					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
+					context, ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
 		}
 		return context;
 	}

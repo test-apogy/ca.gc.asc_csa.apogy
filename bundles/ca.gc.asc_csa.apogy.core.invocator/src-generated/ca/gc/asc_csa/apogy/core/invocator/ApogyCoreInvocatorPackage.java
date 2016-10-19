@@ -466,22 +466,13 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST = 37;
 
 	/**
-	 * The operation id for the '<em>Filter Archived</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___FILTER_ARCHIVED__ELIST = 38;
-
-	/**
 	 * The operation id for the '<em>Create Context</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION = 39;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION = 38;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -490,7 +481,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 40;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 39;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -5494,16 +5485,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EOperation getApogyCoreInvocatorFacade__GetAllScriptBasedPrograms__ProgramsList();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#filterArchived(org.eclipse.emf.common.util.EList) <em>Filter Archived</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Filter Archived</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#filterArchived(org.eclipse.emf.common.util.EList)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__FilterArchived__EList();
-
-	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createContext(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession) <em>Create Context</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8194,14 +8175,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST = eINSTANCE.getApogyCoreInvocatorFacade__GetAllScriptBasedPrograms__ProgramsList();
-
-		/**
-		 * The meta object literal for the '<em><b>Filter Archived</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___FILTER_ARCHIVED__ELIST = eINSTANCE.getApogyCoreInvocatorFacade__FilterArchived__EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Context</b></em>' operation.

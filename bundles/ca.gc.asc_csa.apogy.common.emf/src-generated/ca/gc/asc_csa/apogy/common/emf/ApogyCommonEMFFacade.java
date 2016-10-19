@@ -439,13 +439,55 @@ public interface ApogyCommonEMFFacade extends EObject
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Generates and returns a default name for a specific feature container.
-	 * @param eObject The instance of the container.
-	 * @param eReference The reference of the object to name.
+	 * @param eContainer The instance of the container.
+	 * @param eObject The instance of the object to name.
+	 * @param objectReference The reference to the object.
 	 * @return A unique name.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" eObjectUnique="false" eReferenceUnique="false"
+	 * @model unique="false" eContainerUnique="false" eObjectUnique="false" objectReferenceUnique="false"
 	 * @generated
 	 */
-	String getDefaultName(EObject eObject, EReference eReference);
+	String getDefaultName(EObject eContainer, EObject eObject, EReference objectReference);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns only the objects that are not archived
+	 * @param objects Refers to the array containing the objects to filter
+	 * @return Array of filtered objects
+	 * <!-- end-model-doc -->
+	 * @model unique="false" objectsUnique="false" objectsMany="true"
+	 * @generated
+	 */
+	EList<Object> filterArchived(EList<Object> objects);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns the array with the specified object one position higher
+	 * @param objects Refers to the array containing the object to move up
+	 * @param object Refers to the object to move up
+	 * @return Modified array of objects
+	 * <!-- end-model-doc -->
+	 * @model unique="false" objectsUnique="false" objectsMany="true" objectUnique="false"
+	 * @generated
+	 */
+	EList<Object> moveUp(EList<Object> objects, Object object);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns the array with the specified object one position lower
+	 * @param objects Refers to the array containing the object to move down
+	 * @param object Refers to the object to move down
+	 * @return Modified array of objects
+	 * <!-- end-model-doc -->
+	 * @model unique="false" objectsUnique="false" objectsMany="true" objectUnique="false"
+	 * @generated
+	 */
+	EList<Object> moveDown(EList<Object> objects, Object object);
 
 } // ApogyCommonEMFFacade

@@ -50,7 +50,7 @@ public class ScriptBasedProgramsListView extends AbstractView implements IEditin
 		super.createPartControl(parent);
 		
 		// Create the control composite
-		composite = new ScriptBasedProgramsListComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL){
+		composite = new ScriptBasedProgramsListComposite(parent, SWT.NONE){
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				getSelectionProvider().setSelection(selection);

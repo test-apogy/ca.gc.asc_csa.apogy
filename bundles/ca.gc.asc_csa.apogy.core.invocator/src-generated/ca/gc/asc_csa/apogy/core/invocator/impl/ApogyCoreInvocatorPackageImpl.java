@@ -1051,17 +1051,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__FilterArchived__EList() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(38);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getApogyCoreInvocatorFacade__CreateContext__InvocatorSession() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(39);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(38);
 	}
 
 	/**
@@ -3113,7 +3104,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___FILTER_ARCHIVED__ELIST);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
@@ -3647,9 +3637,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		g2 = createEGenericType(this.getProgram());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
-
-		op = initEOperation(getApogyCoreInvocatorFacade__FilterArchived__EList(), theEcorePackage.getEJavaObject(), "filterArchived", 0, -1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEJavaObject(), "objects", 0, -1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCoreInvocatorFacade__CreateContext__InvocatorSession(), this.getContext(), "createContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getInvocatorSession(), "invocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);

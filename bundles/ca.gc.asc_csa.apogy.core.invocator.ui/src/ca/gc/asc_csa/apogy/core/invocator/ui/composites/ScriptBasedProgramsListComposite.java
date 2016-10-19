@@ -20,6 +20,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -27,9 +28,11 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
@@ -48,11 +51,14 @@ import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.wb.swt.SWTResourceManager;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
@@ -75,7 +81,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		super(parent, style);
 		setLayout(new GridLayout(1, true));
 
-		Section sctnProgramsList = formToolkit.createSection(this, Section.TITLE_BAR);
+		Section sctnProgramsList = formToolkit.createSection(this, Section.NO_TITLE);
 		sctnProgramsList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		formToolkit.paintBordersFor(sctnProgramsList);
 		sctnProgramsList.setText("Programs List");
@@ -95,7 +101,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		treeViewer = new TreeViewer(compositeProgramsList, SWT.BORDER | SWT.SINGLE | SWT.V_SCROLL);
 		Tree tree = treeViewer.getTree();
 		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 7));
-		tree.setHeaderVisible(true);
+//		tree.setHeaderVisible(true);
 		tree.setLinesVisible(true);
 		ColumnViewerToolTipSupport.enableFor(treeViewer);
 		treeViewer.addSelectionChangedListener(getTreeViewerSelectionChangedListener());
@@ -107,7 +113,6 @@ public class ScriptBasedProgramsListComposite extends Composite {
 
 		treeViewer.setContentProvider(new ProgramsListsContentProvider(adapterFactory));
 		treeViewer.setLabelProvider(new ProgramsListsLabelProvider(adapterFactory));
-		new Label(compositeProgramsList, SWT.NONE);
 
 		Button btnNewGroup = formToolkit.createButton(compositeProgramsList, "New Group", SWT.NONE);
 		btnNewGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
@@ -119,6 +124,8 @@ public class ScriptBasedProgramsListComposite extends Composite {
 				 * Creates and opens the wizard to create a valid context
 				 */
 				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
+				getShell().setBackground(SWTResourceManager.getColor(SWT.COLOR_TRANSPARENT));
+				getShell().setBackgroundMode(SWT.INHERIT_FORCE);
 				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
 
 				dialog.open();
@@ -150,24 +157,51 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(programsList);
+				EObject owner = null;
+				if (isProgramSelected()) {
+					owner = getSelectedProgram();
 
-				SetCommand command = new SetCommand(editingDomain, getSelectedProgram(),
-						ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED, true);
-				editingDomain.getCommandStack().execute(command);
+				} else if (isProgramsGroupSelected()) {
+					owner = getSelectedProgramsGroup();
+				}
+				if (owner != null) {
+					SetCommand command = new SetCommand(editingDomain, owner,
+							ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED, true);
+					editingDomain.getCommandStack().execute(command);
+				}
 			}
 		});
-
 		new Label(compositeProgramsList, SWT.NONE);
 
 		Button btnUp = new Button(compositeProgramsList, SWT.NONE);
 		btnUp.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		formToolkit.adapt(btnUp, true, true);
 		btnUp.setText("Up");
+		btnUp.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if(isProgramSelected()){
+					ISelection selection = treeViewer.getSelection();
+					getSelectedProgramsGroup().eSet(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, ApogyCommonEMFFacade.INSTANCE.moveUp(new BasicEList<>(getSelectedProgramsGroup().getPrograms()) , (Object) getSelectedProgram()));
+					treeViewer.setSelection(selection);
+				}
+			}
+		});
 
 		Button btnDown = new Button(compositeProgramsList, SWT.NONE);
 		btnDown.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
 		formToolkit.adapt(btnDown, true, true);
 		btnDown.setText("Down");
+		btnDown.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				ISelection selection = treeViewer.getSelection();
+				getSelectedProgramsGroup().eSet(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, ApogyCommonEMFFacade.INSTANCE.moveDown(new BasicEList<>(getSelectedProgramsGroup().getPrograms()) , (Object) getSelectedProgram()));
+				treeViewer.setSelection(selection);
+			}
+		});
+		
+		new Label(compositeProgramsList, SWT.NONE);
 		scrolledComposite.setContent(compositeProgramsList);
 		scrolledComposite.setMinSize(compositeProgramsList.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
@@ -214,21 +248,28 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	 * @return Reference to the selected {@link Program}.
 	 */
 	public Program getSelectedProgram() {
-		TreeSelection selection = (TreeSelection) treeViewer.getSelection();
-		if (selection.getFirstElement() instanceof Program) {
-			return (Program) selection.getFirstElement();
+		if (isProgramSelected()) {
+			return (Program) ((TreeSelection) treeViewer.getSelection()).getFirstElement();
 		}
 		return null;
 	}
 
 	public ProgramsGroup getSelectedProgramsGroup() {
-		TreeSelection selection = (TreeSelection) treeViewer.getSelection();
-		if (selection.getFirstElement() instanceof ProgramsGroup) {
-			return (ProgramsGroup) selection.getFirstElement();
-		} else if (selection.getFirstElement() instanceof Program) {
-			return ((Program) selection.getFirstElement()).getProgramsGroup();
+		Object selection = ((TreeSelection) treeViewer.getSelection()).getFirstElement();
+		if (isProgramSelected()) {
+			return ((Program) selection).getProgramsGroup();
+		} else if (isProgramsGroupSelected()) {
+			return (ProgramsGroup) selection;
 		}
 		return null;
+	}
+
+	private boolean isProgramsGroupSelected() {
+		return ((TreeSelection) treeViewer.getSelection()).getFirstElement() instanceof ProgramsGroup;
+	}
+
+	private boolean isProgramSelected() {
+		return ((TreeSelection) treeViewer.getSelection()).getFirstElement() instanceof Program;
 	}
 
 	private class ProgramsListsContentProvider extends AdapterFactoryContentProvider {
@@ -241,8 +282,25 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		public void notifyChanged(Notification notification) {
 			super.notifyChanged(notification);
 			treeViewer.refresh();
+			//treeViewer.expandAll(); // FIXME: Expand
 		}
 
+		@Override
+		public int hashCode() {
+			if(getData() instanceof Named){
+				return ((Named) getData()).hashCode();
+			}
+			return super.hashCode();
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if(getData() instanceof Named && obj instanceof Named){
+				return ((Named) getData()).getName() == ((Named) obj).getName();
+			}
+			return super.equals(obj);
+		}
+		
 		@Override
 		public Object[] getChildren(Object object) {
 			if (object instanceof ProgramsList || object instanceof ProgramsGroup) {
@@ -255,7 +313,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 
 				EList<Object> children = new BasicEList<>();
 				children.addAll(Arrays.asList(super.getChildren(object)));
-				children = ApogyCoreInvocatorFacade.INSTANCE.filterArchived(children);
+				children = ApogyCommonEMFFacade.INSTANCE.filterArchived(children);
 				return children.toArray();
 			}
 			return null;

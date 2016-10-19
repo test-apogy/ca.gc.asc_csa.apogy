@@ -58,6 +58,7 @@ import ca.gc.asc_csa.apogy.common.emf.Activator;
 import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.EMFAnnotationConstants;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
@@ -65,6 +66,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Ranges;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 
@@ -194,8 +196,14 @@ ApogyCommonEMFFacade {
 				return getID((EObject)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING:
 				return getEObjectById((ResourceSet)arguments.get(0), (String)arguments.get(1));
-			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE:
-				return getDefaultName((EObject)arguments.get(0), (EReference)arguments.get(1));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE:
+				return getDefaultName((EObject)arguments.get(0), (EObject)arguments.get(1), (EReference)arguments.get(2));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST:
+				return filterArchived((EList<Object>)arguments.get(0));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT:
+				return moveUp((EList<Object>)arguments.get(0), arguments.get(1));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT:
+				return moveDown((EList<Object>)arguments.get(0), arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1260,16 +1268,15 @@ ApogyCommonEMFFacade {
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public String getDefaultName(EObject eObject, EReference eReference) {
-		String name = eReference.getEReferenceType().getName();
-		eObject.eGet(eReference);
+	public String getDefaultName(EObject eContainer, EObject eObject, EReference objectReference) {
+		String name = ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(eObject);
 
 		// If the container is a list
-		if (eReference.isMany()) {
+		if (objectReference.isMany()) {
 			int j = 1;
 			// Find a name that is unique
-			for (int i = 0; i < eObject.eContents().size(); i++) {
-				Named named = (Named) eObject.eContents().get(i);
+			for (int i = 0; i < eContainer.eContents().size(); i++) {
+				Named named = (Named) eContainer.eContents().get(i);
 				if (named.getName().equals(name + "_" + Integer.toString(j))) {
 					j++;
 					i = 0;
@@ -1279,6 +1286,51 @@ ApogyCommonEMFFacade {
 		}
 
 		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public EList<Object> filterArchived(EList<Object> objects) {
+		System.out.println("ApogyCoreInvocatorFacadeImpl.filterArchived()" + objects);
+		if(!objects.isEmpty()){
+			for(Iterator<Object> iter = objects.iterator(); iter.hasNext();){
+				Object object = iter.next();
+				if(object instanceof Archivable){
+					if(((Archivable) object).isArchived()){
+						iter.remove();
+					}
+				}
+			}
+		}
+		System.out.println("ApogyCoreInvocatorFacadeImpl.filterArchived()" + objects);
+		return objects;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public EList<Object> moveUp(EList<Object> objects, Object object) {
+		int index = objects.indexOf(object);
+		objects.remove(index);
+		objects.add(index-1, object);
+		return objects;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public EList<Object> moveDown(EList<Object> objects, Object object) {
+		int index = objects.indexOf(object);
+		objects.remove(index);
+		objects.add(index+1, object);
+		return objects;
 	}
 
 	/**

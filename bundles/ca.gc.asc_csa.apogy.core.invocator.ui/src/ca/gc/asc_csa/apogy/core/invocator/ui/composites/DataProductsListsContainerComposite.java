@@ -45,7 +45,7 @@ public class DataProductsListsContainerComposite extends Composite {
 	
 	private DataBindingContext m_bindingContext;
 
-	private WritableValue contextBinder;
+	private WritableValue<Context> contextBinder;
 
 	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
@@ -111,7 +111,7 @@ public class DataProductsListsContainerComposite extends Composite {
 	 */
 	public Context getContext(){
 		if(contextBinder != null){
-			return (Context) contextBinder.getValue();
+			return contextBinder.getValue();
 		}
 		return null;
 	}
@@ -128,7 +128,7 @@ public class DataProductsListsContainerComposite extends Composite {
 		}
 		
 		if(contextBinder == null){
-			contextBinder = new WritableValue();
+			contextBinder = new WritableValue<Context>();
 		}
 		contextBinder.setValue(context);
 	}	
@@ -143,14 +143,14 @@ public class DataProductsListsContainerComposite extends Composite {
 		m_bindingContext = new DataBindingContext();
 		
 		if (contextBinder == null) {
-			contextBinder = new WritableValue();
+			contextBinder = new WritableValue<Context>();
 		}
 
 		
 		/**
 		 * Bind data products list.
 		 */		
-		IObservableList invocatorFacadeEnvironmentContextsListContextsObserveValue = EMFProperties
+		IObservableList<?> invocatorFacadeEnvironmentContextsListContextsObserveValue = EMFProperties
 				.list(FeaturePath.fromList(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER,
 						ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST))
 				.observe(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
@@ -161,8 +161,8 @@ public class DataProductsListsContainerComposite extends Composite {
 		/**
 		 * Bind the selection to the context's data products list
 		 */
-		IObservableValue observeDataProductsListsContainerViewerSingleSelection = ViewerProperties.singleSelection().observe(dataProductsListsContainerViewer);
-		IObservableValue observeContextDataProductListObserveValue = EMFProperties.value(ApogyCoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST).observeDetail(contextBinder);
+		IObservableValue<?> observeDataProductsListsContainerViewerSingleSelection = ViewerProperties.singleSelection().observe(dataProductsListsContainerViewer);
+		IObservableValue<?> observeContextDataProductListObserveValue = EMFProperties.value(ApogyCoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST).observeDetail(contextBinder);
 		
 		m_bindingContext.bindValue(observeDataProductsListsContainerViewerSingleSelection, observeContextDataProductListObserveValue);	
 

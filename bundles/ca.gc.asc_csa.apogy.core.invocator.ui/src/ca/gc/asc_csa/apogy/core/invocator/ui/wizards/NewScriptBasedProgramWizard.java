@@ -22,11 +22,14 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
+import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
@@ -42,8 +45,6 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 	private ProgramsGroup programsGroup;
 	private Program program;
 
-	private EClass programType;
-	
 	/**
 	 * Constructor for NewProgramsGroupWizard.
 	 */
@@ -51,9 +52,9 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 		super();
 		setWindowTitle("New Script Based Program");
 		setNeedsProgressMonitor(true);
-		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
-				Activator.ID, "icons/wizban/apogy_new_script_based_program.png");
-		setDefaultPageImageDescriptor(image);		
+		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(Activator.ID,
+				"icons/wizban/apogy_new_script_based_program.png");
+		setDefaultPageImageDescriptor(image);
 		this.programsGroup = programsGroup;
 	}
 
@@ -70,96 +71,109 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		if(getNewProgramWizardPage() != null){
+		if (getNewProgramWizardPage() != null) {
 			addPage(getNewProgramWizardPage());
+			this.setForcePreviousAndNextButtons(true);
 		}
-		/*if (getNamedDescribedWizardPage() != null){
+		/*if (getNamedDescribedWizardPage() != null) {
 			addPage(getNamedDescribedWizardPage());
 		}*/
 	}
-	
+
 	@Override
 	public IWizardPage getNextPage(IWizardPage page) {
-		if(page == newProgramWizardPage && programType == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL){
+		if (page == newProgramWizardPage
+				&& newProgramWizardPage.getProgramType() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST) {
+			addPage(getNamedDescribedWizardPage());
 			return getNamedDescribedWizardPage();
 		}
 		return super.getNextPage(page);
 	}
 
-
 	/**
-	 * Returns the {@link NewProgramWizardPage }.  If null is returned, the page is not added to the wizard.
+	 * Returns the {@link NewProgramWizardPage }. If null is returned, the page
+	 * is not added to the wizard.
+	 * 
 	 * @return Reference to the page.
 	 */
-	protected NewProgramWizardPage getNewProgramWizardPage(){
-		if (newProgramWizardPage == null){
-			newProgramWizardPage = new NewProgramWizardPage(getProgramsGroup(), ApogyCoreInvocatorPackage.Literals.SCRIPT_BASED_PROGRAM, programType);	
+	protected NewProgramWizardPage getNewProgramWizardPage() {
+		if (newProgramWizardPage == null) {
+			newProgramWizardPage = new NewProgramWizardPage(getProgramsGroup(),
+					ApogyCoreInvocatorPackage.Literals.SCRIPT_BASED_PROGRAM);
 		}
 		return newProgramWizardPage;
 	}
-	
+
 	/**
-	 * Returns the {@link NamedDescribedWizardPage}.  If null is returned, the page is not added to the wizard.
+	 * Returns the {@link NamedDescribedWizardPage}. If null is returned, the
+	 * page is not added to the wizard.
+	 * 
 	 * @return Reference to the page.
 	 */
-	protected NamedDescribedWizardPage getNamedDescribedWizardPage(){//Named named, Described described){
-		if (namedDescribedWizardPage == null){
-			namedDescribedWizardPage = new NamedDescribedWizardPage(getProgram(), getProgram());	
+	protected WizardPage getNamedDescribedWizardPage() {// Named named, Described described){
+		if (namedDescribedWizardPage == null) {
+			namedDescribedWizardPage = new NamedDescribedWizardPage(getProgram(), getProgram());
 		}
 		return namedDescribedWizardPage;
 	}
-	
+
 	@Override
 	public boolean performFinish() {
-			
-		ProgramsGroup programsGroup = getProgramsGroup();		
-		EditingDomain editingDomain = AdapterFactoryEditingDomain
-				.getEditingDomainFor(getProgramsList());
-		
+
+		ProgramsGroup programsGroup = getProgramsGroup();
+		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getProgramsList());
+
 		/** Check if there is a domain. */
-		if (editingDomain == null){
+		if (editingDomain == null) {
 			/** No Domain */
 			getProgramsList().getProgramsGroups().add(programsGroup);
-		}else{
+		} else {
 			/** Use the command stack. */
-			AddCommand command = new AddCommand(
-					editingDomain,
-					getProgramsList(),
-					ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS,
-					getProgramsGroup());
-			editingDomain.getCommandStack().execute(command);			
+			AddCommand command = new AddCommand(editingDomain, getProgramsGroup(),
+					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, getProgram());
+			editingDomain.getCommandStack().execute(command);
 		}
-				
+
 		return true;
 	}
-	
-	/** 
-	 * Create and returns the instance of the {@link ProgramsGroup} that the new program will be contained.  
-	 * @return Reference to the {@link ProgramsGroup}. 
+
+	/**
+	 * Create and returns the instance of the {@link ProgramsGroup} that the new
+	 * program will be contained.
+	 * 
+	 * @return Reference to the {@link ProgramsGroup}.
 	 */
-	protected ProgramsGroup getProgramsGroup(){
+	protected ProgramsGroup getProgramsGroup() {
+		if(programsGroup == null && newProgramWizardPage != null){
+			return newProgramWizardPage.getProgramsGroup();
+		}
 		return programsGroup;
 	}
-		
-	/** 
-	 * Returns the list of programs to display.  Override this method to provide custom getter implementation.  The default 
-	 * implementation returns the list of programs available in the active session.
+
+	/**
+	 * Returns the list of programs to display. Override this method to provide
+	 * custom getter implementation. The default implementation returns the list
+	 * of programs available in the active session.
+	 * 
 	 * @return List of programs.
 	 */
-	protected ProgramsList getProgramsList(){
-		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? 
-				null : 
-				ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
+	protected ProgramsList getProgramsList() {
+		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? null
+				: ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
 	}
-	
+
 	protected Program getProgram() {
 		if (program == null) {
-
-			if (programType == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL) {
-				program = (Program) ApogyCoreInvocatorFactory.eINSTANCE.createOperationCall();
-				program.setName("New Operation Call");
-
-			} else {
+			// TODO
+			if (newProgramWizardPage.getProgramType() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST) {
+				setWindowTitle("New Operation Calls List");
+				program = (Program) ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallsList();
+				program.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsGroup(), program, ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
+//			}else if(newProgramWizardPage.getProgramType() != ApogyCoreJavaScriptProgramsPackage.Literals){ 
+//				//TODO Javascript
+//				//program = (Program) ApogyCoreJavaScriptProgramsPackage.Literals
+//				program = null;
+			}else{
 				program = null;
 			}
 		}

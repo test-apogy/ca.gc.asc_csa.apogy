@@ -15,8 +15,6 @@ package ca.gc.asc_csa.apogy.core.invocator;
 
 import java.util.Date;
 import java.util.List;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -555,19 +553,6 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @generated
 	 */
 	List<Program> getAllScriptBasedPrograms(ProgramsList programsList);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Returns only the objects that are not archived
-	 * @param objects Refers to the array containing the objects to filter
-	 * @return Array of filtered objects
-	 * <!-- end-model-doc -->
-	 * @model unique="false" objectsUnique="false" objectsMany="true"
-	 * @generated
-	 */
-	EList<Object> filterArchived(EList<Object> objects);
 
 	/**
 	 * Creates a new context and populates the {@link VariableImplementations}.

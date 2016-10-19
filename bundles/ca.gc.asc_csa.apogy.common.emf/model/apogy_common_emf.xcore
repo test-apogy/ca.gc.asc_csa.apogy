@@ -218,11 +218,35 @@ class ApogyCommonEMFFacade
 	       
 	/*
 	 * Generates and returns a default name for a specific feature container. 
-	 * @param eObject The instance of the container.
-	 * @param eReference The reference of the object to name.
+	 * @param eContainer The instance of the container.
+	 * @param eObject The instance of the object to name.
+	 * @param objectReference The reference to the object.
 	 * @return A unique name.
 	 */	 
-	op String getDefaultName(EObject eObject, EReference eReference)
+	op String getDefaultName(EObject eContainer, EObject eObject, EReference objectReference)
+	
+	 /*
+	  * Returns only the objects that are not archived
+	  * @param objects Refers to the array containing the objects to filter
+	  * @return Array of filtered objects
+	  */
+	 op Object[] filterArchived(Object[] objects)
+	 
+	  /*
+	  * Returns the array with the specified object one position higher
+	  * @param objects Refers to the array containing the object to move up
+	  * @param object Refers to the object to move up
+	  * @return Modified array of objects
+	  */
+	 op Object[] moveUp(Object[] objects, Object object)
+	 
+	  /*
+	  * Returns the array with the specified object one position lower
+	  * @param objects Refers to the array containing the object to move down
+	  * @param object Refers to the object to move down
+	  * @return Modified array of objects
+	  */
+	 op Object[] moveDown(Object[] objects, Object object)
 }
 
 /**

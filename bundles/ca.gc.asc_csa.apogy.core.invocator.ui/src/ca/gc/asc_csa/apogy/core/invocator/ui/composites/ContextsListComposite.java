@@ -75,7 +75,7 @@ public class ContextsListComposite extends Composite {
 	private final String DECORATION_STR = "No variable available";
 	
 	private DataBindingContext m_bindingContext;
-	private WritableValue environmentBinder;
+	private WritableValue<Environment> environmentBinder;
 	private ObservableListContentProvider listContentProvider;
 
 	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
@@ -245,7 +245,7 @@ public class ContextsListComposite extends Composite {
 	 */
 	private Environment getEnvironment() {
 		if (environmentBinder != null && environmentBinder.getValue() != null) {
-			return (Environment) environmentBinder.getValue();
+			return environmentBinder.getValue();
 		}
 		return null;
 		// return contextsList == null ? null : contextsList.getEnvironment();
@@ -259,7 +259,7 @@ public class ContextsListComposite extends Composite {
 	 */
 	public void setEnvironment(Environment environment) {
 		if (environmentBinder == null) {
-			environmentBinder = new WritableValue();
+			environmentBinder = new WritableValue<Environment>();
 		}
 		environmentBinder.setValue(environment);
 		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(environment.getContextsList());
@@ -276,13 +276,13 @@ public class ContextsListComposite extends Composite {
 		DataBindingContext m_bindingContext = new DataBindingContext();
 
 		if (environmentBinder == null) {
-			environmentBinder = new WritableValue();
+			environmentBinder = new WritableValue<Environment>();
 		}
 
 		/**
 		 * Bind contexts list.
 		 */
-		IObservableList invocatorFacadeEnvironmentContextsListContextsObserveValue = EMFProperties
+		IObservableList<?> invocatorFacadeEnvironmentContextsListContextsObserveValue = EMFProperties
 				.list(FeaturePath.fromList(
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS))
@@ -294,8 +294,8 @@ public class ContextsListComposite extends Composite {
 		/**
 		 * Bind variable list with the newContext button
 		 */
-		IObservableValue observeBtnCreateEnabledObserveWidget = WidgetProperties.enabled().observe(btnNew);
-		IObservableValue environmentVariablesListVariablesObserveValue = EMFProperties
+		IObservableValue<?> observeBtnCreateEnabledObserveWidget = WidgetProperties.enabled().observe(btnNew);
+		IObservableValue<?> environmentVariablesListVariablesObserveValue = EMFProperties
 				.value(FeaturePath.fromList(
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES))

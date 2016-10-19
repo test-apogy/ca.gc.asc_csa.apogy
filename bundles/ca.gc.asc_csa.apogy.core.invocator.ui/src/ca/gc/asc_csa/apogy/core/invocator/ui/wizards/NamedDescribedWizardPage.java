@@ -23,6 +23,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
@@ -63,8 +64,12 @@ public class NamedDescribedWizardPage extends WizardPage {
 		this.named = name;
 		this.described = description;
 		
-		name.eAdapters().add(getAdapter());
-		description.eAdapters().add(getAdapter());
+		if(name != null){
+			name.eAdapters().add(getAdapter());
+		}
+		if(description != null){
+			description.eAdapters().add(getAdapter());
+		}
 	}
 
 	private Adapter getAdapter() {
@@ -83,6 +88,9 @@ public class NamedDescribedWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */	
 	public void createControl(Composite parent) {
+		parent.setBackground(SWTResourceManager.getColor(SWT.COLOR_TRANSPARENT));
+		parent.setBackgroundMode(SWT.INHERIT_FORCE);
+		
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new GridLayout(1, false));
 
@@ -112,6 +120,9 @@ public class NamedDescribedWizardPage extends WizardPage {
 		}		
 	}
 	
+	public boolean isNamedDesctibedSet(){
+		return named != null && described != null;
+	}
 	/** 
 	 * This method is invoked to validate the content. 
 	 */

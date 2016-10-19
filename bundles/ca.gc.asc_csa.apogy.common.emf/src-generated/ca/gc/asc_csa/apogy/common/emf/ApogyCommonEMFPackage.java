@@ -453,7 +453,34 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE = 38;
+	int APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE = 38;
+
+		/**
+	 * The operation id for the '<em>Filter Archived</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST = 39;
+
+		/**
+	 * The operation id for the '<em>Move Up</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT = 40;
+
+		/**
+	 * The operation id for the '<em>Move Down</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT = 41;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -462,7 +489,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 39;
+	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 42;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -2630,14 +2657,44 @@ public interface ApogyCommonEMFPackage extends EPackage
 	EOperation getApogyCommonEMFFacade__GetEObjectById__ResourceSet_String();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference) <em>Get Default Name</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference) <em>Get Default Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Default Name</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference)
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference)
 	 * @generated
 	 */
-	EOperation getApogyCommonEMFFacade__GetDefaultName__EObject_EReference();
+	EOperation getApogyCommonEMFFacade__GetDefaultName__EObject_EObject_EReference();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#filterArchived(org.eclipse.emf.common.util.EList) <em>Filter Archived</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Filter Archived</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#filterArchived(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFFacade__FilterArchived__EList();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#moveUp(org.eclipse.emf.common.util.EList, java.lang.Object) <em>Move Up</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Move Up</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#moveUp(org.eclipse.emf.common.util.EList, java.lang.Object)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFFacade__MoveUp__EList_Object();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#moveDown(org.eclipse.emf.common.util.EList, java.lang.Object) <em>Move Down</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Move Down</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#moveDown(org.eclipse.emf.common.util.EList, java.lang.Object)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFFacade__MoveDown__EList_Object();
 
 		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference <em>EObject Reference</em>}'.
@@ -3913,7 +3970,31 @@ public interface ApogyCommonEMFPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE = eINSTANCE.getApogyCommonEMFFacade__GetDefaultName__EObject_EReference();
+		EOperation APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE = eINSTANCE.getApogyCommonEMFFacade__GetDefaultName__EObject_EObject_EReference();
+
+				/**
+		 * The meta object literal for the '<em><b>Filter Archived</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST = eINSTANCE.getApogyCommonEMFFacade__FilterArchived__EList();
+
+				/**
+		 * The meta object literal for the '<em><b>Move Up</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT = eINSTANCE.getApogyCommonEMFFacade__MoveUp__EList_Object();
+
+				/**
+		 * The meta object literal for the '<em><b>Move Down</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT = eINSTANCE.getApogyCommonEMFFacade__MoveDown__EList_Object();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.

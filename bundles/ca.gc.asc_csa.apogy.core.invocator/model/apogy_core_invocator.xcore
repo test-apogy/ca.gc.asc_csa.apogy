@@ -310,13 +310,6 @@ class ApogyCoreInvocatorFacade
 	  * @return List of programs.
 	  */
 	 op List<Program> getAllScriptBasedPrograms(ProgramsList programsList)	 	
-	 
-	 /*
-	  * Returns only the objects that are not archived
-	  * @param objects Refers to the array containing the objects to filter
-	  * @return Array of filtered objects
-	  */
-	 op Object[] filterArchived(Object[] objects)
 
 	/*
 	  * Creates a new context and populates the {@link VariableImplementations}.  
