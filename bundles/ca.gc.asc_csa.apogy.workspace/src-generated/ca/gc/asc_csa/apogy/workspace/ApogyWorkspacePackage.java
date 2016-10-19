@@ -80,43 +80,43 @@ public interface ApogyWorkspacePackage extends EPackage {
 	ApogyWorkspacePackage eINSTANCE = ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyCoreWorkspaceFacadeImpl <em>Apogy Core Workspace Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyCoreWorkspaceFacadeImpl
-	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getApogyCoreWorkspaceFacade()
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getApogyWorkspaceFacade()
 	 * @generated
 	 */
-	int APOGY_CORE_WORKSPACE_FACADE = 0;
+	int APOGY_WORKSPACE_FACADE = 0;
 
 	/**
-	 * The number of structural features of the '<em>Apogy Core Workspace Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_WORKSPACE_FACADE_FEATURE_COUNT = 0;
+	int APOGY_WORKSPACE_FACADE_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Apogy Core Workspace Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_WORKSPACE_FACADE_OPERATION_COUNT = 0;
+	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 0;
 
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.workspace.ApogyCoreWorkspaceFacade <em>Apogy Core Workspace Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Apogy Core Workspace Facade</em>'.
-	 * @see ca.gc.asc_csa.apogy.workspace.ApogyCoreWorkspaceFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade
 	 * @generated
 	 */
-	EClass getApogyCoreWorkspaceFacade();
+	EClass getApogyWorkspaceFacade();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -142,14 +142,14 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyCoreWorkspaceFacadeImpl <em>Apogy Core Workspace Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyCoreWorkspaceFacadeImpl
-		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getApogyCoreWorkspaceFacade()
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getApogyWorkspaceFacade()
 		 * @generated
 		 */
-		EClass APOGY_CORE_WORKSPACE_FACADE = eINSTANCE.getApogyCoreWorkspaceFacade();
+		EClass APOGY_WORKSPACE_FACADE = eINSTANCE.getApogyWorkspaceFacade();
 
 	}
 

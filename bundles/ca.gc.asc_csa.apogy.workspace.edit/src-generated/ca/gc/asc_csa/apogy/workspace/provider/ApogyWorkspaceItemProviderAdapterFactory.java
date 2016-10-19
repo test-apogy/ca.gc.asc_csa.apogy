@@ -100,26 +100,26 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.workspace.ApogyCoreWorkspaceFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreWorkspaceFacadeItemProvider apogyCoreWorkspaceFacadeItemProvider;
+	protected ApogyWorkspaceFacadeItemProvider apogyWorkspaceFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.workspace.ApogyCoreWorkspaceFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createApogyCoreWorkspaceFacadeAdapter() {
-		if (apogyCoreWorkspaceFacadeItemProvider == null) {
-			apogyCoreWorkspaceFacadeItemProvider = new ApogyCoreWorkspaceFacadeItemProvider(this);
+	public Adapter createApogyWorkspaceFacadeAdapter() {
+		if (apogyWorkspaceFacadeItemProvider == null) {
+			apogyWorkspaceFacadeItemProvider = new ApogyWorkspaceFacadeItemProvider(this);
 		}
 
-		return apogyCoreWorkspaceFacadeItemProvider;
+		return apogyWorkspaceFacadeItemProvider;
 	}
 
 	/**
@@ -248,7 +248,7 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 	 * @generated
 	 */
 	public void dispose() {
-		if (apogyCoreWorkspaceFacadeItemProvider != null) apogyCoreWorkspaceFacadeItemProvider.dispose();
+		if (apogyWorkspaceFacadeItemProvider != null) apogyWorkspaceFacadeItemProvider.dispose();
 	}
 
 }

@@ -689,6 +689,16 @@ public interface ApogyCoreUIPackage extends EPackage
 	int IFOLDER = 9;
 
 		/**
+	 * The meta object id for the '<em>Image Descriptor</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.jface.resource.ImageDescriptor
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getImageDescriptor()
+	 * @generated
+	 */
+	int IMAGE_DESCRIPTOR = 10;
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1102,6 +1112,17 @@ public interface ApogyCoreUIPackage extends EPackage
 	EDataType getIFolder();
 
 		/**
+	 * Returns the meta object for data type '{@link org.eclipse.jface.resource.ImageDescriptor <em>Image Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Image Descriptor</em>'.
+	 * @see org.eclipse.jface.resource.ImageDescriptor
+	 * @model instanceClass="org.eclipse.jface.resource.ImageDescriptor"
+	 * @generated
+	 */
+	EDataType getImageDescriptor();
+
+		/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1456,6 +1477,16 @@ public interface ApogyCoreUIPackage extends EPackage
 		 * @generated
 		 */
 		EDataType IFOLDER = eINSTANCE.getIFolder();
+
+				/**
+		 * The meta object literal for the '<em>Image Descriptor</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.jface.resource.ImageDescriptor
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getImageDescriptor()
+		 * @generated
+		 */
+		EDataType IMAGE_DESCRIPTOR = eINSTANCE.getImageDescriptor();
 
   }
 

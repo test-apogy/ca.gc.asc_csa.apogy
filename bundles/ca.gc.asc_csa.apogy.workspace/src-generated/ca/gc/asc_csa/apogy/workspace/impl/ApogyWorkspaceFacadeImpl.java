@@ -13,27 +13,36 @@
  */
 package ca.gc.asc_csa.apogy.workspace.impl;
 
-import ca.gc.asc_csa.apogy.workspace.ApogyCoreWorkspaceFacade;
-import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
+import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Apogy Core Workspace Facade</b></em>'.
+ * An implementation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ApogyCoreWorkspaceFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreWorkspaceFacade {
+public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container implements ApogyWorkspaceFacade {
+	
+	private static ApogyWorkspaceFacade instance = null;
+
+	public static ApogyWorkspaceFacade getInstance() {
+		if (instance == null) {
+			instance = new ApogyWorkspaceFacadeImpl();
+		}
+		return instance;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCoreWorkspaceFacadeImpl() {
+	protected ApogyWorkspaceFacadeImpl() {
 		super();
 	}
 
@@ -44,7 +53,7 @@ public class ApogyCoreWorkspaceFacadeImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ApogyWorkspacePackage.Literals.APOGY_CORE_WORKSPACE_FACADE;
+		return ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE;
 	}
 
-} //ApogyCoreWorkspaceFacadeImpl
+} //ApogyWorkspaceFacadeImpl

@@ -15,19 +15,22 @@ package ca.gc.asc_csa.apogy.workspace;
 
 import org.eclipse.emf.ecore.EObject;
 
+import ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl;
+
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Apogy Core Workspace Facade</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object
+ * '<em><b>Facade</b></em>'. <!-- end-user-doc -->
  *
- * <!-- begin-model-doc -->
- *  Types definitions.
- * <!-- end-model-doc -->
+ * <!-- begin-model-doc --> Types definitions. <!-- end-model-doc -->
  *
  *
- * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyCoreWorkspaceFacade()
+ * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyWorkspaceFacade()
  * @model
  * @generated
  */
-public interface ApogyCoreWorkspaceFacade extends EObject {
-} // ApogyCoreWorkspaceFacade
+public interface ApogyWorkspaceFacade extends EObject {
+	/**
+	 * @generated_NOT
+	 */
+	public static ApogyWorkspaceFacade INSTANCE = ApogyWorkspaceFacadeImpl.getInstance();
+} // ApogyWorkspaceFacade

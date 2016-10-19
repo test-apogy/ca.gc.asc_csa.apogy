@@ -13,7 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.workspace.impl;
 
-import ca.gc.asc_csa.apogy.workspace.ApogyCoreWorkspaceFacade;
+import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFactory;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 
@@ -34,8 +34,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass apogyCoreWorkspaceFacadeEClass = null;
-
+	private EClass apogyWorkspaceFacadeEClass = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -102,8 +101,8 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getApogyCoreWorkspaceFacade() {
-		return apogyCoreWorkspaceFacadeEClass;
+	public EClass getApogyWorkspaceFacade() {
+		return apogyWorkspaceFacadeEClass;
 	}
 
 	/**
@@ -134,7 +133,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		isCreated = true;
 
 		// Create classes and their features
-		apogyCoreWorkspaceFacadeEClass = createEClass(APOGY_CORE_WORKSPACE_FACADE);
+		apogyWorkspaceFacadeEClass = createEClass(APOGY_WORKSPACE_FACADE);
 	}
 
 	/**
@@ -167,7 +166,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(apogyCoreWorkspaceFacadeEClass, ApogyCoreWorkspaceFacade.class, "ApogyCoreWorkspaceFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyWorkspaceFacadeEClass, ApogyWorkspaceFacade.class, "ApogyWorkspaceFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

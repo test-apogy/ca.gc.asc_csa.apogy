@@ -67,7 +67,7 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ApogyWorkspacePackage.APOGY_CORE_WORKSPACE_FACADE: return createApogyCoreWorkspaceFacade();
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE: return createApogyWorkspaceFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -78,9 +78,9 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ApogyCoreWorkspaceFacade createApogyCoreWorkspaceFacade() {
-		ApogyCoreWorkspaceFacadeImpl apogyCoreWorkspaceFacade = new ApogyCoreWorkspaceFacadeImpl();
-		return apogyCoreWorkspaceFacade;
+	public ApogyWorkspaceFacade createApogyWorkspaceFacade() {
+		ApogyWorkspaceFacadeImpl apogyWorkspaceFacade = new ApogyWorkspaceFacadeImpl();
+		return apogyWorkspaceFacade;
 	}
 
 	/**

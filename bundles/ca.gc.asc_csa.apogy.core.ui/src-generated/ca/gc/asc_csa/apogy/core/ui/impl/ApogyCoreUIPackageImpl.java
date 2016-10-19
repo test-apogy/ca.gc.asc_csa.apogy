@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.jface.resource.ImageDescriptor;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
@@ -107,6 +108,13 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	private EDataType iFolderEDataType = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType imageDescriptorEDataType = null;
 
 		/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -541,6 +549,15 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getImageDescriptor() {
+		return imageDescriptorEDataType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCoreUIFactory getApogyCoreUIFactory() {
 		return (ApogyCoreUIFactory)getEFactoryInstance();
 	}
@@ -611,6 +628,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 		iContainerEDataType = createEDataType(ICONTAINER);
 		iFileEDataType = createEDataType(IFILE);
 		iFolderEDataType = createEDataType(IFOLDER);
+		imageDescriptorEDataType = createEDataType(IMAGE_DESCRIPTOR);
 	}
 
   /**
@@ -720,6 +738,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 		initEDataType(iContainerEDataType, IContainer.class, "IContainer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(iFileEDataType, IFile.class, "IFile", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(iFolderEDataType, IFolder.class, "IFolder", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(imageDescriptorEDataType, ImageDescriptor.class, "ImageDescriptor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -33,13 +33,13 @@ public interface ApogyWorkspaceFactory extends EFactory {
 	ApogyWorkspaceFactory eINSTANCE = ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Apogy Core Workspace Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Apogy Core Workspace Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	ApogyCoreWorkspaceFacade createApogyCoreWorkspaceFacade();
+	ApogyWorkspaceFacade createApogyWorkspaceFacade();
 
 	/**
 	 * Returns the package supported by this factory.

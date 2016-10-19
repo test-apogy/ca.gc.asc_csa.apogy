@@ -77,9 +77,9 @@ public class ApogyWorkspaceSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ApogyWorkspacePackage.APOGY_CORE_WORKSPACE_FACADE: {
-				ApogyCoreWorkspaceFacade apogyCoreWorkspaceFacade = (ApogyCoreWorkspaceFacade)theEObject;
-				T result = caseApogyCoreWorkspaceFacade(apogyCoreWorkspaceFacade);
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE: {
+				ApogyWorkspaceFacade apogyWorkspaceFacade = (ApogyWorkspaceFacade)theEObject;
+				T result = caseApogyWorkspaceFacade(apogyWorkspaceFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,17 +88,17 @@ public class ApogyWorkspaceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Apogy Core Workspace Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Apogy Core Workspace Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseApogyCoreWorkspaceFacade(ApogyCoreWorkspaceFacade object) {
+	public T caseApogyWorkspaceFacade(ApogyWorkspaceFacade object) {
 		return null;
 	}
 

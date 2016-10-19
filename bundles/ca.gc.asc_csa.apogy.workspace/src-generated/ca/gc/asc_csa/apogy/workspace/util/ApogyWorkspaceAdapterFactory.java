@@ -79,8 +79,8 @@ public class ApogyWorkspaceAdapterFactory extends AdapterFactoryImpl {
 	protected ApogyWorkspaceSwitch<Adapter> modelSwitch =
 		new ApogyWorkspaceSwitch<Adapter>() {
 			@Override
-			public Adapter caseApogyCoreWorkspaceFacade(ApogyCoreWorkspaceFacade object) {
-				return createApogyCoreWorkspaceFacadeAdapter();
+			public Adapter caseApogyWorkspaceFacade(ApogyWorkspaceFacade object) {
+				return createApogyWorkspaceFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -103,16 +103,16 @@ public class ApogyWorkspaceAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.workspace.ApogyCoreWorkspaceFacade <em>Apogy Core Workspace Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.workspace.ApogyCoreWorkspaceFacade
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade
 	 * @generated
 	 */
-	public Adapter createApogyCoreWorkspaceFacadeAdapter() {
+	public Adapter createApogyWorkspaceFacadeAdapter() {
 		return null;
 	}
 

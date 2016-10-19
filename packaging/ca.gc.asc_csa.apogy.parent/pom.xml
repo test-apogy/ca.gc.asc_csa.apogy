@@ -342,6 +342,7 @@
 		
 		<module>../../bundles/ca.gc.asc_csa.apogy.workspace</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.workspace.edit</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.workspace.ui</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.workspace.feature</module>		
 		
 		<module>../../bundles/ca.gc.asc_csa.apogy.ui</module>		

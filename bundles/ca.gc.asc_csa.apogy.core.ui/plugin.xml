@@ -355,16 +355,6 @@
       </image>
    </extension>
    <extension
-         id="ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature"
-         name="Apogy"
-         point="org.eclipse.core.resources.natures">
-      <runtime>
-         <run
-               class="ca.gc.asc_csa.apogy.core.ui.natures.ApogyProjectNature">
-         </run>
-      </runtime>
-   </extension>
-   <extension
          point="org.eclipse.ui.decorators">
       <decorator
             adaptable="true"
