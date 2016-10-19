@@ -28,7 +28,7 @@
      Canadian Space Agency (CSA) - Initial API and implementation",
 		  modelName="ApogyCoreInvocator",
 		  fileExtensions="sym",
-		  resource="XMI")
+		  resource="XMI", publicConstructors="true")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.invocator/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.invocator.edit/src-generated")
 @GenModel(editorDirectory="/ca.gc.asc_csa.apogy.core.invocator.editor/src-generated")
@@ -52,6 +52,7 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EOperation
 import org.eclipse.emf.ecore.EParameter
 import ca.gc.asc_csa.apogy.common.emf.Archivable
+import java.util.HashMap
 
 /* -------------------------------------------------------------------------
  * 
@@ -63,7 +64,7 @@ type Notification wraps org.eclipse.emf.common.notify.Notification
 type TypeMemberImplementationsEList wraps EList<TypeMemberImplementation>
 type TypeMembersArray wraps TypeMember[]
 type IVariableListener wraps IVariableListener
-
+type HashMap<key, value> wraps HashMap
 
 /* -------------------------------------------------------------------------
  * 
@@ -824,10 +825,37 @@ interface OperationCallContainer
 	op InvocatorSession getInvocatorSession()
 }
 
-class OperationCallsList extends ScriptBasedProgram, OperationCallContainer
-{
-	
+class ProgramSettings extends Named, Described, Archivable{
+	contains SpecificProgramSettings[0..1] specificProgramSettings
 }
+
+abstract class SpecificProgramSettings{	
+}
+
+abstract class ProgramFactory{	
+	op Program createProgram()
+	op void applySettings(Program program, ProgramSettings settings)
+}
+
+class ProgramFactoriesRegistry{
+	
+	readonly transient String PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_POINT_ID = "ca.gc.asc_csa.apogy.core.invocator.programFactoryProvider"
+	readonly transient String PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_ECLASS_ID = "programEClass"
+	readonly transient String PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_FACTORY_ID = "factory"
+	
+	HashMap<EClass,ProgramFactory> programFactoriesMap
+	
+	op ProgramFactory getFactory(EClass eClass)
+}
+
+class OperationCallsList extends ScriptBasedProgram, OperationCallContainer
+{	
+}
+
+class OperationCallsListFactory extends ProgramFactory
+{	
+} 
+ 
 
 /*
  * Reference to the EMF feature of a specific variable and chain of {@link TypeMember} 

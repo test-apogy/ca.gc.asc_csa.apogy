@@ -202,7 +202,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ContextImpl()
+  public ContextImpl()
   {
 		super();
 	}

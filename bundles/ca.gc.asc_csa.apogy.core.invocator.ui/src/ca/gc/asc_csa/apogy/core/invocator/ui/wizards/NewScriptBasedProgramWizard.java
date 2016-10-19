@@ -34,6 +34,8 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
@@ -133,6 +135,11 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, getProgram());
 			editingDomain.getCommandStack().execute(command);
 		}
+		
+		
+		// Test.
+		ProgramFactory factory = ProgramFactoriesRegistry.INSTANCE.getFactory(ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST);
+		System.out.println("NewScriptBasedProgramWizard.performFinish()" +  factory.createProgram());		
 
 		return true;
 	}

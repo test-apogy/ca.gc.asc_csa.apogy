@@ -52,7 +52,7 @@ public class ReferenceResultValueImpl extends AbstractResultValueImpl implements
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ReferenceResultValueImpl()
+  public ReferenceResultValueImpl()
   {
 		super();
 	}

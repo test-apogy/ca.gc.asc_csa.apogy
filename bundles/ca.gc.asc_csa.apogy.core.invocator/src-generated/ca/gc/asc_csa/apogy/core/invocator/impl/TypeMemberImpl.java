@@ -86,7 +86,7 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected TypeMemberImpl()
+  public TypeMemberImpl()
   {
 		super();
 	}

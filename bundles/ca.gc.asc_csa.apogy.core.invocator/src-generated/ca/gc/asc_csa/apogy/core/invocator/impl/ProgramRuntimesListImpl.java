@@ -65,7 +65,7 @@ public class ProgramRuntimesListImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ProgramRuntimesListImpl() {
+	public ProgramRuntimesListImpl() {
 		super();
 	}
 

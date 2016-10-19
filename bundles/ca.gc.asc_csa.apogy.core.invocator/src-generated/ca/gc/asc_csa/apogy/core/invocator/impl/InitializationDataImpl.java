@@ -31,7 +31,7 @@ public class InitializationDataImpl extends AbstractInitializationDataImpl imple
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected InitializationDataImpl()
+  public InitializationDataImpl()
   {
 		super();
 	}

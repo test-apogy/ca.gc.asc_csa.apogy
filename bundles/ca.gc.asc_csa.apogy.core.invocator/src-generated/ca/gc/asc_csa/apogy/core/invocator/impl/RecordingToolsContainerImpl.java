@@ -80,7 +80,7 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RecordingToolsContainerImpl() {
+	public RecordingToolsContainerImpl() {
 		super();
 	}
 

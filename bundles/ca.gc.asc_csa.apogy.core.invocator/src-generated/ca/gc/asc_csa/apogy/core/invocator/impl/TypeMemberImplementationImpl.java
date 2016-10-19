@@ -52,7 +52,7 @@ public class TypeMemberImplementationImpl extends AbstractTypeImplementationImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected TypeMemberImplementationImpl()
+  public TypeMemberImplementationImpl()
   {
 		super();
 	}

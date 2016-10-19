@@ -65,7 +65,7 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ArgumentsListImpl()
+  public ArgumentsListImpl()
   {
 		super();
 	}

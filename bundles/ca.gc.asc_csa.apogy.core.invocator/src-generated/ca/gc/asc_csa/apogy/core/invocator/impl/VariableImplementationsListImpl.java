@@ -58,7 +58,7 @@ public class VariableImplementationsListImpl extends
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VariableImplementationsListImpl() {
+	public VariableImplementationsListImpl() {
 		super();
 	}
 

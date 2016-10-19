@@ -33,7 +33,7 @@ public class NumericEDataTypeArgumentImpl extends EDataTypeArgumentImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NumericEDataTypeArgumentImpl() {
+	public NumericEDataTypeArgumentImpl() {
 		super();
 	}
 

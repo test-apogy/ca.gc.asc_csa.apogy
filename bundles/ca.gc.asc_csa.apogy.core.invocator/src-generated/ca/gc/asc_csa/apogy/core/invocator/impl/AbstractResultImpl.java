@@ -118,7 +118,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AbstractResultImpl()
+  public AbstractResultImpl()
   {
 		super();
 	}

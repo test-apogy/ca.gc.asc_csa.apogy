@@ -116,7 +116,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected DataProductsListImpl()
+  public DataProductsListImpl()
   {
 		super();
 	}

@@ -136,7 +136,7 @@ public class ProgramsGroupImpl extends MinimalEObjectImpl.Container implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ProgramsGroupImpl() {
+	public ProgramsGroupImpl() {
 		super();
 	}
 

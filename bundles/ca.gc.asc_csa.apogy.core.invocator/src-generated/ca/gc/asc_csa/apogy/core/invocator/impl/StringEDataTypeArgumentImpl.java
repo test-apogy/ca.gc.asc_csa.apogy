@@ -33,7 +33,7 @@ public class StringEDataTypeArgumentImpl extends EDataTypeArgumentImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StringEDataTypeArgumentImpl() {
+	public StringEDataTypeArgumentImpl() {
 		super();
 	}
 

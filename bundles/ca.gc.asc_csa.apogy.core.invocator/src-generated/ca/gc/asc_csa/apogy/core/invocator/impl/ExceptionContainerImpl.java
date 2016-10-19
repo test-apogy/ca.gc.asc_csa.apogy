@@ -60,7 +60,7 @@ public class ExceptionContainerImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ExceptionContainerImpl()
+  public ExceptionContainerImpl()
   {
 		super();
 	}

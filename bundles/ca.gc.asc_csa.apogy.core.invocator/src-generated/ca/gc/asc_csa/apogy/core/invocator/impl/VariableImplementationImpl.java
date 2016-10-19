@@ -55,7 +55,7 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected VariableImplementationImpl()
+  public VariableImplementationImpl()
   {
 		super();
 	}

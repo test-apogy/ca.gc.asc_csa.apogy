@@ -61,7 +61,7 @@ public abstract class EDataTypeArgumentImpl extends ArgumentImpl implements EDat
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EDataTypeArgumentImpl()
+  public EDataTypeArgumentImpl()
   {
 		super();
 	}

@@ -114,7 +114,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ProgramImpl()
+  public ProgramImpl()
   {
 		super();
 	}

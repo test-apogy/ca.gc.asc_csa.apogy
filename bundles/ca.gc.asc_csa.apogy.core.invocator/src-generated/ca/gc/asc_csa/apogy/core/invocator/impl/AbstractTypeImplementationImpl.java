@@ -109,7 +109,7 @@ public abstract class AbstractTypeImplementationImpl extends
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AbstractTypeImplementationImpl() {
+	public AbstractTypeImplementationImpl() {
 		super();
 	}
 

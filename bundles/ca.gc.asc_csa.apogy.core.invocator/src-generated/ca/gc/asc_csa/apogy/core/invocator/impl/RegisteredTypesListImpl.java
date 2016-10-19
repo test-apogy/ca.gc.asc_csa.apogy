@@ -61,7 +61,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RegisteredTypesListImpl() {
+	public RegisteredTypesListImpl() {
 		super();
 	}
 

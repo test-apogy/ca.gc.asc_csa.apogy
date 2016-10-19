@@ -60,7 +60,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AttributeValueImpl()
+  public AttributeValueImpl()
   {
 		super();
 	}

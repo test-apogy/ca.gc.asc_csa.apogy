@@ -54,10 +54,14 @@ import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsListFactory;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsListProgramRuntime;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimesList;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
@@ -66,6 +70,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
 import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
 import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
+import ca.gc.asc_csa.apogy.core.invocator.SpecificProgramSettings;
 import ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 import ca.gc.asc_csa.apogy.core.invocator.TriggeredBasedProgram;
@@ -86,6 +91,7 @@ import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 
+import java.util.HashMap;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -359,7 +365,42 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass programSettingsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass specificProgramSettingsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass programFactoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass programFactoriesRegistryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass operationCallsListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass operationCallsListFactoryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -612,6 +653,13 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	private EDataType iVariableListenerEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType hashMapEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -2203,8 +2251,125 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getProgramSettings() {
+		return programSettingsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgramSettings_SpecificProgramSettings() {
+		return (EReference)programSettingsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSpecificProgramSettings() {
+		return specificProgramSettingsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProgramFactory() {
+		return programFactoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getProgramFactory__CreateProgram() {
+		return programFactoryEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getProgramFactory__ApplySettings__Program_ProgramSettings() {
+		return programFactoryEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProgramFactoriesRegistry() {
+		return programFactoriesRegistryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProgramFactoriesRegistry_PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_POINT_ID() {
+		return (EAttribute)programFactoriesRegistryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProgramFactoriesRegistry_PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_ECLASS_ID() {
+		return (EAttribute)programFactoriesRegistryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProgramFactoriesRegistry_PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_FACTORY_ID() {
+		return (EAttribute)programFactoriesRegistryEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProgramFactoriesRegistry_ProgramFactoriesMap() {
+		return (EAttribute)programFactoriesRegistryEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getProgramFactoriesRegistry__GetFactory__EClass() {
+		return programFactoriesRegistryEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOperationCallsList() {
 		return operationCallsListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOperationCallsListFactory() {
+		return operationCallsListFactoryEClass;
 	}
 
 	/**
@@ -3040,6 +3205,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getHashMap() {
+		return hashMapEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCoreInvocatorFactory getApogyCoreInvocatorFactory() {
 		return (ApogyCoreInvocatorFactory)getEFactoryInstance();
 	}
@@ -3267,7 +3441,25 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEReference(operationCallContainerEClass, OPERATION_CALL_CONTAINER__OPERATION_CALLS);
 		createEOperation(operationCallContainerEClass, OPERATION_CALL_CONTAINER___GET_INVOCATOR_SESSION);
 
+		programSettingsEClass = createEClass(PROGRAM_SETTINGS);
+		createEReference(programSettingsEClass, PROGRAM_SETTINGS__SPECIFIC_PROGRAM_SETTINGS);
+
+		specificProgramSettingsEClass = createEClass(SPECIFIC_PROGRAM_SETTINGS);
+
+		programFactoryEClass = createEClass(PROGRAM_FACTORY);
+		createEOperation(programFactoryEClass, PROGRAM_FACTORY___CREATE_PROGRAM);
+		createEOperation(programFactoryEClass, PROGRAM_FACTORY___APPLY_SETTINGS__PROGRAM_PROGRAMSETTINGS);
+
+		programFactoriesRegistryEClass = createEClass(PROGRAM_FACTORIES_REGISTRY);
+		createEAttribute(programFactoriesRegistryEClass, PROGRAM_FACTORIES_REGISTRY__PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_POINT_ID);
+		createEAttribute(programFactoriesRegistryEClass, PROGRAM_FACTORIES_REGISTRY__PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_ECLASS_ID);
+		createEAttribute(programFactoriesRegistryEClass, PROGRAM_FACTORIES_REGISTRY__PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_FACTORY_ID);
+		createEAttribute(programFactoriesRegistryEClass, PROGRAM_FACTORIES_REGISTRY__PROGRAM_FACTORIES_MAP);
+		createEOperation(programFactoriesRegistryEClass, PROGRAM_FACTORIES_REGISTRY___GET_FACTORY__ECLASS);
+
 		operationCallsListEClass = createEClass(OPERATION_CALLS_LIST);
+
+		operationCallsListFactoryEClass = createEClass(OPERATION_CALLS_LIST_FACTORY);
 
 		variableFeatureReferenceEClass = createEClass(VARIABLE_FEATURE_REFERENCE);
 		createEReference(variableFeatureReferenceEClass, VARIABLE_FEATURE_REFERENCE__VARIABLE);
@@ -3393,6 +3585,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		typeMemberImplementationsEListEDataType = createEDataType(TYPE_MEMBER_IMPLEMENTATIONS_ELIST);
 		typeMembersArrayEDataType = createEDataType(TYPE_MEMBERS_ARRAY);
 		iVariableListenerEDataType = createEDataType(IVARIABLE_LISTENER);
+		hashMapEDataType = createEDataType(HASH_MAP);
 	}
 
 	/**
@@ -3423,6 +3616,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
 		// Create type parameters
+		addETypeParameter(hashMapEDataType, "key");
+		addETypeParameter(hashMapEDataType, "value");
 
 		// Set bounds for type parameters
 
@@ -3458,8 +3653,12 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		programEClass.getESuperTypes().add(theApogyCommonEMFPackage.getArchivable());
 		scriptBasedProgramEClass.getESuperTypes().add(this.getProgram());
 		triggeredBasedProgramEClass.getESuperTypes().add(this.getProgram());
+		programSettingsEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		programSettingsEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		programSettingsEClass.getESuperTypes().add(theApogyCommonEMFPackage.getArchivable());
 		operationCallsListEClass.getESuperTypes().add(this.getScriptBasedProgram());
 		operationCallsListEClass.getESuperTypes().add(this.getOperationCallContainer());
+		operationCallsListFactoryEClass.getESuperTypes().add(this.getProgramFactory());
 		variableFeatureReferenceEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		operationCallEClass.getESuperTypes().add(this.getVariableFeatureReference());
 		operationCallEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
@@ -3832,7 +4031,36 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		initEOperation(getOperationCallContainer__GetInvocatorSession(), this.getInvocatorSession(), "getInvocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		initEClass(programSettingsEClass, ProgramSettings.class, "ProgramSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProgramSettings_SpecificProgramSettings(), this.getSpecificProgramSettings(), null, "specificProgramSettings", null, 0, 1, ProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(specificProgramSettingsEClass, SpecificProgramSettings.class, "SpecificProgramSettings", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(programFactoryEClass, ProgramFactory.class, "ProgramFactory", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getProgramFactory__CreateProgram(), this.getProgram(), "createProgram", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getProgramFactory__ApplySettings__Program_ProgramSettings(), null, "applySettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getProgram(), "program", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getProgramSettings(), "settings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(programFactoriesRegistryEClass, ProgramFactoriesRegistry.class, "ProgramFactoriesRegistry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProgramFactoriesRegistry_PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_POINT_ID(), theEcorePackage.getEString(), "PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_POINT_ID", "ca.gc.asc_csa.apogy.core.invocator.programFactoryProvider", 0, 1, ProgramFactoriesRegistry.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProgramFactoriesRegistry_PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_ECLASS_ID(), theEcorePackage.getEString(), "PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_ECLASS_ID", "programEClass", 0, 1, ProgramFactoriesRegistry.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProgramFactoriesRegistry_PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_FACTORY_ID(), theEcorePackage.getEString(), "PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_FACTORY_ID", "factory", 0, 1, ProgramFactoriesRegistry.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(this.getHashMap());
+		g2 = createEGenericType(theEcorePackage.getEClass());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(this.getProgramFactory());
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getProgramFactoriesRegistry_ProgramFactoriesMap(), g1, "programFactoriesMap", null, 0, 1, ProgramFactoriesRegistry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getProgramFactoriesRegistry__GetFactory__EClass(), this.getProgramFactory(), "getFactory", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEClass(), "eClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(operationCallsListEClass, OperationCallsList.class, "OperationCallsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(operationCallsListFactoryEClass, OperationCallsListFactory.class, "OperationCallsListFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(variableFeatureReferenceEClass, VariableFeatureReference.class, "VariableFeatureReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableFeatureReference_Variable(), this.getVariable(), null, "variable", null, 1, 1, VariableFeatureReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3982,6 +4210,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEDataType(typeMemberImplementationsEListEDataType, EList.class, "TypeMemberImplementationsEList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "org.eclipse.emf.common.util.EList<ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation>");
 		initEDataType(typeMembersArrayEDataType, TypeMember[].class, "TypeMembersArray", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(iVariableListenerEDataType, IVariableListener.class, "IVariableListener", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(hashMapEDataType, HashMap.class, "HashMap", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

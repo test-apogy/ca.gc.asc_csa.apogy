@@ -98,7 +98,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected OperationCallImpl()
+  public OperationCallImpl()
   {
 		super();
 	}

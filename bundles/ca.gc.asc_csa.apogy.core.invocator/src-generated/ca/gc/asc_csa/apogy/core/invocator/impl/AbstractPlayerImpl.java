@@ -88,7 +88,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AbstractPlayerImpl()
+  public AbstractPlayerImpl()
   {
 		super();
 	}

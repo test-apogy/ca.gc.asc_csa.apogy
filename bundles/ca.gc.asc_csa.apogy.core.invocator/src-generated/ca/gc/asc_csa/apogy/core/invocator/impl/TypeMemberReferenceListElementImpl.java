@@ -91,7 +91,7 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected TypeMemberReferenceListElementImpl()
+  public TypeMemberReferenceListElementImpl()
   {
 		super();
 	}

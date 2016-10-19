@@ -335,6 +335,33 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreInvocatorPackage.PROGRAM_SETTINGS: {
+				ProgramSettings programSettings = (ProgramSettings)theEObject;
+				T result = caseProgramSettings(programSettings);
+				if (result == null) result = caseNamed(programSettings);
+				if (result == null) result = caseDescribed(programSettings);
+				if (result == null) result = caseArchivable(programSettings);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.SPECIFIC_PROGRAM_SETTINGS: {
+				SpecificProgramSettings specificProgramSettings = (SpecificProgramSettings)theEObject;
+				T result = caseSpecificProgramSettings(specificProgramSettings);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.PROGRAM_FACTORY: {
+				ProgramFactory programFactory = (ProgramFactory)theEObject;
+				T result = caseProgramFactory(programFactory);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.PROGRAM_FACTORIES_REGISTRY: {
+				ProgramFactoriesRegistry programFactoriesRegistry = (ProgramFactoriesRegistry)theEObject;
+				T result = caseProgramFactoriesRegistry(programFactoriesRegistry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST: {
 				OperationCallsList operationCallsList = (OperationCallsList)theEObject;
 				T result = caseOperationCallsList(operationCallsList);
@@ -344,6 +371,13 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = caseNamed(operationCallsList);
 				if (result == null) result = caseDescribed(operationCallsList);
 				if (result == null) result = caseArchivable(operationCallsList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST_FACTORY: {
+				OperationCallsListFactory operationCallsListFactory = (OperationCallsListFactory)theEObject;
+				T result = caseOperationCallsListFactory(operationCallsListFactory);
+				if (result == null) result = caseProgramFactory(operationCallsListFactory);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1132,6 +1166,66 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Program Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Program Settings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProgramSettings(ProgramSettings object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Specific Program Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Specific Program Settings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSpecificProgramSettings(SpecificProgramSettings object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Program Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Program Factory</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProgramFactory(ProgramFactory object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Program Factories Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Program Factories Registry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProgramFactoriesRegistry(ProgramFactoriesRegistry object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Operation Calls List</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1148,6 +1242,21 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Operation Calls List Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operation Calls List Factory</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperationCallsListFactory(OperationCallsListFactory object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Variable Feature Reference</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

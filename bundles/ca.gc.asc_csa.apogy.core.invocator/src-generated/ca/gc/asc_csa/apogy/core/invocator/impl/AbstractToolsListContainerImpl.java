@@ -44,7 +44,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AbstractToolsListContainerImpl()
+  public AbstractToolsListContainerImpl()
   {
 		super();
 	}

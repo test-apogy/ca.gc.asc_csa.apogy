@@ -56,7 +56,7 @@ public class OperationCallsListImpl extends ScriptBasedProgramImpl implements Op
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected OperationCallsListImpl()
+  public OperationCallsListImpl()
   {
 		super();
 	}

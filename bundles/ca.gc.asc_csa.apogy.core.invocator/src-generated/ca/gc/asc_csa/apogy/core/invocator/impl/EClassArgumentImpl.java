@@ -52,7 +52,7 @@ public class EClassArgumentImpl extends ArgumentImpl implements EClassArgument
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EClassArgumentImpl()
+  public EClassArgumentImpl()
   {
 		super();
 	}

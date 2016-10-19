@@ -53,7 +53,7 @@ public abstract class ArgumentImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ArgumentImpl()
+  public ArgumentImpl()
   {
 		super();
 	}

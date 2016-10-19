@@ -87,7 +87,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AbstractChannelImpl() {
+	public AbstractChannelImpl() {
 		super();
 	}
 

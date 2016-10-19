@@ -56,7 +56,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ValuesListImpl()
+  public ValuesListImpl()
   {
 		super();
 	}

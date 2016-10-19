@@ -34,6 +34,7 @@
            name="SessionProvider"
            schema="schema/sessionProvider.exsd">
    </extension-point>
+   <extension-point id="programFactoryProvider" name="ProgramFactoryProvider" schema="schema/programFactoryProvider.exsd"/>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
@@ -42,11 +43,12 @@
             genModel="model/apogy_core_invocator.xcore"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <!-- @generated eclipse_emf_ecore_invocator -->
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
       <parser
-            type="sym"
-            class="ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorResourceFactoryImpl"/>
+            class="ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorResourceFactoryImpl"
+            type="sym">
+      </parser>
    </extension>
 
    <extension
@@ -55,5 +57,12 @@
    			invocatorDelegateClass="ca.gc.asc_csa.apogy.core.invocator.delegates.DefaultInvocatorDelegate">
    		</element>
    	</extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.core.invocator.programFactoryProvider">
+      <ProgramFactory
+            factory="ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallsListFactoryImpl"
+            programEClass="ca.gc.asc_csa.apogy.core.invocator.OperationCallsList">
+      </ProgramFactory>
+   </extension>
    
 </plugin>

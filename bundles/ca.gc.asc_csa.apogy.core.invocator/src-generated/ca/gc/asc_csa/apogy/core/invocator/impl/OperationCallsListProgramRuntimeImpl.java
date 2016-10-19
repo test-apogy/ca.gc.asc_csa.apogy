@@ -32,7 +32,7 @@ public class OperationCallsListProgramRuntimeImpl extends AbstractProgramRuntime
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OperationCallsListProgramRuntimeImpl() {
+	public OperationCallsListProgramRuntimeImpl() {
 		super();
 	}
 

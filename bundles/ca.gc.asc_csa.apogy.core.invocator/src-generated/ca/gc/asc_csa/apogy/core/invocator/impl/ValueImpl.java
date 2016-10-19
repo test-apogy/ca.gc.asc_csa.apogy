@@ -74,7 +74,7 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ValueImpl()
+  public ValueImpl()
   {
 		super();
 	}

@@ -88,7 +88,7 @@ public abstract class AbstractRecorderImpl extends MinimalEObjectImpl.Container 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AbstractRecorderImpl()
+  public AbstractRecorderImpl()
   {
 		super();
 	}

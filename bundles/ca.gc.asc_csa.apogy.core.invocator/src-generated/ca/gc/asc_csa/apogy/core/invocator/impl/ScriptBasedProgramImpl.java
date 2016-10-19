@@ -31,7 +31,7 @@ public abstract class ScriptBasedProgramImpl extends ProgramImpl implements Scri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ScriptBasedProgramImpl() {
+	public ScriptBasedProgramImpl() {
 		super();
 	}
 

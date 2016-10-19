@@ -33,7 +33,7 @@ public class BooleanEDataTypeArgumentImpl extends EDataTypeArgumentImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BooleanEDataTypeArgumentImpl() {
+	public BooleanEDataTypeArgumentImpl() {
 		super();
 	}
 

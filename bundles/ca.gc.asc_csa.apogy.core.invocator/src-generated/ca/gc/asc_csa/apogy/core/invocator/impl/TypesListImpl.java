@@ -65,7 +65,7 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected TypesListImpl()
+  public TypesListImpl()
   {
 		super();
 	}

@@ -145,7 +145,7 @@ public class InvocatorSessionImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected InvocatorSessionImpl()
+  public InvocatorSessionImpl()
   {
 		super();
 	}

@@ -98,7 +98,7 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected VariableFeatureReferenceImpl()
+  public VariableFeatureReferenceImpl()
   {
 		super();
 	}

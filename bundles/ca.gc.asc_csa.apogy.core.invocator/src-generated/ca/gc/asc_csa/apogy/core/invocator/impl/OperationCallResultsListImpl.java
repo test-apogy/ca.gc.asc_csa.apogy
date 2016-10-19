@@ -105,7 +105,7 @@ public class OperationCallResultsListImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected OperationCallResultsListImpl()
+  public OperationCallResultsListImpl()
   {
 		super();
 	}

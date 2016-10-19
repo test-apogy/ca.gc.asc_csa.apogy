@@ -105,7 +105,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected RecordingResultsListImpl()
+  public RecordingResultsListImpl()
   {
 		super();
 	}

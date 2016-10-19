@@ -52,7 +52,7 @@ public class AttributeResultValueImpl extends AbstractResultValueImpl implements
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AttributeResultValueImpl()
+  public AttributeResultValueImpl()
   {
 		super();
 	}

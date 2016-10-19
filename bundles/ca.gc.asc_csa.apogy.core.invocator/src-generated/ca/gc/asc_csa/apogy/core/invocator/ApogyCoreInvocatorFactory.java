@@ -277,6 +277,24 @@ public interface ApogyCoreInvocatorFactory extends EFactory
 	ProgramsGroup createProgramsGroup();
 
 		/**
+	 * Returns a new object of class '<em>Program Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Program Settings</em>'.
+	 * @generated
+	 */
+	ProgramSettings createProgramSettings();
+
+		/**
+	 * Returns a new object of class '<em>Program Factories Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Program Factories Registry</em>'.
+	 * @generated
+	 */
+	ProgramFactoriesRegistry createProgramFactoriesRegistry();
+
+		/**
 	 * Returns a new object of class '<em>Operation Calls List</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -286,6 +304,15 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   OperationCallsList createOperationCallsList();
 
   /**
+	 * Returns a new object of class '<em>Operation Calls List Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Operation Calls List Factory</em>'.
+	 * @generated
+	 */
+	OperationCallsListFactory createOperationCallsListFactory();
+
+		/**
 	 * Returns a new object of class '<em>Variable Feature Reference</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

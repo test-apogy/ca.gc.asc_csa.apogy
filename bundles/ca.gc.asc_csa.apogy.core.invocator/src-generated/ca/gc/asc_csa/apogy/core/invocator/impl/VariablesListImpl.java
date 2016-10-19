@@ -61,7 +61,7 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected VariablesListImpl()
+  public VariablesListImpl()
   {
 		super();
 	}

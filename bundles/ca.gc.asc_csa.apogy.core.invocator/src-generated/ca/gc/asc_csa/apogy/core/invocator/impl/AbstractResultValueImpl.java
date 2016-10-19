@@ -44,7 +44,7 @@ public abstract class AbstractResultValueImpl extends MinimalEObjectImpl.Contain
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AbstractResultValueImpl()
+  public AbstractResultValueImpl()
   {
 		super();
 	}

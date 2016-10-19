@@ -104,7 +104,7 @@ public class ChannelsListImpl extends MinimalEObjectImpl.Container implements Ch
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChannelsListImpl() {
+	public ChannelsListImpl() {
 		super();
 	}
 

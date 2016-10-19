@@ -101,7 +101,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected TypeImpl()
+  public TypeImpl()
   {
 		super();
 	}

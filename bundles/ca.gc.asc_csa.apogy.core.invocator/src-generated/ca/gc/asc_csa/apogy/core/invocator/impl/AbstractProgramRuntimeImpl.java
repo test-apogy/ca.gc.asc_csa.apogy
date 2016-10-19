@@ -125,7 +125,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AbstractProgramRuntimeImpl() {
+	public AbstractProgramRuntimeImpl() {
 		super();
 	}
 

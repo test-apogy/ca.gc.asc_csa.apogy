@@ -82,7 +82,7 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected VariableImpl()
+  public VariableImpl()
   {
 		super();
 	}

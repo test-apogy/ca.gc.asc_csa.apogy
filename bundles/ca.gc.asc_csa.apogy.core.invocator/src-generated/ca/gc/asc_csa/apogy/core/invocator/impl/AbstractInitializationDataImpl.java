@@ -32,7 +32,7 @@ public abstract class AbstractInitializationDataImpl extends MinimalEObjectImpl.
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AbstractInitializationDataImpl()
+  public AbstractInitializationDataImpl()
   {
 		super();
 	}

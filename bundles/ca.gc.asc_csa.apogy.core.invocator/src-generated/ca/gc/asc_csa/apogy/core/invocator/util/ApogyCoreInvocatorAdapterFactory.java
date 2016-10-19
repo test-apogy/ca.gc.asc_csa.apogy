@@ -228,8 +228,28 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 				return createOperationCallContainerAdapter();
 			}
 			@Override
+			public Adapter caseProgramSettings(ProgramSettings object) {
+				return createProgramSettingsAdapter();
+			}
+			@Override
+			public Adapter caseSpecificProgramSettings(SpecificProgramSettings object) {
+				return createSpecificProgramSettingsAdapter();
+			}
+			@Override
+			public Adapter caseProgramFactory(ProgramFactory object) {
+				return createProgramFactoryAdapter();
+			}
+			@Override
+			public Adapter caseProgramFactoriesRegistry(ProgramFactoriesRegistry object) {
+				return createProgramFactoriesRegistryAdapter();
+			}
+			@Override
 			public Adapter caseOperationCallsList(OperationCallsList object) {
 				return createOperationCallsListAdapter();
+			}
+			@Override
+			public Adapter caseOperationCallsListFactory(OperationCallsListFactory object) {
+				return createOperationCallsListFactoryAdapter();
 			}
 			@Override
 			public Adapter caseVariableFeatureReference(VariableFeatureReference object) {
@@ -922,6 +942,62 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramSettings <em>Program Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramSettings
+	 * @generated
+	 */
+	public Adapter createProgramSettingsAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.SpecificProgramSettings <em>Specific Program Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.SpecificProgramSettings
+	 * @generated
+	 */
+	public Adapter createSpecificProgramSettingsAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramFactory <em>Program Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramFactory
+	 * @generated
+	 */
+	public Adapter createProgramFactoryAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry <em>Program Factories Registry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry
+	 * @generated
+	 */
+	public Adapter createProgramFactoriesRegistryAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsList <em>Operation Calls List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -937,6 +1013,20 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsListFactory <em>Operation Calls List Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallsListFactory
+	 * @generated
+	 */
+	public Adapter createOperationCallsListFactoryAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference <em>Variable Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;

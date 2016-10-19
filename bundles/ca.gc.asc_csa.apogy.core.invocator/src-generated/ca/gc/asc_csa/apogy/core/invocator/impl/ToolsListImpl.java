@@ -105,7 +105,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ToolsListImpl()
+  public ToolsListImpl()
   {
 		super();
 	}

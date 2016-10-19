@@ -63,7 +63,7 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EEnumArgumentImpl()
+  public EEnumArgumentImpl()
   {
 		super();
 	}

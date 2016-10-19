@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ca.gc.asc_csa.apogy.core.invocator.*;
+import java.util.HashMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,7 +99,10 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.VALUE: return createValue();
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST: return createProgramsList();
 			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP: return createProgramsGroup();
+			case ApogyCoreInvocatorPackage.PROGRAM_SETTINGS: return createProgramSettings();
+			case ApogyCoreInvocatorPackage.PROGRAM_FACTORIES_REGISTRY: return createProgramFactoriesRegistry();
 			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST: return createOperationCallsList();
+			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST_FACTORY: return createOperationCallsListFactory();
 			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE: return createVariableFeatureReference();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL: return createOperationCall();
 			case ApogyCoreInvocatorPackage.ARGUMENTS_LIST: return createArgumentsList();
@@ -147,6 +151,8 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 				return createTypeMembersArrayFromString(eDataType, initialValue);
 			case ApogyCoreInvocatorPackage.IVARIABLE_LISTENER:
 				return createIVariableListenerFromString(eDataType, initialValue);
+			case ApogyCoreInvocatorPackage.HASH_MAP:
+				return createHashMapFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -175,6 +181,8 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 				return convertTypeMembersArrayToString(eDataType, instanceValue);
 			case ApogyCoreInvocatorPackage.IVARIABLE_LISTENER:
 				return convertIVariableListenerToString(eDataType, instanceValue);
+			case ApogyCoreInvocatorPackage.HASH_MAP:
+				return convertHashMapToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -476,6 +484,26 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProgramSettings createProgramSettings() {
+		ProgramSettingsImpl programSettings = new ProgramSettingsImpl();
+		return programSettings;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProgramFactoriesRegistry createProgramFactoriesRegistry() {
+		ProgramFactoriesRegistryImpl programFactoriesRegistry = new ProgramFactoriesRegistryImpl();
+		return programFactoriesRegistry;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -486,6 +514,16 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperationCallsListFactory createOperationCallsListFactory() {
+		OperationCallsListFactoryImpl operationCallsListFactory = new OperationCallsListFactoryImpl();
+		return operationCallsListFactory;
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -832,6 +870,24 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 	 */
 	public String convertIVariableListenerToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HashMap<?, ?> createHashMapFromString(EDataType eDataType, String initialValue) {
+		return (HashMap<?, ?>)super.createFromString(initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertHashMapToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
 	}
 
 		/**

@@ -96,7 +96,7 @@ public class TypeMemberReferenceTreeElementImpl extends TypeMemberReferenceImpl 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected TypeMemberReferenceTreeElementImpl()
+  public TypeMemberReferenceTreeElementImpl()
   {
 		super();
 	}

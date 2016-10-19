@@ -60,7 +60,7 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ProgramsListImpl()
+  public ProgramsListImpl()
   {
 		super();
 	}

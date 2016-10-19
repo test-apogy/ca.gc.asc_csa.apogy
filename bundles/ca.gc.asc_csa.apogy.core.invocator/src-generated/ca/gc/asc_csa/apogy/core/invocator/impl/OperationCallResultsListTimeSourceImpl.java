@@ -56,7 +56,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OperationCallResultsListTimeSourceImpl() {
+	public OperationCallResultsListTimeSourceImpl() {
 		super();
 	}
 

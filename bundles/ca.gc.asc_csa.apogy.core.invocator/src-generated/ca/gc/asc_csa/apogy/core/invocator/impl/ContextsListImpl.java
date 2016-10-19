@@ -61,7 +61,7 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ContextsListImpl()
+  public ContextsListImpl()
   {
 		super();
 	}

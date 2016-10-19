@@ -56,7 +56,7 @@ public class LocalTypesListImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected LocalTypesListImpl()
+  public LocalTypesListImpl()
   {
 		super();
 	}

@@ -86,7 +86,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TypeApiAdapterImpl() {
+	public TypeApiAdapterImpl() {
 		super();
 	}
 

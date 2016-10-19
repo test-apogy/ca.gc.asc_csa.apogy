@@ -31,7 +31,7 @@ public abstract class TriggeredBasedProgramImpl extends ProgramImpl implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TriggeredBasedProgramImpl() {
+	public TriggeredBasedProgramImpl() {
 		super();
 	}
 

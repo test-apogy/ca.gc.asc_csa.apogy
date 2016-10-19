@@ -71,7 +71,7 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected OperationCallResultImpl()
+  public OperationCallResultImpl()
   {
 		super();
 	}

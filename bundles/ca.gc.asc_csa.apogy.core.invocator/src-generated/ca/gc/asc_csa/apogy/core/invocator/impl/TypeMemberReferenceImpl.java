@@ -52,7 +52,7 @@ public class TypeMemberReferenceImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected TypeMemberReferenceImpl()
+  public TypeMemberReferenceImpl()
   {
 		super();
 	}

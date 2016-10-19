@@ -742,6 +742,52 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
 		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ProgramSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProgramSettingsItemProvider programSettingsItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ProgramSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProgramSettingsAdapter() {
+		if (programSettingsItemProvider == null) {
+			programSettingsItemProvider = new ProgramSettingsItemProvider(this);
+		}
+
+		return programSettingsItemProvider;
+	}
+
+		/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProgramFactoriesRegistryItemProvider programFactoriesRegistryItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProgramFactoriesRegistryAdapter() {
+		if (programFactoriesRegistryItemProvider == null) {
+			programFactoriesRegistryItemProvider = new ProgramFactoriesRegistryItemProvider(this);
+		}
+
+		return programFactoriesRegistryItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -766,6 +812,29 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsListFactory} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OperationCallsListFactoryItemProvider operationCallsListFactoryItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsListFactory}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOperationCallsListFactoryAdapter() {
+		if (operationCallsListFactoryItemProvider == null) {
+			operationCallsListFactoryItemProvider = new OperationCallsListFactoryItemProvider(this);
+		}
+
+		return operationCallsListFactoryItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1402,7 +1471,10 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (valueItemProvider != null) valueItemProvider.dispose();
 		if (programsListItemProvider != null) programsListItemProvider.dispose();
 		if (programsGroupItemProvider != null) programsGroupItemProvider.dispose();
+		if (programSettingsItemProvider != null) programSettingsItemProvider.dispose();
+		if (programFactoriesRegistryItemProvider != null) programFactoriesRegistryItemProvider.dispose();
 		if (operationCallsListItemProvider != null) operationCallsListItemProvider.dispose();
+		if (operationCallsListFactoryItemProvider != null) operationCallsListFactoryItemProvider.dispose();
 		if (variableFeatureReferenceItemProvider != null) variableFeatureReferenceItemProvider.dispose();
 		if (operationCallItemProvider != null) operationCallItemProvider.dispose();
 		if (argumentsListItemProvider != null) argumentsListItemProvider.dispose();
