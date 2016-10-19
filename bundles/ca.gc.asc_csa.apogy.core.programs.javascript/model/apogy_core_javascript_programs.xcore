@@ -15,7 +15,7 @@
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2016 Copyrights (c)",
 		  modelName="ApogyCoreJavaScriptPrograms",
-		  suppressGenModelAnnotations="false")
+		  suppressGenModelAnnotations="false", publicConstructors="true")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.programs.javascript/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.programs.javascript.edit/src-generated")
 
@@ -23,6 +23,7 @@ package ca.gc.asc_csa.apogy.core.programs.javascript
 
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer
 import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram
+import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory
 
 /*
  * A JavaScriptProgram is an entity that invokes Operation Calls on Variables through a JavaScript program file.
@@ -31,3 +32,7 @@ class JavaScriptProgram extends ScriptBasedProgram, OperationCallContainer
 {
 	String scriptPath
 }
+
+class JavaScriptProgramFactory extends ProgramFactory
+{	
+} 

@@ -122,6 +122,29 @@ public class ApogyCoreJavaScriptProgramsItemProviderAdapterFactory extends Apogy
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgramFactory} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected JavaScriptProgramFactoryItemProvider javaScriptProgramFactoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgramFactory}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createJavaScriptProgramFactoryAdapter() {
+		if (javaScriptProgramFactoryItemProvider == null) {
+			javaScriptProgramFactoryItemProvider = new JavaScriptProgramFactoryItemProvider(this);
+		}
+
+		return javaScriptProgramFactoryItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -248,6 +271,7 @@ public class ApogyCoreJavaScriptProgramsItemProviderAdapterFactory extends Apogy
 	 */
 	public void dispose() {
 		if (javaScriptProgramItemProvider != null) javaScriptProgramItemProvider.dispose();
+		if (javaScriptProgramFactoryItemProvider != null) javaScriptProgramFactoryItemProvider.dispose();
 	}
 
 	/**

@@ -58,6 +58,7 @@ public class ApogyCoreJavaScriptProgramsFactoryImpl extends EFactoryImpl impleme
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyCoreJavaScriptProgramsPackage.JAVA_SCRIPT_PROGRAM: return createJavaScriptProgram();
+			case ApogyCoreJavaScriptProgramsPackage.JAVA_SCRIPT_PROGRAM_FACTORY: return createJavaScriptProgramFactory();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,6 +72,16 @@ public class ApogyCoreJavaScriptProgramsFactoryImpl extends EFactoryImpl impleme
 	public JavaScriptProgram createJavaScriptProgram() {
 		JavaScriptProgramImpl javaScriptProgram = new JavaScriptProgramImpl();
 		return javaScriptProgram;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JavaScriptProgramFactory createJavaScriptProgramFactory() {
+		JavaScriptProgramFactoryImpl javaScriptProgramFactory = new JavaScriptProgramFactoryImpl();
+		return javaScriptProgramFactory;
 	}
 
 	/**

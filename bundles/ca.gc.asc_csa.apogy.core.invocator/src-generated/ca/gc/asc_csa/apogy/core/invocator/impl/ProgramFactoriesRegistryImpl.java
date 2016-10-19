@@ -23,10 +23,14 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation.Internal.InvocationDelegate;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import ca.gc.asc_csa.apogy.common.emf.Activator;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
@@ -192,7 +196,23 @@ public class ProgramFactoriesRegistryImpl extends MinimalEObjectImpl.Container i
 			IConfigurationElement[] contributors = extensionPoint
 					.getConfigurationElements();
 
-			if (contributors.length > 0){
+			for (int i = 0; i < contributors.length; i++) {
+				IConfigurationElement contributor = contributors[i];
+				try {
+					String eClassStr = contributor.getAttribute(getPROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_ECLASS_ID());
+					EClass eClass = ApogyCommonEMFFacade.INSTANCE.getEClass(eClassStr);
+					ProgramFactory programFactory = (ProgramFactory) contributor
+							.createExecutableExtension(getPROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_FACTORY_ID());
+					map.put(eClass, programFactory);
+				} catch (Exception e) {
+					e.printStackTrace();
+					Logger.INSTANCE.log(Activator.ID, this,
+							"Failed to load contributed ProgramFactory from <" + contributor.getClass().getName() + ">",
+							EventSeverity.ERROR, e);
+				}
+			}
+
+			/*if (contributors.length > 0){
 				IConfigurationElement contributor = contributors[0];
 				
 				String eClassStr = contributor.getAttribute(getPROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_ECLASS_ID());				
@@ -204,7 +224,7 @@ public class ProgramFactoriesRegistryImpl extends MinimalEObjectImpl.Container i
 				} catch (CoreException e) {
 					e.printStackTrace();
 				}								
-			}
+			}*/
 			
 			System.out.println("ProgramFactoriesRegistryImpl.getProgramFactoriesMap() size = " + map.size());
 			

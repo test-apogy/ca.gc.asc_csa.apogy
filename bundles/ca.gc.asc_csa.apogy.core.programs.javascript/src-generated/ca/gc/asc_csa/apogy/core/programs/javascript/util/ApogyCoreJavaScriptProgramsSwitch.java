@@ -10,6 +10,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 
+import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 import ca.gc.asc_csa.apogy.core.programs.javascript.*;
 
@@ -87,6 +88,13 @@ public class ApogyCoreJavaScriptProgramsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreJavaScriptProgramsPackage.JAVA_SCRIPT_PROGRAM_FACTORY: {
+				JavaScriptProgramFactory javaScriptProgramFactory = (JavaScriptProgramFactory)theEObject;
+				T result = caseJavaScriptProgramFactory(javaScriptProgramFactory);
+				if (result == null) result = caseProgramFactory(javaScriptProgramFactory);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -103,6 +111,21 @@ public class ApogyCoreJavaScriptProgramsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseJavaScriptProgram(JavaScriptProgram object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Java Script Program Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Java Script Program Factory</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJavaScriptProgramFactory(JavaScriptProgramFactory object) {
 		return null;
 	}
 
@@ -193,6 +216,21 @@ public class ApogyCoreJavaScriptProgramsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOperationCallContainer(OperationCallContainer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Program Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Program Factory</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProgramFactory(ProgramFactory object) {
 		return null;
 	}
 

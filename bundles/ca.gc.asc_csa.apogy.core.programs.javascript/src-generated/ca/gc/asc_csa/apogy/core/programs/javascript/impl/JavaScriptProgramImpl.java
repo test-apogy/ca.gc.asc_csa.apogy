@@ -72,7 +72,7 @@ public class JavaScriptProgramImpl extends ScriptBasedProgramImpl implements Jav
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected JavaScriptProgramImpl() {
+	public JavaScriptProgramImpl() {
 		super();
 	}
 

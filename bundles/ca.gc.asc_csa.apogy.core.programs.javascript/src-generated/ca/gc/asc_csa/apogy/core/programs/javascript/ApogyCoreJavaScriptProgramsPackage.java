@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.core.programs.javascript.ApogyCoreJavaScriptProgramsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreJavaScriptPrograms' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2016 Copyrights (c)' modelName='ApogyCoreJavaScriptPrograms' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.core.programs.javascript/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.programs.javascript.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core.programs'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreJavaScriptPrograms' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2016 Copyrights (c)' modelName='ApogyCoreJavaScriptPrograms' suppressGenModelAnnotations='false' publicConstructors='true' modelDirectory='/ca.gc.asc_csa.apogy.core.programs.javascript/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.programs.javascript.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core.programs'"
  * @generated
  */
 public interface ApogyCoreJavaScriptProgramsPackage extends EPackage {
@@ -172,6 +172,53 @@ public interface ApogyCoreJavaScriptProgramsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.javascript.impl.JavaScriptProgramFactoryImpl <em>Java Script Program Factory</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.programs.javascript.impl.JavaScriptProgramFactoryImpl
+	 * @see ca.gc.asc_csa.apogy.core.programs.javascript.impl.ApogyCoreJavaScriptProgramsPackageImpl#getJavaScriptProgramFactory()
+	 * @generated
+	 */
+	int JAVA_SCRIPT_PROGRAM_FACTORY = 1;
+
+	/**
+	 * The number of structural features of the '<em>Java Script Program Factory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SCRIPT_PROGRAM_FACTORY_FEATURE_COUNT = ApogyCoreInvocatorPackage.PROGRAM_FACTORY_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Create Program</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SCRIPT_PROGRAM_FACTORY___CREATE_PROGRAM = ApogyCoreInvocatorPackage.PROGRAM_FACTORY___CREATE_PROGRAM;
+
+	/**
+	 * The operation id for the '<em>Apply Settings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SCRIPT_PROGRAM_FACTORY___APPLY_SETTINGS__PROGRAM_PROGRAMSETTINGS = ApogyCoreInvocatorPackage.PROGRAM_FACTORY___APPLY_SETTINGS__PROGRAM_PROGRAMSETTINGS;
+
+	/**
+	 * The number of operations of the '<em>Java Script Program Factory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SCRIPT_PROGRAM_FACTORY_OPERATION_COUNT = ApogyCoreInvocatorPackage.PROGRAM_FACTORY_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram <em>Java Script Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -191,6 +238,16 @@ public interface ApogyCoreJavaScriptProgramsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getJavaScriptProgram_ScriptPath();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgramFactory <em>Java Script Program Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Java Script Program Factory</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgramFactory
+	 * @generated
+	 */
+	EClass getJavaScriptProgramFactory();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -232,6 +289,16 @@ public interface ApogyCoreJavaScriptProgramsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute JAVA_SCRIPT_PROGRAM__SCRIPT_PATH = eINSTANCE.getJavaScriptProgram_ScriptPath();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.javascript.impl.JavaScriptProgramFactoryImpl <em>Java Script Program Factory</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.programs.javascript.impl.JavaScriptProgramFactoryImpl
+		 * @see ca.gc.asc_csa.apogy.core.programs.javascript.impl.ApogyCoreJavaScriptProgramsPackageImpl#getJavaScriptProgramFactory()
+		 * @generated
+		 */
+		EClass JAVA_SCRIPT_PROGRAM_FACTORY = eINSTANCE.getJavaScriptProgramFactory();
 
 	}
 

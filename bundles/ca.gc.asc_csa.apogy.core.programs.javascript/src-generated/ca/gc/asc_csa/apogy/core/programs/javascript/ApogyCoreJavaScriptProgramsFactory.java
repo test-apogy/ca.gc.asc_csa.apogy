@@ -32,6 +32,15 @@ public interface ApogyCoreJavaScriptProgramsFactory extends EFactory {
 	JavaScriptProgram createJavaScriptProgram();
 
 	/**
+	 * Returns a new object of class '<em>Java Script Program Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Java Script Program Factory</em>'.
+	 * @generated
+	 */
+	JavaScriptProgramFactory createJavaScriptProgramFactory();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

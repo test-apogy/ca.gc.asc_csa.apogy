@@ -10,6 +10,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 
+import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 import ca.gc.asc_csa.apogy.core.programs.javascript.*;
 
@@ -81,6 +82,10 @@ public class ApogyCoreJavaScriptProgramsAdapterFactory extends AdapterFactoryImp
 				return createJavaScriptProgramAdapter();
 			}
 			@Override
+			public Adapter caseJavaScriptProgramFactory(JavaScriptProgramFactory object) {
+				return createJavaScriptProgramFactoryAdapter();
+			}
+			@Override
 			public Adapter caseNamed(Named object) {
 				return createNamedAdapter();
 			}
@@ -103,6 +108,10 @@ public class ApogyCoreJavaScriptProgramsAdapterFactory extends AdapterFactoryImp
 			@Override
 			public Adapter caseOperationCallContainer(OperationCallContainer object) {
 				return createOperationCallContainerAdapter();
+			}
+			@Override
+			public Adapter caseProgramFactory(ProgramFactory object) {
+				return createProgramFactoryAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -135,6 +144,20 @@ public class ApogyCoreJavaScriptProgramsAdapterFactory extends AdapterFactoryImp
 	 * @generated
 	 */
 	public Adapter createJavaScriptProgramAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgramFactory <em>Java Script Program Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgramFactory
+	 * @generated
+	 */
+	public Adapter createJavaScriptProgramFactoryAdapter() {
 		return null;
 	}
 
@@ -219,6 +242,20 @@ public class ApogyCoreJavaScriptProgramsAdapterFactory extends AdapterFactoryImp
 	 * @generated
 	 */
 	public Adapter createOperationCallContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramFactory <em>Program Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramFactory
+	 * @generated
+	 */
+	public Adapter createProgramFactoryAdapter() {
 		return null;
 	}
 

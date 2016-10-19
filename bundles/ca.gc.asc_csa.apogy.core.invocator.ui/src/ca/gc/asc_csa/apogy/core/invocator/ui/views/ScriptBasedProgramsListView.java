@@ -15,6 +15,9 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.views;
  **/
 
 
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
@@ -25,11 +28,15 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsDefinitionComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ScriptBasedProgramsListComposite;
 
 public class ScriptBasedProgramsListView extends AbstractView implements IEditingDomainProvider
 {
 	private ScriptBasedProgramsListComposite composite;
+	private Adapter adapter;
 
 	public ScriptBasedProgramsListView() {
 	}
@@ -56,7 +63,13 @@ public class ScriptBasedProgramsListView extends AbstractView implements IEditin
 				getSelectionProvider().setSelection(selection);
 			}
 		};
-		composite.setProgramsList(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList());
+	
+		InvocatorSession activeSession = ApogyCoreInvocatorFacade.INSTANCE
+				.getActiveInvocatorSession();
+		composite.setProgramsList(activeSession == null ? null
+				: activeSession.getProgramsList());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(
+				getApogyCoreInvocatorFacadeAdapter());
 	}
 
 	@Override
@@ -67,4 +80,20 @@ public class ScriptBasedProgramsListView extends AbstractView implements IEditin
 	public EditingDomain getEditingDomain() {
 		return AdapterFactoryEditingDomain.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList());
 	}	
+	
+	private Adapter getApogyCoreInvocatorFacadeAdapter() {
+		if (adapter == null) {
+			adapter = new AdapterImpl() {
+				@Override
+				public void notifyChanged(Notification msg) {
+					if (msg.getFeatureID(ApogyCoreInvocatorFacade.class) == ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
+						InvocatorSession activeSession = ApogyCoreInvocatorFacade.INSTANCE
+								.getActiveInvocatorSession();
+						composite.setProgramsList(activeSession == null ? null : activeSession.getProgramsList());
+					}
+				}
+			};
+		}
+		return adapter;
+	}
 }

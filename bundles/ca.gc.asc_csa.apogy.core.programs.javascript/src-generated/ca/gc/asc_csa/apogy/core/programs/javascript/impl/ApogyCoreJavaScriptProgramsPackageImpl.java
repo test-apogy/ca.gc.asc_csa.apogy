@@ -8,6 +8,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.programs.javascript.ApogyCoreJavaScriptProgramsFactory;
 import ca.gc.asc_csa.apogy.core.programs.javascript.ApogyCoreJavaScriptProgramsPackage;
 import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram;
+import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgramFactory;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -28,6 +29,12 @@ public class ApogyCoreJavaScriptProgramsPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	private EClass javaScriptProgramEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass javaScriptProgramFactoryEClass = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -115,6 +122,15 @@ public class ApogyCoreJavaScriptProgramsPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getJavaScriptProgramFactory() {
+		return javaScriptProgramFactoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCoreJavaScriptProgramsFactory getApogyCoreJavaScriptProgramsFactory() {
 		return (ApogyCoreJavaScriptProgramsFactory)getEFactoryInstance();
 	}
@@ -140,6 +156,8 @@ public class ApogyCoreJavaScriptProgramsPackageImpl extends EPackageImpl impleme
 		// Create classes and their features
 		javaScriptProgramEClass = createEClass(JAVA_SCRIPT_PROGRAM);
 		createEAttribute(javaScriptProgramEClass, JAVA_SCRIPT_PROGRAM__SCRIPT_PATH);
+
+		javaScriptProgramFactoryEClass = createEClass(JAVA_SCRIPT_PROGRAM_FACTORY);
 	}
 
 	/**
@@ -176,10 +194,13 @@ public class ApogyCoreJavaScriptProgramsPackageImpl extends EPackageImpl impleme
 		// Add supertypes to classes
 		javaScriptProgramEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getScriptBasedProgram());
 		javaScriptProgramEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getOperationCallContainer());
+		javaScriptProgramFactoryEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getProgramFactory());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(javaScriptProgramEClass, JavaScriptProgram.class, "JavaScriptProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getJavaScriptProgram_ScriptPath(), theEcorePackage.getEString(), "scriptPath", null, 0, 1, JavaScriptProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(javaScriptProgramFactoryEClass, JavaScriptProgramFactory.class, "JavaScriptProgramFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -209,6 +230,7 @@ public class ApogyCoreJavaScriptProgramsPackageImpl extends EPackageImpl impleme
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2016 Copyrights (c)",
 			 "modelName", "ApogyCoreJavaScriptPrograms",
 			 "suppressGenModelAnnotations", "false",
+			 "publicConstructors", "true",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.programs.javascript/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.core.programs.javascript.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.core.programs"
