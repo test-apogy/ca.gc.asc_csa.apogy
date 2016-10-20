@@ -27,16 +27,16 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
-import ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl;
+import ca.gc.asc_csa.apogy.core.invocator.impl.TriggeredBasedProgramImpl;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Controllers Configuration</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Controllers Configuration</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -47,141 +47,125 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBind
  *
  * @generated
  */
-public class ControllersConfigurationImpl extends ProgramImpl implements ControllersConfiguration
-{
-  /**
-	 * The cached value of the '{@link #getOperationCalls() <em>Operation Calls</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+public class ControllersConfigurationImpl extends TriggeredBasedProgramImpl implements ControllersConfiguration {
+	/**
+	 * The cached value of the '{@link #getOperationCalls()
+	 * <em>Operation Calls</em>}' containment reference list. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getOperationCalls()
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<OperationCall> operationCalls;
+	protected EList<OperationCall> operationCalls;
 
-  /**
+	/**
 	 * The default value of the '{@link #isActive() <em>Active</em>}' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isActive()
 	 * @generated
 	 * @ordered
 	 */
-  protected static final boolean ACTIVE_EDEFAULT = false;
+	protected static final boolean ACTIVE_EDEFAULT = false;
 
-  /**
+	/**
 	 * The cached value of the '{@link #isActive() <em>Active</em>}' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isActive()
 	 * @generated
 	 * @ordered
 	 */
-  protected boolean active = ACTIVE_EDEFAULT;
+	protected boolean active = ACTIVE_EDEFAULT;
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ControllersConfigurationImpl()
-  {
+	protected ControllersConfigurationImpl() {
 		super();
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  protected EClass eStaticClass()
-  {
+	@Override
+	protected EClass eStaticClass() {
 		return ApogyCoreProgramsControllersPackage.Literals.CONTROLLERS_CONFIGURATION;
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<OperationCall> getOperationCalls()
-  {
+	public EList<OperationCall> getOperationCalls() {
 		if (operationCalls == null) {
 			operationCalls = new EObjectContainmentWithInverseEList<OperationCall>(OperationCall.class, this, ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS, ApogyCoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER);
 		}
 		return operationCalls;
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public boolean isActive()
-  {
+	public boolean isActive() {
 		return active;
 	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated_NOT
-   */
-  public void setActive(boolean newActive)
-  {
-	  // De-Activates other ControllersConfiguration is applicable.
-	  if(newActive && eContainer() instanceof ProgramsList)
-	  {
-		  ProgramsList programsList = (ProgramsList) eContainer();
-		  for(Program program : programsList.getPrograms())
-		  {
-			  if(program instanceof ControllersConfiguration)
-			  {				  
-				  ControllersConfiguration cc = (ControllersConfiguration) program;
-				  if(cc != this)
-				  {
-					  cc.setActive(false);
-				  }
-			  }
-		  }
-	  }
-	  	  
-	  // Updates all OperationCallControllerBinding in the list.
-	  for(OperationCall op : getOperationCalls())
-	  {
-		  if(op instanceof OperationCallControllerBinding)
-		  {
-			  OperationCallControllerBinding ocb = (OperationCallControllerBinding) op;
-			  ocb.setActive(newActive);
-		  }
-	  }
-	  
-	  setActiveGen(newActive);
-  }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public void setActive(boolean newActive) {
+		// De-Activates other ControllersConfiguration is applicable.
+		if (newActive && eContainer() instanceof ProgramsList) {
+			ProgramsList programsList = (ProgramsList) eContainer();
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+			// FIXME Move the following code under a Facade.
+			for (ProgramsGroup programsGroup : programsList.getProgramsGroups()) {
+
+				for (Program program : programsGroup.getPrograms()) {
+					if (program instanceof ControllersConfiguration) {
+						ControllersConfiguration cc = (ControllersConfiguration) program;
+						if (cc != this) {
+							cc.setActive(false);
+						}
+					}
+				}
+			}
+		}
+
+		// Updates all OperationCallControllerBinding in the list.
+		for (OperationCall op : getOperationCalls()) {
+			if (op instanceof OperationCallControllerBinding) {
+				OperationCallControllerBinding ocb = (OperationCallControllerBinding) op;
+				ocb.setActive(newActive);
+			}
+		}
+
+		setActiveGen(newActive);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setActiveGen(boolean newActive)
-  {
+	public void setActiveGen(boolean newActive) {
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE, oldActive, active));
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @SuppressWarnings("unchecked")
-  @Override
-  public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperationCalls()).basicAdd(otherEnd, msgs);
@@ -189,14 +173,12 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				return ((InternalEList<?>)getOperationCalls()).basicRemove(otherEnd, msgs);
@@ -204,14 +186,12 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Object eGet(int featureID, boolean resolve, boolean coreType)
-  {
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				return getOperationCalls();
@@ -221,15 +201,13 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @SuppressWarnings("unchecked")
-  @Override
-  public void eSet(int featureID, Object newValue)
-  {
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				getOperationCalls().clear();
@@ -242,14 +220,12 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		super.eSet(featureID, newValue);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public void eUnset(int featureID)
-  {
+	@Override
+	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				getOperationCalls().clear();
@@ -261,14 +237,12 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		super.eUnset(featureID);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public boolean eIsSet(int featureID)
-  {
+	@Override
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				return operationCalls != null && !operationCalls.isEmpty();
@@ -278,14 +252,12 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		return super.eIsSet(featureID);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
-  {
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == OperationCallContainer.class) {
 			switch (derivedFeatureID) {
 				case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS: return ApogyCoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS;
@@ -295,14 +267,12 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
-  {
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == OperationCallContainer.class) {
 			switch (baseFeatureID) {
 				case ApogyCoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS: return ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS;
@@ -312,14 +282,12 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public String toString()
-  {
+	@Override
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
@@ -329,4 +297,4 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		return result.toString();
 	}
 
-} //ControllersConfigurationImpl
+} // ControllersConfigurationImpl

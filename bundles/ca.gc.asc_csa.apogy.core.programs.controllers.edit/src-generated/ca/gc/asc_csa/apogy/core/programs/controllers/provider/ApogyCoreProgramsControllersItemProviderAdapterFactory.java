@@ -40,7 +40,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
@@ -683,15 +683,14 @@ public class ApogyCoreProgramsControllersItemProviderAdapterFactory extends Apog
 			 * @generated
 			 */
 			@Override
-			public Object caseProgramsList(ProgramsList object) {
+			public Object caseProgramsGroup(ProgramsGroup object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS,
+						(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS,
 						 ApogyCoreProgramsControllersFactory.eINSTANCE.createControllersConfiguration()));
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

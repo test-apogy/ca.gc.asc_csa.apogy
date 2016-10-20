@@ -647,16 +647,38 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 					return TelecomNodeStatus.UNREACHABLE;
 				}
 				else {
-					if (((this.getLatency() >= 0) && (this.getLatency() < this.getLatencyWarning()))) {
+					boolean _and = false;
+					double _latency = this.getLatency();
+					boolean _greaterEqualsThan_1 = (_latency >= 0);
+					if (!_greaterEqualsThan_1) {
+						_and = false;
+					} else {
+						double _latency_1 = this.getLatency();
+						double _latencyWarning = this.getLatencyWarning();
+						boolean _lessThan = (_latency_1 < _latencyWarning);
+						_and = _lessThan;
+					}
+					if (_and) {
 						double _packetLoss_1 = this.getPacketLoss();
 						double _packetLossWarning = this.getPacketLossWarning();
-						boolean _lessThan = (_packetLoss_1 < _packetLossWarning);
-						if (_lessThan) {
+						boolean _lessThan_1 = (_packetLoss_1 < _packetLossWarning);
+						if (_lessThan_1) {
 							return TelecomNodeStatus.NORMAL;
 						}
 						else {
-							if (((this.getPacketLoss() >= this.getPacketLossWarning()) && 
-								(this.getPacketLoss() < this.getPacketLossAlarm()))) {
+							boolean _and_1 = false;
+							double _packetLoss_2 = this.getPacketLoss();
+							double _packetLossWarning_1 = this.getPacketLossWarning();
+							boolean _greaterEqualsThan_2 = (_packetLoss_2 >= _packetLossWarning_1);
+							if (!_greaterEqualsThan_2) {
+								_and_1 = false;
+							} else {
+								double _packetLoss_3 = this.getPacketLoss();
+								double _packetLossAlarm = this.getPacketLossAlarm();
+								boolean _lessThan_2 = (_packetLoss_3 < _packetLossAlarm);
+								_and_1 = _lessThan_2;
+							}
+							if (_and_1) {
 								return TelecomNodeStatus.PACKET_LOSS_WARNING;
 							}
 							else {
@@ -665,17 +687,39 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 						}
 					}
 					else {
-						if (((this.getLatency() >= this.getLatencyWarning()) && 
-							(this.getLatency() < this.getLatencyAlarm()))) {
-							double _packetLoss_2 = this.getPacketLoss();
-							double _packetLossWarning_1 = this.getPacketLossWarning();
-							boolean _lessThan_1 = (_packetLoss_2 < _packetLossWarning_1);
-							if (_lessThan_1) {
+						boolean _and_2 = false;
+						double _latency_2 = this.getLatency();
+						double _latencyWarning_1 = this.getLatencyWarning();
+						boolean _greaterEqualsThan_3 = (_latency_2 >= _latencyWarning_1);
+						if (!_greaterEqualsThan_3) {
+							_and_2 = false;
+						} else {
+							double _latency_3 = this.getLatency();
+							double _latencyAlarm = this.getLatencyAlarm();
+							boolean _lessThan_3 = (_latency_3 < _latencyAlarm);
+							_and_2 = _lessThan_3;
+						}
+						if (_and_2) {
+							double _packetLoss_4 = this.getPacketLoss();
+							double _packetLossWarning_2 = this.getPacketLossWarning();
+							boolean _lessThan_4 = (_packetLoss_4 < _packetLossWarning_2);
+							if (_lessThan_4) {
 								return TelecomNodeStatus.LATENCY_WARNING;
 							}
 							else {
-								if (((this.getPacketLoss() >= this.getPacketLossWarning()) && 
-									(this.getPacketLoss() < this.getPacketLossAlarm()))) {
+								boolean _and_3 = false;
+								double _packetLoss_5 = this.getPacketLoss();
+								double _packetLossWarning_3 = this.getPacketLossWarning();
+								boolean _greaterEqualsThan_4 = (_packetLoss_5 >= _packetLossWarning_3);
+								if (!_greaterEqualsThan_4) {
+									_and_3 = false;
+								} else {
+									double _packetLoss_6 = this.getPacketLoss();
+									double _packetLossAlarm_1 = this.getPacketLossAlarm();
+									boolean _lessThan_5 = (_packetLoss_6 < _packetLossAlarm_1);
+									_and_3 = _lessThan_5;
+								}
+								if (_and_3) {
 									return TelecomNodeStatus.BOTH_WARNING;
 								}
 								else {
@@ -684,15 +728,26 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 							}
 						}
 						else {
-							double _packetLoss_3 = this.getPacketLoss();
-							double _packetLossWarning_2 = this.getPacketLossWarning();
-							boolean _lessThan_2 = (_packetLoss_3 < _packetLossWarning_2);
-							if (_lessThan_2) {
+							double _packetLoss_7 = this.getPacketLoss();
+							double _packetLossWarning_4 = this.getPacketLossWarning();
+							boolean _lessThan_6 = (_packetLoss_7 < _packetLossWarning_4);
+							if (_lessThan_6) {
 								return TelecomNodeStatus.LATENCY_ALARM;
 							}
 							else {
-								if (((this.getPacketLoss() >= this.getPacketLossWarning()) && 
-									(this.getPacketLoss() < this.getPacketLossAlarm()))) {
+								boolean _and_4 = false;
+								double _packetLoss_8 = this.getPacketLoss();
+								double _packetLossWarning_5 = this.getPacketLossWarning();
+								boolean _greaterEqualsThan_5 = (_packetLoss_8 >= _packetLossWarning_5);
+								if (!_greaterEqualsThan_5) {
+									_and_4 = false;
+								} else {
+									double _packetLoss_9 = this.getPacketLoss();
+									double _packetLossAlarm_2 = this.getPacketLossAlarm();
+									boolean _lessThan_7 = (_packetLoss_9 < _packetLossAlarm_2);
+									_and_4 = _lessThan_7;
+								}
+								if (_and_4) {
 									return TelecomNodeStatus.BOTH_ALARM;
 								}
 								else {

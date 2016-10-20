@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.invocator.util;
  */
 
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -290,11 +291,41 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreInvocatorPackage.PROGRAMS_GROUP: {
+				ProgramsGroup programsGroup = (ProgramsGroup)theEObject;
+				T result = caseProgramsGroup(programsGroup);
+				if (result == null) result = caseNamed(programsGroup);
+				if (result == null) result = caseDescribed(programsGroup);
+				if (result == null) result = caseArchivable(programsGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreInvocatorPackage.PROGRAM: {
 				Program program = (Program)theEObject;
 				T result = caseProgram(program);
 				if (result == null) result = caseNamed(program);
 				if (result == null) result = caseDescribed(program);
+				if (result == null) result = caseArchivable(program);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.SCRIPT_BASED_PROGRAM: {
+				ScriptBasedProgram scriptBasedProgram = (ScriptBasedProgram)theEObject;
+				T result = caseScriptBasedProgram(scriptBasedProgram);
+				if (result == null) result = caseProgram(scriptBasedProgram);
+				if (result == null) result = caseNamed(scriptBasedProgram);
+				if (result == null) result = caseDescribed(scriptBasedProgram);
+				if (result == null) result = caseArchivable(scriptBasedProgram);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorPackage.TRIGGERED_BASED_PROGRAM: {
+				TriggeredBasedProgram triggeredBasedProgram = (TriggeredBasedProgram)theEObject;
+				T result = caseTriggeredBasedProgram(triggeredBasedProgram);
+				if (result == null) result = caseProgram(triggeredBasedProgram);
+				if (result == null) result = caseNamed(triggeredBasedProgram);
+				if (result == null) result = caseDescribed(triggeredBasedProgram);
+				if (result == null) result = caseArchivable(triggeredBasedProgram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -307,10 +338,12 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST: {
 				OperationCallsList operationCallsList = (OperationCallsList)theEObject;
 				T result = caseOperationCallsList(operationCallsList);
-				if (result == null) result = caseProgram(operationCallsList);
+				if (result == null) result = caseScriptBasedProgram(operationCallsList);
 				if (result == null) result = caseOperationCallContainer(operationCallsList);
+				if (result == null) result = caseProgram(operationCallsList);
 				if (result == null) result = caseNamed(operationCallsList);
 				if (result == null) result = caseDescribed(operationCallsList);
+				if (result == null) result = caseArchivable(operationCallsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1022,6 +1055,21 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Programs Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Programs Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProgramsGroup(ProgramsGroup object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Program</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1038,6 +1086,36 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Script Based Program</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Script Based Program</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseScriptBasedProgram(ScriptBasedProgram object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Triggered Based Program</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Triggered Based Program</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTriggeredBasedProgram(TriggeredBasedProgram object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Operation Call Container</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1550,6 +1628,21 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseDescribed(Described object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Archivable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArchivable(Archivable object) {
 		return null;
 	}
 

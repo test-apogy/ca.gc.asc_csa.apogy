@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -24,6 +25,7 @@ import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.TriggeredBasedProgram;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.programs.controllers.*;
 
@@ -172,8 +174,16 @@ public class ApogyCoreProgramsControllersAdapterFactory extends AdapterFactoryIm
 				return createDescribedAdapter();
 			}
 			@Override
+			public Adapter caseArchivable(Archivable object) {
+				return createArchivableAdapter();
+			}
+			@Override
 			public Adapter caseProgram(Program object) {
 				return createProgramAdapter();
+			}
+			@Override
+			public Adapter caseTriggeredBasedProgram(TriggeredBasedProgram object) {
+				return createTriggeredBasedProgramAdapter();
 			}
 			@Override
 			public Adapter caseOperationCallContainer(OperationCallContainer object) {
@@ -524,6 +534,20 @@ public class ApogyCoreProgramsControllersAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Archivable <em>Archivable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Archivable
+	 * @generated
+	 */
+	public Adapter createArchivableAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.Program <em>Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -534,6 +558,20 @@ public class ApogyCoreProgramsControllersAdapterFactory extends AdapterFactoryIm
 	 * @generated
 	 */
 	public Adapter createProgramAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.TriggeredBasedProgram <em>Triggered Based Program</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TriggeredBasedProgram
+	 * @generated
+	 */
+	public Adapter createTriggeredBasedProgramAdapter() {
 		return null;
 	}
 

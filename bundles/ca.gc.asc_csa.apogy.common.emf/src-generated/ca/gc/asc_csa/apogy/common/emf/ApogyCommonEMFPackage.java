@@ -576,6 +576,43 @@ public interface ApogyCommonEMFPackage extends EPackage
   int DESCRIBED_OPERATION_COUNT = 0;
 
   /**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.Archivable <em>Archivable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.emf.Archivable
+	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getArchivable()
+	 * @generated
+	 */
+	int ARCHIVABLE = 4;
+
+		/**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHIVABLE__ARCHIVED = 0;
+
+		/**
+	 * The number of structural features of the '<em>Archivable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHIVABLE_FEATURE_COUNT = 1;
+
+		/**
+	 * The number of operations of the '<em>Archivable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHIVABLE_OPERATION_COUNT = 0;
+
+		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -583,7 +620,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getTimed()
 	 * @generated
 	 */
-  int TIMED = 4;
+  int TIMED = 5;
 
   /**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -620,7 +657,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getStartable()
 	 * @generated
 	 */
-	int STARTABLE = 6;
+	int STARTABLE = 7;
 
 		/**
 	 * The feature id for the '<em><b>Started</b></em>' attribute.
@@ -657,7 +694,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getServer()
 	 * @generated
 	 */
-	int SERVER = 5;
+	int SERVER = 6;
 
 		/**
 	 * The feature id for the '<em><b>Started</b></em>' attribute.
@@ -703,7 +740,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getDuration()
 	 * @generated
 	 */
-	int DURATION = 7;
+	int DURATION = 8;
 
 		/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -794,7 +831,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getTimeSource()
 	 * @generated
 	 */
-	int TIME_SOURCE = 8;
+	int TIME_SOURCE = 9;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -867,7 +904,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getFixedTimeSource()
 	 * @generated
 	 */
-	int FIXED_TIME_SOURCE = 9;
+	int FIXED_TIME_SOURCE = 10;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -940,7 +977,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getCurrentTimeSource()
 	 * @generated
 	 */
-	int CURRENT_TIME_SOURCE = 10;
+	int CURRENT_TIME_SOURCE = 11;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1049,7 +1086,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getBrowseableTimeSource()
 	 * @generated
 	 */
-	int BROWSEABLE_TIME_SOURCE = 11;
+	int BROWSEABLE_TIME_SOURCE = 12;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1194,7 +1231,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getSelectionBasedTimeSource()
 	 * @generated
 	 */
-	int SELECTION_BASED_TIME_SOURCE = 12;
+	int SELECTION_BASED_TIME_SOURCE = 13;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1276,7 +1313,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getCollectionTimedTimeSource()
 	 * @generated
 	 */
-	int COLLECTION_TIMED_TIME_SOURCE = 13;
+	int COLLECTION_TIMED_TIME_SOURCE = 14;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1484,7 +1521,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getDisposable()
 	 * @generated
 	 */
-  int DISPOSABLE = 14;
+  int DISPOSABLE = 15;
 
   /**
 	 * The number of structural features of the '<em>Disposable</em>' class.
@@ -1521,7 +1558,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getAbstractFeatureNode()
 	 * @generated
 	 */
-  int ABSTRACT_FEATURE_NODE = 16;
+  int ABSTRACT_FEATURE_NODE = 17;
 
   /**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.FeatureNodeAdapterImpl <em>Feature Node Adapter</em>}' class.
@@ -1531,7 +1568,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getFeatureNodeAdapter()
 	 * @generated
 	 */
-  int FEATURE_NODE_ADAPTER = 15;
+  int FEATURE_NODE_ADAPTER = 16;
 
   /**
 	 * The feature id for the '<em><b>Source Object</b></em>' reference.
@@ -1613,7 +1650,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getAbstractFeatureListNode()
 	 * @generated
 	 */
-  int ABSTRACT_FEATURE_LIST_NODE = 17;
+  int ABSTRACT_FEATURE_LIST_NODE = 18;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1659,7 +1696,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getAbstractFeatureTreeNode()
 	 * @generated
 	 */
-  int ABSTRACT_FEATURE_TREE_NODE = 18;
+  int ABSTRACT_FEATURE_TREE_NODE = 19;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1705,7 +1742,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getAbstractRootNode()
 	 * @generated
 	 */
-  int ABSTRACT_ROOT_NODE = 19;
+  int ABSTRACT_ROOT_NODE = 20;
 
   /**
 	 * The feature id for the '<em><b>Source Class</b></em>' reference.
@@ -1742,7 +1779,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getTreeRootNode()
 	 * @generated
 	 */
-  int TREE_ROOT_NODE = 20;
+  int TREE_ROOT_NODE = 21;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1797,7 +1834,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getTreeFeatureNode()
 	 * @generated
 	 */
-  int TREE_FEATURE_NODE = 21;
+  int TREE_FEATURE_NODE = 22;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1870,7 +1907,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getListRootNode()
 	 * @generated
 	 */
-  int LIST_ROOT_NODE = 22;
+  int LIST_ROOT_NODE = 23;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1925,7 +1962,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getListFeatureNode()
 	 * @generated
 	 */
-  int LIST_FEATURE_NODE = 23;
+  int LIST_FEATURE_NODE = 24;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1998,7 +2035,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getAbstractFeatureSpecifier()
 	 * @generated
 	 */
-  int ABSTRACT_FEATURE_SPECIFIER = 24;
+  int ABSTRACT_FEATURE_SPECIFIER = 25;
 
   /**
 	 * The feature id for the '<em><b>Structural Feature</b></em>' reference.
@@ -2053,7 +2090,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getTimeDirection()
 	 * @generated
 	 */
-	int TIME_DIRECTION = 25;
+	int TIME_DIRECTION = 26;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.Ranges <em>Ranges</em>}' enum.
@@ -2063,7 +2100,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getRanges()
 	 * @generated
 	 */
-  int RANGES = 26;
+  int RANGES = 27;
 
   /**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -2073,7 +2110,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getException()
 	 * @generated
 	 */
-  int EXCEPTION = 27;
+  int EXCEPTION = 28;
 
   /**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -2083,7 +2120,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getList()
 	 * @generated
 	 */
-  int LIST = 28;
+  int LIST = 29;
 
   /**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -2093,7 +2130,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getSortedSet()
 	 * @generated
 	 */
-  int SORTED_SET = 29;
+  int SORTED_SET = 30;
 
   /**
 	 * The meta object id for the '<em>EClass Filter</em>' data type.
@@ -2103,7 +2140,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getEClassFilter()
 	 * @generated
 	 */
-  int ECLASS_FILTER = 30;
+  int ECLASS_FILTER = 31;
 
   /**
 	 * The meta object id for the '<em>Number</em>' data type.
@@ -2113,7 +2150,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getNumber()
 	 * @generated
 	 */
-  int NUMBER = 31;
+  int NUMBER = 32;
 
 
   /**
@@ -2124,7 +2161,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getIFile()
 	 * @generated
 	 */
-  int IFILE = 32;
+  int IFILE = 33;
 
   /**
 	 * The meta object id for the '<em>Resource</em>' data type.
@@ -2134,7 +2171,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getResource()
 	 * @generated
 	 */
-  int RESOURCE = 33;
+  int RESOURCE = 34;
 
 
   /**
@@ -2145,7 +2182,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getUnit()
 	 * @generated
 	 */
-  int UNIT = 34;
+  int UNIT = 35;
 
 
   /**
@@ -2156,7 +2193,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 35;
+	int COLLECTION = 36;
 
 
 		/**
@@ -2167,7 +2204,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getEList()
 	 * @generated
 	 */
-	int ELIST = 36;
+	int ELIST = 37;
 
 		/**
 	 * The meta object id for the '<em>URI</em>' data type.
@@ -2177,7 +2214,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getURI()
 	 * @generated
 	 */
-	int URI = 37;
+	int URI = 38;
 
 
 		/**
@@ -2188,7 +2225,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getJob()
 	 * @generated
 	 */
-	int JOB = 38;
+	int JOB = 39;
 
 
 		/**
@@ -2199,7 +2236,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getResourceSet()
 	 * @generated
 	 */
-	int RESOURCE_SET = 39;
+	int RESOURCE_SET = 40;
 
 
 		/**
@@ -2666,6 +2703,27 @@ public interface ApogyCommonEMFPackage extends EPackage
   EAttribute getDescribed_Description();
 
   /**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.Archivable <em>Archivable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Archivable</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Archivable
+	 * @generated
+	 */
+	EClass getArchivable();
+
+		/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.emf.Archivable#isArchived <em>Archived</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Archived</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Archivable#isArchived()
+	 * @see #getArchivable()
+	 * @generated
+	 */
+	EAttribute getArchivable_Archived();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3912,6 +3970,24 @@ public interface ApogyCommonEMFPackage extends EPackage
     EAttribute DESCRIBED__DESCRIPTION = eINSTANCE.getDescribed_Description();
 
     /**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.Archivable <em>Archivable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.emf.Archivable
+		 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getArchivable()
+		 * @generated
+		 */
+		EClass ARCHIVABLE = eINSTANCE.getArchivable();
+
+				/**
+		 * The meta object literal for the '<em><b>Archived</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARCHIVABLE__ARCHIVED = eINSTANCE.getArchivable_Archived();
+
+				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

@@ -51,6 +51,7 @@ import org.eclipse.emf.ecore.EEnumLiteral
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EOperation
 import org.eclipse.emf.ecore.EParameter
+import ca.gc.asc_csa.apogy.common.emf.Archivable
 
 /* -------------------------------------------------------------------------
  * 
@@ -301,8 +302,23 @@ class ApogyCoreInvocatorFacade
 	  * @return Reference to the context or null if not found.
 	  */
 	 op Context getContextByName(InvocatorSession invocatorSession, String name)
+	 		 	 
+	 /*
+	  * Returns all the {@link ScriptBasedProgram} programs contained in the list.
+	  * @param programsList Refers to the list that contains all the programs.
+	  * @param filter Determine if the program should be considered as a valid program. 
+	  * @return List of programs.
+	  */
+	 op List<Program> getAllScriptBasedPrograms(ProgramsList programsList)	 	
 	 
 	 /*
+	  * Returns only the objects that are not archived
+	  * @param objects Refers to the array containing the objects to filter
+	  * @return Array of filtered objects
+	  */
+	 op Object[] filterArchived(Object[] objects)
+
+	/*
 	  * Creates a new context and populates the {@link VariableImplementations}.  
 	  * The context is not fully initialized (e.g. Name and description are not set).
 	  * @param invocatorSession the session for which the context is built.
@@ -315,6 +331,11 @@ enum VariableListenerEventType{
 	NEW,
 	CLEAR
 }
+
+
+//interface ProgramFilter{
+//	op boolean isValid(Program program)
+//}
 
 /* -------------------------------------------------------------------------
  * 
@@ -765,31 +786,42 @@ class Value extends Named
 class ProgramsList
 {	
 	@GenModel(property="None")
-	container InvocatorSession invocatorSession opposite programsList
-	
-	contains Program[0..*] programs opposite programsList
+	container InvocatorSession invocatorSession opposite programsList	
+	contains ProgramsGroup[0..*] programsGroups opposite programsList
+}
+
+class ProgramsGroup extends Named, Described, Archivable{
+	@GenModel(property="None")
+	container ProgramsList programsList opposite programsGroups 
+
+    @GenModel(children="false", property="None")
+	refers local readonly volatile transient derived InvocatorSession invocatorSession get
+	{
+		if (programsList == null) return null else return programsList.invocatorSession
+	}	
+	contains Program[0..*] programs opposite programsGroup
 }
 
 
 /* -------------------------------------------------------------------------
  * Program.
  * ------------------------------------------------------------------------- */
-abstract class Program extends Named, Described
+abstract class Program extends Named, Described, Archivable
 {
  	@GenModel(property="None")
-	container ProgramsList programsList opposite programs
+	container ProgramsGroup programsGroup opposite programs
 	
     @GenModel(children="false", property="None")
 	refers local readonly volatile transient derived InvocatorSession invocatorSession get
 	{
-		if (programsList == null) return null else return programsList.invocatorSession
-	} 	
-		
-	/* 
-	 * Contains values that could be used as parameter values in the operation 
-	 * calls.
-	 */
-	contains ValuesList[0..1] valuesList
+		if (programsGroup == null) return null else return programsGroup.invocatorSession
+	}
+}
+
+abstract class ScriptBasedProgram extends Program{	
+} 
+
+abstract class TriggeredBasedProgram extends Program{	
 }
 
 interface OperationCallContainer
@@ -799,7 +831,7 @@ interface OperationCallContainer
 	op InvocatorSession getInvocatorSession()
 }
 
-class OperationCallsList extends Program, OperationCallContainer
+class OperationCallsList extends ScriptBasedProgram, OperationCallContainer
 {
 	
 }

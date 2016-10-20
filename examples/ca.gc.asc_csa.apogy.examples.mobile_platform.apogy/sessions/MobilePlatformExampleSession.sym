@@ -11,14 +11,14 @@
       </variables>
     </variablesList>
     <contextsList xmi:id="_CaxoMQrPEeW4-_ONWXXiAw">
-      <contexts xsi:type="invocator:Context" xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw" instancesCreationDate="2016-02-29T13:09:08.095-0500">
+      <contexts xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw" instancesCreationDate="2016-02-29T13:09:08.095-0500">
         <variableImplementationsList xmi:id="_CaxoMwrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_CaxoNArPEeW4-_ONWXXiAw" variable="_CaxoMArPEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatformSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
-      <contexts xsi:type="invocator:Context" xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
+      <contexts xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_CaxoNgrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_CaxoNwrPEeW4-_ONWXXiAw" variable="_CaxoMArPEeW4-_ONWXXiAw">
             <implementationClass href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatformStub"/>
@@ -60,70 +60,72 @@
     </timeSourcesList>
   </environment>
   <programsList xmi:id="_Ca4V4wrPEeW4-_ONWXXiAw">
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_B6d5oN74EeWUu90KVuiwJg" name="Setup" description="Sets up the mobile plateform to start using it.">
-      <operationCalls xmi:id="_Ca4V5QrPEeW4-_ONWXXiAw" name="Init" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/init"/>
-      </operationCalls>
-      <operationCalls xmi:id="_Gm824N74EeWUu90KVuiwJg" name="Clear Position Error" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
-      </operationCalls>
-      <operationCalls xmi:id="_Ca4V8QrPEeW4-_ONWXXiAw" name="Clear Error" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
-      </operationCalls>
-    </programs>
-    <programs xsi:type="invocator:OperationCallsList" xmi:id="_UOVSkN74EeWUu90KVuiwJg" name="Navigate">
-      <operationCalls xmi:id="_Ca4V6grPEeW4-_ONWXXiAw" name="Change Linear Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the linear velocity component only.">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdLinearVelocity"/>
-        <argumentsList xmi:id="_Ca4V6wrPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V7ArPEeW4-_ONWXXiAw" value="0.5"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_Ca4V5wrPEeW4-_ONWXXiAw" name="Change Angular Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the angular velocity component only.">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdAngularVelocity"/>
-        <argumentsList xmi:id="_Ca4V6ArPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V6QrPEeW4-_ONWXXiAw" value="0.17453292519943295"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_Ca4V7QrPEeW4-_ONWXXiAw" name="Move Forward" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
-        <argumentsList xmi:id="_Ca4V7grPEeW4-_ONWXXiAw">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V7wrPEeW4-_ONWXXiAw" value="0.5"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V8ArPEeW4-_ONWXXiAw" value="0.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_29CO0N8PEeWkAptrmJWICw" name="Move Reverse" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure reverse motion.">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
-        <argumentsList xmi:id="_29CO0d8PEeWkAptrmJWICw">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_29CO0t8PEeWkAptrmJWICw" value="-0.5"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_29CO098PEeWkAptrmJWICw" value="0.0"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_sn3KwN8PEeWkAptrmJWICw" name="Turn Left" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
-        <argumentsList xmi:id="_sn3Kwd8PEeWkAptrmJWICw">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_sn3Kwt8PEeWkAptrmJWICw" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_sn3Kw98PEeWkAptrmJWICw" value="0.08726646259971647"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_xH9R0N8PEeWkAptrmJWICw" name="Turn Right" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
-        <argumentsList xmi:id="_xH9R0d8PEeWkAptrmJWICw">
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_xH9R0t8PEeWkAptrmJWICw" value="0.0"/>
-          <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_xH9R098PEeWkAptrmJWICw" value="-0.08726646259971647"/>
-        </argumentsList>
-      </operationCalls>
-      <operationCalls xmi:id="_Ca7ZMArPEeW4-_ONWXXiAw" name="Stop" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/stop"/>
-      </operationCalls>
-      <operationCalls xmi:id="_zBnZkN74EeWUu90KVuiwJg" name="Reset position to start position." variable="_CaxoMArPEeW4-_ONWXXiAw" description="Resets the position to start position.">
-        <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/resetPosition"/>
-        <argumentsList xmi:id="_zBnZkd74EeWUu90KVuiwJg">
-          <arguments xsi:type="invocator:EClassArgument" xmi:id="_zBnZkt74EeWUu90KVuiwJg">
-            <value xsi:type="mobile_platform:Position" xmi:id="_zBnZk974EeWUu90KVuiwJg"/>
-          </arguments>
-        </argumentsList>
-      </operationCalls>
-    </programs>
+    <programsGroups xmi:id="_hASmYJVIEeak_eGfxSDIhA" name="Default">
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_B6d5oN74EeWUu90KVuiwJg" name="Setup" description="Sets up the mobile plateform to start using it.">
+        <operationCalls xmi:id="_Ca4V5QrPEeW4-_ONWXXiAw" name="Init" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/init"/>
+        </operationCalls>
+        <operationCalls xmi:id="_Gm824N74EeWUu90KVuiwJg" name="Clear Position Error" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
+        </operationCalls>
+        <operationCalls xmi:id="_Ca4V8QrPEeW4-_ONWXXiAw" name="Clear Error" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
+        </operationCalls>
+      </programs>
+      <programs xsi:type="invocator:OperationCallsList" xmi:id="_UOVSkN74EeWUu90KVuiwJg" name="Navigate">
+        <operationCalls xmi:id="_Ca4V6grPEeW4-_ONWXXiAw" name="Change Linear Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the linear velocity component only.">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdLinearVelocity"/>
+          <argumentsList xmi:id="_Ca4V6wrPEeW4-_ONWXXiAw">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V7ArPEeW4-_ONWXXiAw" value="0.5"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_Ca4V5wrPEeW4-_ONWXXiAw" name="Change Angular Velocity Only" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Changes the angular velocity component only.">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdAngularVelocity"/>
+          <argumentsList xmi:id="_Ca4V6ArPEeW4-_ONWXXiAw">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V6QrPEeW4-_ONWXXiAw" value="0.17453292519943295"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_Ca4V7QrPEeW4-_ONWXXiAw" name="Move Forward" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+          <argumentsList xmi:id="_Ca4V7grPEeW4-_ONWXXiAw">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V7wrPEeW4-_ONWXXiAw" value="0.5"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_Ca4V8ArPEeW4-_ONWXXiAw" value="0.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_29CO0N8PEeWkAptrmJWICw" name="Move Reverse" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure reverse motion.">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+          <argumentsList xmi:id="_29CO0d8PEeWkAptrmJWICw">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_29CO0t8PEeWkAptrmJWICw" value="-0.5"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_29CO098PEeWkAptrmJWICw" value="0.0"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_sn3KwN8PEeWkAptrmJWICw" name="Turn Left" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+          <argumentsList xmi:id="_sn3Kwd8PEeWkAptrmJWICw">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_sn3Kwt8PEeWkAptrmJWICw" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_sn3Kw98PEeWkAptrmJWICw" value="0.08726646259971647"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_xH9R0N8PEeWkAptrmJWICw" name="Turn Right" variable="_CaxoMArPEeW4-_ONWXXiAw" description="Commands a pure forward motion.">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+          <argumentsList xmi:id="_xH9R0d8PEeWkAptrmJWICw">
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_xH9R0t8PEeWkAptrmJWICw" value="0.0"/>
+            <arguments xsi:type="invocator:NumericEDataTypeArgument" xmi:id="_xH9R098PEeWkAptrmJWICw" value="-0.08726646259971647"/>
+          </argumentsList>
+        </operationCalls>
+        <operationCalls xmi:id="_Ca7ZMArPEeW4-_ONWXXiAw" name="Stop" variable="_CaxoMArPEeW4-_ONWXXiAw">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/stop"/>
+        </operationCalls>
+        <operationCalls xmi:id="_zBnZkN74EeWUu90KVuiwJg" name="Reset position to start position." variable="_CaxoMArPEeW4-_ONWXXiAw" description="Resets the position to start position.">
+          <eOperation href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/resetPosition"/>
+          <argumentsList xmi:id="_zBnZkd74EeWUu90KVuiwJg">
+            <arguments xsi:type="invocator:EClassArgument" xmi:id="_zBnZkt74EeWUu90KVuiwJg">
+              <value xsi:type="mobile_platform:Position" xmi:id="_zBnZk974EeWUu90KVuiwJg"/>
+            </arguments>
+          </argumentsList>
+        </operationCalls>
+      </programs>
+    </programsGroups>
   </programsList>
   <dataProductsListContainer xmi:id="_Ca7ZMQrPEeW4-_ONWXXiAw">
     <dataProductsList xmi:id="_Ca7ZMgrPEeW4-_ONWXXiAw" name="Simulated Data" description="The list of data products associated with the mobile platform's simulated implementation">

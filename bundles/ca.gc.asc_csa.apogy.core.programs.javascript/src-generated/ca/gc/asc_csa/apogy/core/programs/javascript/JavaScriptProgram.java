@@ -4,7 +4,7 @@
 package ca.gc.asc_csa.apogy.core.programs.javascript;
 
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
-import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +26,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Program;
  * @model
  * @generated
  */
-public interface JavaScriptProgram extends Program, OperationCallContainer {
+public interface JavaScriptProgram extends ScriptBasedProgram, OperationCallContainer {
 	/**
 	 * Returns the value of the '<em><b>Script Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
