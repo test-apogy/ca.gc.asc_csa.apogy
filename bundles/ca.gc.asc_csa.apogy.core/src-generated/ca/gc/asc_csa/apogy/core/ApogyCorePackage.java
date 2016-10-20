@@ -133,13 +133,22 @@ public interface ApogyCorePackage extends EPackage {
 	int APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = 2;
 
 	/**
+	 * The operation id for the '<em>Create Apogy Session</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_FACADE___CREATE_APOGY_SESSION = 3;
+
+	/**
 	 * The operation id for the '<em>Get Apogy System</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING = 3;
+	int APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Load Feature Of Interest From File</em>' operation.
@@ -148,7 +157,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING = 4;
+	int APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Save Feature Of Interest To File</em>' operation.
@@ -157,7 +166,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = 5;
+	int APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = 6;
 
 	/**
 	 * The operation id for the '<em>Get Feature Of Interest Node</em>' operation.
@@ -166,7 +175,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST = 6;
+	int APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST = 7;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -175,7 +184,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE_OPERATION_COUNT = 7;
+	int APOGY_CORE_FACADE_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl <em>Apogy Environment</em>}' class.
@@ -2515,6 +2524,16 @@ public interface ApogyCorePackage extends EPackage {
 	EOperation getApogyCoreFacade__CreateApogySession__boolean_boolean_boolean_boolean();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#createApogySession() <em>Create Apogy Session</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Apogy Session</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCoreFacade#createApogySession()
+	 * @generated
+	 */
+	EOperation getApogyCoreFacade__CreateApogySession();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getApogySystem(ca.gc.asc_csa.apogy.core.invocator.Environment, java.lang.String) <em>Get Apogy System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3543,6 +3562,14 @@ public interface ApogyCorePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = eINSTANCE.getApogyCoreFacade__CreateApogySession__boolean_boolean_boolean_boolean();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Apogy Session</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_FACADE___CREATE_APOGY_SESSION = eINSTANCE.getApogyCoreFacade__CreateApogySession();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Apogy System</b></em>' operation.

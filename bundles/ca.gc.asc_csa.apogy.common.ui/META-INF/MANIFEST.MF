@@ -3,18 +3,25 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.apogy.common.ui.Activator
+Bundle-ClassPath: .
+Bundle-Activator: ca.gc.asc_csa.apogy.common.ui.provider.ApogyWorkspaceUiEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui;visibility:=reexport,
  org.eclipse.core.runtime;visibility:=reexport,
+ org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.100";visibility:=reexport,
  org.eclipse.emf.edit;bundle-version="2.6.0";visibility:=reexport,
  org.eclipse.emf.edit.ui;bundle-version="2.9.0";visibility:=reexport,
- org.eclipse.core.expressions;bundle-version="3.4.600"
+ org.eclipse.core.expressions;bundle-version="3.4.600",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.10.0",
+ org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.100"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
 Export-Package: ca.gc.asc_csa.apogy.common.ui,
+ ca.gc.asc_csa.apogy.common.ui.impl,
+ ca.gc.asc_csa.apogy.common.ui.provider,
+ ca.gc.asc_csa.apogy.common.ui.util,
  ca.gc.asc_csa.apogy.common.ui.actions,
  ca.gc.asc_csa.apogy.common.ui.expressions,
  ca.gc.asc_csa.apogy.common.ui.properties,

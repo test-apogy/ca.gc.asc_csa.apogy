@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.jface.resource.ImageDescriptor;
 import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
 import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
 import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
@@ -107,6 +108,8 @@ public class ApogyCoreUIFactoryImpl extends EFactoryImpl implements ApogyCoreUIF
 				return createIFileFromString(eDataType, initialValue);
 			case ApogyCoreUIPackage.IFOLDER:
 				return createIFolderFromString(eDataType, initialValue);
+			case ApogyCoreUIPackage.IMAGE_DESCRIPTOR:
+				return createImageDescriptorFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -128,6 +131,8 @@ public class ApogyCoreUIFactoryImpl extends EFactoryImpl implements ApogyCoreUIF
 				return convertIFileToString(eDataType, instanceValue);
 			case ApogyCoreUIPackage.IFOLDER:
 				return convertIFolderToString(eDataType, instanceValue);
+			case ApogyCoreUIPackage.IMAGE_DESCRIPTOR:
+				return convertImageDescriptorToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -264,6 +269,24 @@ public class ApogyCoreUIFactoryImpl extends EFactoryImpl implements ApogyCoreUIF
 	 * @generated
 	 */
 	public String convertIFolderToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageDescriptor createImageDescriptorFromString(EDataType eDataType, String initialValue) {
+		return (ImageDescriptor)super.createFromString(eDataType, initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertImageDescriptorToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

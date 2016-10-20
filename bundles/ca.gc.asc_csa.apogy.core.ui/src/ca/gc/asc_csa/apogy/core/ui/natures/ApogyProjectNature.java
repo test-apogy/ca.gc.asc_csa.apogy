@@ -19,7 +19,7 @@ import org.eclipse.core.runtime.CoreException;
 
 public class ApogyProjectNature implements IProjectNature {
 
-	public static final String NATURE_ID = "ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature";
+	public static final String NATURE_ID = "ca.gc.asc_csa.apogy.core.ui.ApogyProjectNature";
 	
 	@Override
 	public void configure() throws CoreException {

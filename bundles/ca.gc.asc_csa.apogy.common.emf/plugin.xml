@@ -23,5 +23,19 @@
             class="ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage"
             genModel="model/apogy_common_emf.xcore"/>
    </extension>
+   
+   <extension
+         point="org.eclipse.emf.transaction.editingDomains">
+      <editingDomain
+            factory="ca.gc.asc_csa.apogy.common.emf.transaction.ApogyEditingDomain"
+            id="ca.gc.asc_csa.apogy.common.emf.editingDomain">
+      </editingDomain>
+   </extension>
+   <extension
+         point="org.eclipse.emf.transaction.listeners">
+      <listener
+            class="ca.gc.asc_csa.apogy.common.emf.transaction.ApogyEditingDomainListener">
+      </listener>
+   </extension>   
 
 </plugin>

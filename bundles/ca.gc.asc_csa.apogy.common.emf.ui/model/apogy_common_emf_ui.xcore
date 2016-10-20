@@ -38,7 +38,7 @@ type Color wraps org.eclipse.swt.graphics.Color
 type Unit wraps javax.measure.unit.Unit<?>
 
 class ApogyCommonEMFUIFacade
-{	
+{		
 	/*
 	 * Returns the color currently associated with the specified
 	 * Ranges. Can be null.
