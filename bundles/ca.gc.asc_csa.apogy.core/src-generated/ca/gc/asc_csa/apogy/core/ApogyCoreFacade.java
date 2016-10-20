@@ -71,6 +71,18 @@ public interface ApogyCoreFacade extends EObject {
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Create an Apogy session.
+	 * @return Reference to the newly created session.
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
+	 * @generated
+	 */
+	InvocatorSession createApogySession();
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Searches and returns the {@link ApogySystem} instance based on the specified fullyQualifiedName.

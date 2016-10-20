@@ -76,6 +76,12 @@ class ApogyCoreFacade
 	op InvocatorSession createApogySession(boolean createEnvironment, boolean createPrograms, boolean createDataProducts, boolean createTools)
 	
 	/*
+	 * Create an Apogy session.
+	 * @return Reference to the newly created session.
+	 */
+	op InvocatorSession createApogySession()
+	
+	/*
 	 * Searches and returns the {@link ApogySystem} instance based on the specified fullyQualifiedName.
 	 * @param environment Environment from which the search will be performed.
 	 * @param param fullyQualifiedName Fully qualified name that refers the {@link ApogySystem} instance.

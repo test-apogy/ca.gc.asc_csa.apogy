@@ -13,6 +13,11 @@
  */
 package ca.gc.asc_csa.apogy.workspace.provider;
 
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFactory;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 
 import ca.gc.asc_csa.apogy.workspace.util.ApogyWorkspaceAdapterFactory;
@@ -27,6 +32,8 @@ import org.eclipse.emf.common.notify.Notifier;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 
 import org.eclipse.emf.edit.provider.ChangeNotifier;
@@ -120,6 +127,29 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 		}
 
 		return apogyWorkspaceFacadeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.workspace.NewProjectSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewProjectSettingsItemProvider newProjectSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.workspace.NewProjectSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNewProjectSettingsAdapter() {
+		if (newProjectSettingsItemProvider == null) {
+			newProjectSettingsItemProvider = new NewProjectSettingsItemProvider(this);
+		}
+
+		return newProjectSettingsItemProvider;
 	}
 
 	/**
@@ -249,6 +279,119 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 	 */
 	public void dispose() {
 		if (apogyWorkspaceFacadeItemProvider != null) apogyWorkspaceFacadeItemProvider.dispose();
+		if (newProjectSettingsItemProvider != null) newProjectSettingsItemProvider.dispose();
+	}
+
+	/**
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseContentNode(ContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyWorkspaceFactory.eINSTANCE.createApogyWorkspaceFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyWorkspaceFactory.eINSTANCE.createNewProjectSettings()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyWorkspaceFactory.eINSTANCE.createApogyWorkspaceFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyWorkspaceFactory.eINSTANCE.createNewProjectSettings()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return ApogyWorkspaceEditPlugin.INSTANCE;
+		}
 	}
 
 }

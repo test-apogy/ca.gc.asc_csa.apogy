@@ -31,7 +31,14 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.workspace
 
+import org.eclipse.core.resources.IProject
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Described
+import ca.gc.asc_csa.apogy.core.Exception
+
 /* Types definitions. */
+type IProject wraps IProject
+
 
 /* -------------------------------------------------------------------------
  * 
@@ -39,4 +46,48 @@ package ca.gc.asc_csa.apogy.workspace
  * 
  * ------------------------------------------------------------------------- */ 
 class ApogyWorkspaceFacade{
+	/*
+	 * Default Apogy Project Name Prefix.
+	 */
+	readonly transient String defaultProjectNamePrefix = "Project"
+
+	/*
+	 * Default Apogy Session Filename Prefix.
+	 */
+	readonly transient String defaultSessionFilename = "session"
+	
+	/*
+	 * Default Apogy Session Filename Extension Prefix.
+	 */
+	readonly transient String defaultSessionFilenameExtension = "sym"
+	
+	/*
+	 * Default Apogy Sessions Directory.
+	 */
+	readonly transient String defaultSessionFolderName = "Sessions"
+
+	/*
+	 * Returns an available project name according to the current workspace.
+	 */
+	op String getDefaultProjectName()	
+	
+	/*
+	 * Creates and initialized a new Apogy project.
+	 * @param name Name of the project.
+	 * @param description Description of the project.
+	 * @return Reference to the project or null if not created.
+	 * @throws Exception Reference to the exception stack.
+	 */
+	op IProject createApogyProject(String name, String description)	throws Exception
+}
+
+/*
+ * Class used to contain the settings used to create the new project.
+ */
+class NewProjectSettings extends Named, Described{
+	
+    /*
+	 * Applies and sets the default values.
+	 */
+	op void applyDefaultValues()
 }

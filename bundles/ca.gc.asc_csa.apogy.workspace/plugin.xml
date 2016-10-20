@@ -26,21 +26,13 @@
    </extension>
    
    <extension
-         id="ca.gc.asc_csa.apogy.workspace.natures.ApogyNature"
+         id="ApogyNature"
          name="Apogy"
          point="org.eclipse.core.resources.natures">
       <runtime>
          <run
-               class="ca.gc.asc_csa.apogy.workspace.natures.ApogyProjectNature">
+               class="ca.gc.asc_csa.apogy.workspace.natures.ApogyNature">
          </run>
       </runtime>
-   </extension>   
-   <extension
-         point="org.eclipse.ui.ide.projectNatureImages">
-      <image
-            icon="icons/ovr/apogy_7x8.gif"
-            id="ca.gc.asc_csa.apogy.core.ui.projectNatureImages"
-            natureId="ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature">
-      </image>
    </extension>
 </plugin>

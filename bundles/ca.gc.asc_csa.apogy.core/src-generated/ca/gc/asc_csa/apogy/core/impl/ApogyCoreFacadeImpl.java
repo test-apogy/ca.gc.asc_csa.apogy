@@ -265,6 +265,15 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 
 	
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public InvocatorSession createApogySession() {
+		return createApogySession(true, true, true, true);
+	}
+
+	/**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated_NOT
@@ -466,6 +475,8 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 				return createResultNode((PositionedResult)arguments.get(0));
 			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
 				return createApogySession((Boolean)arguments.get(0), (Boolean)arguments.get(1), (Boolean)arguments.get(2), (Boolean)arguments.get(3));
+			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION:
+				return createApogySession();
 			case ApogyCorePackage.APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING:
 				return getApogySystem((Environment)arguments.get(0), (String)arguments.get(1));
 			case ApogyCorePackage.APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:

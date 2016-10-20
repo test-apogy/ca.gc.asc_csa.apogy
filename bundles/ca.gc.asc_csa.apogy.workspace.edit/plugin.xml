@@ -30,4 +30,11 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated apogy_workspace -->
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.workspace.provider.ApogyWorkspaceItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
+   </extension>
+
 </plugin>

@@ -13,22 +13,26 @@ package ca.gc.asc_csa.apogy.workspace.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.jface.resource.ImageDescriptor;
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.wizard.Wizard;
+import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NamedDescribedWizardPage;
+import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ui.Activator;
+import ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFactory;
+import ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings;
 
-public class NewApogyProjectWizard extends Wizard{
-//	private NewApogyProjectSettings newApogyProjectSettings;
-//	private NewApogySessionSettings newApogySessionSettings;
-//	private ApogyResourceSettings apogyResourceSettings;
-//	private IWorkbench workbench;
-//	private NewApogyProjectWizardPage newApogyProjectWizardPage;
-//	private NewApogySessionWizardPage newApogySessionWizardPage;
-//	private ImportRegisteredApogyProjectWizardPage importRegisteredApogyProjectWizardPage;
-//
-//	/** The following member is used by performFinish(). */
-//	private IFolder apogyFolder;
+public class NewApogyProjectWizard extends Wizard {
+
+	private NamedDescribedWizardPage namedDescribedWizardPage;
+	private NewProjectSettings newProjectSettings;
 
 	/**
 	 * Constructor for NewApogySessionWizard.
@@ -37,189 +41,58 @@ public class NewApogyProjectWizard extends Wizard{
 		super();
 		setWindowTitle("New Apogy Project");
 		setNeedsProgressMonitor(true);
-//		ImageDescriptor image = Activator.getImageDescriptor(
-//				Activator.ID + "/icons/wizban/apogy_new_project.png");
-//		setDefaultPageImageDescriptor(image);
+		setDefaultPageImageDescriptor(
+				ApogyCommonUiFacade.INSTANCE.getImageDescriptor(Activator.ID + "/icons/wizban/apogy_new_project.png"));
 
-//		newApogyProjectWizardPage = new NewApogyProjectWizardPage(
-//				getNewApogyProjectSettings(), getApogyResourceSettings());
-//
-//		newApogySessionWizardPage = new NewApogySessionWizardPage(
-//				getNewApogySessionSettings(), getApogyResourceSettings());
-//
-//		importRegisteredApogyProjectWizardPage = new ImportRegisteredApogyProjectWizardPage();
+		namedDescribedWizardPage = new NamedDescribedWizardPage(getNewApogyProjectSettings(),
+				getNewApogyProjectSettings());
 	}
-
 
 	/**
 	 * Adding the page to the wizard.
 	 */
 	public void addPages() {
-//		addPage(newApogyProjectWizardPage);
-//		addPage(newApogySessionWizardPage);
-//		addPage(importRegisteredApogyProjectWizardPage);
+		addPage(namedDescribedWizardPage);
 	}
 
+	private NewProjectSettings getNewApogyProjectSettings() {
+		if (newProjectSettings == null) {
+			newProjectSettings = ApogyWorkspaceUiFactory.eINSTANCE.createNewProjectSettings();
+			newProjectSettings.applyDefaultValues();
+		}
+		return newProjectSettings;
+	}
 
 	@Override
 	public boolean performFinish() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+		WorkspaceModifyOperation createApogyProjectOperation = new WorkspaceModifyOperation() {
+			@Override
+			protected void execute(IProgressMonitor monitor)
+					throws CoreException, InvocationTargetException, InterruptedException {
+				try {
+					// Create the project.
+					ApogyWorkspaceFacade.INSTANCE.createApogyProject(getNewApogyProjectSettings().getName(), getNewApogyProjectSettings().getDescription());
+				} catch (Exception e) {
+					Logger.INSTANCE.log(Activator.ID, this, "Problems occured while creating project <" + getNewApogyProjectSettings().getName() + ">",
+							EventSeverity.ERROR, e);
+				} finally {
+					monitor.done();
+				}
+			}
+		};
 
-//	private ApogyResourceSettings getApogyResourceSettings() {
-//
-//		if (apogyResourceSettings == null) {
-//			apogyResourceSettings = ApogyCoreUIFactory.eINSTANCE
-//					.createApogyResourceSettings();
-//		}
-//		return apogyResourceSettings;
-//	}
-//
-//	private NewApogySessionSettings getNewApogySessionSettings() {
-//		if (newApogySessionSettings == null) {
-//			newApogySessionSettings = ApogyCoreUIFactory.eINSTANCE
-//					.createNewApogySessionSettings();
-//		}
-//		return newApogySessionSettings;
-//	}
-//
-//	private NewApogyProjectSettings getNewApogyProjectSettings() {
-//		if (newApogyProjectSettings == null) {
-//			newApogyProjectSettings = ApogyCoreUIFactory.eINSTANCE
-//					.createNewApogyProjectSettings();
-//			newApogyProjectSettings.setDefaultValues();
-//		}
-//		return newApogyProjectSettings;
-//	}
-//
-//	@Override
-//	public boolean performFinish() {
-//		WorkspaceModifyOperation createApogyProjectOperation = new WorkspaceModifyOperation() {
-//			@Override
-//			protected void execute(IProgressMonitor monitor)
-//					throws CoreException, InvocationTargetException,
-//					InterruptedException {
-//				ApogyCoreUIFacade.INSTANCE
-//						.createApogyProject(getNewApogyProjectSettings());
-//				apogyFolder = ApogyCoreUIFacade.INSTANCE
-//						.createApogySessionFolder(getNewApogyProjectSettings());
-//
-//				if (getNewApogyProjectSettings().isImportRegisteredProject()) {
-//					/**
-//					 * Import Registered Session.
-//					 */
-//					try {
-//						URL url = new URL(importRegisteredApogyProjectWizardPage
-//								.getSessionContributor().uri.toString());
-//						InputStream inputStream = url.openConnection()
-//								.getInputStream();
-//						IFile newFile = apogyFolder.getFile(getNewApogySessionSettings().getFilename());
-//						newFile.create(inputStream, true,
-//								new NullProgressMonitor());
-//					} catch (MalformedURLException e1) {
-//						e1.printStackTrace();
-//					} catch (IOException e) {
-//						e.printStackTrace();
-//					} finally{
-//						monitor.done();
-//					}
-//				} else {
-//					/**
-//					 * Create a new Session.
-//					 */
-//					ApogyCoreUIFacade.INSTANCE
-//							.createApogyProject(getNewApogyProjectSettings());
-//					IFolder folder = ApogyCoreUIFacade.INSTANCE
-//							.createApogySessionFolder(getNewApogyProjectSettings());
-//
-//					InvocatorSession session = null;
-//					String filename = null;
-//
-//					session = ApogyCoreUIFacade.INSTANCE
-//							.createApogySession(getNewApogySessionSettings());
-//					filename = getNewApogySessionSettings().getFilename();
-//					try {
-//						ApogyCoreUIFacade.INSTANCE
-//								.createApogySessionFile(folder, filename,
-//										session);
-//					} catch (Exception e) {
-//						e.printStackTrace();
-//					} finally {
-//						monitor.done();
-//					}
-//				}
-//			}
-//		};
-//
-//		/**
-//		 * Execute Jobs.
-//		 */
-//		try {
-//			getContainer().run(false, false, createApogyProjectOperation);
-//
-//			/**
-//			 * Selects the current file in the current view and open the editor.
-//			 */
-//			IFile modelFile = ApogyCoreUIFacade.INSTANCE
-//					.getApogySessionFile(
-//							(IFolder) getApogyResourceSettings()
-//									.getResourceContainer(),
-//							getNewApogySessionSettings().getFilename());
-//
-//			// Select the new file resource in the current view.
-//			//
-//			IWorkbenchWindow workbenchWindow = workbench
-//					.getActiveWorkbenchWindow();
-//			IWorkbenchPage page = workbenchWindow.getActivePage();
-//			final IWorkbenchPart activePart = page.getActivePart();
-//			if (activePart instanceof ISetSelectionTarget) {
-//				final ISelection targetSelection = new StructuredSelection(
-//						modelFile);
-//				getShell().getDisplay().asyncExec(new Runnable() {
-//					public void run() {
-//						((ISetSelectionTarget) activePart)
-//								.selectReveal(targetSelection);
-//					}
-//				});
-//			}
-//
-//			// Open an editor on the new file.
-//			//
-//			try {
-//				page.openEditor(new FileEditorInput(modelFile),
-//						CustomApogyCoreInvocatorEditor.ID);
-//			} catch (PartInitException exception) {
-//				exception.printStackTrace();
-//				return false;
-//			}
-//
-//		} catch (InvocationTargetException e1) {
-//			e1.printStackTrace();
-//		} catch (InterruptedException e1) {
-//			e1.printStackTrace();
-//		}
-//		return true;
-//	}
-//
-//	@Override
-//	public IWizardPage getNextPage(IWizardPage page) {
-//		IWizardPage nextPage = null;
-//
-//		if (page.equals(newApogyProjectWizardPage)) {
-//			nextPage = getNewApogyProjectSettings()
-//					.isImportRegisteredProject() ? importRegisteredApogyProjectWizardPage
-//					: newApogySessionWizardPage;
-//		}
-//		return nextPage;
-//	}
-//
-//	@Override
-//	public boolean canFinish() {
-//		return getNewApogyProjectSettings().isImportRegisteredProject() ? newApogyProjectWizardPage
-//				.isPageComplete()
-//				&& importRegisteredApogyProjectWizardPage.isPageComplete()
-//				: newApogyProjectWizardPage.isPageComplete()
-//						&& newApogySessionWizardPage.isPageComplete();
-//	}
+		/**
+		 * Execute Jobs.
+		 */
+		try {
+			getContainer().run(false, false, createApogyProjectOperation);
+		} catch (InvocationTargetException e) {
+			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while creating project <" + getNewApogyProjectSettings().getName() + ">",
+					EventSeverity.ERROR, e);
+		} catch (InterruptedException e) {
+			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while creating project <" + getNewApogyProjectSettings().getName() + ">",
+					EventSeverity.ERROR, e);
+		}
+		return true;
+	}
 }

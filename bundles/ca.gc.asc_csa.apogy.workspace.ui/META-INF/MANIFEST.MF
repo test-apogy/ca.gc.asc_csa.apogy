@@ -10,14 +10,22 @@ Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.100",
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf.edit;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;bundle-version="2.10.0",
  org.eclipse.jface;bundle-version="3.12.0",
  org.eclipse.e4.ui.di;bundle-version="1.1.100",
  org.eclipse.ui.forms;bundle-version="3.7.0",
  ca.gc.asc_csa.apogy.doc;bundle-version="0.5.0",
  org.eclipse.e4.core.di.annotations;bundle-version="1.5.0",
- org.eclipse.e4.core.di;bundle-version="1.6.0"
+ org.eclipse.e4.core.di;bundle-version="1.6.0",
+ ca.gc.asc_csa.apogy.common.ui;bundle-version="0.5.0",
+ ca.gc.asc_csa.apogy.core.invocator.ui;bundle-version="0.5.0",
+ ca.gc.asc_csa.apogy.workspace;bundle-version="0.5.0",
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0",
+ org.eclipse.ui.ide,
+ ca.gc.asc_csa.apogy.core
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: ca.gc.asc_csa.apogy.workspace.ui,
  ca.gc.asc_csa.apogy.workspace.ui.impl,

@@ -1,9 +1,11 @@
-package ca.gc.asc_csa.apogy.core.workspace;
+package ca.gc.asc_csa.apogy.workspace;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
+	
+	public static final String ID = "ca.gc.asc_csa.apogy.workspace";
 
 	private static BundleContext context;
 

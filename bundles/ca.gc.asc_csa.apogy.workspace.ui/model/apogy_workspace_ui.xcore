@@ -31,31 +31,26 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.workspace.ui
 
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Described
+import org.eclipse.core.resources.IProject
+
 /* Types definitions. */
+type IProject wraps IProject
 
-/* -------------------------------------------------------------------------
- * 
+/* 
  * Apogy Workspace Ui Facade.
- * 
- * ------------------------------------------------------------------------- */ 
+ */
 class ApogyWorkspaceUiFacade{
-	/*
-	 * Displays the wizard to create a new Apogy project.
-	 */
-	op void newProject()
+}
 
-	/*
-	 * Displays the wizard to open an existing Apogy project.
-	 */	
-	op void openProject()
+/*
+ * Class used to contain the settings used to create the new project.
+ */
+class NewProjectSettings extends Named, Described{
 	
-	/*
-	 * Displays the wizard to import an Apogy project.
+    /*
+	 * Applies and sets the default values.
 	 */
-	op void importProject()
-
-	/*
-	 * Displays the wizard to export an Apogy project.
-	 */	
-	op void exportProject()	
+	op void applyDefaultValues()
 }

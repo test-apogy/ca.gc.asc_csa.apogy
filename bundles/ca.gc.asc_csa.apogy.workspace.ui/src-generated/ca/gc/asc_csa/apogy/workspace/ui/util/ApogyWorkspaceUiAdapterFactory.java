@@ -13,6 +13,8 @@
  */
 package ca.gc.asc_csa.apogy.workspace.ui.util;
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.workspace.ui.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -83,6 +85,18 @@ public class ApogyWorkspaceUiAdapterFactory extends AdapterFactoryImpl {
 				return createApogyWorkspaceUiFacadeAdapter();
 			}
 			@Override
+			public Adapter caseNewProjectSettings(NewProjectSettings object) {
+				return createNewProjectSettingsAdapter();
+			}
+			@Override
+			public Adapter caseNamed(Named object) {
+				return createNamedAdapter();
+			}
+			@Override
+			public Adapter caseDescribed(Described object) {
+				return createDescribedAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -113,6 +127,48 @@ public class ApogyWorkspaceUiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApogyWorkspaceUiFacadeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings <em>New Project Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings
+	 * @generated
+	 */
+	public Adapter createNewProjectSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
+	 * @generated
+	 */
+	public Adapter createNamedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
+	 * @generated
+	 */
+	public Adapter createDescribedAdapter() {
 		return null;
 	}
 

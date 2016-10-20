@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.workspace.natures;
+package ca.gc.asc_csa.apogy.workspace.natures;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -17,9 +17,9 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectNature;
 import org.eclipse.core.runtime.CoreException;
 
-public class ApogyProjectNature implements IProjectNature {
-
-	public static final String NATURE_ID = "ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature";
+public class ApogyNature implements IProjectNature {
+	public static final String NATURE_ID = "ca.gc.asc_csa.apogy.workspace.ApogyNature";
+	private IProject project;
 	
 	@Override
 	public void configure() throws CoreException {
@@ -31,10 +31,11 @@ public class ApogyProjectNature implements IProjectNature {
 
 	@Override
 	public IProject getProject() {
-		return null;
+		return project;
 	}
 
 	@Override
 	public void setProject(IProject project) {
+		this.project = project;
 	}
 }

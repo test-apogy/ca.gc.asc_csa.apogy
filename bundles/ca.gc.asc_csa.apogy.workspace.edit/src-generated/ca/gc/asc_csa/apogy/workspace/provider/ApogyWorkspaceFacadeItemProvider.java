@@ -14,6 +14,8 @@
 package ca.gc.asc_csa.apogy.workspace.provider;
 
 
+import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
+import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -22,6 +24,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -29,7 +32,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade} object.
@@ -66,8 +71,100 @@ public class ApogyWorkspaceFacadeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addDefaultProjectNamePrefixPropertyDescriptor(object);
+			addDefaultSessionFilenamePropertyDescriptor(object);
+			addDefaultSessionFilenameExtensionPropertyDescriptor(object);
+			addDefaultSessionFolderNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Project Name Prefix feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultProjectNamePrefixPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyWorkspaceFacade_defaultProjectNamePrefix_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyWorkspaceFacade_defaultProjectNamePrefix_feature", "_UI_ApogyWorkspaceFacade_type"),
+				 ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__DEFAULT_PROJECT_NAME_PREFIX,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Session Filename feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSessionFilenamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyWorkspaceFacade_defaultSessionFilename_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyWorkspaceFacade_defaultSessionFilename_feature", "_UI_ApogyWorkspaceFacade_type"),
+				 ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Session Filename Extension feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSessionFilenameExtensionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyWorkspaceFacade_defaultSessionFilenameExtension_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyWorkspaceFacade_defaultSessionFilenameExtension_feature", "_UI_ApogyWorkspaceFacade_type"),
+				 ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME_EXTENSION,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Session Folder Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSessionFolderNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyWorkspaceFacade_defaultSessionFolderName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyWorkspaceFacade_defaultSessionFolderName_feature", "_UI_ApogyWorkspaceFacade_type"),
+				 ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -89,7 +186,10 @@ public class ApogyWorkspaceFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ApogyWorkspaceFacade_type");
+		String label = ((ApogyWorkspaceFacade)object).getDefaultSessionFilename();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ApogyWorkspaceFacade_type") :
+			getString("_UI_ApogyWorkspaceFacade_type") + " " + label;
 	}
 	
 
@@ -103,6 +203,15 @@ public class ApogyWorkspaceFacadeItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ApogyWorkspaceFacade.class)) {
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_PROJECT_NAME_PREFIX:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME_EXTENSION:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

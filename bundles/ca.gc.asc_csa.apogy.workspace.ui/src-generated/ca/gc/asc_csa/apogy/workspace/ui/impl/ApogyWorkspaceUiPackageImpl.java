@@ -13,14 +13,16 @@
  */
 package ca.gc.asc_csa.apogy.workspace.ui.impl;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade;
 import ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFactory;
 import ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiPackage;
-
+import ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -36,6 +38,20 @@ public class ApogyWorkspaceUiPackageImpl extends EPackageImpl implements ApogyWo
 	 * @generated
 	 */
 	private EClass apogyWorkspaceUiFacadeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass newProjectSettingsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iProjectEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -83,6 +99,9 @@ public class ApogyWorkspaceUiPackageImpl extends EPackageImpl implements ApogyWo
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		ApogyCommonEMFPackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theApogyWorkspaceUiPackage.createPackageContents();
 
@@ -112,8 +131,8 @@ public class ApogyWorkspaceUiPackageImpl extends EPackageImpl implements ApogyWo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceUiFacade__NewProject() {
-		return apogyWorkspaceUiFacadeEClass.getEOperations().get(0);
+	public EClass getNewProjectSettings() {
+		return newProjectSettingsEClass;
 	}
 
 	/**
@@ -121,8 +140,8 @@ public class ApogyWorkspaceUiPackageImpl extends EPackageImpl implements ApogyWo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceUiFacade__OpenProject() {
-		return apogyWorkspaceUiFacadeEClass.getEOperations().get(1);
+	public EOperation getNewProjectSettings__ApplyDefaultValues() {
+		return newProjectSettingsEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -130,17 +149,8 @@ public class ApogyWorkspaceUiPackageImpl extends EPackageImpl implements ApogyWo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceUiFacade__ImportProject() {
-		return apogyWorkspaceUiFacadeEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyWorkspaceUiFacade__ExportProject() {
-		return apogyWorkspaceUiFacadeEClass.getEOperations().get(3);
+	public EDataType getIProject() {
+		return iProjectEDataType;
 	}
 
 	/**
@@ -172,10 +182,12 @@ public class ApogyWorkspaceUiPackageImpl extends EPackageImpl implements ApogyWo
 
 		// Create classes and their features
 		apogyWorkspaceUiFacadeEClass = createEClass(APOGY_WORKSPACE_UI_FACADE);
-		createEOperation(apogyWorkspaceUiFacadeEClass, APOGY_WORKSPACE_UI_FACADE___NEW_PROJECT);
-		createEOperation(apogyWorkspaceUiFacadeEClass, APOGY_WORKSPACE_UI_FACADE___OPEN_PROJECT);
-		createEOperation(apogyWorkspaceUiFacadeEClass, APOGY_WORKSPACE_UI_FACADE___IMPORT_PROJECT);
-		createEOperation(apogyWorkspaceUiFacadeEClass, APOGY_WORKSPACE_UI_FACADE___EXPORT_PROJECT);
+
+		newProjectSettingsEClass = createEClass(NEW_PROJECT_SETTINGS);
+		createEOperation(newProjectSettingsEClass, NEW_PROJECT_SETTINGS___APPLY_DEFAULT_VALUES);
+
+		// Create data types
+		iProjectEDataType = createEDataType(IPROJECT);
 	}
 
 	/**
@@ -201,22 +213,26 @@ public class ApogyWorkspaceUiPackageImpl extends EPackageImpl implements ApogyWo
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		newProjectSettingsEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		newProjectSettingsEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyWorkspaceUiFacadeEClass, ApogyWorkspaceUiFacade.class, "ApogyWorkspaceUiFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getApogyWorkspaceUiFacade__NewProject(), null, "newProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEClass(newProjectSettingsEClass, NewProjectSettings.class, "NewProjectSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getApogyWorkspaceUiFacade__OpenProject(), null, "openProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getNewProjectSettings__ApplyDefaultValues(), null, "applyDefaultValues", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getApogyWorkspaceUiFacade__ImportProject(), null, "importProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getApogyWorkspaceUiFacade__ExportProject(), null, "exportProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		// Initialize data types
+		initEDataType(iProjectEDataType, IProject.class, "IProject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

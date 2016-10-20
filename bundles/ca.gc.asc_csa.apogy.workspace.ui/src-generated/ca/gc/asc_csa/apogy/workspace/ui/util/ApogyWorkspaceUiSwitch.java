@@ -13,6 +13,8 @@
  */
 package ca.gc.asc_csa.apogy.workspace.ui.util;
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.workspace.ui.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -83,6 +85,14 @@ public class ApogyWorkspaceUiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyWorkspaceUiPackage.NEW_PROJECT_SETTINGS: {
+				NewProjectSettings newProjectSettings = (NewProjectSettings)theEObject;
+				T result = caseNewProjectSettings(newProjectSettings);
+				if (result == null) result = caseNamed(newProjectSettings);
+				if (result == null) result = caseDescribed(newProjectSettings);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -99,6 +109,51 @@ public class ApogyWorkspaceUiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApogyWorkspaceUiFacade(ApogyWorkspaceUiFacade object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>New Project Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>New Project Settings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNewProjectSettings(NewProjectSettings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamed(Named object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Described</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Described</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDescribed(Described object) {
 		return null;
 	}
 

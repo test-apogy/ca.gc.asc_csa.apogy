@@ -22,7 +22,7 @@ import ca.gc.asc_csa.apogy.workspace.ui.impl.ApogyWorkspaceUiFacadeImpl;
  * '<em><b>Facade</b></em>'. <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- *  Types definitions.
+ * Apogy Workspace Ui Facade.
  * <!-- end-model-doc -->
  *
  *
@@ -36,41 +36,4 @@ public interface ApogyWorkspaceUiFacade extends EObject {
 	 * @generated_NOT
 	 */
 	public static ApogyWorkspaceUiFacade INSTANCE = ApogyWorkspaceUiFacadeImpl.getInstance();
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
-	 * Displays the wizard to create a new Apogy project. <!-- end-model-doc -->
-	 * 
-	 * @model
-	 * @generated
-	 */
-	void newProject();
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
-	 * Displays the wizard to open an existing Apogy project. <!-- end-model-doc
-	 * -->
-	 * 
-	 * @model
-	 * @generated
-	 */
-	void openProject();
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
-	 * Displays the wizard to import an Apogy project. <!-- end-model-doc -->
-	 * 
-	 * @model
-	 * @generated
-	 */
-	void importProject();
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
-	 * Displays the wizard to export an Apogy project. <!-- end-model-doc -->
-	 * 
-	 * @model
-	 * @generated
-	 */
-	void exportProject();
 } // ApogyWorkspaceUiFacade

@@ -351,7 +351,7 @@
       <image
             icon="icons/ovr/apogy_7x8.gif"
             id="ca.gc.asc_csa.apogy.core.ui.projectNatureImages"
-            natureId="ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature">
+            natureId="ca.gc.asc_csa.apogy.core.ui.ApogyProjectNature">
       </image>
    </extension>
    <extension
@@ -388,5 +388,15 @@
       <new_element
             Class="ca.gc.asc_csa.apogy.core.ui.converters.PositionedResultToNodeConverter">
       </new_element>
+   </extension>
+   <extension
+         id="ApogyProjectNature"
+         name="Apogy Project"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="ca.gc.asc_csa.apogy.core.ui.natures.ApogyProjectNature">
+         </run>
+      </runtime>
    </extension>   
 </plugin>

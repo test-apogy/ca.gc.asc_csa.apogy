@@ -37,5 +37,12 @@
                org.eclipse.emf.edit.provider.IItemLabelProvider
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
-
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="icons/ovr/apogy_7x8.gif"
+            id="ca.gc.asc_csa.apogy.workspace.ui.imageNature"
+            natureId="ca.gc.asc_csa.apogy.workspace.ApogyNature">
+      </image>
+   </extension>
 </plugin>

@@ -123,6 +123,29 @@ public class ApogyWorkspaceUiItemProviderAdapterFactory extends ApogyWorkspaceUi
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewProjectSettingsItemProvider newProjectSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNewProjectSettingsAdapter() {
+		if (newProjectSettingsItemProvider == null) {
+			newProjectSettingsItemProvider = new NewProjectSettingsItemProvider(this);
+		}
+
+		return newProjectSettingsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -249,6 +272,7 @@ public class ApogyWorkspaceUiItemProviderAdapterFactory extends ApogyWorkspaceUi
 	 */
 	public void dispose() {
 		if (apogyWorkspaceUiFacadeItemProvider != null) apogyWorkspaceUiFacadeItemProvider.dispose();
+		if (newProjectSettingsItemProvider != null) newProjectSettingsItemProvider.dispose();
 	}
 
 }

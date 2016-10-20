@@ -13,7 +13,9 @@
  */
 package ca.gc.asc_csa.apogy.workspace.ui;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -100,49 +102,80 @@ public interface ApogyWorkspaceUiPackage extends EPackage {
 	int APOGY_WORKSPACE_UI_FACADE_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>New Project</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_WORKSPACE_UI_FACADE___NEW_PROJECT = 0;
-
-	/**
-	 * The operation id for the '<em>Open Project</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_WORKSPACE_UI_FACADE___OPEN_PROJECT = 1;
-
-	/**
-	 * The operation id for the '<em>Import Project</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_WORKSPACE_UI_FACADE___IMPORT_PROJECT = 2;
-
-	/**
-	 * The operation id for the '<em>Export Project</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_WORKSPACE_UI_FACADE___EXPORT_PROJECT = 3;
-
-	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_UI_FACADE_OPERATION_COUNT = 4;
+	int APOGY_WORKSPACE_UI_FACADE_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.workspace.ui.impl.NewProjectSettingsImpl <em>New Project Settings</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.workspace.ui.impl.NewProjectSettingsImpl
+	 * @see ca.gc.asc_csa.apogy.workspace.ui.impl.ApogyWorkspaceUiPackageImpl#getNewProjectSettings()
+	 * @generated
+	 */
+	int NEW_PROJECT_SETTINGS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_PROJECT_SETTINGS__NAME = ApogyCommonEMFPackage.NAMED__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_PROJECT_SETTINGS__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>New Project Settings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_PROJECT_SETTINGS_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Apply Default Values</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_PROJECT_SETTINGS___APPLY_DEFAULT_VALUES = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>New Project Settings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_PROJECT_SETTINGS_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
+
+
+	/**
+	 * The meta object id for the '<em>IProject</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.core.resources.IProject
+	 * @see ca.gc.asc_csa.apogy.workspace.ui.impl.ApogyWorkspaceUiPackageImpl#getIProject()
+	 * @generated
+	 */
+	int IPROJECT = 2;
 
 
 	/**
@@ -156,44 +189,35 @@ public interface ApogyWorkspaceUiPackage extends EPackage {
 	EClass getApogyWorkspaceUiFacade();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade#newProject() <em>New Project</em>}' operation.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings <em>New Project Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>New Project</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade#newProject()
+	 * @return the meta object for class '<em>New Project Settings</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings
 	 * @generated
 	 */
-	EOperation getApogyWorkspaceUiFacade__NewProject();
+	EClass getNewProjectSettings();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade#openProject() <em>Open Project</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings#applyDefaultValues() <em>Apply Default Values</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Open Project</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade#openProject()
+	 * @return the meta object for the '<em>Apply Default Values</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings#applyDefaultValues()
 	 * @generated
 	 */
-	EOperation getApogyWorkspaceUiFacade__OpenProject();
+	EOperation getNewProjectSettings__ApplyDefaultValues();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade#importProject() <em>Import Project</em>}' operation.
+	 * Returns the meta object for data type '{@link org.eclipse.core.resources.IProject <em>IProject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Import Project</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade#importProject()
+	 * @return the meta object for data type '<em>IProject</em>'.
+	 * @see org.eclipse.core.resources.IProject
+	 * @model instanceClass="org.eclipse.core.resources.IProject"
 	 * @generated
 	 */
-	EOperation getApogyWorkspaceUiFacade__ImportProject();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade#exportProject() <em>Export Project</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Export Project</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade#exportProject()
-	 * @generated
-	 */
-	EOperation getApogyWorkspaceUiFacade__ExportProject();
+	EDataType getIProject();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -228,33 +252,30 @@ public interface ApogyWorkspaceUiPackage extends EPackage {
 		 */
 		EClass APOGY_WORKSPACE_UI_FACADE = eINSTANCE.getApogyWorkspaceUiFacade();
 		/**
-		 * The meta object literal for the '<em><b>New Project</b></em>' operation.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.workspace.ui.impl.NewProjectSettingsImpl <em>New Project Settings</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.workspace.ui.impl.NewProjectSettingsImpl
+		 * @see ca.gc.asc_csa.apogy.workspace.ui.impl.ApogyWorkspaceUiPackageImpl#getNewProjectSettings()
 		 * @generated
 		 */
-		EOperation APOGY_WORKSPACE_UI_FACADE___NEW_PROJECT = eINSTANCE.getApogyWorkspaceUiFacade__NewProject();
+		EClass NEW_PROJECT_SETTINGS = eINSTANCE.getNewProjectSettings();
 		/**
-		 * The meta object literal for the '<em><b>Open Project</b></em>' operation.
+		 * The meta object literal for the '<em><b>Apply Default Values</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_WORKSPACE_UI_FACADE___OPEN_PROJECT = eINSTANCE.getApogyWorkspaceUiFacade__OpenProject();
+		EOperation NEW_PROJECT_SETTINGS___APPLY_DEFAULT_VALUES = eINSTANCE.getNewProjectSettings__ApplyDefaultValues();
 		/**
-		 * The meta object literal for the '<em><b>Import Project</b></em>' operation.
+		 * The meta object literal for the '<em>IProject</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.core.resources.IProject
+		 * @see ca.gc.asc_csa.apogy.workspace.ui.impl.ApogyWorkspaceUiPackageImpl#getIProject()
 		 * @generated
 		 */
-		EOperation APOGY_WORKSPACE_UI_FACADE___IMPORT_PROJECT = eINSTANCE.getApogyWorkspaceUiFacade__ImportProject();
-		/**
-		 * The meta object literal for the '<em><b>Export Project</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_WORKSPACE_UI_FACADE___EXPORT_PROJECT = eINSTANCE.getApogyWorkspaceUiFacade__ExportProject();
+		EDataType IPROJECT = eINSTANCE.getIProject();
 
 	}
 

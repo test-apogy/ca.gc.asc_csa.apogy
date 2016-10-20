@@ -13,13 +13,21 @@
  */
 package ca.gc.asc_csa.apogy.workspace.impl;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFactory;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 
+import ca.gc.asc_csa.apogy.workspace.NewProjectSettings;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -35,6 +43,18 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * @generated
 	 */
 	private EClass apogyWorkspaceFacadeEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass newProjectSettingsEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iProjectEDataType = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -81,6 +101,9 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		ApogyCorePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theApogyWorkspacePackage.createPackageContents();
 
@@ -103,6 +126,87 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 */
 	public EClass getApogyWorkspaceFacade() {
 		return apogyWorkspaceFacadeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getApogyWorkspaceFacade_DefaultProjectNamePrefix() {
+		return (EAttribute)apogyWorkspaceFacadeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getApogyWorkspaceFacade_DefaultSessionFilename() {
+		return (EAttribute)apogyWorkspaceFacadeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getApogyWorkspaceFacade_DefaultSessionFilenameExtension() {
+		return (EAttribute)apogyWorkspaceFacadeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getApogyWorkspaceFacade_DefaultSessionFolderName() {
+		return (EAttribute)apogyWorkspaceFacadeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyWorkspaceFacade__GetDefaultProjectName() {
+		return apogyWorkspaceFacadeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyWorkspaceFacade__CreateApogyProject__String_String() {
+		return apogyWorkspaceFacadeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNewProjectSettings() {
+		return newProjectSettingsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNewProjectSettings__ApplyDefaultValues() {
+		return newProjectSettingsEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getIProject() {
+		return iProjectEDataType;
 	}
 
 	/**
@@ -134,6 +238,18 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 
 		// Create classes and their features
 		apogyWorkspaceFacadeEClass = createEClass(APOGY_WORKSPACE_FACADE);
+		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__DEFAULT_PROJECT_NAME_PREFIX);
+		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME);
+		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME_EXTENSION);
+		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME);
+		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___GET_DEFAULT_PROJECT_NAME);
+		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT__STRING_STRING);
+
+		newProjectSettingsEClass = createEClass(NEW_PROJECT_SETTINGS);
+		createEOperation(newProjectSettingsEClass, NEW_PROJECT_SETTINGS___APPLY_DEFAULT_VALUES);
+
+		// Create data types
+		iProjectEDataType = createEDataType(IPROJECT);
 	}
 
 	/**
@@ -159,14 +275,39 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		newProjectSettingsEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		newProjectSettingsEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyWorkspaceFacadeEClass, ApogyWorkspaceFacade.class, "ApogyWorkspaceFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getApogyWorkspaceFacade_DefaultProjectNamePrefix(), theEcorePackage.getEString(), "defaultProjectNamePrefix", "Project", 0, 1, ApogyWorkspaceFacade.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyWorkspaceFacade_DefaultSessionFilename(), theEcorePackage.getEString(), "defaultSessionFilename", "session", 0, 1, ApogyWorkspaceFacade.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyWorkspaceFacade_DefaultSessionFilenameExtension(), theEcorePackage.getEString(), "defaultSessionFilenameExtension", "sym", 0, 1, ApogyWorkspaceFacade.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyWorkspaceFacade_DefaultSessionFolderName(), theEcorePackage.getEString(), "defaultSessionFolderName", "Sessions", 0, 1, ApogyWorkspaceFacade.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getApogyWorkspaceFacade__GetDefaultProjectName(), theEcorePackage.getEString(), "getDefaultProjectName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		EOperation op = initEOperation(getApogyWorkspaceFacade__CreateApogyProject__String_String(), this.getIProject(), "createApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "description", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCorePackage.getException());
+
+		initEClass(newProjectSettingsEClass, NewProjectSettings.class, "NewProjectSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getNewProjectSettings__ApplyDefaultValues(), null, "applyDefaultValues", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		// Initialize data types
+		initEDataType(iProjectEDataType, IProject.class, "IProject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

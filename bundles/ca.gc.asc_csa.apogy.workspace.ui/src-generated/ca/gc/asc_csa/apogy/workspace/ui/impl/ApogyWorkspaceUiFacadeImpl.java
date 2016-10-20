@@ -13,13 +13,8 @@
  */
 package ca.gc.asc_csa.apogy.workspace.ui.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
-import org.eclipse.e4.core.di.annotations.Execute;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFacade;
 import ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiPackage;
 
@@ -59,72 +54,4 @@ public class ApogyWorkspaceUiFacadeImpl extends MinimalEObjectImpl.Container imp
 	protected EClass eStaticClass() {
 		return ApogyWorkspaceUiPackage.Literals.APOGY_WORKSPACE_UI_FACADE;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	@Execute
-	public void newProject() {
-//		new WizardDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), new NewApogyProjectWizard()).open();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void openProject() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void importProject() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void exportProject() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ApogyWorkspaceUiPackage.APOGY_WORKSPACE_UI_FACADE___NEW_PROJECT:
-				newProject();
-				return null;
-			case ApogyWorkspaceUiPackage.APOGY_WORKSPACE_UI_FACADE___OPEN_PROJECT:
-				openProject();
-				return null;
-			case ApogyWorkspaceUiPackage.APOGY_WORKSPACE_UI_FACADE___IMPORT_PROJECT:
-				importProject();
-				return null;
-			case ApogyWorkspaceUiPackage.APOGY_WORKSPACE_UI_FACADE___EXPORT_PROJECT:
-				exportProject();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
 } //ApogyWorkspaceUiFacadeImpl

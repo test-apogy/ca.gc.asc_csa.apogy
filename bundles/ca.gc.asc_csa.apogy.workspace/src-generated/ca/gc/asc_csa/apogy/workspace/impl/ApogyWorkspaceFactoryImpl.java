@@ -15,7 +15,9 @@ package ca.gc.asc_csa.apogy.workspace.impl;
 
 import ca.gc.asc_csa.apogy.workspace.*;
 
+import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -68,8 +70,39 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE: return createApogyWorkspaceFacade();
+			case ApogyWorkspacePackage.NEW_PROJECT_SETTINGS: return createNewProjectSettings();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case ApogyWorkspacePackage.IPROJECT:
+				return createIProjectFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case ApogyWorkspacePackage.IPROJECT:
+				return convertIProjectToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -81,6 +114,34 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	public ApogyWorkspaceFacade createApogyWorkspaceFacade() {
 		ApogyWorkspaceFacadeImpl apogyWorkspaceFacade = new ApogyWorkspaceFacadeImpl();
 		return apogyWorkspaceFacade;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NewProjectSettings createNewProjectSettings() {
+		NewProjectSettingsImpl newProjectSettings = new NewProjectSettingsImpl();
+		return newProjectSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IProject createIProjectFromString(EDataType eDataType, String initialValue) {
+		return (IProject)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertIProjectToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**
