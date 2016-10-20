@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,11 +42,12 @@ import org.eclipse.emf.ecore.EPackage;
  *     Pierre Allard (Pierre.Allard@canada.ca),
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canad.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreInvocatorUI' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\n All rights reserved. This program and the accompanying materials\n are made available under the terms of the Eclipse Public License v1.0\n which accompanies this distribution, and is available at\n http://www.eclipse.org/legal/epl-v10.html\n \n Contributors:\n     Pierre Allard (Pierre.Allard@canada.ca), \n     Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n     Sebastien Gemme (Sebastien.Gemme@canada.ca),\n     Canadian Space Agency (CSA) - Initial API and implementation' childCreationExtenders='true' modelName='ApogyCoreInvocatorUI' modelDirectory='/ca.gc.asc_csa.apogy.core.invocator.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.invocator.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core.invocator'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreInvocatorUI' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\n All rights reserved. This program and the accompanying materials\n are made available under the terms of the Eclipse Public License v1.0\n which accompanies this distribution, and is available at\n http://www.eclipse.org/legal/epl-v10.html\n \n Contributors:\n     Pierre Allard (Pierre.Allard@canada.ca), \n     Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n     Sebastien Gemme (Sebastien.Gemme@canada.ca),\n     Olivier L. Larouche (Olivier.LLarouche@canada.ca),\n     Canadian Space Agency (CSA) - Initial API and implementation' childCreationExtenders='true' modelName='ApogyCoreInvocatorUI' modelDirectory='/ca.gc.asc_csa.apogy.core.invocator.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.invocator.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core.invocator'"
  * @generated
  */
 public interface ApogyCoreInvocatorUIPackage extends EPackage {
@@ -82,6 +84,52 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	ApogyCoreInvocatorUIPackage eINSTANCE = ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.NewProgramSettingsImpl <em>New Program Settings</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.NewProgramSettingsImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getNewProgramSettings()
+	 * @generated
+	 */
+	int NEW_PROGRAM_SETTINGS = 0;
+
+	/**
+	 * The feature id for the '<em><b>EClass</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_PROGRAM_SETTINGS__ECLASS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Program Settings</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_PROGRAM_SETTINGS__PROGRAM_SETTINGS = 1;
+
+	/**
+	 * The number of structural features of the '<em>New Program Settings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_PROGRAM_SETTINGS_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>New Program Settings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_PROGRAM_SETTINGS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,7 +137,7 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getApogyCoreInvocatorUIFacade()
 	 * @generated
 	 */
-	int APOGY_CORE_INVOCATOR_UI_FACADE = 0;
+	int APOGY_CORE_INVOCATOR_UI_FACADE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -135,8 +183,40 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getCompoundCommand()
 	 * @generated
 	 */
-	int COMPOUND_COMMAND = 1;
+	int COMPOUND_COMMAND = 2;
 
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings <em>New Program Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>New Program Settings</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings
+	 * @generated
+	 */
+	EClass getNewProgramSettings();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings#getEClass <em>EClass</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>EClass</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings#getEClass()
+	 * @see #getNewProgramSettings()
+	 * @generated
+	 */
+	EReference getNewProgramSettings_EClass();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings#getProgramSettings <em>Program Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Program Settings</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings#getProgramSettings()
+	 * @see #getNewProgramSettings()
+	 * @generated
+	 */
+	EReference getNewProgramSettings_ProgramSettings();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade <em>Facade</em>}'.
@@ -202,6 +282,29 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.NewProgramSettingsImpl <em>New Program Settings</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.NewProgramSettingsImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getNewProgramSettings()
+		 * @generated
+		 */
+		EClass NEW_PROGRAM_SETTINGS = eINSTANCE.getNewProgramSettings();
+		/**
+		 * The meta object literal for the '<em><b>EClass</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NEW_PROGRAM_SETTINGS__ECLASS = eINSTANCE.getNewProgramSettings_EClass();
+		/**
+		 * The meta object literal for the '<em><b>Program Settings</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NEW_PROGRAM_SETTINGS__PROGRAM_SETTINGS = eINSTANCE.getNewProgramSettings_ProgramSettings();
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->

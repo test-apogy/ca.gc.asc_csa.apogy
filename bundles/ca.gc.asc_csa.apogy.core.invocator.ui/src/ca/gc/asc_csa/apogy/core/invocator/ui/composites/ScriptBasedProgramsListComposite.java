@@ -25,20 +25,25 @@ import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.dnd.EditingDomainViewerDropAdapter;
+import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
+import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.jface.util.LocalSelectionTransfer;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
+import org.eclipse.swt.dnd.DND;
+import org.eclipse.swt.dnd.FileTransfer;
+import org.eclipse.swt.dnd.Transfer;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
@@ -51,14 +56,11 @@ import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
-import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Named;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
@@ -101,7 +103,6 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		treeViewer = new TreeViewer(compositeProgramsList, SWT.BORDER | SWT.SINGLE | SWT.V_SCROLL);
 		Tree tree = treeViewer.getTree();
 		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 7));
-//		tree.setHeaderVisible(true);
 		tree.setLinesVisible(true);
 		ColumnViewerToolTipSupport.enableFor(treeViewer);
 		treeViewer.addSelectionChangedListener(getTreeViewerSelectionChangedListener());
@@ -124,11 +125,9 @@ public class ScriptBasedProgramsListComposite extends Composite {
 				 * Creates and opens the wizard to create a valid context
 				 */
 				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
-				getShell().setBackground(SWTResourceManager.getColor(SWT.COLOR_TRANSPARENT));
-				getShell().setBackgroundMode(SWT.INHERIT_FORCE);
-				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
-
+				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);				
 				dialog.open();
+				dialog.getShell().setSize(800, 600);
 			}
 		});
 
@@ -172,34 +171,6 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			}
 		});
 		new Label(compositeProgramsList, SWT.NONE);
-
-		Button btnUp = new Button(compositeProgramsList, SWT.NONE);
-		btnUp.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-		formToolkit.adapt(btnUp, true, true);
-		btnUp.setText("Up");
-		btnUp.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				if(isProgramSelected()){
-					ISelection selection = treeViewer.getSelection();
-					getSelectedProgramsGroup().eSet(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, ApogyCommonEMFFacade.INSTANCE.moveUp(new BasicEList<>(getSelectedProgramsGroup().getPrograms()) , (Object) getSelectedProgram()));
-					treeViewer.setSelection(selection);
-				}
-			}
-		});
-
-		Button btnDown = new Button(compositeProgramsList, SWT.NONE);
-		btnDown.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
-		formToolkit.adapt(btnDown, true, true);
-		btnDown.setText("Down");
-		btnDown.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				ISelection selection = treeViewer.getSelection();
-				getSelectedProgramsGroup().eSet(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, ApogyCommonEMFFacade.INSTANCE.moveDown(new BasicEList<>(getSelectedProgramsGroup().getPrograms()) , (Object) getSelectedProgram()));
-				treeViewer.setSelection(selection);
-			}
-		});
 		
 		new Label(compositeProgramsList, SWT.NONE);
 		scrolledComposite.setContent(compositeProgramsList);
@@ -282,7 +253,6 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		public void notifyChanged(Notification notification) {
 			super.notifyChanged(notification);
 			treeViewer.refresh();
-			//treeViewer.expandAll(); // FIXME: Expand
 		}
 
 		@Override
@@ -372,9 +342,14 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		if (programsList != null) {
 			if (!treeViewer.getTree().isDisposed()) {
 				treeViewer.setInput(programsList);
-				treeViewer.expandAll();
 			}
 		}
+		
+		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
+		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
+		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));		
+		treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
+
 		return bindingContext;
 	}
 

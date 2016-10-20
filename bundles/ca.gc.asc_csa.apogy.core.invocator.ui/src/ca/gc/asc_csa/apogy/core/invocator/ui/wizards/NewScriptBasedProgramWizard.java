@@ -23,11 +23,13 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
@@ -36,6 +38,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
@@ -45,7 +48,8 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private NewProgramWizardPage newProgramWizardPage;
 	private ProgramsGroup programsGroup;
-	private Program program;
+	private ProgramSettings programSettings;
+	//private Program program;
 
 	/**
 	 * Constructor for NewProgramsGroupWizard.
@@ -75,22 +79,29 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 	public void addPages() {
 		if (getNewProgramWizardPage() != null) {
 			addPage(getNewProgramWizardPage());
-			this.setForcePreviousAndNextButtons(true);
+//			newProgramWizardPage.set
+			setForcePreviousAndNextButtons(true);
 		}
 		/*if (getNamedDescribedWizardPage() != null) {
 			addPage(getNamedDescribedWizardPage());
 		}*/
 	}
-
-	@Override
-	public IWizardPage getNextPage(IWizardPage page) {
-		if (page == newProgramWizardPage
-				&& newProgramWizardPage.getProgramType() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST) {
-			addPage(getNamedDescribedWizardPage());
-			return getNamedDescribedWizardPage();
-		}
-		return super.getNextPage(page);
-	}
+//
+//	@Override
+//	public IWizardPage getNextPage(IWizardPage page) {
+//		if (page == newProgramWizardPage
+//				&& newProgramWizardPage.getProgramType() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST) {
+//			addPage(getNamedDescribedWizardPage());
+//			
+//			return getNamedDescribedWizardPage();
+//		}if (page == newProgramWizardPage
+//				&& newProgramWizardPage.getProgramType() != ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST) {
+//			addPage(getNamedDescribedWizardPage());
+//			
+//			return getNamedDescribedWizardPage();
+//		}
+//		return super.getNextPage(page);
+//	}
 
 	/**
 	 * Returns the {@link NewProgramWizardPage }. If null is returned, the page
@@ -101,47 +112,46 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 	protected NewProgramWizardPage getNewProgramWizardPage() {
 		if (newProgramWizardPage == null) {
 			newProgramWizardPage = new NewProgramWizardPage(getProgramsGroup(),
-					ApogyCoreInvocatorPackage.Literals.SCRIPT_BASED_PROGRAM);
+					ApogyCoreInvocatorPackage.Literals.SCRIPT_BASED_PROGRAM, getProgramSettings());
 		}
 		return newProgramWizardPage;
 	}
 
-	/**
-	 * Returns the {@link NamedDescribedWizardPage}. If null is returned, the
-	 * page is not added to the wizard.
-	 * 
-	 * @return Reference to the page.
-	 */
-	protected WizardPage getNamedDescribedWizardPage() {// Named named, Described described){
-		if (namedDescribedWizardPage == null) {
-			namedDescribedWizardPage = new NamedDescribedWizardPage(getProgram(), getProgram());
-		}
-		return namedDescribedWizardPage;
-	}
+//	/**
+//	 * Returns the {@link NamedDescribedWizardPage}. If null is returned, the
+//	 * page is not added to the wizard.
+//	 * 
+//	 * @return Reference to the page.
+//	 */
+//	protected WizardPage getNamedDescribedWizardPage() {// Named named, Described described){
+//		if (namedDescribedWizardPage == null) {
+//			namedDescribedWizardPage = new NamedDescribedWizardPage(getProgram(), getProgram());
+//		}
+//		return namedDescribedWizardPage;
+//	}
 
 	@Override
 	public boolean performFinish() {
+		
+		System.out.println("NewScriptBasedProgramWizard.getProgram() :" + newProgramWizardPage.getProgramType());
+		ProgramFactory factory = ProgramFactoriesRegistry.INSTANCE.getFactory(newProgramWizardPage.getProgramType());
+		System.out.println("NewScriptBasedProgramWizard.getProgram() :" + factory.createProgram());
+		Program program = factory.createProgram();
+		program.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsGroup().getProgramsList(), program, ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
 
-		ProgramsGroup programsGroup = getProgramsGroup();
-		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getProgramsList());
+
+		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getProgramsGroup());
 
 		/** Check if there is a domain. */
-		if (editingDomain == null) {
-			/** No Domain */
-			getProgramsList().getProgramsGroups().add(programsGroup);
-		} else {
+		if (editingDomain != null) {
 			/** Use the command stack. */
 			AddCommand command = new AddCommand(editingDomain, getProgramsGroup(),
-					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, getProgram());
+					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, program);
 			editingDomain.getCommandStack().execute(command);
+			return true;
 		}
+		return false;
 		
-		
-		// Test.
-		ProgramFactory factory = ProgramFactoriesRegistry.INSTANCE.getFactory(ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST);
-		System.out.println("NewScriptBasedProgramWizard.performFinish()" +  factory.createProgram());		
-
-		return true;
 	}
 
 	/**
@@ -164,26 +174,27 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 	 * 
 	 * @return List of programs.
 	 */
-	protected ProgramsList getProgramsList() {
+	/*protected ProgramsList getProgramsList() {
 		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? null
 				: ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
-	}
+	}*/
 
-	protected Program getProgram() {
+	/*protected Program getProgram() {
 		if (program == null) {
-			// TODO
-			if (newProgramWizardPage.getProgramType() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST) {
-				setWindowTitle("New Operation Calls List");
-				program = (Program) ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallsList();
-				program.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsGroup(), program, ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
-//			}else if(newProgramWizardPage.getProgramType() != ApogyCoreJavaScriptProgramsPackage.Literals){ 
-//				//TODO Javascript
-//				//program = (Program) ApogyCoreJavaScriptProgramsPackage.Literals
-//				program = null;
-			}else{
-				program = null;
-			}
+			System.out.println("NewScriptBasedProgramWizard.getProgram() :" + newProgramWizardPage.getProgramType());
+			ProgramFactory factory = ProgramFactoriesRegistry.INSTANCE.getFactory(newProgramWizardPage.getProgramType());
+			System.out.println("NewScriptBasedProgramWizard.getProgram() :" + factory.createProgram());
+			program = factory.createProgram();
+			program.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsList(), getProgram(), ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
 		}
 		return program;
+	}*/
+	
+	protected ProgramSettings getProgramSettings(){
+		if (programSettings == null) {
+			programSettings = ApogyCoreInvocatorFactory.eINSTANCE.createProgramSettings();
+		}
+		return programSettings;
 	}
+	
 }

@@ -81,6 +81,29 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewProgramSettingsItemProvider newProgramSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNewProgramSettingsAdapter() {
+		if (newProgramSettingsItemProvider == null) {
+			newProgramSettingsItemProvider = new NewProgramSettingsItemProvider(this);
+		}
+
+		return newProgramSettingsItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,6 +225,7 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 	 * @generated
 	 */
 	public void dispose() {
+		if (newProgramSettingsItemProvider != null) newProgramSettingsItemProvider.dispose();
 		if (apogyCoreInvocatorUIFacadeItemProvider != null) apogyCoreInvocatorUIFacadeItemProvider.dispose();
 	}
 

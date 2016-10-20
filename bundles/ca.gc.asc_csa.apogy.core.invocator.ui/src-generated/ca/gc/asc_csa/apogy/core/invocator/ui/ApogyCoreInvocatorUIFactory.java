@@ -33,6 +33,15 @@ public interface ApogyCoreInvocatorUIFactory extends EFactory {
 	ApogyCoreInvocatorUIFactory eINSTANCE = ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>New Program Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>New Program Settings</em>'.
+	 * @generated
+	 */
+	NewProgramSettings createNewProgramSettings();
+
+	/**
 	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

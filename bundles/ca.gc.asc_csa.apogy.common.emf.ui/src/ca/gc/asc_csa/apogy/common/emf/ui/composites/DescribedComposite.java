@@ -10,6 +10,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui.composites;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -20,30 +21,28 @@ import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
-import ca.gc.asc_csa.apogy.common.emf.Described;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import org.eclipse.ui.forms.widgets.FormToolkit;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 
 public class DescribedComposite extends Composite {
 
 	private DataBindingContext m_bindingContext;
 	private Described described;
-	private Text descriptionText;
+	private StyledText descriptionText;
 	private EditingDomain editingDomain;
-	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
-	private final int DESCRIPTION_TEXT_NUMBER_OF_LINES = 10;
+	// private final int DESCRIPTION_TEXT_NUMBER_OF_LINES = 10;
 
 	public DescribedComposite(Composite parent, int style, EditingDomain editingDomain) {
 		this(parent, style);
 		this.editingDomain = editingDomain;
-	}	
-	
+	}
+
 	public DescribedComposite(Composite parent, int style, Described newDescribed) {
 		this(parent, style);
 		setDescribed(newDescribed);
@@ -51,20 +50,15 @@ public class DescribedComposite extends Composite {
 
 	public DescribedComposite(Composite parent, int style) {
 		super(parent, SWT.NONE);
-		
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		
-		setLayout(new GridLayout(2, false));
+		setLayout(new GridLayout(1, false));
 
-		Label label = toolkit.createLabel(this, "Description:", SWT.NONE);
-		label.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+		Label lblDescription = new Label(this, SWT.NONE);
+		lblDescription.setText("Description");
+		lblDescription.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, true, false, 1, 1));
 
-		descriptionText = toolkit.createText(this, "", SWT.BORDER | SWT.V_SCROLL | SWT.MULTI);
-		GridData layoutData = new GridData(SWT.FILL, SWT.FILL, true, true);
-		layoutData.heightHint = 50;
-		descriptionText.setLayoutData(layoutData);
-				
+		descriptionText = new StyledText(this, SWT.V_SCROLL | SWT.BORDER);
+		descriptionText.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		descriptionText.setAlwaysShowScrollBars(false);
 
 		if (described != null) {
 			m_bindingContext = initCustomDataBindings();
@@ -75,13 +69,15 @@ public class DescribedComposite extends Composite {
 	protected void checkSubclass() {
 		// Disable the check that prevents subclassing of SWT components
 	}
-	
+
 	@SuppressWarnings("unused")
 	private DataBindingContext initDataBindings() {
-		IObservableValue descriptionObserveWidget = WidgetProperties.text(SWT.Modify).observe(descriptionText);
-		IObservableValue descriptionObserveValue = (editingDomain == null ? 
-				EMFProperties.value(ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described):
-				EMFEditProperties.value(editingDomain, ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described));
+		IObservableValue<?> descriptionObserveWidget = WidgetProperties.text(SWT.Modify).observe(descriptionText);
+		@SuppressWarnings("unchecked")
+		IObservableValue<?> descriptionObserveValue = (editingDomain == null
+				? EMFProperties.value(ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described)
+				: EMFEditProperties.value(editingDomain, ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION)
+						.observe(described));
 		//
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
@@ -91,11 +87,15 @@ public class DescribedComposite extends Composite {
 	}
 
 	private DataBindingContext initCustomDataBindings() {
-		IObservableValue descriptionObserveWidget = WidgetProperties.text(new int[]{SWT.Modify, SWT.FocusOut, SWT.DefaultSelection}).observeDelayed(500, descriptionText);
-		
-		IObservableValue descriptionObserveValue = editingDomain == null ? 
-				EMFProperties.value(ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described):
-				EMFEditProperties.value(editingDomain, ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described);
+		IObservableValue<?> descriptionObserveWidget = WidgetProperties
+				.text(new int[] { SWT.Modify, SWT.FocusOut, SWT.DefaultSelection })
+				.observeDelayed(500, descriptionText);
+
+		@SuppressWarnings("unchecked")
+		IObservableValue<?> descriptionObserveValue = editingDomain == null
+				? EMFProperties.value(ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described)
+				: EMFEditProperties.value(editingDomain, ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION)
+						.observe(described);
 
 		//
 		DataBindingContext bindingContext = new DataBindingContext();
@@ -104,8 +104,7 @@ public class DescribedComposite extends Composite {
 		//
 		return bindingContext;
 	}
-	
-	
+
 	public Described getDescribed() {
 		return described;
 	}
@@ -130,10 +129,9 @@ public class DescribedComposite extends Composite {
 	@Override
 	public void dispose() {
 		super.dispose();
-		toolkit.dispose();
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
-		}		
+		}
 	}
 }

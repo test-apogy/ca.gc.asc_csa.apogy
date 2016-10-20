@@ -3,7 +3,6 @@
  */
 package ca.gc.asc_csa.apogy.core.programs.javascript.impl;
 
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.impl.ProgramFactoryImpl;
 
@@ -44,7 +43,7 @@ public class JavaScriptProgramFactoryImpl extends ProgramFactoryImpl implements 
 	 */
 	@Override
 	public Program createProgram() {
-		return ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallsList();
+		return ApogyCoreJavaScriptProgramsFactoryImpl.eINSTANCE.createJavaScriptProgram();
 	}
 
 } //JavaScriptProgramFactoryImpl

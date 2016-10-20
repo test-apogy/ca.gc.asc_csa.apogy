@@ -75,6 +75,12 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case ApogyCoreInvocatorUIPackage.NEW_PROGRAM_SETTINGS: {
+				NewProgramSettings newProgramSettings = (NewProgramSettings)theEObject;
+				T result = caseNewProgramSettings(newProgramSettings);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE: {
 				ApogyCoreInvocatorUIFacade apogyCoreInvocatorUIFacade = (ApogyCoreInvocatorUIFacade)theEObject;
 				T result = caseApogyCoreInvocatorUIFacade(apogyCoreInvocatorUIFacade);
@@ -83,6 +89,21 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>New Program Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>New Program Settings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNewProgramSettings(NewProgramSettings object) {
+		return null;
 	}
 
 	/**

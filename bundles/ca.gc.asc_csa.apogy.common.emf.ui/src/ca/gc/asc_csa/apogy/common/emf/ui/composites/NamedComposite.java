@@ -10,6 +10,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui.composites;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -23,48 +24,42 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Named;
-import org.eclipse.ui.forms.widgets.FormToolkit;
 
-public class NamedComposite extends Composite
-{
+public class NamedComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 	private Named named;
 	private Text nameText;
 	private EditingDomain editingDomain;
-	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
-	public NamedComposite(Composite parent, int style, EditingDomain editingDomain)
-	{
+	public NamedComposite(Composite parent, int style, EditingDomain editingDomain) {
 		this(parent, style);
 		this.editingDomain = editingDomain;
 	}
-	
-	public NamedComposite(Composite parent, int style, Named newNamed)
-	{
+
+	public NamedComposite(Composite parent, int style, Named newNamed) {
 		this(parent, style);
 		setNamed(newNamed);
 	}
 
-	public NamedComposite(Composite parent, int style)
-	{
+	public NamedComposite(Composite parent, int style) {
 		super(parent, style);
-		
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		
-		setLayout(new GridLayout(2, false));
 
-		toolkit.createLabel(this, "Name: ", SWT.NONE);
+		setLayout(new GridLayout(1, false));
 
-		nameText = toolkit.createText(this, "", SWT.BORDER | SWT.SINGLE);
+		Label label = new Label(this, SWT.NONE);
+		label.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false, 1, 1));
+		label.setText("Name");
+		;
+
+		nameText = new Text(this, SWT.BORDER);
 		nameText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
 
-		if (named != null)
-		{
+		if (named != null) {
 			m_bindingContext = initCustomDataBindings();
 		}
 	}
@@ -74,11 +69,11 @@ public class NamedComposite extends Composite
 		// Disable the check that prevents subclassing of SWT components
 	}
 
-	@SuppressWarnings("unused")
-	private DataBindingContext initDataBindings()
-	{
-		IObservableValue nameObserveWidget = WidgetProperties.text(SWT.Modify).observe(nameText);
-		IObservableValue nameObserveValue = EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME).observe(named);
+	@SuppressWarnings({ "unused", "unchecked" })
+	private DataBindingContext initDataBindings() {
+		IObservableValue<?> nameObserveWidget = WidgetProperties.text(SWT.Modify).observe(nameText);
+		IObservableValue<?> nameObserveValue = EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME)
+				.observe(named);
 
 		DataBindingContext bindingContext = new DataBindingContext();
 
@@ -86,60 +81,51 @@ public class NamedComposite extends Composite
 
 		return bindingContext;
 	}
-	
-	private DataBindingContext initCustomDataBindings()
-	{
-		IObservableValue nameObserveWidget = WidgetProperties.text(SWT.Modify).observe(nameText);
-		IObservableValue nameObserveValue = (editingDomain == null ?
-				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME).observe(named) :
-				EMFEditProperties.value(editingDomain, ApogyCommonEMFPackage.Literals.NAMED__NAME).observe(named));
-		
+
+	private DataBindingContext initCustomDataBindings() {
+		IObservableValue<?> nameObserveWidget = WidgetProperties.text(SWT.Modify).observe(nameText);
+		@SuppressWarnings("unchecked")
+		IObservableValue<?> nameObserveValue = (editingDomain == null
+				? EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME).observe(named)
+				: EMFEditProperties.value(editingDomain, ApogyCommonEMFPackage.Literals.NAMED__NAME).observe(named));
+
 		DataBindingContext bindingContext = new DataBindingContext();
-		
-		bindingContext.bindValue(nameObserveWidget, nameObserveValue, null,	null);
-		
+
+		bindingContext.bindValue(nameObserveWidget, nameObserveValue, null, null);
+
 		return bindingContext;
 	}
-	
-	public Named getNamed()
-	{
+
+	public Named getNamed() {
 		return named;
 	}
 
-	public void setNamed(Named newNamed)
-	{
+	public void setNamed(Named newNamed) {
 		setNamed(newNamed, true);
 	}
 
-	public void setNamed(Named newNamed, boolean update)
-	{
+	public void setNamed(Named newNamed, boolean update) {
 		named = newNamed;
-		
-		if (update)
-		{
-			if (m_bindingContext != null)
-			{
+
+		if (update) {
+			if (m_bindingContext != null) {
 				m_bindingContext.dispose();
 				m_bindingContext = null;
 			}
-			
-			if (named != null)
-			{
+
+			if (named != null) {
 				m_bindingContext = initCustomDataBindings();
 			}
 		}
 	}
-	
+
 	@Override
-	public void dispose()
-	{
+	public void dispose() {
 		super.dispose();
-		toolkit.dispose();
-		
-		if (m_bindingContext != null)
-		{
+
+		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
-		}		
+		}
 	}
 }

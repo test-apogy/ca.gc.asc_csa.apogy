@@ -13,352 +13,340 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
-import org.eclipse.jface.viewers.ComboViewer;
+import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.ISelectionChangedListener;
-import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreeSelection;
+import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.TreeViewerColumn;
+import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.ScrolledComposite;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.forms.widgets.Section;
-import org.eclipse.ui.views.properties.tabbed.ISection;
+import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeColumn;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 
-public class NewProgramComposite extends Composite
-{
+public class NewProgramComposite extends Composite {
 	private DataBindingContext m_currentDataBindings;
-	
-	private final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+
+	private final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
+			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 	private ProgramsList programsList;
-	private ProgramsGroup programsGroup;
-	private EClass programSuperClass;
+	private ProgramsGroup group;
+	private EClass eClass;
 	
-	private ComboViewer comboProgramsGroups;
-	private ComboViewer comboProgramsTypes;
+	private Composite compositeGroup;
+	private Composite compositeType;
+	
+	private TreeViewer treeViewerGroups;
+	private TreeViewer treeViewerTypes;
 
-	/*private ISelectionChangedListener comboProgramsGroupsSelectionChangedListener;
-	private ISelectionChangedListener comboProgramsTypesSelectionChangedListener;*/
-	//private ISelectionChangedListener selectionChangedListener;
 
-	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
+	public NewProgramComposite(Composite parent, int style) {
+		super(parent, style);
+		GridLayout gridLayout = new GridLayout(1, false);
+		gridLayout.marginHeight = 0;
+		setLayout(gridLayout);
 
-	public NewProgramComposite( Composite parent, int style )
-	{
-		super( parent, style );
-		setLayout( new GridLayout( 1, true ) );
-		
-		Section sctnProgramsList = formToolkit.createSection(this, Section.NO_TITLE);
-		sctnProgramsList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		formToolkit.paintBordersFor(sctnProgramsList);
-		
-		ScrolledComposite scrolledComposite = new ScrolledComposite(sctnProgramsList, SWT.H_SCROLL | SWT.V_SCROLL);
-		formToolkit.adapt(scrolledComposite);
-		formToolkit.paintBordersFor(scrolledComposite);
-		sctnProgramsList.setClient(scrolledComposite);
-		scrolledComposite.setExpandHorizontal(true);
-		scrolledComposite.setExpandVertical(true);
-		
-		Composite compositeProgramsList = new Composite(scrolledComposite, SWT.NONE);
-		formToolkit.adapt(compositeProgramsList);
-		formToolkit.paintBordersFor(compositeProgramsList);
-		compositeProgramsList.setLayout(new GridLayout(2, false));
-		
-		Label lblProgramType = new Label(compositeProgramsList, SWT.NONE);
-		lblProgramType.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-		formToolkit.adapt(lblProgramType, true, true);
-		lblProgramType.setText("Program Type");
-		
-		comboProgramsTypes = new ComboViewer(compositeProgramsList, SWT.NONE);
-		Combo comboProgramType = comboProgramsTypes.getCombo();
-		comboProgramType.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		formToolkit.paintBordersFor(comboProgramType);
-		
-		comboProgramsTypes.setContentProvider(new ProgramsTypeContentProvider(adapterFactory));
-		comboProgramsTypes.setLabelProvider(new LabelProvider(){
-			@Override
-			public String getText(Object element) {
-				return ((EClass) element).getName();
-			}
-		});
-		
-		Label lblGroup = new Label(compositeProgramsList, SWT.NONE);
-		lblGroup.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-		formToolkit.adapt(lblGroup, true, true);
+		compositeGroup = new Composite(this, SWT.NONE);
+		compositeGroup.setLayout(new GridLayout(1, false));
+		compositeGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+
+		Label lblGroup = new Label(compositeGroup, SWT.NONE);
+		lblGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
 		lblGroup.setText("Group");
+
+		treeViewerGroups = new TreeViewer(compositeGroup, SWT.BORDER | SWT.SINGLE | SWT.V_SCROLL);
+		Tree treeGroups = treeViewerGroups.getTree();
+		treeGroups.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		treeGroups.setLinesVisible(true);
+		ColumnViewerToolTipSupport.enableFor(treeViewerGroups);
+
+		TreeViewerColumn treeViewerProgramsGroupColumnItem_Name = new TreeViewerColumn(treeViewerGroups, SWT.NONE);
+		TreeColumn trclmnProgramsGroupItemName = treeViewerProgramsGroupColumnItem_Name.getColumn();
+		trclmnProgramsGroupItemName.setWidth(200);
+		trclmnProgramsGroupItemName.setText("Name");
+
+		treeViewerGroups.setContentProvider(new ProgramsGroupContentProvider(adapterFactory));
+		treeViewerGroups.setLabelProvider(new GroupsLabelProvider());
+
+		compositeType = new Composite(this, SWT.NONE);
+		compositeType.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		compositeType.setLayout(new GridLayout(1, false));
+
+		Label lblProgramType = new Label(compositeType, SWT.NONE);
+		lblProgramType.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+		lblProgramType.setText("Program Type");
+
+		treeViewerTypes = new TreeViewer(compositeType, SWT.BORDER);
+		Tree treeTypes = treeViewerTypes.getTree();
+		treeTypes.setLinesVisible(true);
+		treeTypes.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		ColumnViewerToolTipSupport.enableFor(treeViewerGroups);
+
+		TreeViewerColumn treeViewerColumn = new TreeViewerColumn(treeViewerTypes, SWT.NONE);
+		TreeColumn treeColumn = treeViewerColumn.getColumn();
+		treeColumn.setWidth(200);
+		treeColumn.setText("Name");
 		
-		comboProgramsGroups = new ComboViewer(compositeProgramsList, SWT.NONE);
-		Combo comboGroup = comboProgramsGroups.getCombo();
-		comboGroup.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		formToolkit.paintBordersFor(comboGroup);
-				
-		comboProgramsGroups.setContentProvider(new ProgramsGroupContentProvider(adapterFactory));
-		comboProgramsGroups.setLabelProvider(new LabelProvider(){
-			@Override
-			public String getText(Object element) {
-				return element instanceof ProgramsGroup ? ((ProgramsGroup) element).getName() : null;
-			}
-		});
-		
-		scrolledComposite.setContent(compositeProgramsList);
-		scrolledComposite.setMinSize(compositeProgramsList.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		treeViewerTypes.setContentProvider(new ProgramsTypeContentProvider(adapterFactory));
+		treeViewerTypes.setLabelProvider(new TypesLabelProvider());
 	}
-	
+
 	/**
-	 * This is used to indicate if a program should belong to the list.  By default all types of {@link Program} are applicable.
-	 * However the developers may override this method to exclude some programs from the list.
-	 * @param program Reference to the program.
+	 * This is used to indicate if a program should belong to the list. By
+	 * default all types of {@link Program} are applicable. However the
+	 * developers may override this method to exclude some programs from the
+	 * list.
+	 * 
+	 * @param program
+	 *            Reference to the program.
 	 * @return Return true means the {@link Program} is applicable.
 	 */
 	protected boolean isApplicable(Program program) {
 		return true;
 	}
-	
-	/*private ISelectionChangedListener getSelectionChangedListener() {
-		if (selectionChangedListener == null){
-			selectionChangedListener = new ISelectionChangedListener() {
-				
-				@Override
-				public void selectionChanged(SelectionChangedEvent event) {
-					NewProgramComposite.this.newSelection((StructuredSelection)event.getSelection());
-				}
-			};
-		}
-		return selectionChangedListener;
-	}*/
-	
-	public ComboViewer getComboProgramsGroups() {
-		return comboProgramsGroups;
+
+	public TreeViewer getTreeViewerGroups() {
+		return treeViewerGroups;
 	}
 
-	public ComboViewer getComboProgramsType() {
-		return comboProgramsTypes;
-	}
-
-	/*private ISelectionChangedListener getComboProgramsTypesSelectionChangedListener() {
-		if (comboProgramsTypesSelectionChangedListener == null){
-			comboProgramsTypesSelectionChangedListener = new ISelectionChangedListener() {
-				
-				@Override
-				public void selectionChanged(SelectionChangedEvent event) {
-					NewProgramComposite.this.newSelection((TreeSelection)event.getSelection());
-				}
-			};
-		}
-		return comboProgramsTypesSelectionChangedListener;
-	}*/
-	
-
-	/*private ISelectionChangedListener getComboProgramsGroupsSelectionChangedListener() {
-		if (comboProgramsGroupsSelectionChangedListener == null){
-			comboProgramsGroupsSelectionChangedListener = new ISelectionChangedListener() {
-				
-				@Override
-				public void selectionChanged(SelectionChangedEvent event) {
-					programsGroup = (ProgramsGroup) ((StructuredSelection) event.getSelection()).getFirstElement();
-				//	NewProgramComposite.this.newSelection((TreeSelection)event.getSelection());
-				}
-			};
-		}
-		return comboProgramsGroupsSelectionChangedListener;
-	}*/
-	
-	
-	/**
-	 * This method is called when a new selection is made in the composite.
-	 * @param selection Reference to the selection.
-	 */
-	protected void newSelection(StructuredSelection selection) {
+	public TreeViewer getTreeViewerTypes() {
+		return treeViewerTypes;
 	}
 	
-	public void setProgramSuperClass(EClass programSuperClass){
-		this.programSuperClass = programSuperClass;
+	private class TypesLabelProvider extends StyledCellLabelProvider {
+		@Override
+		public void update(ViewerCell cell) {
+			if (cell.getElement() instanceof EClass) {
+				cell.setText(((EClass) cell.getElement()).getName());
+			}
+		}
+
+		@Override
+		public String getToolTipText(Object element) {
+			if (element instanceof Described) {
+				return ((Described) element).getDescription();
+			}
+			return super.getToolTipText(element);
+		}
+	}
+	
+	private class GroupsLabelProvider extends StyledCellLabelProvider {
+		@Override
+		public void update(ViewerCell cell) {
+			if (cell.getElement() instanceof ProgramsGroup) {
+				cell.setText(((ProgramsGroup) cell.getElement()).getName());
+			}
+		}
+
+		@Override
+		public String getToolTipText(Object element) {
+			if (element instanceof Described) {
+				return ((Described) element).getDescription();
+			}
+			return super.getToolTipText(element);
+		}
 		
-		if (programSuperClass != null){
-			if (m_currentDataBindings != null){
+		@Override
+		public Point getToolTipShift(Object object) {
+			return new Point(5, 5);
+		}
+
+		@Override
+		public int getToolTipDisplayDelayTime(Object object) {
+			return 500;
+		}
+
+		@Override
+		public int getToolTipTimeDisplayed(Object object) {
+			return 5000;
+		}
+	}
+
+	public void setProgramSuperClass(EClass programSuperClass) {
+		this.eClass = programSuperClass;
+
+		if (programSuperClass != null) {
+			if (m_currentDataBindings != null) {
 				m_currentDataBindings.dispose();
 			}
 			m_currentDataBindings = initDataBindings();
 		}
 	}
-	
+
 	/**
 	 * Returns the selected program.
+	 * 
 	 * @return Reference to the selected {@link Program}.
 	 */
 	public Program getSelectedProgramTypes() {
-		TreeSelection selection = (TreeSelection) comboProgramsTypes.getSelection();
+		TreeSelection selection = (TreeSelection) treeViewerTypes.getSelection();
 		return (Program) selection.getFirstElement();
-	}	
-	
+	}
+
 	/**
 	 * Returns the selected program.
+	 * 
 	 * @return Reference to the selected {@link Program}.
 	 */
 	public Program getSelectedProgramGroup() {
-		TreeSelection selection = (TreeSelection) comboProgramsGroups.getSelection();
+		TreeSelection selection = (TreeSelection) treeViewerGroups.getSelection();
 		return (Program) selection.getFirstElement();
 	}
-	
-	
-	private class ProgramsTypeContentProvider extends AdapterFactoryContentProvider{
-		
+
+	private class ProgramsTypeContentProvider extends AdapterFactoryContentProvider {
+
 		public ProgramsTypeContentProvider(AdapterFactory adapterFactory) {
 			super(adapterFactory);
 		}
 
 		@Override
 		public Object[] getElements(Object inputElement) {
-			if (programSuperClass != null) {
-				return ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(programSuperClass).toArray();
+			if (eClass != null) {
+				return ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(eClass).toArray();
 			}
 			Object[] objects = new Object[0];
 			return objects;
 		}
 		
+		@Override
+		public boolean hasChildren(Object object) {
+			return false;
+		}
+	
+		
+	
+
 	}
-	
-	
-	private class ProgramsGroupContentProvider extends AdapterFactoryContentProvider{
+
+	private class ProgramsGroupContentProvider extends AdapterFactoryContentProvider {
 
 		public ProgramsGroupContentProvider(AdapterFactory adapterFactory) {
 			super(adapterFactory);
 		}
-		
+
 		@Override
 		public Object[] getChildren(Object object) {
-				return (object instanceof ProgramsList) ? super.getChildren(object) : null;			
-		}
-	}
-	
-	/*private class ProgramsListsLabelProvider extends AdapterFactoryLabelProvider implements ITableLabelProvider{
-		private final static int NAME_COLUMN_ID = 0;
-		private final static int DESCRIPTION_COLUMN_ID = 1;
-		
-		public ProgramsListsLabelProvider(AdapterFactory adapterFactory) {
-			super(adapterFactory);
+			return (object instanceof ProgramsList) ? super.getChildren(object) : null;
 		}
 		
 		@Override
-		public String getColumnText(Object object, int columnIndex) {
-			String str = "<undefined>";		
-			
-			Named named = (Named) object;
-			
-			switch (columnIndex) {
-			case NAME_COLUMN_ID:
-				str = named.getName() == null ? "<unnamed>" : named.getName();
-				break;
-			}
-			
-			return str;
-		}	
-		
-		
-	}*/
-	
-	public ProgramsGroup getProgramsGroup(){
-		if(comboProgramsGroups.getSelection() instanceof ProgramsGroup){
-			return (ProgramsGroup) comboProgramsGroups.getSelection();
+		public boolean hasChildren(Object object) {
+			return false;
 		}
-		return null;
-	}
-	
-	public EClass getProgramsType(){
-		if(comboProgramsTypes.getSelection() instanceof EClass){
-			return (EClass) comboProgramsTypes.getSelection();
-		}
-		return null;
 	}
 
 	/*
-	public void setProgramsList(ProgramsList programsList){
+	 * private class ProgramsListsLabelProvider extends
+	 * AdapterFactoryLabelProvider implements ITableLabelProvider{ private final
+	 * static int NAME_COLUMN_ID = 0; private final static int
+	 * DESCRIPTION_COLUMN_ID = 1;
+	 * 
+	 * public ProgramsListsLabelProvider(AdapterFactory adapterFactory) {
+	 * super(adapterFactory); }
+	 * 
+	 * @Override public String getColumnText(Object object, int columnIndex) {
+	 * String str = "<undefined>";
+	 * 
+	 * Named named = (Named) object;
+	 * 
+	 * switch (columnIndex) { case NAME_COLUMN_ID: str = named.getName() == null
+	 * ? "<unnamed>" : named.getName(); break; }
+	 * 
+	 * return str; }
+	 * 
+	 * 
+	 * }
+	 */
+
+//	public ProgramsGroup getProgramsGroup() {
+//		if (comboProgramsGroups.getSelection() instanceof ProgramsGroup) {
+//			return (ProgramsGroup) comboProgramsGroups.getSelection();
+//		}
+//		return null;
+//	}
+//
+//	public EClass getProgramsType() {
+//		if (comboProgramsTypes.getSelection() instanceof EClass) {
+//			return (EClass) comboProgramsTypes.getSelection();
+//		}
+//		return null;
+//	}
+
+	/*
+	 * public void setProgramsList(ProgramsList programsList){ this.programsList
+	 * = programsList;
+	 * 
+	 * if (programsList != null){ if (m_currentDataBindings != null){
+	 * m_currentDataBindings.dispose(); } m_currentDataBindings =
+	 * initDataBindings(); } }
+	 */
+
+	public void setProgramsList(ProgramsList programsList) {
 		this.programsList = programsList;
-		
-		if (programsList != null){
-			if (m_currentDataBindings != null){
-				m_currentDataBindings.dispose();
-			}
-			m_currentDataBindings = initDataBindings();
-		}
-	}*/
-	
-	
-	public void setProgramsList(ProgramsList programsList){
-		this.programsList = programsList;
-		
-		if (programsList != null){
-			if (m_currentDataBindings != null){
+
+		if (programsList != null) {
+			if (m_currentDataBindings != null) {
 				m_currentDataBindings.dispose();
 			}
 			m_currentDataBindings = initDataBindings();
 		}
 	}
-	
-	public void setProgramsList(ProgramsList programsList, ProgramsGroup selectedGroup){
-		this.programsGroup = selectedGroup;
+
+	public void setProgramsList(ProgramsList programsList, ProgramsGroup selectedGroup) {
+		this.group = selectedGroup;
 		setProgramsList(programsList);
 	}
 
-	protected DataBindingContext initDataBindings()
-	{
+	protected DataBindingContext initDataBindings() {
 		return initDataBindingsCustom();
 	}
-	
-	protected DataBindingContext initDataBindingsCustom()
-	{
+
+	protected DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
 
 		if (programsList != null) {
-			if (!comboProgramsGroups.getCombo().isDisposed()) {
-				comboProgramsGroups.setInput(programsList);
-				if(programsGroup != null){
-					ISelection selection = new StructuredSelection(programsGroup);
-					comboProgramsGroups.setSelection(selection);
+			if (!treeViewerGroups.getTree().isDisposed()) {
+				treeViewerGroups.setInput(programsList);
+				if (group != null) {
+					ISelection selection = new StructuredSelection(group);
+					treeViewerGroups.setSelection(selection);
 				}
 
 			}
 		}
 
-		if (!comboProgramsTypes.getCombo().isDisposed()) {
-			comboProgramsTypes.setInput(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		if (!treeViewerTypes.getTree().isDisposed()) {
+			treeViewerTypes.setInput(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 		}
-		
-		
-		
-		//comboProgramsGroups.addSelectionChangedListener(getComboProgramsGroupsSelectionChangedListener());
-		//comboProgramsTypes.addSelectionChangedListener(getSelectionChangedListener());
-		
+
+		// comboProgramsGroups.addSelectionChangedListener(getComboProgramsGroupsSelectionChangedListener());
+		// comboProgramsTypes.addSelectionChangedListener(getSelectionChangedListener());
+
 		return bindingContext;
 	}
-	
+
 	@Override
-	public void dispose()
-	{
-		if (m_currentDataBindings != null){
+	public void dispose() {
+		if (m_currentDataBindings != null) {
 			m_currentDataBindings.dispose();
 		}
 		super.dispose();

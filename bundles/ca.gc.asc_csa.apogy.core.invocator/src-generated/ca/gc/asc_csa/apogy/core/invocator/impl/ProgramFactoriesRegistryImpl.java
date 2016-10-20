@@ -15,15 +15,12 @@ package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
-
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation.Internal.InvocationDelegate;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -195,6 +192,8 @@ public class ProgramFactoriesRegistryImpl extends MinimalEObjectImpl.Container i
 			
 			IConfigurationElement[] contributors = extensionPoint
 					.getConfigurationElements();
+			
+			System.out.println("ProgramFactoriesRegistryImpl.getProgramFactoriesMap() contributors Size: " + contributors.length);
 
 			for (int i = 0; i < contributors.length; i++) {
 				IConfigurationElement contributor = contributors[i];

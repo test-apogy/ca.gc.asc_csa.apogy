@@ -29,15 +29,14 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.core.ui
 
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
-
+import ca.gc.asc_csa.apogy.common.emf.Exception
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation
 import ca.gc.asc_csa.apogy.core.ApogySystem
-import org.eclipse.core.resources.IProject
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
 import org.eclipse.core.resources.IContainer
 import org.eclipse.core.resources.IFile
 import org.eclipse.core.resources.IFolder
-import ca.gc.asc_csa.apogy.common.emf.Exception
-import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation
+import org.eclipse.core.resources.IProject
 
 type IProject wraps IProject
 type IContainer wraps IContainer

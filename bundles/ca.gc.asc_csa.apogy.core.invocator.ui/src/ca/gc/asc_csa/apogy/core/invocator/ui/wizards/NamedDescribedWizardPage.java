@@ -23,7 +23,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
@@ -87,10 +86,7 @@ public class NamedDescribedWizardPage extends WizardPage {
 	/**
 	 * @see IDialogPage#createControl(Composite)
 	 */	
-	public void createControl(Composite parent) {
-		parent.setBackground(SWTResourceManager.getColor(SWT.COLOR_TRANSPARENT));
-		parent.setBackgroundMode(SWT.INHERIT_FORCE);
-		
+	public void createControl(Composite parent) {	
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new GridLayout(1, false));
 

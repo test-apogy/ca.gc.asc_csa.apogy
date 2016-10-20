@@ -18,12 +18,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +35,13 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
  * @generated
  */
 public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements ApogyCoreInvocatorUIPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass newProgramSettingsEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -115,6 +125,33 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getNewProgramSettings() {
+		return newProgramSettingsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNewProgramSettings_EClass() {
+		return (EReference)newProgramSettingsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNewProgramSettings_ProgramSettings() {
+		return (EReference)newProgramSettingsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getApogyCoreInvocatorUIFacade() {
 		return apogyCoreInvocatorUIFacadeEClass;
 	}
@@ -174,6 +211,10 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		isCreated = true;
 
 		// Create classes and their features
+		newProgramSettingsEClass = createEClass(NEW_PROGRAM_SETTINGS);
+		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__ECLASS);
+		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__PROGRAM_SETTINGS);
+
 		apogyCoreInvocatorUIFacadeEClass = createEClass(APOGY_CORE_INVOCATOR_UI_FACADE);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND);
@@ -206,6 +247,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
 		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
@@ -216,6 +258,10 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(newProgramSettingsEClass, NewProgramSettings.class, "NewProgramSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNewProgramSettings_EClass(), theEcorePackage.getEClass(), null, "eClass", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNewProgramSettings_ProgramSettings(), theApogyCoreInvocatorPackage.getProgramSettings(), null, "programSettings", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(apogyCoreInvocatorUIFacadeEClass, ApogyCoreInvocatorUIFacade.class, "ApogyCoreInvocatorUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCoreInvocatorUIFacade__CopyInitializationData__Context_Context(), null, "copyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);

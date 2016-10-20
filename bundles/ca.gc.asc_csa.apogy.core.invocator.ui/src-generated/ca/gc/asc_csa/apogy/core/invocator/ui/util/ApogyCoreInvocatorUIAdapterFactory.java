@@ -76,6 +76,10 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 	protected ApogyCoreInvocatorUISwitch<Adapter> modelSwitch =
 		new ApogyCoreInvocatorUISwitch<Adapter>() {
 			@Override
+			public Adapter caseNewProgramSettings(NewProgramSettings object) {
+				return createNewProgramSettingsAdapter();
+			}
+			@Override
 			public Adapter caseApogyCoreInvocatorUIFacade(ApogyCoreInvocatorUIFacade object) {
 				return createApogyCoreInvocatorUIFacadeAdapter();
 			}
@@ -98,6 +102,20 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings <em>New Program Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings
+	 * @generated
+	 */
+	public Adapter createNewProgramSettingsAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade <em>Facade</em>}'.

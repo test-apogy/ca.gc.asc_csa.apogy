@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import java.util.Collection;
 import java.util.List;
 
@@ -71,7 +70,7 @@ public class DigitalElevationMapSamplerItemProvider
 	 */
 	protected void addTargetResolutionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new AbstractUnitItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_DigitalElevationMapSampler_targetResolution_feature"),
