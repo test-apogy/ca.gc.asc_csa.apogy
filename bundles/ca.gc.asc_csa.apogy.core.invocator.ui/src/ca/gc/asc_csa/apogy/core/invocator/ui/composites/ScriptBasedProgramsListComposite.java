@@ -122,7 +122,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			public void widgetSelected(SelectionEvent e) {
 
 				/**
-				 * Creates and opens the wizard to create a valid context
+				 * Creates and opens the wizard to create a valid ProgramsGroup
 				 */
 				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
 				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);				
@@ -138,7 +138,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			public void widgetSelected(SelectionEvent e) {
 
 				/**
-				 * Creates and opens the wizard to create a valid context
+				 * Creates and opens the wizard to create a valid Program
 				 */
 				NewScriptBasedProgramWizard newScriptBasedProgramWizard = new NewScriptBasedProgramWizard(
 						getSelectedProgramsGroup());
@@ -190,7 +190,13 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	protected boolean isApplicable(Program program) {
 		return true;
 	}
-
+	
+	/**
+	 * Returns a reference to a tree viewer listener used to bind with {
+	 * {@link #treeViewer}.
+	 * 
+	 * @return Reference to the listener.
+	 */
 	private ISelectionChangedListener getTreeViewerSelectionChangedListener() {
 		if (treeViewerSelectionChangedListener == null) {
 			treeViewerSelectionChangedListener = new ISelectionChangedListener() {
@@ -214,9 +220,9 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	}
 
 	/**
-	 * Returns the selected program.
+	 * Returns the selected  {@link Program}.
 	 * 
-	 * @return Reference to the selected {@link Program}.
+	 * @return Reference to the selected program.
 	 */
 	public Program getSelectedProgram() {
 		if (isProgramSelected()) {
@@ -225,6 +231,11 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		return null;
 	}
 
+	/**
+	 * Returns the selected {@link ProgramsGroup}.
+	 * 
+	 * @return Reference to the selected programsGroup.
+	 */
 	public ProgramsGroup getSelectedProgramsGroup() {
 		Object selection = ((TreeSelection) treeViewer.getSelection()).getFirstElement();
 		if (isProgramSelected()) {
@@ -235,14 +246,26 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		return null;
 	}
 
+	/**
+	 * Returns a boolean to know if a {@link ProgramsGroup} or another object is selected
+	 * @return true if a ProgramsGroup is selected, false otherwise
+	 */
 	private boolean isProgramsGroupSelected() {
 		return ((TreeSelection) treeViewer.getSelection()).getFirstElement() instanceof ProgramsGroup;
 	}
 
+
+	/**
+	 * Returns a boolean to know if a {@link Program} or another object is selected
+	 * @return true if a program is selected, false otherwise
+	 */
 	private boolean isProgramSelected() {
 		return ((TreeSelection) treeViewer.getSelection()).getFirstElement() instanceof Program;
 	}
 
+	/**
+	 * Content provider for the TreeViewer
+	 */
 	private class ProgramsListsContentProvider extends AdapterFactoryContentProvider {
 
 		public ProgramsListsContentProvider(AdapterFactory adapterFactory) {
@@ -295,6 +318,9 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		}
 	}
 
+	/**
+	 * Label provider for the TreeViewer
+	 */
 	private class ProgramsListsLabelProvider extends AdapterFactoryLabelProvider implements ITableLabelProvider {
 		private final static int NAME_COLUMN_ID = 0;
 
@@ -321,6 +347,10 @@ public class ScriptBasedProgramsListComposite extends Composite {
 
 	}
 
+	/**
+	 * Sets the programsList in the composite
+	 * @param programsList
+	 */
 	public void setProgramsList(ProgramsList programsList) {
 		this.programsList = programsList;
 
@@ -345,6 +375,9 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			}
 		}
 		
+		/**
+		 * Drag & Drop support
+		 */
 		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
 		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
 		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));		

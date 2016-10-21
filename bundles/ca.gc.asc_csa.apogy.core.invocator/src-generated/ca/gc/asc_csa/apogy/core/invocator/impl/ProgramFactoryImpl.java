@@ -13,6 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.core.invocator.impl;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
@@ -67,7 +68,10 @@ public abstract class ProgramFactoryImpl extends MinimalEObjectImpl.Container im
 	 */
 	public void applySettings(Program program, ProgramSettings settings) {
 		program.setName(settings.getName());
-		program.setDescription(settings.getDescription());
+		if(settings.getDescription() != null){
+			program.setDescription(settings.getDescription());
+		}
+	
 	}
 
 	/**

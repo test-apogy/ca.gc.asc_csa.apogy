@@ -14,19 +14,16 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.core.databinding.SetBinding;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.swt.SWT;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
@@ -115,7 +112,7 @@ public class NewProgramsGroupWizard extends Wizard implements INewWizard {
 		if (programsGroup == null) {
 			programsGroup = ApogyCoreInvocatorFactory.eINSTANCE.createProgramsGroup();
 			programsGroup.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsList(),
-					programsGroup, ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS));
+					ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS));
 		}
 		return programsGroup;
 	}

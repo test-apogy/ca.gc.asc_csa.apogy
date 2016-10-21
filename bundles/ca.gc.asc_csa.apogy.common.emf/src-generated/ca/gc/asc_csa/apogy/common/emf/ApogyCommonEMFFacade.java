@@ -440,14 +440,13 @@ public interface ApogyCommonEMFFacade extends EObject
 	 * <!-- begin-model-doc -->
 	 * Generates and returns a default name for a specific feature container.
 	 * @param eContainer The instance of the container.
-	 * @param eObject The instance of the object to name.
 	 * @param objectReference The reference to the object.
 	 * @return A unique name.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" eContainerUnique="false" eObjectUnique="false" objectReferenceUnique="false"
+	 * @model unique="false" eContainerUnique="false" objectReferenceUnique="false"
 	 * @generated
 	 */
-	String getDefaultName(EObject eContainer, EObject eObject, EReference objectReference);
+	String getDefaultName(EObject eContainer, EReference objectReference);
 
 		/**
 	 * <!-- begin-user-doc -->

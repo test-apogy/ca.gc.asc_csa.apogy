@@ -54,7 +54,6 @@ public class NamedComposite extends Composite {
 		Label label = new Label(this, SWT.NONE);
 		label.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false, 1, 1));
 		label.setText("Name");
-		;
 
 		nameText = new Text(this, SWT.BORDER);
 		nameText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));

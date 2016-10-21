@@ -9,6 +9,7 @@
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ * 	   Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 @GenModel(prefix="ApogyCommonEMF",
@@ -22,6 +23,7 @@ Contributors:
     Pierre Allard (Pierre.Allard@canada.ca), 
     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+	Olivier L. Larouche (Olivier.LLarouche@canada.ca),
     Canadian Space Agency (CSA) - Initial API and implementation",	
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
@@ -219,11 +221,10 @@ class ApogyCommonEMFFacade
 	/*
 	 * Generates and returns a default name for a specific feature container. 
 	 * @param eContainer The instance of the container.
-	 * @param eObject The instance of the object to name.
 	 * @param objectReference The reference to the object.
 	 * @return A unique name.
 	 */	 
-	op String getDefaultName(EObject eContainer, EObject eObject, EReference objectReference)
+	op String getDefaultName(EObject eContainer, EReference objectReference)
 	
 	 /*
 	  * Returns only the objects that are not archived

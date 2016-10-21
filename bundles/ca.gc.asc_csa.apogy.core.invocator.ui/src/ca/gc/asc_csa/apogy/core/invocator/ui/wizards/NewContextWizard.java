@@ -35,15 +35,15 @@ import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
-public class NewContextWizard extends Wizard{
-	
+public class NewContextWizard extends Wizard {
+
 	private InvocatorSession invocatorSession;
 	private Context context;
 	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private VariableImplementationsWizardPage variableImplementationWizardPage;
 	private DataProductsListWizardPage dataProductsListWizardPage;
 	private VariableImplementationsList variableImplementationsList;
-	
+
 	/**
 	 * Constructor for NewContextWizard.
 	 */
@@ -51,121 +51,130 @@ public class NewContextWizard extends Wizard{
 		super();
 		setWindowTitle("New Context");
 		setNeedsProgressMonitor(true);
-		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
-				Activator.ID, "icons/wizban/apogy_new_context.png");
-		setDefaultPageImageDescriptor(image);		
+		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(Activator.ID,
+				"icons/wizban/apogy_new_context.png");
+		setDefaultPageImageDescriptor(image);
 		this.invocatorSession = invocatorSession;
 	}
-	
+
 	/**
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		if(getNamedDescribedWizardPage() != null){
+		if (getNamedDescribedWizardPage() != null) {
 			addPage(getNamedDescribedWizardPage());
 		}
-		if(getVariableImplementationWizardPage() != null){
+		if (getVariableImplementationWizardPage() != null) {
 			addPage(getVariableImplementationWizardPage());
 		}
-		if(getDataProductsListWizardPage() != null){
+		if (getDataProductsListWizardPage() != null) {
 			addPage(getDataProductsListWizardPage());
 		}
 	}
-	
-	public void setInvocatorSession(InvocatorSession invocatorSession){
+
+	public void setInvocatorSession(InvocatorSession invocatorSession) {
 		this.invocatorSession = invocatorSession;
 	}
-	
-	public InvocatorSession getInvocatorSession(){
+
+	public InvocatorSession getInvocatorSession() {
 		return invocatorSession;
 	}
-	
 
 	/**
-	 * Returns the {@link NamedDescribedContextWizardPage}.  If null is returned, the page is not added to the wizard.
+	 * Returns the {@link NamedDescribedContextWizardPage}. If null is returned,
+	 * the page is not added to the wizard.
+	 * 
 	 * @return Reference to the page.
 	 */
-	protected NamedDescribedWizardPage getNamedDescribedWizardPage(){
-		if (namedDescribedWizardPage == null){
-			namedDescribedWizardPage = new NamedDescribedWizardPage(getContext(), getContext()); 
-		}		
+	protected NamedDescribedWizardPage getNamedDescribedWizardPage() {
+		if (namedDescribedWizardPage == null) {
+			namedDescribedWizardPage = new NamedDescribedWizardPage(getContext(), getContext());
+		}
 		return namedDescribedWizardPage;
 	}
-	
+
 	/**
-	 * Returns the {@link VariableImplementationsWizardPage}.  If null is returned, the page is not added to the wizard.
+	 * Returns the {@link VariableImplementationsWizardPage}. If null is
+	 * returned, the page is not added to the wizard.
+	 * 
 	 * @return Reference to the page.
 	 */
-	protected VariableImplementationsWizardPage getVariableImplementationWizardPage(){
-		if (variableImplementationWizardPage == null){
-			variableImplementationWizardPage  = new VariableImplementationsWizardPage(getContext());
-		}		
-		return variableImplementationWizardPage ;
+	protected VariableImplementationsWizardPage getVariableImplementationWizardPage() {
+		if (variableImplementationWizardPage == null) {
+			variableImplementationWizardPage = new VariableImplementationsWizardPage(getContext());
+		}
+		return variableImplementationWizardPage;
 	}
-	
+
 	/**
-	 * Returns the {@link DataProductsListWizardPage}.  If null is returned, the page is not added to the wizard.
+	 * Returns the {@link DataProductsListWizardPage}. If null is returned, the
+	 * page is not added to the wizard.
+	 * 
 	 * @return Reference to the page.
 	 */
-	protected DataProductsListWizardPage getDataProductsListWizardPage(){
-		if (dataProductsListWizardPage == null){
+	protected DataProductsListWizardPage getDataProductsListWizardPage() {
+		if (dataProductsListWizardPage == null) {
 			dataProductsListWizardPage = new DataProductsListWizardPage(getContext(), getInvocatorSession());
-		}		
-		return dataProductsListWizardPage ;
-	}	
+		}
+		return dataProductsListWizardPage;
+	}
 
 	@Override
 	public boolean performFinish() {
-		
+
 		/*
-		 *  Create a compound command to execute addContext and the addDataProducts if needed
+		 * Create a compound command to execute addContext and the
+		 * addDataProducts if needed
 		 */
 		StrictCompoundCommand compoundCommand = new StrictCompoundCommand();
-		
+
 		/*
 		 * Create the command to add the new context
 		 */
 		EditingDomain editingDomain = AdapterFactoryEditingDomain
-				.getEditingDomainFor(getInvocatorSession().getEnvironment().getContextsList());			
-		AddCommand addContextcommand = new AddCommand(editingDomain, getInvocatorSession().getEnvironment().getContextsList(),
+				.getEditingDomainFor(getInvocatorSession().getEnvironment().getContextsList());
+		AddCommand addContextcommand = new AddCommand(editingDomain,
+				getInvocatorSession().getEnvironment().getContextsList(),
 				ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS, context);
 		compoundCommand.append(addContextcommand);
-		
+
 		/*
 		 * Verify if the context's dataProductsList is in the invocatorSession's
 		 * dataProductsListsContainer to know if the DataProductsList is already
 		 * existing or a new one
 		 */
 		boolean newDataProductsList = false;
-		for(int i = 0; i < invocatorSession.getDataProductsListContainer().getDataProductsList().size(); i++){
-			if(context.getDataProductsList() == invocatorSession.getDataProductsListContainer().getDataProductsList().get(i)){
+		for (int i = 0; i < invocatorSession.getDataProductsListContainer().getDataProductsList().size(); i++) {
+			if (context.getDataProductsList() == invocatorSession.getDataProductsListContainer().getDataProductsList()
+					.get(i)) {
 				newDataProductsList = true;
 			}
 		}
-		
+
 		/*
 		 * If the dataProductsList was not found in the invocatorSession's
 		 * dataProductsListsContainer
 		 */
-		if(!newDataProductsList){
+		if (!newDataProductsList) {
 			/*
 			 * Create the command to add the new DataProductsList
 			 */
-			editingDomain = AdapterFactoryEditingDomain
-					.getEditingDomainFor(getInvocatorSession());			
-			AddCommand addDataProductsListCommand = new AddCommand(editingDomain, getInvocatorSession().getDataProductsListContainer(),
-					ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER, context.getDataProductsList());
+			editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getInvocatorSession());
+			AddCommand addDataProductsListCommand = new AddCommand(editingDomain,
+					getInvocatorSession().getDataProductsListContainer(),
+					ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER,
+					context.getDataProductsList());
 			compoundCommand.append(addDataProductsListCommand);
 		}
-		
+
 		/*
 		 * Execure the command
 		 */
 		editingDomain.getCommandStack().execute(compoundCommand);
-						
+
 		return true;
 	}
-			
+
 	/**
 	 * Create and returns the instance of the {@link Context} to be set within
 	 * the wizard pages. This method uses the lazy loading pattern.
@@ -177,7 +186,7 @@ public class NewContextWizard extends Wizard{
 			context = ApogyCoreInvocatorFacade.INSTANCE.createContext(getInvocatorSession());
 			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
 					getInvocatorSession().getEnvironment().getContextsList(),
-					context, ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
+					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
 		}
 		return context;
 	}

@@ -10,6 +10,7 @@ package ca.gc.asc_csa.apogy.common.emf.impl;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -66,7 +67,6 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Ranges;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;
-import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 
@@ -196,8 +196,8 @@ ApogyCommonEMFFacade {
 				return getID((EObject)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING:
 				return getEObjectById((ResourceSet)arguments.get(0), (String)arguments.get(1));
-			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE:
-				return getDefaultName((EObject)arguments.get(0), (EObject)arguments.get(1), (EReference)arguments.get(2));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE:
+				return getDefaultName((EObject)arguments.get(0), (EReference)arguments.get(1));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST:
 				return filterArchived((EList<Object>)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT:
@@ -1268,8 +1268,8 @@ ApogyCommonEMFFacade {
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public String getDefaultName(EObject eContainer, EObject eObject, EReference objectReference) {
-		String name = ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(eObject);
+	public String getDefaultName(EObject eContainer, EReference objectReference) {
+		String name = objectReference.getEReferenceType().getName();
 
 		// If the container is a list
 		if (objectReference.isMany()) {
@@ -1277,7 +1277,7 @@ ApogyCommonEMFFacade {
 			// Find a name that is unique
 			for (int i = 0; i < eContainer.eContents().size(); i++) {
 				Named named = (Named) eContainer.eContents().get(i);
-				if (named.getName().equals(name + "_" + Integer.toString(j))) {
+				if (named.getName() != null && named.getName().equals(name + "_" + Integer.toString(j))) {
 					j++;
 					i = 0;
 				}

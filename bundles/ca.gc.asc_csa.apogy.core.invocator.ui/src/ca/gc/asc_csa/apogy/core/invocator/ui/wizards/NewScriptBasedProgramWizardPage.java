@@ -20,45 +20,47 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.DescribedComposite;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.SubClassesListComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NewProgramComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ProgramsGroupsComposite;
 
-public class NewProgramWizardPage extends WizardPage {
+public class NewScriptBasedProgramWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewProgramWizardPage";
-	private NewProgramComposite newProgramComposite;
-	private NamedComposite namedComposite;
-	private DescribedComposite describedComposite;
+	
+	private SubClassesListComposite subClassesListComposite;
+	private ProgramsGroupsComposite programsGroupsComposite;
+	
+	
 	private Adapter adapter; 
 	private ProgramsGroup programsGroup;
+	private ProgramsList programsList;
 	private EClass programSuperClass;
-	private EClass programsType;
-	private ProgramSettings programSettings;
+	private NewProgramSettings newProgramSettings;
 	
 	/**
 	 * Constructor for the WizardPage.
 	 * 
 	 * @param pageName
 	 */
-	public NewProgramWizardPage() {
+	public NewScriptBasedProgramWizardPage() {
 		super(WIZARD_PAGE_ID);
 		setTitle("New Program");
 		setDescription("Select the programs's group and type.");
 	}
 
-	public NewProgramWizardPage(
-			ProgramsGroup programsGroup, EClass programSuperClass, ProgramSettings programSettings) {
+	public NewScriptBasedProgramWizardPage(
+			ProgramsList programsList, EClass programSuperClass, NewProgramSettings newProgramSettings) {
 		this();
 		if (this.programsGroup != null){
 			this.programsGroup.eAdapters().remove(getAdapter());
@@ -66,20 +68,25 @@ public class NewProgramWizardPage extends WizardPage {
 		if (this.programSuperClass != null){
 			this.programSuperClass.eAdapters().remove(getAdapter());
 		}
-		if (this.programSettings != null){
-			this.programSettings.eAdapters().remove(getAdapter());
+		if (this.newProgramSettings != null){
+			this.newProgramSettings.eAdapters().remove(getAdapter());
 		}
 		
 		this.programSuperClass = programSuperClass;
 		programSuperClass.eAdapters().add(getAdapter());
 		
-		this.programSettings = programSettings;
-		programSettings.eAdapters().add(getAdapter());
+		this.newProgramSettings = newProgramSettings;
+		newProgramSettings.eAdapters().add(getAdapter());
 		
-		if(programsGroup != null){
-			this.programsGroup = programsGroup;
-			programsGroup.eAdapters().add(getAdapter());
-		}
+		this.programsList = programsList;
+		programsList.eAdapters().add(getAdapter());
+	}
+	
+	public NewScriptBasedProgramWizardPage(
+			ProgramsGroup programsGroup, EClass programSuperClass, NewProgramSettings newProgramSettings) {
+		this(programsGroup.getProgramsList(), programSuperClass, newProgramSettings);
+		this.programsGroup = programsGroup;
+		
 	}
 
 	private Adapter getAdapter() {
@@ -95,7 +102,7 @@ public class NewProgramWizardPage extends WizardPage {
 	}
 	
 	public EClass getProgramType(){
-		return this.programsType;
+		return (EClass) this.newProgramSettings.eGet(ApogyCoreInvocatorUIPackage.Literals.NEW_PROGRAM_SETTINGS__ECLASS);
 	}
 	
 	public ProgramsGroup getProgramsGroup(){
@@ -107,42 +114,38 @@ public class NewProgramWizardPage extends WizardPage {
 	 */	
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.None);
-		container.setLayout(new GridLayout(2, false));
-
-		newProgramComposite = new NewProgramComposite(container, SWT.None);
+		container.setLayout(new GridLayout(1, false));
+		
+		programsGroupsComposite = new ProgramsGroupsComposite(container, SWT.None);
 		if(programsGroup != null){
-			newProgramComposite.setProgramsList(programsGroup.getProgramsList(), programsGroup);
+			programsGroupsComposite.setProgramsList(programsList, programsGroup);
 		}else{
-			newProgramComposite.setProgramsList(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList(), null);
+			programsGroupsComposite.setProgramsList(programsList);
 		}
-		newProgramComposite.setProgramSuperClass(programSuperClass);
-		newProgramComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 1, 2));
-		newProgramComposite.getTreeViewerGroups().addSelectionChangedListener(new ISelectionChangedListener() {
-
+		programsGroupsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		programsGroupsComposite.addSelectionChangedListener(new ISelectionChangedListener() {
+			
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
-				NewProgramWizardPage.this.programsGroup = (ProgramsGroup) ((StructuredSelection) event.getSelection()).getFirstElement();
+				NewScriptBasedProgramWizardPage.this.programsGroup = (ProgramsGroup) ((TreeSelection) event.getSelection()).getFirstElement();
 				validate();
 			}
 		});
-		newProgramComposite.getTreeViewerTypes().addSelectionChangedListener(new ISelectionChangedListener() {
-
+		
+		subClassesListComposite = new SubClassesListComposite(container, SWT.None);
+		subClassesListComposite.setProgramSuperClass(programSuperClass);
+		subClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		subClassesListComposite.addSelectionChangedListener(new ISelectionChangedListener() {
+			
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
-				NewProgramWizardPage.this.programsType = (EClass) ((StructuredSelection) event.getSelection()).getFirstElement();
+				EClass eClass = (EClass) ((TreeSelection) event.getSelection()).getFirstElement();
 				System.out.println(
-						"NewProgramWizardPage.createControl(...).new ISelectionChangedListener() {...}.selectionChanged()");
+						"NewProgramWizardPage.createControl(...).new ISelectionChangedListener() {...}.selectionChanged() : SubClass");
+				newProgramSettings.eSet(ApogyCoreInvocatorUIPackage.Literals.NEW_PROGRAM_SETTINGS__ECLASS, eClass);
 				validate();
 			}
 		});
-		
-		namedComposite = new NamedComposite(container, SWT.NONE);
-		namedComposite.setNamed(programSettings);
-		namedComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1,1));
-		
-		describedComposite = new DescribedComposite(container, SWT.NONE);
-		describedComposite.setDescribed(programSettings);
-		describedComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1,1));
 
 		setControl(container);
 		
@@ -166,25 +169,16 @@ public class NewProgramWizardPage extends WizardPage {
 	protected void validate() {	
 		String errorGroup = "";
 		String errorType = "";
-		String errorName = "";
-		String infoDescription = "";
 		
 		if(programsGroup == null){
 			errorGroup = " <group>";
 		}
-		if(programsType == null){
+		if(newProgramSettings == null || newProgramSettings.eGet(ApogyCoreInvocatorUIPackage.Literals.NEW_PROGRAM_SETTINGS__ECLASS) == null){
 			errorType = " <type>";
 		}
-		if(programSettings == null || programSettings.getName() == null){
-			errorName = " <name>";
-		}
-		if(programSettings == null || programSettings.getDescription() == null){
-			infoDescription = "It is recommended to enter a description";
-		}
-		
-		setMessage(infoDescription);
-		if(errorGroup != "" || errorType != "" || errorName != ""){
-			setErrorMessage(errorGroup + errorType + errorName + " must be provided");
+
+		if(errorGroup != "" || errorType != ""){
+			setErrorMessage(errorGroup + errorType + " must be provided");
 			setPageComplete(false);
 		}else{
 			setErrorMessage(null);

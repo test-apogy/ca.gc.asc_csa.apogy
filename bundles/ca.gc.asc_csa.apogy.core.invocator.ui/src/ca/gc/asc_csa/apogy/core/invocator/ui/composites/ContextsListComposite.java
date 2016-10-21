@@ -272,6 +272,7 @@ public class ContextsListComposite extends Composite {
 	 * 
 	 * @return Reference to the data bindings context.
 	 */
+	@SuppressWarnings("unchecked")
 	private DataBindingContext initDataBindingsCustom() {
 		DataBindingContext m_bindingContext = new DataBindingContext();
 

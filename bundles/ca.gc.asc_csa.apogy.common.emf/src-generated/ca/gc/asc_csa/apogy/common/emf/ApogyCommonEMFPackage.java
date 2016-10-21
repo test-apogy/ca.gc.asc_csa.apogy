@@ -44,11 +44,12 @@ import org.eclipse.emf.ecore.EReference;
  *     Pierre Allard (Pierre.Allard@canada.ca),
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ * 	   Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonEMF' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' childCreationExtenders='true' extensibleProviderFactory='true' modelName='ApogyCommonEMF' modelDirectory='/ca.gc.asc_csa.apogy.common.emf/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.emf.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonEMF' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n\tOlivier L. Larouche (Olivier.LLarouche@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' childCreationExtenders='true' extensibleProviderFactory='true' modelName='ApogyCommonEMF' modelDirectory='/ca.gc.asc_csa.apogy.common.emf/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.emf.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common'"
  * @generated
  */
 public interface ApogyCommonEMFPackage extends EPackage
@@ -453,7 +454,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE = 38;
+	int APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE = 38;
 
 		/**
 	 * The operation id for the '<em>Filter Archived</em>' operation.
@@ -2657,14 +2658,14 @@ public interface ApogyCommonEMFPackage extends EPackage
 	EOperation getApogyCommonEMFFacade__GetEObjectById__ResourceSet_String();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference) <em>Get Default Name</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference) <em>Get Default Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Default Name</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference)
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getDefaultName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference)
 	 * @generated
 	 */
-	EOperation getApogyCommonEMFFacade__GetDefaultName__EObject_EObject_EReference();
+	EOperation getApogyCommonEMFFacade__GetDefaultName__EObject_EReference();
 
 		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#filterArchived(org.eclipse.emf.common.util.EList) <em>Filter Archived</em>}' operation.
@@ -3970,7 +3971,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE = eINSTANCE.getApogyCommonEMFFacade__GetDefaultName__EObject_EObject_EReference();
+		EOperation APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE = eINSTANCE.getApogyCommonEMFFacade__GetDefaultName__EObject_EReference();
 
 				/**
 		 * The meta object literal for the '<em><b>Filter Archived</b></em>' operation.

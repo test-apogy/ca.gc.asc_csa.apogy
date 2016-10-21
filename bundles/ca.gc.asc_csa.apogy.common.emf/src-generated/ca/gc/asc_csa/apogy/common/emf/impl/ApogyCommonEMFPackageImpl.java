@@ -783,7 +783,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonEMFFacade__GetDefaultName__EObject_EObject_EReference() {
+	public EOperation getApogyCommonEMFFacade__GetDefaultName__EObject_EReference() {
 		return apogyCommonEMFFacadeEClass.getEOperations().get(38);
 	}
 
@@ -1713,7 +1713,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_TIME_SPAN__COLLECTION);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_ID__EOBJECT);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING);
-		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EREFERENCE);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT);
@@ -2086,9 +2086,8 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		addEParameter(op, this.getResourceSet(), "resourceSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "id", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCommonEMFFacade__GetDefaultName__EObject_EObject_EReference(), theEcorePackage.getEString(), "getDefaultName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonEMFFacade__GetDefaultName__EObject_EReference(), theEcorePackage.getEString(), "getDefaultName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEObject(), "eContainer", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEReference(), "objectReference", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCommonEMFFacade__FilterArchived__EList(), theEcorePackage.getEJavaObject(), "filterArchived", 0, -1, !IS_UNIQUE, IS_ORDERED);
