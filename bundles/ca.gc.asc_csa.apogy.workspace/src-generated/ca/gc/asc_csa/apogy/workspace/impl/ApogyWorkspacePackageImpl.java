@@ -13,13 +13,11 @@
  */
 package ca.gc.asc_csa.apogy.workspace.impl;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFactory;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
-
-import ca.gc.asc_csa.apogy.workspace.NewProjectSettings;
+import java.util.List;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -48,13 +46,13 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass newProjectSettingsEClass = null;
+	private EDataType iProjectEDataType = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType iProjectEDataType = null;
+	private EDataType listApogyProjectsEDataType = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -187,17 +185,8 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNewProjectSettings() {
-		return newProjectSettingsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getNewProjectSettings__ApplyDefaultValues() {
-		return newProjectSettingsEClass.getEOperations().get(0);
+	public EOperation getApogyWorkspaceFacade__GetApogyProjects() {
+		return apogyWorkspaceFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -207,6 +196,15 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 */
 	public EDataType getIProject() {
 		return iProjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getListApogyProjects() {
+		return listApogyProjectsEDataType;
 	}
 
 	/**
@@ -244,12 +242,11 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___GET_DEFAULT_PROJECT_NAME);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT__STRING_STRING);
-
-		newProjectSettingsEClass = createEClass(NEW_PROJECT_SETTINGS);
-		createEOperation(newProjectSettingsEClass, NEW_PROJECT_SETTINGS___APPLY_DEFAULT_VALUES);
+		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS);
 
 		// Create data types
 		iProjectEDataType = createEDataType(IPROJECT);
+		listApogyProjectsEDataType = createEDataType(LIST_APOGY_PROJECTS);
 	}
 
 	/**
@@ -278,15 +275,12 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
-		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		newProjectSettingsEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		newProjectSettingsEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyWorkspaceFacadeEClass, ApogyWorkspaceFacade.class, "ApogyWorkspaceFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -302,12 +296,11 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		addEParameter(op, theEcorePackage.getEString(), "description", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCorePackage.getException());
 
-		initEClass(newProjectSettingsEClass, NewProjectSettings.class, "NewProjectSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getNewProjectSettings__ApplyDefaultValues(), null, "applyDefaultValues", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyWorkspaceFacade__GetApogyProjects(), this.getListApogyProjects(), "getApogyProjects", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(iProjectEDataType, IProject.class, "IProject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(listApogyProjectsEDataType, List.class, "ListApogyProjects", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.List<org.eclipse.core.resources.IProject>");
 
 		// Create resource
 		createResource(eNS_URI);

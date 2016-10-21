@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.workspace;
 import org.eclipse.emf.ecore.EObject;
 
 import ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl;
+import java.util.List;
 import org.eclipse.core.resources.IProject;
 
 /**
@@ -130,6 +131,18 @@ public interface ApogyWorkspaceFacade extends EObject {
 	 * @generated
 	 */
 	IProject createApogyProject(String name, String description) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns the list of projects with the Apogy nature.
+	 * @return List of Apogy projects.
+	 * <!-- end-model-doc -->
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.workspace.ListApogyProjects" unique="false"
+	 * @generated
+	 */
+	List<IProject> getApogyProjects();
 
 	/**
 	 * @generated_NOT

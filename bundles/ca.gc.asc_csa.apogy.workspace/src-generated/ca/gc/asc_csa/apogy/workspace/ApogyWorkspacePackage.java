@@ -13,7 +13,6 @@
  */
 package ca.gc.asc_csa.apogy.workspace;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -157,69 +156,23 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT__STRING_STRING = 1;
 
 	/**
+	 * The operation id for the '<em>Get Apogy Projects</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS = 2;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 2;
+	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 3;
 
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.workspace.impl.NewProjectSettingsImpl <em>New Project Settings</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.workspace.impl.NewProjectSettingsImpl
-	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getNewProjectSettings()
-	 * @generated
-	 */
-	int NEW_PROJECT_SETTINGS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_PROJECT_SETTINGS__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_PROJECT_SETTINGS__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>New Project Settings</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_PROJECT_SETTINGS_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Apply Default Values</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_PROJECT_SETTINGS___APPLY_DEFAULT_VALUES = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>New Project Settings</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_PROJECT_SETTINGS_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '<em>IProject</em>' data type.
@@ -229,7 +182,18 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getIProject()
 	 * @generated
 	 */
-	int IPROJECT = 2;
+	int IPROJECT = 1;
+
+
+	/**
+	 * The meta object id for the '<em>List Apogy Projects</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.List
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getListApogyProjects()
+	 * @generated
+	 */
+	int LIST_APOGY_PROJECTS = 2;
 
 
 	/**
@@ -307,24 +271,14 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__CreateApogyProject__String_String();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.workspace.NewProjectSettings <em>New Project Settings</em>}'.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getApogyProjects() <em>Get Apogy Projects</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>New Project Settings</em>'.
-	 * @see ca.gc.asc_csa.apogy.workspace.NewProjectSettings
+	 * @return the meta object for the '<em>Get Apogy Projects</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getApogyProjects()
 	 * @generated
 	 */
-	EClass getNewProjectSettings();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.NewProjectSettings#applyDefaultValues() <em>Apply Default Values</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Apply Default Values</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.NewProjectSettings#applyDefaultValues()
-	 * @generated
-	 */
-	EOperation getNewProjectSettings__ApplyDefaultValues();
+	EOperation getApogyWorkspaceFacade__GetApogyProjects();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.core.resources.IProject <em>IProject</em>}'.
@@ -336,6 +290,17 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getIProject();
+
+	/**
+	 * Returns the meta object for data type '{@link java.util.List <em>List Apogy Projects</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>List Apogy Projects</em>'.
+	 * @see java.util.List
+	 * @model instanceClass="java.util.List<org.eclipse.core.resources.IProject>"
+	 * @generated
+	 */
+	EDataType getListApogyProjects();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -412,21 +377,12 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT__STRING_STRING = eINSTANCE.getApogyWorkspaceFacade__CreateApogyProject__String_String();
 		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.workspace.impl.NewProjectSettingsImpl <em>New Project Settings</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.workspace.impl.NewProjectSettingsImpl
-		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getNewProjectSettings()
-		 * @generated
-		 */
-		EClass NEW_PROJECT_SETTINGS = eINSTANCE.getNewProjectSettings();
-		/**
-		 * The meta object literal for the '<em><b>Apply Default Values</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Apogy Projects</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation NEW_PROJECT_SETTINGS___APPLY_DEFAULT_VALUES = eINSTANCE.getNewProjectSettings__ApplyDefaultValues();
+		EOperation APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS = eINSTANCE.getApogyWorkspaceFacade__GetApogyProjects();
 		/**
 		 * The meta object literal for the '<em>IProject</em>' data type.
 		 * <!-- begin-user-doc -->
@@ -436,6 +392,15 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType IPROJECT = eINSTANCE.getIProject();
+		/**
+		 * The meta object literal for the '<em>List Apogy Projects</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.List
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getListApogyProjects()
+		 * @generated
+		 */
+		EDataType LIST_APOGY_PROJECTS = eINSTANCE.getListApogyProjects();
 
 	}
 

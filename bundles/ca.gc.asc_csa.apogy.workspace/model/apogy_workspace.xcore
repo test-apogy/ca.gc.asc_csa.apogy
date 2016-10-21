@@ -31,13 +31,13 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.workspace
 
-import org.eclipse.core.resources.IProject
-import ca.gc.asc_csa.apogy.common.emf.Named
-import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.core.Exception
+import java.util.List
+import org.eclipse.core.resources.IProject
 
 /* Types definitions. */
 type IProject wraps IProject
+type ListApogyProjects wraps List<IProject>
 
 
 /* -------------------------------------------------------------------------
@@ -79,15 +79,10 @@ class ApogyWorkspaceFacade{
 	 * @throws Exception Reference to the exception stack.
 	 */
 	op IProject createApogyProject(String name, String description)	throws Exception
-}
-
-/*
- * Class used to contain the settings used to create the new project.
- */
-class NewProjectSettings extends Named, Described{
-	
-    /*
-	 * Applies and sets the default values.
+		
+	/*
+	 * Returns the list of projects with the Apogy nature.
+	 * @return List of Apogy projects.
 	 */
-	op void applyDefaultValues()
+	op ListApogyProjects getApogyProjects()
 }

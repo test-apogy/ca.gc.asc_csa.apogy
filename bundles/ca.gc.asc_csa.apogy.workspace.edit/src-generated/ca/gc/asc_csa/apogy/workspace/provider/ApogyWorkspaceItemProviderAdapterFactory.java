@@ -130,29 +130,6 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.workspace.NewProjectSettings} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NewProjectSettingsItemProvider newProjectSettingsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.workspace.NewProjectSettings}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNewProjectSettingsAdapter() {
-		if (newProjectSettingsItemProvider == null) {
-			newProjectSettingsItemProvider = new NewProjectSettingsItemProvider(this);
-		}
-
-		return newProjectSettingsItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -279,7 +256,6 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 	 */
 	public void dispose() {
 		if (apogyWorkspaceFacadeItemProvider != null) apogyWorkspaceFacadeItemProvider.dispose();
-		if (newProjectSettingsItemProvider != null) newProjectSettingsItemProvider.dispose();
 	}
 
 	/**
@@ -334,11 +310,6 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyWorkspaceFactory.eINSTANCE.createApogyWorkspaceFacade()));
 
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyWorkspaceFactory.eINSTANCE.createNewProjectSettings()));
-
 				return null;
 			}
  
@@ -353,11 +324,6 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyWorkspaceFactory.eINSTANCE.createApogyWorkspaceFacade()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyWorkspaceFactory.eINSTANCE.createNewProjectSettings()));
 
 				return null;
 			}

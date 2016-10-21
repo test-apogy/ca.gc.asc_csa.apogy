@@ -15,7 +15,9 @@ package ca.gc.asc_csa.apogy.workspace.impl;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.core.resources.IFile;
@@ -35,8 +37,11 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.workspace.Activator;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 import ca.gc.asc_csa.apogy.workspace.natures.ApogyNature;
@@ -280,6 +285,28 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<IProject> getApogyProjects() {			
+		List<IProject> projects = new ArrayList<IProject>();		
+		for (IProject project : ResourcesPlugin.getWorkspace().getRoot().getProjects()) {
+			System.out.println("ApogyWorkspaceFacadeImpl.getApogyProjects(): " + project.getName());
+			System.out.println("ApogyWorkspaceFacadeImpl.getApogyProjects(): " + project.getName());
+			try {
+				if (project.hasNature(ApogyNature.NATURE_ID)){
+					projects.add(project);
+					System.out.println("ApogyWorkspaceFacadeImpl.getApogyProjects(): Apogy project");
+				}
+			} catch (CoreException e) {
+				Logger.INSTANCE.log(Activator.ID, "Unable to check the nature of project <" + project.getName(), EventSeverity.ERROR, e);
+			}
+		}		
+		return projects;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -333,6 +360,8 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS:
+				return getApogyProjects();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
