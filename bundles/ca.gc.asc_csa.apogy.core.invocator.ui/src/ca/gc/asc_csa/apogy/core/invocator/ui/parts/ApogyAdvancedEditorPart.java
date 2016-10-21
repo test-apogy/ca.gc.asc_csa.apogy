@@ -13,51 +13,32 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.edit.domain.IEditingDomainProvider;
+import javax.annotation.PostConstruct;
+
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
-import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 
-public class ApogyAdvancedEditorPart extends AbstractView implements IEditingDomainProvider {
+public class ApogyAdvancedEditorPart{
 
-	@Override
-	public void updatePartName() {
-	}
-
-	@Override
-	public void createPartControl(Composite parent) {
-		super.createPartControl(parent);
+//	@Inject ESelectionService selectionService;
+	
+	@PostConstruct	
+	public void createPartControl(Composite parent, ESelectionService selectionService) {
 		EObjectComposite eObjectComposite = new EObjectComposite(parent,
 				SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
-				getSelectionProvider().setSelection(selection);
+				selectionService.setSelection(selection);
 			}
 		};
 	
 		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
 			eObjectComposite.setEObject(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 		}
-	}
-
-	@Override
-	public void updateSelection(ISelection selection) {
-	}
-
-	@Override
-	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
-	}		
-	
-	@Override
-	public void dispose() {
-		// TODO Auto-generated method stub
-		super.dispose();
 	}
 }

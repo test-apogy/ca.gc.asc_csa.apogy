@@ -9,9 +9,6 @@
             <children xsi:type="basic:Part" xmi:id="_4uWh8JI5EeawCfS-XYP3Tg" elementId="ca.gc.asc_csa.apogy.rcp.parts.introPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.workspace.ui/ca.gc.asc_csa.apogy.workspace.ui.parts.IntroPart" label="Welcome" iconURI="">
               <tags>View</tags>
               <tags>categoryTag:org.eclipse.ui</tags>
-              <menus xmi:id="_4uWh8ZI5EeawCfS-XYP3Tg" elementId="org.eclipse.ui.internal.introview">
-                <tags>ViewMenu</tags>
-              </menus>
             </children>
           </children>
         </children>
@@ -70,7 +67,13 @@
           </children>
         </children>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_8W6f0CK2Eea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.advanced" label="Advanced" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Advanced"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_8W6f0CK2Eea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.advanced" label="Advanced" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Advanced">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_X6YqcJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.9" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_ZAZ3UJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.7">
+            <children xsi:type="advanced:Placeholder" xmi:id="_lZOOIJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.3" ref="_c0P8YJe8EeadvPGeI8VxSw"/>
+          </children>
+        </children>
+      </children>
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_6wlLisgZEeSyMNYR5xypkQ" elementId="file" label="File">
@@ -169,6 +172,7 @@
       </menus>
       <toolbar xmi:id="_WS2HYoykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"/>
     </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_c0P8YJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.part.advancededitor" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ApogyAdvancedEditorPart" label="Advanced Editor"/>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.switchPerspective" label="Apogy" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="" command="_C4Fq0B32EeaqJNPAWI4oCw">
