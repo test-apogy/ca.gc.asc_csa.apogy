@@ -56,9 +56,9 @@ public final class ApogyWorkspaceEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     ApogyCoreEditPlugin.INSTANCE,
-		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		   });

@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.workspace.impl;
 
 import ca.gc.asc_csa.apogy.workspace.*;
 
+import java.util.List;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -70,7 +71,6 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE: return createApogyWorkspaceFacade();
-			case ApogyWorkspacePackage.NEW_PROJECT_SETTINGS: return createNewProjectSettings();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -86,6 +86,8 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 		switch (eDataType.getClassifierID()) {
 			case ApogyWorkspacePackage.IPROJECT:
 				return createIProjectFromString(eDataType, initialValue);
+			case ApogyWorkspacePackage.LIST_APOGY_PROJECTS:
+				return createListApogyProjectsFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -101,6 +103,8 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 		switch (eDataType.getClassifierID()) {
 			case ApogyWorkspacePackage.IPROJECT:
 				return convertIProjectToString(eDataType, instanceValue);
+			case ApogyWorkspacePackage.LIST_APOGY_PROJECTS:
+				return convertListApogyProjectsToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -121,16 +125,6 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NewProjectSettings createNewProjectSettings() {
-		NewProjectSettingsImpl newProjectSettings = new NewProjectSettingsImpl();
-		return newProjectSettings;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IProject createIProjectFromString(EDataType eDataType, String initialValue) {
 		return (IProject)super.createFromString(eDataType, initialValue);
 	}
@@ -142,6 +136,25 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	 */
 	public String convertIProjectToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public List<IProject> createListApogyProjectsFromString(EDataType eDataType, String initialValue) {
+		return (List<IProject>)super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertListApogyProjectsToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
 	}
 
 	/**

@@ -75,6 +75,7 @@ public class ApogyWorkspaceFacadeItemProvider
 			addDefaultSessionFilenamePropertyDescriptor(object);
 			addDefaultSessionFilenameExtensionPropertyDescriptor(object);
 			addDefaultSessionFolderNamePropertyDescriptor(object);
+			addActiveProjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -168,6 +169,28 @@ public class ApogyWorkspaceFacadeItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Active Project feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActiveProjectPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyWorkspaceFacade_activeProject_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyWorkspaceFacade_activeProject_feature", "_UI_ApogyWorkspaceFacade_type"),
+				 ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns ApogyWorkspaceFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,6 +232,7 @@ public class ApogyWorkspaceFacadeItemProvider
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME:
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME_EXTENSION:
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

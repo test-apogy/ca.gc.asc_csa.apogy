@@ -20,6 +20,7 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.workspace.ui.wizards.NewApogyProjectWizard;
+import ca.gc.asc_csa.apogy.workspace.ui.wizards.OpenApogyProjectWizard;
 
 public class IntroPart {
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
@@ -91,6 +92,7 @@ public class IntroPart {
 		ImageHyperlink openProjectHyperlink = formToolkit.createImageHyperlink(compositeTodo, SWT.NONE);
 		openProjectHyperlink.addHyperlinkListener(new IHyperlinkListener() {
 			public void linkActivated(HyperlinkEvent e) {
+				new WizardDialog(parent.getShell(), new OpenApogyProjectWizard()).open();
 			}
 			public void linkEntered(HyperlinkEvent e) {
 			}

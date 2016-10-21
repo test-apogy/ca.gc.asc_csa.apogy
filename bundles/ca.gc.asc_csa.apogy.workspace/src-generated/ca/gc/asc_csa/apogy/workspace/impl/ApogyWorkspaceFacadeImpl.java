@@ -15,7 +15,10 @@ package ca.gc.asc_csa.apogy.workspace.impl;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.core.resources.IFile;
@@ -26,17 +29,25 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.workspace.Activator;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 import ca.gc.asc_csa.apogy.workspace.natures.ApogyNature;
@@ -52,6 +63,7 @@ import ca.gc.asc_csa.apogy.workspace.natures.ApogyNature;
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultSessionFilename <em>Default Session Filename</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultSessionFilenameExtension <em>Default Session Filename Extension</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultSessionFolderName <em>Default Session Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getActiveProject <em>Active Project</em>}</li>
  * </ul>
  *
  * @generated
@@ -132,6 +144,24 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected String defaultSessionFolderName = DEFAULT_SESSION_FOLDER_NAME_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getActiveProject() <em>Active Project</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActiveProject()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final IProject ACTIVE_PROJECT_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getActiveProject() <em>Active Project</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActiveProject()
+	 * @generated
+	 * @ordered
+	 */
+	protected IProject activeProject = ACTIVE_PROJECT_EDEFAULT;
 	private static ApogyWorkspaceFacade instance = null;
 
 	public static ApogyWorkspaceFacade getInstance() {
@@ -188,6 +218,27 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public String getDefaultSessionFolderName() {
 		return defaultSessionFolderName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IProject getActiveProject() {
+		return activeProject;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActiveProject(IProject newActiveProject) {
+		IProject oldActiveProject = activeProject;
+		activeProject = newActiveProject;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT, oldActiveProject, activeProject));
 	}
 
 	/**
@@ -280,6 +331,78 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<IProject> getApogyProjects() {			
+		List<IProject> projects = new ArrayList<IProject>();		
+		for (IProject project : ResourcesPlugin.getWorkspace().getRoot().getProjects()) {
+			try {
+				if (project.hasNature(ApogyNature.NATURE_ID)){
+					projects.add(project);
+				}
+			} catch (CoreException e) {
+				Logger.INSTANCE.log(Activator.ID, "Unable to check the nature of project <" + project.getName(), EventSeverity.ERROR, e);
+			}
+		}		
+		return projects;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public IProject getApogyProject(String name) {
+		IProject result = null;
+
+		Iterator<IProject> projects = getApogyProjects().iterator();
+		while (projects.hasNext() && result == null){
+			IProject project = projects.next();
+			if (project.getName().equals(name)){
+				result = project;
+			}
+		}		
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void openApogyProject(IProject project) {		
+		IFolder sessionsFolder = project.getFolder(ApogyWorkspaceFacade.INSTANCE.getDefaultSessionFolderName());
+		IFile sessionFile = sessionsFolder
+				.getFile(new Path(getDefaultSessionFilename() + "." + getDefaultSessionFilenameExtension()));
+		
+		// Create a resource set to hold the resources.
+		ResourceSet resourceSet = new ResourceSetImpl();
+
+		// Register the appropriate resource factory to handle all file extensions.
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put
+			(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
+
+		URI uri = URI.createPlatformResourceURI(sessionFile.getFullPath().toString(), true);
+		Resource resource = resourceSet.getResource(uri, true);
+
+		InvocatorSession session = (InvocatorSession) EcoreUtil.copy(resource.getContents().get(0));
+		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(session);
+		
+		setActiveProject(project);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void closeApogyProject(IProject project) {
+		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -294,8 +417,40 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				return getDefaultSessionFilenameExtension();
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME:
 				return getDefaultSessionFolderName();
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT:
+				return getActiveProject();
 		}
 		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT:
+				setActiveProject((IProject)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT:
+				setActiveProject(ACTIVE_PROJECT_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
 	}
 
 	/**
@@ -313,6 +468,8 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				return DEFAULT_SESSION_FILENAME_EXTENSION_EDEFAULT == null ? defaultSessionFilenameExtension != null : !DEFAULT_SESSION_FILENAME_EXTENSION_EDEFAULT.equals(defaultSessionFilenameExtension);
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME:
 				return DEFAULT_SESSION_FOLDER_NAME_EDEFAULT == null ? defaultSessionFolderName != null : !DEFAULT_SESSION_FOLDER_NAME_EDEFAULT.equals(defaultSessionFolderName);
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT:
+				return ACTIVE_PROJECT_EDEFAULT == null ? activeProject != null : !ACTIVE_PROJECT_EDEFAULT.equals(activeProject);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -333,6 +490,16 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS:
+				return getApogyProjects();
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECT__STRING:
+				return getApogyProject((String)arguments.get(0));
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT:
+				openApogyProject((IProject)arguments.get(0));
+				return null;
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT:
+				closeApogyProject((IProject)arguments.get(0));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -354,6 +521,8 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 		result.append(defaultSessionFilenameExtension);
 		result.append(", defaultSessionFolderName: ");
 		result.append(defaultSessionFolderName);
+		result.append(", activeProject: ");
+		result.append(activeProject);
 		result.append(')');
 		return result.toString();
 	}
