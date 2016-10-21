@@ -13,21 +13,13 @@ package ca.gc.asc_csa.apogy.common.ui;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.net.URL;
-
-import org.eclipse.core.runtime.FileLocator;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-public class Activator extends AbstractUIPlugin {
+public class Activator implements BundleActivator {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "ca.gc.asc_csa.apogy.common.ui"; //$NON-NLS-1$
-
-	// The shared instance
-	private static Activator plugin;
+	public static final String ID = "ca.gc.asc_csa.apogy.common.ui"; //$NON-NLS-1$
 	
 	private BundleContext context;	
 	
@@ -37,45 +29,15 @@ public class Activator extends AbstractUIPlugin {
 	public Activator() {
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext)
-	 */
 	public void start(BundleContext context) throws Exception {
-		super.start(context);
 		this.context = context;
-		plugin = this;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
-	 */
 	public void stop(BundleContext context) throws Exception {
-		plugin = null;
-		super.stop(context);
+		this.context = null;
 	}
 
-	/**
-	 * Returns the shared instance
-	 *
-	 * @return the shared instance
-	 */
-	public static Activator getDefault() {
-		return plugin;
+	public BundleContext getContext() {
+		return context;
 	}
-	
-	/**
-	 * Returns an image descriptor for the image file at the given
-	 * plug-in relative path
-	 *
-	 * @param path the path
-	 * @return the image descriptor
-	 */
-	public ImageDescriptor getImageDescriptor(String path) 
-	{		
-		URL url = FileLocator.find(context.getBundle(), new Path(path), null);				
-        return ImageDescriptor.createFromURL(url);
-	}
-
 }

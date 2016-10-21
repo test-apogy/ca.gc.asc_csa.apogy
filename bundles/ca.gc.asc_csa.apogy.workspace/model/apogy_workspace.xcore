@@ -85,4 +85,28 @@ class ApogyWorkspaceFacade{
 	 * @return List of Apogy projects.
 	 */
 	op ListApogyProjects getApogyProjects()
+	
+	/*
+	 * Searches the projects for a project with a specific name.
+	 * @param name Name of the project.
+	 * @return Reference to the project or null if there is not project with the specified name.
+	 */
+	op IProject getApogyProject(String name)
+	
+	/*
+	 * Opens the specified Apogy Project.
+	 * @param project Reference to the project to open.
+	 */
+	op void openApogyProject(IProject project)
+
+	/*
+	 * Closes the specified Apogy Project.
+	 * @param project Reference to the project to close.
+	 */
+	op void closeApogyProject(IProject project)
+	
+	/*
+	 * Indicates which project is opened.
+	 */
+	transient IProject activeProject
 }

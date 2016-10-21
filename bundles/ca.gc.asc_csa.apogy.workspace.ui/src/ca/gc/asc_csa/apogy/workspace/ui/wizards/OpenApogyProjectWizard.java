@@ -23,6 +23,7 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
+import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ui.Activator;
 
 public class OpenApogyProjectWizard extends Wizard {
@@ -37,7 +38,7 @@ public class OpenApogyProjectWizard extends Wizard {
 		setWindowTitle("Open Apogy Project");
 		setNeedsProgressMonitor(true);
 		setDefaultPageImageDescriptor(
-				ApogyCommonUiFacade.INSTANCE.getImageDescriptor(Activator.ID + "/icons/wizban/apogy_open_project.png"));
+				ApogyCommonUiFacade.INSTANCE.getImageDescriptor("platform:/plugin/" + Activator.ID + "/icons/wizban/apogy.png"));
 
 		openApogyProjectWizardPage = new OpenApogyProjectWizardPage();
 	}
@@ -58,9 +59,9 @@ public class OpenApogyProjectWizard extends Wizard {
 					throws CoreException, InvocationTargetException, InterruptedException {
 				try {
 					// Open the project.
-//					ApogyWorkspaceFacade.INSTANCE.createApogyProject(getNewApogyProjectSettings().getName(), getNewApogyProjectSettings().getDescription());
+					ApogyWorkspaceFacade.INSTANCE.openApogyProject(openApogyProjectWizardPage.getSelectedProject());
 				} catch (Exception e) {
-					Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + "!!!!FIXME!!!!" + ">",
+					Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + openApogyProjectWizardPage.getSelectedProject().getName() + ">",
 							EventSeverity.ERROR, e);
 				} finally {
 					monitor.done();
@@ -74,10 +75,10 @@ public class OpenApogyProjectWizard extends Wizard {
 		try {
 			getContainer().run(false, false, createApogyProjectOperation);
 		} catch (InvocationTargetException e) {
-			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + "!!!!FIXME!!!!" + ">",
+			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + openApogyProjectWizardPage.getSelectedProject().getName() + ">",
 					EventSeverity.ERROR, e);
 		} catch (InterruptedException e) {
-			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + "!!!!FIXME!!!!" + ">",
+			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + openApogyProjectWizardPage.getSelectedProject().getName() + ">",
 					EventSeverity.ERROR, e);
 		}
 		return true;

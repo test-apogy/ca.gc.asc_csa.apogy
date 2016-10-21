@@ -22,6 +22,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.jface.resource.ImageDescriptor;
 
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.ui.Activator;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiPackage;
 
@@ -80,6 +83,7 @@ public class ApogyCommonUiFacadeImpl extends MinimalEObjectImpl.Container implem
 			url = new URL(uri);
 			imageDescriptor = ImageDescriptor.createFromURL(url);
 		} catch (MalformedURLException e) {
+			Logger.INSTANCE.log(Activator.ID, "Unable to load image <" + uri + ">", EventSeverity.WARNING, e);
 		}
 		return imageDescriptor;
 	}

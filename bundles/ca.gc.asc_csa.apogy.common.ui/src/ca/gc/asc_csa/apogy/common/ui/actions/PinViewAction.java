@@ -18,7 +18,8 @@ import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuCreator;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.widgets.Event;
-import ca.gc.asc_csa.apogy.common.ui.Activator;
+
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.common.ui.views.Pinnable;
 
 public class PinViewAction extends Action {
@@ -35,7 +36,7 @@ public class PinViewAction extends Action {
 		this.pinnable = pinnable;				
 		try
 		{
-			imageDescriptor = Activator.getDefault().getImageDescriptor("/icons/pin.gif");			
+			imageDescriptor = ApogyCommonUiFacade.INSTANCE.getImageDescriptor("/icons/pin.gif");			
 		}
 		catch(Exception e)
 		{

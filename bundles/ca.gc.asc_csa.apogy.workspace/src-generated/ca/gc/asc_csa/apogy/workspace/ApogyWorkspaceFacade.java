@@ -39,6 +39,7 @@ import org.eclipse.core.resources.IProject;
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionFilename <em>Default Session Filename</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionFilenameExtension <em>Default Session Filename Extension</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionFolderName <em>Default Session Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getActiveProject <em>Active Project</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyWorkspaceFacade()
@@ -107,6 +108,31 @@ public interface ApogyWorkspaceFacade extends EObject {
 	String getDefaultSessionFolderName();
 
 	/**
+	 * Returns the value of the '<em><b>Active Project</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Indicates which project is opened.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Active Project</em>' attribute.
+	 * @see #setActiveProject(IProject)
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyWorkspaceFacade_ActiveProject()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.workspace.IProject" transient="true"
+	 * @generated
+	 */
+	IProject getActiveProject();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getActiveProject <em>Active Project</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Active Project</em>' attribute.
+	 * @see #getActiveProject()
+	 * @generated
+	 */
+	void setActiveProject(IProject value);
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -143,6 +169,43 @@ public interface ApogyWorkspaceFacade extends EObject {
 	 * @generated
 	 */
 	List<IProject> getApogyProjects();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Searches the projects for a project with a specific name.
+	 * @param name Name of the project.
+	 * @return Reference to the project or null if there is not project with the specified name.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.workspace.IProject" unique="false" nameUnique="false"
+	 * @generated
+	 */
+	IProject getApogyProject(String name);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Opens the specified Apogy Project.
+	 * @param project Reference to the project to open.
+	 * <!-- end-model-doc -->
+	 * @model projectDataType="ca.gc.asc_csa.apogy.workspace.IProject" projectUnique="false"
+	 * @generated
+	 */
+	void openApogyProject(IProject project);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Closes the specified Apogy Project.
+	 * @param project Reference to the project to close.
+	 * <!-- end-model-doc -->
+	 * @model projectDataType="ca.gc.asc_csa.apogy.workspace.IProject" projectUnique="false"
+	 * @generated
+	 */
+	void closeApogyProject(IProject project);
 
 	/**
 	 * @generated_NOT

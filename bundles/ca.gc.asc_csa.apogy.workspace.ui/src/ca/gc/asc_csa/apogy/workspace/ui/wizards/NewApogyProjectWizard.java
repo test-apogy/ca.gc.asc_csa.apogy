@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.workspace.ui.wizards;
 
 import java.lang.reflect.InvocationTargetException;
 
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.wizard.Wizard;
@@ -42,7 +43,7 @@ public class NewApogyProjectWizard extends Wizard {
 		setWindowTitle("New Apogy Project");
 		setNeedsProgressMonitor(true);
 		setDefaultPageImageDescriptor(
-				ApogyCommonUiFacade.INSTANCE.getImageDescriptor(Activator.ID + "/icons/wizban/apogy_new_project.png"));
+				ApogyCommonUiFacade.INSTANCE.getImageDescriptor("platform:/plugin/" + Activator.ID + "/icons/wizban/apogy.png"));
 
 		namedDescribedWizardPage = new NamedDescribedWizardPage(getNewApogyProjectSettings(),
 				getNewApogyProjectSettings());
@@ -71,7 +72,8 @@ public class NewApogyProjectWizard extends Wizard {
 					throws CoreException, InvocationTargetException, InterruptedException {
 				try {
 					// Create the project.
-					ApogyWorkspaceFacade.INSTANCE.createApogyProject(getNewApogyProjectSettings().getName(), getNewApogyProjectSettings().getDescription());
+					IProject project = ApogyWorkspaceFacade.INSTANCE.createApogyProject(getNewApogyProjectSettings().getName(), getNewApogyProjectSettings().getDescription());
+					ApogyWorkspaceFacade.INSTANCE.openApogyProject(project);
 				} catch (Exception e) {
 					Logger.INSTANCE.log(Activator.ID, this, "Problems occured while creating project <" + getNewApogyProjectSettings().getName() + ">",
 							EventSeverity.ERROR, e);

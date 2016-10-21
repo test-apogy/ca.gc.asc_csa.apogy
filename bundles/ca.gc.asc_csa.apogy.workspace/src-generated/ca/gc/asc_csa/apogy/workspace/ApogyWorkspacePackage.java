@@ -129,13 +129,22 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME = 3;
 
 	/**
+	 * The feature id for the '<em><b>Active Project</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT = 4;
+
+	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE_FEATURE_COUNT = 4;
+	int APOGY_WORKSPACE_FACADE_FEATURE_COUNT = 5;
 
 	/**
 	 * The operation id for the '<em>Get Default Project Name</em>' operation.
@@ -165,13 +174,40 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS = 2;
 
 	/**
+	 * The operation id for the '<em>Get Apogy Project</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECT__STRING = 3;
+
+	/**
+	 * The operation id for the '<em>Open Apogy Project</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT = 4;
+
+	/**
+	 * The operation id for the '<em>Close Apogy Project</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT = 5;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 3;
+	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 6;
 
 
 	/**
@@ -251,6 +287,17 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EAttribute getApogyWorkspaceFacade_DefaultSessionFolderName();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getActiveProject <em>Active Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Active Project</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getActiveProject()
+	 * @see #getApogyWorkspaceFacade()
+	 * @generated
+	 */
+	EAttribute getApogyWorkspaceFacade_ActiveProject();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultProjectName() <em>Get Default Project Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -279,6 +326,36 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyWorkspaceFacade__GetApogyProjects();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getApogyProject(java.lang.String) <em>Get Apogy Project</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Apogy Project</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getApogyProject(java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyWorkspaceFacade__GetApogyProject__String();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#openApogyProject(org.eclipse.core.resources.IProject) <em>Open Apogy Project</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Open Apogy Project</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#openApogyProject(org.eclipse.core.resources.IProject)
+	 * @generated
+	 */
+	EOperation getApogyWorkspaceFacade__OpenApogyProject__IProject();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject(org.eclipse.core.resources.IProject) <em>Close Apogy Project</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Close Apogy Project</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject(org.eclipse.core.resources.IProject)
+	 * @generated
+	 */
+	EOperation getApogyWorkspaceFacade__CloseApogyProject__IProject();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.core.resources.IProject <em>IProject</em>}'.
@@ -363,6 +440,13 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 */
 		EAttribute APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME = eINSTANCE.getApogyWorkspaceFacade_DefaultSessionFolderName();
 		/**
+		 * The meta object literal for the '<em><b>Active Project</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT = eINSTANCE.getApogyWorkspaceFacade_ActiveProject();
+		/**
 		 * The meta object literal for the '<em><b>Get Default Project Name</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -383,6 +467,27 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS = eINSTANCE.getApogyWorkspaceFacade__GetApogyProjects();
+		/**
+		 * The meta object literal for the '<em><b>Get Apogy Project</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECT__STRING = eINSTANCE.getApogyWorkspaceFacade__GetApogyProject__String();
+		/**
+		 * The meta object literal for the '<em><b>Open Apogy Project</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT = eINSTANCE.getApogyWorkspaceFacade__OpenApogyProject__IProject();
+		/**
+		 * The meta object literal for the '<em><b>Close Apogy Project</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT = eINSTANCE.getApogyWorkspaceFacade__CloseApogyProject__IProject();
 		/**
 		 * The meta object literal for the '<em>IProject</em>' data type.
 		 * <!-- begin-user-doc -->
