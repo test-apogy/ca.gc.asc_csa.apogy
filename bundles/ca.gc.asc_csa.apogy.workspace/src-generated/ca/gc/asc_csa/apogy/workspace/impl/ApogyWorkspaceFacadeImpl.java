@@ -292,12 +292,9 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	public List<IProject> getApogyProjects() {			
 		List<IProject> projects = new ArrayList<IProject>();		
 		for (IProject project : ResourcesPlugin.getWorkspace().getRoot().getProjects()) {
-			System.out.println("ApogyWorkspaceFacadeImpl.getApogyProjects(): " + project.getName());
-			System.out.println("ApogyWorkspaceFacadeImpl.getApogyProjects(): " + project.getName());
 			try {
 				if (project.hasNature(ApogyNature.NATURE_ID)){
 					projects.add(project);
-					System.out.println("ApogyWorkspaceFacadeImpl.getApogyProjects(): Apogy project");
 				}
 			} catch (CoreException e) {
 				Logger.INSTANCE.log(Activator.ID, "Unable to check the nature of project <" + project.getName(), EventSeverity.ERROR, e);
