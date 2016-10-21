@@ -44,7 +44,7 @@ public class EObjectComposite extends Composite {
 
 	private TreeViewer instanceViewer;
 
-	private ISelectionChangedListener variableImplementationsViewerListener;
+	private ISelectionChangedListener selectionChangedListener;
 
 	private EObject eObject;
 
@@ -87,7 +87,7 @@ public class EObjectComposite extends Composite {
 		instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 		instanceViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 		
-		instanceViewer.addSelectionChangedListener(getInstanceViewerListener());
+		instanceViewer.addSelectionChangedListener(getSelectionChangedListener());
 	}
 
 	/**
@@ -142,7 +142,7 @@ public class EObjectComposite extends Composite {
 	public void dispose() {
 		super.dispose();
 		toolkit.dispose();
-		instanceViewer.removeSelectionChangedListener(getInstanceViewerListener());
+		instanceViewer.removeSelectionChangedListener(getSelectionChangedListener());
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
@@ -153,16 +153,16 @@ public class EObjectComposite extends Composite {
 	 * Listener used to listen {{@link #instanceViewer} selection changes.
  	 * @return Reference to the listener (Lazy Loaded).
 	 */
-	private ISelectionChangedListener getInstanceViewerListener() {
-		if (variableImplementationsViewerListener == null){
-			variableImplementationsViewerListener = new ISelectionChangedListener() {				
+	private ISelectionChangedListener getSelectionChangedListener() {
+		if (selectionChangedListener == null){
+			selectionChangedListener = new ISelectionChangedListener() {				
 				@Override
 				public void selectionChanged(SelectionChangedEvent event) {
 					newSelection(event.getSelection());
 				}
 			};
 		}		
-		return variableImplementationsViewerListener;
+		return selectionChangedListener;
 	}
 
 	/**
