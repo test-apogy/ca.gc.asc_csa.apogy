@@ -323,7 +323,6 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.invocator.edit</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.invocator.editor</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.invocator.ui</module>
-		<module>../../bundles/ca.gc.asc_csa.apogy.core.invocator.ui.edit</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.controllers</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.programs.controllers.edit</module>

@@ -28,7 +28,7 @@
 		  childCreationExtenders="true",
 		  modelName="ApogyCoreInvocatorUI")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.invocator.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.invocator.ui.edit/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.invocator.ui/src-generated")
 
 package ca.gc.asc_csa.apogy.core.invocator.ui
 

@@ -632,4 +632,17 @@
             genModel="model/apogy_core_invocator_ui.xcore"/>
    </extension>
 
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated apogy_core_invocator_ui -->
+      <factory
+            uri="ca.gc.asc_csa.apogy.core.invocator.ui"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.provider.ApogyCoreInvocatorUIItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
 </plugin>
