@@ -22,6 +22,7 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
 
 public class ApogyAdvancedEditorPart{
 
@@ -29,16 +30,17 @@ public class ApogyAdvancedEditorPart{
 	
 	@PostConstruct	
 	public void createPartControl(Composite parent, ESelectionService selectionService) {
-		EObjectComposite eObjectComposite = new EObjectComposite(parent,
-				SWT.None) {
-			@Override
-			protected void newSelection(ISelection selection) {
-				selectionService.setSelection(selection);
-			}
-		};
-	
-		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
-			eObjectComposite.setEObject(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
-		}
+		AdvancedEditorComposite advancedEditorComposite = new AdvancedEditorComposite(parent, SWT.None, selectionService);
+//		EObjectComposite eObjectComposite = new EObjectComposite(parent,
+//				SWT.None) {
+//			@Override
+//			protected void newSelection(ISelection selection) {
+//				selectionService.setSelection(selection);
+//			}
+//		};
+//	
+//		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
+//			eObjectComposite.setEObject(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+//		}
 	}
 }
