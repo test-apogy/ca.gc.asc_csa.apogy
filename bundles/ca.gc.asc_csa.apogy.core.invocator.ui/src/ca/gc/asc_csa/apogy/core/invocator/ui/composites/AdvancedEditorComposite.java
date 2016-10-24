@@ -62,10 +62,8 @@ public class AdvancedEditorComposite extends Composite implements ISelectionProv
 	 * @param parent
 	 * @param style
 	 */
-	public AdvancedEditorComposite(Composite parent, int style, ESelectionService selectionService, EObject eObject) {
+	public AdvancedEditorComposite(Composite parent, int style) {
 		super(parent, style);
-		System.out.println("AdvancedEditorComposite.AdvancedEditorComposite()");
-
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
 				dispose();
@@ -74,23 +72,13 @@ public class AdvancedEditorComposite extends Composite implements ISelectionProv
 		setLayout(new GridLayout(2, false));
 
 		eObjectComposite = new EObjectComposite(this, SWT.None) {
-			// @Override
-			// protected void newSelection(ISelection selection) {
-			// selectionService.setSelection(selection);
-			// }
+			@Override
+			protected void newSelection(ISelection selection) {
+				AdvancedEditorComposite.this.newSelection(selection);
+			}
 		};
 		eObjectComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
-		//
-		// if(eObject != null){
-		// eObjectComposite.setEObject(eObject);
-		// }else{
-		eObjectComposite.setEObject(eObject);
-		// }
 		
-		eObjectNotFull = !isEObjectFull(eObjectComposite.getSelectedEObject());
-	
-		
-
 		btnNew = new Button(this, SWT.NONE);
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnNew.setText("New");
@@ -122,6 +110,9 @@ public class AdvancedEditorComposite extends Composite implements ISelectionProv
 		bindingContext = initDataBindings();
 	}
 
+	protected void newSelection(ISelection selection) {
+	}
+
 	@Override
 	public void dispose() {
 		super.dispose();
@@ -141,6 +132,7 @@ public class AdvancedEditorComposite extends Composite implements ISelectionProv
 		
 		return m_bindingContext;
 	}
+		
 	
 	private boolean isEObjectFull(EObject eObject){
 		boolean eObjectFull = true;
