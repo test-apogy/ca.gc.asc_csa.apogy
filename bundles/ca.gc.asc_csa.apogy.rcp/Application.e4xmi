@@ -72,6 +72,9 @@
           <children xsi:type="basic:PartStack" xmi:id="_ZAZ3UJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.7">
             <children xsi:type="advanced:Placeholder" xmi:id="_lZOOIJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.3" ref="_c0P8YJe8EeadvPGeI8VxSw"/>
           </children>
+          <children xsi:type="basic:PartStack" xmi:id="_cUGf4JfAEeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.8">
+            <children xsi:type="advanced:Placeholder" xmi:id="_cuYoIJfAEeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.4" ref="_RoXV8JfAEeadvPGeI8VxSw"/>
+          </children>
         </children>
       </children>
     </children>
@@ -173,6 +176,7 @@
       <toolbar xmi:id="_WS2HYoykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_c0P8YJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.part.advancededitor" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ApogyAdvancedEditorPart" label="Advanced Editor"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_RoXV8JfAEeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.part.properties" contributionURI="bundleclass://ca.gc.asc_csa.apogy.common.emf.ui.emfforms/ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.FormPropertiesPart" label="Properties"/>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.switchPerspective" label="Apogy" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="" command="_C4Fq0B32EeaqJNPAWI4oCw">
