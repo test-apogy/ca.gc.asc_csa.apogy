@@ -21,24 +21,32 @@ import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoActiveSessionComposite;
 
 abstract public class AbstractApogySessionBasedPart {
 
 	private Composite composite;
+//	private NoActiveSessionComposite noActiveSessionComposite;
 	private Adapter adapter;
 	
 	@Inject ESelectionService selectionService;
 
 	@PostConstruct
 	public void createPartControl(Composite parent) {
+		parent.setLayout(new FillLayout());
+//		noActiveSessionComposite = new NoActiveSessionComposite(parent, SWT.None);
+//		noActiveSessionComposite.setVisible(false);
 		composite = createContentComposite(parent);
 		setSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());
 	}
+
 	
 	abstract protected Composite createContentComposite(Composite parent);
 	
@@ -46,7 +54,14 @@ abstract public class AbstractApogySessionBasedPart {
 		return composite;
 	}
 	
-	protected void setSession(InvocatorSession invocatorSession){		
+	protected void setSession(InvocatorSession invocatorSession){	
+//		if(invocatorSession == null && composite.isVisible()){
+//			composite.setVisible(false);
+//			noActiveSessionComposite.setVisible(true);
+//		}else if(invocatorSession != null && noActiveSessionComposite.isVisible()){
+//			composite.setVisible(true);
+//			noActiveSessionComposite.setVisible(false);
+//		}
 	}
 	
 	private Adapter getApogyCoreInvocatorFacadeAdapter() {

@@ -25,7 +25,9 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart{
 	protected Composite createContentComposite(Composite parent){
 		return new AdvancedEditorComposite(parent, SWT.None) {
 			@Override
-			protected void newSelection(ISelection selection) {
+			protected void newSelection(ISelection selection) 
+			{
+				super.newSelection(selection);
 				selectionService.setSelection(selection);
 			}
 		};
@@ -33,5 +35,6 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart{
 	
 	protected void setSession(InvocatorSession invocatorSession){
 		((AdvancedEditorComposite)getContentComposite()).setEObject(invocatorSession);
+		
 	}
 }

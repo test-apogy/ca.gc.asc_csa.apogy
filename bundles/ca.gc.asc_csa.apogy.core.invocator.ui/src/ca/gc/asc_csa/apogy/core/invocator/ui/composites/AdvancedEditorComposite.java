@@ -16,45 +16,31 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
 
 import java.util.List;
 
-import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.beans.PojoProperties;
-import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
-import org.eclipse.jface.viewers.ISelectionProvider;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Label;
 
-public class AdvancedEditorComposite extends Composite implements ISelectionProvider {
+public class AdvancedEditorComposite extends Composite{
 
 	private ISelectionChangedListener selectionChangedListener;
 	private EObjectComposite eObjectComposite;
-	private DataBindingContext bindingContext;
 	
 	private Button btnNew;
 	
-	private boolean eObjectNotFull;
 
 	/**
 	 * Creates the composite.
@@ -87,10 +73,16 @@ public class AdvancedEditorComposite extends Composite implements ISelectionProv
 			@Override
 			public void handleEvent(Event event) {
 				if (event.type == SWT.Selection) {
-
+					System.out.println(
+							"AdvancedEditorComposite.AdvancedEditorComposite(...).new Listener() {...}.handleEvent()" + " not yet implemented");
+					/**
+					 * Creates and opens the wizard to create a valid context
+					 */
+//					NewChildWizard newChildWizard = new NewChildWizard(eObjectComposite.getSelectedEObject().eClass());
+//					WizardDialog dialog = new WizardDialog(getShell(), newChildWizard);
+//				
+//					dialog.open();
 				}
-				// selectedEClass.getEAllStructuralFeatures();
-				// TODO: New Child button clicked
 			}
 		});
 
@@ -106,11 +98,10 @@ public class AdvancedEditorComposite extends Composite implements ISelectionProv
 
 			}
 		});
-		
-		bindingContext = initDataBindings();
 	}
 
 	protected void newSelection(ISelection selection) {
+		checkEnableNewButton((EObject) ((TreeSelection) selection).getFirstElement());
 	}
 
 	@Override
@@ -120,85 +111,29 @@ public class AdvancedEditorComposite extends Composite implements ISelectionProv
 			eObjectComposite.removeListener(SWT.Selection, (Listener) selectionChangedListener);
 		}
 	}
-
-	@SuppressWarnings("unchecked")
-	private DataBindingContext initDataBindings(){
-		DataBindingContext m_bindingContext = new DataBindingContext();
 		
-		IObservableValue<?> observeButtonNewEnabled = WidgetProperties.enabled().observe(btnNew);
-		IObservableValue<?> observeEObjectFull = PojoProperties.value("EObjectFull", this.getClass()).observe(this);
-		
-		m_bindingContext.bindValue(observeButtonNewEnabled, observeEObjectFull);
-		
-		return m_bindingContext;
-	}
-		
-	
-	private boolean isEObjectFull(EObject eObject){
-		boolean eObjectFull = true;
-		System.out.println("AdvancedEditorComposite.isEObjectFull()");
+	private void checkEnableNewButton(EObject eObject){
+		boolean objectFull = true;
 		if (eObject != null) {
-			//EClass selectedEClass = eObject.eClass();
-			System.out.println("AdvancedEditorComposite.EObjectFull() : " + eObjectFull);
-			System.out.println("AdvancedEditorComposite.EObjectFull() : " + eObject);
-			System.out.println("AdvancedEditorComposite.EObjectFull() : " + eObject.eClass().getEAllStructuralFeatures());
-			for (EStructuralFeature structuralFeature : eObject.eClass().getEAllStructuralFeatures()) {
-				//EReference eref = structuralFeature.get;
-				//            		EReference)referenceEObject;
-				final Object value = eObject.eGet(structuralFeature);
-				System.out.println("AdvancedEditorComposite.isEObjectFull() : value : " + value);
+			EList<EReference> structuralFeatures = eObject.eClass().getEAllContainments();
+			for (int i = 0; i < structuralFeatures.size(); i++) {
+				final Object value = eObject.eGet(structuralFeatures.get(i));
 				if (value == null) {
-					eObjectFull = false;
+					objectFull = false;
 					break;
 				}
 				if (value instanceof List) {
-					eObjectFull = false;
+					objectFull = false;
 					break;
 				}
 			}
-		}else{
-			return true;
 		}
-		//		//EList<EStructuralFeature> structuralFeatures = selectedEClass.getEAllStructuralFeatures();
-//		EList<EAttribute> attributes = selectedEClass.getEAllAttributes();
-//		//eObject.is
-//		for(EStructuralFeature structuralFeatures: selectedEClass.getEAllStructuralFeatures()){
-//			if(structuralFeatures. && eObject.eGet(structuralFeatures) != null){
-//				eObjectFull = false;
-//			}else{
-//				if(eObject.eGet(structuralFeatures))
-//			}
-//		}
-		System.out.println("AdvancedEditorComposite.isEObjectFull( : END : )" + eObjectFull);
-		return eObjectFull ;
+		System.out.println("AdvancedEditorComposite.checkEnableNewButton(): " + objectFull);
+		btnNew.setEnabled(!objectFull);
 	}
-	
+
 	public void setEObject(EObject eObject){
 		eObjectComposite.setEObject(eObject);
-		eObjectNotFull = !isEObjectFull(eObject);
-	}
-	
-	
-	/**
-	 * Selection provider methods
-	 */
-	@Override
-	public void addSelectionChangedListener(ISelectionChangedListener listener) {
-		selectionChangedListener = listener;
-		eObjectComposite.addListener(SWT.Selection, (Listener) listener);
-	}
-
-	@Override
-	public ISelection getSelection() {
-		return (ISelection) eObjectComposite.getSelectedEObject();
-	}
-
-	@Override
-	public void removeSelectionChangedListener(ISelectionChangedListener listener) {
-		eObjectComposite.removeListener(SWT.Selection, (Listener) listener);
-	}
-
-	@Override
-	public void setSelection(ISelection selection) {
+		checkEnableNewButton(eObject);
 	}
 }
