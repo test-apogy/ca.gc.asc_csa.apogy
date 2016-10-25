@@ -38,7 +38,9 @@ import org.eclipse.core.resources.IProject;
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultProjectNamePrefix <em>Default Project Name Prefix</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionFilename <em>Default Session Filename</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionFilenameExtension <em>Default Session Filename Extension</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionFolderName <em>Default Session Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionsFolderName <em>Default Sessions Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultProgramsFolderName <em>Default Programs Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultDataFolderName <em>Default Data Folder Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getActiveProject <em>Active Project</em>}</li>
  * </ul>
  *
@@ -93,19 +95,49 @@ public interface ApogyWorkspaceFacade extends EObject {
 	String getDefaultSessionFilenameExtension();
 
 	/**
-	 * Returns the value of the '<em><b>Default Session Folder Name</b></em>' attribute.
-	 * The default value is <code>"Sessions"</code>.
+	 * Returns the value of the '<em><b>Default Sessions Folder Name</b></em>' attribute.
+	 * The default value is <code>"sessions"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Default Apogy Sessions Directory.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Default Session Folder Name</em>' attribute.
-	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyWorkspaceFacade_DefaultSessionFolderName()
-	 * @model default="Sessions" unique="false" transient="true" changeable="false"
+	 * @return the value of the '<em>Default Sessions Folder Name</em>' attribute.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyWorkspaceFacade_DefaultSessionsFolderName()
+	 * @model default="sessions" unique="false" transient="true" changeable="false"
 	 * @generated
 	 */
-	String getDefaultSessionFolderName();
+	String getDefaultSessionsFolderName();
+
+	/**
+	 * Returns the value of the '<em><b>Default Programs Folder Name</b></em>' attribute.
+	 * The default value is <code>"scripts"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Default Apogy Programs Directory.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Default Programs Folder Name</em>' attribute.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyWorkspaceFacade_DefaultProgramsFolderName()
+	 * @model default="scripts" unique="false" transient="true" changeable="false"
+	 * @generated
+	 */
+	String getDefaultProgramsFolderName();
+
+	/**
+	 * Returns the value of the '<em><b>Default Data Folder Name</b></em>' attribute.
+	 * The default value is <code>"data"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Default Apogy Data Directory.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Default Data Folder Name</em>' attribute.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyWorkspaceFacade_DefaultDataFolderName()
+	 * @model default="data" unique="false" transient="true" changeable="false"
+	 * @generated
+	 */
+	String getDefaultDataFolderName();
 
 	/**
 	 * Returns the value of the '<em><b>Active Project</b></em>' attribute.
@@ -162,26 +194,26 @@ public interface ApogyWorkspaceFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the list of projects with the Apogy nature.
-	 * @return List of Apogy projects.
+	 * Returns the list of projects with the Apogy nature in the active workspace.
+	 * @return List of Apogy projects stored in the workspace.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.workspace.ListApogyProjects" unique="false"
 	 * @generated
 	 */
-	List<IProject> getApogyProjects();
+	List<IProject> getWorkspaceApogyProjects();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Searches the projects for a project with a specific name.
+	 * Searches the projects for a project with a specific name in the active workspace.
 	 * @param name Name of the project.
 	 * @return Reference to the project or null if there is not project with the specified name.
 	 * <!-- end-model-doc -->
 	 * @model dataType="ca.gc.asc_csa.apogy.workspace.IProject" unique="false" nameUnique="false"
 	 * @generated
 	 */
-	IProject getApogyProject(String name);
+	IProject getWorkspaceApogyProject(String name);
 
 	/**
 	 * <!-- begin-user-doc -->

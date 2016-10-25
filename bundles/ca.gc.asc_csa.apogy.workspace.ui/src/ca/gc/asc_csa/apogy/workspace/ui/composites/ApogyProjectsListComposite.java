@@ -63,7 +63,7 @@ public class ApogyProjectsListComposite extends Composite {
 				return ((IProject)element).getName(); 
 			}
 		});
-		viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getApogyProjects().toArray());
+		viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());
 	}
 
 	/**
