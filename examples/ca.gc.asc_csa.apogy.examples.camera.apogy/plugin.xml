@@ -53,6 +53,9 @@
             URI="sessions/PTUCameraExampleSession.sym">
       </SessionProvider>
    </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.workspace.projectProvider">
+   </extension>
    
 
 </plugin>

@@ -13,10 +13,12 @@ package ca.gc.asc_csa.apogy.workspace.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.core.resources.IProject;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
@@ -36,7 +38,6 @@ public class RegisteredApogyProjectsListComposite extends Composite {
 
 	public RegisteredApogyProjectsListComposite(Composite parent, int style) {
 		super(parent, style);
-		System.out.println("RegisteredApogyProjectsListComposite.RegisteredApogyProjectsListComposite()");
 		setLayout(new GridLayout(1, true));
 
 		viewer = new TableViewer(this, SWT.BORDER | SWT.SINGLE | SWT.V_SCROLL);
@@ -60,7 +61,8 @@ public class RegisteredApogyProjectsListComposite extends Composite {
 		viewer.setLabelProvider(new LabelProvider(){
 			@Override
 			public String getText(Object element) {
-				return element.toString(); 
+				Bundle bundle = (Bundle) element;				
+				return bundle.getSymbolicName(); 
 			}
 		});
 		viewer.setInput(ProjectProvidersRegistry.INSTANCE.getApogyProjectProviders().toArray());
@@ -77,6 +79,6 @@ public class RegisteredApogyProjectsListComposite extends Composite {
 	 * @return Reference to the project or null if no project is selected.
 	 */
 	public Bundle getSelectedBundle() {
-		return null;
+		return (Bundle) ((IStructuredSelection) viewer.getSelection()).getFirstElement();
 	}
 }

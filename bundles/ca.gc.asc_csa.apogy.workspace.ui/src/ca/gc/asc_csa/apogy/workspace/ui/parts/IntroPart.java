@@ -35,7 +35,7 @@ public class IntroPart {
 		parent.setLayout(gl_parent);
 		
 		Section sctnNewSectionOverview = formToolkit.createSection(parent, Section.TITLE_BAR);
-		sctnNewSectionOverview.setForeground(SWTResourceManager.getColor(SWT.COLOR_LINK_FOREGROUND));
+		sctnNewSectionOverview.setForeground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND));
 		sctnNewSectionOverview.setFont(SWTResourceManager.getFont("Ubuntu", 25, SWT.BOLD));
 		GridData gd_sctnNewSectionDescription = new GridData(SWT.FILL, SWT.FILL, true, false, 2, 1);
 		gd_sctnNewSectionDescription.widthHint = 278;
@@ -163,11 +163,13 @@ public class IntroPart {
 		composite.setLayout(new GridLayout(1, false));
 		
 		ImageHyperlink importDirectoryProjectHyperlink = formToolkit.createImageHyperlink(composite, SWT.NONE);
+		importDirectoryProjectHyperlink.setEnabled(false);
 		importDirectoryProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
 		formToolkit.paintBordersFor(importDirectoryProjectHyperlink);
 		importDirectoryProjectHyperlink.setText("Directory");
 		
 		ImageHyperlink importArchiveProjectHyperlink = formToolkit.createImageHyperlink(composite, SWT.NONE);
+		importArchiveProjectHyperlink.setEnabled(false);
 		importArchiveProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
 		formToolkit.paintBordersFor(importArchiveProjectHyperlink);
 		importArchiveProjectHyperlink.setText("Archive");
@@ -202,6 +204,7 @@ public class IntroPart {
 		compositeExport.setLayout(gl_compositeExport);
 		
 		ImageHyperlink exportProjectDirectoryHyperlink = formToolkit.createImageHyperlink(compositeExport, SWT.NONE);
+		exportProjectDirectoryHyperlink.setEnabled(false);
 		exportProjectDirectoryHyperlink.addHyperlinkListener(new IHyperlinkListener() {
 			public void linkActivated(HyperlinkEvent e) {
 			}
@@ -216,6 +219,7 @@ public class IntroPart {
 		exportProjectDirectoryHyperlink.setText("Directory");
 		
 		ImageHyperlink exportProjectArchiveHyperlink = formToolkit.createImageHyperlink(compositeExport, SWT.NONE);
+		exportProjectArchiveHyperlink.setEnabled(false);
 		exportProjectArchiveHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
 		formToolkit.paintBordersFor(exportProjectArchiveHyperlink);
 		exportProjectArchiveHyperlink.setText("Archive");

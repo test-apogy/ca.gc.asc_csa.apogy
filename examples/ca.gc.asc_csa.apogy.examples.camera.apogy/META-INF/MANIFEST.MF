@@ -26,6 +26,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
  ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
- ca.gc.asc_csa.apogy.addons.sensors.fov.bindings
+ ca.gc.asc_csa.apogy.addons.sensors.fov.bindings,
+ ca.gc.asc_csa.apogy.workspace;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.apogy.examples.camera.apogy.Activator
