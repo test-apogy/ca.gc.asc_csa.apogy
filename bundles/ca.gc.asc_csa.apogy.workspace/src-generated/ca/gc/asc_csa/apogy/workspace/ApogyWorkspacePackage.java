@@ -229,6 +229,52 @@ public interface ApogyWorkspacePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl <em>Project Providers Registry</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getProjectProvidersRegistry()
+	 * @generated
+	 */
+	int PROJECT_PROVIDERS_REGISTRY = 1;
+
+	/**
+	 * The feature id for the '<em><b>PROJECT PROVIDERS CONTRIBUTORS POINT ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_PROVIDERS_REGISTRY__PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Apogy Project Providers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_PROVIDERS_REGISTRY__APOGY_PROJECT_PROVIDERS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Project Providers Registry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_PROVIDERS_REGISTRY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Project Providers Registry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_PROVIDERS_REGISTRY_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '<em>IProject</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,7 +282,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getIProject()
 	 * @generated
 	 */
-	int IPROJECT = 1;
+	int IPROJECT = 2;
 
 
 	/**
@@ -247,7 +293,18 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getListApogyProjects()
 	 * @generated
 	 */
-	int LIST_APOGY_PROJECTS = 2;
+	int LIST_APOGY_PROJECTS = 3;
+
+
+	/**
+	 * The meta object id for the '<em>List Apogy Project Bundles</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.List
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getListApogyProjectBundles()
+	 * @generated
+	 */
+	int LIST_APOGY_PROJECT_BUNDLES = 4;
 
 
 	/**
@@ -398,6 +455,38 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__CloseApogyProject__IProject();
 
 	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry <em>Project Providers Registry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Project Providers Registry</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry
+	 * @generated
+	 */
+	EClass getProjectProvidersRegistry();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry#getPROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID <em>PROJECT PROVIDERS CONTRIBUTORS POINT ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>PROJECT PROVIDERS CONTRIBUTORS POINT ID</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry#getPROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID()
+	 * @see #getProjectProvidersRegistry()
+	 * @generated
+	 */
+	EAttribute getProjectProvidersRegistry_PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry#getApogyProjectProviders <em>Apogy Project Providers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Apogy Project Providers</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry#getApogyProjectProviders()
+	 * @see #getProjectProvidersRegistry()
+	 * @generated
+	 */
+	EAttribute getProjectProvidersRegistry_ApogyProjectProviders();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.core.resources.IProject <em>IProject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -418,6 +507,17 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getListApogyProjects();
+
+	/**
+	 * Returns the meta object for data type '{@link java.util.List <em>List Apogy Project Bundles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>List Apogy Project Bundles</em>'.
+	 * @see java.util.List
+	 * @model instanceClass="java.util.List<org.osgi.framework.Bundle>"
+	 * @generated
+	 */
+	EDataType getListApogyProjectBundles();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -543,6 +643,29 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT = eINSTANCE.getApogyWorkspaceFacade__CloseApogyProject__IProject();
 		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl <em>Project Providers Registry</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getProjectProvidersRegistry()
+		 * @generated
+		 */
+		EClass PROJECT_PROVIDERS_REGISTRY = eINSTANCE.getProjectProvidersRegistry();
+		/**
+		 * The meta object literal for the '<em><b>PROJECT PROVIDERS CONTRIBUTORS POINT ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT_PROVIDERS_REGISTRY__PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID = eINSTANCE.getProjectProvidersRegistry_PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID();
+		/**
+		 * The meta object literal for the '<em><b>Apogy Project Providers</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT_PROVIDERS_REGISTRY__APOGY_PROJECT_PROVIDERS = eINSTANCE.getProjectProvidersRegistry_ApogyProjectProviders();
+		/**
 		 * The meta object literal for the '<em>IProject</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -560,6 +683,15 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType LIST_APOGY_PROJECTS = eINSTANCE.getListApogyProjects();
+		/**
+		 * The meta object literal for the '<em>List Apogy Project Bundles</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.List
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getListApogyProjectBundles()
+		 * @generated
+		 */
+		EDataType LIST_APOGY_PROJECT_BUNDLES = eINSTANCE.getListApogyProjectBundles();
 
 	}
 

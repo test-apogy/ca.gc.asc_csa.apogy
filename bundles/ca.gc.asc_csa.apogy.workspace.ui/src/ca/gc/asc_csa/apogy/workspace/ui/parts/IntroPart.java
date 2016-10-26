@@ -18,6 +18,7 @@ import org.eclipse.ui.forms.widgets.ImageHyperlink;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.SWTResourceManager;
 
+import ca.gc.asc_csa.apogy.workspace.ui.wizards.ImportRegisteredApogyProjectWizard;
 import ca.gc.asc_csa.apogy.workspace.ui.wizards.NewApogyProjectWizard;
 import ca.gc.asc_csa.apogy.workspace.ui.wizards.OpenApogyProjectWizard;
 
@@ -127,7 +128,7 @@ public class IntroPart {
 			public void linkExited(HyperlinkEvent e) {
 			}
 		});
-		examplesHyperlink.setToolTipText("Open an Apogy project example.");
+		examplesHyperlink.setToolTipText("Import an Apogy project example.");
 		examplesHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
 		examplesHyperlink.setImage(null);
 		formToolkit.paintBordersFor(examplesHyperlink);
@@ -174,6 +175,7 @@ public class IntroPart {
 		ImageHyperlink importRegisteredProjectHyperlink = formToolkit.createImageHyperlink(composite, SWT.NONE);
 		importRegisteredProjectHyperlink.addHyperlinkListener(new IHyperlinkListener() {
 			public void linkActivated(HyperlinkEvent e) {
+				new WizardDialog(parent.getShell(), new ImportRegisteredApogyProjectWizard()).open();
 			}
 			public void linkEntered(HyperlinkEvent e) {
 			}

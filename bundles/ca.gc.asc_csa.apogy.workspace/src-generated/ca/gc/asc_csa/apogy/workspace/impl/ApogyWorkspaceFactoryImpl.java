@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.osgi.framework.Bundle;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,6 +72,7 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE: return createApogyWorkspaceFacade();
+			case ApogyWorkspacePackage.PROJECT_PROVIDERS_REGISTRY: return createProjectProvidersRegistry();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -88,6 +90,8 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 				return createIProjectFromString(eDataType, initialValue);
 			case ApogyWorkspacePackage.LIST_APOGY_PROJECTS:
 				return createListApogyProjectsFromString(eDataType, initialValue);
+			case ApogyWorkspacePackage.LIST_APOGY_PROJECT_BUNDLES:
+				return createListApogyProjectBundlesFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -105,6 +109,8 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 				return convertIProjectToString(eDataType, instanceValue);
 			case ApogyWorkspacePackage.LIST_APOGY_PROJECTS:
 				return convertListApogyProjectsToString(eDataType, instanceValue);
+			case ApogyWorkspacePackage.LIST_APOGY_PROJECT_BUNDLES:
+				return convertListApogyProjectBundlesToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -118,6 +124,16 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	public ApogyWorkspaceFacade createApogyWorkspaceFacade() {
 		ApogyWorkspaceFacadeImpl apogyWorkspaceFacade = new ApogyWorkspaceFacadeImpl();
 		return apogyWorkspaceFacade;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProjectProvidersRegistry createProjectProvidersRegistry() {
+		ProjectProvidersRegistryImpl projectProvidersRegistry = new ProjectProvidersRegistryImpl();
+		return projectProvidersRegistry;
 	}
 
 	/**
@@ -154,6 +170,25 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	 * @generated
 	 */
 	public String convertListApogyProjectsToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public List<Bundle> createListApogyProjectBundlesFromString(EDataType eDataType, String initialValue) {
+		return (List<Bundle>)super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertListApogyProjectBundlesToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
 	}
 

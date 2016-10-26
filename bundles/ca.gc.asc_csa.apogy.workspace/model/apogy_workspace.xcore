@@ -34,10 +34,12 @@ package ca.gc.asc_csa.apogy.workspace
 import ca.gc.asc_csa.apogy.core.Exception
 import java.util.List
 import org.eclipse.core.resources.IProject
+import org.osgi.framework.Bundle
 
 /* Types definitions. */
 type IProject wraps IProject
 type ListApogyProjects wraps List<IProject>
+type ListApogyProjectBundles wraps List<Bundle>
 
 
 /* -------------------------------------------------------------------------
@@ -95,7 +97,7 @@ class ApogyWorkspaceFacade{
 	 * @return List of Apogy projects stored in the workspace.
 	 */
 	op ListApogyProjects getWorkspaceApogyProjects()
-	
+		
 	/*
 	 * Searches the projects for a project with a specific name in the active workspace.
 	 * @param name Name of the project.
@@ -119,4 +121,19 @@ class ApogyWorkspaceFacade{
 	 * Indicates which project is opened.
 	 */
 	transient IProject activeProject
+}
+
+/*
+ * This registry holds all the bundles that contain Apogy projects.  This class is a singleton.
+ */
+class ProjectProvidersRegistry{	
+	/*
+	 * Eclipse Extension Point Id.
+	 */
+	readonly transient String PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID = "ca.gc.asc_csa.apogy.workspace.projectProvider"
+	
+	/*
+	 * Contains all the bundles that provides an Apogy project.
+	 */
+	ListApogyProjectBundles apogyProjectProviders
 }

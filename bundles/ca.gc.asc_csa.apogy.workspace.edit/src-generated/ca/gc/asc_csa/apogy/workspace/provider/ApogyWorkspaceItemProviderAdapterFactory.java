@@ -130,6 +130,29 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProjectProvidersRegistryItemProvider projectProvidersRegistryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProjectProvidersRegistryAdapter() {
+		if (projectProvidersRegistryItemProvider == null) {
+			projectProvidersRegistryItemProvider = new ProjectProvidersRegistryItemProvider(this);
+		}
+
+		return projectProvidersRegistryItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,6 +279,7 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 	 */
 	public void dispose() {
 		if (apogyWorkspaceFacadeItemProvider != null) apogyWorkspaceFacadeItemProvider.dispose();
+		if (projectProvidersRegistryItemProvider != null) projectProvidersRegistryItemProvider.dispose();
 	}
 
 	/**
@@ -310,6 +334,11 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyWorkspaceFactory.eINSTANCE.createApogyWorkspaceFacade()));
 
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyWorkspaceFactory.eINSTANCE.createProjectProvidersRegistry()));
+
 				return null;
 			}
  
@@ -324,6 +353,11 @@ public class ApogyWorkspaceItemProviderAdapterFactory extends ApogyWorkspaceAdap
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyWorkspaceFactory.eINSTANCE.createApogyWorkspaceFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyWorkspaceFactory.eINSTANCE.createProjectProvidersRegistry()));
 
 				return null;
 			}
