@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.workspace.ui.parts;
+package ca.gc.asc_csa.apogy.rcp.parts;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -122,6 +122,9 @@ public class IntroPart {
 		ImageHyperlink examplesHyperlink = formToolkit.createImageHyperlink(composite_2, SWT.NONE);
 		examplesHyperlink.addHyperlinkListener(new IHyperlinkListener() {
 			public void linkActivated(HyperlinkEvent e) {
+				ImportRegisteredApogyProjectWizard wizard = new ImportRegisteredApogyProjectWizard();
+				wizard.setProjectNameFilter("ca.gc.asc_csa.apogy.examples");
+				new WizardDialog(parent.getShell(), wizard).open();
 			}
 			public void linkEntered(HyperlinkEvent e) {
 			}

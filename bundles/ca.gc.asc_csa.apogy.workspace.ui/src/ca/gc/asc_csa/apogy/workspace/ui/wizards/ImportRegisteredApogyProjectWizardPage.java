@@ -26,6 +26,7 @@ public class ImportRegisteredApogyProjectWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.workspace.ui.wizards.ImportRegisteredApogyProjectWizardPage";
 	private RegisteredApogyProjectsListComposite composite;
+	private String filter;
 
 	/**
 	 * Constructor for SampleNewWizardPage.
@@ -47,6 +48,11 @@ public class ImportRegisteredApogyProjectWizardPage extends WizardPage {
 			protected void newSelection(ISelection selection) {
 				validate();
 			}
+			
+			@Override
+			protected String getProjectNameFilter() {
+				return ImportRegisteredApogyProjectWizardPage.this.filter;
+			}
 		};
 		setControl(composite);
 		composite.setFocus();
@@ -62,5 +68,9 @@ public class ImportRegisteredApogyProjectWizardPage extends WizardPage {
 		setErrorMessage(message);
 		setPageComplete(message == null);
 		return message;
+	}
+
+	public void setProjectNameFilter(String filter) {
+		this.filter = filter;
 	}
 }

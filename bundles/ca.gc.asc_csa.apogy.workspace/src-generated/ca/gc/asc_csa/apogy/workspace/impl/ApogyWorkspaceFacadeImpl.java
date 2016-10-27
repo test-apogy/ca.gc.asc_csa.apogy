@@ -14,8 +14,11 @@
 package ca.gc.asc_csa.apogy.workspace.impl;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -28,6 +31,7 @@ import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -42,6 +46,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import org.osgi.framework.Bundle;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
@@ -321,11 +326,11 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public IProject createApogyProject(String name, String description) throws Exception{
+	public IProject createApogyProjectTemplate(String name, String description) throws Exception {
 		/*
 		 * Create the project structure in the workspace.
 		 */
@@ -373,7 +378,24 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 			if (!dataFolder.exists()) {
 				dataFolder.create(true, true, null);
 			}						
+		} catch (CoreException e) {
+			throw new Exception("Problems occured while creating project <" + name + ">", e);			
+		}
 
+		return project;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public IProject createApogyProject(String name, String description) throws Exception{
+		/*
+		 * Create the project structure in the workspace.
+		 */
+		IProject project = createApogyProjectTemplate(name, description);
+		try {
 			/*
 			 * Create Apogy Session.
 			 */
@@ -382,6 +404,7 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 			/*
 			 * Create the Apogy Session File.
 			 */
+			IFolder sessionsFolder = project.getFolder(ApogyWorkspaceFacade.INSTANCE.getDefaultSessionsFolderName());
 			IFile sessionFile = sessionsFolder
 					.getFile(new Path(getDefaultSessionFilename() + "." + getDefaultSessionFilenameExtension()));
 			ResourceSet resourceSet = new ResourceSetImpl();
@@ -396,7 +419,7 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 			options.put(XMLResource.OPTION_ENCODING, "UTF-8");
 			resource.save(options);
 
-		} catch (CoreException | IOException e) {
+		} catch (IOException e) {
 			throw new Exception("Problems occured while creating project <" + name + ">", e);			
 		}
 
@@ -471,7 +494,34 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public void importApogyProject(Bundle bundle) throws Exception {
+		IProject project = createApogyProjectTemplate(bundle.getSymbolicName(), "");
+		
+		URL url = null;
+		String entry = "";
+		
+		/* Import the session. */
+		entry = "sessions/" + getDefaultSessionFilename() + "." + getDefaultSessionFilenameExtension();
+		url = bundle.getEntry(entry);
+		if (url != null){
+			IFile file = project.getFile(entry);			
+			file.create(url.openStream(), true, null );
+		}
+		
+		/* Import the programs. */
+		// FIXME Implement this section.
+		
+		/* Import the data. */
+		// FIXME Implement this section.
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	public void closeApogyProject(IProject project) {
+		// FIXME Should dispose the editing domain as well.
 		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
 	}
 
@@ -564,6 +614,13 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 		switch (operationID) {
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___GET_DEFAULT_PROJECT_NAME:
 				return getDefaultProjectName();
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT_TEMPLATE__STRING_STRING:
+				try {
+					return createApogyProjectTemplate((String)arguments.get(0), (String)arguments.get(1));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT__STRING_STRING:
 				try {
 					return createApogyProject((String)arguments.get(0), (String)arguments.get(1));
@@ -578,6 +635,14 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT:
 				openApogyProject((IProject)arguments.get(0));
 				return null;
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE:
+				try {
+					importApogyProject((Bundle)arguments.get(0));
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT:
 				closeApogyProject((IProject)arguments.get(0));
 				return null;

@@ -6,7 +6,7 @@
       <children xsi:type="advanced:Perspective" xmi:id="_MJCyUJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.perspective.welcome" label="Welcome" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Welcome">
         <children xsi:type="basic:PartSashContainer" xmi:id="_j20PMJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7">
           <children xsi:type="basic:PartStack" xmi:id="_TSorMJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
-            <children xsi:type="basic:Part" xmi:id="_4uWh8JI5EeawCfS-XYP3Tg" elementId="ca.gc.asc_csa.apogy.rcp.parts.introPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.workspace.ui/ca.gc.asc_csa.apogy.workspace.ui.parts.IntroPart" label="Welcome" iconURI="">
+            <children xsi:type="basic:Part" xmi:id="_4uWh8JI5EeawCfS-XYP3Tg" elementId="ca.gc.asc_csa.apogy.rcp.parts.introPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.parts.IntroPart" label="Welcome" iconURI="">
               <tags>View</tags>
               <tags>categoryTag:org.eclipse.ui</tags>
             </children>

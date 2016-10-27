@@ -174,13 +174,22 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE___GET_DEFAULT_PROJECT_NAME = 0;
 
 	/**
+	 * The operation id for the '<em>Create Apogy Project Template</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT_TEMPLATE__STRING_STRING = 1;
+
+	/**
 	 * The operation id for the '<em>Create Apogy Project</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT__STRING_STRING = 1;
+	int APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT__STRING_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Get Workspace Apogy Projects</em>' operation.
@@ -189,7 +198,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECTS = 2;
+	int APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECTS = 3;
 
 	/**
 	 * The operation id for the '<em>Get Workspace Apogy Project</em>' operation.
@@ -198,7 +207,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECT__STRING = 3;
+	int APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECT__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Open Apogy Project</em>' operation.
@@ -207,7 +216,16 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT = 4;
+	int APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT = 5;
+
+	/**
+	 * The operation id for the '<em>Import Apogy Project</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE = 6;
 
 	/**
 	 * The operation id for the '<em>Close Apogy Project</em>' operation.
@@ -216,7 +234,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT = 5;
+	int APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT = 7;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -225,7 +243,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 6;
+	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 8;
 
 
 	/**
@@ -305,6 +323,17 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 */
 	int LIST_APOGY_PROJECT_BUNDLES = 4;
+
+
+	/**
+	 * The meta object id for the '<em>Bundle</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.osgi.framework.Bundle
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getBundle()
+	 * @generated
+	 */
+	int BUNDLE = 5;
 
 
 	/**
@@ -405,6 +434,16 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__GetDefaultProjectName();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#createApogyProjectTemplate(java.lang.String, java.lang.String) <em>Create Apogy Project Template</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Apogy Project Template</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#createApogyProjectTemplate(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyWorkspaceFacade__CreateApogyProjectTemplate__String_String();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#createApogyProject(java.lang.String, java.lang.String) <em>Create Apogy Project</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -443,6 +482,16 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyWorkspaceFacade__OpenApogyProject__IProject();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#importApogyProject(org.osgi.framework.Bundle) <em>Import Apogy Project</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Import Apogy Project</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#importApogyProject(org.osgi.framework.Bundle)
+	 * @generated
+	 */
+	EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject(org.eclipse.core.resources.IProject) <em>Close Apogy Project</em>}' operation.
@@ -518,6 +567,17 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getListApogyProjectBundles();
+
+	/**
+	 * Returns the meta object for data type '{@link org.osgi.framework.Bundle <em>Bundle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Bundle</em>'.
+	 * @see org.osgi.framework.Bundle
+	 * @model instanceClass="org.osgi.framework.Bundle"
+	 * @generated
+	 */
+	EDataType getBundle();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -608,6 +668,13 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___GET_DEFAULT_PROJECT_NAME = eINSTANCE.getApogyWorkspaceFacade__GetDefaultProjectName();
 		/**
+		 * The meta object literal for the '<em><b>Create Apogy Project Template</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT_TEMPLATE__STRING_STRING = eINSTANCE.getApogyWorkspaceFacade__CreateApogyProjectTemplate__String_String();
+		/**
 		 * The meta object literal for the '<em><b>Create Apogy Project</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -635,6 +702,13 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT = eINSTANCE.getApogyWorkspaceFacade__OpenApogyProject__IProject();
+		/**
+		 * The meta object literal for the '<em><b>Import Apogy Project</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE = eINSTANCE.getApogyWorkspaceFacade__ImportApogyProject__Bundle();
 		/**
 		 * The meta object literal for the '<em><b>Close Apogy Project</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -692,6 +766,15 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType LIST_APOGY_PROJECT_BUNDLES = eINSTANCE.getListApogyProjectBundles();
+		/**
+		 * The meta object literal for the '<em>Bundle</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.osgi.framework.Bundle
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getBundle()
+		 * @generated
+		 */
+		EDataType BUNDLE = eINSTANCE.getBundle();
 
 	}
 

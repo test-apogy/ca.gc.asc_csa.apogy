@@ -31,14 +31,6 @@
       </Type>
    </extension>
    <extension
-         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
-      <SessionProvider
-            Description="Session showing the use of the PTU Dish Antenna example system."
-            Name="PTU Dish Antenna Example"
-            URI="sessions/PTUDishAntennaExampleSession.sym">
-      </SessionProvider>
-   </extension>
-   <extension
          point="ca.gc.asc_csa.apogy.workspace.projectProvider">
    </extension>
    

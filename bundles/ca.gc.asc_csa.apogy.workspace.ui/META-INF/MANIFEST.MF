@@ -32,7 +32,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.databinding.property;bundle-version="1.6.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: ca.gc.asc_csa.apogy.workspace.ui,
+ ca.gc.asc_csa.apogy.workspace.ui.composites,
  ca.gc.asc_csa.apogy.workspace.ui.impl,
  ca.gc.asc_csa.apogy.workspace.ui.provider,
- ca.gc.asc_csa.apogy.workspace.ui.util
+ ca.gc.asc_csa.apogy.workspace.ui.util,
+ ca.gc.asc_csa.apogy.workspace.ui.wizards
 Bundle-ActivationPolicy: lazy

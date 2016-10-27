@@ -30,13 +30,5 @@
             URI="model/MobilePlatformApogySystem.ss">
       </Type>
    </extension>
-   <extension
-         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
-      <SessionProvider
-            Description="Session showing the use of the Mobile Platform example system."
-            Name="Mobile Platform Example"
-            URI="sessions/MobilePlatformExampleSession.sym">
-      </SessionProvider>
-   </extension>
 
 </plugin>

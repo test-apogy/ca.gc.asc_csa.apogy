@@ -24,7 +24,8 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
  ca.gc.asc_csa.apogy.core.environment.orbit.earth;visibility:=reexport,
  ca.gc.asc_csa.apogy.examples.satellite;visibility:=reexport,
- ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0"
+ ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0",
+ ca.gc.asc_csa.apogy.workspace;bundle-version="0.5.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: ca.gc.asc_csa.apogy.examples.satellite.apogy,
  ca.gc.asc_csa.apogy.examples.satellite.apogy.converters,

@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.workspace;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.osgi.framework.Bundle;
 import ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl;
 import java.util.List;
 import org.eclipse.core.resources.IProject;
@@ -179,7 +180,22 @@ public interface ApogyWorkspaceFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Creates and initialized a new Apogy project.
+	 * Creates and initialized a new Apogy project template without the session.
+	 * @param name Name of the project.
+	 * @param description Description of the project.
+	 * @return Reference to the project or null if not created.
+	 * @throws Exception Reference to the exception stack.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.workspace.IProject" unique="false" exceptions="ca.gc.asc_csa.apogy.core.Exception" nameUnique="false" descriptionUnique="false"
+	 * @generated
+	 */
+	IProject createApogyProjectTemplate(String name, String description) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Creates and initialized a new Apogy project with a session file.
 	 * @param name Name of the project.
 	 * @param description Description of the project.
 	 * @return Reference to the project or null if not created.
@@ -226,6 +242,18 @@ public interface ApogyWorkspaceFacade extends EObject {
 	 * @generated
 	 */
 	void openApogyProject(IProject project);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Imports the specified Apogy Project Bundle.
+	 * @param project Reference to the bundle that contains the Apogy project.
+	 * <!-- end-model-doc -->
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception" bundleDataType="ca.gc.asc_csa.apogy.workspace.Bundle" bundleUnique="false"
+	 * @generated
+	 */
+	void importApogyProject(Bundle bundle) throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->

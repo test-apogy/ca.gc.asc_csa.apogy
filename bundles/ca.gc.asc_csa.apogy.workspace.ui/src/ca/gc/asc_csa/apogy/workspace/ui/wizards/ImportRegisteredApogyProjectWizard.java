@@ -20,7 +20,10 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
+import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ui.Activator;
 
 public class ImportRegisteredApogyProjectWizard extends Wizard {
@@ -39,6 +42,10 @@ public class ImportRegisteredApogyProjectWizard extends Wizard {
 
 		importRegisteredApogyProjectWizardPage = new ImportRegisteredApogyProjectWizardPage();
 	}
+	
+	public void setProjectNameFilter(String filter){
+		importRegisteredApogyProjectWizardPage.setProjectNameFilter(filter);
+	}
 
 	/**
 	 * Adding the page to the wizard.
@@ -55,11 +62,11 @@ public class ImportRegisteredApogyProjectWizard extends Wizard {
 			protected void execute(IProgressMonitor monitor)
 					throws CoreException, InvocationTargetException, InterruptedException {
 				try {
-					// Open the project.
-//					ApogyWorkspaceFacade.INSTANCE.openApogyProject(importRegisteredApogyProjectWizardPage.getSelectedProject());
+					// Import the project.
+					ApogyWorkspaceFacade.INSTANCE.importApogyProject(importRegisteredApogyProjectWizardPage.getSelectedBundle());
 				} catch (Exception e) {
-//					Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + importRegisteredApogyProjectWizardPage.getSelectedProject().getName() + ">",
-//							EventSeverity.ERROR, e);
+					Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + importRegisteredApogyProjectWizardPage.getSelectedBundle().getSymbolicName() + ">",
+							EventSeverity.ERROR, e);
 				} finally {
 					monitor.done();
 				}
@@ -71,12 +78,9 @@ public class ImportRegisteredApogyProjectWizard extends Wizard {
 		 */
 		try {
 			getContainer().run(false, false, operation);
-		} catch (InvocationTargetException e) {
-//			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + importRegisteredApogyProjectWizardPage.getSelectedProject().getName() + ">",
-//					EventSeverity.ERROR, e);
-		} catch (InterruptedException e) {
-//			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + importRegisteredApogyProjectWizardPage.getSelectedProject().getName() + ">",
-//					EventSeverity.ERROR, e);
+		} catch (InvocationTargetException | InterruptedException e) {
+			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while opening project <" + importRegisteredApogyProjectWizardPage.getSelectedBundle().getSymbolicName() + ">",
+					EventSeverity.ERROR, e);
 		}
 		return true;
 	}
