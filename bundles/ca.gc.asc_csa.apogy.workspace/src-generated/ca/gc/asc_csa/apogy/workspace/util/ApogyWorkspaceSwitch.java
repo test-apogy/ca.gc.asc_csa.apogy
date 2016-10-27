@@ -83,6 +83,12 @@ public class ApogyWorkspaceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyWorkspacePackage.PROJECT_PROVIDERS_REGISTRY: {
+				ProjectProvidersRegistry projectProvidersRegistry = (ProjectProvidersRegistry)theEObject;
+				T result = caseProjectProvidersRegistry(projectProvidersRegistry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -99,6 +105,21 @@ public class ApogyWorkspaceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApogyWorkspaceFacade(ApogyWorkspaceFacade object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Project Providers Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Project Providers Registry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProjectProvidersRegistry(ProjectProvidersRegistry object) {
 		return null;
 	}
 

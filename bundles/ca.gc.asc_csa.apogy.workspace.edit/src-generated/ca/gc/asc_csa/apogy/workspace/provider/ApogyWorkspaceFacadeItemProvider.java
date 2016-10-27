@@ -74,7 +74,9 @@ public class ApogyWorkspaceFacadeItemProvider
 			addDefaultProjectNamePrefixPropertyDescriptor(object);
 			addDefaultSessionFilenamePropertyDescriptor(object);
 			addDefaultSessionFilenameExtensionPropertyDescriptor(object);
-			addDefaultSessionFolderNamePropertyDescriptor(object);
+			addDefaultSessionsFolderNamePropertyDescriptor(object);
+			addDefaultProgramsFolderNamePropertyDescriptor(object);
+			addDefaultDataFolderNamePropertyDescriptor(object);
 			addActiveProjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -147,19 +149,63 @@ public class ApogyWorkspaceFacadeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Session Folder Name feature.
+	 * This adds a property descriptor for the Default Sessions Folder Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultSessionFolderNamePropertyDescriptor(Object object) {
+	protected void addDefaultSessionsFolderNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ApogyWorkspaceFacade_defaultSessionFolderName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyWorkspaceFacade_defaultSessionFolderName_feature", "_UI_ApogyWorkspaceFacade_type"),
-				 ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME,
+				 getString("_UI_ApogyWorkspaceFacade_defaultSessionsFolderName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyWorkspaceFacade_defaultSessionsFolderName_feature", "_UI_ApogyWorkspaceFacade_type"),
+				 ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__DEFAULT_SESSIONS_FOLDER_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Programs Folder Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultProgramsFolderNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyWorkspaceFacade_defaultProgramsFolderName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyWorkspaceFacade_defaultProgramsFolderName_feature", "_UI_ApogyWorkspaceFacade_type"),
+				 ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__DEFAULT_PROGRAMS_FOLDER_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Data Folder Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultDataFolderNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyWorkspaceFacade_defaultDataFolderName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyWorkspaceFacade_defaultDataFolderName_feature", "_UI_ApogyWorkspaceFacade_type"),
+				 ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME,
 				 false,
 				 false,
 				 false,
@@ -231,7 +277,9 @@ public class ApogyWorkspaceFacadeItemProvider
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_PROJECT_NAME_PREFIX:
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME:
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME_EXTENSION:
-			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSIONS_FOLDER_NAME:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_PROGRAMS_FOLDER_NAME:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME:
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

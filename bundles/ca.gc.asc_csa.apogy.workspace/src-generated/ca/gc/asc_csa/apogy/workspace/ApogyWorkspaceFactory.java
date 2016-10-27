@@ -42,6 +42,15 @@ public interface ApogyWorkspaceFactory extends EFactory {
 	ApogyWorkspaceFacade createApogyWorkspaceFacade();
 
 	/**
+	 * Returns a new object of class '<em>Project Providers Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Project Providers Registry</em>'.
+	 * @generated
+	 */
+	ProjectProvidersRegistry createProjectProvidersRegistry();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

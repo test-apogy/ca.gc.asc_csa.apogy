@@ -34,10 +34,12 @@ package ca.gc.asc_csa.apogy.workspace
 import ca.gc.asc_csa.apogy.core.Exception
 import java.util.List
 import org.eclipse.core.resources.IProject
+import org.osgi.framework.Bundle
 
 /* Types definitions. */
 type IProject wraps IProject
 type ListApogyProjects wraps List<IProject>
+type ListApogyProjectBundles wraps List<Bundle>
 
 
 /* -------------------------------------------------------------------------
@@ -64,7 +66,17 @@ class ApogyWorkspaceFacade{
 	/*
 	 * Default Apogy Sessions Directory.
 	 */
-	readonly transient String defaultSessionFolderName = "Sessions"
+	readonly transient String defaultSessionsFolderName = "sessions"
+
+	/*
+	 * Default Apogy Programs Directory.
+	 */
+	readonly transient String defaultProgramsFolderName = "scripts"
+
+	/*
+	 * Default Apogy Data Directory.
+	 */
+	readonly transient String defaultDataFolderName = "data"
 
 	/*
 	 * Returns an available project name according to the current workspace.
@@ -81,17 +93,17 @@ class ApogyWorkspaceFacade{
 	op IProject createApogyProject(String name, String description)	throws Exception
 		
 	/*
-	 * Returns the list of projects with the Apogy nature.
-	 * @return List of Apogy projects.
+	 * Returns the list of projects with the Apogy nature in the active workspace.
+	 * @return List of Apogy projects stored in the workspace.
 	 */
-	op ListApogyProjects getApogyProjects()
-	
+	op ListApogyProjects getWorkspaceApogyProjects()
+		
 	/*
-	 * Searches the projects for a project with a specific name.
+	 * Searches the projects for a project with a specific name in the active workspace.
 	 * @param name Name of the project.
 	 * @return Reference to the project or null if there is not project with the specified name.
 	 */
-	op IProject getApogyProject(String name)
+	op IProject getWorkspaceApogyProject(String name)
 	
 	/*
 	 * Opens the specified Apogy Project.
@@ -109,4 +121,19 @@ class ApogyWorkspaceFacade{
 	 * Indicates which project is opened.
 	 */
 	transient IProject activeProject
+}
+
+/*
+ * This registry holds all the bundles that contain Apogy projects.  This class is a singleton.
+ */
+class ProjectProvidersRegistry{	
+	/*
+	 * Eclipse Extension Point Id.
+	 */
+	readonly transient String PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID = "ca.gc.asc_csa.apogy.workspace.projectProvider"
+	
+	/*
+	 * Contains all the bundles that provides an Apogy project.
+	 */
+	ListApogyProjectBundles apogyProjectProviders
 }

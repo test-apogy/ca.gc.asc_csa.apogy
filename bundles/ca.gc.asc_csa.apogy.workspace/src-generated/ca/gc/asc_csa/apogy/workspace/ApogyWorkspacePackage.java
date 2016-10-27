@@ -120,13 +120,31 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME_EXTENSION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Default Session Folder Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Sessions Folder Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME = 3;
+	int APOGY_WORKSPACE_FACADE__DEFAULT_SESSIONS_FOLDER_NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Default Programs Folder Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE__DEFAULT_PROGRAMS_FOLDER_NAME = 4;
+
+	/**
+	 * The feature id for the '<em><b>Default Data Folder Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME = 5;
 
 	/**
 	 * The feature id for the '<em><b>Active Project</b></em>' attribute.
@@ -135,7 +153,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT = 4;
+	int APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT = 6;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -144,7 +162,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE_FEATURE_COUNT = 5;
+	int APOGY_WORKSPACE_FACADE_FEATURE_COUNT = 7;
 
 	/**
 	 * The operation id for the '<em>Get Default Project Name</em>' operation.
@@ -165,22 +183,22 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT__STRING_STRING = 1;
 
 	/**
-	 * The operation id for the '<em>Get Apogy Projects</em>' operation.
+	 * The operation id for the '<em>Get Workspace Apogy Projects</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS = 2;
+	int APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECTS = 2;
 
 	/**
-	 * The operation id for the '<em>Get Apogy Project</em>' operation.
+	 * The operation id for the '<em>Get Workspace Apogy Project</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECT__STRING = 3;
+	int APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECT__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Open Apogy Project</em>' operation.
@@ -211,6 +229,52 @@ public interface ApogyWorkspacePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl <em>Project Providers Registry</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getProjectProvidersRegistry()
+	 * @generated
+	 */
+	int PROJECT_PROVIDERS_REGISTRY = 1;
+
+	/**
+	 * The feature id for the '<em><b>PROJECT PROVIDERS CONTRIBUTORS POINT ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_PROVIDERS_REGISTRY__PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Apogy Project Providers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_PROVIDERS_REGISTRY__APOGY_PROJECT_PROVIDERS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Project Providers Registry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_PROVIDERS_REGISTRY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Project Providers Registry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_PROVIDERS_REGISTRY_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '<em>IProject</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -218,7 +282,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getIProject()
 	 * @generated
 	 */
-	int IPROJECT = 1;
+	int IPROJECT = 2;
 
 
 	/**
@@ -229,7 +293,18 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getListApogyProjects()
 	 * @generated
 	 */
-	int LIST_APOGY_PROJECTS = 2;
+	int LIST_APOGY_PROJECTS = 3;
+
+
+	/**
+	 * The meta object id for the '<em>List Apogy Project Bundles</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.List
+	 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getListApogyProjectBundles()
+	 * @generated
+	 */
+	int LIST_APOGY_PROJECT_BUNDLES = 4;
 
 
 	/**
@@ -276,15 +351,37 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EAttribute getApogyWorkspaceFacade_DefaultSessionFilenameExtension();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionFolderName <em>Default Session Folder Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionsFolderName <em>Default Sessions Folder Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Session Folder Name</em>'.
-	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionFolderName()
+	 * @return the meta object for the attribute '<em>Default Sessions Folder Name</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionsFolderName()
 	 * @see #getApogyWorkspaceFacade()
 	 * @generated
 	 */
-	EAttribute getApogyWorkspaceFacade_DefaultSessionFolderName();
+	EAttribute getApogyWorkspaceFacade_DefaultSessionsFolderName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultProgramsFolderName <em>Default Programs Folder Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Programs Folder Name</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultProgramsFolderName()
+	 * @see #getApogyWorkspaceFacade()
+	 * @generated
+	 */
+	EAttribute getApogyWorkspaceFacade_DefaultProgramsFolderName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultDataFolderName <em>Default Data Folder Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Data Folder Name</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultDataFolderName()
+	 * @see #getApogyWorkspaceFacade()
+	 * @generated
+	 */
+	EAttribute getApogyWorkspaceFacade_DefaultDataFolderName();
 
 	/**
 	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getActiveProject <em>Active Project</em>}'.
@@ -318,24 +415,24 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__CreateApogyProject__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getApogyProjects() <em>Get Apogy Projects</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getWorkspaceApogyProjects() <em>Get Workspace Apogy Projects</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Apogy Projects</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getApogyProjects()
+	 * @return the meta object for the '<em>Get Workspace Apogy Projects</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getWorkspaceApogyProjects()
 	 * @generated
 	 */
-	EOperation getApogyWorkspaceFacade__GetApogyProjects();
+	EOperation getApogyWorkspaceFacade__GetWorkspaceApogyProjects();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getApogyProject(java.lang.String) <em>Get Apogy Project</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getWorkspaceApogyProject(java.lang.String) <em>Get Workspace Apogy Project</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Apogy Project</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getApogyProject(java.lang.String)
+	 * @return the meta object for the '<em>Get Workspace Apogy Project</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getWorkspaceApogyProject(java.lang.String)
 	 * @generated
 	 */
-	EOperation getApogyWorkspaceFacade__GetApogyProject__String();
+	EOperation getApogyWorkspaceFacade__GetWorkspaceApogyProject__String();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#openApogyProject(org.eclipse.core.resources.IProject) <em>Open Apogy Project</em>}' operation.
@@ -358,6 +455,38 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__CloseApogyProject__IProject();
 
 	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry <em>Project Providers Registry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Project Providers Registry</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry
+	 * @generated
+	 */
+	EClass getProjectProvidersRegistry();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry#getPROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID <em>PROJECT PROVIDERS CONTRIBUTORS POINT ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>PROJECT PROVIDERS CONTRIBUTORS POINT ID</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry#getPROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID()
+	 * @see #getProjectProvidersRegistry()
+	 * @generated
+	 */
+	EAttribute getProjectProvidersRegistry_PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry#getApogyProjectProviders <em>Apogy Project Providers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Apogy Project Providers</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry#getApogyProjectProviders()
+	 * @see #getProjectProvidersRegistry()
+	 * @generated
+	 */
+	EAttribute getProjectProvidersRegistry_ApogyProjectProviders();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.core.resources.IProject <em>IProject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -378,6 +507,17 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getListApogyProjects();
+
+	/**
+	 * Returns the meta object for data type '{@link java.util.List <em>List Apogy Project Bundles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>List Apogy Project Bundles</em>'.
+	 * @see java.util.List
+	 * @model instanceClass="java.util.List<org.osgi.framework.Bundle>"
+	 * @generated
+	 */
+	EDataType getListApogyProjectBundles();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -433,12 +573,26 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 */
 		EAttribute APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME_EXTENSION = eINSTANCE.getApogyWorkspaceFacade_DefaultSessionFilenameExtension();
 		/**
-		 * The meta object literal for the '<em><b>Default Session Folder Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Sessions Folder Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME = eINSTANCE.getApogyWorkspaceFacade_DefaultSessionFolderName();
+		EAttribute APOGY_WORKSPACE_FACADE__DEFAULT_SESSIONS_FOLDER_NAME = eINSTANCE.getApogyWorkspaceFacade_DefaultSessionsFolderName();
+		/**
+		 * The meta object literal for the '<em><b>Default Programs Folder Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOGY_WORKSPACE_FACADE__DEFAULT_PROGRAMS_FOLDER_NAME = eINSTANCE.getApogyWorkspaceFacade_DefaultProgramsFolderName();
+		/**
+		 * The meta object literal for the '<em><b>Default Data Folder Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME = eINSTANCE.getApogyWorkspaceFacade_DefaultDataFolderName();
 		/**
 		 * The meta object literal for the '<em><b>Active Project</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -461,19 +615,19 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT__STRING_STRING = eINSTANCE.getApogyWorkspaceFacade__CreateApogyProject__String_String();
 		/**
-		 * The meta object literal for the '<em><b>Get Apogy Projects</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Workspace Apogy Projects</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS = eINSTANCE.getApogyWorkspaceFacade__GetApogyProjects();
+		EOperation APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECTS = eINSTANCE.getApogyWorkspaceFacade__GetWorkspaceApogyProjects();
 		/**
-		 * The meta object literal for the '<em><b>Get Apogy Project</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Workspace Apogy Project</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECT__STRING = eINSTANCE.getApogyWorkspaceFacade__GetApogyProject__String();
+		EOperation APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECT__STRING = eINSTANCE.getApogyWorkspaceFacade__GetWorkspaceApogyProject__String();
 		/**
 		 * The meta object literal for the '<em><b>Open Apogy Project</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -488,6 +642,29 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT = eINSTANCE.getApogyWorkspaceFacade__CloseApogyProject__IProject();
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl <em>Project Providers Registry</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getProjectProvidersRegistry()
+		 * @generated
+		 */
+		EClass PROJECT_PROVIDERS_REGISTRY = eINSTANCE.getProjectProvidersRegistry();
+		/**
+		 * The meta object literal for the '<em><b>PROJECT PROVIDERS CONTRIBUTORS POINT ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT_PROVIDERS_REGISTRY__PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID = eINSTANCE.getProjectProvidersRegistry_PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID();
+		/**
+		 * The meta object literal for the '<em><b>Apogy Project Providers</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT_PROVIDERS_REGISTRY__APOGY_PROJECT_PROVIDERS = eINSTANCE.getProjectProvidersRegistry_ApogyProjectProviders();
 		/**
 		 * The meta object literal for the '<em>IProject</em>' data type.
 		 * <!-- begin-user-doc -->
@@ -506,6 +683,15 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType LIST_APOGY_PROJECTS = eINSTANCE.getListApogyProjects();
+		/**
+		 * The meta object literal for the '<em>List Apogy Project Bundles</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.List
+		 * @see ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspacePackageImpl#getListApogyProjectBundles()
+		 * @generated
+		 */
+		EDataType LIST_APOGY_PROJECT_BUNDLES = eINSTANCE.getListApogyProjectBundles();
 
 	}
 

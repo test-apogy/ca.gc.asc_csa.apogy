@@ -16,6 +16,7 @@
 -->
 
 <plugin>
+   <extension-point id="projectProvider" name="projectProvider" schema="schema/projectProvider.exsd"/>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated apogy_core_workspace -->

@@ -13,36 +13,36 @@ package ca.gc.asc_csa.apogy.workspace.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.core.resources.IProject;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.osgi.framework.Bundle;
 
-import ca.gc.asc_csa.apogy.workspace.ui.composites.ApogyProjectsListComposite;
+import ca.gc.asc_csa.apogy.workspace.ui.composites.RegisteredApogyProjectsListComposite;
 
-public class OpenApogyProjectWizardPage extends WizardPage {
+public class ImportRegisteredApogyProjectWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.workspace.ui.wizards.OpenApogyProjectWizardPage";
-	private ApogyProjectsListComposite composite;
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.workspace.ui.wizards.ImportRegisteredApogyProjectWizardPage";
+	private RegisteredApogyProjectsListComposite composite;
 
 	/**
 	 * Constructor for SampleNewWizardPage.
 	 * 
 	 * @param pageName
 	 */
-	public OpenApogyProjectWizardPage() {
+	public ImportRegisteredApogyProjectWizardPage() {
 		super(WIZARD_PAGE_ID);
 		setTitle("Apogy Project");
-		setDescription("Select the Apogy project to open");
+		setDescription("Select the Apogy project to import");
 	}
 
 	/**
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {
-		composite = new ApogyProjectsListComposite(parent, SWT.NONE) {
+		composite = new RegisteredApogyProjectsListComposite(parent, SWT.NONE) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				validate();
@@ -53,12 +53,12 @@ public class OpenApogyProjectWizardPage extends WizardPage {
 		validate();
 	}
 
-	public IProject getSelectedProject() {
-		return composite.getSelectedProject();
+	public Bundle getSelectedBundle() {
+		return composite.getSelectedBundle();
 	}
 
 	private String validate() {
-		String message = composite.getSelectedProject() == null ? "You must select a project" : null;
+		String message = composite.getSelectedBundle() == null ? "You must select a project" : null;
 		setErrorMessage(message);
 		setPageComplete(message == null);
 		return message;

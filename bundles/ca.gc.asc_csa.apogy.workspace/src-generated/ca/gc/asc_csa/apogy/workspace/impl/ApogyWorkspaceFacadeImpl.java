@@ -62,7 +62,9 @@ import ca.gc.asc_csa.apogy.workspace.natures.ApogyNature;
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultProjectNamePrefix <em>Default Project Name Prefix</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultSessionFilename <em>Default Session Filename</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultSessionFilenameExtension <em>Default Session Filename Extension</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultSessionFolderName <em>Default Session Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultSessionsFolderName <em>Default Sessions Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultProgramsFolderName <em>Default Programs Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getDefaultDataFolderName <em>Default Data Folder Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.impl.ApogyWorkspaceFacadeImpl#getActiveProject <em>Active Project</em>}</li>
  * </ul>
  *
@@ -127,23 +129,59 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 */
 	protected String defaultSessionFilenameExtension = DEFAULT_SESSION_FILENAME_EXTENSION_EDEFAULT;
 	/**
-	 * The default value of the '{@link #getDefaultSessionFolderName() <em>Default Session Folder Name</em>}' attribute.
+	 * The default value of the '{@link #getDefaultSessionsFolderName() <em>Default Sessions Folder Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultSessionFolderName()
+	 * @see #getDefaultSessionsFolderName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_SESSION_FOLDER_NAME_EDEFAULT = "Sessions";
+	protected static final String DEFAULT_SESSIONS_FOLDER_NAME_EDEFAULT = "sessions";
 	/**
-	 * The cached value of the '{@link #getDefaultSessionFolderName() <em>Default Session Folder Name</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultSessionsFolderName() <em>Default Sessions Folder Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultSessionFolderName()
+	 * @see #getDefaultSessionsFolderName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultSessionFolderName = DEFAULT_SESSION_FOLDER_NAME_EDEFAULT;
+	protected String defaultSessionsFolderName = DEFAULT_SESSIONS_FOLDER_NAME_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getDefaultProgramsFolderName() <em>Default Programs Folder Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultProgramsFolderName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_PROGRAMS_FOLDER_NAME_EDEFAULT = "scripts";
+	/**
+	 * The cached value of the '{@link #getDefaultProgramsFolderName() <em>Default Programs Folder Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultProgramsFolderName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultProgramsFolderName = DEFAULT_PROGRAMS_FOLDER_NAME_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getDefaultDataFolderName() <em>Default Data Folder Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultDataFolderName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_DATA_FOLDER_NAME_EDEFAULT = "data";
+	/**
+	 * The cached value of the '{@link #getDefaultDataFolderName() <em>Default Data Folder Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultDataFolderName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultDataFolderName = DEFAULT_DATA_FOLDER_NAME_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getActiveProject() <em>Active Project</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -213,11 +251,30 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDefaultSessionFolderName() {
-		return defaultSessionFolderName;
+	public String getDefaultSessionsFolderName() {
+		return defaultSessionsFolderName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDefaultProgramsFolderName() {
+		return defaultProgramsFolderName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDefaultDataFolderName() {
+		return defaultDataFolderName;
 	}
 
 	/**
@@ -294,12 +351,28 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 			}
 
 			/*
-			 * Create the session folder.
+			 * Create the sessions folder.
 			 */
-			IFolder sessionsFolder = project.getFolder(ApogyWorkspaceFacade.INSTANCE.getDefaultSessionFolderName());
+			IFolder sessionsFolder = project.getFolder(ApogyWorkspaceFacade.INSTANCE.getDefaultSessionsFolderName());
 			if (!sessionsFolder.exists()) {
 				sessionsFolder.create(true, true, null);
 			}
+			
+			/*
+			 * Create the programs folder.
+			 */
+			IFolder programsFolder = project.getFolder(ApogyWorkspaceFacade.INSTANCE.getDefaultProgramsFolderName());
+			if (!programsFolder.exists()) {
+				programsFolder.create(true, true, null);
+			}
+			
+			/*
+			 * Create the data folder.
+			 */
+			IFolder dataFolder = project.getFolder(ApogyWorkspaceFacade.INSTANCE.getDefaultDataFolderName());
+			if (!dataFolder.exists()) {
+				dataFolder.create(true, true, null);
+			}						
 
 			/*
 			 * Create Apogy Session.
@@ -335,7 +408,7 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public List<IProject> getApogyProjects() {			
+	public List<IProject> getWorkspaceApogyProjects() {			
 		List<IProject> projects = new ArrayList<IProject>();		
 		for (IProject project : ResourcesPlugin.getWorkspace().getRoot().getProjects()) {
 			try {
@@ -354,10 +427,10 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public IProject getApogyProject(String name) {
+	public IProject getWorkspaceApogyProject(String name) {
 		IProject result = null;
 
-		Iterator<IProject> projects = getApogyProjects().iterator();
+		Iterator<IProject> projects = getWorkspaceApogyProjects().iterator();
 		while (projects.hasNext() && result == null){
 			IProject project = projects.next();
 			if (project.getName().equals(name)){
@@ -373,7 +446,7 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 * @generated_NOT
 	 */
 	public void openApogyProject(IProject project) {		
-		IFolder sessionsFolder = project.getFolder(ApogyWorkspaceFacade.INSTANCE.getDefaultSessionFolderName());
+		IFolder sessionsFolder = project.getFolder(ApogyWorkspaceFacade.INSTANCE.getDefaultSessionsFolderName());
 		IFile sessionFile = sessionsFolder
 				.getFile(new Path(getDefaultSessionFilename() + "." + getDefaultSessionFilenameExtension()));
 		
@@ -415,8 +488,12 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				return getDefaultSessionFilename();
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME_EXTENSION:
 				return getDefaultSessionFilenameExtension();
-			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME:
-				return getDefaultSessionFolderName();
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSIONS_FOLDER_NAME:
+				return getDefaultSessionsFolderName();
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_PROGRAMS_FOLDER_NAME:
+				return getDefaultProgramsFolderName();
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME:
+				return getDefaultDataFolderName();
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT:
 				return getActiveProject();
 		}
@@ -466,8 +543,12 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				return DEFAULT_SESSION_FILENAME_EDEFAULT == null ? defaultSessionFilename != null : !DEFAULT_SESSION_FILENAME_EDEFAULT.equals(defaultSessionFilename);
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FILENAME_EXTENSION:
 				return DEFAULT_SESSION_FILENAME_EXTENSION_EDEFAULT == null ? defaultSessionFilenameExtension != null : !DEFAULT_SESSION_FILENAME_EXTENSION_EDEFAULT.equals(defaultSessionFilenameExtension);
-			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSION_FOLDER_NAME:
-				return DEFAULT_SESSION_FOLDER_NAME_EDEFAULT == null ? defaultSessionFolderName != null : !DEFAULT_SESSION_FOLDER_NAME_EDEFAULT.equals(defaultSessionFolderName);
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSIONS_FOLDER_NAME:
+				return DEFAULT_SESSIONS_FOLDER_NAME_EDEFAULT == null ? defaultSessionsFolderName != null : !DEFAULT_SESSIONS_FOLDER_NAME_EDEFAULT.equals(defaultSessionsFolderName);
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_PROGRAMS_FOLDER_NAME:
+				return DEFAULT_PROGRAMS_FOLDER_NAME_EDEFAULT == null ? defaultProgramsFolderName != null : !DEFAULT_PROGRAMS_FOLDER_NAME_EDEFAULT.equals(defaultProgramsFolderName);
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME:
+				return DEFAULT_DATA_FOLDER_NAME_EDEFAULT == null ? defaultDataFolderName != null : !DEFAULT_DATA_FOLDER_NAME_EDEFAULT.equals(defaultDataFolderName);
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT:
 				return ACTIVE_PROJECT_EDEFAULT == null ? activeProject != null : !ACTIVE_PROJECT_EDEFAULT.equals(activeProject);
 		}
@@ -490,10 +571,10 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECTS:
-				return getApogyProjects();
-			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___GET_APOGY_PROJECT__STRING:
-				return getApogyProject((String)arguments.get(0));
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECTS:
+				return getWorkspaceApogyProjects();
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECT__STRING:
+				return getWorkspaceApogyProject((String)arguments.get(0));
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT:
 				openApogyProject((IProject)arguments.get(0));
 				return null;
@@ -519,8 +600,12 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 		result.append(defaultSessionFilename);
 		result.append(", defaultSessionFilenameExtension: ");
 		result.append(defaultSessionFilenameExtension);
-		result.append(", defaultSessionFolderName: ");
-		result.append(defaultSessionFolderName);
+		result.append(", defaultSessionsFolderName: ");
+		result.append(defaultSessionsFolderName);
+		result.append(", defaultProgramsFolderName: ");
+		result.append(defaultProgramsFolderName);
+		result.append(", defaultDataFolderName: ");
+		result.append(defaultDataFolderName);
 		result.append(", activeProject: ");
 		result.append(activeProject);
 		result.append(')');

@@ -10,7 +10,6 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.forms.events.HyperlinkEvent;
 import org.eclipse.ui.forms.events.IHyperlinkListener;
 import org.eclipse.ui.forms.widgets.FormText;
@@ -19,6 +18,7 @@ import org.eclipse.ui.forms.widgets.ImageHyperlink;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.SWTResourceManager;
 
+import ca.gc.asc_csa.apogy.workspace.ui.wizards.ImportRegisteredApogyProjectWizard;
 import ca.gc.asc_csa.apogy.workspace.ui.wizards.NewApogyProjectWizard;
 import ca.gc.asc_csa.apogy.workspace.ui.wizards.OpenApogyProjectWizard;
 
@@ -30,14 +30,14 @@ public class IntroPart {
 	 */
 	@PostConstruct
 	public void createControls(Composite parent) {
-		GridLayout gl_parent = new GridLayout(1, false);
+		GridLayout gl_parent = new GridLayout(2, true);
 		gl_parent.verticalSpacing = 10;
 		parent.setLayout(gl_parent);
 		
 		Section sctnNewSectionOverview = formToolkit.createSection(parent, Section.TITLE_BAR);
 		sctnNewSectionOverview.setForeground(SWTResourceManager.getColor(SWT.COLOR_LINK_FOREGROUND));
 		sctnNewSectionOverview.setFont(SWTResourceManager.getFont("Ubuntu", 25, SWT.BOLD));
-		GridData gd_sctnNewSectionDescription = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1);
+		GridData gd_sctnNewSectionDescription = new GridData(SWT.FILL, SWT.FILL, true, false, 2, 1);
 		gd_sctnNewSectionDescription.widthHint = 278;
 		sctnNewSectionOverview.setLayoutData(gd_sctnNewSectionDescription);
 		formToolkit.paintBordersFor(sctnNewSectionOverview);
@@ -57,24 +57,21 @@ public class IntroPart {
 		formToolkit.paintBordersFor(formText);
 		formText.setText("Apogy is a multi-mission operations and planning software framework. Apogy uses Eclipse Modeling Framework models to define the systems being controlled, the environment in which these systems are operated, the operations being carried out and the corresponding data produced during operations.", false, false);
 		
-		Section sctnNewSectionTodo = formToolkit.createSection(parent, Section.TITLE_BAR);
-		sctnNewSectionTodo.setForeground(SWTResourceManager.getColor(SWT.COLOR_LINK_FOREGROUND));
-		sctnNewSectionTodo.setFont(SWTResourceManager.getFont("Ubuntu", 20, SWT.BOLD));
-		sctnNewSectionTodo.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 1, 1));
-		formToolkit.paintBordersFor(sctnNewSectionTodo);
-		sctnNewSectionTodo.setText("What would you like to do?");
-		sctnNewSectionTodo.setExpanded(true);
+		Section sctnSession = formToolkit.createSection(parent, Section.TITLE_BAR);
+		sctnSession.setForeground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND));
+		sctnSession.setFont(SWTResourceManager.getFont("Ubuntu", 20, SWT.BOLD));
+		sctnSession.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		formToolkit.paintBordersFor(sctnSession);
+		sctnSession.setText("Session");
+		sctnSession.setExpanded(true);
 		
-		Composite compositeTodo = formToolkit.createComposite(sctnNewSectionTodo, SWT.NONE);
-		formToolkit.paintBordersFor(compositeTodo);
-		sctnNewSectionTodo.setClient(compositeTodo);
+		Composite compositeOpen = formToolkit.createComposite(sctnSession, SWT.NONE);
+		formToolkit.paintBordersFor(compositeOpen);
+		sctnSession.setClient(compositeOpen);
 		GridLayout gl_composite_1 = new GridLayout(1, false);
-		gl_composite_1.verticalSpacing = 20;
-		compositeTodo.setLayout(gl_composite_1);
+		compositeOpen.setLayout(gl_composite_1);
 		
-		formToolkit.createLabel(compositeTodo, "", SWT.NONE);
-		
-		ImageHyperlink newProjectHyperlink = formToolkit.createImageHyperlink(compositeTodo, SWT.NONE);
+		ImageHyperlink newProjectHyperlink = formToolkit.createImageHyperlink(compositeOpen, SWT.NONE);
 		newProjectHyperlink.addHyperlinkListener(new IHyperlinkListener() {
 			public void linkActivated(HyperlinkEvent e) {
 				new WizardDialog(parent.getShell(), new NewApogyProjectWizard()).open();
@@ -87,9 +84,9 @@ public class IntroPart {
 		newProjectHyperlink.setToolTipText("Create a new Apogy project.");
 		newProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
 		formToolkit.paintBordersFor(newProjectHyperlink);
-		newProjectHyperlink.setText("New Project");
+		newProjectHyperlink.setText("New");
 		
-		ImageHyperlink openProjectHyperlink = formToolkit.createImageHyperlink(compositeTodo, SWT.NONE);
+		ImageHyperlink openProjectHyperlink = formToolkit.createImageHyperlink(compositeOpen, SWT.NONE);
 		openProjectHyperlink.addHyperlinkListener(new IHyperlinkListener() {
 			public void linkActivated(HyperlinkEvent e) {
 				new WizardDialog(parent.getShell(), new OpenApogyProjectWizard()).open();
@@ -102,43 +99,27 @@ public class IntroPart {
 		openProjectHyperlink.setToolTipText("Open an existing Apogy project.");
 		openProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
 		formToolkit.paintBordersFor(openProjectHyperlink);
-		openProjectHyperlink.setText("Open Project");
+		openProjectHyperlink.setText("Open");
 		
-		Label label_1 = formToolkit.createSeparator(compositeTodo, SWT.HORIZONTAL);
-		label_1.setBackground(SWTResourceManager.getColor(SWT.COLOR_LINK_FOREGROUND));
+		ImageHyperlink closeProjectHyperlink = formToolkit.createImageHyperlink(compositeOpen, SWT.NONE);
+		closeProjectHyperlink.setToolTipText("Close the active Apogy project.");
+		closeProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
+		closeProjectHyperlink.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		formToolkit.paintBordersFor(closeProjectHyperlink);
+		closeProjectHyperlink.setText("Close");
 		
-		ImageHyperlink importProjectHyperlink = formToolkit.createImageHyperlink(compositeTodo, SWT.NONE);
-		importProjectHyperlink.addHyperlinkListener(new IHyperlinkListener() {
-			public void linkActivated(HyperlinkEvent e) {
-			}
-			public void linkEntered(HyperlinkEvent e) {
-			}
-			public void linkExited(HyperlinkEvent e) {
-			}
-		});
-		importProjectHyperlink.setToolTipText("Import an Apogy existing project into the current workspace.");
-		importProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
-		formToolkit.paintBordersFor(importProjectHyperlink);
-		importProjectHyperlink.setText("Import Project");
+		Section sctnSupport = formToolkit.createSection(parent, Section.TITLE_BAR);
+		sctnSupport.setFont(SWTResourceManager.getFont("Ubuntu", 20, SWT.BOLD));
+		sctnSupport.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+		formToolkit.paintBordersFor(sctnSupport);
+		sctnSupport.setText("Support");
 		
-		ImageHyperlink exportProjectHyperlink = formToolkit.createImageHyperlink(compositeTodo, SWT.NONE);
-		exportProjectHyperlink.addHyperlinkListener(new IHyperlinkListener() {
-			public void linkActivated(HyperlinkEvent e) {
-			}
-			public void linkEntered(HyperlinkEvent e) {
-			}
-			public void linkExited(HyperlinkEvent e) {
-			}
-		});
-		exportProjectHyperlink.setToolTipText("Export the active Apogy project.");
-		exportProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
-		formToolkit.paintBordersFor(exportProjectHyperlink);
-		exportProjectHyperlink.setText("Export Project");
+		Composite composite_2 = formToolkit.createComposite(sctnSupport, SWT.NONE);
+		formToolkit.paintBordersFor(composite_2);
+		sctnSupport.setClient(composite_2);
+		composite_2.setLayout(new GridLayout(1, false));
 		
-		Label label = formToolkit.createSeparator(compositeTodo, SWT.HORIZONTAL);
-		label.setBackground(SWTResourceManager.getColor(SWT.COLOR_LINK_FOREGROUND));
-		
-		ImageHyperlink examplesHyperlink = formToolkit.createImageHyperlink(compositeTodo, SWT.NONE);
+		ImageHyperlink examplesHyperlink = formToolkit.createImageHyperlink(composite_2, SWT.NONE);
 		examplesHyperlink.addHyperlinkListener(new IHyperlinkListener() {
 			public void linkActivated(HyperlinkEvent e) {
 			}
@@ -147,13 +128,13 @@ public class IntroPart {
 			public void linkExited(HyperlinkEvent e) {
 			}
 		});
-		examplesHyperlink.setToolTipText("Open an Apogy project example.");
+		examplesHyperlink.setToolTipText("Import an Apogy project example.");
 		examplesHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
 		examplesHyperlink.setImage(null);
 		formToolkit.paintBordersFor(examplesHyperlink);
 		examplesHyperlink.setText("Examples");
 		
-		ImageHyperlink helpHyperLink = formToolkit.createImageHyperlink(compositeTodo, SWT.NONE);
+		ImageHyperlink helpHyperLink = formToolkit.createImageHyperlink(composite_2, SWT.NONE);
 		helpHyperLink.addHyperlinkListener(new IHyperlinkListener() {
 			public void linkActivated(HyperlinkEvent e) {
 //				parent.getShell().getWorkbench().getHelpSystem().displayHelpResource(Constants.APOGY_DOC_TOC_LOCATION);
@@ -167,6 +148,77 @@ public class IntroPart {
 		helpHyperLink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
 		formToolkit.paintBordersFor(helpHyperLink);
 		helpHyperLink.setText("Help");
+		
+		
+		
+		Section sctnImport = formToolkit.createSection(parent, Section.TITLE_BAR);
+		sctnImport.setFont(SWTResourceManager.getFont("Ubuntu", 20, SWT.BOLD));
+		sctnImport.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+		formToolkit.paintBordersFor(sctnImport);
+		sctnImport.setText("Import");
+		
+		Composite composite = formToolkit.createComposite(sctnImport, SWT.NONE);
+		sctnImport.setClient(composite);
+		formToolkit.paintBordersFor(composite);
+		composite.setLayout(new GridLayout(1, false));
+		
+		ImageHyperlink importDirectoryProjectHyperlink = formToolkit.createImageHyperlink(composite, SWT.NONE);
+		importDirectoryProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
+		formToolkit.paintBordersFor(importDirectoryProjectHyperlink);
+		importDirectoryProjectHyperlink.setText("Directory");
+		
+		ImageHyperlink importArchiveProjectHyperlink = formToolkit.createImageHyperlink(composite, SWT.NONE);
+		importArchiveProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
+		formToolkit.paintBordersFor(importArchiveProjectHyperlink);
+		importArchiveProjectHyperlink.setText("Archive");
+		
+		ImageHyperlink importRegisteredProjectHyperlink = formToolkit.createImageHyperlink(composite, SWT.NONE);
+		importRegisteredProjectHyperlink.addHyperlinkListener(new IHyperlinkListener() {
+			public void linkActivated(HyperlinkEvent e) {
+				new WizardDialog(parent.getShell(), new ImportRegisteredApogyProjectWizard()).open();
+			}
+			public void linkEntered(HyperlinkEvent e) {
+			}
+			public void linkExited(HyperlinkEvent e) {
+			}
+		});
+		importRegisteredProjectHyperlink.setToolTipText("Import an Apogy existing project into the current workspace.");
+		importRegisteredProjectHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
+		formToolkit.paintBordersFor(importRegisteredProjectHyperlink);
+		importRegisteredProjectHyperlink.setText("Registered");
+		
+		Section sctnExport = formToolkit.createSection(parent, Section.TITLE_BAR);
+		sctnExport.setForeground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND));
+		sctnExport.setFont(SWTResourceManager.getFont("Ubuntu", 20, SWT.BOLD));
+		sctnExport.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+		formToolkit.paintBordersFor(sctnExport);
+		sctnExport.setText("Export");
+		sctnExport.setExpanded(true);
+		
+		Composite compositeExport = formToolkit.createComposite(sctnExport, SWT.NONE);
+		formToolkit.paintBordersFor(compositeExport);
+		sctnExport.setClient(compositeExport);
+		GridLayout gl_compositeExport = new GridLayout(1, false);
+		compositeExport.setLayout(gl_compositeExport);
+		
+		ImageHyperlink exportProjectDirectoryHyperlink = formToolkit.createImageHyperlink(compositeExport, SWT.NONE);
+		exportProjectDirectoryHyperlink.addHyperlinkListener(new IHyperlinkListener() {
+			public void linkActivated(HyperlinkEvent e) {
+			}
+			public void linkEntered(HyperlinkEvent e) {
+			}
+			public void linkExited(HyperlinkEvent e) {
+			}
+		});
+		exportProjectDirectoryHyperlink.setToolTipText("Export the active Apogy project.");
+		exportProjectDirectoryHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
+		formToolkit.paintBordersFor(exportProjectDirectoryHyperlink);
+		exportProjectDirectoryHyperlink.setText("Directory");
+		
+		ImageHyperlink exportProjectArchiveHyperlink = formToolkit.createImageHyperlink(compositeExport, SWT.NONE);
+		exportProjectArchiveHyperlink.setFont(SWTResourceManager.getFont("Ubuntu", 15, SWT.NORMAL));
+		formToolkit.paintBordersFor(exportProjectArchiveHyperlink);
+		exportProjectArchiveHyperlink.setText("Archive");
 	}
 
 	@PreDestroy
