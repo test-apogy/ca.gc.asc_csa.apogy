@@ -105,17 +105,20 @@ public class AdvancedEditorComposite extends Composite {
 					if (editingDomain != null) {
 						// If the containing feature is a list, the object is
 						// removed from the list
-						if (eObjectComposite.getSelectedEObject().eContainingFeature().isMany()) {
-							command = new RemoveCommand(editingDomain,
-									(EList<?>) eObjectComposite.getSelectedEObject().eContainer()
-											.eGet(eObjectComposite.getSelectedEObject().eContainingFeature()),
-									eObjectComposite.getSelectedEObject());
-						}
-						// Otherwise, if the feature is not a list, the
-						// EStructuralFeature of the parent is set to null
-						else {
-							command = new SetCommand(editingDomain, eObjectComposite.getSelectedEObject().eContainer(),
-									eObjectComposite.getSelectedEObject().eContainingFeature(), null);
+						if(eObjectComposite.getSelectedEObject().eContainingFeature() != null) {
+							if (eObjectComposite.getSelectedEObject().eContainingFeature().isMany()) {
+								command = new RemoveCommand(editingDomain,
+										(EList<?>) eObjectComposite.getSelectedEObject().eContainer()
+												.eGet(eObjectComposite.getSelectedEObject().eContainingFeature()),
+										eObjectComposite.getSelectedEObject());
+							}
+							// Otherwise, if the feature is not a list, the
+							// EStructuralFeature of the parent is set to null
+							else {
+								command = new SetCommand(editingDomain,
+										eObjectComposite.getSelectedEObject().eContainer(),
+										eObjectComposite.getSelectedEObject().eContainingFeature(), null);
+							} 
 						}
 					}
 					editingDomain.getCommandStack().execute(command);
