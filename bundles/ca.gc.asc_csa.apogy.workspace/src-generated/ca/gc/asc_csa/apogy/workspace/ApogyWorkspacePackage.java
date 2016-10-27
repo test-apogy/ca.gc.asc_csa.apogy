@@ -147,13 +147,31 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME = 5;
 
 	/**
+	 * The feature id for the '<em><b>Deleted Worskpace Project</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE__DELETED_WORSKPACE_PROJECT = 6;
+
+	/**
+	 * The feature id for the '<em><b>New Workspace Project</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE__NEW_WORKSPACE_PROJECT = 7;
+
+	/**
 	 * The feature id for the '<em><b>Active Project</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT = 6;
+	int APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT = 8;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -162,7 +180,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE_FEATURE_COUNT = 7;
+	int APOGY_WORKSPACE_FACADE_FEATURE_COUNT = 9;
 
 	/**
 	 * The operation id for the '<em>Get Default Project Name</em>' operation.
@@ -219,13 +237,22 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT = 5;
 
 	/**
+	 * The operation id for the '<em>Delete Apogy Project</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE___DELETE_APOGY_PROJECT__IPROJECT = 6;
+
+	/**
 	 * The operation id for the '<em>Import Apogy Project</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE = 6;
+	int APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE = 7;
 
 	/**
 	 * The operation id for the '<em>Close Apogy Project</em>' operation.
@@ -234,7 +261,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT = 7;
+	int APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT = 8;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -243,7 +270,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 8;
+	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 9;
 
 
 	/**
@@ -413,6 +440,28 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EAttribute getApogyWorkspaceFacade_DefaultDataFolderName();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDeletedWorskpaceProject <em>Deleted Worskpace Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Deleted Worskpace Project</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDeletedWorskpaceProject()
+	 * @see #getApogyWorkspaceFacade()
+	 * @generated
+	 */
+	EAttribute getApogyWorkspaceFacade_DeletedWorskpaceProject();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getNewWorkspaceProject <em>New Workspace Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>New Workspace Project</em>'.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getNewWorkspaceProject()
+	 * @see #getApogyWorkspaceFacade()
+	 * @generated
+	 */
+	EAttribute getApogyWorkspaceFacade_NewWorkspaceProject();
+
+	/**
 	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getActiveProject <em>Active Project</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -484,6 +533,16 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__OpenApogyProject__IProject();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#deleteApogyProject(org.eclipse.core.resources.IProject) <em>Delete Apogy Project</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Delete Apogy Project</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#deleteApogyProject(org.eclipse.core.resources.IProject)
+	 * @generated
+	 */
+	EOperation getApogyWorkspaceFacade__DeleteApogyProject__IProject();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#importApogyProject(org.osgi.framework.Bundle) <em>Import Apogy Project</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -494,14 +553,14 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject(org.eclipse.core.resources.IProject) <em>Close Apogy Project</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject() <em>Close Apogy Project</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Close Apogy Project</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject(org.eclipse.core.resources.IProject)
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject()
 	 * @generated
 	 */
-	EOperation getApogyWorkspaceFacade__CloseApogyProject__IProject();
+	EOperation getApogyWorkspaceFacade__CloseApogyProject();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry <em>Project Providers Registry</em>}'.
@@ -654,6 +713,20 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 */
 		EAttribute APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME = eINSTANCE.getApogyWorkspaceFacade_DefaultDataFolderName();
 		/**
+		 * The meta object literal for the '<em><b>Deleted Worskpace Project</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOGY_WORKSPACE_FACADE__DELETED_WORSKPACE_PROJECT = eINSTANCE.getApogyWorkspaceFacade_DeletedWorskpaceProject();
+		/**
+		 * The meta object literal for the '<em><b>New Workspace Project</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOGY_WORKSPACE_FACADE__NEW_WORKSPACE_PROJECT = eINSTANCE.getApogyWorkspaceFacade_NewWorkspaceProject();
+		/**
 		 * The meta object literal for the '<em><b>Active Project</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -703,6 +776,13 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT = eINSTANCE.getApogyWorkspaceFacade__OpenApogyProject__IProject();
 		/**
+		 * The meta object literal for the '<em><b>Delete Apogy Project</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_WORKSPACE_FACADE___DELETE_APOGY_PROJECT__IPROJECT = eINSTANCE.getApogyWorkspaceFacade__DeleteApogyProject__IProject();
+		/**
 		 * The meta object literal for the '<em><b>Import Apogy Project</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -715,7 +795,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT = eINSTANCE.getApogyWorkspaceFacade__CloseApogyProject__IProject();
+		EOperation APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT = eINSTANCE.getApogyWorkspaceFacade__CloseApogyProject();
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl <em>Project Providers Registry</em>}' class.
 		 * <!-- begin-user-doc -->

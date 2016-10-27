@@ -205,8 +205,26 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getApogyWorkspaceFacade_ActiveProject() {
+	public EAttribute getApogyWorkspaceFacade_DeletedWorskpaceProject() {
 		return (EAttribute)apogyWorkspaceFacadeEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getApogyWorkspaceFacade_NewWorkspaceProject() {
+		return (EAttribute)apogyWorkspaceFacadeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getApogyWorkspaceFacade_ActiveProject() {
+		return (EAttribute)apogyWorkspaceFacadeEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -268,7 +286,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle() {
+	public EOperation getApogyWorkspaceFacade__DeleteApogyProject__IProject() {
 		return apogyWorkspaceFacadeEClass.getEOperations().get(6);
 	}
 
@@ -277,8 +295,17 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceFacade__CloseApogyProject__IProject() {
+	public EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle() {
 		return apogyWorkspaceFacadeEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyWorkspaceFacade__CloseApogyProject() {
+		return apogyWorkspaceFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -379,6 +406,8 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__DEFAULT_SESSIONS_FOLDER_NAME);
 		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__DEFAULT_PROGRAMS_FOLDER_NAME);
 		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME);
+		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__DELETED_WORSKPACE_PROJECT);
+		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__NEW_WORKSPACE_PROJECT);
 		createEAttribute(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___GET_DEFAULT_PROJECT_NAME);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CREATE_APOGY_PROJECT_TEMPLATE__STRING_STRING);
@@ -386,8 +415,9 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECTS);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECT__STRING);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT);
+		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___DELETE_APOGY_PROJECT__IPROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE);
-		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT__IPROJECT);
+		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT);
 
 		projectProvidersRegistryEClass = createEClass(PROJECT_PROVIDERS_REGISTRY);
 		createEAttribute(projectProvidersRegistryEClass, PROJECT_PROVIDERS_REGISTRY__PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID);
@@ -441,6 +471,8 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		initEAttribute(getApogyWorkspaceFacade_DefaultSessionsFolderName(), theEcorePackage.getEString(), "defaultSessionsFolderName", "sessions", 0, 1, ApogyWorkspaceFacade.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApogyWorkspaceFacade_DefaultProgramsFolderName(), theEcorePackage.getEString(), "defaultProgramsFolderName", "scripts", 0, 1, ApogyWorkspaceFacade.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApogyWorkspaceFacade_DefaultDataFolderName(), theEcorePackage.getEString(), "defaultDataFolderName", "data", 0, 1, ApogyWorkspaceFacade.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyWorkspaceFacade_DeletedWorskpaceProject(), this.getIProject(), "deletedWorskpaceProject", null, 0, 1, ApogyWorkspaceFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyWorkspaceFacade_NewWorkspaceProject(), this.getIProject(), "newWorkspaceProject", null, 0, 1, ApogyWorkspaceFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApogyWorkspaceFacade_ActiveProject(), this.getIProject(), "activeProject", null, 0, 1, ApogyWorkspaceFacade.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getApogyWorkspaceFacade__GetDefaultProjectName(), theEcorePackage.getEString(), "getDefaultProjectName", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -462,13 +494,18 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 
 		op = initEOperation(getApogyWorkspaceFacade__OpenApogyProject__IProject(), null, "openApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getIProject(), "project", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCorePackage.getException());
+
+		op = initEOperation(getApogyWorkspaceFacade__DeleteApogyProject__IProject(), null, "deleteApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getIProject(), "project", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCorePackage.getException());
 
 		op = initEOperation(getApogyWorkspaceFacade__ImportApogyProject__Bundle(), null, "importApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getBundle(), "bundle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCorePackage.getException());
 
-		op = initEOperation(getApogyWorkspaceFacade__CloseApogyProject__IProject(), null, "closeApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getIProject(), "project", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyWorkspaceFacade__CloseApogyProject(), null, "closeApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCorePackage.getException());
 
 		initEClass(projectProvidersRegistryEClass, ProjectProvidersRegistry.class, "ProjectProvidersRegistry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProjectProvidersRegistry_PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID(), theEcorePackage.getEString(), "PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID", "ca.gc.asc_csa.apogy.workspace.projectProvider", 0, 1, ProjectProvidersRegistry.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

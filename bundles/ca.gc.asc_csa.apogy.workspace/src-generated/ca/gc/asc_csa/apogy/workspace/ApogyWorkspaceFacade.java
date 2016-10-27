@@ -42,6 +42,8 @@ import org.eclipse.core.resources.IProject;
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultSessionsFolderName <em>Default Sessions Folder Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultProgramsFolderName <em>Default Programs Folder Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDefaultDataFolderName <em>Default Data Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDeletedWorskpaceProject <em>Deleted Worskpace Project</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getNewWorkspaceProject <em>New Workspace Project</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getActiveProject <em>Active Project</em>}</li>
  * </ul>
  *
@@ -141,6 +143,58 @@ public interface ApogyWorkspaceFacade extends EObject {
 	String getDefaultDataFolderName();
 
 	/**
+	 * Returns the value of the '<em><b>Deleted Worskpace Project</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Reference to the deleted workspace project.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Deleted Worskpace Project</em>' attribute.
+	 * @see #setDeletedWorskpaceProject(IProject)
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyWorkspaceFacade_DeletedWorskpaceProject()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.workspace.IProject"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
+	 * @generated
+	 */
+	IProject getDeletedWorskpaceProject();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getDeletedWorskpaceProject <em>Deleted Worskpace Project</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Deleted Worskpace Project</em>' attribute.
+	 * @see #getDeletedWorskpaceProject()
+	 * @generated
+	 */
+	void setDeletedWorskpaceProject(IProject value);
+
+	/**
+	 * Returns the value of the '<em><b>New Workspace Project</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Reference to the new workspace project.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>New Workspace Project</em>' attribute.
+	 * @see #setNewWorkspaceProject(IProject)
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage#getApogyWorkspaceFacade_NewWorkspaceProject()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.workspace.IProject"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
+	 * @generated
+	 */
+	IProject getNewWorkspaceProject();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#getNewWorkspaceProject <em>New Workspace Project</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>New Workspace Project</em>' attribute.
+	 * @see #getNewWorkspaceProject()
+	 * @generated
+	 */
+	void setNewWorkspaceProject(IProject value);
+
+	/**
 	 * Returns the value of the '<em><b>Active Project</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -237,11 +291,25 @@ public interface ApogyWorkspaceFacade extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Opens the specified Apogy Project.
 	 * @param project Reference to the project to open.
+	 * @throws Exception Reference to the exception.
 	 * <!-- end-model-doc -->
-	 * @model projectDataType="ca.gc.asc_csa.apogy.workspace.IProject" projectUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception" projectDataType="ca.gc.asc_csa.apogy.workspace.IProject" projectUnique="false"
 	 * @generated
 	 */
-	void openApogyProject(IProject project);
+	void openApogyProject(IProject project) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Deletes the specified Apogy Project.
+	 * @param project Reference to the project to open.
+	 * @throws Exception Reference to the exception.
+	 * <!-- end-model-doc -->
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception" projectDataType="ca.gc.asc_csa.apogy.workspace.IProject" projectUnique="false"
+	 * @generated
+	 */
+	void deleteApogyProject(IProject project) throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -261,11 +329,12 @@ public interface ApogyWorkspaceFacade extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Closes the specified Apogy Project.
 	 * @param project Reference to the project to close.
+	 * @throws Exception Reference to the exception.
 	 * <!-- end-model-doc -->
-	 * @model projectDataType="ca.gc.asc_csa.apogy.workspace.IProject" projectUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception"
 	 * @generated
 	 */
-	void closeApogyProject(IProject project);
+	void closeApogyProject() throws Exception;
 
 	/**
 	 * @generated_NOT

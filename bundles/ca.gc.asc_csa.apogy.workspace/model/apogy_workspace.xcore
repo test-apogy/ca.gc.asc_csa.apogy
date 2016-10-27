@@ -78,6 +78,18 @@ class ApogyWorkspaceFacade{
 	 * Default Apogy Data Directory.
 	 */
 	readonly transient String defaultDataFolderName = "data"
+	
+	/*
+	 * Reference to the deleted workspace project.
+	 */
+    @GenModel(property="None")
+	IProject deletedWorskpaceProject
+
+	/*
+	 * Reference to the new workspace project.
+	 */	
+	@GenModel(property="None")
+	IProject newWorkspaceProject
 
 	/*
 	 * Returns an available project name according to the current workspace.
@@ -119,8 +131,16 @@ class ApogyWorkspaceFacade{
 	/*
 	 * Opens the specified Apogy Project.
 	 * @param project Reference to the project to open.
+	 * @throws Exception Reference to the exception.
 	 */
-	op void openApogyProject(IProject project)
+	op void openApogyProject(IProject project) throws Exception
+
+	/*
+	 * Deletes the specified Apogy Project.
+	 * @param project Reference to the project to open.
+	 * @throws Exception Reference to the exception.
+	 */
+	op void deleteApogyProject(IProject project) throws Exception
 
 	/*
 	 * Imports the specified Apogy Project Bundle.
@@ -131,9 +151,10 @@ class ApogyWorkspaceFacade{
 	/*
 	 * Closes the specified Apogy Project.
 	 * @param project Reference to the project to close.
+	 * @throws Exception Reference to the exception. 
 	 */
-	op void closeApogyProject(IProject project)
-	
+	op void closeApogyProject() throws Exception
+		
 	/*
 	 * Indicates which project is opened.
 	 */
