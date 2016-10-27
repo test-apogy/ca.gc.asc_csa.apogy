@@ -654,10 +654,8 @@ class ContextsList
  	contains Context[0..*] contexts opposite contextsList
 }
 
-class Context extends Named, Described
-{
-	boolean archived = "false"
-	
+class Context extends Named, Described, Archivable
+{	
 	@GenModel(property="None")
 	container ContextsList contextsList opposite contexts	
 			

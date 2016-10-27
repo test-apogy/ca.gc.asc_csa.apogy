@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.invocator.impl;
  */
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
@@ -720,6 +721,12 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 				default: return -1;
 			}
 		}
+		if (baseClass == Archivable.class) {
+			switch (derivedFeatureID) {
+				case ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED: return ApogyCommonEMFPackage.ARCHIVABLE__ARCHIVED;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -733,6 +740,12 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
 				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		if (baseClass == Archivable.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.ARCHIVABLE__ARCHIVED: return ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED;
 				default: return -1;
 			}
 		}

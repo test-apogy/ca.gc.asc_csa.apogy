@@ -142,9 +142,9 @@ public class ContextItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Context_archived_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Context_archived_feature", "_UI_Context_type"),
-				 ApogyCoreInvocatorPackage.Literals.CONTEXT__ARCHIVED,
+				 getString("_UI_Archivable_archived_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Archivable_archived_feature", "_UI_Archivable_type"),
+				 ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED,
 				 true,
 				 false,
 				 false,

@@ -6616,17 +6616,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EClass getContext();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.Context#isArchived <em>Archived</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Archived</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#isArchived()
-	 * @see #getContext()
-	 * @generated
-	 */
-	EAttribute getContext_Archived();
-
-	/**
 	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getContextsList <em>Contexts List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9278,14 +9267,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONTEXT = eINSTANCE.getContext();
-
-		/**
-		 * The meta object literal for the '<em><b>Archived</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTEXT__ARCHIVED = eINSTANCE.getContext_Archived();
 
 		/**
 		 * The meta object literal for the '<em><b>Contexts List</b></em>' container reference feature.
