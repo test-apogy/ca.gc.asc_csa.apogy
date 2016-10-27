@@ -204,6 +204,8 @@ ApogyCommonEMFFacade {
 				return moveUp((EList<Object>)arguments.get(0), arguments.get(1));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT:
 				return moveDown((EList<Object>)arguments.get(0), arguments.get(1));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS:
+				return getChildEClasses((EClass)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1331,6 +1333,40 @@ ApogyCommonEMFFacade {
 		objects.remove(index);
 		objects.add(index+1, object);
 		return objects;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<EClass> getChildEClasses(EClass parentEClass) {
+		List<EClass> classes = null;
+
+		if (parentEClass != null)
+		{
+			EClassFilter filter = new EClassFilter()
+			{
+				public boolean filter(EClass eClass)
+				{
+					boolean result = false;
+					EList<EReference> childReferences = parentEClass.getEAllContainments();
+					for(int i = 0; i < childReferences.size(); i++){
+						if(childReferences.get(i).getEReferenceType() == eClass){
+							result = true;
+							break;
+						}
+					}
+					return result &&
+							!eClass.isInterface() &&
+							!eClass.isAbstract();
+				}
+			};
+
+			List<EClass> list = ApogyCommonEMFFacade.INSTANCE.getAllAvailableEClasses();
+			classes = ApogyCommonEMFFacade.INSTANCE.filterEClasses(list, filter);
+		}
+		return classes;
 	}
 
 	/**

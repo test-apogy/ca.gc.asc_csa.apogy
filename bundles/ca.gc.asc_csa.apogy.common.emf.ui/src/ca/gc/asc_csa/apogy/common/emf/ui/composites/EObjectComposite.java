@@ -18,7 +18,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.jface.viewers.AbstractTreeViewer;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
+import org.eclipse.jface.viewers.DoubleClickEvent;
+import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -88,6 +91,19 @@ public class EObjectComposite extends Composite {
 		instanceViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 		
 		instanceViewer.addSelectionChangedListener(getSelectionChangedListener());
+		instanceViewer.addDoubleClickListener(new IDoubleClickListener() {
+			
+			@Override
+			public void doubleClick(DoubleClickEvent event) {
+					IStructuredSelection selection = (IStructuredSelection) event.getSelection();		
+					Object selectedObject = selection.getFirstElement();
+					if(instanceViewer.getExpandedState(selectedObject)){
+						instanceViewer.collapseToLevel(selectedObject, AbstractTreeViewer.ALL_LEVELS);
+					}else{
+						instanceViewer.expandToLevel(selectedObject, 1);
+					}
+			}
+		});
 	}
 
 	/**

@@ -14,29 +14,42 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.edit.command.AddCommand;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseSubClassWizardPage;
+import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseChildEReferenceWizardPage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
 public class NewChildWizard extends Wizard{
 	
-	private ChooseSubClassWizardPage chooseSubClassWizardPage;
-	private EClass parent;
+	private ChooseChildEReferenceWizardPage chooseSubClassWizardPage;
+	private EList<EReference> eReferencesList;
+	private EObject parent;
 	
 	/**
 	 * Constructor for NewContextWizard.
 	 */
-	public NewChildWizard(EClass parent) {
+	public NewChildWizard(EList<EReference> eReferencesList, EObject parent) {
 		super();
 		setWindowTitle("New Child");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
 				Activator.ID, "icons/wizban/apogy_new_child.png");
 		setDefaultPageImageDescriptor(image);		
+		this.eReferencesList = eReferencesList;
 		this.parent = parent;
 	}
 	
@@ -53,10 +66,9 @@ public class NewChildWizard extends Wizard{
 	 * Returns the {@link SubClassesWizardPage}.  If null is returned, the page is not added to the wizard.
 	 * @return Reference to the page.
 	 */
-	protected ChooseSubClassWizardPage geChooseSubClassWizardPage(){
+	protected ChooseChildEReferenceWizardPage geChooseSubClassWizardPage(){
 		if (chooseSubClassWizardPage == null){
-			System.out.println("NewChildWizard.geChooseSubClassWizardPage()");
-			chooseSubClassWizardPage = new ChooseSubClassWizardPage(parent); 
+			chooseSubClassWizardPage = new ChooseChildEReferenceWizardPage(eReferencesList); 
 		}		
 		return chooseSubClassWizardPage;
 	}
@@ -65,7 +77,67 @@ public class NewChildWizard extends Wizard{
 
 	@Override
 	public boolean performFinish() {
+		EObject eObject = EcoreUtil.create(chooseSubClassWizardPage.getSelectedEClass());
+		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(parent);
+		
+		if(editingDomain != null){
+			Command command = null;
+			if (chooseSubClassWizardPage.getSelectedEReference().isMany()) {
+				command = new AddCommand(editingDomain, parent, chooseSubClassWizardPage.getSelectedEReference(), eObject);
+			} else {
+				command = new SetCommand(editingDomain, parent, chooseSubClassWizardPage.getSelectedEReference(), eObject);
+			}
+
+			editingDomain.getCommandStack().execute(command);
+			System.out.println();
+			return true;
+		}
+		
+		
+//		EObject eObject = EcoreUtil.create(chooseSubClassWizardPage.getSelectedEReference());
+//	//	ListFeatureNode test1 = (ListFeatureNode) parent;
+//		
+//
+//		// TODO
+//		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(parent);
+//
+////		System.out.println("NewChildWizard.performFinish() parent " + parent);
+////		System.out.println("NewChildWizard.performFinish() eObject " + eObject);
+//		/** Check if there is a domain. */
+//		if (editingDomain != null) {
+//			/** Use the command stack. */
+//		
+////			System.out.println(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS);
+////			System.out.println(getChildEReference(parent.eClass(), eObject.eClass()));
+//		
+//			System.out.println();
+//			
+//			EReference eReference = getChildEReference(parent.eClass(), eObject.eClass());
+//			
+//			System.out.println("PARENT: " + parent);
+//			System.out.println("--ICI----------");
+//			System.out.println(eObject.eClass().eContainmentFeature());
+//			System.out.println(eReference);
+//			System.out.println(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
+//			System.out.println("--ICI----------");
+//			//System.out.println("REFERENCE: " + eObject.eClass().eContainingFeature());
+//			
+//			Command command = null;
+////			AddCommand command = new AddCommand(editingDomain, parent,
+////					getChildEReference(parent.eClass(), eObject.eClass()), eObject);
+//			if (eReference.isMany()){
+//				command = new AddCommand(editingDomain, parent,
+//						eReference, eObject);
+//			}else{
+//				command = new SetCommand(editingDomain, parent, eReference, eObject);
+//			}
+//			
+//			editingDomain.getCommandStack().execute(command);
+//			System.out.println();
+//			return true;
+//		}		
 		return false;
+		
 		
 //		/*
 //		 *  Create a compound command to execute addContext and the addDataProducts if needed
@@ -114,5 +186,37 @@ public class NewChildWizard extends Wizard{
 //		editingDomain.getCommandStack().execute(compoundCommand);
 //						
 //		return true;
+	}
+	
+	private EReference getChildEReference(EClass parent, EClass child){
+			
+		EList<EReference> parentEReferences = child.getEAllReferences();
+		EList<EReference> possibleChildrenWhatever = parent.getEAllContainments();
+		
+		System.out.println(parentEReferences);
+		System.out.println(possibleChildrenWhatever);
+
+		System.out.println("-----------");
+		
+		System.out.println(parentEReferences);
+		System.out.println(possibleChildrenWhatever);
+		//System.out.println(test12);
+		
+		/*for(int i = 0; i < possibleChildrenWhatever.size(); i++){
+			if(test1 == possibleChildrenWhatever.get(i)){
+				return possibleChildrenWhatever.get
+			}
+		}*/
+		
+		for(int i = 0; i < possibleChildrenWhatever.size(); i++){
+			for(int j = 0; j < parentEReferences.size(); j++){
+				if(possibleChildrenWhatever.get(i) == parentEReferences.get(j)){
+					System.out.println("FOUND" + parentEReferences.get(j));
+					return parentEReferences.get(j);
+				}
+			}
+			
+		}
+		return null;
 	}
 }

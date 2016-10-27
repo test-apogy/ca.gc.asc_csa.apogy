@@ -153,7 +153,7 @@ public interface Context extends Named, Described
 	 * @see #setDataProductsList(DataProductsList)
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext_DataProductsList()
 	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
 	 */
   DataProductsList getDataProductsList();

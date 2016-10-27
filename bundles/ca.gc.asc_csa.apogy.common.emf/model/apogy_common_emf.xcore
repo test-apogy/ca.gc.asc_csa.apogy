@@ -247,6 +247,14 @@ class ApogyCommonEMFFacade
 	  * @return Modified array of objects
 	  */
 	 op Object[] moveDown(Object[] objects, Object object)
+	 
+	 /*
+	 * Returns all the child classes of the specified parent class. The result list contains
+	 * only implementation classes (not abstract). 
+	 * @param parentEClass Type of the class to find child classes.
+	 * @return List of child classes.
+	 */
+	 op List<EClass> getChildEClasses(EClass parentEClass)
 }
 
 /**
