@@ -504,4 +504,17 @@ public interface ApogyCommonEMFFacade extends EObject
 	 */
 	List<EClass> getChildEClasses(EClass parentEClass);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns a list of all the object's child EReferences that are either null or a list
+	 * @param eObject The parent object
+	 * @return List of EReferences that are either null or a list
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.EList<org.eclipse.emf.ecore.EReference>" unique="false" many="false" eObjectUnique="false"
+	 * @generated
+	 */
+	EList<EReference> getSettableEReferences(EObject eObject);
+
 } // ApogyCommonEMFFacade

@@ -492,13 +492,22 @@ public interface ApogyCommonEMFPackage extends EPackage
 	int APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS = 42;
 
 		/**
+	 * The operation id for the '<em>Get Settable EReferences</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT = 43;
+
+		/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 43;
+	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 44;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -2716,6 +2725,16 @@ public interface ApogyCommonEMFPackage extends EPackage
 	EOperation getApogyCommonEMFFacade__GetChildEClasses__EClass();
 
 		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getSettableEReferences(org.eclipse.emf.ecore.EObject) <em>Get Settable EReferences</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Settable EReferences</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getSettableEReferences(org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFFacade__GetSettableEReferences__EObject();
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference <em>EObject Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4022,6 +4041,14 @@ public interface ApogyCommonEMFPackage extends EPackage
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS = eINSTANCE.getApogyCommonEMFFacade__GetChildEClasses__EClass();
+
+				/**
+		 * The meta object literal for the '<em><b>Get Settable EReferences</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT = eINSTANCE.getApogyCommonEMFFacade__GetSettableEReferences__EObject();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.

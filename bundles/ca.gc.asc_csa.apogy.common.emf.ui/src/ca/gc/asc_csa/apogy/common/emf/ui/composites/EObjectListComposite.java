@@ -20,16 +20,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
-import org.eclipse.jface.viewers.AbstractTreeViewer;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
-import org.eclipse.jface.viewers.DoubleClickEvent;
-import org.eclipse.jface.viewers.IDoubleClickListener;
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -221,16 +216,6 @@ public class EObjectListComposite extends Composite {
 						ITreeSelection defaultElementSelected = new TreeSelection(treePath);
 						treeViewerEObjectsList.setSelection(defaultElementSelected, true);
 					}
-				
-				
-//				if (treeViewerEObjectsList.getTree().getItemCount() > 0) {
-//					TreePath featuresTreePath = new TreePath(treeViewerEObjectsList.getTree().getItems());//new TreePath(treeViewerEObjectsList.getTree().getItems()[0]);
-//					treeViewerEObjectsList.setSelection(new TreeSelection(featuresTreePath));
-//							//treeViewerEObjectsList.getTree().getItems()[0]));
-//							//defaultSelectedContext(ISelection) treeViewerEObjectsList.getTree().getItems()[0]);
-//					System.out.println("EObjectListComposite.initDataBindingsCustom()");
-//				}
-
 			}
 		}
 

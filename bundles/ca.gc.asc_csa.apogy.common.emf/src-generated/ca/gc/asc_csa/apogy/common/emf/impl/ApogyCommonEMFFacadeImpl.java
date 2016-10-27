@@ -206,6 +206,8 @@ ApogyCommonEMFFacade {
 				return moveDown((EList<Object>)arguments.get(0), arguments.get(1));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS:
 				return getChildEClasses((EClass)arguments.get(0));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT:
+				return getSettableEReferences((EObject)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1296,7 +1298,6 @@ ApogyCommonEMFFacade {
 	 * @generated_NOT
 	 */
 	public EList<Object> filterArchived(EList<Object> objects) {
-		System.out.println("ApogyCoreInvocatorFacadeImpl.filterArchived()" + objects);
 		if(!objects.isEmpty()){
 			for(Iterator<Object> iter = objects.iterator(); iter.hasNext();){
 				Object object = iter.next();
@@ -1307,7 +1308,6 @@ ApogyCommonEMFFacade {
 				}
 			}
 		}
-		System.out.println("ApogyCoreInvocatorFacadeImpl.filterArchived()" + objects);
 		return objects;
 	}
 
@@ -1367,6 +1367,26 @@ ApogyCommonEMFFacade {
 			classes = ApogyCommonEMFFacade.INSTANCE.filterEClasses(list, filter);
 		}
 		return classes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public EList<EReference> getSettableEReferences(EObject eObject) {
+		EList<EReference> structuralFeatures = new BasicEList<EReference>();
+		structuralFeatures.addAll(eObject.eClass().getEAllContainments());
+		
+		for(Iterator<EReference> ite = structuralFeatures.iterator(); ite.hasNext();){
+			EReference eReference = ite.next();
+			final Object value = eObject.eGet(eReference);
+			if(value != null && !(value instanceof List)) {
+				ite.remove();
+			}
+		}
+		
+		return structuralFeatures;
 	}
 
 	/**

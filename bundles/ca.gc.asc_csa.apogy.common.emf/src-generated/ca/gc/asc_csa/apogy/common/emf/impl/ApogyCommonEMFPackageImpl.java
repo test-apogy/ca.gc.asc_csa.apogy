@@ -828,6 +828,15 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCommonEMFFacade__GetSettableEReferences__EObject() {
+		return apogyCommonEMFFacadeEClass.getEOperations().get(43);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEObjectReference() {
 		return eObjectReferenceEClass;
 	}
@@ -1727,6 +1736,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT);
 
 		eObjectReferenceEClass = createEClass(EOBJECT_REFERENCE);
 		createEReference(eObjectReferenceEClass, EOBJECT_REFERENCE__EOBJECT);
@@ -2116,6 +2126,13 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		addEParameter(op, theEcorePackage.getEClass(), "parentEClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(theEcorePackage.getEClass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCommonEMFFacade__GetSettableEReferences__EObject(), null, "getSettableEReferences", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getEList());
+		g2 = createEGenericType(theEcorePackage.getEReference());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 

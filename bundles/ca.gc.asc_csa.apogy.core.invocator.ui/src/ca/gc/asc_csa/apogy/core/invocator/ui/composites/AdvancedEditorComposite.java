@@ -14,15 +14,13 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.Iterator;
-import java.util.List;
-
-import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.RemoveCommand;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -38,10 +36,8 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
-import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewChildWizard;
+import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
 
 public class AdvancedEditorComposite extends Composite{
 
@@ -81,12 +77,9 @@ public class AdvancedEditorComposite extends Composite{
 		btnNew.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
-				if (event.type == SWT.Selection) {
-					/**
-					 * Creates and opens the wizard to create a valid context
-					 */
+				if (event.type == SWT.Selection) {				
 					NewChildWizard newChildWizard = new NewChildWizard(
-							getPossibleEStructuralFeatures(eObjectComposite.getSelectedEObject()), eObjectComposite.getSelectedEObject());
+							ApogyCommonEMFFacade.INSTANCE.getSettableEReferences(eObjectComposite.getSelectedEObject()), eObjectComposite.getSelectedEObject());
 					WizardDialog dialog = new WizardDialog(getShell(), newChildWizard);
 		
 					dialog.open();
@@ -101,7 +94,22 @@ public class AdvancedEditorComposite extends Composite{
 			@Override
 			public void handleEvent(Event event) {
 				if (event.type == SWT.Selection) {
-					// TODO: Delete button clicked
+					EditingDomain editingDomain = AdapterFactoryEditingDomain
+							.getEditingDomainFor(eObjectComposite.getSelectedEObject());
+
+					Command command = null;
+					if (editingDomain != null) {
+						if (eObjectComposite.getSelectedEObject().eContainingFeature().isMany()) {
+							command = new RemoveCommand(editingDomain,
+									(EList<?>) eObjectComposite.getSelectedEObject().eContainer()
+											.eGet(eObjectComposite.getSelectedEObject().eContainingFeature()),
+									eObjectComposite.getSelectedEObject());
+						} else {
+							command = new SetCommand(editingDomain, eObjectComposite.getSelectedEObject().eContainer(),
+									eObjectComposite.getSelectedEObject().eContainingFeature(), null);
+						}
+					}
+					editingDomain.getCommandStack().execute(command);
 				}
 
 			}
@@ -121,78 +129,13 @@ public class AdvancedEditorComposite extends Composite{
 	}
 		
 	private void checkEnableNewButton(EObject eObject){
-		btnNew.setEnabled(!getPossibleEStructuralFeatures(eObject).isEmpty());
-	}
-	
-//	private boolean isObjectChildsFull(EObject eObject){
-//		if (eObject != null) {
-//			EList<EReference> structuralFeatures = eObject.eClass().getEAllContainments();
-//			for (int i = 0; i < structuralFeatures.size(); i++) {
-//				if(!isContainmentFull(eObject, structuralFeatures.get(i))){
-//					return false;
-//				}
-//			}
-//		}
-//		return true;
-//	}
-	
-	private EList<EReference> getPossibleEStructuralFeatures(EObject eObject){
-		EList<EReference> structuralFeatures = new BasicEList<EReference>();
-		structuralFeatures.addAll(eObject.eClass().getEAllContainments());
-		
-		for(Iterator<EReference> ite = structuralFeatures.iterator(); ite.hasNext();){
-			EReference eReference = ite.next();
-			final Object value = eObject.eGet(eReference);
-			if(value != null && !(value instanceof List)) {
-				ite.remove();
-			}
+		if(eObject != null){
+			btnNew.setEnabled(!ApogyCommonEMFFacade.INSTANCE.getSettableEReferences(eObject).isEmpty());
+		}else{
+			btnNew.setEnabled(false);
 		}
 		
-		return structuralFeatures;
 	}
-	
-//	private boolean isContainmentFull(EObject eObject, EReference eReference){
-//		if(eObject != null && eReference != null){
-//			final Object value = eObject.eGet(eReference);
-//			if(value == null || value instanceof List){
-//				return false;
-//			}			
-//		}
-//		return true;
-//	}
-//	
-//	private EList<EClass> getPossibleChildList(EObject eObject){
-//		System.out.println(eObject);
-//		EList<EClass> possibleChildList = new BasicEList<>();
-//		
-//		if(eObject != null && !isObjectChildsFull(eObject)){
-//			EList<EReference> structuralFeatures = eObject.eClass().getEAllContainments();
-//			for (int i = 0; i < structuralFeatures.size(); i++) {
-//				if(!isContainmentFull(eObject, structuralFeatures.get(i))){
-//					possibleChildList.addAll(ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(structuralFeatures.get(i).getEReferenceType()));
-//				}
-//			}
-//		}
-//		
-//		if (!possibleChildList.isEmpty()){			
-//			EClassFilter filter = new EClassFilter()
-//			{
-//				public boolean filter(EClass eClass)
-//				{
-//					if(eClass.isAbstract()){
-//						System.out.println("ABSTRACT CLASS");
-//					}
-//					return !eClass.isAbstract();
-//				}
-//			};
-//			List<EClass> list = ApogyCommonEMFFacade.INSTANCE.filterEClasses(possibleChildList, filter);	
-//			possibleChildList.clear();
-//			possibleChildList.addAll(list);
-//		}		
-//		
-//		return possibleChildList;
-//	}
-
 
 	public void setEObject(EObject eObject){
 		eObjectComposite.setEObject(eObject);

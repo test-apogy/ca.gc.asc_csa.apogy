@@ -85,13 +85,7 @@ public class DataProductsListsContainerComposite extends Composite {
 		dataProductsListsContainerViewer = new TableViewer(compositeCheckboxViewer);
 		dataProductsListsContainerViewer.getTable().setLinesVisible(true);
 		
-		listContentProvider = new ObservableListContentProvider(){
-			@Override
-			public Object[] getElements(Object inputElement) {
-				// TODO Auto-generated method stub
-				return super.getElements(inputElement);
-			}
-		};
+		listContentProvider = new ObservableListContentProvider();
 		dataProductsListsContainerViewer.setContentProvider(listContentProvider);
 		
 		tableDataProductsContainer = dataProductsListsContainerViewer.getTable();
