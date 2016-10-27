@@ -22,6 +22,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.jface.viewers.AbstractTreeViewer;
+import org.eclipse.jface.viewers.DoubleClickEvent;
+import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Display;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
@@ -102,6 +107,26 @@ public class ApogyCommonEMFUIFacadeImpl extends MinimalEObjectImpl.Container imp
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void addExpandOnDoubleClick(TreeViewer treeViewer) {
+		treeViewer.addDoubleClickListener(new IDoubleClickListener() {
+
+			@Override
+			public void doubleClick(DoubleClickEvent event) {
+				Object selectedObject = ((IStructuredSelection) event.getSelection()).getFirstElement();
+				if (treeViewer.getExpandedState(selectedObject)) {
+					treeViewer.collapseToLevel(selectedObject, AbstractTreeViewer.ALL_LEVELS);
+				} else {
+					treeViewer.expandToLevel(selectedObject, 1);
+				}
+			}
+		});
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -113,6 +138,9 @@ public class ApogyCommonEMFUIFacadeImpl extends MinimalEObjectImpl.Container imp
 				return getColorForRange((Ranges)arguments.get(0));
 			case ApogyCommonEMFUIPackage.APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT:
 				return getDisplayUnits((ETypedElement)arguments.get(0));
+			case ApogyCommonEMFUIPackage.APOGY_COMMON_EMFUI_FACADE___ADD_EXPAND_ON_DOUBLE_CLICK__TREEVIEWER:
+				addExpandOnDoubleClick((TreeViewer)arguments.get(0));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

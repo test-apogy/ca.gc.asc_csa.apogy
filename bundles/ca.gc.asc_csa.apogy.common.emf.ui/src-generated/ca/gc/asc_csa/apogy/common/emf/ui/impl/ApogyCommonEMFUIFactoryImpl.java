@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.graphics.Color;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFactory;
@@ -92,6 +93,8 @@ public class ApogyCommonEMFUIFactoryImpl extends EFactoryImpl implements ApogyCo
 				return createColorFromString(eDataType, initialValue);
 			case ApogyCommonEMFUIPackage.UNIT:
 				return createUnitFromString(eDataType, initialValue);
+			case ApogyCommonEMFUIPackage.TREE_VIEWER:
+				return createTreeViewerFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -110,6 +113,8 @@ public class ApogyCommonEMFUIFactoryImpl extends EFactoryImpl implements ApogyCo
 				return convertColorToString(eDataType, instanceValue);
 			case ApogyCommonEMFUIPackage.UNIT:
 				return convertUnitToString(eDataType, instanceValue);
+			case ApogyCommonEMFUIPackage.TREE_VIEWER:
+				return convertTreeViewerToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -166,6 +171,24 @@ public class ApogyCommonEMFUIFactoryImpl extends EFactoryImpl implements ApogyCo
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TreeViewer createTreeViewerFromString(EDataType eDataType, String initialValue) {
+		return (TreeViewer)super.createFromString(eDataType, initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTreeViewerToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
