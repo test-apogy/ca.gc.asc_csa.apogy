@@ -14,25 +14,19 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.jface.wizard.WizardPage;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
@@ -40,7 +34,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
 public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {

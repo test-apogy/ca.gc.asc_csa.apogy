@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
+package ca.gc.asc_csa.apogy.common.emf.ui.wizards;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -31,7 +31,7 @@ import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
 
 public class NamedDescribedWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NamedDescribedWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage";
 	private NamedComposite namedComposite;
 	private DescribedComposite describedComposite;
 	private Adapter adapter; 
