@@ -10,7 +10,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui.composites;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Olivier L. Larouche (Olivier.LLarouche@canad.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -51,6 +51,12 @@ public class EObjectListComposite extends Composite {
 	private TreeViewer treeViewerEObjectsList;
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
 
+	/**
+	 * Creates the composite.
+	 * 
+	 * @param parent
+	 * @param style
+	 */
 	public EObjectListComposite(Composite parent, int style) {
 		super(parent, style);
 		GridLayout gridLayout = new GridLayout(1, false);
@@ -59,7 +65,11 @@ public class EObjectListComposite extends Composite {
 
 		Label lblEObjectTypeName = new Label(this, SWT.NONE);
 		lblEObjectTypeName.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
-		lblEObjectTypeName.setText(getTitle());
+		if (getTitle() != null) {
+			lblEObjectTypeName.setText(getTitle());
+		} else {
+			lblEObjectTypeName.setText("");
+		}
 
 		treeViewerEObjectsList = new TreeViewer(this, SWT.BORDER);
 		Tree treeEObjectsList = treeViewerEObjectsList.getTree();
@@ -73,10 +83,10 @@ public class EObjectListComposite extends Composite {
 		TreeColumn treeColumn = treeViewerColumn.getColumn();
 		treeColumn.setWidth(200);
 
-		treeViewerEObjectsList.setContentProvider(new EObjectContentProvider(adapterFactory));
+		treeViewerEObjectsList.setContentProvider(getContentProvider());
 		treeViewerEObjectsList.setLabelProvider(getLabelProvider());
 	}
-	
+
 	private ISelectionChangedListener getTreeViewerSelectionChangedListener() {
 		if (treeViewerSelectionChangedListener == null) {
 			treeViewerSelectionChangedListener = new ISelectionChangedListener() {
@@ -99,25 +109,54 @@ public class EObjectListComposite extends Composite {
 	protected void newSelection(TreeSelection selection) {
 	}
 
-
+	/**
+	 * The method gets the selected {@link EObject} in the {@link TreeViewer}
+	 * 
+	 * @return The selected {@link EObject}
+	 */
 	public EObject getSelectedEObject() {
 		IStructuredSelection selection = (IStructuredSelection) treeViewerEObjectsList.getSelection();
 		return (EObject) selection.getFirstElement();
 	}
-	
-	public void setSelectedEObject(EObject eObject){
-		if(eObjectsList.contains(eObject));
+
+	/**
+	 * Sets the specified {@link EObject} as the selection of the
+	 * {@link TreeViewer}
+	 * 
+	 * @param eObject
+	 *            The specified {@link EObject}
+	 */
+	public void setSelectedEObject(EObject eObject) {
+		if (eObjectsList.contains(eObject))
+			;
 		treeViewerEObjectsList.setSelection((IStructuredSelection) eObject);
 	}
 
-	protected StyledCellLabelProvider getLabelProvider(){
+	/**
+	 * Called to get the label provider for the {@link TreeViewer} This method
+	 * can be overwritten to change the label provider
+	 */
+	protected StyledCellLabelProvider getLabelProvider() {
 		return new EObjectEClassNameLabelProvider();
 	}
-	
-	protected String getTitle(){
+
+	/**
+	 * Called to get the content provider for the {@link TreeViewer} This method
+	 * can be overwritten to change the content provider
+	 */
+	protected AdapterFactoryContentProvider getContentProvider() {
+		return new EObjectContentProvider(adapterFactory);
+	}
+
+	/**
+	 * Called to get the text of the label above the {@link TreeViewer} This
+	 * method can be overwritten to change the title above the
+	 * {@link TreeViewer}
+	 */
+	protected String getTitle() {
 		return "EObject";
 	}
-	
+
 	/**
 	 * Label provider for the treeViewer
 	 */
@@ -155,7 +194,7 @@ public class EObjectListComposite extends Composite {
 	}
 
 	/**
-	 * Content provider for the treeViewer
+	 * Content provider for the {@link TreeViewer}
 	 */
 	private class EObjectContentProvider extends AdapterFactoryContentProvider {
 
@@ -179,7 +218,7 @@ public class EObjectListComposite extends Composite {
 	}
 
 	/**
-	 * Sets the eClasses List to displays it's content
+	 * Sets the {@link EList<EObjectst>} to displays it's content
 	 * 
 	 * @param eObjectsList
 	 *            reference to the {@link EList<EObject>}
@@ -195,10 +234,14 @@ public class EObjectListComposite extends Composite {
 		}
 	}
 
+	/**
+	 * Returns the {@link EList<EObjectst>} displayed in the {@link TreeViewer}
+	 * 
+	 * @return
+	 */
 	public EList<EObject> getEObjectsList() {
 		return this.eObjectsList;
 	}
-
 
 	protected DataBindingContext initDataBindings() {
 		return initDataBindingsCustom();
@@ -210,12 +253,12 @@ public class EObjectListComposite extends Composite {
 		if (eObjectsList != null) {
 			if (!treeViewerEObjectsList.getTree().isDisposed()) {
 				treeViewerEObjectsList.setInput(eObjectsList);
-				
-				if (treeViewerEObjectsList.getTree().getItemCount() > 0){
-						TreePath treePath = new TreePath(new Object[]{eObjectsList.get(0)});		
-						ITreeSelection defaultElementSelected = new TreeSelection(treePath);
-						treeViewerEObjectsList.setSelection(defaultElementSelected, true);
-					}
+
+				if (treeViewerEObjectsList.getTree().getItemCount() > 0) {
+					TreePath treePath = new TreePath(new Object[] { eObjectsList.get(0) });
+					ITreeSelection defaultElementSelected = new TreeSelection(treePath);
+					treeViewerEObjectsList.setSelection(defaultElementSelected, true);
+				}
 			}
 		}
 

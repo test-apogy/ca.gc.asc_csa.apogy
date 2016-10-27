@@ -10,7 +10,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui.wizards;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Olivier L. Larouche (Olivier.llarouche@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -30,12 +30,12 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseChildEReferenceWizardPage;
 import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
 
-public class NewChildWizard extends Wizard{
-	
+public class NewChildWizard extends Wizard {
+
 	private ChooseChildEReferenceWizardPage chooseSubClassWizardPage;
 	private EList<EReference> eReferencesList;
 	private EObject parent;
-	
+
 	/**
 	 * Constructor for NewContextWizard.
 	 */
@@ -43,49 +43,55 @@ public class NewChildWizard extends Wizard{
 		super();
 		setWindowTitle("New Child");
 		setNeedsProgressMonitor(true);
-		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
-				Activator.ID, "icons/wizban/emf_new_child.png");
-		setDefaultPageImageDescriptor(image);		
+		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(Activator.ID,
+				"icons/wizban/emf_new_child.png");
+		setDefaultPageImageDescriptor(image);
 		this.eReferencesList = eReferencesList;
 		this.parent = parent;
 	}
-	
+
 	/**
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		if(geChooseSubClassWizardPage() != null){
+		if (geChooseSubClassWizardPage() != null) {
 			addPage(geChooseSubClassWizardPage());
 		}
 	}
 
 	/**
-	 * Returns the {@link SubClassesWizardPage}.  If null is returned, the page is not added to the wizard.
+	 * Returns the {@link SubClassesWizardPage}. If null is returned, the page
+	 * is not added to the wizard.
+	 * 
 	 * @return Reference to the page.
 	 */
-	protected ChooseChildEReferenceWizardPage geChooseSubClassWizardPage(){
-		if (chooseSubClassWizardPage == null){
-			chooseSubClassWizardPage = new ChooseChildEReferenceWizardPage(eReferencesList); 
-		}		
+	protected ChooseChildEReferenceWizardPage geChooseSubClassWizardPage() {
+		if (chooseSubClassWizardPage == null) {
+			chooseSubClassWizardPage = new ChooseChildEReferenceWizardPage(eReferencesList);
+		}
 		return chooseSubClassWizardPage;
 	}
-	
-
 
 	@Override
 	public boolean performFinish() {
+		// Get the editing domain of the parent
 		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(parent);
 
 		if (editingDomain != null) {
 			Command command = null;
+			// If the selected reference is a list
 			if (chooseSubClassWizardPage.getSelectedEReference().isMany()) {
+				// Add the new eObject to the list
 				command = new AddCommand(editingDomain, parent, chooseSubClassWizardPage.getSelectedEReference(),
 						EcoreUtil.create(chooseSubClassWizardPage.getSelectedEClass()));
-			} else {
+			}
+			// Otherwise, if the reference is not a list
+			else {
+				// Set the corresponding EReference of the parent to the new
+				// eObject
 				command = new SetCommand(editingDomain, parent, chooseSubClassWizardPage.getSelectedEReference(),
 						EcoreUtil.create(chooseSubClassWizardPage.getSelectedEClass()));
 			}
-
 			editingDomain.getCommandStack().execute(command);
 			return true;
 		}

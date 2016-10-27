@@ -10,6 +10,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui.wizards;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -37,7 +38,7 @@ import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectListComposite;
 
 public class ChooseChildEReferenceWizardPage extends WizardPage {
 
-private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.ChooseChildEReferenceWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseChildEReferenceWizardPage";
 
 	private EObjectListComposite eReferencesListComposite;
 	private EObjectListComposite eClassesListComposite;
@@ -55,206 +56,131 @@ private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator
 		setDescription("Select the new child's reference and type.");
 	}
 
-	public ChooseChildEReferenceWizardPage(
-			EList<EReference> childEReferences) {
+	public ChooseChildEReferenceWizardPage(EList<EReference> childEReferences) {
 		this();
-		if (this.childEReferences != null){
-			for(int i = 0; i < childEReferences.size(); i++ ){
+		if (this.childEReferences != null) {
+			for (int i = 0; i < childEReferences.size(); i++) {
 				this.childEReferences.get(i).eAdapters().remove(getAdapter());
-			}						
+			}
 		}
-		
+
 		this.childEReferences = childEReferences;
-		
-		for(int i = 0; i < childEReferences.size(); i++ ){
+
+		for (int i = 0; i < childEReferences.size(); i++) {
 			this.childEReferences.get(i).eAdapters().add(getAdapter());
 		}
 	}
-	
+
 	private Adapter getAdapter() {
-		if (adapter == null){
-			adapter = new AdapterImpl(){
+		if (adapter == null) {
+			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
 					validate();
 				}
 			};
-		}				
+		}
 		return adapter;
-	}
-	
-	public EReference getSelectedEReference(){
-		return (EReference) eReferencesListComposite.getSelectedEObject();
-	}
-	
-//	public void setSelectedEReference(EClass eClass){
-//		this.eReferencesListComposite.setSelectedEObject(eClass);
-//	}
-	
-	public EClass getSelectedEClass(){
-		return (EClass) eClassesListComposite.getSelectedEObject();
 	}
 
 	/**
 	 * @see IDialogPage#createControl(Composite)
-	 */	
+	 */
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new GridLayout(2, false));
-		
-		
-		
-		eReferencesListComposite = new EObjectListComposite(container, SWT.None){
+
+		eReferencesListComposite = new EObjectListComposite(container, SWT.None) {
 			@Override
 			protected void newSelection(TreeSelection selection) {
-				if(eClassesListComposite != null){
-					ChooseChildEReferenceWizardPage.this.setEClassListCompositeList((EReference) this.getSelectedEObject()); 
+				// Sets the eClassList of the EObjectListComposite of EClasses
+				if (eClassesListComposite != null) {
+					ChooseChildEReferenceWizardPage.this
+							.setEClassListCompositeList((EReference) this.getSelectedEObject());
 				}
 				ChooseChildEReferenceWizardPage.this.validate();
-			}		
-			
+			}
+
 			@Override
 			protected StyledCellLabelProvider getLabelProvider() {
 				return new EReferenceLabelProvider();
 			}
-			
+
 			@Override
 			protected String getTitle() {
 				return "Reference";
 			}
 		};
-		
+
 		EList<EObject> eObjectsEReferenceList = new BasicEList<EObject>();
 		eObjectsEReferenceList.addAll(childEReferences);
 		eReferencesListComposite.setEObjectsList(eObjectsEReferenceList);
 		eReferencesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		
-		eClassesListComposite = new EObjectListComposite(container, SWT.None){
+
+		eClassesListComposite = new EObjectListComposite(container, SWT.None) {
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				ChooseChildEReferenceWizardPage.this.validate();
-			}		
-			
+			}
+
 			@Override
 			protected StyledCellLabelProvider getLabelProvider() {
 				return new EClassLabelProvider();
 			}
-			
+
 			@Override
 			protected String getTitle() {
 				return "Type";
 			}
 		};
-		
-		if(eReferencesListComposite.getSelectedEObject() != null){
-			setEClassListCompositeList((EReference)eReferencesListComposite.getSelectedEObject()); 
+
+		if (eReferencesListComposite.getSelectedEObject() != null) {
+			setEClassListCompositeList((EReference) eReferencesListComposite.getSelectedEObject());
 		}
 		eClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		eReferencesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		
-		
 
-		
-		
-//		((EReference)eReferencesListComposite.getSelectedEObject())
-//		EReference test = null;
-//		List<EClass> availableClasses = ApogyCommonEMFFacade.INSTANCE.getAllAvailableEClasses();
-//		test.getEReferenceType();
-		
-		
-		
-		
-	
-		
-//		List<EClass> classes = ApogyCommonEMFFacade.INSTANCE.getChildEClasses(parentEClass);
-		
-		
-//		if (parentEClass != null)
-//		{
-//			EList<EReference> structuralFeatures = parentEClass.getEAllContainments();
-//			
-//			EClassFilter filter = new EClassFilter()
-//			{
-//				public boolean filter(EClass eClass)
-//				{
-//					System.out.println(eClass);
-//					for (int i = 0; i < structuralFeatures.size(); i++) {
-//						final Object value = structuralFeatures.get(i).getEReferenceType();
-//						System.out.println(value);
-//						if (value == eClass) {
-//							System.out.println("Value found");
-//							Object object = test.eGet(structuralFeatures.get(i));
-//							System.out.println(object);
-//							if(object == null || object instanceof List){
-//								System.out.println("TRUE");
-//								return true;
-//							}
-//							System.out.println("FALSE");
-//							return false;
-//						}
-//					}
-//					return false;
-//				}
-//			};
-//			classes = ApogyCommonEMFFacade.INSTANCE.filterEClasses(classes, filter);	
-//		}
-//		
-//		EList<EClass> childEClasses = new BasicEList<>();
-//		childEClasses.addAll(classes);
-//		private void checkEnableNewButton(EObject eObject){
-//			boolean objectFull = true;
-//			if (eObject != null) {
-//				EList<EReference> structuralFeatures = eObject.eClass().getEAllContainments();
-//				for (int i = 0; i < structuralFeatures.size(); i++) {
-//					final Object value = eObject.eGet(structuralFeatures.get(i));
-//					if (value == null) {
-//						objectFull = false;
-//						break;
-//					}
-//					if (value instanceof List) {
-//						objectFull = false;
-//						break;
-//					}
-//				}
-//			}
-//			btnNew.setEnabled(!objectFull);
-//		}
-		
-	
-		
-		
-//		eClassListComposite.setEClassesList(childEClasses);
-	
-		
-		
-//		eClassListComposite.setEClassesList();
-		
-		
-//		subClassesListComposite = new SubClassesListComposite(container, SWT.None);
-//		subClassesListComposite.setSuperClass(superClass);
-//		subClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-//		subClassesListComposite.addSelectionChangedListener(new ISelectionChangedListener() {
-//			
-//			@Override
-//			public void selectionChanged(SelectionChangedEvent event) {
-//				setSelectedClass((EClass) ((TreeSelection) event.getSelection()).getFirstElement());
-//				validate();
-//			}
-//		});
-		
 		setControl(container);
 		validate();
 	}
-	
-	private void setEClassListCompositeList(EReference eReference){
+
+	/**
+	 * Gets the selected {@link EReference} in the {@link EObjectListComposite}
+	 * of EReferences
+	 * 
+	 * @return EReference The {@link EReference} selected by the user
+	 */
+	public EReference getSelectedEReference() {
+		return (EReference) eReferencesListComposite.getSelectedEObject();
+	}
+
+	/**
+	 * Returns the selected {@link EClass} in the {@link EObjectListComposite}
+	 * of EClasses
+	 * 
+	 * @return EReference The {@link EClass} selected by the user
+	 */
+	public EClass getSelectedEClass() {
+		return (EClass) eClassesListComposite.getSelectedEObject();
+	}
+
+	/**
+	 * Gets all the possible sub classes of an {@link EReference} and sets this
+	 * list in the list of {@link EObject} in the {@link EObjectListComposite}
+	 * of EClasses
+	 * 
+	 * @param eReference
+	 */
+	private void setEClassListCompositeList(EReference eReference) {
 		EList<EObject> eObjectsEClassList = new BasicEList<EObject>();
-		eObjectsEClassList.addAll(
-				ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
-						((EReference)eReferencesListComposite.getSelectedEObject())
-						.getEReferenceType()));
+		eObjectsEClassList.addAll(ApogyCommonEMFFacade.INSTANCE
+				.getAllSubEClasses(((EReference) eReferencesListComposite.getSelectedEObject()).getEReferenceType()));
 		eClassesListComposite.setEObjectsList(eObjectsEClassList);
 	}
-	
+
+	/**
+	 * Label provider of the EReferencesListComposite
+	 */
 	private class EReferenceLabelProvider extends StyledCellLabelProvider {
 		@Override
 		public void update(ViewerCell cell) {
@@ -286,7 +212,10 @@ private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator
 			return 5000;
 		}
 	}
-	
+
+	/**
+	 * Label provider of the EClassesListComposite
+	 */
 	private class EClassLabelProvider extends StyledCellLabelProvider {
 		@Override
 		public void update(ViewerCell cell) {
@@ -318,35 +247,35 @@ private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator
 			return 5000;
 		}
 	}
-	
+
 	@Override
 	public void dispose() {
 		super.dispose();
-		if (this.childEReferences != null){
-			for(int i = 0; i < childEReferences.size(); i++ ){
+		if (this.childEReferences != null) {
+			for (int i = 0; i < childEReferences.size(); i++) {
 				this.childEReferences.get(i).eAdapters().remove(getAdapter());
-			}						
+			}
 		}
 	}
-	
-	/** 
-	 * This method is invoked to validate the content. 
+
+	/**
+	 * This method is invoked to validate the content.
 	 */
-	protected void validate() {	
+	protected void validate() {
 		String errorEReference = "";
 		String errorEClass = "";
-		
-		if(eReferencesListComposite.getSelectedEObject() == null){
+
+		if (eReferencesListComposite.getSelectedEObject() == null) {
 			errorEReference = "<Reference> ";
 		}
-		if(eClassesListComposite == null || eClassesListComposite.getSelectedEObject() == null){
+		if (eClassesListComposite == null || eClassesListComposite.getSelectedEObject() == null) {
 			errorEClass = "<Type> ";
 		}
-		
-		if(errorEReference != "" || errorEClass != ""){
+
+		if (errorEReference != "" || errorEClass != "") {
 			setErrorMessage(errorEReference + errorEClass + "must be selected");
 			setPageComplete(false);
-		}else{
+		} else {
 			setErrorMessage(null);
 			setPageComplete(true);
 		}

@@ -10,6 +10,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -31,8 +32,9 @@ abstract public class AbstractApogySessionBasedPart {
 
 	private Composite composite;
 	private Adapter adapter;
-	
-	@Inject ESelectionService selectionService;
+
+	@Inject
+	ESelectionService selectionService;
 
 	@PostConstruct
 	public void createPartControl(Composite parent) {
@@ -42,15 +44,30 @@ abstract public class AbstractApogySessionBasedPart {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());
 	}
 
+	/**
+	 * Specifies the {@link Composite} to insert in the part's composite
+	 */
 	abstract protected Composite createContentComposite(Composite parent);
-	
-	public Composite getContentComposite(){
+
+	/**
+	 * Gets the content {@link Composite} in the part's composite
+	 * 
+	 * @return Composite
+	 */
+	public Composite getContentComposite() {
 		return composite;
 	}
-	
-	protected void setSession(InvocatorSession invocatorSession){	
+
+	/**
+	 * This method is called when the {@link InvocatorSession} needs to be
+	 * changed or initialized.
+	 * 
+	 * @param selection
+	 *            Reference to the selection.
+	 */
+	protected void setSession(InvocatorSession invocatorSession) {
 	}
-	
+
 	private Adapter getApogyCoreInvocatorFacadeAdapter() {
 		if (adapter == null) {
 			adapter = new AdapterImpl() {
@@ -62,9 +79,9 @@ abstract public class AbstractApogySessionBasedPart {
 		}
 		return adapter;
 	}
-	
+
 	@PreDestroy
-	protected void dispose(){
+	protected void dispose() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
 		System.out.println("ApogyAdvancedEditorPart.dispose()");
 	}
