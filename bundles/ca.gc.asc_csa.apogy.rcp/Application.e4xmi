@@ -157,7 +157,7 @@
       </menus>
       <toolbar xmi:id="_WS2HYoykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"/>
     </sharedElements>
-    <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
+    <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0" side="Bottom">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.test2" label="Apogy" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="" command="_C4Fq0B32EeaqJNPAWI4oCw">
           <parameters xmi:id="_2yJIACj-EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.parameter.1" name="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveId" value="ca.gc.asc_csa.apogy.rcp.perspective.systems"/>
@@ -171,6 +171,13 @@
           <tags>glue</tags>
         </children>
         <children xsi:type="menu:ToolControl" xmi:id="_hxCx4CmwEeaErYjgnAFhag" elementId="ca.gc.asc_csa.apogy.rcp.toolcontrol.PerspectiveSwitcher" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.perspectiveswitcher/org.eclipse.e4.ui.workbench.perspectiveswitcher.tools.PerspectiveSwitcherSwtTrim"/>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_Uy5CwJxWEeaSR_Mq0TOEvQ" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.1">
+      <children xsi:type="menu:ToolBar" xmi:id="_Vtr3EJxWEeaSR_Mq0TOEvQ" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.2">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_WIRhUJxWEeaSR_Mq0TOEvQ" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.showview" label="Show Views" command="_CZNp8CgcEeau5bAVKAeRVA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_fvkywJxWEeaSR_Mq0TOEvQ" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.preferences" label="Preferences" command="_WnLtICjiEeaYVMfJA5sKMA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_iSMggJxWEeaSR_Mq0TOEvQ" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.about" label="About" command="_WnB8ICjiEeaYVMfJA5sKMA"/>
       </children>
     </trimBars>
   </children>
