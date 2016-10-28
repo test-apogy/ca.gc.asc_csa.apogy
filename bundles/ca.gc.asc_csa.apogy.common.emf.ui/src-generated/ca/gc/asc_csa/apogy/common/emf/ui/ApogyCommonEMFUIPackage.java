@@ -120,13 +120,22 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 	int APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = 1;
 
 		/**
+	 * The operation id for the '<em>Add Expand On Double Click</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMFUI_FACADE___ADD_EXPAND_ON_DOUBLE_CLICK__TREEVIEWER = 2;
+
+		/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMFUI_FACADE_OPERATION_COUNT = 2;
+	int APOGY_COMMON_EMFUI_FACADE_OPERATION_COUNT = 3;
 
 		/**
 	 * The meta object id for the '<em>Color</em>' data type.
@@ -151,6 +160,17 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 
 
   /**
+	 * The meta object id for the '<em>Tree Viewer</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.jface.viewers.TreeViewer
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getTreeViewer()
+	 * @generated
+	 */
+	int TREE_VIEWER = 3;
+
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -181,6 +201,16 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 	EOperation getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement();
 
 		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#addExpandOnDoubleClick(org.eclipse.jface.viewers.TreeViewer) <em>Add Expand On Double Click</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Expand On Double Click</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#addExpandOnDoubleClick(org.eclipse.jface.viewers.TreeViewer)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFUIFacade__AddExpandOnDoubleClick__TreeViewer();
+
+		/**
 	 * Returns the meta object for data type '{@link org.eclipse.swt.graphics.Color <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -203,6 +233,17 @@ public interface ApogyCommonEMFUIPackage extends EPackage
   EDataType getUnit();
 
   /**
+	 * Returns the meta object for data type '{@link org.eclipse.jface.viewers.TreeViewer <em>Tree Viewer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Tree Viewer</em>'.
+	 * @see org.eclipse.jface.viewers.TreeViewer
+	 * @model instanceClass="org.eclipse.jface.viewers.TreeViewer"
+	 * @generated
+	 */
+	EDataType getTreeViewer();
+
+		/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -253,6 +294,14 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 		EOperation APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = eINSTANCE.getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement();
 
 				/**
+		 * The meta object literal for the '<em><b>Add Expand On Double Click</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMFUI_FACADE___ADD_EXPAND_ON_DOUBLE_CLICK__TREEVIEWER = eINSTANCE.getApogyCommonEMFUIFacade__AddExpandOnDoubleClick__TreeViewer();
+
+				/**
 		 * The meta object literal for the '<em>Color</em>' data type.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -271,6 +320,16 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 		 * @generated
 		 */
     EDataType UNIT = eINSTANCE.getUnit();
+
+				/**
+		 * The meta object literal for the '<em>Tree Viewer</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.jface.viewers.TreeViewer
+		 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getTreeViewer()
+		 * @generated
+		 */
+		EDataType TREE_VIEWER = eINSTANCE.getTreeViewer();
 
   }
 

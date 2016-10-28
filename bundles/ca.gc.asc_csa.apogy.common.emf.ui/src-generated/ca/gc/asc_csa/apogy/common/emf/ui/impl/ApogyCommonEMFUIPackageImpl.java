@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.graphics.Color;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
@@ -57,6 +58,13 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
   private EDataType unitEDataType = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType treeViewerEDataType = null;
+
+		/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -151,6 +159,15 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFUIFacade__AddExpandOnDoubleClick__TreeViewer() {
+		return apogyCommonEMFUIFacadeEClass.getEOperations().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -170,6 +187,15 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getTreeViewer() {
+		return treeViewerEDataType;
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -201,10 +227,12 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 		apogyCommonEMFUIFacadeEClass = createEClass(APOGY_COMMON_EMFUI_FACADE);
 		createEOperation(apogyCommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES);
 		createEOperation(apogyCommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___ADD_EXPAND_ON_DOUBLE_CLICK__TREEVIEWER);
 
 		// Create data types
 		colorEDataType = createEDataType(COLOR);
 		unitEDataType = createEDataType(UNIT);
+		treeViewerEDataType = createEDataType(TREE_VIEWER);
 	}
 
   /**
@@ -250,9 +278,13 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 		op = initEOperation(getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement(), this.getUnit(), "getDisplayUnits", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getETypedElement(), "eTypedElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCommonEMFUIFacade__AddExpandOnDoubleClick__TreeViewer(), null, "addExpandOnDoubleClick", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getTreeViewer(), "treeViewer", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		// Initialize data types
 		initEDataType(colorEDataType, Color.class, "Color", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(unitEDataType, Unit.class, "Unit", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "javax.measure.unit.Unit<?>");
+		initEDataType(treeViewerEDataType, TreeViewer.class, "TreeViewer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -13,7 +13,12 @@ package ca.gc.asc_csa.apogy.common.emf.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Arrays;
+
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
@@ -33,9 +38,12 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
-import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 
 public class EObjectComposite extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -43,10 +51,13 @@ public class EObjectComposite extends Composite {
 	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
 	private TreeViewer instanceViewer;
+	ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
+			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 	private ISelectionChangedListener selectionChangedListener;
 
 	private EObject eObject;
+	private boolean filterArchived = false;
 
 	public EObjectComposite(Composite parent, int style,
 			EObject eObject) {
@@ -81,13 +92,12 @@ public class EObjectComposite extends Composite {
 		treeInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		treeInstance.setLinesVisible(true);
 		toolkit.paintBordersFor(treeInstance);
-
-		ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
-				ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+		
 		instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 		instanceViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 		
 		instanceViewer.addSelectionChangedListener(getSelectionChangedListener());
+		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(instanceViewer);
 	}
 
 	/**
@@ -180,5 +190,34 @@ public class EObjectComposite extends Composite {
 	public EObject getSelectedEObject() {
 		IStructuredSelection selection = (IStructuredSelection) instanceViewer.getSelection();
 		return (EObject) selection.getFirstElement();
+	}
+	
+	public void filterArchived(boolean filterArchived){
+		if(this.filterArchived != filterArchived){
+			this.filterArchived = filterArchived;
+			if(filterArchived == true){
+				instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory){
+					@Override
+					public Object[] getElements(Object object) {
+						EList<Object> elements = new BasicEList<>();
+						elements.addAll(Arrays.asList(super.getElements(object)));
+						return ApogyCommonEMFFacade.INSTANCE.filterArchived(elements).toArray();
+					}
+					@Override
+					public Object[] getChildren(Object object) {
+						EList<Object> elements = new BasicEList<>();
+						elements.addAll(Arrays.asList(super.getChildren(object)));
+						return ApogyCommonEMFFacade.INSTANCE.filterArchived(elements).toArray();
+					}
+					@Override
+					public void notifyChanged(Notification notification) {
+						instanceViewer.refresh();
+						super.notifyChanged(notification);
+					}
+				});
+			}else{
+				instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
+			}
+		}
 	}
 }

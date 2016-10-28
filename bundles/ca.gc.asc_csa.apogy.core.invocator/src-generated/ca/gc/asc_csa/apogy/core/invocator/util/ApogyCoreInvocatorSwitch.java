@@ -230,6 +230,7 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				T result = caseContext(context);
 				if (result == null) result = caseNamed(context);
 				if (result == null) result = caseDescribed(context);
+				if (result == null) result = caseArchivable(context);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
