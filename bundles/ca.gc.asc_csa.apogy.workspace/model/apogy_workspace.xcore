@@ -40,6 +40,7 @@ import org.osgi.framework.Bundle
 type IProject wraps IProject
 type ListApogyProjects wraps List<IProject>
 type ListApogyProjectBundles wraps List<Bundle>
+type Bundle wraps Bundle
 
 
 /* -------------------------------------------------------------------------
@@ -77,6 +78,18 @@ class ApogyWorkspaceFacade{
 	 * Default Apogy Data Directory.
 	 */
 	readonly transient String defaultDataFolderName = "data"
+	
+	/*
+	 * Reference to the deleted workspace project.
+	 */
+    @GenModel(property="None")
+	IProject deletedWorskpaceProject
+
+	/*
+	 * Reference to the new workspace project.
+	 */	
+	@GenModel(property="None")
+	IProject newWorkspaceProject
 
 	/*
 	 * Returns an available project name according to the current workspace.
@@ -84,13 +97,23 @@ class ApogyWorkspaceFacade{
 	op String getDefaultProjectName()	
 	
 	/*
-	 * Creates and initialized a new Apogy project.
+	 * Creates and initialized a new Apogy project template without the session.
+	 * @param name Name of the project.
+	 * @param description Description of the project.
+	 * @return Reference to the project or null if not created.
+	 * @throws Exception Reference to the exception stack.
+	 */
+	op IProject createApogyProjectTemplate(String name, String description)	throws Exception	
+	
+	/*
+	 * Creates and initialized a new Apogy project with a session file.
 	 * @param name Name of the project.
 	 * @param description Description of the project.
 	 * @return Reference to the project or null if not created.
 	 * @throws Exception Reference to the exception stack.
 	 */
 	op IProject createApogyProject(String name, String description)	throws Exception
+	
 		
 	/*
 	 * Returns the list of projects with the Apogy nature in the active workspace.
@@ -108,15 +131,30 @@ class ApogyWorkspaceFacade{
 	/*
 	 * Opens the specified Apogy Project.
 	 * @param project Reference to the project to open.
+	 * @throws Exception Reference to the exception.
 	 */
-	op void openApogyProject(IProject project)
+	op void openApogyProject(IProject project) throws Exception
+
+	/*
+	 * Deletes the specified Apogy Project.
+	 * @param project Reference to the project to open.
+	 * @throws Exception Reference to the exception.
+	 */
+	op void deleteApogyProject(IProject project) throws Exception
+
+	/*
+	 * Imports the specified Apogy Project Bundle.
+	 * @param project Reference to the bundle that contains the Apogy project.
+	 */
+	op void importApogyProject(Bundle bundle) throws Exception	
 
 	/*
 	 * Closes the specified Apogy Project.
 	 * @param project Reference to the project to close.
+	 * @throws Exception Reference to the exception. 
 	 */
-	op void closeApogyProject(IProject project)
-	
+	op void closeApogyProject() throws Exception
+		
 	/*
 	 * Indicates which project is opened.
 	 */

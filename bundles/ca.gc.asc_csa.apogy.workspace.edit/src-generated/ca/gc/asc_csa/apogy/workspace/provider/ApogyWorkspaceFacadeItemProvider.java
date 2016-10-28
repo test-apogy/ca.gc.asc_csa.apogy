@@ -280,6 +280,8 @@ public class ApogyWorkspaceFacadeItemProvider
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_SESSIONS_FOLDER_NAME:
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_PROGRAMS_FOLDER_NAME:
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DEFAULT_DATA_FOLDER_NAME:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__DELETED_WORSKPACE_PROJECT:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__NEW_WORKSPACE_PROJECT:
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

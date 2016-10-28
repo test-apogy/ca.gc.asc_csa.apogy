@@ -31,6 +31,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.addons.mobility.pathplanners;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
- ca.gc.asc_csa.apogy.examples.lander;visibility:=reexport
+ ca.gc.asc_csa.apogy.examples.lander;visibility:=reexport,
+ ca.gc.asc_csa.apogy.workspace;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.apogy.examples.lander.apogy.Activator

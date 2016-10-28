@@ -92,6 +92,8 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 				return createListApogyProjectsFromString(eDataType, initialValue);
 			case ApogyWorkspacePackage.LIST_APOGY_PROJECT_BUNDLES:
 				return createListApogyProjectBundlesFromString(eDataType, initialValue);
+			case ApogyWorkspacePackage.BUNDLE:
+				return createBundleFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -111,6 +113,8 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 				return convertListApogyProjectsToString(eDataType, instanceValue);
 			case ApogyWorkspacePackage.LIST_APOGY_PROJECT_BUNDLES:
 				return convertListApogyProjectBundlesToString(eDataType, instanceValue);
+			case ApogyWorkspacePackage.BUNDLE:
+				return convertBundleToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -190,6 +194,24 @@ public class ApogyWorkspaceFactoryImpl extends EFactoryImpl implements ApogyWork
 	 */
 	public String convertListApogyProjectBundlesToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bundle createBundleFromString(EDataType eDataType, String initialValue) {
+		return (Bundle)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBundleToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

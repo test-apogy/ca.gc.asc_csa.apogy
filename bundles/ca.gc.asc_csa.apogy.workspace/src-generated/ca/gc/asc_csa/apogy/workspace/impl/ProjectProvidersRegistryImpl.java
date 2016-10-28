@@ -16,7 +16,7 @@ package ca.gc.asc_csa.apogy.workspace.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.IExtension;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.Notification;
@@ -128,13 +128,11 @@ public class ProjectProvidersRegistryImpl extends MinimalEObjectImpl.Container i
 			apogyProjectProviders = new ArrayList<Bundle>();
 
 			IExtensionPoint extensionPoint = Platform.getExtensionRegistry()
-					.getExtensionPoint(getPROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID());
+					.getExtensionPoint(getPROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID());			
 			
-			for (IConfigurationElement configurationElement : extensionPoint
-					.getConfigurationElements()) {
-				System.out.println("ProjectProvidersRegistryImpl.getApogyProjectProviders(): " + configurationElement);
-			}
-			
+			for (IExtension extension : extensionPoint.getExtensions()) {
+				apogyProjectProviders.add(Platform.getBundle(extension.getNamespaceIdentifier()));
+			}			
 			
 			setApogyProjectProviders(apogyProjectProviders);
 		}				

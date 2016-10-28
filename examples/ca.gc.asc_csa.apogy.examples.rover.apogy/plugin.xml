@@ -31,12 +31,7 @@
       </Type>
    </extension>
    <extension
-         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
-      <SessionProvider
-            Description="Session showing the use of the Rover example system."
-            Name="Rover Example"
-            URI="sessions/RoverExampleSession.sym">
-      </SessionProvider>
+         point="ca.gc.asc_csa.apogy.workspace.projectProvider">
    </extension>
 
 </plugin>

@@ -383,7 +383,7 @@
           </argumentsList>
         </operationCalls>
       </programs>
-      <programs xsi:type="javascript:JavaScriptProgram" xmi:id="_E8RqgAr6EeaEj-JyoPM1Mg" name="Rover Example Scenario" description="" scriptPath="/js/RoverExampleScenario.js"/>
+      <programs xsi:type="javascript:JavaScriptProgram" xmi:id="_E8RqgAr6EeaEj-JyoPM1Mg" name="Rover Example Scenario" description="" scriptPath="/scripts/RoverExampleScenario.js"/>
     </programsGroups>
   </programsList>
   <dataProductsListContainer xmi:id="_Ca7ZMQrPEeW4-_ONWXXiAw">

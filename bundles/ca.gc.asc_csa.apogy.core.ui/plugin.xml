@@ -91,31 +91,6 @@
          </propertyCategory>
       </propertyContributor>
    </extension>
-   <extension
-         point="org.eclipse.ui.newWizards">
-      <wizard
-            category="ca.gc.asc_csa.apogy.core.ui"
-            class="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogyProjectWizard"
-            icon="icons/sample.gif"
-            id="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogyProjectWizard"
-            name="New Apogy Project"
-            project="true">
-      </wizard>
-      <wizard
-            category="ca.gc.asc_csa.apogy.core.ui"
-            class="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogySessionWizard"
-            icon="icons/sample.gif"
-            id="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogySessionWizard"
-            name="New Apogy Session">
-      </wizard>
-      <wizard
-            category="ca.gc.asc_csa.apogy.core.ui"
-            class="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogySystemWizard"
-            icon="icons/sample.gif"
-            id="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogySystemWizard"
-            name="New Apogy System">
-      </wizard>      
-   </extension>
    
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated apogy_core_ui -->
