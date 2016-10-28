@@ -31,12 +31,7 @@
       </Type>
    </extension>
    <extension
-         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
-      <SessionProvider
-            Description="Session showing the use of the Lidar example system."
-            Name="Lidar Example"
-            URI="sessions/LidarExampleSession.sym">
-      </SessionProvider>
+         point="ca.gc.asc_csa.apogy.workspace.projectProvider">
    </extension>
 
 </plugin>

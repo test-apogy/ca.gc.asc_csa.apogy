@@ -29,11 +29,6 @@
            schema="schema/typeContributor.exsd">
    </extension-point>
    
-   <extension-point
-           id="sessionProvider"
-           name="SessionProvider"
-           schema="schema/sessionProvider.exsd">
-   </extension-point>
    <extension-point id="programFactoryProvider" name="ProgramFactoryProvider" schema="schema/programFactoryProvider.exsd"/>
 
    <extension point="org.eclipse.emf.ecore.generated_package">

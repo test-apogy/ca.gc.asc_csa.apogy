@@ -6,7 +6,7 @@
       <children xsi:type="advanced:Perspective" xmi:id="_MJCyUJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.perspective.welcome" label="Welcome" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Welcome">
         <children xsi:type="basic:PartSashContainer" xmi:id="_j20PMJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7">
           <children xsi:type="basic:PartStack" xmi:id="_TSorMJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
-            <children xsi:type="basic:Part" xmi:id="_4uWh8JI5EeawCfS-XYP3Tg" elementId="ca.gc.asc_csa.apogy.rcp.parts.introPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.workspace.ui/ca.gc.asc_csa.apogy.workspace.ui.parts.IntroPart" label="Welcome" iconURI="">
+            <children xsi:type="basic:Part" xmi:id="_4uWh8JI5EeawCfS-XYP3Tg" elementId="ca.gc.asc_csa.apogy.rcp.parts.introPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.parts.IntroPart" label="Welcome" iconURI="">
               <tags>View</tags>
               <tags>categoryTag:org.eclipse.ui</tags>
             </children>
@@ -30,6 +30,26 @@
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Environment">
         <children xsi:type="basic:PartSashContainer" xmi:id="_Sj4c8IyREeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7"/>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_vW2qwJ00Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.controllers" label="Controllers" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/ProgramsList.gif">
+        <children xsi:type="basic:PartSashContainer" xmi:id="__aDBkJ00Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.10">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_CD0gMJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.11" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_D4VKwJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.9">
+              <children xsi:type="advanced:Placeholder" xmi:id="_GFhloJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.5" ref="_H_U1UJ01Eeal-58svzdKOg"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_ETjHIJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.10">
+              <children xsi:type="advanced:Placeholder" xmi:id="_HdvVwJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.6" ref="_jFkp4J01Eeal-58svzdKOg"/>
+            </children>
+          </children>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_CyIXsJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.12" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_K0TB4J02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.11">
+              <children xsi:type="advanced:Placeholder" xmi:id="_JMD4wJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.7" ref="_BxoHgJ02Eeal-58svzdKOg"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_LcGowJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.12">
+              <children xsi:type="advanced:Placeholder" xmi:id="_LvCy4J02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.8" ref="_l-k3UJ01Eeal-58svzdKOg"/>
+            </children>
+          </children>
+        </children>
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_ypkYICKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.programs" label="Programs" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/ProgramsList.gif" tooltip="Programs">
         <children xsi:type="basic:PartSashContainer" xmi:id="_GRop8CkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.0">
@@ -167,7 +187,7 @@
       </menus>
       <toolbar xmi:id="_oepiwoyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_WS2HYIykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Apogy Camera View" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/icons/CameraView.gif" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_WS2HYIykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Camera View" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/icons/CameraView.gif" closeable="true">
       <tags>View</tags>
       <tags>categoryTag:ca.gc.asc_csa.apogy.addons.ui.category</tags>
       <menus xmi:id="_WS2HYYykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView">
@@ -177,6 +197,17 @@
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_c0P8YJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.part.advancededitor" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ApogyAdvancedEditorPart" label="Advanced Editor"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_RoXV8JfAEeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.part.properties" contributionURI="bundleclass://ca.gc.asc_csa.apogy.common.emf.ui.emfforms/ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.FormPropertiesPart" label="Properties"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_H_U1UJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.part.configurations" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.programs.controllers.ui/ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts.ControllerConfigsPart" label="Configurations"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_jFkp4J01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.part.bindings" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.programs.controllers.ui/ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts.ControllerBindingsPart" label="Bindings"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_l-k3UJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.part.details" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.programs.controllers.ui/ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts.ControllerBindingDetailsPart" label="Details"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BxoHgJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.common.io.jinput.ui.views.JInputStatusView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Status" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.common.io.jinput.ui/icons/joystick.png" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
+      <menus xmi:id="_BxoHgZ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.common.io.jinput.ui.views.JInputStatusView">
+        <tags>ViewMenu</tags>
+      </menus>
+      <toolbar xmi:id="_BxoHgp02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.common.io.jinput.ui.views.JInputStatusView"/>
+    </sharedElements>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.switchPerspective" label="Apogy" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="" command="_C4Fq0B32EeaqJNPAWI4oCw">

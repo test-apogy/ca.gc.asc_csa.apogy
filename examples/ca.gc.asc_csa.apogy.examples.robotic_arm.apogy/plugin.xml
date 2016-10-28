@@ -31,12 +31,7 @@
       </Type>
    </extension>
    <extension
-         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
-      <SessionProvider
-            Description="Session showing the use of the Robotic Arm example system."
-            Name="Robotic Arm Example"
-            URI="sessions/RoboticArmExampleSession.sym">
-      </SessionProvider>
-   </extension>   
+         point="ca.gc.asc_csa.apogy.workspace.projectProvider">
+   </extension>
 
 </plugin>

@@ -14,12 +14,14 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.apogy.common.emf.ui,
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
  org.jfree.jfreechart;bundle-version="1.0.13",
- ca.gc.asc_csa.apogy.core.invocator.ui;bundle-version="0.5.0"
+ ca.gc.asc_csa.apogy.core.invocator.ui;bundle-version="0.5.0",
+ org.eclipse.e4.ui.workbench;bundle-version="1.4.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.core.programs.controllers.ui,
  ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands,
  ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite,
+ ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts,
  ca.gc.asc_csa.apogy.core.programs.controllers.ui.properties.sections
 Bundle-Localization: plugin
 

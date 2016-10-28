@@ -38,20 +38,7 @@
       </Type>
    </extension>
    <extension
-         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
-      <SessionProvider
-            Description="Session showing the use of the Camera example system."
-            Name="Camera Example"
-            URI="sessions/CameraExampleSession.sym">
-      </SessionProvider>
-   </extension>
-   <extension
-         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
-      <SessionProvider
-            Description="Session showing the use of the PTU Camera example system."
-            Name="PTU Camera Example"
-            URI="sessions/PTUCameraExampleSession.sym">
-      </SessionProvider>
+         point="ca.gc.asc_csa.apogy.workspace.projectProvider">
    </extension>
    
 

@@ -405,32 +405,7 @@
             </objectClass>
          </enablement>
       </decorator>
-      
-      <decorator
-            adaptable="true"
-            class="ca.gc.asc_csa.apogy.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
-            icon="icons/ovr/active_session_7x8.gif"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
-            label="Active Session Decorator"
-            lightweight="true"
-            location="TOP_LEFT"
-            state="true">
-         <enablement>
-            <or>
-               <objectClass
-                     name="ca.gc.asc_csa.apogy.core.invocator.InvocatorSession">
-               </objectClass>
-               <objectClass
-                     name="org.eclipse.core.resources.IResource">
-               </objectClass>
-               <objectClass
-                     name="org.eclipse.emf.ecore.resource.Resource">
-               </objectClass>
-            </or>
-         </enablement>
-      </decorator>
-      
-   </extension>
+   </extension>      
    <extension
          point="org.eclipse.ui.views">
       <view
