@@ -40,13 +40,14 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
 Export-Package: ca.gc.asc_csa.apogy.core.invocator.ui,
- ca.gc.asc_csa.apogy.core.invocator.ui.impl,
- ca.gc.asc_csa.apogy.core.invocator.ui.provider,
- ca.gc.asc_csa.apogy.core.invocator.ui.util,
  ca.gc.asc_csa.apogy.core.invocator.ui.commands,
  ca.gc.asc_csa.apogy.core.invocator.ui.composites,
  ca.gc.asc_csa.apogy.core.invocator.ui.decorators,
+ ca.gc.asc_csa.apogy.core.invocator.ui.impl,
+ ca.gc.asc_csa.apogy.core.invocator.ui.parts,
  ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections,
+ ca.gc.asc_csa.apogy.core.invocator.ui.provider,
+ ca.gc.asc_csa.apogy.core.invocator.ui.util,
  ca.gc.asc_csa.apogy.core.invocator.ui.views,
  ca.gc.asc_csa.apogy.core.invocator.ui.wizards
 
