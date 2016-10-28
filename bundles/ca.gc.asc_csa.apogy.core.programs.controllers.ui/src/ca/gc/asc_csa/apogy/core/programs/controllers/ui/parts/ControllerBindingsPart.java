@@ -21,7 +21,7 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractApogySessionBasedPart;
 
-public class ControllerConfigsPart extends AbstractApogySessionBasedPart{
+public class ControllerBindingsPart extends AbstractApogySessionBasedPart{
 	
 	@Inject ESelectionService selectionService;
 	
