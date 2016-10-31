@@ -313,6 +313,15 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyWorkspaceFacade__IsProjectExists__String() {
+		return apogyWorkspaceFacadeEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProjectProvidersRegistry() {
 		return projectProvidersRegistryEClass;
 	}
@@ -418,6 +427,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___DELETE_APOGY_PROJECT__IPROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT);
+		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___IS_PROJECT_EXISTS__STRING);
 
 		projectProvidersRegistryEClass = createEClass(PROJECT_PROVIDERS_REGISTRY);
 		createEAttribute(projectProvidersRegistryEClass, PROJECT_PROVIDERS_REGISTRY__PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID);
@@ -506,6 +516,9 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 
 		op = initEOperation(getApogyWorkspaceFacade__CloseApogyProject(), null, "closeApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCorePackage.getException());
+
+		op = initEOperation(getApogyWorkspaceFacade__IsProjectExists__String(), theEcorePackage.getEBoolean(), "isProjectExists", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(projectProvidersRegistryEClass, ProjectProvidersRegistry.class, "ProjectProvidersRegistry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProjectProvidersRegistry_PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID(), theEcorePackage.getEString(), "PROJECT_PROVIDERS_CONTRIBUTORS_POINT_ID", "ca.gc.asc_csa.apogy.workspace.projectProvider", 0, 1, ProjectProvidersRegistry.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -337,6 +337,19 @@ public interface ApogyWorkspaceFacade extends EObject {
 	void closeApogyProject() throws Exception;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns if the project exists or not.
+	 * @param name Reference to the project name.
+	 * @return Returns true if the project exists.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" nameUnique="false"
+	 * @generated
+	 */
+	boolean isProjectExists(String name);
+
+	/**
 	 * @generated_NOT
 	 */
 	public static ApogyWorkspaceFacade INSTANCE = ApogyWorkspaceFacadeImpl.getInstance();

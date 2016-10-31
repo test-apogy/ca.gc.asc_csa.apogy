@@ -266,10 +266,10 @@ public class WorkspaceProjectsListComposite extends Composite {
 
 	@Override
 	public void dispose() {
+		ApogyWorkspaceFacade.INSTANCE.eAdapters().remove(getWorkspaceAdapter());
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
-		}
-		ApogyWorkspaceFacade.INSTANCE.eAdapters().remove(getWorkspaceAdapter());
+		}		
 		super.dispose();
 	}
 }

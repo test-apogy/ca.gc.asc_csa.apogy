@@ -46,7 +46,16 @@ public class NewApogyProjectWizard extends Wizard {
 				ApogyCommonUiFacade.INSTANCE.getImageDescriptor("platform:/plugin/" + Activator.ID + "/icons/wizban/apogy.png"));
 
 		namedDescribedWizardPage = new NamedDescribedWizardPage(getNewApogyProjectSettings(),
-				getNewApogyProjectSettings());
+				getNewApogyProjectSettings()){
+			@Override
+			protected void validate() {
+				super.validate();				
+				if (ApogyWorkspaceFacade.INSTANCE.isProjectExists(getNewApogyProjectSettings().getName())){				
+					setErrorMessage("A project with the same name already exists");
+					setPageComplete(false);
+				}
+			}
+		};
 	}
 
 	/**

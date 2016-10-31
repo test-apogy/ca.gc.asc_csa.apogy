@@ -264,13 +264,22 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT = 8;
 
 	/**
+	 * The operation id for the '<em>Is Project Exists</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE___IS_PROJECT_EXISTS__STRING = 9;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 9;
+	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 10;
 
 
 	/**
@@ -563,6 +572,16 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__CloseApogyProject();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#isProjectExists(java.lang.String) <em>Is Project Exists</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Project Exists</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#isProjectExists(java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyWorkspaceFacade__IsProjectExists__String();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry <em>Project Providers Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -796,6 +815,13 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT = eINSTANCE.getApogyWorkspaceFacade__CloseApogyProject();
+		/**
+		 * The meta object literal for the '<em><b>Is Project Exists</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_WORKSPACE_FACADE___IS_PROJECT_EXISTS__STRING = eINSTANCE.getApogyWorkspaceFacade__IsProjectExists__String();
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.workspace.impl.ProjectProvidersRegistryImpl <em>Project Providers Registry</em>}' class.
 		 * <!-- begin-user-doc -->

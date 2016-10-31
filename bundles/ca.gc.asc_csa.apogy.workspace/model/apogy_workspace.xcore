@@ -127,7 +127,7 @@ class ApogyWorkspaceFacade{
 	 * @return Reference to the project or null if there is not project with the specified name.
 	 */
 	op IProject getWorkspaceApogyProject(String name)
-	
+		
 	/*
 	 * Opens the specified Apogy Project.
 	 * @param project Reference to the project to open.
@@ -154,6 +154,13 @@ class ApogyWorkspaceFacade{
 	 * @throws Exception Reference to the exception. 
 	 */
 	op void closeApogyProject() throws Exception
+
+	/*
+	 * Returns if the project exists or not. 
+	 * @param name Reference to the project name.
+	 * @return Returns true if the project exists. 
+	 */
+	op boolean isProjectExists(String name)
 		
 	/*
 	 * Indicates which project is opened.
