@@ -588,7 +588,7 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 		URI uri = URI.createPlatformResourceURI(sessionFile.getFullPath().toString(), true);
 		Resource resource = resourceSet.getResource(uri, true);
 
-		InvocatorSession session = (InvocatorSession) EcoreUtil.copy(resource.getContents().get(0));
+		InvocatorSession session = (InvocatorSession) resource.getContents().get(0);
 		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(session);
 
 		setActiveProject(project);

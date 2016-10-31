@@ -161,7 +161,6 @@ public class WorkspaceProjectsListComposite extends Composite {
 		btnExport.setSize(74, 29);
 		btnExport.setText("Export");
 
-//		viewer.setContentProvider(ArrayContentProvider.getInstance());
 		viewer.setContentProvider(ArrayContentProvider.getInstance());
 		viewer.setLabelProvider(new LabelProvider() {
 			@Override
@@ -175,8 +174,9 @@ public class WorkspaceProjectsListComposite extends Composite {
 				return result;
 			}
 		});
-		viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());
 		m_bindingContext = customInitDataBindings();
+		
+		viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());		
 	}
 
 	/**
@@ -256,16 +256,8 @@ public class WorkspaceProjectsListComposite extends Composite {
 		if (workspaceAdapter == null){
 			workspaceAdapter = new AdapterImpl(){
 				@Override
-				public void notifyChanged(Notification msg) {										
-					viewer.refresh(true);
-					System.out.println(
-							"WorkspaceProjectsListComposite.getWorkspaceAdapter().new AdapterImpl() {...}.notifyChanged()");
-					try {
-						throw new Exception("Test");
-					} catch (Exception e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+				public void notifyChanged(Notification msg) {					
+					viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());
 				}
 			};
 		}
