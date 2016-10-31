@@ -284,6 +284,7 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.math.ui</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.processors</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.processors.edit</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.common.resources</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.topology</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.topology.addons.dynamics</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.topology.addons.dynamics.edit</module>

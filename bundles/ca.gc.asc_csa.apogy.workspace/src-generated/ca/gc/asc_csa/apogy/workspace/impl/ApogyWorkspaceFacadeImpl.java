@@ -16,7 +16,6 @@ package ca.gc.asc_csa.apogy.workspace.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -45,6 +44,7 @@ import org.osgi.framework.Bundle;
 
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.resources.ApogyCommonResourcesFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
@@ -580,24 +580,7 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 		}
 
 		/* Import the scripts. */
-		scriptsFolder = getDefaultProgramsFolderName();
-		url = bundle.getEntry(scriptsFolder);
-		if (url != null) {
-			Enumeration<String> entries = bundle.getEntryPaths(scriptsFolder);
-			
-			while (entries.hasMoreElements()){								
-				String entry = entries.nextElement();
-				System.out.println("ApogyWorkspaceFacadeImpl.importApogyProject()" + entry);
-								
-				/* If this is a file, then create it. */
-				if (!(entry.substring(entry.length() - 1).equals("/"))){
-					IFile file = project.getFile(entry);	
-					System.err.println("ApogyWorkspaceFacadeImpl.importApogyProject(): " + entry);
-					url = bundle.getEntry(entry);
-					file.create(url.openStream(), true, null);
-				}
-			}			
-		}
+		ApogyCommonResourcesFacade.INSTANCE.importContent(project.getFolder(getDefaultProgramsFolderName()), bundle, getDefaultProgramsFolderName(), true);
 		setNewWorkspaceProject(project);
 	}
 
