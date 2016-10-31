@@ -50,7 +50,7 @@ import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 import ca.gc.asc_csa.apogy.workspace.ui.Activator;
-import ca.gc.asc_csa.apogy.workspace.ui.wizards.NewApogyProjectWizard;
+import ca.gc.asc_csa.apogy.workspace.ui.wizards.NewProjectWizard;
 
 public class WorkspaceProjectsListComposite extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -126,7 +126,7 @@ public class WorkspaceProjectsListComposite extends Composite {
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				new WizardDialog(parent.getShell(), new NewApogyProjectWizard()).open();
+				new WizardDialog(parent.getShell(), new NewProjectWizard()).open();
 			}
 		});
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));

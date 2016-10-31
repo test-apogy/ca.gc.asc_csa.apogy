@@ -295,7 +295,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle() {
+	public EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle_String() {
 		return apogyWorkspaceFacadeEClass.getEOperations().get(7);
 	}
 
@@ -425,7 +425,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECT__STRING);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___DELETE_APOGY_PROJECT__IPROJECT);
-		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE);
+		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___IS_PROJECT_EXISTS__STRING);
 
@@ -510,8 +510,9 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		addEParameter(op, this.getIProject(), "project", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCorePackage.getException());
 
-		op = initEOperation(getApogyWorkspaceFacade__ImportApogyProject__Bundle(), null, "importApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyWorkspaceFacade__ImportApogyProject__Bundle_String(), null, "importApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getBundle(), "bundle", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "projectName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCorePackage.getException());
 
 		op = initEOperation(getApogyWorkspaceFacade__CloseApogyProject(), null, "closeApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);

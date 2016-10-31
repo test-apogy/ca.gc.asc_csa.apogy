@@ -31,6 +31,7 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -45,9 +46,9 @@ import org.osgi.framework.Bundle;
 
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ProjectProvidersRegistry;
 import ca.gc.asc_csa.apogy.workspace.ui.Activator;
+import ca.gc.asc_csa.apogy.workspace.ui.wizards.ImportRegisteredProjectWizard;
 
 public class RegisteredProjectsListComposite extends Composite {
 	private TableViewer viewer;
@@ -80,7 +81,7 @@ public class RegisteredProjectsListComposite extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent event) {
 				try {
-					ApogyWorkspaceFacade.INSTANCE.importApogyProject(getSelectedBundle());
+					new WizardDialog(parent.getShell(), new ImportRegisteredProjectWizard(getSelectedBundle())).open();
 				} catch (Exception e) {
 					Logger.INSTANCE.log(Activator.ID, "Unable to import the project <" + getSelectedBundle().getSymbolicName() +">", EventSeverity.ERROR, e);
 				}

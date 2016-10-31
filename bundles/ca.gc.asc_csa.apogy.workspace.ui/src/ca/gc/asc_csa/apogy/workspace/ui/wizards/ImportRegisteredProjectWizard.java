@@ -15,11 +15,11 @@ package ca.gc.asc_csa.apogy.workspace.ui.wizards;
 
 import java.lang.reflect.InvocationTargetException;
 
-import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
+import org.osgi.framework.Bundle;
 
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
@@ -30,15 +30,16 @@ import ca.gc.asc_csa.apogy.workspace.ui.Activator;
 import ca.gc.asc_csa.apogy.workspace.ui.ApogyWorkspaceUiFactory;
 import ca.gc.asc_csa.apogy.workspace.ui.NewProjectSettings;
 
-public class NewApogyProjectWizard extends Wizard {
+public class ImportRegisteredProjectWizard extends Wizard {
 
 	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private NewProjectSettings newProjectSettings;
+	private Bundle selectedBundle;
 
 	/**
 	 * Constructor for NewApogySessionWizard.
 	 */
-	public NewApogyProjectWizard() {
+	public ImportRegisteredProjectWizard() {
 		super();
 		setWindowTitle("New Apogy Project");
 		setNeedsProgressMonitor(true);
@@ -58,6 +59,11 @@ public class NewApogyProjectWizard extends Wizard {
 		};
 	}
 
+	public ImportRegisteredProjectWizard(Bundle selectedBundle) {
+		this();
+		this.selectedBundle = selectedBundle;
+	}
+
 	/**
 	 * Adding the page to the wizard.
 	 */
@@ -68,7 +74,14 @@ public class NewApogyProjectWizard extends Wizard {
 	private NewProjectSettings getNewApogyProjectSettings() {
 		if (newProjectSettings == null) {
 			newProjectSettings = ApogyWorkspaceUiFactory.eINSTANCE.createNewProjectSettings();
-			newProjectSettings.applyDefaultValues();
+			/* Find an available name. */
+			String name = selectedBundle.getSymbolicName();			
+			int i = 1;
+			while (ApogyWorkspaceFacade.INSTANCE.isProjectExists(name)){
+				name = selectedBundle.getSymbolicName() + "_" + i;
+				i++;
+			}			
+			newProjectSettings.setName(name);
 		}
 		return newProjectSettings;
 	}
@@ -81,10 +94,9 @@ public class NewApogyProjectWizard extends Wizard {
 					throws CoreException, InvocationTargetException, InterruptedException {
 				try {
 					// Create the project.
-					IProject project = ApogyWorkspaceFacade.INSTANCE.createApogyProject(getNewApogyProjectSettings().getName(), getNewApogyProjectSettings().getDescription());
-					ApogyWorkspaceFacade.INSTANCE.openApogyProject(project);
+					ApogyWorkspaceFacade.INSTANCE.importApogyProject(selectedBundle, getNewApogyProjectSettings().getName());
 				} catch (Exception e) {
-					Logger.INSTANCE.log(Activator.ID, this, "Problems occured while creating project <" + getNewApogyProjectSettings().getName() + ">",
+					Logger.INSTANCE.log(Activator.ID, this, "Problems occured while importing project <" + getNewApogyProjectSettings().getName() + ">",
 							EventSeverity.ERROR, e);
 				} finally {
 					monitor.done();
@@ -98,10 +110,10 @@ public class NewApogyProjectWizard extends Wizard {
 		try {
 			getContainer().run(false, false, createApogyProjectOperation);
 		} catch (InvocationTargetException e) {
-			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while creating project <" + getNewApogyProjectSettings().getName() + ">",
+			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while importing project <" + getNewApogyProjectSettings().getName() + ">",
 					EventSeverity.ERROR, e);
 		} catch (InterruptedException e) {
-			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while creating project <" + getNewApogyProjectSettings().getName() + ">",
+			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while importing project <" + getNewApogyProjectSettings().getName() + ">",
 					EventSeverity.ERROR, e);
 		}
 		return true;

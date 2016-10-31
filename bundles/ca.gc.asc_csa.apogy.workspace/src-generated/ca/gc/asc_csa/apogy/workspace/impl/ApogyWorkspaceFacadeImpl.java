@@ -564,8 +564,8 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 * 
 	 * @generated_NOT
 	 */
-	public void importApogyProject(Bundle bundle) throws Exception {
-		IProject project = createApogyProjectTemplate(bundle.getSymbolicName(), "");
+	public void importApogyProject(Bundle bundle, String projectName) throws Exception {
+		IProject project = createApogyProjectTemplate(projectName, "");
 
 		URL url = null;
 		String entry = "";
@@ -747,9 +747,9 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING:
 				try {
-					importApogyProject((Bundle)arguments.get(0));
+					importApogyProject((Bundle)arguments.get(0), (String)arguments.get(1));
 					return null;
 				}
 				catch (Throwable throwable) {

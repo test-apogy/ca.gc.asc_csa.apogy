@@ -252,7 +252,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE = 7;
+	int APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Close Apogy Project</em>' operation.
@@ -552,14 +552,14 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__DeleteApogyProject__IProject();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#importApogyProject(org.osgi.framework.Bundle) <em>Import Apogy Project</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#importApogyProject(org.osgi.framework.Bundle, java.lang.String) <em>Import Apogy Project</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Import Apogy Project</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#importApogyProject(org.osgi.framework.Bundle)
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#importApogyProject(org.osgi.framework.Bundle, java.lang.String)
 	 * @generated
 	 */
-	EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle();
+	EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle_String();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject() <em>Close Apogy Project</em>}' operation.
@@ -807,7 +807,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE = eINSTANCE.getApogyWorkspaceFacade__ImportApogyProject__Bundle();
+		EOperation APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING = eINSTANCE.getApogyWorkspaceFacade__ImportApogyProject__Bundle_String();
 		/**
 		 * The meta object literal for the '<em><b>Close Apogy Project</b></em>' operation.
 		 * <!-- begin-user-doc -->

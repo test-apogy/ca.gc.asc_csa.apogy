@@ -317,11 +317,12 @@ public interface ApogyWorkspaceFacade extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Imports the specified Apogy Project Bundle.
 	 * @param project Reference to the bundle that contains the Apogy project.
+	 * @param projectName Name of the project to create.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception" bundleDataType="ca.gc.asc_csa.apogy.workspace.Bundle" bundleUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception" bundleDataType="ca.gc.asc_csa.apogy.workspace.Bundle" bundleUnique="false" projectNameUnique="false"
 	 * @generated
 	 */
-	void importApogyProject(Bundle bundle) throws Exception;
+	void importApogyProject(Bundle bundle, String projectName) throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->

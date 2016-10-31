@@ -145,8 +145,9 @@ class ApogyWorkspaceFacade{
 	/*
 	 * Imports the specified Apogy Project Bundle.
 	 * @param project Reference to the bundle that contains the Apogy project.
+	 * @param projectName Name of the project to create.
 	 */
-	op void importApogyProject(Bundle bundle) throws Exception	
+	op void importApogyProject(Bundle bundle, String projectName) throws Exception	
 
 	/*
 	 * Closes the specified Apogy Project.
