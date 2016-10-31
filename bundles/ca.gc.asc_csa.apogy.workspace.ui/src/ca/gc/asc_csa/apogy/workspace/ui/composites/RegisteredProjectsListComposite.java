@@ -31,6 +31,7 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
+import org.eclipse.jface.wizard.IWizard;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -81,7 +82,8 @@ public class RegisteredProjectsListComposite extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent event) {
 				try {
-					new WizardDialog(parent.getShell(), new ImportRegisteredProjectWizard(getSelectedBundle())).open();
+					IWizard wizard = new ImportRegisteredProjectWizard(getSelectedBundle());
+					new WizardDialog(parent.getShell(), wizard).open();
 				} catch (Exception e) {
 					Logger.INSTANCE.log(Activator.ID, "Unable to import the project <" + getSelectedBundle().getSymbolicName() +">", EventSeverity.ERROR, e);
 				}

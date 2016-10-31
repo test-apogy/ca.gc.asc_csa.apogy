@@ -36,11 +36,9 @@ public class ImportRegisteredProjectWizard extends Wizard {
 	private NewProjectSettings newProjectSettings;
 	private Bundle selectedBundle;
 
-	/**
-	 * Constructor for NewApogySessionWizard.
-	 */
-	public ImportRegisteredProjectWizard() {
+	public ImportRegisteredProjectWizard(Bundle selectedBundle) {
 		super();
+		this.selectedBundle = selectedBundle;
 		setWindowTitle("New Apogy Project");
 		setNeedsProgressMonitor(true);
 		setDefaultPageImageDescriptor(
@@ -56,12 +54,7 @@ public class ImportRegisteredProjectWizard extends Wizard {
 					setPageComplete(false);
 				}
 			}
-		};
-	}
-
-	public ImportRegisteredProjectWizard(Bundle selectedBundle) {
-		this();
-		this.selectedBundle = selectedBundle;
+		};		
 	}
 
 	/**
@@ -74,6 +67,7 @@ public class ImportRegisteredProjectWizard extends Wizard {
 	private NewProjectSettings getNewApogyProjectSettings() {
 		if (newProjectSettings == null) {
 			newProjectSettings = ApogyWorkspaceUiFactory.eINSTANCE.createNewProjectSettings();
+			
 			/* Find an available name. */
 			String name = selectedBundle.getSymbolicName();			
 			int i = 1;

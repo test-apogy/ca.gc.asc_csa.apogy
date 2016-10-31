@@ -24,6 +24,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
@@ -93,7 +94,8 @@ public class WorkspaceProjectsListComposite extends Composite {
 				try {
 					ApogyWorkspaceFacade.INSTANCE.openApogyProject(getSelectedProject());
 				} catch (Exception e) {
-					Logger.INSTANCE.log(Activator.ID, "Unable to open project <" + getSelectedProject().getName() + ">", EventSeverity.ERROR, e);
+					Logger.INSTANCE.log(Activator.ID, "Unable to open project <" + getSelectedProject().getName() + ">",
+							EventSeverity.ERROR, e);
 				}
 			}
 		});
@@ -107,10 +109,14 @@ public class WorkspaceProjectsListComposite extends Composite {
 				try {
 					ApogyWorkspaceFacade.INSTANCE.closeApogyProject();
 				} catch (Exception e) {
-					if (ApogyWorkspaceFacade.INSTANCE.getActiveProject() == null){
-						Logger.INSTANCE.log(Activator.ID, "There is no active project to close.", EventSeverity.WARNING);
-					}else{
-						Logger.INSTANCE.log(Activator.ID, "Unable to close the project <" + ApogyWorkspaceFacade.INSTANCE.getActiveProject().getName() + ">", EventSeverity.ERROR, e);
+					if (ApogyWorkspaceFacade.INSTANCE.getActiveProject() == null) {
+						Logger.INSTANCE.log(Activator.ID, "There is no active project to close.",
+								EventSeverity.WARNING);
+					} else {
+						Logger.INSTANCE.log(Activator.ID,
+								"Unable to close the project <"
+										+ ApogyWorkspaceFacade.INSTANCE.getActiveProject().getName() + ">",
+								EventSeverity.ERROR, e);
 					}
 				}
 			}
@@ -138,9 +144,17 @@ public class WorkspaceProjectsListComposite extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent event) {
 				try {
-					ApogyWorkspaceFacade.INSTANCE.deleteApogyProject(getSelectedProject());
+					MessageDialog dialog = new MessageDialog(null, "Delete the selected project", null, "Are you sure to delete the project <" + getSelectedProject().getName() + ">", MessageDialog.QUESTION,
+							new String[] { "Yes", "No" }, 1);
+					int result = dialog.open();
+					if (result == 0){
+						ApogyWorkspaceFacade.INSTANCE.deleteApogyProject(getSelectedProject());
+					}
 				} catch (Exception e) {
-					Logger.INSTANCE.log(Activator.ID, "Unable to delete the project <" + ApogyWorkspaceFacade.INSTANCE.getActiveProject().getName() + ">", EventSeverity.ERROR, e);
+					Logger.INSTANCE.log(Activator.ID,
+							"Unable to delete the project <"
+									+ ApogyWorkspaceFacade.INSTANCE.getActiveProject().getName() + ">",
+							EventSeverity.ERROR, e);
 				}
 			}
 		});
@@ -165,18 +179,18 @@ public class WorkspaceProjectsListComposite extends Composite {
 		viewer.setLabelProvider(new LabelProvider() {
 			@Override
 			public String getText(Object element) {
-				
+
 				IProject project = ((IProject) element);
 				String result = project.getName();
-				if (project == ApogyWorkspaceFacade.INSTANCE.getActiveProject()){
-					result = "<Active> " + result; 
+				if (project == ApogyWorkspaceFacade.INSTANCE.getActiveProject()) {
+					result = "<Active> " + result;
 				}
 				return result;
 			}
 		});
 		m_bindingContext = customInitDataBindings();
-		
-		viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());		
+
+		viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());
 	}
 
 	/**
@@ -213,7 +227,9 @@ public class WorkspaceProjectsListComposite extends Composite {
 
 		/* Close Button Enabled Binding. */
 		@SuppressWarnings("unchecked")
-		IObservableValue<?> observeEnabledWorspaceActiveProject = EMFProperties.value(ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT).observe(ApogyWorkspaceFacade.INSTANCE);
+		IObservableValue<?> observeEnabledWorspaceActiveProject = EMFProperties
+				.value(ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT)
+				.observe(ApogyWorkspaceFacade.INSTANCE);
 		IObservableValue<?> observeEnabledBtnCloseObserveWidget = WidgetProperties.enabled().observe(btnClose);
 		bindingContext.bindValue(observeEnabledBtnCloseObserveWidget, observeEnabledWorspaceActiveProject, null,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
@@ -223,8 +239,7 @@ public class WorkspaceProjectsListComposite extends Composite {
 								return fromObject != null;
 							}
 						}));
-		
-		
+
 		/* Delete Button Enabled Binding. */
 		IObservableValue<?> observeEnabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
 		bindingContext.bindValue(observeEnabledBtnDeleteObserveWidget, observeSingleSelectionViewer, null,
@@ -251,12 +266,12 @@ public class WorkspaceProjectsListComposite extends Composite {
 		//
 		return bindingContext;
 	}
-	
-	private Adapter getWorkspaceAdapter(){
-		if (workspaceAdapter == null){
-			workspaceAdapter = new AdapterImpl(){
+
+	private Adapter getWorkspaceAdapter() {
+		if (workspaceAdapter == null) {
+			workspaceAdapter = new AdapterImpl() {
 				@Override
-				public void notifyChanged(Notification msg) {					
+				public void notifyChanged(Notification msg) {
 					viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());
 				}
 			};
@@ -269,7 +284,7 @@ public class WorkspaceProjectsListComposite extends Composite {
 		ApogyWorkspaceFacade.INSTANCE.eAdapters().remove(getWorkspaceAdapter());
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
-		}		
+		}
 		super.dispose();
 	}
 }
