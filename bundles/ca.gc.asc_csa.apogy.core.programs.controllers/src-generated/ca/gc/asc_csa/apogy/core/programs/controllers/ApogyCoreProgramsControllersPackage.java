@@ -133,13 +133,22 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE = 2;
 
 	/**
+	 * The operation id for the '<em>Set Active Controllers Configuration</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_ACTIVE_CONTROLLERS_CONFIGURATION__CONTROLLERSCONFIGURATION_BOOLEAN = 3;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE_OPERATION_COUNT = 3;
+	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.
@@ -1537,6 +1546,16 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	EOperation getApogyCoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#setActiveControllersConfiguration(ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration, java.lang.Boolean) <em>Set Active Controllers Configuration</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Active Controllers Configuration</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#setActiveControllersConfiguration(ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration, java.lang.Boolean)
+	 * @generated
+	 */
+	EOperation getApogyCoreProgramsControllersFacade__SetActiveControllersConfiguration__ControllersConfiguration_Boolean();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration <em>Controllers Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2152,6 +2171,14 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE = eINSTANCE.getApogyCoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Active Controllers Configuration</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_ACTIVE_CONTROLLERS_CONFIGURATION__CONTROLLERSCONFIGURATION_BOOLEAN = eINSTANCE.getApogyCoreProgramsControllersFacade__SetActiveControllersConfiguration__ControllersConfiguration_Boolean();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.

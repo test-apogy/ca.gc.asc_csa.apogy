@@ -2134,6 +2134,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getProgramsList_ActiveControllersGroup() {
+		return (EReference)programsListEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProgramsGroup() {
 		return programsGroupEClass;
 	}
@@ -3413,6 +3422,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		programsListEClass = createEClass(PROGRAMS_LIST);
 		createEReference(programsListEClass, PROGRAMS_LIST__INVOCATOR_SESSION);
 		createEReference(programsListEClass, PROGRAMS_LIST__PROGRAMS_GROUPS);
+		createEReference(programsListEClass, PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP);
 
 		programsGroupEClass = createEClass(PROGRAMS_GROUP);
 		createEReference(programsGroupEClass, PROGRAMS_GROUP__PROGRAMS_LIST);
@@ -4002,6 +4012,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEClass(programsListEClass, ProgramsList.class, "ProgramsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProgramsList_InvocatorSession(), this.getInvocatorSession(), this.getInvocatorSession_ProgramsList(), "invocatorSession", null, 0, 1, ProgramsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProgramsList_ProgramsGroups(), this.getProgramsGroup(), this.getProgramsGroup_ProgramsList(), "programsGroups", null, 0, -1, ProgramsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgramsList_ActiveControllersGroup(), this.getProgramsGroup(), null, "activeControllersGroup", null, 1, 1, ProgramsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(programsGroupEClass, ProgramsGroup.class, "ProgramsGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProgramsGroup_ProgramsList(), this.getProgramsList(), this.getProgramsList_ProgramsGroups(), "programsList", null, 0, 1, ProgramsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

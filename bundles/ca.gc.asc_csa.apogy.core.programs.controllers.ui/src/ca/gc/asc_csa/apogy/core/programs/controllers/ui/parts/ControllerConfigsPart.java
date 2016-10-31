@@ -16,29 +16,30 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
 import javax.inject.Inject;
 
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractApogySessionBasedPart;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConfigsComposite;
 
 public class ControllerConfigsPart extends AbstractApogySessionBasedPart{
 	
 	@Inject ESelectionService selectionService;
 	
 	protected Composite createContentComposite(Composite parent){
-			return null;	
-		/*return new AdvancedEditorComposite(parent, SWT.None) {
+		return new ControllerConfigsComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) 
 			{
 				super.newSelection(selection);
 				selectionService.setSelection(selection);
 			}
-		};*/
+		};
 	}
 	
-	protected void setSession(ProgramsGroup programsGroup){
-		//((AdvancedEditorComposite)getContentComposite()).setEObject(invocatorSession);
-		
+	protected void setSession(InvocatorSession invocatorSession){
+		((ControllerConfigsComposite)getContentComposite()).setControllersGroup(invocatorSession.getProgramsList().getActiveControllersGroup());	
 	}
 }

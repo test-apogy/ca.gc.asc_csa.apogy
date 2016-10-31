@@ -782,6 +782,9 @@ class ProgramsList
 	@GenModel(property="None")
 	container InvocatorSession invocatorSession opposite programsList	
 	contains ProgramsGroup[0..*] programsGroups opposite programsList
+	
+	@GenModel(notify="true")
+	refers ProgramsGroup[1] activeControllersGroup
 }
 
 class ProgramsGroup extends Named, Described, Archivable{

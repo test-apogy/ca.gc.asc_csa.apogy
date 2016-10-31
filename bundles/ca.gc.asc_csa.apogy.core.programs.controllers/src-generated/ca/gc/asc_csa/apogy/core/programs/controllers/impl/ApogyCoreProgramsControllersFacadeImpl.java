@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
 
@@ -22,10 +23,15 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 
 /**
  * <!-- begin-user-doc -->
@@ -146,6 +152,41 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setActiveControllersConfiguration(ControllersConfiguration controllersConfiguration, Boolean active) {
+		for (Iterator<Program> iteConfig = controllersConfiguration.getProgramsGroup().getPrograms()
+				.iterator(); iteConfig.hasNext();) {
+			ControllersConfiguration config = (ControllersConfiguration) iteConfig.next();
+			Boolean activate = false;
+			if (config == controllersConfiguration && active) {
+				activate = true;
+			}
+			config.eSet(ApogyCoreProgramsControllersPackage.Literals.CONTROLLERS_CONFIGURATION__ACTIVE, activate);
+			for (Iterator<OperationCall> iteOpsCallBinding = config.getOperationCalls().iterator(); iteOpsCallBinding
+					.hasNext();) {
+				OperationCallControllerBinding operationCallControllerBinding = (OperationCallControllerBinding) iteOpsCallBinding
+						.next();
+				operationCallControllerBinding.eSet(
+						ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE,
+						activate);
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public void activateControllersConfiguration(ControllersConfiguration controllersConfiguration) {
+		
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -160,6 +201,9 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 				return sortCustomInputConditioningPoint((List<CustomInputConditioningPoint>)arguments.get(0));
 			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE:
 				return createCustomInputConditioningPoint((Double)arguments.get(0), (Double)arguments.get(1));
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_ACTIVE_CONTROLLERS_CONFIGURATION__CONTROLLERSCONFIGURATION_BOOLEAN:
+				setActiveControllersConfiguration((ControllersConfiguration)arguments.get(0), (Boolean)arguments.get(1));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

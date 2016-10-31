@@ -1279,11 +1279,11 @@ ApogyCommonEMFFacade {
 		if (objectReference.isMany()) {
 			int j = 1;
 			// Find a name that is unique
-			for (int i = 0; i < eContainer.eContents().size(); i++) {
-				Named named = (Named) eContainer.eContents().get(i);
-				if (named.getName().equals(name + "_" + Integer.toString(j))) {
+			for(Iterator<EObject> ite = eContainer.eContents().iterator(); ite.hasNext();){
+				Named namedObject = (Named) ite.next();
+				if (namedObject.getName() != null && namedObject.getName().equals(name + "_" + Integer.toString(j))) {
 					j++;
-					i = 0;
+					ite = eContainer.eContents().iterator();
 				}
 			}
 			return name + "_" + Integer.toString(j);

@@ -14,6 +14,8 @@ package ca.gc.asc_csa.apogy.common.emf.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.edit.EMFEditPlugin;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.ViewerCell;
@@ -61,6 +63,10 @@ public class NamedDescribedListComposite extends EObjectListComposite{
 			if (cell.getElement() instanceof Named) {
 				cell.setText(((Named) cell.getElement()).getName());
 			}
+			if(cell.getText() == ""){
+				cell.setText("<unnamed>");
+			}
+			treeViewerEObjectsList.refresh();
 		}
 		
 		@Override
@@ -85,7 +91,8 @@ public class NamedDescribedListComposite extends EObjectListComposite{
 		public int getToolTipTimeDisplayed(Object object) {
 			return 5000;
 		}
-
-	}
+	}	
+	
+	
 
 }

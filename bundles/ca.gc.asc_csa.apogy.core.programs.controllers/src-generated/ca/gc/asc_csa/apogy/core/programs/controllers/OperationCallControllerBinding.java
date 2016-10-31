@@ -73,7 +73,7 @@ public interface OperationCallControllerBinding extends OperationCall
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
 	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getOperationCallControllerBinding_Active()
-	 * @model unique="false" transient="true"
+	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
 	 */

@@ -326,6 +326,15 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreProgramsControllersFacade__SetActiveControllersConfiguration__ControllersConfiguration_Boolean() {
+		return apogyCoreProgramsControllersFacadeEClass.getEOperations().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -866,6 +875,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT);
 		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST);
 		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE);
+		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_ACTIVE_CONTROLLERS_CONFIGURATION__CONTROLLERSCONFIGURATION_BOOLEAN);
 
 		controllersConfigurationEClass = createEClass(CONTROLLERS_CONFIGURATION);
 		createEAttribute(controllersConfigurationEClass, CONTROLLERS_CONFIGURATION__ACTIVE);
@@ -1022,12 +1032,16 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		addEParameter(op, theEcorePackage.getEDouble(), "inputValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "outputValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCoreProgramsControllersFacade__SetActiveControllersConfiguration__ControllersConfiguration_Boolean(), null, "setActiveControllersConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getControllersConfiguration(), "controllersConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBooleanObject(), "active", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(controllersConfigurationEClass, ControllersConfiguration.class, "ControllersConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getControllersConfiguration_Active(), theEcorePackage.getEBoolean(), "active", "false", 0, 1, ControllersConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getControllersConfiguration_Active(), theEcorePackage.getEBoolean(), "active", "false", 0, 1, ControllersConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationCallControllerBindingEClass, OperationCallControllerBinding.class, "OperationCallControllerBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperationCallControllerBinding_CreateResult(), theEcorePackage.getEBoolean(), "createResult", "false", 0, 1, OperationCallControllerBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOperationCallControllerBinding_Active(), theEcorePackage.getEBoolean(), "active", null, 0, 1, OperationCallControllerBinding.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOperationCallControllerBinding_Active(), theEcorePackage.getEBoolean(), "active", null, 0, 1, OperationCallControllerBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOperationCallControllerBinding_Trigger(), this.getTrigger(), this.getTrigger_OperationCallControllerBinding(), "trigger", null, 1, 1, OperationCallControllerBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getOperationCallControllerBinding__Update(), null, "update", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1150,6 +1164,12 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		   source, 
 		   new String[] {
 			 "documentation", " -------------------------------------------------------------------------\n\nUtilities\n\n-------------------------------------------------------------------------"
+		   });	
+		addAnnotation
+		  (getApogyCoreProgramsControllersFacade__SetActiveControllersConfiguration__ControllersConfiguration_Boolean(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Activates/Deactivates the controllerConfiguration and makes sure there is only one active configuration.\n@param controllersConfiguration Reference to the ControllersConfiguration to activate.\n@param active Value to set"
 		   });	
 		addAnnotation
 		  (controllersConfigurationEClass, 

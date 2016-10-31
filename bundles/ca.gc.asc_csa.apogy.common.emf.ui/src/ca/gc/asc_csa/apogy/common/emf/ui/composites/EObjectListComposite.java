@@ -14,15 +14,19 @@ package ca.gc.asc_csa.apogy.common.emf.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
+import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
@@ -30,6 +34,7 @@ import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
+import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
@@ -43,12 +48,9 @@ import org.eclipse.swt.widgets.TreeColumn;
 public class EObjectListComposite extends Composite {
 	private DataBindingContext m_currentDataBindings;
 
-	private final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
-			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+	private EList<? extends EObject> eObjectsList;
 
-	private EList<EObject> eObjectsList;
-
-	private TreeViewer treeViewerEObjectsList;
+	protected TreeViewer treeViewerEObjectsList;
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
 
 	/**
@@ -144,8 +146,56 @@ public class EObjectListComposite extends Composite {
 	 * Called to get the content provider for the {@link TreeViewer} This method
 	 * can be overwritten to change the content provider
 	 */
-	protected AdapterFactoryContentProvider getContentProvider() {
-		return new EObjectContentProvider(adapterFactory);
+	protected IContentProvider getContentProvider() {
+		return new ContentProvider();
+	}
+
+	protected class ContentProvider implements ITreeContentProvider {
+		Viewer viewer = null;
+		List<EObject> inputList;
+
+		@SuppressWarnings("unchecked")
+		@Override
+		public Object[] getElements(Object inputElement) {
+			if (inputList != null) {
+				for (Iterator<EObject> ite = inputList.iterator(); ite.hasNext();) {
+					ite.next().eAdapters().clear();
+				}
+			}
+
+			inputList = (List<EObject>) inputElement;
+			for (Iterator<EObject> ite = inputList.iterator(); ite.hasNext();) {
+				ite.next().eAdapters().add(new AdapterImpl() {
+					@Override
+					public void notifyChanged(Notification notification) {
+						ContentProvider.this.viewer.refresh();
+					}
+				});
+			}
+			return inputList.toArray();
+		}
+
+		@Override
+		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+			ITreeContentProvider.super.inputChanged(viewer, oldInput, newInput);
+			this.viewer = viewer;
+		}
+
+		@Override
+		public Object[] getChildren(Object parentElement) {
+			return null;
+		}
+
+		@Override
+		public Object getParent(Object element) {
+			return null;
+		}
+
+		@Override
+		public boolean hasChildren(Object element) {
+			return false;
+		}
+
 	}
 
 	/**
@@ -190,41 +240,18 @@ public class EObjectListComposite extends Composite {
 		public int getToolTipTimeDisplayed(Object object) {
 			return 5000;
 		}
-
 	}
 
 	/**
-	 * Content provider for the {@link TreeViewer}
-	 */
-	private class EObjectContentProvider extends AdapterFactoryContentProvider {
-
-		public EObjectContentProvider(AdapterFactory adapterFactory) {
-			super(adapterFactory);
-		}
-
-		@Override
-		public Object[] getElements(Object inputElement) {
-			if (eObjectsList != null) {
-				return eObjectsList.toArray();
-			}
-			Object[] objects = new Object[0];
-			return objects;
-		}
-
-		@Override
-		public boolean hasChildren(Object object) {
-			return false;
-		}
-	}
-
-	/**
-	 * Sets the {@link EList<EObjectst>} to displays it's content
+	 * Sets the {@link EList<?>} to displays it's content
 	 * 
 	 * @param eObjectsList
-	 *            reference to the {@link EList<EObject>}
+	 *            reference to the {@link EList<?>}
 	 */
-	public void setEObjectsList(EList<EObject> eObjectsList) {
+	public void setEObjectsList(EList<? extends EObject> eObjectsList) {
 		this.eObjectsList = eObjectsList;
+
+		System.out.println("EObjectListComposite.setEObjectsList()" + eObjectsList);
 
 		if (eObjectsList != null) {
 			if (m_currentDataBindings != null) {
@@ -239,7 +266,7 @@ public class EObjectListComposite extends Composite {
 	 * 
 	 * @return
 	 */
-	public EList<EObject> getEObjectsList() {
+	public EList<? extends EObject> getEObjectsList() {
 		return this.eObjectsList;
 	}
 
@@ -252,6 +279,7 @@ public class EObjectListComposite extends Composite {
 
 		if (eObjectsList != null) {
 			if (!treeViewerEObjectsList.getTree().isDisposed()) {
+				System.out.println("EObjectListComposite.initDataBindingsCustom()");
 				treeViewerEObjectsList.setInput(eObjectsList);
 
 				if (treeViewerEObjectsList.getTree().getItemCount() > 0) {
