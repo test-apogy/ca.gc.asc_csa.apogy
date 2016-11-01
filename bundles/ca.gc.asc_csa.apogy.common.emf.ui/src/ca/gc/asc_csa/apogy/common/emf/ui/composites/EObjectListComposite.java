@@ -251,8 +251,6 @@ public class EObjectListComposite extends Composite {
 	public void setEObjectsList(EList<? extends EObject> eObjectsList) {
 		this.eObjectsList = eObjectsList;
 
-		System.out.println("EObjectListComposite.setEObjectsList()" + eObjectsList);
-
 		if (eObjectsList != null) {
 			if (m_currentDataBindings != null) {
 				m_currentDataBindings.dispose();
@@ -279,7 +277,6 @@ public class EObjectListComposite extends Composite {
 
 		if (eObjectsList != null) {
 			if (!treeViewerEObjectsList.getTree().isDisposed()) {
-				System.out.println("EObjectListComposite.initDataBindingsCustom()");
 				treeViewerEObjectsList.setInput(eObjectsList);
 
 				if (treeViewerEObjectsList.getTree().getItemCount() > 0) {
