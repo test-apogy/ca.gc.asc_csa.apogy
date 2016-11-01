@@ -580,7 +580,7 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 		}
 
 		/* Import the scripts. */
-		ApogyCommonResourcesFacade.INSTANCE.importContent(project.getFolder(getDefaultProgramsFolderName()), bundle, getDefaultProgramsFolderName(), true);
+		ApogyCommonResourcesFacade.INSTANCE.importContent(project, bundle, getDefaultProgramsFolderName(), true);
 		setNewWorkspaceProject(project);
 	}
 
