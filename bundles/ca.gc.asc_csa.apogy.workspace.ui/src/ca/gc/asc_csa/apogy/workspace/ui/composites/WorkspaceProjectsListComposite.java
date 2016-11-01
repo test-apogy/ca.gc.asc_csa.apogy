@@ -229,6 +229,9 @@ public class WorkspaceProjectsListComposite extends Composite {
 	}
 
 	protected DataBindingContext customInitDataBindings() {
+		
+		ApogyWorkspaceFacade.INSTANCE.eAdapters().remove(getWorkspaceAdapter());
+		
 		DataBindingContext bindingContext = new DataBindingContext();
 
 		IObservableValue<?> observeSingleSelectionViewer = ViewerProperties.singleSelection().observe(viewer);
@@ -293,7 +296,9 @@ public class WorkspaceProjectsListComposite extends Composite {
 			workspaceAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());
+					if (!isDisposed()){
+						viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());
+					}
 				}
 			};
 		}
