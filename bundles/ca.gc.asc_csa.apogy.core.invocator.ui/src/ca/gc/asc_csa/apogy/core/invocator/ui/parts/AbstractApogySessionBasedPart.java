@@ -34,7 +34,7 @@ abstract public class AbstractApogySessionBasedPart {
 	private Adapter adapter;
 
 	@Inject
-	ESelectionService selectionService;
+	protected ESelectionService selectionService;
 
 	@PostConstruct
 	public void createPartControl(Composite parent) {

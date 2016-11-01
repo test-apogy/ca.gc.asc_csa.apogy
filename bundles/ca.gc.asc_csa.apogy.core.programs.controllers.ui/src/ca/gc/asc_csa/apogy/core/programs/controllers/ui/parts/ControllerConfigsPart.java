@@ -13,10 +13,8 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import javax.inject.Inject;
-
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
@@ -26,15 +24,12 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConf
 
 public class ControllerConfigsPart extends AbstractApogySessionBasedPart{
 	
-	@Inject ESelectionService selectionService;
-	
 	protected Composite createContentComposite(Composite parent){
 		return new ControllerConfigsComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) 
 			{
-				super.newSelection(selection);
-				selectionService.setSelection(selection);
+				selectionService.setSelection(((TreeSelection)selection).getFirstElement());
 			}
 		};
 	}

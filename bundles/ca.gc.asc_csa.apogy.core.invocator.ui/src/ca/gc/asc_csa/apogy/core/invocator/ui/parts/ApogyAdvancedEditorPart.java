@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  */
 
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
@@ -28,7 +29,7 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
 			@Override
 			protected void newSelection(ISelection selection) {
 				super.newSelection(selection);
-				selectionService.setSelection(selection);
+				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
 			}
 		};
 	}

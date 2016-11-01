@@ -14,8 +14,6 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import javax.sound.sampled.ReverbType;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -26,6 +24,7 @@ import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -39,7 +38,6 @@ import org.eclipse.swt.widgets.Listener;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedDescribedListComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
@@ -76,6 +74,10 @@ public class ControllerConfigsComposite extends Composite {
 		setLayout(new GridLayout(2, false));
 
 		controllersConfigsComposite = new NamedDescribedListComposite(this, SWT.None) {
+			@Override
+			protected void newSelection(TreeSelection selection) {
+				ControllerConfigsComposite.this.newSelection(selection);
+			}
 			@Override
 			protected String getTitle() {
 				return "";
@@ -160,7 +162,7 @@ public class ControllerConfigsComposite extends Composite {
 			controllersConfigsComposite.removeListener(SWT.Selection, (Listener) selectionChangedListener);
 		}
 		if(adapter != null){
-			
+			controllersGroup.eAdapters().remove(getControllersGroupAdapter());
 		}
 	}
 
