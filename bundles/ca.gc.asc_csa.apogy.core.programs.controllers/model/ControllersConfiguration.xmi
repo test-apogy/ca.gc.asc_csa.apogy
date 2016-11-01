@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<controllers:ControllersConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:controllers="ca.gc.asc_csa.apogy.core.programs.controllers"
-    xsi:schemaLocation="ca.gc.asc_csa.apogy.core.programs.controllers apogy_core_programs_controllers.xcore#/EPackage"/>
