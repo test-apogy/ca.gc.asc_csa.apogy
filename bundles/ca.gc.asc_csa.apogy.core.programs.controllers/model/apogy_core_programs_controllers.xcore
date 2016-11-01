@@ -95,7 +95,7 @@ class OperationCallControllerBinding extends OperationCall
 	boolean createResult = "false"
 	
  	@GenModel(property="Readonly")
-	boolean active
+	transient boolean active
 	
 	contains Trigger[1] trigger opposite operationCallControllerBinding
 	

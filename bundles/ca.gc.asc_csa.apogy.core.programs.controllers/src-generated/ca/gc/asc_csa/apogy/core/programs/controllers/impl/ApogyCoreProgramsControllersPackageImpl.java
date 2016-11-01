@@ -1041,7 +1041,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 
 		initEClass(operationCallControllerBindingEClass, OperationCallControllerBinding.class, "OperationCallControllerBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperationCallControllerBinding_CreateResult(), theEcorePackage.getEBoolean(), "createResult", "false", 0, 1, OperationCallControllerBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOperationCallControllerBinding_Active(), theEcorePackage.getEBoolean(), "active", null, 0, 1, OperationCallControllerBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOperationCallControllerBinding_Active(), theEcorePackage.getEBoolean(), "active", null, 0, 1, OperationCallControllerBinding.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOperationCallControllerBinding_Trigger(), this.getTrigger(), this.getTrigger_OperationCallControllerBinding(), "trigger", null, 1, 1, OperationCallControllerBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getOperationCallControllerBinding__Update(), null, "update", 0, 1, !IS_UNIQUE, IS_ORDERED);
