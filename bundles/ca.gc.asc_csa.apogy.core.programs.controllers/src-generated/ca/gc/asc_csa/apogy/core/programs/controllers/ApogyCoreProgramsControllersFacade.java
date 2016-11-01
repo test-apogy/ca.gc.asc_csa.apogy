@@ -66,4 +66,17 @@ public interface ApogyCoreProgramsControllersFacade extends EObject
 	 */
 	CustomInputConditioningPoint createCustomInputConditioningPoint(double inputValue, double outputValue);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Activates/Deactivates the controllerConfiguration and makes sure there is only one active configuration.
+	 * @param controllersConfiguration Reference to the ControllersConfiguration to activate.
+	 * @param active Value to set
+	 * <!-- end-model-doc -->
+	 * @model controllersConfigurationUnique="false" activeUnique="false"
+	 * @generated
+	 */
+	void setActiveControllersConfiguration(ControllersConfiguration controllersConfiguration, Boolean active);
+
 } // ApogyCoreProgramsControllersFacade

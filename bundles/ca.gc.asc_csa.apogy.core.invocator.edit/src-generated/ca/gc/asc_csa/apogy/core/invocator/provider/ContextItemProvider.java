@@ -142,9 +142,9 @@ public class ContextItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Context_archived_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Context_archived_feature", "_UI_Context_type"),
-				 ApogyCoreInvocatorPackage.Literals.CONTEXT__ARCHIVED,
+				 getString("_UI_Archivable_archived_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Archivable_archived_feature", "_UI_Archivable_type"),
+				 ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED,
 				 true,
 				 false,
 				 false,
@@ -258,7 +258,6 @@ public class ContextItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST);
-			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -319,6 +318,7 @@ public class ContextItemProvider
 			case ApogyCoreInvocatorPackage.CONTEXT__NAME:
 			case ApogyCoreInvocatorPackage.CONTEXT__DESCRIPTION:
 			case ApogyCoreInvocatorPackage.CONTEXT__ARCHIVED:
+			case ApogyCoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST:
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
 			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 			case ApogyCoreInvocatorPackage.CONTEXT__VARIABLES_INSTANTIATED:

@@ -114,7 +114,9 @@ public class ControllersConfigurationImpl extends TriggeredBasedProgramImpl impl
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * @deprecated use {@link ApogyCoreProgramsControllersFacade.INSTANCE.activateControllersConfiguration(controllersConfiguration)}
+	 *  <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
 	 */

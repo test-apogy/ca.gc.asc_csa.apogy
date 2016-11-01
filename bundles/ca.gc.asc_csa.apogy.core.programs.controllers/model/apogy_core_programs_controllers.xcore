@@ -66,6 +66,13 @@ class ApogyCoreProgramsControllersFacade
 	op TreeSet<CustomInputConditioningPoint> sortCustomInputConditioningPoint(List<CustomInputConditioningPoint> points)
 	
 	op CustomInputConditioningPoint createCustomInputConditioningPoint(double inputValue, double outputValue)
+	
+	/*  
+	 * Activates/Deactivates the controllerConfiguration and makes sure there is only one active configuration.
+	 * @param controllersConfiguration Reference to the ControllersConfiguration to activate.
+	 * @param active Value to set
+	 */
+	op void setActiveControllersConfiguration(ControllersConfiguration controllersConfiguration, Boolean active)
 }
 
 /* -------------------------------------------------------------------------
@@ -76,7 +83,7 @@ class ApogyCoreProgramsControllersFacade
 
 class ControllersConfiguration extends TriggeredBasedProgram, OperationCallContainer 
 {	
-	transient boolean active = "false"
+	boolean active = "false"
 }
 
 class OperationCallControllerBinding extends OperationCall

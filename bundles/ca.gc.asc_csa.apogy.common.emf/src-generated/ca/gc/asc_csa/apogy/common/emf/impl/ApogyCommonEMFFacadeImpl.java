@@ -203,6 +203,10 @@ ApogyCommonEMFFacade {
 				return filterArchived((EList<Object>)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN:
 				return getTransactionalEditingDomain();
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS:
+				return getChildEClasses((EClass)arguments.get(0));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT:
+				return getSettableEReferences((EObject)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1274,11 +1278,11 @@ ApogyCommonEMFFacade {
 		if (objectReference.isMany()) {
 			int j = 1;
 			// Find a name that is unique
-			for (int i = 0; i < eContainer.eContents().size(); i++) {
-				Named named = (Named) eContainer.eContents().get(i);
-				if (named.getName().equals(name + "_" + Integer.toString(j))) {
+			for(Iterator<EObject> ite = eContainer.eContents().iterator(); ite.hasNext();){
+				Named namedObject = (Named) ite.next();
+				if (namedObject.getName() != null && namedObject.getName().equals(name + "_" + Integer.toString(j))) {
 					j++;
-					i = 0;
+					ite = eContainer.eContents().iterator();
 				}
 			}
 			return name + "_" + Integer.toString(j);
@@ -1313,6 +1317,60 @@ ApogyCommonEMFFacade {
 	 */
 	public TransactionalEditingDomain getTransactionalEditingDomain() {
 		return TransactionalEditingDomain.Registry.INSTANCE.getEditingDomain("ca.gc.asc_csa.apogy.common.emf.editingDomain");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public List<EClass> getChildEClasses(EClass parentEClass) {
+		List<EClass> classes = null;
+
+		if (parentEClass != null)
+		{
+			EClassFilter filter = new EClassFilter()
+			{
+				public boolean filter(EClass eClass)
+				{
+					boolean result = false;
+					EList<EReference> childReferences = parentEClass.getEAllContainments();
+					for(int i = 0; i < childReferences.size(); i++){
+						if(childReferences.get(i).getEReferenceType() == eClass){
+							result = true;
+							break;
+						}
+					}
+					return result &&
+							!eClass.isInterface() &&
+							!eClass.isAbstract();
+				}
+			};
+
+			List<EClass> list = ApogyCommonEMFFacade.INSTANCE.getAllAvailableEClasses();
+			classes = ApogyCommonEMFFacade.INSTANCE.filterEClasses(list, filter);
+		}
+		return classes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public EList<EReference> getSettableEReferences(EObject eObject) {
+		EList<EReference> structuralFeatures = new BasicEList<EReference>();
+		structuralFeatures.addAll(eObject.eClass().getEAllContainments());
+		
+		for(Iterator<EReference> ite = structuralFeatures.iterator(); ite.hasNext();){
+			EReference eReference = ite.next();
+			final Object value = eObject.eGet(eReference);
+			if(value != null && !(value instanceof List)) {
+				ite.remove();
+			}
+		}
+		
+		return structuralFeatures;
 	}
 
 	/**

@@ -2359,13 +2359,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int PROGRAMS_LIST__PROGRAMS_GROUPS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Active Controllers Group</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP = 2;
+
+	/**
 	 * The number of structural features of the '<em>Programs List</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMS_LIST_FEATURE_COUNT = 2;
+	int PROGRAMS_LIST_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Programs List</em>' class.
@@ -6616,17 +6625,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EClass getContext();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.Context#isArchived <em>Archived</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Archived</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#isArchived()
-	 * @see #getContext()
-	 * @generated
-	 */
-	EAttribute getContext_Archived();
-
-	/**
 	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getContextsList <em>Contexts List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6986,6 +6984,17 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProgramsList_ProgramsGroups();
+
+	/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getActiveControllersGroup <em>Active Controllers Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Active Controllers Group</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getActiveControllersGroup()
+	 * @see #getProgramsList()
+	 * @generated
+	 */
+	EReference getProgramsList_ActiveControllersGroup();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup <em>Programs Group</em>}'.
@@ -9280,14 +9289,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		EClass CONTEXT = eINSTANCE.getContext();
 
 		/**
-		 * The meta object literal for the '<em><b>Archived</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTEXT__ARCHIVED = eINSTANCE.getContext_Archived();
-
-		/**
 		 * The meta object literal for the '<em><b>Contexts List</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9576,6 +9577,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROGRAMS_LIST__PROGRAMS_GROUPS = eINSTANCE.getProgramsList_ProgramsGroups();
+
+		/**
+		 * The meta object literal for the '<em><b>Active Controllers Group</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP = eINSTANCE.getProgramsList_ActiveControllersGroup();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsGroupImpl <em>Programs Group</em>}' class.

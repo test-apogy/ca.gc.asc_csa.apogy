@@ -54,7 +54,7 @@ public interface ControllersConfiguration extends TriggeredBasedProgram, Operati
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
 	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllersConfiguration_Active()
-	 * @model default="false" unique="false" transient="true"
+	 * @model default="false" unique="false"
 	 * @generated
 	 */
   boolean isActive();

@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
+package ca.gc.asc_csa.apogy.common.emf.ui.wizards;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -10,7 +10,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Olivier L. Larouche (Olivier.llarouche@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -31,13 +31,13 @@ import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
 
 public class NamedDescribedWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NamedDescribedWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage";
 	private NamedComposite namedComposite;
 	private DescribedComposite describedComposite;
-	private Adapter adapter; 
+	private Adapter adapter;
 	private Named named;
 	private Described described;
-	
+
 	/**
 	 * Constructor for the WizardPage.
 	 * 
@@ -49,90 +49,90 @@ public class NamedDescribedWizardPage extends WizardPage {
 		setDescription("Enter a name and a description (optional).");
 	}
 
-	public NamedDescribedWizardPage(
-			Named name, Described description) {
+	public NamedDescribedWizardPage(Named name, Described description) {
 		this();
-		if (this.named != null){
+		if (this.named != null) {
 			this.named.eAdapters().remove(getAdapter());
 		}
-		
-		if (this.described != null){
+
+		if (this.described != null) {
 			this.described.eAdapters().remove(getAdapter());
 		}
-		
+
 		this.named = name;
 		this.described = description;
-		
-		if(name != null){
+
+		if (name != null) {
 			name.eAdapters().add(getAdapter());
 		}
-		if(description != null){
+		if (description != null) {
 			description.eAdapters().add(getAdapter());
 		}
 	}
 
 	private Adapter getAdapter() {
-		if (adapter == null){
-			adapter = new AdapterImpl(){
+		if (adapter == null) {
+			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
 					validate();
 				}
 			};
-		}				
+		}
 		return adapter;
 	}
 
 	/**
 	 * @see IDialogPage#createControl(Composite)
-	 */	
-	public void createControl(Composite parent) {	
+	 */
+	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new GridLayout(1, false));
 
 		namedComposite = new NamedComposite(container, SWT.None);
-		namedComposite.setNamed(named);		
+		namedComposite.setNamed(named);
 		namedComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
-		
+
 		describedComposite = new DescribedComposite(container, SWT.None);
 		describedComposite.setDescribed(described);
-		describedComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));	
-		
+		describedComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+
 		setControl(container);
-		
+
 		namedComposite.setFocus();
-		
+
 		validate();
 	}
-	
+
 	@Override
 	public void dispose() {
 		super.dispose();
-		if (this.named != null){
+		if (this.named != null) {
 			this.named.eAdapters().remove(getAdapter());
 		}
-		if (this.described != null){
+		if (this.described != null) {
 			this.described.eAdapters().remove(getAdapter());
-		}		
+		}
 	}
-	
-	public boolean isNamedDesctibedSet(){
+
+	public boolean isNamedDesctibedSet() {
 		return named != null && described != null;
 	}
-	/** 
-	 * This method is invoked to validate the content. 
+
+	/**
+	 * This method is invoked to validate the content.
 	 */
 	protected void validate() {
 		String errorStr = null;
 		String infoStr = null;
-		
-		if (named == null || named.getName() == null || named.getName().isEmpty()){
+
+		if (named == null || named.getName() == null || named.getName().isEmpty()) {
 			errorStr = "A name must be provided.";
 		}
-		
-		if (described == null || described.getDescription() == null || described.getDescription().isEmpty()){
+
+		if (described == null || described.getDescription() == null || described.getDescription().isEmpty()) {
 			infoStr = "It is recommended to enter a description.";
-		}	
+		}
 
 		setMessage(infoStr);
 		setErrorMessage(errorStr);

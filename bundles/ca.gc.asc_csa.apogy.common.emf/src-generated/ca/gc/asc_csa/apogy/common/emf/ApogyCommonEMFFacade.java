@@ -475,4 +475,31 @@ public interface ApogyCommonEMFFacade extends EObject
 	 */
 	TransactionalEditingDomain getTransactionalEditingDomain();
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns all the child classes of the specified parent class. The result list contains
+	 * only implementation classes (not abstract).
+	 * @param parentEClass Type of the class to find child classes.
+	 * @return List of child classes.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EClass>" unique="false" many="false" parentEClassUnique="false"
+	 * @generated
+	 */
+	List<EClass> getChildEClasses(EClass parentEClass);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns a list of all the object's child EReferences that are either null or a list
+	 * @param eObject The parent object
+	 * @return List of EReferences that are either null or a list
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.EList<org.eclipse.emf.ecore.EReference>" unique="false" many="false" eObjectUnique="false"
+	 * @generated
+	 */
+	EList<EReference> getSettableEReferences(EObject eObject);
+
 } // ApogyCommonEMFFacade

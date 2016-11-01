@@ -654,10 +654,8 @@ class ContextsList
  	contains Context[0..*] contexts opposite contextsList
 }
 
-class Context extends Named, Described
-{
-	boolean archived = "false"
-	
+class Context extends Named, Described, Archivable
+{	
 	@GenModel(property="None")
 	container ContextsList contextsList opposite contexts	
 			
@@ -669,7 +667,7 @@ class Context extends Named, Described
 		if (contextsList == null) return null else return contextsList.environment
 	} 
 		
-	@GenModel(children="true")
+ 	@GenModel(notify="true")
 	refers DataProductsList[1] dataProductsList
 		
   	@GenModel(property="Readonly")
@@ -784,6 +782,9 @@ class ProgramsList
 	@GenModel(property="None")
 	container InvocatorSession invocatorSession opposite programsList	
 	contains ProgramsGroup[0..*] programsGroups opposite programsList
+	
+	@GenModel(notify="true")
+	refers ProgramsGroup[1] activeControllersGroup
 }
 
 class ProgramsGroup extends Named, Described, Archivable{

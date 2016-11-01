@@ -10,31 +10,30 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
 
-public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart{
-	
-	protected Composite createContentComposite(Composite parent){
+public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
+
+	protected Composite createContentComposite(Composite parent) {
 		return new AdvancedEditorComposite(parent, SWT.None) {
 			@Override
-			protected void newSelection(ISelection selection) 
-			{
-				super.newSelection(selection);
-				selectionService.setSelection(selection);
+			protected void newSelection(ISelection selection) {
+				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
 			}
 		};
 	}
-	
-	protected void setSession(InvocatorSession invocatorSession){
-		((AdvancedEditorComposite)getContentComposite()).setEObject(invocatorSession);
-		
+
+	protected void setSession(InvocatorSession invocatorSession) {
+		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
 	}
 }

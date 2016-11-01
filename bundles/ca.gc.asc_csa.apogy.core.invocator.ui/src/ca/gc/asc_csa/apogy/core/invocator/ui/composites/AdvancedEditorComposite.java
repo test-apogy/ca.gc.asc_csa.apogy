@@ -14,14 +14,17 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.List;
-
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.edit.command.RemoveCommand;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.TreeSelection;
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -32,15 +35,16 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
 
-public class AdvancedEditorComposite extends Composite{
+public class AdvancedEditorComposite extends Composite {
 
 	private ISelectionChangedListener selectionChangedListener;
 	private EObjectComposite eObjectComposite;
-	
+
 	private Button btnNew;
-	
 
 	/**
 	 * Creates the composite.
@@ -60,11 +64,15 @@ public class AdvancedEditorComposite extends Composite{
 		eObjectComposite = new EObjectComposite(this, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
+				if(selection == null || ((TreeSelection)selection).getFirstElement() == null){
+					System.out.println(
+							"AdvancedEditorComposite.AdvancedEditorComposite(...).new EObjectComposite() {...}.newSelection()");
+				}
 				AdvancedEditorComposite.this.newSelection(selection);
 			}
 		};
 		eObjectComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
-		
+
 		btnNew = new Button(this, SWT.NONE);
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnNew.setText("New");
@@ -73,15 +81,15 @@ public class AdvancedEditorComposite extends Composite{
 			@Override
 			public void handleEvent(Event event) {
 				if (event.type == SWT.Selection) {
-					System.out.println(
-							"AdvancedEditorComposite.AdvancedEditorComposite(...).new Listener() {...}.handleEvent()" + " not yet implemented");
 					/**
-					 * Creates and opens the wizard to create a valid context
+					 * Creates and opens the wizard to create a new child
 					 */
-//					NewChildWizard newChildWizard = new NewChildWizard(eObjectComposite.getSelectedEObject().eClass());
-//					WizardDialog dialog = new WizardDialog(getShell(), newChildWizard);
-//				
-//					dialog.open();
+					NewChildWizard newChildWizard = new NewChildWizard(
+							ApogyCommonEMFFacade.INSTANCE.getSettableEReferences(eObjectComposite.getSelectedEObject()),
+							eObjectComposite.getSelectedEObject());
+					WizardDialog dialog = new WizardDialog(getShell(), newChildWizard);
+
+					dialog.open();
 				}
 			}
 		});
@@ -93,7 +101,31 @@ public class AdvancedEditorComposite extends Composite{
 			@Override
 			public void handleEvent(Event event) {
 				if (event.type == SWT.Selection) {
-					// TODO: Delete button clicked
+					// Get the editing domain of the object
+					EditingDomain editingDomain = AdapterFactoryEditingDomain
+							.getEditingDomainFor(eObjectComposite.getSelectedEObject());
+
+					Command command = null;
+					if (editingDomain != null) {
+						// If the containing feature is a list, the object is
+						// removed from the list
+						if(eObjectComposite.getSelectedEObject().eContainingFeature() != null) {
+							if (eObjectComposite.getSelectedEObject().eContainingFeature().isMany()) {
+								command = new RemoveCommand(editingDomain,
+										(EList<?>) eObjectComposite.getSelectedEObject().eContainer()
+												.eGet(eObjectComposite.getSelectedEObject().eContainingFeature()),
+										eObjectComposite.getSelectedEObject());
+							}
+							// Otherwise, if the feature is not a list, the
+							// EStructuralFeature of the parent is set to null
+							else {
+								command = new SetCommand(editingDomain,
+										eObjectComposite.getSelectedEObject().eContainer(),
+										eObjectComposite.getSelectedEObject().eContainingFeature(), null);
+							} 
+						}
+					}
+					editingDomain.getCommandStack().execute(command);
 				}
 
 			}
@@ -111,28 +143,23 @@ public class AdvancedEditorComposite extends Composite{
 			eObjectComposite.removeListener(SWT.Selection, (Listener) selectionChangedListener);
 		}
 	}
-		
-	private void checkEnableNewButton(EObject eObject){
-		boolean objectFull = true;
+
+	private void checkEnableNewButton(EObject eObject) {
 		if (eObject != null) {
-			EList<EReference> structuralFeatures = eObject.eClass().getEAllContainments();
-			for (int i = 0; i < structuralFeatures.size(); i++) {
-				final Object value = eObject.eGet(structuralFeatures.get(i));
-				if (value == null) {
-					objectFull = false;
-					break;
-				}
-				if (value instanceof List) {
-					objectFull = false;
-					break;
-				}
-			}
+			btnNew.setEnabled(!ApogyCommonEMFFacade.INSTANCE.getSettableEReferences(eObject).isEmpty());
+		} else {
+			btnNew.setEnabled(false);
 		}
-		System.out.println("AdvancedEditorComposite.checkEnableNewButton(): " + objectFull);
-		btnNew.setEnabled(!objectFull);
+
 	}
 
-	public void setEObject(EObject eObject){
+	/**
+	 * Sets the root object for the composite
+	 * 
+	 * @param eObject
+	 *            The root eObject
+	 */
+	public void setEObject(EObject eObject) {
 		eObjectComposite.setEObject(eObject);
 		checkEnableNewButton(eObject);
 	}

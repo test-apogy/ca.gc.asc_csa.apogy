@@ -1,5 +1,4 @@
-package ca.gc.asc_csa.apogy.common.emf.impl;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -12,34 +11,17 @@ package ca.gc.asc_csa.apogy.common.emf.impl;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.SortedSet;
-
-import javax.measure.unit.Unit;
-
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EGenericType;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureTreeNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource;
@@ -48,10 +30,6 @@ import ca.gc.asc_csa.apogy.common.emf.Disposable;
 import ca.gc.asc_csa.apogy.common.emf.Duration;
 import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
 import ca.gc.asc_csa.apogy.common.emf.FixedTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
@@ -67,309 +45,337 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.TreeRootNode;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.SortedSet;
+
+import javax.measure.unit.Unit;
+
+import org.eclipse.core.resources.IFile;
+
+import org.eclipse.core.runtime.jobs.Job;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
  * @generated
  */
-public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyCommonEMFPackage
-{
-  /**
+public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyCommonEMFPackage {
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass apogyCommonEMFFacadeEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass eObjectReferenceEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass namedEClass = null;
+	private EClass namedEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass describedEClass = null;
+	private EClass describedEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass archivableEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass timedEClass = null;
+	private EClass timedEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass serverEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass startableEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass durationEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass timeSourceEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass fixedTimeSourceEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass currentTimeSourceEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass browseableTimeSourceEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass selectionBasedTimeSourceEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass collectionTimedTimeSourceEClass = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass disposableEClass = null;
+	private EClass disposableEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractFeatureNodeEClass = null;
+	private EClass featureNodeAdapterEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass featureNodeAdapterEClass = null;
+	private EClass abstractFeatureNodeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractFeatureListNodeEClass = null;
+	private EClass abstractFeatureListNodeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractFeatureTreeNodeEClass = null;
+	private EClass abstractFeatureTreeNodeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractRootNodeEClass = null;
+	private EClass abstractRootNodeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass treeRootNodeEClass = null;
+	private EClass treeRootNodeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass treeFeatureNodeEClass = null;
+	private EClass treeFeatureNodeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass listRootNodeEClass = null;
+	private EClass listRootNodeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass listFeatureNodeEClass = null;
+	private EClass listFeatureNodeEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass abstractFeatureSpecifierEClass = null;
+	private EClass abstractFeatureSpecifierEClass = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum timeDirectionEEnum = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EEnum rangesEEnum = null;
+	private EEnum rangesEEnum = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType exceptionEDataType = null;
+	private EDataType exceptionEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType listEDataType = null;
+	private EDataType listEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType sortedSetEDataType = null;
+	private EDataType sortedSetEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType eClassFilterEDataType = null;
+	private EDataType eClassFilterEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType numberEDataType = null;
+	private EDataType numberEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType iFileEDataType = null;
+	private EDataType iFileEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType resourceEDataType = null;
+	private EDataType resourceEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType unitEDataType = null;
+	private EDataType unitEDataType = null;
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType collectionEDataType = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType eListEDataType = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType uriEDataType = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType jobEDataType = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType resourceSetEDataType = null;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType transactionalEditingDomainEDataType = null;
 
-		/**
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -378,38 +384,36 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * initialization of the package, or returns the registered package,
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private ApogyCommonEMFPackageImpl()
-  {
+	private ApogyCommonEMFPackageImpl() {
 		super(eNS_URI, ApogyCommonEMFFactory.eINSTANCE);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private static boolean isInited = false;
+	private static boolean isInited = false;
 
-  /**
+	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
 	 * <p>This method is used to initialize {@link ApogyCommonEMFPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static ApogyCommonEMFPackage init()
-  {
+	public static ApogyCommonEMFPackage init() {
 		if (isInited) return (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
 		// Obtain or create and register package
@@ -435,7 +439,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return theApogyCommonEMFPackage;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -444,7 +448,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -453,7 +457,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -462,7 +466,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -471,7 +475,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -480,7 +484,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(3);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -489,7 +493,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(4);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -498,7 +502,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(5);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -507,7 +511,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(6);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -516,7 +520,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(7);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -525,7 +529,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(8);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -534,7 +538,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(9);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -543,7 +547,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(10);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -552,7 +556,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(11);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -561,7 +565,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(12);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -570,7 +574,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(13);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -579,7 +583,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(14);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -588,7 +592,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(15);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -597,7 +601,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(16);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -606,7 +610,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(17);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -615,7 +619,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(18);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -624,7 +628,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(19);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -633,7 +637,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(20);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -642,7 +646,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(21);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -651,7 +655,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(22);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -660,7 +664,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(23);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -669,7 +673,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(24);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -678,7 +682,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(25);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -687,7 +691,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(26);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -696,7 +700,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(27);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -705,7 +709,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(28);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -714,7 +718,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(29);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -723,7 +727,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(30);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -732,7 +736,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(31);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -741,7 +745,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(32);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -750,7 +754,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(33);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -759,7 +763,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(34);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -768,7 +772,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(35);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -777,7 +781,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(36);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -786,7 +790,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(37);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -795,7 +799,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(38);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -804,7 +808,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(39);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -813,7 +817,25 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return apogyCommonEMFFacadeEClass.getEOperations().get(40);
 	}
 
-		/**
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFFacade__GetChildEClasses__EClass() {
+		return apogyCommonEMFFacadeEClass.getEOperations().get(41);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFFacade__GetSettableEReferences__EObject() {
+		return apogyCommonEMFFacadeEClass.getEOperations().get(42);
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -822,7 +844,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return eObjectReferenceEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -831,47 +853,43 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EReference)eObjectReferenceEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getNamed()
-  {
+	public EClass getNamed() {
 		return namedEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getNamed_Name()
-  {
+	public EAttribute getNamed_Name() {
 		return (EAttribute)namedEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getDescribed()
-  {
+	public EClass getDescribed() {
 		return describedEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getDescribed_Description()
-  {
+	public EAttribute getDescribed_Description() {
 		return (EAttribute)describedEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -880,7 +898,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return archivableEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -889,27 +907,25 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)archivableEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTimed()
-  {
+	public EClass getTimed() {
 		return timedEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTimed_Time()
-  {
+	public EAttribute getTimed_Time() {
 		return (EAttribute)timedEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -918,7 +934,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return serverEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -927,7 +943,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)serverEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -936,7 +952,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return startableEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -945,7 +961,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)startableEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -954,7 +970,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return durationEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -963,7 +979,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)durationEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -972,7 +988,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)durationEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -981,7 +997,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)durationEClass.getEStructuralFeatures().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -990,7 +1006,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)durationEClass.getEStructuralFeatures().get(3);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -999,7 +1015,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)durationEClass.getEStructuralFeatures().get(4);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1008,7 +1024,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)durationEClass.getEStructuralFeatures().get(5);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1017,7 +1033,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return durationEClass.getEOperations().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1026,7 +1042,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return timeSourceEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1035,7 +1051,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)timeSourceEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1044,7 +1060,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return fixedTimeSourceEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1053,7 +1069,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return currentTimeSourceEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1062,7 +1078,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)currentTimeSourceEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1071,7 +1087,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)currentTimeSourceEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1080,7 +1096,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return currentTimeSourceEClass.getEOperations().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1089,7 +1105,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return currentTimeSourceEClass.getEOperations().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1098,7 +1114,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return browseableTimeSourceEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1107,7 +1123,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)browseableTimeSourceEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1116,7 +1132,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)browseableTimeSourceEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1125,7 +1141,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)browseableTimeSourceEClass.getEStructuralFeatures().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1134,7 +1150,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)browseableTimeSourceEClass.getEStructuralFeatures().get(3);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1143,7 +1159,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return browseableTimeSourceEClass.getEOperations().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1152,7 +1168,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return browseableTimeSourceEClass.getEOperations().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1161,7 +1177,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return browseableTimeSourceEClass.getEOperations().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1170,7 +1186,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return browseableTimeSourceEClass.getEOperations().get(3);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1179,7 +1195,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return selectionBasedTimeSourceEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1188,7 +1204,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return selectionBasedTimeSourceEClass.getEOperations().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1197,7 +1213,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return collectionTimedTimeSourceEClass;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1206,7 +1222,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)collectionTimedTimeSourceEClass.getEStructuralFeatures().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1215,7 +1231,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EReference)collectionTimedTimeSourceEClass.getEStructuralFeatures().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1224,7 +1240,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EReference)collectionTimedTimeSourceEClass.getEStructuralFeatures().get(2);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1233,7 +1249,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)collectionTimedTimeSourceEClass.getEStructuralFeatures().get(3);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1242,7 +1258,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (EAttribute)collectionTimedTimeSourceEClass.getEStructuralFeatures().get(4);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1251,7 +1267,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return collectionTimedTimeSourceEClass.getEOperations().get(0);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1260,247 +1276,223 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return collectionTimedTimeSourceEClass.getEOperations().get(1);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getDisposable()
-  {
+	public EClass getDisposable() {
 		return disposableEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getDisposable__Dispose()
-  {
+	public EOperation getDisposable__Dispose() {
 		return disposableEClass.getEOperations().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractFeatureNode()
-  {
-		return abstractFeatureNodeEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getFeatureNodeAdapter()
-  {
+	public EClass getFeatureNodeAdapter() {
 		return featureNodeAdapterEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getFeatureNodeAdapter_SourceObject()
-  {
+	public EReference getFeatureNodeAdapter_SourceObject() {
 		return (EReference)featureNodeAdapterEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getFeatureNodeAdapter_FeatureNode()
-  {
+	public EReference getFeatureNodeAdapter_FeatureNode() {
 		return (EReference)featureNodeAdapterEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getFeatureNodeAdapter_CurrentValue()
-  {
+	public EAttribute getFeatureNodeAdapter_CurrentValue() {
 		return (EAttribute)featureNodeAdapterEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getFeatureNodeAdapter_Resolved()
-  {
+	public EAttribute getFeatureNodeAdapter_Resolved() {
 		return (EAttribute)featureNodeAdapterEClass.getEStructuralFeatures().get(3);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractFeatureListNode()
-  {
+	public EClass getAbstractFeatureNode() {
+		return abstractFeatureNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbstractFeatureListNode() {
 		return abstractFeatureListNodeEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractFeatureListNode_Parent()
-  {
+	public EReference getAbstractFeatureListNode_Parent() {
 		return (EReference)abstractFeatureListNodeEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractFeatureListNode_Child()
-  {
+	public EReference getAbstractFeatureListNode_Child() {
 		return (EReference)abstractFeatureListNodeEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractFeatureTreeNode()
-  {
+	public EClass getAbstractFeatureTreeNode() {
 		return abstractFeatureTreeNodeEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractFeatureTreeNode_Parent()
-  {
+	public EReference getAbstractFeatureTreeNode_Parent() {
 		return (EReference)abstractFeatureTreeNodeEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractFeatureTreeNode_Children()
-  {
+	public EReference getAbstractFeatureTreeNode_Children() {
 		return (EReference)abstractFeatureTreeNodeEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractRootNode()
-  {
+	public EClass getAbstractRootNode() {
 		return abstractRootNodeEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractRootNode_SourceClass()
-  {
+	public EReference getAbstractRootNode_SourceClass() {
 		return (EReference)abstractRootNodeEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTreeRootNode()
-  {
+	public EClass getTreeRootNode() {
 		return treeRootNodeEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTreeFeatureNode()
-  {
+	public EClass getTreeFeatureNode() {
 		return treeFeatureNodeEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getListRootNode()
-  {
+	public EClass getListRootNode() {
 		return listRootNodeEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getListFeatureNode()
-  {
+	public EClass getListFeatureNode() {
 		return listFeatureNodeEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getAbstractFeatureSpecifier()
-  {
+	public EClass getAbstractFeatureSpecifier() {
 		return abstractFeatureSpecifierEClass;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractFeatureSpecifier_StructuralFeature()
-  {
+	public EReference getAbstractFeatureSpecifier_StructuralFeature() {
 		return (EReference)abstractFeatureSpecifierEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getAbstractFeatureSpecifier_MultiValued()
-  {
+	public EAttribute getAbstractFeatureSpecifier_MultiValued() {
 		return (EAttribute)abstractFeatureSpecifierEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getAbstractFeatureSpecifier_Index()
-  {
+	public EAttribute getAbstractFeatureSpecifier_Index() {
 		return (EAttribute)abstractFeatureSpecifierEClass.getEStructuralFeatures().get(2);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1509,97 +1501,88 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return timeDirectionEEnum;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EEnum getRanges()
-  {
+	public EEnum getRanges() {
 		return rangesEEnum;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getException()
-  {
+	public EDataType getException() {
 		return exceptionEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getList()
-  {
+	public EDataType getList() {
 		return listEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getSortedSet()
-  {
+	public EDataType getSortedSet() {
 		return sortedSetEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getEClassFilter()
-  {
+	public EDataType getEClassFilter() {
 		return eClassFilterEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getNumber()
-  {
+	public EDataType getNumber() {
 		return numberEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getIFile()
-  {
+	public EDataType getIFile() {
 		return iFileEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getResource()
-  {
+	public EDataType getResource() {
 		return resourceEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getUnit()
-  {
+	public EDataType getUnit() {
 		return unitEDataType;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1608,7 +1591,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return collectionEDataType;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1617,7 +1600,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return eListEDataType;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1626,7 +1609,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return uriEDataType;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1635,7 +1618,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return jobEDataType;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1644,7 +1627,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return resourceSetEDataType;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1653,7 +1636,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return transactionalEditingDomainEDataType;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1662,22 +1645,21 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		return (ApogyCommonEMFFactory)getEFactoryInstance();
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private boolean isCreated = false;
+	private boolean isCreated = false;
 
-  /**
+	/**
 	 * Creates the meta-model objects for the package.  This method is
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void createPackageContents()
-  {
+	public void createPackageContents() {
 		if (isCreated) return;
 		isCreated = true;
 
@@ -1724,6 +1706,8 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT);
 
 		eObjectReferenceEClass = createEClass(EOBJECT_REFERENCE);
 		createEReference(eObjectReferenceEClass, EOBJECT_REFERENCE__EOBJECT);
@@ -1844,22 +1828,21 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		transactionalEditingDomainEDataType = createEDataType(TRANSACTIONAL_EDITING_DOMAIN);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private boolean isInitialized = false;
+	private boolean isInitialized = false;
 
-  /**
+	/**
 	 * Complete the initialization of the package and its meta-model.  This
 	 * method is guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void initializePackageContents()
-  {
+	public void initializePackageContents() {
 		if (isInitialized) return;
 		isInitialized = true;
 
@@ -2103,6 +2086,20 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		addEParameter(op, theEcorePackage.getEJavaObject(), "objects", 0, -1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getApogyCommonEMFFacade__GetTransactionalEditingDomain(), this.getTransactionalEditingDomain(), "getTransactionalEditingDomain", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEMFFacade__GetChildEClasses__EClass(), null, "getChildEClasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEClass(), "parentEClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(theEcorePackage.getEClass());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCommonEMFFacade__GetSettableEReferences__EObject(), null, "getSettableEReferences", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getEList());
+		g2 = createEGenericType(theEcorePackage.getEReference());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
 
 		initEClass(eObjectReferenceEClass, EObjectReference.class, "EObjectReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEObjectReference_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, EObjectReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
