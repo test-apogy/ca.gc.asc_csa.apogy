@@ -15,8 +15,12 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
-public class FormPropertiesPart {
+import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
+public class FormPropertiesPart {
+	
 	private Composite composite;
 
 	@PostConstruct
@@ -28,9 +32,8 @@ public class FormPropertiesPart {
 		composite.setLayoutData(GridDataFactory.fillDefaults().create());
 	}
 
-	@Inject
-	public void setSelection(@Optional @Named(IServiceConstants.ACTIVE_SELECTION) final EObject eObject) {
-
+	@Inject @Optional
+	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) EObject eObject) {
 		if (eObject != null) {
 			for (Control control : composite.getChildren()) {
 				control.dispose();
@@ -39,12 +42,11 @@ public class FormPropertiesPart {
 			try {
 				ECPSWTViewRenderer.INSTANCE.render(composite, eObject);
 			} catch (Exception e) {
-				e.printStackTrace();
+				String message = this.getClass().getSimpleName() + ".setSelection(): "
+						+ "Error while opening EMF Forms";
+				Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
 			}
-
 			composite.layout();
 		}
-
 	}
-
 }

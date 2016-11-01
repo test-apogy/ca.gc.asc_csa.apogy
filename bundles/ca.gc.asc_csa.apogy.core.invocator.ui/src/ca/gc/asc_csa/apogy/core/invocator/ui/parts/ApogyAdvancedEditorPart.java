@@ -28,7 +28,6 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
 		return new AdvancedEditorComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
-				super.newSelection(selection);
 				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
 			}
 		};

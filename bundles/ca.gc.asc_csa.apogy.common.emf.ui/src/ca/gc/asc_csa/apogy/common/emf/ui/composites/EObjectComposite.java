@@ -28,6 +28,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.window.ToolTip;
 import org.eclipse.swt.SWT;
@@ -59,11 +60,6 @@ public class EObjectComposite extends Composite {
 	private EObject eObject;
 	private boolean filterArchived = false;
 
-	public EObjectComposite(Composite parent, int style,
-			EObject eObject) {
-		this(parent, style);
-	}
-
 	/**
 	 * Creates the composite.
 	 * 
@@ -84,7 +80,7 @@ public class EObjectComposite extends Composite {
 		setLayout(new GridLayout(1, true));
 	
 		instanceViewer = new TreeViewer(this, SWT.BORDER
-				| SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
+				| SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION | SWT.SINGLE);
 
 		ColumnViewerToolTipSupport.enableFor(instanceViewer,
 				ToolTip.NO_RECREATE);
@@ -150,13 +146,13 @@ public class EObjectComposite extends Composite {
 
 	@Override
 	public void dispose() {
-		super.dispose();
-		toolkit.dispose();
 		instanceViewer.removeSelectionChangedListener(getSelectionChangedListener());
+		toolkit.dispose();		
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
 		}
+		super.dispose();
 	}
 
 	/**
@@ -167,7 +163,7 @@ public class EObjectComposite extends Composite {
 		if (selectionChangedListener == null){
 			selectionChangedListener = new ISelectionChangedListener() {				
 				@Override
-				public void selectionChanged(SelectionChangedEvent event) {
+				public void selectionChanged(SelectionChangedEvent event) {				
 					newSelection(event.getSelection());
 				}
 			};
@@ -212,12 +208,11 @@ public class EObjectComposite extends Composite {
 					@Override
 					public void notifyChanged(Notification notification) {
 						instanceViewer.refresh();
-						super.notifyChanged(notification);
 					}
 				});
 			}else{
 				instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 			}
 		}
-	}
+	}	
 }

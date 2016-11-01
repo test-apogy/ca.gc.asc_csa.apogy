@@ -6,6 +6,8 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator {
 
 	private static BundleContext context;
+	
+	public static final String ID = "ca.gc.asc_csa.apogy.common.emf.ui.emfforms";
 
 	static BundleContext getContext() {
 		return context;

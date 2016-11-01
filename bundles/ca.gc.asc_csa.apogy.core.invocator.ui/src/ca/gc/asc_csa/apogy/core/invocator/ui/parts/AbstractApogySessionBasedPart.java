@@ -45,12 +45,12 @@ abstract public class AbstractApogySessionBasedPart {
 	}
 
 	/**
-	 * Specifies the {@link Composite} to insert in the part's composite
+	 * Specifies the {@link Composite} to insert in the part
 	 */
 	abstract protected Composite createContentComposite(Composite parent);
 
 	/**
-	 * Gets the content {@link Composite} in the part's composite
+	 * Gets the content {@link Composite} in the part
 	 * 
 	 * @return Composite
 	 */
@@ -83,6 +83,5 @@ abstract public class AbstractApogySessionBasedPart {
 	@PreDestroy
 	protected void dispose() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
-		System.out.println("ApogyAdvancedEditorPart.dispose()");
 	}
 }

@@ -64,6 +64,10 @@ public class AdvancedEditorComposite extends Composite {
 		eObjectComposite = new EObjectComposite(this, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
+				if(selection == null || ((TreeSelection)selection).getFirstElement() == null){
+					System.out.println(
+							"AdvancedEditorComposite.AdvancedEditorComposite(...).new EObjectComposite() {...}.newSelection()");
+				}
 				AdvancedEditorComposite.this.newSelection(selection);
 			}
 		};
