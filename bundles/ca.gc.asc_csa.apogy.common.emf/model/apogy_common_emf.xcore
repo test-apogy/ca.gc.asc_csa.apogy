@@ -238,7 +238,7 @@ class ApogyCommonEMFFacade
 	  * Returns the default Apogy {@link TransactionalEditingDomain).
 	  * @return Reference to the Apogy {@link TransactionalEditingDomain).
 	  */	 
-	 op TransactionalEditingDomain getTransactionalEditingDomain()
+	 op TransactionalEditingDomain getEditingDomain()
 	 
 	 /*
 	 * Returns all the child classes of the specified parent class. The result list contains

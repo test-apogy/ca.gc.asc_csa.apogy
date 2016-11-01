@@ -813,7 +813,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonEMFFacade__GetTransactionalEditingDomain() {
+	public EOperation getApogyCommonEMFFacade__GetEditingDomain() {
 		return apogyCommonEMFFacadeEClass.getEOperations().get(40);
 	}
 
@@ -1705,7 +1705,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST);
-		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_EDITING_DOMAIN);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT);
 
@@ -2085,7 +2085,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		op = initEOperation(getApogyCommonEMFFacade__FilterArchived__EList(), theEcorePackage.getEJavaObject(), "filterArchived", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "objects", 0, -1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getApogyCommonEMFFacade__GetTransactionalEditingDomain(), this.getTransactionalEditingDomain(), "getTransactionalEditingDomain", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCommonEMFFacade__GetEditingDomain(), this.getTransactionalEditingDomain(), "getEditingDomain", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCommonEMFFacade__GetChildEClasses__EClass(), null, "getChildEClasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEClass(), "parentEClass", 0, 1, !IS_UNIQUE, IS_ORDERED);

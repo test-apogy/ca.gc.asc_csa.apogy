@@ -464,13 +464,13 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	int APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST = 39;
 
 	/**
-	 * The operation id for the '<em>Get Transactional Editing Domain</em>' operation.
+	 * The operation id for the '<em>Get Editing Domain</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN = 40;
+	int APOGY_COMMON_EMF_FACADE___GET_EDITING_DOMAIN = 40;
 
 	/**
 	 * The operation id for the '<em>Get Child EClasses</em>' operation.
@@ -2689,14 +2689,14 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	EOperation getApogyCommonEMFFacade__FilterArchived__EList();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getTransactionalEditingDomain() <em>Get Transactional Editing Domain</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getEditingDomain() <em>Get Editing Domain</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Transactional Editing Domain</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getTransactionalEditingDomain()
+	 * @return the meta object for the '<em>Get Editing Domain</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getEditingDomain()
 	 * @generated
 	 */
-	EOperation getApogyCommonEMFFacade__GetTransactionalEditingDomain();
+	EOperation getApogyCommonEMFFacade__GetEditingDomain();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getChildEClasses(org.eclipse.emf.ecore.EClass) <em>Get Child EClasses</em>}' operation.
@@ -4013,12 +4013,12 @@ public interface ApogyCommonEMFPackage extends EPackage {
 		EOperation APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST = eINSTANCE.getApogyCommonEMFFacade__FilterArchived__EList();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Transactional Editing Domain</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Editing Domain</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN = eINSTANCE.getApogyCommonEMFFacade__GetTransactionalEditingDomain();
+		EOperation APOGY_COMMON_EMF_FACADE___GET_EDITING_DOMAIN = eINSTANCE.getApogyCommonEMFFacade__GetEditingDomain();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Child EClasses</b></em>' operation.

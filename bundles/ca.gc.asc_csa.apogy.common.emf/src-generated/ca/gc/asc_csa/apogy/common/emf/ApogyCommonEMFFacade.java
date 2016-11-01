@@ -473,7 +473,7 @@ public interface ApogyCommonEMFFacade extends EObject
 	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.emf.TransactionalEditingDomain" unique="false"
 	 * @generated
 	 */
-	TransactionalEditingDomain getTransactionalEditingDomain();
+	TransactionalEditingDomain getEditingDomain();
 
 		/**
 	 * <!-- begin-user-doc -->

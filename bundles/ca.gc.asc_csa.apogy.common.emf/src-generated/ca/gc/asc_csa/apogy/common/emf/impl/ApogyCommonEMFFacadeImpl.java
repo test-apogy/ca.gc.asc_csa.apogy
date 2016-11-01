@@ -201,8 +201,8 @@ ApogyCommonEMFFacade {
 				return getDefaultName((EObject)arguments.get(0), (EObject)arguments.get(1), (EReference)arguments.get(2));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST:
 				return filterArchived((EList<Object>)arguments.get(0));
-			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN:
-				return getTransactionalEditingDomain();
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_EDITING_DOMAIN:
+				return getEditingDomain();
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS:
 				return getChildEClasses((EClass)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT:
@@ -1315,7 +1315,7 @@ ApogyCommonEMFFacade {
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public TransactionalEditingDomain getTransactionalEditingDomain() {
+	public TransactionalEditingDomain getEditingDomain() {
 		return TransactionalEditingDomain.Registry.INSTANCE.getEditingDomain("ca.gc.asc_csa.apogy.common.emf.editingDomain");
 	}
 
