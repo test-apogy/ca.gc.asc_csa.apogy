@@ -14,11 +14,16 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.ITableLabelProvider;
+import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
+import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -31,6 +36,8 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 
 public class ControllerBindingsComposite extends Composite {
@@ -99,47 +106,6 @@ public class ControllerBindingsComposite extends Composite {
 		btnEdit.setText("Edit");
 		
 		treeViewer.addSelectionChangedListener(getTreeViewerSelectionChangedListener());
-
-//		treeViewer.setContentProvider(getContentProvider());
-//		treeViewer.setLabelProvider(getLabelProvider());
-
-//		btnNew = new Button(this, SWT.NONE);
-//		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-//		btnNew.setText("New");
-//		btnNew.setEnabled(true);
-//		btnNew.addListener(SWT.Selection, new Listener() {
-//			@Override
-//			public void handleEvent(Event event) {
-//
-//				ControllersConfiguration config = (ControllersConfiguration) ApogyCoreProgramsControllersFactory.eINSTANCE
-//						.create(ApogyCoreProgramsControllersPackage.Literals.CONTROLLERS_CONFIGURATION);
-//				config.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(controllersGroup, config, ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
-//				
-//				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(controllersGroup);
-//				AddCommand command = new AddCommand(editingDomain, controllersGroup,
-//						ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, config);
-//				
-//				editingDomain.getCommandStack().execute(command);
-//			}
-//		});
-//
-//		Button btnDelete = new Button(this, SWT.NONE);
-//		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-//		btnDelete.setText("Delete");
-//		btnDelete.addListener(SWT.Selection, new Listener() {
-//			@Override
-//			public void handleEvent(Event event) {
-//				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(controllersGroup);
-//				RemoveCommand command = new RemoveCommand(editingDomain, controllersGroup,
-//						ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, controllersConfigsComposite.getSelectedEObject());
-//				
-//				editingDomain.getCommandStack().execute(command);
-//			}
-//		});
-//		
-//		Label label = new Label(this, SWT.SEPARATOR | SWT.HORIZONTAL);
-//		label.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-
 	}
 	
 	private ISelectionChangedListener getTreeViewerSelectionChangedListener() {
@@ -156,11 +122,87 @@ public class ControllerBindingsComposite extends Composite {
 	}
 
 	protected void newSelection(ISelection selection) {
-//		this.selectedControllerConfiguration = (ControllersConfiguration) selection;
 	}
 	
 	public void setControllersConfiguration(ControllersConfiguration controllersConfiguration) {
 		this.controllersConfiguration = controllersConfiguration;
+	}
+	
+	/**
+	 * Label provider for the TreeViewer
+	 */
+	private class VariableImplementationLabelProvider extends
+			AdapterFactoryLabelProvider implements ITableLabelProvider{
+
+		public VariableImplementationLabelProvider(AdapterFactory adapterFactory) {
+			super(adapterFactory);
+		}
+
+		private static final int FEATURE_COLUMN_ID = 0;
+		private static final int INTERFACE_COLUMN_ID = 1;
+		private static final int IMPLEMENTATION_COLUMN_ID = 2;
+
+		@Override
+		public String getColumnText(Object object, int columnIndex) {
+			String str = "<undefined>";
+
+			switch (columnIndex) {
+			case FEATURE_COLUMN_ID:
+				str = EMFEcoreInvocatorEditUtilities.getName((AbstractTypeImplementation) object);
+				break;
+			case INTERFACE_COLUMN_ID:
+				str = EMFEcoreInvocatorEditUtilities.getInterfaceName((AbstractTypeImplementation) object, false);
+				break;
+
+			case IMPLEMENTATION_COLUMN_ID:
+				str = EMFEcoreInvocatorEditUtilities.getImplementationName((AbstractTypeImplementation) object, false);
+				break;
+
+			default:
+				break;
+			}
+
+			return str;
+		}
+	}	
+	
+	/**
+	 * Content provider for the TreeViewer
+	 */
+	private class VariableImplementationContentProvider implements
+			ITreeContentProvider {
+
+		@Override
+		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+		}
+
+		@Override
+		public void dispose() {
+		}
+
+		@Override
+		public boolean hasChildren(Object element) {
+			return (!((AbstractTypeImplementation) element)
+					.getTypeMemberImplementations().isEmpty());
+		}
+
+		@Override
+		public Object getParent(Object element) {
+			/** Not used. */
+			return null;
+		}
+
+		@Override
+		public Object[] getElements(Object inputElement) {
+			return null; //TODO: Get elements
+		}
+
+		@Override
+		public Object[] getChildren(Object parentElement) {
+			AbstractTypeImplementation abstractTypeImplementation = (AbstractTypeImplementation) parentElement;
+			return abstractTypeImplementation.getTypeMemberImplementations()
+					.toArray();
+		}
 	}
 
 	@Override

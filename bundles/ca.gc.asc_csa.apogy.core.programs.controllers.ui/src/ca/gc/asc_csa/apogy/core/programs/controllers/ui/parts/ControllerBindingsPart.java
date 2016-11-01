@@ -25,6 +25,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -57,17 +58,9 @@ public class ControllerBindingsPart{
 	
 	@Inject @Optional
 	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllersConfiguration selection){
-		System.out.println("ControllerBindingsPart.setSelection()");
 		setConfiguration(selection);
 	}
-	
-//	@Inject @Optional
-//	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ISelection selection){
-//		System.out.println("ControllerBindingsPart.setSelection()");
-//		//setConfiguration(selection);
-//	}
-
-	
+		
 	/**
 	 * This method is called when the {@link InvocatorSession} needs to be
 	 * changed or initialized.
