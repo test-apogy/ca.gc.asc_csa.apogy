@@ -49,6 +49,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
@@ -200,10 +201,8 @@ ApogyCommonEMFFacade {
 				return getDefaultName((EObject)arguments.get(0), (EObject)arguments.get(1), (EReference)arguments.get(2));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST:
 				return filterArchived((EList<Object>)arguments.get(0));
-			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT:
-				return moveUp((EList<Object>)arguments.get(0), arguments.get(1));
-			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT:
-				return moveDown((EList<Object>)arguments.get(0), arguments.get(1));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN:
+				return getTransactionalEditingDomain();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1294,7 +1293,6 @@ ApogyCommonEMFFacade {
 	 * @generated_NOT
 	 */
 	public EList<Object> filterArchived(EList<Object> objects) {
-		System.out.println("ApogyCoreInvocatorFacadeImpl.filterArchived()" + objects);
 		if(!objects.isEmpty()){
 			for(Iterator<Object> iter = objects.iterator(); iter.hasNext();){
 				Object object = iter.next();
@@ -1305,7 +1303,6 @@ ApogyCommonEMFFacade {
 				}
 			}
 		}
-		System.out.println("ApogyCoreInvocatorFacadeImpl.filterArchived()" + objects);
 		return objects;
 	}
 
@@ -1314,23 +1311,8 @@ ApogyCommonEMFFacade {
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public EList<Object> moveUp(EList<Object> objects, Object object) {
-		int index = objects.indexOf(object);
-		objects.remove(index);
-		objects.add(index-1, object);
-		return objects;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public EList<Object> moveDown(EList<Object> objects, Object object) {
-		int index = objects.indexOf(object);
-		objects.remove(index);
-		objects.add(index+1, object);
-		return objects;
+	public TransactionalEditingDomain getTransactionalEditingDomain() {
+		return TransactionalEditingDomain.Registry.INSTANCE.getEditingDomain("ca.gc.asc_csa.apogy.common.emf.editingDomain");
 	}
 
 	/**

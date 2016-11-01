@@ -465,22 +465,13 @@ public interface ApogyCommonEMFPackage extends EPackage
 	int APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST = 39;
 
 		/**
-	 * The operation id for the '<em>Move Up</em>' operation.
+	 * The operation id for the '<em>Get Transactional Editing Domain</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT = 40;
-
-		/**
-	 * The operation id for the '<em>Move Down</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT = 41;
+	int APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN = 40;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -489,7 +480,7 @@ public interface ApogyCommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 42;
+	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 41;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -2267,6 +2258,17 @@ public interface ApogyCommonEMFPackage extends EPackage
 
 
 		/**
+	 * The meta object id for the '<em>Transactional Editing Domain</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.transaction.TransactionalEditingDomain
+	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getTransactionalEditingDomain()
+	 * @generated
+	 */
+	int TRANSACTIONAL_EDITING_DOMAIN = 41;
+
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2677,24 +2679,14 @@ public interface ApogyCommonEMFPackage extends EPackage
 	EOperation getApogyCommonEMFFacade__FilterArchived__EList();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#moveUp(org.eclipse.emf.common.util.EList, java.lang.Object) <em>Move Up</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getTransactionalEditingDomain() <em>Get Transactional Editing Domain</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Move Up</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#moveUp(org.eclipse.emf.common.util.EList, java.lang.Object)
+	 * @return the meta object for the '<em>Get Transactional Editing Domain</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getTransactionalEditingDomain()
 	 * @generated
 	 */
-	EOperation getApogyCommonEMFFacade__MoveUp__EList_Object();
-
-		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#moveDown(org.eclipse.emf.common.util.EList, java.lang.Object) <em>Move Down</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Move Down</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#moveDown(org.eclipse.emf.common.util.EList, java.lang.Object)
-	 * @generated
-	 */
-	EOperation getApogyCommonEMFFacade__MoveDown__EList_Object();
+	EOperation getApogyCommonEMFFacade__GetTransactionalEditingDomain();
 
 		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference <em>EObject Reference</em>}'.
@@ -3627,6 +3619,17 @@ public interface ApogyCommonEMFPackage extends EPackage
 	EDataType getResourceSet();
 
 		/**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.transaction.TransactionalEditingDomain <em>Transactional Editing Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Transactional Editing Domain</em>'.
+	 * @see org.eclipse.emf.transaction.TransactionalEditingDomain
+	 * @model instanceClass="org.eclipse.emf.transaction.TransactionalEditingDomain"
+	 * @generated
+	 */
+	EDataType getTransactionalEditingDomain();
+
+		/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3981,20 +3984,12 @@ public interface ApogyCommonEMFPackage extends EPackage
 		EOperation APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST = eINSTANCE.getApogyCommonEMFFacade__FilterArchived__EList();
 
 				/**
-		 * The meta object literal for the '<em><b>Move Up</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Transactional Editing Domain</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT = eINSTANCE.getApogyCommonEMFFacade__MoveUp__EList_Object();
-
-				/**
-		 * The meta object literal for the '<em><b>Move Down</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT = eINSTANCE.getApogyCommonEMFFacade__MoveDown__EList_Object();
+		EOperation APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN = eINSTANCE.getApogyCommonEMFFacade__GetTransactionalEditingDomain();
 
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -4779,6 +4774,16 @@ public interface ApogyCommonEMFPackage extends EPackage
 		 * @generated
 		 */
 		EDataType RESOURCE_SET = eINSTANCE.getResourceSet();
+
+				/**
+		 * The meta object literal for the '<em>Transactional Editing Domain</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.transaction.TransactionalEditingDomain
+		 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getTransactionalEditingDomain()
+		 * @generated
+		 */
+		EDataType TRANSACTIONAL_EDITING_DOMAIN = eINSTANCE.getTransactionalEditingDomain();
 
   }
 

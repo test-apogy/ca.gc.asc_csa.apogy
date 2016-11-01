@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
@@ -360,6 +361,13 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	private EDataType resourceSetEDataType = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType transactionalEditingDomainEDataType = null;
 
 		/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -801,17 +809,8 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonEMFFacade__MoveUp__EList_Object() {
+	public EOperation getApogyCommonEMFFacade__GetTransactionalEditingDomain() {
 		return apogyCommonEMFFacadeEClass.getEOperations().get(40);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCommonEMFFacade__MoveDown__EList_Object() {
-		return apogyCommonEMFFacadeEClass.getEOperations().get(41);
 	}
 
 		/**
@@ -1650,6 +1649,15 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getTransactionalEditingDomain() {
+		return transactionalEditingDomainEDataType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCommonEMFFactory getApogyCommonEMFFactory() {
 		return (ApogyCommonEMFFactory)getEFactoryInstance();
 	}
@@ -1715,8 +1723,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST);
-		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___MOVE_UP__ELIST_OBJECT);
-		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___MOVE_DOWN__ELIST_OBJECT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN);
 
 		eObjectReferenceEClass = createEClass(EOBJECT_REFERENCE);
 		createEReference(eObjectReferenceEClass, EOBJECT_REFERENCE__EOBJECT);
@@ -1834,6 +1841,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		uriEDataType = createEDataType(URI);
 		jobEDataType = createEDataType(JOB);
 		resourceSetEDataType = createEDataType(RESOURCE_SET);
+		transactionalEditingDomainEDataType = createEDataType(TRANSACTIONAL_EDITING_DOMAIN);
 	}
 
   /**
@@ -2094,13 +2102,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		op = initEOperation(getApogyCommonEMFFacade__FilterArchived__EList(), theEcorePackage.getEJavaObject(), "filterArchived", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "objects", 0, -1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCommonEMFFacade__MoveUp__EList_Object(), theEcorePackage.getEJavaObject(), "moveUp", 0, -1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEJavaObject(), "objects", 0, -1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEJavaObject(), "object", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCommonEMFFacade__MoveDown__EList_Object(), theEcorePackage.getEJavaObject(), "moveDown", 0, -1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEJavaObject(), "objects", 0, -1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEJavaObject(), "object", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCommonEMFFacade__GetTransactionalEditingDomain(), this.getTransactionalEditingDomain(), "getTransactionalEditingDomain", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(eObjectReferenceEClass, EObjectReference.class, "EObjectReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEObjectReference_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, EObjectReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2240,6 +2242,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		initEDataType(uriEDataType, org.eclipse.emf.common.util.URI.class, "URI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(jobEDataType, Job.class, "Job", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(resourceSetEDataType, ResourceSet.class, "ResourceSet", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(transactionalEditingDomainEDataType, TransactionalEditingDomain.class, "TransactionalEditingDomain", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

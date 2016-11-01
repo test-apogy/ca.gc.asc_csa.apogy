@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
 import ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFFacadeImpl;
 
@@ -466,28 +467,12 @@ public interface ApogyCommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the array with the specified object one position higher
-	 * @param objects Refers to the array containing the object to move up
-	 * @param object Refers to the object to move up
-	 * @return Modified array of objects
+	 * Returns the default Apogy {@link TransactionalEditingDomain).
+	 * @return Reference to the Apogy {@link TransactionalEditingDomain).
 	 * <!-- end-model-doc -->
-	 * @model unique="false" objectsUnique="false" objectsMany="true" objectUnique="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.emf.TransactionalEditingDomain" unique="false"
 	 * @generated
 	 */
-	EList<Object> moveUp(EList<Object> objects, Object object);
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Returns the array with the specified object one position lower
-	 * @param objects Refers to the array containing the object to move down
-	 * @param object Refers to the object to move down
-	 * @return Modified array of objects
-	 * <!-- end-model-doc -->
-	 * @model unique="false" objectsUnique="false" objectsMany="true" objectUnique="false"
-	 * @generated
-	 */
-	EList<Object> moveDown(EList<Object> objects, Object object);
+	TransactionalEditingDomain getTransactionalEditingDomain();
 
 } // ApogyCommonEMFFacade

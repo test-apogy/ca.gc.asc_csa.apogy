@@ -83,23 +83,6 @@
    </extension>
       
    <extension
-         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
-      <propertyContributor
-            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
-         <propertyCategory
-               category="ca.gc.asc_csa.apogy.core.ui.property.category.Default">
-         </propertyCategory>
-      </propertyContributor>
-   </extension>
-   
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated apogy_core_ui -->
-      <package
-            uri="ca.gc.asc_csa.apogy.core.ui"
-            class="ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage"
-            genModel="model/apogy_core_ui.xcore"/>
-   </extension>
-   <extension
          point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
             Class="ca.gc.asc_csa.apogy.core.ui.ResultNodePresentationAdapter">
@@ -374,4 +357,12 @@
          </run>
       </runtime>
    </extension>   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_core_ui -->
+      <package
+            uri="ca.gc.asc_csa.apogy.core.ui"
+            class="ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage"
+            genModel="model/apogy_core_ui.xcore"/>
+   </extension>
+
 </plugin>

@@ -43,6 +43,7 @@ import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.ecore.EReference
+import org.eclipse.emf.transaction.TransactionalEditingDomain
 
 /* ------------------------------------------------------------------------------------------
  * 
@@ -62,6 +63,7 @@ type EList<EObject> wraps EList
 type URI wraps URI
 type Job wraps org.eclipse.core.runtime.jobs.Job
 type ResourceSet wraps ResourceSet
+type TransactionalEditingDomain wraps TransactionalEditingDomain
 
 /* ------------------------------------------------------------------------------------------
  * 
@@ -232,21 +234,11 @@ class ApogyCommonEMFFacade
 	  */
 	 op Object[] filterArchived(Object[] objects)
 	 
-	  /*
-	  * Returns the array with the specified object one position higher
-	  * @param objects Refers to the array containing the object to move up
-	  * @param object Refers to the object to move up
-	  * @return Modified array of objects
-	  */
-	 op Object[] moveUp(Object[] objects, Object object)
-	 
-	  /*
-	  * Returns the array with the specified object one position lower
-	  * @param objects Refers to the array containing the object to move down
-	  * @param object Refers to the object to move down
-	  * @return Modified array of objects
-	  */
-	 op Object[] moveDown(Object[] objects, Object object)
+	 /*
+	  * Returns the default Apogy {@link TransactionalEditingDomain).
+	  * @return Reference to the Apogy {@link TransactionalEditingDomain).
+	  */	 
+	 op TransactionalEditingDomain getTransactionalEditingDomain()
 }
 
 /**
