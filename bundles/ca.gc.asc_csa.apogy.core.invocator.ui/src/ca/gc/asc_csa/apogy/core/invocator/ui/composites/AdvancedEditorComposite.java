@@ -14,12 +14,14 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.core.databinding.observable.ChangeEvent;
+import org.eclipse.core.databinding.observable.IChangeListener;
+import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.RemoveCommand;
 import org.eclipse.emf.edit.command.SetCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -87,6 +89,14 @@ public class AdvancedEditorComposite extends Composite {
 					NewChildWizard newChildWizard = new NewChildWizard(
 							ApogyCommonEMFFacade.INSTANCE.getSettableEReferences(eObjectComposite.getSelectedEObject()),
 							eObjectComposite.getSelectedEObject());
+					// Listener that sets the new child as the selected item
+					newChildWizard.getCreatedChild().addChangeListener(new IChangeListener() {
+						@SuppressWarnings("unchecked")
+						@Override
+						public void handleChange(ChangeEvent event) {
+							eObjectComposite.setSelectedEObject(((WritableValue<EObject>)event.getObservable()).getValue());
+						}
+					});
 					WizardDialog dialog = new WizardDialog(getShell(), newChildWizard);
 
 					dialog.open();
@@ -102,8 +112,8 @@ public class AdvancedEditorComposite extends Composite {
 			public void handleEvent(Event event) {
 				if (event.type == SWT.Selection) {
 					// Get the editing domain of the object
-					EditingDomain editingDomain = AdapterFactoryEditingDomain
-							.getEditingDomainFor(eObjectComposite.getSelectedEObject());
+					EditingDomain editingDomain = ApogyCommonEMFFacade.INSTANCE.getTransactionalEditingDomain();
+							//AdapterFactoryEditingDomain.getEditingDomainFor(eObjectComposite.getSelectedEObject());
 
 					Command command = null;
 					if (editingDomain != null) {

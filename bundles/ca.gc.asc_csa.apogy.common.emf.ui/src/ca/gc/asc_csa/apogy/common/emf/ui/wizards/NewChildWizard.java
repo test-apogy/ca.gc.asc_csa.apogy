@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -21,13 +22,12 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseChildEReferenceWizardPage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
 
 public class NewChildWizard extends Wizard {
@@ -35,7 +35,8 @@ public class NewChildWizard extends Wizard {
 	private ChooseChildEReferenceWizardPage chooseSubClassWizardPage;
 	private EList<EReference> eReferencesList;
 	private EObject parent;
-
+	private WritableValue<EObject> createdChild;
+	
 	/**
 	 * Constructor for NewContextWizard.
 	 */
@@ -48,6 +49,7 @@ public class NewChildWizard extends Wizard {
 		setDefaultPageImageDescriptor(image);
 		this.eReferencesList = eReferencesList;
 		this.parent = parent;
+		createdChild = new WritableValue<>();
 	}
 
 	/**
@@ -75,26 +77,32 @@ public class NewChildWizard extends Wizard {
 	@Override
 	public boolean performFinish() {
 		// Get the editing domain of the parent
-		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(parent);
+		EditingDomain editingDomain = ApogyCommonEMFFacade.INSTANCE.getTransactionalEditingDomain();//AdapterFactoryEditingDomain.getEditingDomainFor(parent);
 
 		if (editingDomain != null) {
 			Command command = null;
+			EObject eObject = EcoreUtil.create(chooseSubClassWizardPage.getSelectedEClass());;
 			// If the selected reference is a list
 			if (chooseSubClassWizardPage.getSelectedEReference().isMany()) {
 				// Add the new eObject to the list
 				command = new AddCommand(editingDomain, parent, chooseSubClassWizardPage.getSelectedEReference(),
-						EcoreUtil.create(chooseSubClassWizardPage.getSelectedEClass()));
+						eObject);
 			}
 			// Otherwise, if the reference is not a list
 			else {
 				// Set the corresponding EReference of the parent to the new
 				// eObject
 				command = new SetCommand(editingDomain, parent, chooseSubClassWizardPage.getSelectedEReference(),
-						EcoreUtil.create(chooseSubClassWizardPage.getSelectedEClass()));
+						eObject);
 			}
 			editingDomain.getCommandStack().execute(command);
+			createdChild.setValue(eObject);
 			return true;
 		}
 		return false;
+	}
+	
+	public WritableValue<EObject> getCreatedChild(){
+		return createdChild;
 	}
 }

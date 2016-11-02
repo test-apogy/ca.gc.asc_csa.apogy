@@ -29,6 +29,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -129,9 +130,7 @@ public class EObjectListComposite extends Composite {
 	 *            The specified {@link EObject}
 	 */
 	public void setSelectedEObject(EObject eObject) {
-		if (eObjectsList.contains(eObject))
-			;
-		treeViewerEObjectsList.setSelection((IStructuredSelection) eObject);
+		treeViewerEObjectsList.setSelection(new StructuredSelection(eObject));
 	}
 
 	/**

@@ -25,7 +25,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -69,7 +68,6 @@ public class ControllerBindingsPart{
 	 *            Reference to the selection.
 	 */
 	protected void setConfiguration(ControllersConfiguration controllersConfiguration) {
-		System.out.println("ControllerBindingsPart.setConfiguration()");
 		if(adapter != null){
 			this.controllersConfiguration.eAdapters().remove(getControllersConfigurationAdapter());
 		}

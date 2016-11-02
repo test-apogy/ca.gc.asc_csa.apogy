@@ -14,8 +14,6 @@ package ca.gc.asc_csa.apogy.common.emf.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.edit.EMFEditPlugin;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.ViewerCell;

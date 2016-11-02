@@ -169,6 +169,7 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 			}
 		}else{
 			ProgramsGroup contollerGroup = (ProgramsGroup) ApogyCoreInvocatorFactory.eINSTANCE.create(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP);
+			contollerGroup.setName("Controllers Group");
 			getProgramsGroups().add(contollerGroup);
 			this.eSet(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP, contollerGroup);
 		}

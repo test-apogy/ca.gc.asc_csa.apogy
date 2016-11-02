@@ -28,7 +28,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.TreeSelection;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.window.ToolTip;
 import org.eclipse.swt.SWT;
@@ -186,6 +186,16 @@ public class EObjectComposite extends Composite {
 	public EObject getSelectedEObject() {
 		IStructuredSelection selection = (IStructuredSelection) instanceViewer.getSelection();
 		return (EObject) selection.getFirstElement();
+	}
+	
+	/**
+	 * Sets the selected {@link EObject}.
+	 * 
+	 * @return Reference to the {@link EObject}.
+	 */
+	public void setSelectedEObject(EObject eObject) {
+		instanceViewer.refresh();
+		instanceViewer.setSelection(new StructuredSelection(eObject));
 	}
 	
 	public void filterArchived(boolean filterArchived){
