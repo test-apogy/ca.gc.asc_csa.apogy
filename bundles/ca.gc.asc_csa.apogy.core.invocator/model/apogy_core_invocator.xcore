@@ -320,7 +320,13 @@ class ApogyCoreInvocatorFacade
 	  * @param invocatorSession the session for which the context is built.
 	  * @return Reference to the new context. 
 	  */
-	 op Context createContext(InvocatorSession invocatorSession)	 
+	 op Context createContext(InvocatorSession invocatorSession)	
+	 
+	 /*
+	  * Gets the {@link ProgramsGroup} named "Controllers group".
+	  * @return Reference to the controller's programsGroup.
+	  */ 
+	  op ProgramsGroup getControllersGroup()
 } 
 
 enum VariableListenerEventType{
@@ -782,9 +788,6 @@ class ProgramsList
 	@GenModel(property="None")
 	container InvocatorSession invocatorSession opposite programsList	
 	contains ProgramsGroup[0..*] programsGroups opposite programsList
-	
-	@GenModel(notify="true")
-	refers ProgramsGroup[1] activeControllersGroup
 }
 
 class ProgramsGroup extends Named, Described, Archivable{

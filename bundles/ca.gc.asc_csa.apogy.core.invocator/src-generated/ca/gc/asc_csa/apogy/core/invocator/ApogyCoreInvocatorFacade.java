@@ -564,4 +564,16 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @generated
 	 */
 	Context createContext(InvocatorSession invocatorSession);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gets the {@link ProgramsGroup} named "Controllers group".
+	 * @return Reference to the controller's programsGroup.
+	 * <!-- end-model-doc -->
+	 * @model kind="operation" unique="false"
+	 * @generated
+	 */
+	ProgramsGroup getControllersGroup();
 } // ApogyCoreInvocatorFacade

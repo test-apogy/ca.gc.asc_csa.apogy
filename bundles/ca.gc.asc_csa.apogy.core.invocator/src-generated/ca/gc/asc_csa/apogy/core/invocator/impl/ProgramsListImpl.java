@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
@@ -41,7 +40,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl#getProgramsGroups <em>Programs Groups</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl#getActiveControllersGroup <em>Active Controllers Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,15 +55,6 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected EList<ProgramsGroup> programsGroups;
-		/**
-	 * The cached value of the '{@link #getActiveControllersGroup() <em>Active Controllers Group</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActiveControllersGroup()
-	 * @generated
-	 * @ordered
-	 */
-	protected ProgramsGroup activeControllersGroup;
 		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -156,49 +145,6 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 
 		/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public ProgramsGroup getActiveControllersGroup() {
-		if (this.eIsSet(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP)) {
-			InternalEObject oldActiveControllersGroup = (InternalEObject)activeControllersGroup;
-			activeControllersGroup = (ProgramsGroup)eResolveProxy(oldActiveControllersGroup);
-			if (activeControllersGroup != oldActiveControllersGroup) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP, oldActiveControllersGroup, activeControllersGroup));
-			}
-		}else{
-			ProgramsGroup contollerGroup = (ProgramsGroup) ApogyCoreInvocatorFactory.eINSTANCE.create(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP);
-			contollerGroup.setName("Controllers Group");
-			getProgramsGroups().add(contollerGroup);
-			this.eSet(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP, contollerGroup);
-		}
-		return activeControllersGroup;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ProgramsGroup basicGetActiveControllersGroup() {
-		return activeControllersGroup;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setActiveControllersGroup(ProgramsGroup newActiveControllersGroup) {
-		ProgramsGroup oldActiveControllersGroup = activeControllersGroup;
-		activeControllersGroup = newActiveControllersGroup;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP, oldActiveControllersGroup, activeControllersGroup));
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -263,9 +209,6 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 				return basicGetInvocatorSession();
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
 				return getProgramsGroups();
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP:
-				if (resolve) return getActiveControllersGroup();
-				return basicGetActiveControllersGroup();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -287,9 +230,6 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 				getProgramsGroups().clear();
 				getProgramsGroups().addAll((Collection<? extends ProgramsGroup>)newValue);
 				return;
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP:
-				setActiveControllersGroup((ProgramsGroup)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -309,9 +249,6 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
 				getProgramsGroups().clear();
 				return;
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP:
-				setActiveControllersGroup((ProgramsGroup)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -329,8 +266,6 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 				return basicGetInvocatorSession() != null;
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
 				return programsGroups != null && !programsGroups.isEmpty();
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP:
-				return activeControllersGroup != null;
 		}
 		return super.eIsSet(featureID);
 	}

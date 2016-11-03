@@ -35,7 +35,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getProgramsGroups <em>Programs Groups</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getActiveControllersGroup <em>Active Controllers Group</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getProgramsList()
@@ -90,32 +89,5 @@ public interface ProgramsList extends EObject
 	 * @generated
 	 */
 	EList<ProgramsGroup> getProgramsGroups();
-
-		/**
-	 * Returns the value of the '<em><b>Active Controllers Group</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Active Controllers Group</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Active Controllers Group</em>' reference.
-	 * @see #setActiveControllersGroup(ProgramsGroup)
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getProgramsList_ActiveControllersGroup()
-	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
-	 * @generated
-	 */
-	ProgramsGroup getActiveControllersGroup();
-
-		/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getActiveControllersGroup <em>Active Controllers Group</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Active Controllers Group</em>' reference.
-	 * @see #getActiveControllersGroup()
-	 * @generated
-	 */
-	void setActiveControllersGroup(ProgramsGroup value);
 
 } // ProgramsList

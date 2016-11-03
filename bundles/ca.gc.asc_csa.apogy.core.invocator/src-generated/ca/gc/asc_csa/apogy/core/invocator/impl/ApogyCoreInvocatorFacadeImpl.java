@@ -1413,6 +1413,17 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProgramsGroup getControllersGroup() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1578,6 +1589,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return getAllScriptBasedPrograms((ProgramsList)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION:
 				return createContext((InvocatorSession)arguments.get(0));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP:
+				return getControllersGroup();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

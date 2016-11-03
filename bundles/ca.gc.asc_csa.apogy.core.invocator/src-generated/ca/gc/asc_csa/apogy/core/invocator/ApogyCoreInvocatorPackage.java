@@ -476,13 +476,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION = 38;
 
 	/**
+	 * The operation id for the '<em>Get Controllers Group</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP = 39;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 39;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 40;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -2359,22 +2368,13 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int PROGRAMS_LIST__PROGRAMS_GROUPS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Active Controllers Group</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP = 2;
-
-	/**
 	 * The number of structural features of the '<em>Programs List</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMS_LIST_FEATURE_COUNT = 3;
+	int PROGRAMS_LIST_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Programs List</em>' class.
@@ -5773,6 +5773,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EOperation getApogyCoreInvocatorFacade__CreateContext__InvocatorSession();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getControllersGroup() <em>Get Controllers Group</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Controllers Group</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getControllersGroup()
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__GetControllersGroup();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6984,17 +6994,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProgramsList_ProgramsGroups();
-
-	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getActiveControllersGroup <em>Active Controllers Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Active Controllers Group</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getActiveControllersGroup()
-	 * @see #getProgramsList()
-	 * @generated
-	 */
-	EReference getProgramsList_ActiveControllersGroup();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup <em>Programs Group</em>}'.
@@ -8609,6 +8608,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		EOperation APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION = eINSTANCE.getApogyCoreInvocatorFacade__CreateContext__InvocatorSession();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Controllers Group</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP = eINSTANCE.getApogyCoreInvocatorFacade__GetControllersGroup();
+
+		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9577,14 +9584,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROGRAMS_LIST__PROGRAMS_GROUPS = eINSTANCE.getProgramsList_ProgramsGroups();
-
-		/**
-		 * The meta object literal for the '<em><b>Active Controllers Group</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP = eINSTANCE.getProgramsList_ActiveControllersGroup();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsGroupImpl <em>Programs Group</em>}' class.

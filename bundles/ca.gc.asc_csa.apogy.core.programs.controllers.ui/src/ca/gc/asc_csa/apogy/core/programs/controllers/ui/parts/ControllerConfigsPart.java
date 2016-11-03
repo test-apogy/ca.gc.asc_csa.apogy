@@ -18,6 +18,7 @@ import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractApogySessionBasedPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConfigsComposite;
@@ -35,6 +36,6 @@ public class ControllerConfigsPart extends AbstractApogySessionBasedPart{
 	}
 	
 	protected void setSession(InvocatorSession invocatorSession){
-		((ControllerConfigsComposite)getContentComposite()).setControllersGroup(invocatorSession.getProgramsList().getActiveControllersGroup());	
+		((ControllerConfigsComposite)getContentComposite()).setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());	
 	}
 }

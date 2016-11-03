@@ -21,7 +21,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -73,34 +72,11 @@ public class ProgramsListItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addActiveControllersGroupPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
   /**
-	 * This adds a property descriptor for the Active Controllers Group feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActiveControllersGroupPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ProgramsList_activeControllersGroup_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ProgramsList_activeControllersGroup_feature", "_UI_ProgramsList_type"),
-				 ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-		/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -169,9 +145,6 @@ public class ProgramsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ProgramsList.class)) {
-			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__ACTIVE_CONTROLLERS_GROUP:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS_GROUPS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
