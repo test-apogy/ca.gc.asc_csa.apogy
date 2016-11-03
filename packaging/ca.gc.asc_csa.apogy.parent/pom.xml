@@ -246,6 +246,7 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.emf.ui.edit</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.emf.ui.emfforms</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.emf.templates</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.common.emf.transaction</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.file.csv</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.common.file.csv.edit</module>

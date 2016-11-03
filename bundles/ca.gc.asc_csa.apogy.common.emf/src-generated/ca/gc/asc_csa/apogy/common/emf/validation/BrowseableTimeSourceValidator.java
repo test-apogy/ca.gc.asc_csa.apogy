@@ -4,9 +4,9 @@
  */
 package ca.gc.asc_csa.apogy.common.emf.validation;
 
-import ca.gc.asc_csa.apogy.common.emf.TimeDirection;
-
 import java.util.Date;
+
+import ca.gc.asc_csa.apogy.common.emf.TimeDirection;
 
 /**
  * A sample validator interface for {@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource}.

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;

@@ -30,8 +30,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
+
 import ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFFacadeImpl;
 
 /**
@@ -462,18 +461,6 @@ public interface ApogyCommonEMFFacade extends EObject
 	 * @generated
 	 */
 	EList<Object> filterArchived(EList<Object> objects);
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Returns the default Apogy {@link TransactionalEditingDomain).
-	 * @return Reference to the Apogy {@link TransactionalEditingDomain).
-	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.emf.TransactionalEditingDomain" unique="false"
-	 * @generated
-	 */
-	TransactionalEditingDomain getTransactionalEditingDomain();
 
 		/**
 	 * <!-- begin-user-doc -->

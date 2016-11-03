@@ -31,19 +31,18 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.common.emf
 
-import org.eclipse.emf.ecore.EOperation
-import org.eclipse.emf.ecore.EClass
-import org.eclipse.emf.ecore.EDate
-import org.eclipse.emf.ecore.ETypedElement
-import org.eclipse.emf.ecore.EStructuralFeature
-import org.eclipse.emf.ecore.EObject
 import org.eclipse.core.resources.IFile
-import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.URI
-import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.emf.ecore.EClass
+import org.eclipse.emf.ecore.EDate
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EOperation
 import org.eclipse.emf.ecore.EReference
-import org.eclipse.emf.transaction.TransactionalEditingDomain
+import org.eclipse.emf.ecore.EStructuralFeature
+import org.eclipse.emf.ecore.ETypedElement
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.resource.ResourceSet
 
 /* ------------------------------------------------------------------------------------------
  * 
@@ -63,7 +62,6 @@ type EList<EObject> wraps EList
 type URI wraps URI
 type Job wraps org.eclipse.core.runtime.jobs.Job
 type ResourceSet wraps ResourceSet
-type TransactionalEditingDomain wraps TransactionalEditingDomain
 
 /* ------------------------------------------------------------------------------------------
  * 
@@ -233,12 +231,6 @@ class ApogyCommonEMFFacade
 	  * @return Array of filtered objects
 	  */
 	 op Object[] filterArchived(Object[] objects)
-	 
-	 /*
-	  * Returns the default Apogy {@link TransactionalEditingDomain).
-	  * @return Reference to the Apogy {@link TransactionalEditingDomain).
-	  */	 
-	 op TransactionalEditingDomain getTransactionalEditingDomain()
 	 
 	 /*
 	 * Returns all the child classes of the specified parent class. The result list contains

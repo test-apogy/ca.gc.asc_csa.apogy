@@ -4,11 +4,11 @@
  */
 package ca.gc.asc_csa.apogy.common.emf.validation;
 
-import ca.gc.asc_csa.apogy.common.emf.Timed;
-
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
+
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
 /**
  * A sample validator interface for {@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource}.

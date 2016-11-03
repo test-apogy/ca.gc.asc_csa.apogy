@@ -2,21 +2,18 @@
  */
 package ca.gc.asc_csa.apogy.common.emf.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Duration;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-
-import java.lang.reflect.InvocationTargetException;
-
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->

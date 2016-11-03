@@ -4,9 +4,9 @@
  */
 package ca.gc.asc_csa.apogy.common.emf.validation;
 
-import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
-
 import org.eclipse.emf.ecore.EObject;
+
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 
 /**
  * A sample validator interface for {@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter}.

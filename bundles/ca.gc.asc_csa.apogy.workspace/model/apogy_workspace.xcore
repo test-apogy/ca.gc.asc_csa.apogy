@@ -134,6 +134,12 @@ class ApogyWorkspaceFacade{
 	 * @throws Exception Reference to the exception.
 	 */
 	op void openApogyProject(IProject project) throws Exception
+	
+	/*
+	 * Save the active Apogy Project.
+	 * @throws Exception Reference to the exception.
+	 */
+	op void saveActiveApogyProject() throws Exception	
 
 	/*
 	 * Deletes the specified Apogy Project.

@@ -85,5 +85,11 @@
          </run>
       </application>
    </extension>
+   <extension
+         point="org.eclipse.emf.transaction.listeners">
+      <listener
+            class="ca.gc.asc_csa.apogy.rcp.emf.transaction.ApogyEditingDomainListener">
+      </listener>
+   </extension>
 
 </plugin>

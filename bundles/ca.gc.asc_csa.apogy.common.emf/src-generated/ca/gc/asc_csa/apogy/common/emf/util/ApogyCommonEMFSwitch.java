@@ -16,7 +16,34 @@ package ca.gc.asc_csa.apogy.common.emf.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import ca.gc.asc_csa.apogy.common.emf.*;
+
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureTreeNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
+import ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.common.emf.Duration;
+import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.emf.FixedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.SelectionBasedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Server;
+import ca.gc.asc_csa.apogy.common.emf.Startable;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->

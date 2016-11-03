@@ -464,22 +464,13 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	int APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST = 39;
 
 	/**
-	 * The operation id for the '<em>Get Transactional Editing Domain</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN = 40;
-
-	/**
 	 * The operation id for the '<em>Get Child EClasses</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS = 41;
+	int APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS = 40;
 
 	/**
 	 * The operation id for the '<em>Get Settable EReferences</em>' operation.
@@ -488,7 +479,7 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT = 42;
+	int APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT = 41;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -497,7 +488,7 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 43;
+	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 42;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -2268,17 +2259,6 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	int RESOURCE_SET = 40;
 
 	/**
-	 * The meta object id for the '<em>Transactional Editing Domain</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.emf.transaction.TransactionalEditingDomain
-	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getTransactionalEditingDomain()
-	 * @generated
-	 */
-	int TRANSACTIONAL_EDITING_DOMAIN = 41;
-
-
-	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2687,16 +2667,6 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCommonEMFFacade__FilterArchived__EList();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getTransactionalEditingDomain() <em>Get Transactional Editing Domain</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Transactional Editing Domain</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getTransactionalEditingDomain()
-	 * @generated
-	 */
-	EOperation getApogyCommonEMFFacade__GetTransactionalEditingDomain();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#getChildEClasses(org.eclipse.emf.ecore.EClass) <em>Get Child EClasses</em>}' operation.
@@ -3649,17 +3619,6 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	EDataType getResourceSet();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.transaction.TransactionalEditingDomain <em>Transactional Editing Domain</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Transactional Editing Domain</em>'.
-	 * @see org.eclipse.emf.transaction.TransactionalEditingDomain
-	 * @model instanceClass="org.eclipse.emf.transaction.TransactionalEditingDomain"
-	 * @generated
-	 */
-	EDataType getTransactionalEditingDomain();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4011,14 +3970,6 @@ public interface ApogyCommonEMFPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST = eINSTANCE.getApogyCommonEMFFacade__FilterArchived__EList();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Transactional Editing Domain</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_COMMON_EMF_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN = eINSTANCE.getApogyCommonEMFFacade__GetTransactionalEditingDomain();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Child EClasses</b></em>' operation.
@@ -4819,16 +4770,6 @@ public interface ApogyCommonEMFPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType RESOURCE_SET = eINSTANCE.getResourceSet();
-
-		/**
-		 * The meta object literal for the '<em>Transactional Editing Domain</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.emf.transaction.TransactionalEditingDomain
-		 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getTransactionalEditingDomain()
-		 * @generated
-		 */
-		EDataType TRANSACTIONAL_EDITING_DOMAIN = eINSTANCE.getTransactionalEditingDomain();
 
 	}
 

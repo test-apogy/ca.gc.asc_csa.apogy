@@ -15,8 +15,6 @@ package ca.gc.asc_csa.apogy.common.emf;
 
 import java.util.Comparator;
 
-import ca.gc.asc_csa.apogy.common.emf.Timed;
-
 public class TimedComparator implements Comparator<Timed> 
 {
 	public TimedComparator() {	

@@ -223,10 +223,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.parameterdefinitionparameterdefinitionpart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ParameterDefinitionPart" label="Parameter Definition"/>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.switchPerspective" label="Apogy" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="" command="_C4Fq0B32EeaqJNPAWI4oCw">
-          <parameters xmi:id="_2yJIACj-EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.parameter.1" name="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveId" value="ca.gc.asc_csa.apogy.rcp.perspective.welcome"/>
-          <parameters xmi:id="_Ntw0ICmMEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.parameter.2" name="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveLabel" value="Welcome"/>
-        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.save" label="Save" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/tool16/save.gif" tooltip="" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_t6MqICmyEeaErYjgnAFhag" elementId="ca.gc.asc_csa.apogy.rcp.toolbarseparator.0"/>
         <children xsi:type="menu:ToolControl" xmi:id="_0s-3cCmwEeaErYjgnAFhag" elementId="ca.gc.asc_csa.apogy.rcp.toolcontrol.PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
           <tags>stretch</tags>
@@ -240,6 +237,7 @@
   </children>
   <handlers xmi:id="_0cimwCj3EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handler.0" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.SwitchPerspectiveHandler" command="_C4Fq0B32EeaqJNPAWI4oCw"/>
   <handlers xmi:id="_GuUuoJVtEeaa6JtpKE_Ezw" elementId="ca.gc.asc_csa.apogy.rcp.handler.newProject" command="_CI2YUJVtEeaa6JtpKE_Ezw"/>
+  <handlers xmi:id="_BfdysKBmEeavx4McADZI6Q" elementId="ca.gc.asc_csa.apogy.rcp.handler.save" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
@@ -285,7 +283,7 @@
     <parameters xmi:id="__3wtoCmLEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.commands.switchPerspectiveCommandPerspectiveLabel" name="label" optional="false"/>
   </commands>
   <commands xmi:id="_6wlLgMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.open" commandName="openCommand"/>
-  <commands xmi:id="_6wlLg8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_6wlLg8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.command.save" commandName="saveCommand"/>
   <commands xmi:id="_6wlLhsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
   <commands xmi:id="_6wlLfMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.exit" commandName="exitCommand"/>
   <commands xmi:id="_CBjNUCgbEeau5bAVKAeRVA" elementId="org.eclipse.equinox.p2.ui.sdk.update" commandName="%Update.command"/>

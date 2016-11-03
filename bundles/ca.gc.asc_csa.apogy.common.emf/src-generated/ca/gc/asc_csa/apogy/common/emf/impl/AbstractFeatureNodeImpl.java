@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 

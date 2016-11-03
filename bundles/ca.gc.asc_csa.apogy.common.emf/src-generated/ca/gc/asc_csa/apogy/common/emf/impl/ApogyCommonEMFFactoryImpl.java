@@ -16,7 +16,9 @@ package ca.gc.asc_csa.apogy.common.emf.impl;
 import java.util.Collection;
 import java.util.List;
 import java.util.SortedSet;
+
 import javax.measure.unit.Unit;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
@@ -29,8 +31,27 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import ca.gc.asc_csa.apogy.common.emf.*;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Duration;
+import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
+import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.emf.FixedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.emf.Ranges;
+import ca.gc.asc_csa.apogy.common.emf.SelectionBasedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Server;
+import ca.gc.asc_csa.apogy.common.emf.Startable;
+import ca.gc.asc_csa.apogy.common.emf.TimeDirection;
+import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -139,8 +160,6 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 				return createJobFromString(eDataType, initialValue);
 			case ApogyCommonEMFPackage.RESOURCE_SET:
 				return createResourceSetFromString(eDataType, initialValue);
-			case ApogyCommonEMFPackage.TRANSACTIONAL_EDITING_DOMAIN:
-				return createTransactionalEditingDomainFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -185,8 +204,6 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 				return convertJobToString(eDataType, instanceValue);
 			case ApogyCommonEMFPackage.RESOURCE_SET:
 				return convertResourceSetToString(eDataType, instanceValue);
-			case ApogyCommonEMFPackage.TRANSACTIONAL_EDITING_DOMAIN:
-				return convertTransactionalEditingDomainToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -647,24 +664,6 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 	 * @generated
 	 */
 	public String convertResourceSetToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TransactionalEditingDomain createTransactionalEditingDomainFromString(EDataType eDataType, String initialValue) {
-		return (TransactionalEditingDomain)super.createFromString(eDataType, initialValue);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertTransactionalEditingDomainToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
