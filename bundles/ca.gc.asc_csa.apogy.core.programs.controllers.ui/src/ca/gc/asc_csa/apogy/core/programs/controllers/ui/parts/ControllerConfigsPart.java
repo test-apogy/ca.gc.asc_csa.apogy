@@ -39,7 +39,6 @@ public class ControllerConfigsPart extends AbstractApogySessionBasedPart{
 		if (ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup() != null) {
 			((ControllerConfigsComposite) getContentComposite())
 					.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
-
 		}
 	}
 }

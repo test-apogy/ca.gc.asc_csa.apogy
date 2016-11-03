@@ -17,6 +17,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
@@ -27,9 +28,11 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.DescribedComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NewProgramComposite;
@@ -129,9 +132,11 @@ public class NewProgramWizardPage extends WizardPage {
 
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
-				NewProgramWizardPage.this.programsType = (EClass) ((StructuredSelection) event.getSelection()).getFirstElement();
-				System.out.println(
-						"NewProgramWizardPage.createControl(...).new ISelectionChangedListener() {...}.selectionChanged()");
+				NewProgramWizardPage.this.programsType = (EClass) ((StructuredSelection) event.getSelection())
+						.getFirstElement();
+				NewProgramWizardPage.this.programSettings
+						.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(NewProgramWizardPage.this.programsGroup,
+								EcoreUtil.create(NewProgramWizardPage.this.programsType), ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
 				validate();
 			}
 		});

@@ -78,7 +78,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 	private TreeViewer treeViewer;
 
-	private List<ProgramsGroup> programsGroupList;
+	private ProgramsList programsList;
 
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
@@ -131,7 +131,6 @@ public class ScriptBasedProgramsListComposite extends Composite {
 				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
 				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);				
 				dialog.open();
-				dialog.getShell().setSize(800, 600);
 			}
 		});
 
@@ -252,6 +251,20 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		public ProgramsListsContentProvider(AdapterFactory adapterFactory) {
 			super(adapterFactory);
 		}
+		
+		@Override
+		public Object[] getElements(Object object) {
+			List<Object> elements = new ArrayList<Object>();
+			elements.addAll(Arrays.asList(super.getElements(object)));
+			for (Iterator<Object> ite = elements.iterator(); ite.hasNext();) {
+				Object element = ite.next();
+				if (element == ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup()) {
+					ite.remove();
+				}
+
+			}
+			return elements.toArray();
+		}
 
 		@Override
 		public void notifyChanged(Notification notification) {
@@ -326,21 +339,14 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	}
 
 	public void setProgramsList(ProgramsList programsList) {
-//		List<ProgramsGroup> programsGroupList = new ArrayList<>();
-//		programsGroupList.addAll(programsList.getProgramsGroups());
-//		for(Iterator<ProgramsGroup> ite = programsGroupList.iterator(); ite.hasNext();){
-//			ProgramsGroup programsGroup = ite.next();
-//			if(programsGroup == ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()) // TODO 
-//		}
-//		
-//		this.programsList = programsList;
-//
-//		if (programsList != null) {
-//			if (m_currentDataBindings != null) {
-//				m_currentDataBindings.dispose();
-//			}
-//			m_currentDataBindings = initDataBindings();
-//		}
+		this.programsList = programsList;
+
+		if (programsList != null) {
+			if (m_currentDataBindings != null) {
+				m_currentDataBindings.dispose();
+			}
+			m_currentDataBindings = initDataBindings();
+		}
 	}
 
 	protected DataBindingContext initDataBindings() {
@@ -350,16 +356,16 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	protected DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
 
-//	TODO	if (programsList != null) {
-//			if (!treeViewer.getTree().isDisposed()) {
-//				treeViewer.setInput(programsList);
-//			}
-//		}
-//		
-//		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-//		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
-//		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));		
-//	END TODO	treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
+		if (programsList != null) {
+			if (!treeViewer.getTree().isDisposed()) {
+				treeViewer.setInput(programsList);
+			}
+		}
+		
+		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
+		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
+		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));		
+		treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
 
 		return bindingContext;
 	}

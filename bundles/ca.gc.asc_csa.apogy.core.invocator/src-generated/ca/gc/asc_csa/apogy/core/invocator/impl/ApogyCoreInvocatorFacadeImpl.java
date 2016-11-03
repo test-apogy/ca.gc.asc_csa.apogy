@@ -1420,7 +1420,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	public ProgramsGroup getControllersGroup() {
 		for(Iterator<ProgramsGroup> ite = getActiveInvocatorSession().getProgramsList().getProgramsGroups().iterator(); ite.hasNext();){
 			ProgramsGroup group = ite.next();
-			if(group.getName() == "Controllers group"){
+			if(group.getName().equals("Controllers group")){
 				return group;
 			}
 		}

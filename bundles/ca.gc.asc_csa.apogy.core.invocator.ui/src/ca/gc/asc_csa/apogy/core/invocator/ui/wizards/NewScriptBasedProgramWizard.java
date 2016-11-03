@@ -19,6 +19,7 @@ import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
@@ -38,11 +39,9 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
 public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 
-	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private NewProgramWizardPage newProgramWizardPage;
 	private ProgramsGroup programsGroup;
 	private ProgramSettings programSettings;
-	//private Program program;
 
 	/**
 	 * Constructor for NewProgramsGroupWizard.
@@ -72,29 +71,10 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 	public void addPages() {
 		if (getNewProgramWizardPage() != null) {
 			addPage(getNewProgramWizardPage());
-//			newProgramWizardPage.set
 			setForcePreviousAndNextButtons(true);
 		}
-		/*if (getNamedDescribedWizardPage() != null) {
-			addPage(getNamedDescribedWizardPage());
-		}*/
 	}
-//
-//	@Override
-//	public IWizardPage getNextPage(IWizardPage page) {
-//		if (page == newProgramWizardPage
-//				&& newProgramWizardPage.getProgramType() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST) {
-//			addPage(getNamedDescribedWizardPage());
-//			
-//			return getNamedDescribedWizardPage();
-//		}if (page == newProgramWizardPage
-//				&& newProgramWizardPage.getProgramType() != ApogyCoreInvocatorPackage.Literals.OPERATION_CALLS_LIST) {
-//			addPage(getNamedDescribedWizardPage());
-//			
-//			return getNamedDescribedWizardPage();
-//		}
-//		return super.getNextPage(page);
-//	}
+
 
 	/**
 	 * Returns the {@link NewProgramWizardPage }. If null is returned, the page
@@ -110,19 +90,6 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 		return newProgramWizardPage;
 	}
 
-//	/**
-//	 * Returns the {@link NamedDescribedWizardPage}. If null is returned, the
-//	 * page is not added to the wizard.
-//	 * 
-//	 * @return Reference to the page.
-//	 */
-//	protected WizardPage getNamedDescribedWizardPage() {// Named named, Described described){
-//		if (namedDescribedWizardPage == null) {
-//			namedDescribedWizardPage = new NamedDescribedWizardPage(getProgram(), getProgram());
-//		}
-//		return namedDescribedWizardPage;
-//	}
-
 	@Override
 	public boolean performFinish() {
 		
@@ -135,16 +102,16 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 
 		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getProgramsGroup());
 
-		/** Check if there is a domain. */
-		if (editingDomain != null) {
+		/** Check if there is an editing domain. */
+		if (editingDomain == null) {
+			getProgramsGroup().getPrograms().add(program);
+		}else{
 			/** Use the command stack. */
 			AddCommand command = new AddCommand(editingDomain, getProgramsGroup(),
 					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, program);
 			editingDomain.getCommandStack().execute(command);
-			return true;
-		}
-		return false;
-		
+		}	
+		return true;
 	}
 
 	/**
@@ -159,29 +126,6 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 		}
 		return programsGroup;
 	}
-
-	/**
-	 * Returns the list of programs to display. Override this method to provide
-	 * custom getter implementation. The default implementation returns the list
-	 * of programs available in the active session.
-	 * 
-	 * @return List of programs.
-	 */
-	/*protected ProgramsList getProgramsList() {
-		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? null
-				: ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
-	}*/
-
-	/*protected Program getProgram() {
-		if (program == null) {
-			System.out.println("NewScriptBasedProgramWizard.getProgram() :" + newProgramWizardPage.getProgramType());
-			ProgramFactory factory = ProgramFactoriesRegistry.INSTANCE.getFactory(newProgramWizardPage.getProgramType());
-			System.out.println("NewScriptBasedProgramWizard.getProgram() :" + factory.createProgram());
-			program = factory.createProgram();
-			program.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsList(), getProgram(), ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
-		}
-		return program;
-	}*/
 	
 	protected ProgramSettings getProgramSettings(){
 		if (programSettings == null) {

@@ -22,18 +22,19 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
 
-public class SimpleProgramPart extends AbstractApogySessionBasedPart {
+public class SimpleProgramDetailsPart extends AbstractApogySessionBasedPart {
 
 	protected Composite createContentComposite(Composite parent) {
-		return new AdvancedEditorComposite(parent, SWT.None) {
-			@Override
-			protected void newSelection(ISelection selection) {
-				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
-			}
-		};
+		return null;
+//		return new AdvancedEditorComposite(parent, SWT.None) {
+//			@Override
+//			protected void newSelection(ISelection selection) {
+//				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
+//			}
+//		};
 	}
 
 	protected void setSession(InvocatorSession invocatorSession) {
-		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
+//		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
 	}
 }

@@ -51,13 +51,12 @@ public class NewProgramComposite extends Composite {
 	private ProgramsList programsList;
 	private ProgramsGroup group;
 	private EClass eClass;
-	
+
 	private Composite compositeGroup;
 	private Composite compositeType;
-	
+
 	private TreeViewer treeViewerGroups;
 	private TreeViewer treeViewerTypes;
-
 
 	public NewProgramComposite(Composite parent, int style) {
 		super(parent, style);
@@ -105,7 +104,7 @@ public class NewProgramComposite extends Composite {
 		TreeColumn treeColumn = treeViewerColumn.getColumn();
 		treeColumn.setWidth(200);
 		treeColumn.setText("Name");
-		
+
 		treeViewerTypes.setContentProvider(new ProgramsTypeContentProvider(adapterFactory));
 		treeViewerTypes.setLabelProvider(new TypesLabelProvider());
 	}
@@ -131,7 +130,7 @@ public class NewProgramComposite extends Composite {
 	public TreeViewer getTreeViewerTypes() {
 		return treeViewerTypes;
 	}
-	
+
 	private class TypesLabelProvider extends StyledCellLabelProvider {
 		@Override
 		public void update(ViewerCell cell) {
@@ -148,7 +147,7 @@ public class NewProgramComposite extends Composite {
 			return super.getToolTipText(element);
 		}
 	}
-	
+
 	private class GroupsLabelProvider extends StyledCellLabelProvider {
 		@Override
 		public void update(ViewerCell cell) {
@@ -164,7 +163,7 @@ public class NewProgramComposite extends Composite {
 			}
 			return super.getToolTipText(element);
 		}
-		
+
 		@Override
 		public Point getToolTipShift(Object object) {
 			return new Point(5, 5);
@@ -226,15 +225,11 @@ public class NewProgramComposite extends Composite {
 			Object[] objects = new Object[0];
 			return objects;
 		}
-		
+
 		@Override
 		public boolean hasChildren(Object object) {
 			return false;
 		}
-	
-		
-	
-
 	}
 
 	private class ProgramsGroupContentProvider extends AdapterFactoryContentProvider {
@@ -247,58 +242,12 @@ public class NewProgramComposite extends Composite {
 		public Object[] getChildren(Object object) {
 			return (object instanceof ProgramsList) ? super.getChildren(object) : null;
 		}
-		
+
 		@Override
 		public boolean hasChildren(Object object) {
 			return false;
 		}
 	}
-
-	/*
-	 * private class ProgramsListsLabelProvider extends
-	 * AdapterFactoryLabelProvider implements ITableLabelProvider{ private final
-	 * static int NAME_COLUMN_ID = 0; private final static int
-	 * DESCRIPTION_COLUMN_ID = 1;
-	 * 
-	 * public ProgramsListsLabelProvider(AdapterFactory adapterFactory) {
-	 * super(adapterFactory); }
-	 * 
-	 * @Override public String getColumnText(Object object, int columnIndex) {
-	 * String str = "<undefined>";
-	 * 
-	 * Named named = (Named) object;
-	 * 
-	 * switch (columnIndex) { case NAME_COLUMN_ID: str = named.getName() == null
-	 * ? "<unnamed>" : named.getName(); break; }
-	 * 
-	 * return str; }
-	 * 
-	 * 
-	 * }
-	 */
-
-//	public ProgramsGroup getProgramsGroup() {
-//		if (comboProgramsGroups.getSelection() instanceof ProgramsGroup) {
-//			return (ProgramsGroup) comboProgramsGroups.getSelection();
-//		}
-//		return null;
-//	}
-//
-//	public EClass getProgramsType() {
-//		if (comboProgramsTypes.getSelection() instanceof EClass) {
-//			return (EClass) comboProgramsTypes.getSelection();
-//		}
-//		return null;
-//	}
-
-	/*
-	 * public void setProgramsList(ProgramsList programsList){ this.programsList
-	 * = programsList;
-	 * 
-	 * if (programsList != null){ if (m_currentDataBindings != null){
-	 * m_currentDataBindings.dispose(); } m_currentDataBindings =
-	 * initDataBindings(); } }
-	 */
 
 	public void setProgramsList(ProgramsList programsList) {
 		this.programsList = programsList;
@@ -330,16 +279,12 @@ public class NewProgramComposite extends Composite {
 					ISelection selection = new StructuredSelection(group);
 					treeViewerGroups.setSelection(selection);
 				}
-
 			}
 		}
 
 		if (!treeViewerTypes.getTree().isDisposed()) {
 			treeViewerTypes.setInput(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 		}
-
-		// comboProgramsGroups.addSelectionChangedListener(getComboProgramsGroupsSelectionChangedListener());
-		// comboProgramsTypes.addSelectionChangedListener(getSelectionChangedListener());
 
 		return bindingContext;
 	}
