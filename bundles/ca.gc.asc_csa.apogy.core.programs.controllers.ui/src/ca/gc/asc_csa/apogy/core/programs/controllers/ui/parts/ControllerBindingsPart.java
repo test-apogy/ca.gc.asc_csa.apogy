@@ -32,12 +32,13 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingsComposite;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConfigsComposite;
 
 public class ControllerBindingsPart{
 	
 	private ControllerBindingsComposite composite;
-	
 	private ControllersConfiguration controllersConfiguration;
+
 	private Adapter adapter;
 
 	@Inject
@@ -53,11 +54,16 @@ public class ControllerBindingsPart{
 				selectionService.setSelection(selection);
 			}
 		};
+		setConfiguration(controllersConfiguration);
 	}
 	
 	@Inject @Optional
 	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllersConfiguration selection){
-		setConfiguration(selection);
+		if(controllersConfiguration != null){
+			controllersConfiguration.eAdapters().remove(getControllersConfigurationAdapter());
+		}
+		this.controllersConfiguration = selection;
+		controllersConfiguration.eAdapters().add(getControllersConfigurationAdapter());	
 	}
 		
 	/**
@@ -68,13 +74,7 @@ public class ControllerBindingsPart{
 	 *            Reference to the selection.
 	 */
 	protected void setConfiguration(ControllersConfiguration controllersConfiguration) {
-		if(adapter != null){
-			this.controllersConfiguration.eAdapters().remove(getControllersConfigurationAdapter());
-		}
-		this.controllersConfiguration = controllersConfiguration;
-		if(this.controllersConfiguration != null){
-			this.controllersConfiguration.eAdapters().add(getControllersConfigurationAdapter());
-		}
+		composite.setControllersConfiguration(controllersConfiguration);
 	}
 
 	private Adapter getControllersConfigurationAdapter() {
@@ -82,7 +82,7 @@ public class ControllerBindingsPart{
 			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					ControllerBindingsPart.this.composite.setControllersConfiguration(controllersConfiguration);
+					setConfiguration((ControllersConfiguration)msg.getFeature());
 				}
 			};
 		}
