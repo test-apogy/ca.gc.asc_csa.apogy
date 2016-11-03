@@ -13,7 +13,10 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -61,6 +64,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
@@ -74,7 +78,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 	private TreeViewer treeViewer;
 
-	private ProgramsList programsList;
+	private List<ProgramsGroup> programsGroupList;
 
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
@@ -155,7 +159,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		btnDelete.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(programsList);
+				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getSelectedProgramsGroup());
 				EObject owner = null;
 				if (isProgramSelected()) {
 					owner = getSelectedProgram();
@@ -322,14 +326,21 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	}
 
 	public void setProgramsList(ProgramsList programsList) {
-		this.programsList = programsList;
-
-		if (programsList != null) {
-			if (m_currentDataBindings != null) {
-				m_currentDataBindings.dispose();
-			}
-			m_currentDataBindings = initDataBindings();
-		}
+//		List<ProgramsGroup> programsGroupList = new ArrayList<>();
+//		programsGroupList.addAll(programsList.getProgramsGroups());
+//		for(Iterator<ProgramsGroup> ite = programsGroupList.iterator(); ite.hasNext();){
+//			ProgramsGroup programsGroup = ite.next();
+//			if(programsGroup == ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()) // TODO 
+//		}
+//		
+//		this.programsList = programsList;
+//
+//		if (programsList != null) {
+//			if (m_currentDataBindings != null) {
+//				m_currentDataBindings.dispose();
+//			}
+//			m_currentDataBindings = initDataBindings();
+//		}
 	}
 
 	protected DataBindingContext initDataBindings() {
@@ -339,16 +350,16 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	protected DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
 
-		if (programsList != null) {
-			if (!treeViewer.getTree().isDisposed()) {
-				treeViewer.setInput(programsList);
-			}
-		}
-		
-		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
-		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));		
-		treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
+//	TODO	if (programsList != null) {
+//			if (!treeViewer.getTree().isDisposed()) {
+//				treeViewer.setInput(programsList);
+//			}
+//		}
+//		
+//		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
+//		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
+//		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));		
+//	END TODO	treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
 
 		return bindingContext;
 	}
