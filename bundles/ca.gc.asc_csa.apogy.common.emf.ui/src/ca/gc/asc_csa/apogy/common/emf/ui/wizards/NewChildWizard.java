@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
 
 public class NewChildWizard extends Wizard {
@@ -77,7 +77,7 @@ public class NewChildWizard extends Wizard {
 	@Override
 	public boolean performFinish() {
 		// Get the editing domain of the parent
-		EditingDomain editingDomain = ApogyCommonEMFFacade.INSTANCE.getTransactionalEditingDomain();//AdapterFactoryEditingDomain.getEditingDomainFor(parent);
+		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(parent);
 
 		if (editingDomain != null) {
 			Command command = null;

@@ -1415,7 +1415,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	public ProgramsGroup getControllersGroup() {
 		for(Iterator<ProgramsGroup> ite = getActiveInvocatorSession().getProgramsList().getProgramsGroups().iterator(); ite.hasNext();){
@@ -1425,6 +1425,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 			}
 		}
 		return null;
+		
 	}
 
 	/**

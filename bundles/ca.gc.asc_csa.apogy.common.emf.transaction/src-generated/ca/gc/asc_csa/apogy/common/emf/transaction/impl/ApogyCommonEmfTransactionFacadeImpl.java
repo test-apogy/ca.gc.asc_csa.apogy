@@ -53,7 +53,6 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ApogyCommonEmfTransactionFacadeImpl() {
@@ -62,7 +61,6 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -82,14 +80,13 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case ApogyCommonEmfTransactionPackage.APOGY_COMMON_EMF_TRANSACTION_FACADE___GET_DEFAULT_EDITING_DOMAIN:
-			return getDefaultEditingDomain();
+			case ApogyCommonEmfTransactionPackage.APOGY_COMMON_EMF_TRANSACTION_FACADE___GET_DEFAULT_EDITING_DOMAIN:
+				return getDefaultEditingDomain();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -20,6 +20,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.RemoveCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -96,7 +97,7 @@ public class ControllerConfigsComposite extends Composite {
 						.create(ApogyCoreProgramsControllersPackage.Literals.CONTROLLERS_CONFIGURATION);
 				config.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(controllersGroup, config, ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
 				
-				EditingDomain editingDomain = ApogyCommonEMFFacade.INSTANCE.getTransactionalEditingDomain();//AdapterFactoryEditingDomain.getEditingDomainFor(controllersGroup);
+				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(controllersGroup);
 				AddCommand command = new AddCommand(editingDomain, controllersGroup,
 						ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, config);
 				
@@ -112,7 +113,7 @@ public class ControllerConfigsComposite extends Composite {
 		btnDelete.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
-				EditingDomain editingDomain = ApogyCommonEMFFacade.INSTANCE.getTransactionalEditingDomain();//AdapterFactoryEditingDomain.getEditingDomainFor(controllersGroup);
+				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(controllersGroup);
 				RemoveCommand command = new RemoveCommand(editingDomain, controllersGroup,
 						ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, controllersConfigsComposite.getSelectedEObject());
 				

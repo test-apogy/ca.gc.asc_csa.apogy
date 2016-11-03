@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards;
 
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.edit.command.AddCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.IWizardPage;
@@ -150,7 +151,7 @@ public class NewControllerBindingWizard extends Wizard {
 	@Override
 	public boolean performFinish() {
 			
-		EditingDomain editingDomain = ApogyCommonEMFFacade.INSTANCE.getTransactionalEditingDomain();
+		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getControllersConfiguration());
 		
 		/** Check if there is a domain. */
 		if (editingDomain == null){

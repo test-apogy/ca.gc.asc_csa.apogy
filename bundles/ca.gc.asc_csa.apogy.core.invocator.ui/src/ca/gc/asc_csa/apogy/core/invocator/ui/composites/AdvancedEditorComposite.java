@@ -22,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.RemoveCommand;
 import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -108,8 +109,7 @@ public class AdvancedEditorComposite extends Composite {
 			public void handleEvent(Event event) {
 				if (event.type == SWT.Selection) {
 					// Get the editing domain of the object
-					EditingDomain editingDomain = ApogyCommonEMFFacade.INSTANCE.getTransactionalEditingDomain();
-							//AdapterFactoryEditingDomain.getEditingDomainFor(eObjectComposite.getSelectedEObject());
+					EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(eObjectComposite.getSelectedEObject());
 
 					Command command = null;
 					if (editingDomain != null) {
