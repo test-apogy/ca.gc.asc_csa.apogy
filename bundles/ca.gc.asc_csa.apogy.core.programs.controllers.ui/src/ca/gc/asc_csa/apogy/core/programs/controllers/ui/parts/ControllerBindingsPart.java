@@ -57,13 +57,17 @@ public class ControllerBindingsPart{
 		setConfiguration(controllersConfiguration);
 	}
 	
-	@Inject @Optional
-	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllersConfiguration selection){
-		if(controllersConfiguration != null){
-			controllersConfiguration.eAdapters().remove(getControllersConfigurationAdapter());
+	@Inject
+	@Optional
+	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllersConfiguration selection) {
+		if (selection != null) {
+			if (controllersConfiguration != null) {
+				controllersConfiguration.eAdapters().remove(getControllersConfigurationAdapter());
+			}
+			this.controllersConfiguration = selection;
+			controllersConfiguration.eAdapters().add(getControllersConfigurationAdapter());
 		}
-		this.controllersConfiguration = selection;
-		controllersConfiguration.eAdapters().add(getControllersConfigurationAdapter());	
+
 	}
 		
 	/**

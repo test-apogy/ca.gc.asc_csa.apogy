@@ -34,8 +34,12 @@ public class ControllerConfigsPart extends AbstractApogySessionBasedPart{
 			}
 		};
 	}
-	
-	protected void setSession(InvocatorSession invocatorSession){
-		((ControllerConfigsComposite)getContentComposite()).setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());	
+
+	protected void setSession(InvocatorSession invocatorSession) {
+		if (ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup() != null) {
+			((ControllerConfigsComposite) getContentComposite())
+					.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
+
+		}
 	}
 }

@@ -1418,9 +1418,13 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public ProgramsGroup getControllersGroup() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(Iterator<ProgramsGroup> ite = getActiveInvocatorSession().getProgramsList().getProgramsGroups().iterator(); ite.hasNext();){
+			ProgramsGroup group = ite.next();
+			if(group.getName() == "Controllers group"){
+				return group;
+			}
+		}
+		return null;
 	}
 
 	/**
