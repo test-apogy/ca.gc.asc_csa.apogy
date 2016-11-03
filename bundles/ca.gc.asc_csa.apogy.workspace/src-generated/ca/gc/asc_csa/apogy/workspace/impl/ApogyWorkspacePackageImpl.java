@@ -286,7 +286,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceFacade__DeleteApogyProject__IProject() {
+	public EOperation getApogyWorkspaceFacade__SaveActiveApogyProject() {
 		return apogyWorkspaceFacadeEClass.getEOperations().get(6);
 	}
 
@@ -295,7 +295,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle_String() {
+	public EOperation getApogyWorkspaceFacade__DeleteApogyProject__IProject() {
 		return apogyWorkspaceFacadeEClass.getEOperations().get(7);
 	}
 
@@ -304,7 +304,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceFacade__CloseApogyProject() {
+	public EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle_String() {
 		return apogyWorkspaceFacadeEClass.getEOperations().get(8);
 	}
 
@@ -313,8 +313,17 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceFacade__IsProjectExists__String() {
+	public EOperation getApogyWorkspaceFacade__CloseApogyProject() {
 		return apogyWorkspaceFacadeEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyWorkspaceFacade__IsProjectExists__String() {
+		return apogyWorkspaceFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -424,6 +433,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECTS);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___GET_WORKSPACE_APOGY_PROJECT__STRING);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT);
+		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___SAVE_ACTIVE_APOGY_PROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___DELETE_APOGY_PROJECT__IPROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT);
@@ -504,6 +514,9 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 
 		op = initEOperation(getApogyWorkspaceFacade__OpenApogyProject__IProject(), null, "openApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getIProject(), "project", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCorePackage.getException());
+
+		op = initEOperation(getApogyWorkspaceFacade__SaveActiveApogyProject(), null, "saveActiveApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCorePackage.getException());
 
 		op = initEOperation(getApogyWorkspaceFacade__DeleteApogyProject__IProject(), null, "deleteApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);

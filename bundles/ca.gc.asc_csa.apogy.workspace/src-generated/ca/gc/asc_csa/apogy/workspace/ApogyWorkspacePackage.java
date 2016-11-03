@@ -237,13 +237,22 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT = 5;
 
 	/**
+	 * The operation id for the '<em>Save Active Apogy Project</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_WORKSPACE_FACADE___SAVE_ACTIVE_APOGY_PROJECT = 6;
+
+	/**
 	 * The operation id for the '<em>Delete Apogy Project</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___DELETE_APOGY_PROJECT__IPROJECT = 6;
+	int APOGY_WORKSPACE_FACADE___DELETE_APOGY_PROJECT__IPROJECT = 7;
 
 	/**
 	 * The operation id for the '<em>Import Apogy Project</em>' operation.
@@ -252,7 +261,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING = 7;
+	int APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING = 8;
 
 	/**
 	 * The operation id for the '<em>Close Apogy Project</em>' operation.
@@ -261,7 +270,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT = 8;
+	int APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT = 9;
 
 	/**
 	 * The operation id for the '<em>Is Project Exists</em>' operation.
@@ -270,7 +279,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___IS_PROJECT_EXISTS__STRING = 9;
+	int APOGY_WORKSPACE_FACADE___IS_PROJECT_EXISTS__STRING = 10;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -279,7 +288,7 @@ public interface ApogyWorkspacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 10;
+	int APOGY_WORKSPACE_FACADE_OPERATION_COUNT = 11;
 
 
 	/**
@@ -542,6 +551,16 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__OpenApogyProject__IProject();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#saveActiveApogyProject() <em>Save Active Apogy Project</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Save Active Apogy Project</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#saveActiveApogyProject()
+	 * @generated
+	 */
+	EOperation getApogyWorkspaceFacade__SaveActiveApogyProject();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#deleteApogyProject(org.eclipse.core.resources.IProject) <em>Delete Apogy Project</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -794,6 +813,13 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT = eINSTANCE.getApogyWorkspaceFacade__OpenApogyProject__IProject();
+		/**
+		 * The meta object literal for the '<em><b>Save Active Apogy Project</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_WORKSPACE_FACADE___SAVE_ACTIVE_APOGY_PROJECT = eINSTANCE.getApogyWorkspaceFacade__SaveActiveApogyProject();
 		/**
 		 * The meta object literal for the '<em><b>Delete Apogy Project</b></em>' operation.
 		 * <!-- begin-user-doc -->

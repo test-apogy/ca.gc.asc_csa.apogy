@@ -32,10 +32,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import ca.gc.asc_csa.apogy.common.emf.Activator;
-import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.TimeDirection;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;

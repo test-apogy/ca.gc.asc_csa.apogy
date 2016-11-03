@@ -13,6 +13,29 @@
  */
 package ca.gc.asc_csa.apogy.common.emf.impl;
 
+import static ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage.RESOURCE;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.SortedSet;
+
+import javax.measure.unit.Unit;
+
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
@@ -44,35 +67,6 @@ import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.TreeRootNode;
-
-import java.util.Collection;
-import java.util.List;
-import java.util.SortedSet;
-
-import javax.measure.unit.Unit;
-
-import org.eclipse.core.resources.IFile;
-
-import org.eclipse.core.runtime.jobs.Job;
-
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EGenericType;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 /**
  * <!-- begin-user-doc -->
@@ -367,13 +361,6 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	private EDataType resourceSetEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType transactionalEditingDomainEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -813,7 +800,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonEMFFacade__GetEditingDomain() {
+	public EOperation getApogyCommonEMFFacade__GetChildEClasses__EClass() {
 		return apogyCommonEMFFacadeEClass.getEOperations().get(40);
 	}
 
@@ -822,17 +809,8 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonEMFFacade__GetChildEClasses__EClass() {
-		return apogyCommonEMFFacadeEClass.getEOperations().get(41);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getApogyCommonEMFFacade__GetSettableEReferences__EObject() {
-		return apogyCommonEMFFacadeEClass.getEOperations().get(42);
+		return apogyCommonEMFFacadeEClass.getEOperations().get(41);
 	}
 
 	/**
@@ -1632,15 +1610,6 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getTransactionalEditingDomain() {
-		return transactionalEditingDomainEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ApogyCommonEMFFactory getApogyCommonEMFFactory() {
 		return (ApogyCommonEMFFactory)getEFactoryInstance();
 	}
@@ -1705,7 +1674,6 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_EOBJECT_BY_ID__RESOURCESET_STRING);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_DEFAULT_NAME__EOBJECT_EOBJECT_EREFERENCE);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST);
-		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_EDITING_DOMAIN);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT);
 
@@ -1825,7 +1793,6 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		uriEDataType = createEDataType(URI);
 		jobEDataType = createEDataType(JOB);
 		resourceSetEDataType = createEDataType(RESOURCE_SET);
-		transactionalEditingDomainEDataType = createEDataType(TRANSACTIONAL_EDITING_DOMAIN);
 	}
 
 	/**
@@ -2085,8 +2052,6 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		op = initEOperation(getApogyCommonEMFFacade__FilterArchived__EList(), theEcorePackage.getEJavaObject(), "filterArchived", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "objects", 0, -1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getApogyCommonEMFFacade__GetEditingDomain(), this.getTransactionalEditingDomain(), "getEditingDomain", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
 		op = initEOperation(getApogyCommonEMFFacade__GetChildEClasses__EClass(), null, "getChildEClasses", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEClass(), "parentEClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
@@ -2239,7 +2204,6 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		initEDataType(uriEDataType, org.eclipse.emf.common.util.URI.class, "URI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(jobEDataType, Job.class, "Job", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(resourceSetEDataType, ResourceSet.class, "ResourceSet", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(transactionalEditingDomainEDataType, TransactionalEditingDomain.class, "TransactionalEditingDomain", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -49,17 +49,17 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
+
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureTreeNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
 import ca.gc.asc_csa.apogy.common.emf.Activator;
-import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Archivable;
+import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
 import ca.gc.asc_csa.apogy.common.emf.EMFAnnotationConstants;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
@@ -201,8 +201,6 @@ ApogyCommonEMFFacade {
 				return getDefaultName((EObject)arguments.get(0), (EObject)arguments.get(1), (EReference)arguments.get(2));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST:
 				return filterArchived((EList<Object>)arguments.get(0));
-			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_EDITING_DOMAIN:
-				return getEditingDomain();
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS:
 				return getChildEClasses((EClass)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT:
@@ -1308,15 +1306,6 @@ ApogyCommonEMFFacade {
 			}
 		}
 		return objects;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public TransactionalEditingDomain getEditingDomain() {
-		return TransactionalEditingDomain.Registry.INSTANCE.getEditingDomain("ca.gc.asc_csa.apogy.common.emf.editingDomain");
 	}
 
 	/**

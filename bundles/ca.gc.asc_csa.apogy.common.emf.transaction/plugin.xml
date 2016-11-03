@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+  
+  Contributors:
+      Pierre Allard (Pierre.Allard@canada.ca), 
+      Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+      Sebastien Gemme (Sebastien.Gemme@canada.ca),
+      Olivier L. Larouche (Olivier.LLarouche@canada.ca),
+      Canadian Space Agency (CSA) - Initial API and implementation
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_common_emf_transaction -->
+      <package
+            uri="ca.gc.asc_csa.apogy.common.emf.transaction"
+            class="ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionPackage"
+            genModel="model/apogy_common_emf_transaction.xcore"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.transaction.editingDomains">
+      <editingDomain
+            factory="ca.gc.asc_csa.apogy.common.emf.transaction.DefaultApogyEditingDomainFactory"
+            id="ca.gc.asc_csa.apogy.common.emf.transaction.defaultApogyEditingDomain">
+      </editingDomain>
+   </extension>
+
+</plugin>

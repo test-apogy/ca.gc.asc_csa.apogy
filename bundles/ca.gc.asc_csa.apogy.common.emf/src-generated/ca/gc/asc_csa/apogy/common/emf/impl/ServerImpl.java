@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.common.emf.impl;
  */
 
 import org.eclipse.core.runtime.jobs.Job;
-
 import org.eclipse.emf.ecore.EClass;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;

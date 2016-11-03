@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureTreeNode;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 

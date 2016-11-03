@@ -4,7 +4,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.TransactionalEditingDomain.Factory;
 
-public class ApogyEditingDomain implements Factory {
+public class DefaultApogyEditingDomainFactory implements Factory {
 
 	@Override
 	public TransactionalEditingDomain createEditingDomain() {

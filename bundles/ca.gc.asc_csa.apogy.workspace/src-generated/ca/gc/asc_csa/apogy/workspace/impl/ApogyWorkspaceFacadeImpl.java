@@ -13,9 +13,11 @@
  */
 package ca.gc.asc_csa.apogy.workspace.impl;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -40,8 +42,10 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.osgi.framework.Bundle;
 
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.resources.ApogyCommonResourcesFacade;
@@ -534,20 +538,55 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				.getFile(new Path(getDefaultSessionFilename() + "." + getDefaultSessionFilenameExtension()));
 
 		// Create a resource set to hold the resources.
-		ResourceSet resourceSet = new ResourceSetImpl();
-
+		TransactionalEditingDomain domain = ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain();
+		
 		// Register the appropriate resource factory to handle all file
 		// extensions.
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
+		domain.getResourceSet().getResourceFactoryRegistry().getExtensionToFactoryMap()
 				.put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
 
-		URI uri = URI.createPlatformResourceURI(sessionFile.getFullPath().toString(), true);
-		Resource resource = resourceSet.getResource(uri, true);
+		URI uri = URI.createPlatformResourceURI(sessionFile.getFullPath().toString(), true);		
+		Resource resource = domain.getResourceSet().getResource(uri, true);
 
 		InvocatorSession session = (InvocatorSession) resource.getContents().get(0);
 		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(session);
 
 		setActiveProject(project);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void saveActiveApogyProject() throws Exception {
+		if (getActiveProject() != null){
+			IFolder sessionsFolder = getActiveProject().getFolder(ApogyWorkspaceFacade.INSTANCE.getDefaultSessionsFolderName());
+			IFile sessionFile = sessionsFolder
+					.getFile(new Path(getDefaultSessionFilename() + "." + getDefaultSessionFilenameExtension()));
+
+			// Create a resource set to hold the resources.
+			TransactionalEditingDomain domain = ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain();
+			
+			// Register the appropriate resource factory to handle all file
+			// extensions.
+			domain.getResourceSet().getResourceFactoryRegistry().getExtensionToFactoryMap()
+					.put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
+
+			URI uri = URI.createPlatformResourceURI(sessionFile.getFullPath().toString(), true);
+			Resource resource = domain.getResourceSet().getResource(uri, true);
+			
+			domain.runExclusive(new Runnable(){
+				@Override
+				public void run() {
+					try {
+						resource.save(Collections.EMPTY_MAP);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}				
+			});
+		}
 	}
 
 	/**
@@ -732,6 +771,14 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___OPEN_APOGY_PROJECT__IPROJECT:
 				try {
 					openApogyProject((IProject)arguments.get(0));
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___SAVE_ACTIVE_APOGY_PROJECT:
+				try {
+					saveActiveApogyProject();
 					return null;
 				}
 				catch (Throwable throwable) {
