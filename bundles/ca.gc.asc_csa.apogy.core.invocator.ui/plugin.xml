@@ -441,15 +441,7 @@
             id="ca.gc.asc_csa.apogy.core.invocator.ui.views.InstanceView"
             name="Instance"
             restorable="true">
-      </view>
-      <view
-            category="ca.gc.asc_csa.apogy.core.ui.category"
-            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView"
-            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/Instance.gif"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView"
-            name="Session Status">
-      </view>
-      
+      </view>      
       <view
             category="ca.gc.asc_csa.apogy.core.ui.category"
             class="ca.gc.asc_csa.apogy.core.invocator.ui.views.ScriptBasedProgramsListView"

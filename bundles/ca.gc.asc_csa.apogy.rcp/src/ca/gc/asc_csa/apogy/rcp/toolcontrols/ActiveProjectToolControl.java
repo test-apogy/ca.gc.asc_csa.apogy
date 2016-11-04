@@ -11,16 +11,17 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
 
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 
 public class ActiveProjectToolControl {
 	
-	private Label labelValue;
+	private Text textValue;
 	private DataBindingContext bindingContext;
 
 	@PostConstruct
@@ -28,12 +29,12 @@ public class ActiveProjectToolControl {
 		
 		final Composite composite = new Composite(parent, SWT.NONE);
 		GridLayout gl_composite = new GridLayout();
-		gl_composite.numColumns = 2;
 		composite.setLayout(gl_composite);
-		
-		Label labelTitle = new Label(composite, SWT.None);
-		labelTitle.setText("Project: ");		
-		labelValue = new Label(composite, SWT.None);
+		textValue = new Text(composite, SWT.BORDER);
+		GridData gd_labelValue = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
+		gd_labelValue.widthHint = 250;
+		gd_labelValue.minimumWidth = 250;
+		textValue.setLayoutData(gd_labelValue);
 		
 		initDataBindings();
 	}
@@ -44,7 +45,7 @@ public class ActiveProjectToolControl {
 		
 		/* Import Button Enabled. */
 		IObservableValue<?> observeActiveProject = EMFProperties.value(ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT).observe(ApogyWorkspaceFacade.INSTANCE);
-		IObservableValue<?> observeLabelValueText = WidgetProperties.text().observe(labelValue);
+		IObservableValue<?> observeLabelValueText = WidgetProperties.text().observe(textValue);
 		
 		bindingContext.bindValue(observeLabelValueText, observeActiveProject, null, new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE).setConverter(new Converter(IProject.class, String.class){
 			@Override

@@ -194,6 +194,8 @@ class ApogyCoreInvocatorFacade
 	 */
 	op void initVariableInstances(Environment environment)
 	
+	op void initVariableInstances()
+	
 	/*
 	 * Refers to the date at which the instances were initialized. 
 	 */
@@ -203,6 +205,8 @@ class ApogyCoreInvocatorFacade
 	 * Clear the variable instances.
 	 */
 	op void disposeVariableInstances(Environment environment)
+	
+	op void disposeVariableInstances()
 	
 	/*
 	 * Returns the direct owner of the {@link TypeMemberReferenceListElement}.  Null is returned if the reference 

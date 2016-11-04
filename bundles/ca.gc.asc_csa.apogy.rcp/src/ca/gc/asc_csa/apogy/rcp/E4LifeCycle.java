@@ -37,6 +37,18 @@ public class E4LifeCycle {
 		ApogyWorkspaceFacade.INSTANCE.eAdapters().add(getWorkspaceAdapter());
 	}
 
+	@PreSave
+	void preSave(IEclipseContext workbenchContext) {
+	}
+
+	@ProcessAdditions
+	void processAdditions(IEclipseContext workbenchContext) {
+	}
+
+	@ProcessRemovals
+	void processRemovals(IEclipseContext workbenchContext) {
+	}
+
 	private ResourceSetListener getResourceSetListener() {
 		if (resourceSetListener == null){
 			resourceSetListener = new ResourceSetListenerImpl(){
@@ -53,19 +65,7 @@ public class E4LifeCycle {
 		IEventBroker eventBroker = (IEventBroker) this.workbenchContext.get(IEventBroker.class.getName());
 		eventBroker.send(UIEvents.REQUEST_ENABLEMENT_UPDATE_TOPIC, UIEvents.ALL_ELEMENT_ID);
 	}
-
-	@PreSave
-	void preSave(IEclipseContext workbenchContext) {
-	}
-
-	@ProcessAdditions
-	void processAdditions(IEclipseContext workbenchContext) {
-	}
-
-	@ProcessRemovals
-	void processRemovals(IEclipseContext workbenchContext) {
-	}
-
+		
 	private Adapter getWorkspaceAdapter() {
 		if (workspaceAdapter == null){
 			workspaceAdapter = new AdapterImpl(){

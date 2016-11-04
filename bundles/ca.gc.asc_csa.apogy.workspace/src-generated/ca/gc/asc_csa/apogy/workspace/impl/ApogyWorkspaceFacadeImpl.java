@@ -631,18 +631,9 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	public void closeActiveApogyProject() throws Exception {
-		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
-		ApogyWorkspaceFacade.INSTANCE.setActiveProject(null);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void closeApogyProject() throws Exception {
-		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
-		ApogyWorkspaceFacade.INSTANCE.setActiveProject(null);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

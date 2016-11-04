@@ -1115,6 +1115,19 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void initVariableInstances() {
+		disposeVariableInstances();		
+		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
+			ApogyCoreInvocatorFacade.INSTANCE.initVariableInstances(
+					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -1138,6 +1151,18 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 
 		/* Variables are disposed. */
 		environment.getActiveContext().setVariablesInstantiated(false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void disposeVariableInstances() {
+		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
+			ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances(
+					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+		}
 	}
 
 	/**
@@ -1546,8 +1571,14 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT:
 				initVariableInstances((Environment)arguments.get(0));
 				return null;
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES:
+				initVariableInstances();
+				return null;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT:
 				disposeVariableInstances((Environment)arguments.get(0));
+				return null;
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES:
+				disposeVariableInstances();
 				return null;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT:
 				return getOperationCallContainer((TypeMemberReferenceListElement)arguments.get(0));
