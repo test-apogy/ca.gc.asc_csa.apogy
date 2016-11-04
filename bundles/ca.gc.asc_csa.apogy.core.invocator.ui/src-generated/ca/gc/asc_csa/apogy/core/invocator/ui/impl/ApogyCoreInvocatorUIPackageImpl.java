@@ -179,6 +179,24 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCoreInvocatorUIFacade__InitSession() {
+		return apogyCoreInvocatorUIFacadeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorUIFacade__DisposeSession() {
+		return apogyCoreInvocatorUIFacadeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getCompoundCommand() {
 		return compoundCommandEDataType;
 	}
@@ -218,6 +236,8 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		apogyCoreInvocatorUIFacadeEClass = createEClass(APOGY_CORE_INVOCATOR_UI_FACADE);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND);
+		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___INIT_SESSION);
+		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION);
 
 		// Create data types
 		compoundCommandEDataType = createEDataType(COMPOUND_COMMAND);
@@ -274,6 +294,10 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		addEParameter(op, theApogyCoreInvocatorPackage.getAbstractTypeImplementation(), "destination", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCompoundCommand(), "command", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCommonEMFPackage.getException());
+
+		initEOperation(getApogyCoreInvocatorUIFacade__InitSession(), null, "initSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getApogyCoreInvocatorUIFacade__DisposeSession(), null, "disposeSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(compoundCommandEDataType, CompoundCommand.class, "CompoundCommand", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

@@ -32,8 +32,8 @@ public class ActiveProjectToolControl {
 		composite.setLayout(gl_composite);
 		textValue = new Text(composite, SWT.BORDER);
 		GridData gd_labelValue = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
-		gd_labelValue.widthHint = 250;
-		gd_labelValue.minimumWidth = 250;
+		gd_labelValue.widthHint = 300;
+		gd_labelValue.minimumWidth = 300;
 		textValue.setLayoutData(gd_labelValue);
 		
 		initDataBindings();

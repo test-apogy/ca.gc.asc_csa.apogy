@@ -26,6 +26,7 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
+import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
@@ -40,18 +41,20 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.wb.swt.SWTResourceManager;
 
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 
 public class SessionStatusToolControl {
 
 	private DataBindingContext m_bindingContext;
 	private WritableValue<ApogyCoreInvocatorFacade> invocatorFacadeBinder;
 	private Combo comboContext;
-	private Button btnResetInstances;
-	private Button btnClearInstance;
+	private Button btnStart;
+	private Button btnStop;
 	private Text txtInstanceStatus;
 
 	@PostConstruct
@@ -66,29 +69,29 @@ public class SessionStatusToolControl {
 		comboContext.setLayoutData(gd_comboContext);
 		comboContext.setText("Context");
 
-		btnResetInstances = new Button(composite, SWT.NONE);
-		btnResetInstances.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
-		btnResetInstances.setText("Reset");
+		btnStart = new Button(composite, SWT.NONE);
+		btnStart.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
+		btnStart.setText("Start");
 
 		// Create the listener that initiates the variables of the environment
 		// when the button is selected. This is to reset the instances.
-		btnResetInstances.addSelectionListener(new SelectionAdapter() {
+		btnStart.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				ApogyCoreInvocatorFacade.INSTANCE.initVariableInstances();
+				ApogyCoreInvocatorUIFacade.INSTANCE.initSession();
 			}
 		});
 
-		btnClearInstance = new Button(composite, SWT.NONE);
-		btnClearInstance.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
-		btnClearInstance.setText("Clear");
+		btnStop = new Button(composite, SWT.NONE);
+		btnStop.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
+		btnStop.setText("Stop");
 
 		// Create the listener that disposes the variables of the environment
 		// when the button is selected. This is to clear the instances
-		btnClearInstance.addSelectionListener(new SelectionAdapter() {
+		btnStop.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances();
+				ApogyCoreInvocatorUIFacade.INSTANCE.disposeSession();
 			}
 		});
 
@@ -131,12 +134,12 @@ public class SessionStatusToolControl {
 		 * enabled/disabled if there is an active session or not
 		 */
 		IObservableValue<?> observeEnabledResetInstancesObserveWidget = WidgetProperties.enabled()
-				.observe(btnResetInstances);
+				.observe(btnStart);
 		m_bindingContext.bindValue(observeEnabledResetInstancesObserveWidget,
 				invocatorFacadeActiveInvocatorSessionObserveValue, null,
 				new InvocatorInstanceToBooleanUpdateValueStrategy());
 		IObservableValue<?> observeEnabledClearInstancesObserveWidget = WidgetProperties.enabled()
-				.observe(btnClearInstance);
+				.observe(btnStop);
 		m_bindingContext.bindValue(observeEnabledClearInstancesObserveWidget,
 				invocatorFacadeActiveInvocatorSessionObserveValue, null,
 				new InvocatorInstanceToBooleanUpdateValueStrategy());
@@ -174,8 +177,8 @@ public class SessionStatusToolControl {
 		 */
 		IObservableValue<?> observeComboContextSingleSelectionIndexObserveWidget = WidgetProperties.singleSelectionIndex()
 				.observe(comboContext);
-		IObservableValue<?> invocatorFacadeEnvironmentActiveContextObserveValue = EMFProperties
-				.value(FeaturePath.fromList(
+		IObservableValue<?> invocatorFacadeEnvironmentActiveContextObserveValue = EMFEditProperties
+				.value(ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain(), FeaturePath.fromList(
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT))
@@ -187,14 +190,15 @@ public class SessionStatusToolControl {
 
 					@Override
 					public Object convert(Object fromObject) {
-						if (!ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
+							if (!ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
 								.getContextsList().getContexts().get((Integer) fromObject).equals(null)) {
 
 							return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
 									.getContextsList().getContexts().get((Integer) fromObject);
-						} else {
-							return null;
+							}
 						}
+						return null;
 					}
 
 				}), new UpdateValueStrategy().setConverter(new Converter(Context.class, Integer.class) {
@@ -209,6 +213,9 @@ public class SessionStatusToolControl {
 					}
 				}));
 
+		/*
+		 * Bind Status Indicator.
+		 */
 		IObservableValue<?> observeBackgroundInstanceStatusObserveWidget = WidgetProperties.background()
 				.observe(txtInstanceStatus);
 		IObservableValue<?> invocatorFacadeActiveContextCreationDateValue = EMFProperties
@@ -223,12 +230,95 @@ public class SessionStatusToolControl {
 				new UpdateValueStrategy().setConverter(new Converter(Context.class, Color.class) {
 					@Override
 					public Object convert(Object fromObject) {
-						if (invocatorFacadeBinder.getValue().getActiveInvocatorSession()
-								.getEnvironment().getActiveContext().isVariablesInstantiated()) {
-							return SWTResourceManager.getColor(SWT.COLOR_GREEN);
-						} else {
-							return SWTResourceManager.getColor(SWT.COLOR_TRANSPARENT);
+						int color = SWT.COLOR_TRANSPARENT;
+						if (invocatorFacadeBinder.getValue().getActiveInvocatorSession() != null){
+							if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment() != null){
+								if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
+									if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+										color = SWT.COLOR_GREEN;
+									}
+								}
+							}
 						}
+						return SWTResourceManager.getColor(color);
+					}
+				}));
+		
+		/*
+		 * Bind Start Enabled.
+		 */
+		IObservableValue<?> observeEnabledStartButton = WidgetProperties.enabled()
+				.observe(btnStart);
+		m_bindingContext.bindValue(observeEnabledStartButton,
+				invocatorFacadeActiveContextCreationDateValue, null,
+				new UpdateValueStrategy().setConverter(new Converter(Context.class, Boolean.class) {
+					@Override
+					public Object convert(Object fromObject) {
+						boolean result = true; 
+						
+						if (invocatorFacadeBinder.getValue().getActiveInvocatorSession() == null){
+							result = false;
+						}else{						
+							if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment() != null){
+								if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
+									if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+										result = false;
+									}
+								}
+							}
+						}
+						return result;
+					}
+				}));	
+		
+		/*
+		 * Bind Stop Enabled.
+		 */
+		IObservableValue<?> observeEnabledStopButton = WidgetProperties.enabled()
+				.observe(btnStop);
+		m_bindingContext.bindValue(observeEnabledStopButton,
+				invocatorFacadeActiveContextCreationDateValue, null,
+				new UpdateValueStrategy().setConverter(new Converter(Context.class, Boolean.class) {
+					@Override
+					public Object convert(Object fromObject) {
+						boolean result = false; 
+						if (invocatorFacadeBinder.getValue().getActiveInvocatorSession() != null){
+							if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment() != null){
+								if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
+									if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+										result = true;
+									}
+								}
+							}
+						}
+						return result;
+					}
+				}));				
+		
+		/*
+		 * Bind Combo Box Enabled.
+		 */
+		IObservableValue<?> observeEnabledComboWidget = WidgetProperties.enabled()
+				.observe(comboContext);
+		m_bindingContext.bindValue(observeEnabledComboWidget,
+				invocatorFacadeActiveContextCreationDateValue, null,
+				new UpdateValueStrategy().setConverter(new Converter(Context.class, Boolean.class) {
+					@Override
+					public Object convert(Object fromObject) {
+						boolean result = true; 
+						
+						if (invocatorFacadeBinder.getValue().getActiveInvocatorSession() == null){
+							result = false;
+						}else{						
+							if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment() != null){
+								if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
+									if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+										result = false;
+									}
+								}
+							}
+						}
+						return result;
 					}
 				}));
 

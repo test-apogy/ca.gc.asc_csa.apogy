@@ -24,7 +24,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.RecordingCommand;
+
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
@@ -130,6 +134,35 @@ public class ApogyCoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void initSession() {		
+		ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain().getCommandStack().execute(new RecordingCommand(ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain()) {			
+			@Override
+			protected void doExecute() {
+				ApogyCoreInvocatorFacade.INSTANCE.initVariableInstances();
+			}
+		});
+
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void disposeSession() {
+		ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain().getCommandStack().execute(new RecordingCommand(ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain()) {			
+			@Override
+			protected void doExecute() {
+				ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances();
+			}
+		});
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -151,6 +184,12 @@ public class ApogyCoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___INIT_SESSION:
+				initSession();
+				return null;
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION:
+				disposeSession();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
