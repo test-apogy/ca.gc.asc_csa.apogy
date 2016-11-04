@@ -51,7 +51,11 @@
 		  <property
 				name="applicationXMI"
 				value="ca.gc.asc_csa.apogy.rcp/Application.e4xmi">
-		  </property>         
+		  </property>
+         <property
+               name="lifeCycleURI"
+               value="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.E4LifeCycle">
+         </property>		           
 <!--		  <property
 				name="cssTheme"
 				value="org.eclipse.e4.ui.css.theme.e4_default">
@@ -84,12 +88,6 @@
                class="ca.gc.asc_csa.apogy.rcp.Application">
          </run>
       </application>
-   </extension>
-   <extension
-         point="org.eclipse.emf.transaction.listeners">
-      <listener
-            class="ca.gc.asc_csa.apogy.rcp.emf.transaction.ApogyEditingDomainListener">
-      </listener>
    </extension>
 
 </plugin>

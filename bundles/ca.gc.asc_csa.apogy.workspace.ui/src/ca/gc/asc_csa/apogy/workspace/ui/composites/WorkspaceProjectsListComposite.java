@@ -24,7 +24,6 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -52,7 +51,6 @@ import org.eclipse.swt.widgets.TableColumn;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
-import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 import ca.gc.asc_csa.apogy.workspace.ui.Activator;
 import ca.gc.asc_csa.apogy.workspace.ui.wizards.NewProjectWizard;
 
@@ -63,7 +61,6 @@ public class WorkspaceProjectsListComposite extends Composite {
 	private Button btnDelete;
 	private Button btnExport;
 	private Adapter workspaceAdapter;
-	private Button btnClose;
 
 	public WorkspaceProjectsListComposite(Composite parent, int style) {
 		super(parent, style);
@@ -105,29 +102,6 @@ public class WorkspaceProjectsListComposite extends Composite {
 		});
 		btnOpen.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		btnOpen.setText("Open");
-
-		btnClose = new Button(composite, SWT.NONE);
-		btnClose.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent event) {
-				try {
-					ApogyWorkspaceFacade.INSTANCE.closeApogyProject();
-				} catch (Exception e) {
-					if (ApogyWorkspaceFacade.INSTANCE.getActiveProject() == null) {
-						Logger.INSTANCE.log(Activator.ID, "There is no active project to close.",
-								EventSeverity.WARNING);
-					} else {
-						Logger.INSTANCE.log(Activator.ID,
-								"Unable to close the project <"
-										+ ApogyWorkspaceFacade.INSTANCE.getActiveProject().getName() + ">",
-								EventSeverity.ERROR, e);
-					}
-				}
-			}
-		});
-		btnClose.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		btnClose.setSize(64, 29);
-		btnClose.setText("Close");
 
 		Label label = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
 		label.setSize(64, 2);
@@ -247,21 +221,6 @@ public class WorkspaceProjectsListComposite extends Composite {
 								return fromObject != null;
 							}
 
-						}));
-
-		/* Close Button Enabled Binding. */
-		@SuppressWarnings("unchecked")
-		IObservableValue<?> observeEnabledWorspaceActiveProject = EMFProperties
-				.value(ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT)
-				.observe(ApogyWorkspaceFacade.INSTANCE);
-		IObservableValue<?> observeEnabledBtnCloseObserveWidget = WidgetProperties.enabled().observe(btnClose);
-		bindingContext.bindValue(observeEnabledBtnCloseObserveWidget, observeEnabledWorspaceActiveProject, null,
-				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
-						.setConverter(new Converter(Object.class, Boolean.class) {
-							@Override
-							public Object convert(Object fromObject) {
-								return fromObject != null;
-							}
 						}));
 
 		/* Delete Button Enabled Binding. */

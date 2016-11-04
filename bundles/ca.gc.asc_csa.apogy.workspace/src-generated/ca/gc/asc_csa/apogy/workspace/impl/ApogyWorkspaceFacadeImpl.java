@@ -31,6 +31,7 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
@@ -581,6 +582,7 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				public void run() {
 					try {
 						resource.save(Collections.EMPTY_MAP);
+						((BasicCommandStack)ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain().getCommandStack()).saveIsDone();
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
@@ -624,9 +626,19 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void closeActiveApogyProject() throws Exception {
+		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
+		ApogyWorkspaceFacade.INSTANCE.setActiveProject(null);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated_NOT
+	 * @generated
 	 */
 	public void closeApogyProject() throws Exception {
 		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
@@ -800,9 +812,9 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT:
+			case ApogyWorkspacePackage.APOGY_WORKSPACE_FACADE___CLOSE_ACTIVE_APOGY_PROJECT:
 				try {
-					closeApogyProject();
+					closeActiveApogyProject();
 					return null;
 				}
 				catch (Throwable throwable) {

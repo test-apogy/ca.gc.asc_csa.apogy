@@ -313,7 +313,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyWorkspaceFacade__CloseApogyProject() {
+	public EOperation getApogyWorkspaceFacade__CloseActiveApogyProject() {
 		return apogyWorkspaceFacadeEClass.getEOperations().get(9);
 	}
 
@@ -436,7 +436,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___SAVE_ACTIVE_APOGY_PROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___DELETE_APOGY_PROJECT__IPROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING);
-		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT);
+		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___CLOSE_ACTIVE_APOGY_PROJECT);
 		createEOperation(apogyWorkspaceFacadeEClass, APOGY_WORKSPACE_FACADE___IS_PROJECT_EXISTS__STRING);
 
 		projectProvidersRegistryEClass = createEClass(PROJECT_PROVIDERS_REGISTRY);
@@ -528,7 +528,7 @@ public class ApogyWorkspacePackageImpl extends EPackageImpl implements ApogyWork
 		addEParameter(op, theEcorePackage.getEString(), "projectName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCorePackage.getException());
 
-		op = initEOperation(getApogyWorkspaceFacade__CloseApogyProject(), null, "closeApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyWorkspaceFacade__CloseActiveApogyProject(), null, "closeActiveApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theApogyCorePackage.getException());
 
 		op = initEOperation(getApogyWorkspaceFacade__IsProjectExists__String(), theEcorePackage.getEBoolean(), "isProjectExists", 0, 1, !IS_UNIQUE, IS_ORDERED);
