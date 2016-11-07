@@ -90,12 +90,14 @@ abstract public class AbstractApogySessionBasedPart {
 				// Disposes the content composite
 				getContentComposite().dispose();
 				new NoActiveSessionComposite(composite, SWT.None);
+				composite.layout();
 			}
 		}else{
 			if(getContentComposite() instanceof NoActiveSessionComposite){
 				// Disposes the NoActiveSessionComposite
 				getContentComposite().dispose();
-				createContentComposite(composite);		
+				createContentComposite(composite);	
+				composite.layout();
 				}
 			setSessionInComposite(invocatorSession);		
 		}

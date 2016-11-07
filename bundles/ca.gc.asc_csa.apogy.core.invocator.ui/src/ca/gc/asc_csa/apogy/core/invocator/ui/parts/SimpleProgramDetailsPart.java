@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -29,13 +31,11 @@ public class SimpleProgramDetailsPart extends EObjectSelectionBasedPart {
 	@Override
 	protected void createContentComposite(Composite parent) {
 		parent.setLayout(new FillLayout());
-		new EObjectComposite(parent, SWT.None);
-//		new ProgramsDetailsComposite(parent, SWT.None) {
-////			@Override
-////			protected void newSelection(ISelection selection) {
-////				selectionService.setSelection(selection);
-////			}
-//		};
+		new EObjectComposite(parent, SWT.None) {
+			protected void newSelection(ISelection selection) {
+				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
+			}
+		};
 		parent.layout();
 	}
 
@@ -51,19 +51,11 @@ public class SimpleProgramDetailsPart extends EObjectSelectionBasedPart {
 		}
 		return false;
 	}
-
-//	@Override
-//	protected boolean verifySelectionProviderPart(ApogySelection selection) {
-//		if (selection.getPartID() == "ca.gc.asc_csa.apogy.core.invocator.ui.parts.ScriptBasedProgramsListPart") {
-//			return true;
-//		}
-//		return false;
-//	}
 	
 	@Override
 	protected List<String> getAcceptedPartsIds() {
 		List<String> ids = new ArrayList<String>();
-		ids.add("ca.gc.asc_csa.apogy.rcp.part.ScriptBasedProgramsListPart");
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.ProgramsList");
 		return ids;
 	}
 }

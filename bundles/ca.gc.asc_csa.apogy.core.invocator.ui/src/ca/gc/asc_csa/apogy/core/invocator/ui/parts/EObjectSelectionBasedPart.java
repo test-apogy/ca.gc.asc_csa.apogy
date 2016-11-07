@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoEObjectSelectionComposite;
 
@@ -48,6 +49,7 @@ abstract public class EObjectSelectionBasedPart {
 		composite = parent;
 		composite.setLayout(new FillLayout());
 		createContentComposite(composite);
+		composite.layout();
 		setSelection(eObject);
 	}
 
@@ -108,7 +110,9 @@ abstract public class EObjectSelectionBasedPart {
 
 				if (getContentComposite() instanceof NoEObjectSelectionComposite) {
 					// Disposes the NoActiveSessionComposite
-					getContentComposite().dispose();
+					for (Control control : composite.getChildren()) {
+						control.dispose();
+					}
 					createContentComposite(composite);
 					composite.layout();
 				}
@@ -116,7 +120,9 @@ abstract public class EObjectSelectionBasedPart {
 
 			} else {
 				if(getContentComposite() != null && !(getContentComposite() instanceof NoEObjectSelectionComposite)){
-					getContentComposite().dispose();
+					for (Control control : composite.getChildren()) {
+						control.dispose();
+					}
 				}
 				if(getContentComposite() == null){
 					new NoEObjectSelectionComposite(composite, SWT.None);
