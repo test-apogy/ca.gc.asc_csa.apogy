@@ -699,6 +699,16 @@ public interface ApogyCoreUIPackage extends EPackage
 	int IMAGE_DESCRIPTOR = 10;
 
 		/**
+	 * The meta object id for the '<em>ISelection</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.jface.viewers.ISelection
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getISelection()
+	 * @generated
+	 */
+	int ISELECTION = 11;
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1123,6 +1133,17 @@ public interface ApogyCoreUIPackage extends EPackage
 	EDataType getImageDescriptor();
 
 		/**
+	 * Returns the meta object for data type '{@link org.eclipse.jface.viewers.ISelection <em>ISelection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ISelection</em>'.
+	 * @see org.eclipse.jface.viewers.ISelection
+	 * @model instanceClass="org.eclipse.jface.viewers.ISelection"
+	 * @generated
+	 */
+	EDataType getISelection();
+
+		/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1487,6 +1508,16 @@ public interface ApogyCoreUIPackage extends EPackage
 		 * @generated
 		 */
 		EDataType IMAGE_DESCRIPTOR = eINSTANCE.getImageDescriptor();
+
+				/**
+		 * The meta object literal for the '<em>ISelection</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.jface.viewers.ISelection
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getISelection()
+		 * @generated
+		 */
+		EDataType ISELECTION = eINSTANCE.getISelection();
 
   }
 

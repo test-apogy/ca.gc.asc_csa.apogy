@@ -22,7 +22,7 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
 
-public class ParameterDefinitionPart extends AbstractApogySessionBasedPart {
+public class ParameterDefinitionPart{
 
 	protected Composite createContentComposite(Composite parent) {
 		return null;

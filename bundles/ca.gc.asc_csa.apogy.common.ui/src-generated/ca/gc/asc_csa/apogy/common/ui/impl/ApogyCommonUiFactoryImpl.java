@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.viewers.ISelection;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,6 +72,7 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyCommonUiPackage.APOGY_COMMON_UI_FACADE: return createApogyCommonUiFacade();
+			case ApogyCommonUiPackage.APOGY_SELECTION: return createApogySelection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -86,6 +88,8 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 		switch (eDataType.getClassifierID()) {
 			case ApogyCommonUiPackage.IMAGE_DESCRIPTOR:
 				return createImageDescriptorFromString(eDataType, initialValue);
+			case ApogyCommonUiPackage.ISELECTION:
+				return createISelectionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -101,6 +105,8 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 		switch (eDataType.getClassifierID()) {
 			case ApogyCommonUiPackage.IMAGE_DESCRIPTOR:
 				return convertImageDescriptorToString(eDataType, instanceValue);
+			case ApogyCommonUiPackage.ISELECTION:
+				return convertISelectionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -121,6 +127,16 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ApogySelection createApogySelection() {
+		ApogySelectionImpl apogySelection = new ApogySelectionImpl();
+		return apogySelection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ImageDescriptor createImageDescriptorFromString(EDataType eDataType, String initialValue) {
 		return (ImageDescriptor)super.createFromString(eDataType, initialValue);
 	}
@@ -131,6 +147,24 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 	 * @generated
 	 */
 	public String convertImageDescriptorToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ISelection createISelectionFromString(EDataType eDataType, String initialValue) {
+		return (ISelection)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertISelectionToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

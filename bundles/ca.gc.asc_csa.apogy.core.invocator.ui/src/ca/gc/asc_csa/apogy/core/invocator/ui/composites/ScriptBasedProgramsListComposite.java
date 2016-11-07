@@ -19,6 +19,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.observable.ChangeEvent;
+import org.eclipse.core.databinding.observable.IChangeListener;
+import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
@@ -35,9 +38,11 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.util.LocalSelectionTransfer;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
@@ -81,6 +86,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	private ProgramsList programsList;
 
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
+	private IChangeListener newValueChangeListener;
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 
 	public ScriptBasedProgramsListComposite(Composite parent, int style) {
@@ -129,7 +135,8 @@ public class ScriptBasedProgramsListComposite extends Composite {
 				 * Creates and opens the wizard to create a valid context
 				 */
 				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
-				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);				
+				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
+				newProgramsGroupWizard.getCreatedProgramsGroup().addChangeListener(getNewValueChangeListener());
 				dialog.open();
 			}
 		});
@@ -146,7 +153,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 				NewScriptBasedProgramWizard newScriptBasedProgramWizard = new NewScriptBasedProgramWizard(
 						getSelectedProgramsGroup());
 				WizardDialog dialog = new WizardDialog(getShell(), newScriptBasedProgramWizard);
-
+				newScriptBasedProgramWizard.getCreatedProgram().addChangeListener(getNewValueChangeListener());
 				dialog.open();
 			}
 		});
@@ -173,9 +180,6 @@ public class ScriptBasedProgramsListComposite extends Composite {
 				}
 			}
 		});
-		new Label(compositeProgramsList, SWT.NONE);
-		
-		new Label(compositeProgramsList, SWT.NONE);
 		scrolledComposite.setContent(compositeProgramsList);
 		scrolledComposite.setMinSize(compositeProgramsList.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
@@ -213,7 +217,23 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	 * @param selection
 	 *            Reference to the selection.
 	 */
-	protected void newSelection(TreeSelection selection) {
+	protected void newSelection(ISelection selection) {
+	}
+	
+	public IChangeListener getNewValueChangeListener() {
+		if(newValueChangeListener == null){
+			newValueChangeListener = new IChangeListener() {
+				@SuppressWarnings("unchecked")
+				@Override
+				public void handleChange(ChangeEvent event) {						
+					treeViewer.refresh();
+					treeViewer.setSelection(
+							new StructuredSelection(((WritableValue<EObject>) event.getObservable()).getValue()));
+					event.getObservable().removeChangeListener(getNewValueChangeListener());
+				}	
+			};
+		}
+		return newValueChangeListener;
 	}
 
 	/**

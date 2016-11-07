@@ -49,8 +49,6 @@ import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 public class EObjectComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 
-	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
-
 	private TreeViewer instanceViewer;
 	ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
@@ -68,15 +66,6 @@ public class EObjectComposite extends Composite {
 	 */
 	public EObjectComposite(Composite parent, int style) {
 		super(parent, SWT.NONE);
-
-		addDisposeListener(new DisposeListener() {
-			public void widgetDisposed(DisposeEvent e) {
-				toolkit.dispose();
-			}
-		});
-
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
 		setLayout(new GridLayout(1, true));
 	
 		instanceViewer = new TreeViewer(this, SWT.BORDER
@@ -87,7 +76,7 @@ public class EObjectComposite extends Composite {
 		Tree treeInstance = instanceViewer.getTree();
 		treeInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		treeInstance.setLinesVisible(true);
-		toolkit.paintBordersFor(treeInstance);
+
 		
 		instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 		instanceViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
@@ -147,7 +136,6 @@ public class EObjectComposite extends Composite {
 	@Override
 	public void dispose() {
 		instanceViewer.removeSelectionChangedListener(getSelectionChangedListener());
-		toolkit.dispose();		
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;

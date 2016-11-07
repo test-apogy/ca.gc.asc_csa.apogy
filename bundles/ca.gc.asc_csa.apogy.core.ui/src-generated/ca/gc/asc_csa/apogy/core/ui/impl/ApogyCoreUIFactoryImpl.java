@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.viewers.ISelection;
 import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
 import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
 import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
@@ -110,6 +111,8 @@ public class ApogyCoreUIFactoryImpl extends EFactoryImpl implements ApogyCoreUIF
 				return createIFolderFromString(eDataType, initialValue);
 			case ApogyCoreUIPackage.IMAGE_DESCRIPTOR:
 				return createImageDescriptorFromString(eDataType, initialValue);
+			case ApogyCoreUIPackage.ISELECTION:
+				return createISelectionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -133,6 +136,8 @@ public class ApogyCoreUIFactoryImpl extends EFactoryImpl implements ApogyCoreUIF
 				return convertIFolderToString(eDataType, instanceValue);
 			case ApogyCoreUIPackage.IMAGE_DESCRIPTOR:
 				return convertImageDescriptorToString(eDataType, instanceValue);
+			case ApogyCoreUIPackage.ISELECTION:
+				return convertISelectionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -287,6 +292,24 @@ public class ApogyCoreUIFactoryImpl extends EFactoryImpl implements ApogyCoreUIF
 	 * @generated
 	 */
 	public String convertImageDescriptorToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ISelection createISelectionFromString(EDataType eDataType, String initialValue) {
+		return (ISelection)super.createFromString(eDataType, initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertISelectionToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

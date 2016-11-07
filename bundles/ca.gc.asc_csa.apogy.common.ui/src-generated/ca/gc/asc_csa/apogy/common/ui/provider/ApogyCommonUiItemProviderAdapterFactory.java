@@ -123,6 +123,29 @@ public class ApogyCommonUiItemProviderAdapterFactory extends ApogyCommonUiAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.ui.ApogySelection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ApogySelectionItemProvider apogySelectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.ui.ApogySelection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createApogySelectionAdapter() {
+		if (apogySelectionItemProvider == null) {
+			apogySelectionItemProvider = new ApogySelectionItemProvider(this);
+		}
+
+		return apogySelectionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -249,6 +272,7 @@ public class ApogyCommonUiItemProviderAdapterFactory extends ApogyCommonUiAdapte
 	 */
 	public void dispose() {
 		if (apogyCommonUiFacadeItemProvider != null) apogyCommonUiFacadeItemProvider.dispose();
+		if (apogySelectionItemProvider != null) apogySelectionItemProvider.dispose();
 	}
 
 }

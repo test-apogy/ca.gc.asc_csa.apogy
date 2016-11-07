@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  */
 
 import org.eclipse.jface.dialogs.IDialogPage;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
@@ -51,7 +52,7 @@ public class OperationCallsListWizardPage extends WizardPage {
 	public void createControl(Composite parent) {		
 		programsListComposite = new ScriptBasedProgramsListComposite(parent, SWT.None){
 			@Override
-			protected void newSelection(TreeSelection selection) {
+			protected void newSelection(ISelection selection) {
 				validate();
 			}
 			@Override

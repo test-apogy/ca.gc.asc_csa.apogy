@@ -83,6 +83,10 @@ public class ApogyCommonUiAdapterFactory extends AdapterFactoryImpl {
 				return createApogyCommonUiFacadeAdapter();
 			}
 			@Override
+			public Adapter caseApogySelection(ApogySelection object) {
+				return createApogySelectionAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -113,6 +117,20 @@ public class ApogyCommonUiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApogyCommonUiFacadeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.ui.ApogySelection <em>Apogy Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.ui.ApogySelection
+	 * @generated
+	 */
+	public Adapter createApogySelectionAdapter() {
 		return null;
 	}
 

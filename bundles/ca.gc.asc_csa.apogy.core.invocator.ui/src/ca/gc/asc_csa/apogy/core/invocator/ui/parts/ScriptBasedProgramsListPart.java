@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
@@ -27,13 +28,17 @@ public class ScriptBasedProgramsListPart extends AbstractApogySessionBasedPart {
 	protected Composite createContentComposite(Composite parent) {
 		return new ScriptBasedProgramsListComposite(parent, SWT.None){
 			@Override
-			protected void newSelection(TreeSelection selection) {
-				selectionService.setSelection( selection.getFirstElement());
+			protected void newSelection(ISelection selection) {
+//				ApogySelection apogySelection = ApogyCommonUiFactory.eINSTANCE.createApogySelection();
+//				apogySelection.setSelection(selection);
+//				apogySelection.setPartID("ca.gc.asc_csa.apogy.core.invocator.ui.parts.ScriptBasedProgramsListPart");
+//				selectionService.setSelection(apogySelection);
+				selectionService.setSelection(((TreeSelection)selection).getFirstElement());
 			}
 		};
 	}
 
-	protected void setSession(InvocatorSession invocatorSession) {
+	protected void setSessionInComposite(InvocatorSession invocatorSession) {
 		((ScriptBasedProgramsListComposite) getContentComposite()).setProgramsList(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList());
 	}
 }

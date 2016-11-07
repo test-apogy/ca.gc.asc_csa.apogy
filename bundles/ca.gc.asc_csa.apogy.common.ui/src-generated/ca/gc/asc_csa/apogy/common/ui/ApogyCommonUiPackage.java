@@ -13,6 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.common.ui;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
@@ -119,6 +120,52 @@ public interface ApogyCommonUiPackage extends EPackage {
 	int APOGY_COMMON_UI_FACADE_OPERATION_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.ui.impl.ApogySelectionImpl <em>Apogy Selection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogySelectionImpl
+	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getApogySelection()
+	 * @generated
+	 */
+	int APOGY_SELECTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Selection</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_SELECTION__SELECTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Part ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_SELECTION__PART_ID = 1;
+
+	/**
+	 * The number of structural features of the '<em>Apogy Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_SELECTION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Apogy Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_SELECTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '<em>Image Descriptor</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -126,7 +173,18 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getImageDescriptor()
 	 * @generated
 	 */
-	int IMAGE_DESCRIPTOR = 1;
+	int IMAGE_DESCRIPTOR = 2;
+
+
+	/**
+	 * The meta object id for the '<em>ISelection</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.jface.viewers.ISelection
+	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getISelection()
+	 * @generated
+	 */
+	int ISELECTION = 3;
 
 
 	/**
@@ -150,6 +208,38 @@ public interface ApogyCommonUiPackage extends EPackage {
 	EOperation getApogyCommonUiFacade__GetImageDescriptor__String();
 
 	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.ui.ApogySelection <em>Apogy Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Apogy Selection</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.ui.ApogySelection
+	 * @generated
+	 */
+	EClass getApogySelection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.ui.ApogySelection#getSelection <em>Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selection</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.ui.ApogySelection#getSelection()
+	 * @see #getApogySelection()
+	 * @generated
+	 */
+	EAttribute getApogySelection_Selection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.ui.ApogySelection#getPartID <em>Part ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Part ID</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.ui.ApogySelection#getPartID()
+	 * @see #getApogySelection()
+	 * @generated
+	 */
+	EAttribute getApogySelection_PartID();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.jface.resource.ImageDescriptor <em>Image Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,6 +249,17 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getImageDescriptor();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.jface.viewers.ISelection <em>ISelection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ISelection</em>'.
+	 * @see org.eclipse.jface.viewers.ISelection
+	 * @model instanceClass="org.eclipse.jface.viewers.ISelection"
+	 * @generated
+	 */
+	EDataType getISelection();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -202,6 +303,32 @@ public interface ApogyCommonUiPackage extends EPackage {
 		EOperation APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING = eINSTANCE.getApogyCommonUiFacade__GetImageDescriptor__String();
 
 		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.ui.impl.ApogySelectionImpl <em>Apogy Selection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogySelectionImpl
+		 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getApogySelection()
+		 * @generated
+		 */
+		EClass APOGY_SELECTION = eINSTANCE.getApogySelection();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOGY_SELECTION__SELECTION = eINSTANCE.getApogySelection_Selection();
+
+		/**
+		 * The meta object literal for the '<em><b>Part ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOGY_SELECTION__PART_ID = eINSTANCE.getApogySelection_PartID();
+
+		/**
 		 * The meta object literal for the '<em>Image Descriptor</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -210,6 +337,16 @@ public interface ApogyCommonUiPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType IMAGE_DESCRIPTOR = eINSTANCE.getImageDescriptor();
+
+		/**
+		 * The meta object literal for the '<em>ISelection</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.jface.viewers.ISelection
+		 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getISelection()
+		 * @generated
+		 */
+		EDataType ISELECTION = eINSTANCE.getISelection();
 
 	}
 
