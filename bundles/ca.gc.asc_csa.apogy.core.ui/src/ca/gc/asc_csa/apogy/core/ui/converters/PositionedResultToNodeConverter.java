@@ -57,36 +57,37 @@ public class PositionedResultToNodeConverter implements IConverter{
 	 */
 	protected Node getNode(PositionedResult positionedResult){
 		Node node = null;
-				
-		InvocatorSession invocatorSession = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
-		if (invocatorSession != null){
-			Environment environment = invocatorSession.getEnvironment();
-			if (environment instanceof ApogyEnvironment){
-				ApogyEnvironment apogyEnvironment = (ApogyEnvironment) environment;				
-				ApogyTopology apogyTopology = apogyEnvironment.getApogyTopology();				
-				if (apogyTopology != null){
-					GroupNode groupNode = apogyTopology.getRootNode();
-					
-					if (groupNode != null){
-						Iterator<Node> resultNodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCorePackage.Literals.RESULT_NODE, groupNode).iterator();
-						ResultNode resultNode = null;
-						
-						while (resultNodes.hasNext() && resultNode == null){
-							ResultNode current = (ResultNode) resultNodes.next();
-							if (current.getResult() == positionedResult){
-								resultNode = current;
-							}
-						}
-						
-						if (resultNode != null){						
-							if (!resultNode.getAggregatedChildren().isEmpty()){
-								node = resultNode.getAggregatedChildren().get(0);
-							}							
-						}
-					}
-				}
-			}		
-		}
+
+// FIXME TRANSACTION: Volatile + Singleton -> Facade		
+//		InvocatorSession invocatorSession = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+//		if (invocatorSession != null){
+//			Environment environment = invocatorSession.getEnvironment();
+//			if (environment instanceof ApogyEnvironment){
+//				ApogyEnvironment apogyEnvironment = (ApogyEnvironment) environment;				
+//				ApogyTopology apogyTopology = apogyEnvironment.getApogyTopology();				
+//				if (apogyTopology != null){
+//					GroupNode groupNode = apogyTopology.getRootNode();
+//					
+//					if (groupNode != null){
+//						Iterator<Node> resultNodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCorePackage.Literals.RESULT_NODE, groupNode).iterator();
+//						ResultNode resultNode = null;
+//						
+//						while (resultNodes.hasNext() && resultNode == null){
+//							ResultNode current = (ResultNode) resultNodes.next();
+//							if (current.getResult() == positionedResult){
+//								resultNode = current;
+//							}
+//						}
+//						
+//						if (resultNode != null){						
+//							if (!resultNode.getAggregatedChildren().isEmpty()){
+//								node = resultNode.getAggregatedChildren().get(0);
+//							}							
+//						}
+//					}
+//				}
+//			}		
+//		}
 		
 		return node;
 	}

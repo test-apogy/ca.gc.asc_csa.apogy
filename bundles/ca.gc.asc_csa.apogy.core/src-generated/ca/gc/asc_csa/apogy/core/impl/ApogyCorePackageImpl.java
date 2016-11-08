@@ -390,6 +390,15 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getApogyCoreFacade_ApogyTopology() {
+		return (EReference)apogyCoreFacadeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getApogyCoreFacade__ComputeAbsolutePoseMatrix__ApogySystem_Matrix4x4() {
 		return apogyCoreFacadeEClass.getEOperations().get(0);
 	}
@@ -482,10 +491,11 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getApogyEnvironment_ApogyTopology() {
+	public EReference getApogyEnvironment_TimeSourcesList() {
 		return (EReference)apogyEnvironmentEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -494,17 +504,8 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getApogyEnvironment_TimeSourcesList() {
-		return (EReference)apogyEnvironmentEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getApogyEnvironment_ActiveTimeSource() {
-		return (EReference)apogyEnvironmentEClass.getEStructuralFeatures().get(4);
+		return (EReference)apogyEnvironmentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1247,6 +1248,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 
 		// Create classes and their features
 		apogyCoreFacadeEClass = createEClass(APOGY_CORE_FACADE);
+		createEReference(apogyCoreFacadeEClass, APOGY_CORE_FACADE__APOGY_TOPOLOGY);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__APOGYSYSTEM_MATRIX4X4);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN);
@@ -1259,7 +1261,6 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 		apogyEnvironmentEClass = createEClass(APOGY_ENVIRONMENT);
 		createEReference(apogyEnvironmentEClass, APOGY_ENVIRONMENT__WORKSITES_LIST);
 		createEReference(apogyEnvironmentEClass, APOGY_ENVIRONMENT__ACTIVE_WORKSITE);
-		createEReference(apogyEnvironmentEClass, APOGY_ENVIRONMENT__APOGY_TOPOLOGY);
 		createEReference(apogyEnvironmentEClass, APOGY_ENVIRONMENT__TIME_SOURCES_LIST);
 		createEReference(apogyEnvironmentEClass, APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE);
 
@@ -1460,6 +1461,7 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyCoreFacadeEClass, ApogyCoreFacade.class, "ApogyCoreFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getApogyCoreFacade_ApogyTopology(), this.getApogyTopology(), null, "apogyTopology", null, 0, 1, ApogyCoreFacade.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getApogyCoreFacade__ComputeAbsolutePoseMatrix__ApogySystem_Matrix4x4(), theApogyCommonMathPackage.getMatrix4x4(), "computeAbsolutePoseMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getApogySystem(), "apogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1502,7 +1504,6 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 		initEClass(apogyEnvironmentEClass, ApogyEnvironment.class, "ApogyEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApogyEnvironment_WorksitesList(), this.getWorksitesList(), null, "worksitesList", null, 0, 1, ApogyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyEnvironment_ActiveWorksite(), this.getAbstractWorksite(), null, "activeWorksite", null, 0, 1, ApogyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApogyEnvironment_ApogyTopology(), this.getApogyTopology(), null, "apogyTopology", null, 0, 1, ApogyEnvironment.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyEnvironment_TimeSourcesList(), this.getTimeSourcesList(), this.getTimeSourcesList_Environment(), "timeSourcesList", null, 0, 1, ApogyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyEnvironment_ActiveTimeSource(), theApogyCommonEMFPackage.getTimeSource(), null, "activeTimeSource", null, 0, 1, ApogyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

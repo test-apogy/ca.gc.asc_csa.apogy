@@ -144,7 +144,6 @@ public class ApogyEnvironmentItemProvider extends EnvironmentItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_ENVIRONMENT__WORKSITES_LIST);
-			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_ENVIRONMENT__APOGY_TOPOLOGY);
 			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_ENVIRONMENT__TIME_SOURCES_LIST);
 		}
 		return childrenFeatures;
@@ -203,7 +202,6 @@ public class ApogyEnvironmentItemProvider extends EnvironmentItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
-			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
 			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

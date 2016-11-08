@@ -173,37 +173,41 @@ public class CreateUserDefinedResultDialog extends Dialog
 	protected Combo createMapSelectionCombo(Composite parent, Context context)
 	{
 		final Combo combo = new Combo(parent, SWT.NONE);
+
 		
-		if(context.getEnvironment() instanceof ApogyEnvironment)
-		{
-			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
-			
-			Node rootNode = apogyEnvironment.getApogyTopology().getRootNode();			
-			
-			List<Node> nodes = getAllNodes(rootNode);
-			
-			String[] items = new String[nodes.size()];
-			int i = 0;
-			for(Node node : nodes)
-			{
-				String name = node.getNodeId();
-				if(name == null)
-				{
-					name = node.getDescription();
-				}
-				
-				if(name == null)
-				{
-					name = Integer.toString(i);
-				}
-				
-				items[i] = name;
-				indexToNodeMap.put(i, node);
-				
-				i++;
-			}
-			combo.setItems(items);
-		}
+// FIXME TRANSACTION: Singleton Volatile -> Facade.		
+//		if(context.getEnvironment() instanceof ApogyEnvironment)
+//		{
+//			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
+//			
+//			
+//			
+//			Node rootNode = apogyEnvironment.getApogyTopology().getRootNode();			
+//			
+//			List<Node> nodes = getAllNodes(rootNode);
+//			
+//			String[] items = new String[nodes.size()];
+//			int i = 0;
+//			for(Node node : nodes)
+//			{
+//				String name = node.getNodeId();
+//				if(name == null)
+//				{
+//					name = node.getDescription();
+//				}
+//				
+//				if(name == null)
+//				{
+//					name = Integer.toString(i);
+//				}
+//				
+//				items[i] = name;
+//				indexToNodeMap.put(i, node);
+//				
+//				i++;
+//			}
+//			combo.setItems(items);
+//		}
 				
 		return combo;
 	}

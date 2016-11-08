@@ -22,15 +22,14 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.core.AbstractWorksite;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.TimeSourcesList;
 import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
-import ca.gc.asc_csa.apogy.core.ApogyTopology;
+import ca.gc.asc_csa.apogy.core.TimeSourcesList;
 import ca.gc.asc_csa.apogy.core.WorksitesList;
 import ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl;
 
@@ -44,7 +43,6 @@ import ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl;
  *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getTime <em>Time</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getWorksitesList <em>Worksites List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getActiveWorksite <em>Active Worksite</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getApogyTopology <em>Apogy Topology</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getTimeSourcesList <em>Time Sources List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getActiveTimeSource <em>Active Time Source</em>}</li>
  * </ul>
@@ -95,16 +93,6 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements
 	 * @ordered
 	 */
 	protected AbstractWorksite activeWorksite;
-
-	/**
-	 * The cached value of the '{@link #getApogyTopology() <em>Apogy Topology</em>}' reference.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @see #getApogyTopology()
-	 * @generated
-	 * @ordered
-	 */
-	protected ApogyTopology apogyTopology;
 
 	/**
 	 * The cached value of the '{@link #getTimeSourcesList() <em>Time Sources List</em>}' containment reference.
@@ -255,55 +243,21 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
 	}
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public ApogyTopology getApogyTopology() {
-		ApogyTopology tmp = getApogyTopologyGen();
-		if (tmp == null) {
-			tmp = ApogyCoreFactory.eINSTANCE.createApogyTopology();
-			setApogyTopology(tmp);
-		}
-
-		return tmp;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ApogyTopology getApogyTopologyGen() {
-		if (apogyTopology != null && apogyTopology.eIsProxy()) {
-			InternalEObject oldApogyTopology = (InternalEObject)apogyTopology;
-			apogyTopology = (ApogyTopology)eResolveProxy(oldApogyTopology);
-			if (apogyTopology != oldApogyTopology) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
-			}
-		}
-		return apogyTopology;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ApogyTopology basicGetApogyTopology() {
-		return apogyTopology;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setApogyTopology(ApogyTopology newApogyTopology) {
-		ApogyTopology oldApogyTopology = apogyTopology;
-		apogyTopology = newApogyTopology;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
-	}
+// FIXME TRANSACTION: Volatile + Singleton.	
+//	/**
+//	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+//	 * 
+//	 * @generated_NOT
+//	 */
+//	public ApogyTopology getApogyTopology() {
+//		ApogyTopology tmp = getApogyTopologyGen();
+//		if (tmp == null) {
+//			tmp = ApogyCoreFactory.eINSTANCE.createApogyTopology();
+//			setApogyTopology(tmp);
+//		}
+//
+//		return tmp;
+//	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -453,9 +407,6 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements
 			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
 				if (resolve) return getActiveWorksite();
 				return basicGetActiveWorksite();
-			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
-				if (resolve) return getApogyTopology();
-				return basicGetApogyTopology();
 			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				return getTimeSourcesList();
 			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
@@ -480,9 +431,6 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements
 				return;
 			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
 				setActiveWorksite((AbstractWorksite)newValue);
-				return;
-			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
-				setApogyTopology((ApogyTopology)newValue);
 				return;
 			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				setTimeSourcesList((TimeSourcesList)newValue);
@@ -510,9 +458,6 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements
 			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
 				setActiveWorksite((AbstractWorksite)null);
 				return;
-			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
-				setApogyTopology((ApogyTopology)null);
-				return;
 			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				setTimeSourcesList((TimeSourcesList)null);
 				return;
@@ -536,8 +481,6 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements
 				return worksitesList != null;
 			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
 				return activeWorksite != null;
-			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
-				return apogyTopology != null;
 			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				return timeSourcesList != null;
 			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:

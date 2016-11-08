@@ -108,11 +108,12 @@ public class TopologyViewerListenerManager
 		{
 			if(invocatorSession.getEnvironment() instanceof ApogyEnvironment)
 			{
-				ApogyEnvironment apogyEnvironment = (ApogyEnvironment) invocatorSession.getEnvironment();
-				if(apogyEnvironment.getApogyTopology() != null)
-				{
-					root = apogyEnvironment.getApogyTopology().getRootNode();
-				}
+// FIXME TRANSACTION: Volatile, Singleton -> Facade.				
+//				ApogyEnvironment apogyEnvironment = (ApogyEnvironment) invocatorSession.getEnvironment();
+//				if(apogyEnvironment.getApogyTopology() != null)
+//				{
+//					root = apogyEnvironment.getApogyTopology().getRootNode();
+//				}
 			}
 		}
 				
@@ -223,11 +224,12 @@ public class TopologyViewerListenerManager
 				int featureId = msg.getFeatureID(ApogyEnvironment.class);
 				switch (featureId) 
 				{
-					case  ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
-					{
-						setApogyTopology((ApogyTopology) msg.getNewValue());
-					}
-					break;
+// FIXME TRANSACTION Volatile, Singleton -> Facade.				
+//					case  ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
+//					{
+//						setApogyTopology((ApogyTopology) msg.getNewValue());
+//					}
+//					break;
 				}
 			}
 			else if(msg.getNotifier() instanceof ApogyTopology)
@@ -279,7 +281,9 @@ public class TopologyViewerListenerManager
 			if(currentApogyEnvironment != null)
 			{
 				currentApogyEnvironment.eAdapters().add(this);
-				setApogyTopology(currentApogyEnvironment.getApogyTopology());
+				
+// FIXME TRANSACTION: VOLATILE, SINGLETON -> Facade.				
+//				setApogyTopology(currentApogyEnvironment.getApogyTopology());
 			}
 		}
 		

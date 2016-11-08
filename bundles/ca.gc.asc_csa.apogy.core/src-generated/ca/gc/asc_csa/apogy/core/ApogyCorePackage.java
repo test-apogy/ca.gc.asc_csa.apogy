@@ -97,13 +97,22 @@ public interface ApogyCorePackage extends EPackage {
 	int APOGY_CORE_FACADE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Apogy Topology</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_FACADE__APOGY_TOPOLOGY = 0;
+
+	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE_FEATURE_COUNT = 0;
+	int APOGY_CORE_FACADE_FEATURE_COUNT = 1;
 
 	/**
 	 * The operation id for the '<em>Compute Absolute Pose Matrix</em>' operation.
@@ -287,22 +296,13 @@ public interface ApogyCorePackage extends EPackage {
 	int APOGY_ENVIRONMENT__ACTIVE_WORKSITE = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Apogy Topology</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__APOGY_TOPOLOGY = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Time Sources List</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_ENVIRONMENT__TIME_SOURCES_LIST = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 4;
+	int APOGY_ENVIRONMENT__TIME_SOURCES_LIST = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Active Time Source</b></em>' reference.
@@ -311,7 +311,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 5;
+	int APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Apogy Environment</em>' class.
@@ -320,7 +320,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_ENVIRONMENT_FEATURE_COUNT = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 6;
+	int APOGY_ENVIRONMENT_FEATURE_COUNT = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Apogy Environment</em>' class.
@@ -2494,6 +2494,17 @@ public interface ApogyCorePackage extends EPackage {
 	EClass getApogyCoreFacade();
 
 	/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getApogyTopology <em>Apogy Topology</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Apogy Topology</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getApogyTopology()
+	 * @see #getApogyCoreFacade()
+	 * @generated
+	 */
+	EReference getApogyCoreFacade_ApogyTopology();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#computeAbsolutePoseMatrix(ca.gc.asc_csa.apogy.core.ApogySystem, ca.gc.asc_csa.apogy.common.math.Matrix4x4) <em>Compute Absolute Pose Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2604,17 +2615,6 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getApogyEnvironment_ActiveWorksite();
-
-	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment#getApogyTopology <em>Apogy Topology</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Apogy Topology</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.ApogyEnvironment#getApogyTopology()
-	 * @see #getApogyEnvironment()
-	 * @generated
-	 */
-	EReference getApogyEnvironment_ApogyTopology();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment#getTimeSourcesList <em>Time Sources List</em>}'.
@@ -3540,6 +3540,14 @@ public interface ApogyCorePackage extends EPackage {
 		EClass APOGY_CORE_FACADE = eINSTANCE.getApogyCoreFacade();
 
 		/**
+		 * The meta object literal for the '<em><b>Apogy Topology</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APOGY_CORE_FACADE__APOGY_TOPOLOGY = eINSTANCE.getApogyCoreFacade_ApogyTopology();
+
+		/**
 		 * The meta object literal for the '<em><b>Compute Absolute Pose Matrix</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3628,14 +3636,6 @@ public interface ApogyCorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference APOGY_ENVIRONMENT__ACTIVE_WORKSITE = eINSTANCE.getApogyEnvironment_ActiveWorksite();
-
-		/**
-		 * The meta object literal for the '<em><b>Apogy Topology</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOGY_ENVIRONMENT__APOGY_TOPOLOGY = eINSTANCE.getApogyEnvironment_ApogyTopology();
 
 		/**
 		 * The meta object literal for the '<em><b>Time Sources List</b></em>' containment reference feature.

@@ -234,47 +234,48 @@ public class ApogyEnvironment3DView extends AbstractApogy3DView
 					@Override
 					protected IStatus run(IProgressMonitor monitor) 
 					{
-						try
-						{					
-							if(newApogyEnvironment != null)
-							{
-								// If the ApogyEnvironment topology has not been initialize, initialize it and attach
-								// ApogyEnvironmentNode to keep the topology updated.
-								if(newApogyEnvironment.getApogyTopology().getRootNode() == null)
-								{
-									// Updates the deployment of the deployment node to get the topology to update.
-									TransformNode root = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
-									root.setNodeId("UNIVERSE_ROOT");
-									root.setDescription("Root Node of the Apogy Environment");
-									
-									// Creates the ApogyEnvironmentNode that represent the topology associated with the ApogyEnvironment.
-									ApogyEnvironmentNode apogyEnvironmentNode = ApogyCoreTopologyFacade.INSTANCE.createApogyEnvironmentNode(newApogyEnvironment);									
-									root.getChildren().add(apogyEnvironmentNode);
-																		
-									newApogyEnvironment.getApogyTopology().setRootNode(root);				
-									
-									GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(newApogyEnvironment.getApogyTopology().getRootNode());
-									if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
-								}
-								else
-								{																
-									GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(newApogyEnvironment.getApogyTopology().getRootNode());
-									if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
-								}														
-							}
-							else
-							{
-								TransformNode root = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
-								root.setNodeId("UNIVERSE_ROOT");
-								root.setDescription("Root Node of the Apogy Environment");
-								GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(root);
-								if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
-							}
-						}
-						catch(Throwable t)
-						{
-							t.printStackTrace();
-						}
+						// FIXME TRANSACTION: Singleton, Volatile -> Facade
+//						try
+//						{							
+//							if(newApogyEnvironment != null)
+//							{								
+//								// If the ApogyEnvironment topology has not been initialize, initialize it and attach
+//								// ApogyEnvironmentNode to keep the topology updated.
+//								if(newApogyEnvironment.getApogyTopology().getRootNode() == null)
+//								{
+//									// Updates the deployment of the deployment node to get the topology to update.
+//									TransformNode root = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
+//									root.setNodeId("UNIVERSE_ROOT");
+//									root.setDescription("Root Node of the Apogy Environment");
+//									
+//									// Creates the ApogyEnvironmentNode that represent the topology associated with the ApogyEnvironment.
+//									ApogyEnvironmentNode apogyEnvironmentNode = ApogyCoreTopologyFacade.INSTANCE.createApogyEnvironmentNode(newApogyEnvironment);									
+//									root.getChildren().add(apogyEnvironmentNode);
+//																		
+//									newApogyEnvironment.getApogyTopology().setRootNode(root);				
+//									
+//									GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(newApogyEnvironment.getApogyTopology().getRootNode());
+//									if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
+//								}
+//								else
+//								{																
+//									GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(newApogyEnvironment.getApogyTopology().getRootNode());
+//									if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
+//								}														
+//							}
+//							else
+//							{
+//								TransformNode root = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
+//								root.setNodeId("UNIVERSE_ROOT");
+//								root.setDescription("Root Node of the Apogy Environment");
+//								GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(root);
+//								if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
+//							}
+//						}
+//						catch(Throwable t)
+//						{
+//							t.printStackTrace();
+//						}
 						
 						if(topologyViewer != null)
 						{

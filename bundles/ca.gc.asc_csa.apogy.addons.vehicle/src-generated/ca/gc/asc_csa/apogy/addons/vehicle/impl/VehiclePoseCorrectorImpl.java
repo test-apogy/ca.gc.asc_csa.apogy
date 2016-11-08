@@ -860,50 +860,52 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 	  
 	  try
 	  {		  
-		  ApogyEnvironment env = (ApogyEnvironment) getApogySystemApiAdapter().getEnvironment();		  		  		  
-		  Node root = env.getApogyTopology().getRootNode();		  		  		  
+		  ApogyEnvironment env = (ApogyEnvironment) getApogySystemApiAdapter().getEnvironment();		
 		  
-		  // Gets the list of nodes that are part of the system topology.
-		  Node systemRoot = getApogySystemApiAdapter().getApogySystem().getTopologyRoot().getOriginNode();
-		  List<Node> systemNodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.NODE, systemRoot);
-		  		  
-		  List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE, root);		  		  
-		  nodes.addAll(ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.CONTENT_NODE, root));
-		  nodes.addAll(ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, root));
-		  
-		  for(Node node : nodes)
-		  {
-			  // Adds only nodes that are not part of the system itself.
-			  if(!systemNodes.contains(node))
-			  {			  
-				  if(node instanceof ContentNode<?>) 
-				  {
-					  ContentNode<?> contentNode = (ContentNode<?>) node;
-					  
-					   if(contentNode.getContent() instanceof CartesianTriangularMesh)
-					   {
-						  if(!extractedMeshes.contains((ContentNode<CartesianTriangularMesh>) contentNode))
-						  {						  
-							  MeshNodeEntry entry = ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
-							  entry.setNode(contentNode);
-							  entry.setMesh(((ContentNode<CartesianTriangularMesh>) contentNode).getContent());							  							 
-							  extractedMeshes.add(entry);
-						  }
-					   }					  
-				  }
-				  else if(node instanceof CartesianTriangularMeshMapLayerNode)
-				  {
-					  CartesianTriangularMeshMapLayerNode cartesianTriangularMeshMapLayerNode = (CartesianTriangularMeshMapLayerNode) node;
-					  if(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer() != null)
-					  {
-						  MeshNodeEntry entry = ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
-						  entry.setNode(cartesianTriangularMeshMapLayerNode);
-						  entry.setMesh(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer().getCurrentMesh());	
-						  extractedMeshes.add(entry);
-					  }
-				  }
-			  }
-		  }	  
+// FIXME TRANSACTION: SINGLETON, Volatile -> Facade.		  
+//		  Node root = env.getApogyTopology().getRootNode();		  		  		  
+//		  
+//		  // Gets the list of nodes that are part of the system topology.
+//		  Node systemRoot = getApogySystemApiAdapter().getApogySystem().getTopologyRoot().getOriginNode();
+//		  List<Node> systemNodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.NODE, systemRoot);
+//		  		  
+//		  List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE, root);		  		  
+//		  nodes.addAll(ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.CONTENT_NODE, root));
+//		  nodes.addAll(ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, root));
+//		  
+//		  for(Node node : nodes)
+//		  {
+//			  // Adds only nodes that are not part of the system itself.
+//			  if(!systemNodes.contains(node))
+//			  {			  
+//				  if(node instanceof ContentNode<?>) 
+//				  {
+//					  ContentNode<?> contentNode = (ContentNode<?>) node;
+//					  
+//					   if(contentNode.getContent() instanceof CartesianTriangularMesh)
+//					   {
+//						  if(!extractedMeshes.contains((ContentNode<CartesianTriangularMesh>) contentNode))
+//						  {						  
+//							  MeshNodeEntry entry = ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
+//							  entry.setNode(contentNode);
+//							  entry.setMesh(((ContentNode<CartesianTriangularMesh>) contentNode).getContent());							  							 
+//							  extractedMeshes.add(entry);
+//						  }
+//					   }					  
+//				  }
+//				  else if(node instanceof CartesianTriangularMeshMapLayerNode)
+//				  {
+//					  CartesianTriangularMeshMapLayerNode cartesianTriangularMeshMapLayerNode = (CartesianTriangularMeshMapLayerNode) node;
+//					  if(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer() != null)
+//					  {
+//						  MeshNodeEntry entry = ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
+//						  entry.setNode(cartesianTriangularMeshMapLayerNode);
+//						  entry.setMesh(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer().getCurrentMesh());	
+//						  extractedMeshes.add(entry);
+//					  }
+//				  }
+//			  }
+//		  }	  
 	  }
 	  catch(Exception e)
 	  {

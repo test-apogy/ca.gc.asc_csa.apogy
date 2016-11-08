@@ -111,6 +111,10 @@ class ApogyCoreFacade
 	 * @return The FeatureOfInterestNode associated with the specified FeatureOfInterest, null if none is found.
 	 */
 	op FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest)
+	
+	
+	@GenModel(children="true", notify="true", property="None")
+	refers derived transient ApogyTopology[0..1] apogyTopology	
 }
 
 /* -------------------------------------------------------------------------
@@ -127,8 +131,8 @@ class ApogyEnvironment extends Environment, Timed
 	 */
 	refers AbstractWorksite activeWorksite
 		
-	@GenModel(children="true", notify="true", property="None")
-	refers derived transient ApogyTopology[0..1] apogyTopology	
+//	@GenModel(children="true", notify="true", property="None")
+//	refers derived transient ApogyTopology[0..1] apogyTopology	
 	
 	/*
 	 * The list of available time sources.
