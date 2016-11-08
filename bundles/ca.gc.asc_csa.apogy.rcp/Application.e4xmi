@@ -3,10 +3,17 @@
   <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.window.main" label="Apogy" width="500" height="400">
     <tags>shellMaximized</tags>
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_6wlLkMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.ide.perspectivestack">
-      <children xsi:type="advanced:Perspective" xmi:id="_MJCyUJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.perspective.welcome" label="Welcome" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Welcome">
+      <children xsi:type="advanced:Perspective" xmi:id="__Qv0EKH0EeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.welcome" label="Welcome" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Welcome">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_ETMaQKH1EeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.14">
+          <children xsi:type="basic:PartStack" xmi:id="_E_s68KH1EeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.15">
+            <children xsi:type="basic:Part" xmi:id="_FsmdMKH1EeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.part.welcomePart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.parts.WelcomePart" label="Welcome" tooltip="Welcome"/>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_MJCyUJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.perspective.projects" label="Projects" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Projects">
         <children xsi:type="basic:PartSashContainer" xmi:id="_j20PMJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7">
           <children xsi:type="basic:PartStack" xmi:id="_TSorMJI1EeamGfEKvUVWpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
-            <children xsi:type="basic:Part" xmi:id="_4uWh8JI5EeawCfS-XYP3Tg" elementId="ca.gc.asc_csa.apogy.rcp.parts.introPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.parts.IntroPart" label="Welcome" iconURI="">
+            <children xsi:type="basic:Part" xmi:id="_4uWh8JI5EeawCfS-XYP3Tg" elementId="ca.gc.asc_csa.apogy.rcp.parts.projects.Part" contributionURI="bundleclass://ca.gc.asc_csa.apogy.workspace.ui/ca.gc.asc_csa.apogy.workspace.ui.parts.ProjectsPart" label="Projects" iconURI="">
               <tags>View</tags>
               <tags>categoryTag:org.eclipse.ui</tags>
             </children>
@@ -110,6 +117,7 @@
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_6wlLisgZEeSyMNYR5xypkQ" elementId="file" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_xIqYsKHsEeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.handledmenuitem.close" label="Close" tooltip="Closes the active project" command="_4JIHkKHoEeaQMb_PNdzFwg"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjcgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.handleditem.quit" label="Quit" command="_WnJ38CjiEeaYVMfJA5sKMA"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_PvYPQCgbEeau5bAVKAeRVA" elementId="ca.gc.asc_csa.apogy.rcp.menu.window" label="Window">
@@ -234,10 +242,14 @@
         <children xsi:type="menu:ToolControl" xmi:id="_hxCx4CmwEeaErYjgnAFhag" elementId="ca.gc.asc_csa.apogy.rcp.toolcontrol.PerspectiveSwitcher" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.perspectiveswitcher/org.eclipse.e4.ui.workbench.perspectiveswitcher.tools.PerspectiveSwitcherSwtTrim"/>
       </children>
     </trimBars>
+    <trimBars xmi:id="_W5SysKH1EeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.1" side="Bottom">
+      <children xsi:type="menu:ToolControl" xmi:id="_X4VN0KH1EeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.toolcontrol.0" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.toolcontrols.ActiveProjectToolControl"/>
+      <children xsi:type="menu:ToolControl" xmi:id="_Y6oGIKKWEeatBNBOSYcp9w" elementId="ca.gc.asc_csa.apogy.rcp.toolcontrol.sessionStatusToolControl" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.toolcontrols.SessionStatusToolControl"/>
+    </trimBars>
   </children>
   <handlers xmi:id="_0cimwCj3EeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handler.0" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.SwitchPerspectiveHandler" command="_C4Fq0B32EeaqJNPAWI4oCw"/>
-  <handlers xmi:id="_GuUuoJVtEeaa6JtpKE_Ezw" elementId="ca.gc.asc_csa.apogy.rcp.handler.newProject" command="_CI2YUJVtEeaa6JtpKE_Ezw"/>
   <handlers xmi:id="_BfdysKBmEeavx4McADZI6Q" elementId="ca.gc.asc_csa.apogy.rcp.handler.save" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_8GgjIKHoEeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.handler.close" contributionURI="bundleclass://ca.gc.asc_csa.apogy.rcp/ca.gc.asc_csa.apogy.rcp.handlers.CloseHandler" command="_4JIHkKHoEeaQMb_PNdzFwg"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="ca.gc.asc_csa.apogy.rcp.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
@@ -302,6 +314,7 @@
   <commands xmi:id="_nZOc8IwJEeagBK84clz7Sg" elementId="org.eclipse.equinox.p2.ui.sdk.install" commandName="%Install.command"/>
   <commands xmi:id="_nZuzQIwJEeagBK84clz7Sg" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="%InstallationDetails.command"/>
   <commands xmi:id="_CI2YUJVtEeaa6JtpKE_Ezw" elementId="ca.gc.asc_csa.apogy.rcp.command.newProject" commandName="New Project"/>
+  <commands xmi:id="_4JIHkKHoEeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.command.close" commandName="closeCommand"/>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

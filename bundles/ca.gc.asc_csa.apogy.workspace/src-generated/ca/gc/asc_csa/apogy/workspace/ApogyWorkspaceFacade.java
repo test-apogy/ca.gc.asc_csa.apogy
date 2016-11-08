@@ -340,14 +340,14 @@ public interface ApogyWorkspaceFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Closes the specified Apogy Project.
+	 * Closes the active Apogy Project.
 	 * @param project Reference to the project to close.
 	 * @throws Exception Reference to the exception.
 	 * <!-- end-model-doc -->
 	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception"
 	 * @generated
 	 */
-	void closeApogyProject() throws Exception;
+	void closeActiveApogyProject() throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -264,13 +264,13 @@ public interface ApogyWorkspacePackage extends EPackage {
 	int APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING = 8;
 
 	/**
-	 * The operation id for the '<em>Close Apogy Project</em>' operation.
+	 * The operation id for the '<em>Close Active Apogy Project</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT = 9;
+	int APOGY_WORKSPACE_FACADE___CLOSE_ACTIVE_APOGY_PROJECT = 9;
 
 	/**
 	 * The operation id for the '<em>Is Project Exists</em>' operation.
@@ -581,14 +581,14 @@ public interface ApogyWorkspacePackage extends EPackage {
 	EOperation getApogyWorkspaceFacade__ImportApogyProject__Bundle_String();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject() <em>Close Apogy Project</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeActiveApogyProject() <em>Close Active Apogy Project</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Close Apogy Project</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeApogyProject()
+	 * @return the meta object for the '<em>Close Active Apogy Project</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#closeActiveApogyProject()
 	 * @generated
 	 */
-	EOperation getApogyWorkspaceFacade__CloseApogyProject();
+	EOperation getApogyWorkspaceFacade__CloseActiveApogyProject();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade#isProjectExists(java.lang.String) <em>Is Project Exists</em>}' operation.
@@ -835,12 +835,12 @@ public interface ApogyWorkspacePackage extends EPackage {
 		 */
 		EOperation APOGY_WORKSPACE_FACADE___IMPORT_APOGY_PROJECT__BUNDLE_STRING = eINSTANCE.getApogyWorkspaceFacade__ImportApogyProject__Bundle_String();
 		/**
-		 * The meta object literal for the '<em><b>Close Apogy Project</b></em>' operation.
+		 * The meta object literal for the '<em><b>Close Active Apogy Project</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_WORKSPACE_FACADE___CLOSE_APOGY_PROJECT = eINSTANCE.getApogyWorkspaceFacade__CloseApogyProject();
+		EOperation APOGY_WORKSPACE_FACADE___CLOSE_ACTIVE_APOGY_PROJECT = eINSTANCE.getApogyWorkspaceFacade__CloseActiveApogyProject();
 		/**
 		 * The meta object literal for the '<em><b>Is Project Exists</b></em>' operation.
 		 * <!-- begin-user-doc -->

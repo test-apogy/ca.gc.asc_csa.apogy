@@ -167,13 +167,31 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = 1;
 
 	/**
+	 * The operation id for the '<em>Init Session</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_UI_FACADE___INIT_SESSION = 2;
+
+	/**
+	 * The operation id for the '<em>Dispose Session</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION = 3;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 2;
+	int APOGY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '<em>Compound Command</em>' data type.
@@ -247,6 +265,26 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#initSession() <em>Init Session</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Init Session</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#initSession()
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorUIFacade__InitSession();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#disposeSession() <em>Dispose Session</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Dispose Session</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#disposeSession()
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorUIFacade__DisposeSession();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.common.command.CompoundCommand <em>Compound Command</em>}'.
@@ -328,6 +366,20 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = eINSTANCE.getApogyCoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
+		/**
+		 * The meta object literal for the '<em><b>Init Session</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___INIT_SESSION = eINSTANCE.getApogyCoreInvocatorUIFacade__InitSession();
+		/**
+		 * The meta object literal for the '<em><b>Dispose Session</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION = eINSTANCE.getApogyCoreInvocatorUIFacade__DisposeSession();
 		/**
 		 * The meta object literal for the '<em>Compound Command</em>' data type.
 		 * <!-- begin-user-doc -->

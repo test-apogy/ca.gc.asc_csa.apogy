@@ -351,6 +351,14 @@ public interface ApogyCoreInvocatorFacade extends EObject
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void initVariableInstances();
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Clear the variable instances.
@@ -361,6 +369,14 @@ public interface ApogyCoreInvocatorFacade extends EObject
   void disposeVariableInstances(Environment environment);
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void disposeVariableInstances();
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

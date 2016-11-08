@@ -3,8 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.invocator.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-ClassPath: .,
- swing2swt.jar
+Bundle-ClassPath: .
 Bundle-Activator: ca.gc.asc_csa.apogy.core.invocator.ui.provider.ApogyCoreInvocatorUIEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
@@ -38,19 +37,23 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.e4.ui.workbench,
  org.eclipse.e4.ui.services,
  org.eclipse.e4.core.di.annotations,
- org.eclipse.e4.ui.model.workbench
+ org.eclipse.e4.ui.model.workbench,
+ ca.gc.asc_csa.apogy.common.emf.transaction;bundle-version="0.5.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
 Export-Package: ca.gc.asc_csa.apogy.core.invocator.ui,
  ca.gc.asc_csa.apogy.core.invocator.ui.commands,
  ca.gc.asc_csa.apogy.core.invocator.ui.composites,
+ ca.gc.asc_csa.apogy.core.invocator.ui.converters,
  ca.gc.asc_csa.apogy.core.invocator.ui.decorators,
  ca.gc.asc_csa.apogy.core.invocator.ui.impl,
  ca.gc.asc_csa.apogy.core.invocator.ui.parts,
  ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections,
  ca.gc.asc_csa.apogy.core.invocator.ui.provider,
+ ca.gc.asc_csa.apogy.core.invocator.ui.toolcontrols,
  ca.gc.asc_csa.apogy.core.invocator.ui.util,
+ ca.gc.asc_csa.apogy.core.invocator.ui.validation,
  ca.gc.asc_csa.apogy.core.invocator.ui.views,
  ca.gc.asc_csa.apogy.core.invocator.ui.wizards
 

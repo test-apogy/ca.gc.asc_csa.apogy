@@ -59,4 +59,26 @@ public interface ApogyCoreInvocatorUIFacade extends EObject {
 	 * @generated
 	 */
 	void copyInitializationData(AbstractTypeImplementation source, AbstractTypeImplementation destination, CompoundCommand command) throws Exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Initializes the active session.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	void initSession();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Disposes the active session.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	void disposeSession();
 } // ApogyCoreInvocatorUIFacade

@@ -156,11 +156,11 @@ class ApogyWorkspaceFacade{
 	op void importApogyProject(Bundle bundle, String projectName) throws Exception	
 
 	/*
-	 * Closes the specified Apogy Project.
+	 * Closes the active Apogy Project.
 	 * @param project Reference to the project to close.
 	 * @throws Exception Reference to the exception. 
 	 */
-	op void closeApogyProject() throws Exception
+	op void closeActiveApogyProject() throws Exception
 
 	/*
 	 * Returns if the project exists or not. 

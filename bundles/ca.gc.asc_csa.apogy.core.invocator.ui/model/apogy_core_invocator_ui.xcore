@@ -53,8 +53,7 @@ class NewProgramSettings
 	contains ProgramSettings programSettings
 }
 
-class ApogyCoreInvocatorUIFacade
-{
+class ApogyCoreInvocatorUIFacade{
 	/*  
 	 * Copies the Initialization Data.
 	 * @param source Reference to the source context.
@@ -69,4 +68,15 @@ class ApogyCoreInvocatorUIFacade
 	 * @param command Reference to the stack command.
 	 */	
 	op void copyInitializationData(AbstractTypeImplementation source, AbstractTypeImplementation destination, CompoundCommand command) throws Exception
+	
+	/*
+	 * Initializes the active session.
+	 */
+	op void initSession()
+	
+	/*
+	 * Disposes the active session.
+	 */
+	op void disposeSession()	
+		
 }
