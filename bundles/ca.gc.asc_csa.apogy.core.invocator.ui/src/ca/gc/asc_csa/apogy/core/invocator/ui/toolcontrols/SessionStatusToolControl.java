@@ -23,7 +23,6 @@ import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
@@ -51,7 +50,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 public class SessionStatusToolControl {
 
 	private DataBindingContext m_bindingContext;
-	private WritableValue<ApogyCoreInvocatorFacade> invocatorFacadeBinder;
 	private Combo comboContext;
 	private Button btnStart;
 	private Button btnStop;
@@ -123,11 +121,9 @@ public class SessionStatusToolControl {
 	protected DataBindingContext customInitDataBindings() {
 
 		m_bindingContext = new DataBindingContext();
-		invocatorFacadeBinder = new WritableValue<ApogyCoreInvocatorFacade>();
-		invocatorFacadeBinder.setValue(ApogyCoreInvocatorFacade.INSTANCE);
 		IObservableValue<?> invocatorFacadeActiveInvocatorSessionObserveValue = EMFProperties
 				.value(ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
-				.observeDetail(invocatorFacadeBinder);
+				.observe(ApogyCoreInvocatorFacade.INSTANCE);
 
 		/**
 		 * Data binding for the different elements of the UI to be
@@ -138,11 +134,13 @@ public class SessionStatusToolControl {
 		m_bindingContext.bindValue(observeEnabledResetInstancesObserveWidget,
 				invocatorFacadeActiveInvocatorSessionObserveValue, null,
 				new InvocatorInstanceToBooleanUpdateValueStrategy());
+		
 		IObservableValue<?> observeEnabledClearInstancesObserveWidget = WidgetProperties.enabled()
 				.observe(btnStop);
 		m_bindingContext.bindValue(observeEnabledClearInstancesObserveWidget,
 				invocatorFacadeActiveInvocatorSessionObserveValue, null,
 				new InvocatorInstanceToBooleanUpdateValueStrategy());
+		
 		IObservableValue<?> observeEnabledComboContextObserveWidget = WidgetProperties.enabled().observe(comboContext);
 		m_bindingContext.bindValue(observeEnabledComboContextObserveWidget,
 				invocatorFacadeActiveInvocatorSessionObserveValue, null,
@@ -161,12 +159,13 @@ public class SessionStatusToolControl {
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS))
-				.observeDetail(invocatorFacadeBinder);
+				.observe(ApogyCoreInvocatorFacade.INSTANCE);
+		
 		m_bindingContext.bindList(observeComboContextItemsObserveWidget,
 				invocatorFacadeEnvironmentContextsListContextsObserveValue, null,
-				new UpdateListStrategy().setConverter(new Converter(Context.class, String.class) {
+				new UpdateListStrategy(UpdateListStrategy.POLICY_UPDATE).setConverter(new Converter(Context.class, String.class) {
 					@Override
-					public Object convert(Object arg0) {
+					public Object convert(Object arg0) {						
 						return ((Context) arg0).getName() == null ? "null" : ((Context) arg0).getName();
 					}
 				}));
@@ -182,7 +181,7 @@ public class SessionStatusToolControl {
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT))
-				.observeDetail(invocatorFacadeBinder);
+				.observe(ApogyCoreInvocatorFacade.INSTANCE);
 
 		m_bindingContext.bindValue(observeComboContextSingleSelectionIndexObserveWidget,
 				invocatorFacadeEnvironmentActiveContextObserveValue,
@@ -224,17 +223,17 @@ public class SessionStatusToolControl {
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.CONTEXT__VARIABLES_INSTANTIATED))
-				.observeDetail(invocatorFacadeBinder);
+				.observe(ApogyCoreInvocatorFacade.INSTANCE);
 		m_bindingContext.bindValue(observeBackgroundInstanceStatusObserveWidget,
 				invocatorFacadeActiveContextCreationDateValue, null,
 				new UpdateValueStrategy().setConverter(new Converter(Context.class, Color.class) {
 					@Override
 					public Object convert(Object fromObject) {
 						int color = SWT.COLOR_TRANSPARENT;
-						if (invocatorFacadeBinder.getValue().getActiveInvocatorSession() != null){
-							if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment() != null){
-								if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
-									if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
+							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment() != null){
+								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
+									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
 										color = SWT.COLOR_GREEN;
 									}
 								}
@@ -256,12 +255,12 @@ public class SessionStatusToolControl {
 					public Object convert(Object fromObject) {
 						boolean result = true; 
 						
-						if (invocatorFacadeBinder.getValue().getActiveInvocatorSession() == null){
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
 							result = false;
 						}else{						
-							if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment() != null){
-								if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
-									if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment() != null){
+								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
+									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
 										result = false;
 									}
 								}
@@ -282,10 +281,10 @@ public class SessionStatusToolControl {
 					@Override
 					public Object convert(Object fromObject) {
 						boolean result = false; 
-						if (invocatorFacadeBinder.getValue().getActiveInvocatorSession() != null){
-							if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment() != null){
-								if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
-									if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
+							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment() != null){
+								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
+									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
 										result = true;
 									}
 								}
@@ -307,12 +306,12 @@ public class SessionStatusToolControl {
 					public Object convert(Object fromObject) {
 						boolean result = true; 
 						
-						if (invocatorFacadeBinder.getValue().getActiveInvocatorSession() == null){
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
 							result = false;
 						}else{						
-							if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment() != null){
-								if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
-									if (invocatorFacadeBinder.getValue().getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment() != null){
+								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
+									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
 										result = false;
 									}
 								}
