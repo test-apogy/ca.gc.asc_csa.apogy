@@ -35,109 +35,56 @@ import org.eclipse.swt.widgets.Control;
 
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoEObjectSelectionComposite;
 
-abstract public class EObjectSelectionBasedPart {
-	private Composite composite;
-	private EObject eObject;
-
-	protected Boolean acceptSelection;
-
-	@Inject
-	protected ESelectionService selectionService;
-
-	@PostConstruct
-	public void createPartControl(Composite parent) {
-		composite = parent;
-		composite.setLayout(new FillLayout());
-		createContentComposite(composite);
-		composite.layout();
-		setSelection(eObject);
-	}
-
-	/**
-	 * Specifies the {@link Composite} to create in the part
-	 */
-	abstract protected void createContentComposite(Composite parent);
-
-	/**
-	 * Used to know if the selection is an instance of the type of EObjects
-	 * which can be set in the content composite
-	 * 
-	 * @param selectionClass
-	 *            the class to verify
-	 * @return true if the class can be set in the content composite, false
-	 *         otherwise
-	 */
-	abstract protected boolean isSettableClass(Class<? extends EObject> selectionClass);
-
-	/**
-	 * Gets the content {@link Composite} in the part
-	 * 
-	 * @return Composite
-	 */
-	public Composite getContentComposite() {
-		System.out.println("EObjectSelectionBasedPart.getContentComposite()");
-		if (composite != null) {
-			if (composite.getChildren().length > 0) {
-				for(Iterator<?> ite = Arrays.asList(composite.getChildren()).iterator(); ite.hasNext();){
-					System.out.println(ite.next());
-				}
-				return (Composite) composite.getChildren()[0];
-			}
-		}
-		return null;
-	}
-
-	/**
-	 * This method is called when the {@link EObject} needs to be changed or
-	 * initialized in the content composite.
-	 * 
-	 * @param eObject
-	 *            Reference to the EObject.
-	 */
-	abstract protected void setContentCompositeSelection(EObject eObject);
+abstract public class AbstractEObjectSelectionBasedPart extends AbstractApogyPart {
 	
-//	abstract protected boolean verifySelectionProviderPart(String partID);
+	@Override
+	abstract protected boolean isEObjectAcepted(EObject eObject);
 	
-	abstract protected List<String> getAcceptedPartsIds();
-	
+	@Override
 	@Inject
 	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) EObject eObject) {
-		if (composite != null) {
-			if (this.acceptSelection) {
-				if (eObject != null && isSettableClass(eObject.getClass())) {
-					this.eObject = eObject;
-
-					if (getContentComposite() instanceof NoEObjectSelectionComposite) {
-						// Disposes the NoActiveSessionComposite
-						for (Control control : composite.getChildren()) {
-							control.dispose();
-						}
-						createContentComposite(composite);
-						composite.layout();
-					}
-					setContentCompositeSelection(eObject);
-
-				} else {
-					if (getContentComposite() != null
-							&& !(getContentComposite() instanceof NoEObjectSelectionComposite)) {
-						for (Control control : composite.getChildren()) {
-							control.dispose();
-						}
-					}
-					if (getContentComposite() == null) {
-						selectionService.setSelection(null);
-						new NoEObjectSelectionComposite(composite, SWT.None);
-						composite.layout();
-					};
-				}
-			}else if(getContentComposite() == null){
-				selectionService.setSelection(null);
-				new NoEObjectSelectionComposite(composite, SWT.None);
-				composite.layout();
-			}
-		}
+	protected void setEObject(@Named(IServiceConstants.ACTIVE_SELECTION) EObject eObject) {
+		super.setEObject(eObject);
 	}
+
+//	@Inject
+//	@Optional
+//	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) EObject eObject) {
+//		if (composite != null) {
+//			if (this.acceptSelection) {
+//				if (eObject != null && isSettableClass(eObject.getClass())) {
+//					this.eObject = eObject;
+//
+//					if (getContentComposite() instanceof NoEObjectSelectionComposite) {
+//						// Disposes the NoActiveSessionComposite
+//						for (Control control : composite.getChildren()) {
+//							control.dispose();
+//						}
+//						createContentComposite(composite);
+//						composite.layout();
+//					}
+//					setContentCompositeSelection(eObject);
+//
+//				} else {
+//					if (getContentComposite() != null
+//							&& !(getContentComposite() instanceof NoEObjectSelectionComposite)) {
+//						for (Control control : composite.getChildren()) {
+//							control.dispose();
+//						}
+//					}
+//					if (getContentComposite() == null) {
+//						selectionService.setSelection(null);
+//						new NoEObjectSelectionComposite(composite, SWT.None);
+//						composite.layout();
+//					};
+//				}
+//			}else if(getContentComposite() == null){
+//				selectionService.setSelection(null);
+//				new NoEObjectSelectionComposite(composite, SWT.None);
+//				composite.layout();
+//			}
+//		}
+//	}
 
 //	/**
 //	 * This method is called when the {@link EObject} needs to be changed or
@@ -211,18 +158,18 @@ abstract public class EObjectSelectionBasedPart {
 //		}
 //	}
 
-	@Inject
-	@Optional
-	public void receiveActivePart(@Named(IServiceConstants.ACTIVE_PART) MPart activePart) {
-		if (activePart != null && getAcceptedPartsIds().contains(activePart.getElementId())) {
-			System.out.println(true);
-			this.acceptSelection = true;
-		} else {
-			System.out.println(false);
-			this.acceptSelection = false;
-		}
-
-	}
+//	@Inject
+//	@Optional
+//	public void receiveActivePart(@Named(IServiceConstants.ACTIVE_PART) MPart activePart) {
+//		if (activePart != null && getAcceptedPartsIds().contains(activePart.getElementId())) {
+//			System.out.println(true);
+//			this.acceptSelection = true;
+//		} else {
+//			System.out.println(false);
+//			this.acceptSelection = false;
+//		}
+//
+//	}
 	
 	
 	
@@ -258,9 +205,9 @@ abstract public class EObjectSelectionBasedPart {
 //		}
 //	}
 
-	@PreDestroy
-	protected void dispose() {
-		getContentComposite().dispose();
-		composite.dispose();
-	}
+//	@PreDestroy
+//	protected void dispose() {
+//		getContentComposite().dispose();
+//		composite.dispose();
+//	}
 }

@@ -14,6 +14,9 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Arrays;
+import java.util.Iterator;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
@@ -22,6 +25,7 @@ import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -30,7 +34,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoActiveSessionComposite;
 
-abstract public class AbstractApogySessionBasedPart {
+abstract public class AbstractApogyPart {
 
 	private Composite composite;
 	private Adapter adapter;
@@ -43,7 +47,8 @@ abstract public class AbstractApogySessionBasedPart {
 		composite = parent;
 		composite.setLayout(new FillLayout());
 		createContentComposite(composite);
-		setSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		
+		setEObject(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());
 	}
 
@@ -58,18 +63,20 @@ abstract public class AbstractApogySessionBasedPart {
 	 * @return Composite
 	 */
 	public Composite getContentComposite() {
-		System.out.println("AbstractApogySessionBasedPart.getContentComposite()");
-		return (Composite) composite.getChildren()[0];
+		if (composite != null && composite.getChildren().length > 0) {
+			return (Composite) composite.getChildren()[0];
+		}
+		return null;
 	}
 
 	/**
-	 * This method is called when the {@link InvocatorSession} needs to be
+	 * This method is called when the {@link EObject} needs to be
 	 * changed or initialized in the content composite.
 	 * 
 	 * @param invocatorSession
 	 *            Reference to the InvocatorSession.
 	 */
-	abstract protected void setSessionInComposite(InvocatorSession invocatorSession);
+	abstract protected void setEObjectInComposite(EObject eObject);
 	
 	/**
 	 * This method is called when the {@link InvocatorSession} needs to be
@@ -82,25 +89,20 @@ abstract public class AbstractApogySessionBasedPart {
 	 * @param invocatorSession
 	 *            Reference to the InvocatorSession.
 	 */
-	private void setSession(InvocatorSession invocatorSession){
-		// If there is no active session
-		if(invocatorSession == null){
-			// Verify if the content composite is not a NoActiveSessionComposite
-			if(!(getContentComposite() instanceof NoActiveSessionComposite)){
-				// Disposes the content composite
-				selectionService.setSelection(null);
-				getContentComposite().dispose();
-				new NoActiveSessionComposite(composite, SWT.None);
-				composite.layout();
+	protected void setEObject(EObject eObject){
+		if (composite != null) {
+			if (getContentComposite() == null && !isEObjectAcepted(eObject)) {
+				setNoActiveSessionComposite();
 			}
-		}else{
-			if(getContentComposite() instanceof NoActiveSessionComposite){
-				// Disposes the NoActiveSessionComposite
-				getContentComposite().dispose();
-				createContentComposite(composite);	
-				composite.layout();
+			if (isEObjectAcepted(eObject)) {
+				if (getContentComposite() instanceof NoActiveSessionComposite) {
+					// Disposes the NoActiveSessionComposite
+					getContentComposite().dispose();
+					createContentComposite(composite);
+					composite.layout();
 				}
-			setSessionInComposite(invocatorSession);		
+				setEObjectInComposite(eObject);
+			}
 		}
 	}
 
@@ -109,15 +111,34 @@ abstract public class AbstractApogySessionBasedPart {
 			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					setSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+					setNoActiveSessionComposite();
 				}
 			};
 		}
 		return adapter;
 	}
+	
+	private void setNoActiveSessionComposite(){
+		if(!(getContentComposite() instanceof NoActiveSessionComposite)){
+			// Disposes the content composite
+			getContentComposite().dispose();
+			new NoActiveSessionComposite(composite, SWT.None);
+			composite.layout();
+		}
+	}
+	
+	protected boolean isEObjectAcepted(EObject eObject) {
+		if(eObject instanceof InvocatorSession){
+			return true;
+		}
+		return false;
+	}
 
 	@PreDestroy
 	protected void dispose() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
+		if(composite != null){
+			composite.dispose();
+		}
 	}
 }
