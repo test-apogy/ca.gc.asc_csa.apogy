@@ -466,24 +466,6 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   ReferenceResultValue createReferenceResultValue();
 
   /**
-	 * Returns a new object of class '<em>Recording Tools Container</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Recording Tools Container</em>'.
-	 * @generated
-	 */
-	RecordingToolsContainer createRecordingToolsContainer();
-
-		/**
-	 * Returns a new object of class '<em>Channels List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Channels List</em>'.
-	 * @generated
-	 */
-	ChannelsList createChannelsList();
-
-		/**
 	 * Returns a new object of class '<em>Operation Call Results List Time Source</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

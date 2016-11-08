@@ -14,12 +14,8 @@
 package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-
-import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractProgramRuntime;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
@@ -33,7 +29,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
 import ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument;
-import ca.gc.asc_csa.apogy.core.invocator.ChannelsList;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
@@ -65,7 +60,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
-import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
 import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
@@ -562,41 +556,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	private EClass referenceResultValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass recordingToolsContainerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass channelsListEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass abstractChannelEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass abstractRecorderEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass abstractPlayerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3025,123 +2984,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRecordingToolsContainer() {
-		return recordingToolsContainerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRecordingToolsContainer_Recorder() {
-		return (EReference)recordingToolsContainerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRecordingToolsContainer_Player() {
-		return (EReference)recordingToolsContainerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRecordingToolsContainer_ChannelsLists() {
-		return (EReference)recordingToolsContainerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getChannelsList() {
-		return channelsListEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getChannelsList_Channels() {
-		return (EReference)channelsListEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getChannelsList_RecordingToolsContainer() {
-		return (EReference)channelsListEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAbstractChannel() {
-		return abstractChannelEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbstractChannel_ChannelsList() {
-		return (EReference)abstractChannelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAbstractRecorder() {
-		return abstractRecorderEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbstractRecorder_RecordingToolsContainer() {
-		return (EReference)abstractRecorderEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAbstractPlayer() {
-		return abstractPlayerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbstractPlayer_RecordingToolsContainer() {
-		return (EReference)abstractPlayerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getOperationCallResultsListTimeSource() {
 		return operationCallResultsListTimeSourceEClass;
 	}
@@ -3574,24 +3416,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		referenceResultValueEClass = createEClass(REFERENCE_RESULT_VALUE);
 		createEReference(referenceResultValueEClass, REFERENCE_RESULT_VALUE__VALUE);
 
-		recordingToolsContainerEClass = createEClass(RECORDING_TOOLS_CONTAINER);
-		createEReference(recordingToolsContainerEClass, RECORDING_TOOLS_CONTAINER__RECORDER);
-		createEReference(recordingToolsContainerEClass, RECORDING_TOOLS_CONTAINER__PLAYER);
-		createEReference(recordingToolsContainerEClass, RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS);
-
-		channelsListEClass = createEClass(CHANNELS_LIST);
-		createEReference(channelsListEClass, CHANNELS_LIST__CHANNELS);
-		createEReference(channelsListEClass, CHANNELS_LIST__RECORDING_TOOLS_CONTAINER);
-
-		abstractChannelEClass = createEClass(ABSTRACT_CHANNEL);
-		createEReference(abstractChannelEClass, ABSTRACT_CHANNEL__CHANNELS_LIST);
-
-		abstractRecorderEClass = createEClass(ABSTRACT_RECORDER);
-		createEReference(abstractRecorderEClass, ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER);
-
-		abstractPlayerEClass = createEClass(ABSTRACT_PLAYER);
-		createEReference(abstractPlayerEClass, ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER);
-
 		operationCallResultsListTimeSourceEClass = createEClass(OPERATION_CALL_RESULTS_LIST_TIME_SOURCE);
 		createEReference(operationCallResultsListTimeSourceEClass, OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST);
 
@@ -3703,15 +3527,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		operationCallResultEClass.getESuperTypes().add(this.getOperationCallContainer());
 		attributeResultValueEClass.getESuperTypes().add(this.getAbstractResultValue());
 		referenceResultValueEClass.getESuperTypes().add(this.getAbstractResultValue());
-		recordingToolsContainerEClass.getESuperTypes().add(this.getAbstractToolsListContainer());
-		channelsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		channelsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		abstractChannelEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		abstractChannelEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		abstractRecorderEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		abstractRecorderEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		abstractPlayerEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		abstractPlayerEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		operationCallResultsListTimeSourceEClass.getESuperTypes().add(theApogyCommonEMFPackage.getCollectionTimedTimeSource());
 
 		// Initialize classes, features, and operations; add parameters
@@ -4195,24 +4010,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		initEClass(referenceResultValueEClass, ReferenceResultValue.class, "ReferenceResultValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReferenceResultValue_Value(), theEcorePackage.getEObject(), null, "value", null, 0, 1, ReferenceResultValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(recordingToolsContainerEClass, RecordingToolsContainer.class, "RecordingToolsContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRecordingToolsContainer_Recorder(), this.getAbstractRecorder(), this.getAbstractRecorder_RecordingToolsContainer(), "recorder", null, 1, 1, RecordingToolsContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRecordingToolsContainer_Player(), this.getAbstractPlayer(), this.getAbstractPlayer_RecordingToolsContainer(), "player", null, 1, 1, RecordingToolsContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRecordingToolsContainer_ChannelsLists(), this.getChannelsList(), this.getChannelsList_RecordingToolsContainer(), "channelsLists", null, 0, -1, RecordingToolsContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(channelsListEClass, ChannelsList.class, "ChannelsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getChannelsList_Channels(), this.getAbstractChannel(), this.getAbstractChannel_ChannelsList(), "channels", null, 0, -1, ChannelsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getChannelsList_RecordingToolsContainer(), this.getRecordingToolsContainer(), this.getRecordingToolsContainer_ChannelsLists(), "recordingToolsContainer", null, 0, 1, ChannelsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(abstractChannelEClass, AbstractChannel.class, "AbstractChannel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractChannel_ChannelsList(), this.getChannelsList(), this.getChannelsList_Channels(), "channelsList", null, 0, 1, AbstractChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(abstractRecorderEClass, AbstractRecorder.class, "AbstractRecorder", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractRecorder_RecordingToolsContainer(), this.getRecordingToolsContainer(), this.getRecordingToolsContainer_Recorder(), "recordingToolsContainer", null, 0, 1, AbstractRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(abstractPlayerEClass, AbstractPlayer.class, "AbstractPlayer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractPlayer_RecordingToolsContainer(), this.getRecordingToolsContainer(), this.getRecordingToolsContainer_Player(), "recordingToolsContainer", null, 0, 1, AbstractPlayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationCallResultsListTimeSourceEClass, OperationCallResultsListTimeSource.class, "OperationCallResultsListTimeSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationCallResultsListTimeSource_OpsCallList(), this.getOperationCallResultsList(), null, "opsCallList", null, 0, 1, OperationCallResultsListTimeSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

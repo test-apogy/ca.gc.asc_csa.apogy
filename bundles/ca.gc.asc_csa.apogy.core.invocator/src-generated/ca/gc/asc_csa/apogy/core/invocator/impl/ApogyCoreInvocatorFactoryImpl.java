@@ -120,8 +120,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE: return createAttributeResultValue();
 			case ApogyCoreInvocatorPackage.ATTRIBUTE_VALUE: return createAttributeValue();
 			case ApogyCoreInvocatorPackage.REFERENCE_RESULT_VALUE: return createReferenceResultValue();
-			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER: return createRecordingToolsContainer();
-			case ApogyCoreInvocatorPackage.CHANNELS_LIST: return createChannelsList();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE: return createOperationCallResultsListTimeSource();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -706,26 +704,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 	}
 
   /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RecordingToolsContainer createRecordingToolsContainer() {
-		RecordingToolsContainerImpl recordingToolsContainer = new RecordingToolsContainerImpl();
-		return recordingToolsContainer;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ChannelsList createChannelsList() {
-		ChannelsListImpl channelsList = new ChannelsListImpl();
-		return channelsList;
-	}
-
-		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

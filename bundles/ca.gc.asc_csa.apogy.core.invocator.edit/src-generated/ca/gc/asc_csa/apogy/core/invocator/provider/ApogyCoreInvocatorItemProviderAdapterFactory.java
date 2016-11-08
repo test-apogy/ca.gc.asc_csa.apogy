@@ -1238,52 +1238,6 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RecordingToolsContainerItemProvider recordingToolsContainerItemProvider;
-
-		/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRecordingToolsContainerAdapter() {
-		if (recordingToolsContainerItemProvider == null) {
-			recordingToolsContainerItemProvider = new RecordingToolsContainerItemProvider(this);
-		}
-
-		return recordingToolsContainerItemProvider;
-	}
-
-		/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ChannelsListItemProvider channelsListItemProvider;
-
-		/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createChannelsListAdapter() {
-		if (channelsListItemProvider == null) {
-			channelsListItemProvider = new ChannelsListItemProvider(this);
-		}
-
-		return channelsListItemProvider;
-	}
-
-		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1492,8 +1446,6 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (attributeResultValueItemProvider != null) attributeResultValueItemProvider.dispose();
 		if (attributeValueItemProvider != null) attributeValueItemProvider.dispose();
 		if (referenceResultValueItemProvider != null) referenceResultValueItemProvider.dispose();
-		if (recordingToolsContainerItemProvider != null) recordingToolsContainerItemProvider.dispose();
-		if (channelsListItemProvider != null) channelsListItemProvider.dispose();
 		if (operationCallResultsListTimeSourceItemProvider != null) operationCallResultsListTimeSourceItemProvider.dispose();
 	}
 

@@ -33,7 +33,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 
@@ -221,11 +220,6 @@ public class ToolsListItemProvider
   protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
   {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-				 ApogyCoreInvocatorFactory.eINSTANCE.createRecordingToolsContainer()));
 	}
 
   /**

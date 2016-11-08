@@ -344,26 +344,6 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 				return createReferenceResultValueAdapter();
 			}
 			@Override
-			public Adapter caseRecordingToolsContainer(RecordingToolsContainer object) {
-				return createRecordingToolsContainerAdapter();
-			}
-			@Override
-			public Adapter caseChannelsList(ChannelsList object) {
-				return createChannelsListAdapter();
-			}
-			@Override
-			public Adapter caseAbstractChannel(AbstractChannel object) {
-				return createAbstractChannelAdapter();
-			}
-			@Override
-			public Adapter caseAbstractRecorder(AbstractRecorder object) {
-				return createAbstractRecorderAdapter();
-			}
-			@Override
-			public Adapter caseAbstractPlayer(AbstractPlayer object) {
-				return createAbstractPlayerAdapter();
-			}
-			@Override
 			public Adapter caseOperationCallResultsListTimeSource(OperationCallResultsListTimeSource object) {
 				return createOperationCallResultsListTimeSourceAdapter();
 			}
@@ -1361,78 +1341,6 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createReferenceResultValueAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer <em>Recording Tools Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer
-	 * @generated
-	 */
-	public Adapter createRecordingToolsContainerAdapter() {
-		return null;
-	}
-
-		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList <em>Channels List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ChannelsList
-	 * @generated
-	 */
-	public Adapter createChannelsListAdapter() {
-		return null;
-	}
-
-		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractChannel <em>Abstract Channel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractChannel
-	 * @generated
-	 */
-	public Adapter createAbstractChannelAdapter() {
-		return null;
-	}
-
-		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder <em>Abstract Recorder</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder
-	 * @generated
-	 */
-  public Adapter createAbstractRecorderAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer <em>Abstract Player</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer
-	 * @generated
-	 */
-  public Adapter createAbstractPlayerAdapter()
   {
 		return null;
 	}

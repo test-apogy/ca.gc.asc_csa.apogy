@@ -4778,299 +4778,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int REFERENCE_RESULT_VALUE_OPERATION_COUNT = ABSTRACT_RESULT_VALUE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl <em>Recording Tools Container</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingToolsContainer()
-	 * @generated
-	 */
-	int RECORDING_TOOLS_CONTAINER = 64;
-
-	/**
-	 * The feature id for the '<em><b>Tools List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECORDING_TOOLS_CONTAINER__TOOLS_LIST = ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
-
-	/**
-	 * The feature id for the '<em><b>Recorder</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECORDING_TOOLS_CONTAINER__RECORDER = ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Player</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECORDING_TOOLS_CONTAINER__PLAYER = ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Channels Lists</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS = ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Recording Tools Container</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECORDING_TOOLS_CONTAINER_FEATURE_COUNT = ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Recording Tools Container</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECORDING_TOOLS_CONTAINER_OPERATION_COUNT = ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ChannelsListImpl <em>Channels List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ChannelsListImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getChannelsList()
-	 * @generated
-	 */
-	int CHANNELS_LIST = 65;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHANNELS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHANNELS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Channels</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHANNELS_LIST__CHANNELS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Recording Tools Container</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHANNELS_LIST__RECORDING_TOOLS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Channels List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHANNELS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Channels List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHANNELS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractChannelImpl <em>Abstract Channel</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractChannelImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractChannel()
-	 * @generated
-	 */
-	int ABSTRACT_CHANNEL = 66;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CHANNEL__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CHANNEL__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Channels List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CHANNEL__CHANNELS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Channel</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CHANNEL_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Abstract Channel</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CHANNEL_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractRecorderImpl <em>Abstract Recorder</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractRecorderImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractRecorder()
-	 * @generated
-	 */
-	int ABSTRACT_RECORDER = 67;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_RECORDER__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_RECORDER__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Recording Tools Container</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Recorder</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_RECORDER_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Abstract Recorder</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_RECORDER_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractPlayerImpl <em>Abstract Player</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractPlayerImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractPlayer()
-	 * @generated
-	 */
-	int ABSTRACT_PLAYER = 68;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_PLAYER__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_PLAYER__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Recording Tools Container</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Player</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_PLAYER_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Abstract Player</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_PLAYER_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListTimeSourceImpl <em>Operation Call Results List Time Source</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5078,7 +4785,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsListTimeSource()
 	 * @generated
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 69;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 64;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5295,7 +5002,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableListenerEventType()
 	 * @generated
 	 */
-	int VARIABLE_LISTENER_EVENT_TYPE = 70;
+	int VARIABLE_LISTENER_EVENT_TYPE = 65;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState <em>Program Runtime State</em>}' enum.
@@ -5305,7 +5012,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramRuntimeState()
 	 * @generated
 	 */
-	int PROGRAM_RUNTIME_STATE = 71;
+	int PROGRAM_RUNTIME_STATE = 66;
 
 	/**
 	 * The meta object id for the '<em>Throwable</em>' data type.
@@ -5315,7 +5022,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getThrowable()
 	 * @generated
 	 */
-	int THROWABLE = 72;
+	int THROWABLE = 67;
 
 	/**
 	 * The meta object id for the '<em>Notification</em>' data type.
@@ -5325,7 +5032,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNotification()
 	 * @generated
 	 */
-	int NOTIFICATION = 73;
+	int NOTIFICATION = 68;
 
 	/**
 	 * The meta object id for the '<em>Type Member Implementations EList</em>' data type.
@@ -5335,7 +5042,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
 	 * @generated
 	 */
-	int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 74;
+	int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 69;
 
 	/**
 	 * The meta object id for the '<em>Type Members Array</em>' data type.
@@ -5344,7 +5051,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMembersArray()
 	 * @generated
 	 */
-	int TYPE_MEMBERS_ARRAY = 75;
+	int TYPE_MEMBERS_ARRAY = 70;
 
 	/**
 	 * The meta object id for the '<em>IVariable Listener</em>' data type.
@@ -5354,7 +5061,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getIVariableListener()
 	 * @generated
 	 */
-	int IVARIABLE_LISTENER = 76;
+	int IVARIABLE_LISTENER = 71;
 
 
 	/**
@@ -5365,7 +5072,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getHashMap()
 	 * @generated
 	 */
-	int HASH_MAP = 77;
+	int HASH_MAP = 72;
 
 
 	/**
@@ -8041,144 +7748,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EReference getReferenceResultValue_Value();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer <em>Recording Tools Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Recording Tools Container</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer
-	 * @generated
-	 */
-	EClass getRecordingToolsContainer();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getRecorder <em>Recorder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Recorder</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getRecorder()
-	 * @see #getRecordingToolsContainer()
-	 * @generated
-	 */
-	EReference getRecordingToolsContainer_Recorder();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getPlayer <em>Player</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Player</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getPlayer()
-	 * @see #getRecordingToolsContainer()
-	 * @generated
-	 */
-	EReference getRecordingToolsContainer_Player();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getChannelsLists <em>Channels Lists</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Channels Lists</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getChannelsLists()
-	 * @see #getRecordingToolsContainer()
-	 * @generated
-	 */
-	EReference getRecordingToolsContainer_ChannelsLists();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList <em>Channels List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Channels List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ChannelsList
-	 * @generated
-	 */
-	EClass getChannelsList();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getChannels <em>Channels</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Channels</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getChannels()
-	 * @see #getChannelsList()
-	 * @generated
-	 */
-	EReference getChannelsList_Channels();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getRecordingToolsContainer <em>Recording Tools Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Recording Tools Container</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getRecordingToolsContainer()
-	 * @see #getChannelsList()
-	 * @generated
-	 */
-	EReference getChannelsList_RecordingToolsContainer();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractChannel <em>Abstract Channel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Channel</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractChannel
-	 * @generated
-	 */
-	EClass getAbstractChannel();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractChannel#getChannelsList <em>Channels List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Channels List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractChannel#getChannelsList()
-	 * @see #getAbstractChannel()
-	 * @generated
-	 */
-	EReference getAbstractChannel_ChannelsList();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder <em>Abstract Recorder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Recorder</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder
-	 * @generated
-	 */
-	EClass getAbstractRecorder();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder#getRecordingToolsContainer <em>Recording Tools Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Recording Tools Container</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder#getRecordingToolsContainer()
-	 * @see #getAbstractRecorder()
-	 * @generated
-	 */
-	EReference getAbstractRecorder_RecordingToolsContainer();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer <em>Abstract Player</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Player</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer
-	 * @generated
-	 */
-	EClass getAbstractPlayer();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer#getRecordingToolsContainer <em>Recording Tools Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Recording Tools Container</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer#getRecordingToolsContainer()
-	 * @see #getAbstractPlayer()
-	 * @generated
-	 */
-	EReference getAbstractPlayer_RecordingToolsContainer();
-
-	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource <em>Operation Call Results List Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10474,120 +10043,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REFERENCE_RESULT_VALUE__VALUE = eINSTANCE.getReferenceResultValue_Value();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl <em>Recording Tools Container</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingToolsContainer()
-		 * @generated
-		 */
-		EClass RECORDING_TOOLS_CONTAINER = eINSTANCE.getRecordingToolsContainer();
-
-		/**
-		 * The meta object literal for the '<em><b>Recorder</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RECORDING_TOOLS_CONTAINER__RECORDER = eINSTANCE.getRecordingToolsContainer_Recorder();
-
-		/**
-		 * The meta object literal for the '<em><b>Player</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RECORDING_TOOLS_CONTAINER__PLAYER = eINSTANCE.getRecordingToolsContainer_Player();
-
-		/**
-		 * The meta object literal for the '<em><b>Channels Lists</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS = eINSTANCE.getRecordingToolsContainer_ChannelsLists();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ChannelsListImpl <em>Channels List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ChannelsListImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getChannelsList()
-		 * @generated
-		 */
-		EClass CHANNELS_LIST = eINSTANCE.getChannelsList();
-
-		/**
-		 * The meta object literal for the '<em><b>Channels</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CHANNELS_LIST__CHANNELS = eINSTANCE.getChannelsList_Channels();
-
-		/**
-		 * The meta object literal for the '<em><b>Recording Tools Container</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CHANNELS_LIST__RECORDING_TOOLS_CONTAINER = eINSTANCE.getChannelsList_RecordingToolsContainer();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractChannelImpl <em>Abstract Channel</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractChannelImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractChannel()
-		 * @generated
-		 */
-		EClass ABSTRACT_CHANNEL = eINSTANCE.getAbstractChannel();
-
-		/**
-		 * The meta object literal for the '<em><b>Channels List</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_CHANNEL__CHANNELS_LIST = eINSTANCE.getAbstractChannel_ChannelsList();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractRecorderImpl <em>Abstract Recorder</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractRecorderImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractRecorder()
-		 * @generated
-		 */
-		EClass ABSTRACT_RECORDER = eINSTANCE.getAbstractRecorder();
-
-		/**
-		 * The meta object literal for the '<em><b>Recording Tools Container</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER = eINSTANCE.getAbstractRecorder_RecordingToolsContainer();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractPlayerImpl <em>Abstract Player</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractPlayerImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractPlayer()
-		 * @generated
-		 */
-		EClass ABSTRACT_PLAYER = eINSTANCE.getAbstractPlayer();
-
-		/**
-		 * The meta object literal for the '<em><b>Recording Tools Container</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER = eINSTANCE.getAbstractPlayer_RecordingToolsContainer();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListTimeSourceImpl <em>Operation Call Results List Time Source</em>}' class.

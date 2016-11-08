@@ -1240,45 +1240,6 @@ class ReferenceResultValue extends AbstractResultValue
 }
 
 /* -------------------------------------------------------------------------
- * RecordersListContainer
- * ------------------------------------------------------------------------- */ 
-class RecordingToolsContainer extends AbstractToolsListContainer
-{
-	contains AbstractRecorder[1] recorder opposite recordingToolsContainer
- 	contains AbstractPlayer[1] player opposite recordingToolsContainer 	
- 	contains ChannelsList[0..*] channelsLists opposite recordingToolsContainer
-} 
-
-class ChannelsList extends Named, Described
-{
-	contains AbstractChannel[0..*] channels opposite channelsList 
-	container RecordingToolsContainer recordingToolsContainer opposite channelsLists
-}
-
-abstract class AbstractChannel extends Named, Described
-{
-	container ChannelsList channelsList opposite channels
-}
-
-/* -------------------------------------------------------------------------
- * Recorder
- * ------------------------------------------------------------------------- */ 
- 
-abstract class AbstractRecorder extends Named, Described
-{
- 	@GenModel(property="None")
-	container RecordingToolsContainer recordingToolsContainer opposite recorder
-}
-
-/* -------------------------------------------------------------------------
- * Player
- * ------------------------------------------------------------------------- */ 
-abstract class AbstractPlayer extends Named, Described
-{	
-	container RecordingToolsContainer recordingToolsContainer opposite player
-}
-
-/* -------------------------------------------------------------------------
  * Specialized Time Sources
  * ------------------------------------------------------------------------- */
 

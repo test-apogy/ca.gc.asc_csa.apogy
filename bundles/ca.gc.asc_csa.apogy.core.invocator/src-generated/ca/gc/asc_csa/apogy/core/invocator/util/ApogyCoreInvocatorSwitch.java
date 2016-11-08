@@ -554,45 +554,6 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER: {
-				RecordingToolsContainer recordingToolsContainer = (RecordingToolsContainer)theEObject;
-				T result = caseRecordingToolsContainer(recordingToolsContainer);
-				if (result == null) result = caseAbstractToolsListContainer(recordingToolsContainer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.CHANNELS_LIST: {
-				ChannelsList channelsList = (ChannelsList)theEObject;
-				T result = caseChannelsList(channelsList);
-				if (result == null) result = caseNamed(channelsList);
-				if (result == null) result = caseDescribed(channelsList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.ABSTRACT_CHANNEL: {
-				AbstractChannel abstractChannel = (AbstractChannel)theEObject;
-				T result = caseAbstractChannel(abstractChannel);
-				if (result == null) result = caseNamed(abstractChannel);
-				if (result == null) result = caseDescribed(abstractChannel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.ABSTRACT_RECORDER: {
-				AbstractRecorder abstractRecorder = (AbstractRecorder)theEObject;
-				T result = caseAbstractRecorder(abstractRecorder);
-				if (result == null) result = caseNamed(abstractRecorder);
-				if (result == null) result = caseDescribed(abstractRecorder);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreInvocatorPackage.ABSTRACT_PLAYER: {
-				AbstractPlayer abstractPlayer = (AbstractPlayer)theEObject;
-				T result = caseAbstractPlayer(abstractPlayer);
-				if (result == null) result = caseNamed(abstractPlayer);
-				if (result == null) result = caseDescribed(abstractPlayer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE: {
 				OperationCallResultsListTimeSource operationCallResultsListTimeSource = (OperationCallResultsListTimeSource)theEObject;
 				T result = caseOperationCallResultsListTimeSource(operationCallResultsListTimeSource);
@@ -1615,83 +1576,6 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	 * @generated
 	 */
   public T caseReferenceResultValue(ReferenceResultValue object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Recording Tools Container</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Recording Tools Container</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRecordingToolsContainer(RecordingToolsContainer object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Channels List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Channels List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseChannelsList(ChannelsList object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Channel</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Channel</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAbstractChannel(AbstractChannel object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Recorder</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Recorder</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseAbstractRecorder(AbstractRecorder object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Player</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Player</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseAbstractPlayer(AbstractPlayer object)
   {
 		return null;
 	}

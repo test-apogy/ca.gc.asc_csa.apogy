@@ -1,17 +1,18 @@
-package ca.gc.asc_csa.apogy.core.invocator;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *      Pierre Allard (Pierre.Allard@canada.ca), 
+ *      Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *      Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *      Olivier L. Larouche (Olivier.LLarouche@canada.ca),
+ *      Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.invocator;
 
 
 /**
@@ -31,9 +32,7 @@ package ca.gc.asc_csa.apogy.core.invocator;
  * @model
  * @generated
  */
-public interface RecordingResultsList extends ResultsList
-{
-
+public interface RecordingResultsList extends ResultsList {
 	/**
 	 * Returns the value of the '<em><b>Data Products List</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getRecordingResultsList <em>Recording Results List</em>}'.
@@ -78,4 +77,5 @@ public interface RecordingResultsList extends ResultsList
 	 * @generated
 	 */
 	InvocatorSession getInvocatorSession();
+
 } // RecordingResultsList

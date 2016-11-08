@@ -1,39 +1,46 @@
-package ca.gc.asc_csa.apogy.core.invocator.impl;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *      Pierre Allard (Pierre.Allard@canada.ca), 
+ *      Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *      Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *      Olivier L. Larouche (Olivier.LLarouche@canada.ca),
+ *      Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.invocator.impl;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
+
+import com.google.common.base.Objects;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import ca.gc.asc_csa.apogy.common.emf.Described;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
-
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import com.google.common.base.Objects;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,9 +59,8 @@ import com.google.common.base.Objects;
  *
  * @generated
  */
-public class RecordingResultsListImpl extends MinimalEObjectImpl.Container implements RecordingResultsList
-{
-  /**
+public class RecordingResultsListImpl extends MinimalEObjectImpl.Container implements RecordingResultsList {
+	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,6 +69,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,6 +79,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,6 +89,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected static final String DESCRIPTION_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,6 +99,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getResults() <em>Results</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -100,28 +110,26 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 */
 	protected EList<AbstractResult> results;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public RecordingResultsListImpl()
-  {
+	public RecordingResultsListImpl() {
 		super();
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  protected EClass eStaticClass()
-  {
+	@Override
+	protected EClass eStaticClass() {
 		return ApogyCoreInvocatorPackage.Literals.RECORDING_RESULTS_LIST;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -130,7 +138,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return name;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -142,7 +150,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME, oldName, name));
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -151,7 +159,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return description;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -163,7 +171,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION, oldDescription, description));
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -175,7 +183,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return results;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -185,7 +193,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return (DataProductsList)eContainer();
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -195,7 +203,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return (DataProductsList)eInternalContainer();
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -205,7 +213,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return msgs;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -226,7 +234,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST, newDataProductsList, newDataProductsList));
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -243,7 +251,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		}
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -262,7 +270,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -278,7 +286,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -292,7 +300,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -315,7 +323,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -341,7 +349,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		super.eSet(featureID, newValue);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -365,7 +373,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		super.eUnset(featureID);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -387,7 +395,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return super.eIsSet(featureID);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -403,7 +411,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -419,7 +427,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
