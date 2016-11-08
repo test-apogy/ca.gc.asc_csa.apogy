@@ -40,9 +40,8 @@ public class ScriptExecutorDebugHandler extends ScriptExecutorHandler {
         new Job("Debug JavaScriptProgram") {
             @Override
             protected IStatus run(IProgressMonitor monitor) {
-                JavaScriptProgram jsProgram = getJavaScriptProgram(event);
-
                 try {
+                    JavaScriptProgram jsProgram = getJavaScriptProgram(event);
                     ILaunchConfiguration configuration = lookupConfiguration(jsProgram);
 
                     if (configuration == null) {

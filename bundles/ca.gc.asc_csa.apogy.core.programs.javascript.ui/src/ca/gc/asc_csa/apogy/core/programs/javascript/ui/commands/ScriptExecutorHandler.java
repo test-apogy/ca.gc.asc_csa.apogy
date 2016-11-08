@@ -18,7 +18,9 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.debug.core.DebugPlugin;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationType;
@@ -30,9 +32,11 @@ import org.eclipse.debug.core.sourcelookup.containers.ProjectSourceContainer;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
+import org.eclipse.ui.statushandlers.StatusManager;
 import org.eclipse.wst.jsdt.debug.internal.core.launching.ILaunchConstants;
 
 import ca.gc.asc_csa.apogy.core.programs.javascript.JavaScriptProgram;
+import ca.gc.asc_csa.apogy.core.programs.javascript.ui.Activator;
 
 /**
  * Abstract {@link JavaScriptProgram} execution command handler. Contains common functions to create 
@@ -58,8 +62,9 @@ public abstract class ScriptExecutorHandler extends AbstractHandler {
 
     /**
      * Gets the {@link JavaScriptProgram} from the event.
+     * @throws CoreException script file missing
      */
-    protected static JavaScriptProgram getJavaScriptProgram(ExecutionEvent event) {
+    protected static JavaScriptProgram getJavaScriptProgram(ExecutionEvent event) throws CoreException {
         ISelection selection = HandlerUtil.getCurrentSelection(event);
         if (!(selection instanceof IStructuredSelection)) {
             return null;
@@ -69,6 +74,13 @@ public abstract class ScriptExecutorHandler extends AbstractHandler {
         Object firstElement = structuredSelection.getFirstElement();
         if (!(firstElement instanceof JavaScriptProgram)) {
             return null;
+        }
+        
+        if (((JavaScriptProgram) firstElement).getScriptPath() == null) {
+            String message = "Apogy JavaScript file missing, please create one";
+            IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID, message);
+            StatusManager.getManager().handle(status, StatusManager.LOG | StatusManager.SHOW);
+            throw new CoreException(new Status(IStatus.ERROR, Activator.PLUGIN_ID, message));
         }
 
         return (JavaScriptProgram) firstElement;
@@ -136,12 +148,9 @@ public abstract class ScriptExecutorHandler extends AbstractHandler {
      * 
      * @return The project name or null if the script path has not the right
      *         format
+     * @throws CoreException file missing
      */
-    protected String getProjectName(String scriptPath) {
-        if (scriptPath == null) {
-            return null;
-        }
-
+    protected String getProjectName(String scriptPath) throws CoreException {
         IPath path = new Path(scriptPath);
         return path.segment(0);
     }
