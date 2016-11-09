@@ -1,3 +1,7 @@
+# News #
+
+2016-11-08: [Apogy: the one-stop-shop solution for operating robots, satellites and beyond](http://www.asc-csa.gc.ca/eng/blog/2016/11/08/apogy-the-one-stop-shop-solution-for-operating-robots-satellites-and-beyond.asp)
+
 # Background #
 **Apogy** is a multi-mission operations and planning software framework. **Apogy** uses Eclipse Modeling Framework models to define the systems being controlled, the environment in which these systems are operated, the operations being carried out and the corresponding data produced during operations.
 
