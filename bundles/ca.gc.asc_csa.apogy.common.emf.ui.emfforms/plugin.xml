@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.emf.ecp.view.context.viewServices">
       <viewService
-            class="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyViewModelService">
+            class="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.services.ApogyReferenceService">
       </viewService>
    </extension>
 
