@@ -84,37 +84,48 @@ public class ProgramsDetailsComposite extends Composite {
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
 	private IChangeListener newValueChangeListener;
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
+	
+	EObjectComposite eObjectComposite;
 
 	public ProgramsDetailsComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new GridLayout(1, true));
 
-		Section sctnProgramsList = formToolkit.createSection(this, Section.NO_TITLE);
-		sctnProgramsList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		formToolkit.paintBordersFor(sctnProgramsList);
-		sctnProgramsList.setText("Programs List");
-
-		ScrolledComposite scrolledComposite = new ScrolledComposite(sctnProgramsList, SWT.H_SCROLL | SWT.V_SCROLL);
+		ScrolledComposite scrolledComposite = new ScrolledComposite(this, SWT.H_SCROLL | SWT.V_SCROLL);
 		formToolkit.adapt(scrolledComposite);
 		formToolkit.paintBordersFor(scrolledComposite);
-		sctnProgramsList.setClient(scrolledComposite);
 		scrolledComposite.setExpandHorizontal(true);
 		scrolledComposite.setExpandVertical(true);
 
-		Composite compositeProgramsList = new Composite(scrolledComposite, SWT.NONE);
-		formToolkit.adapt(compositeProgramsList);
-		formToolkit.paintBordersFor(compositeProgramsList);
-		compositeProgramsList.setLayout(new GridLayout(2, false));
+		Composite compositeProgram = new Composite(scrolledComposite, SWT.NONE);
+		compositeProgram.setLayout(new GridLayout(2, false));
 
-		Composite eObjectComposite = new EObjectComposite(compositeProgramsList, SWT.None);
+		eObjectComposite = new EObjectComposite(compositeProgram, SWT.None){
+			@Override
+			protected void newSelection(ISelection selection) {
+				ProgramsDetailsComposite.this.newSelection(selection);
+			}
+			
+			@Override
+			protected AdapterFactoryContentProvider getContentProvider() {
+				// TODO Auto-generated method stub
+				return super.getContentProvider();
+			}
+			
+			@Override
+			protected AdapterFactoryLabelProvider getLabelProvider() {
+				// TODO Auto-generated method stub
+				return super.getLabelProvider();
+			}
+		};
 		eObjectComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 7));
 
-		Button btnNewGroup = formToolkit.createButton(compositeProgramsList, "New Group", SWT.NONE);
-		btnNewGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-//		btnNewGroup.addSelectionListener(new SelectionAdapter() {
-//			@Override
-//			public void widgetSelected(SelectionEvent e) {
-//
+		Button btnInvoke = formToolkit.createButton(compositeProgram, "New Group", SWT.NONE);
+		btnInvoke.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+		btnInvoke.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+//				TODO
 //				/**
 //				 * Creates and opens the wizard to create a valid context
 //				 */
@@ -122,199 +133,81 @@ public class ProgramsDetailsComposite extends Composite {
 //				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
 //				newProgramsGroupWizard.getCreatedProgramsGroup().addChangeListener(getNewValueChangeListener());
 //				dialog.open();
-//			}
-//		});
+			}
+		});
 
-		Button btnNewProgram = formToolkit.createButton(compositeProgramsList, "New Program", SWT.NONE);
-		btnNewProgram.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-//		btnNewProgram.addSelectionListener(new SelectionAdapter() {
-//			@Override
-//			public void widgetSelected(SelectionEvent e) {
-//
-//				/**
-//				 * Creates and opens the wizard to create a valid context
-//				 */
-//				NewScriptBasedProgramWizard newScriptBasedProgramWizard = new NewScriptBasedProgramWizard(
-//						getSelectedProgramsGroup());
-//				WizardDialog dialog = new WizardDialog(getShell(), newScriptBasedProgramWizard);
-//				newScriptBasedProgramWizard.getCreatedProgram().addChangeListener(getNewValueChangeListener());
-//				dialog.open();
-//			}
-//		});
-
-		Button btnDelete = new Button(compositeProgramsList, SWT.NONE);
-		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-		formToolkit.adapt(btnDelete, true, true);
-		btnDelete.setText("Delete");
-//		btnDelete.addSelectionListener(new SelectionAdapter() {
-//			@Override
-//			public void widgetSelected(SelectionEvent e) {
-//				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getSelectedProgramsGroup());
-//				EObject owner = null;
-//				if (isProgramSelected()) {
-//					owner = getSelectedProgram();
-//
-//				} else if (isProgramsGroupSelected()) {
-//					owner = getSelectedProgramsGroup();
-//				}
-//				if (owner != null) {
-//					SetCommand command = new SetCommand(editingDomain, owner,
-//							ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED, true);
-//					editingDomain.getCommandStack().execute(command);
-//				}
-//			}
-//		});
-		scrolledComposite.setContent(compositeProgramsList);
-		scrolledComposite.setMinSize(compositeProgramsList.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		scrolledComposite.setContent(compositeProgram);
+		scrolledComposite.setMinSize(compositeProgram.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
 
-//	/**
-//	 * This is used to indicate if a program should belong to the list. By
-//	 * default all types of {@link Program} are applicable. However the
-//	 * developers may override this method to exclude some programs from the
-//	 * list.
-//	 * 
-//	 * @param program
-//	 *            Reference to the program.
-//	 * @return Return true means the {@link Program} is applicable.
-//	 */
-//	protected boolean isApplicable(Program program) {
-//		return true;
-//	}
-//
-//	private ISelectionChangedListener getTreeViewerSelectionChangedListener() {
-//		if (treeViewerSelectionChangedListener == null) {
-//			treeViewerSelectionChangedListener = new ISelectionChangedListener() {
-//
-//				@Override
-//				public void selectionChanged(SelectionChangedEvent event) {
-//					ProgramsDetailsComposite.this.newSelection((TreeSelection) event.getSelection());
-//				}
-//			};
-//		}
-//		return treeViewerSelectionChangedListener;
-//	}
-//
-//	/**
-//	 * This method is called when a new selection is made in the composite.
-//	 * 
-//	 * @param selection
-//	 *            Reference to the selection.
-//	 */
-//	protected void newSelection(ISelection selection) {
-//	}
-//	
-//	public IChangeListener getNewValueChangeListener() {
-//		if(newValueChangeListener == null){
-//			newValueChangeListener = new IChangeListener() {
-//				@SuppressWarnings("unchecked")
-//				@Override
-//				public void handleChange(ChangeEvent event) {						
-//					treeViewer.refresh();
-//					treeViewer.setSelection(
-//							new StructuredSelection(((WritableValue<EObject>) event.getObservable()).getValue()));
-//					event.getObservable().removeChangeListener(getNewValueChangeListener());
-//				}	
-//			};
-//		}
-//		return newValueChangeListener;
-//	}
-//
-//	/**
-//	 * Returns the selected program.
-//	 * 
-//	 * @return Reference to the selected {@link Program}.
-//	 */
-//	public Program getSelectedProgram() {
-//		if (isProgramSelected()) {
-//			return (Program) ((TreeSelection) treeViewer.getSelection()).getFirstElement();
-//		}
-//		return null;
-//	}
-//
-//	public ProgramsGroup getSelectedProgramsGroup() {
-//		Object selection = ((TreeSelection) treeViewer.getSelection()).getFirstElement();
-//		if (isProgramSelected()) {
-//			return ((Program) selection).getProgramsGroup();
-//		} else if (isProgramsGroupSelected()) {
-//			return (ProgramsGroup) selection;
-//		}
-//		return null;
-//	}
-//
-//	private boolean isProgramsGroupSelected() {
-//		return ((TreeSelection) treeViewer.getSelection()).getFirstElement() instanceof ProgramsGroup;
-//	}
-//
-//	private boolean isProgramSelected() {
-//		return ((TreeSelection) treeViewer.getSelection()).getFirstElement() instanceof Program;
-//	}
-//
-//	private class ProgramsListsContentProvider extends AdapterFactoryContentProvider {
-//
-//		public ProgramsListsContentProvider(AdapterFactory adapterFactory) {
-//			super(adapterFactory);
-//		}
-//		
-//		@Override
-//		public Object[] getElements(Object object) {
-//			List<Object> elements = new ArrayList<Object>();
-//			elements.addAll(Arrays.asList(super.getElements(object)));
-//			for (Iterator<Object> ite = elements.iterator(); ite.hasNext();) {
-//				Object element = ite.next();
-//				if (element == ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup()) {
-//					ite.remove();
-//				}
-//
-//			}
-//			return elements.toArray();
-//		}
-//
-//		@Override
-//		public void notifyChanged(Notification notification) {
-//			super.notifyChanged(notification);
-//			treeViewer.refresh();
-//		}
-//
-//		@Override
-//		public int hashCode() {
-//			if(getData() instanceof Named){
-//				return ((Named) getData()).hashCode();
-//			}
-//			return super.hashCode();
-//		}
-//
-//		@Override
-//		public boolean equals(Object obj) {
-//			if(getData() instanceof Named && obj instanceof Named){
-//				return ((Named) getData()).getName() == ((Named) obj).getName();
-//			}
-//			return super.equals(obj);
-//		}
-//		
-//		@Override
-//		public Object[] getChildren(Object object) {
-//			if (object instanceof ProgramsList || object instanceof ProgramsGroup) {
-//
-//				if (object instanceof Archivable) {
-//					if (((Archivable) object).isArchived()) {
-//						return null;
-//					}
-//				}
-//
-//				EList<Object> children = new BasicEList<>();
-//				children.addAll(Arrays.asList(super.getChildren(object)));
-//				children = ApogyCommonEMFFacade.INSTANCE.filterArchived(children);
-//				return children.toArray();
-//			}
-//			return null;
-//		}
-//
-//		@Override
-//		public boolean hasChildren(Object object) {
-//			return getChildren(object) != null;
-//		}
-//	}
+
+	/**
+	 * This method is called when a new selection is made in the composite.
+	 * 
+	 * @param selection
+	 *            Reference to the selection.
+	 */
+	protected void newSelection(ISelection selection) {
+	}
+
+	/**
+	 * Returns the selected Detail.
+	 * 
+	 * @return Reference to the selected {@link EObject}.
+	 */
+	public EObject getSelectedDetail(){
+		return eObjectComposite.getSelectedEObject();
+	}
+
+	
+	private class ProgramContentProvider extends AdapterFactoryContentProvider {
+
+		public ProgramContentProvider(AdapterFactory adapterFactory) {
+			super(adapterFactory);
+		}
+		
+		@Override
+		public Object[] getElements(Object object) {
+			return super.getElements(object);
+		}
+
+		@Override
+		public void notifyChanged(Notification notification) {
+			super.notifyChanged(notification);
+			treeViewer.refresh();
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if(getData() instanceof Named && obj instanceof Named){
+				return ((Named) getData()).getName() == ((Named) obj).getName();
+			}
+			return super.equals(obj);
+		}
+		
+		@Override
+		public Object[] getChildren(Object object) {
+			if (object instanceof ProgramsList || object instanceof ProgramsGroup) {
+
+				if (object instanceof Archivable) {
+					if (((Archivable) object).isArchived()) {
+						return null;
+					}
+				}
+
+				EList<Object> children = new BasicEList<>();
+				children.addAll(Arrays.asList(super.getChildren(object)));
+				children = ApogyCommonEMFFacade.INSTANCE.filterArchived(children);
+				return children.toArray();
+			}
+			return null;
+		}
+
+		@Override
+		public boolean hasChildren(Object object) {
+			return getChildren(object) != null;
+		}
+	}
 //
 //	private class ProgramsListsLabelProvider extends AdapterFactoryLabelProvider implements ITableLabelProvider {
 //		private final static int NAME_COLUMN_ID = 0;

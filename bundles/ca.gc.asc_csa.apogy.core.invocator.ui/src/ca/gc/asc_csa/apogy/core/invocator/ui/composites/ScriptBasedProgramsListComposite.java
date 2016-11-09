@@ -59,7 +59,6 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
@@ -344,7 +343,9 @@ public class ScriptBasedProgramsListComposite extends Composite {
 				EList<Object> children = new BasicEList<>();
 				children.addAll(Arrays.asList(super.getChildren(object)));
 				children = ApogyCommonEMFFacade.INSTANCE.filterArchived(children);
-				return children.toArray();
+				if(!children.isEmpty()){
+					return children.toArray();
+				}
 			}
 			return null;
 		}
