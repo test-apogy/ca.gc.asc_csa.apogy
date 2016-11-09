@@ -52,7 +52,3 @@ class ApogyCommonUiFacade{
 	 */
 	op ImageDescriptor getImageDescriptor(String uri)
 }
-
-
-class ApogySelection{
-}

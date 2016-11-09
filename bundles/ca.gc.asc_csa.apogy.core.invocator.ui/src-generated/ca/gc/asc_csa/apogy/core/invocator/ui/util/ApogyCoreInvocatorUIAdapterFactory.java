@@ -76,6 +76,10 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 	protected ApogyCoreInvocatorUISwitch<Adapter> modelSwitch =
 		new ApogyCoreInvocatorUISwitch<Adapter>() {
 			@Override
+			public Adapter caseApogyCoreInvocatorUIFacade(ApogyCoreInvocatorUIFacade object) {
+				return createApogyCoreInvocatorUIFacadeAdapter();
+			}
+			@Override
 			public Adapter caseScriptBasedProgramsListPartSelection(ScriptBasedProgramsListPartSelection object) {
 				return createScriptBasedProgramsListPartSelectionAdapter();
 			}
@@ -84,12 +88,12 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 				return createProgramDetailsPartSelectionAdapter();
 			}
 			@Override
-			public Adapter caseNewProgramSettings(NewProgramSettings object) {
-				return createNewProgramSettingsAdapter();
+			public Adapter caseApogyAdvancedEditorPartSelection(ApogyAdvancedEditorPartSelection object) {
+				return createApogyAdvancedEditorPartSelectionAdapter();
 			}
 			@Override
-			public Adapter caseApogyCoreInvocatorUIFacade(ApogyCoreInvocatorUIFacade object) {
-				return createApogyCoreInvocatorUIFacadeAdapter();
+			public Adapter caseNewProgramSettings(NewProgramSettings object) {
+				return createNewProgramSettingsAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -136,6 +140,20 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProgramDetailsPartSelectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection <em>Apogy Advanced Editor Part Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection
+	 * @generated
+	 */
+	public Adapter createApogyAdvancedEditorPartSelectionAdapter() {
 		return null;
 	}
 

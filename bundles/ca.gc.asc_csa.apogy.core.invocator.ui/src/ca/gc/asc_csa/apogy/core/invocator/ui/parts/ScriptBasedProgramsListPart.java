@@ -16,31 +16,46 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ScriptBasedProgramsListComposite;
 
-public class ScriptBasedProgramsListPart extends AbstractApogyPart {
+public class ScriptBasedProgramsListPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
 		return new ScriptBasedProgramsListComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
-				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
+				if (selection.isEmpty()){
+					setNullSelection();					
+				}else {
+					Program program = ((ScriptBasedProgramsListComposite) getContentComposite()).getSelectedProgram();
+					if (program != null){
+						ScriptBasedProgramsListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createScriptBasedProgramsListPartSelection();
+						selectionSent.setProgram(program);		
+						
+						selectionService.setSelection(selectionSent);						
+					}
+				}
 			}
 		};
 
 	}
 
 	@Override
-	protected void setEObjectInComposite(EObject eObject) {
+	protected void setContentCompositeSelection(EObject eObject) {
 		((ScriptBasedProgramsListComposite) getContentComposite())
-				.setProgramsList(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList());
-
+		.setProgramsList(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList());
 	}
 
+	@Override
+	protected void setNullSelection() {
+		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createScriptBasedProgramsListPartSelection());
+	}
 }

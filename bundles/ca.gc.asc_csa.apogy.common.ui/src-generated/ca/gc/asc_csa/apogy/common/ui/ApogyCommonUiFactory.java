@@ -42,15 +42,6 @@ public interface ApogyCommonUiFactory extends EFactory {
 	ApogyCommonUiFacade createApogyCommonUiFacade();
 
 	/**
-	 * Returns a new object of class '<em>Apogy Selection</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Apogy Selection</em>'.
-	 * @generated
-	 */
-	ApogySelection createApogySelection();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

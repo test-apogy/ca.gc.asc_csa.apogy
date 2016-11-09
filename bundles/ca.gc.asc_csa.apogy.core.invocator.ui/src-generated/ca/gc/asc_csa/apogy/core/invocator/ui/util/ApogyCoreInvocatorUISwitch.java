@@ -75,6 +75,12 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE: {
+				ApogyCoreInvocatorUIFacade apogyCoreInvocatorUIFacade = (ApogyCoreInvocatorUIFacade)theEObject;
+				T result = caseApogyCoreInvocatorUIFacade(apogyCoreInvocatorUIFacade);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreInvocatorUIPackage.SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION: {
 				ScriptBasedProgramsListPartSelection scriptBasedProgramsListPartSelection = (ScriptBasedProgramsListPartSelection)theEObject;
 				T result = caseScriptBasedProgramsListPartSelection(scriptBasedProgramsListPartSelection);
@@ -87,15 +93,15 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreInvocatorUIPackage.NEW_PROGRAM_SETTINGS: {
-				NewProgramSettings newProgramSettings = (NewProgramSettings)theEObject;
-				T result = caseNewProgramSettings(newProgramSettings);
+			case ApogyCoreInvocatorUIPackage.APOGY_ADVANCED_EDITOR_PART_SELECTION: {
+				ApogyAdvancedEditorPartSelection apogyAdvancedEditorPartSelection = (ApogyAdvancedEditorPartSelection)theEObject;
+				T result = caseApogyAdvancedEditorPartSelection(apogyAdvancedEditorPartSelection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE: {
-				ApogyCoreInvocatorUIFacade apogyCoreInvocatorUIFacade = (ApogyCoreInvocatorUIFacade)theEObject;
-				T result = caseApogyCoreInvocatorUIFacade(apogyCoreInvocatorUIFacade);
+			case ApogyCoreInvocatorUIPackage.NEW_PROGRAM_SETTINGS: {
+				NewProgramSettings newProgramSettings = (NewProgramSettings)theEObject;
+				T result = caseNewProgramSettings(newProgramSettings);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -130,6 +136,21 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProgramDetailsPartSelection(ProgramDetailsPartSelection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Advanced Editor Part Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Advanced Editor Part Selection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseApogyAdvancedEditorPartSelection(ApogyAdvancedEditorPartSelection object) {
 		return null;
 	}
 

@@ -14,6 +14,11 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -21,62 +26,46 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
-import ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallsListImpl;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
 
-public class ProgramDetailsPart extends AbstractEObjectSelectionBasedPart{
+public class ProgramDetailsPart extends AbstractSelectionBasedPart{
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
 		return new EObjectComposite(parent, SWT.None) {
 			protected void newSelection(ISelection selection) {
-				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
+				if(((TreeSelection) selection).getFirstElement() instanceof EObject){
+					ProgramDetailsPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramDetailsPartSelection();
+					selectionSent.setEObject((EObject)((TreeSelection) selection).getFirstElement());
+					
+					selectionService.setSelection(selectionSent);
+				}
 			}
 		};
 	}
-	
-	@Override
-	protected boolean isEObjectAcepted(EObject eObject) {
-		if (eObject instanceof OperationCallsListImpl) {
-			return true;
-		}
-		return false;
-	}
 
 	@Override
-	protected void setEObjectInComposite(EObject eObject) {
+	protected void setSelectionInContentComposite(EObject eObject) {
 		((EObjectComposite) getContentComposite()).setEObject(eObject);
 	}
 
+	@Override
+	protected void setNullSelection() {
+		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramDetailsPartSelection());
+	}
+	
+	/**
+	 * Injects a {@link ScriptBasedProgramsListPartSelection} in the part from the {@link ESelectionService}
+	 * @param selection
+	 */
+	@Inject
+	@Optional
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ScriptBasedProgramsListPartSelection selection) {
+		if(selection != null){
+			setEObject(selection.getProgram());
+		}
+	}
 }
-//EObjectSelectionBasedPart {
-//	@Override
-//	protected void createContentComposite(Composite parent) {
-//		parent.setLayout(new FillLayout());
-//		new EObjectComposite(parent, SWT.None) {
-//			protected void newSelection(ISelection selection) {
-//				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
-//			}
-//		};
-//		parent.layout();
-//	}
-//
-//	@Override
-//	protected void setContentCompositeSelection(EObject eObject) {
-//		((EObjectComposite) getContentComposite()).setEObject(eObject);
-//	}
-//
-//	@Override
-//	protected boolean isSettableClass(Class<? extends EObject> selectionClass) {
-//		if (selectionClass == OperationCallsListImpl.class) {
-//			return true;
-//		}
-//		return false;
-//	}
-//	
-//	@Override
-//	protected List<String> getAcceptedPartsIds() {
-//		List<String> ids = new ArrayList<String>();
-//		ids.add("ca.gc.asc_csa.apogy.rcp.part.ProgramsList");
-//		return ids;
-//	}
-//}

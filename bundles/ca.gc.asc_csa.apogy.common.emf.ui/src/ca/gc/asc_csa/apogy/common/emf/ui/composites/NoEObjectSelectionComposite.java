@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials

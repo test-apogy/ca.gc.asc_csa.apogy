@@ -42,29 +42,11 @@ import org.eclipse.emf.ecore.EObject
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
 
-class ScriptBasedProgramsListPartSelection
-{
-	refers Program program
-}
-
-class ProgramDetailsPartSelection
-{
-	refers EObject eObject
-}
-
-class NewProgramSettings
-{	
-	/*
-	 * EClass of the program
-	 */
-	contains EClass eClass
-
-	/*
-	 * Settings of the program.
-	 */
-	contains ProgramSettings programSettings
-}
-
+/* -------------------------------------------------------------------------
+ * 
+ * Utilities
+ * 
+ * ------------------------------------------------------------------------- */
 class ApogyCoreInvocatorUIFacade{
 	/*  
 	 * Copies the Initialization Data.
@@ -90,5 +72,43 @@ class ApogyCoreInvocatorUIFacade{
 	 * Disposes the active session.
 	 */
 	op void disposeSession()	
-		
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Selections for part dependency injection
+ * 
+ * ------------------------------------------------------------------------- */
+class ScriptBasedProgramsListPartSelection
+{
+	refers Program program
+}
+
+class ProgramDetailsPartSelection
+{
+	refers EObject eObject
+}
+
+class ApogyAdvancedEditorPartSelection
+{
+	refers EObject eObject
+}
+
+
+/* -------------------------------------------------------------------------
+ * 
+ * Settings to be used in wiwards
+ * 
+ * ------------------------------------------------------------------------- */
+class NewProgramSettings
+{	
+	/*
+	 * EClass of the program
+	 */
+	contains EClass eClass
+
+	/*
+	 * Settings of the program.
+	 */
+	contains ProgramSettings programSettings
 }

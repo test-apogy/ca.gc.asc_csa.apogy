@@ -14,33 +14,41 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
-import ca.gc.asc_csa.apogy.common.ui.ApogySelection;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection;
 
-public class ParameterDefinitionPart extends AbstractEObjectSelectionBasedPart{
+public class ParameterDefinitionPart extends AbstractSelectionBasedPart{
 
+	
+	@Inject
+	@Optional
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramDetailsPartSelection selection) {
+	}
+
+	@Override
+	protected void setSelectionInContentComposite(EObject eObject) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new EObjectComposite(parent, SWT.None);
-//		return new AdvancedEditorComposite(parent, SWT.None) {
-//			@Override
-//			protected void newSelection(ISelection selection) {
-//				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
-//			}
-//		};
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	protected boolean isEObjectAcepted(EObject eObject) {
-		//if()
-		return false;
+	protected void setNullSelection() {
+		// TODO Auto-generated method stub
+		
 	}
 
-	@Override
-	protected void setEObjectInComposite(EObject eObject) {
-		((EObjectComposite) getContentComposite()).setEObject(eObject);
-	}
 }

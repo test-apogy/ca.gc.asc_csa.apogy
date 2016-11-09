@@ -58,7 +58,6 @@ public class ApogyCommonResourcesFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ApogyCommonResourcesFacadeImpl() {
@@ -67,7 +66,6 @@ public class ApogyCommonResourcesFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -107,20 +105,19 @@ public class ApogyCommonResourcesFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case ApogyCommonResourcesPackage.APOGY_COMMON_RESOURCES_FACADE___IMPORT_CONTENT__IPROJECT_BUNDLE_STRING_BOOLEAN:
-			try {
-				importContent((IProject) arguments.get(0), (Bundle) arguments.get(1), (String) arguments.get(2),
-						(Boolean) arguments.get(3));
-				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
+			case ApogyCommonResourcesPackage.APOGY_COMMON_RESOURCES_FACADE___IMPORT_CONTENT__IPROJECT_BUNDLE_STRING_BOOLEAN:
+				try {
+					importContent((IProject)arguments.get(0), (Bundle)arguments.get(1), (String)arguments.get(2), (Boolean)arguments.get(3));
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -16,8 +16,6 @@ package ca.gc.asc_csa.apogy.common.ui.impl;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFactory;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiPackage;
-
-import ca.gc.asc_csa.apogy.common.ui.ApogySelection;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
@@ -42,13 +40,6 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * @generated
 	 */
 	private EClass apogyCommonUiFacadeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass apogySelectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,15 +142,6 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getApogySelection() {
-		return apogySelectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EDataType getImageDescriptor() {
 		return imageDescriptorEDataType;
 	}
@@ -204,8 +186,6 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		apogyCommonUiFacadeEClass = createEClass(APOGY_COMMON_UI_FACADE);
 		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING);
 
-		apogySelectionEClass = createEClass(APOGY_SELECTION);
-
 		// Create data types
 		imageDescriptorEDataType = createEDataType(IMAGE_DESCRIPTOR);
 		iSelectionEDataType = createEDataType(ISELECTION);
@@ -248,8 +228,6 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 
 		EOperation op = initEOperation(getApogyCommonUiFacade__GetImageDescriptor__String(), this.getImageDescriptor(), "getImageDescriptor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "uri", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEClass(apogySelectionEClass, ApogySelection.class, "ApogySelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize data types
 		initEDataType(imageDescriptorEDataType, ImageDescriptor.class, "ImageDescriptor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

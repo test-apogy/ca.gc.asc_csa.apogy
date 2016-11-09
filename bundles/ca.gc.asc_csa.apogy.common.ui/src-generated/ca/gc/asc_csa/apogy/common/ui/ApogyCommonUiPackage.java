@@ -119,34 +119,6 @@ public interface ApogyCommonUiPackage extends EPackage {
 	int APOGY_COMMON_UI_FACADE_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.ui.impl.ApogySelectionImpl <em>Apogy Selection</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogySelectionImpl
-	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getApogySelection()
-	 * @generated
-	 */
-	int APOGY_SELECTION = 1;
-
-	/**
-	 * The number of structural features of the '<em>Apogy Selection</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_SELECTION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Apogy Selection</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_SELECTION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '<em>Image Descriptor</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -154,7 +126,7 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getImageDescriptor()
 	 * @generated
 	 */
-	int IMAGE_DESCRIPTOR = 2;
+	int IMAGE_DESCRIPTOR = 1;
 
 
 	/**
@@ -165,7 +137,7 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getISelection()
 	 * @generated
 	 */
-	int ISELECTION = 3;
+	int ISELECTION = 2;
 
 
 	/**
@@ -187,16 +159,6 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCommonUiFacade__GetImageDescriptor__String();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.ui.ApogySelection <em>Apogy Selection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Apogy Selection</em>'.
-	 * @see ca.gc.asc_csa.apogy.common.ui.ApogySelection
-	 * @generated
-	 */
-	EClass getApogySelection();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.jface.resource.ImageDescriptor <em>Image Descriptor</em>}'.
@@ -260,16 +222,6 @@ public interface ApogyCommonUiPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING = eINSTANCE.getApogyCommonUiFacade__GetImageDescriptor__String();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.ui.impl.ApogySelectionImpl <em>Apogy Selection</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogySelectionImpl
-		 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getApogySelection()
-		 * @generated
-		 */
-		EClass APOGY_SELECTION = eINSTANCE.getApogySelection();
 
 		/**
 		 * The meta object literal for the '<em>Image Descriptor</em>' data type.

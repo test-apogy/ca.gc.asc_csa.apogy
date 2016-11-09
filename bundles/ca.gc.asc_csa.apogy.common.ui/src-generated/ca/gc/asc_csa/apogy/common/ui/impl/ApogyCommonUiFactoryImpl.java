@@ -72,7 +72,6 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyCommonUiPackage.APOGY_COMMON_UI_FACADE: return createApogyCommonUiFacade();
-			case ApogyCommonUiPackage.APOGY_SELECTION: return createApogySelection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -120,16 +119,6 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 	public ApogyCommonUiFacade createApogyCommonUiFacade() {
 		ApogyCommonUiFacadeImpl apogyCommonUiFacade = new ApogyCommonUiFacadeImpl();
 		return apogyCommonUiFacade;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ApogySelection createApogySelection() {
-		ApogySelectionImpl apogySelection = new ApogySelectionImpl();
-		return apogySelection;
 	}
 
 	/**
