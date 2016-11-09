@@ -169,4 +169,8 @@ public class AdvancedEditorComposite extends Composite {
 		eObjectComposite.setEObject(eObject);
 		checkEnableNewButton(eObject);
 	}
+	
+	public EObject getSelectedEObject(){
+		return eObjectComposite.getSelectedEObject();
+	}
 }

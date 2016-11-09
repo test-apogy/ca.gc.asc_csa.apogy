@@ -13,91 +13,35 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.inject.Inject;
-import javax.inject.Named;
-
-import org.eclipse.e4.core.di.annotations.Optional;
-import org.eclipse.e4.ui.services.IServiceConstants;
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingsComposite;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConfigsComposite;
 
-public class ControllerBindingsPart{
-	
-	private ControllerBindingsComposite composite;
-	private ControllersConfiguration controllersConfiguration;
-
-	private Adapter adapter;
-
-	@Inject
-	ESelectionService selectionService;
-
-	@PostConstruct
-	public void createPartControl(Composite parent) {
-		parent.setLayout(new FillLayout());
-		composite = new ControllerBindingsComposite(parent, SWT.None){
+public class ControllerBindingsPart extends AbstractSelectionBasedPart{
+	@Override
+	protected Composite createContentComposite(Composite parent) {
+		return new ControllerBindingsComposite(parent, SWT.None){
 			@Override
 			protected void newSelection(ISelection selection) 
 			{
-				selectionService.setSelection(selection);
+				// TODO
 			}
 		};
-		setConfiguration(controllersConfiguration);
-	}
-	
-	@Inject
-	@Optional
-	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllersConfiguration selection) {
-		if (selection != null) {
-			if (controllersConfiguration != null) {
-				controllersConfiguration.eAdapters().remove(getControllersConfigurationAdapter());
-			}
-			this.controllersConfiguration = selection;
-			controllersConfiguration.eAdapters().add(getControllersConfigurationAdapter());
-		}
-
-	}
-		
-	/**
-	 * This method is called when the {@link InvocatorSession} needs to be
-	 * changed or initialized.
-	 * 
-	 * @param selection
-	 *            Reference to the selection.
-	 */
-	protected void setConfiguration(ControllersConfiguration controllersConfiguration) {
-		composite.setControllersConfiguration(controllersConfiguration);
 	}
 
-	private Adapter getControllersConfigurationAdapter() {
-		if (adapter == null) {
-			adapter = new AdapterImpl() {
-				@Override
-				public void notifyChanged(Notification msg) {
-					setConfiguration((ControllersConfiguration)msg.getFeature());
-				}
-			};
-		}
-		return adapter;
+	@Override
+	protected void setSelectionInContentComposite(EObject eObject) {
+		((ControllerBindingsComposite) getContentComposite()).setControllersConfiguration((ControllersConfiguration)eObject);
 	}
 
-	@PreDestroy
-	protected void dispose() {
-		if(adapter != null){
-			this.controllersConfiguration.eAdapters().remove(getControllersConfigurationAdapter());
-		}
-		composite.dispose();
+	@Override
+	protected void setNullSelection() {
+		// TODO Auto-generated method stub
 	}
+
 }

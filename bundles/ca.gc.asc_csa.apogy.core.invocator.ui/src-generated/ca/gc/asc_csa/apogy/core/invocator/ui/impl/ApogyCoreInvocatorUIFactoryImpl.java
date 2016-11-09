@@ -66,8 +66,11 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ApogyCoreInvocatorUIPackage.NEW_PROGRAM_SETTINGS: return createNewProgramSettings();
 			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE: return createApogyCoreInvocatorUIFacade();
+			case ApogyCoreInvocatorUIPackage.SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION: return createScriptBasedProgramsListPartSelection();
+			case ApogyCoreInvocatorUIPackage.PROGRAM_DETAILS_PART_SELECTION: return createProgramDetailsPartSelection();
+			case ApogyCoreInvocatorUIPackage.APOGY_ADVANCED_EDITOR_PART_SELECTION: return createApogyAdvancedEditorPartSelection();
+			case ApogyCoreInvocatorUIPackage.NEW_PROGRAM_SETTINGS: return createNewProgramSettings();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -101,6 +104,36 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ScriptBasedProgramsListPartSelection createScriptBasedProgramsListPartSelection() {
+		ScriptBasedProgramsListPartSelectionImpl scriptBasedProgramsListPartSelection = new ScriptBasedProgramsListPartSelectionImpl();
+		return scriptBasedProgramsListPartSelection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProgramDetailsPartSelection createProgramDetailsPartSelection() {
+		ProgramDetailsPartSelectionImpl programDetailsPartSelection = new ProgramDetailsPartSelectionImpl();
+		return programDetailsPartSelection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ApogyAdvancedEditorPartSelection createApogyAdvancedEditorPartSelection() {
+		ApogyAdvancedEditorPartSelectionImpl apogyAdvancedEditorPartSelection = new ApogyAdvancedEditorPartSelectionImpl();
+		return apogyAdvancedEditorPartSelection;
 	}
 
 	/**

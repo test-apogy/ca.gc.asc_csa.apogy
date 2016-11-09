@@ -24,6 +24,14 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl
  * A representation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ *  -------------------------------------------------------------------------
+ * 
+ * Utilities
+ * 
+ * -------------------------------------------------------------------------
+ * <!-- end-model-doc -->
+ *
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getApogyCoreInvocatorUIFacade()
  * @model

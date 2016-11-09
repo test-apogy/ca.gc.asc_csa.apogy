@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -38,6 +39,7 @@ public class NewProgramsGroupWizard extends Wizard implements INewWizard {
 
 	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private ProgramsGroup programsGroup;
+	private WritableValue<ProgramsGroup> createdGroup;
 
 	/**
 	 * Constructor for NewProgramsGroupWizard.
@@ -49,6 +51,7 @@ public class NewProgramsGroupWizard extends Wizard implements INewWizard {
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(Activator.ID,
 				"icons/wizban/apogy_new_programs_group.png");
 		setDefaultPageImageDescriptor(image);
+		createdGroup = new WritableValue<>();
 	}
 
 	/**
@@ -85,20 +88,19 @@ public class NewProgramsGroupWizard extends Wizard implements INewWizard {
 	@Override
 	public boolean performFinish() {
 
-		ProgramsGroup programsGroup = getProgramsGroup();
 		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getProgramsList());
 
 		/** Check if there is a domain. */
 		if (editingDomain == null) {
 			/** No Domain */
-			getProgramsList().getProgramsGroups().add(programsGroup);
+			getProgramsList().getProgramsGroups().add(getProgramsGroup());
 		} else {
 			/** Use the command stack. */
 			AddCommand command = new AddCommand(editingDomain, getProgramsList(),
 					ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS, getProgramsGroup());
 			editingDomain.getCommandStack().execute(command);
 		}
-
+		this.createdGroup.setValue(getProgramsGroup());
 		return true;
 	}
 
@@ -112,8 +114,8 @@ public class NewProgramsGroupWizard extends Wizard implements INewWizard {
 	protected ProgramsGroup getProgramsGroup() {
 		if (programsGroup == null) {
 			programsGroup = ApogyCoreInvocatorFactory.eINSTANCE.createProgramsGroup();
-			programsGroup.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsList(),
-					programsGroup, ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS));
+			programsGroup.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsList(), programsGroup,
+					ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS));
 		}
 		return programsGroup;
 	}
@@ -128,5 +130,9 @@ public class NewProgramsGroupWizard extends Wizard implements INewWizard {
 	protected ProgramsList getProgramsList() {
 		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? null
 				: ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
+	}
+	
+	public WritableValue<ProgramsGroup> getCreatedProgramsGroup(){
+		return createdGroup;
 	}
 }

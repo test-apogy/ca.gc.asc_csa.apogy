@@ -24,6 +24,14 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>New Program Settings</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ *  -------------------------------------------------------------------------
+ * 
+ * Settings to be used in wiwards
+ * 
+ * -------------------------------------------------------------------------
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

@@ -20,6 +20,9 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0",
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0",
  org.eclipse.emf.edit,
- org.eclipse.emfforms.editor
+ org.eclipse.emfforms.editor,
+ ca.gc.asc_csa.apogy.core.invocator.ui;bundle-version="0.5.0",
+ ca.gc.asc_csa.apogy.common.emf.ui,
+ ca.gc.asc_csa.apogy.core.invocator.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

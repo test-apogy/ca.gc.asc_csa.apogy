@@ -18,7 +18,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.UpdateListStrategy;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.list.IObservableList;
@@ -28,6 +27,9 @@ import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
+import org.eclipse.jface.viewers.ComboViewer;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -35,7 +37,6 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -50,7 +51,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 public class SessionStatusToolControl {
 
 	private DataBindingContext m_bindingContext;
-	private Combo comboContext;
+	private ComboViewer comboViewerContext;
 	private Button btnStart;
 	private Button btnStop;
 	private Text txtInstanceStatus;
@@ -60,19 +61,20 @@ public class SessionStatusToolControl {
 		final Composite composite = new Composite(parent, SWT.NONE);
 		composite.setLayout(new GridLayout(4, false));
 
-		comboContext = new Combo(composite, SWT.NONE);
+		comboViewerContext = new ComboViewer(composite, SWT.NONE);
 		GridData gd_comboContext = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1);
 		gd_comboContext.widthHint = 250;
 		gd_comboContext.minimumWidth = 250;
-		comboContext.setLayoutData(gd_comboContext);
-		comboContext.setText("Context");
+		comboViewerContext.getCombo().setLayoutData(gd_comboContext);
 
 		btnStart = new Button(composite, SWT.NONE);
 		btnStart.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
 		btnStart.setText("Start");
 
-		// Create the listener that initiates the variables of the environment
-		// when the button is selected. This is to reset the instances.
+		/*
+		 * Create the listener that initiates the variables of the environment
+		 * when the button is selected. This is to reset the instances.
+		 */
 		btnStart.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -84,8 +86,10 @@ public class SessionStatusToolControl {
 		btnStop.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
 		btnStop.setText("Stop");
 
-		// Create the listener that disposes the variables of the environment
-		// when the button is selected. This is to clear the instances
+		/*
+		 * Create the listener that disposes the variables of the environment
+		 * when the button is selected. This is to clear the instances
+		 */
 		btnStop.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -103,7 +107,6 @@ public class SessionStatusToolControl {
 		m_bindingContext = customInitDataBindings();
 	}
 
-	
 	/**
 	 * Disposes the actual composite.
 	 */
@@ -129,19 +132,18 @@ public class SessionStatusToolControl {
 		 * Data binding for the different elements of the UI to be
 		 * enabled/disabled if there is an active session or not
 		 */
-		IObservableValue<?> observeEnabledResetInstancesObserveWidget = WidgetProperties.enabled()
-				.observe(btnStart);
+		IObservableValue<?> observeEnabledResetInstancesObserveWidget = WidgetProperties.enabled().observe(btnStart);
 		m_bindingContext.bindValue(observeEnabledResetInstancesObserveWidget,
 				invocatorFacadeActiveInvocatorSessionObserveValue, null,
 				new InvocatorInstanceToBooleanUpdateValueStrategy());
-		
-		IObservableValue<?> observeEnabledClearInstancesObserveWidget = WidgetProperties.enabled()
-				.observe(btnStop);
+
+		IObservableValue<?> observeEnabledClearInstancesObserveWidget = WidgetProperties.enabled().observe(btnStop);
 		m_bindingContext.bindValue(observeEnabledClearInstancesObserveWidget,
 				invocatorFacadeActiveInvocatorSessionObserveValue, null,
 				new InvocatorInstanceToBooleanUpdateValueStrategy());
-		
-		IObservableValue<?> observeEnabledComboContextObserveWidget = WidgetProperties.enabled().observe(comboContext);
+
+		IObservableValue<?> observeEnabledComboContextObserveWidget = WidgetProperties.enabled()
+				.observe(comboViewerContext.getCombo());
 		m_bindingContext.bindValue(observeEnabledComboContextObserveWidget,
 				invocatorFacadeActiveInvocatorSessionObserveValue, null,
 				new InvocatorInstanceToBooleanUpdateValueStrategy());
@@ -152,7 +154,6 @@ public class SessionStatusToolControl {
 				new InvocatorInstanceToBooleanUpdateValueStrategy());
 
 		/** Data binding to get the name of the contexts or the combo box */
-		IObservableList<?> observeComboContextItemsObserveWidget = WidgetProperties.items().observe(comboContext);
 		IObservableList<?> invocatorFacadeEnvironmentContextsListContextsObserveValue = EMFProperties
 				.list(FeaturePath.fromList(
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
@@ -160,27 +161,30 @@ public class SessionStatusToolControl {
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS))
 				.observe(ApogyCoreInvocatorFacade.INSTANCE);
-		
-		m_bindingContext.bindList(observeComboContextItemsObserveWidget,
-				invocatorFacadeEnvironmentContextsListContextsObserveValue, null,
-				new UpdateListStrategy(UpdateListStrategy.POLICY_UPDATE).setConverter(new Converter(Context.class, String.class) {
-					@Override
-					public Object convert(Object arg0) {						
-						return ((Context) arg0).getName() == null ? "null" : ((Context) arg0).getName();
-					}
-				}));
+		comboViewerContext.setContentProvider(new ObservableListContentProvider());
+		comboViewerContext.setLabelProvider(new LabelProvider() {
+			@Override
+			public String getText(Object element) {
+				if (element instanceof Context) {
+					return ((Context) element).getName();
+				}
+				return null;
+			}
+		});
+		comboViewerContext.setInput(invocatorFacadeEnvironmentContextsListContextsObserveValue);
 
 		/**
 		 * Data binding to set the text value of the combo box to the active
 		 * context
 		 */
-		IObservableValue<?> observeComboContextSingleSelectionIndexObserveWidget = WidgetProperties.singleSelectionIndex()
-				.observe(comboContext);
+		IObservableValue<?> observeComboContextSingleSelectionIndexObserveWidget = WidgetProperties
+				.singleSelectionIndex().observe(comboViewerContext.getCombo());
 		IObservableValue<?> invocatorFacadeEnvironmentActiveContextObserveValue = EMFEditProperties
-				.value(ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain(), FeaturePath.fromList(
-						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
-						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
-						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT))
+				.value(ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain(),
+						FeaturePath.fromList(
+								(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
+								(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
+								(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT))
 				.observe(ApogyCoreInvocatorFacade.INSTANCE);
 
 		m_bindingContext.bindValue(observeComboContextSingleSelectionIndexObserveWidget,
@@ -189,22 +193,24 @@ public class SessionStatusToolControl {
 
 					@Override
 					public Object convert(Object fromObject) {
-						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
 							if (!ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
-								.getContextsList().getContexts().get((Integer) fromObject).equals(null)) {
+									.getContextsList().getContexts().get((Integer) fromObject).equals(null)) {
 
-							return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
-									.getContextsList().getContexts().get((Integer) fromObject);
+								return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+										.getContextsList().getContexts().get((Integer) fromObject);
 							}
 						}
 						return null;
 					}
 
-				}), new UpdateValueStrategy().setConverter(new Converter(Context.class, Integer.class) {
+				}),
+
+				new UpdateValueStrategy().setConverter(new Converter(Context.class, Integer.class) {
 					@Override
 					public Object convert(Object arg0) {
-						for (int i = 0; i < comboContext.getItemCount(); i++) {
-							if (((Context) arg0).getName().equals(comboContext.getItem(i))) {
+						for (int i = 0; i < comboViewerContext.getCombo().getItemCount(); i++) {
+							if (((Context) arg0).getName().equals(comboViewerContext.getCombo().getItem(i))) {
 								return i;
 							}
 						}
@@ -230,10 +236,13 @@ public class SessionStatusToolControl {
 					@Override
 					public Object convert(Object fromObject) {
 						int color = SWT.COLOR_TRANSPARENT;
-						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
-							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment() != null){
-								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
-									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
+							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()
+									.getEnvironment() != null) {
+								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+										.getActiveContext() != null) {
+									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+											.getActiveContext().isVariablesInstantiated()) {
 										color = SWT.COLOR_GREEN;
 									}
 								}
@@ -242,25 +251,26 @@ public class SessionStatusToolControl {
 						return SWTResourceManager.getColor(color);
 					}
 				}));
-		
+
 		/*
 		 * Bind Start Enabled.
 		 */
-		IObservableValue<?> observeEnabledStartButton = WidgetProperties.enabled()
-				.observe(btnStart);
-		m_bindingContext.bindValue(observeEnabledStartButton,
-				invocatorFacadeActiveContextCreationDateValue, null,
+		IObservableValue<?> observeEnabledStartButton = WidgetProperties.enabled().observe(btnStart);
+		m_bindingContext.bindValue(observeEnabledStartButton, invocatorFacadeActiveContextCreationDateValue, null,
 				new UpdateValueStrategy().setConverter(new Converter(Context.class, Boolean.class) {
 					@Override
 					public Object convert(Object fromObject) {
-						boolean result = true; 
-						
-						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
+						boolean result = true;
+
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null) {
 							result = false;
-						}else{						
-							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment() != null){
-								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
-									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+						} else {
+							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()
+									.getEnvironment() != null) {
+								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+										.getActiveContext() != null) {
+									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+											.getActiveContext().isVariablesInstantiated()) {
 										result = false;
 									}
 								}
@@ -268,23 +278,24 @@ public class SessionStatusToolControl {
 						}
 						return result;
 					}
-				}));	
-		
+				}));
+
 		/*
 		 * Bind Stop Enabled.
 		 */
-		IObservableValue<?> observeEnabledStopButton = WidgetProperties.enabled()
-				.observe(btnStop);
-		m_bindingContext.bindValue(observeEnabledStopButton,
-				invocatorFacadeActiveContextCreationDateValue, null,
+		IObservableValue<?> observeEnabledStopButton = WidgetProperties.enabled().observe(btnStop);
+		m_bindingContext.bindValue(observeEnabledStopButton, invocatorFacadeActiveContextCreationDateValue, null,
 				new UpdateValueStrategy().setConverter(new Converter(Context.class, Boolean.class) {
 					@Override
 					public Object convert(Object fromObject) {
-						boolean result = false; 
-						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
-							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment() != null){
-								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
-									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+						boolean result = false;
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
+							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()
+									.getEnvironment() != null) {
+								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+										.getActiveContext() != null) {
+									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+											.getActiveContext().isVariablesInstantiated()) {
 										result = true;
 									}
 								}
@@ -292,26 +303,28 @@ public class SessionStatusToolControl {
 						}
 						return result;
 					}
-				}));				
-		
+				}));
+
 		/*
 		 * Bind Combo Box Enabled.
 		 */
 		IObservableValue<?> observeEnabledComboWidget = WidgetProperties.enabled()
-				.observe(comboContext);
-		m_bindingContext.bindValue(observeEnabledComboWidget,
-				invocatorFacadeActiveContextCreationDateValue, null,
+				.observe(comboViewerContext.getCombo());
+		m_bindingContext.bindValue(observeEnabledComboWidget, invocatorFacadeActiveContextCreationDateValue, null,
 				new UpdateValueStrategy().setConverter(new Converter(Context.class, Boolean.class) {
 					@Override
 					public Object convert(Object fromObject) {
-						boolean result = true; 
-						
-						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
+						boolean result = true;
+
+						if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null) {
 							result = false;
-						}else{						
-							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment() != null){
-								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext() != null){
-									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getActiveContext().isVariablesInstantiated()){
+						} else {
+							if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()
+									.getEnvironment() != null) {
+								if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+										.getActiveContext() != null) {
+									if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment()
+											.getActiveContext().isVariablesInstantiated()) {
 										result = false;
 									}
 								}

@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.viewers.ISelection;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
@@ -115,6 +116,13 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * @generated
 	 */
 	private EDataType imageDescriptorEDataType = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iSelectionEDataType = null;
 
 		/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -558,6 +566,15 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getISelection() {
+		return iSelectionEDataType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCoreUIFactory getApogyCoreUIFactory() {
 		return (ApogyCoreUIFactory)getEFactoryInstance();
 	}
@@ -629,6 +646,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 		iFileEDataType = createEDataType(IFILE);
 		iFolderEDataType = createEDataType(IFOLDER);
 		imageDescriptorEDataType = createEDataType(IMAGE_DESCRIPTOR);
+		iSelectionEDataType = createEDataType(ISELECTION);
 	}
 
   /**
@@ -739,6 +757,7 @@ public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIP
 		initEDataType(iFileEDataType, IFile.class, "IFile", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(iFolderEDataType, IFolder.class, "IFolder", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(imageDescriptorEDataType, ImageDescriptor.class, "ImageDescriptor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(iSelectionEDataType, ISelection.class, "ISelection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -35,6 +35,9 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
  ca.gc.asc_csa.apogy.common.converters.ui,
  org.eclipse.e4.ui.workbench,
+ org.eclipse.e4.ui.services,
+ org.eclipse.e4.core.di.annotations,
+ org.eclipse.e4.ui.model.workbench,
  ca.gc.asc_csa.apogy.common.emf.transaction;bundle-version="0.5.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

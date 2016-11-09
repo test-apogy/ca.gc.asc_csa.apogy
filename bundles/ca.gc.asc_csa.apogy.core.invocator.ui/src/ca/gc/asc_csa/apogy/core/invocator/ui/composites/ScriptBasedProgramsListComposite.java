@@ -19,6 +19,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.observable.ChangeEvent;
+import org.eclipse.core.databinding.observable.IChangeListener;
+import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
@@ -35,9 +38,11 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.util.LocalSelectionTransfer;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
@@ -81,6 +86,7 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	private ProgramsList programsList;
 
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
+	private IChangeListener newValueChangeListener;
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 
 	public ScriptBasedProgramsListComposite(Composite parent, int style) {
@@ -126,10 +132,11 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			public void widgetSelected(SelectionEvent e) {
 
 				/**
-				 * Creates and opens the wizard to create a valid context
+				 * Creates and opens the wizard to create a valid ProgramsGroup
 				 */
 				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
-				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);				
+				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
+				newProgramsGroupWizard.getCreatedProgramsGroup().addChangeListener(getNewValueChangeListener());
 				dialog.open();
 			}
 		});
@@ -141,12 +148,12 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			public void widgetSelected(SelectionEvent e) {
 
 				/**
-				 * Creates and opens the wizard to create a valid context
+				 * Creates and opens the wizard to create a valid Program
 				 */
 				NewScriptBasedProgramWizard newScriptBasedProgramWizard = new NewScriptBasedProgramWizard(
 						getSelectedProgramsGroup());
 				WizardDialog dialog = new WizardDialog(getShell(), newScriptBasedProgramWizard);
-
+				newScriptBasedProgramWizard.getCreatedProgram().addChangeListener(getNewValueChangeListener());
 				dialog.open();
 			}
 		});
@@ -173,9 +180,6 @@ public class ScriptBasedProgramsListComposite extends Composite {
 				}
 			}
 		});
-		new Label(compositeProgramsList, SWT.NONE);
-		
-		new Label(compositeProgramsList, SWT.NONE);
 		scrolledComposite.setContent(compositeProgramsList);
 		scrolledComposite.setMinSize(compositeProgramsList.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
@@ -193,7 +197,13 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	protected boolean isApplicable(Program program) {
 		return true;
 	}
-
+	
+	/**
+	 * Returns a reference to a tree viewer listener used to bind with {
+	 * {@link #treeViewer}.
+	 * 
+	 * @return Reference to the listener.
+	 */
 	private ISelectionChangedListener getTreeViewerSelectionChangedListener() {
 		if (treeViewerSelectionChangedListener == null) {
 			treeViewerSelectionChangedListener = new ISelectionChangedListener() {
@@ -213,13 +223,29 @@ public class ScriptBasedProgramsListComposite extends Composite {
 	 * @param selection
 	 *            Reference to the selection.
 	 */
-	protected void newSelection(TreeSelection selection) {
+	protected void newSelection(ISelection selection) {
+	}
+	
+	public IChangeListener getNewValueChangeListener() {
+		if(newValueChangeListener == null){
+			newValueChangeListener = new IChangeListener() {
+				@SuppressWarnings("unchecked")
+				@Override
+				public void handleChange(ChangeEvent event) {						
+					treeViewer.refresh();
+					treeViewer.setSelection(
+							new StructuredSelection(((WritableValue<EObject>) event.getObservable()).getValue()));
+					event.getObservable().removeChangeListener(getNewValueChangeListener());
+				}	
+			};
+		}
+		return newValueChangeListener;
 	}
 
 	/**
-	 * Returns the selected program.
+	 * Returns the selected  {@link Program}.
 	 * 
-	 * @return Reference to the selected {@link Program}.
+	 * @return Reference to the selected program.
 	 */
 	public Program getSelectedProgram() {
 		if (isProgramSelected()) {
@@ -228,6 +254,11 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		return null;
 	}
 
+	/**
+	 * Returns the selected {@link ProgramsGroup}.
+	 * 
+	 * @return Reference to the selected programsGroup.
+	 */
 	public ProgramsGroup getSelectedProgramsGroup() {
 		Object selection = ((TreeSelection) treeViewer.getSelection()).getFirstElement();
 		if (isProgramSelected()) {
@@ -238,14 +269,26 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		return null;
 	}
 
+	/**
+	 * Returns a boolean to know if a {@link ProgramsGroup} or another object is selected
+	 * @return true if a ProgramsGroup is selected, false otherwise
+	 */
 	private boolean isProgramsGroupSelected() {
 		return ((TreeSelection) treeViewer.getSelection()).getFirstElement() instanceof ProgramsGroup;
 	}
 
+
+	/**
+	 * Returns a boolean to know if a {@link Program} or another object is selected
+	 * @return true if a program is selected, false otherwise
+	 */
 	private boolean isProgramSelected() {
 		return ((TreeSelection) treeViewer.getSelection()).getFirstElement() instanceof Program;
 	}
 
+	/**
+	 * Content provider for the TreeViewer
+	 */
 	private class ProgramsListsContentProvider extends AdapterFactoryContentProvider {
 
 		public ProgramsListsContentProvider(AdapterFactory adapterFactory) {
@@ -312,6 +355,9 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		}
 	}
 
+	/**
+	 * Label provider for the TreeViewer
+	 */
 	private class ProgramsListsLabelProvider extends AdapterFactoryLabelProvider implements ITableLabelProvider {
 		private final static int NAME_COLUMN_ID = 0;
 
@@ -338,6 +384,10 @@ public class ScriptBasedProgramsListComposite extends Composite {
 
 	}
 
+	/**
+	 * Sets the programsList in the composite
+	 * @param programsList
+	 */
 	public void setProgramsList(ProgramsList programsList) {
 		this.programsList = programsList;
 
@@ -362,10 +412,15 @@ public class ScriptBasedProgramsListComposite extends Composite {
 			}
 		}
 		
+		/**
+		 * Drag & Drop support
+		 */
 		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
-		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));		
-		treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
+		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(),
+				FileTransfer.getInstance() };
+		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));
+		treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(
+				AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
 
 		return bindingContext;
 	}

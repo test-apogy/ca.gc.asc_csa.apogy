@@ -15,16 +15,18 @@ Require-Bundle: org.eclipse.ui;visibility:=reexport,
  org.eclipse.core.expressions;bundle-version="3.4.600",
  org.eclipse.xtext.xbase.lib;bundle-version="2.10.0",
  org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.100",
- ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0"
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0",
+ org.eclipse.e4.ui.workbench
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
 Export-Package: ca.gc.asc_csa.apogy.common.ui,
- ca.gc.asc_csa.apogy.common.ui.impl,
- ca.gc.asc_csa.apogy.common.ui.provider,
- ca.gc.asc_csa.apogy.common.ui.util,
  ca.gc.asc_csa.apogy.common.ui.actions,
  ca.gc.asc_csa.apogy.common.ui.expressions,
+ ca.gc.asc_csa.apogy.common.ui.impl,
+ ca.gc.asc_csa.apogy.common.ui.parts,
  ca.gc.asc_csa.apogy.common.ui.properties,
  ca.gc.asc_csa.apogy.common.ui.properties.sections,
+ ca.gc.asc_csa.apogy.common.ui.provider,
+ ca.gc.asc_csa.apogy.common.ui.util,
  ca.gc.asc_csa.apogy.common.ui.views

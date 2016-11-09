@@ -32,9 +32,11 @@ Contributors:
 package ca.gc.asc_csa.apogy.common.ui
 
 import org.eclipse.jface.resource.ImageDescriptor
+import org.eclipse.jface.viewers.ISelection
 
 /* Types definitions. */
 type ImageDescriptor wraps ImageDescriptor
+type ISelection wraps ISelection
 
 /* -------------------------------------------------------------------------
  * 

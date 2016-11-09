@@ -14,26 +14,46 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
 
 public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
 
+	@Override
+	protected void setNullSelection() {
+		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createApogyAdvancedEditorPartSelection());
+	}
+
+	@Override
 	protected Composite createContentComposite(Composite parent) {
 		return new AdvancedEditorComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
-				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
+				if (selection.isEmpty()) {
+					setNullSelection();
+				} else {
+					EObject eObject = ((AdvancedEditorComposite) getContentComposite()).getSelectedEObject();
+					if (eObject != null) {
+						ApogyAdvancedEditorPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
+								.createApogyAdvancedEditorPartSelection();
+						selectionSent.setEObject(eObject);
+
+						selectionService.setSelection(selectionSent);
+					}
+				}
+
 			}
 		};
 	}
 
-	protected void setSession(InvocatorSession invocatorSession) {
-		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
+	@Override
+	protected void setContentCompositeSelection(EObject eObject) {
+		((AdvancedEditorComposite) getContentComposite()).setEObject(eObject);
 	}
 }

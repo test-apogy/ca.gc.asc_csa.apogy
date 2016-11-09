@@ -33,6 +33,33 @@ public interface ApogyCoreInvocatorUIFactory extends EFactory {
 	ApogyCoreInvocatorUIFactory eINSTANCE = ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Script Based Programs List Part Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Script Based Programs List Part Selection</em>'.
+	 * @generated
+	 */
+	ScriptBasedProgramsListPartSelection createScriptBasedProgramsListPartSelection();
+
+	/**
+	 * Returns a new object of class '<em>Program Details Part Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Program Details Part Selection</em>'.
+	 * @generated
+	 */
+	ProgramDetailsPartSelection createProgramDetailsPartSelection();
+
+	/**
+	 * Returns a new object of class '<em>Apogy Advanced Editor Part Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Apogy Advanced Editor Part Selection</em>'.
+	 * @generated
+	 */
+	ApogyAdvancedEditorPartSelection createApogyAdvancedEditorPartSelection();
+
+	/**
 	 * Returns a new object of class '<em>New Program Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

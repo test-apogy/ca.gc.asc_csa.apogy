@@ -14,27 +14,41 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.TreeSelection;
-import org.eclipse.swt.SWT;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.services.IServiceConstants;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection;
 
-public class ParameterDefinitionPart extends AbstractApogySessionBasedPart {
+public class ParameterDefinitionPart extends AbstractSelectionBasedPart{
 
+	
+	@Inject
+	@Optional
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramDetailsPartSelection selection) {
+	}
+
+	@Override
+	protected void setSelectionInContentComposite(EObject eObject) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
 	protected Composite createContentComposite(Composite parent) {
+		// TODO Auto-generated method stub
 		return null;
-//		return new AdvancedEditorComposite(parent, SWT.None) {
-//			@Override
-//			protected void newSelection(ISelection selection) {
-//				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
-//			}
-//		};
 	}
 
-	protected void setSession(InvocatorSession invocatorSession) {
-//		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
+	@Override
+	protected void setNullSelection() {
+		// TODO Auto-generated method stub
+		
 	}
+
 }

@@ -25,6 +25,10 @@ import ca.gc.asc_csa.apogy.core.invocator.impl.ProgramFactoriesRegistryImpl;
  * A representation of the model object '<em><b>Program Factories Registry</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Registry to get the factory of a Program EClass
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -123,6 +127,9 @@ public interface ProgramFactoriesRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gets the factory corresponding to the EClass
+	 * <!-- end-model-doc -->
 	 * @model unique="false" eClassUnique="false"
 	 * @generated
 	 */

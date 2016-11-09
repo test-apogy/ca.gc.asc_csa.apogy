@@ -67,7 +67,10 @@ public abstract class ProgramFactoryImpl extends MinimalEObjectImpl.Container im
 	 */
 	public void applySettings(Program program, ProgramSettings settings) {
 		program.setName(settings.getName());
-		program.setDescription(settings.getDescription());
+		if(settings.getDescription() != null){
+			program.setDescription(settings.getDescription());
+		}
+	
 	}
 
 	/**

@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
@@ -25,20 +26,37 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConf
 
 public class ControllerConfigsPart extends AbstractApogySessionBasedPart{
 	
-	protected Composite createContentComposite(Composite parent){
-		return new ControllerConfigsComposite(parent, SWT.None) {
-			@Override
-			protected void newSelection(ISelection selection) 
-			{
-				selectionService.setSelection(((TreeSelection)selection).getFirstElement());
-			}
-		};
+//	protected Composite createContentComposite(Composite parent){
+//		return new ControllerConfigsComposite(parent, SWT.None) {
+//			@Override
+//			protected void newSelection(ISelection selection) 
+//			{
+//				selectionService.setSelection(((TreeSelection)selection).getFirstElement());
+//			}
+//		};
+//	}
+//
+//	protected void setSessionInComposite(InvocatorSession invocatorSession) {
+//		if (ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup() != null) {
+//			((ControllerConfigsComposite) getContentComposite())
+//					.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
+//		}
+//	}
+
+	@Override
+	protected void setNullSelection() {
+		
 	}
 
-	protected void setSession(InvocatorSession invocatorSession) {
-		if (ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup() != null) {
-			((ControllerConfigsComposite) getContentComposite())
-					.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
-		}
+	@Override
+	protected void setContentCompositeSelection(EObject eObject) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected Composite createContentComposite(Composite parent) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

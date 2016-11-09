@@ -16,7 +16,6 @@ package ca.gc.asc_csa.apogy.common.ui.impl;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFactory;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiPackage;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
@@ -26,6 +25,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.viewers.ISelection;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,6 +47,13 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * @generated
 	 */
 	private EDataType imageDescriptorEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iSelectionEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -144,6 +151,15 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getISelection() {
+		return iSelectionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCommonUiFactory getApogyCommonUiFactory() {
 		return (ApogyCommonUiFactory)getEFactoryInstance();
 	}
@@ -172,6 +188,7 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 
 		// Create data types
 		imageDescriptorEDataType = createEDataType(IMAGE_DESCRIPTOR);
+		iSelectionEDataType = createEDataType(ISELECTION);
 	}
 
 	/**
@@ -214,6 +231,7 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 
 		// Initialize data types
 		initEDataType(imageDescriptorEDataType, ImageDescriptor.class, "ImageDescriptor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(iSelectionEDataType, ISelection.class, "ISelection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -23,10 +23,13 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +38,27 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings;
  * @generated
  */
 public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements ApogyCoreInvocatorUIPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass scriptBasedProgramsListPartSelectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass programDetailsPartSelectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass apogyAdvancedEditorPartSelectionEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,6 +142,60 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ApogyCoreInvocatorUIPackage.eNS_URI, theApogyCoreInvocatorUIPackage);
 		return theApogyCoreInvocatorUIPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getScriptBasedProgramsListPartSelection() {
+		return scriptBasedProgramsListPartSelectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScriptBasedProgramsListPartSelection_Program() {
+		return (EReference)scriptBasedProgramsListPartSelectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProgramDetailsPartSelection() {
+		return programDetailsPartSelectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgramDetailsPartSelection_EObject() {
+		return (EReference)programDetailsPartSelectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getApogyAdvancedEditorPartSelection() {
+		return apogyAdvancedEditorPartSelectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getApogyAdvancedEditorPartSelection_EObject() {
+		return (EReference)apogyAdvancedEditorPartSelectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -229,15 +307,24 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		isCreated = true;
 
 		// Create classes and their features
-		newProgramSettingsEClass = createEClass(NEW_PROGRAM_SETTINGS);
-		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__ECLASS);
-		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__PROGRAM_SETTINGS);
-
 		apogyCoreInvocatorUIFacadeEClass = createEClass(APOGY_CORE_INVOCATOR_UI_FACADE);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___INIT_SESSION);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION);
+
+		scriptBasedProgramsListPartSelectionEClass = createEClass(SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION);
+		createEReference(scriptBasedProgramsListPartSelectionEClass, SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION__PROGRAM);
+
+		programDetailsPartSelectionEClass = createEClass(PROGRAM_DETAILS_PART_SELECTION);
+		createEReference(programDetailsPartSelectionEClass, PROGRAM_DETAILS_PART_SELECTION__EOBJECT);
+
+		apogyAdvancedEditorPartSelectionEClass = createEClass(APOGY_ADVANCED_EDITOR_PART_SELECTION);
+		createEReference(apogyAdvancedEditorPartSelectionEClass, APOGY_ADVANCED_EDITOR_PART_SELECTION__EOBJECT);
+
+		newProgramSettingsEClass = createEClass(NEW_PROGRAM_SETTINGS);
+		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__ECLASS);
+		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__PROGRAM_SETTINGS);
 
 		// Create data types
 		compoundCommandEDataType = createEDataType(COMPOUND_COMMAND);
@@ -267,9 +354,9 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
 		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -278,10 +365,6 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(newProgramSettingsEClass, NewProgramSettings.class, "NewProgramSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNewProgramSettings_EClass(), theEcorePackage.getEClass(), null, "eClass", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNewProgramSettings_ProgramSettings(), theApogyCoreInvocatorPackage.getProgramSettings(), null, "programSettings", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(apogyCoreInvocatorUIFacadeEClass, ApogyCoreInvocatorUIFacade.class, "ApogyCoreInvocatorUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getApogyCoreInvocatorUIFacade__CopyInitializationData__Context_Context(), null, "copyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -298,6 +381,19 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		initEOperation(getApogyCoreInvocatorUIFacade__InitSession(), null, "initSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getApogyCoreInvocatorUIFacade__DisposeSession(), null, "disposeSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(scriptBasedProgramsListPartSelectionEClass, ScriptBasedProgramsListPartSelection.class, "ScriptBasedProgramsListPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getScriptBasedProgramsListPartSelection_Program(), theApogyCoreInvocatorPackage.getProgram(), null, "program", null, 0, 1, ScriptBasedProgramsListPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(programDetailsPartSelectionEClass, ProgramDetailsPartSelection.class, "ProgramDetailsPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProgramDetailsPartSelection_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, ProgramDetailsPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(apogyAdvancedEditorPartSelectionEClass, ApogyAdvancedEditorPartSelection.class, "ApogyAdvancedEditorPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getApogyAdvancedEditorPartSelection_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, ApogyAdvancedEditorPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(newProgramSettingsEClass, NewProgramSettings.class, "NewProgramSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNewProgramSettings_EClass(), theEcorePackage.getEClass(), null, "eClass", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNewProgramSettings_ProgramSettings(), theApogyCoreInvocatorPackage.getProgramSettings(), null, "programSettings", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(compoundCommandEDataType, CompoundCommand.class, "CompoundCommand", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

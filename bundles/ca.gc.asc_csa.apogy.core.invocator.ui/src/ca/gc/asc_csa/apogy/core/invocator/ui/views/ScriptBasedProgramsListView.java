@@ -59,7 +59,7 @@ public class ScriptBasedProgramsListView extends AbstractView implements IEditin
 		// Create the control composite
 		composite = new ScriptBasedProgramsListComposite(parent, SWT.NONE){
 			@Override
-			protected void newSelection(TreeSelection selection) {
+			protected void newSelection(ISelection selection) {
 				getSelectionProvider().setSelection(selection);
 			}
 		};

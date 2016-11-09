@@ -845,10 +845,19 @@ abstract class SpecificProgramSettings{
 }
 
 abstract class ProgramFactory{	
+	/*
+	 * Creates the program
+	 */
 	op Program createProgram()
+	/*
+	 * Applies the settings to the program
+	 */
 	op void applySettings(Program program, ProgramSettings settings)
 }
 
+/*
+ * Registry to get the factory of a Program EClass
+ */
 class ProgramFactoriesRegistry{
 	
 	readonly transient String PROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_POINT_ID = "ca.gc.asc_csa.apogy.core.invocator.programFactoryProvider"
@@ -857,6 +866,9 @@ class ProgramFactoriesRegistry{
 	
 	HashMap<EClass,ProgramFactory> programFactoriesMap
 	
+	/*
+	 * Gets the factory corresponding to the EClass
+	 */
 	op ProgramFactory getFactory(EClass eClass)
 }
 

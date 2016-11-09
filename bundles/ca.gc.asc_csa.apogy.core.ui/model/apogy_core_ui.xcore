@@ -37,14 +37,15 @@ import org.eclipse.core.resources.IContainer
 import org.eclipse.core.resources.IFile
 import org.eclipse.core.resources.IFolder
 import org.eclipse.core.resources.IProject
-import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation
 import org.eclipse.jface.resource.ImageDescriptor
+import org.eclipse.jface.viewers.ISelection
 
 type IProject wraps IProject
 type IContainer wraps IContainer
 type IFile wraps IFile
 type IFolder wraps IFolder
 type ImageDescriptor wraps ImageDescriptor
+type ISelection wraps ISelection
 
 class ApogyCoreUIFacade
 {	

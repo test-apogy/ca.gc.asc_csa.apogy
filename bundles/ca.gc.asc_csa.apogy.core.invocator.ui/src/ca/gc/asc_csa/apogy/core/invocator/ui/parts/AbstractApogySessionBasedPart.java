@@ -14,66 +14,58 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.inject.Inject;
 
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoActiveSessionComposite;
 
-abstract public class AbstractApogySessionBasedPart {
-
-	private Composite composite;
+abstract public class AbstractApogySessionBasedPart extends AbstractApogyPart{
+	
 	private Adapter adapter;
+	
+	abstract protected void setNullSelection();
 
-	@Inject
-	protected ESelectionService selectionService;
-
-	@PostConstruct
-	public void createPartControl(Composite parent) {
-		parent.setLayout(new FillLayout());
-		composite = createContentComposite(parent);
-		setSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+	@Override
+	protected Composite getNoContentComposite() {
+		return new NoActiveSessionComposite(composite, SWT.None);
+	}
+	
+	@Override
+	protected Class<? extends Composite> getNoContentCompositeClass(){
+		return NoActiveSessionComposite.class;
+	}
+	
+	@Override
+	protected EObject getInitializeObject() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());
+		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 	}
 
 	/**
-	 * Specifies the {@link Composite} to insert in the part
-	 */
-	abstract protected Composite createContentComposite(Composite parent);
-
-	/**
-	 * Gets the content {@link Composite} in the part
+	 * Gets an adapter that sets the part's composite to a
+	 * {@link NoActiveSessionComposite} if there is no active session.
 	 * 
-	 * @return Composite
+	 * @return the {@link Adapter}
 	 */
-	public Composite getContentComposite() {
-		return composite;
-	}
-
-	/**
-	 * This method is called when the {@link InvocatorSession} needs to be
-	 * changed or initialized.
-	 * 
-	 * @param selection
-	 *            Reference to the selection.
-	 */
-	protected void setSession(InvocatorSession invocatorSession) {
-	}
-
 	private Adapter getApogyCoreInvocatorFacadeAdapter() {
 		if (adapter == null) {
 			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					setSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+					if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
+						AbstractApogySessionBasedPart.this.setEObject(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+					} else {
+						AbstractApogySessionBasedPart.this.setNoContentComposite();
+					}
+
 				}
 			};
 		}
@@ -83,5 +75,8 @@ abstract public class AbstractApogySessionBasedPart {
 	@PreDestroy
 	protected void dispose() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
+		if (composite != null) {
+			composite.dispose();
+		}
 	}
 }
