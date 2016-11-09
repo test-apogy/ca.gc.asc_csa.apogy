@@ -26,8 +26,8 @@ import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.TypesList;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 
 /**
@@ -41,7 +41,7 @@ import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl#getTypesList <em>Types List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl#getLocalTypesList <em>Local Types List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl#getVariablesList <em>Variables List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl#getContextsList <em>Contexts List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl#getActiveContext <em>Active Context</em>}</li>
@@ -92,16 +92,16 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getTypesList() <em>Types List</em>}' containment reference.
+	 * The cached value of the '{@link #getLocalTypesList() <em>Local Types List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getTypesList()
+	 * <!-- end-user-doc -->
+	 * @see #getLocalTypesList()
 	 * @generated
 	 * @ordered
 	 */
-  protected TypesList typesList;
+	protected LocalTypesList localTypesList;
 
-  /**
+		/**
 	 * The cached value of the '{@link #getVariablesList() <em>Variables List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -255,51 +255,48 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public TypesList getTypesList()
-  {
-		return typesList;
+	public LocalTypesList getLocalTypesList() {
+		return localTypesList;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public NotificationChain basicSetTypesList(TypesList newTypesList, NotificationChain msgs)
-  {
-		TypesList oldTypesList = typesList;
-		typesList = newTypesList;
+	public NotificationChain basicSetLocalTypesList(LocalTypesList newLocalTypesList, NotificationChain msgs) {
+		LocalTypesList oldLocalTypesList = localTypesList;
+		localTypesList = newLocalTypesList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST, oldTypesList, newTypesList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST, oldLocalTypesList, newLocalTypesList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setTypesList(TypesList newTypesList)
-  {
-		if (newTypesList != typesList) {
+	public void setLocalTypesList(LocalTypesList newLocalTypesList) {
+		if (newLocalTypesList != localTypesList) {
 			NotificationChain msgs = null;
-			if (typesList != null)
-				msgs = ((InternalEObject)typesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST, null, msgs);
-			if (newTypesList != null)
-				msgs = ((InternalEObject)newTypesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST, null, msgs);
-			msgs = basicSetTypesList(newTypesList, msgs);
+			if (localTypesList != null)
+				msgs = ((InternalEObject)localTypesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST, null, msgs);
+			if (newLocalTypesList != null)
+				msgs = ((InternalEObject)newLocalTypesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST, null, msgs);
+			msgs = basicSetLocalTypesList(newLocalTypesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST, newTypesList, newTypesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST, newLocalTypesList, newLocalTypesList));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -468,8 +465,8 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__INVOCATOR_SESSION:
 				return basicSetInvocatorSession(null, msgs);
-			case ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST:
-				return basicSetTypesList(null, msgs);
+			case ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST:
+				return basicSetLocalTypesList(null, msgs);
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST:
 				return basicSetVariablesList(null, msgs);
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST:
@@ -509,8 +506,8 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__INVOCATOR_SESSION:
 				if (resolve) return getInvocatorSession();
 				return basicGetInvocatorSession();
-			case ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST:
-				return getTypesList();
+			case ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST:
+				return getLocalTypesList();
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST:
 				return getVariablesList();
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST:
@@ -540,8 +537,8 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)newValue);
 				return;
-			case ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST:
-				setTypesList((TypesList)newValue);
+			case ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST:
+				setLocalTypesList((LocalTypesList)newValue);
 				return;
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST:
 				setVariablesList((VariablesList)newValue);
@@ -574,8 +571,8 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)null);
 				return;
-			case ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST:
-				setTypesList((TypesList)null);
+			case ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST:
+				setLocalTypesList((LocalTypesList)null);
 				return;
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST:
 				setVariablesList((VariablesList)null);
@@ -605,8 +602,8 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__INVOCATOR_SESSION:
 				return basicGetInvocatorSession() != null;
-			case ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST:
-				return typesList != null;
+			case ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST:
+				return localTypesList != null;
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST:
 				return variablesList != null;
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST:

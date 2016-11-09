@@ -88,15 +88,6 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   ToolsList createToolsList();
 
   /**
-	 * Returns a new object of class '<em>Types List</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Types List</em>'.
-	 * @generated
-	 */
-  TypesList createTypesList();
-
-  /**
 	 * Returns a new object of class '<em>Local Types List</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -410,15 +401,6 @@ public interface ApogyCoreInvocatorFactory extends EFactory
 	 * @generated
 	 */
   OperationCallResultsList createOperationCallResultsList();
-
-  /**
-	 * Returns a new object of class '<em>Recording Results List</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Recording Results List</em>'.
-	 * @generated
-	 */
-  RecordingResultsList createRecordingResultsList();
 
   /**
 	 * Returns a new object of class '<em>Operation Call Result</em>'.

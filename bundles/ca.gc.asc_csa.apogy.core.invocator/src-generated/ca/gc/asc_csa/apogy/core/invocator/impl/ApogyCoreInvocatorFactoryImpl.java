@@ -78,7 +78,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER: return createDataProductsListsContainer();
 			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST: return createDataProductsList();
 			case ApogyCoreInvocatorPackage.TOOLS_LIST: return createToolsList();
-			case ApogyCoreInvocatorPackage.TYPES_LIST: return createTypesList();
 			case ApogyCoreInvocatorPackage.LOCAL_TYPES_LIST: return createLocalTypesList();
 			case ApogyCoreInvocatorPackage.REGISTERED_TYPES_LIST: return createRegisteredTypesList();
 			case ApogyCoreInvocatorPackage.TYPE: return createType();
@@ -114,7 +113,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.PROGRAM_RUNTIMES_LIST: return createProgramRuntimesList();
 			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST_PROGRAM_RUNTIME: return createOperationCallsListProgramRuntime();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST: return createOperationCallResultsList();
-			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST: return createRecordingResultsList();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULT: return createOperationCallResult();
 			case ApogyCoreInvocatorPackage.EXCEPTION_CONTAINER: return createExceptionContainer();
 			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE: return createAttributeResultValue();
@@ -249,17 +247,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
   {
 		ToolsListImpl toolsList = new ToolsListImpl();
 		return toolsList;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public TypesList createTypesList()
-  {
-		TypesListImpl typesList = new TypesListImpl();
-		return typesList;
 	}
 
   /**
@@ -635,17 +622,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
   {
 		OperationCallResultsListImpl operationCallResultsList = new OperationCallResultsListImpl();
 		return operationCallResultsList;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public RecordingResultsList createRecordingResultsList()
-  {
-		RecordingResultsListImpl recordingResultsList = new RecordingResultsListImpl();
-		return recordingResultsList;
 	}
 
   /**

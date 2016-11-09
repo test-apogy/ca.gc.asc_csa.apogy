@@ -28,7 +28,6 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getDataProductsListsContainer <em>Data Products Lists Container</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getOperationCallResultsList <em>Operation Call Results List</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getRecordingResultsList <em>Recording Results List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getInvocatorSession <em>Invocator Session</em>}</li>
  * </ul>
  *
@@ -96,35 +95,6 @@ public interface DataProductsList extends Named, Described
   void setOperationCallResultsList(OperationCallResultsList value);
 
   /**
-	 * Returns the value of the '<em><b>Recording Results List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList#getDataProductsList <em>Data Products List</em>}'.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Recording Results List</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Recording Results List</em>' containment reference.
-	 * @see #setRecordingResultsList(RecordingResultsList)
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getDataProductsList_RecordingResultsList()
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList#getDataProductsList
-	 * @model opposite="dataProductsList" containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false' notify='false'"
-	 * @generated
-	 */
-  RecordingResultsList getRecordingResultsList();
-
-  /**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getRecordingResultsList <em>Recording Results List</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Recording Results List</em>' containment reference.
-	 * @see #getRecordingResultsList()
-	 * @generated
-	 */
-  void setRecordingResultsList(RecordingResultsList value);
-
-		/**
 	 * Returns the value of the '<em><b>Invocator Session</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>

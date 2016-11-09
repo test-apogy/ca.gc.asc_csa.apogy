@@ -140,12 +140,6 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreInvocatorPackage.TYPES_LIST: {
-				TypesList typesList = (TypesList)theEObject;
-				T result = caseTypesList(typesList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ApogyCoreInvocatorPackage.LOCAL_TYPES_LIST: {
 				LocalTypesList localTypesList = (LocalTypesList)theEObject;
 				T result = caseLocalTypesList(localTypesList);
@@ -495,15 +489,6 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST: {
-				RecordingResultsList recordingResultsList = (RecordingResultsList)theEObject;
-				T result = caseRecordingResultsList(recordingResultsList);
-				if (result == null) result = caseResultsList(recordingResultsList);
-				if (result == null) result = caseNamed(recordingResultsList);
-				if (result == null) result = caseDescribed(recordingResultsList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ApogyCoreInvocatorPackage.ABSTRACT_RESULT: {
 				AbstractResult abstractResult = (AbstractResult)theEObject;
 				T result = caseAbstractResult(abstractResult);
@@ -678,22 +663,6 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	 * @generated
 	 */
   public T caseAbstractToolsListContainer(AbstractToolsListContainer object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Types List</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Types List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseTypesList(TypesList object)
   {
 		return null;
 	}
@@ -1448,22 +1417,6 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	 * @generated
 	 */
   public T caseOperationCallResultsList(OperationCallResultsList object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Recording Results List</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Recording Results List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseRecordingResultsList(RecordingResultsList object)
   {
 		return null;
 	}

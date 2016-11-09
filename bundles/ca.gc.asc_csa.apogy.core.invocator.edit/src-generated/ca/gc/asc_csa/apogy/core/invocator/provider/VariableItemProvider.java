@@ -143,7 +143,7 @@ public class VariableItemProvider
 									return o1.getName().compareTo(o2.getName());
 								}
 							};
-							types = ApogyCoreInvocatorFacade.INSTANCE.getAllTypes(environment);
+							types = ApogyCoreInvocatorFacade.INSTANCE.getAllTypes();
 							Collections.sort(types, comparator);
 						}
 						return types;

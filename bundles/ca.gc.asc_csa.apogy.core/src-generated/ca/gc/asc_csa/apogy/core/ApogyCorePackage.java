@@ -233,13 +233,13 @@ public interface ApogyCorePackage extends EPackage {
 	int APOGY_ENVIRONMENT__INVOCATOR_SESSION = ApogyCoreInvocatorPackage.ENVIRONMENT__INVOCATOR_SESSION;
 
 	/**
-	 * The feature id for the '<em><b>Types List</b></em>' containment reference.
+	 * The feature id for the '<em><b>Local Types List</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_ENVIRONMENT__TYPES_LIST = ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST;
+	int APOGY_ENVIRONMENT__LOCAL_TYPES_LIST = ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST;
 
 	/**
 	 * The feature id for the '<em><b>Variables List</b></em>' containment reference.

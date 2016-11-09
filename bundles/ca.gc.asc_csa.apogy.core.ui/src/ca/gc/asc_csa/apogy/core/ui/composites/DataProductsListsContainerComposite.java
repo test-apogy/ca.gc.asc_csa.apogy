@@ -38,6 +38,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.ui.PlatformUI;
+
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
@@ -49,8 +51,6 @@ import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
-import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
-import org.eclipse.ui.PlatformUI;
 
 public class DataProductsListsContainerComposite extends Composite {
 	private DataBindingContext m_currentDataBindings;
@@ -118,8 +118,7 @@ public class DataProductsListsContainerComposite extends Composite {
 			public Object[] getChildren(Object object) {
 				if (object instanceof DataProductsListsContainer
 						|| object instanceof DataProductsList
-						|| object instanceof OperationCallResultsList
-						|| object instanceof RecordingResultsList) {
+						|| object instanceof OperationCallResultsList) {
 					return super.getChildren(object);
 				} else {
 					return null;
@@ -130,8 +129,7 @@ public class DataProductsListsContainerComposite extends Composite {
 			public boolean hasChildren(Object object) {
 				if (object instanceof DataProductsListsContainer
 						|| object instanceof DataProductsList
-						|| object instanceof OperationCallResultsList
-						|| object instanceof RecordingResultsList) {
+						|| object instanceof OperationCallResultsList) {
 					return super.hasChildren(object);
 				} else {
 					return false;

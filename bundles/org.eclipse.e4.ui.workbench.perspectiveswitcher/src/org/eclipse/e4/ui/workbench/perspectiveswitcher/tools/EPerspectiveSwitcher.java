@@ -54,7 +54,11 @@ public class EPerspectiveSwitcher {
 				return;
 			
 			if (perspective != null){
-				MWindow perspectiveWindow = perspective.getContext().get(MWindow.class); 
+				
+				if (perspective.getContext() != null){
+				MWindow perspectiveWindow = perspective.getContext().get(MWindow.class);
+				
+				
 				if (window != perspectiveWindow)
 					return;
 							
@@ -62,6 +66,7 @@ public class EPerspectiveSwitcher {
 				Object newValue = event.getProperty(UIEvents.EventTags.NEW_VALUE);
 				
 				control.updateAttributeFor(perspective, attName, newValue);
+				}
 			}
 		}
 	};

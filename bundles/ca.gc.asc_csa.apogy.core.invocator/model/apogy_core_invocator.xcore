@@ -33,7 +33,7 @@
 		  resource="XMI", publicConstructors="true")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.invocator/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.invocator.edit/src-generated")
-@GenModel(editorDirectory="/ca.gc.asc_csa.apogy.core.invocator.editor/src-generated")
+//@GenModel(editorDirectory="/ca.gc.asc_csa.apogy.core.invocator.editor/src-generated")
 
 package ca.gc.asc_csa.apogy.core.invocator
 
@@ -246,18 +246,6 @@ class ApogyCoreInvocatorFacade
 	 * Refers to the active invocator session.
 	 */
 	refers InvocatorSession activeInvocatorSession
-	
-	/*
-	 * Loads the registered types.
-	 * @param session Reference to the session.
-	 */
-	 op void loadRegisteredTypes(InvocatorSession session)
-	 
-	 /*
-	  * Returns the list of all the {@link Type} contained in the specified {@link Environment}.
-	  * @environment Reference to the environment.
-	  */
-	 op List<Type> getAllTypes(Environment environment) 
 	 
 	 /*
 	  * Adds the specified {@link IVariableListener}.
@@ -331,6 +319,16 @@ class ApogyCoreInvocatorFacade
 	  * @return Reference to the controller's programsGroup.
 	  */ 
 	  op ProgramsGroup getControllersGroup()
+	
+	/* 
+	 * Registered Types List.
+	 */  
+	contains RegisteredTypesList[0..1] registeredTypes	  
+	
+	/*
+	 * Returns all available local and registered types. 
+	 */
+	op List<Type> getAllTypes()
 } 
 
 enum VariableListenerEventType{
@@ -366,7 +364,7 @@ class InvocatorSession extends Named, Described
    @GenModel(property="None")
  	container InvocatorSession invocatorSession opposite environment
  	
-  	contains TypesList[0..1] typesList
+  	contains LocalTypesList[0..1] localTypesList
 	contains VariablesList[0..1] variablesList opposite environment
 	contains ContextsList[0..1] contextsList opposite environment
 		
@@ -391,9 +389,6 @@ class InvocatorSession extends Named, Described
  
  	contains OperationCallResultsList [1] operationCallResultsList opposite dataProductsList
   	
-    @GenModel(children="false", createChild="false", notify="false")
- 	contains RecordingResultsList [0..1] recordingResultsList opposite dataProductsList
- 
     @GenModel(children="false", property="None")
 	refers local readonly volatile transient derived InvocatorSession invocatorSession get
 	{
@@ -426,24 +421,31 @@ class InvocatorSession extends Named, Described
  }
 
 /* -------------------------------------------------------------------------
+ * 
  * Types.
+ * 
  * ------------------------------------------------------------------------- */
  
- class TypesList
- {
-	contains LocalTypesList[0..1] localTypes
-	contains RegisteredTypesList[0..1] registeredTypes
- }
- 
- class LocalTypesList
- {
+ /* 
+  * List of {@link Type}s that are defined locally.
+  */
+ class LocalTypesList{
+ 	/*
+ 	 * Contains the local {@link Type}s. 
+ 	 */
  	@GenModel(children="true", createChild="true", property="None") 		
  	contains Type[0..*] types
  }
  
- class RegisteredTypesList
- { 	
- 	@GenModel(children="true", createChild="false", property="None")
+ /* 
+  * List of {@link Type}s that are registered in bundles.
+  */
+ class RegisteredTypesList{ 	
+ 	
+ 	/*
+ 	 * Contains the bundled {@link Type}s. 
+ 	 */
+ 	@GenModel(children="true", createChild="false", property="None") 	
 	refers derived transient readonly Type[0..*] types	 	 	
  }
  
@@ -1106,25 +1108,6 @@ class OperationCallResultsList extends ResultsList
 	
     @GenModel(children="false", property="None")
 	refers local readonly volatile transient derived InvocatorSession invocatorSession get
-	{
-		if (dataProductsList == null)
-		{
-			return null
-		}
-		else
-		{
-			return dataProductsList.invocatorSession
-		}
-	}
-}
-
-class RecordingResultsList extends ResultsList
-{
-	@GenModel(property="None")
-	container DataProductsList dataProductsList opposite recordingResultsList
-	
-    @GenModel(children="false", property="None")
-	refers local readonly volatile transient derived InvocatorSession invocatorSession get		
 	{
 		if (dataProductsList == null)
 		{

@@ -257,8 +257,8 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 		if (createEnvironment) {
 			ApogyEnvironment environment = ApogyCoreFactory.eINSTANCE
 					.createApogyEnvironment();
-			environment.setTypesList(ApogyCoreInvocatorFactory.eINSTANCE
-					.createTypesList());
+			environment.setLocalTypesList(ApogyCoreInvocatorFactory.eINSTANCE
+					.createLocalTypesList());
 			environment.setVariablesList(ApogyCoreInvocatorFactory.eINSTANCE
 					.createVariablesList());
 			environment.setContextsList(ApogyCoreInvocatorFactory.eINSTANCE

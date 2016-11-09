@@ -116,10 +116,6 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 				return createAbstractToolsListContainerAdapter();
 			}
 			@Override
-			public Adapter caseTypesList(TypesList object) {
-				return createTypesListAdapter();
-			}
-			@Override
 			public Adapter caseLocalTypesList(LocalTypesList object) {
 				return createLocalTypesListAdapter();
 			}
@@ -312,10 +308,6 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 				return createOperationCallResultsListAdapter();
 			}
 			@Override
-			public Adapter caseRecordingResultsList(RecordingResultsList object) {
-				return createRecordingResultsListAdapter();
-			}
-			@Override
 			public Adapter caseAbstractResult(AbstractResult object) {
 				return createAbstractResultAdapter();
 			}
@@ -500,21 +492,6 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createAbstractToolsListContainerAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.TypesList <em>Types List</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.TypesList
-	 * @generated
-	 */
-  public Adapter createTypesListAdapter()
   {
 		return null;
 	}
@@ -1221,21 +1198,6 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createOperationCallResultsListAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList <em>Recording Results List</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList
-	 * @generated
-	 */
-  public Adapter createRecordingResultsListAdapter()
   {
 		return null;
 	}

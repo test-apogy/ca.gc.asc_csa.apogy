@@ -33,7 +33,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getTypesList <em>Types List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getLocalTypesList <em>Local Types List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getVariablesList <em>Variables List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getContextsList <em>Contexts List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getActiveContext <em>Active Context</em>}</li>
@@ -75,32 +75,32 @@ public interface Environment extends Named, Described
   void setInvocatorSession(InvocatorSession value);
 
   /**
-	 * Returns the value of the '<em><b>Types List</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Local Types List</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Types List</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Types List</em>' containment reference.
-	 * @see #setTypesList(TypesList)
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEnvironment_TypesList()
+	 * <p>
+	 * If the meaning of the '<em>Local Types List</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Types List</em>' containment reference.
+	 * @see #setLocalTypesList(LocalTypesList)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEnvironment_LocalTypesList()
 	 * @model containment="true"
 	 * @generated
 	 */
-  TypesList getTypesList();
+	LocalTypesList getLocalTypesList();
 
-  /**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getTypesList <em>Types List</em>}' containment reference.
+		/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getLocalTypesList <em>Local Types List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Types List</em>' containment reference.
-	 * @see #getTypesList()
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Types List</em>' containment reference.
+	 * @see #getLocalTypesList()
 	 * @generated
 	 */
-  void setTypesList(TypesList value);
+	void setLocalTypesList(LocalTypesList value);
 
-  /**
+		/**
 	 * Returns the value of the '<em><b>Variables List</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.VariablesList#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->

@@ -166,7 +166,8 @@ public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
 			activeSession = (InvocatorSession) content;			
 						
 			/** Load registered types. */
-			ApogyCoreInvocatorFacade.INSTANCE.loadRegisteredTypes(activeSession);
+// FIXME Transaction: Volatile, Singleton -> Facade.			
+//			ApogyCoreInvocatorFacade.INSTANCE.loadRegisteredTypes(activeSession);
 			
 			/** Set the active session. */
 			ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(activeSession);

@@ -21,6 +21,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -68,7 +69,6 @@ import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement;
-import ca.gc.asc_csa.apogy.core.invocator.TypesList;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
@@ -87,6 +87,7 @@ import ca.gc.asc_csa.apogy.core.invocator.delegates.InvocatorDelegateRegistry;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl#getRegisteredTypes <em>Registered Types</em>}</li>
  * </ul>
  *
  * @generated
@@ -119,6 +120,15 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected InvocatorSession activeInvocatorSession;
+	/**
+	 * The cached value of the '{@link #getRegisteredTypes() <em>Registered Types</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRegisteredTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected RegisteredTypesList registeredTypes;
 	private HashSet<IVariableListener> variableListenersSet;
 	private static ApogyCoreInvocatorFacade instance = null;
 
@@ -198,6 +208,49 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 		activeInvocatorSession = newActiveInvocatorSession;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION, oldActiveInvocatorSession, activeInvocatorSession));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RegisteredTypesList getRegisteredTypes() {
+		return registeredTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRegisteredTypes(RegisteredTypesList newRegisteredTypes, NotificationChain msgs) {
+		RegisteredTypesList oldRegisteredTypes = registeredTypes;
+		registeredTypes = newRegisteredTypes;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES, oldRegisteredTypes, newRegisteredTypes);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRegisteredTypes(RegisteredTypesList newRegisteredTypes) {
+		if (newRegisteredTypes != registeredTypes) {
+			NotificationChain msgs = null;
+			if (registeredTypes != null)
+				msgs = ((InternalEObject)registeredTypes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES, null, msgs);
+			if (newRegisteredTypes != null)
+				msgs = ((InternalEObject)newRegisteredTypes).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES, null, msgs);
+			msgs = basicSetRegisteredTypes(newRegisteredTypes, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES, newRegisteredTypes, newRegisteredTypes));
 	}
 
 	/**
@@ -1249,17 +1302,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * 
 	 * @generated_NOT
 	 */
-	public void loadRegisteredTypes(InvocatorSession session) {
-		Environment environment = session.getEnvironment();
-		if (environment != null) {
-			TypesList typesList = environment.getTypesList();
-			if (typesList != null) {
-				RegisteredTypesList registeredTypesList = typesList.getRegisteredTypes();
-				if (registeredTypesList != null) {
-					registeredTypesList.getTypes();
-				}
-			}
-		}
+	public void loadRegisteredTypes(InvocatorSession session) {	
 	}
 
 	/**
@@ -1270,19 +1313,15 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	public List<Type> getAllTypes(Environment environment) {
 		List<Type> types = new ArrayList<Type>();
 
-		TypesList typesList = environment.getTypesList();
-
-		if (typesList != null) {
-			LocalTypesList localTypesList = typesList.getLocalTypes();
+			LocalTypesList localTypesList = environment.getLocalTypesList();
 			if (localTypesList != null) {
 				types.addAll(localTypesList.getTypes());
 			}
 
-			RegisteredTypesList registeredTypesList = typesList.getRegisteredTypes();
-			if (registeredTypesList != null) {
-				types.addAll(registeredTypesList.getTypes());
-			}
-		}
+//			RegisteredTypesList registeredTypesList = typesList.getRegisteredTypes();
+//			if (registeredTypesList != null) {
+//				types.addAll(registeredTypesList.getTypes());
+//		}
 
 		return types;
 	}
@@ -1454,6 +1493,31 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<Type> getAllTypes() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES:
+				return basicSetRegisteredTypes(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1465,6 +1529,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				if (resolve) return getActiveInvocatorSession();
 				return basicGetActiveInvocatorSession();
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES:
+				return getRegisteredTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1481,6 +1547,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				setActiveInvocatorSession((InvocatorSession)newValue);
+				return;
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES:
+				setRegisteredTypes((RegisteredTypesList)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1499,6 +1568,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				setActiveInvocatorSession((InvocatorSession)null);
 				return;
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES:
+				setRegisteredTypes((RegisteredTypesList)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1514,6 +1586,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return INIT_VARIABLE_INSTANCES_DATE_EDEFAULT == null ? initVariableInstancesDate != null : !INIT_VARIABLE_INSTANCES_DATE_EDEFAULT.equals(initVariableInstancesDate);
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				return activeInvocatorSession != null;
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES:
+				return registeredTypes != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1594,11 +1668,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE:
 				collectInitializationData((Variable)arguments.get(0));
 				return null;
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION:
-				loadRegisteredTypes((InvocatorSession)arguments.get(0));
-				return null;
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT:
-				return getAllTypes((Environment)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER:
 				addVariableListener((IVariableListener)arguments.get(0));
 				return null;
@@ -1627,6 +1696,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return createContext((InvocatorSession)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP:
 				return getControllersGroup();
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES:
+				return getAllTypes();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -21,6 +21,14 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Local Types List</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ *  -------------------------------------------------------------------------
+ * 
+ * Types.
+ * 
+ * -------------------------------------------------------------------------
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -43,6 +51,9 @@ public interface LocalTypesList extends EObject
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains the local {@link Type}s.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Types</em>' containment reference list.
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getLocalTypesList_Types()
 	 * @model containment="true"

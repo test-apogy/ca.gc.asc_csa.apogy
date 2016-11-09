@@ -21,6 +21,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Registered Types List</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * List of {@link Type}s that are registered in bundles.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -43,6 +47,9 @@ public interface RegisteredTypesList extends EObject
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains the bundled {@link Type}s.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Types</em>' reference list.
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getRegisteredTypesList_Types()
 	 * @model transient="true" changeable="false" derived="true"

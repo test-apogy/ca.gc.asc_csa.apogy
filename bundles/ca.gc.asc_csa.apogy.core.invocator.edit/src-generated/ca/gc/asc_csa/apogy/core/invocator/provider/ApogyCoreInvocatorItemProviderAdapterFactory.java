@@ -240,30 +240,6 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.TypesList} instances.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected TypesListItemProvider typesListItemProvider;
-
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypesList}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public Adapter createTypesListAdapter()
-  {
-		if (typesListItemProvider == null) {
-			typesListItemProvider = new TypesListItemProvider(this);
-		}
-
-		return typesListItemProvider;
-	}
-
-  /**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.LocalTypesList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1094,30 +1070,6 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList} instances.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected RecordingResultsListItemProvider recordingResultsListItemProvider;
-
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public Adapter createRecordingResultsListAdapter()
-  {
-		if (recordingResultsListItemProvider == null) {
-			recordingResultsListItemProvider = new RecordingResultsListItemProvider(this);
-		}
-
-		return recordingResultsListItemProvider;
-	}
-
-  /**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1404,7 +1356,6 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (dataProductsListsContainerItemProvider != null) dataProductsListsContainerItemProvider.dispose();
 		if (dataProductsListItemProvider != null) dataProductsListItemProvider.dispose();
 		if (toolsListItemProvider != null) toolsListItemProvider.dispose();
-		if (typesListItemProvider != null) typesListItemProvider.dispose();
 		if (localTypesListItemProvider != null) localTypesListItemProvider.dispose();
 		if (registeredTypesListItemProvider != null) registeredTypesListItemProvider.dispose();
 		if (typeItemProvider != null) typeItemProvider.dispose();
@@ -1440,7 +1391,6 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (programRuntimesListItemProvider != null) programRuntimesListItemProvider.dispose();
 		if (operationCallsListProgramRuntimeItemProvider != null) operationCallsListProgramRuntimeItemProvider.dispose();
 		if (operationCallResultsListItemProvider != null) operationCallResultsListItemProvider.dispose();
-		if (recordingResultsListItemProvider != null) recordingResultsListItemProvider.dispose();
 		if (operationCallResultItemProvider != null) operationCallResultItemProvider.dispose();
 		if (exceptionContainerItemProvider != null) exceptionContainerItemProvider.dispose();
 		if (attributeResultValueItemProvider != null) attributeResultValueItemProvider.dispose();

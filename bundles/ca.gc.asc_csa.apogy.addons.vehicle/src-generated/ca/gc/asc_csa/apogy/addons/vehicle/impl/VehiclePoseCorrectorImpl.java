@@ -39,7 +39,6 @@ import ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider;
 import ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D;
 import ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry;
 import ca.gc.asc_csa.apogy.addons.vehicle.OrientationCorrectionMode;
-import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
 import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
 import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
 import ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities;
@@ -50,14 +49,10 @@ import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
-import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
 import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
-import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.impl.PoseCorrectorImpl;
 
 /**

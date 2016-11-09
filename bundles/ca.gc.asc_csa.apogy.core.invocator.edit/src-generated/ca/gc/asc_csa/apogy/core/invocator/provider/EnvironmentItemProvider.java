@@ -164,7 +164,7 @@ public class EnvironmentItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__TYPES_LIST);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__LOCAL_TYPES_LIST);
 			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST);
 			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST);
 		}
@@ -241,7 +241,7 @@ public class EnvironmentItemProvider
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ApogyCoreInvocatorPackage.ENVIRONMENT__TYPES_LIST:
+			case ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST:
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST:
 			case ApogyCoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -264,8 +264,8 @@ public class EnvironmentItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__TYPES_LIST,
-				 ApogyCoreInvocatorFactory.eINSTANCE.createTypesList()));
+				(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__LOCAL_TYPES_LIST,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createLocalTypesList()));
 
 		newChildDescriptors.add
 			(createChildParameter
