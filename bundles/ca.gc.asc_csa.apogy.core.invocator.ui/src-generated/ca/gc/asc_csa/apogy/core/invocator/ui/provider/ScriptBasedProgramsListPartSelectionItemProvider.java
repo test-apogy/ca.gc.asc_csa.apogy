@@ -1,18 +1,21 @@
 /**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *      Pierre Allard (Pierre.Allard@canada.ca), 
+ *      Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *      Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *      Olivier L. Larouche (Olivier.LLarouche@canada.ca),
+ *      Canadian Space Agency (CSA) - Initial API and implementation
  */
-package ca.gc.asc_csa.apogy.common.ui.provider;
+package ca.gc.asc_csa.apogy.core.invocator.ui.provider;
 
+
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -21,7 +24,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.edit.provider.IChildCreationExtender;
+
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -31,12 +35,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.ui.ApogySelection} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ApogySelectionItemProvider 
+public class ScriptBasedProgramsListPartSelectionItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -50,7 +54,7 @@ public class ApogySelectionItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ApogySelectionItemProvider(AdapterFactory adapterFactory) {
+	public ScriptBasedProgramsListPartSelectionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -65,19 +69,42 @@ public class ApogySelectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addProgramPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This returns ApogySelection.gif.
+	 * This adds a property descriptor for the Program feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProgramPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ScriptBasedProgramsListPartSelection_program_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ScriptBasedProgramsListPartSelection_program_feature", "_UI_ScriptBasedProgramsListPartSelection_type"),
+				 ApogyCoreInvocatorUIPackage.Literals.SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION__PROGRAM,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns ScriptBasedProgramsListPartSelection.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogySelection"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ScriptBasedProgramsListPartSelection"));
 	}
 
 	/**
@@ -88,7 +115,7 @@ public class ApogySelectionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ApogySelection_type");
+		return getString("_UI_ScriptBasedProgramsListPartSelection_type");
 	}
 	
 
@@ -125,7 +152,7 @@ public class ApogySelectionItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
+		return ApogyCoreInvocatorUIEditPlugin.INSTANCE;
 	}
 
 }

@@ -75,6 +75,18 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case ApogyCoreInvocatorUIPackage.SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION: {
+				ScriptBasedProgramsListPartSelection scriptBasedProgramsListPartSelection = (ScriptBasedProgramsListPartSelection)theEObject;
+				T result = caseScriptBasedProgramsListPartSelection(scriptBasedProgramsListPartSelection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreInvocatorUIPackage.PROGRAM_DETAILS_PART_SELECTION: {
+				ProgramDetailsPartSelection programDetailsPartSelection = (ProgramDetailsPartSelection)theEObject;
+				T result = caseProgramDetailsPartSelection(programDetailsPartSelection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreInvocatorUIPackage.NEW_PROGRAM_SETTINGS: {
 				NewProgramSettings newProgramSettings = (NewProgramSettings)theEObject;
 				T result = caseNewProgramSettings(newProgramSettings);
@@ -89,6 +101,36 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Script Based Programs List Part Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Script Based Programs List Part Selection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseScriptBasedProgramsListPartSelection(ScriptBasedProgramsListPartSelection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Program Details Part Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Program Details Part Selection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProgramDetailsPartSelection(ProgramDetailsPartSelection object) {
+		return null;
 	}
 
 	/**

@@ -20,39 +20,63 @@ import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
+import ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallsListImpl;
 
-public class ApogyAdvancedEditorPart extends AbstractApogyPart{
+public class ProgramDetailsPart extends AbstractEObjectSelectionBasedPart{
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new AdvancedEditorComposite(parent, SWT.None) {
-			@Override
+		return new EObjectComposite(parent, SWT.None) {
 			protected void newSelection(ISelection selection) {
 				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
 			}
 		};
 	}
+	
+	@Override
+	protected boolean isEObjectAcepted(EObject eObject) {
+		if (eObject instanceof OperationCallsListImpl) {
+			return true;
+		}
+		return false;
+	}
 
 	@Override
 	protected void setEObjectInComposite(EObject eObject) {
-		((AdvancedEditorComposite) getContentComposite()).setEObject(eObject);
+		((EObjectComposite) getContentComposite()).setEObject(eObject);
 	}
-	
+
 }
-//AbstractApogySessionBasedPart {
-//
-//	protected Composite createContentComposite(Composite parent) {
-//		return new AdvancedEditorComposite(parent, SWT.None) {
-//			@Override
+//EObjectSelectionBasedPart {
+//	@Override
+//	protected void createContentComposite(Composite parent) {
+//		parent.setLayout(new FillLayout());
+//		new EObjectComposite(parent, SWT.None) {
 //			protected void newSelection(ISelection selection) {
 //				selectionService.setSelection(((TreeSelection) selection).getFirstElement());
 //			}
 //		};
+//		parent.layout();
 //	}
 //
-//	protected void setSessionInComposite(InvocatorSession invocatorSession) {
-//		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
+//	@Override
+//	protected void setContentCompositeSelection(EObject eObject) {
+//		((EObjectComposite) getContentComposite()).setEObject(eObject);
+//	}
+//
+//	@Override
+//	protected boolean isSettableClass(Class<? extends EObject> selectionClass) {
+//		if (selectionClass == OperationCallsListImpl.class) {
+//			return true;
+//		}
+//		return false;
+//	}
+//	
+//	@Override
+//	protected List<String> getAcceptedPartsIds() {
+//		List<String> ids = new ArrayList<String>();
+//		ids.add("ca.gc.asc_csa.apogy.rcp.part.ProgramsList");
+//		return ids;
 //	}
 //}

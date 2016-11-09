@@ -383,9 +383,11 @@ public class ScriptBasedProgramsListComposite extends Composite {
 		}
 		
 		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
-		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));		
-		treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
+		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(),
+				FileTransfer.getInstance() };
+		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));
+		treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(
+				AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
 
 		return bindingContext;
 	}

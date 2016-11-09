@@ -27,6 +27,8 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +37,20 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings;
  * @generated
  */
 public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements ApogyCoreInvocatorUIPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass scriptBasedProgramsListPartSelectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass programDetailsPartSelectionEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,6 +134,42 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ApogyCoreInvocatorUIPackage.eNS_URI, theApogyCoreInvocatorUIPackage);
 		return theApogyCoreInvocatorUIPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getScriptBasedProgramsListPartSelection() {
+		return scriptBasedProgramsListPartSelectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScriptBasedProgramsListPartSelection_Program() {
+		return (EReference)scriptBasedProgramsListPartSelectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProgramDetailsPartSelection() {
+		return programDetailsPartSelectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgramDetailsPartSelection_EObject() {
+		return (EReference)programDetailsPartSelectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -229,6 +281,12 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		isCreated = true;
 
 		// Create classes and their features
+		scriptBasedProgramsListPartSelectionEClass = createEClass(SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION);
+		createEReference(scriptBasedProgramsListPartSelectionEClass, SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION__PROGRAM);
+
+		programDetailsPartSelectionEClass = createEClass(PROGRAM_DETAILS_PART_SELECTION);
+		createEReference(programDetailsPartSelectionEClass, PROGRAM_DETAILS_PART_SELECTION__EOBJECT);
+
 		newProgramSettingsEClass = createEClass(NEW_PROGRAM_SETTINGS);
 		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__ECLASS);
 		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__PROGRAM_SETTINGS);
@@ -267,8 +325,8 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
 		// Create type parameters
@@ -278,6 +336,12 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(scriptBasedProgramsListPartSelectionEClass, ScriptBasedProgramsListPartSelection.class, "ScriptBasedProgramsListPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getScriptBasedProgramsListPartSelection_Program(), theApogyCoreInvocatorPackage.getProgram(), null, "program", null, 0, 1, ScriptBasedProgramsListPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(programDetailsPartSelectionEClass, ProgramDetailsPartSelection.class, "ProgramDetailsPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProgramDetailsPartSelection_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, ProgramDetailsPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(newProgramSettingsEClass, NewProgramSettings.class, "NewProgramSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNewProgramSettings_EClass(), theEcorePackage.getEClass(), null, "eClass", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNewProgramSettings_ProgramSettings(), theApogyCoreInvocatorPackage.getProgramSettings(), null, "programSettings", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

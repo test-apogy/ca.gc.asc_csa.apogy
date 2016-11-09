@@ -55,6 +55,4 @@ class ApogyCommonUiFacade{
 
 
 class ApogySelection{
-	ISelection selection
-	String PartID
 }

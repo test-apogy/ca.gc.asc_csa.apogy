@@ -14,102 +14,44 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.inject.Inject;
 
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoActiveSessionComposite;
 
-abstract public class AbstractApogySessionBasedPart {
-
-	private Composite composite;
-	private Adapter adapter;
-
-	@Inject
-	protected ESelectionService selectionService;
-
-	@PostConstruct
-	public void createPartControl(Composite parent) {
-		composite = parent;
-		composite.setLayout(new FillLayout());
-		createContentComposite(composite);
-		setSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
-		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());
-	}
-
-	/**
-	 * Specifies the {@link Composite} to insert in the part
-	 */
-	abstract protected Composite createContentComposite(Composite parent);
-
-	/**
-	 * Gets the content {@link Composite} in the part
-	 * 
-	 * @return Composite
-	 */
-	public Composite getContentComposite() {
-		System.out.println("AbstractApogySessionBasedPart.getContentComposite()");
-		return (Composite) composite.getChildren()[0];
-	}
-
-	/**
-	 * This method is called when the {@link InvocatorSession} needs to be
-	 * changed or initialized in the content composite.
-	 * 
-	 * @param invocatorSession
-	 *            Reference to the InvocatorSession.
-	 */
-	abstract protected void setSessionInComposite(InvocatorSession invocatorSession);
+abstract public class AbstractApogySessionBasedPart extends AbstractApogyPart{
 	
-	/**
-	 * This method is called when the {@link InvocatorSession} needs to be
-	 * changed or initialized in the composite. If there is no active
-	 * session, this method disposes any existing content composite and replaces
-	 * it with a {@link NoActiveSessionComposite}. If there is an active
-	 * session, it disposes any NoActiveSessionComposite, replaces it with the
-	 * content composite and calls setSessionInComposite.
-	 * 
-	 * @param invocatorSession
-	 *            Reference to the InvocatorSession.
-	 */
-	private void setSession(InvocatorSession invocatorSession){
-		// If there is no active session
-		if(invocatorSession == null){
-			// Verify if the content composite is not a NoActiveSessionComposite
-			if(!(getContentComposite() instanceof NoActiveSessionComposite)){
-				// Disposes the content composite
-				selectionService.setSelection(null);
-				getContentComposite().dispose();
-				new NoActiveSessionComposite(composite, SWT.None);
-				composite.layout();
-			}
-		}else{
-			if(getContentComposite() instanceof NoActiveSessionComposite){
-				// Disposes the NoActiveSessionComposite
-				getContentComposite().dispose();
-				createContentComposite(composite);	
-				composite.layout();
-				}
-			setSessionInComposite(invocatorSession);		
-		}
+	private Adapter adapter;
+	
+	abstract protected void setNullSelection();
+
+	@Override
+	void getNoContentComposite() {
+		new NoActiveSessionComposite(composite, SWT.None);
 	}
 
+	/**
+	 * Gets an adapter that sets the part's composite to a
+	 * {@link NoActiveSessionComposite} if there is no active session.
+	 * 
+	 * @return the {@link Adapter}
+	 */
 	private Adapter getApogyCoreInvocatorFacadeAdapter() {
 		if (adapter == null) {
 			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					setSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+					if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null) {
+						AbstractApogySessionBasedPart.this.setEObject(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+					} else {
+						AbstractApogySessionBasedPart.this.setNoContentComposite();
+					}
+
 				}
 			};
 		}
@@ -119,5 +61,97 @@ abstract public class AbstractApogySessionBasedPart {
 	@PreDestroy
 	protected void dispose() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
+		if (composite != null) {
+			composite.dispose();
+		}
 	}
+//
+//	private Composite composite;
+//	private Adapter adapter;
+//
+//	@Inject
+//	protected ESelectionService selectionService;
+//
+//	@PostConstruct
+//	public void createPartControl(Composite parent) {
+//		composite = parent;
+//		composite.setLayout(new FillLayout());
+//		createContentComposite(composite);
+//		setSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+//		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());
+//	}
+//
+//	/**
+//	 * Specifies the {@link Composite} to insert in the part
+//	 */
+//	abstract protected Composite createContentComposite(Composite parent);
+//
+//	/**
+//	 * Gets the content {@link Composite} in the part
+//	 * 
+//	 * @return Composite
+//	 */
+//	public Composite getContentComposite() {
+//		System.out.println("AbstractApogySessionBasedPart.getContentComposite()");
+//		return (Composite) composite.getChildren()[0];
+//	}
+//
+//	/**
+//	 * This method is called when the {@link InvocatorSession} needs to be
+//	 * changed or initialized in the content composite.
+//	 * 
+//	 * @param invocatorSession
+//	 *            Reference to the InvocatorSession.
+//	 */
+//	abstract protected void setSessionInComposite(InvocatorSession invocatorSession);
+//	
+//	/**
+//	 * This method is called when the {@link InvocatorSession} needs to be
+//	 * changed or initialized in the composite. If there is no active
+//	 * session, this method disposes any existing content composite and replaces
+//	 * it with a {@link NoActiveSessionComposite}. If there is an active
+//	 * session, it disposes any NoActiveSessionComposite, replaces it with the
+//	 * content composite and calls setSessionInComposite.
+//	 * 
+//	 * @param invocatorSession
+//	 *            Reference to the InvocatorSession.
+//	 */
+//	private void setSession(InvocatorSession invocatorSession){
+//		// If there is no active session
+//		if(invocatorSession == null){
+//			// Verify if the content composite is not a NoActiveSessionComposite
+//			if(!(getContentComposite() instanceof NoActiveSessionComposite)){
+//				// Disposes the content composite
+//				selectionService.setSelection(null);
+//				getContentComposite().dispose();
+//				new NoActiveSessionComposite(composite, SWT.None);
+//				composite.layout();
+//			}
+//		}else{
+//			if(getContentComposite() instanceof NoActiveSessionComposite){
+//				// Disposes the NoActiveSessionComposite
+//				getContentComposite().dispose();
+//				createContentComposite(composite);	
+//				composite.layout();
+//				}
+//			setSessionInComposite(invocatorSession);		
+//		}
+//	}
+//
+//	private Adapter getApogyCoreInvocatorFacadeAdapter() {
+//		if (adapter == null) {
+//			adapter = new AdapterImpl() {
+//				@Override
+//				public void notifyChanged(Notification msg) {
+//					setSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+//				}
+//			};
+//		}
+//		return adapter;
+//	}
+//
+//	@PreDestroy
+//	protected void dispose() {
+//		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
+//	}
 }

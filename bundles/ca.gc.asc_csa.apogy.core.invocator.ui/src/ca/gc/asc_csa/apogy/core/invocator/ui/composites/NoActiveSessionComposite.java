@@ -39,6 +39,6 @@ public class NoActiveSessionComposite extends Composite {
 		
 		Label lblNoActiveSession = new Label(this, SWT.NONE);
 		lblNoActiveSession.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, true, 1, 1));
-		lblNoActiveSession.setText("No active session");
+		lblNoActiveSession.setText("No active session/selection");
 	}
 }

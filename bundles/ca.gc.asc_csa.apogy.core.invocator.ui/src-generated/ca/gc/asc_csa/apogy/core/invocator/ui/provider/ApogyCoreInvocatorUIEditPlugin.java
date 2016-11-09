@@ -56,8 +56,8 @@ public final class ApogyCoreInvocatorUIEditPlugin extends EMFPlugin {
 	public ApogyCoreInvocatorUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EcoreEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     EcoreEditPlugin.INSTANCE,
 		     ApogyCommonEMFEditPlugin.INSTANCE,
 		   });
 	}

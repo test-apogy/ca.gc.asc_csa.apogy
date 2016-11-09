@@ -84,6 +84,80 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	ApogyCoreInvocatorUIPackage eINSTANCE = ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ScriptBasedProgramsListPartSelectionImpl <em>Script Based Programs List Part Selection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ScriptBasedProgramsListPartSelectionImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getScriptBasedProgramsListPartSelection()
+	 * @generated
+	 */
+	int SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Program</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION__PROGRAM = 0;
+
+	/**
+	 * The number of structural features of the '<em>Script Based Programs List Part Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Script Based Programs List Part Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ProgramDetailsPartSelectionImpl <em>Program Details Part Selection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ProgramDetailsPartSelectionImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getProgramDetailsPartSelection()
+	 * @generated
+	 */
+	int PROGRAM_DETAILS_PART_SELECTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>EObject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM_DETAILS_PART_SELECTION__EOBJECT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Program Details Part Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM_DETAILS_PART_SELECTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Program Details Part Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM_DETAILS_PART_SELECTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.NewProgramSettingsImpl <em>New Program Settings</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,7 +165,7 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getNewProgramSettings()
 	 * @generated
 	 */
-	int NEW_PROGRAM_SETTINGS = 0;
+	int NEW_PROGRAM_SETTINGS = 2;
 
 	/**
 	 * The feature id for the '<em><b>EClass</b></em>' containment reference.
@@ -137,7 +211,7 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getApogyCoreInvocatorUIFacade()
 	 * @generated
 	 */
-	int APOGY_CORE_INVOCATOR_UI_FACADE = 1;
+	int APOGY_CORE_INVOCATOR_UI_FACADE = 3;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -201,8 +275,50 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getCompoundCommand()
 	 * @generated
 	 */
-	int COMPOUND_COMMAND = 2;
+	int COMPOUND_COMMAND = 4;
 
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection <em>Script Based Programs List Part Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Script Based Programs List Part Selection</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection
+	 * @generated
+	 */
+	EClass getScriptBasedProgramsListPartSelection();
+
+	/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection#getProgram <em>Program</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Program</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection#getProgram()
+	 * @see #getScriptBasedProgramsListPartSelection()
+	 * @generated
+	 */
+	EReference getScriptBasedProgramsListPartSelection_Program();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection <em>Program Details Part Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Program Details Part Selection</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection
+	 * @generated
+	 */
+	EClass getProgramDetailsPartSelection();
+
+	/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection#getEObject <em>EObject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>EObject</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection#getEObject()
+	 * @see #getProgramDetailsPartSelection()
+	 * @generated
+	 */
+	EReference getProgramDetailsPartSelection_EObject();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings <em>New Program Settings</em>}'.
@@ -320,6 +436,38 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ScriptBasedProgramsListPartSelectionImpl <em>Script Based Programs List Part Selection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ScriptBasedProgramsListPartSelectionImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getScriptBasedProgramsListPartSelection()
+		 * @generated
+		 */
+		EClass SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION = eINSTANCE.getScriptBasedProgramsListPartSelection();
+		/**
+		 * The meta object literal for the '<em><b>Program</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION__PROGRAM = eINSTANCE.getScriptBasedProgramsListPartSelection_Program();
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ProgramDetailsPartSelectionImpl <em>Program Details Part Selection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ProgramDetailsPartSelectionImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getProgramDetailsPartSelection()
+		 * @generated
+		 */
+		EClass PROGRAM_DETAILS_PART_SELECTION = eINSTANCE.getProgramDetailsPartSelection();
+		/**
+		 * The meta object literal for the '<em><b>EObject</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROGRAM_DETAILS_PART_SELECTION__EOBJECT = eINSTANCE.getProgramDetailsPartSelection_EObject();
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.NewProgramSettingsImpl <em>New Program Settings</em>}' class.
 		 * <!-- begin-user-doc -->

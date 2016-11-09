@@ -14,32 +14,21 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.eclipse.e4.core.di.annotations.Optional;
-import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.e4.ui.services.IServiceConstants;
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
-
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoEObjectSelectionComposite;
 
 abstract public class AbstractEObjectSelectionBasedPart extends AbstractApogyPart {
 	
-	@Override
-	abstract protected boolean isEObjectAcepted(EObject eObject);
+//	EObject eObject;
 	
+
 	@Override
 	@Inject
 	@Optional

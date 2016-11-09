@@ -14,18 +14,17 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.TreeSelection;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
+import ca.gc.asc_csa.apogy.common.ui.ApogySelection;
 
-public class ParameterDefinitionPart{
+public class ParameterDefinitionPart extends AbstractEObjectSelectionBasedPart{
 
 	protected Composite createContentComposite(Composite parent) {
-		return null;
+		return new EObjectComposite(parent, SWT.None);
 //		return new AdvancedEditorComposite(parent, SWT.None) {
 //			@Override
 //			protected void newSelection(ISelection selection) {
@@ -34,7 +33,14 @@ public class ParameterDefinitionPart{
 //		};
 	}
 
-	protected void setSession(InvocatorSession invocatorSession) {
-//		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
+	@Override
+	protected boolean isEObjectAcepted(EObject eObject) {
+		//if()
+		return false;
+	}
+
+	@Override
+	protected void setEObjectInComposite(EObject eObject) {
+		((EObjectComposite) getContentComposite()).setEObject(eObject);
 	}
 }

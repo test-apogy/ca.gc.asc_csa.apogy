@@ -76,6 +76,14 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 	protected ApogyCoreInvocatorUISwitch<Adapter> modelSwitch =
 		new ApogyCoreInvocatorUISwitch<Adapter>() {
 			@Override
+			public Adapter caseScriptBasedProgramsListPartSelection(ScriptBasedProgramsListPartSelection object) {
+				return createScriptBasedProgramsListPartSelectionAdapter();
+			}
+			@Override
+			public Adapter caseProgramDetailsPartSelection(ProgramDetailsPartSelection object) {
+				return createProgramDetailsPartSelectionAdapter();
+			}
+			@Override
 			public Adapter caseNewProgramSettings(NewProgramSettings object) {
 				return createNewProgramSettingsAdapter();
 			}
@@ -102,6 +110,34 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection <em>Script Based Programs List Part Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection
+	 * @generated
+	 */
+	public Adapter createScriptBasedProgramsListPartSelectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection <em>Program Details Part Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection
+	 * @generated
+	 */
+	public Adapter createProgramDetailsPartSelectionAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings <em>New Program Settings</em>}'.

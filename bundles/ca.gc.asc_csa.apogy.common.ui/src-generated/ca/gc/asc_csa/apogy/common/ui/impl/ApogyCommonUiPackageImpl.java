@@ -18,7 +18,6 @@ import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFactory;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiPackage;
 
 import ca.gc.asc_csa.apogy.common.ui.ApogySelection;
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
@@ -161,24 +160,6 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getApogySelection_Selection() {
-		return (EAttribute)apogySelectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getApogySelection_PartID() {
-		return (EAttribute)apogySelectionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EDataType getImageDescriptor() {
 		return imageDescriptorEDataType;
 	}
@@ -224,8 +205,6 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING);
 
 		apogySelectionEClass = createEClass(APOGY_SELECTION);
-		createEAttribute(apogySelectionEClass, APOGY_SELECTION__SELECTION);
-		createEAttribute(apogySelectionEClass, APOGY_SELECTION__PART_ID);
 
 		// Create data types
 		imageDescriptorEDataType = createEDataType(IMAGE_DESCRIPTOR);
@@ -271,8 +250,6 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		addEParameter(op, theEcorePackage.getEString(), "uri", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(apogySelectionEClass, ApogySelection.class, "ApogySelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getApogySelection_Selection(), this.getISelection(), "selection", null, 0, 1, ApogySelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getApogySelection_PartID(), theEcorePackage.getEString(), "PartID", null, 0, 1, ApogySelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(imageDescriptorEDataType, ImageDescriptor.class, "ImageDescriptor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

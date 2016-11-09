@@ -32,13 +32,25 @@
 
 package ca.gc.asc_csa.apogy.core.invocator.ui
 
-import ca.gc.asc_csa.apogy.core.invocator.Context
 import ca.gc.asc_csa.apogy.common.emf.Exception
-import org.eclipse.emf.ecore.EClass
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation
+import ca.gc.asc_csa.apogy.core.invocator.Context
+import ca.gc.asc_csa.apogy.core.invocator.Program
 import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings
+import org.eclipse.emf.ecore.EClass
+import org.eclipse.emf.ecore.EObject
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
+
+class ScriptBasedProgramsListPartSelection
+{
+	refers Program program
+}
+
+class ProgramDetailsPartSelection
+{
+	refers EObject eObject
+}
 
 class NewProgramSettings
 {	

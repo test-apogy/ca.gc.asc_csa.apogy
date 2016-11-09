@@ -21,11 +21,11 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.ui.parts.EObjectSelectionBasedPart;
+import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractSelectionBasedPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingsComposite;
 
-public class ControllerBindingsPart extends EObjectSelectionBasedPart{
+public class ControllerBindingsPart extends AbstractSelectionBasedPart{
 	@Override
 	protected void createContentComposite(Composite parent) {
 		new ControllerBindingsComposite(parent, SWT.None){
