@@ -114,8 +114,8 @@ public class NewProgramsGroupWizard extends Wizard implements INewWizard {
 	protected ProgramsGroup getProgramsGroup() {
 		if (programsGroup == null) {
 			programsGroup = ApogyCoreInvocatorFactory.eINSTANCE.createProgramsGroup();
-			programsGroup.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsList(),
-					programsGroup, ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS));
+			programsGroup.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(getProgramsList(), programsGroup,
+					ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS));
 		}
 		return programsGroup;
 	}

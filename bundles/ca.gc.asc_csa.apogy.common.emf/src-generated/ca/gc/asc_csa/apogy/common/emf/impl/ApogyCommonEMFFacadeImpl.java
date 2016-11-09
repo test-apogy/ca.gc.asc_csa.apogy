@@ -10,6 +10,7 @@ package ca.gc.asc_csa.apogy.common.emf.impl;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
@@ -1276,11 +1277,11 @@ ApogyCommonEMFFacade {
 		if (objectReference.isMany()) {
 			int j = 1;
 			// Find a name that is unique
-			for(Iterator<EObject> ite = eContainer.eContents().iterator(); ite.hasNext();){
-				Named namedObject = (Named) ite.next();
-				if (namedObject.getName() != null && namedObject.getName().equals(name + "_" + Integer.toString(j))) {
+			for (int i = 0; i < eContainer.eContents().size(); i++) {
+				Named named = (Named) eContainer.eContents().get(i);
+				if (named.getName().equals(name + "_" + Integer.toString(j))) {
 					j++;
-					ite = eContainer.eContents().iterator();
+					i = 0;
 				}
 			}
 			return name + "_" + Integer.toString(j);

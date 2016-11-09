@@ -30,6 +30,9 @@ public interface ProgramFactory extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Creates the program
+	 * <!-- end-model-doc -->
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -38,6 +41,9 @@ public interface ProgramFactory extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Applies the settings to the program
+	 * <!-- end-model-doc -->
 	 * @model programUnique="false" settingsUnique="false"
 	 * @generated
 	 */
