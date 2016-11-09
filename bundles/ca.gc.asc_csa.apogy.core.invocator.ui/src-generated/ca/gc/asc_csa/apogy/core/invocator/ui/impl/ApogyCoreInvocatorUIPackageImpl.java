@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.impl;
  */
 
 import org.eclipse.emf.common.command.CompoundCommand;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
@@ -30,6 +31,8 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,6 +67,13 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass variablesListPartSelectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass newProgramSettingsEClass = null;
 
 	/**
@@ -79,6 +89,13 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	private EDataType compoundCommandEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType variablesListEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -203,6 +220,24 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getVariablesListPartSelection() {
+		return variablesListPartSelectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariablesListPartSelection_Variables() {
+		return (EAttribute)variablesListPartSelectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNewProgramSettings() {
 		return newProgramSettingsEClass;
 	}
@@ -284,6 +319,15 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getVariablesList() {
+		return variablesListEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCoreInvocatorUIFactory getApogyCoreInvocatorUIFactory() {
 		return (ApogyCoreInvocatorUIFactory)getEFactoryInstance();
 	}
@@ -322,12 +366,16 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		apogyAdvancedEditorPartSelectionEClass = createEClass(APOGY_ADVANCED_EDITOR_PART_SELECTION);
 		createEReference(apogyAdvancedEditorPartSelectionEClass, APOGY_ADVANCED_EDITOR_PART_SELECTION__EOBJECT);
 
+		variablesListPartSelectionEClass = createEClass(VARIABLES_LIST_PART_SELECTION);
+		createEAttribute(variablesListPartSelectionEClass, VARIABLES_LIST_PART_SELECTION__VARIABLES);
+
 		newProgramSettingsEClass = createEClass(NEW_PROGRAM_SETTINGS);
 		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__ECLASS);
 		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__PROGRAM_SETTINGS);
 
 		// Create data types
 		compoundCommandEDataType = createEDataType(COMPOUND_COMMAND);
+		variablesListEDataType = createEDataType(VARIABLES_LIST);
 	}
 
 	/**
@@ -391,12 +439,16 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		initEClass(apogyAdvancedEditorPartSelectionEClass, ApogyAdvancedEditorPartSelection.class, "ApogyAdvancedEditorPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApogyAdvancedEditorPartSelection_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, ApogyAdvancedEditorPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(variablesListPartSelectionEClass, VariablesListPartSelection.class, "VariablesListPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVariablesListPartSelection_Variables(), this.getVariablesList(), "variables", null, 0, 1, VariablesListPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(newProgramSettingsEClass, NewProgramSettings.class, "NewProgramSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNewProgramSettings_EClass(), theEcorePackage.getEClass(), null, "eClass", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNewProgramSettings_ProgramSettings(), theApogyCoreInvocatorPackage.getProgramSettings(), null, "programSettings", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(compoundCommandEDataType, CompoundCommand.class, "CompoundCommand", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(variablesListEDataType, List.class, "VariablesList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.List<ca.gc.asc_csa.apogy.core.invocator.Variable>");
 
 		// Create resource
 		createResource(eNS_URI);

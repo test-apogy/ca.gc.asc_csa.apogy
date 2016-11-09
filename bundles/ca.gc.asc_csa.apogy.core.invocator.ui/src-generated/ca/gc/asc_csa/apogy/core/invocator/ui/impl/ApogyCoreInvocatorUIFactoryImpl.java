@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -21,6 +22,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ca.gc.asc_csa.apogy.core.invocator.ui.*;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,6 +72,7 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 			case ApogyCoreInvocatorUIPackage.SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION: return createScriptBasedProgramsListPartSelection();
 			case ApogyCoreInvocatorUIPackage.PROGRAM_DETAILS_PART_SELECTION: return createProgramDetailsPartSelection();
 			case ApogyCoreInvocatorUIPackage.APOGY_ADVANCED_EDITOR_PART_SELECTION: return createApogyAdvancedEditorPartSelection();
+			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION: return createVariablesListPartSelection();
 			case ApogyCoreInvocatorUIPackage.NEW_PROGRAM_SETTINGS: return createNewProgramSettings();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -86,6 +89,8 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreInvocatorUIPackage.COMPOUND_COMMAND:
 				return createCompoundCommandFromString(eDataType, initialValue);
+			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST:
+				return createVariablesListFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -101,6 +106,8 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreInvocatorUIPackage.COMPOUND_COMMAND:
 				return convertCompoundCommandToString(eDataType, instanceValue);
+			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST:
+				return convertVariablesListToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -141,6 +148,16 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VariablesListPartSelection createVariablesListPartSelection() {
+		VariablesListPartSelectionImpl variablesListPartSelection = new VariablesListPartSelectionImpl();
+		return variablesListPartSelection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public NewProgramSettings createNewProgramSettings() {
 		NewProgramSettingsImpl newProgramSettings = new NewProgramSettingsImpl();
 		return newProgramSettings;
@@ -172,6 +189,25 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 	 */
 	public String convertCompoundCommandToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public List<Variable> createVariablesListFromString(EDataType eDataType, String initialValue) {
+		return (List<Variable>)super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVariablesListToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
 	}
 
 	/**

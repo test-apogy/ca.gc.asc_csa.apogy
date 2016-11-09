@@ -59,4 +59,10 @@ public class ControllerConfigsPart extends AbstractApogySessionBasedPart{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	protected void newInvocatorSession(InvocatorSession invocatorSession) {
+		// TODO Auto-generated method stub
+		
+	}
 }

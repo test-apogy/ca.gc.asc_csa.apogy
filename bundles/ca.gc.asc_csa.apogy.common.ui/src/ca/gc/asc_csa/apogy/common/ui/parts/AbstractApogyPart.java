@@ -79,7 +79,8 @@ abstract public class AbstractApogyPart {
 	 * method should create an empty selection according to the implemented part
 	 * and set the selection in the {@link ESelectionService}.
 	 */
-	abstract protected void setNullSelection();
+	protected void setNullSelection(){		
+	}
 
 	/**
 	 * This method sets the {@link EObject} in the part.

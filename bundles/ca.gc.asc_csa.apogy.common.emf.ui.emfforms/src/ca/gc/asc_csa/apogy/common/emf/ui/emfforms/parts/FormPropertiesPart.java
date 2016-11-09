@@ -48,10 +48,6 @@ public class FormPropertiesPart extends AbstractSelectionBasedPart {
 		contentComposite.layout();
 	}
 
-	@Override
-	protected void setNullSelection() {
-	}
-
 	@Inject
 	@Optional
 	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ApogyAdvancedEditorPartSelection selection) {

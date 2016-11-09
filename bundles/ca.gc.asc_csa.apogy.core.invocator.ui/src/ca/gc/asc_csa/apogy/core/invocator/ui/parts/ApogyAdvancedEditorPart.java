@@ -19,6 +19,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
@@ -53,7 +54,8 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
 	}
 
 	@Override
-	protected void setContentCompositeSelection(EObject eObject) {
-		((AdvancedEditorComposite) getContentComposite()).setEObject(eObject);
+	protected void newInvocatorSession(InvocatorSession invocatorSession) {
+		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
+		
 	}
 }

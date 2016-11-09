@@ -60,6 +60,15 @@ public interface ApogyCoreInvocatorUIFactory extends EFactory {
 	ApogyAdvancedEditorPartSelection createApogyAdvancedEditorPartSelection();
 
 	/**
+	 * Returns a new object of class '<em>Variables List Part Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variables List Part Selection</em>'.
+	 * @generated
+	 */
+	VariablesListPartSelection createVariablesListPartSelection();
+
+	/**
 	 * Returns a new object of class '<em>New Program Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

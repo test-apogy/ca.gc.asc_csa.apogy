@@ -92,6 +92,10 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 				return createApogyAdvancedEditorPartSelectionAdapter();
 			}
 			@Override
+			public Adapter caseVariablesListPartSelection(VariablesListPartSelection object) {
+				return createVariablesListPartSelectionAdapter();
+			}
+			@Override
 			public Adapter caseNewProgramSettings(NewProgramSettings object) {
 				return createNewProgramSettingsAdapter();
 			}
@@ -154,6 +158,20 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApogyAdvancedEditorPartSelectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection <em>Variables List Part Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection
+	 * @generated
+	 */
+	public Adapter createVariablesListPartSelectionAdapter() {
 		return null;
 	}
 

@@ -416,16 +416,7 @@
             name="Operation Call"
             restorable="true">
       </view>
-      
-      <view
-            category="ca.gc.asc_csa.apogy.core.ui.category"
-            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.ContextsDefinitionView"
-            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/ContextsList.gif"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.ContextsDefinitionView"
-            name="Contexts"
-            restorable="true">
-      </view>      
-      
+            
       <view
             category="ca.gc.asc_csa.apogy.core.ui.category"
             class="ca.gc.asc_csa.apogy.core.invocator.ui.views.DocumentationView"
@@ -441,13 +432,6 @@
             id="ca.gc.asc_csa.apogy.core.invocator.ui.views.InstanceView"
             name="Instance"
             restorable="true">
-      </view>      
-      <view
-            category="ca.gc.asc_csa.apogy.core.ui.category"
-            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.ScriptBasedProgramsListView"
-            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/Instance.gif"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.ScriptBasedProgramsListView"
-            name="Programs List">
       </view>
       
    </extension>

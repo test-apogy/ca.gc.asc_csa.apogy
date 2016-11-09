@@ -39,8 +39,11 @@ import ca.gc.asc_csa.apogy.core.invocator.Program
 import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EObject
+import java.util.List
+import ca.gc.asc_csa.apogy.core.invocator.Variable
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
+type VariablesList wraps List<Variable> 
 
 /* -------------------------------------------------------------------------
  * 
@@ -94,6 +97,9 @@ class ApogyAdvancedEditorPartSelection
 	refers EObject eObject
 }
 
+class VariablesListPartSelection{
+	VariablesList variables	
+}
 
 /* -------------------------------------------------------------------------
  * 

@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
@@ -111,7 +112,7 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getNewProgramSettings()
 	 * @generated
 	 */
-	int NEW_PROGRAM_SETTINGS = 4;
+	int NEW_PROGRAM_SETTINGS = 5;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
@@ -269,6 +270,43 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	int APOGY_ADVANCED_EDITOR_PART_SELECTION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariablesListPartSelectionImpl <em>Variables List Part Selection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariablesListPartSelectionImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getVariablesListPartSelection()
+	 * @generated
+	 */
+	int VARIABLES_LIST_PART_SELECTION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Variables</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLES_LIST_PART_SELECTION__VARIABLES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Variables List Part Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLES_LIST_PART_SELECTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Variables List Part Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLES_LIST_PART_SELECTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The feature id for the '<em><b>EClass</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -312,7 +350,18 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getCompoundCommand()
 	 * @generated
 	 */
-	int COMPOUND_COMMAND = 5;
+	int COMPOUND_COMMAND = 6;
+
+
+	/**
+	 * The meta object id for the '<em>Variables List</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.List
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getVariablesList()
+	 * @generated
+	 */
+	int VARIABLES_LIST = 7;
 
 
 	/**
@@ -377,6 +426,27 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getApogyAdvancedEditorPartSelection_EObject();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection <em>Variables List Part Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variables List Part Selection</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection
+	 * @generated
+	 */
+	EClass getVariablesListPartSelection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariables <em>Variables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Variables</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariables()
+	 * @see #getVariablesListPartSelection()
+	 * @generated
+	 */
+	EAttribute getVariablesListPartSelection_Variables();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings <em>New Program Settings</em>}'.
@@ -472,6 +542,17 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	EDataType getCompoundCommand();
 
 	/**
+	 * Returns the meta object for data type '{@link java.util.List <em>Variables List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Variables List</em>'.
+	 * @see java.util.List
+	 * @model instanceClass="java.util.List<ca.gc.asc_csa.apogy.core.invocator.Variable>"
+	 * @generated
+	 */
+	EDataType getVariablesList();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,6 +624,22 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 */
 		EReference APOGY_ADVANCED_EDITOR_PART_SELECTION__EOBJECT = eINSTANCE.getApogyAdvancedEditorPartSelection_EObject();
 		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariablesListPartSelectionImpl <em>Variables List Part Selection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariablesListPartSelectionImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getVariablesListPartSelection()
+		 * @generated
+		 */
+		EClass VARIABLES_LIST_PART_SELECTION = eINSTANCE.getVariablesListPartSelection();
+		/**
+		 * The meta object literal for the '<em><b>Variables</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLES_LIST_PART_SELECTION__VARIABLES = eINSTANCE.getVariablesListPartSelection_Variables();
+		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.NewProgramSettingsImpl <em>New Program Settings</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -611,6 +708,15 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType COMPOUND_COMMAND = eINSTANCE.getCompoundCommand();
+		/**
+		 * The meta object literal for the '<em>Variables List</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.List
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getVariablesList()
+		 * @generated
+		 */
+		EDataType VARIABLES_LIST = eINSTANCE.getVariablesList();
 
 	}
 

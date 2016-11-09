@@ -25,13 +25,12 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoActiveSessionComposite;
 
 abstract public class AbstractApogySessionBasedPart extends AbstractApogyPart{
 	
 	private Adapter adapter;
-	
-	abstract protected void setNullSelection();
 
 	@Override
 	protected Composite getNoContentComposite() {
@@ -47,8 +46,14 @@ abstract public class AbstractApogySessionBasedPart extends AbstractApogyPart{
 	protected EObject getInitializeObject() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());
 		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
-	}
+	} 
+	
+	abstract protected void newInvocatorSession(InvocatorSession invocatorSession);
 
+	@Override
+	protected void setContentCompositeSelection(EObject eObject) {
+		newInvocatorSession((InvocatorSession) eObject); 
+	}
 	/**
 	 * Gets an adapter that sets the part's composite to a
 	 * {@link NoActiveSessionComposite} if there is no active session.

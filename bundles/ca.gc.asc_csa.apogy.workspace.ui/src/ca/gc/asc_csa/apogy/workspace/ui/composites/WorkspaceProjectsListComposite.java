@@ -19,6 +19,7 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
+import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.common.notify.Adapter;
@@ -209,7 +210,6 @@ public class WorkspaceProjectsListComposite extends Composite {
 		DataBindingContext bindingContext = new DataBindingContext();
 
 		IObservableValue<?> observeSingleSelectionViewer = ViewerProperties.singleSelection().observe(viewer);
-		IObservableValue<?> observeMultipleSelectionViewer = ViewerProperties.singleSelection().observe(viewer);
 
 		/* Open Button Enabled Binding. */
 		IObservableValue<?> observeEnabledBtnOpenObserveWidget = WidgetProperties.enabled().observe(btnOpen);
@@ -225,7 +225,7 @@ public class WorkspaceProjectsListComposite extends Composite {
 
 		/* Delete Button Enabled Binding. */
 		IObservableValue<?> observeEnabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
-		bindingContext.bindValue(observeEnabledBtnDeleteObserveWidget, observeMultipleSelectionViewer, null,
+		bindingContext.bindValue(observeEnabledBtnDeleteObserveWidget, observeSingleSelectionViewer, null,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
 						.setConverter(new Converter(Object.class, Boolean.class) {
 							@Override
@@ -236,7 +236,7 @@ public class WorkspaceProjectsListComposite extends Composite {
 
 		/* Export Button Enabled Binding. */
 		IObservableValue<?> observeEnabledBtnExportObserveWidget = WidgetProperties.enabled().observe(btnExport);
-		bindingContext.bindValue(observeEnabledBtnExportObserveWidget, observeMultipleSelectionViewer, null,
+		bindingContext.bindValue(observeEnabledBtnExportObserveWidget, observeSingleSelectionViewer, null,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
 						.setConverter(new Converter(IProject.class, Boolean.class) {
 							@Override
