@@ -22,9 +22,6 @@ import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -68,7 +65,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewContextWizard;
 
 public class ContextsListComposite extends Composite {
@@ -85,9 +81,7 @@ public class ContextsListComposite extends Composite {
 	private CheckboxTableViewer contextsListViewer;
 	private Button btnNew; 
 	private Composite composite;
-
-	private AdapterImpl sessionAdapter;
-
+	
 	private EditingDomain editingDomain;
 	
 	private ISelectionChangedListener contextsListViewerSelectionListener;
@@ -187,18 +181,6 @@ public class ContextsListComposite extends Composite {
 		});
 		btnNew.setText("New");
 		toolkit.adapt(btnNew, true, true);
-		
-		
-		// FIXME: This should once data bound...
-		/**
-		 * Adds a control decoration if there is no variable
-		 */
-		if(getEnvironment() != null 
-				&& getEnvironment().getVariablesList() != null 
-				&& getEnvironment().getVariablesList().getVariables() != null 
-				&& getEnvironment().getVariablesList().getVariables().size() < 1){
-			replaceControlDecoration();
-		}
 
 		Button btnDelete = new Button(composite, SWT.NONE);
 		btnDelete.setEnabled(false);
@@ -339,6 +321,16 @@ public class ContextsListComposite extends Composite {
 		 */
 		contextsListViewer.removeSelectionChangedListener(getContextsListViewerSelectionListener());
 		contextsListViewer.addSelectionChangedListener(getContextsListViewerSelectionListener());
+		
+		/**
+		 * Adds a control decoration if there is no variable
+		 */
+		if(getEnvironment() != null 
+				&& getEnvironment().getVariablesList() != null 
+				&& getEnvironment().getVariablesList().getVariables() != null 
+				&& getEnvironment().getVariablesList().getVariables().size() < 1){
+			replaceControlDecoration();
+		}
 
 		return m_bindingContext;
 	}
@@ -385,28 +377,6 @@ public class ContextsListComposite extends Composite {
 		IStructuredSelection selection = (IStructuredSelection) contextsListViewer.getSelection();
 		return (Context) selection.getFirstElement();
 	}
-
-
-	/**
-	 * This adapter listens {@link Environment#setActiveContext(Context)}
-	 * changes.
-	 * 
-	 * @return Reference to the adapter.
-	 */
-	private Adapter getInvocatorSessionAdapter() {
-		if (sessionAdapter == null) {
-			sessionAdapter = new AdapterImpl() {
-				@Override
-				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(
-							InvocatorSession.class) == ApogyCoreInvocatorPackage.INVOCATOR_SESSION__ENVIRONMENT) {
-						contextsListViewer.refresh();
-					}
-				}
-			};
-		}
-		return sessionAdapter;
-	}
 	
 	@Override
 	public void dispose() {
@@ -415,11 +385,6 @@ public class ContextsListComposite extends Composite {
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
-		}
-		
-		// FIXME Remove the check.
-		if (getEnvironment() != null){
-			getEnvironment().eAdapters().remove(getInvocatorSessionAdapter());	
-		}		
+		}	
 	}
 }
