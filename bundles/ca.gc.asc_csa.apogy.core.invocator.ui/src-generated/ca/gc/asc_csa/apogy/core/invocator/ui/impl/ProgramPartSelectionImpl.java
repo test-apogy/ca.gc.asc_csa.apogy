@@ -14,13 +14,14 @@
  */
 package ca.gc.asc_csa.apogy.core.invocator.ui.impl;
 
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -28,34 +29,34 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Program Details Part Selection</b></em>'.
+ * An implementation of the model object '<em><b>Program Part Selection</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ProgramDetailsPartSelectionImpl#getEObject <em>EObject</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ProgramPartSelectionImpl#getProgram <em>Program</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ProgramDetailsPartSelectionImpl extends MinimalEObjectImpl.Container implements ProgramDetailsPartSelection {
+public class ProgramPartSelectionImpl extends MinimalEObjectImpl.Container implements ProgramPartSelection {
 	/**
-	 * The cached value of the '{@link #getEObject() <em>EObject</em>}' reference.
+	 * The cached value of the '{@link #getProgram() <em>Program</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEObject()
+	 * @see #getProgram()
 	 * @generated
 	 * @ordered
 	 */
-	protected EObject eObject;
+	protected Program program;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ProgramDetailsPartSelectionImpl() {
+	protected ProgramPartSelectionImpl() {
 		super();
 	}
 
@@ -66,7 +67,7 @@ public class ProgramDetailsPartSelectionImpl extends MinimalEObjectImpl.Containe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ApogyCoreInvocatorUIPackage.Literals.PROGRAM_DETAILS_PART_SELECTION;
+		return ApogyCoreInvocatorUIPackage.Literals.PROGRAM_PART_SELECTION;
 	}
 
 	/**
@@ -74,16 +75,16 @@ public class ProgramDetailsPartSelectionImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getEObject() {
-		if (eObject != null && eObject.eIsProxy()) {
-			InternalEObject oldEObject = (InternalEObject)eObject;
-			eObject = eResolveProxy(oldEObject);
-			if (eObject != oldEObject) {
+	public Program getProgram() {
+		if (program != null && program.eIsProxy()) {
+			InternalEObject oldProgram = (InternalEObject)program;
+			program = (Program)eResolveProxy(oldProgram);
+			if (program != oldProgram) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorUIPackage.PROGRAM_DETAILS_PART_SELECTION__EOBJECT, oldEObject, eObject));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM, oldProgram, program));
 			}
 		}
-		return eObject;
+		return program;
 	}
 
 	/**
@@ -91,8 +92,8 @@ public class ProgramDetailsPartSelectionImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject basicGetEObject() {
-		return eObject;
+	public Program basicGetProgram() {
+		return program;
 	}
 
 	/**
@@ -100,11 +101,11 @@ public class ProgramDetailsPartSelectionImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEObject(EObject newEObject) {
-		EObject oldEObject = eObject;
-		eObject = newEObject;
+	public void setProgram(Program newProgram) {
+		Program oldProgram = program;
+		program = newProgram;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorUIPackage.PROGRAM_DETAILS_PART_SELECTION__EOBJECT, oldEObject, eObject));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM, oldProgram, program));
 	}
 
 	/**
@@ -115,9 +116,9 @@ public class ProgramDetailsPartSelectionImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.PROGRAM_DETAILS_PART_SELECTION__EOBJECT:
-				if (resolve) return getEObject();
-				return basicGetEObject();
+			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM:
+				if (resolve) return getProgram();
+				return basicGetProgram();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -130,8 +131,8 @@ public class ProgramDetailsPartSelectionImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.PROGRAM_DETAILS_PART_SELECTION__EOBJECT:
-				setEObject((EObject)newValue);
+			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM:
+				setProgram((Program)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -145,8 +146,8 @@ public class ProgramDetailsPartSelectionImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.PROGRAM_DETAILS_PART_SELECTION__EOBJECT:
-				setEObject((EObject)null);
+			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM:
+				setProgram((Program)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -160,10 +161,10 @@ public class ProgramDetailsPartSelectionImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.PROGRAM_DETAILS_PART_SELECTION__EOBJECT:
-				return eObject != null;
+			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM:
+				return program != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ProgramDetailsPartSelectionImpl
+} //ProgramPartSelectionImpl

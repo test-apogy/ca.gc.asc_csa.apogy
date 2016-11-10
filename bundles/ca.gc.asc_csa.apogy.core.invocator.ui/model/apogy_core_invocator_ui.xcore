@@ -84,9 +84,9 @@ class ScriptBasedProgramsListPartSelection
 	refers Program program
 }
 
-class ProgramDetailsPartSelection
+class ProgramPartSelection
 {
-	refers EObject eObject
+	refers Program program
 }
 
 class ApogyAdvancedEditorPartSelection

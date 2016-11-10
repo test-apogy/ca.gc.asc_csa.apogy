@@ -84,8 +84,8 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 				return createScriptBasedProgramsListPartSelectionAdapter();
 			}
 			@Override
-			public Adapter caseProgramDetailsPartSelection(ProgramDetailsPartSelection object) {
-				return createProgramDetailsPartSelectionAdapter();
+			public Adapter caseProgramPartSelection(ProgramPartSelection object) {
+				return createProgramPartSelectionAdapter();
 			}
 			@Override
 			public Adapter caseApogyAdvancedEditorPartSelection(ApogyAdvancedEditorPartSelection object) {
@@ -130,16 +130,16 @@ public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection <em>Program Details Part Selection</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection <em>Program Part Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection
 	 * @generated
 	 */
-	public Adapter createProgramDetailsPartSelectionAdapter() {
+	public Adapter createProgramPartSelectionAdapter() {
 		return null;
 	}
 

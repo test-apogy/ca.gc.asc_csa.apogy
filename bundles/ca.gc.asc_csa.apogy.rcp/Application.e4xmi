@@ -227,8 +227,8 @@
       <toolbar xmi:id="_BxoHgp02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.common.io.jinput.ui.views.JInputStatusView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_tOdkEKHYEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ScriptBasedProgramsListPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ScriptBasedProgramsListPart" label="Programs"/>
-    <sharedElements xsi:type="basic:Part" xmi:id="_Qzm3kKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramDetailsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramDetailsPart" label="Program Details"/>
-    <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ParameterDefinitionPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ParameterDefinitionPart" label="Parameter Definition"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_Qzm3kKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramPart" label="Program"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramDetails" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ParameterDefinitionPart" label="Details"/>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.save" label="Save" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/tool16/save.gif" tooltip="" command="_6wlLg8gZEeSyMNYR5xypkQ"/>

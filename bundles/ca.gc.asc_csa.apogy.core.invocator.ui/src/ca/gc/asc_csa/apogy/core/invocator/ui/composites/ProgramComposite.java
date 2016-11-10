@@ -72,7 +72,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewProgramsGroupWizard;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewScriptBasedProgramWizard;
 
-public class ProgramsDetailsComposite extends Composite {
+public class ProgramComposite extends Composite {
 	private DataBindingContext m_currentDataBindings;
 
 	private final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
@@ -87,7 +87,7 @@ public class ProgramsDetailsComposite extends Composite {
 	
 	EObjectComposite eObjectComposite;
 
-	public ProgramsDetailsComposite(Composite parent, int style) {
+	public ProgramComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new GridLayout(1, true));
 
@@ -103,7 +103,7 @@ public class ProgramsDetailsComposite extends Composite {
 		eObjectComposite = new EObjectComposite(compositeProgram, SWT.None){
 			@Override
 			protected void newSelection(ISelection selection) {
-				ProgramsDetailsComposite.this.newSelection(selection);
+				ProgramComposite.this.newSelection(selection);
 			}
 			
 			@Override
@@ -125,7 +125,7 @@ public class ProgramsDetailsComposite extends Composite {
 		btnInvoke.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-//				TODO
+//				FIXME
 //				/**
 //				 * Creates and opens the wizard to create a valid context
 //				 */

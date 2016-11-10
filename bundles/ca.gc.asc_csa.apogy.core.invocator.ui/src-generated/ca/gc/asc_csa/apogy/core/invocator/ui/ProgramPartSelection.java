@@ -14,49 +14,51 @@
  */
 package ca.gc.asc_csa.apogy.core.invocator.ui;
 
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Program Details Part Selection</b></em>'.
+ * A representation of the model object '<em><b>Program Part Selection</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection#getEObject <em>EObject</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getProgram <em>Program</em>}</li>
  * </ul>
  *
- * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramDetailsPartSelection()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramPartSelection()
  * @model
  * @generated
  */
-public interface ProgramDetailsPartSelection extends EObject {
+public interface ProgramPartSelection extends EObject {
 	/**
-	 * Returns the value of the '<em><b>EObject</b></em>' reference.
+	 * Returns the value of the '<em><b>Program</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>EObject</em>' reference isn't clear,
+	 * If the meaning of the '<em>Program</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>EObject</em>' reference.
-	 * @see #setEObject(EObject)
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramDetailsPartSelection_EObject()
+	 * @return the value of the '<em>Program</em>' reference.
+	 * @see #setProgram(Program)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramPartSelection_Program()
 	 * @model
 	 * @generated
 	 */
-	EObject getEObject();
+	Program getProgram();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection#getEObject <em>EObject</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getProgram <em>Program</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>EObject</em>' reference.
-	 * @see #getEObject()
+	 * @param value the new value of the '<em>Program</em>' reference.
+	 * @see #getProgram()
 	 * @generated
 	 */
-	void setEObject(EObject value);
+	void setProgram(Program value);
 
-} // ProgramDetailsPartSelection
+} // ProgramPartSelection

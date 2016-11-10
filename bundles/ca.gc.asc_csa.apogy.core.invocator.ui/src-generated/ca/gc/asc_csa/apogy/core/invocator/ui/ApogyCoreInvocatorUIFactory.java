@@ -42,13 +42,13 @@ public interface ApogyCoreInvocatorUIFactory extends EFactory {
 	ScriptBasedProgramsListPartSelection createScriptBasedProgramsListPartSelection();
 
 	/**
-	 * Returns a new object of class '<em>Program Details Part Selection</em>'.
+	 * Returns a new object of class '<em>Program Part Selection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Program Details Part Selection</em>'.
+	 * @return a new object of class '<em>Program Part Selection</em>'.
 	 * @generated
 	 */
-	ProgramDetailsPartSelection createProgramDetailsPartSelection();
+	ProgramPartSelection createProgramPartSelection();
 
 	/**
 	 * Returns a new object of class '<em>Apogy Advanced Editor Part Selection</em>'.
