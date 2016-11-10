@@ -29,13 +29,11 @@ public class ContextsDefinitionPart extends AbstractApogySessionBasedPart{
 				selectionService.setSelection(selection);
 			}
 		};
-
 	}
 
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
 		((ContextsListComposite) getContentComposite())
 		.setEnvironment(invocatorSession.getEnvironment());
-		
 	}
 }

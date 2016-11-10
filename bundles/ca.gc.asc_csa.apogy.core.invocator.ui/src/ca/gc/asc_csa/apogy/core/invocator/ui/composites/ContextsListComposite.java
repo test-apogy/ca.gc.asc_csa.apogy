@@ -86,15 +86,6 @@ public class ContextsListComposite extends Composite {
 	private Button btnNew; 
 	private Composite composite;
 
-	/**
-	 * Returns the {@link Context} list viewer.
-	 * 
-	 * @return Reference to the viewer.
-	 */
-	public CheckboxTableViewer getContextsListViewer() {
-		return contextsListViewer;
-	}
-
 	private AdapterImpl sessionAdapter;
 
 	private EditingDomain editingDomain;
@@ -197,6 +188,8 @@ public class ContextsListComposite extends Composite {
 		btnNew.setText("New");
 		toolkit.adapt(btnNew, true, true);
 		
+		
+		// FIXME: This should once data bound...
 		/**
 		 * Adds a control decoration if there is no variable
 		 */
@@ -208,7 +201,8 @@ public class ContextsListComposite extends Composite {
 		}
 
 		Button btnDelete = new Button(composite, SWT.NONE);
-		btnDelete.setToolTipText("Not implemented yet!!!"); // TODO: Delete Button
+		btnDelete.setEnabled(false);
+		btnDelete.setToolTipText("Not implemented yet!!!");
 		btnDelete.setEnabled(false);
 		btnDelete.setText("Delete");
 		toolkit.adapt(btnDelete, true, true);
@@ -422,6 +416,10 @@ public class ContextsListComposite extends Composite {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
 		}
-		getEnvironment().eAdapters().remove(getInvocatorSessionAdapter());
+		
+		// FIXME Remove the check.
+		if (getEnvironment() != null){
+			getEnvironment().eAdapters().remove(getInvocatorSessionAdapter());	
+		}		
 	}
 }

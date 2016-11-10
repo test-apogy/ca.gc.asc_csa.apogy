@@ -14,40 +14,44 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.List;
+
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariablesListComposite;
 
 public class VariablesListPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new Composite(parent, SWT.None); 
-				
-//				VariablesListComposite(parent, SWT.None) {
-//			@Override
-//			protected void newSelection(ISelection selection) {
-//				if (selection.isEmpty()){
-//					setNullSelection();					
-//				}else {
-//					List<Variable> variables = ((VariablesListComposite) getContentComposite()).getSelectedVariable();
-//					if (!variables.isEmpty()){
-//						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createVariablesListPartSelection();
-//						selectionSent.setVariables(variables);		
-//						
-//						selectionService.setSelection(selectionSent);						
-//					}
-//				}
-//			}
-//		};
+		return new VariablesListComposite(parent, SWT.None) {
+			@Override
+			protected void newSelection(ISelection selection) {
+				if (selection.isEmpty()){
+					setNullSelection();					
+				}else {
+					List<Variable> variables = ((VariablesListComposite) getContentComposite()).getSelectedVariable();
+					if (!variables.isEmpty()){
+						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createVariablesListPartSelection();
+						selectionSent.setVariables(variables);		
+						
+						selectionService.setSelection(selectionSent);						
+					}
+				}
+			}
+		};
 	}
 	
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-//		((VariablesListComposite) getContentComposite())
-//		.setVariablesList(invocatorSession.getEnvironment().getVariablesList());
+		((VariablesListComposite) getContentComposite())
+		.setVariablesList(invocatorSession.getEnvironment().getVariablesList());
 	}
 
 	@Override

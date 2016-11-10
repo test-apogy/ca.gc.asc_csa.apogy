@@ -30,7 +30,9 @@
               <children xsi:type="basic:Part" xmi:id="_wsxEgKaaEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
             </children>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_JvElAKaTEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.17"/>
+          <children xsi:type="basic:PartStack" xmi:id="_JvElAKaTEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.17">
+            <children xsi:type="advanced:Placeholder" xmi:id="_S6c5MKbEEeasovviMTpnqw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.13" ref="_iuRl0KaZEeanWP_Ek56TpQ"/>
+          </children>
         </children>
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Environment">
@@ -243,7 +245,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_Qzm3kKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.programdetailssimpleprogramdetailspart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.SimpleProgramDetailsPart" label="Program Details"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.parameterdefinitionparameterdefinitionpart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ParameterDefinitionPart" label="Parameter Definition"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_iuRl0KaZEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.part.contextsList" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ContextsDefinitionPart" label="Contexts"/>
-    <sharedElements xsi:type="basic:Part" xmi:id="_VhqlIKaaEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.part.variables" label="Variables"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_VhqlIKaaEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.part.variables" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.VariablesListPart" label="Variables"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_tOdkEKHYEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ScriptBasedProgramsListPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ScriptBasedProgramsListPart" label="Programs"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_Qzm3kKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramDetailsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramDetailsPart" label="Program Details"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ParameterDefinitionPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ParameterDefinitionPart" label="Parameter Definition"/>
