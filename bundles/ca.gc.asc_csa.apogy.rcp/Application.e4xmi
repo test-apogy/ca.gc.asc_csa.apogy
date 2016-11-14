@@ -30,9 +30,7 @@
               <children xsi:type="basic:Part" xmi:id="_wsxEgKaaEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
             </children>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_JvElAKaTEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.17">
-            <children xsi:type="advanced:Placeholder" xmi:id="_S6c5MKbEEeasovviMTpnqw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.13" ref="_iuRl0KaZEeanWP_Ek56TpQ"/>
-          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_JvElAKaTEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.17"/>
         </children>
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Environment">
