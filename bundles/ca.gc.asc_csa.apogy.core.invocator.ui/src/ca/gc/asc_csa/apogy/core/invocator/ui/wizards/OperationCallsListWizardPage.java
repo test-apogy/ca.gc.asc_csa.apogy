@@ -50,7 +50,7 @@ public class OperationCallsListWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {		
-		programsListComposite = new ScriptBasedProgramsListComposite(parent, SWT.None){
+		programsListComposite = new ScriptBasedProgramsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL){
 			@Override
 			protected void newSelection(ISelection selection) {
 				validate();

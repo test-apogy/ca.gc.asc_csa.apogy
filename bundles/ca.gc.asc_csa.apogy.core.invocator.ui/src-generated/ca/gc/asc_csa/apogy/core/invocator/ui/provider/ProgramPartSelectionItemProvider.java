@@ -69,25 +69,25 @@ public class ProgramPartSelectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addProgramPropertyDescriptor(object);
+			addOperationCallPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Program feature.
+	 * This adds a property descriptor for the Operation Call feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProgramPropertyDescriptor(Object object) {
+	protected void addOperationCallPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ProgramPartSelection_program_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ProgramPartSelection_program_feature", "_UI_ProgramPartSelection_type"),
-				 ApogyCoreInvocatorUIPackage.Literals.PROGRAM_PART_SELECTION__PROGRAM,
+				 getString("_UI_ProgramPartSelection_operationCall_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ProgramPartSelection_operationCall_feature", "_UI_ProgramPartSelection_type"),
+				 ApogyCoreInvocatorUIPackage.Literals.PROGRAM_PART_SELECTION__OPERATION_CALL,
 				 true,
 				 false,
 				 true,

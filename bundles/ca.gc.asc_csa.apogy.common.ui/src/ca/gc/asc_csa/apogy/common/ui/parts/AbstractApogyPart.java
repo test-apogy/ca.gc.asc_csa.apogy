@@ -34,7 +34,7 @@ abstract public class AbstractApogyPart {
 	public void createPartControl(Composite parent) {
 		composite = parent;
 		composite.setLayout(new FillLayout());
-		createContentComposite(composite);
+		setNoContentComposite();
 		composite.layout();
 		setEObject(getInitializeObject());
 	}

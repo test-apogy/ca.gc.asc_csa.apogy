@@ -39,6 +39,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Program
 import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EObject
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
 
@@ -86,7 +87,7 @@ class ScriptBasedProgramsListPartSelection
 
 class ProgramPartSelection
 {
-	refers Program program
+	refers OperationCall operationCall
 }
 
 class ApogyAdvancedEditorPartSelection

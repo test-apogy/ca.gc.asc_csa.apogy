@@ -13,119 +13,102 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.observable.ChangeEvent;
-import org.eclipse.core.databinding.observable.IChangeListener;
-import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.edit.command.SetCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.ui.dnd.EditingDomainViewerDropAdapter;
-import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
-import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
-import org.eclipse.jface.util.LocalSelectionTransfer;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
-import org.eclipse.jface.viewers.ITableLabelProvider;
-import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.viewers.TreeSelection;
-import org.eclipse.jface.viewers.TreeViewer;
-import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
-import org.eclipse.swt.dnd.DND;
-import org.eclipse.swt.dnd.FileTransfer;
-import org.eclipse.swt.dnd.Transfer;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.forms.widgets.Section;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
-import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewProgramsGroupWizard;
-import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewScriptBasedProgramWizard;
 
-public class ProgramComposite extends Composite {
+public class OperationCallsListComposite extends ScrolledComposite {
 	private DataBindingContext m_currentDataBindings;
 
 	private final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
-	private TreeViewer treeViewer;
 
-	private ProgramsList programsList;
+	private OperationCallsList operationCallsList;
 
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
-	private IChangeListener newValueChangeListener;
-	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 	
 	EObjectComposite eObjectComposite;
 
-	public ProgramComposite(Composite parent, int style) {
+	public OperationCallsListComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new GridLayout(1, true));
+		setExpandHorizontal(true);
+		setExpandVertical(true);
 
-		ScrolledComposite scrolledComposite = new ScrolledComposite(this, SWT.H_SCROLL | SWT.V_SCROLL);
-		formToolkit.adapt(scrolledComposite);
-		formToolkit.paintBordersFor(scrolledComposite);
-		scrolledComposite.setExpandHorizontal(true);
-		scrolledComposite.setExpandVertical(true);
-
-		Composite compositeProgram = new Composite(scrolledComposite, SWT.NONE);
+		Composite compositeProgram = new Composite(this, SWT.NONE);
+		compositeProgram.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		compositeProgram.setLayout(new GridLayout(2, false));
 
 		eObjectComposite = new EObjectComposite(compositeProgram, SWT.None){
 			@Override
 			protected void newSelection(ISelection selection) {
-				ProgramComposite.this.newSelection(selection);
+				OperationCallsListComposite.this.newSelection(selection);
 			}
 			
 			@Override
 			protected AdapterFactoryContentProvider getContentProvider() {
-				// TODO Auto-generated method stub
+				// TODO Create custom content provider
 				return super.getContentProvider();
 			}
 			
 			@Override
 			protected AdapterFactoryLabelProvider getLabelProvider() {
-				// TODO Auto-generated method stub
+				// TODO Create custom label provider
 				return super.getLabelProvider();
 			}
 		};
-		eObjectComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 7));
+		eObjectComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
 
-		Button btnInvoke = formToolkit.createButton(compositeProgram, "New Group", SWT.NONE);
-		btnInvoke.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-		btnInvoke.addSelectionListener(new SelectionAdapter() {
+		Button btnNew = new Button(compositeProgram, SWT.NONE);
+		btnNew.setText("New");
+		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-//				FIXME
+//				TODO New button 
+//				/**
+//				 * Creates and opens the wizard to create a valid context
+//				 */
+//				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
+//				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
+//				newProgramsGroupWizard.getCreatedProgramsGroup().addChangeListener(getNewValueChangeListener());
+//				dialog.open();
+			}
+		});
+		
+		Button btnDelete = new Button(compositeProgram, SWT.NONE);
+		btnDelete.setText("Delete");
+		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		btnDelete.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+//				TODO Delete button
 //				/**
 //				 * Creates and opens the wizard to create a valid context
 //				 */
@@ -136,8 +119,8 @@ public class ProgramComposite extends Composite {
 			}
 		});
 
-		scrolledComposite.setContent(compositeProgram);
-		scrolledComposite.setMinSize(compositeProgram.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		setContent(compositeProgram);
+		setMinSize(compositeProgram.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
 
 
@@ -151,12 +134,16 @@ public class ProgramComposite extends Composite {
 	}
 
 	/**
-	 * Returns the selected Detail.
+	 * Returns the selected {@link OperationCall}.
 	 * 
-	 * @return Reference to the selected {@link EObject}.
+	 * @return Reference to the selected {@link OperationCall}.
 	 */
-	public EObject getSelectedDetail(){
-		return eObjectComposite.getSelectedEObject();
+	public OperationCall getSelectedOperationCall(){
+		return (OperationCall)eObjectComposite.getSelectedEObject();
+	}
+	
+	public void setOperationCallsList(OperationCallsList operationCallsList){
+		eObjectComposite.setEObject(operationCallsList);
 	}
 
 	
@@ -174,7 +161,7 @@ public class ProgramComposite extends Composite {
 		@Override
 		public void notifyChanged(Notification notification) {
 			super.notifyChanged(notification);
-			treeViewer.refresh();
+			eObjectComposite.refresh();
 		}
 
 		@Override

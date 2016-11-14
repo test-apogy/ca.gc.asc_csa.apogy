@@ -32,21 +32,18 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.window.ToolTip;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.DisposeEvent;
-import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 
-public class EObjectComposite extends Composite {
+public class EObjectComposite extends ScrolledComposite {
 	private DataBindingContext m_bindingContext;
 
 	private TreeViewer instanceViewer;
@@ -65,10 +62,20 @@ public class EObjectComposite extends Composite {
 	 * @param style
 	 */
 	public EObjectComposite(Composite parent, int style) {
-		super(parent, SWT.NONE);
+		super(parent, style);
 		setLayout(new GridLayout(1, true));
+		setExpandHorizontal(true);
+		setExpandVertical(true);
 
-		instanceViewer = new TreeViewer(this,
+		Composite compositeEObject = new Composite(this, SWT.NONE);
+		GridLayout gl_compositeEObject = new GridLayout(2, false);
+		gl_compositeEObject.marginWidth = 0;
+		gl_compositeEObject.marginHeight = 0;
+		gl_compositeEObject.verticalSpacing = 0;
+		gl_compositeEObject.horizontalSpacing = 0;
+		compositeEObject.setLayout(gl_compositeEObject);
+		
+		instanceViewer = new TreeViewer(compositeEObject,
 				SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION | SWT.SINGLE);
 
 		ColumnViewerToolTipSupport.enableFor(instanceViewer, ToolTip.NO_RECREATE);
@@ -81,6 +88,9 @@ public class EObjectComposite extends Composite {
 
 		instanceViewer.addSelectionChangedListener(getSelectionChangedListener());
 		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(instanceViewer);
+		
+		this.setContent(compositeEObject);
+		this.setMinSize(compositeEObject.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
 
 	/**
@@ -224,5 +234,9 @@ public class EObjectComposite extends Composite {
 
 	protected AdapterFactoryLabelProvider getLabelProvider() {
 		return new AdapterFactoryLabelProvider(adapterFactory);
+	}
+	
+	public void refresh(){
+		this.instanceViewer.refresh();
 	}
 }

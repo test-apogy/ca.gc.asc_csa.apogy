@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.math.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.math.*;
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 import org.eclipse.emf.ecore.EClass;

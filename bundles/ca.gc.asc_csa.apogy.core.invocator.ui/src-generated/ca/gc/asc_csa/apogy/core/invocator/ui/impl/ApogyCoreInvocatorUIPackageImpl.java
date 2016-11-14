@@ -176,7 +176,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProgramPartSelection_Program() {
+	public EReference getProgramPartSelection_OperationCall() {
 		return (EReference)programPartSelectionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -317,7 +317,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		createEReference(scriptBasedProgramsListPartSelectionEClass, SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION__PROGRAM);
 
 		programPartSelectionEClass = createEClass(PROGRAM_PART_SELECTION);
-		createEReference(programPartSelectionEClass, PROGRAM_PART_SELECTION__PROGRAM);
+		createEReference(programPartSelectionEClass, PROGRAM_PART_SELECTION__OPERATION_CALL);
 
 		apogyAdvancedEditorPartSelectionEClass = createEClass(APOGY_ADVANCED_EDITOR_PART_SELECTION);
 		createEReference(apogyAdvancedEditorPartSelectionEClass, APOGY_ADVANCED_EDITOR_PART_SELECTION__EOBJECT);
@@ -386,7 +386,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		initEReference(getScriptBasedProgramsListPartSelection_Program(), theApogyCoreInvocatorPackage.getProgram(), null, "program", null, 0, 1, ScriptBasedProgramsListPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(programPartSelectionEClass, ProgramPartSelection.class, "ProgramPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProgramPartSelection_Program(), theApogyCoreInvocatorPackage.getProgram(), null, "program", null, 0, 1, ProgramPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgramPartSelection_OperationCall(), theApogyCoreInvocatorPackage.getOperationCall(), null, "operationCall", null, 0, 1, ProgramPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(apogyAdvancedEditorPartSelectionEClass, ApogyAdvancedEditorPartSelection.class, "ApogyAdvancedEditorPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApogyAdvancedEditorPartSelection_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, ApogyAdvancedEditorPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

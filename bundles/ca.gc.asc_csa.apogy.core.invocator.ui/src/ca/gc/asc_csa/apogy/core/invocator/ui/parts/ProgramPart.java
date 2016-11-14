@@ -22,28 +22,33 @@ import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
-import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallsListComposite;
 
 public class ProgramPart extends AbstractSelectionBasedPart{
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new EObjectComposite(parent, SWT.None) {
+		return new OperationCallsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			protected void newSelection(ISelection selection) {
-				if(((TreeSelection) selection).getFirstElement() instanceof EObject){
-					ProgramPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramPartSelection();
-					selectionSent.setProgram((Program)((TreeSelection) selection).getFirstElement());
-					
-					selectionService.setSelection(selectionSent);
+				if (selection.isEmpty()){
+					setNullSelection();					
+				}else {
+					OperationCall operationCall = ((OperationCallsListComposite) getContentComposite()).getSelectedOperationCall();
+					if (operationCall != null){
+						ProgramPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramPartSelection();
+						selectionSent.setOperationCall(operationCall);		
+						
+						selectionService.setSelection(selectionSent);						
+					}
 				}
 			}
 		};
@@ -51,7 +56,7 @@ public class ProgramPart extends AbstractSelectionBasedPart{
 
 	@Override
 	protected void setSelectionInContentComposite(EObject eObject) {
-		((EObjectComposite) getContentComposite()).setEObject(eObject);
+		((OperationCallsListComposite) getContentComposite()).setOperationCallsList((OperationCallsList)eObject);
 	}
 
 	@Override
@@ -60,14 +65,17 @@ public class ProgramPart extends AbstractSelectionBasedPart{
 	}
 	
 	/**
-	 * Injects a {@link ScriptBasedProgramsListPartSelection} in the part from the {@link ESelectionService}
+	 * Injects a {@link OperationCallsListComposite} in the part from the {@link ESelectionService}
 	 * @param selection
 	 */
 	@Inject
 	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ScriptBasedProgramsListPartSelection selection) {
-		if(selection != null){
-			setEObject(selection.getProgram());
+	private void setSelection(
+			@Named(IServiceConstants.ACTIVE_SELECTION) ScriptBasedProgramsListPartSelection selection) {
+		if (selection != null) {
+			if (selection.getProgram() instanceof OperationCallsList || selection.getProgram() == null) {
+				setEObject(selection.getProgram());
+			}
 		}
 	}
 }

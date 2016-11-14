@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.*;
 import javax.vecmath.Color3f;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;

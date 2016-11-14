@@ -108,7 +108,7 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 			getProgramsGroup().getPrograms().add(program);
 		}else{
 			/** Use the command stack. */
-			AddCommand command = new AddCommand(editingDomain, getProgramsGroup(),
+			AddCommand command = new AddCommand(editingDomain, newProgramWizardPage.getProgramsGroup(),
 					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, program);
 			editingDomain.getCommandStack().execute(command);
 		}	

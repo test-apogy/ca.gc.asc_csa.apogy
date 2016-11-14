@@ -14,8 +14,7 @@
  */
 package ca.gc.asc_csa.apogy.core.invocator.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.invocator.Program;
-
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 
@@ -35,22 +34,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ProgramPartSelectionImpl#getProgram <em>Program</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ProgramPartSelectionImpl#getOperationCall <em>Operation Call</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ProgramPartSelectionImpl extends MinimalEObjectImpl.Container implements ProgramPartSelection {
 	/**
-	 * The cached value of the '{@link #getProgram() <em>Program</em>}' reference.
+	 * The cached value of the '{@link #getOperationCall() <em>Operation Call</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProgram()
+	 * @see #getOperationCall()
 	 * @generated
 	 * @ordered
 	 */
-	protected Program program;
-
+	protected OperationCall operationCall;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,16 +73,16 @@ public class ProgramPartSelectionImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Program getProgram() {
-		if (program != null && program.eIsProxy()) {
-			InternalEObject oldProgram = (InternalEObject)program;
-			program = (Program)eResolveProxy(oldProgram);
-			if (program != oldProgram) {
+	public OperationCall getOperationCall() {
+		if (operationCall != null && operationCall.eIsProxy()) {
+			InternalEObject oldOperationCall = (InternalEObject)operationCall;
+			operationCall = (OperationCall)eResolveProxy(oldOperationCall);
+			if (operationCall != oldOperationCall) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM, oldProgram, program));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__OPERATION_CALL, oldOperationCall, operationCall));
 			}
 		}
-		return program;
+		return operationCall;
 	}
 
 	/**
@@ -92,8 +90,8 @@ public class ProgramPartSelectionImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Program basicGetProgram() {
-		return program;
+	public OperationCall basicGetOperationCall() {
+		return operationCall;
 	}
 
 	/**
@@ -101,11 +99,11 @@ public class ProgramPartSelectionImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProgram(Program newProgram) {
-		Program oldProgram = program;
-		program = newProgram;
+	public void setOperationCall(OperationCall newOperationCall) {
+		OperationCall oldOperationCall = operationCall;
+		operationCall = newOperationCall;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM, oldProgram, program));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__OPERATION_CALL, oldOperationCall, operationCall));
 	}
 
 	/**
@@ -116,9 +114,9 @@ public class ProgramPartSelectionImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM:
-				if (resolve) return getProgram();
-				return basicGetProgram();
+			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__OPERATION_CALL:
+				if (resolve) return getOperationCall();
+				return basicGetOperationCall();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -131,8 +129,8 @@ public class ProgramPartSelectionImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM:
-				setProgram((Program)newValue);
+			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__OPERATION_CALL:
+				setOperationCall((OperationCall)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -146,8 +144,8 @@ public class ProgramPartSelectionImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM:
-				setProgram((Program)null);
+			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__OPERATION_CALL:
+				setOperationCall((OperationCall)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -161,8 +159,8 @@ public class ProgramPartSelectionImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__PROGRAM:
-				return program != null;
+			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION__OPERATION_CALL:
+				return operationCall != null;
 		}
 		return super.eIsSet(featureID);
 	}

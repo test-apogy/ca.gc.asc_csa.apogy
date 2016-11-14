@@ -215,13 +215,13 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	int SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Program</b></em>' reference.
+	 * The feature id for the '<em><b>Operation Call</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM_PART_SELECTION__PROGRAM = 0;
+	int PROGRAM_PART_SELECTION__OPERATION_CALL = 0;
 
 	/**
 	 * The number of structural features of the '<em>Program Part Selection</em>' class.
@@ -347,15 +347,15 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	EClass getProgramPartSelection();
 
 	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getProgram <em>Program</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getOperationCall <em>Operation Call</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Program</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getProgram()
+	 * @return the meta object for the reference '<em>Operation Call</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getOperationCall()
 	 * @see #getProgramPartSelection()
 	 * @generated
 	 */
-	EReference getProgramPartSelection_Program();
+	EReference getProgramPartSelection_OperationCall();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection <em>Apogy Advanced Editor Part Selection</em>}'.
@@ -520,12 +520,12 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 */
 		EClass PROGRAM_PART_SELECTION = eINSTANCE.getProgramPartSelection();
 		/**
-		 * The meta object literal for the '<em><b>Program</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Operation Call</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROGRAM_PART_SELECTION__PROGRAM = eINSTANCE.getProgramPartSelection_Program();
+		EReference PROGRAM_PART_SELECTION__OPERATION_CALL = eINSTANCE.getProgramPartSelection_OperationCall();
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyAdvancedEditorPartSelectionImpl <em>Apogy Advanced Editor Part Selection</em>}' class.
 		 * <!-- begin-user-doc -->

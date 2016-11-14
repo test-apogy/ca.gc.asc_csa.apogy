@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;

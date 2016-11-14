@@ -14,8 +14,7 @@
  */
 package ca.gc.asc_csa.apogy.core.invocator.ui;
 
-import ca.gc.asc_csa.apogy.core.invocator.Program;
-
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getProgram <em>Program</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getOperationCall <em>Operation Call</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramPartSelection()
@@ -36,29 +35,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ProgramPartSelection extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Program</b></em>' reference.
+	 * Returns the value of the '<em><b>Operation Call</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Program</em>' reference isn't clear,
+	 * If the meaning of the '<em>Operation Call</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Program</em>' reference.
-	 * @see #setProgram(Program)
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramPartSelection_Program()
+	 * @return the value of the '<em>Operation Call</em>' reference.
+	 * @see #setOperationCall(OperationCall)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramPartSelection_OperationCall()
 	 * @model
 	 * @generated
 	 */
-	Program getProgram();
+	OperationCall getOperationCall();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getProgram <em>Program</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getOperationCall <em>Operation Call</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Program</em>' reference.
-	 * @see #getProgram()
+	 * @param value the new value of the '<em>Operation Call</em>' reference.
+	 * @see #getOperationCall()
 	 * @generated
 	 */
-	void setProgram(Program value);
+	void setOperationCall(OperationCall value);
 
 } // ProgramPartSelection

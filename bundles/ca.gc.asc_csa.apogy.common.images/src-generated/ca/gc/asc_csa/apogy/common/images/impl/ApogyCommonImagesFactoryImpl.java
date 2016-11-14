@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.common.images.impl;
  */
 
 
+import ca.gc.asc_csa.apogy.common.images.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.image.BufferedImage;

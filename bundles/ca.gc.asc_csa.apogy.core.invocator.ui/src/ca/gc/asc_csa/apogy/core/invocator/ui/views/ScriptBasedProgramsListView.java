@@ -22,7 +22,6 @@ import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
@@ -30,7 +29,6 @@ import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsDefinitionComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ScriptBasedProgramsListComposite;
 
 public class ScriptBasedProgramsListView extends AbstractView implements IEditingDomainProvider
@@ -57,7 +55,7 @@ public class ScriptBasedProgramsListView extends AbstractView implements IEditin
 		super.createPartControl(parent);
 		
 		// Create the control composite
-		composite = new ScriptBasedProgramsListComposite(parent, SWT.NONE){
+		composite = new ScriptBasedProgramsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL){
 			@Override
 			protected void newSelection(ISelection selection) {
 				getSelectionProvider().setSelection(selection);

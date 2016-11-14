@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.emf.edit.utils.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.*;
 import java.util.Collection;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
