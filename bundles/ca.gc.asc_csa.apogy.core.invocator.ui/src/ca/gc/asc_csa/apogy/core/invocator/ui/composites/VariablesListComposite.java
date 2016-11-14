@@ -18,10 +18,16 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
+import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.observable.value.WritableValue;
+import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
-import org.eclipse.jface.viewers.ArrayContentProvider;
+import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -40,6 +46,8 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 
@@ -47,13 +55,16 @@ public class VariablesListComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 	private TableViewer viewer;
 	private Button btnDelete;
-	private VariablesList variablesList;
+	private WritableValue<VariablesList> variablesListBinder = new WritableValue<>();
+	
+	AdapterFactory adapterFactory = new ComposedAdapterFactory(
+			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 	public VariablesListComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new GridLayout(2, false));
 
-		viewer = new TableViewer(this, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL);
+		viewer = new TableViewer(this, SWT.BORDER | SWT.MULTI | SWT.FULL_SELECTION | SWT.V_SCROLL);
 		Table table = viewer.getTable();
 		table.setHeaderVisible(true);
 		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
@@ -66,8 +77,9 @@ public class VariablesListComposite extends Composite {
 				newSelection(event.getSelection());
 			}
 		});
-
-		TableViewerColumn tableViewerColumnItem_Name = new TableViewerColumn(viewer, SWT.NONE);
+		viewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
+			
+		TableViewerColumn tableViewerColumnItem_Name = new TableViewerColumn(viewer, SWT.NONE);		
 		TableColumn trclmnName = tableViewerColumnItem_Name.getColumn();
 		trclmnName.setText("Name");
 		trclmnName.setWidth(150);
@@ -130,25 +142,10 @@ public class VariablesListComposite extends Composite {
 		btnDelete.setSize(74, 29);
 		btnDelete.setText("Delete");
 		new Label(this, SWT.NONE);
-
-		viewer.setContentProvider(ArrayContentProvider.getInstance());
-//		viewer.setLabelProvider(new LabelProvider() {
-//			@Override
-//			public String getText(Object element) {
-//
-//				IProject project = ((IProject) element);
-//				String result = project.getName();
-//				if (project == ApogyWorkspaceFacade.INSTANCE.getActiveProject()) {
-//					result = "<Active> " + result;
-//				}
-//				return result;
-//			}
-//		});
-		m_bindingContext = customInitDataBindings();
-
-//		viewer.setInput(ApogyWorkspaceFacade.INSTANCE.getWorkspaceApogyProjects().toArray());
+		
+		customInitDataBindings();
 	}
-
+	
 	/**
 	 * This method is invoked a when a new selection is selected.
 	 */
@@ -168,10 +165,24 @@ public class VariablesListComposite extends Composite {
 	protected DataBindingContext customInitDataBindings() {
 		
 		DataBindingContext bindingContext = new DataBindingContext();
+		
+		/*
+		 * Bind variables list.
+		 */
+		@SuppressWarnings("unchecked")
+		IObservableList<?> variablesListObserveValue = EMFProperties
+				.list(ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES)
+				.observeDetail(variablesListBinder);
+
+		ViewerSupport.bind(viewer, variablesListObserveValue,
+				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME), EMFProperties.value(ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION));
+		
 
 		IObservableValue<?> observeSingleSelectionViewer = ViewerProperties.singleSelection().observe(viewer);
 
-		/* Delete Button Enabled Binding. */
+		/* 
+		 * Delete Button Enabled Binding. 
+		 */
 		IObservableValue<?> observeEnabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
 		bindingContext.bindValue(observeEnabledBtnDeleteObserveWidget, observeSingleSelectionViewer, null,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
@@ -181,7 +192,7 @@ public class VariablesListComposite extends Composite {
 								return fromObject != null;
 							}
 						}));
-
+		
 		return bindingContext;
 	}
 	
@@ -190,14 +201,7 @@ public class VariablesListComposite extends Composite {
 	 * @param variablesList Reference the list of {@link Variable}.
 	 */
 	public void setVariablesList(VariablesList variablesList) {
-		this.variablesList = variablesList;
-
-		if (variablesList != null) {
-			if (m_bindingContext != null) {
-				m_bindingContext.dispose();
-			}
-			m_bindingContext = customInitDataBindings();
-		}
+		variablesListBinder.setValue(variablesList);
 	}
 	
 

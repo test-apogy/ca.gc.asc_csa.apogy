@@ -18,12 +18,13 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsDefinitionComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsListComposite;
 
 public class ContextsDefinitionPart extends AbstractApogySessionBasedPart{
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new ContextsListComposite(parent, SWT.None) {
+		return new ContextsDefinitionComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				selectionService.setSelection(selection);
