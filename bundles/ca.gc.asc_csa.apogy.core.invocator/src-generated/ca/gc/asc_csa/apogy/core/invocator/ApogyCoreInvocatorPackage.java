@@ -503,13 +503,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES = 40;
 
 	/**
+	 * The operation id for the '<em>Delete Variable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 41;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 41;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 42;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -1573,13 +1582,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int VARIABLE__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Variables List</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__VARIABLES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int VARIABLE__VARIABLES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Variable Type</b></em>' reference.
@@ -1588,7 +1606,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__VARIABLE_TYPE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int VARIABLE__VARIABLE_TYPE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -1597,7 +1615,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__ENVIRONMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int VARIABLE__ENVIRONMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -1606,7 +1624,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+	int VARIABLE_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -5392,6 +5410,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EOperation getApogyCoreInvocatorFacade__GetAllTypes();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#deleteVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Delete Variable</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Delete Variable</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#deleteVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8026,6 +8054,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES = eINSTANCE.getApogyCoreInvocatorFacade__GetAllTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Delete Variable</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = eINSTANCE.getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.

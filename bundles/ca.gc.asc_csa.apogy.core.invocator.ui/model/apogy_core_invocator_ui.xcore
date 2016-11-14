@@ -41,9 +41,10 @@ import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EObject
 import java.util.List
 import ca.gc.asc_csa.apogy.core.invocator.Variable
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
-type VariablesList wraps List<Variable> 
+type ListVariables wraps List<Variable> 
 
 /* -------------------------------------------------------------------------
  * 
@@ -75,6 +76,14 @@ class ApogyCoreInvocatorUIFacade{
 	 * Disposes the active session.
 	 */
 	op void disposeSession()	
+	
+	/*
+	 * Delete the variable from the specified list using a transaction.
+	 * @param variablesList List of variables.
+	 * @param variable Variable to remove.
+	 * @see ApogyCoreInvocatorFacade#deleteVariable(VariablesList variablesList, Variable variable)
+	 */
+	op void deleteVariable(VariablesList variablesList, Variable variable)
 }
 
 /* -------------------------------------------------------------------------
@@ -98,7 +107,7 @@ class ApogyAdvancedEditorPartSelection
 }
 
 class VariablesListPartSelection{
-	VariablesList variables	
+	ListVariables variables	
 }
 
 /* -------------------------------------------------------------------------

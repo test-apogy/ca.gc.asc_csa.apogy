@@ -48,7 +48,7 @@ public interface VariablesListPartSelection extends EObject {
 	 * @return the value of the '<em>Variables</em>' attribute.
 	 * @see #setVariables(List)
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getVariablesListPartSelection_Variables()
-	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.core.invocator.ui.VariablesList"
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.core.invocator.ui.ListVariables"
 	 * @generated
 	 */
 	List<Variable> getVariables();

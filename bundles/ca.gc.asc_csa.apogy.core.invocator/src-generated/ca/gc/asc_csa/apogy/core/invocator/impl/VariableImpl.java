@@ -13,6 +13,8 @@ package ca.gc.asc_csa.apogy.core.invocator.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -38,6 +40,7 @@ import com.google.common.base.Objects;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImpl#getVariablesList <em>Variables List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImpl#getVariableType <em>Variable Type</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImpl#getEnvironment <em>Environment</em>}</li>
@@ -68,6 +71,26 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
   protected String name = NAME_EDEFAULT;
 
   /**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
+
+		/**
 	 * The cached value of the '{@link #getVariableType() <em>Variable Type</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -122,6 +145,27 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VARIABLE__DESCRIPTION, oldDescription, description));
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -293,6 +337,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.VARIABLE__NAME:
 				return getName();
+			case ApogyCoreInvocatorPackage.VARIABLE__DESCRIPTION:
+				return getDescription();
 			case ApogyCoreInvocatorPackage.VARIABLE__VARIABLES_LIST:
 				if (resolve) return getVariablesList();
 				return basicGetVariablesList();
@@ -317,6 +363,9 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			case ApogyCoreInvocatorPackage.VARIABLE__NAME:
 				setName((String)newValue);
 				return;
+			case ApogyCoreInvocatorPackage.VARIABLE__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
 			case ApogyCoreInvocatorPackage.VARIABLE__VARIABLES_LIST:
 				setVariablesList((VariablesList)newValue);
 				return;
@@ -339,6 +388,9 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			case ApogyCoreInvocatorPackage.VARIABLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ApogyCoreInvocatorPackage.VARIABLE__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 			case ApogyCoreInvocatorPackage.VARIABLE__VARIABLES_LIST:
 				setVariablesList((VariablesList)null);
 				return;
@@ -360,6 +412,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.VARIABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ApogyCoreInvocatorPackage.VARIABLE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ApogyCoreInvocatorPackage.VARIABLE__VARIABLES_LIST:
 				return basicGetVariablesList() != null;
 			case ApogyCoreInvocatorPackage.VARIABLE__VARIABLE_TYPE:
@@ -372,6 +426,38 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Described.class) {
+			switch (derivedFeatureID) {
+				case ApogyCoreInvocatorPackage.VARIABLE__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Described.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreInvocatorPackage.VARIABLE__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -383,6 +469,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

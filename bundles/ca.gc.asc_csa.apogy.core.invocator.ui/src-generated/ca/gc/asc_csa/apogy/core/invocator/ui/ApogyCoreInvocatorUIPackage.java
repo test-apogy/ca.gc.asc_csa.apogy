@@ -170,13 +170,22 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION = 3;
 
 	/**
+	 * The operation id for the '<em>Delete Variable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 4;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 4;
+	int APOGY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Program</b></em>' reference.
@@ -354,15 +363,14 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '<em>Variables List</em>' data type.
+	 * The meta object id for the '<em>List Variables</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.List
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getVariablesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getListVariables()
 	 * @generated
 	 */
-	int VARIABLES_LIST = 7;
-
+	int LIST_VARIABLES = 7;
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection <em>Script Based Programs List Part Selection</em>}'.
@@ -531,6 +539,16 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	EOperation getApogyCoreInvocatorUIFacade__DisposeSession();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#deleteVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Delete Variable</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Delete Variable</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#deleteVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorUIFacade__DeleteVariable__VariablesList_Variable();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.common.command.CompoundCommand <em>Compound Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -542,15 +560,15 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	EDataType getCompoundCommand();
 
 	/**
-	 * Returns the meta object for data type '{@link java.util.List <em>Variables List</em>}'.
+	 * Returns the meta object for data type '{@link java.util.List <em>List Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Variables List</em>'.
+	 * @return the meta object for data type '<em>List Variables</em>'.
 	 * @see java.util.List
 	 * @model instanceClass="java.util.List<ca.gc.asc_csa.apogy.core.invocator.Variable>"
 	 * @generated
 	 */
-	EDataType getVariablesList();
+	EDataType getListVariables();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -700,6 +718,13 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 */
 		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION = eINSTANCE.getApogyCoreInvocatorUIFacade__DisposeSession();
 		/**
+		 * The meta object literal for the '<em><b>Delete Variable</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = eINSTANCE.getApogyCoreInvocatorUIFacade__DeleteVariable__VariablesList_Variable();
+		/**
 		 * The meta object literal for the '<em>Compound Command</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -709,14 +734,14 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 */
 		EDataType COMPOUND_COMMAND = eINSTANCE.getCompoundCommand();
 		/**
-		 * The meta object literal for the '<em>Variables List</em>' data type.
+		 * The meta object literal for the '<em>List Variables</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.List
-		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getVariablesList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getListVariables()
 		 * @generated
 		 */
-		EDataType VARIABLES_LIST = eINSTANCE.getVariablesList();
+		EDataType LIST_VARIABLES = eINSTANCE.getListVariables();
 
 	}
 

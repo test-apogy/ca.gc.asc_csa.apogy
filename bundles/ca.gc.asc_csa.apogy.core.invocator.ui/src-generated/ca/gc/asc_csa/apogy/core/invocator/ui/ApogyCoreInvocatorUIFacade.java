@@ -17,6 +17,8 @@ import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl;
 
 /**
@@ -89,4 +91,18 @@ public interface ApogyCoreInvocatorUIFacade extends EObject {
 	 * @generated
 	 */
 	void disposeSession();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Delete the variable from the specified list using a transaction.
+	 * @param variablesList List of variables.
+	 * @param variable Variable to remove.
+	 * @see ApogyCoreInvocatorFacade#deleteVariable(VariablesList variablesList, Variable variable)
+	 * <!-- end-model-doc -->
+	 * @model variablesListUnique="false" variableUnique="false"
+	 * @generated
+	 */
+	void deleteVariable(VariablesList variablesList, Variable variable);
 } // ApogyCoreInvocatorUIFacade

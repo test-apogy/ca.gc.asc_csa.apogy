@@ -89,8 +89,8 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreInvocatorUIPackage.COMPOUND_COMMAND:
 				return createCompoundCommandFromString(eDataType, initialValue);
-			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST:
-				return createVariablesListFromString(eDataType, initialValue);
+			case ApogyCoreInvocatorUIPackage.LIST_VARIABLES:
+				return createListVariablesFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -106,8 +106,8 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 		switch (eDataType.getClassifierID()) {
 			case ApogyCoreInvocatorUIPackage.COMPOUND_COMMAND:
 				return convertCompoundCommandToString(eDataType, instanceValue);
-			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST:
-				return convertVariablesListToString(eDataType, instanceValue);
+			case ApogyCoreInvocatorUIPackage.LIST_VARIABLES:
+				return convertListVariablesToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -197,7 +197,7 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public List<Variable> createVariablesListFromString(EDataType eDataType, String initialValue) {
+	public List<Variable> createListVariablesFromString(EDataType eDataType, String initialValue) {
 		return (List<Variable>)super.createFromString(initialValue);
 	}
 
@@ -206,7 +206,7 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertVariablesListToString(EDataType eDataType, Object instanceValue) {
+	public String convertListVariablesToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
 	}
 

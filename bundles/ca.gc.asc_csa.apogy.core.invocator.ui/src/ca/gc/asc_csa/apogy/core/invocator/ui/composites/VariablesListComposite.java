@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
@@ -28,6 +29,7 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -35,6 +37,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -47,9 +50,14 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewVariableWizard;
 
 public class VariablesListComposite extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -97,7 +105,7 @@ public class VariablesListComposite extends Composite {
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-//				new WizardDialog(parent.getShell(), new NewProjectWizard()).open();
+				new WizardDialog(parent.getShell(), new NewVariableWizard(variablesListBinder.getValue())).open();
 			}
 		});
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
@@ -105,39 +113,39 @@ public class VariablesListComposite extends Composite {
 		btnNew.setText("New");
 
 		btnDelete = new Button(composite, SWT.NONE);
-//		btnDelete.addSelectionListener(new SelectionAdapter() {
-//			@Override
-//			public void widgetSelected(SelectionEvent event) {
-//				String projectToDeleteMessage = "";
-//
-//				Iterator<IProject> projects = getSelectedProjects().iterator();
-//				while (projects.hasNext()) {
-//					IProject project = projects.next();
-//					projectToDeleteMessage = projectToDeleteMessage + project.getName();
-//
-//					if (projects.hasNext()) {
-//						projectToDeleteMessage = projectToDeleteMessage + ", ";
-//					}
-//				}
-//
-//				MessageDialog dialog = new MessageDialog(null, "Delete the selected project", null,
-//						"Are you sure to delete these projects: " + projectToDeleteMessage, MessageDialog.QUESTION,
-//						new String[] { "Yes", "No" }, 1);
-//				int result = dialog.open();
-//				if (result == 0) {
-//					for (IProject project : getSelectedProjects()) {
-//						try {
-//							ApogyWorkspaceFacade.INSTANCE.deleteApogyProject(project);
-//						} catch (Exception e) {
-//							Logger.INSTANCE.log(Activator.ID,
-//									"Unable to delete the project <"
-//											+ ApogyWorkspaceFacade.INSTANCE.getActiveProject().getName() + ">",
-//									EventSeverity.ERROR, e);
-//						}
-//					}
-//				}
-//			}
-//		});
+		btnDelete.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent event) {
+				String variablesToDeleteMessage = "";
+
+				Iterator<Variable> variables = getSelectedVariables().iterator();
+				while (variables.hasNext()) {
+					Variable variable = variables.next();
+					variablesToDeleteMessage = variablesToDeleteMessage + variable.getName();
+
+					if (variables.hasNext()) {
+						variablesToDeleteMessage = variablesToDeleteMessage + ", ";
+					}
+				}
+
+				MessageDialog dialog = new MessageDialog(null, "Delete the selected variables", null,
+						"Are you sure to delete these variables: " + variablesToDeleteMessage, MessageDialog.QUESTION,
+						new String[] { "Yes", "No" }, 1);
+				int result = dialog.open();
+				if (result == 0) {
+					for (Variable variable : getSelectedVariables()) {
+						try {
+							ApogyCoreInvocatorFacade.INSTANCE.deleteVariable(variablesListBinder.getValue(), variable);
+						} catch (Exception e) {
+							Logger.INSTANCE.log(Activator.ID,
+									"Unable to delete the variable <"
+											+ variable.getName() + ">",
+									EventSeverity.ERROR, e);
+						}
+					}
+				}
+			}
+		});
 		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		btnDelete.setSize(74, 29);
 		btnDelete.setText("Delete");
@@ -158,7 +166,7 @@ public class VariablesListComposite extends Composite {
 	 * @return Reference to the list of {@link Variable}.
 	 */
 	@SuppressWarnings("unchecked")
-	public List<Variable> getSelectedVariable() {
+	public List<Variable> getSelectedVariables() {
 		return ((IStructuredSelection) viewer.getSelection()).toList();
 	}
 
@@ -170,11 +178,11 @@ public class VariablesListComposite extends Composite {
 		 * Bind variables list.
 		 */
 		@SuppressWarnings("unchecked")
-		IObservableList<?> variablesListObserveValue = EMFProperties
+		IObservableList<?> variablesListObserveList = EMFProperties
 				.list(ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES)
 				.observeDetail(variablesListBinder);
 
-		ViewerSupport.bind(viewer, variablesListObserveValue,
+		ViewerSupport.bind(viewer, variablesListObserveList,
 				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME), EMFProperties.value(ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION));
 		
 

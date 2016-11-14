@@ -1078,6 +1078,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(41);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInvocatorSession() {
 		return invocatorSessionEClass;
 	}
@@ -3063,6 +3072,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3395,6 +3405,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		typeMemberReferenceListElementEClass.getESuperTypes().add(this.getTypeMemberReference());
 		typeMemberReferenceTreeElementEClass.getESuperTypes().add(this.getTypeMemberReference());
 		variableEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		variableEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		contextEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		contextEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		contextEClass.getESuperTypes().add(theApogyCommonEMFPackage.getArchivable());
@@ -3589,6 +3600,10 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		g2 = createEGenericType(this.getType());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable(), null, "deleteVariable", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVariablesList(), "variablesList", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

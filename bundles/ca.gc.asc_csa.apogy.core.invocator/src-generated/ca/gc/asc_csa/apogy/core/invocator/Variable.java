@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 
 
@@ -39,7 +40,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * @model
  * @generated
  */
-public interface Variable extends Named
+public interface Variable extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Variables List</b></em>' container reference.

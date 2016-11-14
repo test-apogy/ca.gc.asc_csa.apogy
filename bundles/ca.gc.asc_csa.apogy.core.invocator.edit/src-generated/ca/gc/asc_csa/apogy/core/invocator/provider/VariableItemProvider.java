@@ -79,6 +79,7 @@ public class VariableItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 			addVariableTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -108,6 +109,28 @@ public class VariableItemProvider
 	}
 
   /**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Described_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
 	 * This adds a property descriptor for the Variable Type feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -192,6 +215,7 @@ public class VariableItemProvider
 
 		switch (notification.getFeatureID(Variable.class)) {
 			case ApogyCoreInvocatorPackage.VARIABLE__NAME:
+			case ApogyCoreInvocatorPackage.VARIABLE__DESCRIPTION:
 			case ApogyCoreInvocatorPackage.VARIABLE__ENVIRONMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

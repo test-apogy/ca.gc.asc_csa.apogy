@@ -605,4 +605,17 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @generated
 	 */
 	List<Type> getAllTypes();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Delete the variable from the specified list.
+	 * @param variablesList List of variables.
+	 * @param variable Variable to remove.
+	 * <!-- end-model-doc -->
+	 * @model variablesListUnique="false" variableUnique="false"
+	 * @generated
+	 */
+	void deleteVariable(VariablesList variablesList, Variable variable);
 } // ApogyCoreInvocatorFacade
