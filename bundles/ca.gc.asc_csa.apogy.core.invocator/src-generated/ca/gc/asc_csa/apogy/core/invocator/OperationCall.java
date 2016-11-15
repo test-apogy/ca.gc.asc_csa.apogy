@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import org.eclipse.emf.ecore.EOperation;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
@@ -43,7 +44,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * @model
  * @generated
  */
-public interface OperationCall extends VariableFeatureReference, Named, Described
+public interface OperationCall extends VariableFeatureReference, Named, Described, Archivable
 {
   /**
 	 * Returns the value of the '<em><b>EOperation</b></em>' reference.

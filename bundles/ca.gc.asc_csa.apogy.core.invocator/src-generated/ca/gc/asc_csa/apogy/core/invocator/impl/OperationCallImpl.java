@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
@@ -42,6 +43,7 @@ import com.google.common.base.Objects;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl#isArchived <em>Archived</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl#getEOperation <em>EOperation</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl#getArgumentsList <em>Arguments List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl#getOperationCallContainer <em>Operation Call Container</em>}</li>
@@ -72,6 +74,26 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+
+		/**
+	 * The default value of the '{@link #isArchived() <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isArchived()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ARCHIVED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isArchived() <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isArchived()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean archived = ARCHIVED_EDEFAULT;
 
 		/**
 	 * The cached value of the '{@link #getEOperation() <em>EOperation</em>}' reference.
@@ -133,6 +155,27 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 		description = newDescription;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.OPERATION_CALL__DESCRIPTION, oldDescription, description));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isArchived() {
+		return archived;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setArchived(boolean newArchived) {
+		boolean oldArchived = archived;
+		archived = newArchived;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.OPERATION_CALL__ARCHIVED, oldArchived, archived));
 	}
 
 		/**
@@ -377,6 +420,8 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
 				return getDescription();
+			case ApogyCoreInvocatorPackage.OPERATION_CALL__ARCHIVED:
+				return isArchived();
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				if (resolve) return getEOperation();
 				return basicGetEOperation();
@@ -405,6 +450,9 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
+			case ApogyCoreInvocatorPackage.OPERATION_CALL__ARCHIVED:
+				setArchived((Boolean)newValue);
+				return;
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				setEOperation((EOperation)newValue);
 				return;
@@ -430,6 +478,9 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case ApogyCoreInvocatorPackage.OPERATION_CALL__ARCHIVED:
+				setArchived(ARCHIVED_EDEFAULT);
+				return;
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				setEOperation((EOperation)null);
 				return;
@@ -454,6 +505,8 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 		switch (featureID) {
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ApogyCoreInvocatorPackage.OPERATION_CALL__ARCHIVED:
+				return archived != ARCHIVED_EDEFAULT;
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				return eOperation != null;
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
@@ -481,6 +534,12 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 				default: return -1;
 			}
 		}
+		if (baseClass == Archivable.class) {
+			switch (derivedFeatureID) {
+				case ApogyCoreInvocatorPackage.OPERATION_CALL__ARCHIVED: return ApogyCommonEMFPackage.ARCHIVABLE__ARCHIVED;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -494,6 +553,12 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
 				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreInvocatorPackage.OPERATION_CALL__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		if (baseClass == Archivable.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.ARCHIVABLE__ARCHIVED: return ApogyCoreInvocatorPackage.OPERATION_CALL__ARCHIVED;
 				default: return -1;
 			}
 		}
@@ -512,6 +577,8 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (description: ");
 		result.append(description);
+		result.append(", archived: ");
+		result.append(archived);
 		result.append(')');
 		return result.toString();
 	}

@@ -394,6 +394,7 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				T result = caseOperationCall(operationCall);
 				if (result == null) result = caseVariableFeatureReference(operationCall);
 				if (result == null) result = caseDescribed(operationCall);
+				if (result == null) result = caseArchivable(operationCall);
 				if (result == null) result = caseNamed(operationCall);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

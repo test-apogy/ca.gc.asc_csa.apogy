@@ -13,18 +13,30 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.Arrays;
-
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.emf.common.notify.AdapterFactory;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.conversion.Converter;
+import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.observable.value.WritableValue;
+import org.eclipse.core.databinding.property.Properties;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.databinding.FeaturePath;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.edit.command.AddCommand;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
+import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
+import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -33,27 +45,24 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.TableColumn;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.emf.Archivable;
-import ca.gc.asc_csa.apogy.common.emf.Named;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewOperationCallWizard;
 
 public class OperationCallsListComposite extends ScrolledComposite {
 	private DataBindingContext m_currentDataBindings;
 
-	private final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
-			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+	private WritableValue<OperationCallsList> operationCallsListBinder;
 
-	private OperationCallsList operationCallsList;
-
-	private ISelectionChangedListener treeViewerSelectionChangedListener;
-	
-	EObjectComposite eObjectComposite;
+	private TableViewer tableViewer;
+	private Button btnDelete;
+	private Button btnNew;
 
 	public OperationCallsListComposite(Composite parent, int style) {
 		super(parent, style);
@@ -61,68 +70,94 @@ public class OperationCallsListComposite extends ScrolledComposite {
 		setExpandHorizontal(true);
 		setExpandVertical(true);
 
-		Composite compositeProgram = new Composite(this, SWT.NONE);
-		compositeProgram.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		compositeProgram.setLayout(new GridLayout(2, false));
+		Composite composite = new Composite(this, SWT.NONE);
+		composite.setLayout(new GridLayout(2, false));
 
-		eObjectComposite = new EObjectComposite(compositeProgram, SWT.None){
+		tableViewer = new TableViewer(composite, SWT.BORDER | SWT.FULL_SELECTION);
+		Table table = tableViewer.getTable();
+		table.setHeaderVisible(true);
+		table.setLinesVisible(true);
+		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
+		tableViewer.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
-			protected void newSelection(ISelection selection) {
-				OperationCallsListComposite.this.newSelection(selection);
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection(event.getSelection());
 			}
-			
-			@Override
-			protected AdapterFactoryContentProvider getContentProvider() {
-				// TODO Create custom content provider
-				return super.getContentProvider();
-			}
-			
-			@Override
-			protected AdapterFactoryLabelProvider getLabelProvider() {
-				// TODO Create custom label provider
-				return super.getLabelProvider();
-			}
-		};
-		eObjectComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
+		});
 
-		Button btnNew = new Button(compositeProgram, SWT.NONE);
-		btnNew.setText("New");
+		TableColumn tblclmnName = new TableColumn(table, SWT.NONE);
+		tblclmnName.setWidth(100);
+		tblclmnName.setText("Name");
+
+		TableColumn tblclmnFeature = new TableColumn(table, SWT.NONE);
+		tblclmnFeature.setWidth(100);
+		tblclmnFeature.setText("Feature");
+
+		TableColumn tblclmnCommand = new TableColumn(table, SWT.NONE);
+		tblclmnCommand.setWidth(100);
+		tblclmnCommand.setText("Command");
+
+		btnNew = new Button(composite, SWT.NONE);
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+		btnNew.setText("New");
+		btnNew.setEnabled(false);
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-//				TODO New button 
-//				/**
-//				 * Creates and opens the wizard to create a valid context
-//				 */
-//				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
-//				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
-//				newProgramsGroupWizard.getCreatedProgramsGroup().addChangeListener(getNewValueChangeListener());
-//				dialog.open();
+
+				NewOperationCallWizard newOperationCallWizard = new NewOperationCallWizard(operationCallsListBinder.getValue()) {
+					@Override
+					public boolean performFinish() {
+						// FIXME Move to core + UI facade
+						EditingDomain editingDomain = AdapterFactoryEditingDomain
+								.getEditingDomainFor(operationCallsListBinder.getValue());
+
+						/** Use the command stack. */
+						AddCommand command = new AddCommand(editingDomain, operationCallsListBinder.getValue(),
+								ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+								getOperationCall());
+						editingDomain.getCommandStack().execute(command);
+
+						OperationCallsListComposite.this.tableViewer.setSelection(new StructuredSelection(getOperationCall()));
+						return true;
+					}
+				};
+				WizardDialog dialog = new WizardDialog(getShell(), newOperationCallWizard);
+				dialog.open();
 			}
 		});
-		
-		Button btnDelete = new Button(compositeProgram, SWT.NONE);
+
+		btnDelete = new Button(composite, SWT.NONE);
+		btnDelete.setLayoutData(new GridData(SWT.CENTER, SWT.TOP, false, false, 1, 1));
 		btnDelete.setText("Delete");
-		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		btnDelete.setEnabled(false);
 		btnDelete.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-//				TODO Delete button
-//				/**
-//				 * Creates and opens the wizard to create a valid context
-//				 */
-//				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
-//				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
-//				newProgramsGroupWizard.getCreatedProgramsGroup().addChangeListener(getNewValueChangeListener());
-//				dialog.open();
+				// FIXME Move to core + UI facade
+				EditingDomain editingDomain = AdapterFactoryEditingDomain
+						.getEditingDomainFor(getSelectedOperationCall());
+
+				SetCommand command = new SetCommand(editingDomain, getSelectedOperationCall(),
+						ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED, true);
+				editingDomain.getCommandStack().execute(command);
 			}
 		});
 
-		setContent(compositeProgram);
-		setMinSize(compositeProgram.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		setContent(composite);
+		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+
+		m_currentDataBindings = initDataBindingsCustom();
 	}
 
+	/**
+	 * Returns the selected {@link OperationCall}.
+	 * 
+	 * @return Reference to the selected {@link OperationCall}.
+	 */
+	public OperationCall getSelectedOperationCall() {
+		return (OperationCall) tableViewer.getStructuredSelection().getFirstElement();
+	}
 
 	/**
 	 * This method is called when a new selection is made in the composite.
@@ -133,133 +168,94 @@ public class OperationCallsListComposite extends ScrolledComposite {
 	protected void newSelection(ISelection selection) {
 	}
 
-	/**
-	 * Returns the selected {@link OperationCall}.
-	 * 
-	 * @return Reference to the selected {@link OperationCall}.
-	 */
-	public OperationCall getSelectedOperationCall(){
-		return (OperationCall)eObjectComposite.getSelectedEObject();
-	}
-	
-	public void setOperationCallsList(OperationCallsList operationCallsList){
-		eObjectComposite.setEObject(operationCallsList);
+	public void setOperationCallsList(OperationCallsList operationCallsList) {
+		operationCallsListBinder.setValue(operationCallsList);
+
+		btnNew.setEnabled(true);
+		for (TableColumn column : tableViewer.getTable().getColumns()) {
+			column.pack();
+		}
+
 	}
 
-	
-	private class ProgramContentProvider extends AdapterFactoryContentProvider {
+	@SuppressWarnings("unchecked")
+	protected DataBindingContext initDataBindingsCustom() {
 
-		public ProgramContentProvider(AdapterFactory adapterFactory) {
-			super(adapterFactory);
-		}
-		
-		@Override
-		public Object[] getElements(Object object) {
-			return super.getElements(object);
-		}
+		DataBindingContext bindingContext = new DataBindingContext();
 
-		@Override
-		public void notifyChanged(Notification notification) {
-			super.notifyChanged(notification);
-			eObjectComposite.refresh();
-		}
+		operationCallsListBinder = new WritableValue<>();
 
-		@Override
-		public boolean equals(Object obj) {
-			if(getData() instanceof Named && obj instanceof Named){
-				return ((Named) getData()).getName() == ((Named) obj).getName();
-			}
-			return super.equals(obj);
-		}
-		
-		@Override
-		public Object[] getChildren(Object object) {
-			if (object instanceof ProgramsList || object instanceof ProgramsGroup) {
+		/*
+		 * Binding for the table
+		 */
+		IObservableList<?> operationCallsListObserveList = EMFProperties
+				.list(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS)
+				.observeDetail(operationCallsListBinder);
 
-				if (object instanceof Archivable) {
-					if (((Archivable) object).isArchived()) {
-						return null;
+		ObservableListContentProvider contentProvider = new ObservableListContentProvider();
+		tableViewer.setContentProvider(contentProvider);
+		tableViewer.setLabelProvider(new ObservableMapLabelProvider(Properties.observeEach(
+				contentProvider.getKnownElements(), EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME),
+				EMFProperties.value(
+						FeaturePath.fromList(ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE,
+								ApogyCommonEMFPackage.Literals.NAMED__NAME)),
+				EMFProperties.value(FeaturePath.fromList(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+						EcorePackage.Literals.ENAMED_ELEMENT__NAME)))) {
+			private final static int NAME_COLUMN_ID = 0;
+			private final static int FEATURE_COLUMN_ID = 1;
+			private final static int COMMAND_COLUMN_ID = 2;
+
+			@Override
+			public String getColumnText(Object element, int columnIndex) {
+				String str = "<undefined>";
+
+				if (element instanceof OperationCall) {
+					OperationCall operationCall = (OperationCall) element;
+
+					switch (columnIndex) {
+					case NAME_COLUMN_ID:
+						str = operationCall.getName() == null ? "<unnamed>" : operationCall.getName();
+						break;
+					case FEATURE_COLUMN_ID:
+						str = ApogyCoreInvocatorFacade.INSTANCE.getOperationCallString(operationCall);
+						str = str.substring(0, str.indexOf("#"));
+						break;
+					case COMMAND_COLUMN_ID:
+						str = ApogyCoreInvocatorFacade.INSTANCE.getEOperationString(operationCall.getArgumentsList(), operationCall.getEOperation());
+						str = str.substring(1,str.length());
+						break;
 					}
 				}
-
-				EList<Object> children = new BasicEList<>();
-				children.addAll(Arrays.asList(super.getChildren(object)));
-				children = ApogyCommonEMFFacade.INSTANCE.filterArchived(children);
-				return children.toArray();
+				return str;
 			}
-			return null;
-		}
 
-		@Override
-		public boolean hasChildren(Object object) {
-			return getChildren(object) != null;
-		}
+		});
+		tableViewer.setInput(operationCallsListObserveList);
+
+		/*
+		 * Delete Button Enabled Binding.
+		 */
+		IObservableValue<?> observeSingleSelectionTableViewer = ViewerProperties.singleSelection().observe(tableViewer);
+
+		IObservableValue<?> observeEnabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
+
+		bindingContext.bindValue(observeEnabledBtnDeleteObserveWidget, observeSingleSelectionTableViewer, null,
+				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
+						.setConverter(new Converter(Object.class, Boolean.class) {
+							@Override
+							public Object convert(Object fromObject) {
+								return fromObject != null;
+							}
+						}));
+
+		return bindingContext;
 	}
-//
-//	private class ProgramsListsLabelProvider extends AdapterFactoryLabelProvider implements ITableLabelProvider {
-//		private final static int NAME_COLUMN_ID = 0;
-//
-//		public ProgramsListsLabelProvider(AdapterFactory adapterFactory) {
-//			super(adapterFactory);
-//		}
-//
-//		@Override
-//		public String getColumnText(Object object, int columnIndex) {
-//			String str = "<undefined>";
-//
-//			if (object instanceof Named) {
-//				Named named = (Named) object;
-//
-//				switch (columnIndex) {
-//				case NAME_COLUMN_ID:
-//					str = named.getName() == null ? "<unnamed>" : named.getName();
-//					break;
-//				}
-//			}
-//
-//			return str;
-//		}
-//
-//	}
-//
-//	public void setProgramsList(ProgramsList programsList) {
-//		this.programsList = programsList;
-//
-//		if (programsList != null) {
-//			if (m_currentDataBindings != null) {
-//				m_currentDataBindings.dispose();
-//			}
-//			m_currentDataBindings = initDataBindings();
-//		}
-//	}
-//
-//	protected DataBindingContext initDataBindings() {
-//		return initDataBindingsCustom();
-//	}
-//
-//	protected DataBindingContext initDataBindingsCustom() {
-//		DataBindingContext bindingContext = new DataBindingContext();
-//
-//		if (programsList != null) {
-//			if (!treeViewer.getTree().isDisposed()) {
-//				treeViewer.setInput(programsList);
-//			}
-//		}
-//		
-//		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-//		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
-//		treeViewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(treeViewer));		
-//		treeViewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(AdapterFactoryEditingDomain.getEditingDomainFor(programsList), treeViewer));
-//
-//		return bindingContext;
-//	}
-//
-//	@Override
-//	public void dispose() {
-//		if (m_currentDataBindings != null) {
-//			m_currentDataBindings.dispose();
-//		}
-//		super.dispose();
-//		treeViewer.removeSelectionChangedListener(getTreeViewerSelectionChangedListener());
-//	}
+
+	@Override
+	public void dispose() {
+		if (m_currentDataBindings != null) {
+			m_currentDataBindings.dispose();
+		}
+		super.dispose();
+	}
 }

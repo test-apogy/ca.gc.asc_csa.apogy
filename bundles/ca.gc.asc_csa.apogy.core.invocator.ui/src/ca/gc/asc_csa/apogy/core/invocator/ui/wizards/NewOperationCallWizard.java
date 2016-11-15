@@ -21,7 +21,6 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchWizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
@@ -31,6 +30,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
@@ -41,27 +41,25 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
 	private OperationCallEOperationsWizardPage operationCallEOperationsWizardPage;
 	private NamedDescribedWizardPage namedDescribedWizardPage;
+	
+	private OperationCallsList operationCallsList;
 	private OperationCall operationCall;
 	
 	/**
 	 * Constructor for NewApogySessionWizard.
-	 */
-	public NewOperationCallWizard() {
+	 */	
+	public NewOperationCallWizard(OperationCallsList operationCallsList){
 		super();
+		this.operationCallsList = operationCallsList;
+		initialize(operationCallsList.getProgramsGroup());
+	}
+	
+	private void initialize(ProgramsGroup programsGroup){
 		setWindowTitle("New Operation Call");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
 				Activator.ID, "icons/wizban/apogy_new_operation_call.png");
-		setDefaultPageImageDescriptor(image);		
-	}
-
-	/**
-	 * We will accept the selection in the workbench to see if we can initialize
-	 * from it.
-	 * 
-	 * @see IWorkbenchWizard#init(IWorkbench, IStructuredSelection)
-	 */
-	public void init(IWorkbench workbench, IStructuredSelection selection) {
+		setDefaultPageImageDescriptor(image);	;
 	}
 
 	/**
@@ -91,7 +89,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	 */
 	protected OperationCallsListWizardPage getOperationCallsListWizardPage(){
 		if (operationCallsListWizardPage == null){
-			operationCallsListWizardPage = new OperationCallsListWizardPage(getProgramsList());	
+			operationCallsListWizardPage = new OperationCallsListWizardPage(operationCallsList.getProgramsGroup(), operationCallsList);	
 		}		
 		return operationCallsListWizardPage;
 	}
@@ -132,8 +130,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	
 	@Override
 	public boolean performFinish() {
-			
-		OperationCallsList operationCallsList = getOperationCallsListWizardPage().getSelectedOperationCallsList();		
+		OperationCallsList operationCallsList = getOperationCallsListWizardPage().getOperationCallsList();		
 		EditingDomain editingDomain = AdapterFactoryEditingDomain
 				.getEditingDomainFor(operationCallsList);
 		
@@ -189,5 +186,9 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 			variablesList = session.getEnvironment() == null ? null : session.getEnvironment().getVariablesList();			
 		}
 		return variablesList;
+	}
+
+	@Override
+	public void init(IWorkbench workbench, IStructuredSelection selection) {
 	}
 }

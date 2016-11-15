@@ -129,6 +129,11 @@ public class NewProgramWizardPage extends WizardPage {
 				}
 				NewProgramWizardPage.this.programsGroup = (ProgramsGroup) ((StructuredSelection) event.getSelection()).getFirstElement();
 				NewProgramWizardPage.this.programsGroup.eAdapters().add(getAdapter());
+				if(newProgramComposite.getTreeViewerTypes().getSelection() != null){
+					NewProgramWizardPage.this.programSettings
+					.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(NewProgramWizardPage.this.programsGroup,
+							EcoreUtil.create(NewProgramWizardPage.this.programsType), ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
+				}
 				validate();
 			}
 		});

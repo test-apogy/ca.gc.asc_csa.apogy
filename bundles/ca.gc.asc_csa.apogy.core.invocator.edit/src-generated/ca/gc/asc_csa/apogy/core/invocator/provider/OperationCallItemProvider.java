@@ -82,6 +82,7 @@ public class OperationCallItemProvider extends
 			super.getPropertyDescriptors(object);
 
 			addDescriptionPropertyDescriptor(object);
+			addArchivedPropertyDescriptor(object);
 			addEOperationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -105,6 +106,28 @@ public class OperationCallItemProvider extends
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Archived feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArchivedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Archivable_archived_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Archivable_archived_feature", "_UI_Archivable_type"),
+				 ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -264,6 +287,7 @@ public class OperationCallItemProvider extends
 
 		switch (notification.getFeatureID(OperationCall.class)) {
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL__ARCHIVED:
 			case ApogyCoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

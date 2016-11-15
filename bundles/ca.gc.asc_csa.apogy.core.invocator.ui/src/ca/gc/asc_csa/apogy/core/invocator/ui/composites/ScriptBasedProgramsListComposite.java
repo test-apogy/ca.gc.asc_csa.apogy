@@ -13,23 +13,20 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.core.databinding.property.Properties;
 import org.eclipse.core.databinding.property.list.DelegatingListProperty;
 import org.eclipse.core.databinding.property.list.IListProperty;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
-import org.eclipse.jface.databinding.viewers.ObservableSetTreeContentProvider;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
-import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
-import org.eclipse.jface.window.ToolTip;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
@@ -45,6 +42,8 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewProgramsGroupWizard;
@@ -88,7 +87,26 @@ public class ScriptBasedProgramsListComposite extends ScrolledComposite {
 				/**
 				 * Creates and opens the wizard to create a valid ProgramsGroup
 				 */
-				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard();
+				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard(){
+					@Override
+					public boolean performFinish() {
+						
+						EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getProgramsList());
+
+						/** Check if there is a domain. */
+						if (editingDomain == null) {
+							/** No Domain */
+							getProgramsList().getProgramsGroups().add(getProgramsGroup());
+						} else {
+							/** Use the command stack. */
+							AddCommand command = new AddCommand(editingDomain, getProgramsList(),
+									ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS, getProgramsGroup());
+							editingDomain.getCommandStack().execute(command);
+						}
+						ScriptBasedProgramsListComposite.this.treeViewer.setSelection(new StructuredSelection(getProgramsGroup()));
+						return true;
+					}
+				};
 				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
 				dialog.open();
 			}
@@ -105,7 +123,26 @@ public class ScriptBasedProgramsListComposite extends ScrolledComposite {
 				 * Creates and opens the wizard to create a valid Program
 				 */
 				NewScriptBasedProgramWizard newScriptBasedProgramWizard = new NewScriptBasedProgramWizard(
-						getSelectedProgramsGroup());
+						getSelectedProgramsGroup()){
+					@Override
+					public boolean performFinish() {
+						ProgramFactory factory = ProgramFactoriesRegistry.INSTANCE.getFactory(getProgramType());
+						
+						Program program = factory.createProgram();
+						program.setName(getProgramSettings().getName());
+						program.setDescription(getProgramSettings().getDescription());
+
+						EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getCreationProgramsGroup());
+
+						/** Use the command stack. */
+						AddCommand command = new AddCommand(editingDomain, getCreationProgramsGroup(),
+								ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, program);
+						editingDomain.getCommandStack().execute(command);
+						
+						ScriptBasedProgramsListComposite.this.treeViewer.setSelection(new StructuredSelection(program));
+						return true;
+					}
+				};
 				WizardDialog dialog = new WizardDialog(getShell(), newScriptBasedProgramWizard);
 				dialog.open();
 			}

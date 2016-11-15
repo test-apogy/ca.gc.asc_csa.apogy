@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
@@ -592,4 +593,43 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @generated
 	 */
 	ProgramsGroup getControllersGroup();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gets a string to describe the {@link OperationCall}.
+	 * @return A string formatted like this:
+	 * variable-> subType1-> ...-> subTypeN.feature#eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
+	 * <!-- end-model-doc -->
+	 * @model unique="false" operationCallUnique="false"
+	 * @generated
+	 */
+	String getOperationCallString(OperationCall operationCall);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gets a string to describe the {@link EOperation} and it's {@link Argument} if applicable.
+	 * @returns A string formatted like this:
+	 * #eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
+	 * <!-- end-model-doc -->
+	 * @model unique="false" argumentListUnique="false" eOperationUnique="false"
+	 * @generated
+	 */
+	String getEOperationString(ArgumentsList argumentList, EOperation eOperation);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gets a string of the subTypes and features of an {@link OperationCall}.
+	 * @returns A string formatted like this:
+	 * -> subType1-> ...-> subTypeN.feature
+	 * <!-- end-model-doc -->
+	 * @model unique="false" typeMemberReferenceListElementUnique="false" listRootNodeUnique="false"
+	 * @generated
+	 */
+	String getSubTypeFeatureString(TypeMemberReferenceListElement typeMemberReferenceListElement, ListRootNode listRootNode);
 } // ApogyCoreInvocatorFacade
