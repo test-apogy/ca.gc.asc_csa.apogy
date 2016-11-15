@@ -503,13 +503,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES = 40;
 
 	/**
+	 * The operation id for the '<em>Add Variable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE = 41;
+
+	/**
 	 * The operation id for the '<em>Delete Variable</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 41;
+	int APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 42;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -518,7 +527,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 42;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 43;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -5410,6 +5419,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EOperation getApogyCoreInvocatorFacade__GetAllTypes();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#addVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Add Variable</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Variable</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#addVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__AddVariable__VariablesList_Variable();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#deleteVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Delete Variable</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8054,6 +8073,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES = eINSTANCE.getApogyCoreInvocatorFacade__GetAllTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Variable</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE = eINSTANCE.getApogyCoreInvocatorFacade__AddVariable__VariablesList_Variable();
 
 		/**
 		 * The meta object literal for the '<em><b>Delete Variable</b></em>' operation.

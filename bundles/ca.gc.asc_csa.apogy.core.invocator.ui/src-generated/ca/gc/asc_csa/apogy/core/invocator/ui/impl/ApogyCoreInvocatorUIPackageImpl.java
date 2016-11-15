@@ -310,8 +310,17 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorUIFacade__DeleteVariable__VariablesList_Variable() {
+	public EOperation getApogyCoreInvocatorUIFacade__AddVariable__VariablesList_Variable() {
 		return apogyCoreInvocatorUIFacadeEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorUIFacade__DeleteVariables__VariablesList_List() {
+		return apogyCoreInvocatorUIFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -365,7 +374,8 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___INIT_SESSION);
 		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION);
-		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE);
+		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE);
+		createEOperation(apogyCoreInvocatorUIFacadeEClass, APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLES__VARIABLESLIST_LIST);
 
 		scriptBasedProgramsListPartSelectionEClass = createEClass(SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION);
 		createEReference(scriptBasedProgramsListPartSelectionEClass, SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION__PROGRAM);
@@ -440,9 +450,13 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 
 		initEOperation(getApogyCoreInvocatorUIFacade__DisposeSession(), null, "disposeSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCoreInvocatorUIFacade__DeleteVariable__VariablesList_Variable(), null, "deleteVariable", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreInvocatorUIFacade__AddVariable__VariablesList_Variable(), null, "addVariable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreInvocatorPackage.getVariablesList(), "variablesList", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreInvocatorPackage.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorUIFacade__DeleteVariables__VariablesList_List(), null, "deleteVariables", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getVariablesList(), "variablesList", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getListVariables(), "variables", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(scriptBasedProgramsListPartSelectionEClass, ScriptBasedProgramsListPartSelection.class, "ScriptBasedProgramsListPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getScriptBasedProgramsListPartSelection_Program(), theApogyCoreInvocatorPackage.getProgram(), null, "program", null, 0, 1, ScriptBasedProgramsListPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

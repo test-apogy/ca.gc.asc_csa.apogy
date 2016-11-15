@@ -329,6 +329,13 @@ class ApogyCoreInvocatorFacade
 	 * Returns all available local and registered types. 
 	 */
 	op List<Type> getAllTypes()
+
+	/*
+	 * Adds the variable to the specified list.
+	 * @param variablesList List of variables.
+	 * @param variable Variable to add.
+	 */
+	op void addVariable(VariablesList variablesList, Variable variable)
 	
 	/*
 	 * Delete the variable from the specified list.

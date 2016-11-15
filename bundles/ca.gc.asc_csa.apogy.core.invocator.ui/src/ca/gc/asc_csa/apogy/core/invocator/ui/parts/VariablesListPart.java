@@ -49,10 +49,7 @@ public class VariablesListPart extends AbstractApogySessionBasedPart {
 	}
 	
 	@Override
-	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		
-		System.out.println("VariablesListPart.newInvocatorSession()");
-		
+	protected void newInvocatorSession(InvocatorSession invocatorSession) {		
 		((VariablesListComposite) getContentComposite())
 		.setVariablesList(invocatorSession.getEnvironment().getVariablesList());
 	}

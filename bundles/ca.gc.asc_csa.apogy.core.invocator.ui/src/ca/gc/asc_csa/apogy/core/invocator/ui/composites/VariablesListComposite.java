@@ -13,7 +13,6 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
@@ -22,14 +21,10 @@ import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
-import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.databinding.EMFProperties;
-import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -50,14 +45,11 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.log.EventSeverity;
-import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
-import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
-import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewVariableWizard;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableWizard;
 
 public class VariablesListComposite extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -65,9 +57,6 @@ public class VariablesListComposite extends Composite {
 	private Button btnDelete;
 	private WritableValue<VariablesList> variablesListBinder = new WritableValue<>();
 	
-	AdapterFactory adapterFactory = new ComposedAdapterFactory(
-			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
-
 	public VariablesListComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new GridLayout(2, false));
@@ -85,7 +74,6 @@ public class VariablesListComposite extends Composite {
 				newSelection(event.getSelection());
 			}
 		});
-		viewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 			
 		TableViewerColumn tableViewerColumnItem_Name = new TableViewerColumn(viewer, SWT.NONE);		
 		TableColumn trclmnName = tableViewerColumnItem_Name.getColumn();
@@ -105,7 +93,7 @@ public class VariablesListComposite extends Composite {
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				new WizardDialog(parent.getShell(), new NewVariableWizard(variablesListBinder.getValue())).open();
+				new WizardDialog(parent.getShell(), new VariableWizard(variablesListBinder.getValue())).open();
 			}
 		});
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
@@ -116,34 +104,7 @@ public class VariablesListComposite extends Composite {
 		btnDelete.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent event) {
-				String variablesToDeleteMessage = "";
-
-				Iterator<Variable> variables = getSelectedVariables().iterator();
-				while (variables.hasNext()) {
-					Variable variable = variables.next();
-					variablesToDeleteMessage = variablesToDeleteMessage + variable.getName();
-
-					if (variables.hasNext()) {
-						variablesToDeleteMessage = variablesToDeleteMessage + ", ";
-					}
-				}
-
-				MessageDialog dialog = new MessageDialog(null, "Delete the selected variables", null,
-						"Are you sure to delete these variables: " + variablesToDeleteMessage, MessageDialog.QUESTION,
-						new String[] { "Yes", "No" }, 1);
-				int result = dialog.open();
-				if (result == 0) {
-					for (Variable variable : getSelectedVariables()) {
-						try {
-							ApogyCoreInvocatorFacade.INSTANCE.deleteVariable(variablesListBinder.getValue(), variable);
-						} catch (Exception e) {
-							Logger.INSTANCE.log(Activator.ID,
-									"Unable to delete the variable <"
-											+ variable.getName() + ">",
-									EventSeverity.ERROR, e);
-						}
-					}
-				}
+				ApogyCoreInvocatorUIFacade.INSTANCE.deleteVariables(variablesListBinder.getValue(), getSelectedVariables());
 			}
 		});
 		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
@@ -185,14 +146,13 @@ public class VariablesListComposite extends Composite {
 		ViewerSupport.bind(viewer, variablesListObserveList,
 				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME), EMFProperties.value(ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION));
 		
-
 		IObservableValue<?> observeSingleSelectionViewer = ViewerProperties.singleSelection().observe(viewer);
 
 		/* 
 		 * Delete Button Enabled Binding. 
 		 */
-		IObservableValue<?> observeEnabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
-		bindingContext.bindValue(observeEnabledBtnDeleteObserveWidget, observeSingleSelectionViewer, null,
+		IObservableValue<?> enabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
+		bindingContext.bindValue(enabledBtnDeleteObserveWidget, observeSingleSelectionViewer, null,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
 						.setConverter(new Converter(Object.class, Boolean.class) {
 							@Override
@@ -215,9 +175,7 @@ public class VariablesListComposite extends Composite {
 
 	@Override
 	public void dispose() {		
-		if (m_bindingContext != null) {
-			m_bindingContext.dispose();
-		}
+		m_bindingContext.dispose();
 		super.dispose();
 	}
 }

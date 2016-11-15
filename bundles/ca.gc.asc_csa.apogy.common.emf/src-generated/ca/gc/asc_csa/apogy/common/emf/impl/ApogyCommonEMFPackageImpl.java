@@ -363,6 +363,13 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	private EDataType resourceSetEDataType = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType listNamedEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -811,6 +818,15 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 */
 	public EOperation getApogyCommonEMFFacade__GetSettableEReferences__EObject() {
 		return apogyCommonEMFFacadeEClass.getEOperations().get(41);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFFacade__ToString__List_String() {
+		return apogyCommonEMFFacadeEClass.getEOperations().get(42);
 	}
 
 	/**
@@ -1610,6 +1626,15 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getListNamed() {
+		return listNamedEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCommonEMFFactory getApogyCommonEMFFactory() {
 		return (ApogyCommonEMFFactory)getEFactoryInstance();
 	}
@@ -1676,6 +1701,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___FILTER_ARCHIVED__ELIST);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___TO_STRING__LIST_STRING);
 
 		eObjectReferenceEClass = createEClass(EOBJECT_REFERENCE);
 		createEReference(eObjectReferenceEClass, EOBJECT_REFERENCE__EOBJECT);
@@ -1793,6 +1819,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		uriEDataType = createEDataType(URI);
 		jobEDataType = createEDataType(JOB);
 		resourceSetEDataType = createEDataType(RESOURCE_SET);
+		listNamedEDataType = createEDataType(LIST_NAMED);
 	}
 
 	/**
@@ -2066,6 +2093,10 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
+		op = initEOperation(getApogyCommonEMFFacade__ToString__List_String(), theEcorePackage.getEString(), "toString", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getListNamed(), "nameds", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "separator", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(eObjectReferenceEClass, EObjectReference.class, "EObjectReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEObjectReference_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, EObjectReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2204,6 +2235,7 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		initEDataType(uriEDataType, org.eclipse.emf.common.util.URI.class, "URI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(jobEDataType, Job.class, "Job", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(resourceSetEDataType, ResourceSet.class, "ResourceSet", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(listNamedEDataType, List.class, "ListNamed", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.List<? extends ca.gc.asc_csa.apogy.common.emf.Named>");
 
 		// Create resource
 		createResource(eNS_URI);

@@ -45,6 +45,7 @@ import org.eclipse.emf.ecore.EStructuralFeature
 import org.eclipse.emf.ecore.ETypedElement
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.ResourceSet
+import java.util.List
 
 /* ------------------------------------------------------------------------------------------
  * 
@@ -64,6 +65,7 @@ type EList<EObject> wraps EList
 type URI wraps URI
 type Job wraps org.eclipse.core.runtime.jobs.Job
 type ResourceSet wraps ResourceSet
+type ListNamed wraps List<? extends Named>
 
 /* ------------------------------------------------------------------------------------------
  * 
@@ -248,6 +250,14 @@ class ApogyCommonEMFFacade
 	  * @return List of EReferences that are either null or a list
 	  */
 	 op EList<EReference> getSettableEReferences(EObject eObject)
+	 
+	 /*
+	  * Returns the string representation of the list of {@link Named}.
+	  * @param nameds List of named.
+	  * @param separator String used to separate the nameds.
+	  * @return Reference to the string representation.
+	  */
+	 op String toString(ListNamed nameds, String separator)
 }
 
 /**

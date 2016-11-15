@@ -1508,6 +1508,15 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public void addVariable(VariablesList variablesList, Variable variable) {
+		variablesList.getVariables().add(variable);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	public void deleteVariable(VariablesList variablesList, Variable variable) {
 		variablesList.getVariables().remove(variable);
 	}
@@ -1707,6 +1716,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return getControllersGroup();
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES:
 				return getAllTypes();
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE:
+				addVariable((VariablesList)arguments.get(0), (Variable)arguments.get(1));
+				return null;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE:
 				deleteVariable((VariablesList)arguments.get(0), (Variable)arguments.get(1));
 				return null;

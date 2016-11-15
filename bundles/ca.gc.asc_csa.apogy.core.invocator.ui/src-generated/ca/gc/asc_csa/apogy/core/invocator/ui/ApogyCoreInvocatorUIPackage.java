@@ -170,13 +170,22 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION = 3;
 
 	/**
-	 * The operation id for the '<em>Delete Variable</em>' operation.
+	 * The operation id for the '<em>Add Variable</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 4;
+	int APOGY_CORE_INVOCATOR_UI_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE = 4;
+
+	/**
+	 * The operation id for the '<em>Delete Variables</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLES__VARIABLESLIST_LIST = 5;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -185,7 +194,7 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 5;
+	int APOGY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Program</b></em>' reference.
@@ -539,14 +548,24 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	EOperation getApogyCoreInvocatorUIFacade__DisposeSession();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#deleteVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Delete Variable</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#addVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Add Variable</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Delete Variable</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#deleteVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable)
+	 * @return the meta object for the '<em>Add Variable</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#addVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable)
 	 * @generated
 	 */
-	EOperation getApogyCoreInvocatorUIFacade__DeleteVariable__VariablesList_Variable();
+	EOperation getApogyCoreInvocatorUIFacade__AddVariable__VariablesList_Variable();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#deleteVariables(ca.gc.asc_csa.apogy.core.invocator.VariablesList, java.util.List) <em>Delete Variables</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Delete Variables</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#deleteVariables(ca.gc.asc_csa.apogy.core.invocator.VariablesList, java.util.List)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorUIFacade__DeleteVariables__VariablesList_List();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.common.command.CompoundCommand <em>Compound Command</em>}'.
@@ -718,12 +737,19 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 */
 		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION = eINSTANCE.getApogyCoreInvocatorUIFacade__DisposeSession();
 		/**
-		 * The meta object literal for the '<em><b>Delete Variable</b></em>' operation.
+		 * The meta object literal for the '<em><b>Add Variable</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = eINSTANCE.getApogyCoreInvocatorUIFacade__DeleteVariable__VariablesList_Variable();
+		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE = eINSTANCE.getApogyCoreInvocatorUIFacade__AddVariable__VariablesList_Variable();
+		/**
+		 * The meta object literal for the '<em><b>Delete Variables</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLES__VARIABLESLIST_LIST = eINSTANCE.getApogyCoreInvocatorUIFacade__DeleteVariables__VariablesList_List();
 		/**
 		 * The meta object literal for the '<em>Compound Command</em>' data type.
 		 * <!-- begin-user-doc -->

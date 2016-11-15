@@ -1078,8 +1078,17 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable() {
+	public EOperation getApogyCoreInvocatorFacade__AddVariable__VariablesList_Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(41);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(42);
 	}
 
 	/**
@@ -3072,6 +3081,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
@@ -3600,6 +3610,10 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		g2 = createEGenericType(this.getType());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__AddVariable__VariablesList_Variable(), null, "addVariable", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVariablesList(), "variablesList", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable(), null, "deleteVariable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariablesList(), "variablesList", 0, 1, !IS_UNIQUE, IS_ORDERED);

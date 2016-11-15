@@ -489,4 +489,18 @@ public interface ApogyCommonEMFFacade extends EObject
 	 */
 	EList<EReference> getSettableEReferences(EObject eObject);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns the string representation of the list of {@link Named}.
+	 * @param nameds List of named.
+	 * @param separator String used to separate the nameds.
+	 * @return Reference to the string representation.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" namedsDataType="ca.gc.asc_csa.apogy.common.emf.ListNamed" namedsUnique="false" separatorUnique="false"
+	 * @generated
+	 */
+	String toString(List<? extends Named> nameds, String separator);
+
 } // ApogyCommonEMFFacade

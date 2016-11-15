@@ -78,12 +78,20 @@ class ApogyCoreInvocatorUIFacade{
 	op void disposeSession()	
 	
 	/*
-	 * Delete the variable from the specified list using a transaction.
+	 * Adds the variable to the specified list using a transaction.
 	 * @param variablesList List of variables.
-	 * @param variable Variable to remove.
+	 * @param variable Variable to add.
+	 * @see ApogyCoreInvocatorFacade#addVariable(VariablesList variablesList, Variable variable)
+	 */
+	op void addVariable(VariablesList variablesList, Variable variable)
+		
+	/*
+	 * Delete the variables from the specified list using a transaction.
+	 * @param variablesList List of variables.
+	 * @param variables Variables to remove.
 	 * @see ApogyCoreInvocatorFacade#deleteVariable(VariablesList variablesList, Variable variable)
 	 */
-	op void deleteVariable(VariablesList variablesList, Variable variable)
+	op void deleteVariables(VariablesList variablesList, ListVariables variables)
 }
 
 /* -------------------------------------------------------------------------

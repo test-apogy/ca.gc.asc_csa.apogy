@@ -610,6 +610,19 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Adds the variable to the specified list.
+	 * @param variablesList List of variables.
+	 * @param variable Variable to add.
+	 * <!-- end-model-doc -->
+	 * @model variablesListUnique="false" variableUnique="false"
+	 * @generated
+	 */
+	void addVariable(VariablesList variablesList, Variable variable);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * Delete the variable from the specified list.
 	 * @param variablesList List of variables.
 	 * @param variable Variable to remove.

@@ -484,13 +484,22 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	int APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT = 41;
 
 	/**
+	 * The operation id for the '<em>To String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_FACADE___TO_STRING__LIST_STRING = 42;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 42;
+	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 43;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -2262,6 +2271,17 @@ public interface ApogyCommonEMFPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '<em>List Named</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.List
+	 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getListNamed()
+	 * @generated
+	 */
+	int LIST_NAMED = 41;
+
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2690,6 +2710,16 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCommonEMFFacade__GetSettableEReferences__EObject();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#toString(java.util.List, java.lang.String) <em>To String</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>To String</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#toString(java.util.List, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFFacade__ToString__List_String();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference <em>EObject Reference</em>}'.
@@ -3622,6 +3652,17 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	EDataType getResourceSet();
 
 	/**
+	 * Returns the meta object for data type '{@link java.util.List <em>List Named</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>List Named</em>'.
+	 * @see java.util.List
+	 * @model instanceClass="java.util.List<? extends ca.gc.asc_csa.apogy.common.emf.Named>"
+	 * @generated
+	 */
+	EDataType getListNamed();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3989,6 +4030,14 @@ public interface ApogyCommonEMFPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT = eINSTANCE.getApogyCommonEMFFacade__GetSettableEReferences__EObject();
+
+		/**
+		 * The meta object literal for the '<em><b>To String</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_FACADE___TO_STRING__LIST_STRING = eINSTANCE.getApogyCommonEMFFacade__ToString__List_String();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -4773,6 +4822,16 @@ public interface ApogyCommonEMFPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType RESOURCE_SET = eINSTANCE.getResourceSet();
+
+		/**
+		 * The meta object literal for the '<em>List Named</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.List
+		 * @see ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFPackageImpl#getListNamed()
+		 * @generated
+		 */
+		EDataType LIST_NAMED = eINSTANCE.getListNamed();
 
 	}
 

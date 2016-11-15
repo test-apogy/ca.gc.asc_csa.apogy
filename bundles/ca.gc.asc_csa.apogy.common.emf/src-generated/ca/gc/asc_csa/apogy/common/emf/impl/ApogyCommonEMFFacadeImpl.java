@@ -206,6 +206,8 @@ ApogyCommonEMFFacade {
 				return getChildEClasses((EClass)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT:
 				return getSettableEReferences((EObject)arguments.get(0));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___TO_STRING__LIST_STRING:
+				return toString((List<? extends Named>)arguments.get(0), (String)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1361,6 +1363,26 @@ ApogyCommonEMFFacade {
 		}
 		
 		return structuralFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String toString(List<? extends Named> nameds, String separator) {
+		String message = "";
+
+		Iterator<? extends Named> items = nameds.iterator();
+		while (items.hasNext()) {
+			Named named = items.next();
+			message = message + named.getName();
+
+			if (items.hasNext()) {
+				message = message + separator;
+			}
+		}
+		return message;
 	}
 
 	/**

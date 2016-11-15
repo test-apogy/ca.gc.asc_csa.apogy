@@ -161,6 +161,8 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 				return createJobFromString(eDataType, initialValue);
 			case ApogyCommonEMFPackage.RESOURCE_SET:
 				return createResourceSetFromString(eDataType, initialValue);
+			case ApogyCommonEMFPackage.LIST_NAMED:
+				return createListNamedFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -205,6 +207,8 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 				return convertJobToString(eDataType, instanceValue);
 			case ApogyCommonEMFPackage.RESOURCE_SET:
 				return convertResourceSetToString(eDataType, instanceValue);
+			case ApogyCommonEMFPackage.LIST_NAMED:
+				return convertListNamedToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -666,6 +670,25 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 	 */
 	public String convertResourceSetToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public List<? extends Named> createListNamedFromString(EDataType eDataType, String initialValue) {
+		return (List<? extends Named>)super.createFromString(initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertListNamedToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
 	}
 
 		/**

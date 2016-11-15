@@ -14,20 +14,17 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.wizard.Wizard;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 
-public class NewVariableWizard extends Wizard{
+public class VariableWizard extends Wizard{
 
 	private SetVariableTypeWizardPage setVariableTypeWizardPage;
 	
@@ -39,7 +36,7 @@ public class NewVariableWizard extends Wizard{
 	/**
 	 * Constructor for NewProgramsGroupWizard.
 	 */
-	public NewVariableWizard(VariablesList variablesList) {
+	public VariableWizard(VariablesList variablesList) {
 		super();
 		setWindowTitle("New Variable");
 		setNeedsProgressMonitor(true);
@@ -52,7 +49,7 @@ public class NewVariableWizard extends Wizard{
 	 */
 	public void addPages() {
 		addPage(getNamedDescribedWizardPage());
-		addPage(getNewVariableWizardPage());
+		addPage(getSetVariableTypeWizardPage());
 	}	
 
 	/**
@@ -74,7 +71,7 @@ public class NewVariableWizard extends Wizard{
 	 * 
 	 * @return Reference to the page.
 	 */
-	protected SetVariableTypeWizardPage getNewVariableWizardPage() {
+	protected SetVariableTypeWizardPage getSetVariableTypeWizardPage() {
 		if (setVariableTypeWizardPage == null) {
 			setVariableTypeWizardPage = new SetVariableTypeWizardPage(variable);
 		}
@@ -82,19 +79,8 @@ public class NewVariableWizard extends Wizard{
 	}
 
 	@Override
-	public boolean performFinish() {
-		
-		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(variablesList);
-
-		/** Check if there is an editing domain. */
-		if (editingDomain == null) {
-			variablesList.getVariables().add(variable);
-		}else{
-			/** Use the command stack. */
-			AddCommand command = new AddCommand(editingDomain, variablesList,
-					ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES, variable);
-			editingDomain.getCommandStack().execute(command);
-		}	
+	public boolean performFinish() {		
+		ApogyCoreInvocatorUIFacade.INSTANCE.addVariable(variablesList, variable);
 		return true;
 	}
 }

@@ -20,6 +20,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,13 +97,27 @@ public interface ApogyCoreInvocatorUIFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Delete the variable from the specified list using a transaction.
+	 * Adds the variable to the specified list using a transaction.
 	 * @param variablesList List of variables.
-	 * @param variable Variable to remove.
-	 * @see ApogyCoreInvocatorFacade#deleteVariable(VariablesList variablesList, Variable variable)
+	 * @param variable Variable to add.
+	 * @see ApogyCoreInvocatorFacade#addVariable(VariablesList variablesList, Variable variable)
 	 * <!-- end-model-doc -->
 	 * @model variablesListUnique="false" variableUnique="false"
 	 * @generated
 	 */
-	void deleteVariable(VariablesList variablesList, Variable variable);
+	void addVariable(VariablesList variablesList, Variable variable);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Delete the variables from the specified list using a transaction.
+	 * @param variablesList List of variables.
+	 * @param variables Variables to remove.
+	 * @see ApogyCoreInvocatorFacade#deleteVariable(VariablesList variablesList, Variable variable)
+	 * <!-- end-model-doc -->
+	 * @model variablesListUnique="false" variablesDataType="ca.gc.asc_csa.apogy.core.invocator.ui.ListVariables" variablesUnique="false"
+	 * @generated
+	 */
+	void deleteVariables(VariablesList variablesList, List<Variable> variables);
 } // ApogyCoreInvocatorUIFacade
