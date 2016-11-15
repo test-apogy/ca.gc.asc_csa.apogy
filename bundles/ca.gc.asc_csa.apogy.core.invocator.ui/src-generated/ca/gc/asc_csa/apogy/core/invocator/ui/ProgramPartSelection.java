@@ -14,49 +14,50 @@
  */
 package ca.gc.asc_csa.apogy.core.invocator.ui;
 
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Program Details Part Selection</b></em>'.
+ * A representation of the model object '<em><b>Program Part Selection</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection#getEObject <em>EObject</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getOperationCall <em>Operation Call</em>}</li>
  * </ul>
  *
- * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramDetailsPartSelection()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramPartSelection()
  * @model
  * @generated
  */
-public interface ProgramDetailsPartSelection extends EObject {
+public interface ProgramPartSelection extends EObject {
 	/**
-	 * Returns the value of the '<em><b>EObject</b></em>' reference.
+	 * Returns the value of the '<em><b>Operation Call</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>EObject</em>' reference isn't clear,
+	 * If the meaning of the '<em>Operation Call</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>EObject</em>' reference.
-	 * @see #setEObject(EObject)
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramDetailsPartSelection_EObject()
+	 * @return the value of the '<em>Operation Call</em>' reference.
+	 * @see #setOperationCall(OperationCall)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getProgramPartSelection_OperationCall()
 	 * @model
 	 * @generated
 	 */
-	EObject getEObject();
+	OperationCall getOperationCall();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection#getEObject <em>EObject</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection#getOperationCall <em>Operation Call</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>EObject</em>' reference.
-	 * @see #getEObject()
+	 * @param value the new value of the '<em>Operation Call</em>' reference.
+	 * @see #getOperationCall()
 	 * @generated
 	 */
-	void setEObject(EObject value);
+	void setOperationCall(OperationCall value);
 
-} // ProgramDetailsPartSelection
+} // ProgramPartSelection

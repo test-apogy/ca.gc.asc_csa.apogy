@@ -109,6 +109,7 @@ public class ApogyCoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = caseOperationCall(operationCallControllerBinding);
 				if (result == null) result = caseVariableFeatureReference(operationCallControllerBinding);
 				if (result == null) result = caseDescribed(operationCallControllerBinding);
+				if (result == null) result = caseArchivable(operationCallControllerBinding);
 				if (result == null) result = caseNamed(operationCallControllerBinding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

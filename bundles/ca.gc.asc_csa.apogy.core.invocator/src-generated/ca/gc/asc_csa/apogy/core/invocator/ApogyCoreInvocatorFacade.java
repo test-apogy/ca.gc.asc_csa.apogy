@@ -1,26 +1,29 @@
-package ca.gc.asc_csa.apogy.core.invocator;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- *     Pierre Allard (Pierre.Allard@canada.ca), 
- *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
- *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
- *     Canadian Space Agency (CSA) - Initial API and implementation
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *      Pierre Allard (Pierre.Allard@canada.ca), 
+ *      Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *      Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *      Olivier L. Larouche (Olivier.LLarouche@canada.ca),
+ *      Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import java.util.Date;
-import java.util.List;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
 import ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl;
+
+import java.util.Date;
+import java.util.List;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,8 +51,7 @@ import ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl;
  * @model
  * @generated
  */
-public interface ApogyCoreInvocatorFacade extends EObject
-{
+public interface ApogyCoreInvocatorFacade extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Init Variable Instances Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -129,7 +131,7 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Executes the specified {@link OperationCall} and returns the {@link OperationCallResult}.
 	 * This method invokes {@link ApogyCoreInvocatorFacade#exec(OperationCall operationCall, true).
@@ -139,11 +141,11 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model unique="false" operationCallUnique="false"
 	 * @generated
 	 */
-  OperationCallResult exec(OperationCall operationCall);
+	OperationCallResult exec(OperationCall operationCall);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Executes the specified {@link OperationCall} and returns the {@link OperationCallResult}.
 	 * @param operationCall Reference to the {@link OperationCall}.
@@ -154,11 +156,11 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model unique="false" operationCallUnique="false" saveResultUnique="false"
 	 * @generated
 	 */
-  OperationCallResult exec(OperationCall operationCall, boolean saveResult);
+	OperationCallResult exec(OperationCall operationCall, boolean saveResult);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Executes the list of {@link OperationCall} sequentially.
 	 * @param operationCallsList Reference to the list of {@link OperationCall}.
@@ -166,9 +168,9 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model operationCallsListUnique="false"
 	 * @generated
 	 */
-  void exec(OperationCallsList operationCallsList);
+	void exec(OperationCallsList operationCallsList);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -181,31 +183,31 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	Object getValue(OperationCallResult operationCallResult);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" valueUnique="false"
 	 * @generated
 	 */
-  AbstractResultValue createAbstractResultValue(Object value);
+	AbstractResultValue createAbstractResultValue(Object value);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" variableUnique="false"
 	 * @generated
 	 */
-  EObject getInstance(Variable variable);
+	EObject getInstance(Variable variable);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" variableUnique="false"
 	 * @generated
 	 */
-  EClass getInstanceClass(Variable variable);
+	EClass getInstanceClass(Variable variable);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -216,9 +218,9 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	TypeApiAdapter getTypeApiAdapter(VariableFeatureReference variableFeatureReference);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Returns the instance referred by the {@link VariableFeatureReference}
 	 * @param variableFeatureReference Reference to the variable feature.
@@ -227,11 +229,11 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model unique="false" variableFeatureReferenceUnique="false"
 	 * @generated
 	 */
-  EObject getInstance(VariableFeatureReference variableFeatureReference);
+	EObject getInstance(VariableFeatureReference variableFeatureReference);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Returns the instance referred by the variableFeatureReference.TypeMemberReferenceListElement.
 	 * @param variableFeatureReference Reference to the variable feature.
@@ -240,11 +242,11 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model unique="false" variableFeatureReferenceUnique="false"
 	 * @generated
 	 */
-  EObject getTypeMemberInstance(VariableFeatureReference variableFeatureReference);
+	EObject getTypeMemberInstance(VariableFeatureReference variableFeatureReference);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Returns the value referred by the variableFeatureReference.ListRootNode.
 	 * @param variableFeatureReference Reference to the variable feature.
@@ -253,9 +255,9 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model unique="false" variableFeatureReferenceUnique="false"
 	 * @generated
 	 */
-  Object getEMFFeatureValue(VariableFeatureReference variableFeatureReference);
+	Object getEMFFeatureValue(VariableFeatureReference variableFeatureReference);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -269,31 +271,31 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	EClass getInstanceClass(VariableFeatureReference variableFeatureReference);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" operationCallUnique="false"
 	 * @generated
 	 */
-  AbstractTypeImplementation getTypeImplementation(OperationCall operationCall);
+	AbstractTypeImplementation getTypeImplementation(OperationCall operationCall);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" variableUnique="false" elementTypeUnique="false"
 	 * @generated
 	 */
-  AbstractTypeImplementation getTypeImplementation(Variable variable, AbstractType elementType);
+	AbstractTypeImplementation getTypeImplementation(Variable variable, AbstractType elementType);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" variableUnique="false"
 	 * @generated
 	 */
-  AbstractTypeImplementation getTypeImplementation(Variable variable);
+	AbstractTypeImplementation getTypeImplementation(Variable variable);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -307,7 +309,7 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	List<Variable> getVariableByName(InvocatorSession session, String name);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -321,9 +323,9 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	TypeMemberReferenceListElement createTypeMemberReferences(TypeMember[] typeMembers);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * *
 	 * Create a {@link ListRootNode} based on the specified sequence of {@link EStructuralFeature}.
@@ -333,17 +335,17 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model unique="false" environmentUnique="false" fullyQualifiedNameUnique="false"
 	 * @generated
 	 */
-  AbstractTypeImplementation getTypeImplementation(Environment environment, String fullyQualifiedName);
+	AbstractTypeImplementation getTypeImplementation(Environment environment, String fullyQualifiedName);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" typeMemberReferenceTreeElementUnique="false"
 	 * @generated
 	 */
-  String getFullyQualifiedName(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement);
+	String getFullyQualifiedName(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model unique="false" abstractFeatureNodeUnique="false"
@@ -351,9 +353,9 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	String getFullyQualifiedName(AbstractFeatureNode abstractFeatureNode);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Creates a list of TypeMemberImplementation according to the definition of the specified variable type.
 	 * @param variableType Reference to the type.
@@ -362,20 +364,20 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation>" unique="false" many="false" variableTypeUnique="false"
 	 * @generated
 	 */
-  List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType);
+	List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Resets the variable instances.
 	 * <!-- end-model-doc -->
 	 * @model environmentUnique="false"
 	 * @generated
 	 */
-  void initVariableInstances(Environment environment);
+	void initVariableInstances(Environment environment);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
@@ -383,18 +385,18 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	void initVariableInstances();
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Clear the variable instances.
 	 * <!-- end-model-doc -->
 	 * @model environmentUnique="false"
 	 * @generated
 	 */
-  void disposeVariableInstances(Environment environment);
+	void disposeVariableInstances(Environment environment);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
@@ -402,9 +404,9 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	void disposeVariableInstances();
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Returns the direct owner of the {@link TypeMemberReferenceListElement}.  Null is returned if the reference
 	 * is a direct child of the {@link OperationCall}.
@@ -415,11 +417,11 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model unique="false" typeMemberReferenceListElementUnique="false"
 	 * @generated
 	 */
-  OperationCall getOperationCallContainer(TypeMemberReferenceListElement typeMemberReferenceListElement);
+	OperationCall getOperationCallContainer(TypeMemberReferenceListElement typeMemberReferenceListElement);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Apply the initialization data to the specified environment.
 	 * @param environment Environment to initialize.
@@ -427,11 +429,11 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model environmentUnique="false"
 	 * @generated
 	 */
-  void applyInitializationData(Environment environment);
+	void applyInitializationData(Environment environment);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Collects the initialization data for the specified environment.
 	 * @param environment Environment to collect data from.
@@ -439,11 +441,11 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model environmentUnique="false"
 	 * @generated
 	 */
-  void collectInitializationData(Environment environment);
+	void collectInitializationData(Environment environment);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Apply the initialization data to the specified Variable.
 	 * @param variable Variable to initialize.
@@ -451,11 +453,11 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model variableUnique="false"
 	 * @generated
 	 */
-  void applyInitializationData(Variable variable);
+	void applyInitializationData(Variable variable);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Collects the initialization data from the specified Variable.
 	 * @param variable Variable to collect data from.
@@ -463,9 +465,9 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @model variableUnique="false"
 	 * @generated
 	 */
-  void collectInitializationData(Variable variable);
+	void collectInitializationData(Variable variable);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -477,7 +479,7 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	void addVariableListener(IVariableListener listener);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -489,7 +491,7 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	void removeVariableListener(IVariableListener listener);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -502,7 +504,7 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	void notifyVariableListeners(Variable variable, VariableListenerEventType event);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -516,7 +518,7 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	InvocatorSession loadInvocatorSession(String uri) throws Exception;
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -530,7 +532,7 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	DataProductsList getDataProductsByName(InvocatorSession invocatorSession, String name);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -544,7 +546,7 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	Program getProgramByName(InvocatorSession invocatorSession, String name);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -558,7 +560,7 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 */
 	Context getContextByName(InvocatorSession invocatorSession, String name);
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -573,6 +575,9 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	List<Program> getAllScriptBasedPrograms(ProgramsList programsList);
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * Creates a new context and populates the {@link VariableImplementations}.
 	 * The context is not fully initialized (e.g. Name and description are not set).
 	 * @param invocatorSession the session for which the context is built.
@@ -631,4 +636,44 @@ public interface ApogyCoreInvocatorFacade extends EObject
 	 * @generated
 	 */
 	void deleteVariable(VariablesList variablesList, Variable variable);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gets a string to describe the {@link OperationCall}.
+	 * @return A string formatted like this:
+	 * variable-> subType1-> ...-> subTypeN.feature#eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
+	 * <!-- end-model-doc -->
+	 * @model unique="false" operationCallUnique="false"
+	 * @generated
+	 */
+	String getOperationCallString(OperationCall operationCall);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gets a string to describe the {@link EOperation} and it's {@link Argument} if applicable.
+	 * @returns A string formatted like this:
+	 * #eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
+	 * <!-- end-model-doc -->
+	 * @model unique="false" argumentListUnique="false" eOperationUnique="false"
+	 * @generated
+	 */
+	String getEOperationString(ArgumentsList argumentList, EOperation eOperation);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gets a string of the subTypes and features of an {@link OperationCall}.
+	 * @returns A string formatted like this:
+	 * -> subType1-> ...-> subTypeN.feature
+	 * <!-- end-model-doc -->
+	 * @model unique="false" typeMemberReferenceListElementUnique="false" listRootNodeUnique="false"
+	 * @generated
+	 */
+	String getSubTypeFeatureString(TypeMemberReferenceListElement typeMemberReferenceListElement, ListRootNode listRootNode);
+
 } // ApogyCoreInvocatorFacade

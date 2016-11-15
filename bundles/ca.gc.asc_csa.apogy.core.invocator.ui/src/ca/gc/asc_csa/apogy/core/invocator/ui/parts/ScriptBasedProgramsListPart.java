@@ -28,7 +28,7 @@ public class ScriptBasedProgramsListPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new ScriptBasedProgramsListComposite(parent, SWT.None) {
+		return new ScriptBasedProgramsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()){

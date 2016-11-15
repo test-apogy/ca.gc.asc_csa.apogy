@@ -27,6 +27,8 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -46,6 +48,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Activator;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
@@ -1524,6 +1527,77 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String getOperationCallString(OperationCall operationCall) {
+		String str = "";
+		str += operationCall.getVariable().getName();
+		str += getSubTypeFeatureString(operationCall.getTypeMemberReferenceListElement(), operationCall.getFeatureRoot());
+		str += getEOperationString(operationCall.getArgumentsList(), operationCall.getEOperation()); 
+		return str;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String getEOperationString(ArgumentsList argumentList, EOperation eOperation) {
+		String str = "#";
+		String operation_str = eOperation == null ? "NO_OPERATION"
+				: eOperation.getName();
+
+		String eParamaters_str = null;
+		if (argumentList != null
+				&& !argumentList.getArguments().isEmpty()) {
+			eParamaters_str = "(";
+			for (EParameter eParameter : eOperation.getEParameters()) {
+				eParamaters_str += eParameter.getEType().getName() + " ";
+				eParamaters_str += eParameter.getName() + ", ";
+			}
+			eParamaters_str = eParamaters_str.substring(0, eParamaters_str.length() - 2);
+			eParamaters_str += ")";
+		}
+
+		if (eParamaters_str != null) {
+			return str + operation_str + "." + eParamaters_str;
+		} else {
+			return str + operation_str;
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String getSubTypeFeatureString(TypeMemberReferenceListElement typeMemberReferenceListElement, ListRootNode listRootNode) {
+		String typeReference_str = "";
+		if(typeMemberReferenceListElement != null){
+			typeReference_str = "-> " + typeMemberReferenceListElement.getTypeMember().getName();
+			Boolean continueConcat = typeMemberReferenceListElement.getParent() instanceof TypeMemberReferenceListElement;
+			while(continueConcat){
+				typeMemberReferenceListElement = typeMemberReferenceListElement.getParent();
+				("-> ").concat(typeMemberReferenceListElement.getParent().getTypeMember().getName().concat(typeReference_str));
+				continueConcat = typeMemberReferenceListElement.getParent() instanceof TypeMemberReferenceListElement;
+			}
+		}
+		
+		String feature_str = "";
+		if (listRootNode != null) {
+			AbstractFeatureListNode leaf = ApogyCommonEMFFacade.INSTANCE
+					.getLeaf(listRootNode);
+			if (leaf != null) {
+				feature_str = "." + ApogyCommonEMFFacade.INSTANCE.getAncestriesString(leaf);
+			}
+		}
+
+		return typeReference_str + feature_str;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1722,6 +1796,12 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE:
 				deleteVariable((VariablesList)arguments.get(0), (Variable)arguments.get(1));
 				return null;
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL:
+				return getOperationCallString((OperationCall)arguments.get(0));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION:
+				return getEOperationString((ArgumentsList)arguments.get(0), (EOperation)arguments.get(1));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE:
+				return getSubTypeFeatureString((TypeMemberReferenceListElement)arguments.get(0), (ListRootNode)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

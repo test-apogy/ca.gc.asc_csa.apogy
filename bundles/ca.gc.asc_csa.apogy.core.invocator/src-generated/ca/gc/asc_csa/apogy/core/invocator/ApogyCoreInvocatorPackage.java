@@ -9,6 +9,7 @@
  *      Pierre Allard (Pierre.Allard@canada.ca), 
  *      Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *      Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *      Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *      Canadian Space Agency (CSA) - Initial API and implementation
  */
 package ca.gc.asc_csa.apogy.core.invocator;
@@ -521,13 +522,40 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 42;
 
 	/**
+	 * The operation id for the '<em>Get Operation Call String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL = 43;
+
+	/**
+	 * The operation id for the '<em>Get EOperation String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION = 44;
+
+	/**
+	 * The operation id for the '<em>Get Sub Type Feature String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = 45;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 43;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 46;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -3190,13 +3218,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int OPERATION_CALL__DESCRIPTION = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_CALL__ARCHIVED = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>EOperation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL__EOPERATION = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 1;
+	int OPERATION_CALL__EOPERATION = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Arguments List</b></em>' containment reference.
@@ -3205,7 +3242,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL__ARGUMENTS_LIST = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 2;
+	int OPERATION_CALL__ARGUMENTS_LIST = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Operation Call Container</b></em>' container reference.
@@ -3214,7 +3251,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL__OPERATION_CALL_CONTAINER = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 3;
+	int OPERATION_CALL__OPERATION_CALL_CONTAINER = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -3223,7 +3260,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL__INVOCATOR_SESSION = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 4;
+	int OPERATION_CALL__INVOCATOR_SESSION = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -3232,7 +3269,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL__ENVIRONMENT = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 5;
+	int OPERATION_CALL__ENVIRONMENT = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Operation Call</em>' class.
@@ -3241,7 +3278,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_FEATURE_COUNT = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 6;
+	int OPERATION_CALL_FEATURE_COUNT = VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Operation Call</em>' class.
@@ -4953,7 +4990,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 */
 	int IVARIABLE_LISTENER = 69;
 
-
 	/**
 	 * The meta object id for the '<em>Hash Map</em>' data type.
 	 * <!-- begin-user-doc -->
@@ -5437,6 +5473,36 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getOperationCallString(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Get Operation Call String</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Operation Call String</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getOperationCallString(ca.gc.asc_csa.apogy.core.invocator.OperationCall)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getEOperationString(ca.gc.asc_csa.apogy.core.invocator.ArgumentsList, org.eclipse.emf.ecore.EOperation) <em>Get EOperation String</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get EOperation String</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getEOperationString(ca.gc.asc_csa.apogy.core.invocator.ArgumentsList, org.eclipse.emf.ecore.EOperation)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getSubTypeFeatureString(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement, ca.gc.asc_csa.apogy.common.emf.ListRootNode) <em>Get Sub Type Feature String</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Sub Type Feature String</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getSubTypeFeatureString(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement, ca.gc.asc_csa.apogy.common.emf.ListRootNode)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
@@ -8089,6 +8155,30 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = eINSTANCE.getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Operation Call String</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL = eINSTANCE.getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall();
+
+		/**
+		 * The meta object literal for the '<em><b>Get EOperation String</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION = eINSTANCE.getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Sub Type Feature String</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = eINSTANCE.getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.

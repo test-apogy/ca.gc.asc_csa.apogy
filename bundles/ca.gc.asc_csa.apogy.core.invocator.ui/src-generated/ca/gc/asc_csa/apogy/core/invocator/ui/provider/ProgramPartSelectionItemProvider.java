@@ -35,12 +35,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ProgramDetailsPartSelectionItemProvider 
+public class ProgramPartSelectionItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -54,7 +54,7 @@ public class ProgramDetailsPartSelectionItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProgramDetailsPartSelectionItemProvider(AdapterFactory adapterFactory) {
+	public ProgramPartSelectionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -69,25 +69,25 @@ public class ProgramDetailsPartSelectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addEObjectPropertyDescriptor(object);
+			addOperationCallPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the EObject feature.
+	 * This adds a property descriptor for the Operation Call feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEObjectPropertyDescriptor(Object object) {
+	protected void addOperationCallPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ProgramDetailsPartSelection_eObject_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ProgramDetailsPartSelection_eObject_feature", "_UI_ProgramDetailsPartSelection_type"),
-				 ApogyCoreInvocatorUIPackage.Literals.PROGRAM_DETAILS_PART_SELECTION__EOBJECT,
+				 getString("_UI_ProgramPartSelection_operationCall_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ProgramPartSelection_operationCall_feature", "_UI_ProgramPartSelection_type"),
+				 ApogyCoreInvocatorUIPackage.Literals.PROGRAM_PART_SELECTION__OPERATION_CALL,
 				 true,
 				 false,
 				 true,
@@ -97,14 +97,14 @@ public class ProgramDetailsPartSelectionItemProvider
 	}
 
 	/**
-	 * This returns ProgramDetailsPartSelection.gif.
+	 * This returns ProgramPartSelection.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ProgramDetailsPartSelection"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ProgramPartSelection"));
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class ProgramDetailsPartSelectionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ProgramDetailsPartSelection_type");
+		return getString("_UI_ProgramPartSelection_type");
 	}
 	
 

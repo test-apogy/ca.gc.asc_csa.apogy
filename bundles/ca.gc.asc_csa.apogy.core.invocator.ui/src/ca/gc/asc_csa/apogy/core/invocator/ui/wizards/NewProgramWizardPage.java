@@ -124,7 +124,16 @@ public class NewProgramWizardPage extends WizardPage {
 
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
+				if (NewProgramWizardPage.this.programsGroup != null){
+					NewProgramWizardPage.this.programsGroup.eAdapters().remove(getAdapter());
+				}
 				NewProgramWizardPage.this.programsGroup = (ProgramsGroup) ((StructuredSelection) event.getSelection()).getFirstElement();
+				NewProgramWizardPage.this.programsGroup.eAdapters().add(getAdapter());
+				if(newProgramComposite.getTreeViewerTypes().getSelection() != null){
+					NewProgramWizardPage.this.programSettings
+					.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(NewProgramWizardPage.this.programsGroup,
+							EcoreUtil.create(NewProgramWizardPage.this.programsType), ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
+				}
 				validate();
 			}
 		});
@@ -132,8 +141,12 @@ public class NewProgramWizardPage extends WizardPage {
 
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
+				if (NewProgramWizardPage.this.programsType != null){
+					NewProgramWizardPage.this.programsType.eAdapters().remove(getAdapter());
+				}
 				NewProgramWizardPage.this.programsType = (EClass) ((StructuredSelection) event.getSelection())
 						.getFirstElement();
+				NewProgramWizardPage.this.programsType.eAdapters().add(getAdapter());
 				NewProgramWizardPage.this.programSettings
 						.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(NewProgramWizardPage.this.programsGroup,
 								EcoreUtil.create(NewProgramWizardPage.this.programsType), ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));

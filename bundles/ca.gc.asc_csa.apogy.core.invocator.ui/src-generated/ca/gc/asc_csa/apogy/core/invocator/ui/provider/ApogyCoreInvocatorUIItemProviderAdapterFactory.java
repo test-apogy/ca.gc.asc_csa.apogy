@@ -107,26 +107,26 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ProgramDetailsPartSelectionItemProvider programDetailsPartSelectionItemProvider;
+	protected ProgramPartSelectionItemProvider programPartSelectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramDetailsPartSelection}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createProgramDetailsPartSelectionAdapter() {
-		if (programDetailsPartSelectionItemProvider == null) {
-			programDetailsPartSelectionItemProvider = new ProgramDetailsPartSelectionItemProvider(this);
+	public Adapter createProgramPartSelectionAdapter() {
+		if (programPartSelectionItemProvider == null) {
+			programPartSelectionItemProvider = new ProgramPartSelectionItemProvider(this);
 		}
 
-		return programDetailsPartSelectionItemProvider;
+		return programPartSelectionItemProvider;
 	}
 
 	/**
@@ -322,7 +322,7 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 	public void dispose() {
 		if (apogyCoreInvocatorUIFacadeItemProvider != null) apogyCoreInvocatorUIFacadeItemProvider.dispose();
 		if (scriptBasedProgramsListPartSelectionItemProvider != null) scriptBasedProgramsListPartSelectionItemProvider.dispose();
-		if (programDetailsPartSelectionItemProvider != null) programDetailsPartSelectionItemProvider.dispose();
+		if (programPartSelectionItemProvider != null) programPartSelectionItemProvider.dispose();
 		if (apogyAdvancedEditorPartSelectionItemProvider != null) apogyAdvancedEditorPartSelectionItemProvider.dispose();
 		if (variablesListPartSelectionItemProvider != null) variablesListPartSelectionItemProvider.dispose();
 		if (newProgramSettingsItemProvider != null) newProgramSettingsItemProvider.dispose();

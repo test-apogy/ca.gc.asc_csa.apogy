@@ -64,7 +64,6 @@ public class ApogyCoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ApogyCoreInvocatorUIFacadeImpl() {
@@ -73,7 +72,6 @@ public class ApogyCoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -225,40 +223,40 @@ public class ApogyCoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT:
-			try {
-				copyInitializationData((Context) arguments.get(0), (Context) arguments.get(1));
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT:
+				try {
+					copyInitializationData((Context)arguments.get(0), (Context)arguments.get(1));
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND:
+				try {
+					copyInitializationData((AbstractTypeImplementation)arguments.get(0), (AbstractTypeImplementation)arguments.get(1), (CompoundCommand)arguments.get(2));
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___INIT_SESSION:
+				initSession();
 				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND:
-			try {
-				copyInitializationData((AbstractTypeImplementation) arguments.get(0),
-						(AbstractTypeImplementation) arguments.get(1), (CompoundCommand) arguments.get(2));
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION:
+				disposeSession();
 				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___INIT_SESSION:
-			initSession();
-			return null;
-		case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___DISPOSE_SESSION:
-			disposeSession();
-			return null;
-		case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE:
-			addVariable((VariablesList) arguments.get(0), (Variable) arguments.get(1));
-			return null;
-		case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLES__VARIABLESLIST_LIST:
-			deleteVariables((VariablesList) arguments.get(0), (List<Variable>) arguments.get(1));
-			return null;
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE:
+				addVariable((VariablesList)arguments.get(0), (Variable)arguments.get(1));
+				return null;
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLES__VARIABLESLIST_LIST:
+				deleteVariables((VariablesList)arguments.get(0), (List<Variable>)arguments.get(1));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

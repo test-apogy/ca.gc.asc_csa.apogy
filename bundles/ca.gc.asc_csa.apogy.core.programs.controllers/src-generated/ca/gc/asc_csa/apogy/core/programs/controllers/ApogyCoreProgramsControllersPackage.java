@@ -306,6 +306,15 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	int OPERATION_CALL_CONTROLLER_BINDING__DESCRIPTION = ApogyCoreInvocatorPackage.OPERATION_CALL__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_CALL_CONTROLLER_BINDING__ARCHIVED = ApogyCoreInvocatorPackage.OPERATION_CALL__ARCHIVED;
+
+	/**
 	 * The feature id for the '<em><b>EOperation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

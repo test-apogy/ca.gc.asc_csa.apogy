@@ -343,13 +343,33 @@ class ApogyCoreInvocatorFacade
 	 * @param variable Variable to remove.
 	 */
 	op void deleteVariable(VariablesList variablesList, Variable variable)
+	  
+	 /*
+	  * Gets a string to describe the {@link OperationCall}.
+	  * @return A string formatted like this: 
+	  * variable-> subType1-> ...-> subTypeN.feature#eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
+	  */
+     op String getOperationCallString(OperationCall operationCall)
+     
+     /*
+      * Gets a string to describe the {@link EOperation} and it's {@link Argument} if applicable.
+      * @returns A string formatted like this:
+      * #eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
+      */
+     op String getEOperationString(ArgumentsList argumentList, EOperation eOperation)
+     
+      /*
+      * Gets a string of the subTypes and features of an {@link OperationCall}.
+      * @returns A string formatted like this:
+      * -> subType1-> ...-> subTypeN.feature
+      */
+     op String getSubTypeFeatureString(TypeMemberReferenceListElement typeMemberReferenceListElement, ListRootNode listRootNode)
 } 
 
 enum VariableListenerEventType{
 	NEW,
 	CLEAR
 }
-
 
 //interface ProgramFilter{
 //	op boolean isValid(Program program)
@@ -921,7 +941,7 @@ class VariableFeatureReference extends Named
 /* -------------------------------------------------------------------------
  * Operation Call.
  * ------------------------------------------------------------------------- */ 
-class OperationCall extends VariableFeatureReference, Named, Described
+class OperationCall extends VariableFeatureReference, Named, Described, Archivable
 {
     @GenModel(notify="true")
 	refers EOperation[1] eOperation

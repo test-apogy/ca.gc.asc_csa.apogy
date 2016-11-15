@@ -33,6 +33,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
 public class NewProgramsGroupWizard extends Wizard implements INewWizard {
@@ -85,22 +86,11 @@ public class NewProgramsGroupWizard extends Wizard implements INewWizard {
 		return namedDescribedWizardPage;
 	}
 
+	/**
+	 * This method should be overwritten to create the {@link ProgramsGroup} with a transaction.
+	 */
 	@Override
 	public boolean performFinish() {
-
-		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getProgramsList());
-
-		/** Check if there is a domain. */
-		if (editingDomain == null) {
-			/** No Domain */
-			getProgramsList().getProgramsGroups().add(getProgramsGroup());
-		} else {
-			/** Use the command stack. */
-			AddCommand command = new AddCommand(editingDomain, getProgramsList(),
-					ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS, getProgramsGroup());
-			editingDomain.getCommandStack().execute(command);
-		}
-		this.createdGroup.setValue(getProgramsGroup());
 		return true;
 	}
 

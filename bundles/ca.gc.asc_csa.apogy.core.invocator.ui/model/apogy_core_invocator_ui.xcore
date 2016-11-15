@@ -42,6 +42,7 @@ import org.eclipse.emf.ecore.EObject
 import java.util.List
 import ca.gc.asc_csa.apogy.core.invocator.Variable
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
 type ListVariables wraps List<Variable> 
@@ -104,9 +105,9 @@ class ScriptBasedProgramsListPartSelection
 	refers Program program
 }
 
-class ProgramDetailsPartSelection
+class ProgramPartSelection
 {
-	refers EObject eObject
+	refers OperationCall operationCall
 }
 
 class ApogyAdvancedEditorPartSelection

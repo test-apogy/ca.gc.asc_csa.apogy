@@ -14,10 +14,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.core.databinding.observable.value.WritableValue;
-import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
@@ -28,11 +25,9 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.Program;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
+import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
 public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
@@ -40,7 +35,6 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 	private NewProgramWizardPage newProgramWizardPage;
 	private ProgramsGroup programsGroup;
 	private ProgramSettings programSettings;
-	private WritableValue<Program> program; 
 
 	/**
 	 * Constructor for NewProgramsGroupWizard.
@@ -53,7 +47,6 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 				"icons/wizban/apogy_new_script_based_program.png");
 		setDefaultPageImageDescriptor(image);
 		this.programsGroup = programsGroup;
-		program = new WritableValue<>();
 	}
 
 	/**
@@ -90,29 +83,11 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 		return newProgramWizardPage;
 	}
 
+	/**
+	 * This method should be overwritten to create the {@link ScriptBasedProgram} with a transaction.
+	 */
 	@Override
 	public boolean performFinish() {
-		
-		System.out.println("NewScriptBasedProgramWizard.getProgram() :" + newProgramWizardPage.getProgramType());
-		ProgramFactory factory = ProgramFactoriesRegistry.INSTANCE.getFactory(newProgramWizardPage.getProgramType());
-		System.out.println("NewScriptBasedProgramWizard.getProgram() :" + factory.createProgram());
-		Program program = factory.createProgram();
-		program.setName(programSettings.getName());
-		program.setDescription(programSettings.getDescription());
-
-
-		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getProgramsGroup());
-
-		/** Check if there is an editing domain. */
-		if (editingDomain == null) {
-			getProgramsGroup().getPrograms().add(program);
-		}else{
-			/** Use the command stack. */
-			AddCommand command = new AddCommand(editingDomain, getProgramsGroup(),
-					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, program);
-			editingDomain.getCommandStack().execute(command);
-		}	
-		this.program.setValue(program);
 		return true;
 	}
 
@@ -129,6 +104,10 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 		return programsGroup;
 	}
 	
+	protected ProgramsGroup getCreationProgramsGroup(){
+		return newProgramWizardPage.getProgramsGroup();
+	}
+	
 	protected ProgramSettings getProgramSettings(){
 		if (programSettings == null) {
 			programSettings = ApogyCoreInvocatorFactory.eINSTANCE.createProgramSettings();
@@ -136,8 +115,8 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 		return programSettings;
 	}
 	
-	public WritableValue<Program> getCreatedProgram(){
-		return program;
+	protected EClass getProgramType(){
+		return newProgramWizardPage.getProgramType();
 	}
 	
 }

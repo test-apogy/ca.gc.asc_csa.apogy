@@ -32,21 +32,18 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.window.ToolTip;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.DisposeEvent;
-import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 
-public class EObjectComposite extends Composite {
+public class EObjectComposite extends ScrolledComposite {
 	private DataBindingContext m_bindingContext;
 
 	private TreeViewer instanceViewer;
@@ -65,30 +62,42 @@ public class EObjectComposite extends Composite {
 	 * @param style
 	 */
 	public EObjectComposite(Composite parent, int style) {
-		super(parent, SWT.NONE);
+		super(parent, style);
 		setLayout(new GridLayout(1, true));
-	
-		instanceViewer = new TreeViewer(this, SWT.BORDER
-				| SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION | SWT.SINGLE);
+		setExpandHorizontal(true);
+		setExpandVertical(true);
 
-		ColumnViewerToolTipSupport.enableFor(instanceViewer,
-				ToolTip.NO_RECREATE);
+		Composite compositeEObject = new Composite(this, SWT.NONE);
+		GridLayout gl_compositeEObject = new GridLayout(2, false);
+		gl_compositeEObject.marginWidth = 0;
+		gl_compositeEObject.marginHeight = 0;
+		gl_compositeEObject.verticalSpacing = 0;
+		gl_compositeEObject.horizontalSpacing = 0;
+		compositeEObject.setLayout(gl_compositeEObject);
+		
+		instanceViewer = new TreeViewer(compositeEObject,
+				SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION | SWT.SINGLE);
+
+		ColumnViewerToolTipSupport.enableFor(instanceViewer, ToolTip.NO_RECREATE);
 		Tree treeInstance = instanceViewer.getTree();
 		treeInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		treeInstance.setLinesVisible(true);
 
-		
-		instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
-		instanceViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
-		
+		instanceViewer.setContentProvider(getContentProvider());
+		instanceViewer.setLabelProvider(getLabelProvider());
+
 		instanceViewer.addSelectionChangedListener(getSelectionChangedListener());
 		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(instanceViewer);
+		
+		this.setContent(compositeEObject);
+		this.setMinSize(compositeEObject.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
 
 	/**
 	 * Binds the {@link EObject} with the composite.
 	 * 
-	 * @param eObject Reference to the list of eObject.
+	 * @param eObject
+	 *            Reference to the list of eObject.
 	 */
 	public void setEObject(EObject eObject) {
 		setEObject(eObject, true);
@@ -118,8 +127,8 @@ public class EObjectComposite extends Composite {
 
 	protected DataBindingContext initDataBindings() {
 		return initDataBindingsCustom();
-	}	
-	
+	}
+
 	/**
 	 * Creates and returns the data bindings.
 	 * 
@@ -129,7 +138,7 @@ public class EObjectComposite extends Composite {
 		DataBindingContext bindingContext = new DataBindingContext();
 		EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
 		eObjectReference.setEObject(eObject);
-		instanceViewer.setInput(eObjectReference);						
+		instanceViewer.setInput(eObjectReference);
 		return bindingContext;
 	}
 
@@ -145,27 +154,30 @@ public class EObjectComposite extends Composite {
 
 	/**
 	 * Listener used to listen {{@link #instanceViewer} selection changes.
- 	 * @return Reference to the listener (Lazy Loaded).
+	 * 
+	 * @return Reference to the listener (Lazy Loaded).
 	 */
 	private ISelectionChangedListener getSelectionChangedListener() {
-		if (selectionChangedListener == null){
-			selectionChangedListener = new ISelectionChangedListener() {				
+		if (selectionChangedListener == null) {
+			selectionChangedListener = new ISelectionChangedListener() {
 				@Override
-				public void selectionChanged(SelectionChangedEvent event) {				
+				public void selectionChanged(SelectionChangedEvent event) {
 					newSelection(event.getSelection());
 				}
 			};
-		}		
+		}
 		return selectionChangedListener;
 	}
 
 	/**
 	 * This method is called when a new selection is made in the composite.
-	 * @param selection Reference to the selection.
+	 * 
+	 * @param selection
+	 *            Reference to the selection.
 	 */
 	protected void newSelection(ISelection selection) {
 	}
-	
+
 	/**
 	 * Returns the selected {@link EObject}.
 	 * 
@@ -175,7 +187,7 @@ public class EObjectComposite extends Composite {
 		IStructuredSelection selection = (IStructuredSelection) instanceViewer.getSelection();
 		return (EObject) selection.getFirstElement();
 	}
-	
+
 	/**
 	 * Sets the selected {@link EObject}.
 	 * 
@@ -185,32 +197,46 @@ public class EObjectComposite extends Composite {
 		instanceViewer.refresh();
 		instanceViewer.setSelection(new StructuredSelection(eObject));
 	}
-	
-	public void filterArchived(boolean filterArchived){
-		if(this.filterArchived != filterArchived){
+
+	public void filterArchived(boolean filterArchived) {
+		if (this.filterArchived != filterArchived) {
 			this.filterArchived = filterArchived;
-			if(filterArchived == true){
-				instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory){
+			if (filterArchived == true) {
+				instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory) {
 					@Override
 					public Object[] getElements(Object object) {
 						EList<Object> elements = new BasicEList<>();
 						elements.addAll(Arrays.asList(super.getElements(object)));
 						return ApogyCommonEMFFacade.INSTANCE.filterArchived(elements).toArray();
 					}
+
 					@Override
 					public Object[] getChildren(Object object) {
 						EList<Object> elements = new BasicEList<>();
 						elements.addAll(Arrays.asList(super.getChildren(object)));
 						return ApogyCommonEMFFacade.INSTANCE.filterArchived(elements).toArray();
 					}
+
 					@Override
 					public void notifyChanged(Notification notification) {
 						instanceViewer.refresh();
 					}
 				});
-			}else{
+			} else {
 				instanceViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 			}
 		}
-	}	
+	}
+
+	protected AdapterFactoryContentProvider getContentProvider() {
+		return new AdapterFactoryContentProvider(adapterFactory);
+	}
+
+	protected AdapterFactoryLabelProvider getLabelProvider() {
+		return new AdapterFactoryLabelProvider(adapterFactory);
+	}
+	
+	public void refresh(){
+		this.instanceViewer.refresh();
+	}
 }
