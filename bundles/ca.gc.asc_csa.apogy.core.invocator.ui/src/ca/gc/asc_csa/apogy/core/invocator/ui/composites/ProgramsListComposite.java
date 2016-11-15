@@ -53,15 +53,7 @@ public class ProgramsListComposite extends ScrolledComposite {
 		Composite tableComposite = new Composite(this, SWT.NONE);
 		tableComposite.setLayout(new FillLayout());
 
-		tableViewer = new TableViewer(tableComposite, SWT.BORDER | SWT.FULL_SELECTION){
-			@Override
-			protected Object[] getRawChildren(Object parent) {
-				if(isApplicable(parent)){
-					return super.getRawChildren(parent);
-				}
-				return super.getRawChildren(null);
-			}
-		};
+		tableViewer = new TableViewer(tableComposite, SWT.BORDER | SWT.FULL_SELECTION);
 		Table table = tableViewer.getTable();
 		table.setLinesVisible(true);
 		tableViewer.addSelectionChangedListener(new ISelectionChangedListener() {
@@ -102,6 +94,7 @@ public class ProgramsListComposite extends ScrolledComposite {
 	 * @return Return true means the {@link Program} is applicable.
 	 */
 	protected boolean isApplicable(Object object) {
+		// TODO filter by program type
 		return true;
 	}
 	
@@ -142,21 +135,12 @@ public class ProgramsListComposite extends ScrolledComposite {
 				.list(ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS)
 				.observeDetail(programsGroupBinder);
 		
-		ObservableListContentProvider contentProvider = new ObservableListContentProvider(){
-			@Override
-			public Object[] getElements(Object inputElement) {
-				// TODO Auto-generated method stub
-				return super.getElements(inputElement);
-			}
-		};
+		ObservableListContentProvider contentProvider = new ObservableListContentProvider();
 		tableViewer.setContentProvider(contentProvider);
 		tableViewer.setLabelProvider(new ObservableMapLabelProvider(Properties
 				.observeEach(contentProvider.getKnownElements(),
 						EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME))));
 		tableViewer.setInput(operationCallsListObserveList);
-		
-//		ViewerSupport.bind(tableViewer, operationCallsListObserveList, EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
-//		tableViewer.setInput(operationCallsListObserveList);
 		
 		return bindingContext;
 	}

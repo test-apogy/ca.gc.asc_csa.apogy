@@ -24,7 +24,7 @@ import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.command.RemoveCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
@@ -119,6 +119,7 @@ public class OperationCallsListComposite extends ScrolledComposite {
 						editingDomain.getCommandStack().execute(command);
 
 						OperationCallsListComposite.this.tableViewer.setSelection(new StructuredSelection(getOperationCall()));
+						packColumns();
 						return true;
 					}
 				};
@@ -136,10 +137,11 @@ public class OperationCallsListComposite extends ScrolledComposite {
 			public void widgetSelected(SelectionEvent e) {
 				// FIXME Move to core + UI facade
 				EditingDomain editingDomain = AdapterFactoryEditingDomain
-						.getEditingDomainFor(getSelectedOperationCall());
+						.getEditingDomainFor(operationCallsListBinder.getValue());
 
-				SetCommand command = new SetCommand(editingDomain, getSelectedOperationCall(),
-						ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED, true);
+				RemoveCommand command = new RemoveCommand(editingDomain, operationCallsListBinder.getValue(),
+						ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+						getSelectedOperationCall());
 				editingDomain.getCommandStack().execute(command);
 			}
 		});
@@ -167,15 +169,25 @@ public class OperationCallsListComposite extends ScrolledComposite {
 	 */
 	protected void newSelection(ISelection selection) {
 	}
+	
+	/**
+	 * This methods packs the columns to adjust their widths
+	 */
+	private void packColumns(){
+		for (TableColumn column : tableViewer.getTable().getColumns()) {
+			column.pack();
+		}
+	}
 
+	/**
+	 * Sets the {@link OperationCallsList} in the composite
+	 * @param operationCallsList
+	 */
 	public void setOperationCallsList(OperationCallsList operationCallsList) {
 		operationCallsListBinder.setValue(operationCallsList);
 
 		btnNew.setEnabled(true);
-		for (TableColumn column : tableViewer.getTable().getColumns()) {
-			column.pack();
-		}
-
+		packColumns();
 	}
 
 	@SuppressWarnings("unchecked")

@@ -16,16 +16,13 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
-import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ProgramsListComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ScriptBasedProgramsListComposite;
 
 public class OperationCallsListWizardPage extends WizardPage {
 
@@ -35,21 +32,37 @@ public class OperationCallsListWizardPage extends WizardPage {
 	
 	private ProgramsListComposite programsListComposite; 
 
-	
 	/**
 	 * Constructor for the WizardPage.
 	 * 
 	 * @param pageName
+	 * @Deprecated The constructor OperationCallsListWizardPage(ProgramsGroup,
+	 *             OperationCallsList) should be used because a ProgramsGroup
+	 *             must be specified.
 	 */
+	@Deprecated
 	public OperationCallsListWizardPage() {
 		super(WIZARD_PAGE_ID);
 		setTitle("Program Selection");
 		setDescription("Select the Program.");
 	}
-
-	public OperationCallsListWizardPage(ProgramsGroup programsGroup, OperationCallsList operationCallsList) {
-		this();
+	
+	/**
+	 * Constructor for the WizardPage.
+	 */
+	public OperationCallsListWizardPage(ProgramsGroup programsGroup) {
+		super(WIZARD_PAGE_ID);
+		setTitle("Program Selection");
+		setDescription("Select the Program.");
 		this.programsGroup = programsGroup;
+	}
+
+	/**
+	 * Constructor for the WizardPage that specifies a default
+	 * {@link OperationCallsList} to set as selection.
+	 */
+	public OperationCallsListWizardPage(ProgramsGroup programsGroup, OperationCallsList operationCallsList) {
+		this(programsGroup);
 		this.operationCallsList = operationCallsList;
 	}
 
@@ -65,8 +78,8 @@ public class OperationCallsListWizardPage extends WizardPage {
 			}
 			@Override
 			protected boolean isApplicable(Object object) {
+				// TODO Only keep the OperationCallsList
 				return true;
-				//return object instanceof OperationCallsList;
 			}
 		};
 		programsListComposite.setProgramsGroup(programsGroup);
