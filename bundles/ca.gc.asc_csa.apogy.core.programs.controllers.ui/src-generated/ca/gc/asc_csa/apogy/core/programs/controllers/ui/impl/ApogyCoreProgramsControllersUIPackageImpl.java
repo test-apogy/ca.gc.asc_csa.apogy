@@ -18,7 +18,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsController
 
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIPackage;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection;
 
 import org.eclipse.emf.ecore.EClass;
@@ -46,7 +46,7 @@ public class ApogyCoreProgramsControllersUIPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass controllerBindingsSelectionEClass = null;
+	private EClass controllerBindingsPartSelectionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -135,8 +135,8 @@ public class ApogyCoreProgramsControllersUIPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getControllerBindingsSelection() {
-		return controllerBindingsSelectionEClass;
+	public EClass getControllerBindingsPartSelection() {
+		return controllerBindingsPartSelectionEClass;
 	}
 
 	/**
@@ -144,8 +144,8 @@ public class ApogyCoreProgramsControllersUIPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getControllerBindingsSelection_OperationCallControllerBinding() {
-		return (EReference)controllerBindingsSelectionEClass.getEStructuralFeatures().get(0);
+	public EReference getControllerBindingsPartSelection_OperationCallControllerBinding() {
+		return (EReference)controllerBindingsPartSelectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -179,8 +179,8 @@ public class ApogyCoreProgramsControllersUIPackageImpl extends EPackageImpl impl
 		controllerConfigsPartSelectionEClass = createEClass(CONTROLLER_CONFIGS_PART_SELECTION);
 		createEReference(controllerConfigsPartSelectionEClass, CONTROLLER_CONFIGS_PART_SELECTION__CONTROLLERS_CONFIGURATION);
 
-		controllerBindingsSelectionEClass = createEClass(CONTROLLER_BINDINGS_SELECTION);
-		createEReference(controllerBindingsSelectionEClass, CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING);
+		controllerBindingsPartSelectionEClass = createEClass(CONTROLLER_BINDINGS_PART_SELECTION);
+		createEReference(controllerBindingsPartSelectionEClass, CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING);
 	}
 
 	/**
@@ -219,8 +219,8 @@ public class ApogyCoreProgramsControllersUIPackageImpl extends EPackageImpl impl
 		initEClass(controllerConfigsPartSelectionEClass, ControllerConfigsPartSelection.class, "ControllerConfigsPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getControllerConfigsPartSelection_ControllersConfiguration(), theApogyCoreProgramsControllersPackage.getControllersConfiguration(), null, "controllersConfiguration", null, 0, 1, ControllerConfigsPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(controllerBindingsSelectionEClass, ControllerBindingsSelection.class, "ControllerBindingsSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getControllerBindingsSelection_OperationCallControllerBinding(), theApogyCoreProgramsControllersPackage.getOperationCallControllerBinding(), null, "operationCallControllerBinding", null, 0, 1, ControllerBindingsSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(controllerBindingsPartSelectionEClass, ControllerBindingsPartSelection.class, "ControllerBindingsPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getControllerBindingsPartSelection_OperationCallControllerBinding(), theApogyCoreProgramsControllersPackage.getOperationCallControllerBinding(), null, "operationCallControllerBinding", null, 0, 1, ControllerBindingsPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

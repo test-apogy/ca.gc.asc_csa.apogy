@@ -70,17 +70,13 @@ public class ControllerConfigsComposite extends ScrolledComposite {
 		setExpandVertical(true);
 		
 		Composite composite = new Composite(this, SWT.NONE);
-		composite.setLayout(new GridLayout(2, false));
-
+		composite.setLayout(new GridLayout(2, false));	
+		
 		controllersConfigsComposite = new NamedDescribedListComposite(composite, SWT.None) {
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				ControllerConfigsComposite.this.newSelection(selection);
 			}
-			@Override
-			protected String getTitle() {
-				return "";
-			}	
 		};
 		controllersConfigsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 5));
 

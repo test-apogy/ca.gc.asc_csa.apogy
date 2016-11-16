@@ -69,7 +69,7 @@ public class ApogyCoreProgramsControllersUIFactoryImpl extends EFactoryImpl impl
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_CONFIGS_PART_SELECTION: return createControllerConfigsPartSelection();
-			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_SELECTION: return createControllerBindingsSelection();
+			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION: return createControllerBindingsPartSelection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -90,9 +90,9 @@ public class ApogyCoreProgramsControllersUIFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ControllerBindingsSelection createControllerBindingsSelection() {
-		ControllerBindingsSelectionImpl controllerBindingsSelection = new ControllerBindingsSelectionImpl();
-		return controllerBindingsSelection;
+	public ControllerBindingsPartSelection createControllerBindingsPartSelection() {
+		ControllerBindingsPartSelectionImpl controllerBindingsPartSelection = new ControllerBindingsPartSelectionImpl();
+		return controllerBindingsPartSelection;
 	}
 
 	/**

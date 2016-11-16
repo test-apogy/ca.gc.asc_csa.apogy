@@ -56,6 +56,5 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
 		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
-		
 	}
 }

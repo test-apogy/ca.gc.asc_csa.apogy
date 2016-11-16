@@ -43,13 +43,13 @@ public interface ApogyCoreProgramsControllersUIFactory extends EFactory {
 	ControllerConfigsPartSelection createControllerConfigsPartSelection();
 
 	/**
-	 * Returns a new object of class '<em>Controller Bindings Selection</em>'.
+	 * Returns a new object of class '<em>Controller Bindings Part Selection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Controller Bindings Selection</em>'.
+	 * @return a new object of class '<em>Controller Bindings Part Selection</em>'.
 	 * @generated
 	 */
-	ControllerBindingsSelection createControllerBindingsSelection();
+	ControllerBindingsPartSelection createControllerBindingsPartSelection();
 
 	/**
 	 * Returns the package supported by this factory.

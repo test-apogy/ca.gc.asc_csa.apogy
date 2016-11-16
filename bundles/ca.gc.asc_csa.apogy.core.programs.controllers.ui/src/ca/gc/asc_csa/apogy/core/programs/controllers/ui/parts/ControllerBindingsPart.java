@@ -28,7 +28,7 @@ import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIFactory;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingsComposite;
 
@@ -44,7 +44,7 @@ public class ControllerBindingsPart extends AbstractSelectionBasedPart{
 				}else {
 					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getContentComposite()).getOperationCallControllerBinding();
 					if (operationCallControllerBinding  != null){
-						ControllerBindingsSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsSelection();
+						ControllerBindingsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection();
 						selectionSent.setOperationCallControllerBinding(operationCallControllerBinding);
 						
 						selectionService.setSelection(selectionSent);				
@@ -61,7 +61,7 @@ public class ControllerBindingsPart extends AbstractSelectionBasedPart{
 
 	@Override
 	protected void setNullSelection() {
-		selectionService.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsSelection());
+		selectionService.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection());
 	}
 	
 	/**
@@ -80,10 +80,4 @@ public class ControllerBindingsPart extends AbstractSelectionBasedPart{
 			}
 		}
 	}
-	
-//	// TODO
-//	@Override
-//	protected Composite getNoContentComposite() {
-//		return new ControllerBindingsComposite(composite, SWT.None);
-//	}
 }

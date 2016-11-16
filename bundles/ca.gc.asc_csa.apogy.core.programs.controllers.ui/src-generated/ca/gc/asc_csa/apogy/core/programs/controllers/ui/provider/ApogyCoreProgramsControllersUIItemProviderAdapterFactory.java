@@ -107,26 +107,26 @@ public class ApogyCoreProgramsControllersUIItemProviderAdapterFactory extends Ap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ControllerBindingsSelectionItemProvider controllerBindingsSelectionItemProvider;
+	protected ControllerBindingsPartSelectionItemProvider controllerBindingsPartSelectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createControllerBindingsSelectionAdapter() {
-		if (controllerBindingsSelectionItemProvider == null) {
-			controllerBindingsSelectionItemProvider = new ControllerBindingsSelectionItemProvider(this);
+	public Adapter createControllerBindingsPartSelectionAdapter() {
+		if (controllerBindingsPartSelectionItemProvider == null) {
+			controllerBindingsPartSelectionItemProvider = new ControllerBindingsPartSelectionItemProvider(this);
 		}
 
-		return controllerBindingsSelectionItemProvider;
+		return controllerBindingsPartSelectionItemProvider;
 	}
 
 	/**
@@ -229,7 +229,7 @@ public class ApogyCoreProgramsControllersUIItemProviderAdapterFactory extends Ap
 	 */
 	public void dispose() {
 		if (controllerConfigsPartSelectionItemProvider != null) controllerConfigsPartSelectionItemProvider.dispose();
-		if (controllerBindingsSelectionItemProvider != null) controllerBindingsSelectionItemProvider.dispose();
+		if (controllerBindingsPartSelectionItemProvider != null) controllerBindingsPartSelectionItemProvider.dispose();
 	}
 
 }

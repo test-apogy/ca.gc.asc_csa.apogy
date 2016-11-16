@@ -20,21 +20,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Controller Bindings Selection</b></em>'.
+ * A representation of the model object '<em><b>Controller Bindings Part Selection</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}</li>
  * </ul>
  *
- * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIPackage#getControllerBindingsSelection()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIPackage#getControllerBindingsPartSelection()
  * @model
  * @generated
  */
-public interface ControllerBindingsSelection extends EObject {
+public interface ControllerBindingsPartSelection extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Operation Call Controller Binding</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -45,14 +45,14 @@ public interface ControllerBindingsSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation Call Controller Binding</em>' reference.
 	 * @see #setOperationCallControllerBinding(OperationCallControllerBinding)
-	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIPackage#getControllerBindingsSelection_OperationCallControllerBinding()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIPackage#getControllerBindingsPartSelection_OperationCallControllerBinding()
 	 * @model
 	 * @generated
 	 */
 	OperationCallControllerBinding getOperationCallControllerBinding();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operation Call Controller Binding</em>' reference.
@@ -61,4 +61,4 @@ public interface ControllerBindingsSelection extends EObject {
 	 */
 	void setOperationCallControllerBinding(OperationCallControllerBinding value);
 
-} // ControllerBindingsSelection
+} // ControllerBindingsPartSelection

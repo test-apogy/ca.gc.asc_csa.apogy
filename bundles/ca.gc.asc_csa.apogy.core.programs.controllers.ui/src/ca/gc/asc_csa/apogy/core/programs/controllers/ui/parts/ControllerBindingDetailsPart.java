@@ -25,7 +25,7 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingDetailsComposite;
 
 public class ControllerBindingDetailsPart extends AbstractSelectionBasedPart {
@@ -49,17 +49,11 @@ public class ControllerBindingDetailsPart extends AbstractSelectionBasedPart {
 	 */
 	@Inject
 	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllerBindingsSelection selection) {
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllerBindingsPartSelection selection) {
 		if (selection != null) {
 			if (selection.getOperationCallControllerBinding() == null) {
 				setEObject(selection.getOperationCallControllerBinding());
 			}
 		}
 	}
-	
-//	// TODO
-//	@Override
-//	protected Composite getNoContentComposite() {
-//		return new ControllerBindingDetailsComposite(composite, SWT.None);
-//	}
 }

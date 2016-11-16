@@ -42,16 +42,6 @@ public class NamedDescribedListComposite extends EObjectListComposite{
 		return new EObjectEClassNameLabelProvider();
 	}
 
-
-	/**
-	 * Called to get the text of the label above the {@link TreeViewer} This
-	 * method can be overwritten to change the title above the
-	 * {@link TreeViewer}
-	 */
-	protected String getTitle() {
-		return "";
-	}
-
 	/**
 	 * Label provider for the treeViewer
 	 */

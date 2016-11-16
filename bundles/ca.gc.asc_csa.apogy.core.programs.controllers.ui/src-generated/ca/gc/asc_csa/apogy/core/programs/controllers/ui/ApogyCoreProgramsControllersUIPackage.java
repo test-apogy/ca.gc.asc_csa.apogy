@@ -120,14 +120,14 @@ public interface ApogyCoreProgramsControllersUIPackage extends EPackage {
 	int CONTROLLER_CONFIGS_PART_SELECTION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsSelectionImpl <em>Controller Bindings Selection</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsPartSelectionImpl <em>Controller Bindings Part Selection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsSelectionImpl
-	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ApogyCoreProgramsControllersUIPackageImpl#getControllerBindingsSelection()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsPartSelectionImpl
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ApogyCoreProgramsControllersUIPackageImpl#getControllerBindingsPartSelection()
 	 * @generated
 	 */
-	int CONTROLLER_BINDINGS_SELECTION = 1;
+	int CONTROLLER_BINDINGS_PART_SELECTION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Operation Call Controller Binding</b></em>' reference.
@@ -136,26 +136,25 @@ public interface ApogyCoreProgramsControllersUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING = 0;
+	int CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING = 0;
 
 	/**
-	 * The number of structural features of the '<em>Controller Bindings Selection</em>' class.
+	 * The number of structural features of the '<em>Controller Bindings Part Selection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_BINDINGS_SELECTION_FEATURE_COUNT = 1;
+	int CONTROLLER_BINDINGS_PART_SELECTION_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Controller Bindings Selection</em>' class.
+	 * The number of operations of the '<em>Controller Bindings Part Selection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_BINDINGS_SELECTION_OPERATION_COUNT = 0;
-
+	int CONTROLLER_BINDINGS_PART_SELECTION_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection <em>Controller Configs Part Selection</em>}'.
@@ -179,25 +178,25 @@ public interface ApogyCoreProgramsControllersUIPackage extends EPackage {
 	EReference getControllerConfigsPartSelection_ControllersConfiguration();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection <em>Controller Bindings Selection</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection <em>Controller Bindings Part Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Controller Bindings Selection</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection
+	 * @return the meta object for class '<em>Controller Bindings Part Selection</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection
 	 * @generated
 	 */
-	EClass getControllerBindingsSelection();
+	EClass getControllerBindingsPartSelection();
 
 	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Operation Call Controller Binding</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection#getOperationCallControllerBinding()
-	 * @see #getControllerBindingsSelection()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection#getOperationCallControllerBinding()
+	 * @see #getControllerBindingsPartSelection()
 	 * @generated
 	 */
-	EReference getControllerBindingsSelection_OperationCallControllerBinding();
+	EReference getControllerBindingsPartSelection_OperationCallControllerBinding();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -241,14 +240,14 @@ public interface ApogyCoreProgramsControllersUIPackage extends EPackage {
 		EReference CONTROLLER_CONFIGS_PART_SELECTION__CONTROLLERS_CONFIGURATION = eINSTANCE.getControllerConfigsPartSelection_ControllersConfiguration();
 
 		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsSelectionImpl <em>Controller Bindings Selection</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsPartSelectionImpl <em>Controller Bindings Part Selection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsSelectionImpl
-		 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ApogyCoreProgramsControllersUIPackageImpl#getControllerBindingsSelection()
+		 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsPartSelectionImpl
+		 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ApogyCoreProgramsControllersUIPackageImpl#getControllerBindingsPartSelection()
 		 * @generated
 		 */
-		EClass CONTROLLER_BINDINGS_SELECTION = eINSTANCE.getControllerBindingsSelection();
+		EClass CONTROLLER_BINDINGS_PART_SELECTION = eINSTANCE.getControllerBindingsPartSelection();
 
 		/**
 		 * The meta object literal for the '<em><b>Operation Call Controller Binding</b></em>' reference feature.
@@ -256,7 +255,7 @@ public interface ApogyCoreProgramsControllersUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING = eINSTANCE.getControllerBindingsSelection_OperationCallControllerBinding();
+		EReference CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING = eINSTANCE.getControllerBindingsPartSelection_OperationCallControllerBinding();
 
 	}
 

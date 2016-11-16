@@ -42,7 +42,6 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 
@@ -64,15 +63,8 @@ public class EObjectListComposite extends Composite {
 		super(parent, style);
 		GridLayout gridLayout = new GridLayout(1, false);
 		gridLayout.marginHeight = 0;
+		gridLayout.marginWidth = 0;
 		setLayout(gridLayout);
-
-		Label lblEObjectTypeName = new Label(this, SWT.NONE);
-		lblEObjectTypeName.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
-		if (getTitle() != null) {
-			lblEObjectTypeName.setText(getTitle());
-		} else {
-			lblEObjectTypeName.setText("");
-		}
 
 		treeViewerEObjectsList = new TreeViewer(this, SWT.BORDER);
 		Tree treeEObjectsList = treeViewerEObjectsList.getTree();
@@ -195,15 +187,6 @@ public class EObjectListComposite extends Composite {
 			return false;
 		}
 
-	}
-
-	/**
-	 * Called to get the text of the label above the {@link TreeViewer} This
-	 * method can be overwritten to change the title above the
-	 * {@link TreeViewer}
-	 */
-	protected String getTitle() {
-		return "EObject";
 	}
 
 	/**

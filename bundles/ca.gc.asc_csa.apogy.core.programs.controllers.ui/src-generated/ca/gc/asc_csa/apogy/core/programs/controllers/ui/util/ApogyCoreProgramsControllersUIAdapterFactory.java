@@ -84,8 +84,8 @@ public class ApogyCoreProgramsControllersUIAdapterFactory extends AdapterFactory
 				return createControllerConfigsPartSelectionAdapter();
 			}
 			@Override
-			public Adapter caseControllerBindingsSelection(ControllerBindingsSelection object) {
-				return createControllerBindingsSelectionAdapter();
+			public Adapter caseControllerBindingsPartSelection(ControllerBindingsPartSelection object) {
+				return createControllerBindingsPartSelectionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -122,16 +122,16 @@ public class ApogyCoreProgramsControllersUIAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection <em>Controller Bindings Selection</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection <em>Controller Bindings Part Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection
 	 * @generated
 	 */
-	public Adapter createControllerBindingsSelectionAdapter() {
+	public Adapter createControllerBindingsPartSelectionAdapter() {
 		return null;
 	}
 

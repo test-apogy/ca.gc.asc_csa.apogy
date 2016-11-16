@@ -54,16 +54,15 @@ public class ControllerConfigsPart extends AbstractApogySessionBasedPart {
 		((ControllerConfigsComposite) getContentComposite())
 				.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
 	}
-	
-//	// TODO
-//	@Override
-//	protected Composite getNoContentComposite() {
-//		return new ControllerConfigsComposite(composite, SWT.H_SCROLL | SWT.V_SCROLL);
-//	}
 
 	@Override
 	protected void setNullSelection() {
 		selectionService
 				.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerConfigsPartSelection());
+	}
+	
+	@Override
+	protected Composite getNoContentComposite() {
+		return new ControllerConfigsComposite(composite, SWT.None);
 	}
 }

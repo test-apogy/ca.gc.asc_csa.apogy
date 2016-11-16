@@ -35,12 +35,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ControllerBindingsSelectionItemProvider 
+public class ControllerBindingsPartSelectionItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -54,7 +54,7 @@ public class ControllerBindingsSelectionItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ControllerBindingsSelectionItemProvider(AdapterFactory adapterFactory) {
+	public ControllerBindingsPartSelectionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -85,9 +85,9 @@ public class ControllerBindingsSelectionItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ControllerBindingsSelection_operationCallControllerBinding_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerBindingsSelection_operationCallControllerBinding_feature", "_UI_ControllerBindingsSelection_type"),
-				 ApogyCoreProgramsControllersUIPackage.Literals.CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING,
+				 getString("_UI_ControllerBindingsPartSelection_operationCallControllerBinding_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerBindingsPartSelection_operationCallControllerBinding_feature", "_UI_ControllerBindingsPartSelection_type"),
+				 ApogyCoreProgramsControllersUIPackage.Literals.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING,
 				 true,
 				 false,
 				 true,
@@ -97,14 +97,14 @@ public class ControllerBindingsSelectionItemProvider
 	}
 
 	/**
-	 * This returns ControllerBindingsSelection.gif.
+	 * This returns ControllerBindingsPartSelection.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ControllerBindingsSelection"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ControllerBindingsPartSelection"));
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class ControllerBindingsSelectionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ControllerBindingsSelection_type");
+		return getString("_UI_ControllerBindingsPartSelection_type");
 	}
 	
 

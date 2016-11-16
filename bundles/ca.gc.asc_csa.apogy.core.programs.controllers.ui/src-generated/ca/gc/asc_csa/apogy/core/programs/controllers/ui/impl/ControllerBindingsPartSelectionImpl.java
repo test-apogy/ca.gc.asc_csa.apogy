@@ -17,7 +17,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIPackage;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -29,18 +29,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Controller Bindings Selection</b></em>'.
+ * An implementation of the model object '<em><b>Controller Bindings Part Selection</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsSelectionImpl#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsPartSelectionImpl#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ControllerBindingsSelectionImpl extends MinimalEObjectImpl.Container implements ControllerBindingsSelection {
+public class ControllerBindingsPartSelectionImpl extends MinimalEObjectImpl.Container implements ControllerBindingsPartSelection {
 	/**
 	 * The cached value of the '{@link #getOperationCallControllerBinding() <em>Operation Call Controller Binding</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -56,7 +56,7 @@ public class ControllerBindingsSelectionImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ControllerBindingsSelectionImpl() {
+	protected ControllerBindingsPartSelectionImpl() {
 		super();
 	}
 
@@ -67,7 +67,7 @@ public class ControllerBindingsSelectionImpl extends MinimalEObjectImpl.Containe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ApogyCoreProgramsControllersUIPackage.Literals.CONTROLLER_BINDINGS_SELECTION;
+		return ApogyCoreProgramsControllersUIPackage.Literals.CONTROLLER_BINDINGS_PART_SELECTION;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class ControllerBindingsSelectionImpl extends MinimalEObjectImpl.Containe
 			operationCallControllerBinding = (OperationCallControllerBinding)eResolveProxy(oldOperationCallControllerBinding);
 			if (operationCallControllerBinding != oldOperationCallControllerBinding) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING, oldOperationCallControllerBinding, operationCallControllerBinding));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING, oldOperationCallControllerBinding, operationCallControllerBinding));
 			}
 		}
 		return operationCallControllerBinding;
@@ -105,7 +105,7 @@ public class ControllerBindingsSelectionImpl extends MinimalEObjectImpl.Containe
 		OperationCallControllerBinding oldOperationCallControllerBinding = operationCallControllerBinding;
 		operationCallControllerBinding = newOperationCallControllerBinding;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING, oldOperationCallControllerBinding, operationCallControllerBinding));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING, oldOperationCallControllerBinding, operationCallControllerBinding));
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class ControllerBindingsSelectionImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
+			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
 				if (resolve) return getOperationCallControllerBinding();
 				return basicGetOperationCallControllerBinding();
 		}
@@ -131,7 +131,7 @@ public class ControllerBindingsSelectionImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
+			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
 				setOperationCallControllerBinding((OperationCallControllerBinding)newValue);
 				return;
 		}
@@ -146,7 +146,7 @@ public class ControllerBindingsSelectionImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
+			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
 				setOperationCallControllerBinding((OperationCallControllerBinding)null);
 				return;
 		}
@@ -161,10 +161,10 @@ public class ControllerBindingsSelectionImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
+			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
 				return operationCallControllerBinding != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ControllerBindingsSelectionImpl
+} //ControllerBindingsPartSelectionImpl

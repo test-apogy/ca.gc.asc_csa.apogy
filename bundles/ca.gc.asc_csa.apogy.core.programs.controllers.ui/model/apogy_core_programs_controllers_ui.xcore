@@ -46,7 +46,7 @@ class ControllerConfigsPartSelection
 	refers ControllersConfiguration controllersConfiguration
 }
 
-class ControllerBindingsSelection
+class ControllerBindingsPartSelection
 {
 	refers OperationCallControllerBinding operationCallControllerBinding
 }
