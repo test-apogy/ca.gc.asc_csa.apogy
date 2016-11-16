@@ -20,6 +20,7 @@ import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ProgramsListComposite;
@@ -85,6 +86,9 @@ public class OperationCallsListWizardPage extends WizardPage {
 		programsListComposite.setProgramsGroup(programsGroup);
 		programsListComposite.setSelectedProgram(operationCallsList);
 		setControl(programsListComposite);
+		
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
+		
 		validate();
 	}
 	

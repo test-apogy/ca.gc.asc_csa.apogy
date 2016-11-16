@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.wizard.WizardPage;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,6 +55,13 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * @generated
 	 */
 	private EDataType iSelectionEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType wizardPageEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -142,6 +150,15 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCommonUiFacade__AdjustWizardPage__WizardPage() {
+		return apogyCommonUiFacadeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getImageDescriptor() {
 		return imageDescriptorEDataType;
 	}
@@ -153,6 +170,15 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 */
 	public EDataType getISelection() {
 		return iSelectionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getWizardPage() {
+		return wizardPageEDataType;
 	}
 
 	/**
@@ -185,10 +211,12 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		// Create classes and their features
 		apogyCommonUiFacadeEClass = createEClass(APOGY_COMMON_UI_FACADE);
 		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING);
+		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE);
 
 		// Create data types
 		imageDescriptorEDataType = createEDataType(IMAGE_DESCRIPTOR);
 		iSelectionEDataType = createEDataType(ISELECTION);
+		wizardPageEDataType = createEDataType(WIZARD_PAGE);
 	}
 
 	/**
@@ -229,9 +257,13 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		EOperation op = initEOperation(getApogyCommonUiFacade__GetImageDescriptor__String(), this.getImageDescriptor(), "getImageDescriptor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "uri", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCommonUiFacade__AdjustWizardPage__WizardPage(), null, "adjustWizardPage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getWizardPage(), "wizardPage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		// Initialize data types
 		initEDataType(imageDescriptorEDataType, ImageDescriptor.class, "ImageDescriptor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(iSelectionEDataType, ISelection.class, "ISelection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(wizardPageEDataType, WizardPage.class, "WizardPage", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

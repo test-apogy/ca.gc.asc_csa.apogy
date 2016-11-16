@@ -32,9 +32,11 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectListComposite;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 
 public class ChooseChildEReferenceWizardPage extends WizardPage {
 
@@ -89,7 +91,12 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new GridLayout(2, false));
-
+		
+		Label referenceLabel = new Label(container, SWT.None);
+		referenceLabel.setText("Reference");
+		Label typeLabel = new Label(container, SWT.None);
+		typeLabel.setText("Type");
+		
 		eReferencesListComposite = new EObjectListComposite(container, SWT.None) {
 			@Override
 			protected void newSelection(TreeSelection selection) {
@@ -104,11 +111,6 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 			@Override
 			protected StyledCellLabelProvider getLabelProvider() {
 				return new EReferenceLabelProvider();
-			}
-
-			@Override
-			protected String getTitle() {
-				return "Reference";
 			}
 		};
 
@@ -127,11 +129,6 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 			protected StyledCellLabelProvider getLabelProvider() {
 				return new EClassLabelProvider();
 			}
-
-			@Override
-			protected String getTitle() {
-				return "Type";
-			}
 		};
 
 		if (eReferencesListComposite.getSelectedEObject() != null) {
@@ -141,6 +138,7 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 		eReferencesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
 		setControl(container);
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
 		validate();
 	}
 

@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.common.ui;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.resource.ImageDescriptor;
 
+import org.eclipse.jface.wizard.WizardPage;
 import ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiFacadeImpl;
 
 /**
@@ -56,5 +57,13 @@ public interface ApogyCommonUiFacade extends EObject {
 	 * @generated
 	 */
 	ImageDescriptor getImageDescriptor(String uri);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model wizardPageDataType="ca.gc.asc_csa.apogy.common.ui.WizardPage" wizardPageUnique="false"
+	 * @generated
+	 */
+	void adjustWizardPage(WizardPage wizardPage);
 
 } // ApogyCommonUiFacade

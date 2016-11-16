@@ -26,6 +26,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 public class SetVariableTypeWizardPage extends WizardPage {
@@ -78,6 +79,8 @@ public class SetVariableTypeWizardPage extends WizardPage {
 		table = tableViewer.getTable();
 		table.setHeaderVisible(true);
 		table.setLinesVisible(true);
+		
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
 		
 		validate();
 	}

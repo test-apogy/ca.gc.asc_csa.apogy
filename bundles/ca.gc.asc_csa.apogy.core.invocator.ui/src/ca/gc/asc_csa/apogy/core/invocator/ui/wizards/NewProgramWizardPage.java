@@ -31,6 +31,7 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.DescribedComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings;
@@ -163,6 +164,8 @@ public class NewProgramWizardPage extends WizardPage {
 		describedComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1,1));
 
 		setControl(container);
+		
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
 		
 		validate();
 	}

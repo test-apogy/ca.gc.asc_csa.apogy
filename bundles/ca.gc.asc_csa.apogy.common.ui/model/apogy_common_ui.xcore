@@ -33,10 +33,12 @@ package ca.gc.asc_csa.apogy.common.ui
 
 import org.eclipse.jface.resource.ImageDescriptor
 import org.eclipse.jface.viewers.ISelection
+import org.eclipse.jface.wizard.WizardPage
 
 /* Types definitions. */
 type ImageDescriptor wraps ImageDescriptor
 type ISelection wraps ISelection
+type WizardPage wraps WizardPage
 
 /* -------------------------------------------------------------------------
  * 
@@ -51,4 +53,6 @@ class ApogyCommonUiFacade{
 	 * @return Reference to the {@link ImageDescriptor} or null if not available.
 	 */
 	op ImageDescriptor getImageDescriptor(String uri)
+	
+	op void adjustWizardPage(WizardPage wizardPage)
 }

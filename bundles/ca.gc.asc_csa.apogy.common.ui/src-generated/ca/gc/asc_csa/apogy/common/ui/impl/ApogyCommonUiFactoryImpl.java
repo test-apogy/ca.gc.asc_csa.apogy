@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.wizard.WizardPage;
 
 /**
  * <!-- begin-user-doc -->
@@ -89,6 +90,8 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 				return createImageDescriptorFromString(eDataType, initialValue);
 			case ApogyCommonUiPackage.ISELECTION:
 				return createISelectionFromString(eDataType, initialValue);
+			case ApogyCommonUiPackage.WIZARD_PAGE:
+				return createWizardPageFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -106,6 +109,8 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 				return convertImageDescriptorToString(eDataType, instanceValue);
 			case ApogyCommonUiPackage.ISELECTION:
 				return convertISelectionToString(eDataType, instanceValue);
+			case ApogyCommonUiPackage.WIZARD_PAGE:
+				return convertWizardPageToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -154,6 +159,24 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 	 * @generated
 	 */
 	public String convertISelectionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WizardPage createWizardPageFromString(EDataType eDataType, String initialValue) {
+		return (WizardPage)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertWizardPageToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

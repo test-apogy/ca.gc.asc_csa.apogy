@@ -25,6 +25,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableImplementationsComposite;
@@ -80,6 +81,9 @@ public class VariableImplementationsWizardPage extends WizardPage {
 		variableImplementationsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
 		
 		setControl(variableImplementationsComposite);
+		
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
+		
 		validate();
 	}
 	

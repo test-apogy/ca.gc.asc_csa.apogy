@@ -110,13 +110,22 @@ public interface ApogyCommonUiPackage extends EPackage {
 	int APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING = 0;
 
 	/**
+	 * The operation id for the '<em>Adjust Wizard Page</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE = 1;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_UI_FACADE_OPERATION_COUNT = 1;
+	int APOGY_COMMON_UI_FACADE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '<em>Image Descriptor</em>' data type.
@@ -141,6 +150,17 @@ public interface ApogyCommonUiPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '<em>Wizard Page</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.jface.wizard.WizardPage
+	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getWizardPage()
+	 * @generated
+	 */
+	int WIZARD_PAGE = 3;
+
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,6 +179,16 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCommonUiFacade__GetImageDescriptor__String();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade#adjustWizardPage(org.eclipse.jface.wizard.WizardPage) <em>Adjust Wizard Page</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Adjust Wizard Page</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade#adjustWizardPage(org.eclipse.jface.wizard.WizardPage)
+	 * @generated
+	 */
+	EOperation getApogyCommonUiFacade__AdjustWizardPage__WizardPage();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.jface.resource.ImageDescriptor <em>Image Descriptor</em>}'.
@@ -181,6 +211,17 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getISelection();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.jface.wizard.WizardPage <em>Wizard Page</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Wizard Page</em>'.
+	 * @see org.eclipse.jface.wizard.WizardPage
+	 * @model instanceClass="org.eclipse.jface.wizard.WizardPage"
+	 * @generated
+	 */
+	EDataType getWizardPage();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -224,6 +265,14 @@ public interface ApogyCommonUiPackage extends EPackage {
 		EOperation APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING = eINSTANCE.getApogyCommonUiFacade__GetImageDescriptor__String();
 
 		/**
+		 * The meta object literal for the '<em><b>Adjust Wizard Page</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE = eINSTANCE.getApogyCommonUiFacade__AdjustWizardPage__WizardPage();
+
+		/**
 		 * The meta object literal for the '<em>Image Descriptor</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -242,6 +291,16 @@ public interface ApogyCommonUiPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ISELECTION = eINSTANCE.getISelection();
+
+		/**
+		 * The meta object literal for the '<em>Wizard Page</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.jface.wizard.WizardPage
+		 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getWizardPage()
+		 * @generated
+		 */
+		EDataType WIZARD_PAGE = eINSTANCE.getWizardPage();
 
 	}
 

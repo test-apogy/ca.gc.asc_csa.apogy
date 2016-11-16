@@ -28,6 +28,7 @@ import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.DescribedComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 
 public class NamedDescribedWizardPage extends WizardPage {
 
@@ -100,7 +101,7 @@ public class NamedDescribedWizardPage extends WizardPage {
 		setControl(container);
 
 		namedComposite.setFocus();
-
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
 		validate();
 	}
 

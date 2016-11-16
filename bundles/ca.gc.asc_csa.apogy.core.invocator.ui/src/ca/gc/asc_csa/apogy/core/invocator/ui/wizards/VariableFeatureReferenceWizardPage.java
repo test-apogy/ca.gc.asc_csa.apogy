@@ -20,6 +20,8 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
@@ -79,6 +81,9 @@ public class VariableFeatureReferenceWizardPage extends WizardPage {
 		variableFeatureReferenceComposite = new VariableFeatureReferenceComposite(parent, SWT.None);
 		variableFeatureReferenceComposite.set(variablesList, this.variableFeatureReference);
 		setControl(variableFeatureReferenceComposite);
+		
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
+		
 		validate();
 	}
 	
