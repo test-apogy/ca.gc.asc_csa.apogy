@@ -65,72 +65,24 @@
             name="Load User Defined Input Conditioning From File">
       </command>
    </extension>
-   <extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
-         <command
-               commandId="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.ActivateControllersConfigurationCommand"
-               label="Activate"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                  <and>
-                     <count value="1"/>
-                     <iterate
-                        ifEmpty="false"
-                        operator="and">
-                          <instanceof
-                              value="ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration">
-                          </instanceof>
-                     </iterate>
-                  </and>
-               </with>
-            </visibleWhen>
-         </command>
-         <command
-               commandId="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.DeActivateControllersConfigurationCommand"
-               label="Deactivate"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                  <and>
-                     <count value="1"/>
-                     <iterate
-                        ifEmpty="false"
-                        operator="and">
-                          <instanceof
-                              value="ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration">
-                          </instanceof>
-                     </iterate>
-                  </and>
-               </with>
-            </visibleWhen>
-         </command>
-         <command
-               commandId="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.LoadUserDefinedInputConditioningFromFileCommand"
-               label="Load User Defined Input Conditioning From File"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                  <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
-                           value="ca.gc.asc_csa.apogy.core.programs.controllers.UserDefinedInputConditioning">
-                       </instanceof>
-                  </iterate>
-               </with>
-            </visibleWhen>
-         </command>
-      </menuContribution>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated apogy_core_programs_controllers_ui -->
+      <package
+            uri="ca.gc.asc_csa.apogy.core.programs.controllers.ui"
+            class="ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIPackage"
+            genModel="model/apogy_core_programs_controllers_ui.xcore"/>
    </extension>
 
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated apogy_core_programs_controllers_ui -->
+      <factory
+            uri="ca.gc.asc_csa.apogy.core.programs.controllers.ui"
+            class="ca.gc.asc_csa.apogy.core.programs.controllers.ui.provider.ApogyCoreProgramsControllersUIItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
 </plugin>

@@ -30,8 +30,7 @@ import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 
@@ -49,13 +48,10 @@ public class EOperationsComposite extends Composite {
 	
 	public EOperationsComposite(Composite parent, int style) {
 		super(parent, SWT.NONE);
-		
-		GridLayout gridLayout = new GridLayout(1, false);
-		setLayout(gridLayout);
+		setLayout(new FillLayout());
 		
 		treeViewer = new TreeViewer(this, SWT.BORDER);
 		tree = treeViewer.getTree();		
-		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		tree.setLinesVisible(true);
 		
 		ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);		

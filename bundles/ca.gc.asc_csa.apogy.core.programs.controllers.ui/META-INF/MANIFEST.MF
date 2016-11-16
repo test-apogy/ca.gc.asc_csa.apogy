@@ -3,11 +3,23 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.programs.controllers.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.apogy.core.programs.controllers.ui.Activator
+Bundle-ClassPath: .
+Bundle-Activator: ca.gc.asc_csa.apogy.core.programs.controllers.ui.provider.ApogyCoreProgramsControllersUIEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- ca.gc.asc_csa.apogy.core.programs.controllers,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore.xcore.lib,
+ ca.gc.asc_csa.apogy.core.programs.controllers;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.io.jinput;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.programs.controllers.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.io.jinput.edit;visibility:=reexport,
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.300",
  org.eclipse.core.databinding;bundle-version="1.4.1",
  ca.gc.asc_csa.apogy.common.ui,
@@ -26,6 +38,9 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.core.programs.controllers.ui,
+ ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl,
+ ca.gc.asc_csa.apogy.core.programs.controllers.ui.provider,
+ ca.gc.asc_csa.apogy.core.programs.controllers.ui.util,
  ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands,
  ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite,
  ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts,

@@ -69,6 +69,8 @@ public class ControllerBindingsComposite extends Composite {
 	private ISelectionChangedListener selectionChangedListener;
 	
 	private ControllersConfiguration controllersConfiguration;
+	
+	private TableViewer tableViewer;
 
 	/**
 	 * Creates the composite.
@@ -85,7 +87,7 @@ public class ControllerBindingsComposite extends Composite {
 		});
 		setLayout(new GridLayout(2, false));
 		
-		TableViewer tableViewer = new TableViewer(this, SWT.BORDER | SWT.FULL_SELECTION);
+		tableViewer = new TableViewer(this, SWT.BORDER | SWT.FULL_SELECTION);
 		Table table = tableViewer.getTable();
 		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 3));
 		
@@ -223,6 +225,10 @@ public class ControllerBindingsComposite extends Composite {
 	
 	public void setControllersConfiguration(ControllersConfiguration controllersConfiguration) {
 		this.controllersConfiguration = controllersConfiguration;
+	}
+	
+	public OperationCallControllerBinding getOperationCallControllerBinding(){
+		return (OperationCallControllerBinding) tableViewer.getStructuredSelection().getFirstElement();
 	}
 	
 	/**

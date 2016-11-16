@@ -13,6 +13,12 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.services.IServiceConstants;
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
@@ -20,6 +26,10 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingsComposite;
 
 public class ControllerBindingsPart extends AbstractSelectionBasedPart{
@@ -29,7 +39,17 @@ public class ControllerBindingsPart extends AbstractSelectionBasedPart{
 			@Override
 			protected void newSelection(ISelection selection) 
 			{
-				// TODO
+				if (selection.isEmpty()){
+					setNullSelection();					
+				}else {
+					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getContentComposite()).getOperationCallControllerBinding();
+					if (operationCallControllerBinding  != null){
+						ControllerBindingsSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsSelection();
+						selectionSent.setOperationCallControllerBinding(operationCallControllerBinding);
+						
+						selectionService.setSelection(selectionSent);				
+					}
+				}
 			}
 		};
 	}
@@ -41,7 +61,29 @@ public class ControllerBindingsPart extends AbstractSelectionBasedPart{
 
 	@Override
 	protected void setNullSelection() {
-		// TODO Auto-generated method stub
+		selectionService.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsSelection());
 	}
-
+	
+	/**
+	 * Injects a {@link ControllerConfigsPartSelection} in the part from the
+	 * {@link ESelectionService}
+	 * 
+	 * @param selection
+	 */
+	@Inject
+	@Optional
+	private void setSelection(
+			@Named(IServiceConstants.ACTIVE_SELECTION) ControllerConfigsPartSelection selection) {
+		if (selection != null) {
+			if (selection.getControllersConfiguration() == null) {
+				setEObject(selection.getControllersConfiguration());
+			}
+		}
+	}
+	
+//	// TODO
+//	@Override
+//	protected Composite getNoContentComposite() {
+//		return new ControllerBindingsComposite(composite, SWT.None);
+//	}
 }

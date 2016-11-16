@@ -1097,15 +1097,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(42);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(43);
 	}
 
@@ -1114,8 +1105,17 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode() {
+	public EOperation getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(44);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(45);
 	}
 
 	/**
@@ -3649,6 +3649,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		op = initEOperation(getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable(), null, "deleteVariable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariablesList(), "variablesList", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		op = initEOperation(getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall(), theEcorePackage.getEString(), "getOperationCallString", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

@@ -14,26 +14,21 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  */
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.edit.command.CommandParameter;
-import org.eclipse.emf.edit.command.SetCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
@@ -42,17 +37,17 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 
-public class OperationCallComposite extends Composite {
+public class OperationCallComposite extends ScrolledComposite {
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 	
 	private DataBindingContext m_bindingContext;
 	private Section sctnOperation;	
+	private VariableFeatureReferenceComposite variableFeatureReferenceComposite;
 	private EOperationsComposite eOperationsComposite;
 	private Section sctnArguments;
 	private OperationCallArgumentsComposite argumentsComposite;
 	private OperationCall operationCall;	
-	private EditingDomain editingDomain;
 
 	private AdapterImpl operationCallAdapter;
 	AdapterFactory adapterFactory = new ComposedAdapterFactory(
@@ -70,42 +65,38 @@ public class OperationCallComposite extends Composite {
 				toolkit.dispose();
 			}
 		});
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		setLayout(new GridLayout(3, true));
+		setLayout(new GridLayout(1, true));
+		setExpandHorizontal(true);
+		setExpandVertical(true);
+		
+		Composite composite = new Composite(this, SWT.NONE);
+		composite.setLayout(new GridLayout(3, true));
 		
 		/**
 		 * Operation
 		 */
-		sctnOperation = toolkit.createSection(this, Section.TITLE_BAR);
-		GridData gd_sctnOperation = new GridData(SWT.FILL, SWT.FILL, false, true, 1, 1);
-		sctnOperation.setLayoutData(gd_sctnOperation);
-		toolkit.paintBordersFor(sctnOperation);
+		variableFeatureReferenceComposite = new VariableFeatureReferenceComposite(composite, SWT.NONE);
+		GridLayout gridLayout_2 = (GridLayout) variableFeatureReferenceComposite.getLayout();
+		gridLayout_2.marginWidth = 0;
+		gridLayout_2.marginHeight = 0;
+		GridData gd_variableFeatureReferenceComposite = new GridData(SWT.FILL, SWT.FILL, true, true, 3, 1);
+		variableFeatureReferenceComposite.setLayoutData(gd_variableFeatureReferenceComposite);
+		
+		sctnOperation = toolkit.createSection(composite, Section.TITLE_BAR);
+		sctnOperation.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 1, 1));
 		sctnOperation.setText("Operation");
-		sctnOperation.setExpanded(true);
-				
-		eOperationsComposite = new EOperationsComposite(sctnOperation, SWT.BORDER){
-			@Override
-			protected void newSelection(TreeSelection selection) {		
-				CommandParameter commandParameter = 
-						new CommandParameter(getOperationCall(), 
-											 ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION, 
-											 selection.getFirstElement());
-				IEditingDomainItemProvider editingDomainItemProvider = (IEditingDomainItemProvider) adapterFactory.adapt(getOperationCall(), IEditingDomainItemProvider.class);
-				Command command = editingDomainItemProvider.createCommand(getOperationCall(), editingDomain, SetCommand.class, commandParameter);
-				editingDomain.getCommandStack().execute(command);				
-				OperationCallComposite.this.newSelection(selection);
-			}
-		};
+		
+		eOperationsComposite = new EOperationsComposite(sctnOperation, SWT.NONE);
+		FillLayout fillLayout = (FillLayout) eOperationsComposite.getLayout();
+		fillLayout.marginWidth = 0;
+		fillLayout.marginHeight = 0;
 		sctnOperation.setClient(eOperationsComposite);
-		toolkit.adapt(eOperationsComposite);
 				
 		/** 
 		 * Arguments.
 		 */
-		sctnArguments = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
+		sctnArguments = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);			
 		sctnArguments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
-		toolkit.paintBordersFor(sctnArguments);
 		sctnArguments.setText("Arguments");
 		sctnArguments.setExpanded(true);
 		
@@ -115,9 +106,13 @@ public class OperationCallComposite extends Composite {
 				OperationCallComposite.this.newSelection(selection);
 			}
 		};
+		GridLayout gridLayout_1 = (GridLayout) argumentsComposite.getLayout();
+		gridLayout_1.marginWidth = 0;
+		gridLayout_1.marginHeight = 0;
 		sctnArguments.setClient(argumentsComposite);
-		toolkit.adapt(argumentsComposite);
-		new Label(this, SWT.NONE);
+		
+		setContent(composite);
+		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
 	
 	/** 
@@ -171,9 +166,6 @@ public class OperationCallComposite extends Composite {
 	 */
 	protected DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
-
-		editingDomain = AdapterFactoryEditingDomain
-				.getEditingDomainFor(getOperationCall());
 		
 		if (getOperationCall().getVariable()!=null){		
 			eOperationsComposite.setEClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(getOperationCall()), getOperationCall().getEOperation());
@@ -182,6 +174,8 @@ public class OperationCallComposite extends Composite {
 			eOperationsComposite.setEClass(null);
 			argumentsComposite.setOperationCall(null);			
 		}
+		
+		variableFeatureReferenceComposite.set(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(), operationCall);
 		
 		return bindingContext;
 	}

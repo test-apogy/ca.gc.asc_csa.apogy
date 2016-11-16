@@ -19,36 +19,39 @@ import javax.inject.Named;
 
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.services.IServiceConstants;
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallComposite;
 
 public class ProgramDetailsPart extends AbstractSelectionBasedPart{
 
-	
+	/**
+	 * Injects a {@link ProgramPartSelection} in the part from the
+	 * {@link ESelectionService}
+	 * 
+	 * @param selection
+	 */
 	@Inject
 	@Optional
 	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramPartSelection selection) {
+		if (selection != null) {
+			setEObject(selection.getOperationCall());
+		}
 	}
 
 	@Override
 	protected void setSelectionInContentComposite(EObject eObject) {
-		// TODO Auto-generated method stub
-		
+		((OperationCallComposite) getContentComposite()).setOperationCall((OperationCall)eObject);
 	}
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		// TODO Auto-generated method stub
-		return null;
+		return new OperationCallComposite(composite, SWT.None);
 	}
-
-	@Override
-	protected void setNullSelection() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

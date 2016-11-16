@@ -13,56 +13,57 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractApogySessionBasedPart;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConfigsComposite;
 
-public class ControllerConfigsPart extends AbstractApogySessionBasedPart{
-	
-//	protected Composite createContentComposite(Composite parent){
-//		return new ControllerConfigsComposite(parent, SWT.None) {
-//			@Override
-//			protected void newSelection(ISelection selection) 
-//			{
-//				selectionService.setSelection(((TreeSelection)selection).getFirstElement());
-//			}
-//		};
-//	}
-//
-//	protected void setSessionInComposite(InvocatorSession invocatorSession) {
-//		if (ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup() != null) {
-//			((ControllerConfigsComposite) getContentComposite())
-//					.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
-//		}
-//	}
-
-	@Override
-	protected void setNullSelection() {
-		
-	}
-
-	@Override
-	protected void setContentCompositeSelection(EObject eObject) {
-		// TODO Auto-generated method stub
-		
-	}
+public class ControllerConfigsPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		// TODO Auto-generated method stub
-		return null;
+		return new ControllerConfigsComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
+			@Override
+			protected void newSelection(ISelection selection) {
+				if (selection.isEmpty()) {
+					setNullSelection();
+				} else {
+					ControllersConfiguration controllersConfiguration = ((ControllerConfigsComposite) getContentComposite())
+							.getSelectedControllerConfiguration();
+					if (controllersConfiguration != null) {
+						ControllerConfigsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE
+								.createControllerConfigsPartSelection();
+						selectionSent.setControllersConfiguration(controllersConfiguration);
+
+						selectionService.setSelection(selectionSent);
+					}
+				}
+			}
+		};
 	}
 
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		// TODO Auto-generated method stub
-		
+		((ControllerConfigsComposite) getContentComposite())
+				.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
+	}
+	
+//	// TODO
+//	@Override
+//	protected Composite getNoContentComposite() {
+//		return new ControllerConfigsComposite(composite, SWT.H_SCROLL | SWT.V_SCROLL);
+//	}
+
+	@Override
+	protected void setNullSelection() {
+		selectionService
+				.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerConfigsPartSelection());
 	}
 }

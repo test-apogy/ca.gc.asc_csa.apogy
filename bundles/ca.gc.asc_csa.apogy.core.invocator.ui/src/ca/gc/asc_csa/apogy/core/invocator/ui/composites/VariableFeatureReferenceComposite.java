@@ -121,9 +121,6 @@ public class VariableFeatureReferenceComposite extends Composite {
 				toolkit.dispose();
 			}
 		});
-
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
 		setLayout(new GridLayout(3, true));		
 		
 		/**
@@ -133,7 +130,6 @@ public class VariableFeatureReferenceComposite extends Composite {
 		 */
 		Section sctnVariable = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
 		sctnVariable.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		toolkit.paintBordersFor(sctnVariable);
 		sctnVariable.setText("Variable");	
 		variablesViewer = new TableViewer(sctnVariable, SWT.BORDER
 		| SWT.H_SCROLL | SWT.V_SCROLL);
@@ -152,11 +148,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 		 */		
 		Section sctnSubType = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
 		sctnSubType.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		toolkit.paintBordersFor(sctnSubType);
 		sctnSubType.setText("Sub-Type");
 
-		Composite compositeSubType = toolkit.createCompositeSeparator(sctnSubType);
-		compositeSubType.setLayout(new GridLayout());
+		Composite compositeSubType = new Composite(sctnSubType, SWT.None);//.createCompositeSeparator(sctnSubType);
+		compositeSubType.setLayout(new GridLayout(1, false));
 		
 		typeMemberViewer = new TreeViewer(compositeSubType, SWT.BORDER | SWT.V_SCROLL
 				| SWT.H_SCROLL | SWT.SINGLE);
@@ -186,11 +181,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 				false, false, 1, 1));
 		clearTypeButton.setText("Clear");
 		
-
-		toolkit.paintBordersFor(compositeSubType);
-		sctnSubType.setClient(compositeSubType);
-		
-		
+		sctnSubType.setClient(compositeSubType);		
 		
 		/**
 		 * 
@@ -199,11 +190,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 		 */
 		Section sctnFeature = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
 		sctnFeature.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-		toolkit.paintBordersFor(sctnFeature);
 		sctnFeature.setText("Feature");
 		
-		Composite compositeFeature = toolkit.createCompositeSeparator(sctnFeature);
-		compositeFeature.setLayout(new GridLayout());
+		Composite compositeFeature = new Composite(sctnFeature, SWT.NONE);
+		compositeFeature.setLayout(new GridLayout(1, false));
 
 		featuresViewer = new TreeViewer(compositeFeature, SWT.VIRTUAL | SWT.BORDER
 				| SWT.V_SCROLL | SWT.H_SCROLL | SWT.SINGLE);
@@ -238,7 +228,6 @@ public class VariableFeatureReferenceComposite extends Composite {
 				false, false, 1, 1));
 		clearFeatureSelection.setText("Clear");
 		
-		toolkit.paintBordersFor(compositeFeature);
 		sctnFeature.setClient(compositeFeature);		
 	}
 

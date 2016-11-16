@@ -14,31 +14,52 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
  */
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
+import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
-import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractApogySessionBasedPart;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsSelection;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingDetailsComposite;
 
-public class ControllerBindingDetailsPart{
-	
-	@Inject ESelectionService selectionService;
-	
-	protected Composite createContentComposite(Composite parent){
-			return null;	
-		/*return new AdvancedEditorComposite(parent, SWT.None) {
-			@Override
-			protected void newSelection(ISelection selection) 
-			{
-				super.newSelection(selection);
-				selectionService.setSelection(selection);
+public class ControllerBindingDetailsPart extends AbstractSelectionBasedPart {
+
+	@Override
+	protected Composite createContentComposite(Composite parent) {
+		return new ControllerBindingDetailsComposite(parent, SWT.None);
+	}
+
+	@Override
+	protected void setSelectionInContentComposite(EObject eObject) {
+		((ControllerBindingDetailsComposite) getContentComposite())
+				.setOperationCallControllerBinding((OperationCallControllerBinding) eObject);
+	}
+
+	/**
+	 * Injects a {@link ControllerBindingsSelection} in the part from the
+	 * {@link ESelectionService}
+	 * 
+	 * @param selection
+	 */
+	@Inject
+	@Optional
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllerBindingsSelection selection) {
+		if (selection != null) {
+			if (selection.getOperationCallControllerBinding() == null) {
+				setEObject(selection.getOperationCallControllerBinding());
 			}
-		};*/
+		}
 	}
 	
-	protected void setSession(ProgramsGroup programsGroup){
-		//((AdvancedEditorComposite)getContentComposite()).setEObject(invocatorSession);
-		
-	}
+//	// TODO
+//	@Override
+//	protected Composite getNoContentComposite() {
+//		return new ControllerBindingDetailsComposite(composite, SWT.None);
+//	}
 }

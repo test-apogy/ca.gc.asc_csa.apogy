@@ -65,7 +65,9 @@ public class ProgramPart extends AbstractSelectionBasedPart{
 	}
 	
 	/**
-	 * Injects a {@link OperationCallsListComposite} in the part from the {@link ESelectionService}
+	 * Injects a {@link ScriptBasedProgramsListPartSelection} in the part from the
+	 * {@link ESelectionService}
+	 * 
 	 * @param selection
 	 */
 	@Inject

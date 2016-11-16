@@ -26,8 +26,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.DisposeEvent;
-import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -45,7 +44,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsController
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 
-public class ControllerConfigsComposite extends Composite {
+public class ControllerConfigsComposite extends ScrolledComposite {
 
 	private ISelectionChangedListener selectionChangedListener;
 	private NamedDescribedListComposite controllersConfigsComposite;
@@ -66,14 +65,14 @@ public class ControllerConfigsComposite extends Composite {
 	 */
 	public ControllerConfigsComposite(Composite parent, int style) {
 		super(parent, style);
-		addDisposeListener(new DisposeListener() {
-			public void widgetDisposed(DisposeEvent e) {
-				dispose();
-			}
-		});
-		setLayout(new GridLayout(2, false));
+		setLayout(new GridLayout(1, true));
+		setExpandHorizontal(true);
+		setExpandVertical(true);
+		
+		Composite composite = new Composite(this, SWT.NONE);
+		composite.setLayout(new GridLayout(2, false));
 
-		controllersConfigsComposite = new NamedDescribedListComposite(this, SWT.None) {
+		controllersConfigsComposite = new NamedDescribedListComposite(composite, SWT.None) {
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				ControllerConfigsComposite.this.newSelection(selection);
@@ -85,7 +84,7 @@ public class ControllerConfigsComposite extends Composite {
 		};
 		controllersConfigsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 5));
 
-		btnNew = new Button(this, SWT.NONE);
+		btnNew = new Button(composite, SWT.NONE);
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnNew.setText("New");
 		btnNew.setEnabled(true);
@@ -107,7 +106,7 @@ public class ControllerConfigsComposite extends Composite {
 			}
 		});
 
-		Button btnDelete = new Button(this, SWT.NONE);
+		Button btnDelete = new Button(composite, SWT.NONE);
 		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnDelete.setText("Delete");
 		btnDelete.addListener(SWT.Selection, new Listener() {
@@ -121,10 +120,10 @@ public class ControllerConfigsComposite extends Composite {
 			}
 		});
 		
-		Label label = new Label(this, SWT.SEPARATOR | SWT.HORIZONTAL);
+		Label label = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
 		label.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		
-		Button btnActivate = new Button(this, SWT.NONE);
+		Button btnActivate = new Button(composite, SWT.NONE);
 		btnActivate.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnActivate.setText("Activate");
 		btnActivate.addListener(SWT.Selection, new Listener() {
@@ -135,7 +134,7 @@ public class ControllerConfigsComposite extends Composite {
 			}
 		});
 
-		Button btnDeactivate = new Button(this, SWT.NONE);
+		Button btnDeactivate = new Button(composite, SWT.NONE);
 		btnDeactivate.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
 		btnDeactivate.setText("Deactivate");
 		btnDeactivate.addListener(SWT.Selection, new Listener() {
@@ -146,7 +145,8 @@ public class ControllerConfigsComposite extends Composite {
 			}
 		});
 
-		
+		setContent(composite);
+		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
 
 	protected void newSelection(ISelection selection) {

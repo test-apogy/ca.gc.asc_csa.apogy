@@ -14,13 +14,12 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.DialogCellEditor;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.swt.SWT;
@@ -35,14 +34,11 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
-import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 
-public class SelectControllerComponentComposite extends Composite {
+public class ControllerBindingDetailsComposite extends Composite {
 
-	private ISelectionChangedListener selectionChangedListener;
-	private ArgumentsList argumentsList;
-	
-	private Adapter adapter;
+	private OperationCallControllerBinding operationCallControllerBinding;
 
 	/**
 	 * Creates the composite.
@@ -50,7 +46,7 @@ public class SelectControllerComponentComposite extends Composite {
 	 * @param parent
 	 * @param style
 	 */
-	public SelectControllerComponentComposite(Composite parent, int style) {
+	public ControllerBindingDetailsComposite(Composite parent, int style) {
 		super(parent, style);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
@@ -60,6 +56,13 @@ public class SelectControllerComponentComposite extends Composite {
 		setLayout(new GridLayout(2, false));
 
 		TableViewer tableViewer = new TableViewer(this, SWT.BORDER | SWT.FULL_SELECTION);
+		tableViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection(event.getSelection());
+			}
+		});
 		Table table = tableViewer.getTable();
 		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 3));
 
@@ -70,8 +73,8 @@ public class SelectControllerComponentComposite extends Composite {
 		tableViewerActionColumn.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				if(element instanceof Argument){
-					return ((Argument)element).toString();
+				if (element instanceof Argument) {
+					return ((Argument) element).toString();
 				}
 				return "";
 			}
@@ -88,9 +91,9 @@ public class SelectControllerComponentComposite extends Composite {
 				return "Click here";
 			}
 		});
-		
+
 		DialogCellEditor cellEditor = new DialogCellEditor(this) {
-			
+
 			@Override
 			protected Object openDialogBox(Control cellEditorWindow) {
 				MessageBox dialog = new MessageBox(getShell(), SWT.ICON_QUESTION | SWT.CANCEL);
@@ -99,44 +102,19 @@ public class SelectControllerComponentComposite extends Composite {
 				return dialog.open();
 			}
 		};
-		
-		tableViewer.setCellEditors(new CellEditor[]{null, cellEditor});
-	}
-	
 
-//	protected void newSelection(ISelection selection) {
-//		this.selectedControllerConfiguration = (ControllersConfiguration) selection;
-//	}
-	
-	public void setArgumentsList(ArgumentsList argumentsList) {
-		if(this.argumentsList != null){
-			argumentsList.eAdapters().remove(getArgumentListAdapter());
-		}
-		this.argumentsList = argumentsList;
-		this.argumentsList.eAdapters().add(getArgumentListAdapter());
+		tableViewer.setCellEditors(new CellEditor[] { null, cellEditor });
 	}
-	
-	private Adapter getArgumentListAdapter() {
-		if (adapter == null) {
-			adapter = new AdapterImpl() {
-				@Override
-				public void notifyChanged(Notification msg) {
-					// TODO
-				}
-			};
-		}
-		return adapter;
+
+	protected void newSelection(ISelection selection) {
 	}
-	
-	@Override
-	public void dispose() {
-		super.dispose();
-//		if (selectionChangedListener != null) {
-//			controllersConfigsComposite.removeListener(SWT.Selection, (Listener) selectionChangedListener);
-//		}
-		if(adapter != null){
-			argumentsList.eAdapters().remove(getArgumentListAdapter());
-		}
+
+	public void setOperationCallControllerBinding(OperationCallControllerBinding operationCallControllerBinding) {
+		this.operationCallControllerBinding = operationCallControllerBinding;
+	}
+
+	public OperationCallControllerBinding getOperationCallControllerBinding() {
+		return operationCallControllerBinding;
 	}
 
 }
