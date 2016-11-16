@@ -188,13 +188,9 @@ public class ProgramFactoriesRegistryImpl extends MinimalEObjectImpl.Container i
 			IExtensionPoint extensionPoint = Platform.getExtensionRegistry()
 					.getExtensionPoint(getPROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_POINT_ID());
 
-			System.out.println("ProgramFactoriesRegistryImpl.getProgramFactoriesMap() : " + getPROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_POINT_ID());
-			
 			IConfigurationElement[] contributors = extensionPoint
 					.getConfigurationElements();
 			
-			System.out.println("ProgramFactoriesRegistryImpl.getProgramFactoriesMap() contributors Size: " + contributors.length);
-
 			for (int i = 0; i < contributors.length; i++) {
 				IConfigurationElement contributor = contributors[i];
 				try {
@@ -210,23 +206,6 @@ public class ProgramFactoriesRegistryImpl extends MinimalEObjectImpl.Container i
 							EventSeverity.ERROR, e);
 				}
 			}
-
-			/*if (contributors.length > 0){
-				IConfigurationElement contributor = contributors[0];
-				
-				String eClassStr = contributor.getAttribute(getPROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_ECLASS_ID());				
-				EClass eClass = ApogyCommonEMFFacade.INSTANCE.getEClass(eClassStr);				
-
-				try {
-					ProgramFactory programFactory = (ProgramFactory) contributor.createExecutableExtension(getPROGRAM_FACTORY_PROVIDER_CONTRIBUTORS_FACTORY_ID());
-					map.put(eClass, programFactory);
-				} catch (CoreException e) {
-					e.printStackTrace();
-				}								
-			}*/
-			
-			System.out.println("ProgramFactoriesRegistryImpl.getProgramFactoriesMap() size = " + map.size());
-			
 			setProgramFactoriesMap(map);
 		}		
 		

@@ -97,15 +97,15 @@ public interface ApogyCoreInvocatorFactory extends EFactory
   LocalTypesList createLocalTypesList();
 
   /**
-	 * Returns a new object of class '<em>Registered Types List</em>'.
+	 * Returns a new object of class '<em>Types Registry</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Registered Types List</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Types Registry</em>'.
 	 * @generated
 	 */
-  RegisteredTypesList createRegisteredTypesList();
+	TypesRegistry createTypesRegistry();
 
-  /**
+		/**
 	 * Returns a new object of class '<em>Type</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -40,7 +40,6 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
@@ -110,9 +109,7 @@ public class VariablesListComposite extends Composite {
 		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		btnDelete.setSize(74, 29);
 		btnDelete.setText("Delete");
-		new Label(this, SWT.NONE);
-		
-		customInitDataBindings();
+		m_bindingContext = customInitDataBindings();
 	}
 	
 	/**

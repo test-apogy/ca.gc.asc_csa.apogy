@@ -44,7 +44,6 @@ import org.eclipse.emf.ecore.EOperation;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getRegisteredTypes <em>Registered Types</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getApogyCoreInvocatorFacade()
@@ -101,31 +100,6 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * @generated
 	 */
 	void setActiveInvocatorSession(InvocatorSession value);
-
-	/**
-	 * Returns the value of the '<em><b>Registered Types</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Registered Types List.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Registered Types</em>' containment reference.
-	 * @see #setRegisteredTypes(RegisteredTypesList)
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getApogyCoreInvocatorFacade_RegisteredTypes()
-	 * @model containment="true"
-	 * @generated
-	 */
-	RegisteredTypesList getRegisteredTypes();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getRegisteredTypes <em>Registered Types</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Registered Types</em>' containment reference.
-	 * @see #getRegisteredTypes()
-	 * @generated
-	 */
-	void setRegisteredTypes(RegisteredTypesList value);
 
 	public ApogyCoreInvocatorFacade INSTANCE = ApogyCoreInvocatorFacadeImpl.getInstance();
 	
@@ -599,17 +573,6 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * @generated
 	 */
 	ProgramsGroup getControllersGroup();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Returns all available local and registered types.
-	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.core.invocator.Type>" unique="false" many="false"
-	 * @generated
-	 */
-	List<Type> getAllTypes();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -146,9 +146,9 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreInvocatorPackage.REGISTERED_TYPES_LIST: {
-				RegisteredTypesList registeredTypesList = (RegisteredTypesList)theEObject;
-				T result = caseRegisteredTypesList(registeredTypesList);
+			case ApogyCoreInvocatorPackage.TYPES_REGISTRY: {
+				TypesRegistry typesRegistry = (TypesRegistry)theEObject;
+				T result = caseTypesRegistry(typesRegistry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -686,22 +686,21 @@ public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Registered Types List</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Types Registry</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Registered Types List</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Types Registry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseRegisteredTypesList(RegisteredTypesList object)
-  {
+	public T caseTypesRegistry(TypesRegistry object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Type</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

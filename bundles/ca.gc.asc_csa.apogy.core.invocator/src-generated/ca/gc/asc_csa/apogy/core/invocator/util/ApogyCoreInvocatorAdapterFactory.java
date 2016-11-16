@@ -120,8 +120,8 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 				return createLocalTypesListAdapter();
 			}
 			@Override
-			public Adapter caseRegisteredTypesList(RegisteredTypesList object) {
-				return createRegisteredTypesListAdapter();
+			public Adapter caseTypesRegistry(TypesRegistry object) {
+				return createTypesRegistryAdapter();
 			}
 			@Override
 			public Adapter caseAbstractType(AbstractType object) {
@@ -512,21 +512,20 @@ public class ApogyCoreInvocatorAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList <em>Registered Types List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.TypesRegistry <em>Types Registry</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypesRegistry
 	 * @generated
 	 */
-  public Adapter createRegisteredTypesListAdapter()
-  {
+	public Adapter createTypesRegistryAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractType <em>Abstract Type</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
