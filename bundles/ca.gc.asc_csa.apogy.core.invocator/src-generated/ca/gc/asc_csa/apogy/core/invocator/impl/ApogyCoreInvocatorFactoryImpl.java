@@ -79,7 +79,7 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST: return createDataProductsList();
 			case ApogyCoreInvocatorPackage.TOOLS_LIST: return createToolsList();
 			case ApogyCoreInvocatorPackage.LOCAL_TYPES_LIST: return createLocalTypesList();
-			case ApogyCoreInvocatorPackage.REGISTERED_TYPES_LIST: return createRegisteredTypesList();
+			case ApogyCoreInvocatorPackage.TYPES_REGISTRY: return createTypesRegistry();
 			case ApogyCoreInvocatorPackage.TYPE: return createType();
 			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER: return createTypeApiAdapter();
 			case ApogyCoreInvocatorPackage.TYPE_MEMBER: return createTypeMember();
@@ -262,16 +262,15 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public RegisteredTypesList createRegisteredTypesList()
-  {
-		RegisteredTypesListImpl registeredTypesList = new RegisteredTypesListImpl();
-		return registeredTypesList;
+	public TypesRegistry createTypesRegistry() {
+		TypesRegistryImpl typesRegistry = new TypesRegistryImpl();
+		return typesRegistry;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

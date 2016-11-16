@@ -117,22 +117,13 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Registered Types</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES = 2;
-
-	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_FEATURE_COUNT = 3;
+	int APOGY_CORE_INVOCATOR_FACADE_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Exec</em>' operation.
@@ -495,22 +486,13 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP = 39;
 
 	/**
-	 * The operation id for the '<em>Get All Types</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES = 40;
-
-	/**
 	 * The operation id for the '<em>Add Variable</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE = 41;
+	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE = 40;
 
 	/**
 	 * The operation id for the '<em>Delete Variable</em>' operation.
@@ -519,7 +501,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 42;
+	int APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 41;
 
 	/**
 	 * The operation id for the '<em>Get Operation Call String</em>' operation.
@@ -528,7 +510,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL = 43;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL = 42;
 
 	/**
 	 * The operation id for the '<em>Get EOperation String</em>' operation.
@@ -537,7 +519,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION = 44;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION = 43;
 
 	/**
 	 * The operation id for the '<em>Get Sub Type Feature String</em>' operation.
@@ -546,7 +528,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = 45;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = 44;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -555,7 +537,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 46;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 45;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -1015,14 +997,32 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int LOCAL_TYPES_LIST_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RegisteredTypesListImpl <em>Registered Types List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypesRegistryImpl <em>Types Registry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RegisteredTypesListImpl
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRegisteredTypesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypesRegistryImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypesRegistry()
 	 * @generated
 	 */
-	int REGISTERED_TYPES_LIST = 8;
+	int TYPES_REGISTRY = 8;
+
+	/**
+	 * The feature id for the '<em><b>TYPE CONTRIBUTOR EXTENSION POINT ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPES_REGISTRY__TYPE_CONTRIBUTOR_EXTENSION_POINT_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>TYPE CONTRIBUTOR URI ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPES_REGISTRY__TYPE_CONTRIBUTOR_URI_ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Types</b></em>' reference list.
@@ -1031,25 +1031,25 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTERED_TYPES_LIST__TYPES = 0;
+	int TYPES_REGISTRY__TYPES = 2;
 
 	/**
-	 * The number of structural features of the '<em>Registered Types List</em>' class.
+	 * The number of structural features of the '<em>Types Registry</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTERED_TYPES_LIST_FEATURE_COUNT = 1;
+	int TYPES_REGISTRY_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Registered Types List</em>' class.
+	 * The number of operations of the '<em>Types Registry</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTERED_TYPES_LIST_OPERATION_COUNT = 0;
+	int TYPES_REGISTRY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractType <em>Abstract Type</em>}' class.
@@ -5034,17 +5034,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EReference getApogyCoreInvocatorFacade_ActiveInvocatorSession();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getRegisteredTypes <em>Registered Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Registered Types</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getRegisteredTypes()
-	 * @see #getApogyCoreInvocatorFacade()
-	 * @generated
-	 */
-	EReference getApogyCoreInvocatorFacade_RegisteredTypes();
-
-	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5445,16 +5434,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EOperation getApogyCoreInvocatorFacade__GetControllersGroup();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getAllTypes() <em>Get All Types</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get All Types</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getAllTypes()
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__GetAllTypes();
-
-	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#addVariable(ca.gc.asc_csa.apogy.core.invocator.VariablesList, ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Add Variable</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5784,25 +5763,47 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EReference getLocalTypesList_Types();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList <em>Registered Types List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.TypesRegistry <em>Types Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Registered Types List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList
+	 * @return the meta object for class '<em>Types Registry</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypesRegistry
 	 * @generated
 	 */
-	EClass getRegisteredTypesList();
+	EClass getTypesRegistry();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList#getTypes <em>Types</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.TypesRegistry#getTYPE_CONTRIBUTOR_EXTENSION_POINT_ID <em>TYPE CONTRIBUTOR EXTENSION POINT ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>TYPE CONTRIBUTOR EXTENSION POINT ID</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypesRegistry#getTYPE_CONTRIBUTOR_EXTENSION_POINT_ID()
+	 * @see #getTypesRegistry()
+	 * @generated
+	 */
+	EAttribute getTypesRegistry_TYPE_CONTRIBUTOR_EXTENSION_POINT_ID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.TypesRegistry#getTYPE_CONTRIBUTOR_URI_ID <em>TYPE CONTRIBUTOR URI ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>TYPE CONTRIBUTOR URI ID</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypesRegistry#getTYPE_CONTRIBUTOR_URI_ID()
+	 * @see #getTypesRegistry()
+	 * @generated
+	 */
+	EAttribute getTypesRegistry_TYPE_CONTRIBUTOR_URI_ID();
+
+	/**
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.core.invocator.TypesRegistry#getTypes <em>Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Types</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList#getTypes()
-	 * @see #getRegisteredTypesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypesRegistry#getTypes()
+	 * @see #getTypesRegistry()
 	 * @generated
 	 */
-	EReference getRegisteredTypesList_Types();
+	EReference getTypesRegistry_Types();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractType <em>Abstract Type</em>}'.
@@ -7805,14 +7806,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		EReference APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = eINSTANCE.getApogyCoreInvocatorFacade_ActiveInvocatorSession();
 
 		/**
-		 * The meta object literal for the '<em><b>Registered Types</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOGY_CORE_INVOCATOR_FACADE__REGISTERED_TYPES = eINSTANCE.getApogyCoreInvocatorFacade_RegisteredTypes();
-
-		/**
 		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8133,14 +8126,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP = eINSTANCE.getApogyCoreInvocatorFacade__GetControllersGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Get All Types</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES = eINSTANCE.getApogyCoreInvocatorFacade__GetAllTypes();
-
-		/**
 		 * The meta object literal for the '<em><b>Add Variable</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8403,14 +8388,30 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		EReference LOCAL_TYPES_LIST__TYPES = eINSTANCE.getLocalTypesList_Types();
 
 		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RegisteredTypesListImpl <em>Registered Types List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypesRegistryImpl <em>Types Registry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RegisteredTypesListImpl
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRegisteredTypesList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypesRegistryImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypesRegistry()
 		 * @generated
 		 */
-		EClass REGISTERED_TYPES_LIST = eINSTANCE.getRegisteredTypesList();
+		EClass TYPES_REGISTRY = eINSTANCE.getTypesRegistry();
+
+		/**
+		 * The meta object literal for the '<em><b>TYPE CONTRIBUTOR EXTENSION POINT ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TYPES_REGISTRY__TYPE_CONTRIBUTOR_EXTENSION_POINT_ID = eINSTANCE.getTypesRegistry_TYPE_CONTRIBUTOR_EXTENSION_POINT_ID();
+
+		/**
+		 * The meta object literal for the '<em><b>TYPE CONTRIBUTOR URI ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TYPES_REGISTRY__TYPE_CONTRIBUTOR_URI_ID = eINSTANCE.getTypesRegistry_TYPE_CONTRIBUTOR_URI_ID();
 
 		/**
 		 * The meta object literal for the '<em><b>Types</b></em>' reference list feature.
@@ -8418,7 +8419,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REGISTERED_TYPES_LIST__TYPES = eINSTANCE.getRegisteredTypesList_Types();
+		EReference TYPES_REGISTRY__TYPES = eINSTANCE.getTypesRegistry_Types();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractType <em>Abstract Type</em>}' class.

@@ -264,30 +264,29 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.TypesRegistry} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected RegisteredTypesListItemProvider registeredTypesListItemProvider;
+	protected TypesRegistryItemProvider typesRegistryItemProvider;
 
-  /**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList}.
+		/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypesRegistry}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createRegisteredTypesListAdapter()
-  {
-		if (registeredTypesListItemProvider == null) {
-			registeredTypesListItemProvider = new RegisteredTypesListItemProvider(this);
+	@Override
+	public Adapter createTypesRegistryAdapter() {
+		if (typesRegistryItemProvider == null) {
+			typesRegistryItemProvider = new TypesRegistryItemProvider(this);
 		}
 
-		return registeredTypesListItemProvider;
+		return typesRegistryItemProvider;
 	}
 
-  /**
+		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.Type} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1357,7 +1356,7 @@ public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvoc
 		if (dataProductsListItemProvider != null) dataProductsListItemProvider.dispose();
 		if (toolsListItemProvider != null) toolsListItemProvider.dispose();
 		if (localTypesListItemProvider != null) localTypesListItemProvider.dispose();
-		if (registeredTypesListItemProvider != null) registeredTypesListItemProvider.dispose();
+		if (typesRegistryItemProvider != null) typesRegistryItemProvider.dispose();
 		if (typeItemProvider != null) typeItemProvider.dispose();
 		if (typeApiAdapterItemProvider != null) typeApiAdapterItemProvider.dispose();
 		if (typeMemberItemProvider != null) typeMemberItemProvider.dispose();

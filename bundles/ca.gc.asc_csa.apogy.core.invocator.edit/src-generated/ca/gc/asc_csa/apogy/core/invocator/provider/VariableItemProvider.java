@@ -34,7 +34,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Type;
@@ -135,6 +134,7 @@ public class VariableItemProvider
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated_NOT
+	 * FIXME Remove generated_NOT
 	 */
   protected void addVariableTypePropertyDescriptor(Object object)
   {
@@ -166,7 +166,7 @@ public class VariableItemProvider
 									return o1.getName().compareTo(o2.getName());
 								}
 							};
-							types = ApogyCoreInvocatorFacade.INSTANCE.getAllTypes();
+//							types = ApogyCoreInvocatorFacade.INSTANCE.getAllTypes();
 							Collections.sort(types, comparator);
 						}
 						return types;
