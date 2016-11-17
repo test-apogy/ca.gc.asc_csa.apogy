@@ -42,6 +42,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.URIHandlerImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.osgi.framework.Bundle;
@@ -587,7 +588,19 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 				@Override
 				public void run() {
 					try {
-						resource.save(Collections.EMPTY_MAP);
+						
+						final Map<Object, Object> saveOptions = new HashMap<Object, Object>();
+						saveOptions.put(Resource.OPTION_SAVE_ONLY_IF_CHANGED,
+								Resource.OPTION_SAVE_ONLY_IF_CHANGED_MEMORY_BUFFER);
+						saveOptions.put(Resource.OPTION_LINE_DELIMITER,
+								Resource.OPTION_LINE_DELIMITER_UNSPECIFIED);
+
+						// The following lines added.
+						saveOptions.put(XMLResource.OPTION_URI_HANDLER,
+								new URIHandlerImpl.PlatformSchemeAware());
+						
+						resource.save(saveOptions);
+						
 						((BasicCommandStack) ApogyCommonEmfTransactionFacade.INSTANCE.getDefaultEditingDomain()
 								.getCommandStack()).saveIsDone();
 					} catch (IOException e) {
