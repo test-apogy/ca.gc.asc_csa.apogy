@@ -27,9 +27,8 @@ import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
+import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.viewers.ComboViewer;
-import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -41,6 +40,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.wb.swt.SWTResourceManager;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
@@ -161,18 +161,7 @@ public class SessionStatusToolControl {
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS))
 				.observe(ApogyCoreInvocatorFacade.INSTANCE);
-		comboViewerContext.setContentProvider(new ObservableListContentProvider());
-		comboViewerContext.setLabelProvider(new LabelProvider() {
-			@Override
-			public String getText(Object element) {
-				if (element instanceof Context) {
-					return ((Context) element).getName();
-				}
-				return null;
-			}
-		});
-		comboViewerContext.setInput(invocatorFacadeEnvironmentContextsListContextsObserveValue);
-
+		ViewerSupport.bind(comboViewerContext, invocatorFacadeEnvironmentContextsListContextsObserveValue, EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
 		/**
 		 * Data binding to set the text value of the combo box to the active
 		 * context
