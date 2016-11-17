@@ -27,7 +27,7 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallDetailsComposite;
 
 public class ProgramDetailsPart extends AbstractSelectionBasedPart{
 
@@ -41,17 +41,17 @@ public class ProgramDetailsPart extends AbstractSelectionBasedPart{
 	@Optional
 	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramPartSelection selection) {
 		if (selection != null) {
-			setEObject(selection.getOperationCall());
+				setEObject(selection.getOperationCall());
 		}
 	}
 
 	@Override
 	protected void setSelectionInContentComposite(EObject eObject) {
-		((OperationCallComposite) getContentComposite()).setOperationCall((OperationCall)eObject);
+		((OperationCallDetailsComposite) getContentComposite()).setOperationCall((OperationCall)eObject);
 	}
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new OperationCallComposite(composite, SWT.None);
+		return new OperationCallDetailsComposite(composite, SWT.None);
 	}
 }

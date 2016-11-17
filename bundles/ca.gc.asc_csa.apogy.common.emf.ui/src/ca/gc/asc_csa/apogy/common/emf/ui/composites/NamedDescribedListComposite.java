@@ -54,7 +54,6 @@ public class NamedDescribedListComposite extends EObjectListComposite{
 			if(cell.getText() == ""){
 				cell.setText("<unnamed>");
 			}
-			treeViewerEObjectsList.refresh();
 		}
 		
 		@Override

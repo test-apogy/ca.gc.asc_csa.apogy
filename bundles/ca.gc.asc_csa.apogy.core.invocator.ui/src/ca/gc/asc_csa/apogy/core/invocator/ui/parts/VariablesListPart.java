@@ -56,6 +56,7 @@ public class VariablesListPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected void setNullSelection() {
+		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.variables"));
 		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createVariablesListPartSelection());
 	}
 }

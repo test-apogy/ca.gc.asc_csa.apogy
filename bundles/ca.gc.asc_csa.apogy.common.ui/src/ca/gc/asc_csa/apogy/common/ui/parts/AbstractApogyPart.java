@@ -17,6 +17,7 @@ package ca.gc.asc_csa.apogy.common.ui.parts;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import org.eclipse.e4.ui.workbench.modeling.EPartService;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.layout.FillLayout;
@@ -29,6 +30,9 @@ abstract public class AbstractApogyPart {
 
 	@Inject
 	protected ESelectionService selectionService;
+	
+	@Inject
+	protected EPartService partService;
 
 	@PostConstruct
 	public void createPartControl(Composite parent) {
@@ -76,10 +80,11 @@ abstract public class AbstractApogyPart {
 
 	/**
 	 * This method is called when the selection needs to be set to null. This
-	 * method should create an empty selection according to the implemented part
-	 * and set the selection in the {@link ESelectionService}.
+	 * method should first set the part active using the {@link EPartService}
+	 * and then create an empty selection according to the implemented part and
+	 * set the selection in the {@link ESelectionService}.
 	 */
-	protected void setNullSelection(){		
+	protected void setNullSelection() {
 	}
 
 	/**

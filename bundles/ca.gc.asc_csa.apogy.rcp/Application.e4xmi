@@ -239,9 +239,6 @@
       </menus>
       <toolbar xmi:id="_BxoHgp02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.common.io.jinput.ui.views.JInputStatusView"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_tOdkEKHYEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.details" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ScriptBasedProgramsListPart" label="Programs"/>
-    <sharedElements xsi:type="basic:Part" xmi:id="_Qzm3kKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.programdetailssimpleprogramdetailspart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.SimpleProgramDetailsPart" label="Program Details"/>
-    <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.parameterdefinitionparameterdefinitionpart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ParameterDefinitionPart" label="Parameter Definition"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_iuRl0KaZEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.part.contextsList" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ContextsDefinitionPart" label="Contexts"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_VhqlIKaaEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.part.variables" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.VariablesListPart" label="Variables"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_tOdkEKHYEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ScriptBasedProgramsListPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ScriptBasedProgramsListPart" label="Programs"/>

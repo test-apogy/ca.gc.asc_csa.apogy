@@ -83,7 +83,7 @@ import org.eclipse.ui.forms.widgets.Section;
 
 public class VariableFeatureReferenceComposite extends Composite {
 	private DataBindingContext m_bindingContext;
-	
+
 	private DataBindingContext m_FeaturesbindingContext;
 
 	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
@@ -103,8 +103,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 
 	private AdapterImpl variableFeatureReferenceAdapter;
 
-	AdapterFactory adapterFactory = new ComposedAdapterFactory(
-			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+	AdapterFactory adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 	private Table table;
 
 	/**
@@ -121,8 +120,8 @@ public class VariableFeatureReferenceComposite extends Composite {
 				toolkit.dispose();
 			}
 		});
-		setLayout(new GridLayout(3, true));		
-		
+		setLayout(new GridLayout(3, true));
+
 		/**
 		 * 
 		 * Variable.
@@ -130,31 +129,28 @@ public class VariableFeatureReferenceComposite extends Composite {
 		 */
 		Section sctnVariable = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
 		sctnVariable.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		sctnVariable.setText("Variable");	
-		variablesViewer = new TableViewer(sctnVariable, SWT.BORDER
-		| SWT.H_SCROLL | SWT.V_SCROLL);
+		sctnVariable.setText("Variable");
+		variablesViewer = new TableViewer(sctnVariable, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		variablesViewer.setUseHashlookup(true);
 		variablesViewer.setComparator(new ViewerComparator());
 		table = variablesViewer.getTable();
 		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		table.setLinesVisible(true);
 		sctnVariable.setClient(table);
-		
-		
+
 		/**
 		 * 
 		 * Sub-Type.
 		 * 
-		 */		
+		 */
 		Section sctnSubType = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
 		sctnSubType.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		sctnSubType.setText("Sub-Type");
 
-		Composite compositeSubType = new Composite(sctnSubType, SWT.None);//.createCompositeSeparator(sctnSubType);
+		Composite compositeSubType = new Composite(sctnSubType, SWT.None);// .createCompositeSeparator(sctnSubType);
 		compositeSubType.setLayout(new GridLayout(1, false));
-		
-		typeMemberViewer = new TreeViewer(compositeSubType, SWT.BORDER | SWT.V_SCROLL
-				| SWT.H_SCROLL | SWT.SINGLE);
+
+		typeMemberViewer = new TreeViewer(compositeSubType, SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL | SWT.SINGLE);
 		typeMemberViewer.setUseHashlookup(true);
 		Tree tree = typeMemberViewer.getTree();
 		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -164,12 +160,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 		clearTypeButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if (editingDomain == null){
+				if (editingDomain == null) {
 					variableFeatureReference.setTypeMemberReferenceListElement(null);
-				}else{					
-					SetCommand command = new SetCommand(
-							editingDomain,
-							variableFeatureReference,
+				} else {
+					SetCommand command = new SetCommand(editingDomain, variableFeatureReference,
 							ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT,
 							null);
 					editingDomain.getCommandStack().execute(command);
@@ -177,12 +171,11 @@ public class VariableFeatureReferenceComposite extends Composite {
 				typeMemberViewer.setSelection(null);
 			}
 		});
-		clearTypeButton.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER,
-				false, false, 1, 1));
+		clearTypeButton.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 		clearTypeButton.setText("Clear");
-		
-		sctnSubType.setClient(compositeSubType);		
-		
+
+		sctnSubType.setClient(compositeSubType);
+
 		/**
 		 * 
 		 * Feature.
@@ -191,71 +184,69 @@ public class VariableFeatureReferenceComposite extends Composite {
 		Section sctnFeature = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
 		sctnFeature.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		sctnFeature.setText("Feature");
-		
+
 		Composite compositeFeature = new Composite(sctnFeature, SWT.NONE);
 		compositeFeature.setLayout(new GridLayout(1, false));
 
-		featuresViewer = new TreeViewer(compositeFeature, SWT.VIRTUAL | SWT.BORDER
-				| SWT.V_SCROLL | SWT.H_SCROLL | SWT.SINGLE);
+		featuresViewer = new TreeViewer(compositeFeature,
+				SWT.VIRTUAL | SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL | SWT.SINGLE);
 		featuresViewer.setUseHashlookup(true);
 		featuresViewer.setContentProvider(getFeaturesContentProvider());
-		featuresViewer.setLabelProvider(new AdapterFactoryLabelProvider(
-				adapterFactory));
-		
+		featuresViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
+
 		Tree featuresTree = featuresViewer.getTree();
-		featuresTree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true,
-				1, 1));
+		featuresTree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		featuresTree.setLinesVisible(true);
 
 		Button clearFeatureSelection = new Button(compositeFeature, SWT.NONE);
 		clearFeatureSelection.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if (editingDomain == null){
+				if (editingDomain == null) {
 					variableFeatureReference.setFeatureRoot(null);
-				}else{				
-					SetCommand command = new SetCommand(
-							editingDomain,
-							variableFeatureReference,
-							ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
-							null);
+				} else {
+					SetCommand command = new SetCommand(editingDomain, variableFeatureReference,
+							ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, null);
 					editingDomain.getCommandStack().execute(command);
 				}
 				featuresViewer.setSelection(null);
 			}
 		});
-		clearFeatureSelection.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER,
-				false, false, 1, 1));
+		clearFeatureSelection.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 		clearFeatureSelection.setText("Clear");
-		
-		sctnFeature.setClient(compositeFeature);		
+
+		sctnFeature.setClient(compositeFeature);
 	}
 
 	/**
-	 * Sets the {@link VariablesList} and the {@link VariableFeatureReference} managed by
-	 * the composite. 
-	 * @param variables Reference to the list of variables.
-	 * @param variableFeatureReference Reference to the variable feature.
+	 * Sets the {@link VariablesList} and the {@link VariableFeatureReference}
+	 * managed by the composite.
+	 * 
+	 * @param variables
+	 *            Reference to the list of variables.
+	 * @param variableFeatureReference
+	 *            Reference to the variable feature.
 	 */
-	public void set(VariablesList variables,
-			VariableFeatureReference variableFeatureReference) {
+	public void set(VariablesList variables, VariableFeatureReference variableFeatureReference) {
 		set(variables, variableFeatureReference, true);
 	}
 
 	/**
-	 * Sets the {@link VariablesList} and the {@link VariableFeatureReference} managed by
-	 * the composite. 
-	 * @param variables Reference to the list of variables.
-	 * @param variableFeatureReference Reference to the variable feature.
-	 * @param update If true then data bindings are created.
+	 * Sets the {@link VariablesList} and the {@link VariableFeatureReference}
+	 * managed by the composite.
+	 * 
+	 * @param variables
+	 *            Reference to the list of variables.
+	 * @param variableFeatureReference
+	 *            Reference to the variable feature.
+	 * @param update
+	 *            If true then data bindings are created.
 	 */
-	private void set(VariablesList variables,
-			VariableFeatureReference variableFeatureReference, boolean update) {
+	private void set(VariablesList variables, VariableFeatureReference variableFeatureReference, boolean update) {
 
 		this.variables = variables;
 		this.variableFeatureReference = variableFeatureReference;
-		editingDomain = AdapterFactoryEditingDomain
-				.getEditingDomainFor(variableFeatureReference);
+		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(variableFeatureReference);
 
 		if (update) {
 			if (m_bindingContext != null) {
@@ -265,8 +256,8 @@ public class VariableFeatureReferenceComposite extends Composite {
 			if (m_FeaturesbindingContext != null) {
 				m_FeaturesbindingContext.dispose();
 				m_FeaturesbindingContext = null;
-			}			
-			
+			}
+
 			if (this.variables != null && this.variableFeatureReference != null) {
 				m_bindingContext = initDataBindings();
 				m_FeaturesbindingContext = initFeaturesDataBindings();
@@ -275,8 +266,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 	}
 
 	/**
-	 * Use this to prevent Window Pro Builder code analysis to fail with the complex 
-	 * data bindings code.  Invokes {@link VariableFeatureReferenceComposite#initDataBindingsCustom()}.
+	 * Use this to prevent Window Pro Builder code analysis to fail with the
+	 * complex data bindings code. Invokes
+	 * {@link VariableFeatureReferenceComposite#initDataBindingsCustom()}.
+	 * 
 	 * @return Reference to the data bindings context.
 	 * @see VariableFeatureReferenceComposite#initDataBindingsCustom()
 	 */
@@ -285,8 +278,9 @@ public class VariableFeatureReferenceComposite extends Composite {
 	}
 
 	/**
-	 * Creates and returns the data bindings context that takes care of the Variables viewer and the 
-	 * Type Members viewer.
+	 * Creates and returns the data bindings context that takes care of the
+	 * Variables viewer and the Type Members viewer.
+	 * 
 	 * @return Reference to the data bindings context.
 	 */
 	private DataBindingContext initDataBindingsCustom() {
@@ -295,29 +289,23 @@ public class VariableFeatureReferenceComposite extends Composite {
 		/**
 		 * Variables Viewer Content.
 		 */
-		ViewerSupport.bind(variablesViewer, EMFObservables.observeList(
-				variables,
-				ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES),
+		ViewerSupport.bind(variablesViewer,
+				EMFObservables.observeList(variables, ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES),
 				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
 
 		/**
 		 * Variable Selection Binding.
 		 */
-		IObservableValue observeSingleSelectionVariablesViewer = ViewerProperties
-				.singleSelection().observe(variablesViewer);
-		
-		IObservableValue observeVariableValue = editingDomain == null ? 
-				EMFObservables.observeValue(
-						variableFeatureReference,
-						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE):
+		IObservableValue observeSingleSelectionVariablesViewer = ViewerProperties.singleSelection()
+				.observe(variablesViewer);
 
-				EMFEditObservables.observeValue(
-						editingDomain,
-						variableFeatureReference,
+		IObservableValue observeVariableValue = editingDomain == null ? EMFObservables.observeValue(
+				variableFeatureReference, ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE) :
+
+				EMFEditObservables.observeValue(editingDomain, variableFeatureReference,
 						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE);
-		
-		bindingContext.bindValue(observeSingleSelectionVariablesViewer,
-				observeVariableValue, null, null);
+
+		bindingContext.bindValue(observeSingleSelectionVariablesViewer, observeVariableValue, null, null);
 
 		/**
 		 * Type Member Viewer Content.
@@ -327,35 +315,28 @@ public class VariableFeatureReferenceComposite extends Composite {
 			protected IListProperty doGetDelegate(Object source) {
 				IListProperty listProperty = null;
 				if (source instanceof VariableFeatureReference) {
-					listProperty = EMFProperties
-							.list(FeaturePath
-									.fromList(
-											ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE,
-											ApogyCoreInvocatorPackage.Literals.VARIABLE__VARIABLE_TYPE,
-											ApogyCoreInvocatorPackage.Literals.TYPE__MEMBERS));
+					listProperty = EMFProperties.list(FeaturePath.fromList(
+							ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE,
+							ApogyCoreInvocatorPackage.Literals.VARIABLE__VARIABLE_TYPE,
+							ApogyCoreInvocatorPackage.Literals.TYPE__MEMBERS));
 				}
 				if (source instanceof TypeMember) {
 					listProperty = EMFProperties
-							.list(FeaturePath
-									.fromList(
-											ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER__MEMBER_TYPE,
-											ApogyCoreInvocatorPackage.Literals.TYPE__MEMBERS));
+							.list(FeaturePath.fromList(ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER__MEMBER_TYPE,
+									ApogyCoreInvocatorPackage.Literals.TYPE__MEMBERS));
 				}
 				return listProperty;
 			}
 		};
-		ViewerSupport.bind(typeMemberViewer, variableFeatureReference,
-				typeMemberChildrenProperty,
+		ViewerSupport.bind(typeMemberViewer, variableFeatureReference, typeMemberChildrenProperty,
 				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
 
 		/**
 		 * Sets Type Member Selection.
 		 */
-		TypeMemberReferenceListElement element = variableFeatureReference
-				.getTypeMemberReferenceListElement();
+		TypeMemberReferenceListElement element = variableFeatureReference.getTypeMemberReferenceListElement();
 		if (element != null) {
-			TypeMember[] typeMemberSegments = new TypeMember[element
-					.getSubSegmentsCount()];
+			TypeMember[] typeMemberSegments = new TypeMember[element.getSubSegmentsCount()];
 
 			for (int i = 0; i < typeMemberSegments.length; i++) {
 				typeMemberSegments[i] = element.getTypeMember();
@@ -363,8 +344,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 			}
 			TreePath typeMemberTreePath = new TreePath(typeMemberSegments);
 			try {
-				TreeSelection treeSelection = new TreeSelection(
-						typeMemberTreePath);
+				TreeSelection treeSelection = new TreeSelection(typeMemberTreePath);
 				typeMemberViewer.setSelection(treeSelection, true);
 			} catch (Throwable t) {
 				t.printStackTrace();
@@ -374,61 +354,53 @@ public class VariableFeatureReferenceComposite extends Composite {
 		/**
 		 * Bind TypeMemberReference.
 		 */
-		IObservableValue observeSingleSelectionTypeViewer = ViewersObservables
-				.observeSingleSelection(typeMemberViewer);
-		
-		IObservableValue observeTypeMemberValue = editingDomain == null ? 
-				EMFObservables
-				.observeValue(
-						variableFeatureReference,
-						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT):
-				
-				EMFEditObservables
-				.observeValue(
-						editingDomain,
-						variableFeatureReference,
+		IObservableValue observeSingleSelectionTypeViewer = ViewersObservables.observeSingleSelection(typeMemberViewer);
+
+		IObservableValue observeTypeMemberValue = editingDomain == null
+				? EMFObservables.observeValue(variableFeatureReference,
+						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT)
+				:
+
+				EMFEditObservables.observeValue(editingDomain, variableFeatureReference,
 						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
-		
-		
-		bindingContext.bindValue(observeSingleSelectionTypeViewer,
-				observeTypeMemberValue, new UpdateValueStrategy()
-						.setConverter(new Converter(TypeMember.class,
-								TypeMemberReferenceListElement.class) {
-							@Override
-							public Object convert(Object fromObject) {
-								ITreeSelection selection = (ITreeSelection) typeMemberViewer
-										.getSelection();
-								TreePath path = selection.getPaths()[0];
-								TypeMember[] typeMembers = new TypeMember[path
-										.getSegmentCount()];
-								for (int i = 0; i < path.getSegmentCount(); i++) {
-									typeMembers[i] = (TypeMember) path
-											.getSegment(i);
-								}
-								return ApogyCoreInvocatorFacade.INSTANCE.createTypeMemberReferences(typeMembers);
+
+		bindingContext.bindValue(observeSingleSelectionTypeViewer, observeTypeMemberValue, new UpdateValueStrategy()
+				.setConverter(new Converter(TypeMember.class, TypeMemberReferenceListElement.class) {
+					@Override
+					public Object convert(Object fromObject) {
+						if (fromObject != null) {
+							ITreeSelection selection = (ITreeSelection) typeMemberViewer.getSelection();
+							TreePath path = selection.getPaths()[0];
+							TypeMember[] typeMembers = new TypeMember[path.getSegmentCount()];
+							for (int i = 0; i < path.getSegmentCount(); i++) {
+								typeMembers[i] = (TypeMember) path.getSegment(i);
 							}
-						}), new UpdateValueStrategy(
-						UpdateValueStrategy.POLICY_NEVER));
+							return ApogyCoreInvocatorFacade.INSTANCE.createTypeMemberReferences(typeMembers);
+						}
+						return null;
+					}
+				}), new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER));
 
 		return bindingContext;
 	}
 
-	
 	/**
-	 * Creates and returns the data bindings context that takes care of the Features viewer.
+	 * Creates and returns the data bindings context that takes care of the
+	 * Features viewer.
+	 * 
 	 * @return Reference to the data bindings context.
 	 */
 	protected DataBindingContext initFeaturesDataBindings() {
 		/** Remove Variable Feature Adapter. */
 		variableFeatureReference.eAdapters().remove(getVariableFeatureReferenceAdapter());
-		
+
 		/** Create the new binding context. */
 		DataBindingContext bindingContext = new DataBindingContext();
 
 		/**
 		 * Set the Features viewer properties.
 		 */
-		featuresViewer.setInput(variableFeatureReference);		
+		featuresViewer.setInput(variableFeatureReference);
 
 		/**
 		 * Set the initial feature selection if any.
@@ -438,75 +410,66 @@ public class VariableFeatureReferenceComposite extends Composite {
 		if (listRootNode != null) {
 			ListFeatureNode node = (ListFeatureNode) listRootNode.getChild();
 			List<EStructuralFeature> featuresList = new ArrayList<EStructuralFeature>();
-			
-			while (node != null){
+
+			while (node != null) {
 				featuresList.add(node.getStructuralFeature());
 				node = (ListFeatureNode) node.getChild();
-			}			
+			}
 			TreePath featuresTreePath = new TreePath(featuresList.toArray());
 			try {
-				treeSelection = new TreeSelection(
-						featuresTreePath);
+				treeSelection = new TreeSelection(featuresTreePath);
 			} catch (Throwable t) {
 				t.printStackTrace();
 			}
 		}
 		featuresViewer.setSelection(treeSelection, true);
-				
+
 		/**
 		 * Bind the features Selection.
 		 */
 		IObservableValue observeSingleSelectionFeaturesViewer = ViewersObservables
 				.observeSingleSelection(featuresViewer);
-				
-		IObservableValue observeFeaturesValue = editingDomain == null ? 
-				EMFObservables
-				.observeValue(
-						variableFeatureReference,
-						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT):			
-				EMFEditObservables
-				.observeValue(
-						editingDomain,
-						variableFeatureReference,
+
+		IObservableValue observeFeaturesValue = editingDomain == null
+				? EMFObservables.observeValue(variableFeatureReference,
+						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT)
+				: EMFEditObservables.observeValue(editingDomain, variableFeatureReference,
 						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
 
-		bindingContext.bindValue(observeSingleSelectionFeaturesViewer,
-				observeFeaturesValue, new UpdateValueStrategy()
-						.setConverter(new Converter(EStructuralFeature.class,
-								ListRootNode.class) {
-							@Override
-							public Object convert(Object fromObject) {
-								ITreeSelection selection = (ITreeSelection) featuresViewer
-										.getSelection();
-								TreePath path = selection.getPaths()[0];
-								EStructuralFeature[] features = new EStructuralFeature[path
-										.getSegmentCount()];
-								for (int i = 0; i < path.getSegmentCount(); i++) {
-									features[i] = (EStructuralFeature) path
-											.getSegment(i);
-								}
-								return createListRootNode(features);
+		bindingContext.bindValue(observeSingleSelectionFeaturesViewer, observeFeaturesValue,
+				new UpdateValueStrategy().setConverter(new Converter(EStructuralFeature.class, ListRootNode.class) {
+					@Override
+					public Object convert(Object fromObject) {
+						if (fromObject != null) {
+							ITreeSelection selection = (ITreeSelection) featuresViewer.getSelection();
+							TreePath path = selection.getPaths()[0];
+							EStructuralFeature[] features = new EStructuralFeature[path.getSegmentCount()];
+							for (int i = 0; i < path.getSegmentCount(); i++) {
+								features[i] = (EStructuralFeature) path.getSegment(i);
 							}
-						}), new UpdateValueStrategy(
-						UpdateValueStrategy.POLICY_NEVER));
-		
+							return createListRootNode(features);
+						}
+						return null;
+					}
+				}), new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER));
 
-		/** 
+		/**
 		 * Listens Variable Feature Reference Events.
 		 */
 		variableFeatureReference.eAdapters().add(getVariableFeatureReferenceAdapter());
-		
+
 		return bindingContext;
 	}
-	
-	
-	/** 
-	 * This adapter is used to bind the feature component of the VariableFeatureReference.
+
+	/**
+	 * This adapter is used to bind the feature component of the
+	 * VariableFeatureReference.
+	 * 
 	 * @return Reference to the adapter.
 	 */
 	private Adapter getVariableFeatureReferenceAdapter() {
-		if (variableFeatureReferenceAdapter == null){
-			variableFeatureReferenceAdapter = new AdapterImpl(){
+		if (variableFeatureReferenceAdapter == null) {
+			variableFeatureReferenceAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
 					switch (msg.getFeatureID(VariableFeatureReference.class)) {
@@ -516,7 +479,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 						if (m_FeaturesbindingContext != null) {
 							m_FeaturesbindingContext.dispose();
 							m_FeaturesbindingContext = null;
-						}			
+						}
 						if (variableFeatureReference != null) {
 							m_FeaturesbindingContext = initFeaturesDataBindings();
 						}
@@ -524,42 +487,44 @@ public class VariableFeatureReferenceComposite extends Composite {
 					default:
 						break;
 					}
-				}				
+				}
 			};
 		}
 		return variableFeatureReferenceAdapter;
 	}
 
-	/** 
-	 * This method could be overloaded to return a subset of the EStructuralFeatures.
-	 * @param eClass Reference to the EClass.
-	 * @return List of EStructuralFeatures contained in eClass. 
+	/**
+	 * This method could be overloaded to return a subset of the
+	 * EStructuralFeatures.
+	 * 
+	 * @param eClass
+	 *            Reference to the EClass.
+	 * @return List of EStructuralFeatures contained in eClass.
 	 */
-	protected List<EStructuralFeature> getEStructuralFeature(EClass eClass){
-		List <EStructuralFeature> list = new ArrayList<EStructuralFeature>();
-		if (variableFeatureReference instanceof OperationCall){
+	protected List<EStructuralFeature> getEStructuralFeature(EClass eClass) {
+		List<EStructuralFeature> list = new ArrayList<EStructuralFeature>();
+		if (variableFeatureReference instanceof OperationCall) {
 			list.addAll(eClass.getEAllReferences());
-		}else{
+		} else {
 			list.addAll(eClass.getEAllStructuralFeatures());
 		}
 		return list;
-	}	
+	}
 
 	/**
-	 * FIXME Move under ApogyCoreInvocatorFacade.  Wait for Eclipse MARS Release.  
-	 * XCore bug fixed by Ed Merks.
-	 * FIXME Move under {@link ApogyCoreInvocatorFacade}.  Wait XCore bug.  Unable to wrap EStructuralFeature to get a array data type. 
+	 * FIXME Move under ApogyCoreInvocatorFacade. Wait for Eclipse MARS Release.
+	 * XCore bug fixed by Ed Merks. FIXME Move under
+	 * {@link ApogyCoreInvocatorFacade}. Wait XCore bug. Unable to wrap
+	 * EStructuralFeature to get a array data type.
 	 */
 	private ListRootNode createListRootNode(EStructuralFeature[] features) {
 		ListRootNode listRootNode = null;
 		if (features.length > 0) {
 			listRootNode = ApogyCommonEMFFactory.eINSTANCE.createListRootNode();
-			listRootNode.setSourceClass(ApogyCoreInvocatorFacade.INSTANCE
-					.getInstanceClass(variableFeatureReference));
+			listRootNode.setSourceClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(variableFeatureReference));
 			AbstractFeatureListNode parentNode = listRootNode;
 			for (int i = 0; i < features.length; i++) {
-				ListFeatureNode node = ApogyCommonEMFFactory.eINSTANCE
-						.createListFeatureNode();
+				ListFeatureNode node = ApogyCommonEMFFactory.eINSTANCE.createListFeatureNode();
 				node.setStructuralFeature(features[i]);
 				parentNode.setChild(node);
 				parentNode = node;
@@ -571,25 +536,23 @@ public class VariableFeatureReferenceComposite extends Composite {
 	@Override
 	public void dispose() {
 		super.dispose();
-		
-		if (variableFeatureReference != null){
+
+		if (variableFeatureReference != null) {
 			variableFeatureReference.eAdapters().remove(getVariableFeatureReferenceAdapter());
 		}
-		
+
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
 		}
 	}
 
-	
-	/** 
+	/**
 	 * 
 	 * This class provides the content of the Feature Viewer.
 	 *
 	 */
-	private class FeaturesContentProvider implements ITreeContentProvider,
-			ILazyTreeContentProvider {
+	private class FeaturesContentProvider implements ITreeContentProvider, ILazyTreeContentProvider {
 		private Viewer viewer;
 
 		@Override
@@ -611,13 +574,11 @@ public class VariableFeatureReferenceComposite extends Composite {
 				VariableFeatureReference variableFeatureReference = (VariableFeatureReference) eObjectParent;
 				Variable variable = variableFeatureReference.getVariable();
 				if (variable != null) {
-					EClass eClass = ApogyCoreInvocatorFacade.INSTANCE
-							.getInstanceClass(variableFeatureReference);
-					
-					if (eClass != null){					
-						eObjectChild = getEStructuralFeature(eClass).get(
-								index);
-												
+					EClass eClass = ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(variableFeatureReference);
+
+					if (eClass != null) {
+						eObjectChild = getEStructuralFeature(eClass).get(index);
+
 						getTreeViewer().replace(parent, index, eObjectChild);
 
 						/** Check the number of children under this element. */
@@ -630,8 +591,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 				EClassifier eClassifier = eReference.getEType();
 				if (eClassifier instanceof EClass) {
 					EClass eClass = (EClass) eClassifier;
-					eObjectChild = getEStructuralFeature(eClass).get(
-							index);
+					eObjectChild = getEStructuralFeature(eClass).get(index);
 				}
 				getTreeViewer().replace(parent, index, eObjectChild);
 
@@ -646,11 +606,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 				VariableFeatureReference variableFeatureReference = (VariableFeatureReference) element;
 				Variable variable = variableFeatureReference.getVariable();
 				if (variable != null) {
-					EClass eClass = ApogyCoreInvocatorFacade.INSTANCE
-							.getInstanceClass(variableFeatureReference);
-					if (eClass == null){
+					EClass eClass = ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(variableFeatureReference);
+					if (eClass == null) {
 						getTreeViewer().setChildCount(element, 0);
-					}else{
+					} else {
 						getTreeViewer().setChildCount(element, getEStructuralFeature(eClass).size());
 					}
 				}
@@ -693,7 +652,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 			return (TreeViewer) viewer;
 		}
 	}
-	
+
 	private IContentProvider getFeaturesContentProvider() {
 		if (featuresContentProvider == null) {
 			featuresContentProvider = new FeaturesContentProvider();

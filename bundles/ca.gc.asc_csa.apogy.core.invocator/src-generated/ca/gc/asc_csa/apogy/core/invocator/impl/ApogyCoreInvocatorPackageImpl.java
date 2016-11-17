@@ -1079,7 +1079,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(43);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(42);
 	}
 
 	/**
@@ -1088,7 +1088,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(44);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(43);
 	}
 
 	/**
@@ -1097,7 +1097,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * @generated
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(45);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(44);
 	}
 
 	/**

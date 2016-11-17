@@ -81,7 +81,7 @@ public class NewControllerBindingWizard extends Wizard {
 	@Override
 	public IWizardPage getNextPage(IWizardPage page) {
 		if(page == getOperationCallEOperationWizardPage()){
-			if(getControllerBinding().getArgumentsList().getArguments().size() > 1){
+			if(getControllerBinding().getArgumentsList() != null){
 				return getControllerComponentWizardPage();
 			}
 		}

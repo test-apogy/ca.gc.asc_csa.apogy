@@ -61,6 +61,7 @@ public class ProgramPart extends AbstractSelectionBasedPart{
 
 	@Override
 	protected void setNullSelection() {
+		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ProgramPart"));
 		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramPartSelection());
 	}
 	

@@ -32,6 +32,8 @@ public class ControllerConfigsPart extends AbstractApogySessionBasedPart {
 		return new ControllerConfigsComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			@Override
 			protected void newSelection(ISelection selection) {
+				System.out.println(
+						"ControllerConfigsPart.createContentComposite(...).new ControllerConfigsComposite() {...}.newSelection()");
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
@@ -57,12 +59,8 @@ public class ControllerConfigsPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected void setNullSelection() {
+		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ControllerConfigsPart"));
 		selectionService
 				.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerConfigsPartSelection());
-	}
-	
-	@Override
-	protected Composite getNoContentComposite() {
-		return new ControllerConfigsComposite(composite, SWT.None);
 	}
 }

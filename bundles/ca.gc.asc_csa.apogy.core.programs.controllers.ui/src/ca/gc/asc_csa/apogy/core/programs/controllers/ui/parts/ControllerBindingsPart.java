@@ -61,6 +61,7 @@ public class ControllerBindingsPart extends AbstractSelectionBasedPart{
 
 	@Override
 	protected void setNullSelection() {
+		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ControllerBindingsPart"));
 		selectionService.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection());
 	}
 	
@@ -75,7 +76,7 @@ public class ControllerBindingsPart extends AbstractSelectionBasedPart{
 	private void setSelection(
 			@Named(IServiceConstants.ACTIVE_SELECTION) ControllerConfigsPartSelection selection) {
 		if (selection != null) {
-			if (selection.getControllersConfiguration() == null) {
+			if (selection.getControllersConfiguration() != null) {
 				setEObject(selection.getControllersConfiguration());
 			}
 		}

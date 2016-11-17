@@ -42,6 +42,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
@@ -81,14 +82,14 @@ public class OperationCallArgumentsComposite extends Composite {
 		TreeViewerColumn treeViewerColumnParameter = new TreeViewerColumn(
 				treeViewer, SWT.NONE);
 		TreeColumn columnParameter = treeViewerColumnParameter.getColumn();
-		columnParameter.setWidth(200);
+		columnParameter.setWidth(80);
 		columnParameter.setText("Parameter");
 
 		TreeViewerColumn treeViewerColumnValue = new TreeViewerColumn(
 				treeViewer, SWT.NONE);
 		TreeColumn columnValue = treeViewerColumnValue.getColumn();
-		columnValue.setWidth(200);
-		columnValue.setText("Value");
+		columnValue.setWidth(50);
+		columnValue.setText("Value");;
 
 		EditingSupport editingSupport = new ParameterEditingSupport(
 				treeViewerColumnValue.getViewer());
@@ -390,8 +391,10 @@ public class OperationCallArgumentsComposite extends Composite {
 //					ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
 //					eClass);
 //			editingDomain.getCommandStack().execute(command);
-
 			this.viewer.refresh();
+			for(TreeColumn column: tree.getColumns()){
+				column.pack();
+			}
 		}
 	}
 }

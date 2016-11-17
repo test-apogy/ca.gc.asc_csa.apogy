@@ -109,6 +109,7 @@ public class ScriptBasedProgramsListComposite extends ScrolledComposite {
 				};
 				WizardDialog dialog = new WizardDialog(getShell(), newProgramsGroupWizard);
 				dialog.open();
+				
 			}
 		});
 
