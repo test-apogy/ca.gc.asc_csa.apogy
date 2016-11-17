@@ -150,7 +150,7 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonUiFacade__AdjustWizardPage__WizardPage() {
+	public EOperation getApogyCommonUiFacade__AdjustWizardPage__WizardPage_Double() {
 		return apogyCommonUiFacadeEClass.getEOperations().get(1);
 	}
 
@@ -211,7 +211,7 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		// Create classes and their features
 		apogyCommonUiFacadeEClass = createEClass(APOGY_COMMON_UI_FACADE);
 		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING);
-		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE);
+		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE_DOUBLE);
 
 		// Create data types
 		imageDescriptorEDataType = createEDataType(IMAGE_DESCRIPTOR);
@@ -257,8 +257,9 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		EOperation op = initEOperation(getApogyCommonUiFacade__GetImageDescriptor__String(), this.getImageDescriptor(), "getImageDescriptor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "uri", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCommonUiFacade__AdjustWizardPage__WizardPage(), null, "adjustWizardPage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonUiFacade__AdjustWizardPage__WizardPage_Double(), null, "adjustWizardPage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getWizardPage(), "wizardPage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDoubleObject(), "ratio", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(imageDescriptorEDataType, ImageDescriptor.class, "ImageDescriptor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

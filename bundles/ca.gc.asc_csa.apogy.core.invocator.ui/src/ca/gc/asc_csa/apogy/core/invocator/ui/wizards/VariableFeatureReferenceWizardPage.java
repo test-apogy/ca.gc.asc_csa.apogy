@@ -82,7 +82,7 @@ public class VariableFeatureReferenceWizardPage extends WizardPage {
 		variableFeatureReferenceComposite.set(variablesList, this.variableFeatureReference);
 		setControl(variableFeatureReferenceComposite);
 		
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.8);
 		
 		validate();
 	}

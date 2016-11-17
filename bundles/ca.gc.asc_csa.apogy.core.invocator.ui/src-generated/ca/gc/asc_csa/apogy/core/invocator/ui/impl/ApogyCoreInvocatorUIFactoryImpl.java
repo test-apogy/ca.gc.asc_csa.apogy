@@ -71,6 +71,7 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE: return createApogyCoreInvocatorUIFacade();
 			case ApogyCoreInvocatorUIPackage.SCRIPT_BASED_PROGRAMS_LIST_PART_SELECTION: return createScriptBasedProgramsListPartSelection();
 			case ApogyCoreInvocatorUIPackage.PROGRAM_PART_SELECTION: return createProgramPartSelection();
+			case ApogyCoreInvocatorUIPackage.PROGRAM_ARGUMENTS_PART_SELECTION: return createProgramArgumentsPartSelection();
 			case ApogyCoreInvocatorUIPackage.APOGY_ADVANCED_EDITOR_PART_SELECTION: return createApogyAdvancedEditorPartSelection();
 			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION: return createVariablesListPartSelection();
 			case ApogyCoreInvocatorUIPackage.NEW_PROGRAM_SETTINGS: return createNewProgramSettings();
@@ -131,6 +132,16 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 	public ProgramPartSelection createProgramPartSelection() {
 		ProgramPartSelectionImpl programPartSelection = new ProgramPartSelectionImpl();
 		return programPartSelection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProgramArgumentsPartSelection createProgramArgumentsPartSelection() {
+		ProgramArgumentsPartSelectionImpl programArgumentsPartSelection = new ProgramArgumentsPartSelectionImpl();
+		return programArgumentsPartSelection;
 	}
 
 	/**

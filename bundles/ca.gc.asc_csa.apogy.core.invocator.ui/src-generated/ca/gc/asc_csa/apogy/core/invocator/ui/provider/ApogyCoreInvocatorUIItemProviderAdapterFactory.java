@@ -130,6 +130,29 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProgramArgumentsPartSelectionItemProvider programArgumentsPartSelectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProgramArgumentsPartSelectionAdapter() {
+		if (programArgumentsPartSelectionItemProvider == null) {
+			programArgumentsPartSelectionItemProvider = new ProgramArgumentsPartSelectionItemProvider(this);
+		}
+
+		return programArgumentsPartSelectionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -323,6 +346,7 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 		if (apogyCoreInvocatorUIFacadeItemProvider != null) apogyCoreInvocatorUIFacadeItemProvider.dispose();
 		if (scriptBasedProgramsListPartSelectionItemProvider != null) scriptBasedProgramsListPartSelectionItemProvider.dispose();
 		if (programPartSelectionItemProvider != null) programPartSelectionItemProvider.dispose();
+		if (programArgumentsPartSelectionItemProvider != null) programArgumentsPartSelectionItemProvider.dispose();
 		if (apogyAdvancedEditorPartSelectionItemProvider != null) apogyAdvancedEditorPartSelectionItemProvider.dispose();
 		if (variablesListPartSelectionItemProvider != null) variablesListPartSelectionItemProvider.dispose();
 		if (newProgramSettingsItemProvider != null) newProgramSettingsItemProvider.dispose();

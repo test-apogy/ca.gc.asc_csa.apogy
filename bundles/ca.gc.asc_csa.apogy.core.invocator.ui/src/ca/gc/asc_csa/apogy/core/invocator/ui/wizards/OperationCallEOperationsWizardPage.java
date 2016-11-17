@@ -97,7 +97,7 @@ public class OperationCallEOperationsWizardPage extends WizardPage {
 			}
 		};		
 		setControl(eOperationsComposite);
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.8);
 		validate();
 	}
 	

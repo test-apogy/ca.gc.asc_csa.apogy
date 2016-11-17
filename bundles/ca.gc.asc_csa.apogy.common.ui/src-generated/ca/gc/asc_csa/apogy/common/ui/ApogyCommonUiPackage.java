@@ -116,7 +116,7 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE = 1;
+	int APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE_DOUBLE = 1;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -181,14 +181,14 @@ public interface ApogyCommonUiPackage extends EPackage {
 	EOperation getApogyCommonUiFacade__GetImageDescriptor__String();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade#adjustWizardPage(org.eclipse.jface.wizard.WizardPage) <em>Adjust Wizard Page</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade#adjustWizardPage(org.eclipse.jface.wizard.WizardPage, java.lang.Double) <em>Adjust Wizard Page</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Adjust Wizard Page</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade#adjustWizardPage(org.eclipse.jface.wizard.WizardPage)
+	 * @see ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade#adjustWizardPage(org.eclipse.jface.wizard.WizardPage, java.lang.Double)
 	 * @generated
 	 */
-	EOperation getApogyCommonUiFacade__AdjustWizardPage__WizardPage();
+	EOperation getApogyCommonUiFacade__AdjustWizardPage__WizardPage_Double();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.jface.resource.ImageDescriptor <em>Image Descriptor</em>}'.
@@ -270,7 +270,7 @@ public interface ApogyCommonUiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE = eINSTANCE.getApogyCommonUiFacade__AdjustWizardPage__WizardPage();
+		EOperation APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE_DOUBLE = eINSTANCE.getApogyCommonUiFacade__AdjustWizardPage__WizardPage_Double();
 
 		/**
 		 * The meta object literal for the '<em>Image Descriptor</em>' data type.

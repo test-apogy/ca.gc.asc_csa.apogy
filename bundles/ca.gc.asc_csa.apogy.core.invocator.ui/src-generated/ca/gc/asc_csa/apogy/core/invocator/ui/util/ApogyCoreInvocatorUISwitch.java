@@ -93,6 +93,12 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreInvocatorUIPackage.PROGRAM_ARGUMENTS_PART_SELECTION: {
+				ProgramArgumentsPartSelection programArgumentsPartSelection = (ProgramArgumentsPartSelection)theEObject;
+				T result = caseProgramArgumentsPartSelection(programArgumentsPartSelection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreInvocatorUIPackage.APOGY_ADVANCED_EDITOR_PART_SELECTION: {
 				ApogyAdvancedEditorPartSelection apogyAdvancedEditorPartSelection = (ApogyAdvancedEditorPartSelection)theEObject;
 				T result = caseApogyAdvancedEditorPartSelection(apogyAdvancedEditorPartSelection);
@@ -142,6 +148,21 @@ public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProgramPartSelection(ProgramPartSelection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Program Arguments Part Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Program Arguments Part Selection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProgramArgumentsPartSelection(ProgramArgumentsPartSelection object) {
 		return null;
 	}
 

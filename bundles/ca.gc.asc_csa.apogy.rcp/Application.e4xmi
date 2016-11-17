@@ -66,8 +66,13 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_n2BDQKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.10" ref="_Qzm3kKHZEeaIzJSZMOTHGg"/>
             </children>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_HwKdcCkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.1">
-            <children xsi:type="advanced:Placeholder" xmi:id="_qiIEMKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.11" ref="_bbsQkKHZEeaIzJSZMOTHGg"/>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_bfm4AKzhEeaZaM9KFM-klA" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.17" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_eT4WcKzhEeaZaM9KFM-klA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.19">
+              <children xsi:type="advanced:Placeholder" xmi:id="_fQnEcKzhEeaZaM9KFM-klA" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.13" ref="_PG7rIKzhEeaZaM9KFM-klA"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_HwKdcCkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.1">
+              <children xsi:type="advanced:Placeholder" xmi:id="_qiIEMKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.11" ref="_bbsQkKHZEeaIzJSZMOTHGg"/>
+            </children>
           </children>
         </children>
       </children>
@@ -243,7 +248,8 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_VhqlIKaaEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.part.variables" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.VariablesListPart" label="Variables"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_tOdkEKHYEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ScriptBasedProgramsListPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ScriptBasedProgramsListPart" label="Programs"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_Qzm3kKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramPart" label="Program"/>
-    <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramDetails" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramDetailsPart" label="Details"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramDetailsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.common.emf.ui.emfforms/ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.ProgramDetailsPart" label="Details"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_PG7rIKzhEeaZaM9KFM-klA" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramArgumentsPart" label="Arguments"/>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.save" label="Save" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/tool16/save.gif" tooltip="" command="_6wlLg8gZEeSyMNYR5xypkQ"/>

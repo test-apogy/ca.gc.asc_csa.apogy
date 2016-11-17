@@ -87,7 +87,7 @@ public class OperationCallsListWizardPage extends WizardPage {
 		programsListComposite.setSelectedProgram(operationCallsList);
 		setControl(programsListComposite);
 		
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.8);
 		
 		validate();
 	}

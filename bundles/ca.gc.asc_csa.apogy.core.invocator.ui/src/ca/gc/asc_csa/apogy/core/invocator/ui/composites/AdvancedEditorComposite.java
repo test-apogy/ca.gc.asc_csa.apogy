@@ -68,6 +68,7 @@ public class AdvancedEditorComposite extends Composite {
 			@Override
 			protected void newSelection(ISelection selection) {
 				AdvancedEditorComposite.this.newSelection(selection);
+				checkEnableNewButton(getSelectedEObject());
 			}
 		};
 		eObjectComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
@@ -75,7 +76,6 @@ public class AdvancedEditorComposite extends Composite {
 		btnNew = new Button(this, SWT.NONE);
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnNew.setText("New");
-		btnNew.setEnabled(true);
 		btnNew.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
@@ -167,6 +167,7 @@ public class AdvancedEditorComposite extends Composite {
 	 */
 	public void setEObject(EObject eObject) {
 		eObjectComposite.setEObject(eObject);
+		eObjectComposite.setSelectedEObject(eObject);
 		checkEnableNewButton(eObject);
 	}
 	

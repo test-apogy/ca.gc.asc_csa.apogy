@@ -21,15 +21,18 @@ import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallDetailsComposite;
 
-public class ProgramDetailsPart extends AbstractSelectionBasedPart{
+public class ProgramArgumentsPart extends AbstractSelectionBasedPart {
 
 	/**
 	 * Injects a {@link ProgramPartSelection} in the part from the
@@ -41,17 +44,38 @@ public class ProgramDetailsPart extends AbstractSelectionBasedPart{
 	@Optional
 	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramPartSelection selection) {
 		if (selection != null) {
-				setEObject(selection.getOperationCall());
+			setEObject(selection.getOperationCall());
 		}
 	}
 
 	@Override
 	protected void setSelectionInContentComposite(EObject eObject) {
-		((OperationCallDetailsComposite) getContentComposite()).setOperationCall((OperationCall)eObject);
+		((OperationCallDetailsComposite) getContentComposite()).setOperationCall((OperationCall) eObject);
 	}
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new OperationCallDetailsComposite(composite, SWT.None);
+		return new OperationCallDetailsComposite(composite, SWT.None) {
+			@Override
+			protected void newSelection(ISelection selection) {
+				if (selection.isEmpty()) {
+					setNullSelection();
+				} else {
+					EObject eObject = ((OperationCallDetailsComposite) getContentComposite()).getSelectedEObject();
+					if (eObject != null) {
+						ProgramArgumentsPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
+								.createProgramArgumentsPartSelection();
+						selectionSent.setEObject(eObject);
+						selectionService.setSelection(selectionSent);
+					}
+				}
+			}
+		};
+	}
+
+	@Override
+	protected void setNullSelection() {
+		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart"));
+		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramArgumentsPartSelection());
 	}
 }

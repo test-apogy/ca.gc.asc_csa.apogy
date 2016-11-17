@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.jface.resource.ImageDescriptor;
 
 import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Monitor;
 
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
@@ -92,19 +93,22 @@ public class ApogyCommonUiFacadeImpl extends MinimalEObjectImpl.Container implem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public void adjustWizardPage(WizardPage wizardPage) {
+	public void adjustWizardPage(WizardPage wizardPage, Double ratio) {
 		for (Monitor monitor : wizardPage.getShell().getDisplay().getMonitors()) {
 			if (monitor.getBounds().contains(wizardPage.getShell().getDisplay().getCursorLocation())) {
-				wizardPage.getShell().setSize(new Double(monitor.getBounds().width / 1.2).intValue(),
-						new Double(monitor.getBounds().height / 1.2).intValue());
+				wizardPage.getShell().setSize(new Double(monitor.getBounds().width * ratio).intValue(),
+						new Double(monitor.getBounds().height * ratio).intValue());
 				wizardPage.getShell().setLocation(
 						monitor.getBounds().x + (monitor.getBounds().width - wizardPage.getShell().getBounds().width) / 2,
 						monitor.getBounds().y + (monitor.getBounds().height - wizardPage.getShell().getBounds().height) / 2);
 			}
+		}
+		if(wizardPage.getControl() instanceof Composite){
+			wizardPage.getControl().requestLayout();
 		}
 	}
 
@@ -118,8 +122,8 @@ public class ApogyCommonUiFacadeImpl extends MinimalEObjectImpl.Container implem
 		switch (operationID) {
 			case ApogyCommonUiPackage.APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING:
 				return getImageDescriptor((String)arguments.get(0));
-			case ApogyCommonUiPackage.APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE:
-				adjustWizardPage((WizardPage)arguments.get(0));
+			case ApogyCommonUiPackage.APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE_DOUBLE:
+				adjustWizardPage((WizardPage)arguments.get(0), (Double)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

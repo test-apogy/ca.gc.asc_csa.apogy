@@ -29,6 +29,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
@@ -54,6 +55,13 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * @generated
 	 */
 	private EClass programPartSelectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass programArgumentsPartSelectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,6 +203,24 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 */
 	public EReference getProgramPartSelection_OperationCall() {
 		return (EReference)programPartSelectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProgramArgumentsPartSelection() {
+		return programArgumentsPartSelectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgramArgumentsPartSelection_EObject() {
+		return (EReference)programArgumentsPartSelectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -383,6 +409,9 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		programPartSelectionEClass = createEClass(PROGRAM_PART_SELECTION);
 		createEReference(programPartSelectionEClass, PROGRAM_PART_SELECTION__OPERATION_CALL);
 
+		programArgumentsPartSelectionEClass = createEClass(PROGRAM_ARGUMENTS_PART_SELECTION);
+		createEReference(programArgumentsPartSelectionEClass, PROGRAM_ARGUMENTS_PART_SELECTION__EOBJECT);
+
 		apogyAdvancedEditorPartSelectionEClass = createEClass(APOGY_ADVANCED_EDITOR_PART_SELECTION);
 		createEReference(apogyAdvancedEditorPartSelectionEClass, APOGY_ADVANCED_EDITOR_PART_SELECTION__EOBJECT);
 
@@ -463,6 +492,9 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 
 		initEClass(programPartSelectionEClass, ProgramPartSelection.class, "ProgramPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProgramPartSelection_OperationCall(), theApogyCoreInvocatorPackage.getOperationCall(), null, "operationCall", null, 0, 1, ProgramPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(programArgumentsPartSelectionEClass, ProgramArgumentsPartSelection.class, "ProgramArgumentsPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProgramArgumentsPartSelection_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, ProgramArgumentsPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(apogyAdvancedEditorPartSelectionEClass, ApogyAdvancedEditorPartSelection.class, "ApogyAdvancedEditorPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApogyAdvancedEditorPartSelection_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, ApogyAdvancedEditorPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

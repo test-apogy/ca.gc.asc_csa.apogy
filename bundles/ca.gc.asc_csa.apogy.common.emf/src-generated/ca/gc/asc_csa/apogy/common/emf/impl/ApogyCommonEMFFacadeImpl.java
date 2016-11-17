@@ -1273,7 +1273,7 @@ ApogyCommonEMFFacade {
 	 * @generated_NOT
 	 */
 	public String getDefaultName(EObject eContainer, EObject eObject, EReference objectReference) {
-		String name = ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(eObject);
+		String name = objectReference.getEType().getName();
 
 		// If the container is a list
 		if (objectReference.isMany()) {

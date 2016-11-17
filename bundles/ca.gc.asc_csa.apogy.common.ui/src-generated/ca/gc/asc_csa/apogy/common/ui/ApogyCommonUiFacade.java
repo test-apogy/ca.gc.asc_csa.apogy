@@ -61,9 +61,15 @@ public interface ApogyCommonUiFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model wizardPageDataType="ca.gc.asc_csa.apogy.common.ui.WizardPage" wizardPageUnique="false"
+	 * <!-- begin-model-doc -->
+	 * Adjusts the size according to the ratio specified and the location of the wizard
+	 * at the center of the screen where the cursor currently is.
+	 * @param wizardPage the {@link WizardPage} to adjust.
+	 * @param ratio the wizard size/screen size wanted. (value from 0 to 1)
+	 * <!-- end-model-doc -->
+	 * @model wizardPageDataType="ca.gc.asc_csa.apogy.common.ui.WizardPage" wizardPageUnique="false" ratioUnique="false"
 	 * @generated
 	 */
-	void adjustWizardPage(WizardPage wizardPage);
+	void adjustWizardPage(WizardPage wizardPage, Double ratio);
 
 } // ApogyCommonUiFacade

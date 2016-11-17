@@ -91,7 +91,7 @@ public class DataProductsListWizardPage extends WizardPage {
 		dataProductsListsContainerComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
 	
 		setControl(container);
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.8);
 		validate();
 	}
 	

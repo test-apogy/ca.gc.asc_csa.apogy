@@ -23,6 +23,7 @@ import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
@@ -170,10 +171,13 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	protected OperationCall getOperationCall(){
 		if (operationCall == null){		
 			operationCall = ApogyCoreInvocatorFactory.eINSTANCE.createOperationCall();
-			operationCall.setName("New Operation Call");
+			operationCall.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
+					getOperationCallsListWizardPage().getOperationCallsList(), operationCall,
+					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS));
 		}
 		return operationCall;
 	}
+		
 	
 	/** 
 	 * Returns the {@link VariablesList}.  

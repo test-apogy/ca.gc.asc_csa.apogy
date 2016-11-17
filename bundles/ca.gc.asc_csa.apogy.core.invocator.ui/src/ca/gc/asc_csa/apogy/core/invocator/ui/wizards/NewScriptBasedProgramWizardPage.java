@@ -149,7 +149,7 @@ public class NewScriptBasedProgramWizardPage extends WizardPage {
 		});
 
 		setControl(container);
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.8);
 		validate();
 	}
 	

@@ -1493,7 +1493,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 		}
 
 		if (eParamaters_str != null) {
-			return str + operation_str + "." + eParamaters_str;
+			return str + operation_str + eParamaters_str;
 		} else {
 			return str + operation_str;
 		}
@@ -1507,11 +1507,11 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	public String getSubTypeFeatureString(TypeMemberReferenceListElement typeMemberReferenceListElement, ListRootNode listRootNode) {
 		String typeReference_str = "";
 		if(typeMemberReferenceListElement != null){
-			typeReference_str = "-> " + typeMemberReferenceListElement.getTypeMember().getName();
+			typeReference_str = "->" + typeMemberReferenceListElement.getTypeMember().getName();
 			Boolean continueConcat = typeMemberReferenceListElement.getParent() instanceof TypeMemberReferenceListElement;
 			while(continueConcat){
 				typeMemberReferenceListElement = typeMemberReferenceListElement.getParent();
-				("-> ").concat(typeMemberReferenceListElement.getParent().getTypeMember().getName().concat(typeReference_str));
+				("->").concat(typeMemberReferenceListElement.getParent().getTypeMember().getName().concat(typeReference_str));
 				continueConcat = typeMemberReferenceListElement.getParent() instanceof TypeMemberReferenceListElement;
 			}
 		}
@@ -1524,7 +1524,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				feature_str = "." + ApogyCommonEMFFacade.INSTANCE.getAncestriesString(leaf);
 			}
 		}
-
 		return typeReference_str + feature_str;
 	}
 

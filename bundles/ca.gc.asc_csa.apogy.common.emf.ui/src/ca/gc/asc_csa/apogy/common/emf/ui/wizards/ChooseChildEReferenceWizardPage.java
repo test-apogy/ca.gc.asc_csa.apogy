@@ -138,7 +138,7 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 		eReferencesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
 		setControl(container);
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this);
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.5);
 		validate();
 	}
 

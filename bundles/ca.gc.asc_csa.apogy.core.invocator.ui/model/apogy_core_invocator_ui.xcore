@@ -110,6 +110,10 @@ class ProgramPartSelection
 	refers OperationCall operationCall
 }
 
+class ProgramArgumentsPartSelection{
+	refers EObject eObject
+}
+
 class ApogyAdvancedEditorPartSelection
 {
 	refers EObject eObject
