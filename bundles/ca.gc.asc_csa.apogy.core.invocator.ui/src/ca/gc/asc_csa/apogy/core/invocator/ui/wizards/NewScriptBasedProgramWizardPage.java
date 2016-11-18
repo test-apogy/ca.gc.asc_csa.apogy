@@ -28,7 +28,6 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.SubClassesListComposite;
-import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
@@ -149,7 +148,7 @@ public class NewScriptBasedProgramWizardPage extends WizardPage {
 		});
 
 		setControl(container);
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.8);
+
 		validate();
 	}
 	

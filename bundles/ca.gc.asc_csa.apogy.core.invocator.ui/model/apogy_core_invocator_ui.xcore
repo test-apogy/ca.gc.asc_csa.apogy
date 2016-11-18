@@ -39,6 +39,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Program
 import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EOperation
 import java.util.List
 import ca.gc.asc_csa.apogy.core.invocator.Variable
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList
@@ -93,6 +94,11 @@ class ApogyCoreInvocatorUIFacade{
 	 * @see ApogyCoreInvocatorFacade#deleteVariable(VariablesList variablesList, Variable variable)
 	 */
 	op void deleteVariables(VariablesList variablesList, ListVariables variables)
+	
+	/*
+	 * TODO
+	 */
+	 op void setEOperationInitArguments(EOperation eOperation, OperationCall operationCall)
 }
 
 /* -------------------------------------------------------------------------

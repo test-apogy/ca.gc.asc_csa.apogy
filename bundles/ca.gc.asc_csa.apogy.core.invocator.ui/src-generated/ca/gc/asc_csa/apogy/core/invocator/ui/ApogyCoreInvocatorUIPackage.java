@@ -198,13 +198,22 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLES__VARIABLESLIST_LIST = 5;
 
 	/**
+	 * The operation id for the '<em>Set EOperation Init Arguments</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_UI_FACADE___SET_EOPERATION_INIT_ARGUMENTS__EOPERATION_OPERATIONCALL = 6;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 6;
+	int APOGY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Program</b></em>' reference.
@@ -626,6 +635,16 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	EOperation getApogyCoreInvocatorUIFacade__DeleteVariables__VariablesList_List();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#setEOperationInitArguments(org.eclipse.emf.ecore.EOperation, ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Set EOperation Init Arguments</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set EOperation Init Arguments</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#setEOperationInitArguments(org.eclipse.emf.ecore.EOperation, ca.gc.asc_csa.apogy.core.invocator.OperationCall)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorUIFacade__SetEOperationInitArguments__EOperation_OperationCall();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.common.command.CompoundCommand <em>Compound Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -824,6 +843,13 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLES__VARIABLESLIST_LIST = eINSTANCE.getApogyCoreInvocatorUIFacade__DeleteVariables__VariablesList_List();
+		/**
+		 * The meta object literal for the '<em><b>Set EOperation Init Arguments</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___SET_EOPERATION_INIT_ARGUMENTS__EOPERATION_OPERATIONCALL = eINSTANCE.getApogyCoreInvocatorUIFacade__SetEOperationInitArguments__EOperation_OperationCall();
 		/**
 		 * The meta object literal for the '<em>Compound Command</em>' data type.
 		 * <!-- begin-user-doc -->

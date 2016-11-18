@@ -15,9 +15,6 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  */
 
 import org.eclipse.core.databinding.observable.value.WritableValue;
-import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
@@ -28,12 +25,12 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
-import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
 public class NewProgramsGroupWizard extends Wizard implements INewWizard {
@@ -68,9 +65,9 @@ public class NewProgramsGroupWizard extends Wizard implements INewWizard {
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		if (getNamedDescribedWizardPage() != null) {
-			addPage(getNamedDescribedWizardPage());
-		}
+		addPage(getNamedDescribedWizardPage());
+
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(getNamedDescribedWizardPage(), 0.8);
 	}
 
 	/**

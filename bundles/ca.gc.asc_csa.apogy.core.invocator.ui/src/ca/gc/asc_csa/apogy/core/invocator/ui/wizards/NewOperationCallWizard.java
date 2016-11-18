@@ -18,6 +18,7 @@ import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
@@ -25,6 +26,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
@@ -42,6 +44,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
 	private OperationCallEOperationsWizardPage operationCallEOperationsWizardPage;
 	private NamedDescribedWizardPage namedDescribedWizardPage;
+	private ArgumentsWizardPage argumentsWizardPage;
 	
 	private OperationCallsList operationCallsList;
 	private OperationCall operationCall;
@@ -67,21 +70,29 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		if (getOperationCallsListWizardPage() != null){
-			addPage(getOperationCallsListWizardPage());	
+		addPage(getOperationCallsListWizardPage());
+		addPage(getNamedDescribedWizardPage());
+		addPage(getVariableFeatureReferenceWizardPage());
+		addPage(getOperationCallEOperationWizardPage());
+
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(getOperationCallEOperationWizardPage(), 0.8);
+	}
+	
+	@Override
+	public IWizardPage getNextPage(IWizardPage page) {
+		if (page == operationCallEOperationsWizardPage) {
+			if(!operationCall.getEOperation().getEParameters().isEmpty()){
+				if (argumentsWizardPage == null) {
+					addPage(getArgumentsWizardPage());
+				} else {
+					return getArgumentsWizardPage();
+				}
+			}else{
+				return null;
+			}
+			
 		}
-		
-		if (getNamedDescribedWizardPage() != null){
-			addPage(getNamedDescribedWizardPage());
-		}
-		
-		if (getVariableFeatureReferenceWizardPage() != null){
-			addPage(getVariableFeatureReferenceWizardPage());
-		}
-		
-		if (getOperationCallEOperationWizardPage() != null){
-			addPage(getOperationCallEOperationWizardPage());
-		}
+		return super.getNextPage(page);
 	}
 
 	/**
@@ -128,10 +139,20 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 		}
 		return operationCallEOperationsWizardPage;
 	}	
-	
+
+	/**
+	 * Returns the {@link OperationCallEOperationsWizardPage}.  If null is returned, the page is not added to the wizard.
+	 * @return Reference to the page.
+	 */	
+	protected ArgumentsWizardPage getArgumentsWizardPage(){
+		if (argumentsWizardPage == null){
+			argumentsWizardPage = new ArgumentsWizardPage(getOperationCall()); 
+		}
+		return argumentsWizardPage;
+	}	
 	@Override
 	public boolean performFinish() {
-		OperationCallsList operationCallsList = getOperationCallsListWizardPage().getOperationCallsList();		
+		OperationCallsList operationCallsList = getOperationCallsListWizardPage().getOperationCallsList();	
 		EditingDomain editingDomain = AdapterFactoryEditingDomain
 				.getEditingDomainFor(operationCallsList);
 		
@@ -177,7 +198,6 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 		}
 		return operationCall;
 	}
-		
 	
 	/** 
 	 * Returns the {@link VariablesList}.  

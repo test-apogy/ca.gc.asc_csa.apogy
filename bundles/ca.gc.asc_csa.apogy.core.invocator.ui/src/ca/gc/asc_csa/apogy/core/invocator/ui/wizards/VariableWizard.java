@@ -50,6 +50,8 @@ public class VariableWizard extends Wizard{
 	public void addPages() {
 		addPage(getNamedDescribedWizardPage());
 		addPage(getSetVariableTypeWizardPage());
+		
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(getNamedDescribedWizardPage(), 0.8);
 	}	
 
 	/**

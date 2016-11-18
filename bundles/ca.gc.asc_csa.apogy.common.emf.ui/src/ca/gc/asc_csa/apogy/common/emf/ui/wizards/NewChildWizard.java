@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui.wizards;
 
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
@@ -29,6 +30,7 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 
 public class NewChildWizard extends Wizard {
 
@@ -42,6 +44,17 @@ public class NewChildWizard extends Wizard {
 	 */
 	public NewChildWizard(EList<EReference> eReferencesList, EObject parent) {
 		super();
+		initWizard(eReferencesList, parent);
+	}
+	
+	public NewChildWizard(EReference eReference, EObject parent) {
+		super();
+		EList<EReference> eReferencesList = new BasicEList<EReference>();
+		eReferencesList.add(eReference);
+		initWizard(eReferencesList, parent);
+	}
+	
+	private void initWizard(EList<EReference> eReferencesList, EObject parent){
 		setWindowTitle("New Child");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(Activator.ID,
@@ -56,9 +69,9 @@ public class NewChildWizard extends Wizard {
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		if (geChooseSubClassWizardPage() != null) {
-			addPage(geChooseSubClassWizardPage());
-		}
+		addPage(getChooseSubClassWizardPage());
+
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(getChooseSubClassWizardPage(), 0.5);
 	}
 
 	/**
@@ -67,7 +80,7 @@ public class NewChildWizard extends Wizard {
 	 * 
 	 * @return Reference to the page.
 	 */
-	protected ChooseChildEReferenceWizardPage geChooseSubClassWizardPage() {
+	protected ChooseChildEReferenceWizardPage getChooseSubClassWizardPage() {
 		if (chooseSubClassWizardPage == null) {
 			chooseSubClassWizardPage = new ChooseChildEReferenceWizardPage(eReferencesList);
 		}
@@ -81,7 +94,7 @@ public class NewChildWizard extends Wizard {
 
 		if (editingDomain != null) {
 			Command command = null;
-			EObject eObject = EcoreUtil.create(chooseSubClassWizardPage.getSelectedEClass());;
+			EObject eObject = EcoreUtil.create(chooseSubClassWizardPage.getSelectedEClass());
 			// If the selected reference is a list
 			if (chooseSubClassWizardPage.getSelectedEReference().isMany()) {
 				// Add the new eObject to the list

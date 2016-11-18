@@ -23,6 +23,7 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramSettings;
@@ -62,10 +63,11 @@ public class NewScriptBasedProgramWizard extends Wizard implements INewWizard {
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		if (getNewProgramWizardPage() != null) {
-			addPage(getNewProgramWizardPage());
-			setForcePreviousAndNextButtons(true);
-		}
+		addPage(getNewProgramWizardPage());
+		
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(getNewProgramWizardPage(), 0.8);
+		setForcePreviousAndNextButtons(true);
+
 	}
 
 

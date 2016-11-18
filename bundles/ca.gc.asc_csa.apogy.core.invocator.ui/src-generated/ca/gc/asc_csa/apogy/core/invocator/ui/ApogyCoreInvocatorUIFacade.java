@@ -15,8 +15,10 @@ package ca.gc.asc_csa.apogy.core.invocator.ui;
 
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl;
@@ -120,4 +122,15 @@ public interface ApogyCoreInvocatorUIFacade extends EObject {
 	 * @generated
 	 */
 	void deleteVariables(VariablesList variablesList, List<Variable> variables);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * TODO
+	 * <!-- end-model-doc -->
+	 * @model eOperationUnique="false" operationCallUnique="false"
+	 * @generated
+	 */
+	void setEOperationInitArguments(EOperation eOperation, OperationCall operationCall);
 } // ApogyCoreInvocatorUIFacade

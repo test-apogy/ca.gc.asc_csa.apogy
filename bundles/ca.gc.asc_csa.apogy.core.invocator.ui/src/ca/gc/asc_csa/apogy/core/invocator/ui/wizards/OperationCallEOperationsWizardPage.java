@@ -22,12 +22,13 @@ import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EOperationsComposite;
-import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 
 public class OperationCallEOperationsWizardPage extends WizardPage {
 
@@ -93,11 +94,12 @@ public class OperationCallEOperationsWizardPage extends WizardPage {
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				operationCall.setEOperation(getSelectedEOperation());
+				ApogyCoreInvocatorUIFacade.INSTANCE.setEOperationInitArguments(getSelectedEOperation(), operationCall);
 				validate();
 			}
 		};		
 		setControl(eOperationsComposite);
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.8);
+		
 		validate();
 	}
 	

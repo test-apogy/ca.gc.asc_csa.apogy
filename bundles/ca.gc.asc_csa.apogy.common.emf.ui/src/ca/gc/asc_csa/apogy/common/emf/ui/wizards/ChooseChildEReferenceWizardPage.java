@@ -36,7 +36,6 @@ import org.eclipse.swt.widgets.Label;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectListComposite;
-import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 
 public class ChooseChildEReferenceWizardPage extends WizardPage {
 
@@ -138,7 +137,6 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 		eReferencesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
 		setControl(container);
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.5);
 		validate();
 	}
 

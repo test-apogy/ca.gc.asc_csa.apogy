@@ -26,7 +26,6 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.DataProductsListsContainerComposite;
@@ -91,7 +90,6 @@ public class DataProductsListWizardPage extends WizardPage {
 		dataProductsListsContainerComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
 	
 		setControl(container);
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(this, 0.8);
 		validate();
 	}
 	

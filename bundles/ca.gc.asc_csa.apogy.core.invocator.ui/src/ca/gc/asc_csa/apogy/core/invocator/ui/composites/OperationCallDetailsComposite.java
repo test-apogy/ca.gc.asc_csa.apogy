@@ -101,14 +101,13 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 		// fillLayout.marginHeight = 0;
 		// sctnOperation.setClient(eOperationsComposite);
 
-		argumentsComposite = new ArgumentsComposite(composite, SWT.NONE) {
+		argumentsComposite = new ArgumentsComposite(composite, SWT.NONE, true) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				OperationCallDetailsComposite.this.newSelection(selection);
 			}
 		};
 		argumentsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		argumentsComposite.setReadOnly(true);
 		GridLayout gridLayout_1 = (GridLayout) argumentsComposite.getLayout();
 		gridLayout_1.marginWidth = 0;
 		gridLayout_1.marginHeight = 0;
@@ -180,10 +179,10 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 		if (getOperationCall().getVariable() != null) {
 			// eOperationsComposite.setEClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(getOperationCall()),
 			// getOperationCall().getEOperation());
-			argumentsComposite.setArgumentsList(getOperationCall().getArgumentsList());
+			argumentsComposite.setOperationCall(getOperationCall());
 		} else {
 			// eOperationsComposite.setEClass(null);
-			argumentsComposite.setArgumentsList(null);
+			argumentsComposite.setOperationCall(null);
 		}
 
 		// variableFeatureReferenceComposite.set(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(),

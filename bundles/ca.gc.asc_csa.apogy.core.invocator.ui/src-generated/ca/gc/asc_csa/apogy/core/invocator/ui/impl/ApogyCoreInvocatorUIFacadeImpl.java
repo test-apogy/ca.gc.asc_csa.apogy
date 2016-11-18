@@ -14,12 +14,17 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.impl;
  */
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.SetCommand;
@@ -35,8 +40,15 @@ import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
@@ -222,6 +234,73 @@ public class ApogyCoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setEOperationInitArguments(EOperation eOperation, OperationCall operationCall) {
+		/** Create Arguments for each operation parameters. */
+		List<Argument> arguments = new ArrayList<Argument>();
+		for (EParameter parameter : eOperation.getEParameters()) {
+			Argument argument = null;
+
+			if (parameter.getEType() instanceof EEnum) {
+				argument = ApogyCoreInvocatorFactory.eINSTANCE
+						.createEEnumArgument();
+				EEnum eEnum = (EEnum) parameter.getEType();
+				((EEnumArgument) argument).setEEnum(eEnum);
+
+				Enum<?> defaultValue = (Enum<?>) parameter.getEType()
+						.getDefaultValue();
+				((EEnumArgument) argument).setEEnumLiteral(eEnum
+						.getEEnumLiteral(defaultValue.name()));
+			} else if (parameter.getEType() instanceof EDataType) {
+				
+				Class<?> clazz = parameter.getEType().getInstanceClass();
+				
+				if (clazz.isAssignableFrom(boolean.class) || clazz.isAssignableFrom(Boolean.class)) {
+					argument = ApogyCoreInvocatorFactory.eINSTANCE.createBooleanEDataTypeArgument();
+				} else if (clazz.isAssignableFrom(Number.class) ||
+						   clazz.isAssignableFrom(byte.class) || 
+						   clazz.isAssignableFrom(short.class) ||
+						   clazz.isAssignableFrom(int.class) ||
+						   clazz.isAssignableFrom(long.class) ||
+						   clazz.isAssignableFrom(float.class) ||
+						   clazz.isAssignableFrom(double.class)){						
+					argument = ApogyCoreInvocatorFactory.eINSTANCE.createNumericEDataTypeArgument();
+				} else{
+					argument = ApogyCoreInvocatorFactory.eINSTANCE.createStringEDataTypeArgument();	
+					((StringEDataTypeArgument)argument).setValue("HELLO");
+				}
+				
+				Object defaultValue = parameter.getEType()
+						.getDefaultValue();
+
+				if (defaultValue != null) {
+					((EDataTypeArgument) argument).setValue(String
+							.valueOf(defaultValue));
+				}
+			} else {
+				argument = ApogyCoreInvocatorFactory.eINSTANCE
+						.createEClassArgument();
+			}
+			arguments.add(argument);
+		}
+
+		/** Add arguments if there are parameters only. */
+		if (!arguments.isEmpty()) {
+			ArgumentsList argumentsList = ApogyCoreInvocatorFactory.eINSTANCE
+					.createArgumentsList();
+			argumentsList.getArguments().addAll(arguments);
+
+			operationCall.setArgumentsList(argumentsList);
+		} else {
+			// Clear the list
+			operationCall.setArgumentsList(null);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -256,6 +335,9 @@ public class ApogyCoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container
 				return null;
 			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___DELETE_VARIABLES__VARIABLESLIST_LIST:
 				deleteVariables((VariablesList)arguments.get(0), (List<Variable>)arguments.get(1));
+				return null;
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___SET_EOPERATION_INIT_ARGUMENTS__EOPERATION_OPERATIONCALL:
+				setEOperationInitArguments((EOperation)arguments.get(0), (OperationCall)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

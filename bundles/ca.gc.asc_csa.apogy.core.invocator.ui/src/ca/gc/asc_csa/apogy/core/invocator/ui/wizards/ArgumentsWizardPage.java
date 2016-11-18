@@ -23,40 +23,40 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.Context;
-import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableImplementationsComposite;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ArgumentsComposite;
 
-public class VariableImplementationsWizardPage extends WizardPage {
+public class ArgumentsWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableImplementationsWizardPage";
-	private VariableImplementationsComposite variableImplementationsComposite;
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.ArgumentsWizardPage";
+	private ArgumentsComposite argumentsComposite;
 	private Adapter adapter; 
-	private Context context;
+	private OperationCall operationCall;
 	
 	/**
 	 * Constructor for the WizardPage.
 	 * 
 	 * @param pageName
-	 * @wbp.parser.constructor
 	 */
-	public VariableImplementationsWizardPage() {
+	public ArgumentsWizardPage() {
 		super(WIZARD_PAGE_ID);
-		setTitle("Variable implementation");
-		setDescription("Select a variable implementation");
+		setTitle("Data Products List");
+		setDescription("Set a data product list.");
 	}
 
-	public VariableImplementationsWizardPage(Context context) {
+	public ArgumentsWizardPage(
+			OperationCall operationCall){
 		this();
+		if (this.operationCall != null){
+			this.operationCall.eAdapters().remove(getAdapter());
+		}
 		
-		if (this.context != null){
-			this.context.eAdapters().remove(getAdapter());
-		}		
-		this.context = context;
-	
-		context.getVariableImplementationsList().getVariableImplementations().get(0).eAdapters().add(getAdapter());
+		this.operationCall = operationCall;
+		
+		operationCall.eAdapters().add(getAdapter());
 	}
 
 	private Adapter getAdapter() {
@@ -75,38 +75,39 @@ public class VariableImplementationsWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */	
 	public void createControl(Composite parent) {
-		variableImplementationsComposite = new VariableImplementationsComposite(parent, SWT.None);
-		variableImplementationsComposite.setContext(context);
-		variableImplementationsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
-		
-		setControl(variableImplementationsComposite);
-		
+		Composite container = new Composite(parent, SWT.None);
+		container.setLayout(new GridLayout(1, false));
+
+		argumentsComposite = new ArgumentsComposite(container, SWT.None, false);
+		argumentsComposite.setOperationCall(operationCall);
+		argumentsComposite.setLayoutData((new GridData(SWT.FILL, SWT.FILL, true, true)));
+	
+		setControl(container);
 		validate();
 	}
 	
 	@Override
 	public void dispose() {
 		super.dispose();
-		if (this.context != null){
-			this.context.eAdapters().remove(getAdapter());
-		}		
+		if (this.operationCall != null){
+			this.operationCall.eAdapters().remove(getAdapter());
+		}	
 	}
 	
 	/** 
 	 * This method is invoked to validate the content. 
 	 */
 	protected void validate() {
-		String errorVariableStr = null;
-				
-		VariableImplementationsList variableImplementationsList = context.getVariableImplementationsList();		
+		String errorArgumentStr = null;
+	
+		if(operationCall.getArgumentsList() != null){
+			Diagnostic diagnosticContext = Diagnostician.INSTANCE.validate(operationCall.getArgumentsList());
+			if (diagnosticContext.getSeverity() != Diagnostic.OK){
+				errorArgumentStr = "Please enter a value for each argument";
+			}	
+		}
+		setErrorMessage(errorArgumentStr);
+		setPageComplete(errorArgumentStr == null);
 		
-		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(variableImplementationsList);
-		
-		if (diagnostic.getSeverity() != Diagnostic.OK){
-			errorVariableStr = "A variable implementation must be selected";
-		}	
-
-		setErrorMessage(errorVariableStr);
-		setPageComplete(errorVariableStr == null);
 	}
 }

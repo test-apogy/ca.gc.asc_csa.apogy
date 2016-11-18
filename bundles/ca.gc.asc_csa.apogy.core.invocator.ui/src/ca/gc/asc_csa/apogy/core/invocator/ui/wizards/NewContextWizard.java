@@ -26,6 +26,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
@@ -62,15 +63,11 @@ public class NewContextWizard extends Wizard {
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		if (getNamedDescribedWizardPage() != null) {
-			addPage(getNamedDescribedWizardPage());
-		}
-		if (getVariableImplementationWizardPage() != null) {
-			addPage(getVariableImplementationWizardPage());
-		}
-		if (getDataProductsListWizardPage() != null) {
-			addPage(getDataProductsListWizardPage());
-		}
+		addPage(getNamedDescribedWizardPage());
+		addPage(getVariableImplementationWizardPage());
+		addPage(getDataProductsListWizardPage());
+
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(getNamedDescribedWizardPage(), 0.8);
 	}
 
 	public void setInvocatorSession(InvocatorSession invocatorSession) {
