@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts;
+package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -17,13 +17,11 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Activator;
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
-import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
-import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
 
 public class ProgramDetailsPart extends AbstractSelectionBasedPart {
 
@@ -56,28 +54,10 @@ public class ProgramDetailsPart extends AbstractSelectionBasedPart {
 	}
 
 	/**
-	 * Injections for the different selections in the part from the
+	 * Injections for the different selections in the part from the TODO 
 	 * {@link ESelectionService}
 	 *
 	 **/
-
-	@Inject
-	@Optional
-	private void setSelection(
-			@Named(IServiceConstants.ACTIVE_SELECTION) ScriptBasedProgramsListPartSelection selection) {
-		if (selection != null) {
-			setEObject(selection.getProgram());
-		}
-	}
-
-	@Inject
-	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramPartSelection selection) {
-		if (selection != null) {
-			setEObject(selection.getOperationCall());
-		}
-	}
-
 	@Inject
 	@Optional
 	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramArgumentsPartSelection selection) {

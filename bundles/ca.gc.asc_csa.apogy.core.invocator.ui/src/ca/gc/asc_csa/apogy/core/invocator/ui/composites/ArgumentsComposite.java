@@ -23,7 +23,12 @@ import org.eclipse.core.databinding.property.list.DelegatingListProperty;
 import org.eclipse.core.databinding.property.list.IListProperty;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.impl.EClassImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecp.ui.view.ECPRendererException;
+import org.eclipse.emf.ecp.ui.view.swt.ECPSWTViewRenderer;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -38,21 +43,28 @@ import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TextCellEditor;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
+import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Layout;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.NoEObjectSelectionComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseEClassWizard;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
@@ -69,7 +81,9 @@ public class ArgumentsComposite extends Composite {
 	private TreeViewerColumn treeViewerParameterColumn;
 	private Button btnNew;
 	private Button btnDelete;
-
+	private Composite compositeEMFForms;
+	private Composite compositeArguments;
+	
 	boolean readOnly;
 
 	private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
@@ -88,16 +102,41 @@ public class ArgumentsComposite extends Composite {
 	 */
 	public ArgumentsComposite(Composite parent, int style) {
 		super(parent, style);
-		setLayout(new GridLayout(2, false));
-
-		treeViewer = new TreeViewer(this, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION | SWT.SINGLE);
+		setLayout(new FillLayout());
+		
+		this.readOnly = true;
+		
+		compositeArguments = new Composite(this, SWT.None);
+		compositeArguments.setLayout(new GridLayout(2, false));
+		
+		treeViewer = new TreeViewer(compositeArguments, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION | SWT.SINGLE);
 		treeInstance = treeViewer.getTree();
-		treeInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
+		treeInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 2));
 		treeInstance.setLinesVisible(true);
 		treeInstance.setHeaderVisible(true);
 		treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
+				if (compositeEMFForms != null && ((StructuredSelection) event.getSelection()).getFirstElement() != null
+						&& !readOnly
+						&& !(((StructuredSelection) event.getSelection()).getFirstElement() instanceof Argument)) {
+					if (compositeEMFForms.getClass() == NoEObjectSelectionComposite.class) {
+						compositeEMFForms.dispose();
+						compositeEMFForms = new Composite(ArgumentsComposite.this, SWT.None);
+						// compositeEMFForms.setLayoutData(new
+						// GridData(SWT.FILL, SWT.FILL, false, true, 1, 2));
+						compositeEMFForms.setLayout(new FillLayout());
+					}
+					try {
+						ECPSWTViewRenderer.INSTANCE.render(compositeEMFForms,
+								(EObject) ((StructuredSelection) event.getSelection()).getFirstElement());
+					} catch (ECPRendererException e) {
+						System.out.println("Error");
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					ArgumentsComposite.this.layout();
+				}
 				newSelection(event.getSelection());
 			}
 		});
@@ -113,8 +152,6 @@ public class ArgumentsComposite extends Composite {
 		treeclmnParameter.setText("Value");
 
 		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
-
-		this.readOnly = false;
 		m_bindingContext = initDataBindingsCustom();
 	}
 
@@ -122,6 +159,8 @@ public class ArgumentsComposite extends Composite {
 		this(parent, style);
 		if (!readOnly) {
 			this.readOnly = readOnly;
+			
+			treeInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
 			/**
 			 * Cell edition support
 			 */
@@ -152,7 +191,7 @@ public class ArgumentsComposite extends Composite {
 				}
 			});
 
-			btnNew = new Button(this, SWT.None);
+			btnNew = new Button(compositeArguments, SWT.None);
 			btnNew.setText("New");
 			btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false));
 			btnNew.addSelectionListener(new SelectionAdapter() {
@@ -161,16 +200,31 @@ public class ArgumentsComposite extends Composite {
 					/**
 					 * Creates and opens the wizard to create a new child
 					 */
-//					TODO replace by ChooseEclass
-//					NewChildWizard newChildWizard = new NewChildWizard(
-//							ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE, getSelectedArgument());
-//					WizardDialog dialog = new WizardDialog(getShell(), newChildWizard);
-//
-//					dialog.open();
+					Wizard wizard;
+					if(getSelectedEObject() instanceof EClassArgument){
+						wizard = new ChooseEClassWizard(ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE, getSelectedEObject(),
+								(EClass) ((Argument) getSelectedEObject()).getEParameter().getEType()){
+							@Override
+							public boolean performFinish() {
+								EObject eObject = EcoreUtil.create(getChooseEClassImplementationWizardPage().getSelectedEClass());
+								((EClassArgument) getParent())
+										.setValue(eObject);
+								treeViewer.setSelection(new StructuredSelection(eObject));
+								return true;
+							}
+						};
+					}else{
+						System.out.println(getSelectedEObject());
+						System.out.println(getSelectedEObject().eContents());
+						wizard = new NewChildWizard(ApogyCommonEMFFacade.INSTANCE.getSettableEReferences(getSelectedEObject()),
+						getSelectedEObject());
+					}
+					WizardDialog dialog = new WizardDialog(getShell(), wizard);
+					dialog.open();
 				}
 			});
 
-			btnDelete = new Button(this, SWT.None);
+			btnDelete = new Button(compositeArguments, SWT.None);
 			btnDelete.setText("Delete");
 			btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false));
 			btnDelete.addSelectionListener(new SelectionAdapter() {
@@ -182,13 +236,17 @@ public class ArgumentsComposite extends Composite {
 					if (editingDomain == null) {
 						((EClassArgument) getSelectedArgument()).setValue(null);
 					} else {
-						SetCommand command = new SetCommand(editingDomain, getSelectedArgument(),
+						SetCommand command = new SetCommand(editingDomain, getSelectedEObject(),
 								ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE, null);
 						editingDomain.getCommandStack().execute(command);
 					}
+//					if(compositeEMFForms.dispose();
+//					compositeEMFForms = new NoEObjectSelectionComposite(ArgumentsComposite.this, SWT.None);
+//					ArgumentsComposite.this.layout();
 				}
 			});
-
+		
+//			layout();
 			m_bindingContext = initDataBindingsButtons();
 		}
 	}
@@ -206,8 +264,20 @@ public class ArgumentsComposite extends Composite {
 		return readOnly;
 	}
 
-	public Argument getSelectedArgument() {
-		return (Argument) treeViewer.getStructuredSelection().getFirstElement();
+	public EObject getSelectedEObject() {
+		return (EObject) treeViewer.getStructuredSelection().getFirstElement();
+	}
+	
+	public Argument getSelectedArgument(){
+		System.out.println(treeViewer.getStructuredSelection().getPaths());
+		if(getSelectedEObject() instanceof Argument){
+			return (Argument) getSelectedEObject();
+		}else{
+			System.out.println(treeViewer.getStructuredSelection().getPaths());
+			return null;
+//			return (Argument) treeViewer.getStructuredSelection().getPaths()
+		}
+		
 	}
 
 	/**
@@ -232,6 +302,11 @@ public class ArgumentsComposite extends Composite {
 		for (TreeColumn column : treeViewer.getTree().getColumns()) {
 			column.pack();
 		}
+		for(Argument argument: operationCall.getArgumentsList().getArguments()){
+			if(argument instanceof EClassArgument && !readOnly){
+				compositeEMFForms = new NoEObjectSelectionComposite(this, SWT.None); 
+			}
+		}		
 	}
 
 	@SuppressWarnings("unchecked")
@@ -278,25 +353,25 @@ public class ArgumentsComposite extends Composite {
 		IObservableValue<?> btnDeleteEnabledObserveValue = WidgetProperties.enabled().observe(btnDelete);
 
 		m_bindingContext.bindValue(btnNewEnabledObserveValue, treeViewerSingleSelectionObservableValue, null,
-				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE).setConverter(new Converter(Argument.class, Boolean.class) {
+				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE).setConverter(new Converter(Object.class, Boolean.class) {
 					@Override
 					public Object convert(Object fromObject) {
-						if(fromObject instanceof EClassArgument){
-							if(((EClassArgument) fromObject).getValue() == null){
+							if(fromObject instanceof EClassArgument && ((EClassArgument) fromObject).getValue() == null){
+								return true;
+							}else if(fromObject instanceof EObject && !((EObject) fromObject).eContents().isEmpty()){
 								return true;
 							}
-						}
 						return false;
 					}
 				}));
 		m_bindingContext.bindValue(btnDeleteEnabledObserveValue, treeViewerSingleSelectionObservableValue, null,
-				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE).setConverter(new Converter(Argument.class, Boolean.class) {
+				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE).setConverter(new Converter(EObject.class, Boolean.class) {
 					@Override
 					public Object convert(Object fromObject) {
-						if(fromObject instanceof EClassArgument){
-							if(((EClassArgument) fromObject).getValue() != null){
+							if(fromObject instanceof EClassArgument && ((EClassArgument) fromObject).getValue() != null){
 								return true;
-							}
+							}else if(fromObject instanceof EObject && !((EObject) fromObject).eContents().isEmpty()){
+								return true;
 						}
 						return false;
 					}
@@ -354,11 +429,6 @@ public class ArgumentsComposite extends Composite {
 			}
 			return adapterLabelProvider;
 		}
-
-	}
-
-	public EObject getSelectedEObject() {
-		return (EObject) treeViewer.getStructuredSelection().getFirstElement();
 	}
 
 	@Override
