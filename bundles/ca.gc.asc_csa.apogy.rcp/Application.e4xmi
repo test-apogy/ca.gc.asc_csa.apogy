@@ -27,33 +27,42 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_cm3GMKaaEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.12" ref="_VhqlIKaaEeanWP_Ek56TpQ"/>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_vTm5MKaaEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.18">
-              <children xsi:type="basic:Part" xmi:id="_wsxEgKaaEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_agOhwLAaEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.contexts" ref="_iuRl0KaZEeanWP_Ek56TpQ"/>
             </children>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_JvElAKaTEeanWP_Ek56TpQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.17">
-            <children xsi:type="advanced:Placeholder" xmi:id="_agOhwLAaEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.contexts" ref="_iuRl0KaZEeanWP_Ek56TpQ"/>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_sXcLMLArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.18" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_tZsSYLArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.17">
+              <children xsi:type="advanced:Placeholder" xmi:id="_uvY6ALArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.14" ref="_gDRD0LArEea_IN33dRJ5eQ"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_twV30LArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.20">
+              <children xsi:type="basic:Part" xmi:id="_w51_YLArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
+              <children xsi:type="basic:Part" xmi:id="_nn-EALAuEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.documentation" label="Info"/>
+            </children>
           </children>
         </children>
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Environment">
         <children xsi:type="basic:PartSashContainer" xmi:id="_Sj4c8IyREeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7"/>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_vW2qwJ00Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.controllers" label="Controllers" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.common.io.jinput.ui/icons/joystick.png">
-        <children xsi:type="basic:PartSashContainer" xmi:id="__aDBkJ00Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.10">
-          <children xsi:type="basic:PartSashContainer" xmi:id="_CD0gMJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.11" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="_D4VKwJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.9">
-              <children xsi:type="advanced:Placeholder" xmi:id="_GFhloJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.5" ref="_H_U1UJ01Eeal-58svzdKOg"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif" tooltip="Orbital">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_WkvXkDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.1">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_YIwvEDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.4" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_-oRW4LAuEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.4">
+              <children xsi:type="basic:Part" xmi:id="_zZAzsLAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.orbits" label="Orbits"/>
+              <children xsi:type="basic:Part" xmi:id="_6Ykm0LAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.ground" label="Ground"/>
             </children>
-            <children xsi:type="basic:PartStack" xmi:id="_ETjHIJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.10">
-              <children xsi:type="advanced:Placeholder" xmi:id="_HdvVwJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.6" ref="_jFkp4J01Eeal-58svzdKOg"/>
+            <children xsi:type="basic:PartStack" xmi:id="_9EP_YLAuEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.3">
+              <children xsi:type="advanced:Placeholder" xmi:id="_pFKJUDdREeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.earthView" ref="_eVPC8DdREeaqBcDQbmA3aw"/>
             </children>
           </children>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_CyIXsJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.12" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="_K0TB4J02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.11">
-              <children xsi:type="advanced:Placeholder" xmi:id="_JMD4wJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.7" ref="_BxoHgJ02Eeal-58svzdKOg"/>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_qPdj0DdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.5" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_r4BdEDdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.5">
+              <children xsi:type="advanced:Placeholder" xmi:id="_tAxN0DdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.0" ref="_nM7m8DdSEeaqBcDQbmA3aw"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_uYG0MDdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.1" ref="_nNLekDdSEeaqBcDQbmA3aw"/>
             </children>
-            <children xsi:type="basic:PartStack" xmi:id="_LcGowJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.12">
-              <children xsi:type="advanced:Placeholder" xmi:id="_LvCy4J02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.8" ref="_l-k3UJ01Eeal-58svzdKOg"/>
+            <children xsi:type="basic:PartStack" xmi:id="_AarvsLAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.21">
+              <children xsi:type="basic:Part" xmi:id="_3W6MoLAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
+              <children xsi:type="basic:Part" xmi:id="_4q8AULAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.documentation" label="Info"/>
             </children>
           </children>
         </children>
@@ -74,48 +83,67 @@
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_HwKdcCkBEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.1">
               <children xsi:type="advanced:Placeholder" xmi:id="_qiIEMKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.11" ref="_bbsQkKHZEeaIzJSZMOTHGg"/>
+              <children xsi:type="basic:Part" xmi:id="_sgGQkLAuEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.documentation" label="Info"/>
+            </children>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_vW2qwJ00Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.controllers" label="Controllers" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.common.io.jinput.ui/icons/joystick.png">
+        <children xsi:type="basic:PartSashContainer" xmi:id="__aDBkJ00Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.10">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_CD0gMJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.11" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_D4VKwJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.9">
+              <children xsi:type="advanced:Placeholder" xmi:id="_GFhloJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.5" ref="_H_U1UJ01Eeal-58svzdKOg"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_ETjHIJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.10">
+              <children xsi:type="advanced:Placeholder" xmi:id="_HdvVwJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.6" ref="_jFkp4J01Eeal-58svzdKOg"/>
+            </children>
+          </children>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_CyIXsJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.12" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_K0TB4J02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.11">
+              <children xsi:type="advanced:Placeholder" xmi:id="_JMD4wJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.7" ref="_BxoHgJ02Eeal-58svzdKOg"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_LcGowJ02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.partstack.12">
+              <children xsi:type="advanced:Placeholder" xmi:id="_LvCy4J02Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.8" ref="_l-k3UJ01Eeal-58svzdKOg"/>
+              <children xsi:type="basic:Part" xmi:id="_wnPaMLAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.info" label="Info"/>
             </children>
           </children>
         </children>
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_3_Z0YCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.data" label="Data" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/DataProductsList.gif" tooltip="Data">
         <children xsi:type="basic:PartSashContainer" xmi:id="__oleUIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.8">
-          <children xsi:type="basic:PartStack" xmi:id="___LZYIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
-            <children xsi:type="advanced:Placeholder" xmi:id="_RLIvEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.2" ref="_En_XkIyWEeajju10_PNlwQ"/>
-          </children>
-        </children>
-      </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif" tooltip="Orbital">
-        <children xsi:type="basic:PartSashContainer" xmi:id="_WkvXkDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.1">
-          <children xsi:type="basic:PartSashContainer" xmi:id="_YIwvEDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.4" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_QcOkYDdUEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.6">
-              <children xsi:type="advanced:Placeholder" xmi:id="_L_h28DdREeaqBcDQbmA3aw" elementId="org.eclipse.ui.editorss" ref="_5QgEwCclEeaypqkzSmS_xw"/>
-              <children xsi:type="basic:PartStack" xmi:id="_KM3FUDiXEeafNNjwzIlosA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.4">
-                <children xsi:type="advanced:Placeholder" xmi:id="_9aBmIDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_qta08CgZEeau5bAVKAeRVA"/>
-              </children>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_M0fvkLAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.19" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_H4xR4LAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.22">
+              <children xsi:type="basic:Part" xmi:id="_MJNzYLAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.data" label="Data"/>
             </children>
-            <children xsi:type="advanced:Placeholder" xmi:id="_pFKJUDdREeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.earthView" ref="_eVPC8DdREeaqBcDQbmA3aw"/>
           </children>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_qPdj0DdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.5" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="_ZUKLMDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.3">
-              <children xsi:type="advanced:Placeholder" xmi:id="_n8yBcDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.properties" ref="_Ds6rMCckEeaypqkzSmS_xw"/>
-              <children xsi:type="advanced:Placeholder" xmi:id="_krKfsDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.views.ProblemView" ref="_C1hTsCclEeaypqkzSmS_xw"/>
-              <children xsi:type="advanced:Placeholder" xmi:id="_3f0RgDdQEeaqBcDQbmA3aw" elementId="org.eclipse.pde.runtime.LogView" ref="_pJ6bsCclEeaypqkzSmS_xw"/>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_F8bEgLAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.6" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="___LZYIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
+              <children xsi:type="advanced:Placeholder" xmi:id="_RLIvEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.2" ref="_En_XkIyWEeajju10_PNlwQ"/>
             </children>
-            <children xsi:type="basic:PartStack" xmi:id="_r4BdEDdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.5">
-              <children xsi:type="advanced:Placeholder" xmi:id="_tAxN0DdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.0" ref="_nM7m8DdSEeaqBcDQbmA3aw"/>
-              <children xsi:type="advanced:Placeholder" xmi:id="_uYG0MDdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.1" ref="_nNLekDdSEeaqBcDQbmA3aw"/>
+            <children xsi:type="basic:PartStack" xmi:id="_P7jAELAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.24">
+              <children xsi:type="basic:Part" xmi:id="_JwOiwLAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
+              <children xsi:type="basic:Part" xmi:id="_QmW3oLAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.documentation" label="Info"/>
             </children>
           </children>
         </children>
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_8W6f0CK2Eea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.advanced" label="Advanced" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/apogy_icon_16x16.gif" tooltip="Advanced">
-        <children xsi:type="basic:PartSashContainer" xmi:id="_X6YqcJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.9" horizontal="true">
-          <children xsi:type="basic:PartStack" xmi:id="_ZAZ3UJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.7">
-            <children xsi:type="advanced:Placeholder" xmi:id="_lZOOIJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.3" ref="_c0P8YJe8EeadvPGeI8VxSw"/>
+        <children xsi:type="basic:PartSashContainer" xmi:id="_X6YqcJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.9">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_Ber4cLAxEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.20" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_ZAZ3UJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.7">
+              <children xsi:type="advanced:Placeholder" xmi:id="_lZOOIJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.3" ref="_c0P8YJe8EeadvPGeI8VxSw"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_C7qz0LAxEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.23">
+              <children xsi:type="advanced:Placeholder" xmi:id="_cuYoIJfAEeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.4" ref="_RoXV8JfAEeadvPGeI8VxSw"/>
+            </children>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_cUGf4JfAEeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.8">
-            <children xsi:type="advanced:Placeholder" xmi:id="_cuYoIJfAEeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.4" ref="_RoXV8JfAEeadvPGeI8VxSw"/>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_KxoDcLAxEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.21">
+            <children xsi:type="basic:PartStack" xmi:id="_cUGf4JfAEeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.8">
+              <children xsi:type="advanced:Placeholder" xmi:id="_krKfsDdQEeaqBcDQbmA3aw" elementId="org.eclipse.ui.views.ProblemView" ref="_C1hTsCclEeaypqkzSmS_xw"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_MAId8LAxEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.25">
+              <children xsi:type="advanced:Placeholder" xmi:id="_3f0RgDdQEeaqBcDQbmA3aw" elementId="org.eclipse.pde.runtime.LogView" ref="_pJ6bsCclEeaypqkzSmS_xw"/>
+            </children>
           </children>
         </children>
       </children>
@@ -126,11 +154,6 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_Ccik8B6_Eea0FN5nav8bqQ" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_qta08CgZEeau5bAVKAeRVA"/>
             </children>
             <children xsi:type="advanced:Placeholder" xmi:id="_dRJBcCcmEeaypqkzSmS_xw" elementId="org.eclipse.ui.editorss" ref="_5QgEwCclEeaypqkzSmS_xw"/>
-          </children>
-          <children xsi:type="basic:PartStack" xmi:id="_KZXqMCcmEeaypqkzSmS_xw" elementId="ca.gc.asc_csa.apogy.rcp.partstack.2">
-            <children xsi:type="advanced:Placeholder" xmi:id="_Ob6IACclEeaypqkzSmS_xw" elementId="org.eclipse.ui.views.ProblemView" ref="_C1hTsCclEeaypqkzSmS_xw"/>
-            <children xsi:type="advanced:Placeholder" xmi:id="_rgIFICclEeaypqkzSmS_xw" elementId="org.eclipse.pde.runtime.LogView" ref="_pJ6bsCclEeaypqkzSmS_xw"/>
-            <children xsi:type="advanced:Placeholder" xmi:id="_REjQICcjEeaypqkzSmS_xw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.properties" ref="_Ds6rMCckEeaypqkzSmS_xw"/>
           </children>
         </children>
       </children>
@@ -233,7 +256,7 @@
       </menus>
       <toolbar xmi:id="_WS2HYoykEeaoU8x1yKOE8A" elementId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_c0P8YJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.part.ApogyAdvancedEditorPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ApogyAdvancedEditorPart" label="Advanced Editor"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_c0P8YJe8EeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.part.ApogyAdvancedEditorPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ApogyAdvancedEditorPart" label="Editor"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_RoXV8JfAEeadvPGeI8VxSw" elementId="ca.gc.asc_csa.apogy.rcp.part.FormPropertiesPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.common.emf.ui.emfforms/ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.FormPropertiesPart" label="Properties"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_H_U1UJ01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.part.ControllerConfigsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.programs.controllers.ui/ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts.ControllerConfigsPart" label="Configurations"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_jFkp4J01Eeal-58svzdKOg" elementId="ca.gc.asc_csa.apogy.rcp.part.ControllerBindingsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.programs.controllers.ui/ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts.ControllerBindingsPart" label="Bindings"/>
@@ -252,6 +275,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_Qzm3kKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramPart" label="Program"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramDetailsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.common.emf.ui.emfforms/ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.ProgramDetailsPart" label="Details"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_PG7rIKzhEeaZaM9KFM-klA" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramArgumentsPart" label="Arguments"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_gDRD0LArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.eObjectPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.RuntimePart" label="Runtime"/>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.save" label="Save" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/tool16/save.gif" tooltip="" command="_6wlLg8gZEeSyMNYR5xypkQ"/>

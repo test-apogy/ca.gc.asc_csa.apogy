@@ -14,14 +14,14 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Label;
 
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspaceFacade;
 import ca.gc.asc_csa.apogy.workspace.ApogyWorkspacePackage;
 
 public class ActiveProjectToolControl {
 	
-	private Text textValue;
+	private Label lblValue;
 	private DataBindingContext bindingContext;
 
 	@PostConstruct
@@ -30,11 +30,11 @@ public class ActiveProjectToolControl {
 		final Composite composite = new Composite(parent, SWT.NONE);
 		GridLayout gl_composite = new GridLayout();
 		composite.setLayout(gl_composite);
-		textValue = new Text(composite, SWT.BORDER);
-		GridData gd_labelValue = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
+		lblValue = new Label(composite, SWT.BORDER);
+		GridData gd_labelValue = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
 		gd_labelValue.widthHint = 300;
-		gd_labelValue.minimumWidth = 300;
-		textValue.setLayoutData(gd_labelValue);
+		gd_labelValue.minimumWidth = 350;
+		lblValue.setLayoutData(gd_labelValue);
 		
 		initDataBindings();
 	}
@@ -45,7 +45,7 @@ public class ActiveProjectToolControl {
 		
 		/* Import Button Enabled. */
 		IObservableValue<?> observeActiveProject = EMFProperties.value(ApogyWorkspacePackage.Literals.APOGY_WORKSPACE_FACADE__ACTIVE_PROJECT).observe(ApogyWorkspaceFacade.INSTANCE);
-		IObservableValue<?> observeLabelValueText = WidgetProperties.text().observe(textValue);
+		IObservableValue<?> observeLabelValueText = WidgetProperties.text().observe(lblValue);
 		
 		bindingContext.bindValue(observeLabelValueText, observeActiveProject, null, new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE).setConverter(new Converter(IProject.class, String.class){
 			@Override

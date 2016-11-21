@@ -408,14 +408,6 @@
    </extension>      
    <extension
          point="org.eclipse.ui.views">
-      <view
-            category="ca.gc.asc_csa.apogy.core.ui.category"
-            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.OperationCallView"
-            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/OperationCall.gif"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.OperationCallView"
-            name="Operation Call"
-            restorable="true">
-      </view>
             
       <view
             category="ca.gc.asc_csa.apogy.core.ui.category"
