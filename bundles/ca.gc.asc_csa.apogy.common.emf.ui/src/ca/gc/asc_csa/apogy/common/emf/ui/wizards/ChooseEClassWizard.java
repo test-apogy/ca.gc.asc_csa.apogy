@@ -80,7 +80,7 @@ public class ChooseEClassWizard extends Wizard {
 	@Override
 	public boolean performFinish() {
 		// TODO
-		return null
+		return true;
 	}
 	
 

@@ -97,7 +97,6 @@ public class ConverterGraphComposite extends  Composite
 			}
 			@Override
 			protected Object getValue(Object o) {
-				// TODO remove this method, if your EditingSupport returns value
 				return super.getValue(o);
 			}
 		};
@@ -117,7 +116,6 @@ public class ConverterGraphComposite extends  Composite
 			}
 			@Override
 			protected Object getValue(Object o) {
-				// TODO remove this method, if your EditingSupport returns value
 				return super.getValue(o);
 			}
 		};
@@ -172,31 +170,23 @@ public class ConverterGraphComposite extends  Composite
 	
 				@Override
 				public void addListener(ILabelProviderListener listener) {
-					// TODO Auto-generated method stub
-					
 				}
 	
 				@Override
 				public void dispose() {
-					// TODO Auto-generated method stub
-					
 				}
 	
 				@Override
 				public boolean isLabelProperty(Object element, String property) {
-					// TODO Auto-generated method stub
 					return false;
 				}
 	
 				@Override
 				public void removeListener(ILabelProviderListener listener) {
-					// TODO Auto-generated method stub
-					
 				}
 	
 				@Override
 				public Image getColumnImage(Object element, int columnIndex) {
-					// TODO Auto-generated method stub
 					return null;
 				}
 	

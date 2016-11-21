@@ -192,8 +192,7 @@ public class RotationMatrixSlidersComposite extends Composite
 				
 				@Override
 				public void widgetDefaultSelected(SelectionEvent e) 
-				{
-					// TODO Auto-generated method stub					
+				{				
 				}
 			});
 		}
@@ -213,8 +212,6 @@ public class RotationMatrixSlidersComposite extends Composite
 				@Override
 				public void widgetDefaultSelected(SelectionEvent e) 
 				{
-					// TODO Auto-generated method stub
-					
 				}
 			});
 		}
