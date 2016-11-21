@@ -19,7 +19,6 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsDefinitionComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsListComposite;
 
 public class ContextsDefinitionPart extends AbstractApogySessionBasedPart{
 	@Override
@@ -34,7 +33,7 @@ public class ContextsDefinitionPart extends AbstractApogySessionBasedPart{
 
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		((ContextsListComposite) getContentComposite())
+		((ContextsDefinitionComposite) getContentComposite())
 		.setEnvironment(invocatorSession.getEnvironment());
 	}
 }
