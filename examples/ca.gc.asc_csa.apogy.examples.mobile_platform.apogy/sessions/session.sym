@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:images="ca.gc.asc_csa.apogy.common.images" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmlns:mobile_platform="ca.gc.asc_csa.apogy.examples.mobile_platform" xmi:id="_CaxBIArPEeW4-_ONWXXiAw" name="">
   <environment xsi:type="core:ApogyEnvironment" xmi:id="_CaxBIQrPEeW4-_ONWXXiAw" name="Mobile Platform Example" description="This is an example session, illustrating how to use the mobile platform example." activeContext="_CaxoMgrPEeW4-_ONWXXiAw" time="2016-02-29T13:15:59.930-0500" activeWorksite="_CaxoOQrPEeW4-_ONWXXiAw" activeTimeSource="_Ca4V4grPEeW4-_ONWXXiAw">
-    <typesList xmi:id="_CaxBIgrPEeW4-_ONWXXiAw">
-      <localTypes xmi:id="_CaxBIwrPEeW4-_ONWXXiAw"/>
-      <registeredTypes xmi:id="_CaxBJArPEeW4-_ONWXXiAw"/>
-    </typesList>
+    <localTypesList xmi:id="_CaxBIwrPEeW4-_ONWXXiAw"/>
     <variablesList xmi:id="_CaxBJQrPEeW4-_ONWXXiAw">
       <variables xmi:id="_CaxoMArPEeW4-_ONWXXiAw" name="mobilePlatform">
         <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.mobile_platform.apogy/model/MobilePlatformApogySystem.ss#_aD78wArNEeW4-_ONWXXiAw"/>

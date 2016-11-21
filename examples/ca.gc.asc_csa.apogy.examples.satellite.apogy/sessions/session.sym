@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:apogy="ca.gc.asc_csa.apogy.examples.satellite.apogy" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:earth="ca.gc.asc_csa.apogy.core.environment.orbit.earth" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmlns:satellite="ca.gc.asc_csa.apogy.examples.satellite" xmlns:ui="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui" xmi:id="_wVizgNATEeW12rm8vWp96w">
   <environment xsi:type="core:ApogyEnvironment" xmi:id="_wVmd4NATEeW12rm8vWp96w" activeContext="_2BlKINQBEeWIC-guB7Dopw" time="2016-03-31T07:30:15.300-0400" activeTimeSource="_vkP4wOJDEeWtY-OwvfmNpQ">
-    <typesList xmi:id="_wVmd4dATEeW12rm8vWp96w">
-      <localTypes xmi:id="_y87sgNATEeW12rm8vWp96w"/>
-      <registeredTypes xmi:id="_wYPiMNATEeW12rm8vWp96w"/>
-    </typesList>
+    <localTypesList xmi:id="_y87sgNATEeW12rm8vWp96w"/>
     <variablesList xmi:id="_wVmd4tATEeW12rm8vWp96w">
       <variables xmi:id="_0dgHYNATEeW12rm8vWp96w" name="constellation">
         <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.satellite.apogy/model/constellation.ss#_FYHr0LrTEeWkHvFmuWZVPA"/>

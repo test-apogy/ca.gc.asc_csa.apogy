@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmi:id="_wazboArOEeW4-_ONWXXiAw" name="">
   <environment xsi:type="core:ApogyEnvironment" xmi:id="_wazboQrOEeW4-_ONWXXiAw" name="PTU Dish Antenna Example" description="This is an example session, demonstrating how the PTU dish antenna is used." activeContext="_wa0CsQrOEeW4-_ONWXXiAw" time="2015-03-30T16:55:13.566-0400" activeWorksite="_wa5iQArOEeW4-_ONWXXiAw" activeTimeSource="_wcQ0MgrOEeW4-_ONWXXiAw">
-    <typesList xmi:id="_wazbogrOEeW4-_ONWXXiAw">
-      <localTypes xmi:id="_wazbowrOEeW4-_ONWXXiAw"/>
-      <registeredTypes xmi:id="_wazbpArOEeW4-_ONWXXiAw"/>
-    </typesList>
+    <localTypesList xmi:id="_wazbowrOEeW4-_ONWXXiAw"/>
     <variablesList xmi:id="_wazbpQrOEeW4-_ONWXXiAw">
       <variables xmi:id="_wazbpgrOEeW4-_ONWXXiAw" name="ptuDish">
         <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.antenna.apogy/model/PTUDishAntennaApogySystem.ss#_sUcqQArOEeW4-_ONWXXiAw"/>

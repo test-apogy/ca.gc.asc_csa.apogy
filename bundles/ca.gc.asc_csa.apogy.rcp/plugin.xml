@@ -33,16 +33,8 @@
                value="icons/about.gif">
          </property>
          <property
-               name="startupForegroundColor"
-               value="2E3436">
-         </property>
-         <property
                name="startupProgressRect"
-               value="30,275,395,4">
-         </property>
-         <property
-               name="startupMessageRect"
-               value="30,250,395,20">
+               value="30,275,395,5">
          </property>
          <property
                name="appName"
@@ -73,6 +65,14 @@
      <property
            name="preferenceCustomization"
            value="plugin_customization.ini">
+     </property>
+     <property
+           name="startupForegroundColor"
+           value="2E3436">
+     </property>
+     <property
+           name="startupMessageRect"
+           value="30,250,395,20">
      </property>
                      
       </product>
