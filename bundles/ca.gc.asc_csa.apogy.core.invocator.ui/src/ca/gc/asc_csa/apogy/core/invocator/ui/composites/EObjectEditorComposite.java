@@ -42,7 +42,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
 
-public class AdvancedEditorComposite extends Composite {
+public class EObjectEditorComposite extends Composite {
 
 	private ISelectionChangedListener selectionChangedListener;
 	private EObjectComposite eObjectComposite;
@@ -55,7 +55,7 @@ public class AdvancedEditorComposite extends Composite {
 	 * @param parent
 	 * @param style
 	 */
-	public AdvancedEditorComposite(Composite parent, int style) {
+	public EObjectEditorComposite(Composite parent, int style) {
 		super(parent, style);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
@@ -67,7 +67,7 @@ public class AdvancedEditorComposite extends Composite {
 		eObjectComposite = new EObjectComposite(this, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
-				AdvancedEditorComposite.this.newSelection(selection);
+				EObjectEditorComposite.this.newSelection(selection);
 				checkEnableNewButton(getSelectedEObject());
 			}
 		};

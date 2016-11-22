@@ -22,9 +22,9 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.EObjectEditorComposite;
 
-public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
+public class EObjectEditorPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected void setNullSelection() {
@@ -33,13 +33,13 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new AdvancedEditorComposite(parent, SWT.None) {
+		return new EObjectEditorComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
-					EObject eObject = ((AdvancedEditorComposite) getContentComposite()).getSelectedEObject();
+					EObject eObject = ((EObjectEditorComposite) getContentComposite()).getSelectedEObject();
 					if (eObject != null) {
 						ApogyAdvancedEditorPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
 								.createApogyAdvancedEditorPartSelection();
@@ -48,13 +48,16 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
 						selectionService.setSelection(selectionSent);
 					}
 				}
-
 			}
 		};
 	}
 
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
+		setEObjectInComposite(invocatorSession);
+	}
+	
+	protected void setEObjectInComposite(EObject eObject){
+		((EObjectEditorComposite) getContentComposite()).setEObject(eObject);
 	}
 }
