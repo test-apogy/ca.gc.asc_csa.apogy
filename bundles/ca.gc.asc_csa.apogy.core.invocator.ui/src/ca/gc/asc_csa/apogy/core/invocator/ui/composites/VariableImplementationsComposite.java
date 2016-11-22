@@ -52,8 +52,10 @@ import org.eclipse.jface.viewers.TreeViewerEditor;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.window.ToolTip;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -63,7 +65,6 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
@@ -75,7 +76,7 @@ import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
 
-public class VariableImplementationsComposite extends Composite {
+public class VariableImplementationsComposite extends ScrolledComposite {
 	private DataBindingContext m_bindingContext;
 
 	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
@@ -95,7 +96,6 @@ public class VariableImplementationsComposite extends Composite {
 
 	private ISelectionChangedListener variableImplementationsViewerListener;
 
-
 	/**
 	 * Creates the composite.
 	 * 
@@ -103,36 +103,24 @@ public class VariableImplementationsComposite extends Composite {
 	 * @param style
 	 */
 	public VariableImplementationsComposite(Composite parent, int style) {
-		super(parent, SWT.NONE);
+		super(parent, style);
 
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
 				toolkit.dispose();
 			}
 		});
+		setLayout(new FillLayout());
+		setExpandHorizontal(true);
+		setExpandVertical(true);
 
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		setLayout(new GridLayout(1, true));
-		
-		ScrolledForm scrolledform = toolkit.createScrolledForm(this);
-		scrolledform.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		toolkit.paintBordersFor(scrolledform);
-		scrolledform.getBody().setLayout(new GridLayout(1, false));
-		
+		Composite composite = new Composite(this, SWT.None);
+		GridLayout gl_composite = new GridLayout(1, false);
+		composite.setLayout(gl_composite);
+		toolkit.adapt(composite);
 
-		/*Section sctnTable = toolkit.createSection(scrolledform.getBody(), Section.NO_TITLE);
-		GridData gd_sctnTable = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
-		gd_sctnTable.widthHint = 1;
-		gd_sctnTable.heightHint = 1;
-		sctnTable.setLayoutData(gd_sctnTable);
-		sctnTable.setSize(440, 0);
-		toolkit.paintBordersFor(sctnTable);
-		*/
-
-		variableImplementationsViewer = new TreeViewer(scrolledform.getBody(),
+		variableImplementationsViewer = new TreeViewer(composite,
 				SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
-	
 
 		ColumnViewerToolTipSupport.enableFor(variableImplementationsViewer, ToolTip.NO_RECREATE);
 		treeVariableImplementations = variableImplementationsViewer.getTree();
@@ -141,7 +129,7 @@ public class VariableImplementationsComposite extends Composite {
 		treeVariableImplementations.setLayoutData(gd_treeVariableImplementations);
 		treeVariableImplementations.setLinesVisible(true);
 		treeVariableImplementations.setHeaderVisible(true);
-		toolkit.paintBordersFor	(treeVariableImplementations);
+		toolkit.paintBordersFor(treeVariableImplementations);
 
 		TreeViewerColumn treeViewerColumnFeature = new TreeViewerColumn(variableImplementationsViewer, SWT.NONE);
 		TreeColumn columnFeature = treeViewerColumnFeature.getColumn();
@@ -173,38 +161,38 @@ public class VariableImplementationsComposite extends Composite {
 		variableImplementationsViewer.setLabelProvider(new VariableImplementationLabelProvider(adapterFactory));
 
 		variableImplementationsViewer.addSelectionChangedListener(getVariableImplementationsViewerListener());
-		//sctnTable.setClient(treeVariableImplementations);
-		
-		Section sctnDetails = toolkit.createSection(scrolledform.getBody(), Section.TITLE_BAR | Section.EXPANDED);
+
+		Section sctnDetails = toolkit.createSection(composite, Section.TITLE_BAR | Section.EXPANDED);
 		sctnDetails.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		//sctnDetails.setSize(440, 127);
 		toolkit.paintBordersFor(sctnDetails);
 		sctnDetails.setText("Details");
 		sctnDetails.setExpanded(true);
 
-		Composite composite = toolkit.createComposite(sctnDetails, SWT.NONE);
-		toolkit.paintBordersFor(composite);
-		sctnDetails.setClient(composite);
-		composite.setLayout(new GridLayout(2, false));
+		Composite compositeDetails = toolkit.createComposite(sctnDetails, SWT.NONE);
+		toolkit.paintBordersFor(compositeDetails);
+		sctnDetails.setClient(compositeDetails);
+		compositeDetails.setLayout(new GridLayout(2, false));
 
-		Label lblName = toolkit.createLabel(composite, "Name:", SWT.NONE);
+		Label lblName = toolkit.createLabel(compositeDetails, "Name:", SWT.NONE);
 		lblName.setSize(69, 21);
 
-		txtName = toolkit.createText(composite, "", SWT.READ_ONLY);
+		txtName = toolkit.createText(compositeDetails, "", SWT.READ_ONLY);
 		txtName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
-		toolkit.createLabel(composite, "Interface:", SWT.NONE);
+		toolkit.createLabel(compositeDetails, "Interface:", SWT.NONE);
 
-		txtInterface = toolkit.createText(composite, "", SWT.READ_ONLY);
+		txtInterface = toolkit.createText(compositeDetails, "", SWT.READ_ONLY);
 		txtInterface.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
-		Label lblImplementation = toolkit.createLabel(composite, "Implementation:", SWT.NONE);
+		Label lblImplementation = toolkit.createLabel(compositeDetails, "Implementation:", SWT.NONE);
 		lblImplementation.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 
-		txtImplementation = toolkit.createText(composite, "", SWT.READ_ONLY);
+		txtImplementation = toolkit.createText(compositeDetails, "", SWT.READ_ONLY);
 		txtImplementation.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+
+		setContent(composite);
+		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
-	
 
 	/**
 	 * Binds the {@link Context} with the composite.
@@ -242,121 +230,129 @@ public class VariableImplementationsComposite extends Composite {
 
 	protected DataBindingContext initDataBindings() {
 		return initDataBindingsCustom();
-	}	
-	
+	}
+
 	/**
 	 * Creates and returns the data bindings.
 	 * 
 	 * @return Reference to the data bindings.
 	 */
-	private DataBindingContext initDataBindingsCustom() {	
+	private DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
 
 		/**
 		 * Bind Viewer Selection
 		 */
-		IObservableValue observeSingleSelectionVariableImplementationsViewer = ViewerProperties.singleSelection()
+		IObservableValue<?> observeSingleSelectionVariableImplementationsViewer = ViewerProperties.singleSelection()
 				.observe(variableImplementationsViewer);
-		
-		/** 
+
+		/**
 		 * Bind Name.
 		 */
-		IObservableValue observeTextTxtNameObserveWidget = WidgetProperties
-				.text().observe(txtName);
-		
-		bindingContext.bindValue(observeTextTxtNameObserveWidget,
-				observeSingleSelectionVariableImplementationsViewer, null, 
-				new UpdateValueStrategy()
-				.setConverter(new Converter(AbstractTypeImplementation.class, String.class) {					
+		IObservableValue<?> observeTextTxtNameObserveWidget = WidgetProperties.text().observe(txtName);
+
+		bindingContext.bindValue(observeTextTxtNameObserveWidget, observeSingleSelectionVariableImplementationsViewer,
+				null,
+				new UpdateValueStrategy().setConverter(new Converter(AbstractTypeImplementation.class, String.class) {
 					@Override
-					public Object convert(Object fromObject) {					
-						return EMFEcoreInvocatorEditUtilities.getName((AbstractTypeImplementation) fromObject);						
+					public Object convert(Object fromObject) {
+						if (fromObject != null) {
+							return EMFEcoreInvocatorEditUtilities.getName((AbstractTypeImplementation) fromObject);
+						}
+						return null;
 					}
-				}));
-		
-		/** 
-		 * Bind Interface.
-		 */
-		IObservableValue observeTextTxtInterfaceObserveWidget = WidgetProperties
-				.text().observe(txtInterface);
-		
-		bindingContext.bindValue(observeTextTxtInterfaceObserveWidget,
-				observeSingleSelectionVariableImplementationsViewer, null, 
-				new UpdateValueStrategy()
-				.setConverter(new Converter(AbstractTypeImplementation.class, String.class) {					
-					@Override
-					public Object convert(Object fromObject) {		
-						return EMFEcoreInvocatorEditUtilities.getInterfaceName((AbstractTypeImplementation) fromObject, true);					}
 				}));
 
-		/** 
+		/**
+		 * Bind Interface.
+		 */
+		IObservableValue<?> observeTextTxtInterfaceObserveWidget = WidgetProperties.text().observe(txtInterface);
+
+		bindingContext.bindValue(observeTextTxtInterfaceObserveWidget,
+				observeSingleSelectionVariableImplementationsViewer, null,
+				new UpdateValueStrategy().setConverter(new Converter(AbstractTypeImplementation.class, String.class) {
+					@Override
+					public Object convert(Object fromObject) {
+						if (fromObject != null) {
+							return EMFEcoreInvocatorEditUtilities
+									.getInterfaceName((AbstractTypeImplementation) fromObject, true);
+						}
+						return null;
+					}
+				}));
+
+		/**
 		 * Bind Implementation.
 		 */
-		IObservableValue observeTextTxtImplementationObserveWidget = WidgetProperties
-				.text().observe(txtImplementation);
-		
+		IObservableValue<?> observeTextTxtImplementationObserveWidget = WidgetProperties.text()
+				.observe(txtImplementation);
+
 		bindingContext.bindValue(observeTextTxtImplementationObserveWidget,
-				observeSingleSelectionVariableImplementationsViewer, null, 
-				new UpdateValueStrategy()
-				.setConverter(new Converter(AbstractTypeImplementation.class, String.class) {					
+				observeSingleSelectionVariableImplementationsViewer, null,
+				new UpdateValueStrategy().setConverter(new Converter(AbstractTypeImplementation.class, String.class) {
 					@Override
-					public Object convert(Object fromObject) {		
-						return EMFEcoreInvocatorEditUtilities.getImplementationName((AbstractTypeImplementation) fromObject, true);					
+					public Object convert(Object fromObject) {
+						if (fromObject != null) {
+							return EMFEcoreInvocatorEditUtilities
+									.getImplementationName((AbstractTypeImplementation) fromObject, true);
+						}
+						return null;
 					}
-				}));		
-		
-		
+				}));
+
 		/**
 		 * Set the content of the list.
 		 */
 		variableImplementationsViewer.setInput(context);
 		variableImplementationsViewer.expandAll();
-		
+
 		/** Select the first element by default. */
 
-		if (context.getVariableImplementationsList().getVariableImplementations() != null && 
-			context.getVariableImplementationsList().getVariableImplementations().isEmpty()){
-		
-			TreePath treePath = new TreePath(new Object[]{context.getVariableImplementationsList().getVariableImplementations().get(0)});		
+		if (context.getVariableImplementationsList().getVariableImplementations() != null
+				&& context.getVariableImplementationsList().getVariableImplementations().isEmpty()) {
+
+			TreePath treePath = new TreePath(
+					new Object[] { context.getVariableImplementationsList().getVariableImplementations().get(0) });
 			ITreeSelection defaultElementSelected = new TreeSelection(treePath);
 			variableImplementationsViewer.setSelection(defaultElementSelected, true);
 		}
-				
+
 		return bindingContext;
 	}
-
 
 	@Override
 	public void dispose() {
 		super.dispose();
-		m_bindingContext.dispose();
 		variableImplementationsViewer.removeSelectionChangedListener(getVariableImplementationsViewerListener());
-		m_bindingContext = null;
 	}
 
 	/**
-	 * Listener used to listen {{@link #variableImplementationsViewer} selection changes.
- 	 * @return Reference to the listener (Lazy Loaded).
+	 * Listener used to listen {{@link #variableImplementationsViewer} selection
+	 * changes.
+	 * 
+	 * @return Reference to the listener (Lazy Loaded).
 	 */
 	private ISelectionChangedListener getVariableImplementationsViewerListener() {
-		if (variableImplementationsViewerListener == null){
-			variableImplementationsViewerListener = new ISelectionChangedListener() {				
+		if (variableImplementationsViewerListener == null) {
+			variableImplementationsViewerListener = new ISelectionChangedListener() {
 				@Override
 				public void selectionChanged(SelectionChangedEvent event) {
 					newSelection(event.getSelection());
 				}
 			};
-		}		
+		}
 		return variableImplementationsViewerListener;
 	}
 
 	/**
 	 * This method is called when a new selection is made in the composite.
-	 * @param selection Reference to the selection.
+	 * 
+	 * @param selection
+	 *            Reference to the selection.
 	 */
 	protected void newSelection(ISelection selection) {
 	}
-	
+
 	/**
 	 * Returns the selected {@link AbstractTypeImplementation}.
 	 * 
@@ -372,8 +368,8 @@ public class VariableImplementationsComposite extends Composite {
 	 * 
 	 *
 	 */
-	private class VariableImplementationLabelProvider extends
-			AdapterFactoryLabelProvider implements ITableLabelProvider{
+	private class VariableImplementationLabelProvider extends AdapterFactoryLabelProvider
+			implements ITableLabelProvider {
 
 		public VariableImplementationLabelProvider(AdapterFactory adapterFactory) {
 			super(adapterFactory);
@@ -405,15 +401,14 @@ public class VariableImplementationsComposite extends Composite {
 
 			return str;
 		}
-	}	
-	
+	}
+
 	/**
 	 * 
 	 * 
 	 *
 	 */
-	private class VariableImplementationContentProvider implements
-			ITreeContentProvider {
+	private class VariableImplementationContentProvider implements ITreeContentProvider {
 
 		@Override
 		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
@@ -425,8 +420,7 @@ public class VariableImplementationsComposite extends Composite {
 
 		@Override
 		public boolean hasChildren(Object element) {
-			return (!((AbstractTypeImplementation) element)
-					.getTypeMemberImplementations().isEmpty());
+			return (!((AbstractTypeImplementation) element).getTypeMemberImplementations().isEmpty());
 		}
 
 		@Override
@@ -437,15 +431,13 @@ public class VariableImplementationsComposite extends Composite {
 
 		@Override
 		public Object[] getElements(Object inputElement) {
-			return context.getVariableImplementationsList()
-					.getVariableImplementations().toArray();
+			return context.getVariableImplementationsList().getVariableImplementations().toArray();
 		}
 
 		@Override
 		public Object[] getChildren(Object parentElement) {
 			AbstractTypeImplementation abstractTypeImplementation = (AbstractTypeImplementation) parentElement;
-			return abstractTypeImplementation.getTypeMemberImplementations()
-					.toArray();
+			return abstractTypeImplementation.getTypeMemberImplementations().toArray();
 		}
 	}
 
@@ -454,12 +446,11 @@ public class VariableImplementationsComposite extends Composite {
 	 * 
 	 *
 	 */
-	private final class VariableImplementationEditingSupport extends
-			EditingSupport {
+	private final class VariableImplementationEditingSupport extends EditingSupport {
 
 		private ColumnViewer viewer = null;
 
-		private IBaseLabelProvider labelProvider = new LabelProvider(){
+		private IBaseLabelProvider labelProvider = new LabelProvider() {
 			@Override
 			public String getText(Object element) {
 				return ((EClass) element).getInstanceTypeName();
@@ -467,10 +458,9 @@ public class VariableImplementationsComposite extends Composite {
 		};
 
 		private IStructuredContentProvider contentProvider = new IStructuredContentProvider() {
-						
+
 			@Override
-			public void inputChanged(Viewer viewer, Object oldInput,
-					Object newInput) {
+			public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 			}
 
 			@Override
@@ -484,23 +474,18 @@ public class VariableImplementationsComposite extends Composite {
 					VariableImplementation variableImplementation = (VariableImplementation) inputElement;
 
 					if (variableImplementation.getVariable().getVariableType() != null) {
-						EClass interfaceClass = variableImplementation
-								.getVariable().getVariableType()
+						EClass interfaceClass = variableImplementation.getVariable().getVariableType()
 								.getInterfaceClass();
-						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
-								interfaceClass).toArray();
+						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(interfaceClass).toArray();
 					}
 				}
 				if (inputElement instanceof TypeMemberImplementation) {
 					TypeMemberImplementation typeMemberImplementation = (TypeMemberImplementation) inputElement;
 
-					if (typeMemberImplementation.getTypeMember()
-							.getMemberType() != null) {
-						EClass interfaceClass = typeMemberImplementation
-								.getTypeMember().getMemberType()
+					if (typeMemberImplementation.getTypeMember().getMemberType() != null) {
+						EClass interfaceClass = typeMemberImplementation.getTypeMember().getMemberType()
 								.getInterfaceClass();
-						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
-								interfaceClass).toArray();
+						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(interfaceClass).toArray();
 					}
 				}
 				return elements;
@@ -530,7 +515,8 @@ public class VariableImplementationsComposite extends Composite {
 		@Override
 		protected Object getValue(Object element) {
 			AbstractTypeImplementation implementation = (AbstractTypeImplementation) element;
-			return implementation.getImplementationClass() == null ? null : implementation.getImplementationClass().getInstanceTypeName();
+			return implementation.getImplementationClass() == null ? null
+					: implementation.getImplementationClass().getInstanceTypeName();
 		}
 
 		@Override
@@ -538,11 +524,8 @@ public class VariableImplementationsComposite extends Composite {
 			EClass eClass = (EClass) value;
 			AbstractTypeImplementation implementation = (AbstractTypeImplementation) element;
 
-			SetCommand command = new SetCommand(
-					editingDomain,
-					implementation,
-					ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
-					eClass);
+			SetCommand command = new SetCommand(editingDomain, implementation,
+					ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS, eClass);
 			editingDomain.getCommandStack().execute(command);
 
 			this.viewer.refresh();
