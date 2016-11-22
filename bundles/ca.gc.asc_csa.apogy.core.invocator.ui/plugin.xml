@@ -18,17 +18,6 @@
          point="org.eclipse.ui.commands">
 
       <command
-            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesResetCommand"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesResetCommand"
-            name="ResetVariableInstancesCommand">
-      </command>
-      
-      <command
-            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesClearCommand"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesClearCommand"
-            name="ResetVariableInstancesCommand">
-      </command>      
-      <command
             defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ExecuteOperationCallCommand"
             id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ExecuteOperationCallCommand"
             name="ExecuteOperationCallCommand">
@@ -100,25 +89,6 @@
       <menuContribution
             allPopups="true"
             locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
-
-         <command
-               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesResetCommand"
-               label="Reset Instances"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                  <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
-                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
-                       </instanceof>
-                  </iterate>
-               </with>
-            </visibleWhen>
-         </command>
          
          <command
                commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
@@ -138,44 +108,6 @@
                </with>
             </visibleWhen>
          </command>         
-
-         <command
-               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesClearCommand"
-               label="Clear Instances"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                  <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
-                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
-                       </instanceof>
-                  </iterate>
-               </with>
-            </visibleWhen>
-         </command>
-
-         <command
-               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
-               label="Apply Data"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                  <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
-                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
-                       </instanceof>
-                  </iterate>
-               </with>
-            </visibleWhen>
-         </command>
 
          <command
                commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"

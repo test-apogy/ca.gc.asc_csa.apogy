@@ -321,16 +321,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 21;
-
-	/**
-	 * The operation id for the '<em>Init Variable Instances</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES = 22;
+	int APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES = 21;
 
 	/**
 	 * The operation id for the '<em>Dispose Variable Instances</em>' operation.
@@ -339,16 +330,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 23;
-
-	/**
-	 * The operation id for the '<em>Dispose Variable Instances</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES = 24;
+	int APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES = 22;
 
 	/**
 	 * The operation id for the '<em>Get Operation Call Container</em>' operation.
@@ -357,7 +339,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 25;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 23;
 
 	/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -366,7 +348,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 26;
+	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 24;
 
 	/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -375,7 +357,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 27;
+	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 25;
 
 	/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -384,7 +366,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 28;
+	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 26;
 
 	/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -393,34 +375,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 29;
-
-	/**
-	 * The operation id for the '<em>Add Variable Listener</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = 30;
-
-	/**
-	 * The operation id for the '<em>Remove Variable Listener</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = 31;
-
-	/**
-	 * The operation id for the '<em>Notify Variable Listeners</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = 32;
+	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 27;
 
 	/**
 	 * The operation id for the '<em>Load Invocator Session</em>' operation.
@@ -429,7 +384,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___LOAD_INVOCATOR_SESSION__STRING = 33;
+	int APOGY_CORE_INVOCATOR_FACADE___LOAD_INVOCATOR_SESSION__STRING = 28;
 
 	/**
 	 * The operation id for the '<em>Get Data Products By Name</em>' operation.
@@ -438,7 +393,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING = 34;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING = 29;
 
 	/**
 	 * The operation id for the '<em>Get Program By Name</em>' operation.
@@ -447,7 +402,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING = 35;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING = 30;
 
 	/**
 	 * The operation id for the '<em>Get Context By Name</em>' operation.
@@ -456,7 +411,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING = 36;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_CONTEXT_BY_NAME__INVOCATORSESSION_STRING = 31;
 
 	/**
 	 * The operation id for the '<em>Get All Script Based Programs</em>' operation.
@@ -465,7 +420,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST = 37;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_SCRIPT_BASED_PROGRAMS__PROGRAMSLIST = 32;
 
 	/**
 	 * The operation id for the '<em>Create Context</em>' operation.
@@ -474,7 +429,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION = 38;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_CONTEXT__INVOCATORSESSION = 33;
 
 	/**
 	 * The operation id for the '<em>Get Controllers Group</em>' operation.
@@ -483,7 +438,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP = 39;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_CONTROLLERS_GROUP = 34;
 
 	/**
 	 * The operation id for the '<em>Add Variable</em>' operation.
@@ -492,7 +447,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE = 40;
+	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE = 35;
 
 	/**
 	 * The operation id for the '<em>Delete Variable</em>' operation.
@@ -501,7 +456,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 41;
+	int APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE = 36;
 
 	/**
 	 * The operation id for the '<em>Get Operation Call String</em>' operation.
@@ -510,7 +465,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL = 42;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL = 37;
 
 	/**
 	 * The operation id for the '<em>Get EOperation String</em>' operation.
@@ -519,7 +474,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION = 43;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION = 38;
 
 	/**
 	 * The operation id for the '<em>Get Sub Type Feature String</em>' operation.
@@ -528,7 +483,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = 44;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = 39;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -537,7 +492,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 45;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 40;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -4922,16 +4877,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_OPERATION_COUNT = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType
-	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableListenerEventType()
-	 * @generated
-	 */
-	int VARIABLE_LISTENER_EVENT_TYPE = 63;
-
-	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState <em>Program Runtime State</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4939,7 +4884,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramRuntimeState()
 	 * @generated
 	 */
-	int PROGRAM_RUNTIME_STATE = 64;
+	int PROGRAM_RUNTIME_STATE = 63;
 
 	/**
 	 * The meta object id for the '<em>Throwable</em>' data type.
@@ -4949,7 +4894,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getThrowable()
 	 * @generated
 	 */
-	int THROWABLE = 65;
+	int THROWABLE = 64;
 
 	/**
 	 * The meta object id for the '<em>Notification</em>' data type.
@@ -4959,7 +4904,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNotification()
 	 * @generated
 	 */
-	int NOTIFICATION = 66;
+	int NOTIFICATION = 65;
 
 	/**
 	 * The meta object id for the '<em>Type Member Implementations EList</em>' data type.
@@ -4969,7 +4914,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
 	 * @generated
 	 */
-	int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 67;
+	int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 66;
 
 	/**
 	 * The meta object id for the '<em>Type Members Array</em>' data type.
@@ -4978,7 +4923,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMembersArray()
 	 * @generated
 	 */
-	int TYPE_MEMBERS_ARRAY = 68;
+	int TYPE_MEMBERS_ARRAY = 67;
 
 	/**
 	 * The meta object id for the '<em>IVariable Listener</em>' data type.
@@ -4988,7 +4933,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getIVariableListener()
 	 * @generated
 	 */
-	int IVARIABLE_LISTENER = 69;
+	int IVARIABLE_LISTENER = 68;
 
 	/**
 	 * The meta object id for the '<em>Hash Map</em>' data type.
@@ -4998,7 +4943,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getHashMap()
 	 * @generated
 	 */
-	int HASH_MAP = 70;
+	int HASH_MAP = 69;
 
 
 	/**
@@ -5244,16 +5189,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EOperation getApogyCoreInvocatorFacade__CreateTypeMemberImplementations__Type();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#initVariableInstances(ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Init Variable Instances</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Init Variable Instances</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#initVariableInstances(ca.gc.asc_csa.apogy.core.invocator.Environment)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__InitVariableInstances__Environment();
-
-	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#initVariableInstances() <em>Init Variable Instances</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5262,16 +5197,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCoreInvocatorFacade__InitVariableInstances();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#disposeVariableInstances(ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Dispose Variable Instances</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Dispose Variable Instances</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#disposeVariableInstances(ca.gc.asc_csa.apogy.core.invocator.Environment)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__DisposeVariableInstances__Environment();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#disposeVariableInstances() <em>Dispose Variable Instances</em>}' operation.
@@ -5332,36 +5257,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Variable();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#addVariableListener(ca.gc.asc_csa.apogy.core.invocator.IVariableListener) <em>Add Variable Listener</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Variable Listener</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#addVariableListener(ca.gc.asc_csa.apogy.core.invocator.IVariableListener)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__AddVariableListener__IVariableListener();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#removeVariableListener(ca.gc.asc_csa.apogy.core.invocator.IVariableListener) <em>Remove Variable Listener</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Variable Listener</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#removeVariableListener(ca.gc.asc_csa.apogy.core.invocator.IVariableListener)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__RemoveVariableListener__IVariableListener();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#notifyVariableListeners(ca.gc.asc_csa.apogy.core.invocator.Variable, ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType) <em>Notify Variable Listeners</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Notify Variable Listeners</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#notifyVariableListeners(ca.gc.asc_csa.apogy.core.invocator.Variable, ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType)
-	 * @generated
-	 */
-	EOperation getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#loadInvocatorSession(java.lang.String) <em>Load Invocator Session</em>}' operation.
@@ -7672,16 +7567,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EReference getOperationCallResultsListTimeSource_OpsCallList();
 
 	/**
-	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Variable Listener Event Type</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType
-	 * @generated
-	 */
-	EEnum getVariableListenerEventType();
-
-	/**
 	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState <em>Program Runtime State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7979,23 +7864,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getApogyCoreInvocatorFacade__InitVariableInstances__Environment();
-
-		/**
-		 * The meta object literal for the '<em><b>Init Variable Instances</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES = eINSTANCE.getApogyCoreInvocatorFacade__InitVariableInstances();
-
-		/**
-		 * The meta object literal for the '<em><b>Dispose Variable Instances</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getApogyCoreInvocatorFacade__DisposeVariableInstances__Environment();
 
 		/**
 		 * The meta object literal for the '<em><b>Dispose Variable Instances</b></em>' operation.
@@ -8044,30 +7913,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = eINSTANCE.getApogyCoreInvocatorFacade__CollectInitializationData__Variable();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Variable Listener</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = eINSTANCE.getApogyCoreInvocatorFacade__AddVariableListener__IVariableListener();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Variable Listener</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = eINSTANCE.getApogyCoreInvocatorFacade__RemoveVariableListener__IVariableListener();
-
-		/**
-		 * The meta object literal for the '<em><b>Notify Variable Listeners</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = eINSTANCE.getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
 
 		/**
 		 * The meta object literal for the '<em><b>Load Invocator Session</b></em>' operation.
@@ -9944,16 +9789,6 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST = eINSTANCE.getOperationCallResultsListTimeSource_OpsCallList();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType
-		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableListenerEventType()
-		 * @generated
-		 */
-		EEnum VARIABLE_LISTENER_EVENT_TYPE = eINSTANCE.getVariableListenerEventType();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramRuntimeState <em>Program Runtime State</em>}' enum.

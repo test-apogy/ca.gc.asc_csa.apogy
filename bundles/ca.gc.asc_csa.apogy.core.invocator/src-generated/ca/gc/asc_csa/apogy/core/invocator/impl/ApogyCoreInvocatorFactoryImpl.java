@@ -133,8 +133,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case ApogyCoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
-				return createVariableListenerEventTypeFromString(eDataType, initialValue);
 			case ApogyCoreInvocatorPackage.PROGRAM_RUNTIME_STATE:
 				return createProgramRuntimeStateFromString(eDataType, initialValue);
 			case ApogyCoreInvocatorPackage.THROWABLE:
@@ -163,8 +161,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case ApogyCoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
-				return convertVariableListenerEventTypeToString(eDataType, instanceValue);
 			case ApogyCoreInvocatorPackage.PROGRAM_RUNTIME_STATE:
 				return convertProgramRuntimeStateToString(eDataType, instanceValue);
 			case ApogyCoreInvocatorPackage.THROWABLE:
@@ -686,26 +682,6 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 	public OperationCallResultsListTimeSource createOperationCallResultsListTimeSource() {
 		OperationCallResultsListTimeSourceImpl operationCallResultsListTimeSource = new OperationCallResultsListTimeSourceImpl();
 		return operationCallResultsListTimeSource;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VariableListenerEventType createVariableListenerEventTypeFromString(EDataType eDataType, String initialValue) {
-		VariableListenerEventType result = VariableListenerEventType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertVariableListenerEventTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 		/**

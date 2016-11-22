@@ -346,14 +346,6 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Resets the variable instances.
 	 * <!-- end-model-doc -->
-	 * @model environmentUnique="false"
-	 * @generated
-	 */
-	void initVariableInstances(Environment environment);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model
 	 * @generated
 	 */
@@ -365,14 +357,6 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Clear the variable instances.
 	 * <!-- end-model-doc -->
-	 * @model environmentUnique="false"
-	 * @generated
-	 */
-	void disposeVariableInstances(Environment environment);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model
 	 * @generated
 	 */
@@ -440,43 +424,6 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * @generated
 	 */
 	void collectInitializationData(Variable variable);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Adds the specified {@link IVariableListener}.
-	 * @param listener Reference to the {@link IVariableListener}.
-	 * <!-- end-model-doc -->
-	 * @model listenerDataType="ca.gc.asc_csa.apogy.core.invocator.IVariableListener" listenerUnique="false"
-	 * @generated
-	 */
-	void addVariableListener(IVariableListener listener);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Removes the specified {@link IVariableListener}.
-	 * @param listener Reference to the {@link IVariableListener}.
-	 * <!-- end-model-doc -->
-	 * @model listenerDataType="ca.gc.asc_csa.apogy.core.invocator.IVariableListener" listenerUnique="false"
-	 * @generated
-	 */
-	void removeVariableListener(IVariableListener listener);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Notifies all {@link IVariableListener} the specified variable instance event.
-	 * @param variable Refers to the variable.
-	 * @param event Refers to the {@link VariableListenerEventType}.
-	 * <!-- end-model-doc -->
-	 * @model variableUnique="false" eventUnique="false"
-	 * @generated
-	 */
-	void notifyVariableListeners(Variable variable, VariableListenerEventType event);
 
 	/**
 	 * <!-- begin-user-doc -->

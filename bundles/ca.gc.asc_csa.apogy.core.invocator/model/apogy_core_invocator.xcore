@@ -172,10 +172,10 @@ class ApogyCoreInvocatorFacade
 	 * @return List of TypeMemberImplementation.
 	 */
 	op List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType)
+	
 	/*
 	 * Resets the variable instances.
 	 */
-	op void initVariableInstances(Environment environment)
 	op void initVariableInstances()
 	/*
 	 * Refers to the date at which the instances were initialized. 
@@ -184,7 +184,6 @@ class ApogyCoreInvocatorFacade
 	/*
 	 * Clear the variable instances.
 	 */
-	op void disposeVariableInstances(Environment environment)
 	op void disposeVariableInstances()
 	/*
 	 * Returns the direct owner of the {@link TypeMemberReferenceListElement}.  Null is returned if the reference 
@@ -218,68 +217,52 @@ class ApogyCoreInvocatorFacade
 	 * Refers to the active invocator session.
 	 */
 	refers InvocatorSession activeInvocatorSession
-	/*
-     * Adds the specified {@link IVariableListener}.
-	 * @param listener Reference to the {@link IVariableListener}.
+ 	/*
+     * Loads the content of the {@link InvocatorSession}.
+	 * @param uri Reference to the session file (e.g. "platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/sessions/RoverExampleSession.sym").
+	 * @return Reference to the session if successfully loaded.
+	 * @throw Exception Reference to the exception if problems occurred during the load.
 	 */
-	op void addVariableListener(IVariableListener listener)
-	/*
-	 * Removes the specified {@link IVariableListener}.
-	 * @param listener Reference to the {@link IVariableListener}.
-	 */
-	op void removeVariableListener(IVariableListener listener)
-	/*
-	  * Notifies all {@link IVariableListener} the specified variable instance event.
-	  * @param variable Refers to the variable.
-	  * @param event Refers to the {@link VariableListenerEventType}.
-	  */
-	op void notifyVariableListeners(Variable variable, VariableListenerEventType event)
-	/*
-	  * Loads the content of the {@link InvocatorSession}.
-	  * @param uri Reference to the session file (e.g. "platform:/plugin/ca.gc.asc_csa.apogy.examples.rover.apogy/sessions/RoverExampleSession.sym").
-	  * @return Reference to the session if successfully loaded.
-	  * @throw Exception Reference to the exception if problems occurred during the load.
-	  */
 	op InvocatorSession loadInvocatorSession(String uri) throws Exception
 	/*
-	  * Search and return the list that matches the specified name.
-	  * @param invocatorSession Reference to the session.
-	  * @param name Search criteria.
-	  * @return Reference to the list or null if not found.
-	  */
+	 * Search and return the list that matches the specified name.
+	 * @param invocatorSession Reference to the session.
+	 * @param name Search criteria.
+	 * @return Reference to the list or null if not found.
+	 */
 	op DataProductsList getDataProductsByName(InvocatorSession invocatorSession, String name)
 	/*
-	  * Search and return the program that matches the specified name.
-	  * @param invocatorSession Reference to the session.
-	  * @param name Search criteria.
-	  * @return Reference to the program or null if not found.
-	  */
+	 * Search and return the program that matches the specified name.
+	 * @param invocatorSession Reference to the session.
+	 * @param name Search criteria.
+	 * @return Reference to the program or null if not found.
+	 */
 	op Program getProgramByName(InvocatorSession invocatorSession, String name)
 	/*
-	  * Search and return the context that matches the specified name.
-	  * @param invocatorSession Reference to the session.
-	  * @param name Search criteria.
-	  * @return Reference to the context or null if not found.
-	  */
+	 * Search and return the context that matches the specified name.
+	 * @param invocatorSession Reference to the session.
+	 * @param name Search criteria.
+	 * @return Reference to the context or null if not found.
+	 */
 	op Context getContextByName(InvocatorSession invocatorSession, String name)
 	/*
-	  * Returns all the {@link ScriptBasedProgram} programs contained in the list.
-	  * @param programsList Refers to the list that contains all the programs.
-	  * @param filter Determine if the program should be considered as a valid program. 
-	  * @return List of programs.
-	  */
+	 * Returns all the {@link ScriptBasedProgram} programs contained in the list.
+	 * @param programsList Refers to the list that contains all the programs.
+	 * @param filter Determine if the program should be considered as a valid program. 
+	 * @return List of programs.
+	 */
 	op List<Program> getAllScriptBasedPrograms(ProgramsList programsList)
 	/*
-	  * Creates a new context and populates the {@link VariableImplementations}.  
-	  * The context is not fully initialized (e.g. Name and description are not set).
-	  * @param invocatorSession the session for which the context is built.
-	  * @return Reference to the new context. 
-	  */
+	 * Creates a new context and populates the {@link VariableImplementations}.  
+	 * The context is not fully initialized (e.g. Name and description are not set).
+	 * @param invocatorSession the session for which the context is built.
+	 * @return Reference to the new context. 
+	 */
 	op Context createContext(InvocatorSession invocatorSession)
 	/*
-	  * Gets the {@link ProgramsGroup} named "Controllers group".
-	  * @return Reference to the controller's programsGroup.
-	  */
+	 * Gets the {@link ProgramsGroup} named "Controllers group".
+	 * @return Reference to the controller's programsGroup.
+	 */
 	op ProgramsGroup getControllersGroup()
 	/*
 	 * Adds the variable to the specified list.
@@ -294,28 +277,23 @@ class ApogyCoreInvocatorFacade
 	 */
 	op void deleteVariable(VariablesList variablesList, Variable variable)
 	/*
-	  * Gets a string to describe the {@link OperationCall}.
-	  * @return A string formatted like this: 
-	  * variable-> subType1-> ...-> subTypeN.feature#eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
-	  */
+	 * Gets a string to describe the {@link OperationCall}.
+	 * @return A string formatted like this: 
+	 * variable-> subType1-> ...-> subTypeN.feature#eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
+	 */
 	op String getOperationCallString(OperationCall operationCall)
 	/*
-      * Gets a string to describe the {@link EOperation} and it's {@link Argument} if applicable.
-      * @returns A string formatted like this:
-      * #eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
-      */      
+     * Gets a string to describe the {@link EOperation} and it's {@link Argument} if applicable.
+     * @returns A string formatted like this:
+     * #eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
+     */      
 	op String getEOperationString(ArgumentsList argumentList, EOperation eOperation)
 	/*
-      * Gets a string of the subTypes and features of an {@link OperationCall}.
-      * @returns A string formatted like this:
-      * -> subType1-> ...-> subTypeN.feature
-      */
+     * Gets a string of the subTypes and features of an {@link OperationCall}.
+     * @returns A string formatted like this:
+     * -> subType1-> ...-> subTypeN.feature
+     */
 	op String getSubTypeFeatureString(TypeMemberReferenceListElement typeMemberReferenceListElement, ListRootNode listRootNode)
-}
-
-enum VariableListenerEventType{
-	NEW,
-	CLEAR
 }
 
 //interface ProgramFilter{

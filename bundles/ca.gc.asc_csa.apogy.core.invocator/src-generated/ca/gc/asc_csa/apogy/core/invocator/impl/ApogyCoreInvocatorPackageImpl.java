@@ -80,9 +80,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
-import ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
-
 import java.util.HashMap;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -553,13 +551,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum variableListenerEventTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EEnum programRuntimeStateEEnum = null;
 
 	/**
@@ -889,7 +880,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__InitVariableInstances__Environment() {
+	public EOperation getApogyCoreInvocatorFacade__InitVariableInstances() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(21);
 	}
 
@@ -898,7 +889,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__InitVariableInstances() {
+	public EOperation getApogyCoreInvocatorFacade__DisposeVariableInstances() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(22);
 	}
 
@@ -907,7 +898,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__DisposeVariableInstances__Environment() {
+	public EOperation getApogyCoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(23);
 	}
 
@@ -916,7 +907,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__DisposeVariableInstances() {
+	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Environment() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(24);
 	}
 
@@ -925,7 +916,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement() {
+	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Environment() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(25);
 	}
 
@@ -934,7 +925,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Environment() {
+	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(26);
 	}
 
@@ -943,7 +934,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Environment() {
+	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(27);
 	}
 
@@ -952,7 +943,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Variable() {
+	public EOperation getApogyCoreInvocatorFacade__LoadInvocatorSession__String() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(28);
 	}
 
@@ -961,7 +952,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Variable() {
+	public EOperation getApogyCoreInvocatorFacade__GetDataProductsByName__InvocatorSession_String() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(29);
 	}
 
@@ -970,7 +961,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__AddVariableListener__IVariableListener() {
+	public EOperation getApogyCoreInvocatorFacade__GetProgramByName__InvocatorSession_String() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(30);
 	}
 
@@ -979,7 +970,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__RemoveVariableListener__IVariableListener() {
+	public EOperation getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(31);
 	}
 
@@ -988,7 +979,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType() {
+	public EOperation getApogyCoreInvocatorFacade__GetAllScriptBasedPrograms__ProgramsList() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(32);
 	}
 
@@ -997,7 +988,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__LoadInvocatorSession__String() {
+	public EOperation getApogyCoreInvocatorFacade__CreateContext__InvocatorSession() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(33);
 	}
 
@@ -1006,7 +997,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetDataProductsByName__InvocatorSession_String() {
+	public EOperation getApogyCoreInvocatorFacade__GetControllersGroup() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(34);
 	}
 
@@ -1015,7 +1006,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetProgramByName__InvocatorSession_String() {
+	public EOperation getApogyCoreInvocatorFacade__AddVariable__VariablesList_Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(35);
 	}
 
@@ -1024,7 +1015,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetContextByName__InvocatorSession_String() {
+	public EOperation getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(36);
 	}
 
@@ -1033,7 +1024,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetAllScriptBasedPrograms__ProgramsList() {
+	public EOperation getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(37);
 	}
 
@@ -1042,7 +1033,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__CreateContext__InvocatorSession() {
+	public EOperation getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(38);
 	}
 
@@ -1051,53 +1042,8 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetControllersGroup() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(39);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreInvocatorFacade__AddVariable__VariablesList_Variable() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(40);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreInvocatorFacade__DeleteVariable__VariablesList_Variable() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(41);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(42);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(43);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode() {
-		return apogyCoreInvocatorFacadeEClass.getEOperations().get(44);
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(39);
 	}
 
 	/**
@@ -2968,15 +2914,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getVariableListenerEventType() {
-		return variableListenerEventTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getProgramRuntimeState() {
 		return programRuntimeStateEEnum;
 	}
@@ -3087,18 +3024,13 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER);
-		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___LOAD_INVOCATOR_SESSION__STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_DATA_PRODUCTS_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_PROGRAM_BY_NAME__INVOCATORSESSION_STRING);
@@ -3382,7 +3314,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEReference(operationCallResultsListTimeSourceEClass, OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST);
 
 		// Create enums
-		variableListenerEventTypeEEnum = createEEnum(VARIABLE_LISTENER_EVENT_TYPE);
 		programRuntimeStateEEnum = createEEnum(PROGRAM_RUNTIME_STATE);
 
 		// Create data types
@@ -3572,13 +3503,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getApogyCoreInvocatorFacade__InitVariableInstances__Environment(), null, "initVariableInstances", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
 		initEOperation(getApogyCoreInvocatorFacade__InitVariableInstances(), null, "initVariableInstances", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCoreInvocatorFacade__DisposeVariableInstances__Environment(), null, "disposeVariableInstances", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getApogyCoreInvocatorFacade__DisposeVariableInstances(), null, "disposeVariableInstances", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -3596,16 +3521,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		op = initEOperation(getApogyCoreInvocatorFacade__CollectInitializationData__Variable(), null, "collectInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCoreInvocatorFacade__AddVariableListener__IVariableListener(), null, "addVariableListener", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getIVariableListener(), "listener", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCoreInvocatorFacade__RemoveVariableListener__IVariableListener(), null, "removeVariableListener", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getIVariableListener(), "listener", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType(), null, "notifyVariableListeners", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVariableListenerEventType(), "event", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCoreInvocatorFacade__LoadInvocatorSession__String(), this.getInvocatorSession(), "loadInvocatorSession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "uri", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3980,10 +3895,6 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEReference(getOperationCallResultsListTimeSource_OpsCallList(), this.getOperationCallResultsList(), null, "opsCallList", null, 0, 1, OperationCallResultsListTimeSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(variableListenerEventTypeEEnum, VariableListenerEventType.class, "VariableListenerEventType");
-		addEEnumLiteral(variableListenerEventTypeEEnum, VariableListenerEventType.NEW);
-		addEEnumLiteral(variableListenerEventTypeEEnum, VariableListenerEventType.CLEAR);
-
 		initEEnum(programRuntimeStateEEnum, ProgramRuntimeState.class, "ProgramRuntimeState");
 		addEEnumLiteral(programRuntimeStateEEnum, ProgramRuntimeState.NOT_INITIALIZED);
 		addEEnumLiteral(programRuntimeStateEEnum, ProgramRuntimeState.INITIALIZED);
