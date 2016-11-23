@@ -46,12 +46,4 @@ public class NoContentComposite extends Composite {
 	protected String getMessage() {
 		return "No displayable content";
 	}
-	
-	@Override
-	public void dispose() {
-		// Disposes the NoActiveSessionComposite
-		for (Control control : getChildren()) {
-			control.dispose();
-		}
-	}
 }

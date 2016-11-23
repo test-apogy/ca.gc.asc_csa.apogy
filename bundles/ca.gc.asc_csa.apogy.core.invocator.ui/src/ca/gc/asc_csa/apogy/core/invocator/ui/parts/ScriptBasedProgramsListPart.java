@@ -27,14 +27,14 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ScriptBasedProgramsListC
 public class ScriptBasedProgramsListPart extends AbstractSessionBasedPart {
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new ScriptBasedProgramsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
+	protected void createContentComposite(Composite parent, int style) {
+		new ScriptBasedProgramsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()){
 					setNullSelection();					
 				}else {
-					Program program = ((ScriptBasedProgramsListComposite) getContentComposite()).getSelectedProgram();
+					Program program = ((ScriptBasedProgramsListComposite) getActualComposite()).getSelectedProgram();
 					if (program != null){
 						ScriptBasedProgramsListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createScriptBasedProgramsListPartSelection();
 						selectionSent.setProgram(program);		
@@ -48,7 +48,7 @@ public class ScriptBasedProgramsListPart extends AbstractSessionBasedPart {
 	
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		((ScriptBasedProgramsListComposite) getContentComposite())
+		((ScriptBasedProgramsListComposite) getActualComposite())
 		.setProgramsList(invocatorSession.getProgramsList());
 	}
 

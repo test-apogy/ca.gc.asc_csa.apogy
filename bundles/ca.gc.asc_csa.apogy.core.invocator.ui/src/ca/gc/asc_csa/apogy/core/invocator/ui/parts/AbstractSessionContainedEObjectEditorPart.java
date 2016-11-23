@@ -20,7 +20,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectEditorComposite;
-import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoSelectionComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
@@ -34,14 +33,14 @@ public abstract class AbstractSessionContainedEObjectEditorPart extends Abstract
 	}
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new EObjectEditorComposite(parent, SWT.None) {
+	protected void createContentComposite(Composite parent, int style) {
+		new EObjectEditorComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
-					EObject eObject = ((EObjectEditorComposite) getContentComposite()).getSelectedEObject();
+					EObject eObject = ((EObjectEditorComposite) getActualComposite()).getSelectedEObject();
 					if (eObject != null) {
 						ApogyAdvancedEditorPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
 								.createApogyAdvancedEditorPartSelection();
@@ -59,11 +58,11 @@ public abstract class AbstractSessionContainedEObjectEditorPart extends Abstract
 //	}
 	
 	@Override
-	protected NoContentComposite getNoContentComposite() {
+	protected void createNoContentComposite(Composite parent, int style) {
 		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
-			return super.getNoContentComposite();
+			super.createNoContentComposite(parent, style);
 		}else{
-			return new NoSelectionComposite(getParentComposite(), SWT.None);	
+			new NoSelectionComposite(parent, style);	
 		}		
 	}	
 }

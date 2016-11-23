@@ -50,18 +50,18 @@ public class ProgramArgumentsPart extends AbstractEObjectSelectionPart {
 
 	@Override
 	protected void setSelectionInContentComposite(EObject eObject) {
-		((OperationCallDetailsComposite) getContentComposite()).setOperationCall((OperationCall) eObject);
+		((OperationCallDetailsComposite) getActualComposite()).setOperationCall((OperationCall) eObject);
 	}
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new OperationCallDetailsComposite(parent, SWT.None) {
+	protected void createContentComposite(Composite parent, int style) {
+		new OperationCallDetailsComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
-					EObject eObject = ((OperationCallDetailsComposite) getContentComposite()).getSelectedEObject();
+					EObject eObject = ((OperationCallDetailsComposite) getActualComposite()).getSelectedEObject();
 					if (eObject != null) {
 						ProgramArgumentsPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
 								.createProgramArgumentsPartSelection();

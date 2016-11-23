@@ -36,13 +36,13 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallsListCompos
 public class ProgramPart extends AbstractEObjectSelectionPart{
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new OperationCallsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
+	protected void createContentComposite(Composite parent, int style) {
+		new OperationCallsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()){
 					setNullSelection();					
 				}else {
-					OperationCall operationCall = ((OperationCallsListComposite) getContentComposite()).getSelectedOperationCall();
+					OperationCall operationCall = ((OperationCallsListComposite) getActualComposite()).getSelectedOperationCall();
 					if (operationCall != null){
 						ProgramPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramPartSelection();
 						selectionSent.setOperationCall(operationCall);		
@@ -56,7 +56,7 @@ public class ProgramPart extends AbstractEObjectSelectionPart{
 
 	@Override
 	protected void setSelectionInContentComposite(EObject eObject) {
-		((OperationCallsListComposite) getContentComposite()).setOperationCallsList((OperationCallsList)eObject);
+		((OperationCallsListComposite) getActualComposite()).setOperationCallsList((OperationCallsList)eObject);
 	}
 
 	@Override

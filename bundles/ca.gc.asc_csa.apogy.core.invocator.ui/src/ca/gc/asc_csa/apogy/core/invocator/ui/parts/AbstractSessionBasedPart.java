@@ -14,15 +14,13 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import javax.annotation.PreDestroy;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
@@ -32,11 +30,12 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 	
 	private Adapter adapter;
 
+	
 	@Override
-	protected NoContentComposite getNoContentComposite() {
-		return new NoActiveSessionComposite(getParentComposite(), SWT.None);
+	protected void createNoContentComposite(Composite parent, int style) {
+		new NoActiveSessionComposite(parent, SWT.None);	
 	}
-		
+			
 	@Override
 	protected EObject getInitializeObject() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());
@@ -46,7 +45,7 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 	abstract protected void newInvocatorSession(InvocatorSession invocatorSession);
 
 	@Override
-	protected void setContentCompositeSelection(EObject eObject) {
+	protected void setCompositeContent(EObject eObject) {
 		newInvocatorSession((InvocatorSession) eObject); 
 	}
 	/**
@@ -67,9 +66,7 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 		return adapter;
 	}
 
-	@PreDestroy
 	public void dispose() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
-		super.dispose();
 	}
 }

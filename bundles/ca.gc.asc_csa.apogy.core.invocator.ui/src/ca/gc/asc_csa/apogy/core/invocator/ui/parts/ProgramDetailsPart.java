@@ -28,13 +28,12 @@ public class ProgramDetailsPart extends AbstractEObjectSelectionPart {
 	Composite contentComposite;
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
+	protected void createContentComposite(Composite parent, int style) {
 		contentComposite = new Composite(parent, SWT.NONE);
 		contentComposite.setLayout(new GridLayout(1, true));
 		contentComposite.setBackground(parent.getDisplay().getSystemColor(SWT.COLOR_WHITE));
 		contentComposite.setLayout(GridLayoutFactory.fillDefaults().margins(10, 10).create());
 		contentComposite.setLayoutData(GridDataFactory.fillDefaults().create());
-		return contentComposite;
 	}
 
 	@Override

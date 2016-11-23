@@ -29,14 +29,14 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariablesListComposite;
 public class VariablesListPart extends AbstractSessionBasedPart {
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new VariablesListComposite(parent, SWT.None) {
+	protected void createContentComposite(Composite parent, int style) {
+		new VariablesListComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()){
 					setNullSelection();					
 				}else {
-					List<Variable> variables = ((VariablesListComposite) getContentComposite()).getSelectedVariables();
+					List<Variable> variables = ((VariablesListComposite) getActualComposite()).getSelectedVariables();
 					if (!variables.isEmpty()){
 						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createVariablesListPartSelection();
 						selectionSent.setVariables(variables);		
@@ -50,7 +50,7 @@ public class VariablesListPart extends AbstractSessionBasedPart {
 	
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {		
-		((VariablesListComposite) getContentComposite())
+		((VariablesListComposite) getActualComposite())
 		.setVariablesList(invocatorSession.getEnvironment().getVariablesList());
 	}
 

@@ -15,9 +15,8 @@ package ca.gc.asc_csa.apogy.common.emf.ui.parts;
  */
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoSelectionComposite;
 import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 
@@ -32,7 +31,7 @@ abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 	}
 
 	@Override
-	protected void setContentCompositeSelection(EObject eObject) {
+	protected void setCompositeContent(EObject eObject) {
 		this.eObject = eObject;
 		setSelectionInContentComposite(eObject);
 	}
@@ -43,7 +42,7 @@ abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 	abstract protected void setSelectionInContentComposite(EObject eObject);
 	
 	@Override
-	protected NoContentComposite getNoContentComposite() {
-		return new NoSelectionComposite(getParentComposite(), SWT.None); 
+	protected void createNoContentComposite(Composite parent, int style) {
+		new NoSelectionComposite(parent, style); 
 	}
 }

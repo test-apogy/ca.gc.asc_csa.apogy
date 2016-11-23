@@ -34,15 +34,15 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBind
 
 public class ControllerBindingsPart extends AbstractEObjectSelectionPart{
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new ControllerBindingsComposite(parent, SWT.None){
+	protected void createContentComposite(Composite parent, int style) {
+		new ControllerBindingsComposite(parent, SWT.None){
 			@Override
 			protected void newSelection(ISelection selection) 
 			{
 				if (selection.isEmpty()){
 					setNullSelection();					
 				}else {
-					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getContentComposite()).getOperationCallControllerBinding();
+					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getActualComposite()).getOperationCallControllerBinding();
 					if (operationCallControllerBinding  != null){
 						ControllerBindingsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection();
 						selectionSent.setOperationCallControllerBinding(operationCallControllerBinding);
@@ -56,7 +56,7 @@ public class ControllerBindingsPart extends AbstractEObjectSelectionPart{
 
 	@Override
 	protected void setSelectionInContentComposite(EObject eObject) {
-		((ControllerBindingsComposite) getContentComposite()).setControllersConfiguration((ControllersConfiguration)eObject);
+		((ControllerBindingsComposite) getActualComposite()).setControllersConfiguration((ControllersConfiguration)eObject);
 	}
 
 	@Override

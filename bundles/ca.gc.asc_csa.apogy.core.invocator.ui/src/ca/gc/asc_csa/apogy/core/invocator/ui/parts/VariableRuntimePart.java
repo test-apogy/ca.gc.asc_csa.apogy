@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoSelectionComposite;
@@ -58,11 +59,11 @@ public class VariableRuntimePart extends AbstractSessionContainedEObjectEditorPa
 	}
 	
 	@Override
-	protected NoContentComposite getNoContentComposite() {
+	protected void createNoContentComposite(Composite parent, int style) {
 		if (this.selection == null){
-			return super.getNoContentComposite();
+			super.createNoContentComposite(parent, style);
 		}else{
-			return new NoContentComposite(getParentComposite(), SWT.None){
+			new NoContentComposite(parent, style){
 				@Override
 				protected String getMessage() {
 					return "Variables are not instantiated";

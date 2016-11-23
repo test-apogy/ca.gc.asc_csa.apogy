@@ -28,8 +28,8 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConf
 public class ControllerConfigsPart extends AbstractSessionBasedPart {
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new ControllerConfigsComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
+	protected void createContentComposite(Composite parent, int style) {
+		new ControllerConfigsComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				System.out.println(
@@ -37,7 +37,7 @@ public class ControllerConfigsPart extends AbstractSessionBasedPart {
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
-					ControllersConfiguration controllersConfiguration = ((ControllerConfigsComposite) getContentComposite())
+					ControllersConfiguration controllersConfiguration = ((ControllerConfigsComposite) getActualComposite())
 							.getSelectedControllerConfiguration();
 					if (controllersConfiguration != null) {
 						ControllerConfigsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE
@@ -53,7 +53,7 @@ public class ControllerConfigsPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		((ControllerConfigsComposite) getContentComposite())
+		((ControllerConfigsComposite) getActualComposite())
 				.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
 	}
 

@@ -31,13 +31,13 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBind
 public class ControllerBindingDetailsPart extends AbstractEObjectSelectionPart {
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new ControllerBindingDetailsComposite(parent, SWT.None);
+	protected void createContentComposite(Composite parent, int style) {
+		new ControllerBindingDetailsComposite(parent, SWT.None);
 	}
 
 	@Override
 	protected void setSelectionInContentComposite(EObject eObject) {
-		((ControllerBindingDetailsComposite) getContentComposite())
+		((ControllerBindingDetailsComposite) getActualComposite())
 				.setOperationCallControllerBinding((OperationCallControllerBinding) eObject);
 	}
 
