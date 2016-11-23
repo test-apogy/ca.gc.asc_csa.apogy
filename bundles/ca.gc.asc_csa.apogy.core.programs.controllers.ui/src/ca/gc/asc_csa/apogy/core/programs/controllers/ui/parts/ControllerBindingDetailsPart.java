@@ -23,12 +23,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingDetailsComposite;
 
-public class ControllerBindingDetailsPart extends AbstractSelectionBasedPart {
+public class ControllerBindingDetailsPart extends AbstractEObjectSelectionPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {

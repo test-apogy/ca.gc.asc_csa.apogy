@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -39,7 +39,6 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
 
 public class EObjectEditorComposite extends Composite {

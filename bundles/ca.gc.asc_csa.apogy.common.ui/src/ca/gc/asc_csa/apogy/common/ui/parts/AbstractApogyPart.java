@@ -24,6 +24,8 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
+
 abstract public class AbstractApogyPart {
 
 	protected Composite composite;
@@ -95,7 +97,7 @@ abstract public class AbstractApogyPart {
 	protected void setEObject(EObject eObject) {
 		if (composite != null) {
 			if (eObject != null) {
-				if (getContentComposite().getClass() == getNoContentCompositeClass()) {
+				if (getContentComposite() instanceof NoContentComposite) {
 					// Disposes the NoActiveSessionComposite
 					for (Control control : composite.getChildren()) {
 						control.dispose();
@@ -115,7 +117,7 @@ abstract public class AbstractApogyPart {
 	 * Sets the part's composite to a {@link NoActiveSessionComposite}.
 	 */
 	protected void setNoContentComposite() {
-		if (getContentComposite() == null || !(getContentComposite().getClass() == getNoContentCompositeClass())) {
+		if (getContentComposite() == null || !(getContentComposite() instanceof NoContentComposite)) {
 			// Disposes the content composite
 			if (getContentComposite() != null) {
 				getContentComposite().dispose();
@@ -128,15 +130,8 @@ abstract public class AbstractApogyPart {
 	}
 
 	/**
-	 * Specifies the {@link Composite} to set in the part when there is no content to display.
-	 * @return {@link Composite}
+	 * Specifies the {@link NoContentComposite} to set in the part when there is no content to display.
+	 * @return {@link NoContentComposite}
 	 */
-	abstract protected Composite getNoContentComposite();
-
-	/**
-	 * Specifies the class of the {@link Composite} set in the part if there is no content to display. This is used to verify the Composite in the part. 
-	 * @return {@link Class<? extends Composite>}
-	 */
-	abstract protected Class<? extends Composite> getNoContentCompositeClass();
-
+	abstract protected NoContentComposite getNoContentComposite();
 }

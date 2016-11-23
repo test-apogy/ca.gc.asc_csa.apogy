@@ -18,12 +18,13 @@ import javax.annotation.PreDestroy;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.NoEObjectSelectionComposite;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoSelectionComposite;
 import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 
-abstract public class AbstractSelectionBasedPart extends AbstractApogyPart{
+
+abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 	
 	EObject eObject;
 
@@ -44,13 +45,8 @@ abstract public class AbstractSelectionBasedPart extends AbstractApogyPart{
 	abstract protected void setSelectionInContentComposite(EObject eObject);
 	
 	@Override
-	protected Class<? extends Composite> getNoContentCompositeClass(){
-		return NoEObjectSelectionComposite.class;
-	}
-
-	@Override
-	protected Composite getNoContentComposite() {
-		return new NoEObjectSelectionComposite(composite, SWT.None); 
+	protected NoContentComposite getNoContentComposite() {
+		return new NoSelectionComposite(composite, SWT.None); 
 	}
 
 	@PreDestroy

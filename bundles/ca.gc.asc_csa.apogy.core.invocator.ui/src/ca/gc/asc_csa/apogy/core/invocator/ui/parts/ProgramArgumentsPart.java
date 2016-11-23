@@ -25,14 +25,14 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallDetailsComposite;
 
-public class ProgramArgumentsPart extends AbstractSelectionBasedPart {
+public class ProgramArgumentsPart extends AbstractEObjectSelectionPart {
 
 	/**
 	 * Injects a {@link ProgramPartSelection} in the part from the

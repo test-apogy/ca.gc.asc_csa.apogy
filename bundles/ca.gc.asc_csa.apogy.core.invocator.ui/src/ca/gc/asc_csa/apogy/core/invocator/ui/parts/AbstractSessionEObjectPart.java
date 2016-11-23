@@ -19,12 +19,11 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectEditorComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.EObjectEditorComposite;
 
-public class EObjectEditorPart extends AbstractApogySessionBasedPart {
+public abstract class AbstractSessionEObjectPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected void setNullSelection() {
@@ -50,11 +49,6 @@ public class EObjectEditorPart extends AbstractApogySessionBasedPart {
 				}
 			}
 		};
-	}
-
-	@Override
-	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		setEObjectInComposite(invocatorSession);
 	}
 	
 	protected void setEObjectInComposite(EObject eObject){

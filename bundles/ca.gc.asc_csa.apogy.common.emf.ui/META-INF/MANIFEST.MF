@@ -44,5 +44,7 @@ Export-Package: ca.gc.asc_csa.apogy.common.emf.ui,
  ca.gc.asc_csa.apogy.common.emf.ui.properties.sections,
  ca.gc.asc_csa.apogy.common.emf.ui.util,
  ca.gc.asc_csa.apogy.common.emf.ui.utils,
- ca.gc.asc_csa.apogy.common.emf.ui.wizards
+ ca.gc.asc_csa.apogy.common.emf.ui.validation,
+ ca.gc.asc_csa.apogy.common.emf.ui.wizards,
+ org.eclipse.wb.swt
 Bundle-ActivationPolicy: lazy

@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -14,17 +14,11 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.swt.widgets.Composite;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
-import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
-
-public class NoActiveSessionComposite extends NoContentComposite {
-	public NoActiveSessionComposite(Composite parent, int style) {
-		super(parent, style);
-	}
-
+public class SessionEObjectPart extends AbstractSessionEObjectPart {
 	@Override
-	protected String getMessage() {
-		return "No active session/selection";
+	protected void newInvocatorSession(InvocatorSession invocatorSession) {
+		setEObjectInComposite(invocatorSession);
 	}
 }

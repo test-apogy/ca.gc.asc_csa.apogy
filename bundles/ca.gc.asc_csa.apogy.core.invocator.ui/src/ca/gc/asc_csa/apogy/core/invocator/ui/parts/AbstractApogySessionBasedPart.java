@@ -21,8 +21,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
@@ -33,15 +33,10 @@ abstract public class AbstractApogySessionBasedPart extends AbstractApogyPart{
 	private Adapter adapter;
 
 	@Override
-	protected Composite getNoContentComposite() {
+	protected NoContentComposite getNoContentComposite() {
 		return new NoActiveSessionComposite(composite, SWT.None);
 	}
-	
-	@Override
-	protected Class<? extends Composite> getNoContentCompositeClass(){
-		return NoActiveSessionComposite.class;
-	}
-	
+		
 	@Override
 	protected EObject getInitializeObject() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());

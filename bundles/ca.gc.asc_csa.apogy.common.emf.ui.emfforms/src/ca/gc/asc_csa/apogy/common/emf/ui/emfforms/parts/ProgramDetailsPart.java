@@ -18,14 +18,14 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Activator;
-import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
 
-public class ProgramDetailsPart extends AbstractSelectionBasedPart {
+public class ProgramDetailsPart extends AbstractEObjectSelectionPart {
 
 	Composite contentComposite;
 
