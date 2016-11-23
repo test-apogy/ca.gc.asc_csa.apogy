@@ -14,12 +14,9 @@ package ca.gc.asc_csa.apogy.common.emf.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
@@ -148,22 +145,7 @@ public class EObjectListComposite extends Composite {
 		@SuppressWarnings("unchecked")
 		@Override
 		public Object[] getElements(Object inputElement) {
-			if (inputList != null) {
-				for (Iterator<EObject> ite = inputList.iterator(); ite.hasNext();) {
-					ite.next().eAdapters().clear();
-				}
-			}
-
-			inputList = (List<EObject>) inputElement;
-			for (Iterator<EObject> ite = inputList.iterator(); ite.hasNext();) {
-				ite.next().eAdapters().add(new AdapterImpl() {
-					@Override
-					public void notifyChanged(Notification notification) {
-						ContentProvider.this.viewer.refresh();
-					}
-				});
-			}
-			return inputList.toArray();
+			return ((List<EObject>)inputElement).toArray();
 		}
 
 		@Override

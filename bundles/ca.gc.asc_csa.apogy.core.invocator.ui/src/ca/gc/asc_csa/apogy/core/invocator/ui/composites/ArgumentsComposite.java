@@ -13,13 +13,18 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.List;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
-import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecp.ui.view.ECPRendererException;
@@ -32,8 +37,10 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
+import org.eclipse.jface.viewers.CellEditor;
+import org.eclipse.jface.viewers.ColumnViewer;
+import org.eclipse.jface.viewers.ComboBoxCellEditor;
 import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -65,10 +72,13 @@ import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.invocator.BooleanEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
+import ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument;
 
 public class ArgumentsComposite extends Composite {
 
@@ -82,10 +92,11 @@ public class ArgumentsComposite extends Composite {
 	
 	boolean readOnly;
 	
-	private OperationCall operationCallInput;
+	private OperationCall operationCall;
 
 	private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+	private Adapter argumentsListAdapter;
 
 	private DataBindingContext m_bindingContext;
 
@@ -102,9 +113,6 @@ public class ArgumentsComposite extends Composite {
 		setLayout(new FillLayout());
 
 		this.readOnly = true;
-		
-		
-		
 
 		compositeArguments = new Composite(this, SWT.None);
 		compositeArguments.setLayout(new GridLayout(2, false));
@@ -118,7 +126,7 @@ public class ArgumentsComposite extends Composite {
 		treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
-				if (((StructuredSelection) event.getSelection()).getFirstElement() != null && !readOnly
+				if (!readOnly && ((StructuredSelection) event.getSelection()).getFirstElement() != null 
 						&& !(((StructuredSelection) event.getSelection()).getFirstElement() instanceof Argument)) {
 					if (compositeEMFForms.getClass() == NoEObjectSelectionComposite.class) {
 						compositeEMFForms.dispose();
@@ -134,7 +142,7 @@ public class ArgumentsComposite extends Composite {
 						e.printStackTrace();
 					}
 					ArgumentsComposite.this.layout();
-				} else if (compositeEMFForms.getClass() != NoEObjectSelectionComposite.class && !readOnly) {
+				} else if (!readOnly && compositeEMFForms.getClass() != NoEObjectSelectionComposite.class) {
 					compositeEMFForms.dispose();
 					compositeEMFForms = new NoEObjectSelectionComposite(ArgumentsComposite.this, SWT.None);
 					ArgumentsComposite.this.layout();
@@ -154,16 +162,58 @@ public class ArgumentsComposite extends Composite {
 		treeclmnParameter.setText("Value");
 		
 
-		treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory){
+		treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory){		
 			@Override
-			public Object[] getChildren(Object object) {
-				if(object instanceof OperationCall){
-					return ((OperationCall) object).getArgumentsList().getArguments().toArray();
+			public Object[] getElements(Object object) {
+				if(object instanceof EObjectReference){
+					if(((EObjectReference) object).getEObject() instanceof OperationCall){
+						return ((OperationCall)((EObjectReference) object).getEObject()).getArgumentsList().getArguments().toArray();
+					}
 				}
-				return super.getChildren(object);
+				return super.getElements(object);
 			}
 		});
-		treeViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
+		treeViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory){
+
+			private static final int PARAMETER_COLUMN_ID = 0;
+			private static final int VALUE_ID = 1;
+
+			@Override
+			public String getColumnText(Object object, int columnIndex) {
+				String str = "<undefined>";
+
+				switch (columnIndex) {
+				case PARAMETER_COLUMN_ID:
+					if(object instanceof Argument){
+						str = super.getColumnText(object, 0);
+						if (str.contains("(")) {
+							str = str.substring(0, str.indexOf("("));
+						}
+						break;
+					}
+					str = object.getClass().getName();
+					break;
+				case VALUE_ID:
+					if (object instanceof EDataTypeArgument) {
+						str = ((EDataTypeArgument) object).getValue();
+					} else if (object instanceof EClassArgument) {
+						EClassArgument eClassArgumentObject = (EClassArgument) object;
+						if (eClassArgumentObject.getValue() != null) {
+							str = ((EClassArgument) object).getValue().toString();
+						}
+					} else if (object instanceof EEnumArgument) {
+						str = ((EEnumArgument) object).getEEnumLiteral().getLiteral();
+					} else {
+						str = super.getText(object);
+					}
+					break;
+				default:
+					break;
+				}
+				return str;
+			}
+
+		});
 
 		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
 		m_bindingContext = initDataBindingsCustom();
@@ -178,32 +228,7 @@ public class ArgumentsComposite extends Composite {
 			/**
 			 * Cell edition support
 			 */
-			TextCellEditor cellEditor = new TextCellEditor(treeViewer.getTree());
-
-			treeViewerParameterColumn.setEditingSupport(new EditingSupport(treeViewer) {
-				@Override
-				protected void setValue(Object element, Object value) {
-					((EDataTypeArgument) element).setValue((String) value);
-				}
-
-				@Override
-				protected Object getValue(Object element) {
-					return ((EDataTypeArgument) element).getValue();
-				}
-
-				@Override
-				protected TextCellEditor getCellEditor(Object element) {
-					return cellEditor;
-				}
-
-				@Override
-				protected boolean canEdit(Object element) {
-					if (element instanceof EDataTypeArgument) {
-						return true;
-					}
-					return false;
-				}
-			});
+			treeViewerParameterColumn.setEditingSupport(new ArgumentsEditor(treeViewer));
 
 			btnNew = new Button(compositeArguments, SWT.None);
 			btnNew.setText("New");
@@ -277,6 +302,96 @@ public class ArgumentsComposite extends Composite {
 			m_bindingContext = initDataBindingsButtons();
 		}
 	}
+	
+	private class ArgumentsEditor extends EditingSupport{
+		
+		private String[] booleanLabels;
+		private String[] literalsLabels;
+		private List<EEnumLiteral> literals;
+
+
+		public ArgumentsEditor(ColumnViewer viewer) {
+			super(viewer);
+			
+			booleanLabels = new String[2];
+			booleanLabels[0] = "true";
+			booleanLabels[1] = "false";
+		}		
+		
+		@Override
+		protected void setValue(Object element, Object value) {
+			if(element instanceof EDataTypeArgument){
+				if(element instanceof BooleanEDataTypeArgument){
+					((EDataTypeArgument) element).setValue(booleanLabels[(int)value]);
+				}else{
+					((EDataTypeArgument) element).setValue((String) value);
+				}
+			}else if(element instanceof EEnumArgument){
+//				TODO
+//				EEnum eEnum = ((EEnumArgument) element).getEEnum();
+//				if((int)value != -1){
+//					((EEnumArgument) element).setEEnumLiteral(eEnum.getELiterals().get(eEnum.getELiterals().indexOf(literals.get((int)value))));
+//				}
+			}
+			
+		}
+
+		@Override
+		protected Object getValue(Object element) {
+			if(element instanceof BooleanEDataTypeArgument){
+				return findComboIndex(booleanLabels, ((EDataTypeArgument) element).getValue());
+			}
+			if(element instanceof EDataTypeArgument){
+				return ((EDataTypeArgument) element).getValue();
+			}
+			if(element instanceof EEnumArgument){
+				return findComboIndex(booleanLabels, ((EEnumArgument) element).getEEnumLiteral().getLiteral());
+			}
+			return null;	
+		}
+		
+		@Override
+		protected CellEditor getCellEditor(Object element) {
+			if(element instanceof EDataTypeArgument){
+				if(element instanceof BooleanEDataTypeArgument){
+					return new ComboBoxCellEditor(treeViewer.getTree(), booleanLabels);
+				}
+				if(element instanceof NumericEDataTypeArgument){
+					return new TextCellEditor(treeViewer.getTree());
+				}
+				if(element instanceof StringEDataTypeArgument){
+					return new TextCellEditor(treeViewer.getTree());
+				}
+			}
+			if(element instanceof EEnumArgument){
+				literals = ((EEnumArgument) element).getEEnum().getELiterals();
+				literalsLabels = new String[literals.size()];
+				for(int i = 0; i < literals.size(); i++){
+					literalsLabels[i] = literals.get(i).getLiteral();
+				}
+				return new ComboBoxCellEditor(treeViewer.getTree(), literalsLabels);
+			}	
+			return new TextCellEditor(treeViewer.getTree());
+		}
+
+		@Override
+		protected boolean canEdit(Object element) {
+			if (element instanceof EDataTypeArgument || element instanceof EEnumArgument) {
+				return true;
+			}
+			return false;
+		}
+		
+		private int findComboIndex(Object[] array, Object element){
+			for(int i = 0; i < array.length; i++){
+				if(element == array[i]){
+					return i;
+				}
+			}
+			return -1;
+		}
+	}
+		
 
 	/**
 	 * This method is called when a new selection is made in the composite.
@@ -323,11 +438,15 @@ public class ArgumentsComposite extends Composite {
 	 *            Reference to the {@link OperationCall}.
 	 */
 	public void setOperationCall(OperationCall operationCall) {
-		this.operationCallInput = operationCall;
+		if(this.operationCall != null){
+			this.operationCall.eAdapters().remove(getArgumentsListAdapter());
+		}
+		this.operationCall = operationCall;
 		EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
 		eObjectReference.setEObject(operationCall);
 		treeViewer.setInput(eObjectReference);
 		treeViewer.expandAll();
+		this.operationCall.eAdapters().add(getArgumentsListAdapter());
 		
 		
 //		treeViewer.setInput(operationCall.getArgumentsList());
@@ -337,7 +456,6 @@ public class ArgumentsComposite extends Composite {
 //		}
 	}
 
-	@SuppressWarnings("unchecked")
 	protected DataBindingContext initDataBindingsCustom() {
 		m_bindingContext = new DataBindingContext();
 		
@@ -419,7 +537,7 @@ public class ArgumentsComposite extends Composite {
 						.setConverter(new Converter(Object.class, Boolean.class) {
 							@Override
 							public Object convert(Object fromObject) {
-								if(fromObject == operationCallInput){
+								if(fromObject == operationCall){
 									return false;
 								}else if (fromObject instanceof EClassArgument
 										&& ((EClassArgument) fromObject).getValue() == null) {
@@ -436,7 +554,7 @@ public class ArgumentsComposite extends Composite {
 						.setConverter(new Converter(EObject.class, Boolean.class) {
 							@Override
 							public Object convert(Object fromObject) {
-								if(fromObject == operationCallInput){
+								if(fromObject == operationCall){
 									return false;
 								}else if (fromObject instanceof Argument) {
 									return false;
@@ -447,61 +565,30 @@ public class ArgumentsComposite extends Composite {
 
 		return m_bindingContext;
 	}
+	
+	public Adapter getArgumentsListAdapter() {
+		if (argumentsListAdapter == null) {
+			argumentsListAdapter = new AdapterImpl() {
+				@Override
+				public void notifyChanged(Notification notification) {
+					if (notification
+							.getFeature() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST) {
+						if (notification.getNewValue() != null) {
+							setOperationCall(((ArgumentsList) notification.getNewValue()).getOperationCall());
+						}
 
-	private class ArgumentsLabelProvider extends ObservableMapLabelProvider {
-
-		private AdapterFactoryLabelProvider adapterLabelProvider;
-
-		@SuppressWarnings("rawtypes")
-		public ArgumentsLabelProvider(IObservableMap[] attributeMaps) {
-			super(attributeMaps);
-		}
-
-		private static final int PARAMETER_COLUMN_ID = 0;
-		private static final int VALUE_ID = 1;
-
-		@Override
-		public String getColumnText(Object object, int columnIndex) {
-			String str = "<undefined>";
-
-			switch (columnIndex) {
-			case PARAMETER_COLUMN_ID:
-				str = getAdapterLabelProvider().getText(object);
-				if (str.contains("(")) {
-					str = str.substring(0, str.indexOf("("));
-				}
-				break;
-			case VALUE_ID:
-				if (object instanceof EDataTypeArgument) {
-					str = ((EDataTypeArgument) object).getValue();
-				} else if (object instanceof EClassArgument) {
-					EClassArgument eClassArgumentObject = (EClassArgument) object;
-					if (eClassArgumentObject.getValue() != null) {
-						str = ((EClassArgument) object).getValue().toString();
 					}
-				} else if (object instanceof EEnumArgument) {
-					str = ((EEnumArgument) object).getEEnumLiteral().getLiteral();
-				} else {
-					str = object.getClass().getName();
 				}
-				break;
-			default:
-				break;
-			}
-			return str;
+			};
 		}
-
-		public AdapterFactoryLabelProvider getAdapterLabelProvider() {
-			if (adapterLabelProvider == null) {
-				adapterLabelProvider = new AdapterFactoryLabelProvider(adapterFactory);
-			}
-			return adapterLabelProvider;
-		}
-
+		return argumentsListAdapter;
 	}
 
 	@Override
 	public void dispose() {
+		if(this.operationCall != null){
+			this.operationCall.eAdapters().remove(getArgumentsListAdapter());
+		}
 		adapterFactory.dispose();
 		super.dispose();
 	}
