@@ -14,18 +14,9 @@ package ca.gc.asc_csa.apogy.common.emf.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.core.databinding.observable.value.WritableValue;
-import org.eclipse.emf.common.command.Command;
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.command.SetCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -72,14 +63,25 @@ public class ChooseEClassWizard extends Wizard {
 	 */
 	protected ChooseEClassImplementationWizardPage getChooseEClassImplementationWizardPage() {
 		if (chooseEClassImplementationWizardPage == null) {
-			chooseEClassImplementationWizardPage  = new ChooseEClassImplementationWizardPage(this.eReference, this.eClass);
+			chooseEClassImplementationWizardPage  = new ChooseEClassImplementationWizardPage(getEReference(), getEClass());
 		}
 		return chooseEClassImplementationWizardPage ;
+	}
+	
+	public EReference getEReference() {
+		return eReference;
+	}
+	
+	public EClass getEClass() {
+		return eClass;
+	}
+	
+	public EObject getParent() {
+		return parent;
 	}
 
 	@Override
 	public boolean performFinish() {
-		// TODO
 		return true;
 	}
 	

@@ -19,7 +19,7 @@ import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
 
-public class VariableRuntimePart extends AbstractSessionEObjectPart {
+public class VariableRuntimePart extends AbstractSessionContentPart {
 	private AdapterImpl adapter;
 	private Environment environment;
 	private Context activeContext;

@@ -19,13 +19,13 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractApogySessionBasedPart;
+import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractSessionBasedPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConfigsComposite;
 
-public class ControllerConfigsPart extends AbstractApogySessionBasedPart {
+public class ControllerConfigsPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {

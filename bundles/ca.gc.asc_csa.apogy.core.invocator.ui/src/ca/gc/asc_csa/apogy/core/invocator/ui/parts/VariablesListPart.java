@@ -26,7 +26,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariablesListComposite;
 
-public class VariablesListPart extends AbstractApogySessionBasedPart {
+public class VariablesListPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {

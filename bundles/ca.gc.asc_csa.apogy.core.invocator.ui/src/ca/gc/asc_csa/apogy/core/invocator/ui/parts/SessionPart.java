@@ -16,7 +16,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
-public class SessionEObjectPart extends AbstractSessionEObjectPart {
+public class SessionPart extends AbstractSessionContentPart {
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
 		setEObjectInComposite(invocatorSession);

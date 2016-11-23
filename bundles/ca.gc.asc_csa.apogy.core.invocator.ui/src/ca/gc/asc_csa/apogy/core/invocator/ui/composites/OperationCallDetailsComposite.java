@@ -35,6 +35,7 @@ import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 
 public class OperationCallDetailsComposite extends ScrolledComposite {
@@ -101,16 +102,16 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 		// fillLayout.marginHeight = 0;
 		// sctnOperation.setClient(eOperationsComposite);
 
-		argumentsComposite = new ArgumentsComposite(composite, SWT.NONE, true) {
+		argumentsComposite = new ArgumentsComposite(composite, SWT.NONE) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				OperationCallDetailsComposite.this.newSelection(selection);
 			}
 		};
 		argumentsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		GridLayout gridLayout_1 = (GridLayout) argumentsComposite.getLayout();
-		gridLayout_1.marginWidth = 0;
-		gridLayout_1.marginHeight = 0;
+//		GridLayout gridLayout_1 = (GridLayout) argumentsComposite.getLayout();
+//		gridLayout_1.marginWidth = 0;
+//		gridLayout_1.marginHeight = 0;
 
 		setContent(composite);
 		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
@@ -189,7 +190,7 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 		// operationCall);
 
 		label.setText(ApogyCoreInvocatorFacade.INSTANCE.getOperationCallString(getOperationCall()));
-		((Composite) getContent()).layout();
+//		((Composite) getContent()).layout();
 		// opsCallText.setText(ApogyCoreInvocatorFacade.INSTANCE.getOperationCallString(getOperationCall()));
 		return bindingContext;
 	}

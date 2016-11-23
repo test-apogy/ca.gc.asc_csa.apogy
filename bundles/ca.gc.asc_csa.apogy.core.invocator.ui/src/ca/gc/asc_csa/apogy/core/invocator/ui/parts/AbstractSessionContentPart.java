@@ -23,7 +23,7 @@ import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectEditorComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 
-public abstract class AbstractSessionEObjectPart extends AbstractApogySessionBasedPart {
+public abstract class AbstractSessionContentPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected void setNullSelection() {

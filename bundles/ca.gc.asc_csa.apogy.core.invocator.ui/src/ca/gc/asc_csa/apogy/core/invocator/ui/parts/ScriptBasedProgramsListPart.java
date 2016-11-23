@@ -24,7 +24,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ScriptBasedProgramsListComposite;
 
-public class ScriptBasedProgramsListPart extends AbstractApogySessionBasedPart {
+public class ScriptBasedProgramsListPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {

@@ -25,6 +25,6 @@ public class NoActiveSessionComposite extends NoContentComposite {
 
 	@Override
 	protected String getMessage() {
-		return "No active session/selection";
+		return "No active session";
 	}
 }

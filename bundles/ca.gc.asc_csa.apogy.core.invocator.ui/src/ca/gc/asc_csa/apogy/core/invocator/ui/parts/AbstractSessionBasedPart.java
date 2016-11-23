@@ -28,7 +28,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoActiveSessionComposite;
 
-abstract public class AbstractApogySessionBasedPart extends AbstractApogyPart{
+abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 	
 	private Adapter adapter;
 
