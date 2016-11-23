@@ -52,10 +52,10 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 	AdapterFactory adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * 
 	 * @param parent
-	 *            Reference to the parent composite.
+	 *            Reference to the parent parentComposite.
 	 * @param style
 	 *            Composite style.
 	 */
@@ -82,14 +82,14 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 		// 1, 1));
 		// label.setFont(SWTResourceManager.getFont("Ubuntu", 20, SWT.NORMAL));
 
-		// opsCallText = new Text(composite, SWT.NONE);
+		// opsCallText = new Text(parentComposite, SWT.NONE);
 		// opsCallText.setFont(SWTResourceManager.getFont("Ubuntu", 20,
 		// SWT.NORMAL));
 		// opsCallText.setEditable(false);
 		// opsCallText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,
 		// false, 1, 1));
 
-		// sctnOperation = toolkit.createSection(composite, Section.TITLE_BAR);
+		// sctnOperation = toolkit.createSection(parentComposite, Section.TITLE_BAR);
 		// sctnOperation.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false,
 		// true, 1, 1));
 		// sctnOperation.setText("Operation");
@@ -118,7 +118,7 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.
@@ -232,7 +232,7 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Disposes the current composite.
+	 * Disposes the current parentComposite.
 	 */
 	@Override
 	public void dispose() {

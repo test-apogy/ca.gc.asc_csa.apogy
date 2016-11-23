@@ -37,7 +37,7 @@ public class TelecomStatusMonitorToolView extends AbstractView
 	@Override
 	public void createPartControl(Composite parent)
 	{
-		// Create the appropriate composite
+		// Create the appropriate parentComposite
 		statusMonitorToolComposite = new TelecomStatusMonitorToolComposite(parent, SWT.NONE);
 		
 		// Register this as a selection listener
@@ -57,7 +57,7 @@ public class TelecomStatusMonitorToolView extends AbstractView
 		// Unregister the selection listener
 		getSite().getPage().removeSelectionListener(this);
 		
-		// Dispose of the composite
+		// Dispose of the parentComposite
 		statusMonitorToolComposite.dispose();
 		
 		// Call the superclass' version

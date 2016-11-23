@@ -50,7 +50,7 @@ public class ConstellationRequestsView extends AbstractView implements IEditingD
 	// Part Name.
 	public static final String PART_NAME = "Constellation Requests";
 
-	// Reference to the composite.
+	// Reference to the parentComposite.
 	private ConstellationRequestsComposite constellationRequestsComposite;
 
 	// Constellation Requests Lists.

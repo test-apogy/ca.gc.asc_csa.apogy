@@ -75,7 +75,7 @@ public class ProgramsListComposite extends ScrolledComposite {
 
 	
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.
@@ -108,7 +108,7 @@ public class ProgramsListComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Sets the programsList in the composite
+	 * Sets the programsList in the parentComposite
 	 * 
 	 * @param programsList
 	 */

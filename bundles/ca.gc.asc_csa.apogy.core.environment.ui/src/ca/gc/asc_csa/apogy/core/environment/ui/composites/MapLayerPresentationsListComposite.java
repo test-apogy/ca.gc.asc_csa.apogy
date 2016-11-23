@@ -66,7 +66,7 @@ public class MapLayerPresentationsListComposite extends Composite {
 	private TreeViewer treeViewer;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
@@ -124,7 +124,7 @@ public class MapLayerPresentationsListComposite extends Composite {
 
 
 	/**
-	 * Binds the {@link CartesianTriangularMeshMapLayer} with the composite.
+	 * Binds the {@link CartesianTriangularMeshMapLayer} with the parentComposite.
 	 * 
 	 * @param cartesianTriangularMeshMapLayer
 	 *            Reference to the list {@link CartesianTriangularMeshMapLayer}.
@@ -182,7 +182,7 @@ public class MapLayerPresentationsListComposite extends Composite {
 	}
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * @param selection Reference to the selection.
 	 */
 	protected void newSelection(ISelection selection) {

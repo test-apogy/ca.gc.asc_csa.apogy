@@ -34,7 +34,7 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 
 	@Override
 	protected NoContentComposite getNoContentComposite() {
-		return new NoActiveSessionComposite(composite, SWT.None);
+		return new NoActiveSessionComposite(getParentComposite(), SWT.None);
 	}
 		
 	@Override
@@ -50,7 +50,7 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 		newInvocatorSession((InvocatorSession) eObject); 
 	}
 	/**
-	 * Gets an adapter that sets the part's composite to a
+	 * Gets an adapter that sets the part's parentComposite to a
 	 * {@link NoActiveSessionComposite} if there is no active session.
 	 * 
 	 * @return the {@link Adapter}
@@ -68,10 +68,8 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 	}
 
 	@PreDestroy
-	protected void dispose() {
+	public void dispose() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
-		if (composite != null) {
-			composite.dispose();
-		}
+		super.dispose();
 	}
 }

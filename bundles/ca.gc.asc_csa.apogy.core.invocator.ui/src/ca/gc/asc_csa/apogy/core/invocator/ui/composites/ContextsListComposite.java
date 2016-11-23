@@ -78,7 +78,7 @@ public class ContextsListComposite extends ScrolledComposite {
 	private TableViewer tableViewer;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
@@ -319,7 +319,7 @@ public class ContextsListComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.

@@ -87,7 +87,7 @@ public class TimeSourcesListComposite2 extends Composite {
 	private Action copyAction;
 
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * @param parent
 	 * @param style
 	 */
@@ -273,7 +273,7 @@ public class TimeSourcesListComposite2 extends Composite {
 	}
 		
 	/**
-	 * Binds the {@link TimeSourcesList} with the composite.
+	 * Binds the {@link TimeSourcesList} with the parentComposite.
 	 * 
 	 * @param context
 	 *            Reference to the list of {@link TimeSourcesList}.
@@ -360,7 +360,7 @@ public class TimeSourcesListComposite2 extends Composite {
 	}
 	
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * @param selection Reference to the selection.
 	 */
 	protected void newSelection(ISelection selection) {

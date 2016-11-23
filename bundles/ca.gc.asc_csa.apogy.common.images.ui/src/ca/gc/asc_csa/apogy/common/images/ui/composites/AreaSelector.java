@@ -219,7 +219,7 @@ public class AreaSelector implements MouseListener, MouseMoveListener
 				
 				if(zoomOnMouseUp)
 				{
-					// Call the zoomInRegion of the composite.
+					// Call the zoomInRegion of the parentComposite.
 					imageDisplayComposite.zoomInRegion(selectedArea);
 				}
 				
@@ -313,7 +313,7 @@ public class AreaSelector implements MouseListener, MouseMoveListener
 	}
 	
 	/**
-	 * Tells whether or not the specified coordinates falls within the image currently displayed in the image composite.
+	 * Tells whether or not the specified coordinates falls within the image currently displayed in the image parentComposite.
 	 * @param point The point representing coordinates in THE IMAGE FRAME.
 	 * @return True if the coordinates falls within the image, false otherwise.
 	 */

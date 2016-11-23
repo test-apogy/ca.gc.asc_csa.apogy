@@ -60,7 +60,7 @@ public class ApogyEnvironmentTimeSourcesView extends AbstractView
 		Composite scrolledContentcomposite = new Composite(scrolledComposite, SWT.NONE);		
 		scrolledContentcomposite.setLayout(new FillLayout());					
 		
-		// Add composite
+		// Add parentComposite
 		apogyEnvironmentTimeSourceComposite = new ApogyEnvironmentTimeSourceComposite(scrolledContentcomposite, SWT.NONE);
 		
 		scrolledComposite.setContent(scrolledContentcomposite);

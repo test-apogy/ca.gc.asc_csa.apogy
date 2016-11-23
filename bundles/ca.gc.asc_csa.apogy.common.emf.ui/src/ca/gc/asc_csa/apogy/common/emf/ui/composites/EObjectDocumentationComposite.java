@@ -35,7 +35,7 @@ public class EObjectDocumentationComposite extends Composite {
 	EObject object;
 	
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * @param parent
 	 * @param style
 	 */

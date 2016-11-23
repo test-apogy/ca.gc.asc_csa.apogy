@@ -162,7 +162,7 @@ public class VariablesListComposite extends Composite {
 	}
 	
 	/**
-	 * Sets the {@link VariablesList} in the composite.
+	 * Sets the {@link VariablesList} in the parentComposite.
 	 * @param variablesList Reference the list of {@link Variable}.
 	 */
 	public void setVariablesList(VariablesList variablesList) {

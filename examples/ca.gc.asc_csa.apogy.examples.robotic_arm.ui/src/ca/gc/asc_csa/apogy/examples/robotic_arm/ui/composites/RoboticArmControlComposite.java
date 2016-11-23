@@ -76,7 +76,7 @@ public class RoboticArmControlComposite extends Composite
 	private Combo cmbSpeedMode;
 	
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * @param parent
 	 * @param style
 	 */

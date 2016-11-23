@@ -55,7 +55,7 @@ public class ProgramArgumentsPart extends AbstractEObjectSelectionPart {
 
 	@Override
 	protected Composite createContentComposite(Composite parent) {
-		return new OperationCallDetailsComposite(composite, SWT.None) {
+		return new OperationCallDetailsComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()) {

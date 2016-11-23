@@ -14,8 +14,6 @@ package ca.gc.asc_csa.apogy.common.emf.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import javax.annotation.PreDestroy;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 
@@ -40,18 +38,12 @@ abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 	}
 	
 	/**
-	 * Sets the {@link EObject} to display in the composite.
+	 * Sets the {@link EObject} to display in the parentComposite.
 	 */
 	abstract protected void setSelectionInContentComposite(EObject eObject);
 	
 	@Override
 	protected NoContentComposite getNoContentComposite() {
-		return new NoSelectionComposite(composite, SWT.None); 
-	}
-
-	@PreDestroy
-	protected void dispose() {
-		getContentComposite().dispose();
-		composite.dispose();
+		return new NoSelectionComposite(getParentComposite(), SWT.None); 
 	}
 }

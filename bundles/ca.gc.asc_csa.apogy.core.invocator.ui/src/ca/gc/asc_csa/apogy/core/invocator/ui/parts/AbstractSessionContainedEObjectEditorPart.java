@@ -20,10 +20,13 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectEditorComposite;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoSelectionComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 
-public abstract class AbstractSessionContentPart extends AbstractSessionBasedPart {
+public abstract class AbstractSessionContainedEObjectEditorPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected void setNullSelection() {
@@ -51,7 +54,16 @@ public abstract class AbstractSessionContentPart extends AbstractSessionBasedPar
 		};
 	}
 	
-	protected void setEObjectInComposite(EObject eObject){
-		((EObjectEditorComposite) getContentComposite()).setEObject(eObject);
-	}
+//	protected void setEObjectInComposite(EObject eObject){
+//		((EObjectEditorComposite) getContentComposite()).setEObject(eObject);
+//	}
+	
+	@Override
+	protected NoContentComposite getNoContentComposite() {
+		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
+			return super.getNoContentComposite();
+		}else{
+			return new NoSelectionComposite(getParentComposite(), SWT.None);	
+		}		
+	}	
 }

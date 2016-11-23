@@ -79,13 +79,13 @@ public class CoordinateConversionComposite extends Composite
 		// Call the superclass' constructor
 		super(parent, style);
 				
-		// Create the content for the composite
+		// Create the content for the parentComposite
 		createContent();
 	}
 	
 	private void createContent()
 	{
-		// Setup the composite's layout
+		// Setup the parentComposite's layout
 		this.setLayout(new GridLayout());
 		
 		// Add the dispose listener
@@ -107,7 +107,7 @@ public class CoordinateConversionComposite extends Composite
 		formToolkit.paintBordersFor(sctnGeoCoords);
 		sctnGeoCoords.setText(GEO_COORD_SECT_TITLE);
 		
-		// Create a composite to handle the contents of the composite
+		// Create a parentComposite to handle the contents of the parentComposite
 		Composite compGeoCoords = formToolkit.createComposite(sctnGeoCoords, SWT.NONE);
 		formToolkit.paintBordersFor(compGeoCoords);
 		compGeoCoords.setLayout(new GridLayout(3, true));
@@ -142,7 +142,7 @@ public class CoordinateConversionComposite extends Composite
 		formToolkit.paintBordersFor(sctnXYZCoords);
 		sctnXYZCoords.setText(XYZ_COORD_SECT_TITLE);
 		
-		// Create a composite to handle the contents of the composite
+		// Create a parentComposite to handle the contents of the parentComposite
 		Composite compXYZCoords = formToolkit.createComposite(sctnXYZCoords, SWT.NONE);
 		formToolkit.paintBordersFor(compXYZCoords);
 		compXYZCoords.setLayout(new GridLayout(3, true));

@@ -49,7 +49,7 @@ public class EObjectEditorComposite extends Composite {
 	private Button btnNew;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
@@ -159,7 +159,7 @@ public class EObjectEditorComposite extends Composite {
 	}
 
 	/**
-	 * Sets the root object for the composite
+	 * Sets the root object for the parentComposite
 	 * 
 	 * @param eObject
 	 *            The root eObject

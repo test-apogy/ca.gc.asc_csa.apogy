@@ -838,7 +838,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 				// If the list of telecom nodes is being changed
 				if (notification.getFeatureID(TelecomStatusMonitorTool.class) == ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES)
 				{
-					// If neither the composite nor the telecom status monitor has been disposed.
+					// If neither the parentComposite nor the telecom status monitor has been disposed.
 					if (TelecomStatusMonitorToolComposite.this.isDisposed() == false &&
 						statusMonitor.isDisposed() == false)
 					{
@@ -879,7 +879,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 						// If the telecom status monitor list no longer contains this telecom status monitor
 						if (telecomStatusMonitorList.getTelecomStatusMonitors().contains(telecomStatusMonitor) == false)
 						{
-							// Remove this tool from the composite
+							// Remove this tool from the parentComposite
 							setTelecomStatusMonitorTool(null);
 						}
 					}

@@ -107,7 +107,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 	private Table table;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
@@ -220,7 +220,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 
 	/**
 	 * Sets the {@link VariablesList} and the {@link VariableFeatureReference}
-	 * managed by the composite.
+	 * managed by the parentComposite.
 	 * 
 	 * @param variables
 	 *            Reference to the list of variables.
@@ -233,7 +233,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 
 	/**
 	 * Sets the {@link VariablesList} and the {@link VariableFeatureReference}
-	 * managed by the composite.
+	 * managed by the parentComposite.
 	 * 
 	 * @param variables
 	 *            Reference to the list of variables.

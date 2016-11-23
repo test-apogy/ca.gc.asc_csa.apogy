@@ -163,7 +163,7 @@ public class DataProductsListsContainerComposite extends Composite {
 	}
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.
@@ -173,7 +173,7 @@ public class DataProductsListsContainerComposite extends Composite {
 
 	/**
 	 * Sets the {@link DataProductsListsContainer} to be displayed in the
-	 * composite.
+	 * parentComposite.
 	 * 
 	 * @param dataProductsListsContainer
 	 *            Reference to the {@link DataProductsListsContainer}.

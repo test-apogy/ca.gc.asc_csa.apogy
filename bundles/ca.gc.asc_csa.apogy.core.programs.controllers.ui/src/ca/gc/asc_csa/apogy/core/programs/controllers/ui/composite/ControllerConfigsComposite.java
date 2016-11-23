@@ -79,7 +79,7 @@ public class ControllerConfigsComposite extends ScrolledComposite {
 	private Button btnDeactivate;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
@@ -204,7 +204,7 @@ public class ControllerConfigsComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Sets the root object for the composite
+	 * Sets the root object for the parentComposite
 	 * 
 	 * @param eObject
 	 *            The root eObject

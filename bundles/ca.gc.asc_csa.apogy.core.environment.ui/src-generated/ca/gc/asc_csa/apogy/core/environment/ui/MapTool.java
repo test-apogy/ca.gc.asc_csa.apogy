@@ -69,7 +69,7 @@ public interface MapTool extends MapAnnotation
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Method that is called to give access to the underlying ChartComposite and JFreeChart used to display the map.
-	 * @param composite The ChartComposite used to display the map.
+	 * @param parentComposite The ChartComposite used to display the map.
 	 * @param chart The JFreeChart used to display the map.
 	 * <!-- end-model-doc -->
 	 * @model compositeDataType="ca.gc.asc_csa.apogy.core.environment.ui.ChartComposite" compositeUnique="false" chartDataType="ca.gc.asc_csa.apogy.core.environment.ui.JFreeChart" chartUnique="false"

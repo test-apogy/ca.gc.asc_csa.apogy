@@ -120,7 +120,7 @@ public abstract class FieldLayoutPreferencePage extends PreferencePage implement
 	}
 	/**
 	 * Creates and returns the SWT control for the customized body 
-	 * of this preference page under the given parent composite.
+	 * of this preference page under the given parent parentComposite.
 	 * <p>
 	 * This framework method must be implemented by concrete subclasses. Any
 	 * subclass returning a <code>Composite</code> object whose <code>Layout</code>
@@ -128,7 +128,7 @@ public abstract class FieldLayoutPreferencePage extends PreferencePage implement
 	 * set the margins of this <code>Layout</code> to 0 pixels. 
 	 * </p>
 	 *
-	 * @param parent the parent composite
+	 * @param parent the parent parentComposite
 	 * @return the new control
 	 */
 	protected abstract Control createPageContents(Composite parent);

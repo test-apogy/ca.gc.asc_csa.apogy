@@ -90,10 +90,10 @@ public class ArgumentsComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * 
 	 * @param parent
-	 *            Reference to the parent composite.
+	 *            Reference to the parent parentComposite.
 	 * @param style
 	 *            Composite style.
 	 */
@@ -279,7 +279,7 @@ public class ArgumentsComposite extends Composite {
 	}
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.

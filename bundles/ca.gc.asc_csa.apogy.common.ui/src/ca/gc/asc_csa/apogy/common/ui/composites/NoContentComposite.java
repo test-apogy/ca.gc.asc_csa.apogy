@@ -20,11 +20,12 @@ import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 
 public class NoContentComposite extends Composite {
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * @param parent
 	 * @param style
 	 */
@@ -44,5 +45,13 @@ public class NoContentComposite extends Composite {
 
 	protected String getMessage() {
 		return "No displayable content";
+	}
+	
+	@Override
+	public void dispose() {
+		// Disposes the NoActiveSessionComposite
+		for (Control control : getChildren()) {
+			control.dispose();
+		}
 	}
 }

@@ -18,7 +18,7 @@ import org.eclipse.swt.widgets.Composite;
 
 public class NoSelectionComposite extends NoContentComposite {
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * @param parent
 	 * @param style
 	 */

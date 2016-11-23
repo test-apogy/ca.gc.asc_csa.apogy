@@ -22,13 +22,13 @@ import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
 
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 
 abstract public class AbstractApogyPart {
 
-	protected Composite composite;
+	private Composite parentComposite;
+
 
 	@Inject
 	protected ESelectionService selectionService;
@@ -38,12 +38,20 @@ abstract public class AbstractApogyPart {
 
 	@PostConstruct
 	public void createPartControl(Composite parent) {
-		composite = parent;
-		composite.setLayout(new FillLayout());
+		parentComposite = parent;
+		parentComposite.setLayout(new FillLayout());
 		setNoContentComposite();
-		composite.layout();
+		parentComposite.layout();
 		setEObject(getInitializeObject());
 	}
+
+	/**
+	 * Returns the parent {@link Composite}.
+	 * @return Reference to the {@link Composite}.
+	 */
+	public Composite getParentComposite() {
+		return parentComposite;
+	}	
 	
 	/**
 	 * Specifies the {@link EObject} to initially set in the part.
@@ -63,9 +71,9 @@ abstract public class AbstractApogyPart {
 	 * @return {@link Composite}
 	 */
 	public Composite getContentComposite() {
-		if (composite != null) {
-			if (composite.getChildren().length > 0) {
-				return (Composite) composite.getChildren()[0];
+		if (parentComposite != null) {
+			if (parentComposite.getChildren().length > 0) {
+				return (Composite) parentComposite.getChildren()[0];
 			}
 		}
 		return null;
@@ -73,7 +81,7 @@ abstract public class AbstractApogyPart {
 
 	/**
 	 * This method is called when the {@link EObject} needs to be changed or
-	 * initialized in the content composite.
+	 * initialized in the content parentComposite.
 	 * 
 	 * @param eObject
 	 *            Reference to the EObject.
@@ -91,19 +99,16 @@ abstract public class AbstractApogyPart {
 
 	/**
 	 * This method sets the {@link EObject} in the part.
-	 * Null EObjects sets the content composite to a nullSelection composite according to the implemented part.
+	 * Null EObjects sets the content parentComposite to a nullSelection parentComposite according to the implemented part.
 	 * @param eObject
 	 */
 	protected void setEObject(EObject eObject) {
-		if (composite != null) {
+		if (parentComposite != null) {
 			if (eObject != null) {
 				if (getContentComposite() instanceof NoContentComposite) {
-					// Disposes the NoActiveSessionComposite
-					for (Control control : composite.getChildren()) {
-						control.dispose();
-					}
-					createContentComposite(composite);
-					composite.layout();
+					getContentComposite().dispose();
+					createContentComposite(parentComposite);
+					parentComposite.layout();
 				}
 				setContentCompositeSelection(eObject);
 
@@ -114,19 +119,16 @@ abstract public class AbstractApogyPart {
 	}
 
 	/**
-	 * Sets the part's composite to a {@link NoActiveSessionComposite}.
+	 * Sets the part's parentComposite to a {@link NoActiveSessionComposite}.
 	 */
-	protected void setNoContentComposite() {
-		if (getContentComposite() == null || !(getContentComposite() instanceof NoContentComposite)) {
-			// Disposes the content composite
-			if (getContentComposite() != null) {
-				getContentComposite().dispose();
-			}
-			getNoContentComposite();
-			composite.layout();
-
-			setNullSelection();
+	private void setNoContentComposite() {
+		if (getContentComposite() != null) {
+			getContentComposite().dispose();
 		}
+		getNoContentComposite();
+		parentComposite.layout();
+
+		setNullSelection();
 	}
 
 	/**
@@ -134,4 +136,10 @@ abstract public class AbstractApogyPart {
 	 * @return {@link NoContentComposite}
 	 */
 	abstract protected NoContentComposite getNoContentComposite();
+	
+	/**
+	 * Disposes the {@link NoContentComposite} if any.
+	 */
+	public void dispose(){
+	}
 }

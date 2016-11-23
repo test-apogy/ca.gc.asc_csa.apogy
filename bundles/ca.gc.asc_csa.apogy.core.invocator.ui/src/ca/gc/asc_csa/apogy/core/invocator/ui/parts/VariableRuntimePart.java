@@ -10,7 +10,10 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.swt.SWT;
 
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoSelectionComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
@@ -19,10 +22,11 @@ import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
 
-public class VariableRuntimePart extends AbstractSessionContentPart {
+public class VariableRuntimePart extends AbstractSessionContainedEObjectEditorPart {
 	private AdapterImpl adapter;
 	private Environment environment;
 	private Context activeContext;
+	private Object selection;
 
 	@Inject
 	@Optional
@@ -41,7 +45,7 @@ public class VariableRuntimePart extends AbstractSessionContentPart {
 			activeContext = variable.getEnvironment().getActiveContext();
 			if (activeContext != null){
 				if (activeContext.isVariablesInstantiated()){
-					setEObjectInComposite(eObject);	
+					setEObject(eObject);	
 				}else{
 					setEObject(null);
 				}	
@@ -52,6 +56,20 @@ public class VariableRuntimePart extends AbstractSessionContentPart {
 			}
 		}
 	}
+	
+	@Override
+	protected NoContentComposite getNoContentComposite() {
+		if (this.selection == null){
+			return super.getNoContentComposite();
+		}else{
+			return new NoContentComposite(getParentComposite(), SWT.None){
+				@Override
+				protected String getMessage() {
+					return "Variables are not instantiated";
+				}
+			};
+		}		
+	}		
 	
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
@@ -110,7 +128,7 @@ public class VariableRuntimePart extends AbstractSessionContentPart {
 	
 	@PreDestroy
 	@Override
-	protected void dispose() {
+	public void dispose() {
 		if (environment != null){
 			environment.eAdapters().remove(getAdapter());
 		}

@@ -25,7 +25,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 
 public class NamedDescribedListComposite extends EObjectListComposite{
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style

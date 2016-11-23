@@ -48,7 +48,7 @@ public class VisibilityPassSpacecraftPositionHistoryRangeComposite extends Compo
 		super(parent, style);			
 		setLayout(new FillLayout());
 		
-		// Adds the chart composite.
+		// Adds the chart parentComposite.
 		new ChartComposite(this, SWT.NONE, getChart(), true);
 	}
 

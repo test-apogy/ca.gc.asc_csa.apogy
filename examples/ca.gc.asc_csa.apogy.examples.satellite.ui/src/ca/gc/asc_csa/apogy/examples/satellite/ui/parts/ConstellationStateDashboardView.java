@@ -44,7 +44,7 @@ public class ConstellationStateDashboardView extends AbstractView implements IEd
 	// Part Name.
 	public static final String PART_NAME = "Constellation Dashboard";
 
-	// Reference to the composite.
+	// Reference to the parentComposite.
 	private ConstellationStateDashboardComposite constellationStateDashboardComposite;
 
 	// Constellation State.

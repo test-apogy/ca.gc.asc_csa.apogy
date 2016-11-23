@@ -54,7 +54,7 @@ public class DataProductsListsContainerComposite extends Composite {
 	private TableViewer dataProductsListsContainerViewer;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
@@ -99,7 +99,7 @@ public class DataProductsListsContainerComposite extends Composite {
 	}
 	
 	/**
-	 * Returns the {@link Context} that is manipulated by this composite.
+	 * Returns the {@link Context} that is manipulated by this parentComposite.
 	 * 
 	 * @return Reference to the context.
 	 */
@@ -111,7 +111,7 @@ public class DataProductsListsContainerComposite extends Composite {
 	}
 	
 	/**
-	 * Binds the {@link Context} with the composite.
+	 * Binds the {@link Context} with the parentComposite.
 	 * Detail
 	 * @param context
 	 *            Reference to the context.

@@ -51,7 +51,7 @@ public class SourceDestinationContextsComposite extends Composite {
 	private TableViewer destinationContextViewer;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
@@ -108,7 +108,7 @@ public class SourceDestinationContextsComposite extends Composite {
 
 	/**
 	 * Sets the {@link ContextsList} managed by
-	 * the composite. 
+	 * the parentComposite. 
 	 * @param contextsList Reference to the list of contexts.
 	 */
 	public void setContextsList(ContextsList contextsList){
@@ -117,7 +117,7 @@ public class SourceDestinationContextsComposite extends Composite {
 
 	/**
 	 * Sets the {@link ContextsList} managed by
-	 * the composite. 
+	 * the parentComposite. 
 	 * @param contextsList Reference to the list of contexts.
 	 * @param update If true then data bindings are created.
 	 */
