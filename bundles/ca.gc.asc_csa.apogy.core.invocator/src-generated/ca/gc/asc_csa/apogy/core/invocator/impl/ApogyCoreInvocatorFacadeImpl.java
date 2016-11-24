@@ -1604,7 +1604,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
-	 */
+	 */	
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {

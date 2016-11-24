@@ -14,9 +14,7 @@ package ca.gc.asc_csa.apogy.core.programs;
  */
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,40 +90,13 @@ public interface ApogyCoreProgramsPackage extends EPackage {
 	int APOGY_CORE_PROGRAMS_FACADE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Session</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_PROGRAMS_FACADE__SESSION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_PROGRAMS_FACADE__VARIABLES = 1;
-
-	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_PROGRAMS_FACADE_FEATURE_COUNT = 2;
-
-	/**
-	 * The operation id for the '<em>Exec</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL = 0;
+	int APOGY_CORE_PROGRAMS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -134,7 +105,7 @@ public interface ApogyCoreProgramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_PROGRAMS_FACADE_OPERATION_COUNT = 1;
+	int APOGY_CORE_PROGRAMS_FACADE_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade <em>Facade</em>}'.
@@ -145,38 +116,6 @@ public interface ApogyCoreProgramsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getApogyCoreProgramsFacade();
-
-	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#getSession <em>Session</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Session</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#getSession()
-	 * @see #getApogyCoreProgramsFacade()
-	 * @generated
-	 */
-	EReference getApogyCoreProgramsFacade_Session();
-
-	/**
-	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#getVariables <em>Variables</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Variables</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#getVariables()
-	 * @see #getApogyCoreProgramsFacade()
-	 * @generated
-	 */
-	EReference getApogyCoreProgramsFacade_Variables();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Exec</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCall)
-	 * @generated
-	 */
-	EOperation getApogyCoreProgramsFacade__Exec__OperationCall();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -210,30 +149,6 @@ public interface ApogyCoreProgramsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass APOGY_CORE_PROGRAMS_FACADE = eINSTANCE.getApogyCoreProgramsFacade();
-
-		/**
-		 * The meta object literal for the '<em><b>Session</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOGY_CORE_PROGRAMS_FACADE__SESSION = eINSTANCE.getApogyCoreProgramsFacade_Session();
-
-		/**
-		 * The meta object literal for the '<em><b>Variables</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOGY_CORE_PROGRAMS_FACADE__VARIABLES = eINSTANCE.getApogyCoreProgramsFacade_Variables();
-
-		/**
-		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL = eINSTANCE.getApogyCoreProgramsFacade__Exec__OperationCall();
 
 	}
 

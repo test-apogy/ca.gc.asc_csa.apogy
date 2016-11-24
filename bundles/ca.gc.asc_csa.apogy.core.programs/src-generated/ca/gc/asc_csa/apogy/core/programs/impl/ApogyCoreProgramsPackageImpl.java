@@ -14,13 +14,8 @@ package ca.gc.asc_csa.apogy.core.programs.impl;
  */
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFactory;
 import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
 import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade;
@@ -84,9 +79,6 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		ApogyCoreInvocatorPackage.eINSTANCE.eClass();
-
 		// Create package meta-data objects
 		theApogyCoreProgramsPackage.createPackageContents();
 
@@ -109,33 +101,6 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 	 */
 	public EClass getApogyCoreProgramsFacade() {
 		return apogyCoreProgramsFacadeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getApogyCoreProgramsFacade_Session() {
-		return (EReference)apogyCoreProgramsFacadeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getApogyCoreProgramsFacade_Variables() {
-		return (EReference)apogyCoreProgramsFacadeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreProgramsFacade__Exec__OperationCall() {
-		return apogyCoreProgramsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -167,9 +132,6 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 
 		// Create classes and their features
 		apogyCoreProgramsFacadeEClass = createEClass(APOGY_CORE_PROGRAMS_FACADE);
-		createEReference(apogyCoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__SESSION);
-		createEReference(apogyCoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__VARIABLES);
-		createEOperation(apogyCoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL);
 	}
 
 	/**
@@ -195,11 +157,6 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
-		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -208,12 +165,6 @@ public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyC
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyCoreProgramsFacadeEClass, ApogyCoreProgramsFacade.class, "ApogyCoreProgramsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getApogyCoreProgramsFacade_Session(), theApogyCoreInvocatorPackage.getInvocatorSession(), null, "session", null, 0, 1, ApogyCoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApogyCoreProgramsFacade_Variables(), theApogyCoreInvocatorPackage.getVariable(), null, "variables", null, 0, -1, ApogyCoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		EOperation op = initEOperation(getApogyCoreProgramsFacade__Exec__OperationCall(), theEcorePackage.getEJavaObject(), "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theApogyCoreInvocatorPackage.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theApogyCommonEMFPackage.getException());
 
 		// Create resource
 		createResource(eNS_URI);

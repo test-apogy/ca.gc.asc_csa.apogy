@@ -243,22 +243,6 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
 	}
 
-// FIXME TRANSACTION: Volatile + Singleton.	
-//	/**
-//	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-//	 * 
-//	 * @generated_NOT
-//	 */
-//	public ApogyTopology getApogyTopology() {
-//		ApogyTopology tmp = getApogyTopologyGen();
-//		if (tmp == null) {
-//			tmp = ApogyCoreFactory.eINSTANCE.createApogyTopology();
-//			setApogyTopology(tmp);
-//		}
-//
-//		return tmp;
-//	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

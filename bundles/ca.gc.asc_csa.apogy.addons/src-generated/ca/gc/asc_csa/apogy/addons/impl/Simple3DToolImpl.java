@@ -264,7 +264,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	public void initialise() 
 	{		
 		// Registers the tool.
-		ca.gc.asc_csa.apogy.addons.Activator.registerSimple3DTool(this);
+		 ca.gc.asc_csa.apogy.addons.Activator.registerSimple3DTool(this);
 	}
 	
 	@Override

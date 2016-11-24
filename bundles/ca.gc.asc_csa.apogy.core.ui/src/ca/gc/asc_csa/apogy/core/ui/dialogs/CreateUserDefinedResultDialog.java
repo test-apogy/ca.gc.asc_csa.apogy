@@ -37,6 +37,7 @@ import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.UserDefinedResult;
@@ -174,40 +175,39 @@ public class CreateUserDefinedResultDialog extends Dialog
 	{
 		final Combo combo = new Combo(parent, SWT.NONE);
 
-		
-// FIXME TRANSACTION: Singleton Volatile -> Facade.		
-//		if(context.getEnvironment() instanceof ApogyEnvironment)
-//		{
-//			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
-//			
-//			
-//			
-//			Node rootNode = apogyEnvironment.getApogyTopology().getRootNode();			
-//			
-//			List<Node> nodes = getAllNodes(rootNode);
-//			
-//			String[] items = new String[nodes.size()];
-//			int i = 0;
-//			for(Node node : nodes)
-//			{
-//				String name = node.getNodeId();
-//				if(name == null)
-//				{
-//					name = node.getDescription();
-//				}
-//				
-//				if(name == null)
-//				{
-//					name = Integer.toString(i);
-//				}
-//				
-//				items[i] = name;
-//				indexToNodeMap.put(i, node);
-//				
-//				i++;
-//			}
-//			combo.setItems(items);
-//		}
+		// FIXME TOPOLOGY.
+		if(context.getEnvironment() instanceof ApogyEnvironment)
+		{
+			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
+			
+			
+			
+			Node rootNode = ApogyCoreFacade.INSTANCE.getApogyTopology().getRootNode();			
+			
+			List<Node> nodes = getAllNodes(rootNode);
+			
+			String[] items = new String[nodes.size()];
+			int i = 0;
+			for(Node node : nodes)
+			{
+				String name = node.getNodeId();
+				if(name == null)
+				{
+					name = node.getDescription();
+				}
+				
+				if(name == null)
+				{
+					name = Integer.toString(i);
+				}
+				
+				items[i] = name;
+				indexToNodeMap.put(i, node);
+				
+				i++;
+			}
+			combo.setItems(items);
+		}
 				
 		return combo;
 	}

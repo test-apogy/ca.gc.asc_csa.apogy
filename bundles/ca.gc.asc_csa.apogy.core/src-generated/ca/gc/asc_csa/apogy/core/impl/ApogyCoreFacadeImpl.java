@@ -83,17 +83,17 @@ import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyCoreFacadeImpl#getApogyTopology <em>Apogy Topology</em>}</li>
+ * <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyCoreFacadeImpl#getApogyTopology
+ * <em>Apogy Topology</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
-		implements ApogyCoreFacade {
+public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreFacade {
 	/**
-	 * The cached value of the '{@link #getApogyTopology() <em>Apogy Topology</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getApogyTopology() <em>Apogy
+	 * Topology</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getApogyTopology()
 	 * @generated
 	 * @ordered
@@ -110,6 +110,7 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected ApogyCoreFacadeImpl() {
@@ -118,6 +119,7 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -126,25 +128,26 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public ApogyTopology getApogyTopology() {
 		if (apogyTopology != null && apogyTopology.eIsProxy()) {
-			InternalEObject oldApogyTopology = (InternalEObject)apogyTopology;
-			apogyTopology = (ApogyTopology)eResolveProxy(oldApogyTopology);
+			InternalEObject oldApogyTopology = (InternalEObject) apogyTopology;
+			apogyTopology = (ApogyTopology) eResolveProxy(oldApogyTopology);
 			if (apogyTopology != oldApogyTopology) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
 			}
 		}
 		return apogyTopology;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public ApogyTopology basicGetApogyTopology() {
@@ -152,88 +155,83 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setApogyTopology(ApogyTopology newApogyTopology) {
 		ApogyTopology oldApogyTopology = apogyTopology;
 		apogyTopology = newApogyTopology;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY,
+					oldApogyTopology, apogyTopology));
 	}
 
 	/**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated_NOT
-   */
-  public Matrix4x4 computeAbsolutePoseMatrix(ApogySystem apogySystem, Matrix4x4 relativePose)
-  {
-	  	// Gets system pose.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public Matrix4x4 computeAbsolutePoseMatrix(ApogySystem apogySystem, Matrix4x4 relativePose) {
+		// Gets system pose.
 		Node root = ApogyCommonTopologyFacade.INSTANCE.findRoot(apogySystem.getTopologyRoot().getOriginNode());
-						
-		Matrix4d systemPose = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(apogySystem.getTopologyRoot().getOriginNode(), root);	  	  	
-		
+
+		Matrix4d systemPose = ApogyCommonTopologyFacade.INSTANCE
+				.expressInFrame(apogySystem.getTopologyRoot().getOriginNode(), root);
+
 		// Gets the system centric result.
 		Matrix4x4 pose = relativePose;
 		Matrix4d matrix = new Matrix4d();
 		matrix.setIdentity();
-		if (pose != null) matrix = pose.asMatrix4d();
-		
+		if (pose != null)
+			matrix = pose.asMatrix4d();
+
 		// Create the absolute position result.
 		Matrix4d m = new Matrix4d();
-		m.setIdentity();		
-		m.mul(systemPose, matrix);			
+		m.setIdentity();
+		m.mul(systemPose, matrix);
 
 		return ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m);
-  }
+	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
 	 */
 	@SuppressWarnings("rawtypes")
-	public ResultNode createResultNode(PositionedResult result) 
-	{
+	public ResultNode createResultNode(PositionedResult result) {
 		// Creates the ResultNode.
-		ResultNode resultNode = ApogyCoreFactory.eINSTANCE
-				.createResultNode();
+		ResultNode resultNode = ApogyCoreFactory.eINSTANCE.createResultNode();
 		resultNode.setResult(result);
 
 		// Sets the time as the ID
 		resultNode.setNodeId(Long.toString(result.getTime().getTime()));
 
 		// Attaches the result itself to the ResultNode.
-		if (result.getResultValue() instanceof AttributeResultValue) 
-		{
+		if (result.getResultValue() instanceof AttributeResultValue) {
 			AttributeResultValue attributeResultValue = (AttributeResultValue) result.getResultValue();
 
-			if (attributeResultValue.getValue() != null) 
-			{
+			if (attributeResultValue.getValue() != null) {
 				// TODO : Adds a marker in the topology ?
 			}
-		} 
-		else if (result.getResultValue() instanceof ReferenceResultValue) 
-		{
+		} else if (result.getResultValue() instanceof ReferenceResultValue) {
 			ReferenceResultValue referenceResultValue = (ReferenceResultValue) result.getResultValue();
-			if (referenceResultValue.getValue() != null) 
-			{
-				if (referenceResultValue.getValue() instanceof Node) 
-				{
+			if (referenceResultValue.getValue() != null) {
+				if (referenceResultValue.getValue() instanceof Node) {
 					// TODO : Do not copy the Node when bug#1429 in Link and
 					// ReferenceGroupNode is fixed.
 					Node node = EcoreUtil.copy((Node) referenceResultValue.getValue());
 					resultNode.getChildren().add(node);
-				} 
-				else 
-				{
-					// Creates and adds a ReferencedContentNode with the result as its content.
+				} else {
+					// Creates and adds a ReferencedContentNode with the result
+					// as its content.
 					EObject content = (EObject) referenceResultValue.getValue();
-					ReferencedContentNode contentNode = ApogyCommonTopologyFacade.INSTANCE.createReferencedContentNode(content);
+					ReferencedContentNode<EObject> contentNode = ApogyCommonTopologyFacade.INSTANCE
+							.createReferencedContentNode(content);
 
-					// Adds a the node via a ReferenceNode under the DataProductNode.
+					// Adds a the node via a ReferenceNode under the
+					// DataProductNode.
 					resultNode.getChildren().add(contentNode);
 				}
 			}
@@ -247,62 +245,56 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public InvocatorSession createApogySession(boolean createEnvironment,
-			boolean createPrograms, boolean createDataProducts,
-			boolean createTools) {
-		InvocatorSession session = ApogyCoreInvocatorFactory.eINSTANCE
-				.createInvocatorSession();
+	public InvocatorSession createApogySession(boolean createEnvironment, boolean createPrograms,
+			boolean createDataProducts, boolean createTools) {
+		InvocatorSession session = ApogyCoreInvocatorFactory.eINSTANCE.createInvocatorSession();
 		Context context = null;
 
 		if (createEnvironment) {
-			ApogyEnvironment environment = ApogyCoreFactory.eINSTANCE
-					.createApogyEnvironment();
-			environment.setLocalTypesList(ApogyCoreInvocatorFactory.eINSTANCE
-					.createLocalTypesList());
-			environment.setVariablesList(ApogyCoreInvocatorFactory.eINSTANCE
-					.createVariablesList());
-			environment.setContextsList(ApogyCoreInvocatorFactory.eINSTANCE
-					.createContextsList());
+			ApogyEnvironment environment = ApogyCoreFactory.eINSTANCE.createApogyEnvironment();
+			environment.setLocalTypesList(ApogyCoreInvocatorFactory.eINSTANCE.createLocalTypesList());
+			environment.setVariablesList(ApogyCoreInvocatorFactory.eINSTANCE.createVariablesList());
+			environment.setContextsList(ApogyCoreInvocatorFactory.eINSTANCE.createContextsList());
 
 			/** Create a default Context */
 			context = ApogyCoreInvocatorFactory.eINSTANCE.createContext();
-			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
-					environment.getContextsList(), context, ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
+			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(environment.getContextsList(), context,
+					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
 			environment.getContextsList().getContexts().add(context);
 			environment.setActiveContext(context);
-			
+
 			/** Creates the Worksites List */
-			WorksitesList worksitesList =  ApogyCoreFactory.eINSTANCE.createWorksitesList();
+			WorksitesList worksitesList = ApogyCoreFactory.eINSTANCE.createWorksitesList();
 			environment.setWorksitesList(worksitesList);
-						
-			/** Creates the Timesource.*/
-			ca.gc.asc_csa.apogy.core.TimeSourcesList timeSourcesList = ApogyCoreFactory.eINSTANCE.createTimeSourcesList();
-			
+
+			/** Creates the Timesource. */
+			ca.gc.asc_csa.apogy.core.TimeSourcesList timeSourcesList = ApogyCoreFactory.eINSTANCE
+					.createTimeSourcesList();
+
 			// Fills in the TimeSource List.
-			timeSourcesList.getTimeSources().addAll(getAllAvaibleTimeSource());						
+			timeSourcesList.getTimeSources().addAll(getAllAvaibleTimeSource());
 			environment.setTimeSourcesList(timeSourcesList);
-			
+
 			// Sets the environment time source to the CurrentTimeSource.
 			environment.setActiveTimeSource(getCurrentTimeSource(timeSourcesList.getTimeSources()));
-			
+
 			session.setEnvironment(environment);
 		}
 
 		if (createPrograms) {
-			session.setProgramsList(ApogyCoreInvocatorFactory.eINSTANCE
-					.createProgramsList());
+			session.setProgramsList(ApogyCoreInvocatorFactory.eINSTANCE.createProgramsList());
 		}
 
 		if (createDataProducts) {
 			DataProductsListsContainer listsContainer = ApogyCoreInvocatorFactory.eINSTANCE
 					.createDataProductsListsContainer();
-			DataProductsList dataProductsList = ApogyCoreInvocatorFactory.eINSTANCE
-					.createDataProductsList();
+			DataProductsList dataProductsList = ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList();
 			listsContainer.getDataProductsList().add(dataProductsList);
 			session.setDataProductsListContainer(listsContainer);
-			
-			OperationCallResultsList operationCallResultsList = ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallResultsList();
-			dataProductsList.setOperationCallResultsList(operationCallResultsList);			
+
+			OperationCallResultsList operationCallResultsList = ApogyCoreInvocatorFactory.eINSTANCE
+					.createOperationCallResultsList();
+			dataProductsList.setOperationCallResultsList(operationCallResultsList);
 
 			if (context != null) {
 				context.setDataProductsList(dataProductsList);
@@ -310,18 +302,16 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 		}
 
 		if (createTools) {
-			ToolsList toolsList = ApogyCoreInvocatorFactory.eINSTANCE
-					.createToolsList();
+			ToolsList toolsList = ApogyCoreInvocatorFactory.eINSTANCE.createToolsList();
 			session.setToolsList(toolsList);
 		}
-		
+
 		return session;
 	}
 
-	
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public InvocatorSession createApogySession() {
@@ -329,389 +319,345 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated_NOT
-   */
-  public ApogySystem getApogySystem(Environment environment, String fullyQualifiedName)
-  {
-	  ApogySystem result = null;
-	  AbstractTypeImplementation typeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(environment, fullyQualifiedName);
-	  
-	  if (typeImplementation != null){
-		  TypeApiAdapter typeApiAdapter = typeImplementation.getAdapterInstance();
-		  
-		  if (typeApiAdapter instanceof ApogySystemApiAdapter){
-			  ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) typeApiAdapter;
-			  result = apogySystemApiAdapter.getApogySystem();
-		  }
-	  }
-	  
-	  return result;	  
-  }
-
-  	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	public List<FeatureOfInterest> loadFeatureOfInterestFromFile(String urlString) throws Exception 
-	{
+	public ApogySystem getApogySystem(Environment environment, String fullyQualifiedName) {
+		ApogySystem result = null;
+		AbstractTypeImplementation typeImplementation = ApogyCoreInvocatorFacade.INSTANCE
+				.getTypeImplementation(environment, fullyQualifiedName);
+
+		if (typeImplementation != null) {
+			TypeApiAdapter typeApiAdapter = typeImplementation.getAdapterInstance();
+
+			if (typeApiAdapter instanceof ApogySystemApiAdapter) {
+				ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) typeApiAdapter;
+				result = apogySystemApiAdapter.getApogySystem();
+			}
+		}
+
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public List<FeatureOfInterest> loadFeatureOfInterestFromFile(String urlString) throws Exception {
 		List<FeatureOfInterest> foiList = new ArrayList<FeatureOfInterest>();
-		
+
 		URL url = new URL(urlString);
-		File tempFile = copyURLContent(url);		
+		File tempFile = copyURLContent(url);
 		BufferedReader reader = new BufferedReader(new FileReader(tempFile));
-		
+
 		String line = null;
-		while ((line = reader.readLine()) != null) 
-		{		
+		while ((line = reader.readLine()) != null) {
 			line = line.trim();
 			FeatureOfInterest foi = parserCSVLine(line);
-			if(foi != null)
-			{
+			if (foi != null) {
 				foiList.add(foi);
 			}
 		}
-		
+
 		reader.close();
-		
+
 		return foiList;
 	}
 
-	private FeatureOfInterest parserCSVLine(String line) throws Exception
-	{
+	private FeatureOfInterest parserCSVLine(String line) throws Exception {
 		FeatureOfInterest foi = null;
-		
+
 		String[] entries = line.split(",");
-		
-		if(entries.length < 8)
-		{
+
+		if (entries.length < 8) {
 			throw new Exception("Line <" + line + "> contains too few entries !");
 		}
-		
+
 		String name = entries[0];
 		String description = entries[1];
 		double x = Double.parseDouble(entries[2]);
 		double y = Double.parseDouble(entries[3]);
 		double z = Double.parseDouble(entries[4]);
-		
+
 		double rx = Double.parseDouble(entries[5]);
 		double ry = Double.parseDouble(entries[6]);
 		double rz = Double.parseDouble(entries[7]);
-		
+
 		foi = ApogyCoreFactory.eINSTANCE.createFeatureOfInterest();
 		foi.setName(name);
 		foi.setDescription(description);
-		
+
 		// Sets pose.
 		TransformNode tmp = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(x, y, z, rx, ry, rz);
-		Matrix4d m  = tmp.asMatrix4d();		
+		Matrix4d m = tmp.asMatrix4d();
 		foi.setPose(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m));
-		
+
 		return foi;
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception 
-	{		
-		// Converts the FOI to CSV format
-		String cvsData = convertToCSV(foiList);
-		
-		// Write data to the file.
-		BufferedWriter writer = new BufferedWriter(new FileWriter(path));
-	    writer.write (cvsData);
-	    writer.close();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
-	public FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest) 
-	{
-// FIXME TRANSACTION: Volatile Singleton -> Facade.		
-//		if(featureOfInterest != null)
-//		{
-//			if(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null)
-//			{
-//				InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
-//				if(session.getEnvironment() instanceof ApogyEnvironment)
-//				{
-//					ApogyEnvironment apogyEnvironment = (ApogyEnvironment) session.getEnvironment();
-//					ApogyTopology apogyTopology = apogyEnvironment.getApogyTopology();
-//					if(apogyTopology != null && apogyTopology.getRootNode() != null)
-//					{
-//						List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCorePackage.Literals.FEATURE_OF_INTEREST_NODE, apogyTopology.getRootNode());
-//						
-//						FeatureOfInterestNode featureOfInterestNode = null;
-//						Iterator<Node> it = nodes.iterator();
-//						while(it.hasNext() && featureOfInterestNode == null)
-//						{
-//							Node n = it.next();
-//							
-//							if(n instanceof FeatureOfInterestNode)
-//							{
-//								FeatureOfInterestNode foin = (FeatureOfInterestNode) n;
-//								if(foin.getFeatureOfInterest() == featureOfInterest)
-//								{
-//									featureOfInterestNode = foin;
-//								}
-//							}
-//						}
-//						
-//						return featureOfInterestNode;
-//					}
-//				}
-//			}			
-//		}
-		
+	public void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception {
+		// Converts the FOI to CSV format
+		String cvsData = convertToCSV(foiList);
+
+		// Write data to the file.
+		BufferedWriter writer = new BufferedWriter(new FileWriter(path));
+		writer.write(cvsData);
+		writer.close();
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest) {
+		if (featureOfInterest != null) {
+			ApogyTopology apogyTopology = getApogyTopology();
+			if (apogyTopology != null && apogyTopology.getRootNode() != null) {
+				List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(
+						ApogyCorePackage.Literals.FEATURE_OF_INTEREST_NODE, apogyTopology.getRootNode());
+
+				FeatureOfInterestNode featureOfInterestNode = null;
+				Iterator<Node> it = nodes.iterator();
+				while (it.hasNext() && featureOfInterestNode == null) {
+					Node n = it.next();
+					if (n instanceof FeatureOfInterestNode) {
+						FeatureOfInterestNode foin = (FeatureOfInterestNode) n;
+						if (foin.getFeatureOfInterest() == featureOfInterest) {
+							featureOfInterestNode = foin;
+						}
+					}
+				}
+
+				return featureOfInterestNode;
+			}
+		}
+
 		return null;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
-				if (resolve) return getApogyTopology();
-				return basicGetApogyTopology();
+		case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
+			if (resolve)
+				return getApogyTopology();
+			return basicGetApogyTopology();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
-				setApogyTopology((ApogyTopology)newValue);
-				return;
+		case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
+			setApogyTopology((ApogyTopology) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
-				setApogyTopology((ApogyTopology)null);
-				return;
+		case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
+			setApogyTopology((ApogyTopology) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
-				return apogyTopology != null;
+		case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
+			return apogyTopology != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	private String convertToCSV(List<FeatureOfInterest> foiList)
-	{
+	private String convertToCSV(List<FeatureOfInterest> foiList) {
 		String csvString = new String();
-		
-		for(FeatureOfInterest foi : foiList)
-		{
-			if(foi.getName() != null)
-			{
-				// Replace comma by space				
+
+		for (FeatureOfInterest foi : foiList) {
+			if (foi.getName() != null) {
+				// Replace comma by space
 				csvString += foi.getName().replaceAll(",", ";") + ",";
-			}
-			else
-			{
+			} else {
 				csvString += ",";
-			}			
-			
-			if(foi.getDescription() != null)
-			{
-				// Replace comma by space		
+			}
+
+			if (foi.getDescription() != null) {
+				// Replace comma by space
 				csvString += foi.getDescription().replaceAll(",", ";") + ",";
-			}
-			else
-			{
+			} else {
 				csvString += ",";
-			}						
-			
+			}
+
 			Tuple3d position = ApogyCommonMathFacade.INSTANCE.extractPosition(foi.getPose());
-			
+
 			csvString += position.getX() + ",";
 			csvString += position.getY() + ",";
 			csvString += position.getZ() + ",";
-			
+
 			Tuple3d orientation = ApogyCommonMathFacade.INSTANCE.extractOrientation(foi.getPose());
 			csvString += orientation.getX() + ",";
 			csvString += orientation.getY() + ",";
 			csvString += orientation.getZ() + "\n";
-			
+
 		}
-		
+
 		return csvString;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments)
-			throws InvocationTargetException {
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyCorePackage.APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__APOGYSYSTEM_MATRIX4X4:
-				return computeAbsolutePoseMatrix((ApogySystem)arguments.get(0), (Matrix4x4)arguments.get(1));
-			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT:
-				return createResultNode((PositionedResult)arguments.get(0));
-			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
-				return createApogySession((Boolean)arguments.get(0), (Boolean)arguments.get(1), (Boolean)arguments.get(2), (Boolean)arguments.get(3));
-			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION:
-				return createApogySession();
-			case ApogyCorePackage.APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING:
-				return getApogySystem((Environment)arguments.get(0), (String)arguments.get(1));
-			case ApogyCorePackage.APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:
-				try {
-					return loadFeatureOfInterestFromFile((String)arguments.get(0));
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
-			case ApogyCorePackage.APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST:
-				try {
-					saveFeatureOfInterestToFile((String)arguments.get(0), (List<FeatureOfInterest>)arguments.get(1));
-					return null;
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
-			case ApogyCorePackage.APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST:
-				return getFeatureOfInterestNode((FeatureOfInterest)arguments.get(0));
+		case ApogyCorePackage.APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__APOGYSYSTEM_MATRIX4X4:
+			return computeAbsolutePoseMatrix((ApogySystem) arguments.get(0), (Matrix4x4) arguments.get(1));
+		case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT:
+			return createResultNode((PositionedResult) arguments.get(0));
+		case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
+			return createApogySession((Boolean) arguments.get(0), (Boolean) arguments.get(1),
+					(Boolean) arguments.get(2), (Boolean) arguments.get(3));
+		case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION:
+			return createApogySession();
+		case ApogyCorePackage.APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING:
+			return getApogySystem((Environment) arguments.get(0), (String) arguments.get(1));
+		case ApogyCorePackage.APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:
+			try {
+				return loadFeatureOfInterestFromFile((String) arguments.get(0));
+			} catch (Throwable throwable) {
+				throw new InvocationTargetException(throwable);
+			}
+		case ApogyCorePackage.APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST:
+			try {
+				saveFeatureOfInterestToFile((String) arguments.get(0), (List<FeatureOfInterest>) arguments.get(1));
+				return null;
+			} catch (Throwable throwable) {
+				throw new InvocationTargetException(throwable);
+			}
+		case ApogyCorePackage.APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST:
+			return getFeatureOfInterestNode((FeatureOfInterest) arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-	private List<TimeSource> getAllAvaibleTimeSource()
-	{
+	private List<TimeSource> getAllAvaibleTimeSource() {
 		List<TimeSource> timeSources = new ArrayList<TimeSource>();
-		
-		List<EClass> timeSourceEClass = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(ApogyCommonEMFPackage.Literals.TIME_SOURCE);
-		
-		for(EClass eClass : timeSourceEClass)
-		{
-			try
-			{
+
+		List<EClass> timeSourceEClass = ApogyCommonEMFFacade.INSTANCE
+				.getAllSubEClasses(ApogyCommonEMFPackage.Literals.TIME_SOURCE);
+
+		for (EClass eClass : timeSourceEClass) {
+			try {
 				EObject eObject = EcoreUtil.create(eClass);
-				if(eObject instanceof TimeSource)
-				{
+				if (eObject instanceof TimeSource) {
 					timeSources.add((TimeSource) eObject);
 				}
-			}
-			catch(Throwable t)
-			{
+			} catch (Throwable t) {
 				t.printStackTrace();
 			}
 		}
-		
+
 		return timeSources;
 	}
-	
-	private CurrentTimeSource getCurrentTimeSource(Collection<TimeSource> timeSources)
-	{
+
+	private CurrentTimeSource getCurrentTimeSource(Collection<TimeSource> timeSources) {
 		CurrentTimeSource currentTimeSource = null;
-		
+
 		Iterator<TimeSource> it = timeSources.iterator();
-		while(it.hasNext() && currentTimeSource == null)
-		{
+		while (it.hasNext() && currentTimeSource == null) {
 			TimeSource timeSource = it.next();
-			if(timeSource instanceof CurrentTimeSource)
-			{
+			if (timeSource instanceof CurrentTimeSource) {
 				currentTimeSource = (CurrentTimeSource) timeSource;
 			}
 		}
-		
+
 		return currentTimeSource;
 	}
-	
-	private File copyURLContent(URL url) throws Exception
-	{		
+
+	private File copyURLContent(URL url) throws Exception {
 		File tempFile = null;
-			
+
 		String fileName = getFileName(url);
 		String fileExtension = getFileExtension(url);
-				
+
 		tempFile = File.createTempFile(fileName, fileExtension);
-							
+
 		url.openConnection();
 		InputStream reader = url.openStream();
-	 			 	    	   		
+
 		FileOutputStream writer = new FileOutputStream(tempFile);
 		byte[] buffer = new byte[153600];
 		int bytesRead = 0;
-		while ((bytesRead = reader.read(buffer)) > 0)
-		{  
-		    writer.write(buffer, 0, bytesRead);
-		    buffer = new byte[153600];
+		while ((bytesRead = reader.read(buffer)) > 0) {
+			writer.write(buffer, 0, bytesRead);
+			buffer = new byte[153600];
 		}
 		writer.close();
-		reader.close();			
-		
-		if(tempFile != null)
-		{
+		reader.close();
+
+		if (tempFile != null) {
 			tempFile.deleteOnExit();
 		}
-		
+
 		return tempFile;
-	}	
-	
-	private String getFileName(URL url)
-	{
+	}
+
+	private String getFileName(URL url) {
 		String fileName = url.getFile();
-		
-		int startIndex = fileName.lastIndexOf(File.separator);				
+
+		int startIndex = fileName.lastIndexOf(File.separator);
 		int endIndex = fileName.lastIndexOf(".");
-		if(startIndex > 0 && endIndex > 0)
-		{
-			fileName = fileName.substring(startIndex+1, endIndex);
+		if (startIndex > 0 && endIndex > 0) {
+			fileName = fileName.substring(startIndex + 1, endIndex);
 		}
-		
+
 		return fileName;
 	}
-	
-	private String getFileExtension(URL url)
-	{
+
+	private String getFileExtension(URL url) {
 		String fileExtension = url.getFile();
-		
+
 		int index = fileExtension.lastIndexOf(".");
-		if(index > 0)
-		{
+		if (index > 0) {
 			fileExtension = fileExtension.substring(index);
 		}
-		
+
 		return fileExtension;
 	}
 } // ApogyCoreFacadeImpl
