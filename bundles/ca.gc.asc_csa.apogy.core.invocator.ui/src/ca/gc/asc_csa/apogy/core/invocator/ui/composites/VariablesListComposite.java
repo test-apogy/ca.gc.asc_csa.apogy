@@ -22,6 +22,10 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
@@ -29,8 +33,10 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.TableViewer;
-import org.eclipse.jface.viewers.TableViewerColumn;
+import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.viewers.TreePath;
+import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -39,13 +45,14 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeColumn;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
@@ -53,39 +60,47 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableWizard;
 
 public class VariablesListComposite extends Composite {
 	private DataBindingContext m_bindingContext;
+	private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
+			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 	private Adapter adapter;
-	private TableViewer tableViewer;
+	
+	private TreeViewer treeViewer;
 	private Button btnDelete;
 //	private WritableValue<VariablesList> variablesListBinder = new WritableValue<>();
+	
 	private VariablesList variablesList;
 	
 	public VariablesListComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new GridLayout(2, false));
 
-		tableViewer = new TableViewer(this, SWT.BORDER | SWT.MULTI | SWT.FULL_SELECTION | SWT.V_SCROLL);
-		Table table = tableViewer.getTable();
-		table.setHeaderVisible(true);
-		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
-		table.setLinesVisible(true);
-		ColumnViewerToolTipSupport.enableFor(tableViewer);
-		tableViewer.addSelectionChangedListener(new ISelectionChangedListener() {
-
+		treeViewer = new TreeViewer(this, SWT.BORDER | SWT.MULTI | SWT.FULL_SELECTION | SWT.V_SCROLL);
+		Tree tree = treeViewer.getTree();
+		tree.setHeaderVisible(true);
+		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
+		tree.setLinesVisible(true);
+		ColumnViewerToolTipSupport.enableFor(treeViewer);
+		treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
-				newSelection(event.getSelection());
+				treeViewer.getStructuredSelection().getPaths();
+				for (TreePath path : treeViewer.getStructuredSelection().getPaths()) {
+					newSelection(new StructuredSelection(path.getFirstSegment()));
+				}
+				// System.out.println(treeViewer.getStructuredSelection().getPaths());
+				// newSelection(event.getSelection());
 			}
 		});
 			
-		TableViewerColumn tableViewerColumnItem_Name = new TableViewerColumn(tableViewer, SWT.NONE);		
-		TableColumn trclmnName = tableViewerColumnItem_Name.getColumn();
-		trclmnName.setText("Variable/Type");
+		TreeViewerColumn treeViewerColumnName = new TreeViewerColumn(treeViewer, SWT.NONE);		
+		TreeColumn trclmnName = treeViewerColumnName.getColumn();
+		trclmnName.setText("Name");
 		trclmnName.setWidth(150);
 		
-		TableViewerColumn tableViewerColumn = new TableViewerColumn(tableViewer, SWT.NONE);
-		TableColumn tblclmnType = tableViewerColumn.getColumn();
-		tblclmnType.setWidth(100);
-		tblclmnType.setText("Interface");
+		TreeViewerColumn treeViewerColumnInterface = new TreeViewerColumn(treeViewer, SWT.NONE);
+		TreeColumn trclmnInterface = treeViewerColumnInterface.getColumn();
+		trclmnInterface.setWidth(100);
+		trclmnInterface.setText("Interface");
 
 		Composite composite = new Composite(this, SWT.NONE);
 		composite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
@@ -130,7 +145,11 @@ public class VariablesListComposite extends Composite {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Variable> getSelectedVariables() {
-		return ((IStructuredSelection) tableViewer.getSelection()).toList();
+		return ((IStructuredSelection) treeViewer.getSelection()).toList();
+	}
+	
+	public Variable getSelectedVariable(){
+		return (Variable) treeViewer.getStructuredSelection().getPaths()[0].getFirstSegment();
 	}
 
 	protected DataBindingContext customInitDataBindings() {
@@ -148,11 +167,73 @@ public class VariablesListComposite extends Composite {
 //		ViewerSupport.bind(tableViewer, variablesListObserveList,
 //				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME), EMFProperties.value(ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION));
 		
-		IObservableValue<?> observeSingleSelectionViewer = ViewerProperties.singleSelection().observe(tableViewer);
+		treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory){
+			@Override
+			public Object[] getElements(Object object) {
+//				Object test = object;
+//				if(object instanceof EObjectReference){
+//					if(((EObjectReference) object).getEObject() instanceof VariablesList){
+//						return ((VariablesList)((EObjectReference) object).getEObject()).getVariables().toArray();
+//					}
+//				}
+				return super.getElements(((EObjectReference) object).getEObject());
+			}
+			@Override
+			public Object[] getChildren(Object object) {
+				if(object instanceof Variable){
+					return ((Variable) object).getVariableType().getMembers().toArray();
+				}
+				return super.getChildren(object);
+			}
+			@Override
+			public Object getParent(Object object) {
+				return super.getParent(object);
+			}
+			@Override
+			public boolean hasChildren(Object object) {
+				if(object instanceof Variable || object instanceof VariablesList){
+					return true;
+				}
+				return false;
+			}
+		});
+		
+		treeViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory){
+			private final int NAME_COLUMN_ID = 0;
+			private final int INTERFACE_COLUMN_ID = 1;
+			
+			@Override
+			public String getColumnText(Object object, int columnIndex) {
+				String str = "<undefined>";
+				
+				switch (columnIndex){
+					case NAME_COLUMN_ID:
+						if(object instanceof Variable){
+							str = ((Variable) object).getName();
+						}else if(object instanceof TypeMember){
+							str = ((TypeMember) object).getName();
+						}
+						break;
+					case INTERFACE_COLUMN_ID:
+						if(object instanceof Variable){
+							str = ((Variable) object).getVariableType().getInterfaceClass().getInstanceTypeName();
+						}else if(object instanceof TypeMember){
+							str = ((TypeMember) object).getMemberType().getInterfaceClass().getInstanceClassName();
+						}
+						break;
+					default:
+						break;
+				}
+				
+				return str;
+				}
+		});
 		
 		/* 
 		 * Delete Button Enabled Binding. 
 		 */
+		IObservableValue<?> observeSingleSelectionViewer = ViewerProperties.singleSelection().observe(treeViewer);
+		
 		IObservableValue<?> enabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
 		bindingContext.bindValue(enabledBtnDeleteObserveWidget, observeSingleSelectionViewer, null,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
@@ -172,14 +253,19 @@ public class VariablesListComposite extends Composite {
 	 */
 	public void setVariablesList(VariablesList variablesList) {
 		if(this.variablesList != null){
+			this.variablesList.eAdapters().remove(getAdapter());
 			this.variablesList.getEnvironment().eAdapters().remove(getAdapter());
 		}
 		this.variablesList = variablesList;
 		
 		EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
 		eObjectReference.setEObject(variablesList);
-		tableViewer.setInput(eObjectReference);
-//		treeViewer.expandAll();
+		treeViewer.setInput(eObjectReference);
+		treeViewer.expandAll();
+		for(TreeColumn column: treeViewer.getTree().getColumns()){
+			column.pack();
+		}
+		variablesList.eAdapters().add(getAdapter());
 		variablesList.getEnvironment().eAdapters().add(getAdapter());
 //		variablesListBinder.setValue(variablesList);
 	}
@@ -194,11 +280,18 @@ public class VariablesListComposite extends Composite {
 						if (msg.getFeatureID(
 								Environment.class) == ApogyCoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST) {
 							if(msg.getNewValue() != null){
-								setVariablesList((VariablesList)msg.getNewValue());
+								setVariablesList(((VariablesList)msg.getNewValue()));
 							}else{
-								tableViewer.setInput(null);
+								treeViewer.setInput(null);
 							}
 							
+						}
+					}
+					if(msg.getNotifier() instanceof VariablesList)
+					{
+						if (msg.getFeatureID(
+								VariablesList.class) == ApogyCoreInvocatorPackage.VARIABLES_LIST__VARIABLES) {
+							setVariablesList(variablesList);
 						}
 					}
 				}
@@ -209,6 +302,9 @@ public class VariablesListComposite extends Composite {
 
 	@Override
 	public void dispose() {		
+		if(variablesList != null){
+			this.variablesList.eAdapters().remove(getAdapter());
+		}
 		m_bindingContext.dispose();
 		super.dispose();
 	}

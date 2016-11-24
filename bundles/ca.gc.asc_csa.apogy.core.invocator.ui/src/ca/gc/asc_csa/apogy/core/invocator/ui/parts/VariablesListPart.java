@@ -34,7 +34,7 @@ public class VariablesListPart extends AbstractSessionBasedPart {
 				if (selection.isEmpty()){
 					setNullSelection();					
 				}else {
-					Variable variable = ((VariablesListComposite) getActualComposite()).getSelectedVariables().get(0);
+					Variable variable = ((VariablesListComposite) getActualComposite()).getSelectedVariable();
 //					List<Variable> variables = ((VariablesListComposite) getActualComposite()).getSelectedVariables();
 					if (variable != null) {
 						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE

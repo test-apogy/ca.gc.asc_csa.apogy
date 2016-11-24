@@ -44,7 +44,9 @@ public class VariableRuntimePart extends AbstractEObjectSelectionPart {
 	
 	@Override
 	protected void setCompositeContents(EObject eObject) {	
-		activeContext = variable.getEnvironment().getActiveContext();
+		activeContext = variable
+				.getEnvironment()
+				.getActiveContext();
 		activeContext.eAdapters().add(getAdapter());
 		
 		variable.getEnvironment().eAdapters().add(getAdapter());
