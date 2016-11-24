@@ -27,7 +27,10 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariablesListComposite;
 
 public class VariableRuntimePart extends AbstractEObjectSelectionPart {
 	private AdapterImpl adapter;
@@ -48,8 +51,18 @@ public class VariableRuntimePart extends AbstractEObjectSelectionPart {
 		new EObjectComposite(parent, SWT.None){
 			@Override
 			protected void newSelection(ISelection selection) {
-				// TODO NEW SELECTIOn
-				super.newSelection(selection);
+				if (selection.isEmpty()){
+					setNullSelection();					
+				}else {
+					EObject eObject = ((EObjectComposite)getActualComposite()).getSelectedEObject();
+					if (eObject != null) {
+						VariableRuntimePartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
+								.createVariableRuntimePartSelection();
+						selectionSent.setEObject(eObject);
+
+						selectionService.setSelection(selectionSent);
+					}
+				}
 			}
 		};
 	}

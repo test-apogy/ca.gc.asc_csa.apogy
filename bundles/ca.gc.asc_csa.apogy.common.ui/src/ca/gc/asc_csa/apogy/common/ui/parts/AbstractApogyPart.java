@@ -33,10 +33,6 @@ abstract public class AbstractApogyPart {
 
 	@Inject
 	protected ESelectionService selectionService;
-	
-	@Inject
-	protected EPartService partService;
-
 
 	private Composite contentComposite;
 

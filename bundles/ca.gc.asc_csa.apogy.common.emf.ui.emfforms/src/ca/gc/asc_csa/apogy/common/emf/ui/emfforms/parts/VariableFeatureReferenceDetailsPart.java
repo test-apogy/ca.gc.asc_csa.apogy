@@ -12,9 +12,9 @@ import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 
-import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection;
 
-public class ProgramDetailsPart extends AbstractFormPropertiesPart {
+public class VariableFeatureReferenceDetailsPart extends AbstractFormPropertiesPart {
 	/**
 	 * Injections for the different selections in the part from the TODO
 	 * {@link ESelectionService}
@@ -22,7 +22,7 @@ public class ProgramDetailsPart extends AbstractFormPropertiesPart {
 	 **/
 	@Inject
 	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramArgumentsPartSelection selection) {
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) VariableRuntimePartSelection selection) {
 		if (selection != null) {
 			setEObject(selection.getEObject());
 		}
@@ -37,7 +37,7 @@ public class ProgramDetailsPart extends AbstractFormPropertiesPart {
 	protected List<String> getSelectionProvidersIds() {
 		List<String> ids = new ArrayList<>();
 
-		ids.add("ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart");
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.VariableRuntimePart");
 
 		return ids;
 	}
@@ -49,8 +49,8 @@ public class ProgramDetailsPart extends AbstractFormPropertiesPart {
 		listeners.add(new ISelectionListener() {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
-				if (selection instanceof ProgramArgumentsPartSelection) {
-					setSelection((ProgramArgumentsPartSelection) selection);
+				if (selection instanceof VariableRuntimePartSelection) {
+					setSelection((VariableRuntimePartSelection) selection);
 				}
 			}
 		});

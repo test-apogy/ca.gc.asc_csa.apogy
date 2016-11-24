@@ -35,7 +35,7 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_uvY6ALArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.14" ref="_gDRD0LArEea_IN33dRJ5eQ"/>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_twV30LArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.20">
-              <children xsi:type="basic:Part" xmi:id="_w51_YLArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_6YbCYLKLEeaMOIeLKtLRnw" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.15" ref="_8p6j4LKLEeaMOIeLKtLRnw"/>
               <children xsi:type="basic:Part" xmi:id="_nn-EALAuEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.documentation" label="Info"/>
             </children>
           </children>
@@ -276,6 +276,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramDetailsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.common.emf.ui.emfforms/ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.ProgramDetailsPart" label="Details"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_PG7rIKzhEeaZaM9KFM-klA" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramArgumentsPart" label="Arguments"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_gDRD0LArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.VariableRuntimePart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.VariableRuntimePart" label="Runtime"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_8p6j4LKLEeaMOIeLKtLRnw" elementId="ca.gc.asc_csa.apogy.rcp.part.VariableFeatureReferenceDetailsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.common.emf.ui.emfforms/ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.VariableFeatureReferenceDetailsPart" label="Detail"/>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.save" label="Save" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/tool16/save.gif" tooltip="" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
