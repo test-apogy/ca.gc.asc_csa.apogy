@@ -15,11 +15,7 @@
 package ca.gc.asc_csa.apogy.core.invocator.ui.provider;
 
 
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
-
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -35,9 +31,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection} object.
@@ -74,29 +68,29 @@ public class VariablesListPartSelectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addVariablesPropertyDescriptor(object);
+			addVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Variables feature.
+	 * This adds a property descriptor for the Variable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVariablesPropertyDescriptor(Object object) {
+	protected void addVariablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_VariablesListPartSelection_variables_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_VariablesListPartSelection_variables_feature", "_UI_VariablesListPartSelection_type"),
-				 ApogyCoreInvocatorUIPackage.Literals.VARIABLES_LIST_PART_SELECTION__VARIABLES,
+				 getString("_UI_VariablesListPartSelection_variable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VariablesListPartSelection_variable_feature", "_UI_VariablesListPartSelection_type"),
+				 ApogyCoreInvocatorUIPackage.Literals.VARIABLES_LIST_PART_SELECTION__VARIABLE,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -120,11 +114,7 @@ public class VariablesListPartSelectionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		List<Variable> labelValue = ((VariablesListPartSelection)object).getVariables();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_VariablesListPartSelection_type") :
-			getString("_UI_VariablesListPartSelection_type") + " " + label;
+		return getString("_UI_VariablesListPartSelection_type");
 	}
 	
 
@@ -138,12 +128,6 @@ public class VariablesListPartSelectionItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(VariablesListPartSelection.class)) {
-			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLES:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

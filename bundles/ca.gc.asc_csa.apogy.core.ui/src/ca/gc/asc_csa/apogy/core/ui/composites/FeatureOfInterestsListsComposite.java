@@ -80,7 +80,7 @@ public class FeatureOfInterestsListsComposite extends Composite
 	}
 	
 	/** 
-	 * This method is called when a new selection is made in the composite. 
+	 * This method is called when a new selection is made in the parentComposite. 
 	 * @param selection Reference to the selection.
 	 */
 	protected void newSelection(TreeSelection selection)

@@ -14,7 +14,6 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.impl;
  */
 
 import org.eclipse.emf.common.command.CompoundCommand;
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
@@ -255,8 +254,8 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVariablesListPartSelection_Variables() {
-		return (EAttribute)variablesListPartSelectionEClass.getEStructuralFeatures().get(0);
+	public EReference getVariablesListPartSelection_Variable() {
+		return (EReference)variablesListPartSelectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -426,7 +425,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		createEReference(apogyAdvancedEditorPartSelectionEClass, APOGY_ADVANCED_EDITOR_PART_SELECTION__EOBJECT);
 
 		variablesListPartSelectionEClass = createEClass(VARIABLES_LIST_PART_SELECTION);
-		createEAttribute(variablesListPartSelectionEClass, VARIABLES_LIST_PART_SELECTION__VARIABLES);
+		createEReference(variablesListPartSelectionEClass, VARIABLES_LIST_PART_SELECTION__VARIABLE);
 
 		newProgramSettingsEClass = createEClass(NEW_PROGRAM_SETTINGS);
 		createEReference(newProgramSettingsEClass, NEW_PROGRAM_SETTINGS__ECLASS);
@@ -514,7 +513,7 @@ public class ApogyCoreInvocatorUIPackageImpl extends EPackageImpl implements Apo
 		initEReference(getApogyAdvancedEditorPartSelection_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, ApogyAdvancedEditorPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variablesListPartSelectionEClass, VariablesListPartSelection.class, "VariablesListPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVariablesListPartSelection_Variables(), this.getListVariables(), "variables", null, 0, 1, VariablesListPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariablesListPartSelection_Variable(), theApogyCoreInvocatorPackage.getVariable(), null, "variable", null, 0, 1, VariablesListPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(newProgramSettingsEClass, NewProgramSettings.class, "NewProgramSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNewProgramSettings_EClass(), theEcorePackage.getEClass(), null, "eClass", null, 0, 1, NewProgramSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

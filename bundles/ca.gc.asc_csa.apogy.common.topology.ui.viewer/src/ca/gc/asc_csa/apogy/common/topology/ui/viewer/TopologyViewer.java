@@ -322,7 +322,7 @@ public class TopologyViewer implements ITopologyViewer
 	}
 		
 	/**
-	 * Initialize the composite associated with this TopologyViewer.
+	 * Initialize the parentComposite associated with this TopologyViewer.
 	 * @param parent
 	 */
 	protected void initializeComposite(Composite parent)
@@ -330,7 +330,7 @@ public class TopologyViewer implements ITopologyViewer
 		Composite top = new Composite(parent, SWT.NONE);
 		top.setLayout(new FillLayout());
 		
-		// Adds the render composite.
+		// Adds the render parentComposite.
 		iRenderEngineDelegate.createRenderComposite(this, top);
 	}		
 	

@@ -41,7 +41,7 @@ public class EClassDocumentationComposite extends Composite {
 	private Section sctnInterface;
 	
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * @param parent
 	 * @param style
 	 */

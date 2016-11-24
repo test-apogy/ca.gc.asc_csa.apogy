@@ -19,12 +19,13 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectEditorComposite;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.AdvancedEditorComposite;
 
-public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
+public abstract class AbstractSessionContainedEObjectEditorPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected void setNullSelection() {
@@ -32,14 +33,14 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
 	}
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new AdvancedEditorComposite(parent, SWT.None) {
+	protected void createContentComposite(Composite parent, int style) {
+		new EObjectEditorComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
-					EObject eObject = ((AdvancedEditorComposite) getContentComposite()).getSelectedEObject();
+					EObject eObject = ((EObjectEditorComposite) getActualComposite()).getSelectedEObject();
 					if (eObject != null) {
 						ApogyAdvancedEditorPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
 								.createApogyAdvancedEditorPartSelection();
@@ -48,13 +49,21 @@ public class ApogyAdvancedEditorPart extends AbstractApogySessionBasedPart {
 						selectionService.setSelection(selectionSent);
 					}
 				}
-
 			}
 		};
 	}
-
+	
 	@Override
-	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		((AdvancedEditorComposite) getContentComposite()).setEObject(invocatorSession);
-	}
+	protected void createNoContentComposite(Composite parent, int style) {
+		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
+			super.createNoContentComposite(parent, style);
+		} else {
+			new NoContentComposite(parent, style) {
+				@Override
+				protected String getMessage() {
+					return "No compatible selection";
+				}
+			};
+		}
+	}	
 }

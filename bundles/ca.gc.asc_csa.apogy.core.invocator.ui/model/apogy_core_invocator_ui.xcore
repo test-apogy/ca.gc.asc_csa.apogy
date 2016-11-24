@@ -126,7 +126,7 @@ class ApogyAdvancedEditorPartSelection
 }
 
 class VariablesListPartSelection{
-	ListVariables variables	
+	refers Variable variable
 }
 
 /* -------------------------------------------------------------------------

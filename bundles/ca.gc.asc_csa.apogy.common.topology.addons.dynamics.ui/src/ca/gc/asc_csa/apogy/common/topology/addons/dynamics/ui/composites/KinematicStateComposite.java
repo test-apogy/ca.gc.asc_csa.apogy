@@ -49,7 +49,7 @@ public class KinematicStateComposite extends Composite {
 	private Tuple3dComposite tuple3dPosition;
 
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style

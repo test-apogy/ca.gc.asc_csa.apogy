@@ -46,7 +46,7 @@ public class NewApogyProjectComposite extends Composite {
 	}
 	
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * @param parent
 	 * @param style
 	 */

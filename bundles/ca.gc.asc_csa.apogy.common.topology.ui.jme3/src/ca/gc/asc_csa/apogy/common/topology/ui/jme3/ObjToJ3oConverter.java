@@ -90,8 +90,5 @@ public class ObjToJ3oConverter extends SimpleApplication implements IApplication
 
 	@Override
 	public void simpleInitApp() {
-		// TODO Auto-generated method stub
-		
 	}
-
 }

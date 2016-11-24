@@ -77,7 +77,7 @@ public class DataProductsListsContainerView extends AbstractView implements IEdi
 	}
 
 	/**
-	 * Sets the Data Products Lists Container of the composite.
+	 * Sets the Data Products Lists Container of the parentComposite.
 	 */
 	private void setCompositeDataProductsListsContainer() {
 		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();

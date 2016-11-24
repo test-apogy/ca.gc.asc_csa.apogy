@@ -688,7 +688,7 @@ public class MapComposite extends Composite
 				// Updates the map background.
 				setBackgroundMapBufferedImage(zoomedImage.asBufferedImage());
 				
-				// Resize composite.
+				// Resize parentComposite.
 				chartComposite.setSize(getChartCompositeSize());
 			}
 			catch(Throwable throwable)

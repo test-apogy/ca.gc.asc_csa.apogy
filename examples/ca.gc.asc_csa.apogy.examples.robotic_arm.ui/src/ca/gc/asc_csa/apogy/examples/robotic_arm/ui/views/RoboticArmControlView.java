@@ -26,7 +26,7 @@ import ca.gc.asc_csa.apogy.examples.robotic_arm.ui.composites.RoboticArmControlC
 public class RoboticArmControlView extends AbstractView
 {
 	/**
-	 * This is the composite which has all of the content
+	 * This is the parentComposite which has all of the content
 	 * for the view.
 	 */
 	private RoboticArmControlComposite roboticArmControlComposite;
@@ -43,8 +43,8 @@ public class RoboticArmControlView extends AbstractView
 		// Call the superclass's version of the method
 		super.createPartControl(parent);
 		
-		// Create the control composite and attach it to
-		// the scrolled composite
+		// Create the control parentComposite and attach it to
+		// the scrolled parentComposite
 		this.roboticArmControlComposite = new RoboticArmControlComposite(parent, SWT.NONE);		
 	}
 	

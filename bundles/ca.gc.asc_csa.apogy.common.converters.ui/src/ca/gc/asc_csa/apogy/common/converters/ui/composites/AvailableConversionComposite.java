@@ -13,7 +13,6 @@ package ca.gc.asc_csa.apogy.common.converters.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.SortedSet;
@@ -34,33 +33,31 @@ import ca.gc.asc_csa.apogy.common.converters.ui.utils.FullyQualifiedTypesNameCom
 import ca.gc.asc_csa.apogy.common.converters.ui.utils.ShortTypesNameComparator;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
-public class AvailableConversionComposite extends Composite 
-{	
+public class AvailableConversionComposite extends Composite {
 	private List inputTypesList = null;
 	private List outputTypesList = null;
-	
+
 	private ClassNameDisplayMode classNameDisplayMode = ClassNameDisplayMode.SIMPLE_CLASS_NAME;
 	private SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> convertersGraph = null;
 	private Map<Class<?>, java.util.List<Class<?>>> conversionsMap = null;
 	private java.util.List<Class<?>> inputTypesClassList = null;
 
-	public AvailableConversionComposite(Composite parent, int style) 
-	{
+	public AvailableConversionComposite(Composite parent, int style) {
 		this(parent, style, null);
 	}
-	
-	public AvailableConversionComposite(Composite parent, int style, SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> convertersGraph) 
-	{
+
+	public AvailableConversionComposite(Composite parent, int style,
+			SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> convertersGraph) {
 		super(parent, style);
-		
-		inputTypesList = createInputTypesList();		
+
+		inputTypesList = createInputTypesList();
 		outputTypesList = new List(this, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		outputTypesList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
 		new Label(this, SWT.NONE);
 		new Label(this, SWT.NONE);
 		setConvertersGraph(convertersGraph);
 	}
-	
+
 	public ClassNameDisplayMode getClassNameDisplayMode() {
 		return classNameDisplayMode;
 	}
@@ -70,119 +67,104 @@ public class AvailableConversionComposite extends Composite
 		populateInputTypesList();
 		updateOutputTypesList(inputTypesClassList.get(inputTypesList.getSelectionIndex()));
 	}
-	
+
 	public SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> getConvertersGraph() {
 		return convertersGraph;
 	}
 
-	public void setConvertersGraph(
-			SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> convertersGraph) 
-	{
-		this.convertersGraph = convertersGraph;		
-	
+	public void setConvertersGraph(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> convertersGraph) {
+		this.convertersGraph = convertersGraph;
+
 		conversionsMap = ApogyCommonConvertersGraphsFacade.INSTANCE.getAvailableDestinationTypeMap(convertersGraph);
-		populateInputTypesList();		
+		populateInputTypesList();
 	}
-	
-	private List createInputTypesList()
-	{
+
+	private List createInputTypesList() {
 		setLayout(new GridLayout(2, false));
-		
+
 		Label lblInputTypes = new Label(this, SWT.NONE);
 		lblInputTypes.setText("Input Types");
-		
+
 		Label lblOutputTypes = new Label(this, SWT.NONE);
 		lblOutputTypes.setText("Output Types");
 		final List inputTypesList = new List(this, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		inputTypesList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		
-		inputTypesList.addSelectionListener(new SelectionListener() 
-		{
-		      public void widgetSelected(SelectionEvent e) 
-		      {
-		        updateOutputTypesList(inputTypesClassList.get(inputTypesList.getSelectionIndex()));
-		      }
+
+		inputTypesList.addSelectionListener(new SelectionListener() {
+			public void widgetSelected(SelectionEvent e) {
+				updateOutputTypesList(inputTypesClassList.get(inputTypesList.getSelectionIndex()));
+			}
 
 			@Override
-			public void widgetDefaultSelected(SelectionEvent e) 
-			{
-				// TODO Auto-generated method stub			
-			}		      
-		    });
-		
+			public void widgetDefaultSelected(SelectionEvent e) {
+			}
+		});
+
 		return inputTypesList;
 	}
-		
-	private void populateInputTypesList()
-	{
+
+	private void populateInputTypesList() {
 		inputTypesList.removeAll();
-		
+
 		SortedSet<Class<?>> sortedSet = new TreeSet<Class<?>>(new ShortTypesNameComparator());
-		
-		switch(classNameDisplayMode)
-		{
-			case SIMPLE_CLASS_NAME:				
-				sortedSet = new TreeSet<Class<?>>(new ShortTypesNameComparator());
+
+		switch (classNameDisplayMode) {
+		case SIMPLE_CLASS_NAME:
+			sortedSet = new TreeSet<Class<?>>(new ShortTypesNameComparator());
 			break;
-			case FULLY_QUALIFIED_CLASS_NAME:				
-				sortedSet = new TreeSet<Class<?>>(new FullyQualifiedTypesNameComparator());
+		case FULLY_QUALIFIED_CLASS_NAME:
+			sortedSet = new TreeSet<Class<?>>(new FullyQualifiedTypesNameComparator());
 			break;
-			default:
-			break;					
+		default:
+			break;
 		}
-		
+
 		sortedSet.addAll(ApogyCommonConvertersGraphsFacade.INSTANCE.getAllInputTypes(convertersGraph));
-		
+
 		inputTypesClassList = new ArrayList<Class<?>>();
 		inputTypesClassList.addAll(sortedSet);
-		
-		for(Class<?> inputType : inputTypesClassList)
-		{		
-			switch(classNameDisplayMode)
-			{
-				case SIMPLE_CLASS_NAME:				
+
+		for (Class<?> inputType : inputTypesClassList) {
+			switch (classNameDisplayMode) {
+			case SIMPLE_CLASS_NAME:
 				inputTypesList.add(inputType.getSimpleName());
 				break;
-				case FULLY_QUALIFIED_CLASS_NAME:				
+			case FULLY_QUALIFIED_CLASS_NAME:
 				inputTypesList.add(inputType.getName());
 				break;
-				default:
-				break;					
+			default:
+				break;
 			}
 		}
-				
-		if(inputTypesClassList.size() > 0)
-		{
+
+		if (inputTypesClassList.size() > 0) {
 			inputTypesList.setFocus();
 			inputTypesList.setSelection(0);
-			inputTypesList.select(0);			
+			inputTypesList.select(0);
 		}
 	}
-	
-	private void updateOutputTypesList(Class<?> inputClass)
-	{
+
+	private void updateOutputTypesList(Class<?> inputClass) {
 		outputTypesList.removeAll();
-		
+
 		SortedSet<Class<?>> sortedSet = new TreeSet<Class<?>>(new ShortTypesNameComparator());
 		sortedSet.addAll(conversionsMap.get(inputClass));
-		
+
 		java.util.List<Class<?>> outputTypes = new ArrayList<Class<?>>();
 		outputTypes.addAll(sortedSet);
-		
-		for(Class<?> outputType : outputTypes)
-		{
-			switch(classNameDisplayMode)
-			{
-				case SIMPLE_CLASS_NAME:				
-					outputTypesList.add(outputType.getSimpleName());
+
+		for (Class<?> outputType : outputTypes) {
+			switch (classNameDisplayMode) {
+			case SIMPLE_CLASS_NAME:
+				outputTypesList.add(outputType.getSimpleName());
 				break;
-				case FULLY_QUALIFIED_CLASS_NAME:				
-					outputTypesList.add(outputType.getName());
+			case FULLY_QUALIFIED_CLASS_NAME:
+				outputTypesList.add(outputType.getName());
 				break;
-				default:
-				break;					
+			default:
+				break;
 			}
-			
+
 		}
 	}
 }

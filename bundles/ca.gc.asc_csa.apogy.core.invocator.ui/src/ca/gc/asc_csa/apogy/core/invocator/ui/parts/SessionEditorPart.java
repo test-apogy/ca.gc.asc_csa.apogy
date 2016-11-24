@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -10,19 +10,16 @@ package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.osgi.framework.BundleActivator;
-import org.osgi.framework.BundleContext;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectEditorComposite;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
-public class Activator implements BundleActivator {
-
+public class SessionEditorPart extends AbstractSessionContainedEObjectEditorPart {
 	@Override
-	public void start(BundleContext context) throws Exception {
-	}
-
-	@Override
-	public void stop(BundleContext context) throws Exception {
+	protected void newInvocatorSession(InvocatorSession invocatorSession) {
+		((EObjectEditorComposite) getActualComposite()).setEObject(invocatorSession);
 	}
 }

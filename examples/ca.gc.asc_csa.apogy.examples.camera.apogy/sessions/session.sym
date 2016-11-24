@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmi:id="_MefnwHgbEeWKP8VylKhlAA">
   <environment xsi:type="core:ApogyEnvironment" xmi:id="_MegO0HgbEeWKP8VylKhlAA" name="PTU Camera Example" description="This is a sample session, illustrating how to use the PTU camera example" activeContext="_MegO13gbEeWKP8VylKhlAA" time="2015-04-13T08:53:27.536-0400" activeWorksite="_MegO3ngbEeWKP8VylKhlAA" activeTimeSource="_Mehc9XgbEeWKP8VylKhlAA">
-    <typesList xmi:id="_MegO0XgbEeWKP8VylKhlAA">
-      <localTypes xmi:id="_MegO0ngbEeWKP8VylKhlAA"/>
-      <registeredTypes xmi:id="_MegO03gbEeWKP8VylKhlAA"/>
-    </typesList>
+    <localTypesList xmi:id="_MegO0ngbEeWKP8VylKhlAA"/>
     <variablesList xmi:id="_MegO1HgbEeWKP8VylKhlAA">
       <variables xmi:id="_MegO1XgbEeWKP8VylKhlAA" name="ptuCamera">
         <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.camera.apogy/model/PTUCameraApogySystem.ss#_1LPEwArOEeW4-_ONWXXiAw"/>

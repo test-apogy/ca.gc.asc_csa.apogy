@@ -18,17 +18,6 @@
          point="org.eclipse.ui.commands">
 
       <command
-            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesResetCommand"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesResetCommand"
-            name="ResetVariableInstancesCommand">
-      </command>
-      
-      <command
-            defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesClearCommand"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesClearCommand"
-            name="ResetVariableInstancesCommand">
-      </command>      
-      <command
             defaultHandler="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ExecuteOperationCallCommand"
             id="ca.gc.asc_csa.apogy.core.invocator.ui.commands.ExecuteOperationCallCommand"
             name="ExecuteOperationCallCommand">
@@ -100,25 +89,6 @@
       <menuContribution
             allPopups="true"
             locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
-
-         <command
-               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesResetCommand"
-               label="Reset Instances"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                  <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
-                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
-                       </instanceof>
-                  </iterate>
-               </with>
-            </visibleWhen>
-         </command>
          
          <command
                commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
@@ -138,44 +108,6 @@
                </with>
             </visibleWhen>
          </command>         
-
-         <command
-               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesClearCommand"
-               label="Clear Instances"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                  <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
-                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
-                       </instanceof>
-                  </iterate>
-               </with>
-            </visibleWhen>
-         </command>
-
-         <command
-               commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
-               label="Apply Data"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                  <iterate
-                     ifEmpty="false"
-                     operator="or">
-                       <instanceof
-                           value="ca.gc.asc_csa.apogy.core.invocator.Environment">
-                       </instanceof>
-                  </iterate>
-               </with>
-            </visibleWhen>
-         </command>
 
          <command
                commandId="ca.gc.asc_csa.apogy.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
@@ -408,14 +340,6 @@
    </extension>      
    <extension
          point="org.eclipse.ui.views">
-      <view
-            category="ca.gc.asc_csa.apogy.core.ui.category"
-            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.OperationCallView"
-            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/OperationCall.gif"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.OperationCallView"
-            name="Operation Call"
-            restorable="true">
-      </view>
             
       <view
             category="ca.gc.asc_csa.apogy.core.ui.category"
@@ -425,14 +349,6 @@
             restorable="true">
       </view>      
       
-      <view
-            category="ca.gc.asc_csa.apogy.core.ui.category"
-            class="ca.gc.asc_csa.apogy.core.invocator.ui.views.InstanceView"
-            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/Instance.gif"
-            id="ca.gc.asc_csa.apogy.core.invocator.ui.views.InstanceView"
-            name="Instance"
-            restorable="true">
-      </view>
       
    </extension>
    

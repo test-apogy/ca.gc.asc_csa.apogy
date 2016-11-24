@@ -54,8 +54,8 @@ public class OperationCallComposite extends ScrolledComposite {
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 	/**
-	 * Create the composite.
-	 * @param parent Reference to the parent composite.
+	 * Create the parentComposite.
+	 * @param parent Reference to the parent parentComposite.
 	 * @param style Composite style.
 	 */
 	public OperationCallComposite(Composite parent, int style) {
@@ -116,7 +116,7 @@ public class OperationCallComposite extends ScrolledComposite {
 	}
 	
 	/** 
-	 * This method is called when a new selection is made in the composite. 
+	 * This method is called when a new selection is made in the parentComposite. 
 	 * @param selection Reference to the selection.
 	 */
 	protected void newSelection(TreeSelection selection){		
@@ -207,7 +207,7 @@ public class OperationCallComposite extends ScrolledComposite {
 	}
 	
 	/**
-	 * Disposes the current composite.
+	 * Disposes the current parentComposite.
 	 */
 	@Override
 	public void dispose() {

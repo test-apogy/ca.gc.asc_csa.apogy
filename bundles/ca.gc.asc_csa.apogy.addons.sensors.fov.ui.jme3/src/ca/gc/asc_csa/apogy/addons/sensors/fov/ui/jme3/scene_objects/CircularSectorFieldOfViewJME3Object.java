@@ -221,8 +221,7 @@ public class CircularSectorFieldOfViewJME3Object extends AbstractFieldOfViewJME3
 
 	@Override
 	public void setShowOutlineOnly(boolean showOutlineOnly) 
-	{
-		// TODO Auto-generated method stub		
+	{		
 	}
 	
 	@Override

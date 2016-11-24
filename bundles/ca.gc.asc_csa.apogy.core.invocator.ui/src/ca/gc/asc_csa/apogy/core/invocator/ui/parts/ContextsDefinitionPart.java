@@ -19,12 +19,11 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsDefinitionComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsListComposite;
 
-public class ContextsDefinitionPart extends AbstractApogySessionBasedPart{
+public class ContextsDefinitionPart extends AbstractSessionBasedPart{
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new ContextsDefinitionComposite(parent, SWT.None) {
+	protected void createContentComposite(Composite parent, int style) {
+		new ContextsDefinitionComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				selectionService.setSelection(selection);
@@ -34,7 +33,7 @@ public class ContextsDefinitionPart extends AbstractApogySessionBasedPart{
 
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		((ContextsListComposite) getContentComposite())
+		((ContextsDefinitionComposite) getActualComposite())
 		.setEnvironment(invocatorSession.getEnvironment());
 	}
 }

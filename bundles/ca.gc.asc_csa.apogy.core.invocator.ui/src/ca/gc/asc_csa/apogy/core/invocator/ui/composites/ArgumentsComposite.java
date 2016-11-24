@@ -66,9 +66,9 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.NoEObjectSelectionComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseEClassWizard;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
@@ -101,10 +101,10 @@ public class ArgumentsComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * 
 	 * @param parent
-	 *            Reference to the parent composite.
+	 *            Reference to the parent parentComposite.
 	 * @param style
 	 *            Composite style.
 	 */
@@ -128,7 +128,7 @@ public class ArgumentsComposite extends Composite {
 			public void selectionChanged(SelectionChangedEvent event) {
 				if (!readOnly && ((StructuredSelection) event.getSelection()).getFirstElement() != null 
 						&& !(((StructuredSelection) event.getSelection()).getFirstElement() instanceof Argument)) {
-					if (compositeEMFForms.getClass() == NoEObjectSelectionComposite.class) {
+					if (compositeEMFForms.getClass() == NoContentComposite.class) {
 						compositeEMFForms.dispose();
 						compositeEMFForms = new Composite(ArgumentsComposite.this, SWT.None);
 						compositeEMFForms.setLayout(new FillLayout());
@@ -142,9 +142,10 @@ public class ArgumentsComposite extends Composite {
 						e.printStackTrace();
 					}
 					ArgumentsComposite.this.layout();
-				} else if (!readOnly && compositeEMFForms.getClass() != NoEObjectSelectionComposite.class) {
+					
+				} else if (!readOnly && !(compositeEMFForms instanceof NoContentComposite)) {
 					compositeEMFForms.dispose();
-					compositeEMFForms = new NoEObjectSelectionComposite(ArgumentsComposite.this, SWT.None);
+					compositeEMFForms = getNoSelectionComposite(ArgumentsComposite.this, SWT.None);
 					ArgumentsComposite.this.layout();
 				}
 				newSelection(event.getSelection());
@@ -296,11 +297,20 @@ public class ArgumentsComposite extends Composite {
 				}
 			});
 
-			compositeEMFForms = new NoEObjectSelectionComposite(ArgumentsComposite.this, SWT.None);
+			compositeEMFForms = getNoSelectionComposite(ArgumentsComposite.this, SWT.None);
 
 			// layout();
 			m_bindingContext = initDataBindingsButtons();
 		}
+	}
+	
+	private NoContentComposite getNoSelectionComposite(Composite parent, int style){
+		return new NoContentComposite(ArgumentsComposite.this, SWT.None){
+			@Override
+			protected String getMessage() {
+				return "No compatible selection";
+			}
+		};
 	}
 	
 	private class ArgumentsEditor extends EditingSupport{
@@ -394,7 +404,7 @@ public class ArgumentsComposite extends Composite {
 		
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.

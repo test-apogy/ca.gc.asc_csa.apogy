@@ -22,6 +22,7 @@ Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
 Export-Package: ca.gc.asc_csa.apogy.common.ui,
  ca.gc.asc_csa.apogy.common.ui.actions,
+ ca.gc.asc_csa.apogy.common.ui.composites,
  ca.gc.asc_csa.apogy.common.ui.expressions,
  ca.gc.asc_csa.apogy.common.ui.impl,
  ca.gc.asc_csa.apogy.common.ui.parts,

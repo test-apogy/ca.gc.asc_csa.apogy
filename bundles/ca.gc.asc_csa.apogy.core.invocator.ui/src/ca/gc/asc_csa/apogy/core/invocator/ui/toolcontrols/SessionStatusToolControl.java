@@ -108,7 +108,7 @@ public class SessionStatusToolControl {
 	}
 
 	/**
-	 * Disposes the actual composite.
+	 * Disposes the actual parentComposite.
 	 */
 	@PreDestroy
 	public void dispose() {

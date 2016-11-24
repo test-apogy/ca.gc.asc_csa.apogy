@@ -179,8 +179,7 @@ public class ConicalFieldOfViewJME3Object extends AbstractFieldOfViewJME3Object<
 
 	@Override
 	public void setShowOutlineOnly(boolean showOutlineOnly) 
-	{
-		// TODO Auto-generated method stub	
+	{	
 	}
 
 	

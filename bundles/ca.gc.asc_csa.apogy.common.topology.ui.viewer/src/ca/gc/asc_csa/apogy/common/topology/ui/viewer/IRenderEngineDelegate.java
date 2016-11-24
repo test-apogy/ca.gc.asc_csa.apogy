@@ -24,10 +24,10 @@ import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
 public interface IRenderEngineDelegate 
 {						
 	/**
-	 * Create the composite into which the rendering will be done and attach it to the specified parent.
+	 * Create the parentComposite into which the rendering will be done and attach it to the specified parent.
 	 * @param topologyViewer The ITopologyViewer associated with this IRenderEngineDelegate.
-	 * @param parent The parent composite.
-	 * @return The composite created.
+	 * @param parent The parent parentComposite.
+	 * @return The parentComposite created.
 	 */
 	public Composite createRenderComposite(ITopologyViewer topologyViewer, Composite parent);
 		

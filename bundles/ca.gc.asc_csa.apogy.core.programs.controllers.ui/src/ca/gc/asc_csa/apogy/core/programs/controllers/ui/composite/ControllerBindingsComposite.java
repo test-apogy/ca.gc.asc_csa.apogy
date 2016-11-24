@@ -73,7 +73,7 @@ public class ControllerBindingsComposite extends Composite {
 	private TableViewer tableViewer;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style

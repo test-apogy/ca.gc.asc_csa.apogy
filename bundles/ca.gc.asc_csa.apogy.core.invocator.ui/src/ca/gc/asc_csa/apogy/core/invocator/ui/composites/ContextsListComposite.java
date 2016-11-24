@@ -14,204 +14,155 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.List;
-
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
+import org.eclipse.core.databinding.property.Properties;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.RemoveCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
-import org.eclipse.jface.databinding.viewers.ViewerSupport;
-import org.eclipse.jface.fieldassist.ControlDecoration;
-import org.eclipse.jface.fieldassist.FieldDecoration;
-import org.eclipse.jface.fieldassist.FieldDecorationRegistry;
-import org.eclipse.jface.viewers.CheckStateChangedEvent;
-import org.eclipse.jface.viewers.CheckboxTableViewer;
-import org.eclipse.jface.viewers.DoubleClickEvent;
-import org.eclipse.jface.viewers.ICheckStateListener;
-import org.eclipse.jface.viewers.ICheckStateProvider;
-import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
+import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.DisposeEvent;
-import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
-import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.swt.widgets.TableColumn;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewContextWizard;
 
-public class ContextsListComposite extends Composite {
-	private final String DECORATION_STR = "No variable available";
-	
+public class ContextsListComposite extends ScrolledComposite {
 	private DataBindingContext m_bindingContext;
 	private WritableValue<Environment> environmentBinder;
-	private ObservableListContentProvider listContentProvider;
 
-	private FormToolkit toolkit = new FormToolkit(Display.getCurrent());
+	private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
+			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+	private Adapter activeContextAdapter;
 
-	private Table tableContexts;
+	private Button btnNew;
+	private Button btnActivate;
+	private Button btnDelete;
 
-	private CheckboxTableViewer contextsListViewer;
-	private Button btnNew; 
-	private Composite composite;
-	
-	private EditingDomain editingDomain;
-	
-	private ISelectionChangedListener contextsListViewerSelectionListener;
-	private ControlDecoration controlDecoration;
+	private TableViewer tableViewer;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
 	 */
 	public ContextsListComposite(Composite parent, int style) {
 		super(parent, style);
+		setLayout(new FillLayout());
+		setExpandHorizontal(true);
+		setExpandVertical(true);
 
-		addDisposeListener(new DisposeListener() {
-			public void widgetDisposed(DisposeEvent e) {
-				toolkit.dispose();
+		Composite composite = new Composite(this, SWT.None);
+		composite.setLayout(new GridLayout(2, false));
+
+		tableViewer = new TableViewer(composite, SWT.BORDER | SWT.FULL_SELECTION);
+		Table table = tableViewer.getTable();
+		table.setHeaderVisible(false);
+		table.setLinesVisible(true);
+		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 4));
+		tableViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection(event.getSelection());
 			}
 		});
 
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		setLayout(new GridLayout(1, true));
+		TableColumn tblclmnName = new TableColumn(table, SWT.NONE);
+		tblclmnName.setText("Name");
 
-		contextsListViewer = CheckboxTableViewer.newCheckList(this, SWT.BORDER | SWT.SINGLE | SWT.FULL_SELECTION);
-		contextsListViewer.getTable().setLinesVisible(true);
-		contextsListViewer.setCheckStateProvider(new ICheckStateProvider() {
-			@Override
-			public boolean isGrayed(Object element) {
-				return false;
-			}
-
-			@Override
-			public boolean isChecked(Object element) {
-				boolean checked = false;
-				if (element instanceof Context && getEnvironment() != null) {
-					checked = getEnvironment().getActiveContext() == element;
-				}
-				return checked;
-			}
-		});
-		contextsListViewer.addDoubleClickListener(new IDoubleClickListener() {
-			
-			@Override
-			public void doubleClick(DoubleClickEvent event) {
-				Object element = ((IStructuredSelection)event.getSelection()).getFirstElement();
-				if (contextsListViewer.getChecked(element)){
-					contextsListViewer.setChecked(element, false);
-					setCheckedElements(element, false);
-				} else {
-					contextsListViewer.setChecked(element, true);
-					setCheckedElements(element, true);
-				}
-			}
-		});
-		contextsListViewer.addCheckStateListener(new ICheckStateListener() {
-			@Override
-			public void checkStateChanged(CheckStateChangedEvent event) {
-				if (event.getChecked()) {
-					setCheckedElements(event.getElement(), true);
-				} else {
-					setCheckedElements(event.getElement(), false);
-				}
-			}
-		}); 
-
-		listContentProvider = new ObservableListContentProvider();
-		contextsListViewer.setContentProvider(listContentProvider);
-
-		tableContexts = contextsListViewer.getTable();
-		tableContexts.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		toolkit.paintBordersFor(tableContexts);
-
-		composite = new Composite(this, SWT.NONE);
-		toolkit.adapt(composite);
-		toolkit.paintBordersFor(composite);
-		RowLayout rl_composite = new RowLayout(SWT.HORIZONTAL);
-		rl_composite.marginLeft = 8;
-		composite.setLayout(rl_composite);
-
-		/**
-		 * Adds a selection listener to the newContext button
-		 */
 		btnNew = new Button(composite, SWT.NONE);
+		btnNew.setText("New");
+		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				
+
 				/**
 				 * Creates and opens the wizard to create a valid context
 				 */
 				NewContextWizard newContextWizard = new NewContextWizard(getEnvironment().getInvocatorSession());
 				WizardDialog dialog = new WizardDialog(getShell(), newContextWizard);
-			
+
 				dialog.open();
 			}
 		});
-		btnNew.setText("New");
-		toolkit.adapt(btnNew, true, true);
 
-		Button btnDelete = new Button(composite, SWT.NONE);
-		btnDelete.setEnabled(false);
-		btnDelete.setToolTipText("Not implemented yet!!!");
-		btnDelete.setEnabled(false);
+		btnDelete = new Button(composite, SWT.NONE);
+		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnDelete.setText("Delete");
-		toolkit.adapt(btnDelete, true, true);
-		
-		m_bindingContext = initDataBindingsCustom();
-	}
-	
-	private void setCheckedElements(Object object, boolean checked){
-		
-		if (checked) {
-			SetCommand command = new SetCommand(editingDomain, getEnvironment(),
-					ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT, object);
-			editingDomain.getCommandStack().execute(command);
-		
-			Object[] checkedElements = contextsListViewer.getCheckedElements();
-			for (int i = 0; i < checkedElements.length; i++) {
-				if (checkedElements[i] == object) {
-					Object[] checkedElement = { object };
-					contextsListViewer.setCheckedElements(checkedElement);
-					break;
-				}
+		btnDelete.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				// FIXME Move to core + UI facade
+				EditingDomain editingDomain = AdapterFactoryEditingDomain
+						.getEditingDomainFor(environmentBinder.getValue());
+
+				RemoveCommand command = new RemoveCommand(editingDomain, environmentBinder.getValue().getContextsList(),
+						ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS, getSelectedContext());
+				editingDomain.getCommandStack().execute(command);
 			}
-		} else {
-			SetCommand command = new SetCommand(editingDomain, getEnvironment(),
-					ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT, null);
-			editingDomain.getCommandStack().execute(command);
-		}	
+		});
+
+		Label label = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
+		label.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+
+		btnActivate = new Button(composite, SWT.NONE);
+		btnActivate.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		btnActivate.setText("Activate");
+		btnActivate.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				// FIXME Move to core + UI facade
+				EditingDomain editingDomain = AdapterFactoryEditingDomain
+						.getEditingDomainFor(environmentBinder.getValue());
+
+				SetCommand command = new SetCommand(editingDomain, environmentBinder.getValue(),
+						ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT, getSelectedContext());
+				editingDomain.getCommandStack().execute(command);
+			}
+		});
+
+		setContent(composite);
+		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+
+		m_bindingContext = initDataBindingsCustom();
 	}
 
 	/**
@@ -220,11 +171,7 @@ public class ContextsListComposite extends Composite {
 	 * @return Reference to the environment.
 	 */
 	private Environment getEnvironment() {
-		if (environmentBinder != null && environmentBinder.getValue() != null) {
-			return environmentBinder.getValue();
-		}
-		return null;
-		// return contextsList == null ? null : contextsList.getEnvironment();
+		return environmentBinder.getValue();
 	}
 
 	/**
@@ -234,12 +181,18 @@ public class ContextsListComposite extends Composite {
 	 *            Reference to the Environment.
 	 */
 	public void setEnvironment(Environment environment) {
-		if (environmentBinder == null) {
-			environmentBinder = new WritableValue<Environment>();
+		if(environmentBinder.getValue() != null){
+			environmentBinder.getValue().eAdapters().remove(getActiveContextAdapter());
 		}
 		environmentBinder.setValue(environment);
-		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(environment.getContextsList());
+		for (TableColumn column : tableViewer.getTable().getColumns()) {
+			column.pack();
+		}
+		environment.eAdapters().add(getActiveContextAdapter());
+	}
 
+	public Context getSelectedContext() {
+		return (Context) tableViewer.getStructuredSelection().getFirstElement();
 	}
 
 	/**
@@ -250,117 +203,123 @@ public class ContextsListComposite extends Composite {
 	 */
 	@SuppressWarnings("unchecked")
 	private DataBindingContext initDataBindingsCustom() {
-		DataBindingContext m_bindingContext = new DataBindingContext();
+		m_bindingContext = new DataBindingContext();
 
 		if (environmentBinder == null) {
 			environmentBinder = new WritableValue<Environment>();
 		}
 
+		
 		/**
-		 * Bind contexts list.
+		 * Context list binding
 		 */
-		IObservableList<?> invocatorFacadeEnvironmentContextsListContextsObserveValue = EMFProperties
+		IObservableList<?> environmentContextListContextsObserveValue = EMFProperties
 				.list(FeaturePath.fromList(
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST,
 						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS))
 				.observeDetail(environmentBinder);
 
-		ViewerSupport.bind(contextsListViewer, invocatorFacadeEnvironmentContextsListContextsObserveValue,
-				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
-		
+		ObservableListContentProvider contentProvider = new ObservableListContentProvider();
+		tableViewer.setContentProvider(contentProvider);
+		tableViewer.setLabelProvider(
+				new ObservableMapLabelProvider(Properties.observeEach(contentProvider.getKnownElements(),
+						EMFProperties.value(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT),
+						EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME))) {
+
+					private AdapterFactoryLabelProvider adapterLabelProvider;
+					private final static int NAME_COLUMN_ID = 0;
+
+					@Override
+					public String getColumnText(Object element, int columnIndex) {
+						String str = "<undefined>";
+
+						if (element instanceof Context) {
+							switch (columnIndex) {
+							case NAME_COLUMN_ID:
+								str = getAdapterLabelProvider().getText(element);
+								break;
+							}
+						}
+						return str;
+					}
+
+					public AdapterFactoryLabelProvider getAdapterLabelProvider() {
+						if (adapterLabelProvider == null) {
+							adapterLabelProvider = new AdapterFactoryLabelProvider(adapterFactory) {
+								@Override
+								public String getText(Object object) {
+									Context context = (Context) object;
+									String str = context.getName();
+
+									if (environmentBinder.getValue() != null
+											&& environmentBinder.getValue().getActiveContext() == context) {
+										str += " <Active>";
+									}
+
+									return str;
+								}
+							};
+						}
+						return adapterLabelProvider;
+					}
+				});
+		tableViewer.setInput(environmentContextListContextsObserveValue);
+
 		/**
-		 * Bind variable list with the newContext button
+		 * Binding to enable the newButton when there is a VariableList
 		 */
 		IObservableValue<?> observeBtnCreateEnabledObserveWidget = WidgetProperties.enabled().observe(btnNew);
 		IObservableValue<?> environmentVariablesListVariablesObserveValue = EMFProperties
-				.value(FeaturePath.fromList(
-						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST,
-						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES))
-				.observeDetail(environmentBinder);
-		m_bindingContext.bindValue(observeBtnCreateEnabledObserveWidget, environmentVariablesListVariablesObserveValue, 
-				null, 
-				new UpdateValueStrategy().setConverter(new Converter(List.class, Boolean.class) {
-					@SuppressWarnings("rawtypes")
+				.value(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST).observeDetail(environmentBinder);
+
+		m_bindingContext.bindValue(observeBtnCreateEnabledObserveWidget, environmentVariablesListVariablesObserveValue,
+				null, new UpdateValueStrategy().setConverter(new Converter(VariablesList.class, Boolean.class) {
 					@Override
-					public Object convert(Object arg0) {
-						/**
-						 * If there is no variable
-						 */
-						if(((List)arg0).isEmpty()){
-							replaceControlDecoration();
-							return false;
-						/**
-						 * Otherwise if there is a variable
-						 */
-						}else{
-							if(controlDecoration != null){
-								controlDecoration.hide();
-						}
-						return true;
-						}
+					public Object convert(Object fromObject) {
+						return fromObject instanceof VariablesList
+								? !((VariablesList) fromObject).getVariables().isEmpty() : false;
 					}
 				}));
 
 		/**
-		 * Selects the first context if there is no active context
+		 * Binding to enable the deleteButton when there is an active session
 		 */
-		if(getEnvironment() != null){
-			Context defaultSelectedContext = getEnvironment().getActiveContext();
-			if (defaultSelectedContext == null
-					&& getEnvironment().getContextsList().getContexts().isEmpty()) {
-				defaultSelectedContext = getEnvironment().getContextsList()
-						.getContexts().get(0);
-			}
-			contextsListViewer.setSelection(new StructuredSelection(
-					defaultSelectedContext), true);
-			
-		}
+		IObservableValue<?> observeSingleSelectionTableViewer = ViewerProperties.singleSelection().observe(tableViewer);
+		IObservableValue<?> observeEnabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
 
-		/**
-		 * Listens to selection changed.
-		 */
-		contextsListViewer.removeSelectionChangedListener(getContextsListViewerSelectionListener());
-		contextsListViewer.addSelectionChangedListener(getContextsListViewerSelectionListener());
+		m_bindingContext.bindValue(observeEnabledBtnDeleteObserveWidget, observeSingleSelectionTableViewer, null,
+				new UpdateValueStrategy().setConverter(new Converter(Object.class, Boolean.class) {
+
+					@Override
+					public Object convert(Object fromObject) {
+						return fromObject != null;
+					}
+
+				}));
 		
 		/**
-		 * Adds a control decoration if there is no variable
+		 * Binding to disable the activateButton when the variables are instantiated
 		 */
-		if(getEnvironment() != null 
-				&& getEnvironment().getVariablesList() != null 
-				&& getEnvironment().getVariablesList().getVariables() != null 
-				&& getEnvironment().getVariablesList().getVariables().size() < 1){
-			replaceControlDecoration();
-		}
+		IObservableValue<?> observeEnabledBtnActivateObserveWidget = WidgetProperties.enabled().observe(btnActivate);
+		IObservableValue<?> invocatorEnvironmentActiveContextVariablesInstantiated = EMFProperties
+				.value(FeaturePath.fromList(
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT,
+						(EStructuralFeature) ApogyCoreInvocatorPackage.Literals.CONTEXT__VARIABLES_INSTANTIATED))
+				.observeDetail(environmentBinder);
+		m_bindingContext.bindValue(observeEnabledBtnActivateObserveWidget,
+				invocatorEnvironmentActiveContextVariablesInstantiated, null,
+				new UpdateValueStrategy().setConverter(new Converter(Boolean.class, Boolean.class) {
+					@Override
+					public Object convert(Object fromObject) {
+						return fromObject == null ? false : !(Boolean) fromObject;
+					}
+				}));
 
 		return m_bindingContext;
 	}
-	
-	private void replaceControlDecoration(){
-		controlDecoration = new ControlDecoration(composite, SWT.LEFT | SWT.TOP);
-		ControlDecoration controlDecoration = new ControlDecoration(btnNew, SWT.LEFT | SWT.TOP);
-		controlDecoration.setDescriptionText(DECORATION_STR);
-		FieldDecoration fieldDecoration = FieldDecorationRegistry.getDefault()
-				.getFieldDecoration(FieldDecorationRegistry.DEC_ERROR);
-		controlDecoration.setImage(fieldDecoration.getImage());
-		controlDecoration.setShowOnlyOnFocus(false);
-		controlDecoration.show();
-	}
-
-	private ISelectionChangedListener getContextsListViewerSelectionListener() {
-		if (contextsListViewerSelectionListener == null) {
-			contextsListViewerSelectionListener = new ISelectionChangedListener() {
-
-				@Override
-				public void selectionChanged(SelectionChangedEvent event) {
-					newSelection(event.getSelection());
-				}
-			};
-		}
-		return contextsListViewerSelectionListener;
-	}
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.
@@ -369,22 +328,29 @@ public class ContextsListComposite extends Composite {
 	}
 
 	/**
-	 * Returns the selected context.
-	 * 
-	 * @return Reference to the context.
+	 * This methods gets an adapter to change the labels if the active context is changed.
 	 */
-	public Context getSelectedContext() {
-		IStructuredSelection selection = (IStructuredSelection) contextsListViewer.getSelection();
-		return (Context) selection.getFirstElement();
+	private Adapter getActiveContextAdapter() {
+		if (activeContextAdapter == null) {
+			activeContextAdapter = new AdapterImpl() {
+				@Override
+				public void notifyChanged(Notification msg) {
+					if (msg.getFeature() == ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT) {
+						tableViewer.refresh();
+					}
+				}
+			};
+		}
+		return activeContextAdapter;
 	}
-	
+
 	@Override
 	public void dispose() {
+		adapterFactory.dispose();
 		super.dispose();
-		toolkit.dispose();
-		if (m_bindingContext != null) {
-			m_bindingContext.dispose();
-			m_bindingContext = null;
-		}	
+		if (environmentBinder != null) {
+			environmentBinder.getValue().eAdapters().remove(getActiveContextAdapter());
+			environmentBinder.dispose();
+		}
 	}
 }

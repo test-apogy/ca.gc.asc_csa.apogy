@@ -57,10 +57,10 @@ public class ConstellationRequestsComposite extends Composite {
 	private ISelectionChangedListener requestsViewerListener;
 
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * 
 	 * @param parent
-	 *            Refers to the parent composite.
+	 *            Refers to the parent parentComposite.
 	 * @param style
 	 *            SWT style.
 	 */
@@ -184,7 +184,7 @@ public class ConstellationRequestsComposite extends Composite {
 
 	/**
 	 * Creates and returns the data bindings context that takes care of the
-	 * composite.
+	 * parentComposite.
 	 * 
 	 * @return Reference to the data bindings context.
 	 */
@@ -211,7 +211,7 @@ public class ConstellationRequestsComposite extends Composite {
 	}
 	
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * @param selection Reference to the selection.
 	 */
 	protected void newSelection(ISelection selection) {

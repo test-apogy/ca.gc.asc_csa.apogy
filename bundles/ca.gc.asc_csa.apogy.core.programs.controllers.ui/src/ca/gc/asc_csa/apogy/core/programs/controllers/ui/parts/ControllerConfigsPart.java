@@ -19,17 +19,17 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractApogySessionBasedPart;
+import ca.gc.asc_csa.apogy.core.invocator.ui.parts.AbstractSessionBasedPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerConfigsComposite;
 
-public class ControllerConfigsPart extends AbstractApogySessionBasedPart {
+public class ControllerConfigsPart extends AbstractSessionBasedPart {
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new ControllerConfigsComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
+	protected void createContentComposite(Composite parent, int style) {
+		new ControllerConfigsComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				System.out.println(
@@ -37,7 +37,7 @@ public class ControllerConfigsPart extends AbstractApogySessionBasedPart {
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
-					ControllersConfiguration controllersConfiguration = ((ControllerConfigsComposite) getContentComposite())
+					ControllersConfiguration controllersConfiguration = ((ControllerConfigsComposite) getActualComposite())
 							.getSelectedControllerConfiguration();
 					if (controllersConfiguration != null) {
 						ControllerConfigsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE
@@ -53,13 +53,12 @@ public class ControllerConfigsPart extends AbstractApogySessionBasedPart {
 
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		((ControllerConfigsComposite) getContentComposite())
+		((ControllerConfigsComposite) getActualComposite())
 				.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
 	}
 
 	@Override
 	protected void setNullSelection() {
-		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ControllerConfigsPart"));
 		selectionService
 				.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerConfigsPartSelection());
 	}

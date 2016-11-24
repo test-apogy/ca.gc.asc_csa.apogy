@@ -41,7 +41,7 @@ public class ControllerBindingDetailsComposite extends Composite {
 	private OperationCallControllerBinding operationCallControllerBinding;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style

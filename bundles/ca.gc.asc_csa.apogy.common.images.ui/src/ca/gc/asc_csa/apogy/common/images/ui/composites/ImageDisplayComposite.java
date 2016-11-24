@@ -52,7 +52,7 @@ public class ImageDisplayComposite extends Composite
 	private DefaultToolTip toolTip = null;
 	
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * @param parent
 	 * @param style
 	 */
@@ -137,7 +137,7 @@ public class ImageDisplayComposite extends Composite
 
 	/**
 	 * Sets the zoom factor of the image displayed.
-	 * @param zoomFactor The zoom factor. A zoom factor of -1 will make the image fit the size of the composite.
+	 * @param zoomFactor The zoom factor. A zoom factor of -1 will make the image fit the size of the parentComposite.
 	 */
 	public void setZoomFactor(double zoomFactor) 
 	{		

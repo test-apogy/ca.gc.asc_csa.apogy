@@ -59,12 +59,12 @@ public class OperationCallArgumentsComposite extends Composite {
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
-	 *            Reference to the parent composite.
+	 *            Reference to the parent parentComposite.
 	 * @param style
-	 *            Style of the composite.
+	 *            Style of the parentComposite.
 	 */
 	public OperationCallArgumentsComposite(Composite parent, int style) {
 		super(parent, SWT.NONE);
@@ -113,7 +113,7 @@ public class OperationCallArgumentsComposite extends Composite {
 	}
 
 	/**
-	 * Disposes the composite.
+	 * Disposes the parentComposite.
 	 */
 	@Override
 	public void dispose() {
@@ -147,7 +147,7 @@ public class OperationCallArgumentsComposite extends Composite {
 	}
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.
@@ -157,7 +157,7 @@ public class OperationCallArgumentsComposite extends Composite {
 
 	/**
 	 * Returns the reference to the {@link OperationCall} bound with the
-	 * composite.
+	 * parentComposite.
 	 * 
 	 * @return Reference to the {@link OperationCall}.
 	 */

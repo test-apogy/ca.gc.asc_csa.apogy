@@ -295,25 +295,18 @@ public abstract class DefaultJME3SceneObject<T extends Node> implements JME3Scen
 	
 	@Override
 	public RGB getColor() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void setColor(RGB rgb) {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void objectSelected() {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void setTransparency(float transparency) {
-		// TODO Auto-generated method stub
-
 	}
 }

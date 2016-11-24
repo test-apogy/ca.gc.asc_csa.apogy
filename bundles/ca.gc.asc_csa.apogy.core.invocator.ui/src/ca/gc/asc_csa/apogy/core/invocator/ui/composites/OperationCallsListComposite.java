@@ -162,7 +162,7 @@ public class OperationCallsListComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.
@@ -180,7 +180,7 @@ public class OperationCallsListComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Sets the {@link OperationCallsList} in the composite
+	 * Sets the {@link OperationCallsList} in the parentComposite
 	 * @param operationCallsList
 	 */
 	public void setOperationCallsList(OperationCallsList operationCallsList) {

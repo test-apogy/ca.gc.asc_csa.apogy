@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.common.ui.composites;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -20,15 +20,16 @@ import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 
-public class NoActiveSessionComposite extends Composite {
+public class NoContentComposite extends Composite {
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * @param parent
 	 * @param style
 	 */
-	public NoActiveSessionComposite(Composite parent, int style) {
+	public NoContentComposite(Composite parent, int style) {
 		super(parent, style);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
@@ -39,6 +40,10 @@ public class NoActiveSessionComposite extends Composite {
 		
 		Label lblNoActiveSession = new Label(this, SWT.NONE);
 		lblNoActiveSession.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, true, 1, 1));
-		lblNoActiveSession.setText("No active session/selection");
+		lblNoActiveSession.setText(getMessage());
+	}
+
+	protected String getMessage() {
+		return "No displayable content";
 	}
 }

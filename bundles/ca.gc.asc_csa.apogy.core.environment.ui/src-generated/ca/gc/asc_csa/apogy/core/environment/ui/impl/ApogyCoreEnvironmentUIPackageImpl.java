@@ -1681,7 +1681,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		initEAttribute(getMapTool_Active(), theEcorePackage.getEBoolean(), "active", "true", 0, 1, MapTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getMapTool__Initialize__ChartComposite_JFreeChart(), null, "initialize", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getChartComposite(), "composite", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getChartComposite(), "parentComposite", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getJFreeChart(), "chart", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getMapTool__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -2047,7 +2047,7 @@ public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements A
 		  (getMapTool__Initialize__ChartComposite_JFreeChart(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Method that is called to give access to the underlying ChartComposite and JFreeChart used to display the map.\n@param composite The ChartComposite used to display the map.\n@param chart The JFreeChart used to display the map."
+			 "documentation", "Method that is called to give access to the underlying ChartComposite and JFreeChart used to display the map.\n@param parentComposite The ChartComposite used to display the map.\n@param chart The JFreeChart used to display the map."
 		   });	
 		addAnnotation
 		  (getMapTool__Dispose(), 

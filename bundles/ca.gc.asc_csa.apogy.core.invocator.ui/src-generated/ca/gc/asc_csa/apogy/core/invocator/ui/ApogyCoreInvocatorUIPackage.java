@@ -13,7 +13,6 @@ package ca.gc.asc_csa.apogy.core.invocator.ui;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
@@ -344,13 +343,13 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	int VARIABLES_LIST_PART_SELECTION = 5;
 
 	/**
-	 * The feature id for the '<em><b>Variables</b></em>' attribute.
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLES_LIST_PART_SELECTION__VARIABLES = 0;
+	int VARIABLES_LIST_PART_SELECTION__VARIABLE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Variables List Part Selection</em>' class.
@@ -522,15 +521,15 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	EClass getVariablesListPartSelection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariables <em>Variables</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Variables</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariables()
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariable()
 	 * @see #getVariablesListPartSelection()
 	 * @generated
 	 */
-	EAttribute getVariablesListPartSelection_Variables();
+	EReference getVariablesListPartSelection_Variable();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings <em>New Program Settings</em>}'.
@@ -763,12 +762,12 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 */
 		EClass VARIABLES_LIST_PART_SELECTION = eINSTANCE.getVariablesListPartSelection();
 		/**
-		 * The meta object literal for the '<em><b>Variables</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VARIABLES_LIST_PART_SELECTION__VARIABLES = eINSTANCE.getVariablesListPartSelection_Variables();
+		EReference VARIABLES_LIST_PART_SELECTION__VARIABLE = eINSTANCE.getVariablesListPartSelection_Variable();
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.NewProgramSettingsImpl <em>New Program Settings</em>}' class.
 		 * <!-- begin-user-doc -->

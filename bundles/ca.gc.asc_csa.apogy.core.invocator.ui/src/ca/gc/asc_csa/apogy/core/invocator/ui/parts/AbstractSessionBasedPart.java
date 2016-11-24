@@ -14,8 +14,6 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import javax.annotation.PreDestroy;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -23,25 +21,28 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.NoActiveSessionComposite;
 
-abstract public class AbstractApogySessionBasedPart extends AbstractApogyPart{
+abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 	
 	private Adapter adapter;
 
-	@Override
-	protected Composite getNoContentComposite() {
-		return new NoActiveSessionComposite(composite, SWT.None);
-	}
 	
 	@Override
-	protected Class<? extends Composite> getNoContentCompositeClass(){
-		return NoActiveSessionComposite.class;
+	protected void createNoContentComposite(Composite parent, int style) {
+		new NoContentComposite(parent, SWT.None){
+			@Override
+			protected String getMessage() {
+				return "No active session";
+			}
+			
+			
+		};	
 	}
-	
+			
 	@Override
 	protected EObject getInitializeObject() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getApogyCoreInvocatorFacadeAdapter());
@@ -51,11 +52,11 @@ abstract public class AbstractApogySessionBasedPart extends AbstractApogyPart{
 	abstract protected void newInvocatorSession(InvocatorSession invocatorSession);
 
 	@Override
-	protected void setContentCompositeSelection(EObject eObject) {
+	protected void setCompositeContent(EObject eObject) {
 		newInvocatorSession((InvocatorSession) eObject); 
 	}
 	/**
-	 * Gets an adapter that sets the part's composite to a
+	 * Gets an adapter that sets the part's parentComposite to a
 	 * {@link NoActiveSessionComposite} if there is no active session.
 	 * 
 	 * @return the {@link Adapter}
@@ -72,11 +73,7 @@ abstract public class AbstractApogySessionBasedPart extends AbstractApogyPart{
 		return adapter;
 	}
 
-	@PreDestroy
-	protected void dispose() {
+	public void dispose() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
-		if (composite != null) {
-			composite.dispose();
-		}
 	}
 }

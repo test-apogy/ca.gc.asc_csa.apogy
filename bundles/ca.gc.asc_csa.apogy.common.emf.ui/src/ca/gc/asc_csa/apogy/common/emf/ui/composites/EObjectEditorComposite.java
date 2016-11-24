@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -39,10 +39,9 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
 
-public class AdvancedEditorComposite extends Composite {
+public class EObjectEditorComposite extends Composite {
 
 	private ISelectionChangedListener selectionChangedListener;
 	private EObjectComposite eObjectComposite;
@@ -50,12 +49,12 @@ public class AdvancedEditorComposite extends Composite {
 	private Button btnNew;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
 	 */
-	public AdvancedEditorComposite(Composite parent, int style) {
+	public EObjectEditorComposite(Composite parent, int style) {
 		super(parent, style);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
@@ -67,7 +66,7 @@ public class AdvancedEditorComposite extends Composite {
 		eObjectComposite = new EObjectComposite(this, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
-				AdvancedEditorComposite.this.newSelection(selection);
+				EObjectEditorComposite.this.newSelection(selection);
 				checkEnableNewButton(getSelectedEObject());
 			}
 		};
@@ -160,7 +159,7 @@ public class AdvancedEditorComposite extends Composite {
 	}
 
 	/**
-	 * Sets the root object for the composite
+	 * Sets the root object for the parentComposite
 	 * 
 	 * @param eObject
 	 *            The root eObject

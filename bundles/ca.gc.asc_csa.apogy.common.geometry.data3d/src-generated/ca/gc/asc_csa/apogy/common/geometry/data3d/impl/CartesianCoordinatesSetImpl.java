@@ -19,15 +19,15 @@ import java.util.Map;
 
 import javax.vecmath.Point3d;
 
-import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
+
 import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 
 /**
@@ -53,17 +53,7 @@ public class CartesianCoordinatesSetImpl extends AbstractCartesianCoordinatesSet
 		super();
 		
 		// Finally, we add ourselves as a listener of this point cloud.
-		this.eAdapters().add(new Adapter() {
-
-			public Notifier getTarget() {
-				// TODO Auto-generated method stub
-				return null;
-			}
-
-			public boolean isAdapterForType(Object type) {
-				// TODO Auto-generated method stub
-				return false;
-			}
+		this.eAdapters().add(new AdapterImpl() {
 
 			@SuppressWarnings("unchecked")
 			public void notifyChanged(Notification notification) {
@@ -87,11 +77,7 @@ public class CartesianCoordinatesSetImpl extends AbstractCartesianCoordinatesSet
 					}
 				}
 			}
-
-			public void setTarget(Notifier newTarget) {
-			}
 		});
-
 	}
 	
 	

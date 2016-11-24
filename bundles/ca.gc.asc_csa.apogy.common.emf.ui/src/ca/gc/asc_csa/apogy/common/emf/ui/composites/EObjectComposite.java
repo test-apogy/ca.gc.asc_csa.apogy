@@ -56,7 +56,7 @@ public class EObjectComposite extends ScrolledComposite {
 	private boolean filterArchived = false;
 
 	/**
-	 * Creates the composite.
+	 * Creates the parentComposite.
 	 * 
 	 * @param parent
 	 * @param style
@@ -94,7 +94,7 @@ public class EObjectComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Binds the {@link EObject} with the composite.
+	 * Binds the {@link EObject} with the parentComposite.
 	 * 
 	 * @param eObject
 	 *            Reference to the list of eObject.
@@ -170,7 +170,7 @@ public class EObjectComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * This method is called when a new selection is made in the composite.
+	 * This method is called when a new selection is made in the parentComposite.
 	 * 
 	 * @param selection
 	 *            Reference to the selection.

@@ -26,7 +26,7 @@ import ca.gc.asc_csa.apogy.core.environment.ui.composites.CoordinateConversionCo
 
 public class CoordinateConversionView extends AbstractView
 {
-	// The relevant composite which has the content for the view
+	// The relevant parentComposite which has the content for the view
 	private CoordinateConversionComposite coordinateConversionComposite;
 	
 	// Whether or not the conversion view should allow selection of objects
@@ -37,7 +37,7 @@ public class CoordinateConversionView extends AbstractView
 		// If the selection enabled value is currently true
 		if ((selectionEnabled == true) && (allowSelections == false))
 		{
-			// Remove the binding from the composite to its current object (if one exists)
+			// Remove the binding from the parentComposite to its current object (if one exists)
 			coordinateConversionComposite.setBoundObject(null);
 		}
 		
@@ -57,7 +57,7 @@ public class CoordinateConversionView extends AbstractView
 		// Call the superclass' version of the method
 		super.createPartControl(parent);
 		
-		// Create the conversion composite
+		// Create the conversion parentComposite
 		coordinateConversionComposite = new CoordinateConversionComposite(parent, SWT.NONE);
 	}
 	
@@ -85,7 +85,7 @@ public class CoordinateConversionView extends AbstractView
 				if ((obj instanceof Positioned) ||
 					(obj instanceof GeographicCoordinates))
 				{
-					// Bind the first one found to the composite
+					// Bind the first one found to the parentComposite
 					coordinateConversionComposite.setBoundObject(obj);
 				
 					// Break out

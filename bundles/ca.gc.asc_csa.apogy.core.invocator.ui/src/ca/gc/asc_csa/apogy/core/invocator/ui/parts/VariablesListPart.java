@@ -14,8 +14,6 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.List;
-
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
@@ -26,23 +24,31 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariablesListComposite;
 
-public class VariablesListPart extends AbstractApogySessionBasedPart {
+public class VariablesListPart extends AbstractSessionBasedPart {
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new VariablesListComposite(parent, SWT.None) {
+	protected void createContentComposite(Composite parent, int style) {
+		new VariablesListComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()){
 					setNullSelection();					
 				}else {
-					List<Variable> variables = ((VariablesListComposite) getContentComposite()).getSelectedVariables();
-					if (!variables.isEmpty()){
-						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createVariablesListPartSelection();
-						selectionSent.setVariables(variables);		
-						
-						selectionService.setSelection(selectionSent);						
+					Variable variable = ((VariablesListComposite) getActualComposite()).getSelectedVariables().get(0);
+//					List<Variable> variables = ((VariablesListComposite) getActualComposite()).getSelectedVariables();
+					if (variable != null) {
+						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
+								.createVariablesListPartSelection();
+						selectionSent.setVariable(variable);
+
+						selectionService.setSelection(selectionSent);
 					}
+//					if (!variables.isEmpty()){
+//						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createVariablesListPartSelection();
+//						selectionSent.setVariable(variables);		
+//						
+//						selectionService.setSelection(selectionSent);						
+//					}
 				}
 			}
 		};
@@ -50,7 +56,7 @@ public class VariablesListPart extends AbstractApogySessionBasedPart {
 	
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {		
-		((VariablesListComposite) getContentComposite())
+		((VariablesListComposite) getActualComposite())
 		.setVariablesList(invocatorSession.getEnvironment().getVariablesList());
 	}
 

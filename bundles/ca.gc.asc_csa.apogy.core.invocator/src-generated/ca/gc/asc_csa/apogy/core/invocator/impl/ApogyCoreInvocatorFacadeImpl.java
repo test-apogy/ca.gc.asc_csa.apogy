@@ -1086,35 +1086,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public void initVariableInstances(Environment environment) {
-		Iterator<Variable> variables = environment.getVariablesList().getVariables().iterator();
-
-		while (variables.hasNext()) {
-			Variable variable = variables.next();
-			InvocatorDelegate invocatorDelegate = InvocatorDelegateRegistry.getInstance()
-					.getInvocatorDelegate(variable.getVariableType().getClass());
-
-			invocatorDelegate.newInstance(environment, variable);
-
-			/* Notifies the listener a new instance has been instantiated. */
-			notifyVariableListeners(variable, VariableListenerEventType.NEW);
-		}
-
-		/** Adjust the creation and disposal dates. */
-		Date date = new Date(System.currentTimeMillis());
-		environment.getActiveContext().setInstancesCreationDate(date);
-		setInitVariableInstancesDate(date);
-		environment.getActiveContext().setInstancesDisposalDate(null);
-
-		/* Variables are instantiated. */
-		environment.getActiveContext().setVariablesInstantiated(true);
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
@@ -1122,35 +1093,31 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	public void initVariableInstances() {
 		disposeVariableInstances();		
 		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
-			ApogyCoreInvocatorFacade.INSTANCE.initVariableInstances(
-					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+			Environment environment = 
+					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment();
+			Iterator<Variable> variables = environment.getVariablesList().getVariables().iterator();
+
+			while (variables.hasNext()) {
+				Variable variable = variables.next();
+				InvocatorDelegate invocatorDelegate = InvocatorDelegateRegistry.getInstance()
+						.getInvocatorDelegate(variable.getVariableType().getClass());
+
+				invocatorDelegate.newInstance(environment, variable);
+
+				/* Notifies the listener a new instance has been instantiated. */
+				notifyVariableListeners(variable, VariableListenerEventType.NEW);
+			}
+
+			/** Adjust the creation and disposal dates. */
+			Date date = new Date(System.currentTimeMillis());
+			environment.getActiveContext().setInstancesCreationDate(date);
+			setInitVariableInstancesDate(date);
+			environment.getActiveContext().setInstancesDisposalDate(null);
+
+			/* Variables are instantiated. */
+			environment.getActiveContext().setVariablesInstantiated(true);
+			
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public void disposeVariableInstances(Environment environment) {
-
-		Iterator<Variable> variables = environment.getVariablesList().getVariables().iterator();
-
-		while (variables.hasNext()) {
-			Variable variable = variables.next();
-			InvocatorDelegate invocatorDelegate = InvocatorDelegateRegistry.getInstance()
-					.getInvocatorDelegate(variable.getVariableType().getClass());
-
-			invocatorDelegate.dispose(environment, variable);
-
-			/* Notifies the listener a new instance has been cleared. */
-			notifyVariableListeners(variable, VariableListenerEventType.CLEAR);
-		}
-
-		environment.getActiveContext().setInstancesDisposalDate(new Date());
-
-		/* Variables are disposed. */
-		environment.getActiveContext().setVariablesInstantiated(false);
 	}
 
 	/**
@@ -1160,8 +1127,26 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 */
 	public void disposeVariableInstances() {
 		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null){
-			ApogyCoreInvocatorFacade.INSTANCE.disposeVariableInstances(
-					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+			Environment environment = 
+					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment();
+			
+			Iterator<Variable> variables = environment.getVariablesList().getVariables().iterator();
+
+			while (variables.hasNext()) {
+				Variable variable = variables.next();
+				InvocatorDelegate invocatorDelegate = InvocatorDelegateRegistry.getInstance()
+						.getInvocatorDelegate(variable.getVariableType().getClass());
+
+				invocatorDelegate.dispose(environment, variable);
+
+				/* Notifies the listener a new instance has been cleared. */
+				notifyVariableListeners(variable, VariableListenerEventType.CLEAR);
+			}
+
+			environment.getActiveContext().setInstancesDisposalDate(new Date());
+
+			/* Variables are disposed. */
+			environment.getActiveContext().setVariablesInstantiated(false);
 		}
 	}
 
@@ -1642,14 +1627,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return getFullyQualifiedName((AbstractFeatureNode)arguments.get(0));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE:
 				return createTypeMemberImplementations((Type)arguments.get(0));
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT:
-				initVariableInstances((Environment)arguments.get(0));
-				return null;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES:
 				initVariableInstances();
-				return null;
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT:
-				disposeVariableInstances((Environment)arguments.get(0));
 				return null;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES:
 				disposeVariableInstances();
@@ -1667,15 +1646,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return null;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE:
 				collectInitializationData((Variable)arguments.get(0));
-				return null;
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER:
-				addVariableListener((IVariableListener)arguments.get(0));
-				return null;
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER:
-				removeVariableListener((IVariableListener)arguments.get(0));
-				return null;
-			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE:
-				notifyVariableListeners((Variable)arguments.get(0), (VariableListenerEventType)arguments.get(1));
 				return null;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___LOAD_INVOCATOR_SESSION__STRING:
 				try {

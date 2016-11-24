@@ -17,14 +17,16 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
+import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIFactory;
@@ -32,17 +34,17 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSe
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingsComposite;
 
-public class ControllerBindingsPart extends AbstractSelectionBasedPart{
+public class ControllerBindingsPart extends AbstractEObjectSelectionPart{
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new ControllerBindingsComposite(parent, SWT.None){
+	protected void createContentComposite(Composite parent, int style) {
+		new ControllerBindingsComposite(parent, SWT.None){
 			@Override
 			protected void newSelection(ISelection selection) 
 			{
 				if (selection.isEmpty()){
 					setNullSelection();					
 				}else {
-					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getContentComposite()).getOperationCallControllerBinding();
+					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getActualComposite()).getOperationCallControllerBinding();
 					if (operationCallControllerBinding  != null){
 						ControllerBindingsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection();
 						selectionSent.setOperationCallControllerBinding(operationCallControllerBinding);
@@ -52,16 +54,24 @@ public class ControllerBindingsPart extends AbstractSelectionBasedPart{
 				}
 			}
 		};
+		
+		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ControllerConfigsPart", new ISelectionListener() {
+			@Override
+			public void selectionChanged(MPart part, Object selection) {
+				if(selection instanceof ControllerConfigsPartSelection){
+					setSelection((ControllerConfigsPartSelection)selection);
+				}
+			}
+		});		
 	}
 
 	@Override
-	protected void setSelectionInContentComposite(EObject eObject) {
-		((ControllerBindingsComposite) getContentComposite()).setControllersConfiguration((ControllersConfiguration)eObject);
+	protected void setCompositeContents(EObject eObject) {
+		((ControllerBindingsComposite) getActualComposite()).setControllersConfiguration((ControllersConfiguration)eObject);
 	}
 
 	@Override
 	protected void setNullSelection() {
-		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ControllerBindingsPart"));
 		selectionService.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection());
 	}
 	

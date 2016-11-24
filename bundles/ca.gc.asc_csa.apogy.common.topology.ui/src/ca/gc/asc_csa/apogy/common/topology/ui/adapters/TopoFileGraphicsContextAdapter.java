@@ -33,7 +33,6 @@ public class TopoFileGraphicsContextAdapter implements GraphicsContextAdapter {
 	private static final String SUPPORTED_EXTENSION = ".topo";
 
 	public TopoFileGraphicsContextAdapter() {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

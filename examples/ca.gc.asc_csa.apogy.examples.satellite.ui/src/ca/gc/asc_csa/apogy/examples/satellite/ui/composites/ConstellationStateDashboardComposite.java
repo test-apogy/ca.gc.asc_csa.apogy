@@ -61,10 +61,10 @@ public class ConstellationStateDashboardComposite extends Composite {
 	private Label lblLoadingStatus;
 
 	/**
-	 * Create the composite.
+	 * Create the parentComposite.
 	 * 
 	 * @param parent
-	 *            Refers to the parent composite.
+	 *            Refers to the parent parentComposite.
 	 * @param style
 	 *            SWT style.
 	 */
@@ -285,7 +285,7 @@ public class ConstellationStateDashboardComposite extends Composite {
 
 	/**
 	 * Creates and returns the data bindings context that takes care of the
-	 * composite.
+	 * parentComposite.
 	 * 
 	 * @return Reference to the data bindings context.
 	 */

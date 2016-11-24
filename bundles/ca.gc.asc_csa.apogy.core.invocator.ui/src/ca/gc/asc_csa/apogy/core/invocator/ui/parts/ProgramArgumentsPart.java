@@ -18,21 +18,23 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
+import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractSelectionBasedPart;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallDetailsComposite;
 
-public class ProgramArgumentsPart extends AbstractSelectionBasedPart {
+public class ProgramArgumentsPart extends AbstractEObjectSelectionPart {
 
 	/**
 	 * Injects a {@link ProgramPartSelection} in the part from the
@@ -49,19 +51,19 @@ public class ProgramArgumentsPart extends AbstractSelectionBasedPart {
 	}
 
 	@Override
-	protected void setSelectionInContentComposite(EObject eObject) {
-		((OperationCallDetailsComposite) getContentComposite()).setOperationCall((OperationCall) eObject);
+	protected void setCompositeContents(EObject eObject) {
+		((OperationCallDetailsComposite) getActualComposite()).setOperationCall((OperationCall) eObject);
 	}
 
 	@Override
-	protected Composite createContentComposite(Composite parent) {
-		return new OperationCallDetailsComposite(composite, SWT.None) {
+	protected void createContentComposite(Composite parent, int style) {
+		new OperationCallDetailsComposite(parent, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
-					EObject eObject = ((OperationCallDetailsComposite) getContentComposite()).getSelectedEObject();
+					EObject eObject = ((OperationCallDetailsComposite) getActualComposite()).getSelectedEObject();
 					if (eObject != null) {
 						ProgramArgumentsPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
 								.createProgramArgumentsPartSelection();
@@ -71,11 +73,19 @@ public class ProgramArgumentsPart extends AbstractSelectionBasedPart {
 				}
 			}
 		};
+		
+		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ProgramPart", new ISelectionListener() {
+			@Override
+			public void selectionChanged(MPart part, Object selection) {
+				if(selection instanceof ProgramPartSelection){
+					setSelection((ProgramPartSelection)selection);
+				}
+			}
+		});
 	}
 
 	@Override
 	protected void setNullSelection() {
-		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart"));
 		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramArgumentsPartSelection());
 	}
 }
