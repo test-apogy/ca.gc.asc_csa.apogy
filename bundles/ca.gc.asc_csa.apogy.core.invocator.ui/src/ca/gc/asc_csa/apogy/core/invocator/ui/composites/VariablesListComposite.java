@@ -22,7 +22,6 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
@@ -32,9 +31,8 @@ import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.wizard.WizardDialog;
@@ -50,10 +48,13 @@ import org.eclipse.swt.widgets.TreeColumn;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableWizard;
@@ -83,12 +84,7 @@ public class VariablesListComposite extends Composite {
 		treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
-				treeViewer.getStructuredSelection().getPaths();
-				for (TreePath path : treeViewer.getStructuredSelection().getPaths()) {
-					newSelection(new StructuredSelection(path.getFirstSegment()));
-				}
-				// System.out.println(treeViewer.getStructuredSelection().getPaths());
-				// newSelection(event.getSelection());
+					newSelection(event.getSelection());
 			}
 		});
 			
@@ -146,6 +142,24 @@ public class VariablesListComposite extends Composite {
 	@SuppressWarnings("unchecked")
 	public List<Variable> getSelectedVariables() {
 		return ((IStructuredSelection) treeViewer.getSelection()).toList();
+	}
+	
+	public VariableFeatureReference getSelectedVariableFeatureReference(){
+		VariableFeatureReference variableFeatureReference = ApogyCoreInvocatorFactory.eINSTANCE.createVariableFeatureReference();
+		ITreeSelection selection = treeViewer.getStructuredSelection();
+
+		if (selection.getFirstElement() instanceof Variable) {
+			variableFeatureReference.setVariable((Variable) selection.getFirstElement());
+		} else if (selection.getFirstElement() instanceof TypeMember) {
+			variableFeatureReference.setVariable((Variable) selection.getPaths()[0].getFirstSegment());
+
+			TypeMemberReferenceListElement typeMemberReferenceListElement = ApogyCoreInvocatorFactory.eINSTANCE
+					.createTypeMemberReferenceListElement();
+			typeMemberReferenceListElement.setTypeMember((TypeMember) selection.getPaths()[0].getLastSegment());
+			variableFeatureReference.setTypeMemberReferenceListElement(typeMemberReferenceListElement);
+		}
+		
+		return variableFeatureReference;
 	}
 	
 	public Variable getSelectedVariable(){

@@ -14,7 +14,7 @@
  */
 package ca.gc.asc_csa.apogy.core.invocator.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
 import org.eclipse.emf.common.notify.Notification;
@@ -33,21 +33,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariablesListPartSelectionImpl#getVariable <em>Variable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariablesListPartSelectionImpl#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VariablesListPartSelectionImpl extends MinimalEObjectImpl.Container implements VariablesListPartSelection {
 	/**
-	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
+	 * The cached value of the '{@link #getVariableFeatureReference() <em>Variable Feature Reference</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVariable()
+	 * @see #getVariableFeatureReference()
 	 * @generated
 	 * @ordered
 	 */
-	protected Variable variable;
+	protected VariableFeatureReference variableFeatureReference;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,16 +72,16 @@ public class VariablesListPartSelectionImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Variable getVariable() {
-		if (variable != null && variable.eIsProxy()) {
-			InternalEObject oldVariable = (InternalEObject)variable;
-			variable = (Variable)eResolveProxy(oldVariable);
-			if (variable != oldVariable) {
+	public VariableFeatureReference getVariableFeatureReference() {
+		if (variableFeatureReference != null && variableFeatureReference.eIsProxy()) {
+			InternalEObject oldVariableFeatureReference = (InternalEObject)variableFeatureReference;
+			variableFeatureReference = (VariableFeatureReference)eResolveProxy(oldVariableFeatureReference);
+			if (variableFeatureReference != oldVariableFeatureReference) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, variableFeatureReference));
 			}
 		}
-		return variable;
+		return variableFeatureReference;
 	}
 
 	/**
@@ -89,8 +89,8 @@ public class VariablesListPartSelectionImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Variable basicGetVariable() {
-		return variable;
+	public VariableFeatureReference basicGetVariableFeatureReference() {
+		return variableFeatureReference;
 	}
 
 	/**
@@ -98,11 +98,11 @@ public class VariablesListPartSelectionImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVariable(Variable newVariable) {
-		Variable oldVariable = variable;
-		variable = newVariable;
+	public void setVariableFeatureReference(VariableFeatureReference newVariableFeatureReference) {
+		VariableFeatureReference oldVariableFeatureReference = variableFeatureReference;
+		variableFeatureReference = newVariableFeatureReference;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, variableFeatureReference));
 	}
 
 	/**
@@ -113,9 +113,9 @@ public class VariablesListPartSelectionImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE:
-				if (resolve) return getVariable();
-				return basicGetVariable();
+			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE_FEATURE_REFERENCE:
+				if (resolve) return getVariableFeatureReference();
+				return basicGetVariableFeatureReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -129,8 +129,8 @@ public class VariablesListPartSelectionImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE:
-				setVariable((Variable)newValue);
+			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE_FEATURE_REFERENCE:
+				setVariableFeatureReference((VariableFeatureReference)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -144,8 +144,8 @@ public class VariablesListPartSelectionImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE:
-				setVariable((Variable)null);
+			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE_FEATURE_REFERENCE:
+				setVariableFeatureReference((VariableFeatureReference)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -159,8 +159,8 @@ public class VariablesListPartSelectionImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE:
-				return variable != null;
+			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION__VARIABLE_FEATURE_REFERENCE:
+				return variableFeatureReference != null;
 		}
 		return super.eIsSet(featureID);
 	}

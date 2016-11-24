@@ -78,6 +78,15 @@ public interface ApogyCoreInvocatorUIFactory extends EFactory {
 	VariablesListPartSelection createVariablesListPartSelection();
 
 	/**
+	 * Returns a new object of class '<em>Variable Runtime Part Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variable Runtime Part Selection</em>'.
+	 * @generated
+	 */
+	VariableRuntimePartSelection createVariableRuntimePartSelection();
+
+	/**
 	 * Returns a new object of class '<em>New Program Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

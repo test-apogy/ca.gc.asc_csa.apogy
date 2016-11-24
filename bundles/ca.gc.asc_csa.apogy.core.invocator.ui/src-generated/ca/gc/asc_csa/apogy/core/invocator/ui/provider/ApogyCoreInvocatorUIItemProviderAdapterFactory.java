@@ -199,6 +199,29 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VariableRuntimePartSelectionItemProvider variableRuntimePartSelectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVariableRuntimePartSelectionAdapter() {
+		if (variableRuntimePartSelectionItemProvider == null) {
+			variableRuntimePartSelectionItemProvider = new VariableRuntimePartSelectionItemProvider(this);
+		}
+
+		return variableRuntimePartSelectionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -349,6 +372,7 @@ public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInv
 		if (programArgumentsPartSelectionItemProvider != null) programArgumentsPartSelectionItemProvider.dispose();
 		if (apogyAdvancedEditorPartSelectionItemProvider != null) apogyAdvancedEditorPartSelectionItemProvider.dispose();
 		if (variablesListPartSelectionItemProvider != null) variablesListPartSelectionItemProvider.dispose();
+		if (variableRuntimePartSelectionItemProvider != null) variableRuntimePartSelectionItemProvider.dispose();
 		if (newProgramSettingsItemProvider != null) newProgramSettingsItemProvider.dispose();
 	}
 

@@ -108,7 +108,11 @@ class ApogyCoreInvocatorFacade
 	 */
 	op Object getValue(OperationCallResult operationCallResult)
 	op AbstractResultValue createAbstractResultValue(Object value)
-	op EObject getInstance(Variable variable)
+
+	// FIXME Check if we can use EObject#getInstance(VariableFeatureReference variableFeatureReference) instead.
+    op EObject getInstance(Variable variable)
+
+	// FIXME Check if we can use EObject#getInstanceClass(VariableFeatureReference variableFeatureReference) instead.
 	op EClass getInstanceClass(Variable variable)
 	/*
 	 * Returns the most specific TypeApiAdapter for the given VariableFeatureReference.

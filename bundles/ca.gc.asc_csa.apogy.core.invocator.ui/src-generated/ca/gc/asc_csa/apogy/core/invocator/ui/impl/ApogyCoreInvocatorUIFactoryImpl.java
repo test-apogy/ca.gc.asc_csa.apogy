@@ -74,6 +74,7 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 			case ApogyCoreInvocatorUIPackage.PROGRAM_ARGUMENTS_PART_SELECTION: return createProgramArgumentsPartSelection();
 			case ApogyCoreInvocatorUIPackage.APOGY_ADVANCED_EDITOR_PART_SELECTION: return createApogyAdvancedEditorPartSelection();
 			case ApogyCoreInvocatorUIPackage.VARIABLES_LIST_PART_SELECTION: return createVariablesListPartSelection();
+			case ApogyCoreInvocatorUIPackage.VARIABLE_RUNTIME_PART_SELECTION: return createVariableRuntimePartSelection();
 			case ApogyCoreInvocatorUIPackage.NEW_PROGRAM_SETTINGS: return createNewProgramSettings();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -162,6 +163,16 @@ public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements Apo
 	public VariablesListPartSelection createVariablesListPartSelection() {
 		VariablesListPartSelectionImpl variablesListPartSelection = new VariablesListPartSelectionImpl();
 		return variablesListPartSelection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VariableRuntimePartSelection createVariableRuntimePartSelection() {
+		VariableRuntimePartSelectionImpl variableRuntimePartSelection = new VariableRuntimePartSelectionImpl();
+		return variableRuntimePartSelection;
 	}
 
 	/**

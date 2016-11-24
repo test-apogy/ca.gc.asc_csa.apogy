@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.provider;
 
 
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -34,12 +35,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class VariablesListPartSelectionItemProvider 
+public class VariableRuntimePartSelectionItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -53,7 +54,7 @@ public class VariablesListPartSelectionItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VariablesListPartSelectionItemProvider(AdapterFactory adapterFactory) {
+	public VariableRuntimePartSelectionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -68,25 +69,25 @@ public class VariablesListPartSelectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addVariableFeatureReferencePropertyDescriptor(object);
+			addEObjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Variable Feature Reference feature.
+	 * This adds a property descriptor for the EObject feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVariableFeatureReferencePropertyDescriptor(Object object) {
+	protected void addEObjectPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_VariablesListPartSelection_variableFeatureReference_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_VariablesListPartSelection_variableFeatureReference_feature", "_UI_VariablesListPartSelection_type"),
-				 ApogyCoreInvocatorUIPackage.Literals.VARIABLES_LIST_PART_SELECTION__VARIABLE_FEATURE_REFERENCE,
+				 getString("_UI_VariableRuntimePartSelection_eObject_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VariableRuntimePartSelection_eObject_feature", "_UI_VariableRuntimePartSelection_type"),
+				 ApogyCoreInvocatorUIPackage.Literals.VARIABLE_RUNTIME_PART_SELECTION__EOBJECT,
 				 true,
 				 false,
 				 true,
@@ -96,14 +97,14 @@ public class VariablesListPartSelectionItemProvider
 	}
 
 	/**
-	 * This returns VariablesListPartSelection.gif.
+	 * This returns VariableRuntimePartSelection.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/VariablesListPartSelection"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/VariableRuntimePartSelection"));
 	}
 
 	/**
@@ -114,7 +115,7 @@ public class VariablesListPartSelectionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_VariablesListPartSelection_type");
+		return getString("_UI_VariableRuntimePartSelection_type");
 	}
 	
 

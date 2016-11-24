@@ -14,7 +14,7 @@
  */
 package ca.gc.asc_csa.apogy.core.invocator.ui;
 
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariable <em>Variable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getVariablesListPartSelection()
@@ -35,29 +35,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VariablesListPartSelection extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Variable</b></em>' reference.
+	 * Returns the value of the '<em><b>Variable Feature Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Variable</em>' reference isn't clear,
+	 * If the meaning of the '<em>Variable Feature Reference</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Variable</em>' reference.
-	 * @see #setVariable(Variable)
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getVariablesListPartSelection_Variable()
+	 * @return the value of the '<em>Variable Feature Reference</em>' reference.
+	 * @see #setVariableFeatureReference(VariableFeatureReference)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getVariablesListPartSelection_VariableFeatureReference()
 	 * @model
 	 * @generated
 	 */
-	Variable getVariable();
+	VariableFeatureReference getVariableFeatureReference();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariable <em>Variable</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariableFeatureReference <em>Variable Feature Reference</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Variable</em>' reference.
-	 * @see #getVariable()
+	 * @param value the new value of the '<em>Variable Feature Reference</em>' reference.
+	 * @see #getVariableFeatureReference()
 	 * @generated
 	 */
-	void setVariable(Variable value);
+	void setVariableFeatureReference(VariableFeatureReference value);
 
 } // VariablesListPartSelection

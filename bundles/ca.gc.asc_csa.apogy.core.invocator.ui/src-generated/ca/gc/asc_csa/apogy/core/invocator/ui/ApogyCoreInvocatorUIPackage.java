@@ -101,7 +101,7 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getNewProgramSettings()
 	 * @generated
 	 */
-	int NEW_PROGRAM_SETTINGS = 6;
+	int NEW_PROGRAM_SETTINGS = 7;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
@@ -343,13 +343,13 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	int VARIABLES_LIST_PART_SELECTION = 5;
 
 	/**
-	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * The feature id for the '<em><b>Variable Feature Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLES_LIST_PART_SELECTION__VARIABLE = 0;
+	int VARIABLES_LIST_PART_SELECTION__VARIABLE_FEATURE_REFERENCE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Variables List Part Selection</em>' class.
@@ -368,6 +368,43 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @ordered
 	 */
 	int VARIABLES_LIST_PART_SELECTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariableRuntimePartSelectionImpl <em>Variable Runtime Part Selection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariableRuntimePartSelectionImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getVariableRuntimePartSelection()
+	 * @generated
+	 */
+	int VARIABLE_RUNTIME_PART_SELECTION = 6;
+
+	/**
+	 * The feature id for the '<em><b>EObject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_RUNTIME_PART_SELECTION__EOBJECT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Variable Runtime Part Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_RUNTIME_PART_SELECTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Variable Runtime Part Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_RUNTIME_PART_SELECTION_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>EClass</b></em>' containment reference.
@@ -413,7 +450,7 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getCompoundCommand()
 	 * @generated
 	 */
-	int COMPOUND_COMMAND = 7;
+	int COMPOUND_COMMAND = 8;
 
 
 	/**
@@ -424,7 +461,7 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getListVariables()
 	 * @generated
 	 */
-	int LIST_VARIABLES = 8;
+	int LIST_VARIABLES = 9;
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection <em>Script Based Programs List Part Selection</em>}'.
@@ -521,15 +558,36 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	EClass getVariablesListPartSelection();
 
 	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariableFeatureReference <em>Variable Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariable()
+	 * @return the meta object for the reference '<em>Variable Feature Reference</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariableFeatureReference()
 	 * @see #getVariablesListPartSelection()
 	 * @generated
 	 */
-	EReference getVariablesListPartSelection_Variable();
+	EReference getVariablesListPartSelection_VariableFeatureReference();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection <em>Variable Runtime Part Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variable Runtime Part Selection</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection
+	 * @generated
+	 */
+	EClass getVariableRuntimePartSelection();
+
+	/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection#getEObject <em>EObject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>EObject</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection#getEObject()
+	 * @see #getVariableRuntimePartSelection()
+	 * @generated
+	 */
+	EReference getVariableRuntimePartSelection_EObject();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.NewProgramSettings <em>New Program Settings</em>}'.
@@ -762,12 +820,28 @@ public interface ApogyCoreInvocatorUIPackage extends EPackage {
 		 */
 		EClass VARIABLES_LIST_PART_SELECTION = eINSTANCE.getVariablesListPartSelection();
 		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Variable Feature Reference</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VARIABLES_LIST_PART_SELECTION__VARIABLE = eINSTANCE.getVariablesListPartSelection_Variable();
+		EReference VARIABLES_LIST_PART_SELECTION__VARIABLE_FEATURE_REFERENCE = eINSTANCE.getVariablesListPartSelection_VariableFeatureReference();
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariableRuntimePartSelectionImpl <em>Variable Runtime Part Selection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.VariableRuntimePartSelectionImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getVariableRuntimePartSelection()
+		 * @generated
+		 */
+		EClass VARIABLE_RUNTIME_PART_SELECTION = eINSTANCE.getVariableRuntimePartSelection();
+		/**
+		 * The meta object literal for the '<em><b>EObject</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE_RUNTIME_PART_SELECTION__EOBJECT = eINSTANCE.getVariableRuntimePartSelection_EObject();
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.NewProgramSettingsImpl <em>New Program Settings</em>}' class.
 		 * <!-- begin-user-doc -->

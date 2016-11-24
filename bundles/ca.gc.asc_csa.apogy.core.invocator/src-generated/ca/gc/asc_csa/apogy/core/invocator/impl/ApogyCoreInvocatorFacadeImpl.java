@@ -37,8 +37,6 @@ import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
-import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
@@ -1521,19 +1519,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public ListRootNode createListRootNode(VariableFeatureReference variableFeatureReference, EStructuralFeature[] features) {
-		ListRootNode listRootNode = null;
-		if (features.length > 0) {
-			listRootNode = ApogyCommonEMFFactory.eINSTANCE.createListRootNode();
-			listRootNode.setSourceClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(variableFeatureReference));
-			AbstractFeatureListNode parentNode = listRootNode;
-			for (int i = 0; i < features.length; i++) {
-				ListFeatureNode node = ApogyCommonEMFFactory.eINSTANCE.createListFeatureNode();
-				node.setStructuralFeature(features[i]);
-				parentNode.setChild(node);
-				parentNode = node;
-			}
-		}
-		return listRootNode;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

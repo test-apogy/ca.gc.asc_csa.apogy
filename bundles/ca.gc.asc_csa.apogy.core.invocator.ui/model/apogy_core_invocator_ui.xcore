@@ -44,6 +44,7 @@ import java.util.List
 import ca.gc.asc_csa.apogy.core.invocator.Variable
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
 type ListVariables wraps List<Variable> 
@@ -126,7 +127,11 @@ class ApogyAdvancedEditorPartSelection
 }
 
 class VariablesListPartSelection{
-	refers Variable variable
+	refers VariableFeatureReference variableFeatureReference
+}
+
+class VariableRuntimePartSelection{
+	refers EObject eObject
 }
 
 /* -------------------------------------------------------------------------
