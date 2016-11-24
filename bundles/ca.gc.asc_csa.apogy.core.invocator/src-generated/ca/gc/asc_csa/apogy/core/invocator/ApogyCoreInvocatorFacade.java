@@ -20,10 +20,10 @@ import ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl;
 
 import java.util.Date;
 import java.util.List;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 /**
  * <!-- begin-user-doc -->
@@ -585,5 +585,18 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * @generated
 	 */
 	String getSubTypeFeatureString(TypeMemberReferenceListElement typeMemberReferenceListElement, ListRootNode listRootNode);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Creates and returns the {@link LinkRootNode} associated to the specified array features.
+	 * @param features Reference to the array of features.
+	 * @return Reference to the {@link LinkRootNode}.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" variableFeatureReferenceUnique="false" featuresDataType="ca.gc.asc_csa.apogy.core.invocator.EStructuralFeatureArray" featuresUnique="false"
+	 * @generated
+	 */
+	ListRootNode createListRootNode(VariableFeatureReference variableFeatureReference, EStructuralFeature[] features);
 
 } // ApogyCoreInvocatorFacade

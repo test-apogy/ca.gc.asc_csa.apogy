@@ -22,6 +22,7 @@ import org.eclipse.swt.widgets.Event;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.common.ui.views.Pinnable;
 
+@Deprecated
 public class PinViewAction extends Action {
 
 	private static final String ID ="ca.gc.asc_csa.apogy.common.ui.actions.PinViewAction";

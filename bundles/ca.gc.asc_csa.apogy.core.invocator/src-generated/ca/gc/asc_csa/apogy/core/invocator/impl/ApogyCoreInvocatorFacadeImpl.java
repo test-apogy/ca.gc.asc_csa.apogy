@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EParameter;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -36,6 +37,8 @@ import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
@@ -1513,6 +1516,27 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ListRootNode createListRootNode(VariableFeatureReference variableFeatureReference, EStructuralFeature[] features) {
+		ListRootNode listRootNode = null;
+		if (features.length > 0) {
+			listRootNode = ApogyCommonEMFFactory.eINSTANCE.createListRootNode();
+			listRootNode.setSourceClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(variableFeatureReference));
+			AbstractFeatureListNode parentNode = listRootNode;
+			for (int i = 0; i < features.length; i++) {
+				ListFeatureNode node = ApogyCommonEMFFactory.eINSTANCE.createListFeatureNode();
+				node.setStructuralFeature(features[i]);
+				parentNode.setChild(node);
+				parentNode = node;
+			}
+		}
+		return listRootNode;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1582,6 +1606,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL:
@@ -1678,6 +1703,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return getEOperationString((ArgumentsList)arguments.get(0), (EOperation)arguments.get(1));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE:
 				return getSubTypeFeatureString((TypeMemberReferenceListElement)arguments.get(0), (ListRootNode)arguments.get(1));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_LIST_ROOT_NODE__VARIABLEFEATUREREFERENCE_ESTRUCTURALFEATURE:
+				return createListRootNode((VariableFeatureReference)arguments.get(0), (EStructuralFeature[])arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

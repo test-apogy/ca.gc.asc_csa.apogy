@@ -31,6 +31,7 @@ import org.eclipse.ui.part.ViewPart;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 
+@Deprecated
 public abstract class AbstractView extends ViewPart implements ISelectionListener, Pinnable, ITabbedPropertySheetPageContributor
 {
 	/**

@@ -94,6 +94,7 @@ import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -596,6 +597,13 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	private EDataType hashMapEDataType = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType eStructuralFeatureArrayEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -1044,6 +1052,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 */
 	public EOperation getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(39);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__CreateListRootNode__VariableFeatureReference_EStructuralFeature() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(40);
 	}
 
 	/**
@@ -2977,6 +2994,15 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getEStructuralFeatureArray() {
+		return eStructuralFeatureArrayEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCoreInvocatorFactory getApogyCoreInvocatorFactory() {
 		return (ApogyCoreInvocatorFactory)getEFactoryInstance();
 	}
@@ -3043,6 +3069,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_LIST_ROOT_NODE__VARIABLEFEATUREREFERENCE_ESTRUCTURALFEATURE);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3323,6 +3350,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		typeMembersArrayEDataType = createEDataType(TYPE_MEMBERS_ARRAY);
 		iVariableListenerEDataType = createEDataType(IVARIABLE_LISTENER);
 		hashMapEDataType = createEDataType(HASH_MAP);
+		eStructuralFeatureArrayEDataType = createEDataType(ESTRUCTURAL_FEATURE_ARRAY);
 	}
 
 	/**
@@ -3568,6 +3596,10 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		op = initEOperation(getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode(), theEcorePackage.getEString(), "getSubTypeFeatureString", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTypeMemberReferenceListElement(), "typeMemberReferenceListElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCommonEMFPackage.getListRootNode(), "listRootNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__CreateListRootNode__VariableFeatureReference_EStructuralFeature(), theApogyCommonEMFPackage.getListRootNode(), "createListRootNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVariableFeatureReference(), "variableFeatureReference", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEStructuralFeatureArray(), "features", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3910,6 +3942,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		initEDataType(typeMembersArrayEDataType, TypeMember[].class, "TypeMembersArray", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(iVariableListenerEDataType, IVariableListener.class, "IVariableListener", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(hashMapEDataType, HashMap.class, "HashMap", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(eStructuralFeatureArrayEDataType, EStructuralFeature[].class, "EStructuralFeatureArray", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

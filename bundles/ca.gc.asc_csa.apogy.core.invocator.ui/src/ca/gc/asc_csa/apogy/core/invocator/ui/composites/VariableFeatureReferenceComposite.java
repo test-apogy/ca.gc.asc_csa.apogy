@@ -65,8 +65,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.Tree;
-import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.Section;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
@@ -78,8 +79,6 @@ import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
-import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.forms.widgets.Section;
 
 public class VariableFeatureReferenceComposite extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -296,10 +295,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 		/**
 		 * Variable Selection Binding.
 		 */
-		IObservableValue observeSingleSelectionVariablesViewer = ViewerProperties.singleSelection()
+		IObservableValue<?> observeSingleSelectionVariablesViewer = ViewerProperties.singleSelection()
 				.observe(variablesViewer);
 
-		IObservableValue observeVariableValue = editingDomain == null ? EMFObservables.observeValue(
+		IObservableValue<?> observeVariableValue = editingDomain == null ? EMFObservables.observeValue(
 				variableFeatureReference, ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE) :
 
 				EMFEditObservables.observeValue(editingDomain, variableFeatureReference,
@@ -310,6 +309,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 		/**
 		 * Type Member Viewer Content.
 		 */
+		@SuppressWarnings("rawtypes")
 		IListProperty typeMemberChildrenProperty = new DelegatingListProperty() {
 			@Override
 			protected IListProperty doGetDelegate(Object source) {
@@ -354,9 +354,9 @@ public class VariableFeatureReferenceComposite extends Composite {
 		/**
 		 * Bind TypeMemberReference.
 		 */
-		IObservableValue observeSingleSelectionTypeViewer = ViewersObservables.observeSingleSelection(typeMemberViewer);
+		IObservableValue<?> observeSingleSelectionTypeViewer = ViewersObservables.observeSingleSelection(typeMemberViewer);
 
-		IObservableValue observeTypeMemberValue = editingDomain == null
+		IObservableValue<?> observeTypeMemberValue = editingDomain == null
 				? EMFObservables.observeValue(variableFeatureReference,
 						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT)
 				:
@@ -427,10 +427,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 		/**
 		 * Bind the features Selection.
 		 */
-		IObservableValue observeSingleSelectionFeaturesViewer = ViewersObservables
+		IObservableValue<?> observeSingleSelectionFeaturesViewer = ViewersObservables
 				.observeSingleSelection(featuresViewer);
 
-		IObservableValue observeFeaturesValue = editingDomain == null
+		IObservableValue<?> observeFeaturesValue = editingDomain == null
 				? EMFObservables.observeValue(variableFeatureReference,
 						ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT)
 				: EMFEditObservables.observeValue(editingDomain, variableFeatureReference,
@@ -447,7 +447,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 							for (int i = 0; i < path.getSegmentCount(); i++) {
 								features[i] = (EStructuralFeature) path.getSegment(i);
 							}
-							return createListRootNode(features);
+							return ApogyCoreInvocatorFacade.INSTANCE.createListRootNode(variableFeatureReference, features);
 						}
 						return null;
 					}
@@ -509,28 +509,6 @@ public class VariableFeatureReferenceComposite extends Composite {
 			list.addAll(eClass.getEAllStructuralFeatures());
 		}
 		return list;
-	}
-
-	/**
-	 * FIXME Move under ApogyCoreInvocatorFacade. Wait for Eclipse MARS Release.
-	 * XCore bug fixed by Ed Merks. FIXME Move under
-	 * {@link ApogyCoreInvocatorFacade}. Wait XCore bug. Unable to wrap
-	 * EStructuralFeature to get a array data type.
-	 */
-	private ListRootNode createListRootNode(EStructuralFeature[] features) {
-		ListRootNode listRootNode = null;
-		if (features.length > 0) {
-			listRootNode = ApogyCommonEMFFactory.eINSTANCE.createListRootNode();
-			listRootNode.setSourceClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(variableFeatureReference));
-			AbstractFeatureListNode parentNode = listRootNode;
-			for (int i = 0; i < features.length; i++) {
-				ListFeatureNode node = ApogyCommonEMFFactory.eINSTANCE.createListFeatureNode();
-				node.setStructuralFeature(features[i]);
-				parentNode.setChild(node);
-				parentNode = node;
-			}
-		}
-		return listRootNode;
 	}
 
 	@Override

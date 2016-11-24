@@ -53,6 +53,7 @@ import org.eclipse.emf.ecore.EEnumLiteral
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EOperation
 import org.eclipse.emf.ecore.EParameter
+import org.eclipse.emf.ecore.EStructuralFeature
 
 /* -------------------------------------------------------------------------
  * 
@@ -70,6 +71,8 @@ type TypeMembersArray wraps TypeMember[]
 type IVariableListener wraps IVariableListener
 
 type HashMap<key, value> wraps HashMap
+
+type EStructuralFeatureArray wraps EStructuralFeature[]
 
 /* -------------------------------------------------------------------------
  * 
@@ -294,6 +297,13 @@ class ApogyCoreInvocatorFacade
      * -> subType1-> ...-> subTypeN.feature
      */
 	op String getSubTypeFeatureString(TypeMemberReferenceListElement typeMemberReferenceListElement, ListRootNode listRootNode)
+	
+	/*
+	 * Creates and returns the {@link LinkRootNode} associated to the specified array features.
+	 * @param features Reference to the array of features.
+	 * @return Reference to the {@link LinkRootNode}.
+	 */
+	op ListRootNode createListRootNode(VariableFeatureReference variableFeatureReference, EStructuralFeatureArray features)
 }
 
 //interface ProgramFilter{

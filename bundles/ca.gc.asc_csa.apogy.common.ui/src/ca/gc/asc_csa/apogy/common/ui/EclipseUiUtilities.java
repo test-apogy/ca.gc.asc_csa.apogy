@@ -25,7 +25,7 @@ import org.eclipse.ui.views.properties.tabbed.ISectionDescriptor;
 import org.eclipse.ui.views.properties.tabbed.ITabDescriptor;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
-
+@Deprecated
 public class EclipseUiUtilities {
 	
 	public final static String PROPERTY_SHEET_ID = "org.eclipse.ui.views.PropertySheet";
