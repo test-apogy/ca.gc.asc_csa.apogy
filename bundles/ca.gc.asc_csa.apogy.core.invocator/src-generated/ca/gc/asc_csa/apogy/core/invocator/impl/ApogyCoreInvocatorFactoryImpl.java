@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ca.gc.asc_csa.apogy.core.invocator.*;
@@ -147,6 +148,8 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 				return createIVariableListenerFromString(eDataType, initialValue);
 			case ApogyCoreInvocatorPackage.HASH_MAP:
 				return createHashMapFromString(eDataType, initialValue);
+			case ApogyCoreInvocatorPackage.ESTRUCTURAL_FEATURE_ARRAY:
+				return createEStructuralFeatureArrayFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -175,6 +178,8 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 				return convertIVariableListenerToString(eDataType, instanceValue);
 			case ApogyCoreInvocatorPackage.HASH_MAP:
 				return convertHashMapToString(eDataType, instanceValue);
+			case ApogyCoreInvocatorPackage.ESTRUCTURAL_FEATURE_ARRAY:
+				return convertEStructuralFeatureArrayToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -816,6 +821,24 @@ public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements Apogy
 	 * @generated
 	 */
 	public String convertHashMapToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EStructuralFeature[] createEStructuralFeatureArrayFromString(EDataType eDataType, String initialValue) {
+		return (EStructuralFeature[])super.createFromString(initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEStructuralFeatureArrayToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
 	}
 

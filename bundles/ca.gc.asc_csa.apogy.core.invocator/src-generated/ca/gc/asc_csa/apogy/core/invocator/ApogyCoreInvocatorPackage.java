@@ -486,13 +486,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = 39;
 
 	/**
+	 * The operation id for the '<em>Create List Root Node</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_LIST_ROOT_NODE__VARIABLEFEATUREREFERENCE_ESTRUCTURALFEATURE = 40;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 40;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 41;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -4947,6 +4956,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '<em>EStructural Feature Array</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEStructuralFeatureArray()
+	 * @generated
+	 */
+	int ESTRUCTURAL_FEATURE_ARRAY = 70;
+
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5377,6 +5396,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createListRootNode(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference, org.eclipse.emf.ecore.EStructuralFeature[]) <em>Create List Root Node</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create List Root Node</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createListRootNode(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference, org.eclipse.emf.ecore.EStructuralFeature[])
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__CreateListRootNode__VariableFeatureReference_EStructuralFeature();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
@@ -7642,6 +7671,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EDataType getHashMap();
 
 	/**
+	 * Returns the meta object for data type '<em>EStructural Feature Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>EStructural Feature Array</em>'.
+	 * @model instanceClass="org.eclipse.emf.ecore.EStructuralFeature[]"
+	 * @generated
+	 */
+	EDataType getEStructuralFeatureArray();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8009,6 +8048,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = eINSTANCE.getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Create List Root Node</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___CREATE_LIST_ROOT_NODE__VARIABLEFEATUREREFERENCE_ESTRUCTURALFEATURE = eINSTANCE.getApogyCoreInvocatorFacade__CreateListRootNode__VariableFeatureReference_EStructuralFeature();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -9858,6 +9905,15 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType HASH_MAP = eINSTANCE.getHashMap();
+
+		/**
+		 * The meta object literal for the '<em>EStructural Feature Array</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEStructuralFeatureArray()
+		 * @generated
+		 */
+		EDataType ESTRUCTURAL_FEATURE_ARRAY = eINSTANCE.getEStructuralFeatureArray();
 
 	}
 
