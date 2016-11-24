@@ -15,9 +15,6 @@
 package ca.gc.asc_csa.apogy.core.invocator.ui;
 
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
-
-import java.util.List;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -29,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariables <em>Variables</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getVariablesListPartSelection()
@@ -38,29 +35,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VariablesListPartSelection extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Variables</b></em>' attribute.
+	 * Returns the value of the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Variables</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Variable</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Variables</em>' attribute.
-	 * @see #setVariables(List)
-	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getVariablesListPartSelection_Variables()
-	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.core.invocator.ui.ListVariables"
+	 * @return the value of the '<em>Variable</em>' reference.
+	 * @see #setVariable(Variable)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getVariablesListPartSelection_Variable()
+	 * @model
 	 * @generated
 	 */
-	List<Variable> getVariables();
+	Variable getVariable();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariables <em>Variables</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection#getVariable <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Variables</em>' attribute.
-	 * @see #getVariables()
+	 * @param value the new value of the '<em>Variable</em>' reference.
+	 * @see #getVariable()
 	 * @generated
 	 */
-	void setVariables(List<Variable> value);
+	void setVariable(Variable value);
 
 } // VariablesListPartSelection

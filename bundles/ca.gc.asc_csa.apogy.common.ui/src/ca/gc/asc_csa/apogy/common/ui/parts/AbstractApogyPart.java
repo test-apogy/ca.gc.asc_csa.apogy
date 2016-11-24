@@ -127,18 +127,16 @@ abstract public class AbstractApogyPart {
 	/**
 	 * Sets the part's parentComposite to a {@link NoActiveSessionComposite}.
 	 */
-	private void setNoContentComposite() {
-		if (getActualComposite() == null || !(getActualComposite() instanceof NoContentComposite)){
-			if (getActualComposite() != null) {
-				for (Control control : parentComposite.getChildren()) {
-					control.dispose();
-				}
+	protected void setNoContentComposite() {
+		if (getActualComposite() != null) {
+			for (Control control : parentComposite.getChildren()) {
+				control.dispose();
 			}
-			createNoContentComposite(parentComposite, SWT.None);
-			parentComposite.layout();
-
-			setNullSelection();
 		}
+		createNoContentComposite(parentComposite, SWT.None);
+		parentComposite.layout();
+
+		setNullSelection();
 	}
 
 	/**

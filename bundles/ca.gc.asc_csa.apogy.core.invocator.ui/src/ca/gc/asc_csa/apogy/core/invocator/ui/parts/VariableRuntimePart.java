@@ -13,80 +13,64 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
-import ca.gc.asc_csa.apogy.common.ui.composites.NoSelectionComposite;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
 
-public class VariableRuntimePart extends AbstractSessionContainedEObjectEditorPart {
+public class VariableRuntimePart extends AbstractEObjectSelectionPart {
 	private AdapterImpl adapter;
-	private Environment environment;
 	private Context activeContext;
-	private Object selection;
+	private Variable variable;
 
 	@Inject
 	@Optional
 	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) VariablesListPartSelection selection) {
-		if (selection != null && selection.getVariables() != null && !selection.getVariables().isEmpty()) {
-			
-			Variable variable = selection.getVariables().get(0);
-			
-			EObject eObject = ApogyCoreInvocatorFacade.INSTANCE.getInstance(variable);	
-			
-			/* Listens the environment for change of active context. */
-			environment = variable.getEnvironment();
-			environment.eAdapters().remove(getAdapter());
-			environment.eAdapters().add(getAdapter());
-			
-			activeContext = variable.getEnvironment().getActiveContext();
-			if (activeContext != null){
-				if (activeContext.isVariablesInstantiated()){
-					setEObject(eObject);	
-				}else{
-					setEObject(null);
-				}	
-				activeContext.eAdapters().remove(getAdapter());
-				activeContext.eAdapters().add(getAdapter());
-			}else{
-				setEObject(null);
-			}
+		if (selection != null) {
+			variable = selection.getVariable();
+			setEObject(selection.getVariable());
 		}
 	}
 	
+	
+	@Override
+	protected void createContentComposite(Composite parent, int style) {
+		new EObjectComposite(parent, SWT.None);
+	}
+	
+	@Override
+	protected void setCompositeContents(EObject eObject) {	
+		activeContext = variable.getEnvironment().getActiveContext();
+		activeContext.eAdapters().add(getAdapter());
+		
+		variable.getEnvironment().eAdapters().add(getAdapter());
+		
+		if(this.variable.getEnvironment().getActiveContext().isVariablesInstantiated()){
+			((EObjectComposite)getActualComposite()).setEObject(eObject);
+		}else{
+			//Set a NoContentComposite if the variables are not instantiated
+			setNoContentComposite();
+		}
+		
+	}	
+
 	@Override
 	protected void createNoContentComposite(Composite parent, int style) {
-		if (this.selection == null){
-			super.createNoContentComposite(parent, style);
-		}else{
-			new NoContentComposite(parent, style){
+		if (this.variable != null) {
+			new NoContentComposite(parent, style) {
 				@Override
 				protected String getMessage() {
-					return "Variables are not instantiated";
+					return "Variables not instantiated";
 				}
 			};
-		}		
-	}		
-	
-	@Override
-	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		if (environment != null){
-			environment.eAdapters().remove(getAdapter());
+		} else {
+			super.createNoContentComposite(parent, style);
 		}
-		
-		if (activeContext != null){
-			activeContext.eAdapters().remove(getAdapter());
-		}
-		
-		setEObject(null);
 	}
-	
-	
-	
 	
 	private Adapter getAdapter(){
 		if (adapter == null){
@@ -95,29 +79,26 @@ public class VariableRuntimePart extends AbstractSessionContainedEObjectEditorPa
 				public void notifyChanged(Notification msg) {
 					if(msg.getNotifier() instanceof Environment)
 					{
-						if(msg.getFeatureID(Environment.class) == ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT){
-							if (environment != null){
-								environment.eAdapters().remove(getAdapter());
-							}
-							
-							if (activeContext != null){
+						if (msg.getFeatureID(
+								Environment.class) == ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT) {
+							if(activeContext != null){
 								activeContext.eAdapters().remove(getAdapter());
 							}
-							setEObject(null);
-						}						
+							if(msg.getNewValue() != null ){
+								((Context) msg.getNewValue()).eAdapters().add(getAdapter());
+							}
+							setEObject(variable);
+						}
 					}
 					
 					if(msg.getNotifier() instanceof Context)
 					{
 						if(msg.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.CONTEXT__VARIABLES_INSTANTIATED){
-							if (environment != null){
-								environment.eAdapters().remove(getAdapter());
+							if((boolean)msg.getNewValue() == true){
+								setEObject(variable);
+							}else{
+								setEObject(null);
 							}
-							
-							if (activeContext != null){
-								activeContext.eAdapters().remove(getAdapter());
-							}
-							setEObject(null);
 						}						
 					}					
 					
@@ -128,16 +109,12 @@ public class VariableRuntimePart extends AbstractSessionContainedEObjectEditorPa
 	}
 	
 	@PreDestroy
-	@Override
 	public void dispose() {
-		if (environment != null){
-			environment.eAdapters().remove(getAdapter());
+		if (variable != null) {
+			variable.getVariablesList().getEnvironment().eAdapters().remove(getAdapter());
 		}
-		
-		if (activeContext != null){
+		if (activeContext != null) {
 			activeContext.eAdapters().remove(getAdapter());
 		}
-		
-		super.dispose();		
 	}
 }

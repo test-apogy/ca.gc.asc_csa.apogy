@@ -32,15 +32,15 @@ abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 	}
 
 	@Override
-	protected void setCompositeContent(EObject eObject) {
+	protected final void setCompositeContent(EObject eObject) {
 		this.eObject = eObject;
-		setSelectionInContentComposite(eObject);
+		setCompositeContents(eObject);
 	}
 	
 	/**
-	 * Sets the {@link EObject} to display in the parentComposite.
+	 * Sets the {@link EObject} to display in the content composite.
 	 */
-	abstract protected void setSelectionInContentComposite(EObject eObject);
+	abstract protected void setCompositeContents(EObject eObject);
 	
 	@Override
 	protected void createNoContentComposite(Composite parent, int style) {

@@ -66,7 +66,7 @@ public class ProgramPart extends AbstractEObjectSelectionPart{
 	}
 
 	@Override
-	protected void setSelectionInContentComposite(EObject eObject) {
+	protected void setCompositeContents(EObject eObject) {
 		((OperationCallsListComposite) getActualComposite()).setOperationCallsList((OperationCallsList)eObject);
 	}
 

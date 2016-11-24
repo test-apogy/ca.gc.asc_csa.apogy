@@ -66,7 +66,7 @@ public class ControllerBindingsPart extends AbstractEObjectSelectionPart{
 	}
 
 	@Override
-	protected void setSelectionInContentComposite(EObject eObject) {
+	protected void setCompositeContents(EObject eObject) {
 		((ControllerBindingsComposite) getActualComposite()).setControllersConfiguration((ControllersConfiguration)eObject);
 	}
 

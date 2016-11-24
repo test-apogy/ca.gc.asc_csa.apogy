@@ -48,7 +48,7 @@ public class ProgramDetailsPart extends AbstractEObjectSelectionPart {
 	}
 
 	@Override
-	protected void setSelectionInContentComposite(EObject eObject) {
+	protected void setCompositeContents(EObject eObject) {
 		for (Control control : contentComposite.getChildren()) {
 			control.dispose();
 		}
