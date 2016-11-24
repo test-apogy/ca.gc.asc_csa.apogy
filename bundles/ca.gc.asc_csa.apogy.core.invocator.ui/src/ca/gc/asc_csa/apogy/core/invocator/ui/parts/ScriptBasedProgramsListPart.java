@@ -54,7 +54,6 @@ public class ScriptBasedProgramsListPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected void setNullSelection() {
-		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ScriptBasedProgramsListPart"));
 		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createScriptBasedProgramsListPartSelection());
 	}
 }

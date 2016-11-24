@@ -14,11 +14,12 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectEditorComposite;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 public class SessionEditorPart extends AbstractSessionContainedEObjectEditorPart {
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		setEObject(invocatorSession);
+		((EObjectEditorComposite) getActualComposite()).setEObject(invocatorSession);
 	}
 }

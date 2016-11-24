@@ -18,8 +18,10 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
+import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
@@ -52,6 +54,15 @@ public class ProgramPart extends AbstractEObjectSelectionPart{
 				}
 			}
 		};
+		
+		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ScriptBasedProgramsListPart", new ISelectionListener() {
+			@Override
+			public void selectionChanged(MPart part, Object selection) {
+				if(selection instanceof ScriptBasedProgramsListPartSelection){
+					setSelection((ScriptBasedProgramsListPartSelection)selection);
+				}
+			}
+		});
 	}
 
 	@Override
@@ -61,7 +72,6 @@ public class ProgramPart extends AbstractEObjectSelectionPart{
 
 	@Override
 	protected void setNullSelection() {
-		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ProgramPart"));
 		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramPartSelection());
 	}
 	

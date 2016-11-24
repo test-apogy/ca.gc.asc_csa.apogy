@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.widgets.Composite;
 
@@ -45,4 +46,15 @@ abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 	protected void createNoContentComposite(Composite parent, int style) {
 		new NoSelectionComposite(parent, style); 
 	}
+	
+	/**
+	 * Specifies the {@link Composite} to create in the part. This method should
+	 * also add a listener on the {@link ESelectionService} using
+	 * .addPostSelectionListener(String partId, ISelectionListener listener).
+	 * The partId is the selection provider's part ID in the RCP. This listener
+	 * should check if the selection is the right type and then call the
+	 * dependency injection method.
+	 */
+	@Override
+	abstract protected void createContentComposite(Composite parent, int style);
 }

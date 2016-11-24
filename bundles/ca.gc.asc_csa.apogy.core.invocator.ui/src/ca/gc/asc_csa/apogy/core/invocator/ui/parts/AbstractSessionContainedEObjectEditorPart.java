@@ -53,10 +53,6 @@ public abstract class AbstractSessionContainedEObjectEditorPart extends Abstract
 		};
 	}
 	
-//	protected void setEObjectInComposite(EObject eObject){
-//		((EObjectEditorComposite) getContentComposite()).setEObject(eObject);
-//	}
-	
 	@Override
 	protected void createNoContentComposite(Composite parent, int style) {
 		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){

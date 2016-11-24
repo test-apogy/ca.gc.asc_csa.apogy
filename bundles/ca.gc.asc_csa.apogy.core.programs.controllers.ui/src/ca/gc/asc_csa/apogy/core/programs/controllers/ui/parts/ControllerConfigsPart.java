@@ -59,7 +59,6 @@ public class ControllerConfigsPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected void setNullSelection() {
-		partService.activate(partService.findPart("ca.gc.asc_csa.apogy.rcp.part.ControllerConfigsPart"));
 		selectionService
 				.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerConfigsPartSelection());
 	}
