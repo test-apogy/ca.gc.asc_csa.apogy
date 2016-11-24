@@ -14,6 +14,9 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -73,8 +76,27 @@ public class ProgramArgumentsPart extends AbstractEObjectSelectionPart {
 				}
 			}
 		};
+	}
+
+	@Override
+	protected void setNullSelection() {
+		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramArgumentsPartSelection());
+	}
+	
+	@Override
+	protected List<String> getSelectionProvidersIds() {
+		List<String> ids = new ArrayList<>();
 		
-		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ProgramPart", new ISelectionListener() {
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.ProgramPart");
+		
+		return ids;
+	}
+
+	@Override
+	protected List<ISelectionListener> getSelectionListeners() {
+		List<ISelectionListener> listeners = new ArrayList<ISelectionListener>();
+		
+		listeners.add(new ISelectionListener() {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
 				if(selection instanceof ProgramPartSelection){
@@ -82,10 +104,7 @@ public class ProgramArgumentsPart extends AbstractEObjectSelectionPart {
 				}
 			}
 		});
-	}
-
-	@Override
-	protected void setNullSelection() {
-		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramArgumentsPartSelection());
+	
+		return listeners;
 	}
 }

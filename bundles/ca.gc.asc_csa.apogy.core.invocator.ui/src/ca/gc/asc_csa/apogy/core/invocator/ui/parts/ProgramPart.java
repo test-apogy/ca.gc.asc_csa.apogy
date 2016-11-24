@@ -14,6 +14,9 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -35,49 +38,42 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallsListComposite;
 
-public class ProgramPart extends AbstractEObjectSelectionPart{
+public class ProgramPart extends AbstractEObjectSelectionPart {
 
 	@Override
 	protected void createContentComposite(Composite parent, int style) {
 		new OperationCallsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			protected void newSelection(ISelection selection) {
-				if (selection.isEmpty()){
-					setNullSelection();					
-				}else {
-					OperationCall operationCall = ((OperationCallsListComposite) getActualComposite()).getSelectedOperationCall();
-					if (operationCall != null){
-						ProgramPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramPartSelection();
-						selectionSent.setOperationCall(operationCall);		
-						
-						selectionService.setSelection(selectionSent);						
+				if (selection.isEmpty()) {
+					setNullSelection();
+				} else {
+					OperationCall operationCall = ((OperationCallsListComposite) getActualComposite())
+							.getSelectedOperationCall();
+					if (operationCall != null) {
+						ProgramPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
+								.createProgramPartSelection();
+						selectionSent.setOperationCall(operationCall);
+
+						selectionService.setSelection(selectionSent);
 					}
 				}
 			}
 		};
-		
-		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ScriptBasedProgramsListPart", new ISelectionListener() {
-			@Override
-			public void selectionChanged(MPart part, Object selection) {
-				if(selection instanceof ScriptBasedProgramsListPartSelection){
-					setSelection((ScriptBasedProgramsListPartSelection)selection);
-				}
-			}
-		});
 	}
 
 	@Override
 	protected void setCompositeContents(EObject eObject) {
-		((OperationCallsListComposite) getActualComposite()).setOperationCallsList((OperationCallsList)eObject);
+		((OperationCallsListComposite) getActualComposite()).setOperationCallsList((OperationCallsList) eObject);
 	}
 
 	@Override
 	protected void setNullSelection() {
 		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramPartSelection());
 	}
-	
+
 	/**
-	 * Injects a {@link ScriptBasedProgramsListPartSelection} in the part from the
-	 * {@link ESelectionService}
+	 * Injects a {@link ScriptBasedProgramsListPartSelection} in the part from
+	 * the {@link ESelectionService}
 	 * 
 	 * @param selection
 	 */
@@ -90,5 +86,30 @@ public class ProgramPart extends AbstractEObjectSelectionPart{
 				setEObject(selection.getProgram());
 			}
 		}
+	}
+
+	@Override
+	protected List<String> getSelectionProvidersIds() {
+		List<String> ids = new ArrayList<>();
+
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.ScriptBasedProgramsListPart");
+
+		return ids;
+	}
+
+	@Override
+	protected List<ISelectionListener> getSelectionListeners() {
+		List<ISelectionListener> listeners = new ArrayList<ISelectionListener>();
+
+		listeners.add(new ISelectionListener() {
+			@Override
+			public void selectionChanged(MPart part, Object selection) {
+				if (selection instanceof ScriptBasedProgramsListPartSelection) {
+					setSelection((ScriptBasedProgramsListPartSelection) selection);
+				}
+			}
+		});
+
+		return listeners;
 	}
 }

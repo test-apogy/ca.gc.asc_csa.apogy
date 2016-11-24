@@ -19,7 +19,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariablesListComposite;
@@ -34,12 +34,12 @@ public class VariablesListPart extends AbstractSessionBasedPart {
 				if (selection.isEmpty()){
 					setNullSelection();					
 				}else {
-					Variable variable = ((VariablesListComposite) getActualComposite()).getSelectedVariable();
+					VariableFeatureReference variableFeatureReference = ((VariablesListComposite)getActualComposite()).getSelectedVariableFeatureReference();
 //					List<Variable> variables = ((VariablesListComposite) getActualComposite()).getSelectedVariables();
-					if (variable != null) {
+					if (variableFeatureReference != null) {
 						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
 								.createVariablesListPartSelection();
-						selectionSent.setVariable(variable);
+						selectionSent.setVariableFeatureReference(variableFeatureReference);
 
 						selectionService.setSelection(selectionSent);
 					}

@@ -13,6 +13,9 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -34,47 +37,51 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSe
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingsComposite;
 
-public class ControllerBindingsPart extends AbstractEObjectSelectionPart{
+public class ControllerBindingsPart extends AbstractEObjectSelectionPart {
 	@Override
 	protected void createContentComposite(Composite parent, int style) {
-		new ControllerBindingsComposite(parent, SWT.None){
+		new ControllerBindingsComposite(parent, SWT.None) {
 			@Override
-			protected void newSelection(ISelection selection) 
-			{
-				if (selection.isEmpty()){
-					setNullSelection();					
-				}else {
-					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getActualComposite()).getOperationCallControllerBinding();
-					if (operationCallControllerBinding  != null){
-						ControllerBindingsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection();
+			protected void newSelection(ISelection selection) {
+				if (selection.isEmpty()) {
+					setNullSelection();
+				} else {
+					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getActualComposite())
+							.getOperationCallControllerBinding();
+					if (operationCallControllerBinding != null) {
+						ControllerBindingsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE
+								.createControllerBindingsPartSelection();
 						selectionSent.setOperationCallControllerBinding(operationCallControllerBinding);
-						
-						selectionService.setSelection(selectionSent);				
+
+						selectionService.setSelection(selectionSent);
 					}
 				}
 			}
 		};
-		
-		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ControllerConfigsPart", new ISelectionListener() {
-			@Override
-			public void selectionChanged(MPart part, Object selection) {
-				if(selection instanceof ControllerConfigsPartSelection){
-					setSelection((ControllerConfigsPartSelection)selection);
-				}
-			}
-		});		
+
+		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ControllerConfigsPart",
+				new ISelectionListener() {
+					@Override
+					public void selectionChanged(MPart part, Object selection) {
+						if (selection instanceof ControllerConfigsPartSelection) {
+							setSelection((ControllerConfigsPartSelection) selection);
+						}
+					}
+				});
 	}
 
 	@Override
 	protected void setCompositeContents(EObject eObject) {
-		((ControllerBindingsComposite) getActualComposite()).setControllersConfiguration((ControllersConfiguration)eObject);
+		((ControllerBindingsComposite) getActualComposite())
+				.setControllersConfiguration((ControllersConfiguration) eObject);
 	}
 
 	@Override
 	protected void setNullSelection() {
-		selectionService.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection());
+		selectionService
+				.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection());
 	}
-	
+
 	/**
 	 * Injects a {@link ControllerConfigsPartSelection} in the part from the
 	 * {@link ESelectionService}
@@ -83,12 +90,36 @@ public class ControllerBindingsPart extends AbstractEObjectSelectionPart{
 	 */
 	@Inject
 	@Optional
-	private void setSelection(
-			@Named(IServiceConstants.ACTIVE_SELECTION) ControllerConfigsPartSelection selection) {
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllerConfigsPartSelection selection) {
 		if (selection != null) {
 			if (selection.getControllersConfiguration() != null) {
 				setEObject(selection.getControllersConfiguration());
 			}
 		}
+	}
+
+	@Override
+	protected List<String> getSelectionProvidersIds() {
+		List<String> ids = new ArrayList<>();
+
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.ControllerConfigsPart");
+
+		return ids;
+	}
+
+	@Override
+	protected List<ISelectionListener> getSelectionListeners() {
+		List<ISelectionListener> listeners = new ArrayList<ISelectionListener>();
+
+		listeners.add(new ISelectionListener() {
+			@Override
+			public void selectionChanged(MPart part, Object selection) {
+				if (selection instanceof ControllerConfigsPartSelection) {
+					setSelection((ControllerConfigsPartSelection) selection);
+				}
+			}
+		});
+
+		return listeners;
 	}
 }

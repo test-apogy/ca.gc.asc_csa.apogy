@@ -9,9 +9,12 @@ import javax.inject.Named;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.e4.ui.services.IServiceConstants;
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecp.ui.view.swt.ECPSWTViewRenderer;
+import org.eclipse.emf.ecp.view.spi.model.VView;
+import org.eclipse.emf.ecp.view.spi.provider.ViewProviderHelper;
 import org.eclipse.jface.layout.GridDataFactory;
 import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.swt.SWT;
@@ -19,12 +22,12 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
-import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Activator;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
+import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
 
-public class FormPropertiesPart extends AbstractFormPropertiesPart {
+public class ProgramDetailsPart extends AbstractFormPropertiesPart {
 
 	Composite contentComposite;
 
@@ -36,12 +39,12 @@ public class FormPropertiesPart extends AbstractFormPropertiesPart {
 		contentComposite.setLayout(GridLayoutFactory.fillDefaults().margins(10, 10).create());
 		contentComposite.setLayoutData(GridDataFactory.fillDefaults().create());
 
-		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ApogyAdvancedEditorPart",
+		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart",
 				new ISelectionListener() {
 					@Override
 					public void selectionChanged(MPart part, Object selection) {
-						if (selection instanceof ApogyAdvancedEditorPartSelection) {
-							setSelection((ApogyAdvancedEditorPartSelection) selection);
+						if (selection instanceof ProgramArgumentsPartSelection) {
+							setSelection((ProgramArgumentsPartSelection) selection);
 						}
 					}
 				});
@@ -53,7 +56,9 @@ public class FormPropertiesPart extends AbstractFormPropertiesPart {
 			control.dispose();
 		}
 		try {
-			ECPSWTViewRenderer.INSTANCE.render(contentComposite, eObject);
+			VView viewModel = ViewProviderHelper.getView(eObject, null);
+			viewModel.setAllContentsReadOnly();
+			ECPSWTViewRenderer.INSTANCE.render(contentComposite, eObject, viewModel);
 		} catch (Exception e) {
 			String message = this.getClass().getSimpleName() + ".setSelection(): " + "Error while opening EMF Forms";
 			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
@@ -61,9 +66,14 @@ public class FormPropertiesPart extends AbstractFormPropertiesPart {
 		contentComposite.layout();
 	}
 
+	/**
+	 * Injections for the different selections in the part from the TODO
+	 * {@link ESelectionService}
+	 *
+	 **/
 	@Inject
 	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ApogyAdvancedEditorPartSelection selection) {
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramArgumentsPartSelection selection) {
 		if (selection != null) {
 			setEObject(selection.getEObject());
 		}
@@ -71,14 +81,14 @@ public class FormPropertiesPart extends AbstractFormPropertiesPart {
 
 	@Override
 	boolean isReadOnly() {
-		return false;
+		return true;
 	}
 
 	@Override
 	protected List<String> getSelectionProvidersIds() {
 		List<String> ids = new ArrayList<>();
 
-		ids.add("ca.gc.asc_csa.apogy.rcp.part.ApogyAdvancedEditorPart");
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart");
 
 		return ids;
 	}
@@ -90,8 +100,8 @@ public class FormPropertiesPart extends AbstractFormPropertiesPart {
 		listeners.add(new ISelectionListener() {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
-				if (selection instanceof ApogyAdvancedEditorPartSelection) {
-					setSelection((ApogyAdvancedEditorPartSelection) selection);
+				if (selection instanceof ProgramArgumentsPartSelection) {
+					setSelection((ProgramArgumentsPartSelection) selection);
 				}
 			}
 		});

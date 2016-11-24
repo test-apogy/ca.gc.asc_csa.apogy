@@ -13,6 +13,9 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -35,15 +38,6 @@ public class ControllerBindingDetailsPart extends AbstractEObjectSelectionPart {
 	@Override
 	protected void createContentComposite(Composite parent, int style) {
 		new ControllerBindingDetailsComposite(parent, SWT.None);
-		
-		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ControllerBindingsPart", new ISelectionListener() {
-			@Override
-			public void selectionChanged(MPart part, Object selection) {
-				if(selection instanceof ControllerBindingsPartSelection){
-					setSelection((ControllerBindingsPartSelection)selection);
-				}
-			}
-		});
 	}
 
 	@Override
@@ -66,5 +60,30 @@ public class ControllerBindingDetailsPart extends AbstractEObjectSelectionPart {
 				setEObject(selection.getOperationCallControllerBinding());
 			}
 		}
+	}
+
+	@Override
+	protected List<String> getSelectionProvidersIds() {
+		List<String> ids = new ArrayList<>();
+
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.ControllerBindingsPart");
+
+		return ids;
+	}
+
+	@Override
+	protected List<ISelectionListener> getSelectionListeners() {
+		List<ISelectionListener> listeners = new ArrayList<ISelectionListener>();
+
+		listeners.add(new ISelectionListener() {
+			@Override
+			public void selectionChanged(MPart part, Object selection) {
+				if (selection instanceof ControllerBindingsPartSelection) {
+					setSelection((ControllerBindingsPartSelection) selection);
+				}
+			}
+		});
+
+		return listeners;
 	}
 }

@@ -14,10 +14,16 @@ package ca.gc.asc_csa.apogy.common.emf.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
+import java.util.Iterator;
+import java.util.List;
+
+import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 
@@ -25,9 +31,20 @@ import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 	
 	EObject eObject;
-
+	
 	@Override
 	protected EObject getInitializeObject() {
+		if(getSelectionListeners().size() == getSelectionProvidersIds().size()){
+			Iterator<ISelectionListener> iteListeners = getSelectionListeners().iterator();
+			for(Iterator<String> iteIds = getSelectionProvidersIds().iterator(); iteIds.hasNext();){
+				selectionService.addSelectionListener(iteIds.next(), iteListeners.next());
+			}
+		} else {
+			String message = this.getClass().getSimpleName() + ".createContentComposite(): "
+					+ "Error while creating the part SelectionListeners. The number of Ids should be the same as the number of SelectionListeners";
+			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR);
+		}
+		
 		return eObject;
 	}
 
@@ -47,19 +64,36 @@ abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 		new NoContentComposite(parent, style){
 			@Override
 			protected String getMessage() {
-				return "No active selection";
+				return "No compatible selection";
 			}
 		}; 
 	}
 	
 	/**
-	 * Specifies the {@link Composite} to create in the part. This method should
-	 * also add a listener on the {@link ESelectionService} using
-	 * .addPostSelectionListener(String partId, ISelectionListener listener).
-	 * The partId is the selection provider's part ID in the RCP. This listener
-	 * should check if the selection is the right type and then call the
-	 * dependency injection method.
+	 * Specifies the {@link Composite} to create in the part.
 	 */
 	@Override
 	abstract protected void createContentComposite(Composite parent, int style);
+	
+	
+	/**
+	 * This method returns a list of the IDs of the parts that the concrete part
+	 * listens. This is used to set a {@link NoContentComposite} when the
+	 * selection is set to null.
+	 * 
+	 * @return {@link List} of {@link String}
+	 */
+	abstract protected List<String> getSelectionProvidersIds();
+
+	/**
+	 * This method returns a list of the {@link ISelectionListener} of the parts
+	 * that the concrete part listens. This is used to set a
+	 * {@link NoContentComposite} when the selection is set to null.
+	 * 
+	 * These listeners should verify if the selection is the right type and if
+	 * it is, use the dependency injection setSelectionMethod().
+	 * 
+	 * @return {@link List} of {@link ISelectionListener}
+	 */
+	abstract protected List<ISelectionListener> getSelectionListeners();
 }
