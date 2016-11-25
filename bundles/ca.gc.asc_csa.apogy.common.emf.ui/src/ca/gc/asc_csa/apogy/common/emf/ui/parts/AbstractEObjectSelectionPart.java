@@ -75,11 +75,8 @@ abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 	@Override
 	abstract protected void createContentComposite(Composite parent, int style);
 	
-	
 	/**
-	 * This method returns a list of the IDs of the parts that the concrete part
-	 * listens. This is used to set a {@link NoContentComposite} when the
-	 * selection is set to null.
+	 * This method returns a list of the IDs of the parts that the part listens.
 	 * 
 	 * @return {@link List} of {@link String}
 	 */
@@ -87,11 +84,10 @@ abstract public class AbstractEObjectSelectionPart extends AbstractApogyPart{
 
 	/**
 	 * This method returns a list of the {@link ISelectionListener} of the parts
-	 * that the concrete part listens. This is used to set a
-	 * {@link NoContentComposite} when the selection is set to null.
+	 * that the concrete part listens.
 	 * 
-	 * These listeners should verify if the selection is the right type and if
-	 * it is, use the dependency injection setSelectionMethod().
+	 * These listeners should verify if the selection is the right type and call
+	 * setEObject(EObject)
 	 * 
 	 * @return {@link List} of {@link ISelectionListener}
 	 */

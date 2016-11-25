@@ -45,5 +45,9 @@ public abstract class AbstractFormPropertiesPart extends AbstractEObjectSelectio
 		contentComposite.layout();
 	}
 	
+	/**
+	 * This method return true if the EMFForm is readOnly and false if it's editable.
+	 * @return
+	 */
 	abstract protected boolean isReadOnly();
 }

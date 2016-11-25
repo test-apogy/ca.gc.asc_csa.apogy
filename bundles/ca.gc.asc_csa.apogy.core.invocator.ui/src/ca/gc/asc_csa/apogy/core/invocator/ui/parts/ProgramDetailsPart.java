@@ -4,19 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.AbstractFormPropertiesPart;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
 
 public class ProgramDetailsPart extends AbstractFormPropertiesPart {
-	/**
-	 * Injections for the different selections in the part from the TODO
-	 * {@link ESelectionService}
-	 *
-	 **/
-
 	@Override
 	protected boolean isReadOnly() {
 		return true;
