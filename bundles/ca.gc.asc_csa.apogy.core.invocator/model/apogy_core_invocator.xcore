@@ -308,6 +308,23 @@ class ApogyCoreInvocatorFacade
 	 * @return Reference to the {@link LinkRootNode}.
 	 */
 	op ListRootNode createListRootNode(VariableFeatureReference variableFeatureReference, EStructuralFeatureArray features)
+	
+	/*
+	 * TODO
+	 */
+	op String getAbstractTypeImplementationName(AbstractTypeImplementation implementation)
+	
+	/*
+	 * TODO
+	 */
+	op String getAbstractTypeImplementationInterfaceName(AbstractTypeImplementation implementation, boolean fullyQualified)
+	
+	/*
+	 * TODO
+	 */
+	op String getAbstractTypeImplementationImplementationName(AbstractTypeImplementation implementation, boolean fullyQualified)
+	
+	
 }
 
 //interface ProgramFilter{

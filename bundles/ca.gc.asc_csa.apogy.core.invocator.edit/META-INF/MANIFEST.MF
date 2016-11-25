@@ -8,8 +8,7 @@ Bundle-Activator: ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.apogy.core.invocator.edit,
- ca.gc.asc_csa.apogy.core.invocator.edit.descriptors,
+Export-Package: ca.gc.asc_csa.apogy.core.invocator.edit.descriptors,
  ca.gc.asc_csa.apogy.core.invocator.provider
 Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,

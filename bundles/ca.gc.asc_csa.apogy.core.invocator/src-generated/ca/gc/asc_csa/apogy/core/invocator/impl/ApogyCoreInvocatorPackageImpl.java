@@ -1068,6 +1068,33 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCoreInvocatorFacade__GetAbstractTypeImplementationName__AbstractTypeImplementation() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(41);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__GetAbstractTypeImplementationInterfaceName__AbstractTypeImplementation_boolean() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(42);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__GetAbstractTypeImplementationImplementationName__AbstractTypeImplementation_boolean() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(43);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInvocatorSession() {
 		return invocatorSessionEClass;
 	}
@@ -3070,6 +3097,9 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_LIST_ROOT_NODE__VARIABLEFEATUREREFERENCE_ESTRUCTURALFEATURE);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_NAME__ABSTRACTTYPEIMPLEMENTATION);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_INTERFACE_NAME__ABSTRACTTYPEIMPLEMENTATION_BOOLEAN);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_IMPLEMENTATION_NAME__ABSTRACTTYPEIMPLEMENTATION_BOOLEAN);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3600,6 +3630,17 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		op = initEOperation(getApogyCoreInvocatorFacade__CreateListRootNode__VariableFeatureReference_EStructuralFeature(), theApogyCommonEMFPackage.getListRootNode(), "createListRootNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariableFeatureReference(), "variableFeatureReference", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEStructuralFeatureArray(), "features", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__GetAbstractTypeImplementationName__AbstractTypeImplementation(), theEcorePackage.getEString(), "getAbstractTypeImplementationName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractTypeImplementation(), "implementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__GetAbstractTypeImplementationInterfaceName__AbstractTypeImplementation_boolean(), theEcorePackage.getEString(), "getAbstractTypeImplementationInterfaceName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractTypeImplementation(), "implementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "fullyQualified", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__GetAbstractTypeImplementationImplementationName__AbstractTypeImplementation_boolean(), theEcorePackage.getEString(), "getAbstractTypeImplementationImplementationName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractTypeImplementation(), "implementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "fullyQualified", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

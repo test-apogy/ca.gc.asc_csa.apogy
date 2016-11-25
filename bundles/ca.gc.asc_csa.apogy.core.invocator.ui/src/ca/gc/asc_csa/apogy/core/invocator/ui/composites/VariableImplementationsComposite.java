@@ -74,7 +74,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
 
 public class VariableImplementationsComposite extends ScrolledComposite {
 	private DataBindingContext m_bindingContext;
@@ -257,7 +256,7 @@ public class VariableImplementationsComposite extends ScrolledComposite {
 					@Override
 					public Object convert(Object fromObject) {
 						if (fromObject != null) {
-							return EMFEcoreInvocatorEditUtilities.getName((AbstractTypeImplementation) fromObject);
+							return ApogyCoreInvocatorFacade.INSTANCE.getAbstractTypeImplementationName((AbstractTypeImplementation) fromObject);
 						}
 						return null;
 					}
@@ -274,8 +273,7 @@ public class VariableImplementationsComposite extends ScrolledComposite {
 					@Override
 					public Object convert(Object fromObject) {
 						if (fromObject != null) {
-							return EMFEcoreInvocatorEditUtilities
-									.getInterfaceName((AbstractTypeImplementation) fromObject, true);
+							return ApogyCoreInvocatorFacade.INSTANCE.getAbstractTypeImplementationInterfaceName((AbstractTypeImplementation) fromObject, true);
 						}
 						return null;
 					}
@@ -293,8 +291,7 @@ public class VariableImplementationsComposite extends ScrolledComposite {
 					@Override
 					public Object convert(Object fromObject) {
 						if (fromObject != null) {
-							return EMFEcoreInvocatorEditUtilities
-									.getImplementationName((AbstractTypeImplementation) fromObject, true);
+							return ApogyCoreInvocatorFacade.INSTANCE.getAbstractTypeImplementationImplementationName((AbstractTypeImplementation) fromObject, true);
 						}
 						return null;
 					}
@@ -385,14 +382,14 @@ public class VariableImplementationsComposite extends ScrolledComposite {
 
 			switch (columnIndex) {
 			case FEATURE_COLUMN_ID:
-				str = EMFEcoreInvocatorEditUtilities.getName((AbstractTypeImplementation) object);
+				str = ApogyCoreInvocatorFacade.INSTANCE.getAbstractTypeImplementationName((AbstractTypeImplementation) object);
 				break;
 			case INTERFACE_COLUMN_ID:
-				str = EMFEcoreInvocatorEditUtilities.getInterfaceName((AbstractTypeImplementation) object, false);
+				str = ApogyCoreInvocatorFacade.INSTANCE.getAbstractTypeImplementationInterfaceName((AbstractTypeImplementation) object, false);
 				break;
 
 			case IMPLEMENTATION_COLUMN_ID:
-				str = EMFEcoreInvocatorEditUtilities.getImplementationName((AbstractTypeImplementation) object, false);
+				str = ApogyCoreInvocatorFacade.INSTANCE.getAbstractTypeImplementationImplementationName((AbstractTypeImplementation) object, false);
 				break;
 
 			default:
@@ -529,7 +526,7 @@ public class VariableImplementationsComposite extends ScrolledComposite {
 			editingDomain.getCommandStack().execute(command);
 
 			this.viewer.refresh();
-			txtImplementation.setText(EMFEcoreInvocatorEditUtilities.getImplementationName(implementation, true));
+			txtImplementation.setText(ApogyCoreInvocatorFacade.INSTANCE.getAbstractTypeImplementationImplementationName(implementation, true));
 		}
 	}
 }

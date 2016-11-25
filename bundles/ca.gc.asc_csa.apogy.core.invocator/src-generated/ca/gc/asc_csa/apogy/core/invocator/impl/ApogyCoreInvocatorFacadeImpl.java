@@ -1524,6 +1524,75 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String getAbstractTypeImplementationName(AbstractTypeImplementation implementation) {
+		String str;
+		if (implementation instanceof VariableImplementation) {
+			VariableImplementation variableImplementation = (VariableImplementation) implementation;
+			str = variableImplementation.getVariable().getName();
+		} else {
+			TypeMemberImplementation typeMemberImplementation = (TypeMemberImplementation) implementation;
+			str = typeMemberImplementation.getTypeMember().getName();
+		}
+		return str;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String getAbstractTypeImplementationInterfaceName(AbstractTypeImplementation implementation, boolean fullyQualified) {
+		String str = "";
+		if (implementation instanceof VariableImplementation) {
+			VariableImplementation variableImplementation = (VariableImplementation) implementation;
+
+			if (variableImplementation.getVariable().getVariableType()
+					.getInterfaceClass() != null) {
+				
+				str = fullyQualified ? 
+					variableImplementation.getVariable()
+						.getVariableType().getInterfaceClass()
+						.getInstanceTypeName() : 
+					variableImplementation
+						.getVariable().getVariableType().getInterfaceClass()
+						.getName();
+							
+			}
+		} else {
+			TypeMemberImplementation typeMemberImplementation = (TypeMemberImplementation) implementation;
+
+			if (typeMemberImplementation.getTypeMember()
+					.getMemberType().getInterfaceClass() != null) {
+				str = fullyQualified ? 						
+					typeMemberImplementation.getTypeMember()
+						.getMemberType().getInterfaceClass().getInstanceTypeName():
+					typeMemberImplementation.getTypeMember()
+							.getMemberType().getInterfaceClass().getName();
+			}
+		}
+		return str;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String getAbstractTypeImplementationImplementationName(AbstractTypeImplementation implementation, boolean fullyQualified) {
+		String str = "";
+		if (implementation.getImplementationClass() != null) {
+			str = fullyQualified ? 
+					implementation.getImplementationClass().getInstanceTypeName():
+					implementation.getImplementationClass().getName(); 
+		}
+		return str;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1692,6 +1761,12 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return getSubTypeFeatureString((TypeMemberReferenceListElement)arguments.get(0), (ListRootNode)arguments.get(1));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_LIST_ROOT_NODE__VARIABLEFEATUREREFERENCE_ESTRUCTURALFEATURE:
 				return createListRootNode((VariableFeatureReference)arguments.get(0), (EStructuralFeature[])arguments.get(1));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_NAME__ABSTRACTTYPEIMPLEMENTATION:
+				return getAbstractTypeImplementationName((AbstractTypeImplementation)arguments.get(0));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_INTERFACE_NAME__ABSTRACTTYPEIMPLEMENTATION_BOOLEAN:
+				return getAbstractTypeImplementationInterfaceName((AbstractTypeImplementation)arguments.get(0), (Boolean)arguments.get(1));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_IMPLEMENTATION_NAME__ABSTRACTTYPEIMPLEMENTATION_BOOLEAN:
+				return getAbstractTypeImplementationImplementationName((AbstractTypeImplementation)arguments.get(0), (Boolean)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

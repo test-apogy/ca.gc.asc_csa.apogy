@@ -599,4 +599,37 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 */
 	ListRootNode createListRootNode(VariableFeatureReference variableFeatureReference, EStructuralFeature[] features);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * TODO
+	 * <!-- end-model-doc -->
+	 * @model unique="false" implementationUnique="false"
+	 * @generated
+	 */
+	String getAbstractTypeImplementationName(AbstractTypeImplementation implementation);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * TODO
+	 * <!-- end-model-doc -->
+	 * @model unique="false" implementationUnique="false" fullyQualifiedUnique="false"
+	 * @generated
+	 */
+	String getAbstractTypeImplementationInterfaceName(AbstractTypeImplementation implementation, boolean fullyQualified);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * TODO
+	 * <!-- end-model-doc -->
+	 * @model unique="false" implementationUnique="false" fullyQualifiedUnique="false"
+	 * @generated
+	 */
+	String getAbstractTypeImplementationImplementationName(AbstractTypeImplementation implementation, boolean fullyQualified);
+
 } // ApogyCoreInvocatorFacade
