@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.topology.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.topology.*;
 import java.util.SortedSet;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -76,6 +77,7 @@ public class ApogyCoreTopologyFactoryImpl extends EFactoryImpl implements ApogyC
   {
 		switch (eClass.getClassifierID()) {
 			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: return createApogyCoreTopologyFacade();
+			case ApogyCoreTopologyPackage.APOGY_TOPOLOGY_CONTROLLER: return createApogyTopologyController();
 			case ApogyCoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER: return createSystemsTopologyAdapter();
 			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE: return createApogyEnvironmentNode();
 			case ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE: return createApogySystemAPIsNode();
@@ -157,6 +159,16 @@ public class ApogyCoreTopologyFactoryImpl extends EFactoryImpl implements ApogyC
 	public ApogyCoreTopologyFacade createApogyCoreTopologyFacade() {
 		ApogyCoreTopologyFacadeImpl apogyCoreTopologyFacade = new ApogyCoreTopologyFacadeImpl();
 		return apogyCoreTopologyFacade;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ApogyTopologyController createApogyTopologyController() {
+		ApogyTopologyControllerImpl apogyTopologyController = new ApogyTopologyControllerImpl();
+		return apogyTopologyController;
 	}
 
 		/**

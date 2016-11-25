@@ -27,6 +27,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
 import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFactory;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
@@ -67,6 +68,13 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 	 * @generated
 	 */
 	private EClass apogyCoreTopologyFacadeEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass apogyTopologyControllerEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -325,6 +333,42 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getApogyTopologyController() {
+		return apogyTopologyControllerEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyTopologyController__Init() {
+		return apogyTopologyControllerEClass.getEOperations().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyTopologyController__Dispose() {
+		return apogyTopologyControllerEClass.getEOperations().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyTopologyController__InitApogyTopology__InvocatorSession() {
+		return apogyTopologyControllerEClass.getEOperations().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -370,6 +414,11 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 		createEOperation(apogyCoreTopologyFacadeEClass, APOGY_CORE_TOPOLOGY_FACADE___INIT_APOGY_TOPOLOGY__APOGYENVIRONMENT);
 		createEOperation(apogyCoreTopologyFacadeEClass, APOGY_CORE_TOPOLOGY_FACADE___DISPOSE_APOGY_TOPOLOGY);
 		createEOperation(apogyCoreTopologyFacadeEClass, APOGY_CORE_TOPOLOGY_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST);
+
+		apogyTopologyControllerEClass = createEClass(APOGY_TOPOLOGY_CONTROLLER);
+		createEOperation(apogyTopologyControllerEClass, APOGY_TOPOLOGY_CONTROLLER___INIT);
+		createEOperation(apogyTopologyControllerEClass, APOGY_TOPOLOGY_CONTROLLER___DISPOSE);
+		createEOperation(apogyTopologyControllerEClass, APOGY_TOPOLOGY_CONTROLLER___INIT_APOGY_TOPOLOGY__INVOCATORSESSION);
 
 		systemsTopologyAdapterEClass = createEClass(SYSTEMS_TOPOLOGY_ADAPTER);
 		createEReference(systemsTopologyAdapterEClass, SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT);
@@ -448,6 +497,15 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 
 		op = initEOperation(getApogyCoreTopologyFacade__GetFeatureOfInterestNode__FeatureOfInterest(), theApogyCorePackage.getFeatureOfInterestNode(), "getFeatureOfInterestNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCorePackage.getFeatureOfInterest(), "featureOfInterest", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(apogyTopologyControllerEClass, ApogyTopologyController.class, "ApogyTopologyController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getApogyTopologyController__Init(), null, "init", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getApogyTopologyController__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyTopologyController__InitApogyTopology__InvocatorSession(), null, "initApogyTopology", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getInvocatorSession(), "session", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(systemsTopologyAdapterEClass, SystemsTopologyAdapter.class, "SystemsTopologyAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSystemsTopologyAdapter_Deployment(), theApogyCorePackage.getApogyEnvironment(), null, "deployment", null, 0, 1, SystemsTopologyAdapter.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

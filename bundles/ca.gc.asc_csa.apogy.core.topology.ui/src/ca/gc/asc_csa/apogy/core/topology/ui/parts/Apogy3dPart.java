@@ -14,43 +14,10 @@ package ca.gc.asc_csa.apogy.core.topology.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
-
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.apogy.core.ApogyTopology;
 
 public class Apogy3dPart extends AbstractApogy3dPart {
-
-	
-	
-	@Override
-	protected void createContentComposite(Composite parent, int style) {
-		new Label(parent, style).setText("Apogy 3d");
-//		new ScriptBasedProgramsListComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
-//			@Override
-//			protected void newSelection(ISelection selection) {
-//				if (selection.isEmpty()){
-//					setNullSelection();					
-//				}else {
-//					Program program = ((ScriptBasedProgramsListComposite) getActualComposite()).getSelectedProgram();
-//					if (program != null){
-//						ScriptBasedProgramsListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createScriptBasedProgramsListPartSelection();
-//						selectionSent.setProgram(program);		
-//						
-//						selectionService.setSelection(selectionSent);						
-//					}
-//				}
-//			}
-//		};
-	}
 		
-	@Override
-	protected void newTopology(ApogyTopology apogyTopology) {
-		// TODO Auto-generated method stub
-		super.newTopology(apogyTopology);
-	}
-
 	@Override
 	protected void setNullSelection() {
 //		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createScriptBasedProgramsListPartSelection());
@@ -61,6 +28,7 @@ public class Apogy3dPart extends AbstractApogy3dPart {
 	 * @return The JME3RenderEngineDelegate to be used.
 	 */
 	protected JME3RenderEngineDelegate createJME3RenderEngineDelegate(){
+		System.out.println("Apogy3dPart.createJME3RenderEngineDelegate()");
 		return new JME3RenderEngineDelegate();
 	}
 

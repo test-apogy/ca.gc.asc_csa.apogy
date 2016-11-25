@@ -42,6 +42,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Variable
 import ca.gc.asc_csa.apogy.core.ApogyTopology
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode
 import ca.gc.asc_csa.apogy.core.FeatureOfInterest
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
 
 type SortedSet<T> wraps java.util.SortedSet 
 
@@ -81,6 +82,29 @@ class ApogyCoreTopologyFacade
 	 * @return The FeatureOfInterestNode associated with the specified FeatureOfInterest, null if none is found.
 	 */
 	op FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest)			 
+}
+
+/*
+ * This controller listens the {@link ApogyCoreInvocatorFacade#activeInvocatorSession} and 
+ * sets the {@link ApogyTopology}
+ */
+class ApogyTopologyController{
+	/*
+	 * Initializes the {@link ApogyCoreInvocatorFacade#activeInvocatorSession} listener.
+	 */
+	op void init()
+	
+	/*
+	 * Disposes the {@link ApogyCoreInvocatorFacade#activeInvocatorSession} listener.
+	 */	
+	op void dispose()
+	
+	/*
+	 * Initializes or clear the active Apogy Topology
+	 * @param session Reference to the session.  If not null, the topology will be initialized.  
+	 * Otherwise, the topology will be disposed. 
+	 */
+	op void initApogyTopology(InvocatorSession session) 
 }
 
 class SystemsTopologyAdapter

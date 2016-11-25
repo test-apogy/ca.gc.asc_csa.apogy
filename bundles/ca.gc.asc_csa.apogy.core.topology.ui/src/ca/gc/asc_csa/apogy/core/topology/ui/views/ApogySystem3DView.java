@@ -48,6 +48,7 @@ import ca.gc.asc_csa.apogy.core.ApogySystem;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.topology.ui.Activator;
 
+@Deprecated
 public class ApogySystem3DView extends AbstractApogy3DView implements IPropertyChangeListener
 {
 	public static final String PART_NAME = "Apogy System 3D Viewer";

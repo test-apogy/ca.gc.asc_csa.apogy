@@ -25,7 +25,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
 import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
@@ -36,10 +39,10 @@ import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
-import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFactory;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -197,29 +200,38 @@ public class ApogyCoreTopologyFacadeImpl extends MinimalEObjectImpl.Container im
 		apogyEnvironmentNode.getResultsListNode();
 		
 		return apogyEnvironmentNode;
-
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	public void initApogyTopology(ApogyEnvironment environment) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (environment != null){
+			// Updates the deployment of the deployment node to get the topology to update.
+			TransformNode root = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
+			root.setNodeId("UNIVERSE_ROOT");
+			root.setDescription("Root Node of the Apogy Environment");
+			
+			// Creates the ApogyEnvironmentNode that represent the topology associated with the ApogyEnvironment.
+			ApogyEnvironmentNode apogyEnvironmentNode = ApogyCoreTopologyFacade.INSTANCE.createApogyEnvironmentNode(environment);									
+			root.getChildren().add(apogyEnvironmentNode);
+												
+			ApogyTopology apogyTopology = ApogyCoreFactory.eINSTANCE.createApogyTopology();			
+			apogyTopology.setRootNode(root);
+			setApogyTopology(apogyTopology);
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	public void disposeApogyTopology() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// FIXME Dispose properly the current topology.
+		setApogyTopology(null);
 	}
 
 	/**

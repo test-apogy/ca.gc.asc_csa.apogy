@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.core.topology.*;
 import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
 import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
@@ -88,6 +89,10 @@ public class ApogyCoreTopologyAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseApogyCoreTopologyFacade(ApogyCoreTopologyFacade object) {
 				return createApogyCoreTopologyFacadeAdapter();
+			}
+			@Override
+			public Adapter caseApogyTopologyController(ApogyTopologyController object) {
+				return createApogyTopologyControllerAdapter();
 			}
 			@Override
 			public Adapter caseSystemsTopologyAdapter(SystemsTopologyAdapter object) {
@@ -190,6 +195,20 @@ public class ApogyCoreTopologyAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createApogyCoreTopologyFacadeAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController <em>Apogy Topology Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController
+	 * @generated
+	 */
+	public Adapter createApogyTopologyControllerAdapter() {
 		return null;
 	}
 

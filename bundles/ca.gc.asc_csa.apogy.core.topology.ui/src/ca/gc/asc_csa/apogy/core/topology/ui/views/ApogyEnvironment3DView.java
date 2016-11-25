@@ -50,6 +50,7 @@ import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
 import ca.gc.asc_csa.apogy.core.topology.ui.Activator;
 import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
 
+@Deprecated
 public class ApogyEnvironment3DView extends AbstractApogy3DView 
 {	
 	public static final String PART_NAME = "Apogy 3D Viewer";	

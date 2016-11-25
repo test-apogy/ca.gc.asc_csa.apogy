@@ -29,10 +29,12 @@ public class Activator implements BundleActivator {
 	@Override
 	public void start(BundleContext context) throws Exception {
 		Activator.context = context;
+		ApogyTopologyController.INSTANCE.init();
 	}
 
 	@Override
-	public void stop(BundleContext context) throws Exception {		
-		Activator.context = null;
+	public void stop(BundleContext context) throws Exception {
+		ApogyTopologyController.INSTANCE.dispose();
+		Activator.context = null;		
 	}
 }

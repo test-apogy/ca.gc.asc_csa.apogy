@@ -92,7 +92,7 @@ public interface ApogyCoreTopologyPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyPackageImpl#getSystemsTopologyAdapter()
 	 * @generated
 	 */
-  int SYSTEMS_TOPOLOGY_ADAPTER = 1;
+  int SYSTEMS_TOPOLOGY_ADAPTER = 2;
 
   /**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl <em>Apogy Environment Node</em>}' class.
@@ -102,7 +102,7 @@ public interface ApogyCoreTopologyPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyPackageImpl#getApogyEnvironmentNode()
 	 * @generated
 	 */
-  int APOGY_ENVIRONMENT_NODE = 2;
+  int APOGY_ENVIRONMENT_NODE = 3;
 
   /**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogySystemAPIsNodeImpl <em>Apogy System AP Is Node</em>}' class.
@@ -112,7 +112,7 @@ public interface ApogyCoreTopologyPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyPackageImpl#getApogySystemAPIsNode()
 	 * @generated
 	 */
-  int APOGY_SYSTEM_AP_IS_NODE = 3;
+  int APOGY_SYSTEM_AP_IS_NODE = 4;
 
   /**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyFacadeImpl <em>Facade</em>}' class.
@@ -204,6 +204,61 @@ public interface ApogyCoreTopologyPackage extends EPackage
 	 * @ordered
 	 */
 	int APOGY_CORE_TOPOLOGY_FACADE_OPERATION_COUNT = 6;
+
+		/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyTopologyControllerImpl <em>Apogy Topology Controller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.topology.impl.ApogyTopologyControllerImpl
+	 * @see ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyPackageImpl#getApogyTopologyController()
+	 * @generated
+	 */
+	int APOGY_TOPOLOGY_CONTROLLER = 1;
+
+		/**
+	 * The number of structural features of the '<em>Apogy Topology Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_TOPOLOGY_CONTROLLER_FEATURE_COUNT = 0;
+
+		/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_TOPOLOGY_CONTROLLER___INIT = 0;
+
+		/**
+	 * The operation id for the '<em>Dispose</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_TOPOLOGY_CONTROLLER___DISPOSE = 1;
+
+		/**
+	 * The operation id for the '<em>Init Apogy Topology</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_TOPOLOGY_CONTROLLER___INIT_APOGY_TOPOLOGY__INVOCATORSESSION = 2;
+
+		/**
+	 * The number of operations of the '<em>Apogy Topology Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_TOPOLOGY_CONTROLLER_OPERATION_COUNT = 3;
 
 		/**
 	 * The feature id for the '<em><b>Deployment</b></em>' reference.
@@ -447,7 +502,7 @@ public interface ApogyCoreTopologyPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyPackageImpl#getSortedSet()
 	 * @generated
 	 */
-  int SORTED_SET = 4;
+  int SORTED_SET = 5;
 
 
   /**
@@ -649,6 +704,46 @@ public interface ApogyCoreTopologyPackage extends EPackage
 	EOperation getApogyCoreTopologyFacade__GetFeatureOfInterestNode__FeatureOfInterest();
 
 		/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController <em>Apogy Topology Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Apogy Topology Controller</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController
+	 * @generated
+	 */
+	EClass getApogyTopologyController();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController#init() <em>Init</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Init</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController#init()
+	 * @generated
+	 */
+	EOperation getApogyTopologyController__Init();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController#dispose() <em>Dispose</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Dispose</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController#dispose()
+	 * @generated
+	 */
+	EOperation getApogyTopologyController__Dispose();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController#initApogyTopology(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession) <em>Init Apogy Topology</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Init Apogy Topology</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController#initApogyTopology(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession)
+	 * @generated
+	 */
+	EOperation getApogyTopologyController__InitApogyTopology__InvocatorSession();
+
+		/**
 	 * Returns the meta object for data type '{@link java.util.SortedSet <em>Sorted Set</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -842,6 +937,40 @@ public interface ApogyCoreTopologyPackage extends EPackage
 		 * @generated
 		 */
 		EOperation APOGY_CORE_TOPOLOGY_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST = eINSTANCE.getApogyCoreTopologyFacade__GetFeatureOfInterestNode__FeatureOfInterest();
+
+				/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyTopologyControllerImpl <em>Apogy Topology Controller</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.topology.impl.ApogyTopologyControllerImpl
+		 * @see ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyPackageImpl#getApogyTopologyController()
+		 * @generated
+		 */
+		EClass APOGY_TOPOLOGY_CONTROLLER = eINSTANCE.getApogyTopologyController();
+
+				/**
+		 * The meta object literal for the '<em><b>Init</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_TOPOLOGY_CONTROLLER___INIT = eINSTANCE.getApogyTopologyController__Init();
+
+				/**
+		 * The meta object literal for the '<em><b>Dispose</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_TOPOLOGY_CONTROLLER___DISPOSE = eINSTANCE.getApogyTopologyController__Dispose();
+
+				/**
+		 * The meta object literal for the '<em><b>Init Apogy Topology</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_TOPOLOGY_CONTROLLER___INIT_APOGY_TOPOLOGY__INVOCATORSESSION = eINSTANCE.getApogyTopologyController__InitApogyTopology__InvocatorSession();
 
 				/**
 		 * The meta object literal for the '<em>Sorted Set</em>' data type.
