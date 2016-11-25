@@ -21,6 +21,7 @@ import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
@@ -68,6 +69,8 @@ import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseEClassWizard;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
@@ -79,6 +82,7 @@ import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
 import ca.gc.asc_csa.apogy.core.invocator.NumericEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
 public class ArgumentsComposite extends Composite {
 
@@ -161,85 +165,7 @@ public class ArgumentsComposite extends Composite {
 		TreeColumn treeclmnParameter = treeViewerParameterColumn.getColumn();
 		treeclmnParameter.setWidth(100);
 		treeclmnParameter.setText("Value");
-		
-
-		treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory){		
-			@Override
-			public Object[] getElements(Object object) {
-				if(object instanceof EObjectReference){
-					if(((EObjectReference) object).getEObject() instanceof OperationCall){
-						return ((OperationCall)((EObjectReference) object).getEObject()).getArgumentsList().getArguments().toArray();
-					}
-				}
-				return super.getElements(object);
-			}
-
-			@Override
-			public Object[] getChildren(Object object) {
-				if (object instanceof OperationCall) {
-					if (((OperationCall) object).getArgumentsList() != null) {
-						return ((OperationCall) object).getArgumentsList().getArguments().toArray();
-					}
-					Object[] nullObjects = {};
-					return nullObjects;
-				}
-				return super.getChildren(object);
-			}
-
-			@Override
-			public boolean hasChildren(Object object) {
-				if (object instanceof OperationCall) {
-					if (((OperationCall) object).getArgumentsList() != null) {
-						return true;
-					}
-					return false;
-				}
-				return super.hasChildren(object);
-			}
-			
-		});
-		treeViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory){
-
-			private static final int PARAMETER_COLUMN_ID = 0;
-			private static final int VALUE_ID = 1;
-
-			@Override
-			public String getColumnText(Object object, int columnIndex) {
-				String str = "<undefined>";
-
-				switch (columnIndex) {
-				case PARAMETER_COLUMN_ID:
-					if(object instanceof Argument){
-						str = super.getColumnText(object, 0);
-						if (str.contains("(")) {
-							str = str.substring(0, str.indexOf("("));
-						}
-						break;
-					}
-					str = object.getClass().getName();
-					break;
-				case VALUE_ID:
-					if (object instanceof EDataTypeArgument) {
-						str = ((EDataTypeArgument) object).getValue();
-					} else if (object instanceof EClassArgument) {
-						EClassArgument eClassArgumentObject = (EClassArgument) object;
-						if (eClassArgumentObject.getValue() != null) {
-							str = ((EClassArgument) object).getValue().toString();
-						}
-					} else if (object instanceof EEnumArgument) {
-						str = ((EEnumArgument) object).getEEnumLiteral().getLiteral();
-					} else {
-						str = super.getText(object);
-					}
-					break;
-				default:
-					break;
-				}
-				return str;
-			}
-
-		});
-
+	
 		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
 		m_bindingContext = initDataBindingsCustom();
 	}
@@ -354,13 +280,25 @@ public class ArgumentsComposite extends Composite {
 		
 		@Override
 		protected void setValue(Object element, Object value) {
-			if(element instanceof EDataTypeArgument){
-				if(element instanceof BooleanEDataTypeArgument){
-					((EDataTypeArgument) element).setValue(booleanLabels[(int)value]);
-				}else{
-					((EDataTypeArgument) element).setValue((String) value);
+			if (element instanceof BooleanEDataTypeArgument) {
+				((EDataTypeArgument) element).setValue(booleanLabels[(int) value]);
+			}
+			if (element instanceof StringEDataTypeArgument) {
+				((EDataTypeArgument) element).setValue((String) value);
+			}
+			if (element instanceof NumericEDataTypeArgument) {
+				System.out.println("ArgumentsComposite.ArgumentsEditor.setValue()");
+				double doublevalue = Double.parseDouble(((EDataTypeArgument) element).getValue());
+				try {
+					doublevalue = Double.parseDouble((String) value);
+				} catch (NumberFormatException e) {
+					String message = this.getClass().getSimpleName() + ".setValue(Object element, Object value): "
+							+ "Value entered is not a number";
+					Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
 				}
-			}else if(element instanceof EEnumArgument){
+				((EDataTypeArgument) element).setValue(Double.toString(doublevalue));
+			}
+			if (element instanceof EEnumArgument) {
 //				TODO
 //				EEnum eEnum = ((EEnumArgument) element).getEEnum();
 //				if((int)value != -1){
@@ -499,6 +437,9 @@ public class ArgumentsComposite extends Composite {
 	protected DataBindingContext initDataBindingsCustom() {
 		m_bindingContext = new DataBindingContext();
 		
+		treeViewer.setContentProvider(new ArgumentsContentProvier(adapterFactory));
+		treeViewer.setLabelProvider(new ArgumentsLabelProvider(adapterFactory));
+		
 
 //		DelegatingListProperty<?, ?> delegatingListProperty = new DelegatingListProperty<Object, Object>() {
 //
@@ -604,6 +545,97 @@ public class ArgumentsComposite extends Composite {
 						}));
 
 		return m_bindingContext;
+	}
+	
+	
+	// XXX
+	private class ArgumentsContentProvier extends AdapterFactoryContentProvider{
+
+		public ArgumentsContentProvier(AdapterFactory adapterFactory) {
+			super(adapterFactory);
+		}
+		
+		@Override
+		public Object[] getElements(Object object) {
+			if(object instanceof EObjectReference){
+				if(((EObjectReference) object).getEObject() instanceof OperationCall){
+					return ((OperationCall)((EObjectReference) object).getEObject()).getArgumentsList().getArguments().toArray();
+				}
+			}
+			return super.getElements(object);
+		}
+
+		@Override
+		public Object[] getChildren(Object object) {
+			if (object instanceof OperationCall) {
+				if (((OperationCall) object).getArgumentsList() != null) {
+					return ((OperationCall) object).getArgumentsList().getArguments().toArray();
+				}
+				Object[] nullObjects = {};
+				return nullObjects;
+			}
+			return super.getChildren(object);
+		}
+
+		@Override
+		public boolean hasChildren(Object object) {
+			if (object instanceof OperationCall) {
+				if (((OperationCall) object).getArgumentsList() != null) {
+					return true;
+				}
+				return false;
+			}
+			return super.hasChildren(object);
+		}
+		
+	}
+	
+	// XXX Label provider
+	private class ArgumentsLabelProvider extends AdapterFactoryLabelProvider{
+
+		private static final int PARAMETER_COLUMN_ID = 0;
+		private static final int VALUE_ID = 1;
+		
+		public ArgumentsLabelProvider(AdapterFactory adapterFactory) {
+			super(adapterFactory);
+		}	
+
+		@Override
+		public String getColumnText(Object object, int columnIndex) {
+			String str = "<undefined>";
+
+			switch (columnIndex) {
+			case PARAMETER_COLUMN_ID:
+				if(object instanceof Argument){
+					str = super.getColumnText(object, 0);
+					if (str.contains("(")) {
+						str = str.substring(0, str.indexOf("("));
+					}
+					break;
+				}
+				str = object.getClass().getName();
+				break;
+			case VALUE_ID:
+				if (object instanceof EDataTypeArgument) {
+					str = ((EDataTypeArgument) object).getValue();
+				} else if (object instanceof EClassArgument) {
+					EClassArgument eClassArgumentObject = (EClassArgument) object;
+					if (eClassArgumentObject.getValue() != null) {
+						str = ((EClassArgument) object).getValue().toString();
+					}
+				} else if (object instanceof EEnumArgument) {
+					str = ((EEnumArgument) object).getEEnumLiteral().getLiteral();
+				} else {
+					str = super.getText(object);
+				}
+				break;
+			default:
+				break;
+			}
+			return str;
+		}
+		
+		
 	}
 	
 	public Adapter getArgumentsListAdapter() {

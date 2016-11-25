@@ -27,6 +27,7 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramPartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ScriptBasedProgramsListPartSelection;
@@ -82,7 +83,10 @@ public class ProgramPart extends AbstractEObjectSelectionPart {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
 				if (selection instanceof ScriptBasedProgramsListPartSelection) {
-					setEObject(((ScriptBasedProgramsListPartSelection) selection).getProgram());;
+					Program program = ((ScriptBasedProgramsListPartSelection) selection).getProgram();
+					if(program == null || program instanceof OperationCallsList){
+						setEObject(program);
+					}
 				}
 			}
 		});
