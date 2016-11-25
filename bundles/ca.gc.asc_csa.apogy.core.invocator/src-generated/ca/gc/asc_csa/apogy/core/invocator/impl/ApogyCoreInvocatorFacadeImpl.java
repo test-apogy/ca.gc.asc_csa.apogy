@@ -1476,13 +1476,12 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 			}
 			eParamaters_str = eParamaters_str.substring(0, eParamaters_str.length() - 2);
 			eParamaters_str += ")";
+		}else{
+			eParamaters_str = "()";
 		}
 
-		if (eParamaters_str != null) {
-			return str + operation_str + eParamaters_str;
-		} else {
-			return str + operation_str;
-		}
+		return str + operation_str + eParamaters_str;
+
 	}
 
 	/**

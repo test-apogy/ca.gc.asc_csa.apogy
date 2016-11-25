@@ -35,7 +35,6 @@ import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 
 public class OperationCallDetailsComposite extends ScrolledComposite {
@@ -46,6 +45,7 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 	private ArgumentsComposite argumentsComposite;
 	private OperationCall operationCall;
 	private Label label;
+	private Composite composite;
 	// private Text opsCallText;
 
 	private AdapterImpl operationCallAdapter;
@@ -71,7 +71,7 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 		setExpandVertical(true);
 		// getShell().setBackgroundMode(SWT.INHERIT_FORCE);
 
-		Composite composite = new Composite(this, SWT.NONE);
+		composite = new Composite(this, SWT.NONE);
 		composite.setLayout(new GridLayout(1, true));
 
 		label = new Label(composite, SWT.WRAP);
@@ -188,8 +188,8 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 
 		// variableFeatureReferenceComposite.set(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(),
 		// operationCall);
-
 		label.setText(ApogyCoreInvocatorFacade.INSTANCE.getOperationCallString(getOperationCall()));
+		composite.layout();
 //		((Composite) getContent()).layout();
 		// opsCallText.setText(ApogyCoreInvocatorFacade.INSTANCE.getOperationCallString(getOperationCall()));
 		return bindingContext;

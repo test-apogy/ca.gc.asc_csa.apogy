@@ -173,6 +173,30 @@ public class ArgumentsComposite extends Composite {
 				}
 				return super.getElements(object);
 			}
+
+			@Override
+			public Object[] getChildren(Object object) {
+				if (object instanceof OperationCall) {
+					if (((OperationCall) object).getArgumentsList() != null) {
+						return ((OperationCall) object).getArgumentsList().getArguments().toArray();
+					}
+					Object[] nullObjects = {};
+					return nullObjects;
+				}
+				return super.getChildren(object);
+			}
+
+			@Override
+			public boolean hasChildren(Object object) {
+				if (object instanceof OperationCall) {
+					if (((OperationCall) object).getArgumentsList() != null) {
+						return true;
+					}
+					return false;
+				}
+				return super.hasChildren(object);
+			}
+			
 		});
 		treeViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory){
 
@@ -452,10 +476,16 @@ public class ArgumentsComposite extends Composite {
 			this.operationCall.eAdapters().remove(getArgumentsListAdapter());
 		}
 		this.operationCall = operationCall;
-		EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
-		eObjectReference.setEObject(operationCall);
-		treeViewer.setInput(eObjectReference);
-		treeViewer.expandAll();
+		
+		if(this.operationCall.getArgumentsList() != null){
+			EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
+			eObjectReference.setEObject(operationCall);
+			treeViewer.setInput(eObjectReference);
+			treeViewer.expandAll();
+		}else{
+			treeViewer.setInput(null);
+		}
+		
 		this.operationCall.eAdapters().add(getArgumentsListAdapter());
 		
 		
