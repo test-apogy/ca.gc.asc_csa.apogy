@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts;
+package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +12,10 @@ import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 
-import ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection;
+import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.AbstractFormPropertiesPart;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ProgramArgumentsPartSelection;
 
-public class VariableFeatureReferenceDetailsPart extends AbstractFormPropertiesPart {
+public class ProgramDetailsPart extends AbstractFormPropertiesPart {
 	/**
 	 * Injections for the different selections in the part from the TODO
 	 * {@link ESelectionService}
@@ -22,14 +23,14 @@ public class VariableFeatureReferenceDetailsPart extends AbstractFormPropertiesP
 	 **/
 	@Inject
 	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) VariableRuntimePartSelection selection) {
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramArgumentsPartSelection selection) {
 		if (selection != null) {
 			setEObject(selection.getEObject());
 		}
 	}
 
 	@Override
-	boolean isReadOnly() {
+	protected boolean isReadOnly() {
 		return true;
 	}
 
@@ -37,7 +38,7 @@ public class VariableFeatureReferenceDetailsPart extends AbstractFormPropertiesP
 	protected List<String> getSelectionProvidersIds() {
 		List<String> ids = new ArrayList<>();
 
-		ids.add("ca.gc.asc_csa.apogy.rcp.part.VariableRuntimePart");
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart");
 
 		return ids;
 	}
@@ -49,8 +50,8 @@ public class VariableFeatureReferenceDetailsPart extends AbstractFormPropertiesP
 		listeners.add(new ISelectionListener() {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
-				if (selection instanceof VariableRuntimePartSelection) {
-					setSelection((VariableRuntimePartSelection) selection);
+				if (selection instanceof ProgramArgumentsPartSelection) {
+					setSelection((ProgramArgumentsPartSelection) selection);
 				}
 			}
 		});

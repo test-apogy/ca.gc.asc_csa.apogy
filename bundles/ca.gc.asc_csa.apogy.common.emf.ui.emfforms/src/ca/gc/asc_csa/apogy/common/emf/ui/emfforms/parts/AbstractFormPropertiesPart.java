@@ -47,5 +47,5 @@ public abstract class AbstractFormPropertiesPart extends AbstractEObjectSelectio
 		contentComposite.layout();
 	}
 	
-	abstract boolean isReadOnly();
+	abstract protected boolean isReadOnly();
 }

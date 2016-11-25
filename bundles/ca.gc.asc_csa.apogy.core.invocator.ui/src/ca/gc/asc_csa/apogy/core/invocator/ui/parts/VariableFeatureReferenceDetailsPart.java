@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts;
+package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,29 +9,36 @@ import javax.inject.Named;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.e4.ui.services.IServiceConstants;
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 
-import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
+import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.AbstractFormPropertiesPart;
+import ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection;
 
-public class FormPropertiesPart extends AbstractFormPropertiesPart {
+public class VariableFeatureReferenceDetailsPart extends AbstractFormPropertiesPart {
+	/**
+	 * Injections for the different selections in the part from the TODO
+	 * {@link ESelectionService}
+	 *
+	 **/
 	@Inject
 	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ApogyAdvancedEditorPartSelection selection) {
+	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) VariableRuntimePartSelection selection) {
 		if (selection != null) {
 			setEObject(selection.getEObject());
 		}
 	}
 
 	@Override
-	boolean isReadOnly() {
-		return false;
+	protected boolean isReadOnly() {
+		return true;
 	}
 
 	@Override
 	protected List<String> getSelectionProvidersIds() {
 		List<String> ids = new ArrayList<>();
 
-		ids.add("ca.gc.asc_csa.apogy.rcp.part.ApogyAdvancedEditorPart");
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.VariableRuntimePart");
 
 		return ids;
 	}
@@ -43,8 +50,8 @@ public class FormPropertiesPart extends AbstractFormPropertiesPart {
 		listeners.add(new ISelectionListener() {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
-				if (selection instanceof ApogyAdvancedEditorPartSelection) {
-					setSelection((ApogyAdvancedEditorPartSelection) selection);
+				if (selection instanceof VariableRuntimePartSelection) {
+					setSelection((VariableRuntimePartSelection) selection);
 				}
 			}
 		});
