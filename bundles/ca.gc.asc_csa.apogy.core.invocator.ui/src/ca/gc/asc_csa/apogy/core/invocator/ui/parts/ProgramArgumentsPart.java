@@ -17,13 +17,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-
-import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.eclipse.e4.ui.services.IServiceConstants;
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
@@ -39,19 +33,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallDetailsComp
 
 public class ProgramArgumentsPart extends AbstractEObjectSelectionPart {
 
-	/**
-	 * Injects a {@link ProgramPartSelection} in the part from the
-	 * {@link ESelectionService}
-	 * 
-	 * @param selection
-	 */
-	@Inject
-	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramPartSelection selection) {
-		if (selection != null) {
-			setEObject(selection.getOperationCall());
-		}
-	}
 
 	@Override
 	protected void setCompositeContents(EObject eObject) {
@@ -100,7 +81,7 @@ public class ProgramArgumentsPart extends AbstractEObjectSelectionPart {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
 				if(selection instanceof ProgramPartSelection){
-					setSelection((ProgramPartSelection)selection);
+					setEObject(((ProgramPartSelection) selection).getOperationCall());
 				}
 			}
 		});

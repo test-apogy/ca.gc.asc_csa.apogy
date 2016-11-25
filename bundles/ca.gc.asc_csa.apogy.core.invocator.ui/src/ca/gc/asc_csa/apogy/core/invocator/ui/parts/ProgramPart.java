@@ -17,13 +17,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-
-import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.eclipse.e4.ui.services.IServiceConstants;
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
@@ -71,23 +65,6 @@ public class ProgramPart extends AbstractEObjectSelectionPart {
 		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createProgramPartSelection());
 	}
 
-	/**
-	 * Injects a {@link ScriptBasedProgramsListPartSelection} in the part from
-	 * the {@link ESelectionService}
-	 * 
-	 * @param selection
-	 */
-	@Inject
-	@Optional
-	private void setSelection(
-			@Named(IServiceConstants.ACTIVE_SELECTION) ScriptBasedProgramsListPartSelection selection) {
-		if (selection != null) {
-			if (selection.getProgram() instanceof OperationCallsList || selection.getProgram() == null) {
-				setEObject(selection.getProgram());
-			}
-		}
-	}
-
 	@Override
 	protected List<String> getSelectionProvidersIds() {
 		List<String> ids = new ArrayList<>();
@@ -105,7 +82,7 @@ public class ProgramPart extends AbstractEObjectSelectionPart {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
 				if (selection instanceof ScriptBasedProgramsListPartSelection) {
-					setSelection((ScriptBasedProgramsListPartSelection) selection);
+					setEObject(((ScriptBasedProgramsListPartSelection) selection).getProgram());;
 				}
 			}
 		});

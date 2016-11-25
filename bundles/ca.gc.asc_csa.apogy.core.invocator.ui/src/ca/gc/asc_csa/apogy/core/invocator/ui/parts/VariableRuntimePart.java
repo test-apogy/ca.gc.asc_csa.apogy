@@ -4,12 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PreDestroy;
-import javax.inject.Inject;
-import javax.inject.Named;
 
-import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -30,22 +26,12 @@ import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariableRuntimePartSelection;
 import ca.gc.asc_csa.apogy.core.invocator.ui.VariablesListPartSelection;
-import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariablesListComposite;
 
 public class VariableRuntimePart extends AbstractEObjectSelectionPart {
 	private AdapterImpl adapter;
 	private Context activeContext;
 	private VariableFeatureReference variableFeatureReference;
-
-	@Inject
-	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) VariablesListPartSelection selection) {
-		if (selection != null) {
-			variableFeatureReference = selection.getVariableFeatureReference();
-			setEObject(selection.getVariableFeatureReference());
-		}
-	}
-
+	
 	@Override
 	protected void createContentComposite(Composite parent, int style) {
 		new EObjectComposite(parent, SWT.None){
@@ -65,6 +51,11 @@ public class VariableRuntimePart extends AbstractEObjectSelectionPart {
 				}
 			}
 		};
+	}
+	
+	@Override
+	protected void setNullSelection() {
+		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createVariableRuntimePartSelection());
 	}
 
 	@Override
@@ -159,7 +150,8 @@ public class VariableRuntimePart extends AbstractEObjectSelectionPart {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
 				if (selection instanceof VariablesListPartSelection) {
-					setSelection((VariablesListPartSelection) selection);
+					variableFeatureReference = ((VariablesListPartSelection)selection).getVariableFeatureReference();
+					setEObject(variableFeatureReference);
 				}
 			}
 		});

@@ -16,13 +16,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-
-import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.eclipse.e4.ui.services.IServiceConstants;
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
@@ -46,22 +40,6 @@ public class ControllerBindingDetailsPart extends AbstractEObjectSelectionPart {
 				.setOperationCallControllerBinding((OperationCallControllerBinding) eObject);
 	}
 
-	/**
-	 * Injects a {@link ControllerBindingsSelection} in the part from the
-	 * {@link ESelectionService}
-	 * 
-	 * @param selection
-	 */
-	@Inject
-	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllerBindingsPartSelection selection) {
-		if (selection != null) {
-			if (selection.getOperationCallControllerBinding() == null) {
-				setEObject(selection.getOperationCallControllerBinding());
-			}
-		}
-	}
-
 	@Override
 	protected List<String> getSelectionProvidersIds() {
 		List<String> ids = new ArrayList<>();
@@ -79,7 +57,7 @@ public class ControllerBindingDetailsPart extends AbstractEObjectSelectionPart {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
 				if (selection instanceof ControllerBindingsPartSelection) {
-					setSelection((ControllerBindingsPartSelection) selection);
+					setEObject(((ControllerBindingsPartSelection) selection).getOperationCallControllerBinding());
 				}
 			}
 		});

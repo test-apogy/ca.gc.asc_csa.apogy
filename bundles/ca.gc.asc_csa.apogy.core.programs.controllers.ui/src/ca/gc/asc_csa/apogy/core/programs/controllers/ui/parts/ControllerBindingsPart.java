@@ -16,13 +16,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.parts;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-
-import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.eclipse.e4.ui.services.IServiceConstants;
-import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
@@ -58,16 +52,6 @@ public class ControllerBindingsPart extends AbstractEObjectSelectionPart {
 				}
 			}
 		};
-
-		selectionService.addSelectionListener("ca.gc.asc_csa.apogy.rcp.part.ControllerConfigsPart",
-				new ISelectionListener() {
-					@Override
-					public void selectionChanged(MPart part, Object selection) {
-						if (selection instanceof ControllerConfigsPartSelection) {
-							setSelection((ControllerConfigsPartSelection) selection);
-						}
-					}
-				});
 	}
 
 	@Override
@@ -80,22 +64,6 @@ public class ControllerBindingsPart extends AbstractEObjectSelectionPart {
 	protected void setNullSelection() {
 		selectionService
 				.setSelection(ApogyCoreProgramsControllersUIFactory.eINSTANCE.createControllerBindingsPartSelection());
-	}
-
-	/**
-	 * Injects a {@link ControllerConfigsPartSelection} in the part from the
-	 * {@link ESelectionService}
-	 * 
-	 * @param selection
-	 */
-	@Inject
-	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ControllerConfigsPartSelection selection) {
-		if (selection != null) {
-			if (selection.getControllersConfiguration() != null) {
-				setEObject(selection.getControllersConfiguration());
-			}
-		}
 	}
 
 	@Override
@@ -115,7 +83,7 @@ public class ControllerBindingsPart extends AbstractEObjectSelectionPart {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
 				if (selection instanceof ControllerConfigsPartSelection) {
-					setSelection((ControllerConfigsPartSelection) selection);
+					setEObject(((ControllerConfigsPartSelection) selection).getControllersConfiguration());
 				}
 			}
 		});

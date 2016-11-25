@@ -4,7 +4,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecp.ui.view.swt.ECPSWTViewRenderer;
 import org.eclipse.emf.ecp.view.spi.model.VView;
 import org.eclipse.emf.ecp.view.spi.provider.ViewProviderHelper;
-import org.eclipse.jface.layout.GridDataFactory;
 import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridLayout;
@@ -25,8 +24,7 @@ public abstract class AbstractFormPropertiesPart extends AbstractEObjectSelectio
 		contentComposite = new Composite(parent, SWT.NONE);
 		contentComposite.setLayout(new GridLayout(1, true));
 		contentComposite.setBackground(parent.getDisplay().getSystemColor(SWT.COLOR_WHITE));
-		contentComposite.setLayout(GridLayoutFactory.fillDefaults().margins(10, 10).create());
-		contentComposite.setLayoutData(GridDataFactory.fillDefaults().create());
+		contentComposite.setLayout(GridLayoutFactory.fillDefaults().margins(10, 10).create());		
 	}
 
 	@Override

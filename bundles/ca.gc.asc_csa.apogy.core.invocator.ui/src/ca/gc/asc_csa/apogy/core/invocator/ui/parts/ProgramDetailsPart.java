@@ -3,12 +3,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-
-import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
 
@@ -21,13 +16,6 @@ public class ProgramDetailsPart extends AbstractFormPropertiesPart {
 	 * {@link ESelectionService}
 	 *
 	 **/
-	@Inject
-	@Optional
-	private void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ProgramArgumentsPartSelection selection) {
-		if (selection != null) {
-			setEObject(selection.getEObject());
-		}
-	}
 
 	@Override
 	protected boolean isReadOnly() {
@@ -51,7 +39,7 @@ public class ProgramDetailsPart extends AbstractFormPropertiesPart {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
 				if (selection instanceof ProgramArgumentsPartSelection) {
-					setSelection((ProgramArgumentsPartSelection) selection);
+					setEObject(((ProgramArgumentsPartSelection) selection).getEObject());
 				}
 			}
 		});
