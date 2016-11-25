@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.ui.converters;
+package ca.gc.asc_csa.apogy.core.topology.converters;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -19,11 +19,11 @@ import ca.gc.asc_csa.apogy.common.converters.IConverter;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.ApogyTopology;
 import ca.gc.asc_csa.apogy.core.PositionedResult;
 import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 
 public class PositionedResultToNodeConverter implements IConverter {
 
@@ -57,7 +57,7 @@ public class PositionedResultToNodeConverter implements IConverter {
 	protected Node getNode(PositionedResult positionedResult) {
 		Node node = null;
 
-		ApogyTopology apogyTopology = ApogyCoreFacade.INSTANCE.getApogyTopology();
+		ApogyTopology apogyTopology = ApogyCoreTopologyFacade.INSTANCE.getApogyTopology();
 		if (apogyTopology != null) {
 			GroupNode groupNode = apogyTopology.getRootNode();
 

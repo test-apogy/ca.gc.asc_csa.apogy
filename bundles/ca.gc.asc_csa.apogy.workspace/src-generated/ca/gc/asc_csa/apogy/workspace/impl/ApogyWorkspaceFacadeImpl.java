@@ -555,6 +555,9 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 		Resource resource = domain.getResourceSet().getResource(uri, true);
 
 		InvocatorSession session = (InvocatorSession) resource.getContents().get(0);
+		
+		
+		
 		ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(session);
 
 		setActiveProject(project);

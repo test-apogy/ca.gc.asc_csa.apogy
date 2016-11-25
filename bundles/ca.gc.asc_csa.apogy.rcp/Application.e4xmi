@@ -118,12 +118,19 @@
           </children>
           <children xsi:type="basic:PartSashContainer" xmi:id="_F8bEgLAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.6" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="___LZYIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
-              <children xsi:type="advanced:Placeholder" xmi:id="_RLIvEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.2" ref="_En_XkIyWEeajju10_PNlwQ"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_RLIvEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.2"/>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_P7jAELAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.24">
               <children xsi:type="basic:Part" xmi:id="_JwOiwLAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
               <children xsi:type="basic:Part" xmi:id="_QmW3oLAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.documentation" label="Info"/>
             </children>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_zTAR4LMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.perspective.3d" label="3D">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_3l31QLMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.22">
+          <children xsi:type="basic:PartStack" xmi:id="_4TqIULMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.partstack.2">
+            <children xsi:type="basic:Part" xmi:id="_5CrKcLMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.part.3d" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.parts.Apogy3dPart" label="3D"/>
           </children>
         </children>
       </children>
@@ -234,11 +241,6 @@
         <tags>ViewMenu</tags>
       </menus>
       <toolbar xmi:id="_nNLekjdSEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"/>
-    </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_En_XkIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.core.topology.ui.views.Apogy3DView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="3D Viewer" closeable="true">
-      <tags>View</tags>
-      <tags>categoryTag:ca.gc.asc_csa.apogy.core.ui.category</tags>
-      <toolbar xmi:id="_WZTdEIyWEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.1"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_oepiwIyfEeazK9WMWvCuMQ" elementId="ca.gc.asc_csa.apogy.core.invocator.ui.views.SessionStatusView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Session Status" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/Instance.gif" closeable="true">
       <tags>View</tags>

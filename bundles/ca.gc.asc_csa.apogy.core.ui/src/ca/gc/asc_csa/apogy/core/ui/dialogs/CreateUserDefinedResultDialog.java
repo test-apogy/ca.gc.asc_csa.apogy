@@ -43,6 +43,7 @@ import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.UserDefinedResult;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 
+@Deprecated
 public class CreateUserDefinedResultDialog extends Dialog 
 {	
 	protected Context context;
@@ -178,35 +179,35 @@ public class CreateUserDefinedResultDialog extends Dialog
 		// FIXME TOPOLOGY.
 		if(context.getEnvironment() instanceof ApogyEnvironment)
 		{
-			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
-			
-			
-			
-			Node rootNode = ApogyCoreFacade.INSTANCE.getApogyTopology().getRootNode();			
-			
-			List<Node> nodes = getAllNodes(rootNode);
-			
-			String[] items = new String[nodes.size()];
-			int i = 0;
-			for(Node node : nodes)
-			{
-				String name = node.getNodeId();
-				if(name == null)
-				{
-					name = node.getDescription();
-				}
-				
-				if(name == null)
-				{
-					name = Integer.toString(i);
-				}
-				
-				items[i] = name;
-				indexToNodeMap.put(i, node);
-				
-				i++;
-			}
-			combo.setItems(items);
+//			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
+//			
+//			
+//			
+//			Node rootNode = ApogyCoreFacade.INSTANCE.getApogyTopology().getRootNode();			
+//			
+//			List<Node> nodes = getAllNodes(rootNode);
+//			
+//			String[] items = new String[nodes.size()];
+//			int i = 0;
+//			for(Node node : nodes)
+//			{
+//				String name = node.getNodeId();
+//				if(name == null)
+//				{
+//					name = node.getDescription();
+//				}
+//				
+//				if(name == null)
+//				{
+//					name = Integer.toString(i);
+//				}
+//				
+//				items[i] = name;
+//				indexToNodeMap.put(i, node);
+//				
+//				i++;
+//			}
+//			combo.setItems(items);
 		}
 				
 		return combo;

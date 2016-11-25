@@ -339,10 +339,10 @@ public class ApogyCoreTopologyItemProviderAdapterFactory extends ApogyCoreTopolo
 	 * @generated
 	 */
 	public void dispose() {
+		if (apogyCoreTopologyFacadeItemProvider != null) apogyCoreTopologyFacadeItemProvider.dispose();
 		if (systemsTopologyAdapterItemProvider != null) systemsTopologyAdapterItemProvider.dispose();
 		if (apogyEnvironmentNodeItemProvider != null) apogyEnvironmentNodeItemProvider.dispose();
 		if (apogySystemAPIsNodeItemProvider != null) apogySystemAPIsNodeItemProvider.dispose();
-		if (apogyCoreTopologyFacadeItemProvider != null) apogyCoreTopologyFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -507,6 +507,11 @@ public class ApogyCoreTopologyItemProviderAdapterFactory extends ApogyCoreTopolo
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyCoreTopologyFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreTopologyFactory.eINSTANCE.createSystemsTopologyAdapter()));
 
 				newChildDescriptors.add
@@ -518,11 +523,6 @@ public class ApogyCoreTopologyItemProviderAdapterFactory extends ApogyCoreTopolo
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreTopologyFactory.eINSTANCE.createApogyCoreTopologyFacade()));
 
 				return null;
 			}
@@ -537,6 +537,11 @@ public class ApogyCoreTopologyItemProviderAdapterFactory extends ApogyCoreTopolo
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyCoreTopologyFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreTopologyFactory.eINSTANCE.createSystemsTopologyAdapter()));
 
 				newChildDescriptors.add
@@ -548,11 +553,6 @@ public class ApogyCoreTopologyItemProviderAdapterFactory extends ApogyCoreTopolo
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreTopologyFactory.eINSTANCE.createApogyCoreTopologyFacade()));
 
 				return null;
 			}

@@ -86,6 +86,12 @@ public class ApogyCoreTopologySwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: {
+				ApogyCoreTopologyFacade apogyCoreTopologyFacade = (ApogyCoreTopologyFacade)theEObject;
+				T result = caseApogyCoreTopologyFacade(apogyCoreTopologyFacade);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER: {
 				SystemsTopologyAdapter systemsTopologyAdapter = (SystemsTopologyAdapter)theEObject;
 				T result = caseSystemsTopologyAdapter(systemsTopologyAdapter);
@@ -107,12 +113,6 @@ public class ApogyCoreTopologySwitch<T> extends Switch<T>
 				if (result == null) result = caseReferencedGroupNode(apogySystemAPIsNode);
 				if (result == null) result = caseGroupNode(apogySystemAPIsNode);
 				if (result == null) result = caseNode(apogySystemAPIsNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: {
-				ApogyCoreTopologyFacade apogyCoreTopologyFacade = (ApogyCoreTopologyFacade)theEObject;
-				T result = caseApogyCoreTopologyFacade(apogyCoreTopologyFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

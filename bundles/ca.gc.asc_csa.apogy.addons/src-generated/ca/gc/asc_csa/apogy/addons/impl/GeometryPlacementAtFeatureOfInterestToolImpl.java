@@ -28,9 +28,9 @@ import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -386,7 +386,7 @@ public abstract class GeometryPlacementAtFeatureOfInterestToolImpl extends Simpl
 		if(getFeatureOfInterest() != null)
 		{			
 			// Get new FeatureOfInterestNode.
-			FeatureOfInterestNode newFeatureOfInterestNode = ApogyCoreFacade.INSTANCE.getFeatureOfInterestNode(getFeatureOfInterest());
+			FeatureOfInterestNode newFeatureOfInterestNode = ApogyCoreTopologyFacade.INSTANCE.getFeatureOfInterestNode(getFeatureOfInterest());
 			
 			// Updates the FeatureOfInterestNode.
 			setFeatureOfInterestNode(newFeatureOfInterestNode);

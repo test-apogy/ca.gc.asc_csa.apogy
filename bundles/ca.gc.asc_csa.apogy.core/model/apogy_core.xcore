@@ -103,18 +103,7 @@ class ApogyCoreFacade
 	 * @param foiList The list of FeatureOfInterest.
 	 * @throws An Exception if the file could not be saved.
 	 */
-	op void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception
-	
-	/**
-	 * Finds the FeatureOfInterestNode associated with a specified FeatureOfInterest in the active session.
-	 * @param featureOfInterest The specified FeatureOfInterest.
-	 * @return The FeatureOfInterestNode associated with the specified FeatureOfInterest, null if none is found.
-	 */
-	op FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest)
-	
-	
-	@GenModel(children="true", notify="true", property="None")
-	refers derived transient ApogyTopology[0..1] apogyTopology	
+	op void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception	
 }
 
 /* -------------------------------------------------------------------------

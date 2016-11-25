@@ -25,14 +25,10 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ISelection;
-import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
-import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
-import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
 import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
 import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
 import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFactory;
 import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
-import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,10 +79,6 @@ public class ApogyCoreUIFactoryImpl extends EFactoryImpl implements ApogyCoreUIF
   {
 		switch (eClass.getClassifierID()) {
 			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE: return createApogyCoreUIFacade();
-			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS: return createApogyResourceSettings();
-			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS: return createNewApogyProjectSettings();
-			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS: return createNewApogySessionSettings();
-			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS: return createNewApogySystemSettings();
 			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION: return createResultNodePresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -151,47 +143,6 @@ public class ApogyCoreUIFactoryImpl extends EFactoryImpl implements ApogyCoreUIF
 	public ApogyCoreUIFacade createApogyCoreUIFacade() {
 		ApogyCoreUIFacadeImpl apogyCoreUIFacade = new ApogyCoreUIFacadeImpl();
 		return apogyCoreUIFacade;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ApogyResourceSettings createApogyResourceSettings() {
-		ApogyResourceSettingsImpl apogyResourceSettings = new ApogyResourceSettingsImpl();
-		return apogyResourceSettings;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NewApogyProjectSettings createNewApogyProjectSettings() {
-		NewApogyProjectSettingsImpl newApogyProjectSettings = new NewApogyProjectSettingsImpl();
-		return newApogyProjectSettings;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public NewApogySessionSettings createNewApogySessionSettings()
-  {
-		NewApogySessionSettingsImpl newApogySessionSettings = new NewApogySessionSettingsImpl();
-		return newApogySessionSettings;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NewApogySystemSettings createNewApogySystemSettings() {
-		NewApogySystemSettingsImpl newApogySystemSettings = new NewApogySystemSettingsImpl();
-		return newApogySystemSettings;
 	}
 
 		/**

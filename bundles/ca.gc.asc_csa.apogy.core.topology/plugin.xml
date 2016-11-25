@@ -23,5 +23,11 @@
             class="ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage"
             genModel="model/apogy_core_topology.xcore"/>
    </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.converters">
+      <new_element
+            Class="ca.gc.asc_csa.apogy.core.topology.converters.PositionedResultToNodeConverter">
+      </new_element>
+   </extension>
 
 </plugin>

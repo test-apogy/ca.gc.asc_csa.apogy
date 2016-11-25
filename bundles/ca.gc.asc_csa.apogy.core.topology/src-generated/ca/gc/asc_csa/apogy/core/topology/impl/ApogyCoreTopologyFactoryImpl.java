@@ -75,10 +75,10 @@ public class ApogyCoreTopologyFactoryImpl extends EFactoryImpl implements ApogyC
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: return createApogyCoreTopologyFacade();
 			case ApogyCoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER: return createSystemsTopologyAdapter();
 			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE: return createApogyEnvironmentNode();
 			case ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE: return createApogySystemAPIsNode();
-			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: return createApogyCoreTopologyFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

@@ -86,6 +86,10 @@ public class ApogyCoreTopologyAdapterFactory extends AdapterFactoryImpl
   protected ApogyCoreTopologySwitch<Adapter> modelSwitch =
     new ApogyCoreTopologySwitch<Adapter>() {
 			@Override
+			public Adapter caseApogyCoreTopologyFacade(ApogyCoreTopologyFacade object) {
+				return createApogyCoreTopologyFacadeAdapter();
+			}
+			@Override
 			public Adapter caseSystemsTopologyAdapter(SystemsTopologyAdapter object) {
 				return createSystemsTopologyAdapterAdapter();
 			}
@@ -96,10 +100,6 @@ public class ApogyCoreTopologyAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseApogySystemAPIsNode(ApogySystemAPIsNode object) {
 				return createApogySystemAPIsNodeAdapter();
-			}
-			@Override
-			public Adapter caseApogyCoreTopologyFacade(ApogyCoreTopologyFacade object) {
-				return createApogyCoreTopologyFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {

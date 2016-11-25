@@ -29,10 +29,7 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.core.ui
 
-import ca.gc.asc_csa.apogy.common.emf.Exception
 import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation
-import ca.gc.asc_csa.apogy.core.ApogySystem
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
 import org.eclipse.core.resources.IContainer
 import org.eclipse.core.resources.IFile
 import org.eclipse.core.resources.IFolder
@@ -49,94 +46,7 @@ type ISelection wraps ISelection
 
 class ApogyCoreUIFacade
 {	
-	/*
-	 * Default Apogy Project Name Prefix.
-	 */
-	readonly String defaultApogyProjectNamePrefix = "Project"
-
-	/*
-	 * Default Apogy Session Filename Prefix.
-	 */
-	readonly String defaultApogySessionFilename = "session"
-	
-	/*
-	 * Default Apogy Session Filename Extension Prefix.
-	 */
-	readonly String defaultApogySessionFilenameExtension = "sym"
-	
-	/*
-	 * Default Apogy Sessions Directory.
-	 */
-	readonly String defaultApogySessionFolderName = "Sessions"
-		
-	op IProject createApogyProject(NewApogyProjectSettings settings)	
-	op IFolder createApogySessionFolder(NewApogyProjectSettings settings)
-	op InvocatorSession createApogySession(NewApogySessionSettings sessionSettings)
-	op IFile createApogySessionFile(IContainer resourceContainer, String filename, InvocatorSession session) throws Exception
-	op IFile getApogySessionFile(IContainer resourceContainer, String filename)
-	op ApogySystem createApogySystem(NewApogySystemSettings systemSettings)
 }
-
-/*
- * This class is used to support Apogy wizards.
- */
-class ApogyResourceSettings
-{
-	IProject resourceProject
-	IFile resourceFile
-	IContainer resourceContainer
-}
-
-class NewApogyProjectSettings
-{	
-	/*
-	 * Returns an available project name.
-	 */
-	op String getDefaultProjectName()
-	
-	/*
-	 * Name of the project.
-	 */
-	String name
-	
-	/*
-	 * Import an existing registered project.
-	 */
-	boolean importRegisteredProject = "false"
-	
-	/*
-	 * Sets the default values of the instance.
-	 */
-	op void setDefaultValues()
-}
-
-
-class NewApogySessionSettings
-{	
-	/*
-	 * Returns an available session filename.
-	 */
-	op String getDefaultFilename(IContainer resourceContainer)	
-	
-	String folder	
-	String filename
-	boolean createEnvironment = "true"
-	boolean createPrograms = "true"
-	boolean createDataProducts = "true"
-	boolean createTools = "true"
-	
-	/*
-	 * Sets the default values of the instance.
-	 */
-	op void setDefaultValues(IContainer resourceContainer)
-}
-
-class NewApogySystemSettings
-{
-	String folder	
-	String filename
-}
-
 
 class ResultNodePresentation extends TransformNodePresentation
 {

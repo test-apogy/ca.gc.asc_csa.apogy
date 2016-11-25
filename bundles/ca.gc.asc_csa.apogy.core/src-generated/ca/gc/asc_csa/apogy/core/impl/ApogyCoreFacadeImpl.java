@@ -28,13 +28,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import javax.vecmath.Matrix4d;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
@@ -79,26 +75,10 @@ import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Facade</b></em>'. <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * </p>
- * <ul>
- * <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyCoreFacadeImpl#getApogyTopology
- * <em>Apogy Topology</em>}</li>
- * </ul>
  *
  * @generated
  */
 public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreFacade {
-	/**
-	 * The cached value of the '{@link #getApogyTopology() <em>Apogy
-	 * Topology</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getApogyTopology()
-	 * @generated
-	 * @ordered
-	 */
-	protected ApogyTopology apogyTopology;
 	private static ApogyCoreFacade instance = null;
 
 	public static ApogyCoreFacade getInstance() {
@@ -110,7 +90,6 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ApogyCoreFacadeImpl() {
@@ -119,52 +98,11 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	protected EClass eStaticClass() {
 		return ApogyCorePackage.Literals.APOGY_CORE_FACADE;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public ApogyTopology getApogyTopology() {
-		if (apogyTopology != null && apogyTopology.eIsProxy()) {
-			InternalEObject oldApogyTopology = (InternalEObject) apogyTopology;
-			apogyTopology = (ApogyTopology) eResolveProxy(oldApogyTopology);
-			if (apogyTopology != oldApogyTopology) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
-			}
-		}
-		return apogyTopology;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public ApogyTopology basicGetApogyTopology() {
-		return apogyTopology;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void setApogyTopology(ApogyTopology newApogyTopology) {
-		ApogyTopology oldApogyTopology = apogyTopology;
-		apogyTopology = newApogyTopology;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY,
-					oldApogyTopology, apogyTopology));
 	}
 
 	/**
@@ -412,97 +350,6 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 		writer.close();
 	}
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest) {
-		if (featureOfInterest != null) {
-			ApogyTopology apogyTopology = getApogyTopology();
-			if (apogyTopology != null && apogyTopology.getRootNode() != null) {
-				List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(
-						ApogyCorePackage.Literals.FEATURE_OF_INTEREST_NODE, apogyTopology.getRootNode());
-
-				FeatureOfInterestNode featureOfInterestNode = null;
-				Iterator<Node> it = nodes.iterator();
-				while (it.hasNext() && featureOfInterestNode == null) {
-					Node n = it.next();
-					if (n instanceof FeatureOfInterestNode) {
-						FeatureOfInterestNode foin = (FeatureOfInterestNode) n;
-						if (foin.getFeatureOfInterest() == featureOfInterest) {
-							featureOfInterestNode = foin;
-						}
-					}
-				}
-
-				return featureOfInterestNode;
-			}
-		}
-
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
-			if (resolve)
-				return getApogyTopology();
-			return basicGetApogyTopology();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
-			setApogyTopology((ApogyTopology) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
-			setApogyTopology((ApogyTopology) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case ApogyCorePackage.APOGY_CORE_FACADE__APOGY_TOPOLOGY:
-			return apogyTopology != null;
-		}
-		return super.eIsSet(featureID);
-	}
-
 	private String convertToCSV(List<FeatureOfInterest> foiList) {
 		String csvString = new String();
 
@@ -539,39 +386,37 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case ApogyCorePackage.APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__APOGYSYSTEM_MATRIX4X4:
-			return computeAbsolutePoseMatrix((ApogySystem) arguments.get(0), (Matrix4x4) arguments.get(1));
-		case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT:
-			return createResultNode((PositionedResult) arguments.get(0));
-		case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
-			return createApogySession((Boolean) arguments.get(0), (Boolean) arguments.get(1),
-					(Boolean) arguments.get(2), (Boolean) arguments.get(3));
-		case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION:
-			return createApogySession();
-		case ApogyCorePackage.APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING:
-			return getApogySystem((Environment) arguments.get(0), (String) arguments.get(1));
-		case ApogyCorePackage.APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:
-			try {
-				return loadFeatureOfInterestFromFile((String) arguments.get(0));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case ApogyCorePackage.APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST:
-			try {
-				saveFeatureOfInterestToFile((String) arguments.get(0), (List<FeatureOfInterest>) arguments.get(1));
-				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case ApogyCorePackage.APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST:
-			return getFeatureOfInterestNode((FeatureOfInterest) arguments.get(0));
+			case ApogyCorePackage.APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__APOGYSYSTEM_MATRIX4X4:
+				return computeAbsolutePoseMatrix((ApogySystem)arguments.get(0), (Matrix4x4)arguments.get(1));
+			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT:
+				return createResultNode((PositionedResult)arguments.get(0));
+			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
+				return createApogySession((Boolean)arguments.get(0), (Boolean)arguments.get(1), (Boolean)arguments.get(2), (Boolean)arguments.get(3));
+			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION:
+				return createApogySession();
+			case ApogyCorePackage.APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING:
+				return getApogySystem((Environment)arguments.get(0), (String)arguments.get(1));
+			case ApogyCorePackage.APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:
+				try {
+					return loadFeatureOfInterestFromFile((String)arguments.get(0));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case ApogyCorePackage.APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST:
+				try {
+					saveFeatureOfInterestToFile((String)arguments.get(0), (List<FeatureOfInterest>)arguments.get(1));
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
 		}
 		return super.eInvoke(operationID, arguments);
 	}
