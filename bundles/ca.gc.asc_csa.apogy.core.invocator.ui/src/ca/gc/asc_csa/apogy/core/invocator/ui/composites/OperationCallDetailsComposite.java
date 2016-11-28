@@ -177,14 +177,15 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 	protected DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
 
-		if (getOperationCall().getVariable() != null) {
-			// eOperationsComposite.setEClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(getOperationCall()),
-			// getOperationCall().getEOperation());
-			argumentsComposite.setOperationCall(getOperationCall());
-		} else {
-			// eOperationsComposite.setEClass(null);
-			argumentsComposite.setOperationCall(null);
-		}
+		argumentsComposite.setOperationCall(getOperationCall());
+//		if (getOperationCall().getVariable() != null) {
+//			// eOperationsComposite.setEClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(getOperationCall()),
+//			// getOperationCall().getEOperation());
+//			argumentsComposite.setOperationCall(getOperationCall());
+//		} else {
+//			// eOperationsComposite.setEClass(null);
+//			argumentsComposite.setOperationCall(null);
+//		}
 
 		// variableFeatureReferenceComposite.set(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(),
 		// operationCall);

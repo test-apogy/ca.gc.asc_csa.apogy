@@ -1450,9 +1450,15 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 */
 	public String getOperationCallString(OperationCall operationCall) {
 		String str = "";
-		str += operationCall.getVariable().getName();
-		str += getSubTypeFeatureString(operationCall.getTypeMemberReferenceListElement(), operationCall.getFeatureRoot());
-		str += getEOperationString(operationCall.getArgumentsList(), operationCall.getEOperation()); 
+		if(operationCall.getVariable() != null){
+			str += operationCall.getVariable().getName();
+		}
+		if(operationCall.getTypeMemberReferenceListElement() != null && operationCall.getFeatureRoot() != null){
+			str += getSubTypeFeatureString(operationCall.getTypeMemberReferenceListElement(), operationCall.getFeatureRoot());	
+		}
+		if(operationCall.getArgumentsList() != null && operationCall.getEOperation() != null){
+			str += getEOperationString(operationCall.getArgumentsList(), operationCall.getEOperation()); 
+		}
 		return str;
 	}
 

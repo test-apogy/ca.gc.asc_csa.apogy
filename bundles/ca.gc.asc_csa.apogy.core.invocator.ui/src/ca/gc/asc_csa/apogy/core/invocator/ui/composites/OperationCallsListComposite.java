@@ -20,9 +20,12 @@ import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.core.databinding.property.Properties;
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.RemoveCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
@@ -45,6 +48,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
@@ -63,6 +67,7 @@ public class OperationCallsListComposite extends ScrolledComposite {
 	private TableViewer tableViewer;
 	private Button btnDelete;
 	private Button btnNew;
+	private Button btnInvoke;
 
 	public OperationCallsListComposite(Composite parent, int style) {
 		super(parent, style);
@@ -77,7 +82,7 @@ public class OperationCallsListComposite extends ScrolledComposite {
 		Table table = tableViewer.getTable();
 		table.setHeaderVisible(true);
 		table.setLinesVisible(true);
-		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
+		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 4));
 		tableViewer.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
@@ -96,6 +101,19 @@ public class OperationCallsListComposite extends ScrolledComposite {
 		TableColumn tblclmnCommand = new TableColumn(table, SWT.NONE);
 		tblclmnCommand.setWidth(100);
 		tblclmnCommand.setText("Command");
+		
+		btnInvoke = new Button(composite, SWT.None);
+		btnInvoke.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+		btnInvoke.setText("Invoke");
+		btnInvoke.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				ApogyCoreInvocatorFacade.INSTANCE.exec((OperationCall)tableViewer.getStructuredSelection().getFirstElement());
+			}
+		});
+		
+		Label label = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
+		label.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 
 		btnNew = new Button(composite, SWT.NONE);
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
@@ -230,7 +248,9 @@ public class OperationCallsListComposite extends ScrolledComposite {
 						break;
 					case FEATURE_COLUMN_ID:
 						str = ApogyCoreInvocatorFacade.INSTANCE.getOperationCallString(operationCall);
-						str = str.substring(0, str.indexOf("#"));
+						if(str.contains("#")){
+							str = str.substring(0, str.indexOf("#"));
+						}
 						break;
 					case COMMAND_COLUMN_ID:
 						str = ApogyCoreInvocatorFacade.INSTANCE.getEOperationString(operationCall.getArgumentsList(), operationCall.getEOperation());
@@ -243,20 +263,37 @@ public class OperationCallsListComposite extends ScrolledComposite {
 
 		});
 		tableViewer.setInput(operationCallsListObserveList);
-
+		
 		/*
-		 * Delete Button Enabled Binding.
+		 * Invoke button enabling bindings.
 		 */
 		IObservableValue<?> observeSingleSelectionTableViewer = ViewerProperties.singleSelection().observe(tableViewer);
-
+		IObservableValue<?> observeEnabledBtnInvokeObserveWidget = WidgetProperties.enabled().observe(btnInvoke);
+		bindingContext.bindValue(observeEnabledBtnInvokeObserveWidget, observeSingleSelectionTableViewer, null,
+				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
+						.setConverter(new Converter(OperationCall.class, Boolean.class) {
+							@Override
+							public Object convert(Object fromObject) {
+								if (fromObject instanceof OperationCall) {
+									return Diagnostician.INSTANCE.validate((EObject) fromObject)
+											.getSeverity() == Diagnostic.OK;
+								} else {
+									return false;
+								}
+							}
+						}));
+		
+		/*
+		 * Delete button enabling bindings.
+		 */
 		IObservableValue<?> observeEnabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
-
 		bindingContext.bindValue(observeEnabledBtnDeleteObserveWidget, observeSingleSelectionTableViewer, null,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
 						.setConverter(new Converter(Object.class, Boolean.class) {
 							@Override
 							public Object convert(Object fromObject) {
 								return fromObject != null;
+								
 							}
 						}));
 

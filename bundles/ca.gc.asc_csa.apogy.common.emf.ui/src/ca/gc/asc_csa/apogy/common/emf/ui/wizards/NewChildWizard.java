@@ -18,6 +18,7 @@ import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -94,18 +95,18 @@ public class NewChildWizard extends Wizard {
 
 		if (editingDomain != null) {
 			Command command = null;
-			EObject eObject = EcoreUtil.create(chooseSubClassWizardPage.getSelectedEClass());
+			EObject eObject = EcoreUtil.create(getSelectedEClass());
 			// If the selected reference is a list
-			if (chooseSubClassWizardPage.getSelectedEReference().isMany()) {
+			if (getSelectedEReference().isMany()) {
 				// Add the new eObject to the list
-				command = new AddCommand(editingDomain, parent, chooseSubClassWizardPage.getSelectedEReference(),
+				command = new AddCommand(editingDomain, getParent(), getSelectedEReference(),
 						eObject);
 			}
 			// Otherwise, if the reference is not a list
 			else {
 				// Set the corresponding EReference of the parent to the new
 				// eObject
-				command = new SetCommand(editingDomain, parent, chooseSubClassWizardPage.getSelectedEReference(),
+				command = new SetCommand(editingDomain, getParent(), getSelectedEReference(),
 						eObject);
 			}
 			editingDomain.getCommandStack().execute(command);
@@ -117,5 +118,17 @@ public class NewChildWizard extends Wizard {
 	
 	public WritableValue<EObject> getCreatedChild(){
 		return createdChild;
+	}
+	
+	public EClass getSelectedEClass(){
+		return chooseSubClassWizardPage.getSelectedEClass();
+	}
+	
+	public EReference getSelectedEReference(){
+		return chooseSubClassWizardPage.getSelectedEReference();
+	}
+	
+	public EObject getParent(){
+		return parent;
 	}
 }
