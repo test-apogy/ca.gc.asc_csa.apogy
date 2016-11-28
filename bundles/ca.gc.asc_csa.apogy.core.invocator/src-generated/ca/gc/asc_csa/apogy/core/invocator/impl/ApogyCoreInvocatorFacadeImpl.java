@@ -1684,7 +1684,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL:

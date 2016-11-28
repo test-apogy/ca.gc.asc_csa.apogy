@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
@@ -135,8 +136,12 @@ public class ArgumentsComposite extends Composite {
 		treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
+				// When a selection is made, if the composite is not in read
+				// only mode, EMFForms is activated if the selection is not on
+				// of the arguments.
 				if (!readOnly && ((StructuredSelection) event.getSelection()).getFirstElement() != null
 						&& !getArguments().contains(((StructuredSelection) event.getSelection()).getFirstElement())) {
+					// Remove the placeholder composite if the composite is a NoContentComposite 
 					if (compositeEMFForms instanceof NoContentComposite) {
 						compositeEMFForms.dispose();
 						compositeEMFForms = new Composite(ArgumentsComposite.this, SWT.None);
@@ -148,6 +153,7 @@ public class ArgumentsComposite extends Composite {
 						}
 					}
 					try {
+						// Render the EMFForms
 						ECPSWTViewRenderer.INSTANCE.render(compositeEMFForms,
 								(EObject) ((StructuredSelection) event.getSelection()).getFirstElement());
 					} catch (ECPRendererException e) {
@@ -156,8 +162,9 @@ public class ArgumentsComposite extends Composite {
 						Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
 					}
 					compositeEMFForms.layout();
-
-				} else if (!readOnly && !(compositeEMFForms instanceof NoContentComposite)) {
+				} 
+				// Otherwise, if the composite is a EMFForms and needs to be replaced by a placeholder
+				else if (!readOnly && !(compositeEMFForms instanceof NoContentComposite)) {
 					compositeEMFForms.dispose();
 					compositeEMFForms = getNoSelectionComposite(ArgumentsComposite.this, SWT.None);
 					ArgumentsComposite.this.layout();
@@ -180,6 +187,12 @@ public class ArgumentsComposite extends Composite {
 		m_bindingContext = initDataBindingsCustom();
 	}
 
+	/**
+	 * Constructor to create the editable composite
+	 * @param parent
+	 * @param style
+	 * @param readOnly
+	 */
 	public ArgumentsComposite(Composite parent, int style, boolean readOnly) {
 		this(parent, style);
 		if (!readOnly) {
@@ -198,6 +211,7 @@ public class ArgumentsComposite extends Composite {
 					 * Creates and opens the wizard to create a new child
 					 */
 					Wizard wizard;
+					// If the parent is an EClassArgument
 					if (getSelectedEObject() instanceof EClassArgument) {
 						wizard = new ChooseEClassWizard(ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE,
 								getSelectedEObject(),
@@ -301,6 +315,12 @@ public class ArgumentsComposite extends Composite {
 		}
 	}
 
+	/**
+	 * Method to get a composite with a message that tells the user that there is no compatible selection
+	 * @param parent
+	 * @param style
+	 * @return A {@link Composite} with a message
+	 */
 	private NoContentComposite getNoSelectionComposite(Composite parent, int style) {
 		return new NoContentComposite(ArgumentsComposite.this, SWT.None) {
 			@Override
@@ -310,11 +330,14 @@ public class ArgumentsComposite extends Composite {
 		};
 	}
 
+	/**
+	 * EditingSupport for the Arguments table. Depending on the type of
+	 * argument, the editingSupport is different.
+	 */
 	private class ArgumentsEditor extends EditingSupport {
 
 		private String[] booleanLabels;
 		private String[] literalsLabels;
-		private List<EEnumLiteral> literals;
 
 		public ArgumentsEditor(ColumnViewer viewer) {
 			super(viewer);
@@ -333,6 +356,7 @@ public class ArgumentsComposite extends Composite {
 				((EDataTypeArgument) element).setValue((String) value);
 			}
 			if (element instanceof NumericEDataTypeArgument) {
+				// To set a numeric value, the editor verifies if it can parse the entered value.
 				double doublevalue = Double.parseDouble(((EDataTypeArgument) element).getValue());
 				try {
 					doublevalue = Double.parseDouble((String) value);
@@ -356,13 +380,13 @@ public class ArgumentsComposite extends Composite {
 		@Override
 		protected Object getValue(Object element) {
 			if (element instanceof BooleanEDataTypeArgument) {
-				return findComboIndex(booleanLabels, ((EDataTypeArgument) element).getValue());
+				return Arrays.asList(booleanLabels).indexOf(((EDataTypeArgument) element).getValue());
 			}
 			if (element instanceof EDataTypeArgument) {
 				return ((EDataTypeArgument) element).getValue();
 			}
 			if (element instanceof EEnumArgument) {
-				return findComboIndex(literalsLabels, ((EEnumArgument) element).getEEnumLiteral().getLiteral());
+				return Arrays.asList(literalsLabels).indexOf(((EEnumArgument) element).getEEnumLiteral().getLiteral());
 			}
 			return null;
 		}
@@ -370,18 +394,22 @@ public class ArgumentsComposite extends Composite {
 		@Override
 		protected CellEditor getCellEditor(Object element) {
 			if (element instanceof EDataTypeArgument) {
+				// ComboBox for a boolean argument.
 				if (element instanceof BooleanEDataTypeArgument) {
 					return new ComboBoxCellEditor(treeViewer.getTree(), booleanLabels);
 				}
+				// Text editor for a numeric argument.
 				if (element instanceof NumericEDataTypeArgument) {
 					return new TextCellEditor(treeViewer.getTree());
 				}
+				// Text editor for a string argument.
 				if (element instanceof StringEDataTypeArgument) {
 					return new TextCellEditor(treeViewer.getTree());
 				}
 			}
+			// ComboBox for an enum argument.
 			if (element instanceof EEnumArgument) {
-				literals = ((EEnumArgument) element).getEEnum().getELiterals();
+				List<EEnumLiteral> literals = ((EEnumArgument) element).getEEnum().getELiterals();
 				literalsLabels = new String[literals.size()];
 				for (int i = 0; i < literals.size(); i++) {
 					literalsLabels[i] = literals.get(i).getLiteral();
@@ -397,15 +425,6 @@ public class ArgumentsComposite extends Composite {
 				return true;
 			}
 			return false;
-		}
-
-		private int findComboIndex(Object[] array, Object element) {
-			for (int i = 0; i < array.length; i++) {
-				if (element == array[i]) {
-					return i;
-				}
-			}
-			return -1;
 		}
 	}
 
@@ -427,18 +446,6 @@ public class ArgumentsComposite extends Composite {
 		return (EObject) treeViewer.getStructuredSelection().getFirstElement();
 	}
 
-	public Argument getSelectedArgument() {
-		System.out.println(treeViewer.getStructuredSelection().getPaths());
-		if (getSelectedEObject() instanceof Argument) {
-			return (Argument) getSelectedEObject();
-		} else {
-			System.out.println(treeViewer.getStructuredSelection().getPaths());
-			return null;
-			// return (Argument) treeViewer.getStructuredSelection().getPaths()
-		}
-
-	}
-
 	/**
 	 * Returns the reference to the {@link ArgumentsList}.
 	 * 
@@ -448,6 +455,11 @@ public class ArgumentsComposite extends Composite {
 		return (ArgumentsList) treeViewer.getInput();
 	}
 
+	/**
+	 * Gets the {@link EList} of {@link Argument} in the {@link ArgumentsList}.
+	 * 
+	 * @return List of {@link Argument}.
+	 */
 	public EList<Argument> getArguments() {
 		return operationCall.getArgumentsList().getArguments();
 	}
@@ -467,19 +479,18 @@ public class ArgumentsComposite extends Composite {
 		if (this.operationCall.getArgumentsList() != null) {
 			EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
 			eObjectReference.setEObject(operationCall);
+			
 			treeViewer.setInput(eObjectReference);
 			treeViewer.expandAll();
+			// Adjust columns
+			for (TreeColumn column : treeViewer.getTree().getColumns()) {
+				column.pack();
+			}
 		} else {
 			treeViewer.setInput(null);
 		}
 
 		this.operationCall.eAdapters().add(getArgumentsListAdapter());
-
-		// treeViewer.setInput(operationCall.getArgumentsList());
-		// treeViewer.expandAll();
-		// for (TreeColumn column : treeViewer.getTree().getColumns()) {
-		// column.pack();
-		// }
 	}
 
 	protected DataBindingContext initDataBindingsCustom() {
@@ -487,74 +498,6 @@ public class ArgumentsComposite extends Composite {
 
 		treeViewer.setContentProvider(new ArgumentsContentProvier(adapterFactory));
 		treeViewer.setLabelProvider(new ArgumentsLabelProvider(adapterFactory));
-
-		// DelegatingListProperty<?, ?> delegatingListProperty = new
-		// DelegatingListProperty<Object, Object>() {
-		//
-		// // private AdapterFactoryContentProvider adapterContentProvider;
-		// private AdapterFactoryItemDelegator adapterFactoryItemDelegator;
-		//
-		// @Override
-		// protected IListProperty<Object, Object> doGetDelegate(Object source)
-		// {
-		// if (source instanceof OperationCall) {
-		// IListProperty<Object, Object> test = EMFProperties.list(
-		// FeaturePath.fromList(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
-		// ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS));
-		// return test;
-		// }
-		// if (source instanceof EClassArgument) {
-		// IListProperty<Object, Object> test = EMFProperties
-		// .list(ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
-		// return
-		// EMFProperties.list(ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
-		// }
-		// if (source instanceof EObject) {
-		//// getAdapterFactoryItemDelegator().getPropertyDescriptors(source);
-		//// EMFProperties.multiList(featurePaths)
-		//// EMFProperties.multiList(((EObject)
-		// source).eClass().getEAllContainments());
-		//// System.out.println(((EObject) source).eContainingFeature());
-		//// System.out.println(((EObject) source).eAllContents());
-		//// System.out.println(((EObject) source).eContainmentFeature());
-		//
-		// }
-		// System.out.println(source);
-		// return null;
-		// }
-		//
-		// public AdapterFactoryItemDelegator getAdapterFactoryItemDelegator() {
-		// if (adapterFactoryItemDelegator == null) {
-		// adapterFactoryItemDelegator = new
-		// AdapterFactoryItemDelegator(adapterFactory);
-		// }
-		// return adapterFactoryItemDelegator;
-		// }
-		//
-		// };
-		//
-		// ObservableListTreeContentProvider contentProvider = new
-		// ObservableListTreeContentProvider(
-		// delegatingListProperty.listFactory(DisplayRealm.getRealm(treeViewer.getControl().getDisplay())),
-		// null) {
-		// @Override
-		// public IObservableSet<?> getKnownElements() {
-		// IObservableSet<?> set = super.getKnownElements();
-		// System.out.println(
-		// "ArgumentsComposite.initDataBindingsCustom().new
-		// ObservableListTreeContentProvider() {...}.getKnownElements()");
-		// return set;
-		// }
-		// };
-		// treeViewer.setContentProvider(contentProvider);
-		// treeViewer
-		// .setLabelProvider(new
-		// ArgumentsLabelProvider(Properties.observeEach(contentProvider.getKnownElements(),
-		// EMFProperties.value(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS),
-		// EMFProperties
-		// .value(ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE),
-		// EMFProperties.value(ApogyCoreInvocatorPackage.Literals.EENUM_ARGUMENT__EENUM),
-		// EMFProperties.value(ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE))));
 
 		return m_bindingContext;
 	}
@@ -567,9 +510,10 @@ public class ArgumentsComposite extends Composite {
 		IObservableValue<?> treeViewerSingleSelectionObservableValue = ViewerProperties.singleSelection()
 				.observe(treeViewer);
 
+		/**
+		 * Data binding to enable/disable the new button.
+		 */
 		IObservableValue<?> btnNewEnabledObserveValue = WidgetProperties.enabled().observe(btnNew);
-		IObservableValue<?> btnDeleteEnabledObserveValue = WidgetProperties.enabled().observe(btnDelete);
-
 		m_bindingContext.bindValue(btnNewEnabledObserveValue, treeViewerSingleSelectionObservableValue, null,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
 						.setConverter(new Converter(Object.class, Boolean.class) {
@@ -585,6 +529,10 @@ public class ArgumentsComposite extends Composite {
 								return false;
 							}
 						}));
+		/**
+		 * Data binding to enable/disable the delete button.
+		 */
+		IObservableValue<?> btnDeleteEnabledObserveValue = WidgetProperties.enabled().observe(btnDelete);
 		m_bindingContext.bindValue(btnDeleteEnabledObserveValue, treeViewerSingleSelectionObservableValue, null,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE)
 						.setConverter(new Converter(EObject.class, Boolean.class) {
@@ -603,6 +551,10 @@ public class ArgumentsComposite extends Composite {
 		return m_bindingContext;
 	}
 
+	/**
+	 * Content provider for the arguments.
+	 * 
+	 */
 	private class ArgumentsContentProvier extends AdapterFactoryContentProvider {
 
 		public ArgumentsContentProvier(AdapterFactory adapterFactory) {
@@ -613,6 +565,7 @@ public class ArgumentsComposite extends Composite {
 		public Object[] getElements(Object object) {
 			if (object instanceof EObjectReference) {
 				if (((EObjectReference) object).getEObject() instanceof OperationCall) {
+					// Returns the arguments list of the treeViewer operationCall input.
 					return ((OperationCall) ((EObjectReference) object).getEObject()).getArgumentsList().getArguments()
 							.toArray();
 				}
@@ -623,6 +576,7 @@ public class ArgumentsComposite extends Composite {
 		@Override
 		public Object[] getChildren(Object object) {
 			if (object == operationCall) {
+				// Only returns the arguments as children of the operationCall input.
 				if (((OperationCall) object).getArgumentsList() != null) {
 					return ((OperationCall) object).getArgumentsList().getArguments().toArray();
 				}
@@ -635,6 +589,7 @@ public class ArgumentsComposite extends Composite {
 		@Override
 		public boolean hasChildren(Object object) {
 			if (object == operationCall) {
+				// Only returns true if the operationCall input has arguments.
 				if (((OperationCall) object).getArgumentsList() != null) {
 					return true;
 				}
@@ -644,6 +599,10 @@ public class ArgumentsComposite extends Composite {
 		}
 	}
 
+	/**
+	 * Label provider for the arguments.
+	 * 
+	 */
 	private class ArgumentsLabelProvider extends AdapterFactoryLabelProvider {
 
 		private static final int PARAMETER_COLUMN_ID = 0;
@@ -661,6 +620,7 @@ public class ArgumentsComposite extends Composite {
 			case PARAMETER_COLUMN_ID:
 				if (getArguments().contains(object)) {
 					str = super.getColumnText(object, 0);
+					// Cut the values from the return of the itemProvider labels
 					if (str.contains("(")) {
 						str = str.substring(0, str.indexOf("("));
 					}
@@ -691,6 +651,10 @@ public class ArgumentsComposite extends Composite {
 		}
 	}
 
+	/**
+	 * Adapter that updates the treeViewer input if the {@link ArgumentsList} is changed.
+	 * @return
+	 */
 	public Adapter getArgumentsListAdapter() {
 		if (argumentsListAdapter == null) {
 			argumentsListAdapter = new AdapterImpl() {
