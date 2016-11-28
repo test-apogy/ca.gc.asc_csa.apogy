@@ -15,6 +15,8 @@ package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -32,6 +34,10 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
@@ -207,9 +213,6 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * @generated_NOT
 	 */
 	public OperationCallResult exec(OperationCall operationCall, boolean saveResult) {
-
-		OperationCallResult result = null;
-
 		/**
 		 * 
 		 * Select the proper delegate.
@@ -247,11 +250,25 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 						"Cannot find an InvocatorDelegate for instance of type <" + instance.getClass() + "> !",
 						EventSeverity.ERROR);
 			} else {
-				result = delegate.execute(instance, operationCall, saveResult);
+				TransactionalEditingDomain domain = (TransactionalEditingDomain) AdapterFactoryEditingDomain
+						.getEditingDomainFor(operationCall);
+				RecordingCommand command = new RecordingCommand(domain) {
+					OperationCallResult result = null;
+					@Override
+					protected void doExecute() {
+						result = delegate.execute(instance, operationCall, saveResult);
+					}
+					@Override
+					public Collection<?> getResult() {
+						OperationCallResult[] results = {result};
+						return Arrays.asList(results);
+					}
+				};
+				domain.getCommandStack().execute(command);
+				return (OperationCallResult)command.getResult().iterator().next();
 			}
 		}
-
-		return result;
+		return null;
 	}
 
 	/**
@@ -1450,14 +1467,13 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 */
 	public String getOperationCallString(OperationCall operationCall) {
 		String str = "";
-		if(operationCall.getVariable() != null){
+		if (operationCall.getVariable() != null) {
 			str += operationCall.getVariable().getName();
 		}
-		if(operationCall.getTypeMemberReferenceListElement() != null && operationCall.getFeatureRoot() != null){
-			str += getSubTypeFeatureString(operationCall.getTypeMemberReferenceListElement(), operationCall.getFeatureRoot());	
-		}
-		if(operationCall.getArgumentsList() != null && operationCall.getEOperation() != null){
-			str += getEOperationString(operationCall.getArgumentsList(), operationCall.getEOperation()); 
+		str += getSubTypeFeatureString(operationCall.getTypeMemberReferenceListElement(),
+				operationCall.getFeatureRoot());
+		if (operationCall.getEOperation() != null) {
+			str += getEOperationString(operationCall.getArgumentsList(), operationCall.getEOperation());
 		}
 		return str;
 	}
