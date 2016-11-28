@@ -14,21 +14,24 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.ChangeEvent;
 import org.eclipse.core.databinding.observable.IChangeListener;
 import org.eclipse.core.databinding.observable.value.WritableValue;
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
-import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
-import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.viewers.TableViewer;
-import org.eclipse.jface.viewers.TableViewerColumn;
-import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
@@ -39,30 +42,35 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeColumn;
 
-import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.Argument;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
-import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference;
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
+import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
-import ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards.NewControllerBindingWizard;
 
 public class ControllerBindingsComposite extends Composite {
 
 	private ISelectionChangedListener selectionChangedListener;
+	private DataBindingContext m_bindingContext;
+	private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
+			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+	private Adapter adapter;
 	
-	private ControllersConfiguration controllersConfiguration;
+	private OperationCallContainer operationCallContainer;
 	
-	private TableViewer tableViewer;
+	private TreeViewer treeViewer;
 
 	/**
 	 * Creates the parentComposite.
@@ -79,81 +87,29 @@ public class ControllerBindingsComposite extends Composite {
 		});
 		setLayout(new GridLayout(2, false));
 		
-		tableViewer = new TableViewer(this, SWT.BORDER | SWT.FULL_SELECTION);
-		Table table = tableViewer.getTable();
-		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 3));
+		treeViewer = new TreeViewer(this, SWT.BORDER | SWT.FULL_SELECTION);
+		Tree tree = treeViewer.getTree();
+		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 3));
 		
-		TableViewerColumn tableViewerActionColumn = new TableViewerColumn(tableViewer, SWT.NONE);
-		TableColumn tblclmnAction = tableViewerActionColumn.getColumn();
-		tblclmnAction.setWidth(100);
-		tblclmnAction.setText("Action");
-		tableViewerActionColumn.setLabelProvider(new ColumnLabelProvider(){
-			@Override
-			public String getText(Object element) {
-				// TODO Auto-generated method stub
-				return super.getText(element);
-			}
-		});
+		TreeViewerColumn treeViewerActionColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
+		TreeColumn treeclmnAction = treeViewerActionColumn.getColumn();
+		treeclmnAction.setWidth(100);
+		treeclmnAction.setText("Action");
 		
-		TableViewerColumn tableViewerParameterColumn = new TableViewerColumn(tableViewer, SWT.NONE);
-		TableColumn tblclmnParameter = tableViewerParameterColumn.getColumn();
-		tblclmnParameter.setWidth(100);
-		tblclmnParameter.setText("Parameter");
-		tableViewerParameterColumn.setLabelProvider(new ColumnLabelProvider(){
-			@Override
-			public String getText(Object element) {
-				// TODO Auto-generated method stub
-				return super.getText(element);
-			}
-		});
-	
-		TableViewerColumn tableViewerControllerColumn = new TableViewerColumn(tableViewer, SWT.NONE);
-		TableColumn tblclmnController = tableViewerControllerColumn.getColumn();
-		tblclmnController.setWidth(100);
-		tblclmnController.setText("Controller");
-		tableViewerControllerColumn.setLabelProvider(new ColumnLabelProvider(){
-			@Override
-			public String getText(Object element) {
-				// TODO Auto-generated method stub
-				return super.getText(element);
-			}
-		});
+		TreeViewerColumn treeViewerParameterColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
+		TreeColumn treeclmnParameter = treeViewerParameterColumn.getColumn();
+		treeclmnParameter.setWidth(100);
+		treeclmnParameter.setText("Parameter");
 
-		TableViewerColumn tableViewerTypeColumn = new TableViewerColumn(tableViewer, SWT.NONE);
-		TableColumn tblclmnType = tableViewerTypeColumn.getColumn();
-		tblclmnType.setWidth(100);
-		tblclmnType.setText("Type");
-		tableViewerTypeColumn.setLabelProvider(new ColumnLabelProvider(){
-			@Override
-			public String getText(Object element) {
-				// TODO Auto-generated method stub
-				return super.getText(element);
-			}
-		});
+		TreeViewerColumn treeViewerControllerColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
+		TreeColumn treeclmnController = treeViewerControllerColumn.getColumn();
+		treeclmnController.setWidth(100);
+		treeclmnController.setText("Controller");
 
-//		TreeViewer treeViewer = new TreeViewer(this, SWT.BORDER);
-//		Tree tree = treeViewer.getTree();
-//		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 3));
-//		
-//		TreeViewerColumn treeViewerColumnName = new TreeViewerColumn(treeViewer, SWT.NONE);
-//		TreeColumn trclmnNewColumnName = treeViewerColumnName.getColumn();
-//		trclmnNewColumnName.setWidth(100);
-//		trclmnNewColumnName.setText("Name");
-//		
-//		TreeViewerColumn treeViewerColumnParameters = new TreeViewerColumn(treeViewer, SWT.NONE);
-//		TreeColumn trclmnNewColumnParameters = treeViewerColumnParameters.getColumn();
-//		trclmnNewColumnParameters.setWidth(100);
-//		trclmnNewColumnParameters.setText("Parameters");
-//		
-//		TreeViewerColumn treeViewerColumnControllerBinding = new TreeViewerColumn(treeViewer, SWT.NONE);
-//		TreeColumn trclmnNewColumnControllerBinding = treeViewerColumnControllerBinding.getColumn();
-//		trclmnNewColumnControllerBinding.setWidth(100);
-//		trclmnNewColumnControllerBinding.setText("Controller Binding");
-//		
-//		TreeViewerColumn treeViewerColumnType = new TreeViewerColumn(treeViewer, SWT.NONE);
-//		TreeColumn trclmnNewColumnType = treeViewerColumnType.getColumn();
-//		trclmnNewColumnType.setWidth(100);
-//		trclmnNewColumnType.setText("Type");		
+		TreeViewerColumn treeViewerTypeColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
+		TreeColumn treeclmnType = treeViewerTypeColumn.getColumn();
+		treeclmnType.setWidth(100);
+		treeclmnType.setText("Type");	
 		
 		Button btnNew = new Button(this, SWT.NONE);
 		GridData gd_btnNew = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
@@ -163,19 +119,19 @@ public class ControllerBindingsComposite extends Composite {
 		btnNew.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
-				NewControllerBindingWizard newControllerBindingWizard = new NewControllerBindingWizard(controllersConfiguration);
+//				NewControllerBindingWizard newControllerBindingWizard = new NewControllerBindingWizard(controllersConfiguration);
 				// Listener that sets the new child as the selected item
-				newControllerBindingWizard.getCreatedControllerBinding().addChangeListener(new IChangeListener() {
-					@SuppressWarnings("unchecked")
-					@Override
-					public void handleChange(ChangeEvent event) {
-						tableViewer.setSelection(new StructuredSelection(((WritableValue<OperationCallControllerBinding>)event.getObservable()).getValue()));
-					}
-				});
-				WizardDialog dialog = new WizardDialog(getShell(), newControllerBindingWizard);
-
-				dialog.open();
-				System.out.println("ControllerBindingsComposite.ControllerBindingsComposite() BTN NEW");
+//				newControllerBindingWizard.getCreatedControllerBinding().addChangeListener(new IChangeListener() {
+//					@SuppressWarnings("unchecked")
+//					@Override
+//					public void handleChange(ChangeEvent event) {
+//						treeViewer.setSelection(new StructuredSelection(((WritableValue<OperationCallControllerBinding>)event.getObservable()).getValue()));
+//					}
+//				});
+//				WizardDialog dialog = new WizardDialog(getShell(), newControllerBindingWizard);
+//
+//				dialog.open();
+//				System.out.println("ControllerBindingsComposite.ControllerBindingsComposite() BTN NEW");
 		}});
 		
 		Button btnDelete = new Button(this, SWT.NONE);
@@ -196,7 +152,9 @@ public class ControllerBindingsComposite extends Composite {
 				System.out.println("ControllerBindingsComposite.ControllerBindingsComposite() BTN EDIT");
 			}});
 		
-		tableViewer.addSelectionChangedListener(getTreeViewerSelectionChangedListener());
+		treeViewer.addSelectionChangedListener(getTreeViewerSelectionChangedListener());
+		
+		m_bindingContext = initDataBindings();
 	}
 	
 	private ISelectionChangedListener getTreeViewerSelectionChangedListener() {
@@ -215,12 +173,62 @@ public class ControllerBindingsComposite extends Composite {
 	protected void newSelection(ISelection selection) {
 	}
 	
-	public void setControllersConfiguration(ControllersConfiguration controllersConfiguration) {
-		this.controllersConfiguration = controllersConfiguration;
+	public void setOperationCallContainer(OperationCallContainer operationCallContainer) {
+		if (this.operationCallContainer != null) {
+			this.operationCallContainer .eAdapters().remove(getAdapter());
+		}
+		this.operationCallContainer = operationCallContainer;
+//
+//		if (this.operationCall.getArgumentsList() != null) {
+//			EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
+//			eObjectReference.setEObject(operationCall);
+//			
+//			treeViewer.setInput(eObjectReference);
+//			treeViewer.expandAll();
+//			// Adjust columns
+//			for (TreeColumn column : treeViewer.getTree().getColumns()) {
+//				column.pack();
+//			}
+//		} else {
+//			treeViewer.setInput(null);
+//		}
+//
+//		this.operationCall.eAdapters().add(getArgumentsListAdapter());
 	}
 	
 	public OperationCallControllerBinding getOperationCallControllerBinding(){
-		return (OperationCallControllerBinding) tableViewer.getStructuredSelection().getFirstElement();
+		return (OperationCallControllerBinding) treeViewer.getStructuredSelection().getFirstElement();
+	}
+	
+	protected DataBindingContext initDataBindings() {
+		m_bindingContext = new DataBindingContext();
+
+		treeViewer.setContentProvider(new ControllerBindingsContentProvider(adapterFactory));
+		treeViewer.setLabelProvider(new ControllerBindingsLabelProvider(adapterFactory));
+
+		return m_bindingContext;
+	}
+	
+	/**
+	 * Adapter that updates the treeViewer input if the {@link OperationCallControllerBinding} is changed.
+	 * @return
+	 */
+	public Adapter getAdapter() {
+		if (adapter == null) {
+			adapter = new AdapterImpl() {
+				@Override
+				public void notifyChanged(Notification notification) {
+					if (notification
+							.getFeature() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS) {
+						if (notification.getNewValue() != null) {
+							setOperationCallContainer(((OperationCall) notification.getNewValue()).getOperationCallContainer());
+							}
+
+					}
+				}
+			};
+		}
+		return adapter;
 	}
 	
 	/**
@@ -246,31 +254,40 @@ public class ControllerBindingsComposite extends Composite {
 			case NAME_COLUMN_ID:
 				if(object instanceof OperationCallControllerBinding){
 					str = ((OperationCallControllerBinding) object).getName();
-				}else if(object instanceof Argument){
-					((BindedEDataTypeArgument)object).getOperationCall().getName();
+				}else if(object instanceof BindedEDataTypeArgument){
+					str = "Parameter";
 				}
 				break;
 			case PARAMETER_COLUMN_ID:
-				str = ((OperationCallControllerBinding)object).getArgumentsList().getArguments().get(0).getEParameter().getEOperation().getName();
+				if(object instanceof OperationCallControllerBinding){
+					str = ((OperationCallControllerBinding) object).getEOperation().getName();
+				}else if(object instanceof BindedEDataTypeArgument){
+					str = ((BindedEDataTypeArgument)object).getEParameter().getName();
+				}
 				break;
 			case CONTROLLER_COLUMN_ID:
-				if(object instanceof ControllerTrigger){
-					str = ((ControllerStateTrigger)object).getComponentQualifier().getEControllerName() + "." + ((ControllerTrigger)object).getComponentQualifier().getEComponentName();
-					if(object instanceof ControllerEdgeTrigger){
-						str += "." + ((ControllerEdgeTrigger)object).getEdgeType().getLiteral();
+				if (object instanceof OperationCallControllerBinding) {
+					str = "";
+				} else if (object instanceof BindedEDataTypeArgument) {
+					BindedEDataTypeArgument bindedEDataTypeArgument = (BindedEDataTypeArgument) object;
+					if (bindedEDataTypeArgument.getValueSource() instanceof FixedValueSource) {
+						str = ((FixedValueSource) bindedEDataTypeArgument.getValueSource()).getValue();
+					} else if (bindedEDataTypeArgument.getValueSource() instanceof ToggleValueSource) {
+						str = ApogyCoreProgramsControllersFacade.INSTANCE
+								.getToggleValueSourceString((ToggleValueSource) bindedEDataTypeArgument);
+					} else {
+						str = ((ControllerValueSource) bindedEDataTypeArgument.getValueSource())
+								.getEComponentQualifier().getEControllerName() + "."
+								+ ((ControllerValueSource) bindedEDataTypeArgument.getValueSource())
+										.getEComponentQualifier().getEComponentName();
 					}
-				}else if(object instanceof TimeTrigger){
-					str = Long.toString(((TimeTrigger)object).getRefreshPeriod()) + " ms";
 				}
 				break;
 			case TYPE_COLUMN_ID:
-				if(object instanceof Variable){
-					str = ((Variable)object).getName();
-					if(((Variable) object).eContainer() instanceof Variable){
-						str = new StringBuilder(new StringBuilder(str).insert(0, ".").toString()).insert(0, ((Variable)((Variable) object).eContainer()).getName()).toString();
-					}
-				}else if(object instanceof TypeMemberReference){
-					str = ((TypeMember)object).getName();
+				if(object instanceof OperationCallControllerBinding){
+					str = "";
+				}else if (object instanceof BindedEDataTypeArgument){
+					str = ((BindedEDataTypeArgument)object).getEParameter().getEType().getName();
 				}
 				break;
 
@@ -285,39 +302,21 @@ public class ControllerBindingsComposite extends Composite {
 	/**
 	 * Content provider for the TreeViewer
 	 */
-	private class ControllerBindingsContentProvider implements
-			ITreeContentProvider {
+	private class ControllerBindingsContentProvider extends
+			AdapterFactoryContentProvider {
 
+		public ControllerBindingsContentProvider(AdapterFactory adapterFactory) {
+			super(adapterFactory);
+		}
 		@Override
-		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+		public Object[] getChildren(Object object) {
+			return ((OperationCallControllerBinding)object).getArgumentsList().getArguments().toArray();
 		}
 
 		@Override
-		public void dispose() {
-		}
-
-		@Override
-		public boolean hasChildren(Object element) {
-			return (!((AbstractTypeImplementation) element)
-					.getTypeMemberImplementations().isEmpty());
-		}
-
-		@Override
-		public Object getParent(Object element) {
-			/** Not used. */
-			return null;
-		}
-
-		@Override
-		public Object[] getElements(Object inputElement) {
-			return null; //TODO: Get elements
-		}
-
-		@Override
-		public Object[] getChildren(Object parentElement) {
-			AbstractTypeImplementation abstractTypeImplementation = (AbstractTypeImplementation) parentElement;
-			return abstractTypeImplementation.getTypeMemberImplementations()
-					.toArray();
+		public boolean hasChildren(Object object) {
+			return object instanceof OperationCallControllerBinding
+					? (((OperationCallControllerBinding) object).getArgumentsList() != null) : false;
 		}
 	}
 

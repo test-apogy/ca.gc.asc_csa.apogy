@@ -73,6 +73,8 @@ class ApogyCoreProgramsControllersFacade
 	 * @param active Value to set
 	 */
 	op void setActiveControllersConfiguration(ControllersConfiguration controllersConfiguration, Boolean active)
+	
+	op String getToggleValueSourceString(ToggleValueSource toggleValueSource)
 }
 
 /* -------------------------------------------------------------------------

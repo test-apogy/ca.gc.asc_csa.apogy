@@ -142,13 +142,22 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_ACTIVE_CONTROLLERS_CONFIGURATION__CONTROLLERSCONFIGURATION_BOOLEAN = 3;
 
 	/**
+	 * The operation id for the '<em>Get Toggle Value Source String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___GET_TOGGLE_VALUE_SOURCE_STRING__TOGGLEVALUESOURCE = 4;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE_OPERATION_COUNT = 4;
+	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.
@@ -1565,6 +1574,16 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	EOperation getApogyCoreProgramsControllersFacade__SetActiveControllersConfiguration__ControllersConfiguration_Boolean();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#getToggleValueSourceString(ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource) <em>Get Toggle Value Source String</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Toggle Value Source String</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#getToggleValueSourceString(ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource)
+	 * @generated
+	 */
+	EOperation getApogyCoreProgramsControllersFacade__GetToggleValueSourceString__ToggleValueSource();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration <em>Controllers Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2188,6 +2207,14 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_ACTIVE_CONTROLLERS_CONFIGURATION__CONTROLLERSCONFIGURATION_BOOLEAN = eINSTANCE.getApogyCoreProgramsControllersFacade__SetActiveControllersConfiguration__ControllersConfiguration_Boolean();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Toggle Value Source String</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___GET_TOGGLE_VALUE_SOURCE_STRING__TOGGLEVALUESOURCE = eINSTANCE.getApogyCoreProgramsControllersFacade__GetToggleValueSourceString__ToggleValueSource();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.

@@ -25,6 +25,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
@@ -39,6 +40,7 @@ public class NewControllerBindingWizard extends Wizard {
 	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
 	private OperationCallEOperationsWizardPage operationCallEOperationsWizardPage;
 	private NamedDescribedWizardPage namedDescribedWizardPage;
+	private TriggerWizardPage triggerWizardPage;
 	private ControllerComponentWizardPage controllerComponentWizardPage;
 
 	private ControllersConfiguration controllersConfiguration;
@@ -61,26 +63,18 @@ public class NewControllerBindingWizard extends Wizard {
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {	
-		if (getNamedDescribedWizardPage() != null){
-			addPage(getNamedDescribedWizardPage());
-		}
+		addPage(getNamedDescribedWizardPage());
+		addPage(getVariableFeatureReferenceWizardPage());
+		addPage(getOperationCallEOperationWizardPage());
+		addPage(getTriggerWizardPage());
+		addPage(getControllerComponentWizardPage());
 		
-		if (getVariableFeatureReferenceWizardPage() != null){
-			addPage(getVariableFeatureReferenceWizardPage());
-		}
-		
-		if (getOperationCallEOperationWizardPage() != null){
-			addPage(getOperationCallEOperationWizardPage());
-		}
-		if (getControllerComponentWizardPage() != null) {
-			addPage(getControllerComponentWizardPage());
-		}
-	
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(namedDescribedWizardPage, 0.8);
 	}
 	
 	@Override
 	public IWizardPage getNextPage(IWizardPage page) {
-		if(page == getOperationCallEOperationWizardPage()){
+		if(page == getTriggerWizardPage()){
 			if(getControllerBinding().getArgumentsList() != null){
 				return getControllerComponentWizardPage();
 			}
@@ -135,6 +129,19 @@ public class NewControllerBindingWizard extends Wizard {
 		return operationCallEOperationsWizardPage;
 	}
 
+	/**
+	 * Returns the {@link TriggerWizardPage}. If null is returned,
+	 * the page is not added to the wizard.
+	 * 
+	 * @return Reference to the page.
+	 */
+	protected TriggerWizardPage getTriggerWizardPage() {
+		if (triggerWizardPage == null) {
+			triggerWizardPage = new TriggerWizardPage(getControllerBinding());
+		}
+		return triggerWizardPage;
+	}
+	
 	/**
 	 * Returns the {@link ControllerComponentWizardPage}. If null is returned,
 	 * the page is not added to the wizard.

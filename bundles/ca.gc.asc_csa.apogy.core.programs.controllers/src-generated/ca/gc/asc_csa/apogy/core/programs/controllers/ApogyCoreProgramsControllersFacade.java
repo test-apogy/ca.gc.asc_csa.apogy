@@ -79,4 +79,12 @@ public interface ApogyCoreProgramsControllersFacade extends EObject
 	 */
 	void setActiveControllersConfiguration(ControllersConfiguration controllersConfiguration, Boolean active);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" toggleValueSourceUnique="false"
+	 * @generated
+	 */
+	String getToggleValueSourceString(ToggleValueSource toggleValueSource);
+
 } // ApogyCoreProgramsControllersFacade

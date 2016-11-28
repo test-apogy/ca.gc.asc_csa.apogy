@@ -29,6 +29,7 @@ import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
@@ -176,6 +177,31 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String getToggleValueSourceString(ToggleValueSource toggleValueSource) {
+		String str = "";
+		
+		if(toggleValueSource.isCurrentValue()){
+			str += "Current";
+		}
+		if(toggleValueSource.isInitialValue()){
+			if(str != ""){
+				str += " and ";
+			}
+			str += "Initial";
+		}
+		if(str != ""){
+			str += " value";
+			return str;
+		}
+		
+		return "<undefined>";
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -204,6 +230,8 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_ACTIVE_CONTROLLERS_CONFIGURATION__CONTROLLERSCONFIGURATION_BOOLEAN:
 				setActiveControllersConfiguration((ControllersConfiguration)arguments.get(0), (Boolean)arguments.get(1));
 				return null;
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___GET_TOGGLE_VALUE_SOURCE_STRING__TOGGLEVALUESOURCE:
+				return getToggleValueSourceString((ToggleValueSource)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
