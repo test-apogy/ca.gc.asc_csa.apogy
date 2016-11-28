@@ -16,9 +16,11 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
 
 import org.eclipse.jface.wizard.Wizard;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
@@ -28,7 +30,7 @@ public class VariableWizard extends Wizard{
 
 	private SetVariableTypeWizardPage setVariableTypeWizardPage;
 	
-	private Variable variable = ApogyCoreInvocatorFactory.eINSTANCE.createVariable();
+	private Variable variable;
 	private VariablesList variablesList;
 
 	private NamedDescribedWizardPage namedDescribedWizardPage;
@@ -62,7 +64,7 @@ public class VariableWizard extends Wizard{
 	 */
 	protected NamedDescribedWizardPage getNamedDescribedWizardPage() {
 		if (namedDescribedWizardPage == null) {
-			namedDescribedWizardPage = new NamedDescribedWizardPage(variable, variable);
+			namedDescribedWizardPage = new NamedDescribedWizardPage(getVariable(), getVariable());
 		}
 		return namedDescribedWizardPage;
 	}	
@@ -75,14 +77,22 @@ public class VariableWizard extends Wizard{
 	 */
 	protected SetVariableTypeWizardPage getSetVariableTypeWizardPage() {
 		if (setVariableTypeWizardPage == null) {
-			setVariableTypeWizardPage = new SetVariableTypeWizardPage(variable);
+			setVariableTypeWizardPage = new SetVariableTypeWizardPage(getVariable());
 		}
 		return setVariableTypeWizardPage;
 	}
 
 	@Override
 	public boolean performFinish() {		
-		ApogyCoreInvocatorUIFacade.INSTANCE.addVariable(variablesList, variable);
+		ApogyCoreInvocatorUIFacade.INSTANCE.addVariable(variablesList, getVariable());
 		return true;
+	}
+	
+	private Variable getVariable(){
+		if(this.variable == null){
+			variable = ApogyCoreInvocatorFactory.eINSTANCE.createVariable();
+			variable.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(variablesList, variable, ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES));
+		}
+		return this.variable;
 	}
 }
