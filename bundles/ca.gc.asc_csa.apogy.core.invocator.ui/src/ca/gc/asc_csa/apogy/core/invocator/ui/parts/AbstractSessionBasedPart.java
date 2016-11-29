@@ -14,6 +14,8 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import javax.annotation.PreDestroy;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -30,7 +32,6 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 	
 	private Adapter adapter;
 
-	
 	@Override
 	protected void createNoContentComposite(Composite parent, int style) {
 		new NoContentComposite(parent, SWT.None){
@@ -73,6 +74,7 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 		return adapter;
 	}
 
+	@PreDestroy
 	public void dispose() {
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getApogyCoreInvocatorFacadeAdapter());
 	}
