@@ -21,8 +21,6 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
-import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
-
 public class ControllerComponentWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewProgramWizardPage";

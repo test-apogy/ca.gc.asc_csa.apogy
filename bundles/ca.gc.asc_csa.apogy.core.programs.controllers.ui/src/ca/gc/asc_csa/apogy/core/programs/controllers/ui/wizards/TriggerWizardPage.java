@@ -16,21 +16,33 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.dialogs.IDialogPage;
+import org.eclipse.jface.viewers.StyledCellLabelProvider;
+import org.eclipse.jface.viewers.TreeSelection;
+import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectListComposite;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.programs.controllers.Trigger;
 
 public class TriggerWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewProgramWizardPage";
 	
 	private OperationCallControllerBinding operationCallControllerBinding;
+	//ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER
 	
 	private Adapter adapter; 
 
@@ -75,15 +87,35 @@ public class TriggerWizardPage extends WizardPage {
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new GridLayout(1, false));
 
-		Composite composite = new Composite(container, SWT.None);
-		composite.setLayout(new GridLayout(1, false));
+		EObjectListComposite eClassesListComposite = new EObjectListComposite(container, SWT.None) {
+			@Override
+			protected void newSelection(TreeSelection selection) {
+				EObject eObject = ApogyCoreProgramsControllersFactory.eINSTANCE.create((EClass)getSelectedEObject());
+				operationCallControllerBinding.setTrigger((Trigger) eObject);
+				TriggerWizardPage.this.validate();
+			}
+			
+			@Override
+			protected StyledCellLabelProvider getLabelProvider() {
+				return new StyledCellLabelProvider() {
+					@Override
+					public void update(ViewerCell cell) {
+						if (cell.getElement() instanceof EClass) {
+							cell.setText(((EClass) cell.getElement()).getName());
+						}
+					}
+				};
+			}
+		};
+		EList<EObject> eObjectsEClassList = new BasicEList<EObject>();
+		eObjectsEClassList.addAll(ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
+				ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER
+						.getEReferenceType()));
+		eClassesListComposite.setEObjectsList(eObjectsEClassList);
 
-		Label label = new Label(composite, SWT.None);
-		label.setText("TODO");
-		label.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, true));
+		eClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
 		setControl(container);
-
 		validate();
 	}
 
@@ -91,8 +123,14 @@ public class TriggerWizardPage extends WizardPage {
 	 * This method is invoked to validate the content.
 	 */
 	protected void validate() {
-		setErrorMessage(null);
-		setPageComplete(true);
+		String errorStr = null;
+
+		if (operationCallControllerBinding.getTrigger() == null){
+			errorStr = "You must select a Trigger";
+		}
+
+		setErrorMessage(errorStr);
+		setPageComplete(errorStr == null);
 	}
 
 }

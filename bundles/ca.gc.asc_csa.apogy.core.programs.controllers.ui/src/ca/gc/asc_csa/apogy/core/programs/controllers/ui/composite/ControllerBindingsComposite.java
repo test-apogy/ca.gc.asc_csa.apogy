@@ -32,6 +32,7 @@ import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -60,6 +61,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards.NewControllerBindingWizard;
 
 public class ControllerBindingsComposite extends Composite {
 
@@ -122,8 +124,18 @@ public class ControllerBindingsComposite extends Composite {
 		btnNew.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
-				MessageBox dialog = new MessageBox(getShell());
-				dialog.setText("TODO");
+//				MessageBox dialog = new MessageBox(getShell());
+//				dialog.setText("TODO");
+//				dialog.open();
+				
+				NewControllerBindingWizard newControllerBindingWizard = new NewControllerBindingWizard(controllersConfiguration){
+					@Override
+					public boolean performFinish() {
+						// TODO
+						return super.performFinish();
+					}
+				};
+				WizardDialog dialog = new WizardDialog(getShell(), newControllerBindingWizard);
 				dialog.open();
 //				NewControllerBindingWizard newControllerBindingWizard = new NewControllerBindingWizard(controllersConfiguration);
 				// Listener that sets the new child as the selected item
