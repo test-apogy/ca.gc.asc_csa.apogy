@@ -32,8 +32,6 @@ public class ControllerConfigsPart extends AbstractSessionBasedPart {
 		new ControllerConfigsComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL) {
 			@Override
 			protected void newSelection(ISelection selection) {
-				System.out.println(
-						"ControllerConfigsPart.createContentComposite(...).new ControllerConfigsComposite() {...}.newSelection()");
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
