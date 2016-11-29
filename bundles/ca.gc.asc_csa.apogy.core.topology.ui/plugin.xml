@@ -15,25 +15,6 @@
 -->
 <plugin>
    <extension
-         point="org.eclipse.ui.views">
-      <view
-            category="ca.gc.asc_csa.apogy.core.ui.category"
-            class="ca.gc.asc_csa.apogy.core.topology.ui.views.ApogyEnvironment3DView"
-            icon="icons/eview16/Apogy3DViewer.gif"
-            id="ca.gc.asc_csa.apogy.core.topology.ui.views.Apogy3DView"
-            name="Apogy 3D Viewer"
-            restorable="true">
-      </view>
-      <view
-            category="ca.gc.asc_csa.apogy.core.ui.category"
-            class="ca.gc.asc_csa.apogy.core.topology.ui.views.ApogySystem3DView"
-            icon="icons/eview16/ApogySystem3DViewer.gif"
-            id="ca.gc.asc_csa.apogy.core.topology.ui.views.ApogySystem3DView"
-            name="Apogy System 3D Viewer"
-            restorable="true">
-      </view>
-   </extension>
-   <extension
          point="org.eclipse.ui.commands">
       <command
             id="ca.gc.asc_csa.apogy.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"

@@ -16,21 +16,10 @@ package ca.gc.asc_csa.apogy.core.topology.ui.parts;
 
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
-import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewer;
-import ca.gc.asc_csa.apogy.core.ApogyTopology;
 
 public abstract class AbstractApogy3dPart extends AbstractApogyTopologyBasedPart {
-
-	private TopologyViewer topologyViewer;
-
-	@Override
-	protected void createContentComposite(Composite parent, int style) {
-		topologyViewer = createTopologyViewer(parent);
-		// topologyViewer.addSelectionChangedListener(listener);
-	}
 
 	public TopologyViewer createTopologyViewer(Composite parent) {
 		JME3RenderEngineDelegate jme3RenderEngineDelegate = createJME3RenderEngineDelegate();
@@ -44,32 +33,10 @@ public abstract class AbstractApogy3dPart extends AbstractApogyTopologyBasedPart
 		return viewer;
 	}
 
-	@Override
-	protected void newTopology(ApogyTopology apogyTopology) {
-		GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE
-				.createGraphicsContext(apogyTopology.getRootNode());
-		topologyViewer.setInput(graphicsContext);
-	}
-
 	/**
 	 * Method that create the JME3RenderEngineDelegate to be used.
 	 * 
 	 * @return The JME3RenderEngineDelegate to be used.
 	 */
 	protected abstract JME3RenderEngineDelegate createJME3RenderEngineDelegate();
-
-	// FIXME Remove THIS. It is just an example.
-	// @PostConstruct
-	// public void createControl(MPart part) {
-	// Map<String, String> state = part.getPersistedState();
-	// String value = state.get("key");
-	// ...
-	// }
-	//
-	// @PersistState
-	// public void persistState(MPart part) {
-	// Map<String, String> state = part.getPersistedState();
-	// state.put("key", "newValue");
-	// ...
-	// }
 }

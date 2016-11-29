@@ -31,6 +31,7 @@ import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 import ca.gc.asc_csa.apogy.core.topology.ui.Activator;
 import org.eclipse.ui.handlers.HandlerUtil;
 
+// FIXME Refactor into E4 handler.
 public class ToggleVariableTopologyVisibilityCommandHandler extends AbstractHandler implements
 		IHandler {
 

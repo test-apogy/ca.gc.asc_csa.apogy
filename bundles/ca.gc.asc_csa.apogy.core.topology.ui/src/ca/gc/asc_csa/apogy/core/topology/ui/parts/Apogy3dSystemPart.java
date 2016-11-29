@@ -16,7 +16,7 @@ package ca.gc.asc_csa.apogy.core.topology.ui.parts;
 
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 
-public class Apogy3dPart extends AbstractApogy3dPart {
+public class Apogy3dSystemPart extends AbstractApogy3dPart {
 		
 	@Override
 	protected void setNullSelection() {
@@ -28,7 +28,7 @@ public class Apogy3dPart extends AbstractApogy3dPart {
 	 * @return The JME3RenderEngineDelegate to be used.
 	 */
 	protected JME3RenderEngineDelegate createJME3RenderEngineDelegate(){
-		System.out.println("Apogy3dPart.createJME3RenderEngineDelegate()");
+		System.out.println("Apogy3dEnvironmentPart.createJME3RenderEngineDelegate()");
 		return new JME3RenderEngineDelegate();
 	}
 

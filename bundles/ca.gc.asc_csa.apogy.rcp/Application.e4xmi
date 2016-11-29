@@ -127,10 +127,10 @@
           </children>
         </children>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_zTAR4LMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.perspective.3d" label="3D">
+      <children xsi:type="advanced:Perspective" xmi:id="_zTAR4LMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.perspective.3d" label="3D" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/eview16/Apogy3DViewer.gif">
         <children xsi:type="basic:PartSashContainer" xmi:id="_3l31QLMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.22">
           <children xsi:type="basic:PartStack" xmi:id="_4TqIULMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.partstack.2">
-            <children xsi:type="basic:Part" xmi:id="_5CrKcLMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.part.3d" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.parts.Apogy3dPart" label="3D"/>
+            <children xsi:type="advanced:Placeholder" xmi:id="_UAaloLNPEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.15" ref="_5CrKcLMaEeaf4uxcZZf16g"/>
           </children>
         </children>
       </children>
@@ -278,6 +278,24 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_bbsQkKHZEeaIzJSZMOTHGg" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramDetailsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramDetailsPart" label="Details"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_PG7rIKzhEeaZaM9KFM-klA" elementId="ca.gc.asc_csa.apogy.rcp.part.ProgramArgumentsPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.ProgramArgumentsPart" label="Arguments"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_gDRD0LArEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.eObjectPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.invocator.ui/ca.gc.asc_csa.apogy.core.invocator.ui.parts.VariableRuntimePart" label="Runtime"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_5CrKcLMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.part.3d" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.parts.Apogy3dEnvironmentPart" label="3D" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/eview16/Apogy3DViewer.gif">
+      <handlers xmi:id="_g7PX4LZxEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handler.4" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.handlers.SetAntiAliasingModeHandler" command="_ckNGMLZxEeaTSIALzZwZEw"/>
+      <handlers xmi:id="_eb5GwLZUEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handler.1" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.handlers.ShowStatisticsHandler" command="_ZZp78LZUEeaTSIALzZwZEw"/>
+      <handlers xmi:id="_Q2ys0LNQEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.handler.2" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.handlers.ZoomToFitHandler" command="_8DI3sLNPEeaf4uxcZZf16g"/>
+      <handlers xmi:id="_gy9CwLZqEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handler.3" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.handlers.ResetLevelViewpointHandler" command="_OG5MQLZqEeaTSIALzZwZEw"/>
+      <handlers xmi:id="_dftvYLZ1EeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handler.5" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.handlers.SetHighSpeedModeHandler" command="_Qz4W8LZqEeaTSIALzZwZEw"/>
+      <handlers xmi:id="_khFgYLZ1EeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handler.6" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.handlers.SetPickingModeHandler" command="_UnzUgLZqEeaTSIALzZwZEw"/>
+      <handlers xmi:id="_vFNmcLZ1EeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handler.7" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.handlers.TakeScreenshotHandler" command="_J4xwkLZrEeaTSIALzZwZEw"/>
+      <toolbar xmi:id="_WN4iwLNPEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.1">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_RnDD0LZrEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.1" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/anti_aliasing_16.gif" type="Check" command="_ckNGMLZxEeaTSIALzZwZEw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_2zVK8LNPEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.a" label="" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/show_statistics.gif" type="Check" command="_ZZp78LZUEeaTSIALzZwZEw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_X1ARkLNPEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.a" label="" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/zoom-fit-16.png" command="_8DI3sLNPEeaf4uxcZZf16g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_2htKALZxEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.2" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/level_viewpoint_16.gif" command="_OG5MQLZqEeaTSIALzZwZEw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ZNz1ULZ1EeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.3" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/high_speed_mode_16.gif" type="Check" command="_Qz4W8LZqEeaTSIALzZwZEw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gmc20LZ1EeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.4" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/picking_mode_16.gif" type="Check" command="_UnzUgLZqEeaTSIALzZwZEw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_EtoW0LZqEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.0" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/take_screenshot_16.gif" command="_J4xwkLZrEeaTSIALzZwZEw"/>
+      </toolbar>
+    </sharedElements>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.save" label="Save" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/tool16/save.gif" tooltip="" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
@@ -364,6 +382,13 @@
   <commands xmi:id="_nZuzQIwJEeagBK84clz7Sg" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="%InstallationDetails.command"/>
   <commands xmi:id="_CI2YUJVtEeaa6JtpKE_Ezw" elementId="ca.gc.asc_csa.apogy.rcp.command.newProject" commandName="New Project"/>
   <commands xmi:id="_4JIHkKHoEeaQMb_PNdzFwg" elementId="ca.gc.asc_csa.apogy.rcp.command.close" commandName="closeCommand"/>
+  <commands xmi:id="_8DI3sLNPEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.command.zoomtofit" commandName="zoomToFit"/>
+  <commands xmi:id="_ZZp78LZUEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.command.showstatistics" commandName="showStatistics"/>
+  <commands xmi:id="_OG5MQLZqEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.command.levelviewpoint" commandName="levelViewpoint"/>
+  <commands xmi:id="_Qz4W8LZqEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.command.sethighspeedmode" commandName="setHighSpeedMode"/>
+  <commands xmi:id="_UnzUgLZqEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.command.setpickingmode" commandName="setPickingMode"/>
+  <commands xmi:id="_J4xwkLZrEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.command.takescreenshot" commandName="takeScreenshot"/>
+  <commands xmi:id="_ckNGMLZxEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.command.setantialiasing" commandName="setAntialiasing"/>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

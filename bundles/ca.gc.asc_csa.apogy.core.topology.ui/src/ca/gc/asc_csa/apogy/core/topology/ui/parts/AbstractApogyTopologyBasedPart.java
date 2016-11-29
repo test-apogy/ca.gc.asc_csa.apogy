@@ -21,6 +21,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewer;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.common.ui.parts.AbstractApogyPart;
 import ca.gc.asc_csa.apogy.core.ApogyTopology;
@@ -29,7 +32,18 @@ import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 abstract public class AbstractApogyTopologyBasedPart extends AbstractApogyPart{
 	
 	private Adapter adapter;
+	private TopologyViewer topologyViewer;
 
+	@Override
+	protected void createContentComposite(Composite parent, int style) {
+		topologyViewer = createTopologyViewer(parent);
+	}
+	
+	public TopologyViewer getTopologyViewer() {
+		return topologyViewer;
+	}
+	
+	abstract public TopologyViewer createTopologyViewer(Composite parent);	
 	
 	@Override
 	protected void createNoContentComposite(Composite parent, int style) {
@@ -47,7 +61,11 @@ abstract public class AbstractApogyTopologyBasedPart extends AbstractApogyPart{
 		return ApogyCoreTopologyFacade.INSTANCE.getApogyTopology();
 	} 
 	
-	abstract protected void newTopology(ApogyTopology apogyTopology);
+	protected void newTopology(ApogyTopology apogyTopology) {
+		GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE
+				.createGraphicsContext(apogyTopology.getRootNode());
+		topologyViewer.setInput(graphicsContext);
+	}
 
 	@Override
 	protected void setCompositeContent(EObject eObject) {
@@ -73,5 +91,34 @@ abstract public class AbstractApogyTopologyBasedPart extends AbstractApogyPart{
 
 	public void dispose() {
 		ApogyCoreTopologyFacade.INSTANCE.eAdapters().remove(getAdapter());
+	}
+	
+	
+	public void zoomToFit(){
+		getTopologyViewer().zoomToFit();
+	}
+	
+	public void setAntiAliasing(boolean enable){		
+		getTopologyViewer().setAntiAliasing(enable);
+	}
+	
+	public void setHighSpeedMode(boolean enable){
+		getTopologyViewer().setHighSpeedMotionEnabled(enable);
+	}
+	
+	public void setPickingMode(boolean enable){
+		getTopologyViewer().setPickingModeEnabled(enable);
+	}
+	
+	public void showStatisticsDisplay(boolean enable){
+		getTopologyViewer().setShowStatisticsEnabled(enable);
+	}
+	
+	public void resetLevelViewpoint(){
+		getTopologyViewer().levelViewPoint();
+	}
+	
+	public void takeScreenshot(){
+		getTopologyViewer().takeScreenshot();
 	}
 }
