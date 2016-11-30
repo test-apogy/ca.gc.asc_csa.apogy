@@ -147,7 +147,7 @@ public class OperationCallsListComposite extends ScrolledComposite {
 		});
 
 		btnDelete = new Button(composite, SWT.NONE);
-		btnDelete.setLayoutData(new GridData(SWT.CENTER, SWT.TOP, false, false, 1, 1));
+		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
 		btnDelete.setText("Delete");
 		btnDelete.setEnabled(false);
 		btnDelete.addSelectionListener(new SelectionAdapter() {
