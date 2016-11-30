@@ -1696,7 +1696,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
-	 */
+	 */	
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {

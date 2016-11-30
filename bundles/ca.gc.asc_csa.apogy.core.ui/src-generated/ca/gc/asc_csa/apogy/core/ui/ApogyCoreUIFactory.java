@@ -43,42 +43,6 @@ public interface ApogyCoreUIFactory extends EFactory
 	ApogyCoreUIFacade createApogyCoreUIFacade();
 
 		/**
-	 * Returns a new object of class '<em>Apogy Resource Settings</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Apogy Resource Settings</em>'.
-	 * @generated
-	 */
-	ApogyResourceSettings createApogyResourceSettings();
-
-		/**
-	 * Returns a new object of class '<em>New Apogy Project Settings</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>New Apogy Project Settings</em>'.
-	 * @generated
-	 */
-	NewApogyProjectSettings createNewApogyProjectSettings();
-
-		/**
-	 * Returns a new object of class '<em>New Apogy Session Settings</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>New Apogy Session Settings</em>'.
-	 * @generated
-	 */
-  NewApogySessionSettings createNewApogySessionSettings();
-
-  /**
-	 * Returns a new object of class '<em>New Apogy System Settings</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>New Apogy System Settings</em>'.
-	 * @generated
-	 */
-	NewApogySystemSettings createNewApogySystemSettings();
-
-		/**
 	 * Returns a new object of class '<em>Result Node Presentation</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

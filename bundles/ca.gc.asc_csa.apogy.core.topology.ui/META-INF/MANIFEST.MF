@@ -14,10 +14,14 @@ Require-Bundle: ca.gc.asc_csa.apogy.common.converters,
  org.eclipse.emf.edit,
  org.eclipse.core.expressions,
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
- ca.gc.asc_csa.apogy.common.converters.ui
+ ca.gc.asc_csa.apogy.common.converters.ui,
+ ca.gc.asc_csa.apogy.core.invocator.ui;bundle-version="0.5.0",
+ org.eclipse.e4.core.di.annotations;bundle-version="1.5.0",
+ org.eclipse.e4.ui.model.workbench
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.core.topology.ui,
  ca.gc.asc_csa.apogy.core.topology.ui.commands,
- ca.gc.asc_csa.apogy.core.topology.ui.preferences,
- ca.gc.asc_csa.apogy.core.topology.ui.views
+ ca.gc.asc_csa.apogy.core.topology.ui.handlers,
+ ca.gc.asc_csa.apogy.core.topology.ui.parts,
+ ca.gc.asc_csa.apogy.core.topology.ui.preferences

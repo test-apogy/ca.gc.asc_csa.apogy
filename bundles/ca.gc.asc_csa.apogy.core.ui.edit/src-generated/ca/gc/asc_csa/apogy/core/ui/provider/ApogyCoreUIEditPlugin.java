@@ -15,13 +15,9 @@ package ca.gc.asc_csa.apogy.core.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
 import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
-import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.ui.provider.ApogyCommonTopologyUIEditPlugin;
-import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
-import ca.gc.asc_csa.apogy.core.provider.ApogyCoreEditPlugin;
 
 /**
  * This is the central singleton for the ApogyCoreUI edit plugin.
@@ -55,13 +51,9 @@ public final class ApogyCoreUIEditPlugin extends EMFPlugin {
 	public ApogyCoreUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ApogyCoreInvocatorEditPlugin.INSTANCE,
-		     ApogyCommonEMFEditPlugin.INSTANCE,
-		     ApogyCoreEditPlugin.INSTANCE,
 		     ApogyCommonTopologyUIEditPlugin.INSTANCE,
-		     ApogyCommonMathEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
-		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

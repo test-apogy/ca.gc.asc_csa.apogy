@@ -102,7 +102,7 @@ public class TopologyViewerListenerManager
 	protected Node resolveRootNode()
 	{
 		Node root = null;
-		
+				
 		InvocatorSession invocatorSession = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession(); 
 		if(invocatorSession != null)
 		{

@@ -19,13 +19,9 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
-import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
-import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
-import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
 import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
 import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
 import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
-import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 
 /**
  * <!-- begin-user-doc -->
@@ -91,22 +87,6 @@ public class ApogyCoreUIAdapterFactory extends AdapterFactoryImpl
 				return createApogyCoreUIFacadeAdapter();
 			}
 			@Override
-			public Adapter caseApogyResourceSettings(ApogyResourceSettings object) {
-				return createApogyResourceSettingsAdapter();
-			}
-			@Override
-			public Adapter caseNewApogyProjectSettings(NewApogyProjectSettings object) {
-				return createNewApogyProjectSettingsAdapter();
-			}
-			@Override
-			public Adapter caseNewApogySessionSettings(NewApogySessionSettings object) {
-				return createNewApogySessionSettingsAdapter();
-			}
-			@Override
-			public Adapter caseNewApogySystemSettings(NewApogySystemSettings object) {
-				return createNewApogySystemSettingsAdapter();
-			}
-			@Override
 			public Adapter caseResultNodePresentation(ResultNodePresentation object) {
 				return createResultNodePresentationAdapter();
 			}
@@ -150,63 +130,6 @@ public class ApogyCoreUIAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createApogyCoreUIFacadeAdapter() {
-		return null;
-	}
-
-		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings <em>Apogy Resource Settings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings
-	 * @generated
-	 */
-	public Adapter createApogyResourceSettingsAdapter() {
-		return null;
-	}
-
-		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings <em>New Apogy Project Settings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings
-	 * @generated
-	 */
-	public Adapter createNewApogyProjectSettingsAdapter() {
-		return null;
-	}
-
-		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings <em>New Apogy Session Settings</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings
-	 * @generated
-	 */
-  public Adapter createNewApogySessionSettingsAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings <em>New Apogy System Settings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings
-	 * @generated
-	 */
-	public Adapter createNewApogySystemSettingsAdapter() {
 		return null;
 	}
 

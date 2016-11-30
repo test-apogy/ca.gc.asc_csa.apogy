@@ -390,15 +390,6 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getApogyCoreFacade_ApogyTopology() {
-		return (EReference)apogyCoreFacadeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getApogyCoreFacade__ComputeAbsolutePoseMatrix__ApogySystem_Matrix4x4() {
 		return apogyCoreFacadeEClass.getEOperations().get(0);
 	}
@@ -455,15 +446,6 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 	 */
 	public EOperation getApogyCoreFacade__SaveFeatureOfInterestToFile__String_List() {
 		return apogyCoreFacadeEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreFacade__GetFeatureOfInterestNode__FeatureOfInterest() {
-		return apogyCoreFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -1248,7 +1230,6 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 
 		// Create classes and their features
 		apogyCoreFacadeEClass = createEClass(APOGY_CORE_FACADE);
-		createEReference(apogyCoreFacadeEClass, APOGY_CORE_FACADE__APOGY_TOPOLOGY);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__APOGYSYSTEM_MATRIX4X4);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN);
@@ -1256,7 +1237,6 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING);
 		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST);
-		createEOperation(apogyCoreFacadeEClass, APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST);
 
 		apogyEnvironmentEClass = createEClass(APOGY_ENVIRONMENT);
 		createEReference(apogyEnvironmentEClass, APOGY_ENVIRONMENT__WORKSITES_LIST);
@@ -1461,7 +1441,6 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyCoreFacadeEClass, ApogyCoreFacade.class, "ApogyCoreFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getApogyCoreFacade_ApogyTopology(), this.getApogyTopology(), null, "apogyTopology", null, 0, 1, ApogyCoreFacade.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getApogyCoreFacade__ComputeAbsolutePoseMatrix__ApogySystem_Matrix4x4(), theApogyCommonMathPackage.getMatrix4x4(), "computeAbsolutePoseMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getApogySystem(), "apogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1497,9 +1476,6 @@ public class ApogyCorePackageImpl extends EPackageImpl implements
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "foiList", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
-
-		op = initEOperation(getApogyCoreFacade__GetFeatureOfInterestNode__FeatureOfInterest(), this.getFeatureOfInterestNode(), "getFeatureOfInterestNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getFeatureOfInterest(), "featureOfInterest", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(apogyEnvironmentEClass, ApogyEnvironment.class, "ApogyEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApogyEnvironment_WorksitesList(), this.getWorksitesList(), null, "worksitesList", null, 0, 1, ApogyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

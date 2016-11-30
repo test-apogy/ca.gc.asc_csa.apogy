@@ -70,6 +70,15 @@ public interface ApogyCoreTopologyFactory extends EFactory
 	ApogyCoreTopologyFacade createApogyCoreTopologyFacade();
 
 		/**
+	 * Returns a new object of class '<em>Apogy Topology Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Apogy Topology Controller</em>'.
+	 * @generated
+	 */
+	ApogyTopologyController createApogyTopologyController();
+
+		/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

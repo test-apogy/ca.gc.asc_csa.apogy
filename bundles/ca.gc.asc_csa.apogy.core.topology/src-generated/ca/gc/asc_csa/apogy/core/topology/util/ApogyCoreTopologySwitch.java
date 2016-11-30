@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.core.topology.*;
 import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
 import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
@@ -86,6 +87,18 @@ public class ApogyCoreTopologySwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: {
+				ApogyCoreTopologyFacade apogyCoreTopologyFacade = (ApogyCoreTopologyFacade)theEObject;
+				T result = caseApogyCoreTopologyFacade(apogyCoreTopologyFacade);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCoreTopologyPackage.APOGY_TOPOLOGY_CONTROLLER: {
+				ApogyTopologyController apogyTopologyController = (ApogyTopologyController)theEObject;
+				T result = caseApogyTopologyController(apogyTopologyController);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER: {
 				SystemsTopologyAdapter systemsTopologyAdapter = (SystemsTopologyAdapter)theEObject;
 				T result = caseSystemsTopologyAdapter(systemsTopologyAdapter);
@@ -107,12 +120,6 @@ public class ApogyCoreTopologySwitch<T> extends Switch<T>
 				if (result == null) result = caseReferencedGroupNode(apogySystemAPIsNode);
 				if (result == null) result = caseGroupNode(apogySystemAPIsNode);
 				if (result == null) result = caseNode(apogySystemAPIsNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: {
-				ApogyCoreTopologyFacade apogyCoreTopologyFacade = (ApogyCoreTopologyFacade)theEObject;
-				T result = caseApogyCoreTopologyFacade(apogyCoreTopologyFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -180,6 +187,21 @@ public class ApogyCoreTopologySwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseApogyCoreTopologyFacade(ApogyCoreTopologyFacade object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Topology Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Topology Controller</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseApogyTopologyController(ApogyTopologyController object) {
 		return null;
 	}
 

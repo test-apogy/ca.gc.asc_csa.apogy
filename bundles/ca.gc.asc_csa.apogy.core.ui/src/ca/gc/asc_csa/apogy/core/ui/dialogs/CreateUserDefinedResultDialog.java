@@ -37,11 +37,13 @@ import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.UserDefinedResult;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 
+@Deprecated
 public class CreateUserDefinedResultDialog extends Dialog 
 {	
 	protected Context context;
@@ -174,15 +176,14 @@ public class CreateUserDefinedResultDialog extends Dialog
 	{
 		final Combo combo = new Combo(parent, SWT.NONE);
 
-		
-// FIXME TRANSACTION: Singleton Volatile -> Facade.		
-//		if(context.getEnvironment() instanceof ApogyEnvironment)
-//		{
+		// FIXME TOPOLOGY.
+		if(context.getEnvironment() instanceof ApogyEnvironment)
+		{
 //			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
 //			
 //			
 //			
-//			Node rootNode = apogyEnvironment.getApogyTopology().getRootNode();			
+//			Node rootNode = ApogyCoreFacade.INSTANCE.getApogyTopology().getRootNode();			
 //			
 //			List<Node> nodes = getAllNodes(rootNode);
 //			
@@ -207,7 +208,7 @@ public class CreateUserDefinedResultDialog extends Dialog
 //				i++;
 //			}
 //			combo.setItems(items);
-//		}
+		}
 				
 		return combo;
 	}

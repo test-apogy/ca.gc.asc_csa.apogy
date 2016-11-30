@@ -15,8 +15,6 @@ package ca.gc.asc_csa.apogy.core.programs.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
-import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 
 /**
  * This is the central singleton for the ApogyCorePrograms edit plugin.
@@ -50,8 +48,6 @@ public final class ApogyCoreProgramsEditPlugin extends EMFPlugin {
 	public ApogyCoreProgramsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ApogyCommonEMFEditPlugin.INSTANCE,
-		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		   });
 	}
 

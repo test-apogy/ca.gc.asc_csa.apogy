@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.ui.natures;
+package ca.gc.asc_csa.apogy.core.topology.ui.parts;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -10,31 +10,21 @@ package ca.gc.asc_csa.apogy.core.ui.natures;
  *     Pierre Allard (Pierre.Allard@canada.ca), 
  *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Olivier L. Larouche (Olivier.LLarouche@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IProjectNature;
-import org.eclipse.core.runtime.CoreException;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 
-public class ApogyProjectNature implements IProjectNature {
-
-	public static final String NATURE_ID = "ca.gc.asc_csa.apogy.core.ui.ApogyProjectNature";
+public class Apogy3dSystemPart extends AbstractApogy3dPart {
+		
+	@Override
+	protected void setNullSelection() {
+	}
 	
 	@Override
-	public void configure() throws CoreException {
-	}
-
-	@Override
-	public void deconfigure() throws CoreException {
-	}
-
-	@Override
-	public IProject getProject() {
-		return null;
-	}
-
-	@Override
-	public void setProject(IProject project) {
+	protected JME3RenderEngineDelegate createJME3RenderEngineDelegate(){
+		System.out.println("Apogy3dEnvironmentPart.createJME3RenderEngineDelegate()");
+		return new JME3RenderEngineDelegate();
 	}
 }

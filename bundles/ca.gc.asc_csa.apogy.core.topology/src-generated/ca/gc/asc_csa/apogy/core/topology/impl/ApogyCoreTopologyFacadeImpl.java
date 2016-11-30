@@ -14,32 +14,61 @@ package ca.gc.asc_csa.apogy.core.topology.impl;
  */
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Iterator;
+import java.util.List;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
 import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.ApogyTopology;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
-import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFactory;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyFacadeImpl#getApogyTopology <em>Apogy Topology</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class ApogyCoreTopologyFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreTopologyFacade
 {
 	
+	/**
+	 * The cached value of the '{@link #getApogyTopology() <em>Apogy Topology</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getApogyTopology()
+	 * @generated
+	 * @ordered
+	 */
+	protected ApogyTopology apogyTopology;
 	private static ApogyCoreTopologyFacade instance = null;
 	
 	public static ApogyCoreTopologyFacade getInstance() 
@@ -70,6 +99,44 @@ public class ApogyCoreTopologyFacadeImpl extends MinimalEObjectImpl.Container im
   protected EClass eStaticClass()
   {
 		return ApogyCoreTopologyPackage.Literals.APOGY_CORE_TOPOLOGY_FACADE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ApogyTopology getApogyTopology() {
+		if (apogyTopology != null && apogyTopology.eIsProxy()) {
+			InternalEObject oldApogyTopology = (InternalEObject)apogyTopology;
+			apogyTopology = (ApogyTopology)eResolveProxy(oldApogyTopology);
+			if (apogyTopology != oldApogyTopology) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
+			}
+		}
+		return apogyTopology;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ApogyTopology basicGetApogyTopology() {
+		return apogyTopology;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setApogyTopology(ApogyTopology newApogyTopology) {
+		ApogyTopology oldApogyTopology = apogyTopology;
+		apogyTopology = newApogyTopology;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
 	}
 
 	/**
@@ -133,7 +200,128 @@ public class ApogyCoreTopologyFacadeImpl extends MinimalEObjectImpl.Container im
 		apogyEnvironmentNode.getResultsListNode();
 		
 		return apogyEnvironmentNode;
+	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void initApogyTopology(ApogyEnvironment environment) {
+		if (environment != null){
+			// Updates the deployment of the deployment node to get the topology to update.
+			TransformNode root = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
+			root.setNodeId("UNIVERSE_ROOT");
+			root.setDescription("Root Node of the Apogy Environment");
+			
+			// Creates the ApogyEnvironmentNode that represent the topology associated with the ApogyEnvironment.
+			ApogyEnvironmentNode apogyEnvironmentNode = ApogyCoreTopologyFacade.INSTANCE.createApogyEnvironmentNode(environment);									
+			root.getChildren().add(apogyEnvironmentNode);
+												
+			ApogyTopology apogyTopology = ApogyCoreFactory.eINSTANCE.createApogyTopology();			
+			apogyTopology.setRootNode(root);
+			setApogyTopology(apogyTopology);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void disposeApogyTopology() {
+		// FIXME Dispose properly the current topology.
+		setApogyTopology(null);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest) {
+		if (featureOfInterest != null) {
+			ApogyTopology apogyTopology = getApogyTopology();
+			if (apogyTopology != null && apogyTopology.getRootNode() != null) {
+				List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(
+						ApogyCorePackage.Literals.FEATURE_OF_INTEREST_NODE, apogyTopology.getRootNode());
+
+				FeatureOfInterestNode featureOfInterestNode = null;
+				Iterator<Node> it = nodes.iterator();
+				while (it.hasNext() && featureOfInterestNode == null) {
+					Node n = it.next();
+					if (n instanceof FeatureOfInterestNode) {
+						FeatureOfInterestNode foin = (FeatureOfInterestNode) n;
+						if (foin.getFeatureOfInterest() == featureOfInterest) {
+							featureOfInterestNode = foin;
+						}
+					}
+				}
+
+				return featureOfInterestNode;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE__APOGY_TOPOLOGY:
+				if (resolve) return getApogyTopology();
+				return basicGetApogyTopology();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE__APOGY_TOPOLOGY:
+				setApogyTopology((ApogyTopology)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE__APOGY_TOPOLOGY:
+				setApogyTopology((ApogyTopology)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE__APOGY_TOPOLOGY:
+				return apogyTopology != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 	/**
@@ -176,6 +364,14 @@ public class ApogyCoreTopologyFacadeImpl extends MinimalEObjectImpl.Container im
 				return getAbstractTypeImplementationOriginNode((AbstractTypeImplementation)arguments.get(0));
 			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE___CREATE_APOGY_ENVIRONMENT_NODE__APOGYENVIRONMENT:
 				return createApogyEnvironmentNode((ApogyEnvironment)arguments.get(0));
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE___INIT_APOGY_TOPOLOGY__APOGYENVIRONMENT:
+				initApogyTopology((ApogyEnvironment)arguments.get(0));
+				return null;
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE___DISPOSE_APOGY_TOPOLOGY:
+				disposeApogyTopology();
+				return null;
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST:
+				return getFeatureOfInterestNode((FeatureOfInterest)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

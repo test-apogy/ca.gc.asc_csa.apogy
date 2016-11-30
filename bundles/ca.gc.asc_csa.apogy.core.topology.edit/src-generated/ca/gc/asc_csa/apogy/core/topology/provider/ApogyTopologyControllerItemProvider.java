@@ -1,6 +1,5 @@
-package ca.gc.asc_csa.apogy.core.ui.provider;
-/*
- * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+/**
+ * Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,6 +11,7 @@ package ca.gc.asc_csa.apogy.core.ui.provider;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.topology.provider;
 
 
 import java.util.Collection;
@@ -19,27 +19,25 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
-import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class NewApogyProjectSettingsItemProvider 
+public class ApogyTopologyControllerItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -53,7 +51,7 @@ public class NewApogyProjectSettingsItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NewApogyProjectSettingsItemProvider(AdapterFactory adapterFactory) {
+	public ApogyTopologyControllerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -68,65 +66,19 @@ public class NewApogyProjectSettingsItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addImportRegisteredProjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_NewApogyProjectSettings_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogyProjectSettings_name_feature", "_UI_NewApogyProjectSettings_type"),
-				 ApogyCoreUIPackage.Literals.NEW_APOGY_PROJECT_SETTINGS__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Import Registered Project feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addImportRegisteredProjectPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_NewApogyProjectSettings_importRegisteredProject_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogyProjectSettings_importRegisteredProject_feature", "_UI_NewApogyProjectSettings_type"),
-				 ApogyCoreUIPackage.Literals.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns NewApogyProjectSettings.gif.
+	 * This returns ApogyTopologyController.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/NewApogyProjectSettings"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyTopologyController"));
 	}
 
 	/**
@@ -137,10 +89,7 @@ public class NewApogyProjectSettingsItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((NewApogyProjectSettings)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_NewApogyProjectSettings_type") :
-			getString("_UI_NewApogyProjectSettings_type") + " " + label;
+		return getString("_UI_ApogyTopologyController_type");
 	}
 	
 
@@ -154,13 +103,6 @@ public class NewApogyProjectSettingsItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(NewApogyProjectSettings.class)) {
-			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__NAME:
-			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -184,7 +126,7 @@ public class NewApogyProjectSettingsItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ApogyCoreUIEditPlugin.INSTANCE;
+		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

@@ -32,17 +32,80 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.core.topology
 
-import ca.gc.asc_csa.apogy.core.invocator.Variable
-import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation
-
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode
 import ca.gc.asc_csa.apogy.core.ApogyEnvironment
-
 import ca.gc.asc_csa.apogy.core.ResultsListNode
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode
-import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode
-import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation
+import ca.gc.asc_csa.apogy.core.invocator.Variable
+import ca.gc.asc_csa.apogy.core.ApogyTopology
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
 
 type SortedSet<T> wraps java.util.SortedSet 
+
+/* 
+ * 
+ * ApogyCoreTopologyFacade Singleton.
+ * 
+ */ 
+class ApogyCoreTopologyFacade
+{
+	op Node getVariableOriginNode(Variable variable) 
+		
+	op Node getAbstractTypeImplementationOriginNode(AbstractTypeImplementation abstractTypeImplementation)
+	
+	op ApogyEnvironmentNode createApogyEnvironmentNode(ApogyEnvironment apogyEnvironment)
+	
+	/*
+	 * Apogy Topology Singleton.
+	 */
+	@GenModel(children="true", notify="true", property="None")
+	refers derived transient ApogyTopology[0..1] apogyTopology
+	
+	/* 
+	 * Initializes the {@link ApogyTopology}.
+	 * @param environment Refers the loaded environment.
+	 */
+	op void initApogyTopology(ApogyEnvironment environment)
+
+	/* 
+	 * Disposes the {@link ApogyTopology}.
+	 */	
+	op void disposeApogyTopology()
+	
+	/*
+	 * Finds the FeatureOfInterestNode associated with a specified FeatureOfInterest in the active session.
+	 * @param featureOfInterest The specified FeatureOfInterest.
+	 * @return The FeatureOfInterestNode associated with the specified FeatureOfInterest, null if none is found.
+	 */
+	op FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest)			 
+}
+
+/*
+ * This controller listens the {@link ApogyCoreInvocatorFacade#activeInvocatorSession} and 
+ * sets the {@link ApogyTopology}
+ */
+class ApogyTopologyController{
+	/*
+	 * Initializes the {@link ApogyCoreInvocatorFacade#activeInvocatorSession} listener.
+	 */
+	op void init()
+	
+	/*
+	 * Disposes the {@link ApogyCoreInvocatorFacade#activeInvocatorSession} listener.
+	 */	
+	op void dispose()
+	
+	/*
+	 * Initializes or clear the active Apogy Topology
+	 * @param session Reference to the session.  If not null, the topology will be initialized.  
+	 * Otherwise, the topology will be disposed. 
+	 */
+	op void initApogyTopology(InvocatorSession session) 
+}
 
 class SystemsTopologyAdapter
 {
@@ -81,16 +144,4 @@ class ApogyEnvironmentNode extends ReferencedGroupNode
 class ApogySystemAPIsNode extends ReferencedGroupNode
 {
 	refers transient ApogyEnvironment apogyEnvironment
-}
-
-/* -------------------------------------------------------------------------
- * ApogyCoreTopologyFacade
- * ------------------------------------------------------------------------- */ 
-class ApogyCoreTopologyFacade
-{
-	op Node getVariableOriginNode(Variable variable) 
-		
-	op Node getAbstractTypeImplementationOriginNode(AbstractTypeImplementation abstractTypeImplementation)
-	
-	op ApogyEnvironmentNode createApogyEnvironmentNode(ApogyEnvironment apogyEnvironment) 
 }

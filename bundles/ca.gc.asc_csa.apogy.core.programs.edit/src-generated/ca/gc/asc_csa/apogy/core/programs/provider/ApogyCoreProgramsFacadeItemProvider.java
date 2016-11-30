@@ -20,7 +20,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -29,7 +28,6 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade} object.
@@ -66,54 +64,8 @@ public class ApogyCoreProgramsFacadeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSessionPropertyDescriptor(object);
-			addVariablesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Session feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSessionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ApogyCoreProgramsFacade_session_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreProgramsFacade_session_feature", "_UI_ApogyCoreProgramsFacade_type"),
-				 ApogyCoreProgramsPackage.Literals.APOGY_CORE_PROGRAMS_FACADE__SESSION,
-				 false,
-				 false,
-				 false,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Variables feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addVariablesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ApogyCoreProgramsFacade_variables_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreProgramsFacade_variables_feature", "_UI_ApogyCoreProgramsFacade_type"),
-				 ApogyCoreProgramsPackage.Literals.APOGY_CORE_PROGRAMS_FACADE__VARIABLES,
-				 false,
-				 false,
-				 false,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

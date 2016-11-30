@@ -33,45 +33,12 @@ import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
  * -------------------------------------------------------------------------
  * <!-- end-model-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getApogyTopology <em>Apogy Topology</em>}</li>
- * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getApogyCoreFacade()
  * @model
  * @generated
  */
 public interface ApogyCoreFacade extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Apogy Topology</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Apogy Topology</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Apogy Topology</em>' reference.
-	 * @see #setApogyTopology(ApogyTopology)
-	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getApogyCoreFacade_ApogyTopology()
-	 * @model transient="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
-	 * @generated
-	 */
-	ApogyTopology getApogyTopology();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getApogyTopology <em>Apogy Topology</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Apogy Topology</em>' reference.
-	 * @see #getApogyTopology()
-	 * @generated
-	 */
-	void setApogyTopology(ApogyTopology value);
-
 	/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -155,19 +122,5 @@ public interface ApogyCoreFacade extends EObject {
 	 * @generated
 	 */
 	void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception;
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Finds the FeatureOfInterestNode associated with a specified FeatureOfInterest in the active session.
-	 * @param featureOfInterest The specified FeatureOfInterest.
-	 * @return The FeatureOfInterestNode associated with the specified FeatureOfInterest, null if none is found.
-	 * <!-- end-model-doc -->
-	 * @model unique="false" featureOfInterestUnique="false"
-	 * @generated
-	 */
-	FeatureOfInterestNode getFeatureOfInterestNode(FeatureOfInterest featureOfInterest);
 
 } // ApogyCoreFacade

@@ -18,13 +18,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
-import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
-import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
-import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
 import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
 import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
 import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
-import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,30 +89,6 @@ public class ApogyCoreUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS: {
-				ApogyResourceSettings apogyResourceSettings = (ApogyResourceSettings)theEObject;
-				T result = caseApogyResourceSettings(apogyResourceSettings);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS: {
-				NewApogyProjectSettings newApogyProjectSettings = (NewApogyProjectSettings)theEObject;
-				T result = caseNewApogyProjectSettings(newApogyProjectSettings);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS: {
-				NewApogySessionSettings newApogySessionSettings = (NewApogySessionSettings)theEObject;
-				T result = caseNewApogySessionSettings(newApogySessionSettings);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS: {
-				NewApogySystemSettings newApogySystemSettings = (NewApogySystemSettings)theEObject;
-				T result = caseNewApogySystemSettings(newApogySystemSettings);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION: {
 				ResultNodePresentation resultNodePresentation = (ResultNodePresentation)theEObject;
 				T result = caseResultNodePresentation(resultNodePresentation);
@@ -141,67 +113,6 @@ public class ApogyCoreUISwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseApogyCoreUIFacade(ApogyCoreUIFacade object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Apogy Resource Settings</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Apogy Resource Settings</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseApogyResourceSettings(ApogyResourceSettings object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>New Apogy Project Settings</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New Apogy Project Settings</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNewApogyProjectSettings(NewApogyProjectSettings object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>New Apogy Session Settings</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New Apogy Session Settings</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseNewApogySessionSettings(NewApogySessionSettings object)
-  {
-		return null;
-	}
-
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>New Apogy System Settings</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New Apogy System Settings</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNewApogySystemSettings(NewApogySystemSettings object) {
 		return null;
 	}
 

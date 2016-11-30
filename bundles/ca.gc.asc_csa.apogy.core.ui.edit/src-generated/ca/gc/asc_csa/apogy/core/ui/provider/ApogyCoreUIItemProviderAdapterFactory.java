@@ -104,98 +104,6 @@ public class ApogyCoreUIItemProviderAdapterFactory extends ApogyCoreUIAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ApogyResourceSettingsItemProvider apogyResourceSettingsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createApogyResourceSettingsAdapter() {
-		if (apogyResourceSettingsItemProvider == null) {
-			apogyResourceSettingsItemProvider = new ApogyResourceSettingsItemProvider(this);
-		}
-
-		return apogyResourceSettingsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NewApogyProjectSettingsItemProvider newApogyProjectSettingsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNewApogyProjectSettingsAdapter() {
-		if (newApogyProjectSettingsItemProvider == null) {
-			newApogyProjectSettingsItemProvider = new NewApogyProjectSettingsItemProvider(this);
-		}
-
-		return newApogyProjectSettingsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NewApogySessionSettingsItemProvider newApogySessionSettingsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNewApogySessionSettingsAdapter() {
-		if (newApogySessionSettingsItemProvider == null) {
-			newApogySessionSettingsItemProvider = new NewApogySessionSettingsItemProvider(this);
-		}
-
-		return newApogySessionSettingsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NewApogySystemSettingsItemProvider newApogySystemSettingsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNewApogySystemSettingsAdapter() {
-		if (newApogySystemSettingsItemProvider == null) {
-			newApogySystemSettingsItemProvider = new NewApogySystemSettingsItemProvider(this);
-		}
-
-		return newApogySystemSettingsItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -318,10 +226,6 @@ public class ApogyCoreUIItemProviderAdapterFactory extends ApogyCoreUIAdapterFac
 	 */
 	public void dispose() {
 		if (apogyCoreUIFacadeItemProvider != null) apogyCoreUIFacadeItemProvider.dispose();
-		if (apogyResourceSettingsItemProvider != null) apogyResourceSettingsItemProvider.dispose();
-		if (newApogyProjectSettingsItemProvider != null) newApogyProjectSettingsItemProvider.dispose();
-		if (newApogySessionSettingsItemProvider != null) newApogySessionSettingsItemProvider.dispose();
-		if (newApogySystemSettingsItemProvider != null) newApogySystemSettingsItemProvider.dispose();
 		if (resultNodePresentationItemProvider != null) resultNodePresentationItemProvider.dispose();
 	}
 

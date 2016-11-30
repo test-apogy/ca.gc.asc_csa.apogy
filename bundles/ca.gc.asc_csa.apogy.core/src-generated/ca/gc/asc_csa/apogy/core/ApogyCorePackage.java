@@ -97,22 +97,13 @@ public interface ApogyCorePackage extends EPackage {
 	int APOGY_CORE_FACADE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Apogy Topology</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_FACADE__APOGY_TOPOLOGY = 0;
-
-	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE_FEATURE_COUNT = 1;
+	int APOGY_CORE_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Compute Absolute Pose Matrix</em>' operation.
@@ -178,22 +169,13 @@ public interface ApogyCorePackage extends EPackage {
 	int APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = 6;
 
 	/**
-	 * The operation id for the '<em>Get Feature Of Interest Node</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST = 7;
-
-	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_FACADE_OPERATION_COUNT = 8;
+	int APOGY_CORE_FACADE_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl <em>Apogy Environment</em>}' class.
@@ -2494,17 +2476,6 @@ public interface ApogyCorePackage extends EPackage {
 	EClass getApogyCoreFacade();
 
 	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getApogyTopology <em>Apogy Topology</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Apogy Topology</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getApogyTopology()
-	 * @see #getApogyCoreFacade()
-	 * @generated
-	 */
-	EReference getApogyCoreFacade_ApogyTopology();
-
-	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#computeAbsolutePoseMatrix(ca.gc.asc_csa.apogy.core.ApogySystem, ca.gc.asc_csa.apogy.common.math.Matrix4x4) <em>Compute Absolute Pose Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2573,16 +2544,6 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCoreFacade__SaveFeatureOfInterestToFile__String_List();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getFeatureOfInterestNode(ca.gc.asc_csa.apogy.core.FeatureOfInterest) <em>Get Feature Of Interest Node</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Feature Of Interest Node</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.ApogyCoreFacade#getFeatureOfInterestNode(ca.gc.asc_csa.apogy.core.FeatureOfInterest)
-	 * @generated
-	 */
-	EOperation getApogyCoreFacade__GetFeatureOfInterestNode__FeatureOfInterest();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment <em>Apogy Environment</em>}'.
@@ -3540,14 +3501,6 @@ public interface ApogyCorePackage extends EPackage {
 		EClass APOGY_CORE_FACADE = eINSTANCE.getApogyCoreFacade();
 
 		/**
-		 * The meta object literal for the '<em><b>Apogy Topology</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOGY_CORE_FACADE__APOGY_TOPOLOGY = eINSTANCE.getApogyCoreFacade_ApogyTopology();
-
-		/**
 		 * The meta object literal for the '<em><b>Compute Absolute Pose Matrix</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3602,14 +3555,6 @@ public interface ApogyCorePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = eINSTANCE.getApogyCoreFacade__SaveFeatureOfInterestToFile__String_List();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Feature Of Interest Node</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_FACADE___GET_FEATURE_OF_INTEREST_NODE__FEATUREOFINTEREST = eINSTANCE.getApogyCoreFacade__GetFeatureOfInterestNode__FeatureOfInterest();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl <em>Apogy Environment</em>}' class.
