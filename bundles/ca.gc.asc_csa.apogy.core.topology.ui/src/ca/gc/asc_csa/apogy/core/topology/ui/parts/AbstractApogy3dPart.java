@@ -21,6 +21,7 @@ import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewer;
 
 public abstract class AbstractApogy3dPart extends AbstractApogyTopologyBasedPart {
 
+	@Override
 	public TopologyViewer createTopologyViewer(Composite parent) {
 		JME3RenderEngineDelegate jme3RenderEngineDelegate = createJME3RenderEngineDelegate();
 		TopologyViewer viewer = new TopologyViewer(parent, jme3RenderEngineDelegate);
@@ -33,10 +34,9 @@ public abstract class AbstractApogy3dPart extends AbstractApogyTopologyBasedPart
 		return viewer;
 	}
 
-	/**
-	 * Method that create the JME3RenderEngineDelegate to be used.
-	 * 
+	/*
+	 * Methods that create the JME3RenderEngineDelegate to be used.
 	 * @return The JME3RenderEngineDelegate to be used.
-	 */
+	 */	
 	protected abstract JME3RenderEngineDelegate createJME3RenderEngineDelegate();
 }

@@ -20,30 +20,11 @@ public class Apogy3dSystemPart extends AbstractApogy3dPart {
 		
 	@Override
 	protected void setNullSelection() {
-//		selectionService.setSelection(ApogyCoreInvocatorUIFactory.eINSTANCE.createScriptBasedProgramsListPartSelection());
 	}
 	
-	/**
-	 * Method that create the JME3RenderEngineDelegate to be used.
-	 * @return The JME3RenderEngineDelegate to be used.
-	 */
+	@Override
 	protected JME3RenderEngineDelegate createJME3RenderEngineDelegate(){
 		System.out.println("Apogy3dEnvironmentPart.createJME3RenderEngineDelegate()");
 		return new JME3RenderEngineDelegate();
 	}
-
-// FIXME Remove THIS.  It is just an example.	
-//	@PostConstruct
-//	public void createControl(MPart part) {
-//	        Map<String, String> state = part.getPersistedState();
-//	        String value = state.get("key");
-//	        ...
-//	}
-//
-//	@PersistState
-//	public void persistState(MPart part) {
-//	        Map<String, String> state = part.getPersistedState();
-//	        state.put("key", "newValue");
-//	        ...
-//	}	
 }

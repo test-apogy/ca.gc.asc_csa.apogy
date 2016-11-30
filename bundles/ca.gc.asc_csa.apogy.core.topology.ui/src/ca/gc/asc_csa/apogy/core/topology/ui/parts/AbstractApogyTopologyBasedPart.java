@@ -113,31 +113,55 @@ abstract public class AbstractApogyTopologyBasedPart extends AbstractApogyPart{
 		ApogyCoreTopologyFacade.INSTANCE.eAdapters().remove(getAdapter());
 	}
 	
-	
+	/*
+	 * Sets the actual zoom to display the entire loaded scene.
+	 */
 	public void zoomToFit(){
 		getTopologyViewer().zoomToFit();
 	}
 	
+	/* 
+	 * Enables or disables anti-aliasing rendering.
+	 * @param enable true enables the anti-aliasing.
+	 */
 	public void setAntiAliasing(boolean enable){		
 		getTopologyViewer().setAntiAliasing(enable);
 	}
 	
+	/*
+	 * Enables or disables high speed motion while using the mouse.
+	 * @param enable true enables high speed.
+	 */
 	public void setHighSpeedMode(boolean enable){
 		getTopologyViewer().setHighSpeedMotionEnabled(enable);
 	}
-	
+
+	/*
+	 * Enables or disables the picking mode.
+	 * @param enable true enables the picking mode.
+	 */	
 	public void setPickingMode(boolean enable){
 		getTopologyViewer().setPickingModeEnabled(enable);
 	}
-	
+
+	/*
+	 * Shows of hides the renderer statistics.
+	 * @param enable true enables the statistics display.
+	 */		
 	public void showStatisticsDisplay(boolean enable){
 		getTopologyViewer().setShowStatisticsEnabled(enable);
 	}
 	
+	/*
+	 * Resets the horizontal view point.
+	 */
 	public void resetLevelViewpoint(){
 		getTopologyViewer().levelViewPoint();
 	}
 	
+	/*
+	 * Takes a screenshot and prompts the user to identify the file type and the filename. 
+	 */
 	public void takeScreenshot(){
 		getTopologyViewer().takeScreenshot();
 		
@@ -190,8 +214,8 @@ abstract public class AbstractApogyTopologyBasedPart extends AbstractApogyPart{
 		
 	}
 	
-	/**
-	 * Save the current image to a file. This is done in a UIJob to 
+	/*
+	 * Saves the current image to a file. This is done in a UIJob to 
 	 * keep the desktop responsive in case of a long save process.
 	 * @param fileName The destination file where to save the image.
 	 * @param fileType The file type : SWT.IMAGE_JPEG or SWT.IMAGE_BMP or ...

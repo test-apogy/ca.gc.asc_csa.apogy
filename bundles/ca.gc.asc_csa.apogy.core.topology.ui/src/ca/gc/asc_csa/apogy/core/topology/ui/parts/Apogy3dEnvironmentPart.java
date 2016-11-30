@@ -36,15 +36,14 @@ public class Apogy3dEnvironmentPart extends AbstractApogy3dPart {
 
 	// FIXME: Add List<AbstractResult> selection. List results = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, AbstractResult.class);	
 	
-	/**
-	 * Method that create the JME3RenderEngineDelegate to be used.
-	 * 
-	 * @return The JME3RenderEngineDelegate to be used.
-	 */
+	@Override
 	protected JME3RenderEngineDelegate createJME3RenderEngineDelegate() {
 		return new JME3RenderEngineDelegate();
 	}
 
+	/*
+	 * Highlights the list of results in the renderer.
+	 */
 	public void show(List<AbstractResult> results) {
 		if (getTopologyViewer() != null && getTopologyViewer().getInput() instanceof GraphicsContext) {
 			GraphicsContext graphicsContext = (GraphicsContext) getTopologyViewer().getInput();
@@ -77,18 +76,4 @@ public class Apogy3dEnvironmentPart extends AbstractApogy3dPart {
 			}
 		}
 	}
-	// FIXME Remove THIS. It is just an example.
-	// @PostConstruct
-	// public void createControl(MPart part) {
-	// Map<String, String> state = part.getPersistedState();
-	// String value = state.get("key");
-	// ...
-	// }
-	//
-	// @PersistState
-	// public void persistState(MPart part) {
-	// Map<String, String> state = part.getPersistedState();
-	// state.put("key", "newValue");
-	// ...
-	// }
 }
