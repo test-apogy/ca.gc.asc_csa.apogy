@@ -39,7 +39,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramFactoriesRegistry;
@@ -75,7 +75,7 @@ public class ScriptBasedProgramsListComposite extends ScrolledComposite {
 				newSelection(event.getSelection());
 			}
 		});
-		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
+		ApogyCommonUiFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
 
 		Button btnNewGroup = new Button(compositeProgramsList, SWT.NONE);
 		btnNewGroup.setText("New Group");

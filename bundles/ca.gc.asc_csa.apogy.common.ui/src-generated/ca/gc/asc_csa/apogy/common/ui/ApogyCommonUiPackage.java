@@ -119,13 +119,22 @@ public interface ApogyCommonUiPackage extends EPackage {
 	int APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE_DOUBLE = 1;
 
 	/**
+	 * The operation id for the '<em>Add Expand On Double Click</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_UI_FACADE___ADD_EXPAND_ON_DOUBLE_CLICK__TREEVIEWER = 2;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_UI_FACADE_OPERATION_COUNT = 2;
+	int APOGY_COMMON_UI_FACADE_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '<em>Image Descriptor</em>' data type.
@@ -161,6 +170,17 @@ public interface ApogyCommonUiPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '<em>Tree Viewer</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.jface.viewers.TreeViewer
+	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getTreeViewer()
+	 * @generated
+	 */
+	int TREE_VIEWER = 4;
+
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -189,6 +209,16 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCommonUiFacade__AdjustWizardPage__WizardPage_Double();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade#addExpandOnDoubleClick(org.eclipse.jface.viewers.TreeViewer) <em>Add Expand On Double Click</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Expand On Double Click</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade#addExpandOnDoubleClick(org.eclipse.jface.viewers.TreeViewer)
+	 * @generated
+	 */
+	EOperation getApogyCommonUiFacade__AddExpandOnDoubleClick__TreeViewer();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.jface.resource.ImageDescriptor <em>Image Descriptor</em>}'.
@@ -222,6 +252,17 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getWizardPage();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.jface.viewers.TreeViewer <em>Tree Viewer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Tree Viewer</em>'.
+	 * @see org.eclipse.jface.viewers.TreeViewer
+	 * @model instanceClass="org.eclipse.jface.viewers.TreeViewer"
+	 * @generated
+	 */
+	EDataType getTreeViewer();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -273,6 +314,14 @@ public interface ApogyCommonUiPackage extends EPackage {
 		EOperation APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE_DOUBLE = eINSTANCE.getApogyCommonUiFacade__AdjustWizardPage__WizardPage_Double();
 
 		/**
+		 * The meta object literal for the '<em><b>Add Expand On Double Click</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_UI_FACADE___ADD_EXPAND_ON_DOUBLE_CLICK__TREEVIEWER = eINSTANCE.getApogyCommonUiFacade__AddExpandOnDoubleClick__TreeViewer();
+
+		/**
 		 * The meta object literal for the '<em>Image Descriptor</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -301,6 +350,16 @@ public interface ApogyCommonUiPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType WIZARD_PAGE = eINSTANCE.getWizardPage();
+
+		/**
+		 * The meta object literal for the '<em>Tree Viewer</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.jface.viewers.TreeViewer
+		 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getTreeViewer()
+		 * @generated
+		 */
+		EDataType TREE_VIEWER = eINSTANCE.getTreeViewer();
 
 	}
 

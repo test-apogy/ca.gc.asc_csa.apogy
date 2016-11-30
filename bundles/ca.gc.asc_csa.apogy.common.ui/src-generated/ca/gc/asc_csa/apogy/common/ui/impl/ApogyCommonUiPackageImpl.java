@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.wizard.WizardPage;
 
 /**
@@ -62,6 +63,13 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * @generated
 	 */
 	private EDataType wizardPageEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType treeViewerEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -159,6 +167,15 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCommonUiFacade__AddExpandOnDoubleClick__TreeViewer() {
+		return apogyCommonUiFacadeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getImageDescriptor() {
 		return imageDescriptorEDataType;
 	}
@@ -179,6 +196,15 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 */
 	public EDataType getWizardPage() {
 		return wizardPageEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getTreeViewer() {
+		return treeViewerEDataType;
 	}
 
 	/**
@@ -212,11 +238,13 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		apogyCommonUiFacadeEClass = createEClass(APOGY_COMMON_UI_FACADE);
 		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___GET_IMAGE_DESCRIPTOR__STRING);
 		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE_DOUBLE);
+		createEOperation(apogyCommonUiFacadeEClass, APOGY_COMMON_UI_FACADE___ADD_EXPAND_ON_DOUBLE_CLICK__TREEVIEWER);
 
 		// Create data types
 		imageDescriptorEDataType = createEDataType(IMAGE_DESCRIPTOR);
 		iSelectionEDataType = createEDataType(ISELECTION);
 		wizardPageEDataType = createEDataType(WIZARD_PAGE);
+		treeViewerEDataType = createEDataType(TREE_VIEWER);
 	}
 
 	/**
@@ -261,10 +289,14 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		addEParameter(op, this.getWizardPage(), "wizardPage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDoubleObject(), "ratio", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCommonUiFacade__AddExpandOnDoubleClick__TreeViewer(), null, "addExpandOnDoubleClick", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getTreeViewer(), "treeViewer", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		// Initialize data types
 		initEDataType(imageDescriptorEDataType, ImageDescriptor.class, "ImageDescriptor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(iSelectionEDataType, ISelection.class, "ISelection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(wizardPageEDataType, WizardPage.class, "WizardPage", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(treeViewerEDataType, TreeViewer.class, "TreeViewer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

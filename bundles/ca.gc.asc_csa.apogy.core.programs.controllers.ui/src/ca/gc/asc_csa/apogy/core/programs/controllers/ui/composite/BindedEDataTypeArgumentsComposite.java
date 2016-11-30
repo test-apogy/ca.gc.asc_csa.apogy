@@ -43,7 +43,7 @@ import org.eclipse.swt.widgets.TreeColumn;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
-import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
@@ -113,7 +113,7 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 		treeclmnParameter.setText("Value");
 		treeViewerParameterColumn.setEditingSupport(new ArgumentsEditor(treeViewer));
 
-		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
+		ApogyCommonUiFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
 		m_bindingContext = initDataBindingsCustom();
 	}
 

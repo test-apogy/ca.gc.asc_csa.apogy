@@ -72,11 +72,11 @@ import org.eclipse.swt.widgets.TreeColumn;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
-import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseEClassWizard;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
@@ -183,7 +183,7 @@ public class ArgumentsComposite extends Composite {
 		treeclmnParameter.setWidth(100);
 		treeclmnParameter.setText("Value");
 
-		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
+		ApogyCommonUiFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
 		m_bindingContext = initDataBindingsCustom();
 	}
 

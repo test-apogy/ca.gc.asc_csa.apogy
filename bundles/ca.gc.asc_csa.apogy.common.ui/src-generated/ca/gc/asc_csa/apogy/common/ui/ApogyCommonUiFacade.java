@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.common.ui;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.resource.ImageDescriptor;
 
+import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.wizard.WizardPage;
 import ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiFacadeImpl;
 
@@ -71,5 +72,18 @@ public interface ApogyCommonUiFacade extends EObject {
 	 * @generated
 	 */
 	void adjustWizardPage(WizardPage wizardPage, Double ratio);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Adds a double click listener that expands/collapses the tree
+	 * when an element is clicked.
+	 * @param treeViewer The viewer to add the listener
+	 * <!-- end-model-doc -->
+	 * @model treeViewerDataType="ca.gc.asc_csa.apogy.common.ui.TreeViewer" treeViewerUnique="false"
+	 * @generated
+	 */
+	void addExpandOnDoubleClick(TreeViewer treeViewer);
 
 } // ApogyCommonUiFacade

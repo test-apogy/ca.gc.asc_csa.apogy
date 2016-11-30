@@ -36,7 +36,6 @@ import ca.gc.asc_csa.apogy.common.emf.Ranges
 
 type Color wraps org.eclipse.swt.graphics.Color
 type Unit wraps javax.measure.unit.Unit<?>
-type TreeViewer wraps org.eclipse.jface.viewers.TreeViewer
 
 class ApogyCommonEMFUIFacade
 {		
@@ -52,11 +51,4 @@ class ApogyCommonEMFUIFacade
 	 * @return the display Unit, or the native unit if none found.
 	 */
 	op Unit getDisplayUnits(ETypedElement eTypedElement)
-	
-	/*
-	 * Adds a double click listener that expands/collapses the tree
-	 * when an element is clicked.
-	 * @param treeViewer The viewer to add the listener
-	 */
-	op void addExpandOnDoubleClick(TreeViewer treeViewer)
 }

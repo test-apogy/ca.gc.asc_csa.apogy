@@ -21,7 +21,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.jface.resource.ImageDescriptor;
-
+import org.eclipse.jface.viewers.AbstractTreeViewer;
+import org.eclipse.jface.viewers.DoubleClickEvent;
+import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Monitor;
@@ -115,6 +119,26 @@ public class ApogyCommonUiFacadeImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void addExpandOnDoubleClick(TreeViewer treeViewer) {
+		treeViewer.addDoubleClickListener(new IDoubleClickListener() {
+
+			@Override
+			public void doubleClick(DoubleClickEvent event) {
+				Object selectedObject = ((IStructuredSelection) event.getSelection()).getFirstElement();
+				if (treeViewer.getExpandedState(selectedObject)) {
+					treeViewer.collapseToLevel(selectedObject, AbstractTreeViewer.ALL_LEVELS);
+				} else {
+					treeViewer.expandToLevel(selectedObject, 1);
+				}
+			}
+		});
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -124,6 +148,9 @@ public class ApogyCommonUiFacadeImpl extends MinimalEObjectImpl.Container implem
 				return getImageDescriptor((String)arguments.get(0));
 			case ApogyCommonUiPackage.APOGY_COMMON_UI_FACADE___ADJUST_WIZARD_PAGE__WIZARDPAGE_DOUBLE:
 				adjustWizardPage((WizardPage)arguments.get(0), (Double)arguments.get(1));
+				return null;
+			case ApogyCommonUiPackage.APOGY_COMMON_UI_FACADE___ADD_EXPAND_ON_DOUBLE_CLICK__TREEVIEWER:
+				addExpandOnDoubleClick((TreeViewer)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

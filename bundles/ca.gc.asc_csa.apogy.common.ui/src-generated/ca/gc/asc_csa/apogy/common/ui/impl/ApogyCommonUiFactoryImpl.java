@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.wizard.WizardPage;
 
 /**
@@ -92,6 +93,8 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 				return createISelectionFromString(eDataType, initialValue);
 			case ApogyCommonUiPackage.WIZARD_PAGE:
 				return createWizardPageFromString(eDataType, initialValue);
+			case ApogyCommonUiPackage.TREE_VIEWER:
+				return createTreeViewerFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -111,6 +114,8 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 				return convertISelectionToString(eDataType, instanceValue);
 			case ApogyCommonUiPackage.WIZARD_PAGE:
 				return convertWizardPageToString(eDataType, instanceValue);
+			case ApogyCommonUiPackage.TREE_VIEWER:
+				return convertTreeViewerToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -177,6 +182,24 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 	 * @generated
 	 */
 	public String convertWizardPageToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TreeViewer createTreeViewerFromString(EDataType eDataType, String initialValue) {
+		return (TreeViewer)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTreeViewerToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

@@ -33,12 +33,15 @@ package ca.gc.asc_csa.apogy.common.ui
 
 import org.eclipse.jface.resource.ImageDescriptor
 import org.eclipse.jface.viewers.ISelection
+import org.eclipse.jface.viewers.TreeViewer
 import org.eclipse.jface.wizard.WizardPage
+
 
 /* Types definitions. */
 type ImageDescriptor wraps ImageDescriptor
 type ISelection wraps ISelection
 type WizardPage wraps WizardPage
+type TreeViewer wraps TreeViewer
 
 /* -------------------------------------------------------------------------
  * 
@@ -61,4 +64,11 @@ class ApogyCommonUiFacade{
 	 * @param ratio the wizard size/screen size wanted. (value from 0 to 1)
 	 */
 	op void adjustWizardPage(WizardPage wizardPage, Double ratio)
+	
+	/*
+	 * Adds a double click listener that expands/collapses the tree
+	 * when an element is clicked.
+	 * @param treeViewer The viewer to add the listener
+	 */
+	op void addExpandOnDoubleClick(TreeViewer treeViewer)
 }

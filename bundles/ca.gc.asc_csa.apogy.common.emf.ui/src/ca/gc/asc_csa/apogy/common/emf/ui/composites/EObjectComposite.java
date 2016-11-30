@@ -41,7 +41,7 @@ import org.eclipse.swt.widgets.Tree;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
-import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 
 public class EObjectComposite extends ScrolledComposite {
 	private DataBindingContext m_bindingContext;
@@ -87,7 +87,7 @@ public class EObjectComposite extends ScrolledComposite {
 		instanceViewer.setLabelProvider(getLabelProvider());
 
 		instanceViewer.addSelectionChangedListener(getSelectionChangedListener());
-		ApogyCommonEMFUIFacade.INSTANCE.addExpandOnDoubleClick(instanceViewer);
+		ApogyCommonUiFacade.INSTANCE.addExpandOnDoubleClick(instanceViewer);
 		
 		this.setContent(compositeEObject);
 		this.setMinSize(compositeEObject.computeSize(SWT.DEFAULT, SWT.DEFAULT));

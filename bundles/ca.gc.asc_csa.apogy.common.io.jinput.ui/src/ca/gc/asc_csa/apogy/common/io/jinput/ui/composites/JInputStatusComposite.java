@@ -9,6 +9,8 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
+
 public class JInputStatusComposite extends Composite{
 
 	private TreeViewer treeViewer;
@@ -21,6 +23,7 @@ public class JInputStatusComposite extends Composite{
 		
 		treeViewer = new TreeViewer(this, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
 		tree = treeViewer.getTree();
+		ApogyCommonUiFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
 		
 		treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory)
 		{
