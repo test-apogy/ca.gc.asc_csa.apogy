@@ -1466,6 +1466,15 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	 * @generated_NOT
 	 */
 	public String getOperationCallString(OperationCall operationCall) {
+		return getOperationCallString(operationCall, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public String getOperationCallString(OperationCall operationCall, boolean hideEParamaters) {
 		String str = "";
 		if (operationCall.getVariable() != null) {
 			str += operationCall.getVariable().getName();
@@ -1473,7 +1482,12 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 		str += getSubTypeFeatureString(operationCall.getTypeMemberReferenceListElement(),
 				operationCall.getFeatureRoot());
 		if (operationCall.getEOperation() != null) {
-			str += getEOperationString(operationCall.getArgumentsList(), operationCall.getEOperation());
+			if(hideEParamaters){
+				str += getEOperationString(null, operationCall.getEOperation());	
+				str = str.substring(0, str.length()-2);
+			}else{
+				str += getEOperationString(operationCall.getArgumentsList(), operationCall.getEOperation());
+			}
 		}
 		return str;
 	}
@@ -1776,6 +1790,8 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return null;
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL:
 				return getOperationCallString((OperationCall)arguments.get(0));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL_BOOLEAN:
+				return getOperationCallString((OperationCall)arguments.get(0), (Boolean)arguments.get(1));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION:
 				return getEOperationString((ArgumentsList)arguments.get(0), (EOperation)arguments.get(1));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE:

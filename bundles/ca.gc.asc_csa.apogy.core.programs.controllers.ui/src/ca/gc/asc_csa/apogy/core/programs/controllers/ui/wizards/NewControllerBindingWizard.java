@@ -29,7 +29,6 @@ import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallEOperationsWizardPage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableFeatureReferenceWizardPage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
@@ -37,6 +36,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsController
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.Trigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.Activator;
 
 public class NewControllerBindingWizard extends Wizard {
 
@@ -72,8 +72,8 @@ public class NewControllerBindingWizard extends Wizard {
 		addPage(getVariableFeatureReferenceWizardPage());
 		addPage(getOperationCallEOperationWizardPage());
 //		addPage(getChooseEClassImplementationWizardPage());
-		addPage(getTriggerWizardPage());
-//		addPage(getControllerComponentWizardPage());
+//		addPage(getTriggerWizardPage());
+		addPage(getControllerComponentWizardPage());
 		
 		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(namedDescribedWizardPage, 0.8);
 	}
@@ -169,7 +169,7 @@ public class NewControllerBindingWizard extends Wizard {
 	 */
 	protected ControllerComponentWizardPage getControllerComponentWizardPage() {
 		if (controllerComponentWizardPage == null) {
-			controllerComponentWizardPage = new ControllerComponentWizardPage();
+			controllerComponentWizardPage = new ControllerComponentWizardPage(getControllerBinding());
 		}
 		return controllerComponentWizardPage;
 	}

@@ -285,10 +285,21 @@ class ApogyCoreInvocatorFacade
 	op void deleteVariable(VariablesList variablesList, Variable variable)
 	/*
 	 * Gets a string to describe the {@link OperationCall}.
+	 * @param operationCall The {@link OperationCall} to describe.
 	 * @return A string formatted like this: 
 	 * variable-> subType1-> ...-> subTypeN.feature#eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
 	 */
 	op String getOperationCallString(OperationCall operationCall)
+	
+	/*
+	 * Gets a string to describe the {@link OperationCall}.
+	 * @param operationCall The {@link OperationCall} to describe.
+	 * @param hideEParamaters hides the EParameters, can be used to have a shorter string.
+	 * @return A string formatted like this: 
+	 * variable-> subType1-> ...-> subTypeN.feature#eOperation
+	 */
+	op String getOperationCallString(OperationCall operationCall, boolean hideEParamaters)
+	
 	/*
      * Gets a string to describe the {@link EOperation} and it's {@link Argument} if applicable.
      * @returns A string formatted like this:

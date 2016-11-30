@@ -1041,7 +1041,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation() {
+	public EOperation getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall_boolean() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(38);
 	}
 
@@ -1050,7 +1050,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode() {
+	public EOperation getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(39);
 	}
 
@@ -1059,7 +1059,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__CreateListRootNode__VariableFeatureReference_EStructuralFeature() {
+	public EOperation getApogyCoreInvocatorFacade__GetSubTypeFeatureString__TypeMemberReferenceListElement_ListRootNode() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(40);
 	}
 
@@ -1068,7 +1068,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetAbstractTypeImplementationName__AbstractTypeImplementation() {
+	public EOperation getApogyCoreInvocatorFacade__CreateListRootNode__VariableFeatureReference_EStructuralFeature() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(41);
 	}
 
@@ -1077,7 +1077,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetAbstractTypeImplementationInterfaceName__AbstractTypeImplementation_boolean() {
+	public EOperation getApogyCoreInvocatorFacade__GetAbstractTypeImplementationName__AbstractTypeImplementation() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(42);
 	}
 
@@ -1086,8 +1086,17 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreInvocatorFacade__GetAbstractTypeImplementationImplementationName__AbstractTypeImplementation_boolean() {
+	public EOperation getApogyCoreInvocatorFacade__GetAbstractTypeImplementationInterfaceName__AbstractTypeImplementation_boolean() {
 		return apogyCoreInvocatorFacadeEClass.getEOperations().get(43);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreInvocatorFacade__GetAbstractTypeImplementationImplementationName__AbstractTypeImplementation_boolean() {
+		return apogyCoreInvocatorFacadeEClass.getEOperations().get(44);
 	}
 
 	/**
@@ -3094,6 +3103,7 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE__VARIABLESLIST_VARIABLE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___DELETE_VARIABLE__VARIABLESLIST_VARIABLE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL);
+		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL_BOOLEAN);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE);
 		createEOperation(apogyCoreInvocatorFacadeEClass, APOGY_CORE_INVOCATOR_FACADE___CREATE_LIST_ROOT_NODE__VARIABLEFEATUREREFERENCE_ESTRUCTURALFEATURE);
@@ -3618,6 +3628,10 @@ public class ApogyCoreInvocatorPackageImpl extends EPackageImpl implements Apogy
 
 		op = initEOperation(getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall(), theEcorePackage.getEString(), "getOperationCallString", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall_boolean(), theEcorePackage.getEString(), "getOperationCallString", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "hideEParamaters", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCoreInvocatorFacade__GetEOperationString__ArgumentsList_EOperation(), theEcorePackage.getEString(), "getEOperationString", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getArgumentsList(), "argumentList", 0, 1, !IS_UNIQUE, IS_ORDERED);

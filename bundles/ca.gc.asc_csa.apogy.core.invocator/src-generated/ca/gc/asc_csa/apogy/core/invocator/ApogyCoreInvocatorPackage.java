@@ -468,13 +468,22 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL = 37;
 
 	/**
+	 * The operation id for the '<em>Get Operation Call String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL_BOOLEAN = 38;
+
+	/**
 	 * The operation id for the '<em>Get EOperation String</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION = 38;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_EOPERATION_STRING__ARGUMENTSLIST_EOPERATION = 39;
 
 	/**
 	 * The operation id for the '<em>Get Sub Type Feature String</em>' operation.
@@ -483,7 +492,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = 39;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_SUB_TYPE_FEATURE_STRING__TYPEMEMBERREFERENCELISTELEMENT_LISTROOTNODE = 40;
 
 	/**
 	 * The operation id for the '<em>Create List Root Node</em>' operation.
@@ -492,7 +501,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___CREATE_LIST_ROOT_NODE__VARIABLEFEATUREREFERENCE_ESTRUCTURALFEATURE = 40;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_LIST_ROOT_NODE__VARIABLEFEATUREREFERENCE_ESTRUCTURALFEATURE = 41;
 
 	/**
 	 * The operation id for the '<em>Get Abstract Type Implementation Name</em>' operation.
@@ -501,7 +510,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_NAME__ABSTRACTTYPEIMPLEMENTATION = 41;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_NAME__ABSTRACTTYPEIMPLEMENTATION = 42;
 
 	/**
 	 * The operation id for the '<em>Get Abstract Type Implementation Interface Name</em>' operation.
@@ -510,7 +519,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_INTERFACE_NAME__ABSTRACTTYPEIMPLEMENTATION_BOOLEAN = 42;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_INTERFACE_NAME__ABSTRACTTYPEIMPLEMENTATION_BOOLEAN = 43;
 
 	/**
 	 * The operation id for the '<em>Get Abstract Type Implementation Implementation Name</em>' operation.
@@ -519,7 +528,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_IMPLEMENTATION_NAME__ABSTRACTTYPEIMPLEMENTATION_BOOLEAN = 43;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_IMPLEMENTATION_NAME__ABSTRACTTYPEIMPLEMENTATION_BOOLEAN = 44;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -528,7 +537,7 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 44;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 45;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -5405,6 +5414,16 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 	EOperation getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getOperationCallString(ca.gc.asc_csa.apogy.core.invocator.OperationCall, boolean) <em>Get Operation Call String</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Operation Call String</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getOperationCallString(ca.gc.asc_csa.apogy.core.invocator.OperationCall, boolean)
+	 * @generated
+	 */
+	EOperation getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall_boolean();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getEOperationString(ca.gc.asc_csa.apogy.core.invocator.ArgumentsList, org.eclipse.emf.ecore.EOperation) <em>Get EOperation String</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8089,6 +8108,14 @@ public interface ApogyCoreInvocatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL = eINSTANCE.getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Operation Call String</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_STRING__OPERATIONCALL_BOOLEAN = eINSTANCE.getApogyCoreInvocatorFacade__GetOperationCallString__OperationCall_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Get EOperation String</b></em>' operation.

@@ -46,16 +46,21 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.swt.widgets.TreeItem;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
@@ -95,6 +100,22 @@ public class ControllerBindingsComposite extends Composite {
 		tree.setHeaderVisible(true);
 		tree.setLinesVisible(true);
 		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 3));
+		tree.addListener(SWT.Expand, new Listener() {
+			public void handleEvent(Event e) {
+			TreeItem treeItem = (TreeItem)e.item;
+		      TreeColumn[] treeColumns = treeItem.getParent().getColumns();
+		      getDisplay().asyncExec(new Runnable() {
+
+		         @Override
+		         public void run() {
+		            for (TreeColumn treeColumn : treeColumns)
+		                 treeColumn.pack();
+		         }
+		      });
+				
+			}
+		});
+		ApogyCommonUiFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
 		
 		TreeViewerColumn treeViewerActionColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
 		TreeColumn treeclmnAction = treeViewerActionColumn.getColumn();
@@ -206,7 +227,7 @@ public class ControllerBindingsComposite extends Composite {
 			eObjectReference.setEObject(controllersConfiguration);
 			
 			treeViewer.setInput(eObjectReference);
-			treeViewer.expandAll();
+//			treeViewer.expandAll();
 			// Adjust columns
 			for (TreeColumn column : treeViewer.getTree().getColumns()) {
 				column.pack();
@@ -308,15 +329,24 @@ public class ControllerBindingsComposite extends Composite {
 			switch (columnIndex) {
 			case NAME_COLUMN_ID:
 				if (object instanceof OperationCallControllerBinding) {
-					str = ((OperationCallControllerBinding) object).getName();
+					str = ((OperationCallControllerBinding)object).getName();
 				} else if (object instanceof BindedEDataTypeArgument) {
 					str = ((BindedEDataTypeArgument) object).getEParameter().getName();
+				} else if(object instanceof ControllerTrigger){
+					if(object instanceof ControllerEdgeTrigger){
+						str = ((ControllerEdgeTrigger) object).getEdgeType().getLiteral();					
+					}if(object instanceof ControllerStateTrigger){
+						str = "State";
+					}
+					
+					
+//					str = ((ControllerTrigger) object).getName();
 				}
 				break;
 			case TYPE_COLUMS_ID:
 				if (object instanceof OperationCallControllerBinding) {
 					str = ApogyCoreInvocatorFacade.INSTANCE
-							.getOperationCallString((OperationCallControllerBinding) object);
+							.getOperationCallString((OperationCallControllerBinding) object, true);
 				} else if (object instanceof BindedEDataTypeArgument) {
 					BindedEDataTypeArgument bindedEDataTypeArgument = (BindedEDataTypeArgument) object;
 					if (bindedEDataTypeArgument.getValueSource() instanceof FixedValueSource) {
@@ -330,6 +360,9 @@ public class ControllerBindingsComposite extends Composite {
 								+ ((ControllerValueSource) bindedEDataTypeArgument.getValueSource())
 										.getEComponentQualifier().getEComponentName();
 					}
+				} else if (object instanceof ControllerTrigger) {
+					str = ((ControllerTrigger) object).getComponentQualifier().getEControllerName() + "."
+							+ ((ControllerTrigger) object).getComponentQualifier().getEComponentName();
 				}
 				break;
 			default:
@@ -345,7 +378,7 @@ public class ControllerBindingsComposite extends Composite {
 
 			switch (columnIndex) {
 			case NAME_COLUMN_ID:
-				if (object instanceof BindedEDataTypeArgument) {
+				if (object instanceof BindedEDataTypeArgument || object instanceof ControllerTrigger) {
 					image = super.getColumnImage(object, columnIndex);
 				}
 				break;
@@ -355,9 +388,9 @@ public class ControllerBindingsComposite extends Composite {
 					if (bindedEDataTypeArgument.getValueSource() instanceof ControllerValueSource) {
 						image = super.getColumnImage(((ControllerValueSource) bindedEDataTypeArgument.getValueSource())
 								.getEComponentQualifier(), columnIndex);
-					} else {
-						image = super.getColumnImage(bindedEDataTypeArgument.getValueSource(), columnIndex);
 					}
+				}if (object instanceof ControllerTrigger) {
+					image = super.getColumnImage(((ControllerTrigger) object).getComponentQualifier(), columnIndex);
 				}
 				break;
 			case EOPERATION_VALUE_COLUMN_ID:
@@ -402,13 +435,17 @@ public class ControllerBindingsComposite extends Composite {
 			if (operationCallControllerBinding.getArgumentsList() != null) {
 				return operationCallControllerBinding.getArgumentsList().getArguments().toArray();
 			}
+			if (operationCallControllerBinding.getTrigger() != null
+					&& operationCallControllerBinding.getTrigger() instanceof ControllerTrigger) {
+				Object[] trigger = {operationCallControllerBinding.getTrigger()};
+				return trigger;
+			}
 			return null;
 		}
 
 		@Override
 		public boolean hasChildren(Object object) {
-			return object instanceof OperationCallControllerBinding
-					? (((OperationCallControllerBinding) object).getArgumentsList() != null) : false;
+			return object instanceof OperationCallControllerBinding;
 		}
 	}
 

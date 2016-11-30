@@ -552,6 +552,7 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Gets a string to describe the {@link OperationCall}.
+	 * @param operationCall The {@link OperationCall} to describe.
 	 * @return A string formatted like this:
 	 * variable-> subType1-> ...-> subTypeN.feature#eOperation(TypeArgument1 argument1, ... , TypeArgumentN argumentN)
 	 * <!-- end-model-doc -->
@@ -559,6 +560,21 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * @generated
 	 */
 	String getOperationCallString(OperationCall operationCall);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gets a string to describe the {@link OperationCall}.
+	 * @param operationCall The {@link OperationCall} to describe.
+	 * @param hideEParamaters hides the EParameters, can be used to have a shorter string.
+	 * @return A string formatted like this:
+	 * variable-> subType1-> ...-> subTypeN.feature#eOperation
+	 * <!-- end-model-doc -->
+	 * @model unique="false" operationCallUnique="false" hideEParamatersUnique="false"
+	 * @generated
+	 */
+	String getOperationCallString(OperationCall operationCall, boolean hideEParamaters);
 
 	/**
 	 * <!-- begin-user-doc -->
