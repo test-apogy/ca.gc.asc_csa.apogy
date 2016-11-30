@@ -117,8 +117,7 @@
             </children>
           </children>
           <children xsi:type="basic:PartSashContainer" xmi:id="_F8bEgLAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.6" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="___LZYIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6">
-            </children>
+            <children xsi:type="basic:PartStack" xmi:id="___LZYIyVEeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.6"/>
             <children xsi:type="basic:PartStack" xmi:id="_P7jAELAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.24">
               <children xsi:type="basic:Part" xmi:id="_JwOiwLAvEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
               <children xsi:type="basic:Part" xmi:id="_QmW3oLAwEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.part.documentation" label="Info"/>
