@@ -29,7 +29,7 @@ import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Monitor;
-
+import org.eclipse.swt.widgets.TreeColumn;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.ui.Activator;
@@ -132,7 +132,12 @@ public class ApogyCommonUiFacadeImpl extends MinimalEObjectImpl.Container implem
 				} else {
 					treeViewer.expandToLevel(selectedObject, 1);
 				}
+				
+				for (TreeColumn treeColumn : treeViewer.getTree().getColumns()){
+					treeColumn.pack();
+				}
 			}
+
 		});
 	}
 

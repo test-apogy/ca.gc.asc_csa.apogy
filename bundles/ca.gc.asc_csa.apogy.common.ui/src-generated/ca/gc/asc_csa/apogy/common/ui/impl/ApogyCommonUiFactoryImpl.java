@@ -28,6 +28,7 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.swt.widgets.Display;
 
 /**
  * <!-- begin-user-doc -->
@@ -95,6 +96,8 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 				return createWizardPageFromString(eDataType, initialValue);
 			case ApogyCommonUiPackage.TREE_VIEWER:
 				return createTreeViewerFromString(eDataType, initialValue);
+			case ApogyCommonUiPackage.DISPLAY:
+				return createDisplayFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -116,6 +119,8 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 				return convertWizardPageToString(eDataType, instanceValue);
 			case ApogyCommonUiPackage.TREE_VIEWER:
 				return convertTreeViewerToString(eDataType, instanceValue);
+			case ApogyCommonUiPackage.DISPLAY:
+				return convertDisplayToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -200,6 +205,24 @@ public class ApogyCommonUiFactoryImpl extends EFactoryImpl implements ApogyCommo
 	 * @generated
 	 */
 	public String convertTreeViewerToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Display createDisplayFromString(EDataType eDataType, String initialValue) {
+		return (Display)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDisplayToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

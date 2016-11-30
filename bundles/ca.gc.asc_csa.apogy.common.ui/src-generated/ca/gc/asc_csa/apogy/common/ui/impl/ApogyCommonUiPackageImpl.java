@@ -28,6 +28,7 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.swt.widgets.Display;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,6 +71,13 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * @generated
 	 */
 	private EDataType treeViewerEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType displayEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -212,6 +220,15 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getDisplay() {
+		return displayEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCommonUiFactory getApogyCommonUiFactory() {
 		return (ApogyCommonUiFactory)getEFactoryInstance();
 	}
@@ -245,6 +262,7 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		iSelectionEDataType = createEDataType(ISELECTION);
 		wizardPageEDataType = createEDataType(WIZARD_PAGE);
 		treeViewerEDataType = createEDataType(TREE_VIEWER);
+		displayEDataType = createEDataType(DISPLAY);
 	}
 
 	/**
@@ -297,6 +315,7 @@ public class ApogyCommonUiPackageImpl extends EPackageImpl implements ApogyCommo
 		initEDataType(iSelectionEDataType, ISelection.class, "ISelection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(wizardPageEDataType, WizardPage.class, "WizardPage", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(treeViewerEDataType, TreeViewer.class, "TreeViewer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(displayEDataType, Display.class, "Display", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

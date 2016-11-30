@@ -181,6 +181,17 @@ public interface ApogyCommonUiPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '<em>Display</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.swt.widgets.Display
+	 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getDisplay()
+	 * @generated
+	 */
+	int DISPLAY = 5;
+
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,6 +274,17 @@ public interface ApogyCommonUiPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getTreeViewer();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.swt.widgets.Display <em>Display</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Display</em>'.
+	 * @see org.eclipse.swt.widgets.Display
+	 * @model instanceClass="org.eclipse.swt.widgets.Display"
+	 * @generated
+	 */
+	EDataType getDisplay();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -360,6 +382,16 @@ public interface ApogyCommonUiPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType TREE_VIEWER = eINSTANCE.getTreeViewer();
+
+		/**
+		 * The meta object literal for the '<em>Display</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.swt.widgets.Display
+		 * @see ca.gc.asc_csa.apogy.common.ui.impl.ApogyCommonUiPackageImpl#getDisplay()
+		 * @generated
+		 */
+		EDataType DISPLAY = eINSTANCE.getDisplay();
 
 	}
 

@@ -35,6 +35,7 @@ import org.eclipse.jface.resource.ImageDescriptor
 import org.eclipse.jface.viewers.ISelection
 import org.eclipse.jface.viewers.TreeViewer
 import org.eclipse.jface.wizard.WizardPage
+import org.eclipse.swt.widgets.Display
 
 
 /* Types definitions. */
@@ -42,6 +43,7 @@ type ImageDescriptor wraps ImageDescriptor
 type ISelection wraps ISelection
 type WizardPage wraps WizardPage
 type TreeViewer wraps TreeViewer
+type Display wraps Display
 
 /* -------------------------------------------------------------------------
  * 
@@ -67,7 +69,7 @@ class ApogyCommonUiFacade{
 	
 	/*
 	 * Adds a double click listener that expands/collapses the tree
-	 * when an element is clicked.
+	 * when an element is clicked and adjust the columns after.
 	 * @param treeViewer The viewer to add the listener
 	 */
 	op void addExpandOnDoubleClick(TreeViewer treeViewer)

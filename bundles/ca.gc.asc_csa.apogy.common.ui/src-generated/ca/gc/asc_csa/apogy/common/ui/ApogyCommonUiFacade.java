@@ -78,7 +78,7 @@ public interface ApogyCommonUiFacade extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Adds a double click listener that expands/collapses the tree
-	 * when an element is clicked.
+	 * when an element is clicked and adjust the columns after.
 	 * @param treeViewer The viewer to add the listener
 	 * <!-- end-model-doc -->
 	 * @model treeViewerDataType="ca.gc.asc_csa.apogy.common.ui.TreeViewer" treeViewerUnique="false"
