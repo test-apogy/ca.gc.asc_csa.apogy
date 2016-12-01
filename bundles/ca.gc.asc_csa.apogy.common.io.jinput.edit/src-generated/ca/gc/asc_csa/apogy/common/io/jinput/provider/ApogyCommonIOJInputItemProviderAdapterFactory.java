@@ -95,6 +95,29 @@ public class ApogyCommonIOJInputItemProviderAdapterFactory extends ApogyCommonIO
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ApogyCommonIOJInputFacadeItemProvider apogyCommonIOJInputFacadeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createApogyCommonIOJInputFacadeAdapter() {
+		if (apogyCommonIOJInputFacadeItemProvider == null) {
+			apogyCommonIOJInputFacadeItemProvider = new ApogyCommonIOJInputFacadeItemProvider(this);
+		}
+
+		return apogyCommonIOJInputFacadeItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EController} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -429,6 +452,7 @@ public class ApogyCommonIOJInputItemProviderAdapterFactory extends ApogyCommonIO
 	 * @generated
 	 */
 	public void dispose() {
+		if (apogyCommonIOJInputFacadeItemProvider != null) apogyCommonIOJInputFacadeItemProvider.dispose();
 		if (eControllerItemProvider != null) eControllerItemProvider.dispose();
 		if (eControllerEnvironmentItemProvider != null) eControllerEnvironmentItemProvider.dispose();
 		if (eComponentItemProvider != null) eComponentItemProvider.dispose();

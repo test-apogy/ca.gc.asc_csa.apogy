@@ -251,7 +251,6 @@ public class ControllerBindingsComposite extends Composite {
 			eObjectReference.setEObject(controllersConfiguration);
 			
 			treeViewer.setInput(eObjectReference);
-//			treeViewer.expandAll();
 			// Adjust columns
 			for (TreeColumn column : treeViewer.getTree().getColumns()) {
 				column.pack();
@@ -292,6 +291,7 @@ public class ControllerBindingsComposite extends Composite {
 
 				@Override
 				public void notifyChanged(Notification notification) {
+					System.out.println(notification.getFeature());
 					if (getEStructuralFeature().contains(notification.getFeature())) {
 						treeViewer.refresh();
 						for (TreeColumn column : treeViewer.getTree().getColumns()) {
@@ -304,6 +304,7 @@ public class ControllerBindingsComposite extends Composite {
 				private List<EStructuralFeature> getEStructuralFeature() {
 					if (features == null) {
 						features = new ArrayList<EStructuralFeature>();
+						
 						features.add(ApogyCommonEMFPackage.Literals.NAMED__NAME);
 						
 						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
@@ -321,6 +322,9 @@ public class ControllerBindingsComposite extends Composite {
 						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__COMPONENT);
 						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
 						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__CURRENT_VALUE);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__INITIAL_VALUE);
+						features.add(ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE);
 						features.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME);
 						features.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME);
 					}
@@ -334,17 +338,15 @@ public class ControllerBindingsComposite extends Composite {
 	/**
 	 * Label provider for the TreeViewer
 	 */
-	private class ControllerBindingsLabelProvider extends
-			AdapterFactoryLabelProvider implements ITableLabelProvider{
-		
+	private class ControllerBindingsLabelProvider extends AdapterFactoryLabelProvider implements ITableLabelProvider {
+
 		public ControllerBindingsLabelProvider(AdapterFactory adapterFactory) {
 			super(adapterFactory);
 		}
 
 		private static final int NAME_COLUMN_ID = 0;
-		private static final int ICON_COLUMN_ID = 2;
 		private static final int BINDING_COLUMS_ID = 1;
-//		private static final int EOPERATION_VALUE_COLUMN_ID = 3;
+		private static final int CONDITIONNING_COLUMN_ID = 2;
 
 		@Override
 		public String getColumnText(Object object, int columnIndex) {
@@ -353,18 +355,16 @@ public class ControllerBindingsComposite extends Composite {
 			switch (columnIndex) {
 			case NAME_COLUMN_ID:
 				if (object instanceof OperationCallControllerBinding) {
-					str = ((OperationCallControllerBinding)object).getName();
+					str = ((OperationCallControllerBinding) object).getName();
 				} else if (object instanceof BindedEDataTypeArgument) {
 					str = ((BindedEDataTypeArgument) object).getEParameter().getName();
-				} else if(object instanceof ControllerTrigger){
-					if(object instanceof ControllerEdgeTrigger){
-						str = "Edge";			
-					}if(object instanceof ControllerStateTrigger){
-						str = "State";
+				} else if (object instanceof ControllerTrigger) {
+					if (object instanceof ControllerEdgeTrigger) {
+						str = "Edge value";
 					}
-					
-					
-//					str = ((ControllerTrigger) object).getName();
+					if (object instanceof ControllerStateTrigger) {
+						str = "State value";
+					}
 				}
 				break;
 			case BINDING_COLUMS_ID:
@@ -376,8 +376,8 @@ public class ControllerBindingsComposite extends Composite {
 					if (bindedEDataTypeArgument.getValueSource() instanceof FixedValueSource) {
 						str = ((FixedValueSource) bindedEDataTypeArgument.getValueSource()).getValue();
 					} else if (bindedEDataTypeArgument.getValueSource() instanceof ToggleValueSource) {
-						str = ApogyCoreProgramsControllersFacade.INSTANCE
-								.getToggleValueSourceString((ToggleValueSource) bindedEDataTypeArgument.getValueSource());
+						str = ApogyCoreProgramsControllersFacade.INSTANCE.getToggleValueSourceString(
+								(ToggleValueSource) bindedEDataTypeArgument.getValueSource());
 					} else if ((bindedEDataTypeArgument.getValueSource() instanceof ControllerValueSource)) {
 						str = ((ControllerValueSource) bindedEDataTypeArgument.getValueSource())
 								.getEComponentQualifier().getEControllerName() + "."
@@ -395,15 +395,15 @@ public class ControllerBindingsComposite extends Composite {
 			}
 			return str;
 		}
-		
+
 		@Override
 		public Image getColumnImage(Object object, int columnIndex) {
 			Image image = null;
 
 			switch (columnIndex) {
 			case NAME_COLUMN_ID:
-				if(object instanceof OperationCallControllerBinding){
-					image = super.getColumnImage(((OperationCallControllerBinding) object).getTrigger(), columnIndex); 
+				if (object instanceof OperationCallControllerBinding) {
+					image = super.getColumnImage(((OperationCallControllerBinding) object).getTrigger(), columnIndex);
 				}
 				if (object instanceof BindedEDataTypeArgument) {
 					BindedEDataTypeArgument bindedEDataTypeArgument = (BindedEDataTypeArgument) object;
@@ -417,37 +417,18 @@ public class ControllerBindingsComposite extends Composite {
 				if (object instanceof ControllerTrigger) {
 					image = super.getColumnImage(((ControllerTrigger) object).getComponentQualifier(), columnIndex);
 				}
-				
-				
-//				if (object instanceof BindedEDataTypeArgument || object instanceof ControllerTrigger) {
-//					image = super.getColumnImage(object, columnIndex);
-//				}
 				break;
-			case ICON_COLUMN_ID:
-//				if (object instanceof BindedEDataTypeArgument) {
-//					BindedEDataTypeArgument bindedEDataTypeArgument = (BindedEDataTypeArgument) object;
-//					if (bindedEDataTypeArgument.getValueSource() instanceof ControllerValueSource) {
-//						image = super.getColumnImage(((ControllerValueSource) bindedEDataTypeArgument.getValueSource())
-//								.getEComponentQualifier(), columnIndex);
-//					}
-//				}
-//				if (object instanceof ControllerTrigger) {
-//					image = super.getColumnImage(((ControllerTrigger) object).getComponentQualifier(), columnIndex);
-//				}
+			case CONDITIONNING_COLUMN_ID:
+				if (object instanceof BindedEDataTypeArgument) {
+					BindedEDataTypeArgument bindedEDataTypeArgument = (BindedEDataTypeArgument) object;
+					if (bindedEDataTypeArgument.getValueSource() instanceof ControllerValueSource) {
+						image = super.getColumnImage(
+								((ControllerValueSource) ((BindedEDataTypeArgument) object).getValueSource())
+										.getConditioning(),
+								columnIndex);
+					}
+				}
 				break;
-//			case EOPERATION_VALUE_COLUMN_ID:
-////				if (object instanceof OperationCallControllerBinding) {
-////					image = super.getColumnImage(((OperationCallControllerBinding) object).getTrigger(), columnIndex); 
-////				}else 
-//				if (object instanceof BindedEDataTypeArgument) {
-//					BindedEDataTypeArgument bindedEDataTypeArgument = (BindedEDataTypeArgument) object;
-//					if (bindedEDataTypeArgument.getValueSource() instanceof ControllerValueSource) {
-//						image = super.getColumnImage(
-//								((ControllerValueSource) ((BindedEDataTypeArgument) object).getValueSource())
-//										.getConditioning(), columnIndex);
-//					} 
-//				}
-//				break;
 			default:
 				break;
 			}

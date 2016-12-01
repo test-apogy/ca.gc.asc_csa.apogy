@@ -76,6 +76,10 @@ public class ApogyCommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	protected ApogyCommonIOJInputSwitch<Adapter> modelSwitch =
 		new ApogyCommonIOJInputSwitch<Adapter>() {
 			@Override
+			public Adapter caseApogyCommonIOJInputFacade(ApogyCommonIOJInputFacade object) {
+				return createApogyCommonIOJInputFacadeAdapter();
+			}
+			@Override
 			public Adapter caseEController(EController object) {
 				return createEControllerAdapter();
 			}
@@ -130,6 +134,20 @@ public class ApogyCommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade <em>Facade</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade
+	 * @generated
+	 */
+	public Adapter createApogyCommonIOJInputFacadeAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController <em>EController</em>}'.
