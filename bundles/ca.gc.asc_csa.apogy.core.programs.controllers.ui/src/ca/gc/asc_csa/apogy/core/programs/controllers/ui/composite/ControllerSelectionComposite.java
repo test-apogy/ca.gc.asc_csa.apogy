@@ -17,9 +17,6 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
@@ -39,15 +36,13 @@ import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
 
 public class ControllerSelectionComposite extends Composite {
 
-	final String BIND_PROMPT = "Click here to bind the controller";
+	final String CLICK_PROMPT = "Click here to bind the controller";
 	
 	private Text controllerText;
 	private Text componentText;
 	
 	private EComponentQualifier eComponentQualifier;
 
-	private Adapter adapter;
-//	private Adapter changeControllerAdapter;
 	private DataBindingContext m_bindingContext;
 
 	/**
@@ -67,7 +62,7 @@ public class ControllerSelectionComposite extends Composite {
 		controllerLabel.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 		
 		controllerText = new Text(this, SWT.BORDER);
-		controllerText.setText(BIND_PROMPT);
+		controllerText.setText(CLICK_PROMPT);
 		controllerText.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
 		controllerText.addMouseListener(new MouseAdapter() {
 			@Override
@@ -87,7 +82,7 @@ public class ControllerSelectionComposite extends Composite {
 		componentLabel.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 		
 		componentText = new Text(this, SWT.BORDER);
-		componentText.setText(BIND_PROMPT);
+		componentText.setText(CLICK_PROMPT);
 		componentText.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
 		componentText.addMouseListener(new MouseAdapter() {
 			@Override
@@ -102,29 +97,6 @@ public class ControllerSelectionComposite extends Composite {
 			}
 		});
 	}
-	
-//	protected void startControllersPolling(){
-//		eComponentQualifier.eAdapters().add(getchangeControllerAdapter());
-//	}
-//	
-//	protected void stopControllersPolling(){
-//		eComponentQualifier.eAdapters().remove(getchangeControllerAdapter(eComponentQualifier));
-//	}
-	
-//	private Adapter getchangeControllerAdapter(){
-//		if(changeControllerAdapter == null){
-//			changeControllerAdapter = new AdapterImpl(){
-//				@Override
-//				public void notifyChanged(Notification msg) {
-//					if(msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME ||
-//							msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME){
-//						stopControllersPolling();
-//					}
-//				}
-//			};
-//		}
-//		return changeControllerAdapter;
-//	}
 
 	/**
 	 * Binds the {@link EComponentQualifier} with the UI components.
@@ -133,11 +105,10 @@ public class ControllerSelectionComposite extends Composite {
 	 *            Reference to the {@link EComponentQualifier}.
 	 */
 	public void setEComponentQualifier(EComponentQualifier eComponentQualifier) {
-		if (this.eComponentQualifier != null) {
-			this.eComponentQualifier.eAdapters().remove(getAdapter());
+		if(m_bindingContext != null){
+			m_bindingContext.dispose();
 		}
 		this.eComponentQualifier = eComponentQualifier;
-		this.eComponentQualifier.eAdapters().add(getAdapter());
 		
 		initDataBindingsCustom();		
 	}
@@ -154,10 +125,12 @@ public class ControllerSelectionComposite extends Composite {
 
 					@Override
 					public Object convert(Object fromObject) {
-						return fromObject == null ? BIND_PROMPT : fromObject;
+						return fromObject == null ? CLICK_PROMPT : fromObject;
 					}
 				}));
-		
+		if(eComponentQualifier.getEControllerName() != null){
+			controllerText.setText(eComponentQualifier.getEControllerName());
+		}
 		IObservableValue<?> observeEComponentQualifierComponentName = EMFProperties.value(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME).observe(eComponentQualifier);
 		IObservableValue<?> observeComponentText = WidgetProperties.text().observe(componentText);
 		m_bindingContext.bindValue(observeComponentText, observeEComponentQualifierComponentName, null,
@@ -165,34 +138,17 @@ public class ControllerSelectionComposite extends Composite {
 
 					@Override
 					public Object convert(Object fromObject) {
-						return fromObject == null ? BIND_PROMPT : fromObject;
+						return fromObject == null ? CLICK_PROMPT : fromObject;
 					}
 				}));
-
-		return m_bindingContext;
-	}
-
-	public Adapter getAdapter() {
-		if (adapter == null) {
-			adapter = new AdapterImpl() {
-				@Override
-				public void notifyChanged(Notification msg) {
-					if (msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME
-							|| msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME) {
-						ControllerSelectionComposite.this.forceFocus();
-					}
-				}
-				
-			};
+		if(eComponentQualifier.getEComponentName() != null){
+			controllerText.setText(eComponentQualifier.getEComponentName());
 		}
-		return adapter;
+		return m_bindingContext;
 	}
 
 	@Override
 	public void dispose() {
-		if (this.eComponentQualifier != null) {
-			this.eComponentQualifier.eAdapters().remove(getAdapter());
-		}
 		super.dispose();
 	}
 

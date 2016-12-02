@@ -24,11 +24,9 @@ import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.ITreeContentProvider;
-import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
-import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
@@ -128,6 +126,10 @@ public class EObjectListComposite extends Composite {
 	 */
 	protected StyledCellLabelProvider getLabelProvider() {
 		return new EObjectEClassNameLabelProvider();
+	}
+	
+	public void refreshTreeViewer(){
+		treeViewerEObjectsList.refresh();
 	}
 
 	/**
@@ -243,10 +245,8 @@ public class EObjectListComposite extends Composite {
 			if (!treeViewerEObjectsList.getTree().isDisposed()) {
 				treeViewerEObjectsList.setInput(eObjectsList);
 
-				if (treeViewerEObjectsList.getTree().getItemCount() > 0) {
-					TreePath treePath = new TreePath(new Object[] { eObjectsList.get(0) });
-					ITreeSelection defaultElementSelected = new TreeSelection(treePath);
-					treeViewerEObjectsList.setSelection(defaultElementSelected, true);
+				if (!eObjectsList.isEmpty()) {
+					treeViewerEObjectsList.setSelection(new StructuredSelection(eObjectsList.get(0)));
 				}
 			}
 		}

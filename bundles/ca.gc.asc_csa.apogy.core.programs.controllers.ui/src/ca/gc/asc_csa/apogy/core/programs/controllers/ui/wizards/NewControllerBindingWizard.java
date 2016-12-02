@@ -24,18 +24,16 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseEClassImplementationWizardPage;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallEOperationsWizardPage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableFeatureReferenceWizardPage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
-import ca.gc.asc_csa.apogy.core.programs.controllers.Trigger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.Activator;
 
 public class NewControllerBindingWizard extends Wizard {
@@ -43,10 +41,8 @@ public class NewControllerBindingWizard extends Wizard {
 	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
 	private OperationCallEOperationsWizardPage operationCallEOperationsWizardPage;
 	private NamedDescribedWizardPage namedDescribedWizardPage;
-//	private ChooseEClassImplementationWizardPage chooseEClassImplementationWizardPage;
 	private TriggerWizardPage triggerWizardPage;
-	private ControllerComponentWizardPage controllerComponentWizardPage;
-	
+	private BindedEDataTypeArgumentsWizardPage bindedEDataTypeArgumentsWizardPage;
 
 	private ControllersConfiguration controllersConfiguration;
 	private WritableValue<OperationCallControllerBinding> controllerBinding;
@@ -71,18 +67,22 @@ public class NewControllerBindingWizard extends Wizard {
 		addPage(getNamedDescribedWizardPage());
 		addPage(getVariableFeatureReferenceWizardPage());
 		addPage(getOperationCallEOperationWizardPage());
-//		addPage(getChooseEClassImplementationWizardPage());
-//		addPage(getTriggerWizardPage());
-		addPage(getControllerComponentWizardPage());
+		addPage(getTriggerWizardPage());
 		
 		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(namedDescribedWizardPage, 0.8);
 	}
 	
 	@Override
 	public IWizardPage getNextPage(IWizardPage page) {
-		if(page == getTriggerWizardPage()){
-			if(getControllerBinding().getArgumentsList() != null){
-				return getControllerComponentWizardPage();
+		if (page == getTriggerWizardPage()) {
+			if (getControllerBinding().getArgumentsList() != null) {
+				if (bindedEDataTypeArgumentsWizardPage == null) {
+					addPage(getBindedEDataTypeArgumentsWizardPage());
+				} else {
+					return getBindedEDataTypeArgumentsWizardPage();
+				}
+			} else {
+				return null;
 			}
 		}
 		return super.getNextPage(page);
@@ -130,11 +130,22 @@ public class NewControllerBindingWizard extends Wizard {
 	 */
 	protected OperationCallEOperationsWizardPage getOperationCallEOperationWizardPage() {
 		if (operationCallEOperationsWizardPage == null) {
-			operationCallEOperationsWizardPage = new OperationCallEOperationsWizardPage(getControllerBinding());
+			operationCallEOperationsWizardPage = new OperationCallEOperationsWizardPage(getControllerBinding()){
+				@Override
+				protected void newSelection() {
+					getOperationCall().setEOperation(getEOperationsComposite().getSelectedEOperation());
+					if(getOperationCall().getArgumentsList() != null){
+						for(@SuppressWarnings("unused") Argument argument: getOperationCall().getArgumentsList().getArguments()){
+							argument = ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument();
+						}
+	
+					}
+				}
+			};
 		}
 		return operationCallEOperationsWizardPage;
 	}
-
+	
 	/**
 	 * Returns the {@link TriggerWizardPage}. If null is returned,
 	 * the page is not added to the wizard.
@@ -148,30 +159,17 @@ public class NewControllerBindingWizard extends Wizard {
 		return triggerWizardPage;
 	}
 	
-//	/**
-//	 * Returns the {@link ChooseEClassImplementationWizardPage}. If null is returned,
-//	 * the page is not added to the wizard.
-//	 * 
-//	 * @return Reference to the page.
-//	 */
-//	protected ChooseEClassImplementationWizardPage getChooseEClassImplementationWizardPage() {
-//		if (chooseEClassImplementationWizardPage == null) {
-//			chooseEClassImplementationWizardPage = new ChooseEClassImplementationWizardPage(ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER.getEReferenceType());
-//		}
-//		return chooseEClassImplementationWizardPage;
-//	}
-	
 	/**
-	 * Returns the {@link ControllerComponentWizardPage}. If null is returned,
+	 * Returns the {@link BindedEDataTypeArgumentsWizardPage}. If null is returned,
 	 * the page is not added to the wizard.
 	 * 
 	 * @return Reference to the page.
 	 */
-	protected ControllerComponentWizardPage getControllerComponentWizardPage() {
-		if (controllerComponentWizardPage == null) {
-			controllerComponentWizardPage = new ControllerComponentWizardPage(getControllerBinding());
+	protected BindedEDataTypeArgumentsWizardPage getBindedEDataTypeArgumentsWizardPage() {
+		if (bindedEDataTypeArgumentsWizardPage == null) {
+			bindedEDataTypeArgumentsWizardPage = new BindedEDataTypeArgumentsWizardPage(getControllerBinding());
 		}
-		return controllerComponentWizardPage;
+		return bindedEDataTypeArgumentsWizardPage;
 	}
 
 	@Override

@@ -291,7 +291,7 @@ public class ControllerBindingsComposite extends Composite {
 
 				@Override
 				public void notifyChanged(Notification notification) {
-					System.out.println(notification.getFeature());
+//					System.out.println(notification.getFeature());
 					if (getEStructuralFeature().contains(notification.getFeature())) {
 						treeViewer.refresh();
 						for (TreeColumn column : treeViewer.getTree().getColumns()) {
@@ -470,8 +470,14 @@ public class ControllerBindingsComposite extends Composite {
 
 		@Override
 		public boolean hasChildren(Object object) {
-			return object instanceof OperationCallControllerBinding;
-		}
+			if(object instanceof OperationCallControllerBinding){
+				if(((OperationCallControllerBinding) object).getTrigger() instanceof ControllerTrigger){
+					return true;
+				}
+				return ((OperationCallControllerBinding) object).getArgumentsList() != null;
+			}
+			return false;
+			}
 	}
 
 	@Override

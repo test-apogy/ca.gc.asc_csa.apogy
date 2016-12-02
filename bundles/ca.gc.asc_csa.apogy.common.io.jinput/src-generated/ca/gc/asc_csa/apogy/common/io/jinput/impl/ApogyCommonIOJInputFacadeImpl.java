@@ -89,11 +89,18 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	 * @generated_NOT
 	 */
 	public void addSelectComponentAdapter(EComponentQualifier eComponentQualifier) {
+		for (EController eController : Activator.getEControllerEnvironment().getControllers()) {
+			EventQueue queue = eController.getPojoController().getEventQueue();
+			Event event = new Event();
+			while (queue.getNextEvent(event));
+		}
+		
 		if (selectComponentAdapter == null) {
 			selectComponentAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
 					for (EController eController : Activator.getEControllerEnvironment().getControllers()) {
+
 						Display.getDefault().asyncExec(new Runnable() {
 							@Override
 							public void run() {
@@ -104,6 +111,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 								Event event = new Event();
 
 								while (queue.getNextEvent(event)) {
+									System.out.println(event.getComponent());
 									if (Math.abs(event.getValue()) > 0.5) {
 										eComponentQualifier.setEComponentName(event.getComponent().getName());
 										eComponentQualifier.setEControllerName(eController.getName());
@@ -121,8 +129,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 		eComponentQualifierAdapter = new AdapterImpl() {
 			@Override
 			public void notifyChanged(Notification msg) {
-				if (msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME
-						|| msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME) {
+				if (msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME){
 					forceStopSelectComponent(eComponentQualifier);
 				}
 			}
@@ -135,17 +142,17 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	public void forceStopSelectComponent(EComponentQualifier eComponentQualifier) {
 		if (selectComponentAdapter != null) {
 			Activator.getEControllerEnvironment().eAdapters().remove(selectComponentAdapter);
+			selectComponentAdapter = null;
 		}
 		if (eComponentQualifierAdapter != null) {
 			eComponentQualifier.eAdapters().remove(eComponentQualifierAdapter);
+			eComponentQualifierAdapter = null; 
 		}
-		
-
 	}
 
 	/**

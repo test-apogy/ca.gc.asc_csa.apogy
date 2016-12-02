@@ -93,14 +93,26 @@ public class OperationCallEOperationsWizardPage extends WizardPage {
 		eOperationsComposite = new EOperationsComposite(parent, SWT.None){
 			@Override
 			protected void newSelection(TreeSelection selection) {
-				operationCall.setEOperation(getSelectedEOperation());
-				ApogyCoreInvocatorUIFacade.INSTANCE.setEOperationInitArguments(getSelectedEOperation(), operationCall);
-				validate();
+				OperationCallEOperationsWizardPage.this.newSelection();
 			}
 		};		
 		setControl(eOperationsComposite);
 		
 		validate();
+	}
+	
+	protected void newSelection() {
+		operationCall.setEOperation(getEOperationsComposite().getSelectedEOperation());
+		ApogyCoreInvocatorUIFacade.INSTANCE.setEOperationInitArguments(getEOperationsComposite().getSelectedEOperation(), getOperationCall());
+		validate();
+	}
+	
+	public EOperationsComposite getEOperationsComposite() {
+		return eOperationsComposite;
+	}
+	
+	public OperationCall getOperationCall() {
+		return operationCall;
 	}
 	
 	@Override
