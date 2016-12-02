@@ -72,7 +72,7 @@ abstract public class AbstractApogyPart {
 	 */
 	public Composite getActualComposite() {
 		if (parentComposite != null) {
-			if (parentComposite.getChildren().length > 0) {
+			if (!parentComposite.isDisposed() && parentComposite.getChildren().length > 0) {
 				return (Composite) parentComposite.getChildren()[0];
 			}
 		}
@@ -129,9 +129,10 @@ abstract public class AbstractApogyPart {
 				control.dispose();
 			}
 		}
-		createNoContentComposite(parentComposite, SWT.None);
-		parentComposite.layout();
-
+		if(!parentComposite.isDisposed()){
+			createNoContentComposite(parentComposite, SWT.None);
+			parentComposite.layout();
+		}
 		setNullSelection();
 	}
 

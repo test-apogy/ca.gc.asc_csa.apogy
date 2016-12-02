@@ -51,8 +51,10 @@ public class ControllerConfigsPart extends AbstractSessionBasedPart {
 
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
-		((ControllerConfigsComposite) getActualComposite())
-				.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
+		if(ApogyCoreInvocatorFacade.INSTANCE != null){
+			((ControllerConfigsComposite) getActualComposite())
+			.setControllersGroup(ApogyCoreInvocatorFacade.INSTANCE.getControllersGroup());
+		}
 	}
 
 	@Override

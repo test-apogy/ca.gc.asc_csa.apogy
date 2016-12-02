@@ -35,7 +35,6 @@ public class VariablesListPart extends AbstractSessionBasedPart {
 					setNullSelection();					
 				}else {
 					VariableFeatureReference variableFeatureReference = ((VariablesListComposite)getActualComposite()).getSelectedVariableFeatureReference();
-//					List<Variable> variables = ((VariablesListComposite) getActualComposite()).getSelectedVariables();
 					if (variableFeatureReference != null) {
 						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE
 								.createVariablesListPartSelection();
@@ -43,12 +42,6 @@ public class VariablesListPart extends AbstractSessionBasedPart {
 
 						selectionService.setSelection(selectionSent);
 					}
-//					if (!variables.isEmpty()){
-//						VariablesListPartSelection selectionSent = ApogyCoreInvocatorUIFactory.eINSTANCE.createVariablesListPartSelection();
-//						selectionSent.setVariable(variables);		
-//						
-//						selectionService.setSelection(selectionSent);						
-//					}
 				}
 			}
 		};

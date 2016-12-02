@@ -189,16 +189,11 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 		}
 		if(toggleValueSource.isInitialValue()){
 			if(str != ""){
-				str += " and ";
+				str += " & ";
 			}
 			str += "Initial";
 		}
-		if(str != ""){
-			str += " value";
-			return str;
-		}
-		
-		return "<undefined>";
+		return str;
 	}
 
 	/**

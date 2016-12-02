@@ -33,9 +33,18 @@ Contributors:
  
 package ca.gc.asc_csa.apogy.common.io.jinput
 
+import org.eclipse.emf.common.notify.Adapter
+
 type Job wraps org.eclipse.core.runtime.jobs.Job
 type Component wraps net.java.games.input.Component
 type Controller wraps net.java.games.input.Controller
+type Adapter wraps Adapter
+
+class ApogyCommonIOJInputFacade
+{	
+	op void addSelectComponentAdapter(EComponentQualifier eComponentQualifier)
+	op void forceStopSelectComponent(EComponentQualifier eComponentQualifier)
+}
 
 class EController
 {

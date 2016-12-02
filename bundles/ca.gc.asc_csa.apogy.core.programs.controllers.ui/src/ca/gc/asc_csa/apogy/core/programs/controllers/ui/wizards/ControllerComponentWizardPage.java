@@ -17,10 +17,7 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
 
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingDefinitionComposite;
@@ -30,6 +27,8 @@ public class ControllerComponentWizardPage extends WizardPage {
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewProgramWizardPage";
 
 	private OperationCallControllerBinding operationCallControllerBinding;
+	private ControllerBindingDefinitionComposite composite;
+	
 	/**
 	 * Constructor for the WizardPage.
 	 * 
@@ -50,18 +49,12 @@ public class ControllerComponentWizardPage extends WizardPage {
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new FillLayout());
 
-		ControllerBindingDefinitionComposite composite = new ControllerBindingDefinitionComposite(container,
+		composite = new ControllerBindingDefinitionComposite(container,
 				SWT.H_SCROLL | SWT.V_SCROLL);
 		composite.setOperationCallControllerBinding(operationCallControllerBinding);
-		
-//		Composite composite = new Composite(container, SWT.None);
-//		composite.setLayout(new GridLayout(1, false));
-
-//		Label label = new Label(composite, SWT.None);
-//		label.setText("TODO");
-//		label.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, true));
 
 		setControl(container);
+		
 
 		validate();
 	}

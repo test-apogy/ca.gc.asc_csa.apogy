@@ -33,6 +33,15 @@ public interface ApogyCommonIOJInputFactory extends EFactory {
 	ApogyCommonIOJInputFactory eINSTANCE = ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Facade</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
+	 * @generated
+	 */
+	ApogyCommonIOJInputFacade createApogyCommonIOJInputFacade();
+
+	/**
 	 * Returns a new object of class '<em>EController</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

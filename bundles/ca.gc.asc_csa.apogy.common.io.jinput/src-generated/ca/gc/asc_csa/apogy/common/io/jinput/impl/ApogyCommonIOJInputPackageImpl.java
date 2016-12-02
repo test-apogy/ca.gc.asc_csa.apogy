@@ -13,9 +13,11 @@ package ca.gc.asc_csa.apogy.common.io.jinput.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade;
 import net.java.games.input.Component;
 import net.java.games.input.Controller;
 import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -43,6 +45,13 @@ import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
  * @generated
  */
 public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements ApogyCommonIOJInputPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass apogyCommonIOJInputFacadeEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,6 +121,13 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	private EDataType controllerEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType adapterEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -189,6 +205,33 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ApogyCommonIOJInputPackage.eNS_URI, theApogyCommonIOJInputPackage);
 		return theApogyCommonIOJInputPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getApogyCommonIOJInputFacade() {
+		return apogyCommonIOJInputFacadeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonIOJInputFacade__AddSelectComponentAdapter__EComponentQualifier() {
+		return apogyCommonIOJInputFacadeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonIOJInputFacade__ForceStopSelectComponent__EComponentQualifier() {
+		return apogyCommonIOJInputFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -626,6 +669,15 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getAdapter() {
+		return adapterEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCommonIOJInputFactory getApogyCommonIOJInputFactory() {
 		return (ApogyCommonIOJInputFactory)getEFactoryInstance();
 	}
@@ -668,6 +720,10 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 		isCreated = true;
 
 		// Create classes and their features
+		apogyCommonIOJInputFacadeEClass = createEClass(APOGY_COMMON_IOJ_INPUT_FACADE);
+		createEOperation(apogyCommonIOJInputFacadeEClass, APOGY_COMMON_IOJ_INPUT_FACADE___ADD_SELECT_COMPONENT_ADAPTER__ECOMPONENTQUALIFIER);
+		createEOperation(apogyCommonIOJInputFacadeEClass, APOGY_COMMON_IOJ_INPUT_FACADE___FORCE_STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER);
+
 		eControllerEClass = createEClass(ECONTROLLER);
 		createEAttribute(eControllerEClass, ECONTROLLER__LAST_POLL_RESULT);
 		createEAttribute(eControllerEClass, ECONTROLLER__NAME);
@@ -725,6 +781,7 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 		jobEDataType = createEDataType(JOB);
 		componentEDataType = createEDataType(COMPONENT);
 		controllerEDataType = createEDataType(CONTROLLER);
+		adapterEDataType = createEDataType(ADAPTER);
 	}
 
 	/**
@@ -764,6 +821,14 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 		eVirtualComponentEClass.getESuperTypes().add(this.getEComponent());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(apogyCommonIOJInputFacadeEClass, ApogyCommonIOJInputFacade.class, "ApogyCommonIOJInputFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = initEOperation(getApogyCommonIOJInputFacade__AddSelectComponentAdapter__EComponentQualifier(), null, "addSelectComponentAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEComponentQualifier(), "eComponentQualifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonIOJInputFacade__ForceStopSelectComponent__EComponentQualifier(), null, "forceStopSelectComponent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEComponentQualifier(), "eComponentQualifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(eControllerEClass, EController.class, "EController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEController_LastPollResult(), theEcorePackage.getEBoolean(), "lastPollResult", null, 0, 1, EController.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEController_Name(), theEcorePackage.getEString(), "name", "", 0, 1, EController.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -790,7 +855,7 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 
 		initEOperation(getEControllerEnvironment__StopPolling(), null, "stopPolling", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		EOperation op = initEOperation(getEControllerEnvironment__ResolveController__String(), this.getEController(), "resolveController", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEControllerEnvironment__ResolveController__String(), this.getEController(), "resolveController", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "controllerName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEControllerEnvironment__ResolveEComponent__String_EController(), this.getEComponent(), "resolveEComponent", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -832,6 +897,7 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 		initEDataType(jobEDataType, Job.class, "Job", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(componentEDataType, Component.class, "Component", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(controllerEDataType, Controller.class, "Controller", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(adapterEDataType, Adapter.class, "Adapter", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

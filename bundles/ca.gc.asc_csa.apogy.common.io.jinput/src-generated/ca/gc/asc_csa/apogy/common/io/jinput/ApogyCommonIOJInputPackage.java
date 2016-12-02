@@ -84,6 +84,52 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	ApogyCommonIOJInputPackage eINSTANCE = ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFacadeImpl <em>Facade</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getApogyCommonIOJInputFacade()
+	 * @generated
+	 */
+	int APOGY_COMMON_IOJ_INPUT_FACADE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_IOJ_INPUT_FACADE_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Add Select Component Adapter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_IOJ_INPUT_FACADE___ADD_SELECT_COMPONENT_ADAPTER__ECOMPONENTQUALIFIER = 0;
+
+	/**
+	 * The operation id for the '<em>Force Stop Select Component</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_IOJ_INPUT_FACADE___FORCE_STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER = 1;
+
+	/**
+	 * The number of operations of the '<em>Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_IOJ_INPUT_FACADE_OPERATION_COUNT = 2;
+
+	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl <em>EController</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,7 +137,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEController()
 	 * @generated
 	 */
-	int ECONTROLLER = 0;
+	int ECONTROLLER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Last Poll Result</b></em>' attribute.
@@ -200,7 +246,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEControllerEnvironment()
 	 * @generated
 	 */
-	int ECONTROLLER_ENVIRONMENT = 1;
+	int ECONTROLLER_ENVIRONMENT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Supported</b></em>' attribute.
@@ -336,7 +382,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEComponent()
 	 * @generated
 	 */
-	int ECOMPONENT = 2;
+	int ECOMPONENT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Dead Zone</b></em>' attribute.
@@ -436,7 +482,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEComponents()
 	 * @generated
 	 */
-	int ECOMPONENTS = 3;
+	int ECOMPONENTS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -491,7 +537,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEButton()
 	 * @generated
 	 */
-	int EBUTTON = 4;
+	int EBUTTON = 5;
 
 	/**
 	 * The feature id for the '<em><b>Dead Zone</b></em>' attribute.
@@ -591,7 +637,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEAxis()
 	 * @generated
 	 */
-	int EAXIS = 5;
+	int EAXIS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Dead Zone</b></em>' attribute.
@@ -691,7 +737,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEKey()
 	 * @generated
 	 */
-	int EKEY = 6;
+	int EKEY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Dead Zone</b></em>' attribute.
@@ -791,7 +837,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEComponentQualifier()
 	 * @generated
 	 */
-	int ECOMPONENT_QUALIFIER = 7;
+	int ECOMPONENT_QUALIFIER = 8;
 
 	/**
 	 * The feature id for the '<em><b>EComponent Name</b></em>' attribute.
@@ -837,7 +883,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEVirtualComponent()
 	 * @generated
 	 */
-	int EVIRTUAL_COMPONENT = 8;
+	int EVIRTUAL_COMPONENT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Dead Zone</b></em>' attribute.
@@ -946,7 +992,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getJob()
 	 * @generated
 	 */
-	int JOB = 9;
+	int JOB = 10;
 
 	/**
 	 * The meta object id for the '<em>Component</em>' data type.
@@ -956,7 +1002,7 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getComponent()
 	 * @generated
 	 */
-	int COMPONENT = 10;
+	int COMPONENT = 11;
 
 	/**
 	 * The meta object id for the '<em>Controller</em>' data type.
@@ -966,8 +1012,49 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getController()
 	 * @generated
 	 */
-	int CONTROLLER = 11;
+	int CONTROLLER = 12;
 
+
+	/**
+	 * The meta object id for the '<em>Adapter</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.common.notify.Adapter
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getAdapter()
+	 * @generated
+	 */
+	int ADAPTER = 13;
+
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade <em>Facade</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade
+	 * @generated
+	 */
+	EClass getApogyCommonIOJInputFacade();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#addSelectComponentAdapter(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier) <em>Add Select Component Adapter</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Select Component Adapter</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#addSelectComponentAdapter(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier)
+	 * @generated
+	 */
+	EOperation getApogyCommonIOJInputFacade__AddSelectComponentAdapter__EComponentQualifier();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#forceStopSelectComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier) <em>Force Stop Select Component</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Force Stop Select Component</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#forceStopSelectComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier)
+	 * @generated
+	 */
+	EOperation getApogyCommonIOJInputFacade__ForceStopSelectComponent__EComponentQualifier();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController <em>EController</em>}'.
@@ -1471,6 +1558,17 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	EDataType getController();
 
 	/**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.common.notify.Adapter <em>Adapter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Adapter</em>'.
+	 * @see org.eclipse.emf.common.notify.Adapter
+	 * @model instanceClass="org.eclipse.emf.common.notify.Adapter"
+	 * @generated
+	 */
+	EDataType getAdapter();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1493,6 +1591,32 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFacadeImpl <em>Facade</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getApogyCommonIOJInputFacade()
+		 * @generated
+		 */
+		EClass APOGY_COMMON_IOJ_INPUT_FACADE = eINSTANCE.getApogyCommonIOJInputFacade();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Select Component Adapter</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_IOJ_INPUT_FACADE___ADD_SELECT_COMPONENT_ADAPTER__ECOMPONENTQUALIFIER = eINSTANCE.getApogyCommonIOJInputFacade__AddSelectComponentAdapter__EComponentQualifier();
+
+		/**
+		 * The meta object literal for the '<em><b>Force Stop Select Component</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_IOJ_INPUT_FACADE___FORCE_STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER = eINSTANCE.getApogyCommonIOJInputFacade__ForceStopSelectComponent__EComponentQualifier();
+
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl <em>EController</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1892,6 +2016,16 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType CONTROLLER = eINSTANCE.getController();
+
+		/**
+		 * The meta object literal for the '<em>Adapter</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.common.notify.Adapter
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getAdapter()
+		 * @generated
+		 */
+		EDataType ADAPTER = eINSTANCE.getAdapter();
 
 	}
 
