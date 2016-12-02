@@ -37,7 +37,7 @@ public class PinViewAction extends Action {
 		this.pinnable = pinnable;				
 		try
 		{
-			imageDescriptor = ApogyCommonUiFacade.INSTANCE.getImageDescriptor("/icons/pin.gif");			
+			imageDescriptor = ApogyCommonUiFacade.INSTANCE.getImageDescriptor("platform:/plugin/" + ca.gc.asc_csa.apogy.common.ui.Activator.ID + "/icons/pin.gif");			
 		}
 		catch(Exception e)
 		{

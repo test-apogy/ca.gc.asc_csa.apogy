@@ -335,4 +335,40 @@ This Agreement is governed by the laws of the State of New York and the intellec
          install-size="0"
          version="0.0.0"/>
 
+   <plugin
+         id="ca.gc.asc_csa.apogy.core.environment.surface"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="ca.gc.asc_csa.apogy.core.environment.surface.earth"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="ca.gc.asc_csa.apogy.core.environment.surface.earth.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="ca.gc.asc_csa.apogy.core.environment.surface.earth.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="ca.gc.asc_csa.apogy.core.environment.surface.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="ca.gc.asc_csa.apogy.core.environment.surface.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
 </feature>
