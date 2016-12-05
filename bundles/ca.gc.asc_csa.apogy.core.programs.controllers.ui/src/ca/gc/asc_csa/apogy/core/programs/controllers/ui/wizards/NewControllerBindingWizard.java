@@ -14,6 +14,8 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Arrays;
+
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
@@ -27,8 +29,10 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallEOperationsWizardPage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableFeatureReferenceWizardPage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
@@ -38,9 +42,9 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.Activator;
 
 public class NewControllerBindingWizard extends Wizard {
 
+	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
 	private OperationCallEOperationsWizardPage operationCallEOperationsWizardPage;
-	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private TriggerWizardPage triggerWizardPage;
 	private BindedEDataTypeArgumentsWizardPage bindedEDataTypeArgumentsWizardPage;
 
@@ -73,17 +77,18 @@ public class NewControllerBindingWizard extends Wizard {
 	}
 	
 	@Override
-	public IWizardPage getNextPage(IWizardPage page) {
+	public IWizardPage getNextPage(IWizardPage page) {	
 		if (page == getTriggerWizardPage()) {
-			if (getControllerBinding().getArgumentsList() != null) {
-				if (bindedEDataTypeArgumentsWizardPage == null) {
+			if(getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null){
+				if (!Arrays.asList(getPages()).contains(getBindedEDataTypeArgumentsWizardPage())) {
 					addPage(getBindedEDataTypeArgumentsWizardPage());
 				} else {
 					return getBindedEDataTypeArgumentsWizardPage();
 				}
-			} else {
+			}else{
 				return null;
 			}
+			
 		}
 		return super.getNextPage(page);
 	}
@@ -117,7 +122,14 @@ public class NewControllerBindingWizard extends Wizard {
 		if (variableFeatureReferenceWizardPage == null) {
 			variableFeatureReferenceWizardPage = new VariableFeatureReferenceWizardPage(
 					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(),
-					getControllerBinding());
+					getControllerBinding()){
+				@Override
+				protected void resetOperationCall() {
+					getControllerBinding().setArgumentsList(null);
+					getControllerBinding().setEOperation(null);
+					getBindedEDataTypeArgumentsWizardPage().setOperationCallControllerBinding(getControllerBinding());
+				}
+			};
 		}
 		return variableFeatureReferenceWizardPage;
 	}
@@ -133,13 +145,14 @@ public class NewControllerBindingWizard extends Wizard {
 			operationCallEOperationsWizardPage = new OperationCallEOperationsWizardPage(getControllerBinding()){
 				@Override
 				protected void newSelection() {
-					getOperationCall().setEOperation(getEOperationsComposite().getSelectedEOperation());
+					super.newSelection();
 					if(getOperationCall().getArgumentsList() != null){
-						for(@SuppressWarnings("unused") Argument argument: getOperationCall().getArgumentsList().getArguments()){
-							argument = ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument();
+						for(int i = 0; i <  getOperationCall().getArgumentsList().getArguments().size(); i++){
+							getOperationCall().getArgumentsList().getArguments().set(i, ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument());
 						}
-	
 					}
+					getBindedEDataTypeArgumentsWizardPage().setOperationCallControllerBinding(getControllerBinding());
+					validate();
 				}
 			};
 		}

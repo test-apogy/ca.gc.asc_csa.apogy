@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
@@ -32,6 +33,7 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.BindedEDataTypeArgumentsWizardPage";
 	
 	private OperationCallControllerBinding operationCallControllerBinding;
+	private BindedEDataTypeArgumentsComposite bindedEDataTypeArgumentsComposite;
 	
 	private Adapter adapter; 
 
@@ -57,6 +59,20 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 		operationCallControllerBinding.eAdapters().add(getAdapter());
 	}
 	
+	public void setOperationCallControllerBinding(OperationCallControllerBinding operationCallControllerBinding) {
+		if (this.operationCallControllerBinding != null){
+			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
+		}
+		
+		this.operationCallControllerBinding = operationCallControllerBinding;
+		
+		operationCallControllerBinding.eAdapters().add(getAdapter());
+		
+		if(bindedEDataTypeArgumentsComposite != null){
+			bindedEDataTypeArgumentsComposite.setOperationCall(operationCallControllerBinding);
+		}
+	}
+	
 	private Adapter getAdapter() {
 		if (adapter == null){
 			adapter = new AdapterImpl(){
@@ -74,11 +90,13 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 	 */
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.None);
-		container.setLayout(new GridLayout(1, false));
+		container.setLayout(new FillLayout());
 
-		BindedEDataTypeArgumentsComposite bindedEDataTypeArgumentsComposite = new BindedEDataTypeArgumentsComposite(container, SWT.None);
+		bindedEDataTypeArgumentsComposite = new BindedEDataTypeArgumentsComposite(container, SWT.None);
 		bindedEDataTypeArgumentsComposite.setOperationCall(operationCallControllerBinding);
 	
+		setControl(container);
+		
 		validate();
 	}
 

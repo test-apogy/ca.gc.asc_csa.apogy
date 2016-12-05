@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.ViewerCell;
@@ -174,26 +175,30 @@ public class TriggerComposite extends ScrolledComposite {
 									Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
 								}
 							}
+							newSelection(new StructuredSelection(getSelectedTrigger()));
 							return ((TimeTrigger) trigger).getRefreshPeriod();
 						}
 					}), new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE).setConverter(new Converter(long.class, String.class) {
 						@Override
 						public Object convert(Object fromObject) {
+							newSelection(new StructuredSelection(getSelectedTrigger()));
 							return fromObject == null ? "<undef>" : String.valueOf((long) fromObject);
 						}
 					}));
-			
-			
-		}else if(trigger instanceof ControllerEdgeTrigger){
+
+		} else if (trigger instanceof ControllerEdgeTrigger) {
 			eComponentComposite = new Composite(composite, SWT.BORDER);
 			eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 			eComponentComposite.setLayout(new GridLayout(1, false));
-			
-			EObjectListComposite edgeTypesComposite = new EObjectListComposite(eComponentComposite, SWT.None){
+
+			EObjectListComposite edgeTypesComposite = new EObjectListComposite(eComponentComposite, SWT.None) {
 				@Override
 				protected void newSelection(TreeSelection selection) {
-					((ControllerEdgeTrigger) trigger).setEdgeType(EdgeType.get(((EEnumLiteral)selection.getFirstElement()).getLiteral()));
+					((ControllerEdgeTrigger) trigger)
+							.setEdgeType(EdgeType.get(((EEnumLiteral) selection.getFirstElement()).getLiteral()));
+					TriggerComposite.this.newSelection(selection);
 				}
+
 				@Override
 				protected StyledCellLabelProvider getLabelProvider() {
 					return new StyledCellLabelProvider() {
@@ -208,14 +213,24 @@ public class TriggerComposite extends ScrolledComposite {
 			};
 			edgeTypesComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 			edgeTypesComposite.setEObjectsList(ApogyCoreProgramsControllersPackage.Literals.EDGE_TYPE.getELiterals());
-			
+
 			ControllerSelectionComposite controllerSelectionComposite = new ControllerSelectionComposite(
-					eComponentComposite, SWT.NONE);
+					eComponentComposite, SWT.NONE) {
+				@Override
+				protected void newSelection(ISelection selection) {
+					TriggerComposite.this.newSelection(selection);
+				}
+			};
 			controllerSelectionComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 			controllerSelectionComposite
 					.setEComponentQualifier(((ControllerEdgeTrigger) trigger).getComponentQualifier());
-	} else if (trigger instanceof ControllerStateTrigger) {
-			eComponentComposite = new ControllerSelectionComposite(composite, SWT.BORDER);
+		} else if (trigger instanceof ControllerStateTrigger) {
+			eComponentComposite = new ControllerSelectionComposite(composite, SWT.BORDER) {
+				@Override
+				protected void newSelection(ISelection selection) {
+					TriggerComposite.this.newSelection(selection);
+				}
+			};
 			eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 			((ControllerSelectionComposite) eComponentComposite)
 					.setEComponentQualifier(((ControllerStateTrigger) trigger).getComponentQualifier());
@@ -252,6 +267,10 @@ public class TriggerComposite extends ScrolledComposite {
 	
 	protected void newSelection(ISelection selection){
 		
+	}
+	
+	public EObject getSelectedTrigger(){
+		return triggersListComposite.getSelectedEObject();
 	}
 	
 	/**

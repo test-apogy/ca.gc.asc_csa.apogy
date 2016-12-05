@@ -19,6 +19,7 @@ import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.FocusAdapter;
 import org.eclipse.swt.events.FocusEvent;
@@ -74,6 +75,7 @@ public class ControllerSelectionComposite extends Composite {
 			@Override
 			public void focusLost(FocusEvent e) {
 				ApogyCommonIOJInputFacade.INSTANCE.forceStopSelectComponent(eComponentQualifier);
+				newSelection(null);
 			}
 		});
 		
@@ -94,6 +96,7 @@ public class ControllerSelectionComposite extends Composite {
 			@Override
 			public void focusLost(FocusEvent e) {
 				ApogyCommonIOJInputFacade.INSTANCE.forceStopSelectComponent(eComponentQualifier);
+				newSelection(null);
 			}
 		});
 	}
@@ -113,6 +116,9 @@ public class ControllerSelectionComposite extends Composite {
 		initDataBindingsCustom();		
 	}
 
+	protected void newSelection(ISelection selection) {
+	}
+	
 	@SuppressWarnings("unchecked")
 	protected DataBindingContext initDataBindingsCustom() {
 		m_bindingContext = new DataBindingContext();
@@ -125,6 +131,7 @@ public class ControllerSelectionComposite extends Composite {
 
 					@Override
 					public Object convert(Object fromObject) {
+						newSelection(null);
 						return fromObject == null ? CLICK_PROMPT : fromObject;
 					}
 				}));
@@ -138,6 +145,7 @@ public class ControllerSelectionComposite extends Composite {
 
 					@Override
 					public Object convert(Object fromObject) {
+						newSelection(null);
 						return fromObject == null ? CLICK_PROMPT : fromObject;
 					}
 				}));
