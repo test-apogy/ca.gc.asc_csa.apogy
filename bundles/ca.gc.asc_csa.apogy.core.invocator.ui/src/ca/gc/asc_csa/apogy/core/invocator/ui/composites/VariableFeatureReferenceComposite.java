@@ -45,8 +45,11 @@ import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.databinding.viewers.ViewersObservables;
 import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ILazyTreeContentProvider;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.ITreeSelection;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -136,6 +139,12 @@ public class VariableFeatureReferenceComposite extends Composite {
 		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		table.setLinesVisible(true);
 		sctnVariable.setClient(table);
+		variablesViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection(event.getSelection());
+			}
+		});
 
 		/**
 		 * 
@@ -154,6 +163,12 @@ public class VariableFeatureReferenceComposite extends Composite {
 		Tree tree = typeMemberViewer.getTree();
 		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		tree.setLinesVisible(true);
+		typeMemberViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection(event.getSelection());
+			}
+		});
 
 		Button clearTypeButton = new Button(compositeSubType, SWT.NONE);
 		clearTypeButton.addSelectionListener(new SelectionAdapter() {
@@ -192,6 +207,12 @@ public class VariableFeatureReferenceComposite extends Composite {
 		featuresViewer.setUseHashlookup(true);
 		featuresViewer.setContentProvider(getFeaturesContentProvider());
 		featuresViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
+		featuresViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection(event.getSelection());
+			}
+		});
 
 		Tree featuresTree = featuresViewer.getTree();
 		featuresTree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -215,6 +236,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 		clearFeatureSelection.setText("Clear");
 
 		sctnFeature.setClient(compositeFeature);
+	}
+
+	protected void newSelection(ISelection selection) {
+
 	}
 
 	/**
