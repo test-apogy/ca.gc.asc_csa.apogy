@@ -178,188 +178,6 @@ public interface ApogyCorePackage extends EPackage {
 	int APOGY_CORE_FACADE_OPERATION_COUNT = 7;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl <em>Apogy Environment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl
-	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getApogyEnvironment()
-	 * @generated
-	 */
-	int APOGY_ENVIRONMENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__NAME = ApogyCoreInvocatorPackage.ENVIRONMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__DESCRIPTION = ApogyCoreInvocatorPackage.ENVIRONMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Invocator Session</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__INVOCATOR_SESSION = ApogyCoreInvocatorPackage.ENVIRONMENT__INVOCATOR_SESSION;
-
-	/**
-	 * The feature id for the '<em><b>Local Types List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__LOCAL_TYPES_LIST = ApogyCoreInvocatorPackage.ENVIRONMENT__LOCAL_TYPES_LIST;
-
-	/**
-	 * The feature id for the '<em><b>Variables List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__VARIABLES_LIST = ApogyCoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST;
-
-	/**
-	 * The feature id for the '<em><b>Contexts List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__CONTEXTS_LIST = ApogyCoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST;
-
-	/**
-	 * The feature id for the '<em><b>Active Context</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__ACTIVE_CONTEXT = ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT;
-
-	/**
-	 * The feature id for the '<em><b>Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__TIME = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Worksites List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__WORKSITES_LIST = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Active Worksite</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__ACTIVE_WORKSITE = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Time Sources List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__TIME_SOURCES_LIST = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Active Time Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of structural features of the '<em>Apogy Environment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT_FEATURE_COUNT = ApogyCoreInvocatorPackage.ENVIRONMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of operations of the '<em>Apogy Environment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_ENVIRONMENT_OPERATION_COUNT = ApogyCoreInvocatorPackage.ENVIRONMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.TimeSourcesListImpl <em>Time Sources List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.impl.TimeSourcesListImpl
-	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getTimeSourcesList()
-	 * @generated
-	 */
-	int TIME_SOURCES_LIST = 2;
-
-	/**
-	 * The feature id for the '<em><b>Environment</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_SOURCES_LIST__ENVIRONMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Time Sources</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_SOURCES_LIST__TIME_SOURCES = 1;
-
-	/**
-	 * The number of structural features of the '<em>Time Sources List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_SOURCES_LIST_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Time Sources List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_SOURCES_LIST_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.ApogyTopologyImpl <em>Apogy Topology</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -367,7 +185,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getApogyTopology()
 	 * @generated
 	 */
-	int APOGY_TOPOLOGY = 3;
+	int APOGY_TOPOLOGY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Root Node</b></em>' reference.
@@ -404,7 +222,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getApogySystem()
 	 * @generated
 	 */
-	int APOGY_SYSTEM = 4;
+	int APOGY_SYSTEM = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -522,7 +340,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getApogySystemApiAdapter()
 	 * @generated
 	 */
-	int APOGY_SYSTEM_API_ADAPTER = 5;
+	int APOGY_SYSTEM_API_ADAPTER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -685,7 +503,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getConnectionPointsList()
 	 * @generated
 	 */
-	int CONNECTION_POINTS_LIST = 6;
+	int CONNECTION_POINTS_LIST = 4;
 
 	/**
 	 * The feature id for the '<em><b>Apogy System</b></em>' container reference.
@@ -731,7 +549,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getConnectionPoint()
 	 * @generated
 	 */
-	int CONNECTION_POINT = 7;
+	int CONNECTION_POINT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -795,7 +613,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getAssemblyLink()
 	 * @generated
 	 */
-	int ASSEMBLY_LINK = 8;
+	int ASSEMBLY_LINK = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -904,7 +722,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getAssemblyLinksList()
 	 * @generated
 	 */
-	int ASSEMBLY_LINKS_LIST = 9;
+	int ASSEMBLY_LINKS_LIST = 7;
 
 	/**
 	 * The feature id for the '<em><b>Assembly Links</b></em>' containment reference list.
@@ -941,7 +759,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getPoseProvider()
 	 * @generated
 	 */
-	int POSE_PROVIDER = 10;
+	int POSE_PROVIDER = 8;
 
 	/**
 	 * The feature id for the '<em><b>Pose Transform</b></em>' containment reference.
@@ -978,7 +796,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getAbsolutePoseProvider()
 	 * @generated
 	 */
-	int ABSOLUTE_POSE_PROVIDER = 11;
+	int ABSOLUTE_POSE_PROVIDER = 9;
 
 	/**
 	 * The feature id for the '<em><b>Pose Transform</b></em>' containment reference.
@@ -1015,7 +833,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getPoseCorrector()
 	 * @generated
 	 */
-	int POSE_CORRECTOR = 12;
+	int POSE_CORRECTOR = 10;
 
 	/**
 	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' container reference.
@@ -1070,7 +888,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getApogyInitializationData()
 	 * @generated
 	 */
-	int APOGY_INITIALIZATION_DATA = 13;
+	int APOGY_INITIALIZATION_DATA = 11;
 
 	/**
 	 * The feature id for the '<em><b>Initial Pose Transform</b></em>' containment reference.
@@ -1100,354 +918,6 @@ public interface ApogyCorePackage extends EPackage {
 	int APOGY_INITIALIZATION_DATA_OPERATION_COUNT = ApogyCoreInvocatorPackage.INITIALIZATION_DATA_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl <em>Worksites List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl
-	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getWorksitesList()
-	 * @generated
-	 */
-	int WORKSITES_LIST = 14;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITES_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITES_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Worksites</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITES_LIST__WORKSITES = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Orbits Models Lists</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITES_LIST__ORBITS_MODELS_LISTS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Surface Locations Lists</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITES_LIST__SURFACE_LOCATIONS_LISTS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Worksites List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITES_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Worksites List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITES_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl <em>Abstract Worksite</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl
-	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getAbstractWorksite()
-	 * @generated
-	 */
-	int ABSTRACT_WORKSITE = 15;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_WORKSITE__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_WORKSITE__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_WORKSITE__TIME = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Worksites List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_WORKSITE__WORKSITES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Worksite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_WORKSITE_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Abstract Worksite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_WORKSITE_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.AbstractSurfaceLocationImpl <em>Abstract Surface Location</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.impl.AbstractSurfaceLocationImpl
-	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getAbstractSurfaceLocation()
-	 * @generated
-	 */
-	int ABSTRACT_SURFACE_LOCATION = 16;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_SURFACE_LOCATION__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_SURFACE_LOCATION__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Surface Location</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_SURFACE_LOCATION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Abstract Surface Location</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_SURFACE_LOCATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.SurfaceLocationsListImpl <em>Surface Locations List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.impl.SurfaceLocationsListImpl
-	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getSurfaceLocationsList()
-	 * @generated
-	 */
-	int SURFACE_LOCATIONS_LIST = 17;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SURFACE_LOCATIONS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SURFACE_LOCATIONS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Surface Locations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Surface Locations List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SURFACE_LOCATIONS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Surface Locations List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SURFACE_LOCATIONS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.OrbitModelsListImpl <em>Orbit Models List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.impl.OrbitModelsListImpl
-	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getOrbitModelsList()
-	 * @generated
-	 */
-	int ORBIT_MODELS_LIST = 18;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_MODELS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_MODELS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Orbit Models</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_MODELS_LIST__ORBIT_MODELS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Orbit Models List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_MODELS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Orbit Models List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_MODELS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.AbstractOrbitModelImpl <em>Abstract Orbit Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.impl.AbstractOrbitModelImpl
-	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getAbstractOrbitModel()
-	 * @generated
-	 */
-	int ABSTRACT_ORBIT_MODEL = 19;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_MODEL__NAME = ApogyCommonEMFPackage.NAMED__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_MODEL__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Orbit Models List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Orbit Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Abstract Orbit Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_MODEL_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.PositionedImpl <em>Positioned</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1455,7 +925,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getPositioned()
 	 * @generated
 	 */
-	int POSITIONED = 20;
+	int POSITIONED = 12;
 
 	/**
 	 * The feature id for the '<em><b>Pose</b></em>' containment reference.
@@ -1492,7 +962,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getTopologyRoot()
 	 * @generated
 	 */
-	int TOPOLOGY_ROOT = 23;
+	int TOPOLOGY_ROOT = 15;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.FeatureOfInterestListImpl <em>Feature Of Interest List</em>}' class.
@@ -1502,7 +972,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getFeatureOfInterestList()
 	 * @generated
 	 */
-	int FEATURE_OF_INTEREST_LIST = 22;
+	int FEATURE_OF_INTEREST_LIST = 14;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.impl.FeatureOfInterestImpl <em>Feature Of Interest</em>}' class.
@@ -1512,7 +982,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getFeatureOfInterest()
 	 * @generated
 	 */
-	int FEATURE_OF_INTEREST = 21;
+	int FEATURE_OF_INTEREST = 13;
 
 	/**
 	 * The feature id for the '<em><b>Pose</b></em>' containment reference.
@@ -1639,7 +1109,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getPositionedResult()
 	 * @generated
 	 */
-	int POSITIONED_RESULT = 24;
+	int POSITIONED_RESULT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1730,7 +1200,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getOperationCallPositionedResult()
 	 * @generated
 	 */
-	int OPERATION_CALL_POSITIONED_RESULT = 25;
+	int OPERATION_CALL_POSITIONED_RESULT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1866,7 +1336,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getUserDefinedResult()
 	 * @generated
 	 */
-	int USER_DEFINED_RESULT = 26;
+	int USER_DEFINED_RESULT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1966,7 +1436,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getResultNode()
 	 * @generated
 	 */
-	int RESULT_NODE = 27;
+	int RESULT_NODE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2057,7 +1527,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getResultsListNode()
 	 * @generated
 	 */
-	int RESULTS_LIST_NODE = 28;
+	int RESULTS_LIST_NODE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2148,7 +1618,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getFeatureOfInterestNode()
 	 * @generated
 	 */
-	int FEATURE_OF_INTEREST_NODE = 29;
+	int FEATURE_OF_INTEREST_NODE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2275,7 +1745,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getFeatureOfInterestListNode()
 	 * @generated
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE = 30;
+	int FEATURE_OF_INTEREST_LIST_NODE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2366,7 +1836,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getUpdatable()
 	 * @generated
 	 */
-	int UPDATABLE = 31;
+	int UPDATABLE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Updating</b></em>' attribute.
@@ -2430,7 +1900,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 32;
+	int MAP = 24;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -2440,7 +1910,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 33;
+	int LIST = 25;
 
 
 	/**
@@ -2451,7 +1921,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 34;
+	int COLLECTION = 26;
 
 
 	/**
@@ -2462,7 +1932,7 @@ public interface ApogyCorePackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 35;
+	int EXCEPTION = 27;
 
 
 	/**
@@ -2544,92 +2014,6 @@ public interface ApogyCorePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCoreFacade__SaveFeatureOfInterestToFile__String_List();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment <em>Apogy Environment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Apogy Environment</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.ApogyEnvironment
-	 * @generated
-	 */
-	EClass getApogyEnvironment();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment#getWorksitesList <em>Worksites List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Worksites List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.ApogyEnvironment#getWorksitesList()
-	 * @see #getApogyEnvironment()
-	 * @generated
-	 */
-	EReference getApogyEnvironment_WorksitesList();
-
-	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment#getActiveWorksite <em>Active Worksite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Active Worksite</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.ApogyEnvironment#getActiveWorksite()
-	 * @see #getApogyEnvironment()
-	 * @generated
-	 */
-	EReference getApogyEnvironment_ActiveWorksite();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment#getTimeSourcesList <em>Time Sources List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Time Sources List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.ApogyEnvironment#getTimeSourcesList()
-	 * @see #getApogyEnvironment()
-	 * @generated
-	 */
-	EReference getApogyEnvironment_TimeSourcesList();
-
-	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment#getActiveTimeSource <em>Active Time Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Active Time Source</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.ApogyEnvironment#getActiveTimeSource()
-	 * @see #getApogyEnvironment()
-	 * @generated
-	 */
-	EReference getApogyEnvironment_ActiveTimeSource();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.TimeSourcesList <em>Time Sources List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Time Sources List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.TimeSourcesList
-	 * @generated
-	 */
-	EClass getTimeSourcesList();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.TimeSourcesList#getEnvironment <em>Environment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Environment</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.TimeSourcesList#getEnvironment()
-	 * @see #getTimeSourcesList()
-	 * @generated
-	 */
-	EReference getTimeSourcesList_Environment();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.TimeSourcesList#getTimeSources <em>Time Sources</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Time Sources</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.TimeSourcesList#getTimeSources()
-	 * @see #getTimeSourcesList()
-	 * @generated
-	 */
-	EReference getTimeSourcesList_TimeSources();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ApogyTopology <em>Apogy Topology</em>}'.
@@ -3037,143 +2421,6 @@ public interface ApogyCorePackage extends EPackage {
 	EReference getApogyInitializationData_InitialPoseTransform();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.WorksitesList <em>Worksites List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Worksites List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.WorksitesList
-	 * @generated
-	 */
-	EClass getWorksitesList();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.WorksitesList#getWorksites <em>Worksites</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Worksites</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.WorksitesList#getWorksites()
-	 * @see #getWorksitesList()
-	 * @generated
-	 */
-	EReference getWorksitesList_Worksites();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.WorksitesList#getOrbitsModelsLists <em>Orbits Models Lists</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Orbits Models Lists</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.WorksitesList#getOrbitsModelsLists()
-	 * @see #getWorksitesList()
-	 * @generated
-	 */
-	EReference getWorksitesList_OrbitsModelsLists();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.WorksitesList#getSurfaceLocationsLists <em>Surface Locations Lists</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Surface Locations Lists</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.WorksitesList#getSurfaceLocationsLists()
-	 * @see #getWorksitesList()
-	 * @generated
-	 */
-	EReference getWorksitesList_SurfaceLocationsLists();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.AbstractWorksite <em>Abstract Worksite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Worksite</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractWorksite
-	 * @generated
-	 */
-	EClass getAbstractWorksite();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.AbstractWorksite#getWorksitesList <em>Worksites List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Worksites List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractWorksite#getWorksitesList()
-	 * @see #getAbstractWorksite()
-	 * @generated
-	 */
-	EReference getAbstractWorksite_WorksitesList();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation <em>Abstract Surface Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Surface Location</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation
-	 * @generated
-	 */
-	EClass getAbstractSurfaceLocation();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList <em>Surface Locations List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Surface Locations List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.SurfaceLocationsList
-	 * @generated
-	 */
-	EClass getSurfaceLocationsList();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList#getSurfaceLocations <em>Surface Locations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Surface Locations</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.SurfaceLocationsList#getSurfaceLocations()
-	 * @see #getSurfaceLocationsList()
-	 * @generated
-	 */
-	EReference getSurfaceLocationsList_SurfaceLocations();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.OrbitModelsList <em>Orbit Models List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Orbit Models List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.OrbitModelsList
-	 * @generated
-	 */
-	EClass getOrbitModelsList();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.OrbitModelsList#getOrbitModels <em>Orbit Models</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Orbit Models</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.OrbitModelsList#getOrbitModels()
-	 * @see #getOrbitModelsList()
-	 * @generated
-	 */
-	EReference getOrbitModelsList_OrbitModels();
-
-	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Orbit Model</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractOrbitModel
-	 * @generated
-	 */
-	EClass getAbstractOrbitModel();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.AbstractOrbitModel#getOrbitModelsList <em>Orbit Models List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Orbit Models List</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractOrbitModel#getOrbitModelsList()
-	 * @see #getAbstractOrbitModel()
-	 * @generated
-	 */
-	EReference getAbstractOrbitModel_OrbitModelsList();
-
-	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.Positioned <em>Positioned</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3557,74 +2804,6 @@ public interface ApogyCorePackage extends EPackage {
 		EOperation APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = eINSTANCE.getApogyCoreFacade__SaveFeatureOfInterestToFile__String_List();
 
 		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl <em>Apogy Environment</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl
-		 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getApogyEnvironment()
-		 * @generated
-		 */
-		EClass APOGY_ENVIRONMENT = eINSTANCE.getApogyEnvironment();
-
-		/**
-		 * The meta object literal for the '<em><b>Worksites List</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOGY_ENVIRONMENT__WORKSITES_LIST = eINSTANCE.getApogyEnvironment_WorksitesList();
-
-		/**
-		 * The meta object literal for the '<em><b>Active Worksite</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOGY_ENVIRONMENT__ACTIVE_WORKSITE = eINSTANCE.getApogyEnvironment_ActiveWorksite();
-
-		/**
-		 * The meta object literal for the '<em><b>Time Sources List</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOGY_ENVIRONMENT__TIME_SOURCES_LIST = eINSTANCE.getApogyEnvironment_TimeSourcesList();
-
-		/**
-		 * The meta object literal for the '<em><b>Active Time Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE = eINSTANCE.getApogyEnvironment_ActiveTimeSource();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.TimeSourcesListImpl <em>Time Sources List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.impl.TimeSourcesListImpl
-		 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getTimeSourcesList()
-		 * @generated
-		 */
-		EClass TIME_SOURCES_LIST = eINSTANCE.getTimeSourcesList();
-
-		/**
-		 * The meta object literal for the '<em><b>Environment</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TIME_SOURCES_LIST__ENVIRONMENT = eINSTANCE.getTimeSourcesList_Environment();
-
-		/**
-		 * The meta object literal for the '<em><b>Time Sources</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TIME_SOURCES_LIST__TIME_SOURCES = eINSTANCE.getTimeSourcesList_TimeSources();
-
-		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.ApogyTopologyImpl <em>Apogy Topology</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3949,122 +3128,6 @@ public interface ApogyCorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM = eINSTANCE.getApogyInitializationData_InitialPoseTransform();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl <em>Worksites List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl
-		 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getWorksitesList()
-		 * @generated
-		 */
-		EClass WORKSITES_LIST = eINSTANCE.getWorksitesList();
-
-		/**
-		 * The meta object literal for the '<em><b>Worksites</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORKSITES_LIST__WORKSITES = eINSTANCE.getWorksitesList_Worksites();
-
-		/**
-		 * The meta object literal for the '<em><b>Orbits Models Lists</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORKSITES_LIST__ORBITS_MODELS_LISTS = eINSTANCE.getWorksitesList_OrbitsModelsLists();
-
-		/**
-		 * The meta object literal for the '<em><b>Surface Locations Lists</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORKSITES_LIST__SURFACE_LOCATIONS_LISTS = eINSTANCE.getWorksitesList_SurfaceLocationsLists();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl <em>Abstract Worksite</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl
-		 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getAbstractWorksite()
-		 * @generated
-		 */
-		EClass ABSTRACT_WORKSITE = eINSTANCE.getAbstractWorksite();
-
-		/**
-		 * The meta object literal for the '<em><b>Worksites List</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_WORKSITE__WORKSITES_LIST = eINSTANCE.getAbstractWorksite_WorksitesList();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.AbstractSurfaceLocationImpl <em>Abstract Surface Location</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.impl.AbstractSurfaceLocationImpl
-		 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getAbstractSurfaceLocation()
-		 * @generated
-		 */
-		EClass ABSTRACT_SURFACE_LOCATION = eINSTANCE.getAbstractSurfaceLocation();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.SurfaceLocationsListImpl <em>Surface Locations List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.impl.SurfaceLocationsListImpl
-		 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getSurfaceLocationsList()
-		 * @generated
-		 */
-		EClass SURFACE_LOCATIONS_LIST = eINSTANCE.getSurfaceLocationsList();
-
-		/**
-		 * The meta object literal for the '<em><b>Surface Locations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS = eINSTANCE.getSurfaceLocationsList_SurfaceLocations();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.OrbitModelsListImpl <em>Orbit Models List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.impl.OrbitModelsListImpl
-		 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getOrbitModelsList()
-		 * @generated
-		 */
-		EClass ORBIT_MODELS_LIST = eINSTANCE.getOrbitModelsList();
-
-		/**
-		 * The meta object literal for the '<em><b>Orbit Models</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ORBIT_MODELS_LIST__ORBIT_MODELS = eINSTANCE.getOrbitModelsList_OrbitModels();
-
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.AbstractOrbitModelImpl <em>Abstract Orbit Model</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.impl.AbstractOrbitModelImpl
-		 * @see ca.gc.asc_csa.apogy.core.impl.ApogyCorePackageImpl#getAbstractOrbitModel()
-		 * @generated
-		 */
-		EClass ABSTRACT_ORBIT_MODEL = eINSTANCE.getAbstractOrbitModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Orbit Models List</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST = eINSTANCE.getAbstractOrbitModel_OrbitModelsList();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.impl.PositionedImpl <em>Positioned</em>}' class.

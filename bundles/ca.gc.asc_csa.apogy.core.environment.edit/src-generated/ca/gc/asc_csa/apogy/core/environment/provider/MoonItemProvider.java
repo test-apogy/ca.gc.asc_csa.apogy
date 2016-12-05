@@ -24,7 +24,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import ca.gc.asc_csa.apogy.common.topology.provider.GroupNodeItemProvider;
 import ca.gc.asc_csa.apogy.core.environment.Moon;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
@@ -35,7 +34,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
  * @generated
  */
 public class MoonItemProvider
-  extends GroupNodeItemProvider
+  extends CelestialBodyItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -109,7 +108,7 @@ public class MoonItemProvider
   @Override
   public String getText(Object object)
   {
-		String label = ((Moon)object).getDescription();
+		String label = ((Moon)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Moon_type") :
 			getString("_UI_Moon_type") + " " + label;

@@ -58,8 +58,8 @@ public final class ApogyExamplesRoverApogyEditPlugin extends EMFPlugin {
 		     ApogyCoreEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
-		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}

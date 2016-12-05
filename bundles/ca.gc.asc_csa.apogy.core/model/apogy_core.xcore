@@ -37,8 +37,6 @@ package ca.gc.asc_csa.apogy.core
 
 import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
-import ca.gc.asc_csa.apogy.common.emf.Timed
-import ca.gc.asc_csa.apogy.common.emf.TimeSource
 
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResult
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult
@@ -104,41 +102,6 @@ class ApogyCoreFacade
 	 * @throws An Exception if the file could not be saved.
 	 */
 	op void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception	
-}
-
-/* -------------------------------------------------------------------------
- * 
- * Apogy Environment.
- * 
- * ------------------------------------------------------------------------- */ 
-class ApogyEnvironment extends Environment, Timed
-{
-	contains WorksitesList[0..1] worksitesList
-	
-	/*
-	 * The worksite currently active.
-	 */
-	refers AbstractWorksite activeWorksite
-		
-//	@GenModel(children="true", notify="true", property="None")
-//	refers derived transient ApogyTopology[0..1] apogyTopology	
-	
-	/*
-	 * The list of available time sources.
-	 */
-	contains TimeSourcesList[0..1] timeSourcesList opposite environment 
-	
-	/*
-	 * The time source currently providing time used to drive the environment.
-	 */
-	refers TimeSource activeTimeSource	
-}
-
-class TimeSourcesList
-{	
-    @GenModel(property="None")
-	container ApogyEnvironment environment opposite timeSourcesList
-	contains TimeSource[0..*] timeSources 
 }
 
 
@@ -272,62 +235,6 @@ class ApogyInitializationData extends InitializationData
 {
 	contains Matrix4x4 [0..1] initialPoseTransform	
 }
-
-/* -------------------------------------------------------------------------
- * 
- * Worksites.
- * 
- * ------------------------------------------------------------------------- */
-
-class WorksitesList extends Named, Described
-{
-	contains AbstractWorksite[0..*] worksites opposite worksitesList
-	
-	@GenModel(children="true", notify="true", property="None")
-	contains OrbitModelsList[0..*] orbitsModelsLists	
-	
-	@GenModel(children="true", notify="true", property="None")
-	contains SurfaceLocationsList[0..*] surfaceLocationsLists
-}
-
-abstract class AbstractWorksite extends Named, Described, Timed
-{		
-    @GenModel(property="None")
-	container WorksitesList worksitesList opposite worksites
-}
-
-/* -------------------------------------------------------------------------
- * 
- * Surface Location
- * 
- * ------------------------------------------------------------------------- */
-abstract class AbstractSurfaceLocation extends Named, Described{	
-}
-
-class SurfaceLocationsList extends Named, Described{
-	contains AbstractSurfaceLocation [0..*] surfaceLocations	
-}
-
-
-/* -------------------------------------------------------------------------
- * 
- * Orbits classes
- * 
- * ------------------------------------------------------------------------- */
-
-class OrbitModelsList extends Named, Described
-{	
-	contains AbstractOrbitModel[0..*] orbitModels opposite orbitModelsList
-}
-
-abstract class AbstractOrbitModel extends Named, Described
-{		
-    @GenModel(property="None")
-	container OrbitModelsList orbitModelsList opposite orbitModels
-	
-}
-
-
 
 /* -------------------------------------------------------------------------
  * 

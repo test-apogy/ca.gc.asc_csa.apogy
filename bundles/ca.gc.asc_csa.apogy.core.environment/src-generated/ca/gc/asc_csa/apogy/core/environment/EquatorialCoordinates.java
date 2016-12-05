@@ -1,5 +1,4 @@
-package ca.gc.asc_csa.apogy.core.environment;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -12,6 +11,7 @@ package ca.gc.asc_csa.apogy.core.environment;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -41,84 +41,83 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface EquatorialCoordinates extends EObject
-{
-  /**
+public interface EquatorialCoordinates extends EObject {
+	/**
 	 * Returns the value of the '<em><b>Right Ascension</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Right Ascension</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Right Ascension</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right Ascension</em>' attribute.
 	 * @see #setRightAscension(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEquatorialCoordinates_RightAscension()
 	 * @model unique="false"
 	 * @generated
 	 */
-  double getRightAscension();
+	double getRightAscension();
 
-  /**
+	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates#getRightAscension <em>Right Ascension</em>}' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right Ascension</em>' attribute.
 	 * @see #getRightAscension()
 	 * @generated
 	 */
-  void setRightAscension(double value);
+	void setRightAscension(double value);
 
-  /**
+	/**
 	 * Returns the value of the '<em><b>Declination</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Declination</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Declination</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Declination</em>' attribute.
 	 * @see #setDeclination(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEquatorialCoordinates_Declination()
 	 * @model unique="false"
 	 * @generated
 	 */
-  double getDeclination();
+	double getDeclination();
 
-  /**
+	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates#getDeclination <em>Declination</em>}' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Declination</em>' attribute.
 	 * @see #getDeclination()
 	 * @generated
 	 */
-  void setDeclination(double value);
+	void setDeclination(double value);
 
-  /**
+	/**
 	 * Returns the value of the '<em><b>Radius</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Radius</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Radius</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEquatorialCoordinates_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */
-  double getRadius();
+	double getRadius();
 
-  /**
+	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates#getRadius <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Radius</em>' attribute.
 	 * @see #getRadius()
 	 * @generated
 	 */
-  void setRadius(double value);
+	void setRadius(double value);
 
 } // EquatorialCoordinates

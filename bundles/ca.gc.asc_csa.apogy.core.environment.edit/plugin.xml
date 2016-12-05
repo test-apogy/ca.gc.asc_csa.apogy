@@ -32,13 +32,17 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated apogy_core_environment -->
       <extender
-            uri="ca.gc.asc_csa.apogy.core"
-            class="ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.invocator"
+            class="ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.apogy.common.topology"
             class="ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
       <extender
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
+      <extender
             uri="ca.gc.asc_csa.apogy.common.topology.bindings"
             class="ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentItemProviderAdapterFactory$ApogyCommonTopologyBindingsChildCreationExtender"/>
    </extension>
+
 </plugin>

@@ -138,14 +138,9 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	public void forceStopSelectComponent(EComponentQualifier eComponentQualifier) {
-		if (selectComponentAdapter != null) {
-			Activator.getEControllerEnvironment().eAdapters().remove(selectComponentAdapter);
-		}
-		if (eComponentQualifierAdapter != null) {
-			eComponentQualifier.eAdapters().remove(eComponentQualifierAdapter);
-		}
-		
-
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

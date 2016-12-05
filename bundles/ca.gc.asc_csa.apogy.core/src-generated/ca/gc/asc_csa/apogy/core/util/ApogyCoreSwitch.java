@@ -25,10 +25,7 @@ import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.PositionNode;
 import ca.gc.asc_csa.apogy.common.topology.RotationNode;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
-import ca.gc.asc_csa.apogy.core.*;
 import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
-import ca.gc.asc_csa.apogy.core.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.AssemblyLinksList;
 import ca.gc.asc_csa.apogy.core.ConnectionPoint;
@@ -38,7 +35,6 @@ import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
 import ca.gc.asc_csa.apogy.core.OperationCallPositionedResult;
-import ca.gc.asc_csa.apogy.core.OrbitModelsList;
 import ca.gc.asc_csa.apogy.core.PoseCorrector;
 import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.Positioned;
@@ -47,7 +43,6 @@ import ca.gc.asc_csa.apogy.core.ResultNode;
 import ca.gc.asc_csa.apogy.core.ResultsListNode;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
@@ -55,11 +50,9 @@ import ca.gc.asc_csa.apogy.core.ApogyTopology;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.Updatable;
 import ca.gc.asc_csa.apogy.core.UserDefinedResult;
-import ca.gc.asc_csa.apogy.core.WorksitesList;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractType;
-import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
@@ -122,22 +115,6 @@ public class ApogyCoreSwitch<T> extends Switch<T> {
 			case ApogyCorePackage.APOGY_CORE_FACADE: {
 				ApogyCoreFacade apogyCoreFacade = (ApogyCoreFacade)theEObject;
 				T result = caseApogyCoreFacade(apogyCoreFacade);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCorePackage.APOGY_ENVIRONMENT: {
-				ApogyEnvironment apogyEnvironment = (ApogyEnvironment)theEObject;
-				T result = caseApogyEnvironment(apogyEnvironment);
-				if (result == null) result = caseEnvironment(apogyEnvironment);
-				if (result == null) result = caseTimed(apogyEnvironment);
-				if (result == null) result = caseNamed(apogyEnvironment);
-				if (result == null) result = caseDescribed(apogyEnvironment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCorePackage.TIME_SOURCES_LIST: {
-				TimeSourcesList timeSourcesList = (TimeSourcesList)theEObject;
-				T result = caseTimeSourcesList(timeSourcesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -216,55 +193,6 @@ public class ApogyCoreSwitch<T> extends Switch<T> {
 				T result = caseApogyInitializationData(apogyInitializationData);
 				if (result == null) result = caseInitializationData(apogyInitializationData);
 				if (result == null) result = caseAbstractInitializationData(apogyInitializationData);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCorePackage.WORKSITES_LIST: {
-				WorksitesList worksitesList = (WorksitesList)theEObject;
-				T result = caseWorksitesList(worksitesList);
-				if (result == null) result = caseNamed(worksitesList);
-				if (result == null) result = caseDescribed(worksitesList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCorePackage.ABSTRACT_WORKSITE: {
-				AbstractWorksite abstractWorksite = (AbstractWorksite)theEObject;
-				T result = caseAbstractWorksite(abstractWorksite);
-				if (result == null) result = caseNamed(abstractWorksite);
-				if (result == null) result = caseDescribed(abstractWorksite);
-				if (result == null) result = caseTimed(abstractWorksite);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCorePackage.ABSTRACT_SURFACE_LOCATION: {
-				AbstractSurfaceLocation abstractSurfaceLocation = (AbstractSurfaceLocation)theEObject;
-				T result = caseAbstractSurfaceLocation(abstractSurfaceLocation);
-				if (result == null) result = caseNamed(abstractSurfaceLocation);
-				if (result == null) result = caseDescribed(abstractSurfaceLocation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCorePackage.SURFACE_LOCATIONS_LIST: {
-				SurfaceLocationsList surfaceLocationsList = (SurfaceLocationsList)theEObject;
-				T result = caseSurfaceLocationsList(surfaceLocationsList);
-				if (result == null) result = caseNamed(surfaceLocationsList);
-				if (result == null) result = caseDescribed(surfaceLocationsList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCorePackage.ORBIT_MODELS_LIST: {
-				OrbitModelsList orbitModelsList = (OrbitModelsList)theEObject;
-				T result = caseOrbitModelsList(orbitModelsList);
-				if (result == null) result = caseNamed(orbitModelsList);
-				if (result == null) result = caseDescribed(orbitModelsList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyCorePackage.ABSTRACT_ORBIT_MODEL: {
-				AbstractOrbitModel abstractOrbitModel = (AbstractOrbitModel)theEObject;
-				T result = caseAbstractOrbitModel(abstractOrbitModel);
-				if (result == null) result = caseNamed(abstractOrbitModel);
-				if (result == null) result = caseDescribed(abstractOrbitModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -393,35 +321,6 @@ public class ApogyCoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApogyCoreFacade(ApogyCoreFacade object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Apogy Environment</em>'.
-	 * <!-- begin-user-doc --> This
-	 * implementation returns null; returning a non-null result will terminate
-	 * the switch. <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Apogy Environment</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseApogyEnvironment(ApogyEnvironment object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Time Sources List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Time Sources List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTimeSourcesList(TimeSourcesList object) {
 		return null;
 	}
 
@@ -583,94 +482,6 @@ public class ApogyCoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApogyInitializationData(ApogyInitializationData object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Worksites List</em>'.
-	 * <!-- begin-user-doc --> This implementation
-	 * returns null; returning a non-null result will terminate the switch. <!--
-	 * end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Worksites List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWorksitesList(WorksitesList object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Worksite</em>'.
-	 * <!-- begin-user-doc --> This implementation
-	 * returns null; returning a non-null result will terminate the switch. <!--
-	 * end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Worksite</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAbstractWorksite(AbstractWorksite object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Surface Location</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Surface Location</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Surface Locations List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Surface Locations List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSurfaceLocationsList(SurfaceLocationsList object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Orbit Models List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Orbit Models List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOrbitModelsList(OrbitModelsList object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Orbit Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Orbit Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAbstractOrbitModel(AbstractOrbitModel object) {
 		return null;
 	}
 
@@ -875,20 +686,6 @@ public class ApogyCoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDescribed(Described object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Environment</em>'.
-	 * <!-- begin-user-doc --> This implementation
-	 * returns null; returning a non-null result will terminate the switch. <!--
-	 * end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Environment</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEnvironment(Environment object) {
 		return null;
 	}
 

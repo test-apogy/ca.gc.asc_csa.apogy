@@ -1,5 +1,4 @@
-package ca.gc.asc_csa.apogy.core.environment;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -12,8 +11,8 @@ package ca.gc.asc_csa.apogy.core.environment;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.environment;
 
-import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import ca.gc.asc_csa.apogy.common.topology.GroupNode;
  *
  * <!-- begin-model-doc -->
  * *
- * The Earth.
+ * The Earth. Its mean radius is 6371000 meters.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -36,7 +35,7 @@ import ca.gc.asc_csa.apogy.common.topology.GroupNode;
  * @model
  * @generated
  */
-public interface Earth extends GroupNode {
+public interface Earth extends CelestialBody {
 	/**
 	 * Returns the value of the '<em><b>Radius</b></em>' attribute.
 	 * The default value is <code>"6371000"</code>.

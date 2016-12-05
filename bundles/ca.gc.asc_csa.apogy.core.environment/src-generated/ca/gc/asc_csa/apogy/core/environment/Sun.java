@@ -1,5 +1,4 @@
-package ca.gc.asc_csa.apogy.core.environment;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -12,13 +11,18 @@ package ca.gc.asc_csa.apogy.core.environment;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.environment;
 
-import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Sun</b></em>'.
  * <!-- end-user-doc -->
+ *
+ * <!-- begin-model-doc -->
+ * *
+ * The Sun. Its mean radius is 6.955E8 meters.
+ * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
@@ -31,18 +35,12 @@ import ca.gc.asc_csa.apogy.common.topology.GroupNode;
  * @model
  * @generated
  */
-public interface Sun extends GroupNode
-{
-
-  /**
+public interface Sun extends CelestialBody {
+	/**
 	 * Returns the value of the '<em><b>Radius</b></em>' attribute.
 	 * The default value is <code>"6.955E8"</code>.
 	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Radius</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Sun radius, in meters.
 	 * <!-- end-model-doc -->
@@ -53,21 +51,21 @@ public interface Sun extends GroupNode
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
-  double getRadius();
+	double getRadius();
 
-  /**
+	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.Sun#getRadius <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Radius</em>' attribute.
 	 * @see #getRadius()
 	 * @generated
 	 */
-  void setRadius(double value);
+	void setRadius(double value);
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Returns the sun intensity at the specified radius.
 	 * @param radius The distance from the sun center, in meters.
@@ -76,5 +74,6 @@ public interface Sun extends GroupNode
 	 *        radiusAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
-  double getIrradiance(double radius);
+	double getIrradiance(double radius);
+
 } // Sun

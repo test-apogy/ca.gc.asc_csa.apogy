@@ -1,0 +1,545 @@
+/**
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
+package ca.gc.asc_csa.apogy.core.environment.impl;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+
+import ca.gc.asc_csa.apogy.core.environment.AbstractApogyEnvironmentItem;
+import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.TimeSourcesList;
+import ca.gc.asc_csa.apogy.core.environment.WorksitesList;
+
+import ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl;
+
+import java.util.Collection;
+import java.util.Date;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Apogy Environment</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ApogyEnvironmentImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ApogyEnvironmentImpl#getWorksitesList <em>Worksites List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ApogyEnvironmentImpl#getActiveWorksite <em>Active Worksite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ApogyEnvironmentImpl#getTimeSourcesList <em>Time Sources List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ApogyEnvironmentImpl#getActiveTimeSource <em>Active Time Source</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ApogyEnvironmentImpl#getEnvironmentItems <em>Environment Items</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class ApogyEnvironmentImpl extends EnvironmentImpl implements ApogyEnvironment {
+	/**
+	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date TIME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date time = TIME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getWorksitesList() <em>Worksites List</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWorksitesList()
+	 * @generated
+	 * @ordered
+	 */
+	protected WorksitesList worksitesList;
+
+	/**
+	 * The cached value of the '{@link #getActiveWorksite() <em>Active Worksite</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActiveWorksite()
+	 * @generated
+	 * @ordered
+	 */
+	protected AbstractWorksite activeWorksite;
+
+	/**
+	 * The cached value of the '{@link #getTimeSourcesList() <em>Time Sources List</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTimeSourcesList()
+	 * @generated
+	 * @ordered
+	 */
+	protected TimeSourcesList timeSourcesList;
+
+	/**
+	 * The cached value of the '{@link #getActiveTimeSource() <em>Active Time Source</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActiveTimeSource()
+	 * @generated
+	 * @ordered
+	 */
+	protected TimeSource activeTimeSource;
+
+	/**
+	 * The cached value of the '{@link #getEnvironmentItems() <em>Environment Items</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnvironmentItems()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AbstractApogyEnvironmentItem> environmentItems;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ApogyEnvironmentImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return ApogyCoreEnvironmentPackage.Literals.APOGY_ENVIRONMENT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getTime() {
+		return time;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTime(Date newTime) {
+		Date oldTime = time;
+		time = newTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME, oldTime, time));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WorksitesList getWorksitesList() {
+		return worksitesList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetWorksitesList(WorksitesList newWorksitesList, NotificationChain msgs) {
+		WorksitesList oldWorksitesList = worksitesList;
+		worksitesList = newWorksitesList;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__WORKSITES_LIST, oldWorksitesList, newWorksitesList);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWorksitesList(WorksitesList newWorksitesList) {
+		if (newWorksitesList != worksitesList) {
+			NotificationChain msgs = null;
+			if (worksitesList != null)
+				msgs = ((InternalEObject)worksitesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
+			if (newWorksitesList != null)
+				msgs = ((InternalEObject)newWorksitesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
+			msgs = basicSetWorksitesList(newWorksitesList, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__WORKSITES_LIST, newWorksitesList, newWorksitesList));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractWorksite getActiveWorksite() {
+		if (activeWorksite != null && activeWorksite.eIsProxy()) {
+			InternalEObject oldActiveWorksite = (InternalEObject)activeWorksite;
+			activeWorksite = (AbstractWorksite)eResolveProxy(oldActiveWorksite);
+			if (activeWorksite != oldActiveWorksite) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
+			}
+		}
+		return activeWorksite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractWorksite basicGetActiveWorksite() {
+		return activeWorksite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActiveWorksite(AbstractWorksite newActiveWorksite) {
+		AbstractWorksite oldActiveWorksite = activeWorksite;
+		activeWorksite = newActiveWorksite;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeSourcesList getTimeSourcesList() {
+		return timeSourcesList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTimeSourcesList(TimeSourcesList newTimeSourcesList, NotificationChain msgs) {
+		TimeSourcesList oldTimeSourcesList = timeSourcesList;
+		timeSourcesList = newTimeSourcesList;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST, oldTimeSourcesList, newTimeSourcesList);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTimeSourcesList(TimeSourcesList newTimeSourcesList) {
+		if (newTimeSourcesList != timeSourcesList) {
+			NotificationChain msgs = null;
+			if (timeSourcesList != null)
+				msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, ApogyCoreEnvironmentPackage.TIME_SOURCES_LIST__ENVIRONMENT, TimeSourcesList.class, msgs);
+			if (newTimeSourcesList != null)
+				msgs = ((InternalEObject)newTimeSourcesList).eInverseAdd(this, ApogyCoreEnvironmentPackage.TIME_SOURCES_LIST__ENVIRONMENT, TimeSourcesList.class, msgs);
+			msgs = basicSetTimeSourcesList(newTimeSourcesList, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST, newTimeSourcesList, newTimeSourcesList));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeSource getActiveTimeSource() {
+		if (activeTimeSource != null && activeTimeSource.eIsProxy()) {
+			InternalEObject oldActiveTimeSource = (InternalEObject)activeTimeSource;
+			activeTimeSource = (TimeSource)eResolveProxy(oldActiveTimeSource);
+			if (activeTimeSource != oldActiveTimeSource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
+			}
+		}
+		return activeTimeSource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeSource basicGetActiveTimeSource() {
+		return activeTimeSource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActiveTimeSource(TimeSource newActiveTimeSource) {
+		TimeSource oldActiveTimeSource = activeTimeSource;
+		activeTimeSource = newActiveTimeSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<AbstractApogyEnvironmentItem> getEnvironmentItems() {
+		if (environmentItems == null) {
+			environmentItems = new EObjectContainmentWithInverseEList<AbstractApogyEnvironmentItem>(AbstractApogyEnvironmentItem.class, this, ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ENVIRONMENT_ITEMS, ApogyCoreEnvironmentPackage.ABSTRACT_APOGY_ENVIRONMENT_ITEM__ENVIRONMENT);
+		}
+		return environmentItems;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
+				if (timeSourcesList != null)
+					msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
+				return basicSetTimeSourcesList((TimeSourcesList)otherEnd, msgs);
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ENVIRONMENT_ITEMS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEnvironmentItems()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
+				return basicSetWorksitesList(null, msgs);
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
+				return basicSetTimeSourcesList(null, msgs);
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ENVIRONMENT_ITEMS:
+				return ((InternalEList<?>)getEnvironmentItems()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME:
+				return getTime();
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
+				return getWorksitesList();
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
+				if (resolve) return getActiveWorksite();
+				return basicGetActiveWorksite();
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
+				return getTimeSourcesList();
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+				if (resolve) return getActiveTimeSource();
+				return basicGetActiveTimeSource();
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ENVIRONMENT_ITEMS:
+				return getEnvironmentItems();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME:
+				setTime((Date)newValue);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
+				setWorksitesList((WorksitesList)newValue);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
+				setActiveWorksite((AbstractWorksite)newValue);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
+				setTimeSourcesList((TimeSourcesList)newValue);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+				setActiveTimeSource((TimeSource)newValue);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ENVIRONMENT_ITEMS:
+				getEnvironmentItems().clear();
+				getEnvironmentItems().addAll((Collection<? extends AbstractApogyEnvironmentItem>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME:
+				setTime(TIME_EDEFAULT);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
+				setWorksitesList((WorksitesList)null);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
+				setActiveWorksite((AbstractWorksite)null);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
+				setTimeSourcesList((TimeSourcesList)null);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+				setActiveTimeSource((TimeSource)null);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ENVIRONMENT_ITEMS:
+				getEnvironmentItems().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME:
+				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
+				return worksitesList != null;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
+				return activeWorksite != null;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
+				return timeSourcesList != null;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+				return activeTimeSource != null;
+			case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ENVIRONMENT_ITEMS:
+				return environmentItems != null && !environmentItems.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Timed.class) {
+			switch (derivedFeatureID) {
+				case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME: return ApogyCommonEMFPackage.TIMED__TIME;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Timed.class) {
+			switch (baseFeatureID) {
+				case ApogyCommonEMFPackage.TIMED__TIME: return ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__TIME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (time: ");
+		result.append(time);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ApogyEnvironmentImpl

@@ -49,7 +49,6 @@ import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
@@ -134,54 +133,6 @@ public class ApogyCoreItemProviderAdapterFactory extends
 		}
 
 		return apogyCoreFacadeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all
-	 * {@link ca.gc.asc_csa.apogy.core.ApogyEnvironment} instances. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected ApogyEnvironmentItemProvider apogyEnvironmentItemProvider;
-
-	/**
-	 * This creates an adapter for a
-	 * {@link ca.gc.asc_csa.apogy.core.ApogyEnvironment}. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public Adapter createApogyEnvironmentAdapter() {
-		if (apogyEnvironmentItemProvider == null) {
-			apogyEnvironmentItemProvider = new ApogyEnvironmentItemProvider(this);
-		}
-
-		return apogyEnvironmentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.TimeSourcesList} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TimeSourcesListItemProvider timeSourcesListItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.TimeSourcesList}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTimeSourcesListAdapter() {
-		if (timeSourcesListItemProvider == null) {
-			timeSourcesListItemProvider = new TimeSourcesListItemProvider(this);
-		}
-
-		return timeSourcesListItemProvider;
 	}
 
 	/**
@@ -422,76 +373,6 @@ public class ApogyCoreItemProviderAdapterFactory extends
 		}
 
 		return apogyInitializationDataItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all
-	 * {@link ca.gc.asc_csa.apogy.core.WorksitesList} instances. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected WorksitesListItemProvider worksitesListItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.WorksitesList}.
-	 * <!-- begin-user-doc
-	 * --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createWorksitesListAdapter() {
-		if (worksitesListItemProvider == null) {
-			worksitesListItemProvider = new WorksitesListItemProvider(this);
-		}
-
-		return worksitesListItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SurfaceLocationsListItemProvider surfaceLocationsListItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSurfaceLocationsListAdapter() {
-		if (surfaceLocationsListItemProvider == null) {
-			surfaceLocationsListItemProvider = new SurfaceLocationsListItemProvider(this);
-		}
-
-		return surfaceLocationsListItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.OrbitModelsList} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OrbitModelsListItemProvider orbitModelsListItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.OrbitModelsList}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrbitModelsListAdapter() {
-		if (orbitModelsListItemProvider == null) {
-			orbitModelsListItemProvider = new OrbitModelsListItemProvider(this);
-		}
-
-		return orbitModelsListItemProvider;
 	}
 
 	/**
@@ -873,8 +754,6 @@ public class ApogyCoreItemProviderAdapterFactory extends
 	 */
 	public void dispose() {
 		if (apogyCoreFacadeItemProvider != null) apogyCoreFacadeItemProvider.dispose();
-		if (apogyEnvironmentItemProvider != null) apogyEnvironmentItemProvider.dispose();
-		if (timeSourcesListItemProvider != null) timeSourcesListItemProvider.dispose();
 		if (apogyTopologyItemProvider != null) apogyTopologyItemProvider.dispose();
 		if (apogySystemItemProvider != null) apogySystemItemProvider.dispose();
 		if (apogySystemApiAdapterItemProvider != null) apogySystemApiAdapterItemProvider.dispose();
@@ -885,9 +764,6 @@ public class ApogyCoreItemProviderAdapterFactory extends
 		if (poseProviderItemProvider != null) poseProviderItemProvider.dispose();
 		if (absolutePoseProviderItemProvider != null) absolutePoseProviderItemProvider.dispose();
 		if (apogyInitializationDataItemProvider != null) apogyInitializationDataItemProvider.dispose();
-		if (worksitesListItemProvider != null) worksitesListItemProvider.dispose();
-		if (surfaceLocationsListItemProvider != null) surfaceLocationsListItemProvider.dispose();
-		if (orbitModelsListItemProvider != null) orbitModelsListItemProvider.dispose();
 		if (positionedItemProvider != null) positionedItemProvider.dispose();
 		if (featureOfInterestItemProvider != null) featureOfInterestItemProvider.dispose();
 		if (featureOfInterestListItemProvider != null) featureOfInterestListItemProvider.dispose();
@@ -941,21 +817,6 @@ public class ApogyCoreItemProviderAdapterFactory extends
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
 			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseInvocatorSession(InvocatorSession object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
-						 ApogyCoreFactory.eINSTANCE.createApogyEnvironment()));
-
-				return null;
-			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
@@ -1073,16 +934,6 @@ public class ApogyCoreItemProviderAdapterFactory extends
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createApogyEnvironment()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createTimeSourcesList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreFactory.eINSTANCE.createApogyTopology()));
 
 				newChildDescriptors.add
@@ -1129,21 +980,6 @@ public class ApogyCoreItemProviderAdapterFactory extends
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreFactory.eINSTANCE.createApogyInitializationData()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createWorksitesList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createSurfaceLocationsList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createOrbitModelsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1218,16 +1054,6 @@ public class ApogyCoreItemProviderAdapterFactory extends
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createApogyEnvironment()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createTimeSourcesList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreFactory.eINSTANCE.createApogyTopology()));
 
 				newChildDescriptors.add
@@ -1274,21 +1100,6 @@ public class ApogyCoreItemProviderAdapterFactory extends
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreFactory.eINSTANCE.createApogyInitializationData()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createWorksitesList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createSurfaceLocationsList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreFactory.eINSTANCE.createOrbitModelsList()));
 
 				newChildDescriptors.add
 					(createChildParameter

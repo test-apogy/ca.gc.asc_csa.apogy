@@ -44,7 +44,7 @@ import ca.gc.asc_csa.apogy.common.math.Matrix3x3
 import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation
 import ca.gc.asc_csa.apogy.core.Updatable
 import ca.gc.asc_csa.apogy.core.environment.Earth
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.Moon
 import ca.gc.asc_csa.apogy.core.environment.Sky
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame

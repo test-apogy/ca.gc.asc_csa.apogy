@@ -40,24 +40,6 @@ public interface ApogyCoreFactory extends EFactory {
 	ApogyCoreFacade createApogyCoreFacade();
 
 	/**
-	 * Returns a new object of class '<em>Apogy Environment</em>'. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @return a new object of class '<em>Apogy Environment</em>'.
-	 * @generated
-	 */
-	ApogyEnvironment createApogyEnvironment();
-
-	/**
-	 * Returns a new object of class '<em>Time Sources List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Time Sources List</em>'.
-	 * @generated
-	 */
-	TimeSourcesList createTimeSourcesList();
-
-	/**
 	 * Returns a new object of class '<em>Apogy Topology</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -145,33 +127,6 @@ public interface ApogyCoreFactory extends EFactory {
 	 * @generated
 	 */
 	ApogyInitializationData createApogyInitializationData();
-
-	/**
-	 * Returns a new object of class '<em>Worksites List</em>'. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @return a new object of class '<em>Worksites List</em>'.
-	 * @generated
-	 */
-	WorksitesList createWorksitesList();
-
-	/**
-	 * Returns a new object of class '<em>Surface Locations List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Surface Locations List</em>'.
-	 * @generated
-	 */
-	SurfaceLocationsList createSurfaceLocationsList();
-
-	/**
-	 * Returns a new object of class '<em>Orbit Models List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Orbit Models List</em>'.
-	 * @generated
-	 */
-	OrbitModelsList createOrbitModelsList();
 
 	/**
 	 * Returns a new object of class '<em>Positioned</em>'.

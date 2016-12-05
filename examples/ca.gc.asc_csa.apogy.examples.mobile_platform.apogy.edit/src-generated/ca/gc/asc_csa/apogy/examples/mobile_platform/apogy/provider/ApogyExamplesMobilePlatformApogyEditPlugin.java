@@ -17,11 +17,8 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
-import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
 import ca.gc.asc_csa.apogy.common.images.provider.ApogyCommonImagesEditPlugin;
 import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
-import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.ui.provider.ApogyCommonTopologyUIEditPlugin;
@@ -66,15 +63,12 @@ public final class ApogyExamplesMobilePlatformApogyEditPlugin extends EMFPlugin 
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		     ApogyCoreEnvironmentUIEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
-		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		     ApogyCommonTopologyUIEditPlugin.INSTANCE,
 		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonImagesEditPlugin.INSTANCE,
-		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
-		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
-		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

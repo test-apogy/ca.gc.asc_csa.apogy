@@ -24,52 +24,6 @@
             genModel="model/apogy_core_environment.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.ui.commands">
-      <command
-            defaultHandler="ca.gc.asc_csa.apogy.core.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
-            id="ca.gc.asc_csa.apogy.core.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
-            name="Update Mesh Image">
-      </command>
-      <command
-            defaultHandler="ca.gc.asc_csa.apogy.core.environment.commands.UpdateImageMapLayerCommandHandler"
-            id="ca.gc.asc_csa.apogy.core.environment.commands.UpdateImageMapLayerCommandHandler"
-            name="Update Image Map Layer">
-      </command>
-      <command
-            defaultHandler="ca.gc.asc_csa.apogy.core.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
-            id="ca.gc.asc_csa.apogy.core.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
-            name="Toggle Mesh Layer Visibility">
-      </command>
-   </extension>
-   <extension
-        point="ca.gc.asc_csa.apogy.common.converters">
-      <new_element
-         Class="ca.gc.asc_csa.apogy.core.environment.converters.GeographicalCoordinatesToPositionConverter">
-      </new_element>
-      <new_element
-         Class="ca.gc.asc_csa.apogy.core.environment.converters.PositionedToGeographicalCoordinatesConverter">
-      </new_element>
-   </extension>
-   <extension
-         point="org.eclipse.ui.handlers">
-      <handler
-            class="ca.gc.asc_csa.apogy.core.environment.commands.UpdateImageMapLayerCommandHandler"
-            commandId="ca.gc.asc_csa.apogy.core.environment.commands.UpdateImageMapLayerCommandHandler">
-         <enabledWhen>
-            <with
-                  variable="activeMenuSelection">
-               <iterate
-                     ifEmpty="false"
-                     operator="or">
-                  <instanceof
-                        value="ca.gc.asc_csa.apogy.core.environment.ImageMapLayer">
-                  </instanceof>
-               </iterate>
-            </with>
-         </enabledWhen>
-      </handler>
-   </extension>
-   <extension
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"

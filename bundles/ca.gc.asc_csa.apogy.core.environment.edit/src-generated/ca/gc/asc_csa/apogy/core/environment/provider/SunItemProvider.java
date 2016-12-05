@@ -24,7 +24,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import ca.gc.asc_csa.apogy.common.topology.provider.GroupNodeItemProvider;
 import ca.gc.asc_csa.apogy.core.environment.Sun;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
@@ -35,7 +34,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
  * @generated
  */
 public class SunItemProvider
-  extends GroupNodeItemProvider
+  extends CelestialBodyItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -109,7 +108,7 @@ public class SunItemProvider
   @Override
   public String getText(Object object)
   {
-		String label = ((Sun)object).getDescription();
+		String label = ((Sun)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Sun_type") :
 			getString("_UI_Sun_type") + " " + label;

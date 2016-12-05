@@ -164,52 +164,12 @@ public class WorksiteNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 ApogyCoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createMapsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createMapNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 ApogyCoreEnvironmentFactory.eINSTANCE.createSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter

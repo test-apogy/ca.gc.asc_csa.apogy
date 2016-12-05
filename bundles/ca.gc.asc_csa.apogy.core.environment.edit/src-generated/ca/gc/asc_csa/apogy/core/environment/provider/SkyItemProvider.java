@@ -77,7 +77,6 @@ public class SkyItemProvider
 
 			addTimePropertyDescriptor(object);
 			addSunPropertyDescriptor(object);
-			addSunHorizontalCoordinatesPropertyDescriptor(object);
 			addStarFieldPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -124,29 +123,6 @@ public class SkyItemProvider
 				 false,
 				 false,
 				 false,
-				 null,
-				 getString("_UI_SUNPropertyCategory"),
-				 null));
-	}
-
-  /**
-	 * This adds a property descriptor for the Sun Horizontal Coordinates feature.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected void addSunHorizontalCoordinatesPropertyDescriptor(Object object)
-  {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Sky_sunHorizontalCoordinates_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Sky_sunHorizontalCoordinates_feature", "_UI_Sky_type"),
-				 ApogyCoreEnvironmentPackage.Literals.SKY__SUN_HORIZONTAL_COORDINATES,
-				 true,
-				 false,
-				 true,
 				 null,
 				 getString("_UI_SUNPropertyCategory"),
 				 null));

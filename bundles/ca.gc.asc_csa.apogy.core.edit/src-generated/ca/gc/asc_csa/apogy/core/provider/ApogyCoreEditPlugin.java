@@ -57,8 +57,8 @@ public final class ApogyCoreEditPlugin extends EMFPlugin {
 		     ApogyCommonMathEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
-		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}

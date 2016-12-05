@@ -26,10 +26,7 @@ import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.PositionNode;
 import ca.gc.asc_csa.apogy.common.topology.RotationNode;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
-import ca.gc.asc_csa.apogy.core.*;
 import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
-import ca.gc.asc_csa.apogy.core.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.AssemblyLinksList;
 import ca.gc.asc_csa.apogy.core.ConnectionPoint;
@@ -39,7 +36,6 @@ import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
 import ca.gc.asc_csa.apogy.core.OperationCallPositionedResult;
-import ca.gc.asc_csa.apogy.core.OrbitModelsList;
 import ca.gc.asc_csa.apogy.core.PoseCorrector;
 import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.Positioned;
@@ -48,7 +44,6 @@ import ca.gc.asc_csa.apogy.core.ResultNode;
 import ca.gc.asc_csa.apogy.core.ResultsListNode;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
@@ -56,11 +51,9 @@ import ca.gc.asc_csa.apogy.core.ApogyTopology;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.Updatable;
 import ca.gc.asc_csa.apogy.core.UserDefinedResult;
-import ca.gc.asc_csa.apogy.core.WorksitesList;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractType;
-import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
@@ -125,14 +118,6 @@ public class ApogyCoreAdapterFactory extends AdapterFactoryImpl {
 				return createApogyCoreFacadeAdapter();
 			}
 			@Override
-			public Adapter caseApogyEnvironment(ApogyEnvironment object) {
-				return createApogyEnvironmentAdapter();
-			}
-			@Override
-			public Adapter caseTimeSourcesList(TimeSourcesList object) {
-				return createTimeSourcesListAdapter();
-			}
-			@Override
 			public Adapter caseApogyTopology(ApogyTopology object) {
 				return createApogyTopologyAdapter();
 			}
@@ -175,30 +160,6 @@ public class ApogyCoreAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseApogyInitializationData(ApogyInitializationData object) {
 				return createApogyInitializationDataAdapter();
-			}
-			@Override
-			public Adapter caseWorksitesList(WorksitesList object) {
-				return createWorksitesListAdapter();
-			}
-			@Override
-			public Adapter caseAbstractWorksite(AbstractWorksite object) {
-				return createAbstractWorksiteAdapter();
-			}
-			@Override
-			public Adapter caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {
-				return createAbstractSurfaceLocationAdapter();
-			}
-			@Override
-			public Adapter caseSurfaceLocationsList(SurfaceLocationsList object) {
-				return createSurfaceLocationsListAdapter();
-			}
-			@Override
-			public Adapter caseOrbitModelsList(OrbitModelsList object) {
-				return createOrbitModelsListAdapter();
-			}
-			@Override
-			public Adapter caseAbstractOrbitModel(AbstractOrbitModel object) {
-				return createAbstractOrbitModelAdapter();
 			}
 			@Override
 			public Adapter casePositioned(Positioned object) {
@@ -253,18 +214,6 @@ public class ApogyCoreAdapterFactory extends AdapterFactoryImpl {
 				return createNamedAdapter();
 			}
 			@Override
-			public Adapter caseDescribed(Described object) {
-				return createDescribedAdapter();
-			}
-			@Override
-			public Adapter caseEnvironment(Environment object) {
-				return createEnvironmentAdapter();
-			}
-			@Override
-			public Adapter caseTimed(Timed object) {
-				return createTimedAdapter();
-			}
-			@Override
 			public Adapter caseAbstractType(AbstractType object) {
 				return createAbstractTypeAdapter();
 			}
@@ -277,12 +226,20 @@ public class ApogyCoreAdapterFactory extends AdapterFactoryImpl {
 				return createTypeApiAdapterAdapter();
 			}
 			@Override
+			public Adapter caseDescribed(Described object) {
+				return createDescribedAdapter();
+			}
+			@Override
 			public Adapter caseAbstractInitializationData(AbstractInitializationData object) {
 				return createAbstractInitializationDataAdapter();
 			}
 			@Override
 			public Adapter caseInitializationData(InitializationData object) {
 				return createInitializationDataAdapter();
+			}
+			@Override
+			public Adapter caseTimed(Timed object) {
+				return createTimedAdapter();
 			}
 			@Override
 			public Adapter caseAbstractResult(AbstractResult object) {
@@ -350,34 +307,6 @@ public class ApogyCoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApogyCoreFacadeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment <em>Apogy Environment</em>}'.
-	 * <!-- begin-user-doc --> This default
-	 * implementation returns null so that we can easily ignore cases; it's
-	 * useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.ApogyEnvironment
-	 * @generated
-	 */
-	public Adapter createApogyEnvironmentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.TimeSourcesList <em>Time Sources List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.TimeSourcesList
-	 * @generated
-	 */
-	public Adapter createTimeSourcesListAdapter() {
 		return null;
 	}
 
@@ -534,89 +463,6 @@ public class ApogyCoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApogyInitializationDataAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.WorksitesList <em>Worksites List</em>}'.
-	 * <!-- begin-user-doc --> This default implementation returns null so
-	 * that we can easily ignore cases; it's useful to ignore a case when
-	 * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.WorksitesList
-	 * @generated
-	 */
-	public Adapter createWorksitesListAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractWorksite <em>Abstract Worksite</em>}'.
-	 * <!-- begin-user-doc --> This default
-	 * implementation returns null so that we can easily ignore cases; it's
-	 * useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractWorksite
-	 * @generated
-	 */
-	public Adapter createAbstractWorksiteAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation <em>Abstract Surface Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation
-	 * @generated
-	 */
-	public Adapter createAbstractSurfaceLocationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.SurfaceLocationsList <em>Surface Locations List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.SurfaceLocationsList
-	 * @generated
-	 */
-	public Adapter createSurfaceLocationsListAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.OrbitModelsList <em>Orbit Models List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.OrbitModelsList
-	 * @generated
-	 */
-	public Adapter createOrbitModelsListAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractOrbitModel
-	 * @generated
-	 */
-	public Adapter createAbstractOrbitModelAdapter() {
 		return null;
 	}
 
@@ -811,20 +657,6 @@ public class ApogyCoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDescribedAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.Environment <em>Environment</em>}'.
-	 * <!-- begin-user-doc --> This default
-	 * implementation returns null so that we can easily ignore cases; it's
-	 * useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.invocator.Environment
-	 * @generated
-	 */
-	public Adapter createEnvironmentAdapter() {
 		return null;
 	}
 

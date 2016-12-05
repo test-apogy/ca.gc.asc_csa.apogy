@@ -34,60 +34,42 @@ public interface ApogyCoreEnvironmentFactory extends EFactory
   ApogyCoreEnvironmentFactory eINSTANCE = ca.gc.asc_csa.apogy.core.environment.impl.ApogyCoreEnvironmentFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>Earth Surface Worksite</em>'.
+	 * Returns a new object of class '<em>Apogy Environment</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Earth Surface Worksite</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Apogy Environment</em>'.
 	 * @generated
 	 */
-  EarthSurfaceWorksite createEarthSurfaceWorksite();
+	ApogyEnvironment createApogyEnvironment();
 
-  /**
-	 * Returns a new object of class '<em>Environment</em>'.
+		/**
+	 * Returns a new object of class '<em>Time Sources List</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Environment</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time Sources List</em>'.
 	 * @generated
 	 */
-  Environment createEnvironment();
+	TimeSourcesList createTimeSourcesList();
 
-  /**
-	 * Returns a new object of class '<em>Surface Environment</em>'.
+		/**
+	 * Returns a new object of class '<em>Worksites List</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Surface Environment</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Worksites List</em>'.
 	 * @generated
 	 */
-  SurfaceEnvironment createSurfaceEnvironment();
+	WorksitesList createWorksitesList();
 
-  /**
-	 * Returns a new object of class '<em>Earth Surface Environment</em>'.
+		/**
+	 * Returns a new object of class '<em>Surface Locations List</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Earth Surface Environment</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Surface Locations List</em>'.
 	 * @generated
 	 */
-  EarthSurfaceEnvironment createEarthSurfaceEnvironment();
+	SurfaceLocationsList createSurfaceLocationsList();
 
-  /**
-	 * Returns a new object of class '<em>Atmosphere</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Atmosphere</em>'.
-	 * @generated
-	 */
-  Atmosphere createAtmosphere();
-
-  /**
-	 * Returns a new object of class '<em>Atmosphere Utils</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Atmosphere Utils</em>'.
-	 * @generated
-	 */
-  AtmosphereUtils createAtmosphereUtils();
-
-  /**
+		/**
 	 * Returns a new object of class '<em>Equatorial Coordinates</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -97,33 +79,6 @@ public interface ApogyCoreEnvironmentFactory extends EFactory
   EquatorialCoordinates createEquatorialCoordinates();
 
   /**
-	 * Returns a new object of class '<em>Geographic Coordinates</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Geographic Coordinates</em>'.
-	 * @generated
-	 */
-  GeographicCoordinates createGeographicCoordinates();
-
-  /**
-	 * Returns a new object of class '<em>Horizontal Coordinates</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Horizontal Coordinates</em>'.
-	 * @generated
-	 */
-  HorizontalCoordinates createHorizontalCoordinates();
-
-  /**
-	 * Returns a new object of class '<em>Ecliptic Coordinates</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ecliptic Coordinates</em>'.
-	 * @generated
-	 */
-  EclipticCoordinates createEclipticCoordinates();
-
-  /**
 	 * Returns a new object of class '<em>Sky</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -131,15 +86,6 @@ public interface ApogyCoreEnvironmentFactory extends EFactory
 	 * @generated
 	 */
   Sky createSky();
-
-  /**
-	 * Returns a new object of class '<em>Earth Sky</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Earth Sky</em>'.
-	 * @generated
-	 */
-  EarthSky createEarthSky();
 
   /**
 	 * Returns a new object of class '<em>Sun</em>'.
@@ -205,213 +151,6 @@ public interface ApogyCoreEnvironmentFactory extends EFactory
   StarField createStarField();
 
   /**
-	 * Returns a new object of class '<em>Astronomy Utils</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Astronomy Utils</em>'.
-	 * @generated
-	 */
-  AstronomyUtils createAstronomyUtils();
-
-  /**
-	 * Returns a new object of class '<em>Map</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map</em>'.
-	 * @generated
-	 */
-  Map createMap();
-
-  /**
-	 * Returns a new object of class '<em>Maps List</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Maps List</em>'.
-	 * @generated
-	 */
-  MapsList createMapsList();
-
-  /**
-	 * Returns a new object of class '<em>Rectangular Region</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rectangular Region</em>'.
-	 * @generated
-	 */
-  RectangularRegion createRectangularRegion();
-
-  /**
-	 * Returns a new object of class '<em>Rectangular Volume Region</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rectangular Volume Region</em>'.
-	 * @generated
-	 */
-	RectangularVolumeRegion createRectangularVolumeRegion();
-
-		/**
-	 * Returns a new object of class '<em>Image Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Image Map Layer</em>'.
-	 * @generated
-	 */
-  ImageMapLayer createImageMapLayer();
-
-  /**
-	 * Returns a new object of class '<em>Image Map Layer Presentation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Image Map Layer Presentation</em>'.
-	 * @generated
-	 */
-	ImageMapLayerPresentation createImageMapLayerPresentation();
-
-		/**
-	 * Returns a new object of class '<em>URL Image Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>URL Image Map Layer</em>'.
-	 * @generated
-	 */
-  URLImageMapLayer createURLImageMapLayer();
-
-  /**
-	 * Returns a new object of class '<em>Topology Tree Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Topology Tree Map Layer</em>'.
-	 * @generated
-	 */
-	TopologyTreeMapLayer createTopologyTreeMapLayer();
-
-		/**
-	 * Returns a new object of class '<em>Topology Tree Map Layer Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Topology Tree Map Layer Node</em>'.
-	 * @generated
-	 */
-	TopologyTreeMapLayerNode createTopologyTreeMapLayerNode();
-
-		/**
-	 * Returns a new object of class '<em>Cartesian Triangular Mesh Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cartesian Triangular Mesh Map Layer</em>'.
-	 * @generated
-	 */
-	CartesianTriangularMeshMapLayer createCartesianTriangularMeshMapLayer();
-
-		/**
-	 * Returns a new object of class '<em>Cartesian Triangular Mesh Slope Image Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cartesian Triangular Mesh Slope Image Map Layer</em>'.
-	 * @generated
-	 */
-	CartesianTriangularMeshSlopeImageMapLayer createCartesianTriangularMeshSlopeImageMapLayer();
-
-		/**
-	 * Returns a new object of class '<em>Cartesian Triangular Mesh Discrete Slope Image Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cartesian Triangular Mesh Discrete Slope Image Map Layer</em>'.
-	 * @generated
-	 */
-	CartesianTriangularMeshDiscreteSlopeImageMapLayer createCartesianTriangularMeshDiscreteSlopeImageMapLayer();
-
-		/**
-	 * Returns a new object of class '<em>Cartesian Triangular Mesh Height Image Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cartesian Triangular Mesh Height Image Map Layer</em>'.
-	 * @generated
-	 */
-	CartesianTriangularMeshHeightImageMapLayer createCartesianTriangularMeshHeightImageMapLayer();
-
-		/**
-	 * Returns a new object of class '<em>Line Of Sight Image Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Line Of Sight Image Map Layer</em>'.
-	 * @generated
-	 */
-	LineOfSightImageMapLayer createLineOfSightImageMapLayer();
-
-		/**
-	 * Returns a new object of class '<em>Ellipse Shape Image Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ellipse Shape Image Layer</em>'.
-	 * @generated
-	 */
-	EllipseShapeImageLayer createEllipseShapeImageLayer();
-
-		/**
-	 * Returns a new object of class '<em>Rectangle Shape Image Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rectangle Shape Image Layer</em>'.
-	 * @generated
-	 */
-	RectangleShapeImageLayer createRectangleShapeImageLayer();
-
-		/**
-	 * Returns a new object of class '<em>Cartesian Coordinates Polygon Shape Image Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cartesian Coordinates Polygon Shape Image Map Layer</em>'.
-	 * @generated
-	 */
-	CartesianCoordinatesPolygonShapeImageMapLayer createCartesianCoordinatesPolygonShapeImageMapLayer();
-
-		/**
-	 * Returns a new object of class '<em>Geographic Coordinates Polygon Shape Image Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Geographic Coordinates Polygon Shape Image Map Layer</em>'.
-	 * @generated
-	 */
-	GeographicCoordinatesPolygonShapeImageMapLayer createGeographicCoordinatesPolygonShapeImageMapLayer();
-
-		/**
-	 * Returns a new object of class '<em>Slope Range</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Slope Range</em>'.
-	 * @generated
-	 */
-	SlopeRange createSlopeRange();
-
-		/**
-	 * Returns a new object of class '<em>Basic Cartesian Triangular Mesh Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Basic Cartesian Triangular Mesh Map Layer</em>'.
-	 * @generated
-	 */
-	BasicCartesianTriangularMeshMapLayer createBasicCartesianTriangularMeshMapLayer();
-
-		/**
-	 * Returns a new object of class '<em>Cartesian Triangular Mesh URL Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cartesian Triangular Mesh URL Map Layer</em>'.
-	 * @generated
-	 */
-  CartesianTriangularMeshURLMapLayer createCartesianTriangularMeshURLMapLayer();
-
-  /**
-	 * Returns a new object of class '<em>Features Of Interest Map Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Features Of Interest Map Layer</em>'.
-	 * @generated
-	 */
-	FeaturesOfInterestMapLayer createFeaturesOfInterestMapLayer();
-
-		/**
 	 * Returns a new object of class '<em>Worksite Node</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -419,51 +158,6 @@ public interface ApogyCoreEnvironmentFactory extends EFactory
 	 * @generated
 	 */
   WorksiteNode createWorksiteNode();
-
-  /**
-	 * Returns a new object of class '<em>Surface Worksite Node</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Surface Worksite Node</em>'.
-	 * @generated
-	 */
-  SurfaceWorksiteNode createSurfaceWorksiteNode();
-
-  /**
-	 * Returns a new object of class '<em>Earth Surface Worksite Node</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Earth Surface Worksite Node</em>'.
-	 * @generated
-	 */
-  EarthSurfaceWorksiteNode createEarthSurfaceWorksiteNode();
-
-  /**
-	 * Returns a new object of class '<em>Maps List Node</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Maps List Node</em>'.
-	 * @generated
-	 */
-  MapsListNode createMapsListNode();
-
-  /**
-	 * Returns a new object of class '<em>Map Node</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Node</em>'.
-	 * @generated
-	 */
-  MapNode createMapNode();
-
-  /**
-	 * Returns a new object of class '<em>Abstract Map Layer Node</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abstract Map Layer Node</em>'.
-	 * @generated
-	 */
-  AbstractMapLayerNode createAbstractMapLayerNode();
 
   /**
 	 * Returns a new object of class '<em>Sky Node</em>'.
@@ -475,24 +169,6 @@ public interface ApogyCoreEnvironmentFactory extends EFactory
   SkyNode createSkyNode();
 
   /**
-	 * Returns a new object of class '<em>Earth Sky Node</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Earth Sky Node</em>'.
-	 * @generated
-	 */
-  EarthSkyNode createEarthSkyNode();
-
-  /**
-	 * Returns a new object of class '<em>Cartesian Triangular Mesh Map Layer Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cartesian Triangular Mesh Map Layer Node</em>'.
-	 * @generated
-	 */
-	CartesianTriangularMeshMapLayerNode createCartesianTriangularMeshMapLayerNode();
-
-		/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

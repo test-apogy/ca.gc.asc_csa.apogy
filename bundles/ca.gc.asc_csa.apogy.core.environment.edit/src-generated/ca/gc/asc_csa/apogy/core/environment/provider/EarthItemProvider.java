@@ -23,7 +23,6 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.common.topology.provider.GroupNodeItemProvider;
 import ca.gc.asc_csa.apogy.core.environment.Earth;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
@@ -33,7 +32,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EarthItemProvider extends GroupNodeItemProvider {
+public class EarthItemProvider extends CelestialBodyItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -101,7 +100,7 @@ public class EarthItemProvider extends GroupNodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Earth)object).getDescription();
+		String label = ((Earth)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Earth_type") :
 			getString("_UI_Earth_type") + " " + label;

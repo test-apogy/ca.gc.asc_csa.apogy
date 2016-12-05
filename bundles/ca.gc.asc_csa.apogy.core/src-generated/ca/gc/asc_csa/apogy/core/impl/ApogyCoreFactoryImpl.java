@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import ca.gc.asc_csa.apogy.core.*;
 import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.AssemblyLinksList;
@@ -33,7 +32,6 @@ import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
 import ca.gc.asc_csa.apogy.core.OperationCallPositionedResult;
-import ca.gc.asc_csa.apogy.core.OrbitModelsList;
 import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.Positioned;
 import ca.gc.asc_csa.apogy.core.PositionedResult;
@@ -42,14 +40,12 @@ import ca.gc.asc_csa.apogy.core.ResultsListNode;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 import ca.gc.asc_csa.apogy.core.ApogyTopology;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.UserDefinedResult;
-import ca.gc.asc_csa.apogy.core.WorksitesList;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
@@ -95,8 +91,6 @@ public class ApogyCoreFactoryImpl extends EFactoryImpl implements
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyCorePackage.APOGY_CORE_FACADE: return createApogyCoreFacade();
-			case ApogyCorePackage.APOGY_ENVIRONMENT: return createApogyEnvironment();
-			case ApogyCorePackage.TIME_SOURCES_LIST: return createTimeSourcesList();
 			case ApogyCorePackage.APOGY_TOPOLOGY: return createApogyTopology();
 			case ApogyCorePackage.APOGY_SYSTEM: return createApogySystem();
 			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER: return createApogySystemApiAdapter();
@@ -107,9 +101,6 @@ public class ApogyCoreFactoryImpl extends EFactoryImpl implements
 			case ApogyCorePackage.POSE_PROVIDER: return createPoseProvider();
 			case ApogyCorePackage.ABSOLUTE_POSE_PROVIDER: return createAbsolutePoseProvider();
 			case ApogyCorePackage.APOGY_INITIALIZATION_DATA: return createApogyInitializationData();
-			case ApogyCorePackage.WORKSITES_LIST: return createWorksitesList();
-			case ApogyCorePackage.SURFACE_LOCATIONS_LIST: return createSurfaceLocationsList();
-			case ApogyCorePackage.ORBIT_MODELS_LIST: return createOrbitModelsList();
 			case ApogyCorePackage.POSITIONED: return createPositioned();
 			case ApogyCorePackage.FEATURE_OF_INTEREST: return createFeatureOfInterest();
 			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST: return createFeatureOfInterestList();
@@ -174,25 +165,6 @@ public class ApogyCoreFactoryImpl extends EFactoryImpl implements
 	public ApogyCoreFacade createApogyCoreFacade() {
 		ApogyCoreFacadeImpl apogyCoreFacade = new ApogyCoreFacadeImpl();
 		return apogyCoreFacade;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ApogyEnvironment createApogyEnvironment() {
-		ApogyEnvironmentImpl apogyEnvironment = new ApogyEnvironmentImpl();
-		return apogyEnvironment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TimeSourcesList createTimeSourcesList() {
-		TimeSourcesListImpl timeSourcesList = new TimeSourcesListImpl();
-		return timeSourcesList;
 	}
 
 	/**
@@ -288,35 +260,6 @@ public class ApogyCoreFactoryImpl extends EFactoryImpl implements
 	public ApogyInitializationData createApogyInitializationData() {
 		ApogyInitializationDataImpl apogyInitializationData = new ApogyInitializationDataImpl();
 		return apogyInitializationData;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public WorksitesList createWorksitesList() {
-		WorksitesListImpl worksitesList = new WorksitesListImpl();
-		return worksitesList;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SurfaceLocationsList createSurfaceLocationsList() {
-		SurfaceLocationsListImpl surfaceLocationsList = new SurfaceLocationsListImpl();
-		return surfaceLocationsList;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public OrbitModelsList createOrbitModelsList() {
-		OrbitModelsListImpl orbitModelsList = new OrbitModelsListImpl();
-		return orbitModelsList;
 	}
 
 	/**

@@ -19,7 +19,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
 import ca.gc.asc_csa.apogy.core.environment.Sun;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
@@ -36,7 +35,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
  *
  * @generated
  */
-public class SunImpl extends GroupNodeImpl implements Sun
+public class SunImpl extends CelestialBodyImpl implements Sun
 {
 	private static double SUN_TOTAL_POWER = 384.6E24; // in J/s (Watts).
 	

@@ -16,7 +16,6 @@ package ca.gc.asc_csa.apogy.core.environment.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
 import ca.gc.asc_csa.apogy.core.environment.Moon;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
@@ -33,7 +32,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
  *
  * @generated
  */
-public class MoonImpl extends GroupNodeImpl implements Moon
+public class MoonImpl extends CelestialBodyImpl implements Moon
 {
   /**
 	 * The default value of the '{@link #getRadius() <em>Radius</em>}' attribute.

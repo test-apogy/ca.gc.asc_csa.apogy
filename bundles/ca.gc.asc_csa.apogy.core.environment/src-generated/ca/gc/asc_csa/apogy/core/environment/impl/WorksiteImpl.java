@@ -18,12 +18,11 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.core.environment.Environment;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
-import ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +33,7 @@ import ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl;
  * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.WorksiteImpl#getWorksiteNode <em>Worksite Node</em>}</li>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.WorksiteImpl#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.WorksiteImpl#getSky <em>Sky</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,16 +51,16 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   protected WorksiteNode worksiteNode;
 
   /**
-	 * The cached value of the '{@link #getEnvironment() <em>Environment</em>}' containment reference.
+	 * The cached value of the '{@link #getSky() <em>Sky</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getEnvironment()
+	 * <!-- end-user-doc -->
+	 * @see #getSky()
 	 * @generated
 	 * @ordered
 	 */
-  protected Environment environment;
+	protected Sky sky;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -128,51 +127,64 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Environment getEnvironment()
-  {
-		return environment;
+	public Sky getSky() {
+		return sky;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public NotificationChain basicSetEnvironment(Environment newEnvironment, NotificationChain msgs)
-  {
-		Environment oldEnvironment = environment;
-		environment = newEnvironment;
+	public NotificationChain basicSetSky(Sky newSky, NotificationChain msgs) {
+		Sky oldSky = sky;
+		sky = newSky;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT, oldEnvironment, newEnvironment);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.WORKSITE__SKY, oldSky, newSky);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setEnvironment(Environment newEnvironment)
-  {
-		if (newEnvironment != environment) {
+	public void setSky(Sky newSky) {
+		if (newSky != sky) {
 			NotificationChain msgs = null;
-			if (environment != null)
-				msgs = ((InternalEObject)environment).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT, null, msgs);
-			if (newEnvironment != null)
-				msgs = ((InternalEObject)newEnvironment).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT, null, msgs);
-			msgs = basicSetEnvironment(newEnvironment, msgs);
+			if (sky != null)
+				msgs = ((InternalEObject)sky).eInverseRemove(this, ApogyCoreEnvironmentPackage.SKY__WORKSITE, Sky.class, msgs);
+			if (newSky != null)
+				msgs = ((InternalEObject)newSky).eInverseAdd(this, ApogyCoreEnvironmentPackage.SKY__WORKSITE, Sky.class, msgs);
+			msgs = basicSetSky(newSky, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT, newEnvironment, newEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.WORKSITE__SKY, newSky, newSky));
 	}
 
-  /**
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.WORKSITE__SKY:
+				if (sky != null)
+					msgs = ((InternalEObject)sky).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.WORKSITE__SKY, null, msgs);
+				return basicSetSky((Sky)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -181,8 +193,8 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
-				return basicSetEnvironment(null, msgs);
+			case ApogyCoreEnvironmentPackage.WORKSITE__SKY:
+				return basicSetSky(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -199,8 +211,8 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 			case ApogyCoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
 				if (resolve) return getWorksiteNode();
 				return basicGetWorksiteNode();
-			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
-				return getEnvironment();
+			case ApogyCoreEnvironmentPackage.WORKSITE__SKY:
+				return getSky();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,8 +226,8 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
-				setEnvironment((Environment)newValue);
+			case ApogyCoreEnvironmentPackage.WORKSITE__SKY:
+				setSky((Sky)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -230,8 +242,8 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
-				setEnvironment((Environment)null);
+			case ApogyCoreEnvironmentPackage.WORKSITE__SKY:
+				setSky((Sky)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -248,8 +260,8 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 		switch (featureID) {
 			case ApogyCoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
 				return worksiteNode != null;
-			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
-				return environment != null;
+			case ApogyCoreEnvironmentPackage.WORKSITE__SKY:
+				return sky != null;
 		}
 		return super.eIsSet(featureID);
 	}

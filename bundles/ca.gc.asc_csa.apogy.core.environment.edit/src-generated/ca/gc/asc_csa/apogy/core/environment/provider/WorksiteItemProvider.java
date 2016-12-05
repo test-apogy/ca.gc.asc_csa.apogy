@@ -25,7 +25,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
-import ca.gc.asc_csa.apogy.core.provider.AbstractWorksiteItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.Worksite} object.
@@ -77,7 +76,7 @@ public class WorksiteItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.WORKSITE__WORKSITE_NODE);
-			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.WORKSITE__SKY);
 		}
 		return childrenFeatures;
 	}
@@ -125,7 +124,7 @@ public class WorksiteItemProvider
 
 		switch (notification.getFeatureID(Worksite.class)) {
 			case ApogyCoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
-			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
+			case ApogyCoreEnvironmentPackage.WORKSITE__SKY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -146,18 +145,8 @@ public class WorksiteItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApogyCoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createEnvironment()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
+				(ApogyCoreEnvironmentPackage.Literals.WORKSITE__SKY,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createSky()));
 	}
 
 }

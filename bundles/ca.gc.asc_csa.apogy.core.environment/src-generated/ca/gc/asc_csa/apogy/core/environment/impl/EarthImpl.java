@@ -16,7 +16,6 @@ package ca.gc.asc_csa.apogy.core.environment.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
 import ca.gc.asc_csa.apogy.core.environment.Earth;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
@@ -33,7 +32,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
  *
  * @generated
  */
-public class EarthImpl extends GroupNodeImpl implements Earth {
+public class EarthImpl extends CelestialBodyImpl implements Earth {
 	/**
 	 * The default value of the '{@link #getRadius() <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->

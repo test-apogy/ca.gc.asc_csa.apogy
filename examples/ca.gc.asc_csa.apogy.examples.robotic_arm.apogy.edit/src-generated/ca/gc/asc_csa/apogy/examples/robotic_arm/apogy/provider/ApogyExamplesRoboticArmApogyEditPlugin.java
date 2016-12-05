@@ -61,8 +61,8 @@ public final class ApogyExamplesRoboticArmApogyEditPlugin extends EMFPlugin {
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		     ApogyExamplesRoboticArmEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
-		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}
