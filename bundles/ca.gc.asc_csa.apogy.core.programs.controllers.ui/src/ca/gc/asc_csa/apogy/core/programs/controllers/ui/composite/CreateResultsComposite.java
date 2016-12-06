@@ -21,8 +21,6 @@ import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 
@@ -59,6 +57,9 @@ public class CreateResultsComposite extends Composite {
 		m_bindingContext = new DataBindingContext();
 		operationCallControllerBindingBinder = new WritableValue<>();
 
+		/**
+		 * CheckBox data binding.
+		 */
 		IObservableValue<?> observeOperationCallControllerBindingCreateResult = EMFProperties
 				.value(ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT)
 				.observeDetail(operationCallControllerBindingBinder);
@@ -70,10 +71,22 @@ public class CreateResultsComposite extends Composite {
 		return m_bindingContext;
 	}
 
+	/**
+	 * Gets the controllerBinding displayed by the composite.
+	 * 
+	 * @return reference to the {@link OperationCallControllerBinding}
+	 */
 	public OperationCallControllerBinding getOperationCallControllerBinding() {
 		return operationCallControllerBindingBinder.getValue();
 	}
 
+	/**
+	 * Sets the controllerBinding displayed by the composite.
+	 * 
+	 * @param operationCallControllerBinding
+	 *            reference to the {@link OperationCallControllerBinding} to
+	 *            display
+	 */
 	public void setOperationCallControllerBinding(OperationCallControllerBinding operationCallControllerBinding) {
 		if (operationCallControllerBindingBinder == null) {
 			operationCallControllerBindingBinder = new WritableValue<>();
