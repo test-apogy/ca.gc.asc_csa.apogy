@@ -89,9 +89,7 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 	private Table table;
 
 	private Composite compositeArguments;
-
-	boolean readOnly;
-
+	
 	private WritableValue<ArgumentsList> argumentsListBinder;
 	private OperationCall operationCall;
 
@@ -112,9 +110,7 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 	public BindedEDataTypeArgumentsComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new FillLayout());
-
-		this.readOnly = true;
-
+		
 		compositeArguments = new Composite(this, SWT.None);
 		compositeArguments.setLayout(new GridLayout(2, false));
 		
@@ -154,7 +150,6 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 		TableColumn tableclmnValue = tableViewerValueColumn.getColumn();
 		tableclmnValue.setWidth(100);
 		tableclmnValue.setText("Value");
-		
 		tableViewerValueColumn.setEditingSupport(new ValueEditor(tableViewer));		
 		
 		m_bindingContext = initDataBindingsCustom();
@@ -403,10 +398,6 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 	protected void newSelection(ISelection selection) {
 	}
 
-	public boolean isReadOnly() {
-		return readOnly;
-	}
-
 	public EObject getSelectedEObject() {
 		return (EObject) tableViewer.getStructuredSelection().getFirstElement();
 	}
@@ -451,11 +442,7 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 
 	protected DataBindingContext initDataBindingsCustom() {
 		m_bindingContext = new DataBindingContext();
-		
-		if(argumentsListBinder == null){
-			argumentsListBinder = new WritableValue<>();
-		}
-
+	
 		tableViewer.setContentProvider(new ArgumentsContentProvier(adapterFactory));
 		tableViewer.setLabelProvider(new ArgumentsLabelProvider(adapterFactory));
 

@@ -44,6 +44,7 @@ public class NewControllerBindingWizard extends Wizard {
 	private OperationCallEOperationsWizardPage operationCallEOperationsWizardPage;
 	private TriggerWizardPage triggerWizardPage;
 	private BindedEDataTypeArgumentsWizardPage bindedEDataTypeArgumentsWizardPage;
+	private ConditionningWizardPage conditionningWizardPage;
 
 	private ControllersConfiguration controllersConfiguration;
 	private WritableValue<OperationCallControllerBinding> controllerBinding;
@@ -81,6 +82,17 @@ public class NewControllerBindingWizard extends Wizard {
 					addPage(getBindedEDataTypeArgumentsWizardPage());
 				} else {
 					return getBindedEDataTypeArgumentsWizardPage();
+				}
+			}else{
+				return null;
+			}
+			
+		}else if (page == getBindedEDataTypeArgumentsWizardPage()) {
+			if(getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null){
+				if (!Arrays.asList(getPages()).contains(getConditionningWizardPage())) {
+					addPage(getConditionningWizardPage());
+				} else {
+					return getConditionningWizardPage();
 				}
 			}else{
 				return null;
@@ -174,6 +186,19 @@ public class NewControllerBindingWizard extends Wizard {
 			bindedEDataTypeArgumentsWizardPage = new BindedEDataTypeArgumentsWizardPage(getControllerBinding());
 		}
 		return bindedEDataTypeArgumentsWizardPage;
+	}
+	
+	/**
+	 * Returns the {@link ConditionningWizardPage}. If null is returned,
+	 * the page is not added to the wizard.
+	 * 
+	 * @return Reference to the page.
+	 */
+	protected ConditionningWizardPage getConditionningWizardPage() {
+		if (conditionningWizardPage == null) {
+			conditionningWizardPage  = new ConditionningWizardPage (getControllerBinding());
+		}
+		return conditionningWizardPage;
 	}
 
 	@Override

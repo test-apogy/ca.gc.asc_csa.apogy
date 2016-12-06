@@ -22,6 +22,8 @@ import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
@@ -33,6 +35,7 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.swt.widgets.TreeItem;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 
@@ -60,6 +63,12 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 		TreeColumn treeColumn = treeViewerColumn.getColumn();
 		treeColumn.setWidth(100);
 
+		treeViewerSubClasses.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection((TreeSelection)event.getSelection());
+			}
+		});
 		treeViewerSubClasses.setContentProvider(new ProgramsTypeContentProvider(adapterFactory));
 		treeViewerSubClasses.setLabelProvider(new TypesLabelProvider());
 	}
@@ -140,6 +149,18 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 		}
 	}
 
+	public void setSelectedEClass(EClass eClass){
+		for(TreeItem item : treeViewerSubClasses.getTree().getItems()){
+			if(item == eClass){
+				treeViewerSubClasses.setSelection(new StructuredSelection(eClass));
+			}
+		}
+		if(treeViewerSubClasses.getTree().getItems().length > 0 && treeViewerSubClasses.getSelection().isEmpty()){
+			System.out.println(treeViewerSubClasses.getTree().getItems()[0].getData());
+			treeViewerSubClasses.setSelection(new StructuredSelection(treeViewerSubClasses.getTree().getItems()[0].getData()));
+		}
+	}
+
 	public EClass getEClass() {
 		return this.eClass;
 	}
@@ -165,7 +186,6 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 				treeViewerSubClasses.setInput(eClass);
 			}
 		}
-
 		return bindingContext;
 	}
 
