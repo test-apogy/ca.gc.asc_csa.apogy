@@ -29,10 +29,8 @@ import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 
@@ -51,24 +49,16 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 
 	public SubClassesListComposite(Composite parent, int style) {
 		super(parent, style);
-		GridLayout gridLayout = new GridLayout(1, false);
-		gridLayout.marginHeight = 0;
-		setLayout(gridLayout);
-
-		Label lblProgramType = new Label(this, SWT.NONE);
-		lblProgramType.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
-		lblProgramType.setText("Program Type");
+		setLayout(new FillLayout());
 
 		treeViewerSubClasses = new TreeViewer(this, SWT.BORDER);
 		Tree treeTypes = treeViewerSubClasses.getTree();
 		treeTypes.setLinesVisible(true);
-		treeTypes.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		ColumnViewerToolTipSupport.enableFor(treeViewerSubClasses);
 
 		TreeViewerColumn treeViewerColumn = new TreeViewerColumn(treeViewerSubClasses, SWT.NONE);
 		TreeColumn treeColumn = treeViewerColumn.getColumn();
-		treeColumn.setWidth(200);
-		treeColumn.setText("Name");
+		treeColumn.setWidth(100);
 
 		treeViewerSubClasses.setContentProvider(new ProgramsTypeContentProvider(adapterFactory));
 		treeViewerSubClasses.setLabelProvider(new TypesLabelProvider());
@@ -139,7 +129,7 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 	 * Sets the superClass to displays it's subClasses
 	 * @param superClass reference to the {@link EClass}
 	 */
-	public void setProgramSuperClass(EClass superClass) {
+	public void setSuperClass(EClass superClass) {
 		this.eClass = superClass;
 
 		if (superClass != null) {
@@ -173,9 +163,6 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 		if (eClass != null) {
 			if (!treeViewerSubClasses.getTree().isDisposed()) {
 				treeViewerSubClasses.setInput(eClass);
-				/*if (treeViewerSubClasses.getTree().getItemCount() > 0) {
-					treeViewerSubClasses.setSelection((ISelection) treeViewerSubClasses.getTree().getItems()[0]);
-				}*/
 			}
 		}
 
