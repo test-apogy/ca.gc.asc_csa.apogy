@@ -20,6 +20,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.swt.widgets.Display;
 
@@ -28,6 +29,8 @@ import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
 import ca.gc.asc_csa.apogy.common.io.jinput.EController;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import net.java.games.input.Controller;
 import net.java.games.input.Event;
 import net.java.games.input.EventQueue;
@@ -36,10 +39,34 @@ import net.java.games.input.EventQueue;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFacadeImpl#isSelectingComponent <em>Selecting Component</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonIOJInputFacade {	
+	/**
+	 * The default value of the '{@link #isSelectingComponent() <em>Selecting Component</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSelectingComponent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SELECTING_COMPONENT_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isSelectingComponent() <em>Selecting Component</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSelectingComponent()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean selectingComponent = SELECTING_COMPONENT_EDEFAULT;
 	/**
 	 * @generated_NOT
 	 */
@@ -75,20 +102,42 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * @generated_NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	private Adapter selectComponentAdapter;
+	public boolean isSelectingComponent() {
+		return selectingComponent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSelectingComponent(boolean newSelectingComponent) {
+		boolean oldSelectingComponent = selectingComponent;
+		selectingComponent = newSelectingComponent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE__SELECTING_COMPONENT, oldSelectingComponent, selectingComponent));
+	}
+
 	/**
 	 * @generated_NOT
 	 */
-	private Adapter eComponentQualifierAdapter;
+	private Adapter selectComponentAdapter;
 	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public void addSelectComponentAdapter(EComponentQualifier eComponentQualifier) {
+	public void startSelectComponent(EComponentQualifier eComponentQualifier) {
+		if (isSelectingComponent()) {
+			String message = this.getClass().getSimpleName()
+					+ "Component selection already started. \nUse ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier) to stop a selection and prevent memory leaks.";
+			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
+		}
 		for (EController eController : Activator.getEControllerEnvironment().getControllers()) {
 			EventQueue queue = eController.getPojoController().getEventQueue();
 			Event event = new Event();
@@ -125,18 +174,8 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 
 			};
 		}
-
-		eComponentQualifierAdapter = new AdapterImpl() {
-			@Override
-			public void notifyChanged(Notification msg) {
-				if (msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME){
-					forceStopSelectComponent(eComponentQualifier);
-				}
-			}
-		};
-
-		eComponentQualifier.eAdapters().add(eComponentQualifierAdapter);
 		Activator.getEControllerEnvironment().eAdapters().add(selectComponentAdapter);
+		setSelectingComponent(true);
 	}
 
 	/**
@@ -144,15 +183,70 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public void forceStopSelectComponent(EComponentQualifier eComponentQualifier) {
+	public void stopSelectComponent(EComponentQualifier eComponentQualifier) {
 		if (selectComponentAdapter != null) {
 			Activator.getEControllerEnvironment().eAdapters().remove(selectComponentAdapter);
 			selectComponentAdapter = null;
 		}
-		if (eComponentQualifierAdapter != null) {
-			eComponentQualifier.eAdapters().remove(eComponentQualifierAdapter);
-			eComponentQualifierAdapter = null; 
+		setSelectingComponent(false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE__SELECTING_COMPONENT:
+				return isSelectingComponent();
 		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE__SELECTING_COMPONENT:
+				setSelectingComponent((Boolean)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE__SELECTING_COMPONENT:
+				setSelectingComponent(SELECTING_COMPONENT_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE__SELECTING_COMPONENT:
+				return selectingComponent != SELECTING_COMPONENT_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
 	}
 
 	/**
@@ -163,14 +257,30 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE___ADD_SELECT_COMPONENT_ADAPTER__ECOMPONENTQUALIFIER:
-				addSelectComponentAdapter((EComponentQualifier)arguments.get(0));
+			case ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE___START_SELECT_COMPONENT__ECOMPONENTQUALIFIER:
+				startSelectComponent((EComponentQualifier)arguments.get(0));
 				return null;
-			case ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE___FORCE_STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER:
-				forceStopSelectComponent((EComponentQualifier)arguments.get(0));
+			case ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE___STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER:
+				stopSelectComponent((EComponentQualifier)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (selectingComponent: ");
+		result.append(selectingComponent);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ApogyCommonIOJInputFacadeImpl

@@ -20,6 +20,8 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
+	
+	public static final String ID = "ca.gc.asc_csa.apogy.common.io.jinput"; //$NON-NLS-1$
 
 	private static final String LOGGER_NAME = "net.java.games.input"; 
 	private static final Level LOGGER_LEVEL = Level.WARNING;

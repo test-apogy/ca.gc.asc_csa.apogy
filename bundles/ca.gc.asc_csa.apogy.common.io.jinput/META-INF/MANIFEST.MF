@@ -14,7 +14,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.jinput;bundle-version="0.1.0";visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.xtext.xbase.lib
+ org.eclipse.xtext.xbase.lib,
+ ca.gc.asc_csa.apogy.common.log
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.apogy.common.io.jinput.Activator
 Import-Package: org.eclipse.swt.widgets

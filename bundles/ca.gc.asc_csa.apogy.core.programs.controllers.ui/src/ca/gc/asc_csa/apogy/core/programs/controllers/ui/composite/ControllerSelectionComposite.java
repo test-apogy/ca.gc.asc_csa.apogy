@@ -68,13 +68,13 @@ public class ControllerSelectionComposite extends Composite {
 		controllerText.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				ApogyCommonIOJInputFacade.INSTANCE.addSelectComponentAdapter(eComponentQualifier);
+				ApogyCommonIOJInputFacade.INSTANCE.startSelectComponent(eComponentQualifier);
 			}
 		});
 		controllerText.addFocusListener(new FocusAdapter(){
 			@Override
 			public void focusLost(FocusEvent e) {
-				ApogyCommonIOJInputFacade.INSTANCE.forceStopSelectComponent(eComponentQualifier);
+				ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier);
 				newSelection(null);
 			}
 		});
@@ -89,13 +89,15 @@ public class ControllerSelectionComposite extends Composite {
 		componentText.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				ApogyCommonIOJInputFacade.INSTANCE.addSelectComponentAdapter(eComponentQualifier);
+				if(!ApogyCommonIOJInputFacade.INSTANCE.isSelectingComponent()){
+					ApogyCommonIOJInputFacade.INSTANCE.startSelectComponent(eComponentQualifier);
+				}
 			}
 		});
 		componentText.addFocusListener(new FocusAdapter(){
 			@Override
 			public void focusLost(FocusEvent e) {
-				ApogyCommonIOJInputFacade.INSTANCE.forceStopSelectComponent(eComponentQualifier);
+				ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier);
 				newSelection(null);
 			}
 		});

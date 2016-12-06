@@ -94,31 +94,40 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	int APOGY_COMMON_IOJ_INPUT_FACADE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Selecting Component</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_IOJ_INPUT_FACADE__SELECTING_COMPONENT = 0;
+
+	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_IOJ_INPUT_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_IOJ_INPUT_FACADE_FEATURE_COUNT = 1;
 
 	/**
-	 * The operation id for the '<em>Add Select Component Adapter</em>' operation.
+	 * The operation id for the '<em>Start Select Component</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_IOJ_INPUT_FACADE___ADD_SELECT_COMPONENT_ADAPTER__ECOMPONENTQUALIFIER = 0;
+	int APOGY_COMMON_IOJ_INPUT_FACADE___START_SELECT_COMPONENT__ECOMPONENTQUALIFIER = 0;
 
 	/**
-	 * The operation id for the '<em>Force Stop Select Component</em>' operation.
+	 * The operation id for the '<em>Stop Select Component</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_IOJ_INPUT_FACADE___FORCE_STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER = 1;
+	int APOGY_COMMON_IOJ_INPUT_FACADE___STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER = 1;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1037,24 +1046,35 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 	EClass getApogyCommonIOJInputFacade();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#addSelectComponentAdapter(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier) <em>Add Select Component Adapter</em>}' operation.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#isSelectingComponent <em>Selecting Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Select Component Adapter</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#addSelectComponentAdapter(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier)
+	 * @return the meta object for the attribute '<em>Selecting Component</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#isSelectingComponent()
+	 * @see #getApogyCommonIOJInputFacade()
 	 * @generated
 	 */
-	EOperation getApogyCommonIOJInputFacade__AddSelectComponentAdapter__EComponentQualifier();
+	EAttribute getApogyCommonIOJInputFacade_SelectingComponent();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#forceStopSelectComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier) <em>Force Stop Select Component</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#startSelectComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier) <em>Start Select Component</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Force Stop Select Component</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#forceStopSelectComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier)
+	 * @return the meta object for the '<em>Start Select Component</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#startSelectComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier)
 	 * @generated
 	 */
-	EOperation getApogyCommonIOJInputFacade__ForceStopSelectComponent__EComponentQualifier();
+	EOperation getApogyCommonIOJInputFacade__StartSelectComponent__EComponentQualifier();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#stopSelectComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier) <em>Stop Select Component</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Stop Select Component</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#stopSelectComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier)
+	 * @generated
+	 */
+	EOperation getApogyCommonIOJInputFacade__StopSelectComponent__EComponentQualifier();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController <em>EController</em>}'.
@@ -1602,20 +1622,28 @@ public interface ApogyCommonIOJInputPackage extends EPackage {
 		EClass APOGY_COMMON_IOJ_INPUT_FACADE = eINSTANCE.getApogyCommonIOJInputFacade();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Select Component Adapter</b></em>' operation.
+		 * The meta object literal for the '<em><b>Selecting Component</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_COMMON_IOJ_INPUT_FACADE___ADD_SELECT_COMPONENT_ADAPTER__ECOMPONENTQUALIFIER = eINSTANCE.getApogyCommonIOJInputFacade__AddSelectComponentAdapter__EComponentQualifier();
+		EAttribute APOGY_COMMON_IOJ_INPUT_FACADE__SELECTING_COMPONENT = eINSTANCE.getApogyCommonIOJInputFacade_SelectingComponent();
 
 		/**
-		 * The meta object literal for the '<em><b>Force Stop Select Component</b></em>' operation.
+		 * The meta object literal for the '<em><b>Start Select Component</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_COMMON_IOJ_INPUT_FACADE___FORCE_STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER = eINSTANCE.getApogyCommonIOJInputFacade__ForceStopSelectComponent__EComponentQualifier();
+		EOperation APOGY_COMMON_IOJ_INPUT_FACADE___START_SELECT_COMPONENT__ECOMPONENTQUALIFIER = eINSTANCE.getApogyCommonIOJInputFacade__StartSelectComponent__EComponentQualifier();
+
+		/**
+		 * The meta object literal for the '<em><b>Stop Select Component</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_IOJ_INPUT_FACADE___STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER = eINSTANCE.getApogyCommonIOJInputFacade__StopSelectComponent__EComponentQualifier();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl <em>EController</em>}' class.

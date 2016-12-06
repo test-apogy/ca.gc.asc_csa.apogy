@@ -22,6 +22,12 @@ import ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFacadeImpl;
  * A representation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#isSelectingComponent <em>Selecting Component</em>}</li>
+ * </ul>
  *
  * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getApogyCommonIOJInputFacade()
  * @model
@@ -29,12 +35,30 @@ import ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFacadeImpl;
  */
 public interface ApogyCommonIOJInputFacade extends EObject {
 	/**
+	 * Returns the value of the '<em><b>Selecting Component</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Selecting Component</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @model eComponentQualifierUnique="false"
+	 * @return the value of the '<em>Selecting Component</em>' attribute.
+	 * @see #setSelectingComponent(boolean)
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getApogyCommonIOJInputFacade_SelectingComponent()
+	 * @model unique="false"
 	 * @generated
 	 */
-	void addSelectComponentAdapter(EComponentQualifier eComponentQualifier);
+	boolean isSelectingComponent();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade#isSelectingComponent <em>Selecting Component</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Selecting Component</em>' attribute.
+	 * @see #isSelectingComponent()
+	 * @generated
+	 */
+	void setSelectingComponent(boolean value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -42,7 +66,15 @@ public interface ApogyCommonIOJInputFacade extends EObject {
 	 * @model eComponentQualifierUnique="false"
 	 * @generated
 	 */
-	void forceStopSelectComponent(EComponentQualifier eComponentQualifier);
+	void startSelectComponent(EComponentQualifier eComponentQualifier);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model eComponentQualifierUnique="false"
+	 * @generated
+	 */
+	void stopSelectComponent(EComponentQualifier eComponentQualifier);
 
 	/**
 	 * @generated_NOT
