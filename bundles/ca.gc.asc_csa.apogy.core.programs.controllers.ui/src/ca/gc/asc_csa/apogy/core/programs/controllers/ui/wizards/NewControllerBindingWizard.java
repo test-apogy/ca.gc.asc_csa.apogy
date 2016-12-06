@@ -29,10 +29,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.Argument;
-import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallEOperationsWizardPage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableFeatureReferenceWizardPage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
@@ -91,12 +88,6 @@ public class NewControllerBindingWizard extends Wizard {
 			
 		}
 		return super.getNextPage(page);
-	}
-	
-	@Override
-	public boolean canFinish() {
-		// TODO
-		return super.canFinish();
 	}
 
 	/**

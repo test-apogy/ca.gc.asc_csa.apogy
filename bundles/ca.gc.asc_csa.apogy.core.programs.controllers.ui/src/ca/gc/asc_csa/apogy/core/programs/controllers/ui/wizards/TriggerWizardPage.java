@@ -17,10 +17,12 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.CreateResultsComposite;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.TriggerComposite;
 
 public class TriggerWizardPage extends WizardPage {
@@ -28,7 +30,6 @@ public class TriggerWizardPage extends WizardPage {
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.TriggerWizardPage";
 
 	private OperationCallControllerBinding operationCallControllerBinding;
-	private TriggerComposite composite;
 	
 	/**
 	 * Constructor for the WizardPage.
@@ -48,16 +49,22 @@ public class TriggerWizardPage extends WizardPage {
 	 */
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.None);
-		container.setLayout(new FillLayout());
+		container.setLayout(new GridLayout(1, false));
+		((GridLayout)container.getLayout()).horizontalSpacing = 0;
 
-		composite = new TriggerComposite(container,
+		CreateResultsComposite createResultsComposite = new CreateResultsComposite(container, SWT.None);
+		createResultsComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+		createResultsComposite.setOperationCallControllerBinding(operationCallControllerBinding);
+		
+		TriggerComposite triggerComposite = new TriggerComposite(container,
 				SWT.H_SCROLL | SWT.V_SCROLL){
 			@Override
 			protected void newSelection(ISelection selection) {
 				validate();
 			}
 		};
-		composite.setOperationCallControllerBinding(operationCallControllerBinding);
+		triggerComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		triggerComposite.setOperationCallControllerBinding(operationCallControllerBinding);
 
 		setControl(container);
 		
