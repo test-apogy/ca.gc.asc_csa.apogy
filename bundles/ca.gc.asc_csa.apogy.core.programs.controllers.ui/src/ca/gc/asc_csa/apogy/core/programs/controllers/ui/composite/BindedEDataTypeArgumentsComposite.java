@@ -14,9 +14,11 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.notify.impl.NotificationImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.impl.EAttributeImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
@@ -51,12 +53,14 @@ import org.eclipse.swt.widgets.Text;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
@@ -93,8 +97,7 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 
 	private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
-	private Adapter argumentsListAdapter;
-	private Adapter argumentAdapter;
+	private Adapter adapter;;
 
 	private DataBindingContext m_bindingContext;
 
@@ -244,7 +247,6 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 	private class ValueEditor extends EditingSupport {
 
 		String[] toggleStringValues = new String[2];
-		Adapter adapter;
 
 		public ValueEditor(ColumnViewer viewer) {
 			super(viewer);
@@ -277,7 +279,6 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 			BindedEDataTypeArgument bindedEDataTypeArgument = (BindedEDataTypeArgument) element;
 			if (bindedEDataTypeArgument.getValueSource() instanceof FixedValueSource ) {
 				FixedValueSource fixedValueSource = (FixedValueSource)bindedEDataTypeArgument.getValueSource();
-//				fixedValueSource.eAdapters().add(getAdapter());
 				if(fixedValueSource.getValue() != null){
 					return ((FixedValueSource)bindedEDataTypeArgument.getValueSource()).getValue();
 				}else{
@@ -312,27 +313,12 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 			}
 			return false;
 		}
-		
-//		private Adapter getAdapter(){
-//			if (adapter == null) {
-//				adapter = new EContentAdapter() {
-//					@Override
-//					public void notifyChanged(Notification notification) {
-//						if(notification.getFeature() == ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE){
-//							setOperationCall(operationCall);
-//						}
-//						System.out.println("1:" + notification.getFeature());
-//					}
-//				};
-//			}
-//			return argumentsListAdapter;
-//
-//		}
 	}
 	
 	private class ControllerCellEditor extends CellEditor{
 		Text controllerText;
 		EComponentQualifier eComponentQualifier;
+		Adapter componentAdapter;
 		
 		public ControllerCellEditor(Composite parent) {
 			super(parent);
@@ -340,17 +326,19 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 		
 		@Override
 		protected Control createControl(Composite parent) {
-			controllerText = new Text(parent, SWT.None);
-			controllerText.addMouseListener(new MouseAdapter() {
-				@Override
-				public void mouseDown(MouseEvent e) {
-					ApogyCommonIOJInputFacade.INSTANCE.addSelectComponentAdapter(eComponentQualifier);
-				}
-			});
+			controllerText = new Text(parent, SWT.None);			
+//			controllerText.addMouseListener(new MouseAdapter() {
+//				@Override
+//				public void mouseDown(MouseEvent e) {
+//					System.out.println(
+//							"BindedEDataTypeArgumentsComposite.ControllerCellEditor.createControl(...).new MouseAdapter() {...}.mouseDown()");
+//					
+//				}
+//			});
 			controllerText.addFocusListener(new FocusAdapter(){
 				@Override
 				public void focusLost(FocusEvent e) {
-					ApogyCommonIOJInputFacade.INSTANCE.forceStopSelectComponent(eComponentQualifier);
+					ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier);
 				}
 			});
 			return controllerText;
@@ -370,7 +358,37 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 
 		@Override
 		protected void doSetValue(Object value) {
-			eComponentQualifier = (EComponentQualifier)value;
+			if(this.eComponentQualifier != null){
+				this.eComponentQualifier.eAdapters().remove(getComponentAdapter());
+			}
+			this.eComponentQualifier = (EComponentQualifier)value;
+			this.controllerText.setText(this.eComponentQualifier.getEControllerName() + "." + this.eComponentQualifier.getEComponentName());
+			ApogyCommonIOJInputFacade.INSTANCE.startSelectComponent(eComponentQualifier);
+			eComponentQualifier.eAdapters().add(getComponentAdapter());
+		}
+		
+		private Adapter getComponentAdapter(){
+			if(componentAdapter == null){
+				componentAdapter = new AdapterImpl(){
+					@Override
+					public void notifyChanged(Notification msg) {						
+						if(msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME ||
+								msg.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME){
+							controllerText.setText(eComponentQualifier.getEControllerName() + "." + eComponentQualifier.getEComponentName());
+//							System.out.println(eComponentQualifier.eAdapters().size());
+						}
+
+//						System.out.println(msg.getFeature());
+//						if(msg.getNewValue() != null){
+//							System.out.println(msg.getNewValue());
+//							System.out.println("1");
+////							ApogyCommonIOJInputFacade.INSTANCE.forceStopSelectComponent(eComponentQualifier);
+//						}
+			
+					}
+				};
+			}
+			return componentAdapter;
 		}
 		
 	}
@@ -420,7 +438,7 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 	@SuppressWarnings("unchecked")
 	public void setOperationCall(OperationCall operationCall) {
 		if (this.operationCall != null) {
-			this.operationCall.eAdapters().remove(getArgumentsListAdapter());
+			this.operationCall.eAdapters().remove(getAdapter());
 		}
 		this.operationCall = operationCall;
 
@@ -428,7 +446,7 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 		
 		packColumns();
 
-		this.operationCall.eAdapters().add(getArgumentsListAdapter());
+		this.operationCall.eAdapters().add(getAdapter());
 	}
 
 	protected DataBindingContext initDataBindingsCustom() {
@@ -457,13 +475,8 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 		@Override
 		public Object[] getElements(Object object) {
 			List<Object> objects = new ArrayList<>();
-			for(Iterator<?> ite = ((DecoratingObservableList<?>) object).listIterator(); ite.hasNext();){
-				System.out.println(ite.next());
-			}
 			for (Object object1 : ((DecoratingObservableList<?>) object)) {
-				System.out.println(object);
 				if (object1 instanceof BindedEDataTypeArgument) {
-					System.out.println(object1);
 					objects.add(object1);
 				}
 			}
@@ -542,40 +555,40 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 	 * Adapter that updates the treeViewer input if the {@link ArgumentsList} is changed.
 	 * @return
 	 */
-	public Adapter getArgumentsListAdapter() {
-		if (argumentsListAdapter == null) {
-			argumentsListAdapter = new EContentAdapter() {
+	public Adapter getAdapter() {
+		if (adapter == null) {
+			adapter = new EContentAdapter() {
 				@Override
 				public void notifyChanged(Notification notification) {
-					System.out.println("2:" + notification.getFeature());
 					if (notification
 							.getFeature() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST) {
 						if (notification.getNewValue() != null) {
 							setOperationCall(((ArgumentsList) notification.getNewValue()).getOperationCall());
-							System.out.println(tableViewer.getInput());;
 						}
 					}
-					
-					if(notification.getFeature() == ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE){
-						if(notification.getOldValue() != null){
-							((EObject)notification.getOldValue()).eAdapters().remove(getArgumentsListAdapter());
+					if (notification
+							.getFeature() == ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE) {
+						if (notification.getOldValue() != null) {
+							((EObject) notification.getOldValue()).eAdapters().remove(getAdapter());
 						}
-						((EObject)notification.getNewValue()).eAdapters().add(getArgumentsListAdapter());
-						setOperationCall(((EDataTypeArgument)((EObject) notification.getNewValue()).eContainer()).getOperationCall());
-					
-					}if(notification.getFeature() == ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE){
-						// TODO
+						((EObject) notification.getNewValue()).eAdapters().add(getAdapter());
+					}
+					if (notification.getFeature() == ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE ||
+							notification.getFeature() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER) {
+						if(!tableViewer.isBusy()){
+							tableViewer.refresh();
+						}
 					}
 				}
 			};
 		}
-		return argumentsListAdapter;
+		return adapter;
 	}
 
 	@Override
 	public void dispose() {
 		if (this.operationCall != null) {
-			this.operationCall.eAdapters().remove(getArgumentsListAdapter());
+			this.operationCall.eAdapters().remove(getAdapter());
 		}
 		adapterFactory.dispose();
 		super.dispose();
