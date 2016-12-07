@@ -75,6 +75,11 @@ public class NewControllerBindingWizard extends Wizard {
 	}
 	
 	@Override
+	public boolean canFinish() {
+		return true;
+	}
+	
+	@Override
 	public IWizardPage getNextPage(IWizardPage page) {	
 		if (page == getOperationCallControllerBindingDetailsWizardPage()) {
 			if(getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null){

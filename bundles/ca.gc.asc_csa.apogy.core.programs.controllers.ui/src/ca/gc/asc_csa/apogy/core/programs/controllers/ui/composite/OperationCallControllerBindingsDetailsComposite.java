@@ -37,7 +37,10 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableFeatureReferenceComposite;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
 
 public class OperationCallControllerBindingsDetailsComposite extends ScrolledComposite{
 
@@ -94,10 +97,15 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				operationCallControllerBinding.setEOperation(eOperationsComposite.getSelectedEOperation());
+				// TODO move to facade
 				ApogyCoreInvocatorUIFacade.INSTANCE.setEOperationInitArguments(eOperationsComposite.getSelectedEOperation(), operationCallControllerBinding);
 				if(operationCallControllerBinding.getArgumentsList() != null){
 					for(int i = 0; i <  operationCallControllerBinding.getArgumentsList().getArguments().size(); i++){
-						operationCallControllerBinding.getArgumentsList().getArguments().set(i, ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument());
+						BindedEDataTypeArgument bindedArgument = ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument();
+						ControllerValueSource valueSource = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerValueSource();
+						valueSource.setConditioning(ApogyCoreProgramsControllersFactory.eINSTANCE.createLinearInputConditioning());
+						bindedArgument.setValueSource(valueSource);
+						operationCallControllerBinding.getArgumentsList().getArguments().set(i, bindedArgument);
 					}
 				}
 				OperationCallControllerBindingsDetailsComposite.this.newSelection(selection);
@@ -110,7 +118,12 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 		sectionTrigger.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
 		sectionTrigger.setLayout(new FillLayout());
 		sectionTrigger.setText("Trigger");
-		triggerComposite = new TriggerComposite(sectionTrigger, SWT.None);
+		triggerComposite = new TriggerComposite(sectionTrigger, SWT.None){
+			@Override
+			protected void newSelection(ISelection selection) {
+				OperationCallControllerBindingsDetailsComposite.this.newSelection(selection);
+			}
+		};
 		triggerComposite.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		triggerComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
 		sectionTrigger.setClient(triggerComposite);
