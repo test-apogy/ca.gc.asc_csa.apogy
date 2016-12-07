@@ -23,6 +23,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
@@ -32,6 +35,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBind
 import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 
 /**
@@ -197,6 +201,19 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setControllerValueSourceLastValue(ControllerValueSource source, Object value) {
+		TransactionalEditingDomain domain = (TransactionalEditingDomain) AdapterFactoryEditingDomain
+				.getEditingDomainFor(source);
+		SetCommand command = new SetCommand(domain, source, ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__LAST_VALUE, value);
+		domain.getCommandStack().execute(command);
+	}
+
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -227,6 +244,9 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 				return null;
 			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___GET_TOGGLE_VALUE_SOURCE_STRING__TOGGLEVALUESOURCE:
 				return getToggleValueSourceString((ToggleValueSource)arguments.get(0));
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_CONTROLLER_VALUE_SOURCE_LAST_VALUE__CONTROLLERVALUESOURCE_OBJECT:
+				setControllerValueSourceLastValue((ControllerValueSource)arguments.get(0), arguments.get(1));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

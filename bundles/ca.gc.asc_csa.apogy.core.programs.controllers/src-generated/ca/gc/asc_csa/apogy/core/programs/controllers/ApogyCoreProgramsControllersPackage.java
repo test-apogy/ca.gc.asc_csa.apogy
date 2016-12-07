@@ -151,13 +151,22 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___GET_TOGGLE_VALUE_SOURCE_STRING__TOGGLEVALUESOURCE = 4;
 
 	/**
+	 * The operation id for the '<em>Set Controller Value Source Last Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_CONTROLLER_VALUE_SOURCE_LAST_VALUE__CONTROLLERVALUESOURCE_OBJECT = 5;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE_OPERATION_COUNT = 5;
+	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.
@@ -1584,6 +1593,16 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	EOperation getApogyCoreProgramsControllersFacade__GetToggleValueSourceString__ToggleValueSource();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#setControllerValueSourceLastValue(ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource, java.lang.Object) <em>Set Controller Value Source Last Value</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Controller Value Source Last Value</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#setControllerValueSourceLastValue(ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource, java.lang.Object)
+	 * @generated
+	 */
+	EOperation getApogyCoreProgramsControllersFacade__SetControllerValueSourceLastValue__ControllerValueSource_Object();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration <em>Controllers Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2215,6 +2234,14 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___GET_TOGGLE_VALUE_SOURCE_STRING__TOGGLEVALUESOURCE = eINSTANCE.getApogyCoreProgramsControllersFacade__GetToggleValueSourceString__ToggleValueSource();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Controller Value Source Last Value</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_CONTROLLER_VALUE_SOURCE_LAST_VALUE__CONTROLLERVALUESOURCE_OBJECT = eINSTANCE.getApogyCoreProgramsControllersFacade__SetControllerValueSourceLastValue__ControllerValueSource_Object();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.

@@ -344,6 +344,15 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreProgramsControllersFacade__SetControllerValueSourceLastValue__ControllerValueSource_Object() {
+		return apogyCoreProgramsControllersFacadeEClass.getEOperations().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -886,6 +895,7 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE);
 		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_ACTIVE_CONTROLLERS_CONFIGURATION__CONTROLLERSCONFIGURATION_BOOLEAN);
 		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___GET_TOGGLE_VALUE_SOURCE_STRING__TOGGLEVALUESOURCE);
+		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_CONTROLLER_VALUE_SOURCE_LAST_VALUE__CONTROLLERVALUESOURCE_OBJECT);
 
 		controllersConfigurationEClass = createEClass(CONTROLLERS_CONFIGURATION);
 		createEAttribute(controllersConfigurationEClass, CONTROLLERS_CONFIGURATION__ACTIVE);
@@ -1048,6 +1058,10 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 
 		op = initEOperation(getApogyCoreProgramsControllersFacade__GetToggleValueSourceString__ToggleValueSource(), theEcorePackage.getEString(), "getToggleValueSourceString", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getToggleValueSource(), "toggleValueSource", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreProgramsControllersFacade__SetControllerValueSourceLastValue__ControllerValueSource_Object(), null, "setControllerValueSourceLastValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getControllerValueSource(), "source", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(controllersConfigurationEClass, ControllersConfiguration.class, "ControllersConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getControllersConfiguration_Active(), theEcorePackage.getEBoolean(), "active", "false", 0, 1, ControllersConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

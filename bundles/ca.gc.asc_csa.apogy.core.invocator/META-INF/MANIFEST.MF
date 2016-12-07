@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.emf;bundle-version="0.1.0";visibility:=reexport,
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
- ca.gc.asc_csa.apogy.common.emf.transaction;bundle-version="0.5.0"
+ ca.gc.asc_csa.apogy.common.emf.transaction;bundle-version="0.5.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.core.invocator,
  ca.gc.asc_csa.apogy.core.invocator.delegates,

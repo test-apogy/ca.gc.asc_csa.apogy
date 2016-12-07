@@ -87,4 +87,12 @@ public interface ApogyCoreProgramsControllersFacade extends EObject
 	 */
 	String getToggleValueSourceString(ToggleValueSource toggleValueSource);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model sourceUnique="false" valueUnique="false"
+	 * @generated
+	 */
+	void setControllerValueSourceLastValue(ControllerValueSource source, Object value);
+
 } // ApogyCoreProgramsControllersFacade
