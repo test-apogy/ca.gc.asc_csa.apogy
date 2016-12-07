@@ -68,7 +68,6 @@ public class TriggerWizardPage extends WizardPage {
 
 		setControl(container);
 		
-
 		validate();
 	}
 

@@ -16,7 +16,6 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards;
 
 import java.util.Arrays;
 
-import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -40,6 +39,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.Activator;
 public class NewControllerBindingWizard extends Wizard {
 
 	private NamedDescribedWizardPage namedDescribedWizardPage;
+	private OperationCallControllerBindingDetailsWizardPage operationCallControllerBindingDetailsWizardPage;
 	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
 	private OperationCallEOperationsWizardPage operationCallEOperationsWizardPage;
 	private TriggerWizardPage triggerWizardPage;
@@ -47,7 +47,7 @@ public class NewControllerBindingWizard extends Wizard {
 	private ConditionningWizardPage conditionningWizardPage;
 
 	private ControllersConfiguration controllersConfiguration;
-	private WritableValue<OperationCallControllerBinding> controllerBinding;
+	private OperationCallControllerBinding controllerBinding;
 
 	/**
 	 * Constructor for NewContextWizard.
@@ -59,7 +59,6 @@ public class NewControllerBindingWizard extends Wizard {
 				"icons/wizban/apogy_new_controller_binding.png");
 		setDefaultPageImageDescriptor(image);
 		this.controllersConfiguration = controllersConfiguration;
-		controllerBinding = new WritableValue<>();
 	}
 
 	/**
@@ -67,38 +66,41 @@ public class NewControllerBindingWizard extends Wizard {
 	 */
 	public void addPages() {	
 		addPage(getNamedDescribedWizardPage());
-		addPage(getVariableFeatureReferenceWizardPage());
-		addPage(getOperationCallEOperationWizardPage());
-		addPage(getTriggerWizardPage());
+		addPage(getOperationCallControllerBindingDetailsWizardPage());
+//		addPage(getVariableFeatureReferenceWizardPage());
+//		addPage(getOperationCallEOperationWizardPage());
+//		addPage(getTriggerWizardPage());
 		
 		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(namedDescribedWizardPage, 0.8);
 	}
 	
 	@Override
 	public IWizardPage getNextPage(IWizardPage page) {	
-		if (page == getTriggerWizardPage()) {
+		if (page == getOperationCallControllerBindingDetailsWizardPage()) {
 			if(getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null){
 				if (!Arrays.asList(getPages()).contains(getBindedEDataTypeArgumentsWizardPage())) {
 					addPage(getBindedEDataTypeArgumentsWizardPage());
-				} else {
+				} else {				
 					return getBindedEDataTypeArgumentsWizardPage();
 				}
 			}else{
 				return null;
 			}
 			
-		}else if (page == getBindedEDataTypeArgumentsWizardPage()) {
-			if(getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null){
-				if (!Arrays.asList(getPages()).contains(getConditionningWizardPage())) {
-					addPage(getConditionningWizardPage());
-				} else {
-					return getConditionningWizardPage();
-				}
-			}else{
-				return null;
-			}
-			
 		}
+		
+//		else if (page == getBindedEDataTypeArgumentsWizardPage()) {
+//			if(getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null){
+//				if (!Arrays.asList(getPages()).contains(getConditionningWizardPage())) {
+//					addPage(getConditionningWizardPage());
+//				} else {
+//					return getConditionningWizardPage();
+//				}
+//			}else{
+//				return null;
+//			}
+//			
+//		}
 		return super.getNextPage(page);
 	}
 
@@ -115,6 +117,25 @@ public class NewControllerBindingWizard extends Wizard {
 		return namedDescribedWizardPage;
 	}
 
+	/**
+	 * Returns the {@link OperationCallControllerBindingDetailsWizardPage}. If
+	 * null is returned, the page is not added to the wizard.
+	 * 
+	 * @return Reference to the page.
+	 */
+	protected OperationCallControllerBindingDetailsWizardPage getOperationCallControllerBindingDetailsWizardPage() {
+		if (operationCallControllerBindingDetailsWizardPage == null) {
+			operationCallControllerBindingDetailsWizardPage = new OperationCallControllerBindingDetailsWizardPage(
+					getControllerBinding()) {
+				@Override
+				protected void resetOperationCall() {
+					getBindedEDataTypeArgumentsWizardPage().setOperationCallControllerBinding(getControllerBinding());
+				}
+			};
+		}
+		return operationCallControllerBindingDetailsWizardPage;
+	}
+	
 	/**
 	 * Returns the {@link VariableFeatureReferenceWizardPage}. If null is
 	 * returned, the page is not added to the wizard.
@@ -230,20 +251,16 @@ public class NewControllerBindingWizard extends Wizard {
 	 * @return Reference to the {@link OperationCallControllerBinding}.
 	 */
 	protected OperationCallControllerBinding getControllerBinding() {
-		if (controllerBinding.getValue() == null) {
-			controllerBinding.setValue(ApogyCoreProgramsControllersFactory.eINSTANCE.createOperationCallControllerBinding());
-			controllerBinding.getValue().setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
+		if (controllerBinding == null) {
+			controllerBinding = ApogyCoreProgramsControllersFactory.eINSTANCE.createOperationCallControllerBinding();
+			controllerBinding.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
 					getControllersConfiguration(),
 					getControllerBinding(), 
 					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
 		}
-		return controllerBinding.getValue();
-	}
-	
-	public WritableValue<OperationCallControllerBinding> getCreatedControllerBinding(){
 		return controllerBinding;
 	}
-
+	
 	/**
 	 * Returns the {@link ControllersConfiguration}.
 	 * 

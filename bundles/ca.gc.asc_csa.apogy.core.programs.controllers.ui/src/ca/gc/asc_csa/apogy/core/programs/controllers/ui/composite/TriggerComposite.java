@@ -82,7 +82,10 @@ public class TriggerComposite extends ScrolledComposite {
 		setExpandVertical(true);
 
 		composite = new Composite(this, SWT.None);
-		composite.setLayout(new GridLayout(1, true));
+		GridLayout gridLayout = new GridLayout(1,true);
+		gridLayout.marginWidth = 0;
+		gridLayout.marginHeight = 0;
+		composite.setLayout(gridLayout);
 		
 		triggersListComposite = new EObjectListComposite(composite, SWT.None) {
 			@Override
@@ -189,7 +192,10 @@ public class TriggerComposite extends ScrolledComposite {
 		} else if (trigger instanceof ControllerEdgeTrigger) {
 			eComponentComposite = new Composite(composite, SWT.BORDER);
 			eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-			eComponentComposite.setLayout(new GridLayout(1, false));
+			GridLayout gridLayout = new GridLayout(1,true);
+			gridLayout.marginWidth = 0;
+			gridLayout.marginHeight = 0;
+			eComponentComposite.setLayout(gridLayout);
 
 			EObjectListComposite edgeTypesComposite = new EObjectListComposite(eComponentComposite, SWT.None) {
 				@Override

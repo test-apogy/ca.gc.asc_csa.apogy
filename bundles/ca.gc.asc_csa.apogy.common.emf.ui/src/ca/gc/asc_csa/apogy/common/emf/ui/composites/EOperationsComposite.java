@@ -32,7 +32,9 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
+import org.eclipse.ui.forms.widgets.FormToolkit;
 
 
 public class EOperationsComposite extends Composite {
@@ -44,6 +46,7 @@ public class EOperationsComposite extends Composite {
 	private ISelectionChangedListener treeViewerSelectionChangedListener;
 	private boolean parametersVisible = false;
 	private EOperation defaultSelectedEOperation;
+	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
 	
 	public EOperationsComposite(Composite parent, int style) {
@@ -73,6 +76,7 @@ public class EOperationsComposite extends Composite {
 			m_bindingContext.dispose();
 			m_bindingContext = null;
 		}		
+		toolkit.dispose();
 		treeViewer.removeSelectionChangedListener(getTreeViewerSelectionChangedListener());
 		super.dispose();		
 	}
