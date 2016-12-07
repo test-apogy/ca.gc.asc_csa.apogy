@@ -40,7 +40,6 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsController
 import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
 
 public class OperationCallControllerBindingsDetailsComposite extends ScrolledComposite{
 
@@ -76,12 +75,12 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 		variableFeatureReferenceComposite = new VariableFeatureReferenceComposite(composite, SWT.NONE){
 			@Override
 			protected void newSelection(ISelection selection) {
-				OperationCallControllerBindingsDetailsComposite.this.newSelection(selection);
 				if (operationCallControllerBinding.getVariable() != null) {
 					eOperationsComposite.setEClass(
 							ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(operationCallControllerBinding),
 							operationCallControllerBinding.getEOperation());
 				}
+				OperationCallControllerBindingsDetailsComposite.this.newSelection(selection);
 			}
 		};
 		GridLayout gridLayout = (GridLayout) variableFeatureReferenceComposite.getLayout();

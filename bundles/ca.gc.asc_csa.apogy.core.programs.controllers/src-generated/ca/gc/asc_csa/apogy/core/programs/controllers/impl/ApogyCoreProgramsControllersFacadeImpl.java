@@ -208,8 +208,12 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 	public void setControllerValueSourceLastValue(ControllerValueSource source, Object value) {
 		TransactionalEditingDomain domain = (TransactionalEditingDomain) AdapterFactoryEditingDomain
 				.getEditingDomainFor(source);
-		SetCommand command = new SetCommand(domain, source, ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__LAST_VALUE, value);
-		domain.getCommandStack().execute(command);
+		if(domain != null){
+			SetCommand command = new SetCommand(domain, source, ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__LAST_VALUE, value);
+			domain.getCommandStack().execute(command);
+		}else{
+			source.setLastValue(value);
+		}
 	}
 
 

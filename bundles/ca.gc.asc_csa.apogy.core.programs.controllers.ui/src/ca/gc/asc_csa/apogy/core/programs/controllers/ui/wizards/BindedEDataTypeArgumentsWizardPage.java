@@ -69,7 +69,7 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 		operationCallControllerBinding.eAdapters().add(getAdapter());
 		
 		if(bindedEDataTypeArgumentsComposite != null){
-			bindedEDataTypeArgumentsComposite.setOperationCall(operationCallControllerBinding);
+			bindedEDataTypeArgumentsComposite.setOperationCallControllerBinding(operationCallControllerBinding);
 		}
 	}
 	
@@ -93,7 +93,7 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 		container.setLayout(new FillLayout());
 
 		bindedEDataTypeArgumentsComposite = new BindedEDataTypeArgumentsComposite(container, SWT.None);
-		bindedEDataTypeArgumentsComposite.setOperationCall(operationCallControllerBinding);
+		bindedEDataTypeArgumentsComposite.setOperationCallControllerBinding(operationCallControllerBinding);
 	
 		setControl(container);
 		

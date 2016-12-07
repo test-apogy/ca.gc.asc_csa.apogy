@@ -31,7 +31,8 @@ import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
@@ -52,11 +53,12 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 
 	public SubClassesListComposite(Composite parent, int style) {
 		super(parent, style);
-		setLayout(new FillLayout());
+		setLayout(new GridLayout());
 
 		treeViewerSubClasses = new TreeViewer(this, SWT.BORDER);
 		Tree treeTypes = treeViewerSubClasses.getTree();
 		treeTypes.setLinesVisible(true);
+		treeTypes.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		ColumnViewerToolTipSupport.enableFor(treeViewerSubClasses);
 
 		TreeViewerColumn treeViewerColumn = new TreeViewerColumn(treeViewerSubClasses, SWT.NONE);
@@ -69,11 +71,23 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 				newSelection((TreeSelection)event.getSelection());
 			}
 		});
-		treeViewerSubClasses.setContentProvider(new ProgramsTypeContentProvider(adapterFactory));
-		treeViewerSubClasses.setLabelProvider(new TypesLabelProvider());
+		treeViewerSubClasses.setContentProvider(getContentProvider());
+		treeViewerSubClasses.setLabelProvider(getLabelProvider());
 	}
 
+	/**
+	 * Method that can be overwritten to specify a label provider
+	 */
+	protected StyledCellLabelProvider getLabelProvider(){
+		return new TypesLabelProvider();
+	}
 	
+	/**
+	 * Method that can be overwritten to specify a content provider
+	 */
+	protected AdapterFactoryContentProvider getContentProvider() {
+		return new typeContentProvider(adapterFactory);
+	}
 	/**
 	 * Label provider for the treeViewer
 	 */
@@ -113,9 +127,9 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 	/**
 	 * Content provider for the treeViewer
 	 */
-	private class ProgramsTypeContentProvider extends AdapterFactoryContentProvider {
+	private class typeContentProvider extends AdapterFactoryContentProvider {
 
-		public ProgramsTypeContentProvider(AdapterFactory adapterFactory) {
+		public typeContentProvider(AdapterFactory adapterFactory) {
 			super(adapterFactory);
 		}
 
@@ -200,7 +214,7 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 
 	@Override
 	public ISelection getSelection() {
-		return (ISelection) eClass;
+		return treeViewerSubClasses.getSelection();
 	}
 
 	@Override

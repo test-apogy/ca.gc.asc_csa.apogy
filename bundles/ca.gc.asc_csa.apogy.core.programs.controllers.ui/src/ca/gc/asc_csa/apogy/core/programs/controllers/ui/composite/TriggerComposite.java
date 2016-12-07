@@ -150,7 +150,7 @@ public class TriggerComposite extends ScrolledComposite {
 			labelRefreshPeriod.setText("Delay : ");
 			labelRefreshPeriod.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 			
-			Text textRefreshPeriod = new Text(eComponentComposite, SWT.WRAP | SWT.SINGLE);
+			Text textRefreshPeriod = new Text(eComponentComposite, SWT.WRAP | SWT.SINGLE | SWT.BORDER);
 			textRefreshPeriod.setText("Delay");
 			textRefreshPeriod.setEditable(true);
 			textRefreshPeriod.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));

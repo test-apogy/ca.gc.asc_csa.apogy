@@ -40,11 +40,7 @@ public class NewControllerBindingWizard extends Wizard {
 
 	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private OperationCallControllerBindingDetailsWizardPage operationCallControllerBindingDetailsWizardPage;
-	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
-	private OperationCallEOperationsWizardPage operationCallEOperationsWizardPage;
-	private TriggerWizardPage triggerWizardPage;
 	private BindedEDataTypeArgumentsWizardPage bindedEDataTypeArgumentsWizardPage;
-	private ConditionningWizardPage conditionningWizardPage;
 
 	private ControllersConfiguration controllersConfiguration;
 	private OperationCallControllerBinding controllerBinding;
@@ -67,9 +63,6 @@ public class NewControllerBindingWizard extends Wizard {
 	public void addPages() {	
 		addPage(getNamedDescribedWizardPage());
 		addPage(getOperationCallControllerBindingDetailsWizardPage());
-//		addPage(getVariableFeatureReferenceWizardPage());
-//		addPage(getOperationCallEOperationWizardPage());
-//		addPage(getTriggerWizardPage());
 		
 		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(namedDescribedWizardPage, 0.8);
 	}
@@ -93,19 +86,6 @@ public class NewControllerBindingWizard extends Wizard {
 			}
 			
 		}
-		
-//		else if (page == getBindedEDataTypeArgumentsWizardPage()) {
-//			if(getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null){
-//				if (!Arrays.asList(getPages()).contains(getConditionningWizardPage())) {
-//					addPage(getConditionningWizardPage());
-//				} else {
-//					return getConditionningWizardPage();
-//				}
-//			}else{
-//				return null;
-//			}
-//			
-//		}
 		return super.getNextPage(page);
 	}
 
@@ -142,66 +122,6 @@ public class NewControllerBindingWizard extends Wizard {
 	}
 	
 	/**
-	 * Returns the {@link VariableFeatureReferenceWizardPage}. If null is
-	 * returned, the page is not added to the wizard.
-	 * 
-	 * @return Reference to the page.
-	 */
-	protected VariableFeatureReferenceWizardPage getVariableFeatureReferenceWizardPage() {
-		if (variableFeatureReferenceWizardPage == null) {
-			variableFeatureReferenceWizardPage = new VariableFeatureReferenceWizardPage(
-					ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(),
-					getControllerBinding()){
-				@Override
-				protected void resetOperationCall() {
-					getControllerBinding().setArgumentsList(null);
-					getControllerBinding().setEOperation(null);
-					getBindedEDataTypeArgumentsWizardPage().setOperationCallControllerBinding(getControllerBinding());
-				}
-			};
-		}
-		return variableFeatureReferenceWizardPage;
-	}
-
-	/**
-	 * Returns the {@link OperationCallEOperationsWizardPage}. If null is
-	 * returned, the page is not added to the wizard.
-	 * 
-	 * @return Reference to the page.
-	 */
-	protected OperationCallEOperationsWizardPage getOperationCallEOperationWizardPage() {
-		if (operationCallEOperationsWizardPage == null) {
-			operationCallEOperationsWizardPage = new OperationCallEOperationsWizardPage(getControllerBinding()){
-				@Override
-				protected void newSelection() {
-					super.newSelection();
-					if(getOperationCall().getArgumentsList() != null){
-						for(int i = 0; i <  getOperationCall().getArgumentsList().getArguments().size(); i++){
-							getOperationCall().getArgumentsList().getArguments().set(i, ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument());
-						}
-					}
-					getBindedEDataTypeArgumentsWizardPage().setOperationCallControllerBinding(getControllerBinding());
-					validate();
-				}
-			};
-		}
-		return operationCallEOperationsWizardPage;
-	}
-	
-	/**
-	 * Returns the {@link TriggerWizardPage}. If null is returned,
-	 * the page is not added to the wizard.
-	 * 
-	 * @return Reference to the page.
-	 */
-	protected TriggerWizardPage getTriggerWizardPage() {
-		if (triggerWizardPage == null) {
-			triggerWizardPage = new TriggerWizardPage(getControllerBinding());
-		}
-		return triggerWizardPage;
-	}
-	
-	/**
 	 * Returns the {@link BindedEDataTypeArgumentsWizardPage}. If null is returned,
 	 * the page is not added to the wizard.
 	 * 
@@ -212,19 +132,6 @@ public class NewControllerBindingWizard extends Wizard {
 			bindedEDataTypeArgumentsWizardPage = new BindedEDataTypeArgumentsWizardPage(getControllerBinding());
 		}
 		return bindedEDataTypeArgumentsWizardPage;
-	}
-	
-	/**
-	 * Returns the {@link ConditionningWizardPage}. If null is returned,
-	 * the page is not added to the wizard.
-	 * 
-	 * @return Reference to the page.
-	 */
-	protected ConditionningWizardPage getConditionningWizardPage() {
-		if (conditionningWizardPage == null) {
-			conditionningWizardPage  = new ConditionningWizardPage (getControllerBinding());
-		}
-		return conditionningWizardPage;
 	}
 
 	@Override

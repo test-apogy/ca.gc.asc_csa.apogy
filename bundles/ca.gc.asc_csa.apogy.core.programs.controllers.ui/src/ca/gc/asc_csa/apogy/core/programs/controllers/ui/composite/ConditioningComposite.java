@@ -54,7 +54,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
 
-public class ConditionningComposite extends ScrolledComposite {
+public class ConditioningComposite extends ScrolledComposite {
 
 	private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
@@ -78,7 +78,7 @@ public class ConditionningComposite extends ScrolledComposite {
 	 * @param style
 	 *            Composite style.
 	 */
-	public ConditionningComposite(Composite parent, int style) {
+	public ConditioningComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new FillLayout());
 		setExpandHorizontal(true);

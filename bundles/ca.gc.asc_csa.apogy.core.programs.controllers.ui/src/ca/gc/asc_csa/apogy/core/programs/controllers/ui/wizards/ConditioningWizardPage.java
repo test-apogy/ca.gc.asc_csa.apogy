@@ -25,14 +25,14 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ConditionningComposite;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ConditioningComposite;
 
-public class ConditionningWizardPage extends WizardPage {
+public class ConditioningWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.ConditionningWizardPage";
 	
 	private OperationCallControllerBinding operationCallControllerBinding;
-	private ConditionningComposite conditionningComposite;
+	private ConditioningComposite conditionningComposite;
 	
 	private Adapter adapter; 
 
@@ -41,13 +41,13 @@ public class ConditionningWizardPage extends WizardPage {
 	 * 
 	 * @param pageName
 	 */
-	public ConditionningWizardPage() {
+	public ConditioningWizardPage() {
 		super(WIZARD_PAGE_ID);
 		setTitle("Conditionnings");
 		setDescription("Choose the controllers values sources conditionnings");
 	}
 	
-	public ConditionningWizardPage(OperationCallControllerBinding operationCallControllerBinding){
+	public ConditioningWizardPage(OperationCallControllerBinding operationCallControllerBinding){
 		this();
 		if (this.operationCallControllerBinding != null){
 			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
@@ -91,7 +91,7 @@ public class ConditionningWizardPage extends WizardPage {
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new FillLayout());
 
-		conditionningComposite = new ConditionningComposite(container, SWT.None);
+		conditionningComposite = new ConditioningComposite(container, SWT.None);
 		conditionningComposite.setOperationCallControllerBinding(operationCallControllerBinding);
 	
 		setControl(container);

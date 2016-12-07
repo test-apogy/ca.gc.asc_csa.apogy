@@ -161,5 +161,4 @@ public class ControllerSelectionComposite extends Composite {
 	public void dispose() {
 		super.dispose();
 	}
-
 }
