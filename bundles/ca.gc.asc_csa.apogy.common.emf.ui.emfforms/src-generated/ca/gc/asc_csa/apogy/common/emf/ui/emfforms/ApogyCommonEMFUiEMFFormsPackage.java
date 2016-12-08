@@ -119,13 +119,22 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_BOOLEAN = 1;
 
 	/**
+	 * The operation id for the '<em>Create EMF Forms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW = 2;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE_OPERATION_COUNT = 2;
+	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE_OPERATION_COUNT = 3;
 
 
 	/**
@@ -137,6 +146,17 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 	 * @generated
 	 */
 	int COMPOSITE = 1;
+
+
+	/**
+	 * The meta object id for the '<em>VView</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecp.view.spi.model.VView
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.emfforms.impl.ApogyCommonEMFUiEMFFormsPackageImpl#getVView()
+	 * @generated
+	 */
+	int VVIEW = 2;
 
 
 	/**
@@ -170,6 +190,16 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 	EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_boolean();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade#createEMFForms(org.eclipse.swt.widgets.Composite, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecp.view.spi.model.VView) <em>Create EMF Forms</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create EMF Forms</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade#createEMFForms(org.eclipse.swt.widgets.Composite, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecp.view.spi.model.VView)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.swt.widgets.Composite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -179,6 +209,17 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getComposite();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.ecp.view.spi.model.VView <em>VView</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>VView</em>'.
+	 * @see org.eclipse.emf.ecp.view.spi.model.VView
+	 * @model instanceClass="org.eclipse.emf.ecp.view.spi.model.VView"
+	 * @generated
+	 */
+	EDataType getVView();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -227,6 +268,13 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 		 */
 		EOperation APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_BOOLEAN = eINSTANCE.getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_boolean();
 		/**
+		 * The meta object literal for the '<em><b>Create EMF Forms</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW = eINSTANCE.getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView();
+		/**
 		 * The meta object literal for the '<em>Composite</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -235,6 +283,15 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType COMPOSITE = eINSTANCE.getComposite();
+		/**
+		 * The meta object literal for the '<em>VView</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.ecp.view.spi.model.VView
+		 * @see ca.gc.asc_csa.apogy.common.emf.ui.emfforms.impl.ApogyCommonEMFUiEMFFormsPackageImpl#getVView()
+		 * @generated
+		 */
+		EDataType VVIEW = eINSTANCE.getVView();
 
 	}
 

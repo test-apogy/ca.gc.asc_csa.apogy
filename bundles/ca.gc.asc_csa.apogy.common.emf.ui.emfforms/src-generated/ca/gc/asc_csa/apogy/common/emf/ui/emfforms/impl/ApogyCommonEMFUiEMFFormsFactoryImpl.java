@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.emf.ecp.view.spi.model.VView;
 import org.eclipse.swt.widgets.Composite;
 
 /**
@@ -85,6 +86,8 @@ public class ApogyCommonEMFUiEMFFormsFactoryImpl extends EFactoryImpl implements
 		switch (eDataType.getClassifierID()) {
 			case ApogyCommonEMFUiEMFFormsPackage.COMPOSITE:
 				return createCompositeFromString(eDataType, initialValue);
+			case ApogyCommonEMFUiEMFFormsPackage.VVIEW:
+				return createVViewFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -100,6 +103,8 @@ public class ApogyCommonEMFUiEMFFormsFactoryImpl extends EFactoryImpl implements
 		switch (eDataType.getClassifierID()) {
 			case ApogyCommonEMFUiEMFFormsPackage.COMPOSITE:
 				return convertCompositeToString(eDataType, instanceValue);
+			case ApogyCommonEMFUiEMFFormsPackage.VVIEW:
+				return convertVViewToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -130,6 +135,24 @@ public class ApogyCommonEMFUiEMFFormsFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	public String convertCompositeToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VView createVViewFromString(EDataType eDataType, String initialValue) {
+		return (VView)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVViewToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

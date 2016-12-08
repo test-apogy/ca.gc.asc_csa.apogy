@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.emf.ecp.view.spi.model.VView;
 import org.eclipse.swt.widgets.Composite;
 
 /**
@@ -46,6 +47,13 @@ public class ApogyCommonEMFUiEMFFormsPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EDataType compositeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType vViewEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -143,8 +151,26 @@ public class ApogyCommonEMFUiEMFFormsPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView() {
+		return apogyCommonEMFUiEMFFormsFacadeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getComposite() {
 		return compositeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getVView() {
+		return vViewEDataType;
 	}
 
 	/**
@@ -178,9 +204,11 @@ public class ApogyCommonEMFUiEMFFormsPackageImpl extends EPackageImpl implements
 		apogyCommonEMFUiEMFFormsFacadeEClass = createEClass(APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE);
 		createEOperation(apogyCommonEMFUiEMFFormsFacadeEClass, APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT);
 		createEOperation(apogyCommonEMFUiEMFFormsFacadeEClass, APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_BOOLEAN);
+		createEOperation(apogyCommonEMFUiEMFFormsFacadeEClass, APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW);
 
 		// Create data types
 		compositeEDataType = createEDataType(COMPOSITE);
+		vViewEDataType = createEDataType(VVIEW);
 	}
 
 	/**
@@ -227,8 +255,14 @@ public class ApogyCommonEMFUiEMFFormsPackageImpl extends EPackageImpl implements
 		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "readOnly", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView(), null, "createEMFForms", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getComposite(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVView(), "viewModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		// Initialize data types
 		initEDataType(compositeEDataType, Composite.class, "Composite", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(vViewEDataType, VView.class, "VView", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

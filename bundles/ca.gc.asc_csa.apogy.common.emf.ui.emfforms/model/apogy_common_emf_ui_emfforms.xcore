@@ -33,8 +33,10 @@ package ca.gc.asc_csa.apogy.common.emf.ui.emfforms
 
 import org.eclipse.swt.widgets.Composite
 import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecp.view.spi.model.VView
 
 type Composite wraps Composite
+type VView wraps VView
 
 /* -------------------------------------------------------------------------
  * 
@@ -60,4 +62,14 @@ class ApogyCommonEMFUiEMFFormsFacade{
 	 * @param readOlny Used to specify if the EMF forms is in read only mode.
 	 */
 	op void createEMFForms(Composite parent, EObject eObject, boolean readOnly)
+	
+	/**
+	 * Creates a {@link Composite} containing the EMF forms 
+	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
+	 * @param parent The parent {@link Composite} containing the EMF forms.
+	 * @param eObject The {@link EObject} to display.
+	 * @param readOlny Used to specify if the EMF forms is in read only mode.
+	 * @param viewModel View model used to render the EObject. 
+	 */
+	op void createEMFForms(Composite parent, EObject eObject, VView viewModel)
 }

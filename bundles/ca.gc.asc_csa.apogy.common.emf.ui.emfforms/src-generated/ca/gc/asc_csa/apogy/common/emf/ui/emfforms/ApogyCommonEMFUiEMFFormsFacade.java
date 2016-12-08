@@ -14,6 +14,7 @@
 package ca.gc.asc_csa.apogy.common.emf.ui.emfforms;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecp.view.spi.model.VView;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.impl.ApogyCommonEMFUiEMFFormsFacadeImpl;
@@ -71,4 +72,21 @@ public interface ApogyCommonEMFUiEMFFormsFacade extends EObject {
 	 * @generated
 	 */
 	void createEMFForms(Composite parent, EObject eObject, boolean readOnly);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a {@link Composite} containing the EMF forms
+	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
+	 * @param parent The parent {@link Composite} containing the EMF forms.
+	 * @param eObject The {@link EObject} to display.
+	 * @param readOlny Used to specify if the EMF forms is in read only mode.
+	 * @param viewModel View model used to render the EObject.
+	 * <!-- end-model-doc -->
+	 * @model parentDataType="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Composite" parentUnique="false" eObjectUnique="false" viewModelDataType="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.VView" viewModelUnique="false"
+	 * @generated
+	 */
+	void createEMFForms(Composite parent, EObject eObject, VView viewModel);
 } // ApogyCommonEMFUiEMFFormsFacade
