@@ -19,6 +19,7 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
@@ -38,6 +39,11 @@ public class DescribedComposite extends Composite {
 	private EditingDomain editingDomain;
 	// private final int DESCRIPTION_TEXT_NUMBER_OF_LINES = 10;
 
+	/**
+	 * @deprecated Should use DescribedComposite(composite, int) and then
+	 *             setDescribed(Described newDescribed). This will get the
+	 *             TransactionalEditingDomain.
+	 */
 	public DescribedComposite(Composite parent, int style, EditingDomain editingDomain) {
 		this(parent, style);
 		this.editingDomain = editingDomain;
@@ -115,6 +121,7 @@ public class DescribedComposite extends Composite {
 
 	public void setDescribed(Described newDescribed, boolean update) {
 		described = newDescribed;
+		editingDomain = TransactionUtil.getEditingDomain(newDescribed);
 		if (update) {
 			if (m_bindingContext != null) {
 				m_bindingContext.dispose();

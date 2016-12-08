@@ -439,6 +439,8 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		  Object value = ApogyCoreProgramsControllersFacade.INSTANCE.createValue(getBindedEDataTypeArgument().getEParameter(), data);
 		  
 		  // Update last value (used for display purposes).
+		  System.out.println("Ressource: " + this.eResource());
+		  
 		  ApogyCoreProgramsControllersFacade.INSTANCE.setControllerValueSourceLastValue(this, value);
 		  
 		  return value;

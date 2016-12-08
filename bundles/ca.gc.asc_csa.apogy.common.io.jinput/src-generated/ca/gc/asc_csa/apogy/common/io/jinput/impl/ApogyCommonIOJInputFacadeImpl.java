@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.swt.widgets.Display;
 
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.Activator;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
@@ -162,8 +163,10 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 								while (queue.getNextEvent(event)) {
 									System.out.println(event.getComponent());
 									if (Math.abs(event.getValue()) > 0.5) {
-										eComponentQualifier.setEComponentName(event.getComponent().getName());
-										eComponentQualifier.setEControllerName(eController.getName());
+										ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier, ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME, event.getComponent().getName());
+										ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier, ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME, eController.getName());
+//										eComponentQualifier.setEComponentName(event.getComponent().getName());
+//										eComponentQualifier.setEControllerName(eController.getName());
 									}
 								}
 							}

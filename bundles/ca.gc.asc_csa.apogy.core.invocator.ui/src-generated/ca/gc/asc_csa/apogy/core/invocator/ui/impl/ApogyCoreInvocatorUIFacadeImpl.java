@@ -293,10 +293,14 @@ public class ApogyCoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container
 					.createArgumentsList();
 			argumentsList.getArguments().addAll(arguments);
 
-			operationCall.setArgumentsList(argumentsList);
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCall,
+					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, argumentsList);
+			// operationCall.setArgumentsList(argumentsList);
 		} else {
 			// Clear the list
-			operationCall.setArgumentsList(null);
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCall,
+					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, null);
+			// operationCall.setArgumentsList(null);
 		}
 	}
 

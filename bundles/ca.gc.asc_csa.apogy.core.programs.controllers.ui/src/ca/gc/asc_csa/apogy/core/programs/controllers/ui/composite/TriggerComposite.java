@@ -23,9 +23,11 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -42,6 +44,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectListComposite;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
@@ -99,7 +102,8 @@ public class TriggerComposite extends ScrolledComposite {
 				else if(getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER){
 					trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerStateTrigger();
 				}
-				operationCallControllerBinding.setTrigger(trigger);
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding, ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, trigger);
+//				operationCallControllerBinding.setTrigger(trigger);
 				setEComponentComposite();
 				TriggerComposite.this.newSelection(selection);
 			}
@@ -163,7 +167,7 @@ public class TriggerComposite extends ScrolledComposite {
 			
 			IObservableValue<?> observeTextTextvalue = WidgetProperties.text(SWT.Modify).observe(textRefreshPeriod);
 			@SuppressWarnings("unchecked")
-			IObservableValue<?> observeRefreshPeriodValue = EMFProperties.value(ApogyCoreProgramsControllersPackage.Literals.TIME_TRIGGER__REFRESH_PERIOD).observe(trigger);
+			IObservableValue<?> observeRefreshPeriodValue = EMFEditProperties.value(TransactionUtil.getEditingDomain(operationCallControllerBinding), ApogyCoreProgramsControllersPackage.Literals.TIME_TRIGGER__REFRESH_PERIOD).observe(trigger);
 			m_bindingContext.bindValue(observeTextTextvalue, observeRefreshPeriodValue,
 					new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE).setConverter(new Converter(String.class, long.class) {
 						@Override
@@ -200,8 +204,9 @@ public class TriggerComposite extends ScrolledComposite {
 			EObjectListComposite edgeTypesComposite = new EObjectListComposite(eComponentComposite, SWT.None) {
 				@Override
 				protected void newSelection(TreeSelection selection) {
-					((ControllerEdgeTrigger) trigger)
-							.setEdgeType(EdgeType.get(((EEnumLiteral) selection.getFirstElement()).getLiteral()));
+					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(trigger, ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE, EdgeType.get(((EEnumLiteral) selection.getFirstElement()).getLiteral()));
+//					((ControllerEdgeTrigger) trigger)
+//							.setEdgeType(EdgeType.get(((EEnumLiteral) selection.getFirstElement()).getLiteral()));
 					TriggerComposite.this.newSelection(selection);
 				}
 

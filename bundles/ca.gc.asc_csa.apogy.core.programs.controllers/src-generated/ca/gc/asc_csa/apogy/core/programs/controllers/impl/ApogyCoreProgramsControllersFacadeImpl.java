@@ -25,7 +25,9 @@ import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
@@ -206,8 +208,13 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 	 * @generated_NOT
 	 */
 	public void setControllerValueSourceLastValue(ControllerValueSource source, Object value) {
-		TransactionalEditingDomain domain = (TransactionalEditingDomain) AdapterFactoryEditingDomain
-				.getEditingDomainFor(source);
+		System.out.println(source);
+		EditingDomain domain =  AdapterFactoryEditingDomain.getEditingDomainFor(source);
+		System.out.println("Domain facede:" + domain);
+		//TransactionUtil.getEditingDomain(value);
+//		if (editingDomain instance of null) {
+//			domain = (TransactionalEditingDomain)
+//		}	
 		if(domain != null){
 			SetCommand command = new SetCommand(domain, source, ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__LAST_VALUE, value);
 			domain.getCommandStack().execute(command);

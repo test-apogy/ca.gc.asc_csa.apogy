@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.list.DecoratingObservableList;
-import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -21,7 +19,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ColumnViewer;
 import org.eclipse.jface.viewers.ComboBoxCellEditor;
@@ -44,12 +41,11 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
@@ -58,8 +54,8 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectListComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.SubClassesListComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
@@ -67,7 +63,6 @@ import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
@@ -95,8 +90,9 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
 
 public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {	
 	
-
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
+	
+	private Button devButton;
 	
 	private Composite compositeArguments;
 	private TableViewer tableViewerArguments;
@@ -135,6 +131,11 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 
 		Composite composite = new Composite(this, SWT.None);
 		composite.setLayout(new GridLayout(2, true));
+		
+		devButton = new Button(composite, SWT.CHECK);
+		devButton.setText("Activate EMFForms");
+		devButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 2, 1));
+		devButton.setSelection(false);
 		
 		/**
 		 * Arguments list
@@ -243,6 +244,12 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		m_bindingContext = initDataBindingsCustom();
 	}
 	
+	private void emfForms(Composite parent, AbstractInputConditioning conditioning) {
+		if (devButton.getSelection()) {
+			ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(parent, conditioning, false);
+		}
+	}
+
 	private void updateCompositeValueSource() {
 		if (compositeValueSource != null) {
 			compositeValueSource.dispose();
@@ -366,6 +373,9 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		}
 		
 		if (getSelectedArgument() != null && getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
+			ControllerValueSource controllerValueSource = (ControllerValueSource) getSelectedArgument()
+					.getValueSource();
+			
 			
 			compositeConditioning = new Composite(sectionConditioning, SWT.None);
 			compositeConditioning.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
@@ -378,8 +388,12 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 			AbstractInputConditioningResponsePlotComposite plotComposite = new AbstractInputConditioningResponsePlotComposite(
 					compositeConditioning, SWT.None);
 			plotComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
-			ControllerValueSource controllerValueSource = (ControllerValueSource) getSelectedArgument()
-					.getValueSource();
+			
+			Composite conditionningEMFForms = new Composite(compositeConditioning, SWT.None);
+			conditionningEMFForms.setLayout(new GridLayout());
+			conditionningEMFForms.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+			conditionningEMFForms.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+			
 			SubClassesListComposite subClassesListComposite = new SubClassesListComposite(compositeConditioning,
 					SWT.None) {
 				@Override
@@ -389,6 +403,8 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 								.create((EClass) selection.getFirstElement());
 						controllerValueSource.setConditioning(abstractInputConditioning);
 						plotComposite.setAbstractInputConditioning(controllerValueSource.getConditioning());
+						emfForms(conditionningEMFForms, controllerValueSource.getConditioning());
+//						ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(conditionningEMFForms, controllerValueSource.getConditioning(), false);
 					}
 				}
 			};
@@ -398,9 +414,11 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 				((SubClassesListComposite) subClassesListComposite).setSelectedEClass(
 						((EClass) ((StructuredSelection) subClassesListComposite.getSelection()).getFirstElement()));
 			}
-
+			emfForms(conditionningEMFForms, controllerValueSource.getConditioning());
+//			ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(conditionningEMFForms, controllerValueSource.getConditioning(), false);
 			subClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 			subClassesListComposite.moveAbove(plotComposite);
+			
 			compositeConditioning.layout();
 		} else {
 			compositeConditioning = getNoContentComposite(sectionConditioning);
@@ -416,6 +434,11 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		updateCompositeConditioning();
 	}
 	
+	/**
+	 * 
+	 * @param section
+	 * @return
+	 */
 	private NoContentComposite getNoContentComposite(Section section){
 		NoContentComposite composite = new NoContentComposite(section, SWT.None){
 			@Override

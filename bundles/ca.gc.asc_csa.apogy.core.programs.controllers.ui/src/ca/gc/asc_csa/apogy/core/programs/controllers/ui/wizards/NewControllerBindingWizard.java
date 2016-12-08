@@ -25,12 +25,11 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallEOperationsWizardPage;
-import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableFeatureReferenceWizardPage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
@@ -165,11 +164,13 @@ public class NewControllerBindingWizard extends Wizard {
 	protected OperationCallControllerBinding getControllerBinding() {
 		if (controllerBinding == null) {
 			controllerBinding = ApogyCoreProgramsControllersFactory.eINSTANCE.createOperationCallControllerBinding();
-			controllerBinding.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
+			ApogyCommonEmfTransactionFacade.INSTANCE.addInTempTransactionalEditingDomain(controllerBinding);
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(controllerBinding, ApogyCommonEMFPackage.Literals.NAMED__NAME, ApogyCommonEMFFacade.INSTANCE.getDefaultName(
 					getControllersConfiguration(),
 					getControllerBinding(), 
 					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
 		}
+
 		return controllerBinding;
 	}
 	
