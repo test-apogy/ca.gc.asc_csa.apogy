@@ -32,6 +32,8 @@
 package ca.gc.asc_csa.apogy.common.emf.transaction
 
 import org.eclipse.emf.transaction.TransactionalEditingDomain
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EStructuralFeature
 
 type TransactionalEditingDomain wraps TransactionalEditingDomain
 
@@ -44,4 +46,16 @@ class ApogyCommonEmfTransactionFacade{
 	  * @return Reference to the Apogy {@link TransactionalEditingDomain).
 	  */	 
 	 op TransactionalEditingDomain getDefaultEditingDomain()
+	 
+	 /*
+	  * Puts the specified {@link EObject} inside a {@link ResourceSet} that uses a {@link TransactionalEditingDomain}.
+	  * It is important to remove the {@link EObject} when the temporary {@link TransactionalEditingDomain} 
+	  * is no longer needed to be able to save the modification made to the {@link EObject}.
+	  * @param eObject The reference to the {@link EObject}.
+	  */
+	 op void addInTempTransactionalEditingDomain(EObject eObject)
+	 
+	 op void basicSet(EObject owner, EStructuralFeature feature, Object value)
+	 
+	 op void basicSet(EObject owner, EStructuralFeature feature, Object value, int index)
 }
