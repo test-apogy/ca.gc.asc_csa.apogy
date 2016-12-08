@@ -1,0 +1,126 @@
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
+@GenModel(prefix="ApogyEarthEnvironment",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+          copyrightText="Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Pierre Allard (Pierre.Allard@canada.ca), 
+    Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
+    Canadian Space Agency (CSA) - Initial API and implementation",
+		  modelName="ApogyCoreEnvironment",
+		  complianceLevel="6.0",
+		  suppressGenModelAnnotations="false",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.earth/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.environment.earth.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.core.environment.earth
+
+import ca.gc.asc_csa.apogy.core.ApogySystem
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
+
+import ca.gc.asc_csa.apogy.common.topology.Node
+
+/*
+ * A location on Earth.
+ */
+class GeographicCoordinates
+{
+	/*
+	 * The longitude, in radians. Longitude east of Greenwich, UK  are positive
+	 * while those west of Greenwich are negative.
+	 */
+	@GenModel(propertyCategory="GEOGRAPHIC_COORDINATES", apogy_units="rad")
+	double longitude
+	
+	/*
+	 * The latitude, in radians. Latitude north of the equator are positive while those
+	 * south of the equator are negative.
+	 */
+	@GenModel(propertyCategory="GEOGRAPHIC_COORDINATES", apogy_units="rad")	
+	double latitude
+	
+	/*
+	 * Height above the Earth's sea level, in meters.
+	 */
+	@GenModel(propertyCategory="GEOGRAPHIC_COORDINATES", apogy_units="m")
+	double elevation
+}
+
+
+/*
+ * The horizontal coordinate system is a celestial coordinate system that uses the
+ * observer's local horizon as the fundamental plane. This conveniently divides the
+ * sky into the upper hemisphere that you can see, and the lower hemisphere that you
+ * cannot (because the Earth is in the way). The pole of the upper hemisphere is called
+ * the zenith. The pole of the lower hemisphere is called the nadir.
+ * 
+ * The horizontal coordinates are:
+ * 
+ * - altitude (Alt): sometimes referred to as elevation, that is the angle between the
+ *                   object and the observer's local horizon
+ * 
+ * - azimuth (Az): the angle of the object around the horizon, usually measured from the
+ *                 north point towards the east. In former times, it was common to refer
+ *                 to azimuth from the south, as it was then zero at the same time the hour
+ *                 angle of a star was zero. This assumes, however, that the star (upper)
+ *                 culminates in the south, which is only true for most stars in the
+ *                 Northern Hemisphere
+ */
+class HorizontalCoordinates
+{
+	double altitude
+	double azimuth
+	double radius
+}
+
+/*
+ * The ecliptic coordinate system is a celestial coordinate system that uses the ecliptic
+ * for its fundamental plane. The ecliptic is the path that the sun appears to follow across
+ * the sky over the course of a year. It is also the projection of the Earth's orbital plane
+ * onto the celestial sphere. The latitudinal angle is called the ecliptic latitude or celestial
+ * latitude (denoted β), measured positive towards the north. The longitudinal angle is called
+ * the ecliptic longitude or celestial longitude (denoted λ), measured eastwards from 0° to 360°.
+ * Like right ascension in the equatorial coordinate system, 0° ecliptic longitude is pointing
+ * towards the Sun from the Earth at the Northern hemisphere vernal equinox. This choice makes
+ * the coordinates of the fixed stars subject to shifts due to the precession, so that always a
+ * reference epoch should be specified. Usually epoch J2000.0 is taken, but the instantaneous
+ * equinox of the day (called the epoch of date) is possible too. This coordinate system can be
+ * particularly useful for charting solar system objects. Most planets (except Mercury), and many
+ * small solar system bodies have orbits with small inclinations to the ecliptic plane, and therefore
+ * their ecliptic latitude β is always small. Because of the planets' small deviation from the plane
+ * of the ecliptic, ecliptic coordinates were used historically to compute their positions. (Aaboe 2001, 17-19)
+ */
+class EclipticCoordinates
+{
+	double longitude
+	double latitude
+	double radius 
+}
+
+class ApogyEarthFacade
+{
+	op Tuple3d getMoonVector(ApogySystem apogySystem, String nodeID, ca.gc.asc_csa.apogy.core.invocator.Environment environment)
+	op Tuple3d getMoonVector(Node node, ca.gc.asc_csa.apogy.core.invocator.Environment environment)	
+}
+

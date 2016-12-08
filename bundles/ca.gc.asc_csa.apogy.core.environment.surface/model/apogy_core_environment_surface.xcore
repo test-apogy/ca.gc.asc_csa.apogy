@@ -11,11 +11,11 @@
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
-@GenModel(prefix="ApogyCoreEnvironmentSurface",
+@GenModel(prefix="ApogySurfaceEnvironment",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
-		  copyrightText="Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+          copyrightText="Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
 All rights reserved. This program and the accompanying materials
 are made available under the terms of the Eclipse Public License v1.0
 which accompanies this distribution, and is available at
@@ -26,18 +26,771 @@ Contributors:
     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
     Sebastien Gemme (Sebastien.Gemme@canada.ca),
     Canadian Space Agency (CSA) - Initial API and implementation",
-		  modelName="ApogyCoreEnvironmentSurface",
-		  complianceLevel="8.0",
+		  modelName="ApogySurfaceEnvironment",
+		  complianceLevel="6.0",
 		  suppressGenModelAnnotations="false",
 		  dynamicTemplates="true", 
 		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.surface/src-generated")
-@GenModel(editDirectory= "/ca.gc.asc_csa.apogy.core.environment.surface.edit/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.environment.surface.edit/src-generated")
 
 package ca.gc.asc_csa.apogy.core.environment.surface
 
-/*
- * Apogy Environment Surface Facade (Singleton). 
+import ca.gc.asc_csa.apogy.common.emf.Described
+import ca.gc.asc_csa.apogy.common.emf.Exception
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.TransformNode
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode
+import ca.gc.asc_csa.apogy.core.environment.Worksite
+import org.eclipse.core.runtime.IProgressMonitor
+import ca.gc.asc_csa.apogy.core.environment.CelestialBody
+
+// Types
+type IProgressMonitor wraps IProgressMonitor
+type Color3f wraps javax.vecmath.Color3f
+type List<T> wraps java.util.List
+
+/* -------------------------------------------------------------------------
+ * 
+ * Surface Worksite
+ * 
+ * ------------------------------------------------------------------------- */
+
+
+/**
+ * A worksite on the surface of a CelestialBody
  */
-class ApogyCoreEnvironmentSurfaceFacade{
+abstract class SurfaceWorksite extends Worksite
+{	
+	@GenModel(children="true", notify="true", property="None")
+	contains MapsList[1] mapsList
+
+	/**
+	 * The body on which the Surface Worksite is located.
+	 */
+	@GenModel(children="true", notify="true", property="None")
+	contains CelestialBody[1] celestialBody
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Maps and Layers
+ * 
+ * ------------------------------------------------------------------------- */
+
+class Map extends Named, Described
+{
+	contains Matrix4x4[0..1] transformation
+	
+	contains AbstractMapLayer[0..*] layers opposite map
+	
+	refers derived transient readonly MapNode[1] mapNode
+}
+
+class MapsList
+{
+	contains Map[0..*] maps
+	
+	@GenModel(property="None")
+	refers derived transient readonly MapsListNode[1] mapsListNode
+}
+
+/*
+ * A layer representing a terrain map.
+ */
+abstract class AbstractMapLayer extends Named, Described
+{	
+	@GenModel(property="None")
+	refers Map map opposite layers
+	
+	@GenModel(property="None")
+	refers derived transient readonly AbstractMapLayerNode abstractMapLayerNode
+}
+
+/*
+ * Class representing presentation attributes that are associated to a AbstractMapLayer.
+ */
+abstract class MapLayerPresentation extends Named, Described
+{
+	/*
+	 * Visibility
+	 */
+	@GenModel(notify="true", propertyCategory="PRESENTATION_SETTINGS")
+	boolean visible = "true"
+		
+	refers AbstractMapLayer mapLayer
+}
+
+/*
+ * A Map Layer containing a URL to some data.
+ */
+abstract class URLMapLayer extends AbstractMapLayer
+{
+	@GenModel(propertyCategory="URL")
+	String url
+}
+
+/*
+ * Defines a Region.
+ */
+abstract class Region
+{	
+	/*
+	 *	Transform that expresses the origin of the region relative to the worksite. 
+	 */
+	contains Matrix4x4[0..1] transformation
+}
+
+/*
+ * Defines a 2D rectangular region in the XY Plane.
+ */
+class RectangularRegion extends Region
+{		
+	/*
+	 * Minimum X coordinate on the X axis.
+	 */	
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", apogy_units="m")
+	double xMin = "0.0"
+	
+	/*
+	 * Maximum X coordinate on the X axis.
+	 */
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", apogy_units="m")
+	double xMax = "0.0"
+	
+	/*
+	 * Minimum X coordinate on the Y axis.
+	 */
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", apogy_units="m")
+	double yMin = "0.0"
+	
+	/*
+	 * Maximum X coordinate on the Y axis.
+	 */
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", apogy_units="m")
+	double yMax = "0.0"
+	
+	/*
+	 * Dimension along the X axis.
+	 */
+	@GenModel(propertyCategory="EXTENT_SIZES", apogy_units="m")
+	derived transient readonly volatile double xDimension
+	
+	/*
+	 * Dimension along the Y axis.
+	 */
+	@GenModel(propertyCategory="EXTENT_SIZES", apogy_units="m")
+	derived transient readonly volatile double yDimension 
+	
+	refers derived transient readonly Tuple3d[1] lowerLeftCorner
+	refers derived transient readonly Tuple3d[1] upperLeftCorner
+	refers derived transient readonly Tuple3d[1] lowerRightCorner
+	refers derived transient readonly Tuple3d[1] upperRightCorner
+}
+
+/*
+ * Defines a 3D rectangular volume.
+ */
+class RectangularVolumeRegion extends RectangularRegion
+{		
+	/*
+	 * Minimum Z coordinate on the Z axis.
+	 */	
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", apogy_units="m")
+	double zMin = "0.0"
+	
+	/*
+	 * Maximum Z coordinate on the Z axis.
+	 */
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", apogy_units="m")
+	double zMax = "0.0"
+	
+	/*
+	 * Dimension along the Z axis.
+	 */
+	@GenModel(propertyCategory="EXTENT_SIZES", apogy_units="m")
+	derived transient readonly volatile double zDimension 	
+}
+
+/*
+ * Interface that provides a RectangularRegion.
+ */
+interface RectangularRegionProvider
+{
+   /*
+	* Returns the RectangularRegion defined by the object.
+	* @return The RectangularRegion defined by the object, never null.
+	*/
+	op RectangularRegion getRegion()
+}
+
+/*
+ * Defines a rectangular region covered by an image.
+ */
+interface RectangularRegionImage extends RectangularRegionProvider 
+{
+	/*
+	 * Return the image associated with this region.
+	 * @return The image, can be null.
+	 */
+	op AbstractEImage getRegionImage()
+			
+	/*
+	 * Returns the image resolution.
+	 * @return The resolution, in meters / pixel, or -1 if not defined.
+	 */	
+	@GenModel(apogy_units="m/pixel") op double getResolution()
+}
+
+/*
+ * Map Layer containing a 2D image.
+ */
+class ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
+{
+	/*
+	 * The width of the region covered by the map, in meters.
+	 */
+	@GenModel(property="Editable", propertyCategory="SIZE_AND_RESOLUTION", apogy_units="m")	
+	double width = "0.0"
+
+	/*
+	 * The height of the region covered by the map, in meters. 
+	 */
+	@GenModel(property="Editable", propertyCategory="SIZE_AND_RESOLUTION", apogy_units="m")
+	double height = "0.0"
+
+	/* 
+	 * Whether or not the map is opaque (i.e. cannot be superimposed on other ImageMapLayer. 
+	 * */
+	boolean opaque = "true"
+
+	/* 
+	 * The image.
+	 */
+	@GenModel(propertyCategory="IMAGES")
+	contains AbstractEImage[1] image
+	
+	/*
+	 * An image containing the legend associated with the image.
+	 */
+	@GenModel(propertyCategory="IMAGES")
+	contains AbstractEImage[0..1] legend	
+	
+	/*
+	 * Update the image using the image parameters.
+	 */	
+	op void updateImage(IProgressMonitor progressMonitor)	
+	
+	/*
+	 * Return the RectangularRegion represented by this ImageMapLayer.
+	 */
+	op RectangularRegion getImageMapLayerRegion()
+	
+	/*
+	 * The resolution, in meters / pixels
+	 */
+	@GenModel(property="Readonly", propertyCategory="SIZE_AND_RESOLUTION", apogy_units="m/pixel") 
+	derived transient readonly double resolution		
+}
+
+/*
+ * Presentation properties associated with an Image Layer.
+ */
+class ImageMapLayerPresentation extends MapLayerPresentation, RectangularRegionImage
+{
+	/*
+	 *  Operation that return the Image Map Layer to which this presentation is associated.
+	 */	
+	op ImageMapLayer getImageMapLayer()
+	
+	/*
+	 * The alpha to use to display this layer, from fully opaque (1.0f) to fully transparent (0.0f).
+	 */
+	@GenModel(notify="true", propertyCategory="PRESENTATION_SETTINGS")
+	float alpha = "1.0"	
+}
+
+/*
+ * ImageMapLayer that refers to an image at a URL
+ */
+class URLImageMapLayer extends ImageMapLayer, URLMapLayer
+{
+	/*
+	 * URL to the Image Map Layer legend.
+	 */
+	@GenModel(propertyCategory="URL")
+	String legendURL
+}
+
+/*
+ * A map Layer that contains an arbitray topology tree.
+ */
+class TopologyTreeMapLayer extends AbstractMapLayer
+{		
+	/*
+	 * The root of the topology contained in this layer. 
+	 */
+	@GenModel(children = "true", property="None")
+	contains TopologyTreeMapLayerNode topologyTreeRoot opposite topologyTreeMapLayer
+}
+
+/*
+ * Specialized GroupNode which parent node is overloarded to make it transient.
+ * This is necessary to avoid dangling exceptions.
+ */
+class TopologyTreeMapLayerNode extends AggregateGroupNode
+{
+	refers TopologyTreeMapLayer topologyTreeMapLayer opposite topologyTreeRoot
+	
+	refers transient Node transientParent			
+}
+
+/*
+ * Abstract base class of all Cartesian Triangular Mesh Map Layers
+ */
+class CartesianTriangularMeshMapLayer extends AbstractMapLayer
+{			
+	/*
+	 * Operation that returns the CartesianTriangularMesh associated with this layer.
+	 */
+	op CartesianTriangularMesh getCurrentMesh()
+	
+	/*
+	 * Forces the texture image projected onto the mesh to be updated.
+	 */
+	op void forceUpdateTextureImage()
+		
+	/*
+	 * Whether of not the current mesh needs to be refreshed.
+	 */
+	@GenModel(property="None", propertyCategory="TRIANGULAR_MESH")
+	boolean meshIsDirty = "true"
+	
+	/*
+	 * A list of map layer presentation associated with this CartesianTriangularMeshMapLayer.
+	 */	 
+	contains MapLayerPresentation[0..*] mapLayerPresentations
+	
+	/*
+	 * The texture currently displayed on top of the mesh layer.
+	 */
+	@GenModel(children = "true", property="None")
+	refers transient AbstractEImage textureImage
+	
+	/*
+	 * The node representing this layer in the topology.
+	 */
+	@GenModel(property="None")
+	refers transient CartesianTriangularMeshMapLayerNode cartesianTriangularMeshMapLayerNode	
+}
+
+/*
+ * Abstract class defining an ImageMapLayer for which the image is derived from a Mesh.
+ */
+abstract class CartesianTriangularMeshDerivedImageMapLayer extends ImageMapLayer
+{
+	/*
+	 * The required resolution, in meters / pixels
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", apogy_units="m/pixel") 
+	double requiredResolution = "1.0"
+	
+	/*
+	 * The map layer containing the mesh for which to generate the slope map.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS") 
+	refers CartesianTriangularMeshMapLayer cartesianTriangularMeshMapLayer	
+}
+
+/*
+ * A specialized ImageMapLayer that generate a slope map image associated with a CartesianTriangularMeshMapLayer.
+ */
+class CartesianTriangularMeshSlopeImageMapLayer extends CartesianTriangularMeshDerivedImageMapLayer
+{
+	/*
+	 * Whether or not to use autoscalling to generate the color scale.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS") 
+	boolean autoScale = "true"
+	
+	/*
+	 * The minimum slope to use to generate the color scale. This is applicable only if autoScale is true. 
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", apogy_units="deg") 
+	double minimumSlope = "0.0"
+	
+	/*
+	 * The maximum slope to use to generate the color scale. This is applicable only if autoScale is true. 
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", apogy_units="deg") 
+	double maximumSlope = "50.0"	
+}
+
+/*
+ * A specialized CartesianTriangularMeshSlopeImageMapLayer that generate a slope with discrete slope intervals.
+ */
+class CartesianTriangularMeshDiscreteSlopeImageMapLayer extends CartesianTriangularMeshSlopeImageMapLayer
+{
+	/*
+	 * The range of slope for which to generate colors.
+	 */
+	contains SlopeRange[0..*] slopeRanges
+}
+
+/*
+ *  A specialized ImageMapLayer that generate a height map image associated with a CartesianTriangularMeshMapLayer.
+ */
+class CartesianTriangularMeshHeightImageMapLayer extends CartesianTriangularMeshDerivedImageMapLayer
+{
+	/*
+	 * Whether or not to use autoscalling to generate the color scale.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	boolean autoScale = "true"
+
+	/*
+	 * The minimum height to use to generate the color scale. This is applicable only if autoScale is true. 
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", apogy_units="m")
+	double minimumHeight = "0.0"
+	
+	/*
+	 * The maximum height to use to generate the color scale. This is applicable only if autoScale is true. 
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", apogy_units="m")
+	double maximumHeight = "50.0"	
+}
+
+/*
+ * Class defining a slope range and its associated color.
+ */
+class SlopeRange extends Named, Described
+{
+	/*
+	 * Lower bound of the slope range. Always positive
+	 */
+	@GenModel(property="Editable", apogy_units="deg")
+	double slopeLowerBound = "0"
+	
+	/*
+	 * Upper bound of the slope range. Always positive, and should be larger than slopeLower.
+	 */
+	@GenModel(property="Editable", apogy_units="deg")
+	double slopeUpperBound = "10"
+	
+	/*
+	 * The color to use for this slope range.
+	 */
+	@GenModel(property="Editable")
+	Color3f color = "1.0,1.0,1.0"
+}
+
+/*
+ * A specialized CartesianTriangularMeshDerivedImageMapLayer that generate a image showing wether or not line of sight is present 
+ * between a point above the mesh and a specified fixed location.
+ */
+class LineOfSightImageMapLayer extends CartesianTriangularMeshDerivedImageMapLayer
+{	
+	/*
+	 * Color to use to mark line of sigh is available.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	Color3f lineOfSightAvailableColor = "0.0,1.0,0.0"
+
+	/*
+	 * Color to use to mark line of sigh is NOT available.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	Color3f lineOfSightNotAvailableColor = "1.0,0.0,0.0"
+
+	/*
+	 * The pose of the observer with which we want line of sight.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	contains Matrix4x4[1] observerPose
+	
+	/*
+	 * The height of target above ground.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", apogy_units="m")
+	double targetHeightAboveGround = "1.0" 
+	
+	/*
+	 * Whether or not find each target position using the local normal.
+	 * Using the local normal requires more processing time.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	boolean useHeightPerpendicularToGround = "false"
+}
+
+/*
+ * Base class of image map layer that represent a 2D shape.
+ */
+abstract class AbstractShapeImageLayer extends ImageMapLayer
+{
+	/*
+	 * Whether or not the shape should be drawn as a filled polygon.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS") 
+	boolean shapedFilled = "false"
+	
+	/*
+	 * Color to use to draw the polygon and fill it is required.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	Color3f color = "0.0,1.0,0.0"
+	
+	/*
+	 * The required resolution, in meters / pixels
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", apogy_units="m/pixel") 
+	double requiredResolution = "1.0"
+}
+
+/*
+ * An image map layer representing an ellipse.
+ */
+class EllipseShapeImageLayer extends AbstractShapeImageLayer
+{
+	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS", apogy_units="m") 
+	double ellipseWidth = "1.0"
+	
+	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS", apogy_units="m") 
+	double ellipseHeight = "1.0"
+	
+	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS") 
+	boolean showCenterLines = "true"
+}
+
+/*
+ * An image map layer representing an ellipse.
+ */
+class RectangleShapeImageLayer extends AbstractShapeImageLayer
+{
+	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS", apogy_units="m") 
+	double rectangleWidth = "1.0"
+	
+	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS", apogy_units="m") 
+	double rectangleHeight = "1.0"
+	
+	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS") 
+	boolean showCenterLines = "true"
+}
+
+/*
+ * Abstract base class of Image Map Layer that are defined by a series of vertices.
+ */
+abstract class PolygonShapeImageMapLayer extends AbstractShapeImageLayer
+{
+	/* Returns the list of vertices required to draw the polygon. */
+	op List<Tuple3d> getVertices()
+}
+
+/*
+ * PolygonShapeImageMapLayer defined by a list of cartesian coordinates.
+ */
+class CartesianCoordinatesPolygonShapeImageMapLayer extends PolygonShapeImageMapLayer
+{
+	contains Tuple3d[0..*] polygonVertices
+}
+
+/*
+ * Map Layer that contains a Cartesian Triangular Mesh.
+ */
+class BasicCartesianTriangularMeshMapLayer extends CartesianTriangularMeshMapLayer
+{
+	@GenModel(property="Readonly", propertyCategory="TRIANGULAR_MESH")
+	contains CartesianTriangularMesh[0..1] mesh
+}
+
+/*
+ * Map Layer that contains a URL to a Cartesian Triangular Mesh.
+ */
+class CartesianTriangularMeshURLMapLayer extends CartesianTriangularMeshMapLayer, URLMapLayer 
+{	
+	@GenModel(property="Readonly", propertyCategory="TRIANGULAR_MESH", children = "true")
+	refers transient CartesianTriangularMesh[0..1] mesh
+}
+
+
+/*
+ * Map Layer that contains Feature Of Interest.
+ */
+class FeaturesOfInterestMapLayer extends AbstractMapLayer, RectangularRegionProvider
+{
+	contains FeatureOfInterestList[1] features
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Specific Topology Nodes.
+ * 
+ * ------------------------------------------------------------------------- */ 
+class SurfaceWorksiteNode extends WorksiteNode
+{	
+}
+
+class MapsListNode extends AggregateGroupNode
+{
+	refers transient MapsList mapsList
+}
+
+class MapNode extends TransformNode
+{
+	refers transient Map map
+}
+
+class AbstractMapLayerNode extends AggregateGroupNode
+{
+	refers transient AbstractMapLayer abstractMapLayer
+}
+
+/*
+ * Specialized Node used to represent a CartesianTriangularMeshMapLayer in the topology.
+ */
+class CartesianTriangularMeshMapLayerNode extends AbstractMapLayerNode
+{	
+	op CartesianTriangularMeshMapLayer getCartesianTriangularMeshMapLayer()
+}
+
+/*
+ * Utilities class providing conversion methods.
+ */
+class SurfaceEnvironmentUtilities
+{
+	/*
+	 * Convert from Date (UTC) to Julian.
+	 * Uses formula found at http://en.wikipedia.org/wiki/Julian_date#cite_note-12
+	 */
+	op double convertToJulianDate(Date date)
+	
+	/*
+	 * Method that parses Right Ascension angle expressed in
+	 * HH:mm:ss format and return an angle in radians.
+	 */
+	@GenModel(apogy_units="rad") op float parseRightAscension(String rightAscensionString) throws Exception
+	
+	/*
+	 * Method that parses an angle expressed in deg:mm:ss format
+	 * and return an angle in radians.
+	 */
+	@GenModel(apogy_units="rad") op float parseDegMinSec(String degMinSecAngleString)
+}
+
+/*
+ * A class providing utilities methods to create fully initialze object.
+ */
+class ApogySurfaceEnvironmentFacade
+{		
+	/*
+	 * Assembles a list of ImageMapLayer into a single eImage reference to the Worksite frame.
+	 * Note that only X,Y and Rz are used in transformation applied between ImageMapLayer and the worksite
+	 * origin.
+	 */
+	op AbstractEImage createEImage(List<? extends RectangularRegionImage> rectangularRegionImages)
+			
+	/*
+	 * Return a list containing the position of the 4 corners of the specified ImageMapLayer
+	 * @param imageMapLayer The specified ImageMapLayer.
+	 * @return List containing the position (in the worksite frame) of the four corners of the ImageMapLayer. 
+	 * The list contains : lowerLeftCorner, lowerRightCorner, upperRightCorner and upperLeftCorner.
+	 */
+	op List<Tuple3d> getAbsoluteRectangularRegionCorners(RectangularRegion rectangularRegion)
+		
+	/*
+	 * Returns the ImageMapLayer with the highest resolution (minimum meters/pixel).
+	 * @return The ImageMapLayer with the highest resolution (minimum meters/pixel)
+	 */
+	op RectangularRegionImage getBestResolutionRectangularRegionImage(List<? extends RectangularRegionImage> rectangularRegionImages)
+	
+	/*
+	 * Returns the lower left and upper right corners of a specified RectangularRegionProvider.
+	 * @param rectangularRegionProvider The specified RectangularRegionProvider.
+	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
+	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
+	 */
+	op void getRectangularRegionExtent(RectangularRegionProvider rectangularRegionProvider, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	/*
+	 * Returns the lower left and upper right corners of a specified ImageMapLayer.
+	 * @param imageMapLayer The specified ImageMapLayer.
+	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
+	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
+	 * TODO DEPRECATE - REMOVE
+	 */
+	op void getRectangularRegionImageExtent(RectangularRegionImage rectangularRegionImage, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+
+	/*
+	 * Return  the lower left and upper right corners of the region spanned by a list of RectangularRegionProviders.
+	 * @param rectangularRegionProviders The list of RectangularRegionProviders.
+	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
+	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
+	 */
+	op void getRectangularRegionExtent(List<? extends RectangularRegionProvider> rectangularRegionProviders, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	/*
+	 * Return  the lower left and upper right corners of the region spanned by a list of a ImageMapLayer.
+	 * @param The list of ImageMapLayer.
+	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
+	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
+	 * TODO DEPRECATE - REMOVE
+	 */
+	op void getRectangularRegionImageExtent(List<? extends RectangularRegionImage> rectangularRegionImages, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	/*
+	 * Returns whether rectangularRegionA fits entirely in rectangularRegionB.
+	 * The current implementation does not take into account the Transform.
+	 * @param rectangularRegionA The first RectangularRegion.
+	 * @param rectangularRegionB The second RectangularRegion.
+	 * @return True if rectangularRegionA fits in rectangularRegionB, false otherwise.
+	 */
+	op boolean fitsInside(RectangularRegion rectangularRegionA, RectangularRegion rectangularRegionB)
+	
+	/*
+	 * Returns whether two RectangularRegion intersects.
+	 * reference frame.
+	 * @param rectangularRegionA The first RectangularRegion.
+	 * @param transformAToB The transformation (expressed as a 4x4 matrix that expresses region A into region B)
+	 * @param rectangularRegionB The second RectangularRegion.
+	 * @return True if rectangularRegionA intersects rectangularRegionB, false otherwise.
+	 */
+	op boolean intersects(RectangularRegion rectangularRegionA, RectangularRegion rectangularRegionB, Matrix4x4 transformAToB)
+	
+	op void getImageMapLayerPresentationExtent(ImageMapLayerPresentation imageMapLayerPresentation, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	op void getImageMapLayerPresentationExtent(List<ImageMapLayerPresentation> imageMapLayerPresentations, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	/*
+	 * Returns an image representing the assembly of the specified list of ImageMapLayerPresentation. 
+	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
+	 * @return The image representing the specified list of ImageMapLayerPresentation.
+	 */
+	op AbstractEImage getImageMapLayerPresentationImage(List<ImageMapLayerPresentation> imageMapLayerPresentations)
+	
+	/*
+	 * Returns the ImageMapLayerPresentation with the highest resolution (minimum meters/pixel).
+	 * @return The ImageMapLayerPresentation with the highest resolution (minimum meters/pixel)
+	 */
+	op ImageMapLayerPresentation getBestResolutionMapLayer(List<ImageMapLayerPresentation> imageMapLayerPresentations)
+	
+	/*
+	 * Returns the list of visible ImageMapLayerPresentation from"" a specified imageMapLayerPresentations.
+	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
+	 * @return The list of visible ImageMapLayerPresentation.
+	 */
+	op List<ImageMapLayerPresentation> getVisibleImageMapLayerPresentation(List<ImageMapLayerPresentation> imageMapLayerPresentations)
+	
+	/*
+	 * Returns the RectangularVolumeRegion bounding a triangular mesh.
+	 * @param mesh The triangular mesh.
+	 * @return The RectangularVolumeRegion.
+	 */
+	op RectangularVolumeRegion getRectangularVolumeRegion(CartesianTriangularMesh mesh)				
 }

@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 
 <!--
- Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  All rights reserved. This program and the accompanying materials
  are made available under the terms of the Eclipse Public License v1.0
  which accompanies this distribution, and is available at
@@ -21,8 +21,33 @@
       <!-- @generated apogy_core_environment_surface -->
       <package
             uri="ca.gc.asc_csa.apogy.core.environment.surface"
-            class="ca.gc.asc_csa.apogy.core.environment.surface.ApogyCoreEnvironmentSurfacePackage"
+            class="ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage"
             genModel="model/apogy_core_environment_surface.xcore"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
+         <command
+               commandId="ca.gc.asc_csa.apogy.core.environment.surface.command1"
+               label="Update Image Map Layer"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <instanceof
+                           value="ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayer">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
    </extension>
 
 </plugin>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.preferences.ApogyEnvironmentSurfaceUIJME3Initializer">
+      </initializer>
+   </extension>
+
+</plugin>

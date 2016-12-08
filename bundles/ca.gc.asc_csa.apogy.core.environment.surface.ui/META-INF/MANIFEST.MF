@@ -2,20 +2,49 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.environment.surface.ui;singleton:=true
-Bundle-Version: 0.5.0.qualifier
+Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.surface.ui.provider.ApogyCoreEnvironmentSurfaceUiEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: ca.gc.asc_csa.apogy.core.environment.surface.ui,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.impl,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.provider,
+ ca.gc.asc_csa.apogy.core.environment.surface.ui.preferences,
+ ca.gc.asc_csa.apogy.core.environment.surface.ui.scene_objects,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
+ ca.gc.asc_csa.apogy.core.environment.surface;bundle-version="0.1.0";visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.images;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
- ca.gc.asc_csa.apogy.core.environment.surface;bundle-version="0.1.0"
+ ca.gc.asc_csa.apogy.common.topology.ui.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment.surface.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.images.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.bindings.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data.edit;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors.edit;visibility:=reexport,
+ org.jfree.jfreechart;bundle-version="1.0.13";visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.ui;bundle-version="0.5.0";visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
+Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.surface.ui.provider.ApogyCoreSurfaceEnvironmentUIEditPlugin$Implementation

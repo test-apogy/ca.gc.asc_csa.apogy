@@ -103,7 +103,9 @@ abstract class AbstractApogyEnvironmentItem extends Named, Described
 	container ApogyEnvironment environment opposite environmentItems
 }
 
-
+/**
+ * List of Time Sources.
+ */
 class TimeSourcesList
 {	
     @GenModel(property="None")
@@ -158,7 +160,7 @@ abstract class AbstractSurfaceLocation extends Named, Described
 /**
  * A list of AbstractSurfaceLocation.
  */
-class SurfaceLocationsList extends Named, Described
+class SurfaceLocationsList extends AbstractApogyEnvironmentItem
 {
 	contains AbstractSurfaceLocation [0..*] surfaceLocations	
 }

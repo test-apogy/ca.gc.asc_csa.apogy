@@ -1,0 +1,467 @@
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
+@GenModel(prefix="ApogyEarthSurfaceEnvironment",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+          copyrightText="Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Pierre Allard (Pierre.Allard@canada.ca), 
+    Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
+    Canadian Space Agency (CSA) - Initial API and implementation",
+		  modelName="ApogyCoreEnvironment",
+		  complianceLevel="6.0",
+		  suppressGenModelAnnotations="false",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.earth.surface/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.environment.earth.surface.edit/src-generated")
+//@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.core.environment.earth.surface.tests/src-generated")
+
+package ca.gc.asc_csa.apogy.core.environment.earth.surface
+
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
+
+import ca.gc.asc_csa.apogy.common.topology.TransformNode
+
+import ca.gc.asc_csa.apogy.core.environment.Sky
+import ca.gc.asc_csa.apogy.core.environment.SkyNode
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates
+import ca.gc.asc_csa.apogy.core.environment.Moon
+
+import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksite
+import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksiteNode
+
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates
+import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates
+import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates
+
+// Types
+
+type Point3d wraps javax.vecmath.Point3d
+
+/*
+ * A specialization of Worksite defining a are or volume at the Earth surface.
+ */
+class EarthSurfaceWorksite extends SurfaceWorksite
+{	
+	/*
+	 * The geographical coordinates of the origin of the worksite, in the WS84 datum.
+	 */
+	contains GeographicCoordinates[1] geographicalCoordinates
+	
+	/*
+	 * Azimuth, relative to true North, of the X axis of the worksite
+	 * coordinates system. Follows the right hand rule.
+	 * Note that the Z axis is pointing up (toward zenith).
+	 */
+	@GenModel(apogy_units="rad")
+	double xAxisAzimuth = "0"
+			
+	/*
+	 * The EarthSky associated with the worksite,
+	 */
+	refers derived transient volatile EarthSky[1] earthSky
+	
+	/*
+	 * Converts a position expressed as XYZ in the EarthSurfaceWorksite frame
+	 * to a WS84 GeographicCoordinates.
+	 * @param position The position in the worksite coordinates system.
+	 * @return The GeographicCoordinates of the position, in the WS84 datum.
+	 */
+	op GeographicCoordinates convertToGeographicCoordinates(Tuple3d position)
+	
+	/*
+	 * Converts a WS84 GeographicCoordinates to a XYZ position in the EarthSurfaceWorksite frame.
+	 * @param geographicalCoordinates The geographical coordinates expressed in the WS84 datum.
+	 * @return The XYZ position in the worksite coordinates system.
+	 */
+	op Tuple3d convertToXYZPosition(GeographicCoordinates geographicalCoordinates)
+}
+
+
+/*
+ * A specialization of the Sky for Earth use that adds the Moon. The position of the Moon is
+ * updated, along with the Sun and stars, when the time is changed.
+ */
+class EarthSky extends Sky
+{
+	/*
+	 * The current HorizontalCordinates of the Sun.
+	 */
+	@GenModel(propertyCategory="SUN")
+	refers derived transient HorizontalCoordinates sunHorizontalCoordinates
+	
+	/*
+	 * Returns the Moon angular diameter, in radians.
+	 */
+	@GenModel(propertyCategory="MOON", apogy_units="rad")
+	op double getMoonAngularDiameter()
+	
+	/*
+	 * The Moon in the sky.
+	 */
+	@GenModel(propertyCategory="MOON")
+	refers derived transient readonly Moon moon
+	
+	/*
+	 * The current HorizontalCordinates of the Moon.
+	 */
+	@GenModel(propertyCategory="MOON")
+	refers derived transient HorizontalCoordinates moonHorizontalCoordinates		
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Specific Topology Nodes.
+ * 
+ * ------------------------------------------------------------------------- */
+
+/*
+ * SurfaceWorksiteNode specialized for the Earth Surface.
+ */
+class EarthSurfaceWorksiteNode extends SurfaceWorksiteNode
+{
+	refers transient TransformNode skyTransformNode
+}
+
+/*
+ * SkyNode specialized for the Earth Sky.
+ */
+class EarthSkyNode extends SkyNode
+{
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Facade
+ * 
+ * ------------------------------------------------------------------------- */
+ 
+class ApogyEarthSurfaceEnvironmentFacade
+{
+	/*
+	 * Create an empty EarthSurfaceWorksite with the CSA Mars Yard coordinates.
+	 */
+	op EarthSurfaceWorksite createAndInitializeDefaultCSAWorksite()
+	
+	/**
+	 * Initialize a EarthSkyNode using an EarthSky.
+	 */
+	op void initializeEarthSkyNode(EarthSky earthSky, EarthSkyNode earthSkyNode)
+	
+	/**
+	 * Return the GeographicCoordinates of the CSA Mars Yard.
+	 */
+	op GeographicCoordinates getMarsYardGeographicalCoordinates()
+	
+	op TransformNode getMarsYardTransformNode()
+	
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Utilities classes.
+ * 
+ * ------------------------------------------------------------------------- */
+
+class AtmosphereUtils
+{
+	/*
+	 * Computes the air mass. The Air Mass is the path length which light
+	 * takes through the atmosphere normalized to the shortest possible path
+	 * length (that is, when the sun is directly overhead). The Air Mass
+	 * quantifies the reduction in the power of light as it passes through
+	 * the atmosphere and is absorbed by air and dust.
+	 * @param sunAltitudeAngle The sun elevation angle above the horizon, in radians.
+	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM.
+	 */
+	op double getAirMass(@GenModel(apogy_units="rad") double sunAltitudeAngle)
+		
+	/*
+	 * Computes the intensity of the direct component of sunlight, in Watts/m^2.
+	 * @param sunAltitudeAngle The sun elevation angle above the horizon, in radians.
+	 * @param heightAboveSeaLevel Height above sea level, in meters.
+	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM
+	 */
+	@GenModel(apogy_units="W/m²") op double getDirectSunIntensity(@GenModel(apogy_units="rad") double sunAltitudeAngle, 
+																@GenModel(apogy_units="m") double heightAboveSeaLevel)
+	
+	/*
+	 * Computes the intensity of the diffuse component of sunlight, in Watts/m^2.
+	 * @param sunAltitudeAngle The sun elevation angle above the horizon, in radians.
+	 * @param heightAboveSeaLevel Height above sea level, in meters.
+	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM
+	 */
+	@GenModel(apogy_units="W/m²") op double getDiffuseSunIntensity(@GenModel(apogy_units="rad") double sunAltitudeAngle, 
+																 @GenModel(apogy_units="m") double heightAboveSeaLevel)
+	
+	/*
+	 * Computes the change in altitude that needs to be added to the altitude of
+	 * HorizontalCoordinates to take into account the Earth's atmosphere refraction.
+	 * The calculations in the NOAA Sunrise/Sunset and Solar Position Calculators are
+	 * based on equations from Astronomical Algorithms, by Jean Meeus. The sunrise and
+	 * sunset results have been verified to be accurate to within a minute for locations
+	 * between +/- 72° latitude, and within 10 minutes outside of those latitudes.
+	 * @param geometricAltitude The true altitude (as defined in HorizontalCoordinates) of the object, in radians.
+	 * @see ../doc/AtmosphereRefractionCalculations.html or http://www.srrb.noaa.gov/highlights/sunrise/calcdetails.html.
+	 */
+	op double getAtmosphereRefractionCorrection(@GenModel(apogy_units="rad") double geometricAltitude)
+}
+
+/*
+ * Class that provides methods to find the position of the Moon and Sun in the sky.
+ */
+class AstronomyUtils
+{
+	/*
+	 * Computes the Sun's equatorial coordinates for a given Julian date.
+	 * The calculation are based on page C24 of the 1996 Astronomical Almanac
+	 * which provides a method for finding the position of the Sun in the sky
+	 * to an accuracy of 0.01 degree between the years 1950 and 2050. The
+	 * formulas are based on an elliptical orbit for the Earth, using mean
+	 * orbital elements and a two term approximation for the 'equation of centre'.
+	 * 
+	 * There is also an approximate allowance made for the change in obliquity of
+	 * the ecliptic with time, needed when converting to right ascension and
+	 * declination. The positions are thus apparent positions, they are referred to
+	 * the mean ecliptic and equinox of date. The positions found using this low
+	 * precision formula with values referred to the mean ecliptic and equinox of
+	 * date from a more accurate program. The results (for the whole 1950 to 2050 range)
+	 * have been found to be accurate within 3 seconds of RA and 15 arc seconds in declination.
+	 * 
+	 * @see http://www.stargazing.net/kepler/sun.html#twig02
+	 */
+	op EquatorialCoordinates getSunEquatorialPosition(double julianDay)
+	
+	/*
+	 * Computes the Sun's horizontal coordinates for a date and location on
+	 * the surface of the Earth.
+	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
+	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
+	 */
+	op HorizontalCoordinates getHorizontalSunPosition(Date date, @GenModel(apogy_units="rad") double observerLongitude, @GenModel(apogy_units="rad") double observerLatitude)
+	
+	/*
+	 * Computes the Moon's equatorial coordinates for a given Julian date for
+	 * an observer a the center of the Earth.
+	 * See doc/tutorial.html for more details.
+	 */
+	op EquatorialCoordinates getMoonEquatorialPosition(double julianDay)
+	
+	/*
+	 * Computes the Moon's equatorial coordinates for a date and location on
+	 * the surface of the Earth. This position take into account the radius of
+	 * the Earth.
+	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
+	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative. 
+	 */
+	op EquatorialCoordinates getMoonTopocentricEquatorialPosition(Date date, @GenModel(apogy_units="rad") double observerLongitude, @GenModel(apogy_units="rad") double observerLatitude)
+	
+	/*
+	 * Computes the Moon's horizontal coordinates.
+	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
+	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative. 	 
+	 */
+	op HorizontalCoordinates getHorizontalMoonPosition(Date date, @GenModel(apogy_units="rad") double observerLongitude, @GenModel(apogy_units="rad") double observerLatitude)
+	
+	/*
+	 * Return the number of days since epoch J2000.
+	 */
+	op double getTimeSinceJ2000(double julianDay)
+	
+	/*
+	 * Return the local sideral time, in radians, clamped between 0 and 2π (360 degrees).
+	 * 
+	 * Sidereal time is a system of timekeeping based on the rotation of the Earth with respect
+	 * to the fixed stars in the sky. More specifically, it is the measure of the hour angle of
+	 * the vernal equinox. If the hour angle is measured with respect to the true equinox, apparent
+	 * sidereal time is being measured. If the hour angle is measured with respect to the mean
+	 * equinox, mean sidereal time is being measured. When the measurements are made with respect to
+	 * the meridian at Greenwich, the times are referred to as Greenwich mean sidereal time (GMST)
+	 * and Greenwich apparent sidereal time (GAST). Given below is a simple algorithm for computing
+	 * apparent sidereal time to an accuracy of about 0.1 second, equivalent to about 1.5 arcseconds
+	 * on the sky. The input time required by the algorithm is represented as a Julian date (Julian
+	 * dates can be used to determine Universal Time.)Let JD be the Julian date of the time of interest.
+	 * Let JD0 be the Julian date of the previous midnight (0h) UT (the value of JD0 will end in .5
+	 * exactly), and let H be the hours of UT elapsed since that time. Thus we have JD = JD0 + H/24.
+	 * 
+	 * For both of these Julian dates, compute the number of days and fraction (+ or -) from 2000
+	 * January 1, 12h UT, Julian date 2451545.0:
+	 * 
+	 * D = JD - 2451545.0
+	 * D0 = JD0 - 2451545.0
+	 * 
+	 * Then the Greenwich mean sidereal time in hours is:
+	 * 
+	 * GMST = 6.697374558 + 0.06570982441908 D0 + 1.00273790935 H + 0.000026 T
+	 *
+	 * where T = D/36525 is the number of centuries since the year 2000; thus the
+	 * last term can be omitted in most applications. It will be necessary to
+	 * reduce GMST to the range 0h to 24h. Setting H = 0 in the above formula yields
+	 * the Greenwich mean sidereal time at 0h UT, which is tabulated in The Astronomical Almanac.
+	 * 
+	 * The following alternative formula can be used with a loss of precision of 0.1 second per century:
+	 * 
+	 * GMST = 18.697374558 + 24.06570982441908 D
+	 *
+	 * where, as above, GMST must be reduced to the range 0h to 24h. The equations for GMST given
+	 * above are adapted from those given in Appendix A of USNO Circular No. 163 (1981).
+	 *
+	 * The Greenwich apparent sidereal time is obtained by adding a correction to the Greenwich
+	 * mean sidereal time computed above. The correction term is called the nutation in right
+	 * ascension or the equation of the equinoxes. Thus,
+	 * 
+	 * GAST = GMST + eqeq.
+	 * 
+	 * The equation of the equinoxes is given as eqeq = Δψ cos ε where Δψ, the nutation in longitude,
+	 * is given in hours approximately by:
+	 * 
+	   *  Δψ ≈ -0.000319 sin Ω - 0.000024 sin 2L
+	 * 
+	 * with Ω,  the Longitude of the ascending node of the Moon, given as:
+	 *  
+	   * Ω = 125.04 - 0.052954 D,
+	 *
+	 * and L, the Mean Longitude of the Sun, given as:
+	 * 
+	 * L = 280.47 + 0.98565 D.
+	 * 
+	   *  ε is the obliquity and is given as:
+	 *  
+	   *  ε = 23.4393 - 0.0000004 D.
+	 * 
+	 * The above expressions for Ω, L, and ε are all expressed in degrees.
+	 *
+	 * The mean or apparent sidereal time locally is found by obtaining the local longitude in degrees,
+	 * converting it to hours by dividing by 15, and then adding it to or subtracting it from the Greenwich
+	 * time depending on whether the local position is east (add) or west (subtract) of Greenwich.
+	 * 
+	 * @param date The date
+	 * @param observerLongitude The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.
+	 */
+	op double getLocalSideralTime(Date date, @GenModel(apogy_units="rad") double observerLongitude)
+	
+	/*
+	 * Return the decimal time of day in UTC for a given date.
+	 */
+	op double getUTCDecimalHours(Date date)
+	
+	/*
+	 * Converts Equatorial Coordinates to HorizontalCoordinates for a given geographic location and date.
+	 * @param equatorialCoordinates The location, in equatorial coordinates
+	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
+	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
+	 * @param date The date
+	 */
+	op HorizontalCoordinates convertToHorizontalCoordinates(EquatorialCoordinates equatorialCoordinates, @GenModel(apogy_units="rad") double observerLongitude, @GenModel(apogy_units="rad") double observerLatitude, Date date)
+	
+	/*
+	 * Convert a day's hour, minutes and seconds to an angle, in radians. 24 hours converts to 2π (360 degrees).
+	 */
+	@GenModel(apogy_units="rad") op double convertTimeToAngle(int hours, int minutes, int seconds)
+	
+	/*
+	 * Clamps the specified angle between 0 and 2π (360 degrees).
+	 */
+	@GenModel(apogy_units="rad") op double clampAngleToZero2PI(@GenModel(apogy_units="rad") double angleInRadians)
+	
+	/*
+	 * Converts Ecliptic Coordinates to Equatorial Coordinates.
+	 */
+	op EquatorialCoordinates convertToEquatorialCoordinates(EclipticCoordinates eclipticCoordinates)
+	
+	/*
+	 * Converts Equatorial Coordinates to Ecliptic Coordinates.
+	 */
+	op EclipticCoordinates convertToEclipticCoordinates(EquatorialCoordinates equatorialCoordinates)
+	
+	/*
+	 * Converts Rectangular (x,y,z) Equatorial Coordinates to Equatorial Coordinates
+	 * (Right Ascension and Declination).
+	 */
+	op Point3d convertFromEquatorialRectangularToEclipticRectangular(Point3d equatorialRectangularCoordinates)
+
+	/*
+	 * Converts Rectangular (x,y,z) Ecliptic Coordinates to Rectangular (x,y,z) Equatorial Coordinates.
+	 */
+	op Point3d convertFromEclipticRectangularToEquatorialRectangular(Point3d eclipticCoordinates)
+	
+	/*
+	 * Converts Rectangular (x,y,z) Ecliptic Coordinates to Ecliptic Coordinates (longitude, latitude, radius).
+	 */
+	op EclipticCoordinates convertFromEclipticRectangularToEclipticCoordinates(Point3d eclipticCoordinates)
+	
+	/*
+	 * Converts Rectangular (x,y,z) Equatorial Coordinates to Equatorial Coordinates (Right Ascension, Declination).
+	 */
+	op EquatorialCoordinates convertFromEquatorialRectangularToEquatorialCoordinates(Point3d equatorialCoordinates)
+	
+	/*
+	 * Converts HorizontalCoordinates () to Rectangular Horizontal (x,y,z) coordinates. Rectangular
+	 * Horizontal coordinates are defined as followed:
+	 * - X point to True North.
+	 * - Y points West.
+	 * - Z point toward nadir (up)
+	 */
+	op Point3d convertFromHorizontalCoordinatesToHorizontalRectangular(HorizontalCoordinates horizontalCoordinates)
+	
+	op Point3d convertFromEquatorialCoordinatesToEquatorialRectangular(EquatorialCoordinates equatorialCoordinates)
+	
+	/*
+	 * Convert Astronomical Units (A.U.) to meters.
+	 */
+	@GenModel(apogy_units="m") op double convertAUtoMeters(double astronomicalUnits)
+	
+	/*
+	 * Return the maximum altitude angle that the sun could reach at the specified latitude, in radians.
+	 */
+	@GenModel(apogy_units="rad") op double getMaximumSunAltitude(@GenModel(apogy_units="rad") double observerLatitude)
+	
+	/*
+	 * Converts a sidreal time in HH:mm:ss string
+	 */
+	op String convertToHHmmssString(double sideralTime)
+	
+	/*
+	 * Computes the sun rise time for a given day and location.
+	 * @param day The date of the day
+	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
+	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
+	 */
+	op Date getSunRiseTime(Date day, @GenModel(apogy_units="rad") double observerLongitude, @GenModel(apogy_units="rad") double observerLatitude)
+
+	/*
+	 * Computes the sun set time for a given day and location.
+	 * @param day The date of the day
+	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
+	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative. 
+	 */
+	op Date getSunSetTime(Date day, @GenModel(apogy_units="rad") double observerLongitude, @GenModel(apogy_units="rad") double observerLatitude)
+
+	/*
+	 * Computes the time of maximum sun elevation for a given day and location.
+	 * @param day The date of the day
+	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
+	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative. 
+	 */
+	op Date getSunHighestElevationTime(Date day, @GenModel(apogy_units="rad") double observerLongitude, @GenModel(apogy_units="rad") double observerLatitude)
+}
+

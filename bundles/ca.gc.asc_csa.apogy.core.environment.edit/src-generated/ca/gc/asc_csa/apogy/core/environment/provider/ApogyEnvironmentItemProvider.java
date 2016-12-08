@@ -234,6 +234,11 @@ public class ApogyEnvironmentItemProvider extends EnvironmentItemProvider {
 			(createChildParameter
 				(ApogyCoreEnvironmentPackage.Literals.APOGY_ENVIRONMENT__TIME_SOURCES_LIST,
 				 ApogyCoreEnvironmentFactory.eINSTANCE.createTimeSourcesList()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCoreEnvironmentPackage.Literals.APOGY_ENVIRONMENT__ENVIRONMENT_ITEMS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createSurfaceLocationsList()));
 	}
 
 }

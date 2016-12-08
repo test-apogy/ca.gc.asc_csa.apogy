@@ -15,9 +15,6 @@ package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.common.util.EList;
 
-import ca.gc.asc_csa.apogy.common.emf.Described;
-import ca.gc.asc_csa.apogy.common.emf.Named;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Surface Locations List</b></em>'.
@@ -39,7 +36,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * @model
  * @generated
  */
-public interface SurfaceLocationsList extends Named, Described {
+public interface SurfaceLocationsList extends AbstractApogyEnvironmentItem {
 	/**
 	 * Returns the value of the '<em><b>Surface Locations</b></em>' containment reference list.
 	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation}.

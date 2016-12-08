@@ -1193,8 +1193,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		abstractWorksiteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 		abstractSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		abstractSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		surfaceLocationsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		surfaceLocationsListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		surfaceLocationsListEClass.getESuperTypes().add(this.getAbstractApogyEnvironmentItem());
 		skyEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 		celestialBodyEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
 		celestialBodyEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
@@ -1451,6 +1450,12 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		   source, 
 		   new String[] {
 			 "documentation", "*\nAbstract class representing an item that can be stored under an ApogyEnvironment."
+		   });	
+		addAnnotation
+		  (timeSourcesListEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nList of Time Sources."
 		   });	
 		addAnnotation
 		  (getTimeSourcesList_Environment(), 

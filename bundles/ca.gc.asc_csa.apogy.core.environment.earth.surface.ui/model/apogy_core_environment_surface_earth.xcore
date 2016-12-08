@@ -1,0 +1,97 @@
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
+@GenModel(prefix="ApogyCoreEnvironmentSurfaceEarthUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Pierre Allard (Pierre.Allard@canada.ca), 
+    Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
+    Canadian Space Agency (CSA) - Initial API and implementation",
+		  modelName="ApogyCoreEnvironmentUI",
+		  complianceLevel="6.0",
+		  suppressGenModelAnnotations="false",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.earth.surface.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.edit/src-generated")
+
+package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksitePresentation
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksiteSkyPresentation
+
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.core.environment.Star
+
+// Types
+type Color3f wraps javax.vecmath.Color3f
+type Point3f wraps javax.vecmath.Point3f
+
+/**
+ * Defines the display properties associated with an EarthSurfaceWorksite. 
+ */
+class EarthSurfaceWorksitePresentation extends AbstractSurfaceWorksitePresentation
+{
+}
+
+/**
+ * Defines the display properties associated with an EarthSky. 
+ */
+class EarthSkyPresentation extends AbstractSurfaceWorksiteSkyPresentation
+{
+}
+
+/**
+ * Defines the display properties associated with the Moon in the EarthSky. 
+ */
+class MoonPresentation extends NodePresentation
+{
+	
+}
+
+// Utilities
+
+class EnvironmentUIUtilities
+{
+	op Point3f toPoint3f(Star star)		
+	
+	op float getPointSizeForMagnitude(float magnitude, float magnitudeRangeMinimum, float magnitudeRangeMaximum, float minimumPointSize, float maximumPointSize)
+	
+	/*
+	 * Return the sun color for a given altitude above the horizon.
+	 * @param sunAltitude The altitude above the horizon, in radians.
+	 */
+	op Color3f getSunLightColor(@GenModel(apogy_units="rad") double sunAltitude)
+	
+	/*
+	 * Return the transparency value (between no transparency 0 and full transparency 1.0)
+	 * to be used for the blus sky as a function of the sun altitude angle.
+	 * @param sunAltitude The altitude above the horizon, in radians.
+	 */
+	op double getSkyTransparency(@GenModel(apogy_units="rad") double sunAltitude)
+	
+	/*
+	 * Return the sky color for a given altitude above the horizon.
+	 * @param sunAltitude The altitude above the horizon, in radians.
+	 */
+	op Color3f getSkyColor(@GenModel(apogy_units="rad") double sunAltitude)
+}

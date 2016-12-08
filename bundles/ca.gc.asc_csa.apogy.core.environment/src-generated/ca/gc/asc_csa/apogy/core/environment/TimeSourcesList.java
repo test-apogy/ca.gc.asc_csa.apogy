@@ -23,6 +23,11 @@ import ca.gc.asc_csa.apogy.common.emf.TimeSource;
  * A representation of the model object '<em><b>Time Sources List</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * List of Time Sources.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

@@ -2,18 +2,34 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.environment.surface;singleton:=true
-Bundle-Version: 0.5.0.qualifier
+Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: ca.gc.asc_csa.apogy.core.environment.surface,
+ ca.gc.asc_csa.apogy.core.environment.surface.commands,
  ca.gc.asc_csa.apogy.core.environment.surface.impl,
  ca.gc.asc_csa.apogy.core.environment.surface.util
-Require-Bundle: org.eclipse.core.runtime,
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.12.0";visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- ca.gc.asc_csa.apogy.core.environment;bundle-version="0.5.0"
+ ca.gc.asc_csa.apogy.common.emf;bundle-version="0.5.0";visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.images;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment;bundle-version="0.5.0";visibility:=reexport,
+ org.jgrapht;bundle-version="0.8.2",
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0",
+ edu.wlu.cs.levy.CG;bundle-version="0.1.0",
+ ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0",
+ ca.gc.asc_csa.apogy.common.topology.ui;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.surface.Activator

@@ -599,7 +599,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SURFACE_LOCATIONS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
+	int SURFACE_LOCATIONS_LIST__NAME = ABSTRACT_APOGY_ENVIRONMENT_ITEM__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -608,7 +608,16 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SURFACE_LOCATIONS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int SURFACE_LOCATIONS_LIST__DESCRIPTION = ABSTRACT_APOGY_ENVIRONMENT_ITEM__DESCRIPTION;
+
+		/**
+	 * The feature id for the '<em><b>Environment</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_LOCATIONS_LIST__ENVIRONMENT = ABSTRACT_APOGY_ENVIRONMENT_ITEM__ENVIRONMENT;
 
 		/**
 	 * The feature id for the '<em><b>Surface Locations</b></em>' containment reference list.
@@ -617,7 +626,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS = ABSTRACT_APOGY_ENVIRONMENT_ITEM_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Surface Locations List</em>' class.
@@ -626,7 +635,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SURFACE_LOCATIONS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int SURFACE_LOCATIONS_LIST_FEATURE_COUNT = ABSTRACT_APOGY_ENVIRONMENT_ITEM_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of operations of the '<em>Surface Locations List</em>' class.
@@ -635,7 +644,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SURFACE_LOCATIONS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int SURFACE_LOCATIONS_LIST_OPERATION_COUNT = ABSTRACT_APOGY_ENVIRONMENT_ITEM_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.impl.EquatorialCoordinatesImpl <em>Equatorial Coordinates</em>}' class.
