@@ -11,11 +11,11 @@
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
-package ca.gc.asc_csa.apogy.common.ui.provider;
+package ca.gc.asc_csa.apogy.common.emf.ui.emfforms.provider;
 
-import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsPackage;
 
-import ca.gc.asc_csa.apogy.common.ui.util.ApogyCommonUiAdapterFactory;
+import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.util.ApogyCommonEMFUiEMFFormsAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -52,7 +52,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ApogyCommonUiItemProviderAdapterFactory extends ApogyCommonUiAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonEMFUiEMFFormsItemProviderAdapterFactory extends ApogyCommonEMFUiEMFFormsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public class ApogyCommonUiItemProviderAdapterFactory extends ApogyCommonUiAdapte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonUiEditPlugin.INSTANCE, ApogyCommonUiPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonEMFUiEMFFormsEditPlugin.INSTANCE, ApogyCommonEMFUiEMFFormsPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -91,7 +91,7 @@ public class ApogyCommonUiItemProviderAdapterFactory extends ApogyCommonUiAdapte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ApogyCommonUiItemProviderAdapterFactory() {
+	public ApogyCommonEMFUiEMFFormsItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -100,26 +100,26 @@ public class ApogyCommonUiItemProviderAdapterFactory extends ApogyCommonUiAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApogyCommonUiFacadeItemProvider apogyCommonUiFacadeItemProvider;
+	protected ApogyCommonEMFUiEMFFormsFacadeItemProvider apogyCommonEMFUiEMFFormsFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createApogyCommonUiFacadeAdapter() {
-		if (apogyCommonUiFacadeItemProvider == null) {
-			apogyCommonUiFacadeItemProvider = new ApogyCommonUiFacadeItemProvider(this);
+	public Adapter createApogyCommonEMFUiEMFFormsFacadeAdapter() {
+		if (apogyCommonEMFUiEMFFormsFacadeItemProvider == null) {
+			apogyCommonEMFUiEMFFormsFacadeItemProvider = new ApogyCommonEMFUiEMFFormsFacadeItemProvider(this);
 		}
 
-		return apogyCommonUiFacadeItemProvider;
+		return apogyCommonEMFUiEMFFormsFacadeItemProvider;
 	}
 
 	/**
@@ -248,7 +248,7 @@ public class ApogyCommonUiItemProviderAdapterFactory extends ApogyCommonUiAdapte
 	 * @generated
 	 */
 	public void dispose() {
-		if (apogyCommonUiFacadeItemProvider != null) apogyCommonUiFacadeItemProvider.dispose();
+		if (apogyCommonEMFUiEMFFormsFacadeItemProvider != null) apogyCommonEMFUiEMFFormsFacadeItemProvider.dispose();
 	}
 
 }

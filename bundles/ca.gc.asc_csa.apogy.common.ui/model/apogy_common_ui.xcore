@@ -25,7 +25,7 @@ Contributors:
     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
     Sebastien Gemme (Sebastien.Gemme@canada.ca),
     Canadian Space Agency (CSA) - Initial API and implementation",
-		  modelName="ApogyWorkspaceUi")
+		  modelName="ApogyCommonUi")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.ui/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.ui/src-generated")
 
