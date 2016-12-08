@@ -45,10 +45,7 @@ import ca.gc.asc_csa.apogy.common.images.AbstractEImage
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestList
 import ca.gc.asc_csa.apogy.core.PoseProvider
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
-import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer
-import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation
-import ca.gc.asc_csa.apogy.core.environment.RectangularRegion
-import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider
+
 import ca.gc.asc_csa.apogy.core.environment.Star
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
@@ -78,80 +75,80 @@ class SunPresentation extends NodePresentation
 {	
 }
 
-class EarthSurfaceWorksitePresentation extends NodePresentation
-{
-	@GenModel(propertyCategory="AXIS")
-	boolean axisVisible = "true"
-	
-	@GenModel(propertyCategory="AXIS", apogy_units="m")
-	double axisLength = "10.0"
-	
-	@GenModel(propertyCategory="SKY")
-	boolean azimuthVisible = "true"
-	
-	@GenModel(propertyCategory="SKY")
-	boolean elevationLinesVisible = "true"
-		
-	@GenModel(propertyCategory="SKY")
-	boolean azimuthLinesVisible = "true"
-		
-	@GenModel(propertyCategory="PLANE")
-	boolean planeVisible = "true"
-	
-	@GenModel(propertyCategory="PLANE", apogy_units="m")
-	double planeGridSize = "1.0"
-	
-	@GenModel(propertyCategory="PLANE", apogy_units="m")
-	double planeSize = "10.0"	
-}
-
-class EarthSkyPresentation extends NodePresentation
-{
-	@GenModel(propertyCategory="Horizon")
-	boolean horizonVisible = "true"
-}
-
-class MoonPresentation extends NodePresentation
-{
-	
-}
-
-class FeatureOfInterestNodePresentation extends NodePresentation
-{
-	@GenModel(propertyCategory="FLAG", apogy_units="m")
-	double poleHeight
-	
-	@GenModel(propertyCategory="FLAG")
-	boolean flagVisible = "false"
-}
-
-// Utilities
-
-class EnvironmentUIUtilities
-{
-	op Point3f toPoint3f(Star star)		
-	
-	op float getPointSizeForMagnitude(float magnitude, float magnitudeRangeMinimum, float magnitudeRangeMaximum, float minimumPointSize, float maximumPointSize)
-	
-	/*
-	 * Return the sun color for a given altitude above the horizon.
-	 * @param sunAltitude The altitude above the horizon, in radians.
-	 */
-	op Color3f getSunLightColor(@GenModel(apogy_units="rad") double sunAltitude)
-	
-	/*
-	 * Return the transparency value (between no transparency 0 and full transparency 1.0)
-	 * to be used for the blus sky as a function of the sun altitude angle.
-	 * @param sunAltitude The altitude above the horizon, in radians.
-	 */
-	op double getSkyTransparency(@GenModel(apogy_units="rad") double sunAltitude)
-	
-	/*
-	 * Return the sky color for a given altitude above the horizon.
-	 * @param sunAltitude The altitude above the horizon, in radians.
-	 */
-	op Color3f getSkyColor(@GenModel(apogy_units="rad") double sunAltitude)
-}
+//class EarthSurfaceWorksitePresentation extends NodePresentation
+//{
+//	@GenModel(propertyCategory="AXIS")
+//	boolean axisVisible = "true"
+//	
+//	@GenModel(propertyCategory="AXIS", apogy_units="m")
+//	double axisLength = "10.0"
+//	
+//	@GenModel(propertyCategory="SKY")
+//	boolean azimuthVisible = "true"
+//	
+//	@GenModel(propertyCategory="SKY")
+//	boolean elevationLinesVisible = "true"
+//		
+//	@GenModel(propertyCategory="SKY")
+//	boolean azimuthLinesVisible = "true"
+//		
+//	@GenModel(propertyCategory="PLANE")
+//	boolean planeVisible = "true"
+//	
+//	@GenModel(propertyCategory="PLANE", apogy_units="m")
+//	double planeGridSize = "1.0"
+//	
+//	@GenModel(propertyCategory="PLANE", apogy_units="m")
+//	double planeSize = "10.0"	
+//}
+//
+//class EarthSkyPresentation extends NodePresentation
+//{
+//	@GenModel(propertyCategory="Horizon")
+//	boolean horizonVisible = "true"
+//}
+//
+//class MoonPresentation extends NodePresentation
+//{
+//	
+//}
+//
+//class FeatureOfInterestNodePresentation extends NodePresentation
+//{
+//	@GenModel(propertyCategory="FLAG", apogy_units="m")
+//	double poleHeight
+//	
+//	@GenModel(propertyCategory="FLAG")
+//	boolean flagVisible = "false"
+//}
+//
+//// Utilities
+//
+//class EnvironmentUIUtilities
+//{
+//	op Point3f toPoint3f(Star star)		
+//	
+//	op float getPointSizeForMagnitude(float magnitude, float magnitudeRangeMinimum, float magnitudeRangeMaximum, float minimumPointSize, float maximumPointSize)
+//	
+//	/*
+//	 * Return the sun color for a given altitude above the horizon.
+//	 * @param sunAltitude The altitude above the horizon, in radians.
+//	 */
+//	op Color3f getSunLightColor(@GenModel(apogy_units="rad") double sunAltitude)
+//	
+//	/*
+//	 * Return the transparency value (between no transparency 0 and full transparency 1.0)
+//	 * to be used for the blus sky as a function of the sun altitude angle.
+//	 * @param sunAltitude The altitude above the horizon, in radians.
+//	 */
+//	op double getSkyTransparency(@GenModel(apogy_units="rad") double sunAltitude)
+//	
+//	/*
+//	 * Return the sky color for a given altitude above the horizon.
+//	 * @param sunAltitude The altitude above the horizon, in radians.
+//	 */
+//	op Color3f getSkyColor(@GenModel(apogy_units="rad") double sunAltitude)
+//}
 
 class ApogyCoreEnvironmentUIFacade
 {
@@ -222,351 +219,351 @@ class ApogyCoreEnvironmentUIFacade
 	op List<FeatureOfInterestList> getFeatureOfInterestLists(InvocatorSession session)	
 }
 
-// MapView Definitions
-
-class MapViewConfigurationList extends AbstractToolsListContainer
-{
-	contains MapViewConfiguration[0..*] mapViewConfigurations
-}
-
-
-/*
- * Configuration used for the Map View.
- */
-class MapViewConfiguration extends Named, Described
-{		
-	/*
-	 * List of Maps being displayed.
-	 */
-	@GenModel(children="true", notify="true", property="None")
-	contains ImageMapLayerPresentation[0..*] mapLayers
-
-	/*
-	 * Color of the map background.
-	 */
-	Color3f backgroundColor = "1.0,1.0,1.0"
-
-	/*
-	 * List of Apogy System instances being tracked.
-	 */
-	@GenModel(children="true", notify="true", property="None")
-	contains MapAnnotation[0..*] mapAnnotations		
-	
-	/*
-	 * Default region to use when none is covered by the map Layers
-	 */
-	refers transient RectangularRegion[1] defaultRectangularRegion
-	
-	/*
-	 * The image representing the active ImageMapLayers.
-	 */
-	@GenModel(children="false", notify="true", property="None")
-	refers derived transient readonly AbstractEImage mapImage			
-	
-	/* 
-	 * The rectangular region covered by the image layers defined in the map.
-	 */
-	@GenModel(children="false", notify="true", property="Readonly")
-	refers derived transient readonly RectangularRegion[1] mapImageRectangularRegion
-	
-	/* 
-	 * The rectangular region covered by the map (typically larger than
-	 * mapImageRectangularRegion and contains mapImageRectangularRegion).
-	 */
-	@GenModel(children="false", notify="true", property="Readonly")
-	refers derived transient RectangularRegion[1] extent
-	
-	/* 
-	 * Forces the updates of all derived values.
-	 */
-	op void forceUpdate()
-}
-
-/*
- * Presentation properties for an item displayed 
- * on the MapView.
- */
-abstract class MapViewItemPresentation
-{
-	/*
-	 * Visibility
-	 */
-	boolean visible = "true"
-}
-
-
-/*
- * Presentation properties for an ImageMapLayer displayed on the MapView.
- */
-//class ImageMapLayerPresentation extends MapViewItemPresentation, RectangularRegionImage
+//// MapView Definitions
+//
+//class MapViewConfigurationList extends AbstractToolsListContainer
 //{
-	/** Image Map Layer being displayed.*/
-//	refers ImageMapLayer imageMapLayer
-	
-	/**
-	 * The alpha to use to display this layer, from fully opaque (1.0f) to fully transparent (0.0f).
-	 */
-//	float alpha = "1.0"	
+//	contains MapViewConfiguration[0..*] mapViewConfigurations
 //}
 
 
-/*
- * Presentation properties for an object shown on top of the maps.
- */
-abstract class MapAnnotation extends MapViewItemPresentation
-{
-	/*
-	 *  TheXYPlot being used by MapView.
-	 */
-	op List<AbstractXYAnnotation> getXYShapeAnnotation()
-}
+///*
+// * Configuration used for the Map View.
+// */
+//class MapViewConfiguration extends Named, Described
+//{		
+//	/*
+//	 * List of Maps being displayed.
+//	 */
+//	@GenModel(children="true", notify="true", property="None")
+//	contains ImageMapLayerPresentation[0..*] mapLayers
+//
+//	/*
+//	 * Color of the map background.
+//	 */
+//	Color3f backgroundColor = "1.0,1.0,1.0"
+//
+//	/*
+//	 * List of Apogy System instances being tracked.
+//	 */
+//	@GenModel(children="true", notify="true", property="None")
+//	contains MapAnnotation[0..*] mapAnnotations		
+//	
+//	/*
+//	 * Default region to use when none is covered by the map Layers
+//	 */
+//	refers transient RectangularRegion[1] defaultRectangularRegion
+//	
+//	/*
+//	 * The image representing the active ImageMapLayers.
+//	 */
+//	@GenModel(children="false", notify="true", property="None")
+//	refers derived transient readonly AbstractEImage mapImage			
+//	
+//	/* 
+//	 * The rectangular region covered by the image layers defined in the map.
+//	 */
+//	@GenModel(children="false", notify="true", property="Readonly")
+//	refers derived transient readonly RectangularRegion[1] mapImageRectangularRegion
+//	
+//	/* 
+//	 * The rectangular region covered by the map (typically larger than
+//	 * mapImageRectangularRegion and contains mapImageRectangularRegion).
+//	 */
+//	@GenModel(children="false", notify="true", property="Readonly")
+//	refers derived transient RectangularRegion[1] extent
+//	
+//	/* 
+//	 * Forces the updates of all derived values.
+//	 */
+//	op void forceUpdate()
+//}
+//
+///*
+// * Presentation properties for an item displayed 
+// * on the MapView.
+// */
+//abstract class MapViewItemPresentation
+//{
+//	/*
+//	 * Visibility
+//	 */
+//	boolean visible = "true"
+//}
+//
+//
+///*
+// * Presentation properties for an ImageMapLayer displayed on the MapView.
+// */
+////class ImageMapLayerPresentation extends MapViewItemPresentation, RectangularRegionImage
+////{
+//	/** Image Map Layer being displayed.*/
+////	refers ImageMapLayer imageMapLayer
+//	
+//	/**
+//	 * The alpha to use to display this layer, from fully opaque (1.0f) to fully transparent (0.0f).
+//	 */
+////	float alpha = "1.0"	
+////}
+//
+//
+///*
+// * Presentation properties for an object shown on top of the maps.
+// */
+//abstract class MapAnnotation extends MapViewItemPresentation
+//{
+//	/*
+//	 *  TheXYPlot being used by MapView.
+//	 */
+//	op List<AbstractXYAnnotation> getXYShapeAnnotation()
+//}
+//
+///*
+// * Base class of all map tools.
+// */
+//abstract class MapTool extends MapAnnotation
+//{
+//	/*
+//	 * Whether or not the tool is active.
+//	 */	
+//	boolean active = "true"
+//	
+//	/*
+//	 * Method that is called to give access to the underlying ChartComposite and JFreeChart used to display the map.
+//	 * @param composite The ChartComposite used to display the map.
+//	 * @param chart The JFreeChart used to display the map.
+//	 */
+//	op void initialize(ChartComposite composite, JFreeChart chart)
+//	
+//	/*
+//	 * Method that is called to dispose of the tool.
+//	 */
+//	op void dispose()
+//	
+//	/*
+//	 * Method called when the user clicks on the map with the mouse.
+//	 * @param mouseButton The mouse button clicked
+//	 * @param x The absolute position x coordinates of the point selected.
+//	 * @param y The absolute position y coordinates of the point selected.
+//	 */
+//	op void positionSelected(int mouseButton, double x, double y)
+//}
+//
+///*
+// * Tool that shows the distance between two point on the map. The use needs to 
+// * selects two positions on the map by clicking using the left button on the mouse.
+// */
+//class MapRuler extends MapTool
+//{	
+//	/*
+//	 * The color of the ruler.
+//	 */
+//	Color3f rulerColor	= "0.0,1.0,0.0"
+//}
+//
+///*
+// * Presentation properties for a FeaturesOfInterestMapLayer.
+// */
+//class FeaturesOfInterestMapLayerPresentation extends MapAnnotation, RectangularRegionProvider
+//{
+//	@GenModel(notify="true", propertyCategory="FOI_PROPERTIES")
+//	refers FeaturesOfInterestMapLayer featuresOfInterestMapLayer
+//		
+//	@GenModel(notify="true", propertyCategory="FOI_PROPERTIES", apogy_units="m")
+//	double featureOfInterestRadius = "0.25"
+//	
+//	/** The color of the vector. */
+//	@GenModel(propertyCategory="FOI_PROPERTIES")
+//	Color3f featureOfInterestColor = "0.0,0.0,1.0"		
+//}
 
-/*
- * Base class of all map tools.
- */
-abstract class MapTool extends MapAnnotation
-{
-	/*
-	 * Whether or not the tool is active.
-	 */	
-	boolean active = "true"
-	
-	/*
-	 * Method that is called to give access to the underlying ChartComposite and JFreeChart used to display the map.
-	 * @param composite The ChartComposite used to display the map.
-	 * @param chart The JFreeChart used to display the map.
-	 */
-	op void initialize(ChartComposite composite, JFreeChart chart)
-	
-	/*
-	 * Method that is called to dispose of the tool.
-	 */
-	op void dispose()
-	
-	/*
-	 * Method called when the user clicks on the map with the mouse.
-	 * @param mouseButton The mouse button clicked
-	 * @param x The absolute position x coordinates of the point selected.
-	 * @param y The absolute position y coordinates of the point selected.
-	 */
-	op void positionSelected(int mouseButton, double x, double y)
-}
-
-/*
- * Tool that shows the distance between two point on the map. The use needs to 
- * selects two positions on the map by clicking using the left button on the mouse.
- */
-class MapRuler extends MapTool
-{	
-	/*
-	 * The color of the ruler.
-	 */
-	Color3f rulerColor	= "0.0,1.0,0.0"
-}
-
-/*
- * Presentation properties for a FeaturesOfInterestMapLayer.
- */
-class FeaturesOfInterestMapLayerPresentation extends MapAnnotation, RectangularRegionProvider
-{
-	@GenModel(notify="true", propertyCategory="FOI_PROPERTIES")
-	refers FeaturesOfInterestMapLayer featuresOfInterestMapLayer
-		
-	@GenModel(notify="true", propertyCategory="FOI_PROPERTIES", apogy_units="m")
-	double featureOfInterestRadius = "0.25"
-	
-	/** The color of the vector. */
-	@GenModel(propertyCategory="FOI_PROPERTIES")
-	Color3f featureOfInterestColor = "0.0,0.0,1.0"		
-}
-
-// Trajectory Annotation and Tools.
-
-/*
- * Base class for classes providing a trajectory.
- */
-abstract class TrajectoryProvider
-{
-	/*
-	 * Re-initialize the TrajectoryProvider.
-	 */
-	op void initialize()
-	
-	/*
-	 * Clears the list of points and associated trajectory.
-	 */
-	op void clear()
-	
-	/* 
-	 * Returns the current trajectory as a list of Point2d.
-	 */
-	op List<Point2d> asListOfPoint2d()		
-	
-	/*
-	 * The XYSeries containing the trajectory data to be displayed.
-	 */
-	@GenModel(property="None")
-	op XYSeries getXYSeries()
-	
-	/*
-	 * Latest x coordinates.
-	 */	
-	transient XYDataItem latestPosition
-	
-	/*
-	 * The azimuth of the latest position, in radians, as measured relative to the x axis, positive clockwise.
-	 */
-	@GenModel(apogy_units="rad")
-	transient double azimuthAngle = "0.0"		
-	
-	/*
-	 * The current length of the trajectory.
-	 */
-	@GenModel(apogy_units="m")
-	transient double trajectoryLength = "0.0"
-	
-	/*
-	 * The color of the ruler.
-	 */
-	Color3f trajectoryColor	= "0.0,1.0,0.0"
-}
-
-/* 
- * Base class for user map tools that display trajectory on a map.
- */
-abstract class AbstractTrajectoryTool extends TrajectoryProvider, MapTool
-{
-	
-}
-
-/*
- * Tool that allows a user to define a trajectory by clicking on a map.
- * Clicking on the left mouse button add a point to the trajectory, cliking on 
- * the right mouse button removes the last point of the trajectory.
- */
-class TrajectoryPickingTool extends AbstractTrajectoryTool
-{
-	
-}
-
-/*
- * Base class for TrajectoryProvider that are providing trajectory based on a VariableTrajectoryAnnotation.
- */
-abstract class VariableTrajectoryProvider extends TrajectoryProvider
-{
-	@GenModel(property="None")
-	container VariableTrajectoryAnnotation variableAnnotation opposite trajectoryProvider
-	
-	/*
-	 *  The Apogy System being displayed. This is automatically updated.
-	 */
-	refers transient PoseProvider[1] poseProvider
-}
-
-/*
- * Default implementation of VariableTrajectoryProvider. This implementation makes use of thresholds 
- * to limits the number of position update of the trajectory to improve performance.
- */
-class DefaultVariableTrajectoryProvider extends VariableTrajectoryProvider
-{
-	/*
-	 *  Minimum distance to keep between points added to the XYSeries.
-	 */
-	@GenModel(propertyCategory="THRESHOLDS", apogy_units="m")
-	double distanceThreshold = "0.5"
-	
-	/*
-	 *  Minimum azimuth change that will trigger an azimuthAngle change.
-	 */
-	@GenModel(propertyCategory="THRESHOLDS", apogy_units="rad")
-	double azimuthThreshold = "0.017"
-}
-
-// Variable Annotations.
-
-/*
- * Base class used for MapAnnotation representing a variable on a Map.
- */
-abstract class AbstractVariableAnnotation extends MapAnnotation
-{		
-	/*
-	 * The Apogy System being displayed.
-	 */
-	refers Variable[1] variable
-	
-	/*
-	 * The instance of the object adapted by the Apogy System.
-	 */
-	refers transient EObject[0..1] variableInstance	
-	
-	/*
-	 * The current instance of  ApogySystemApiAdapter handling the variable.
-	 */
-	refers transient ApogySystemApiAdapter[0..1] apogySystemApiAdapter
-	
-	/*
-	 * Method called when the pose of the variable changes.
-	 * @param newPose The new pose matrix.
-	 */
-	op void updatePose(Matrix4x4 newPose)
-}
-
-/*
- * AbstractVariableAnnotation that shows the position and orientation of a variable on a Map.
- */
-class PoseVariableAnnotation extends AbstractVariableAnnotation
-{
-	/*
-	 * The length of the vector.
-	 */
-	@GenModel(propertyCategory="VECTOR_PROPERTIES", apogy_units="m")
-	double vectorlength = "10.0"
-	
-	/*
-	 * The color of the vector.
-	 */
-	@GenModel(propertyCategory="VECTOR_PROPERTIES")
-	Color3f vectorColor = "0.0,0.0,1.0"
-	
-	/*
-	 * Whether to show the pose as text.
-	 */
-	boolean showPose = "true"	
-		
-	/*
-	 * Method called when the position or orientation of the variable changes.
-	 * @param x The x coordinates, in meters.
-	 * @param y The y coordinates, in meters.
-	 * @param zRotation The azimuth, in radians. 
-	 */
-	op void updatePose(@GenModel(apogy_units="m") double x, @GenModel(apogy_units="m") double y, @GenModel(apogy_units="rad") double zRotation)
-}	
-
-/*
- * AbstractVariableAnnotation that draws the trajectory of a variable on a map. 
- */
-class VariableTrajectoryAnnotation extends AbstractVariableAnnotation, TrajectoryProvider
-{	
-	/*
-	 * The trajectory provider.
-	 */
-	contains VariableTrajectoryProvider[1] trajectoryProvider opposite variableAnnotation
-}
-
-/*
- * Specialization of PoseVariableAnnotation that also draws the shape of the vehicle on the map. 
- */
-class VehicleVariableAnnotation extends PoseVariableAnnotation
-{
-	/*
-	 * The length of the vehicle.
-	 */
-	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",apogy_units="m")
-	double vehicleLength = "1.0"
-	
-	/*
-	 * The width of the vehicle.
-	 */
-	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",apogy_units="m")
-	double vehicleWidth = "0.5"
-}
+//// Trajectory Annotation and Tools.
+//
+///*
+// * Base class for classes providing a trajectory.
+// */
+//abstract class TrajectoryProvider
+//{
+//	/*
+//	 * Re-initialize the TrajectoryProvider.
+//	 */
+//	op void initialize()
+//	
+//	/*
+//	 * Clears the list of points and associated trajectory.
+//	 */
+//	op void clear()
+//	
+//	/* 
+//	 * Returns the current trajectory as a list of Point2d.
+//	 */
+//	op List<Point2d> asListOfPoint2d()		
+//	
+//	/*
+//	 * The XYSeries containing the trajectory data to be displayed.
+//	 */
+//	@GenModel(property="None")
+//	op XYSeries getXYSeries()
+//	
+//	/*
+//	 * Latest x coordinates.
+//	 */	
+//	transient XYDataItem latestPosition
+//	
+//	/*
+//	 * The azimuth of the latest position, in radians, as measured relative to the x axis, positive clockwise.
+//	 */
+//	@GenModel(apogy_units="rad")
+//	transient double azimuthAngle = "0.0"		
+//	
+//	/*
+//	 * The current length of the trajectory.
+//	 */
+//	@GenModel(apogy_units="m")
+//	transient double trajectoryLength = "0.0"
+//	
+//	/*
+//	 * The color of the ruler.
+//	 */
+//	Color3f trajectoryColor	= "0.0,1.0,0.0"
+//}
+//
+///* 
+// * Base class for user map tools that display trajectory on a map.
+// */
+//abstract class AbstractTrajectoryTool extends TrajectoryProvider, MapTool
+//{
+//	
+//}
+//
+///*
+// * Tool that allows a user to define a trajectory by clicking on a map.
+// * Clicking on the left mouse button add a point to the trajectory, cliking on 
+// * the right mouse button removes the last point of the trajectory.
+// */
+//class TrajectoryPickingTool extends AbstractTrajectoryTool
+//{
+//	
+//}
+//
+///*
+// * Base class for TrajectoryProvider that are providing trajectory based on a VariableTrajectoryAnnotation.
+// */
+//abstract class VariableTrajectoryProvider extends TrajectoryProvider
+//{
+//	@GenModel(property="None")
+//	container VariableTrajectoryAnnotation variableAnnotation opposite trajectoryProvider
+//	
+//	/*
+//	 *  The Apogy System being displayed. This is automatically updated.
+//	 */
+//	refers transient PoseProvider[1] poseProvider
+//}
+//
+///*
+// * Default implementation of VariableTrajectoryProvider. This implementation makes use of thresholds 
+// * to limits the number of position update of the trajectory to improve performance.
+// */
+//class DefaultVariableTrajectoryProvider extends VariableTrajectoryProvider
+//{
+//	/*
+//	 *  Minimum distance to keep between points added to the XYSeries.
+//	 */
+//	@GenModel(propertyCategory="THRESHOLDS", apogy_units="m")
+//	double distanceThreshold = "0.5"
+//	
+//	/*
+//	 *  Minimum azimuth change that will trigger an azimuthAngle change.
+//	 */
+//	@GenModel(propertyCategory="THRESHOLDS", apogy_units="rad")
+//	double azimuthThreshold = "0.017"
+//}
+//
+//// Variable Annotations.
+//
+///*
+// * Base class used for MapAnnotation representing a variable on a Map.
+// */
+//abstract class AbstractVariableAnnotation extends MapAnnotation
+//{		
+//	/*
+//	 * The Apogy System being displayed.
+//	 */
+//	refers Variable[1] variable
+//	
+//	/*
+//	 * The instance of the object adapted by the Apogy System.
+//	 */
+//	refers transient EObject[0..1] variableInstance	
+//	
+//	/*
+//	 * The current instance of  ApogySystemApiAdapter handling the variable.
+//	 */
+//	refers transient ApogySystemApiAdapter[0..1] apogySystemApiAdapter
+//	
+//	/*
+//	 * Method called when the pose of the variable changes.
+//	 * @param newPose The new pose matrix.
+//	 */
+//	op void updatePose(Matrix4x4 newPose)
+//}
+//
+///*
+// * AbstractVariableAnnotation that shows the position and orientation of a variable on a Map.
+// */
+//class PoseVariableAnnotation extends AbstractVariableAnnotation
+//{
+//	/*
+//	 * The length of the vector.
+//	 */
+//	@GenModel(propertyCategory="VECTOR_PROPERTIES", apogy_units="m")
+//	double vectorlength = "10.0"
+//	
+//	/*
+//	 * The color of the vector.
+//	 */
+//	@GenModel(propertyCategory="VECTOR_PROPERTIES")
+//	Color3f vectorColor = "0.0,0.0,1.0"
+//	
+//	/*
+//	 * Whether to show the pose as text.
+//	 */
+//	boolean showPose = "true"	
+//		
+//	/*
+//	 * Method called when the position or orientation of the variable changes.
+//	 * @param x The x coordinates, in meters.
+//	 * @param y The y coordinates, in meters.
+//	 * @param zRotation The azimuth, in radians. 
+//	 */
+//	op void updatePose(@GenModel(apogy_units="m") double x, @GenModel(apogy_units="m") double y, @GenModel(apogy_units="rad") double zRotation)
+//}	
+//
+///*
+// * AbstractVariableAnnotation that draws the trajectory of a variable on a map. 
+// */
+//class VariableTrajectoryAnnotation extends AbstractVariableAnnotation, TrajectoryProvider
+//{	
+//	/*
+//	 * The trajectory provider.
+//	 */
+//	contains VariableTrajectoryProvider[1] trajectoryProvider opposite variableAnnotation
+//}
+//
+///*
+// * Specialization of PoseVariableAnnotation that also draws the shape of the vehicle on the map. 
+// */
+//class VehicleVariableAnnotation extends PoseVariableAnnotation
+//{
+//	/*
+//	 * The length of the vehicle.
+//	 */
+//	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",apogy_units="m")
+//	double vehicleLength = "1.0"
+//	
+//	/*
+//	 * The width of the vehicle.
+//	 */
+//	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",apogy_units="m")
+//	double vehicleWidth = "0.5"
+//}

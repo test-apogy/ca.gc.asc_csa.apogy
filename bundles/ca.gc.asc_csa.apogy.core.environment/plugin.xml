@@ -84,4 +84,10 @@
          </command>
       </menuContribution>
    </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.converters">
+      <new_element
+            Class="ca.gc.asc_csa.apogy.core.environment.converters.ApogyEnvironmentToTimeSourcesListConverter">
+      </new_element>
+   </extension>
 </plugin>

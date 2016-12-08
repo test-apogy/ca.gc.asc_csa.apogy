@@ -13,12 +13,11 @@
  */
 package ca.gc.asc_csa.apogy.core.environment;
 
+import org.eclipse.emf.common.util.EList;
+
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
-
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->

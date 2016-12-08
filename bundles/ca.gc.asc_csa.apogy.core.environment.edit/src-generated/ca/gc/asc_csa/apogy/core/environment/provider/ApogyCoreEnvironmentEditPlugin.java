@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.core.environment.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
 import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;

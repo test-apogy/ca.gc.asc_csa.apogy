@@ -16,8 +16,9 @@ package ca.gc.asc_csa.apogy.core.environment.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.core.environment.Moon;
+
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
 
 /**
  * <!-- begin-user-doc -->

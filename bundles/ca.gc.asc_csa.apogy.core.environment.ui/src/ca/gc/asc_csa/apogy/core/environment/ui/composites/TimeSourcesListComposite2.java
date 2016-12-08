@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.ui.composites;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -59,17 +59,18 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.TimeSourcesList;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsListComposite;
-import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class TimeSourcesListComposite2 extends Composite {
 

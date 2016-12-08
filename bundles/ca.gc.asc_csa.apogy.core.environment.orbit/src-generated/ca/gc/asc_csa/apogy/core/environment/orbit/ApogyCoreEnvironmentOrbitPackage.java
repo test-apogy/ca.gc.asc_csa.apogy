@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import org.eclipse.emf.ecore.EAttribute;
 
@@ -87,6 +86,34 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	ApogyCoreEnvironmentOrbitPackage eINSTANCE = ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitModelImpl <em>Abstract Orbit Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitModelImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getAbstractOrbitModel()
+	 * @generated
+	 */
+	int ABSTRACT_ORBIT_MODEL = 0;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Orbit Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Abstract Orbit Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ORBIT_MODEL_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl <em>Orbit Worksite</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,7 +121,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getOrbitWorksite()
 	 * @generated
 	 */
-	int ORBIT_WORKSITE = 0;
+	int ORBIT_WORKSITE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -142,13 +169,13 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	int ORBIT_WORKSITE__WORKSITE_NODE = ApogyCoreEnvironmentPackage.WORKSITE__WORKSITE_NODE;
 
 	/**
-	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
+	 * The feature id for the '<em><b>Sky</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_WORKSITE__ENVIRONMENT = ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT;
+	int ORBIT_WORKSITE__SKY = ApogyCoreEnvironmentPackage.WORKSITE__SKY;
 
 	/**
 	 * The feature id for the '<em><b>Orbit Model</b></em>' reference.
@@ -185,7 +212,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getAbstractFrame()
 	 * @generated
 	 */
-	int ABSTRACT_FRAME = 1;
+	int ABSTRACT_FRAME = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -231,7 +258,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getPVACoordinates()
 	 * @generated
 	 */
-	int PVA_COORDINATES = 2;
+	int PVA_COORDINATES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' containment reference.
@@ -295,7 +322,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getTimedStampedPVACoordinates()
 	 * @generated
 	 */
-	int TIMED_STAMPED_PVA_COORDINATES = 3;
+	int TIMED_STAMPED_PVA_COORDINATES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' containment reference.
@@ -368,7 +395,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getPVCoordinatesProviderProvider()
 	 * @generated
 	 */
-	int PV_COORDINATES_PROVIDER_PROVIDER = 4;
+	int PV_COORDINATES_PROVIDER_PROVIDER = 5;
 
 	/**
 	 * The number of structural features of the '<em>PV Coordinates Provider Provider</em>' class.
@@ -405,7 +432,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getAngularCoordinates()
 	 * @generated
 	 */
-	int ANGULAR_COORDINATES = 5;
+	int ANGULAR_COORDINATES = 6;
 
 	/**
 	 * The feature id for the '<em><b>Rotation</b></em>' containment reference.
@@ -460,7 +487,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getTimedStampedAngularCoordinates()
 	 * @generated
 	 */
-	int TIMED_STAMPED_ANGULAR_COORDINATES = 6;
+	int TIMED_STAMPED_ANGULAR_COORDINATES = 7;
 
 	/**
 	 * The feature id for the '<em><b>Rotation</b></em>' containment reference.
@@ -524,7 +551,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getSpacecraftAttitude()
 	 * @generated
 	 */
-	int SPACECRAFT_ATTITUDE = 7;
+	int SPACECRAFT_ATTITUDE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -579,7 +606,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getAttitudeProvider()
 	 * @generated
 	 */
-	int ATTITUDE_PROVIDER = 8;
+	int ATTITUDE_PROVIDER = 9;
 
 	/**
 	 * The number of structural features of the '<em>Attitude Provider</em>' class.
@@ -616,7 +643,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getSpacecraftState()
 	 * @generated
 	 */
-	int SPACECRAFT_STATE = 9;
+	int SPACECRAFT_STATE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -671,7 +698,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getOrbit()
 	 * @generated
 	 */
-	int ORBIT = 10;
+	int ORBIT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -735,7 +762,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getValidityRangeProvider()
 	 * @generated
 	 */
-	int VALIDITY_RANGE_PROVIDER = 11;
+	int VALIDITY_RANGE_PROVIDER = 12;
 
 	/**
 	 * The feature id for the '<em><b>From Valid Date</b></em>' attribute.
@@ -790,34 +817,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getOrbitModel()
 	 * @generated
 	 */
-	int ORBIT_MODEL = 12;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_MODEL__NAME = ApogyCorePackage.ABSTRACT_ORBIT_MODEL__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_MODEL__DESCRIPTION = ApogyCorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Orbit Models List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_MODEL__ORBIT_MODELS_LIST = ApogyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST;
+	int ORBIT_MODEL = 13;
 
 	/**
 	 * The feature id for the '<em><b>From Valid Date</b></em>' attribute.
@@ -826,7 +826,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL__FROM_VALID_DATE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 0;
+	int ORBIT_MODEL__FROM_VALID_DATE = ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>To Valid Date</b></em>' attribute.
@@ -835,7 +835,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL__TO_VALID_DATE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 1;
+	int ORBIT_MODEL__TO_VALID_DATE = ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Reference Frame</b></em>' containment reference.
@@ -844,7 +844,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL__REFERENCE_FRAME = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 2;
+	int ORBIT_MODEL__REFERENCE_FRAME = ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attitude Provider</b></em>' containment reference list.
@@ -853,7 +853,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL__ATTITUDE_PROVIDER = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 3;
+	int ORBIT_MODEL__ATTITUDE_PROVIDER = ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Orbit Model</em>' class.
@@ -862,7 +862,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL_FEATURE_COUNT = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 4;
+	int ORBIT_MODEL_FEATURE_COUNT = ABSTRACT_ORBIT_MODEL_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
@@ -871,7 +871,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL___IS_DATE_IN_VALID_RANGE__DATE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 0;
+	int ORBIT_MODEL___IS_DATE_IN_VALID_RANGE__DATE = ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Propagate</em>' operation.
@@ -880,7 +880,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL___PROPAGATE__DATE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 1;
+	int ORBIT_MODEL___PROPAGATE__DATE = ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Spacecraft States</em>' operation.
@@ -889,7 +889,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 2;
+	int ORBIT_MODEL___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Orbit Model</em>' class.
@@ -898,7 +898,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODEL_OPERATION_COUNT = ApogyCorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 3;
+	int ORBIT_MODEL_OPERATION_COUNT = ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitFacadeImpl <em>Facade</em>}' class.
@@ -908,7 +908,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getApogyCoreEnvironmentOrbitFacade()
 	 * @generated
 	 */
-	int APOGY_CORE_ENVIRONMENT_ORBIT_FACADE = 13;
+	int APOGY_CORE_ENVIRONMENT_ORBIT_FACADE = 14;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -945,7 +945,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 14;
+	int LIST = 15;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -955,7 +955,17 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 15;
+	int EXCEPTION = 16;
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Orbit Model</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel
+	 * @generated
+	 */
+	EClass getAbstractOrbitModel();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite <em>Orbit Worksite</em>}'.
@@ -1389,6 +1399,16 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitModelImpl <em>Abstract Orbit Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitModelImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitPackageImpl#getAbstractOrbitModel()
+		 * @generated
+		 */
+		EClass ABSTRACT_ORBIT_MODEL = eINSTANCE.getAbstractOrbitModel();
+
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl <em>Orbit Worksite</em>}' class.
 		 * <!-- begin-user-doc -->

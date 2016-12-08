@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
-import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;

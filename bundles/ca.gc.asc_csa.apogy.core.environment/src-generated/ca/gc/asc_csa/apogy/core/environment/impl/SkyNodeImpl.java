@@ -17,12 +17,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.SkyNode;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->

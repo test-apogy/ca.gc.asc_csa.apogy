@@ -43,13 +43,13 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
-import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
-import ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation;
 
 public class MapLayerPresentationsListComposite extends Composite {
 	private DataBindingContext m_bindingContext;

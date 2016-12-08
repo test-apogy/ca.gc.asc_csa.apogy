@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.core.impl.ApogyCoreFacadeImpl;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -61,27 +60,6 @@ public interface ApogyCoreFacade extends EObject {
 	ResultNode createResultNode(PositionedResult result);
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model unique="false" createEnvironmentUnique="false" createProgramsUnique="false" createDataProductsUnique="false" createToolsUnique="false"
-	 * @generated
-	 */
-	InvocatorSession createApogySession(boolean createEnvironment,
-			boolean createPrograms, boolean createDataProducts,
-			boolean createTools);
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Create an Apogy session.
-	 * @return Reference to the newly created session.
-	 * <!-- end-model-doc -->
-	 * @model unique="false"
-	 * @generated
-	 */
-	InvocatorSession createApogySession();
-
-		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

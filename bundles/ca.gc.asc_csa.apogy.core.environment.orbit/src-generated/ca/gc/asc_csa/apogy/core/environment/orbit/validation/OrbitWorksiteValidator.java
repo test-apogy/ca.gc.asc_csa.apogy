@@ -4,7 +4,7 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.validation;
 
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel;
 
 /**
  * A sample validator interface for {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite}.

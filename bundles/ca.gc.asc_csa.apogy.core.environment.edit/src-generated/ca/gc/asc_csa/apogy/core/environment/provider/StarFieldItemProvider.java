@@ -24,9 +24,10 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
-import ca.gc.asc_csa.apogy.core.environment.StarField;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.StarField} object.

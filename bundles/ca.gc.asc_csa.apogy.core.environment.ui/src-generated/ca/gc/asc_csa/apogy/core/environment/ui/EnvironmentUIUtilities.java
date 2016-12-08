@@ -34,6 +34,7 @@ public interface EnvironmentUIUtilities extends EObject
 {
 	public static final EnvironmentUIUtilities INSTANCE = EnvironmentUIUtilitiesImpl.getInstance();
 
+
 	public static final double LOWER_SUN_ALTITUDE_FOR_TRANSPARENCY = Math.toRadians(-5.0);
 	public static final double LOWER_SUN_ALTITUDE_TRANSPARENCY = 1.0;
 	public static final double UPPER_SUN_ALTITUDE_FOR_TRANSPARENCY = Math.toRadians(0.0);

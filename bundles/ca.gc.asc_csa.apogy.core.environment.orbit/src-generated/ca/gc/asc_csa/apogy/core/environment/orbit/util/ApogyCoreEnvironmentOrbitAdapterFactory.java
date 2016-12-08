@@ -20,8 +20,7 @@ import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
-import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.*;
 
@@ -81,6 +80,10 @@ public class ApogyCoreEnvironmentOrbitAdapterFactory extends AdapterFactoryImpl 
 	 */
 	protected ApogyCoreEnvironmentOrbitSwitch<Adapter> modelSwitch =
 		new ApogyCoreEnvironmentOrbitSwitch<Adapter>() {
+			@Override
+			public Adapter caseAbstractOrbitModel(AbstractOrbitModel object) {
+				return createAbstractOrbitModelAdapter();
+			}
 			@Override
 			public Adapter caseOrbitWorksite(OrbitWorksite object) {
 				return createOrbitWorksiteAdapter();
@@ -156,10 +159,6 @@ public class ApogyCoreEnvironmentOrbitAdapterFactory extends AdapterFactoryImpl 
 			@Override
 			public Adapter caseWorksite(Worksite object) {
 				return createWorksiteAdapter();
-			}
-			@Override
-			public Adapter caseAbstractOrbitModel(AbstractOrbitModel object) {
-				return createAbstractOrbitModelAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -378,13 +377,13 @@ public class ApogyCoreEnvironmentOrbitAdapterFactory extends AdapterFactoryImpl 
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractWorksite <em>Abstract Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AbstractWorksite <em>Abstract Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractWorksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractWorksite
 	 * @generated
 	 */
 	public Adapter createAbstractWorksiteAdapter() {
@@ -406,13 +405,13 @@ public class ApogyCoreEnvironmentOrbitAdapterFactory extends AdapterFactoryImpl 
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractOrbitModel
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel
 	 * @generated
 	 */
 	public Adapter createAbstractOrbitModelAdapter() {

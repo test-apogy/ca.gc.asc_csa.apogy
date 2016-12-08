@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.ui.composites;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -23,6 +23,7 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
+
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
 import ca.gc.asc_csa.apogy.common.emf.ui.TimeSourceCompositeProvider;

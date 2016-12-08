@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.core.ui.composites;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+
 import ca.gc.asc_csa.apogy.core.ApogySystem;
 
 public class ApogySystem3dViewerComposite extends Composite {

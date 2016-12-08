@@ -13,7 +13,6 @@ package ca.gc.asc_csa.apogy.core.environment.orbit;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
 
 /**

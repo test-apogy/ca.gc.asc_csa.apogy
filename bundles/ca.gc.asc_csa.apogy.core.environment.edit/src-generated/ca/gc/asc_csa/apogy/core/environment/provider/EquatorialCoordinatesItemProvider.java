@@ -31,8 +31,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates} object.

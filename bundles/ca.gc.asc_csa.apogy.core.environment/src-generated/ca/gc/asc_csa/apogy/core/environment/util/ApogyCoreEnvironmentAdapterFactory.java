@@ -17,13 +17,34 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.core.environment.*;
+import ca.gc.asc_csa.apogy.core.environment.AbstractApogyEnvironmentItem;
+import ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.CelestialBody;
+import ca.gc.asc_csa.apogy.core.environment.Earth;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceLocationsList;
+import ca.gc.asc_csa.apogy.core.environment.TimeSourcesList;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.WorksitesList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 
 /**

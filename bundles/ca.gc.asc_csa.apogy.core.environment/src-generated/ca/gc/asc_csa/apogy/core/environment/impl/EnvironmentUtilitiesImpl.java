@@ -27,9 +27,10 @@ import java.util.TreeSet;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
 import ca.gc.asc_csa.apogy.core.environment.Star;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->

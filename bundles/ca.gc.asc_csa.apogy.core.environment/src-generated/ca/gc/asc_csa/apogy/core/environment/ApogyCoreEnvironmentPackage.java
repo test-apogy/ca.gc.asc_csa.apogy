@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
@@ -1215,13 +1216,31 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	int APOGY_CORE_ENVIRONMENT_FACADE_FEATURE_COUNT = 0;
 
 		/**
+	 * The operation id for the '<em>Create Apogy Session</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = 0;
+
+		/**
+	 * The operation id for the '<em>Create Apogy Session</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = 1;
+
+		/**
 	 * The operation id for the '<em>Create Star</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE = 0;
+	int APOGY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE = 2;
 
 		/**
 	 * The operation id for the '<em>Create And Initialize Stars</em>' operation.
@@ -1230,7 +1249,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS = 1;
+	int APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS = 3;
 
 		/**
 	 * The operation id for the '<em>Sort By Magnitude</em>' operation.
@@ -1239,7 +1258,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___SORT_BY_MAGNITUDE__LIST = 2;
+	int APOGY_CORE_ENVIRONMENT_FACADE___SORT_BY_MAGNITUDE__LIST = 4;
 
 		/**
 	 * The operation id for the '<em>Initialize Sky Node</em>' operation.
@@ -1248,7 +1267,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE = 3;
+	int APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE = 5;
 
 		/**
 	 * The operation id for the '<em>Get Sun Vector</em>' operation.
@@ -1257,7 +1276,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = 4;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = 6;
 
 		/**
 	 * The operation id for the '<em>Get Sun Vector</em>' operation.
@@ -1266,7 +1285,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = 5;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = 7;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1275,7 +1294,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 6;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 8;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1284,7 +1303,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 7;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 9;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1293,7 +1312,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_STRING_ENVIRONMENT = 8;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_STRING_ENVIRONMENT = 10;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1302,7 +1321,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = 9;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = 11;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1311,7 +1330,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE_OPERATION_COUNT = 10;
+	int APOGY_CORE_ENVIRONMENT_FACADE_OPERATION_COUNT = 12;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.impl.StarImpl <em>Star</em>}' class.
@@ -2209,6 +2228,26 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	EClass getApogyCoreEnvironmentFacade();
 
 		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createApogySession() <em>Create Apogy Session</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Apogy Session</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createApogySession()
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentFacade__CreateApogySession();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createApogySession(boolean, boolean, boolean, boolean) <em>Create Apogy Session</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Apogy Session</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createApogySession(boolean, boolean, boolean, boolean)
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentFacade__CreateApogySession__boolean_boolean_boolean_boolean();
+
+		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeStars() <em>Create And Initialize Stars</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2858,6 +2897,20 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 		 * @generated
 		 */
 		EClass APOGY_CORE_ENVIRONMENT_FACADE = eINSTANCE.getApogyCoreEnvironmentFacade();
+				/**
+		 * The meta object literal for the '<em><b>Create Apogy Session</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = eINSTANCE.getApogyCoreEnvironmentFacade__CreateApogySession();
+				/**
+		 * The meta object literal for the '<em><b>Create Apogy Session</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = eINSTANCE.getApogyCoreEnvironmentFacade__CreateApogySession__boolean_boolean_boolean_boolean();
 				/**
 		 * The meta object literal for the '<em><b>Create And Initialize Stars</b></em>' operation.
 		 * <!-- begin-user-doc -->

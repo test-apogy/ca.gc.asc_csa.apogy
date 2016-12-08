@@ -35,23 +35,23 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
-import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
-import ca.gc.asc_csa.apogy.common.math.Tuple3d;
-import ca.gc.asc_csa.apogy.core.Positioned;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
-import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
-import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
 import ca.gc.asc_csa.apogy.common.databinding.converters.DoubleToStringConverter;
 import ca.gc.asc_csa.apogy.common.databinding.converters.StringToDoubleConverter;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.Positioned;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
+import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 public class CoordinateConversionComposite extends Composite
 {

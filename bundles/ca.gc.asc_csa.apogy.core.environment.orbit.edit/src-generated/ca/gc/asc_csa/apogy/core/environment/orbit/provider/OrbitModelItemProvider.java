@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -25,7 +26,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.apogy.core.provider.AbstractOrbitModelItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel} object.
@@ -145,7 +145,8 @@ public class OrbitModelItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OrbitModel)object).getName();
+		Date labelValue = ((OrbitModel)object).getFromValidDate();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_OrbitModel_type") :
 			getString("_UI_OrbitModel_type") + " " + label;

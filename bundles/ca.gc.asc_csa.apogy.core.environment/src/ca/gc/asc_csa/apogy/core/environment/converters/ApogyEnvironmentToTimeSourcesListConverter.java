@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.converters;
+package ca.gc.asc_csa.apogy.core.environment.converters;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -14,8 +14,8 @@ package ca.gc.asc_csa.apogy.core.converters;
  */
 
 import ca.gc.asc_csa.apogy.common.converters.IConverter;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
-import ca.gc.asc_csa.apogy.core.TimeSourcesList;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.TimeSourcesList;
 
 public class ApogyEnvironmentToTimeSourcesListConverter implements IConverter {
 

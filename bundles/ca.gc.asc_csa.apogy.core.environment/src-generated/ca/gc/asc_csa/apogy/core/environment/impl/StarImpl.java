@@ -18,9 +18,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.Star;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->

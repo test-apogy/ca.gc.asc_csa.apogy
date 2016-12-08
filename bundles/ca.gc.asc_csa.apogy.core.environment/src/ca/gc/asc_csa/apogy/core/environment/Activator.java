@@ -15,11 +15,12 @@ package ca.gc.asc_csa.apogy.core.environment;
 
 import java.net.URL;
 
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+
 import ca.gc.asc_csa.apogy.common.EclipseUtils;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
-import org.osgi.framework.BundleActivator;
-import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 

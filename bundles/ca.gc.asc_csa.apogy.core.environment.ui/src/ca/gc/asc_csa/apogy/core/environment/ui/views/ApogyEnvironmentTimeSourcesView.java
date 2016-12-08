@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.ui.views;
+package ca.gc.asc_csa.apogy.core.environment.ui.views;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials

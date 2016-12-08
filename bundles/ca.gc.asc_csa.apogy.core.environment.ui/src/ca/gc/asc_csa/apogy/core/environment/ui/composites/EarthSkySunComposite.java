@@ -26,13 +26,13 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.environment.EarthSky;
 import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.DateToSunHorizontalCoordinatesStringConverter;
 import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.DateToSunIntensityStringConverter;
-
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 public class EarthSkySunComposite extends Composite 
 {

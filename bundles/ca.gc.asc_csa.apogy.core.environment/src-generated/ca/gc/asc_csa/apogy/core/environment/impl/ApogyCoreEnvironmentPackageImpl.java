@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
@@ -37,9 +38,12 @@ import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.environment.AbstractApogyEnvironmentItem;
 import ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.CelestialBody;
 import ca.gc.asc_csa.apogy.core.environment.Earth;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
 import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.Moon;
@@ -50,9 +54,6 @@ import ca.gc.asc_csa.apogy.core.environment.StarField;
 import ca.gc.asc_csa.apogy.core.environment.Sun;
 import ca.gc.asc_csa.apogy.core.environment.SurfaceLocationsList;
 import ca.gc.asc_csa.apogy.core.environment.TimeSourcesList;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.WorksitesList;
@@ -754,34 +755,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeStars() {
-		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(1);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreEnvironmentFacade__SortByMagnitude__List() {
-		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(2);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode() {
-		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(3);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreEnvironmentFacade__CreateStar__float_double_double() {
+	public EOperation getApogyCoreEnvironmentFacade__CreateApogySession() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(0);
 	}
 
@@ -790,7 +764,25 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment() {
+	public EOperation getApogyCoreEnvironmentFacade__CreateApogySession__boolean_boolean_boolean_boolean() {
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeStars() {
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentFacade__SortByMagnitude__List() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(4);
 	}
 
@@ -799,7 +791,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__Node_Environment() {
+	public EOperation getApogyCoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(5);
 	}
 
@@ -808,7 +800,16 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentFacade__GetVector__Node_ApogySystem_ConnectionPoint_Environment() {
+	public EOperation getApogyCoreEnvironmentFacade__CreateStar__float_double_double() {
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(6);
 	}
 
@@ -817,7 +818,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_ConnectionPoint_Environment() {
+	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__Node_Environment() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(7);
 	}
 
@@ -826,7 +827,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_String_Environment() {
+	public EOperation getApogyCoreEnvironmentFacade__GetVector__Node_ApogySystem_ConnectionPoint_Environment() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(8);
 	}
 
@@ -835,8 +836,26 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_String_String_Environment() {
+	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_ConnectionPoint_Environment() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(9);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_String_Environment() {
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(10);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_String_String_Environment() {
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(11);
 	}
 
 		/**
@@ -1082,6 +1101,8 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		createEOperation(environmentUtilitiesEClass, ENVIRONMENT_UTILITIES___SORT_BY_MAGNITUDE__LIST);
 
 		apogyCoreEnvironmentFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_FACADE);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___SORT_BY_MAGNITUDE__LIST);
@@ -1260,6 +1281,14 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		initEOperation(op, g1);
 
 		initEClass(apogyCoreEnvironmentFacadeEClass, ApogyCoreEnvironmentFacade.class, "ApogyCoreEnvironmentFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getApogyCoreEnvironmentFacade__CreateApogySession(), theApogyCoreInvocatorPackage.getInvocatorSession(), "createApogySession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreEnvironmentFacade__CreateApogySession__boolean_boolean_boolean_boolean(), theApogyCoreInvocatorPackage.getInvocatorSession(), "createApogySession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "createEnvironment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "createPrograms", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "createDataProducts", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "createTools", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCoreEnvironmentFacade__CreateStar__float_double_double(), this.getStar(), "createStar", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1615,6 +1644,12 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		   source, 
 		   new String[] {
 			 "documentation", "A class providing utilities methods to create fully initialze object."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentFacade__CreateApogySession(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Create an Apogy session.\n@return Reference to the newly created session."
 		   });	
 		addAnnotation
 		  (getApogyCoreEnvironmentFacade__CreateStar__float_double_double(), 

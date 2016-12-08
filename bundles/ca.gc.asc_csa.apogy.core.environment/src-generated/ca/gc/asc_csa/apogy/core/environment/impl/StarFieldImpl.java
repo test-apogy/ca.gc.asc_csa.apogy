@@ -29,16 +29,17 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
 import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
 import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.Star;
 import ca.gc.asc_csa.apogy.core.environment.StarField;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -26,12 +26,12 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import ca.gc.asc_csa.apogy.core.environment.EarthSky;
-import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
 
 import ca.gc.asc_csa.apogy.common.databinding.converters.DoubleToStringConverter;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
 
 public class EarthSkyLocationComposite extends Composite 
 {

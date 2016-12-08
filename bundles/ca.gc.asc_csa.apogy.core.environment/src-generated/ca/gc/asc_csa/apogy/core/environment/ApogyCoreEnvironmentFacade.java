@@ -14,15 +14,17 @@ package ca.gc.asc_csa.apogy.core.environment;
  */
 
 import java.util.List;
-
 import java.util.SortedSet;
+
 import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.core.ConnectionPoint;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
 import ca.gc.asc_csa.apogy.core.environment.impl.ApogyCoreEnvironmentFacadeImpl;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,6 +43,26 @@ import ca.gc.asc_csa.apogy.core.invocator.Environment;
 public interface ApogyCoreEnvironmentFacade extends EObject
 {
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Create an Apogy session.
+	 * @return Reference to the newly created session.
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
+	 * @generated
+	 */
+	InvocatorSession createApogySession();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" createEnvironmentUnique="false" createProgramsUnique="false" createDataProductsUnique="false" createToolsUnique="false"
+	 * @generated
+	 */
+	InvocatorSession createApogySession(boolean createEnvironment, boolean createPrograms, boolean createDataProducts, boolean createTools);
+
 	public static ApogyCoreEnvironmentFacade INSTANCE = ApogyCoreEnvironmentFacadeImpl.getInstance();
 	
   /**

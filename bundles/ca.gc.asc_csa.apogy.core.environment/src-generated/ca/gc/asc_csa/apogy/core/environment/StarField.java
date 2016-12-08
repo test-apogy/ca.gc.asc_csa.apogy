@@ -13,9 +13,9 @@
  */
 package ca.gc.asc_csa.apogy.core.environment;
 
-import ca.gc.asc_csa.apogy.common.topology.Node;
-
 import org.eclipse.emf.common.util.EList;
+
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

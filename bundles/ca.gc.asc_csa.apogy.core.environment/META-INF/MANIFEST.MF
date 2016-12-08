@@ -8,6 +8,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: ca.gc.asc_csa.apogy.core.environment,
+ ca.gc.asc_csa.apogy.core.environment.converters,
  ca.gc.asc_csa.apogy.core.environment.impl,
  ca.gc.asc_csa.apogy.core.environment.util
 Require-Bundle: org.eclipse.core.runtime,

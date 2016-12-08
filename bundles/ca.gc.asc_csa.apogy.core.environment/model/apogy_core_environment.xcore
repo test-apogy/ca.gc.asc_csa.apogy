@@ -50,6 +50,7 @@ import ca.gc.asc_csa.apogy.core.ApogySystem
 import ca.gc.asc_csa.apogy.core.ConnectionPoint
 import ca.gc.asc_csa.apogy.core.invocator.Environment
 import org.eclipse.core.runtime.IProgressMonitor
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
 
 // Types
 
@@ -101,6 +102,7 @@ abstract class AbstractApogyEnvironmentItem extends Named, Described
 {	
 	container ApogyEnvironment environment opposite environmentItems
 }
+
 
 class TimeSourcesList
 {	
@@ -297,6 +299,15 @@ class EnvironmentUtilities
  */
 class ApogyCoreEnvironmentFacade
 {	
+	/*
+	 * Create an Apogy session.
+	 * @return Reference to the newly created session.
+	 */
+	op InvocatorSession createApogySession()
+	
+	op InvocatorSession createApogySession(boolean createEnvironment, boolean createPrograms, boolean createDataProducts, boolean createTools)
+	
+	
 	/**
 	 * Creates and initialize a star.
 	 * @param magnitude Star's magnitude.

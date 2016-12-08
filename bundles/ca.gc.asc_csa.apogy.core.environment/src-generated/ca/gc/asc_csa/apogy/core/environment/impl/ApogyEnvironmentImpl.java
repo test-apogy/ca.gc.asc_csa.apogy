@@ -13,34 +13,30 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.impl;
 
+import java.util.Collection;
+import java.util.Date;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-
 import ca.gc.asc_csa.apogy.core.environment.AbstractApogyEnvironmentItem;
 import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.TimeSourcesList;
 import ca.gc.asc_csa.apogy.core.environment.WorksitesList;
-
 import ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl;
-
-import java.util.Collection;
-import java.util.Date;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +56,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ApogyEnvironmentImpl extends EnvironmentImpl implements ApogyEnvironment {
+public class ApogyEnvironmentImpl extends EnvironmentImpl implements ApogyEnvironment 
+{
+	private Adapter timeSourceAdapter = null;
+	
 	/**
 	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -162,9 +161,25 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements ApogyEnviro
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setTime(Date newTime) 
+	{		
+		if(getActiveWorksite() != null)
+		{
+			getActiveWorksite().setTime(newTime);
+		}
+		
+		setTimeGen(newTime);
+	}
+
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTime(Date newTime) {
+	public void setTimeGen(Date newTime) {
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
@@ -324,9 +339,30 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements ApogyEnviro
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setActiveTimeSource(TimeSource newActiveTimeSource)
+	{
+		if(activeTimeSource != null)
+		{
+			activeTimeSource.eAdapters().remove(getTimeSourceAdapter());
+		}
+		
+		if(newActiveTimeSource != null)
+		{
+			newActiveTimeSource.eAdapters().add(getTimeSourceAdapter());
+			setTime(newActiveTimeSource.getTime());
+		}
+		
+		setActiveTimeSourceGen(newActiveTimeSource);
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActiveTimeSource(TimeSource newActiveTimeSource) {
+	public void setActiveTimeSourceGen(TimeSource newActiveTimeSource) {
 		TimeSource oldActiveTimeSource = activeTimeSource;
 		activeTimeSource = newActiveTimeSource;
 		if (eNotificationRequired())
@@ -542,4 +578,31 @@ public class ApogyEnvironmentImpl extends EnvironmentImpl implements ApogyEnviro
 		return result.toString();
 	}
 
+	private Adapter getTimeSourceAdapter()
+	{
+		if(timeSourceAdapter == null)
+		{
+			timeSourceAdapter = new AdapterImpl()
+			{
+				@Override
+				public void notifyChanged(Notification msg) 
+				{									
+					if(msg.getNotifier() instanceof TimeSource)
+					{												
+						int featureId = msg.getFeatureID(TimeSource.class);
+						if(featureId == ApogyCommonEMFPackage.TIME_SOURCE__TIME)
+						{							
+							if(msg.getNewValue() instanceof Date)
+							{
+								Date newDate = (Date) msg.getNewValue();
+								setTime(new Date(newDate.getTime()));
+							}
+						}
+					}
+				}
+			};
+		}
+		
+		return timeSourceAdapter;
+	}
 } //ApogyEnvironmentImpl

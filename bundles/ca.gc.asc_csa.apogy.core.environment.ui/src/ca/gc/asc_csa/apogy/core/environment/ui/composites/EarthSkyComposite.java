@@ -19,6 +19,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
+
 import ca.gc.asc_csa.apogy.core.environment.EarthSky;
 
 public class EarthSkyComposite extends Composite 

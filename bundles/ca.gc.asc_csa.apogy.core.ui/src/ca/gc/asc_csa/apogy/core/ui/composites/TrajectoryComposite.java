@@ -26,9 +26,6 @@ import org.eclipse.swt.events.ControlListener;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
-import ca.gc.asc_csa.apogy.core.PoseProvider;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.ValueAxis;
@@ -39,6 +36,10 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.experimental.chart.swt.ChartComposite;
 import org.jfree.ui.RectangleInsets;
+
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
 
 public class TrajectoryComposite extends Composite 
 {

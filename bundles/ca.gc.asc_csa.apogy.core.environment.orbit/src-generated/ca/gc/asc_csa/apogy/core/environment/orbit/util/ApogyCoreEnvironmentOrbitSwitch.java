@@ -19,8 +19,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
-import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.*;
 
@@ -81,6 +80,12 @@ public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_MODEL: {
+				AbstractOrbitModel abstractOrbitModel = (AbstractOrbitModel)theEObject;
+				T result = caseAbstractOrbitModel(abstractOrbitModel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE: {
 				OrbitWorksite orbitWorksite = (OrbitWorksite)theEObject;
 				T result = caseOrbitWorksite(orbitWorksite);
@@ -174,8 +179,6 @@ public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				T result = caseOrbitModel(orbitModel);
 				if (result == null) result = caseAbstractOrbitModel(orbitModel);
 				if (result == null) result = caseValidityRangeProvider(orbitModel);
-				if (result == null) result = caseNamed(orbitModel);
-				if (result == null) result = caseDescribed(orbitModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -187,6 +190,21 @@ public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Orbit Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Orbit Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractOrbitModel(AbstractOrbitModel object) {
+		return null;
 	}
 
 	/**
@@ -471,21 +489,6 @@ public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseWorksite(Worksite object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Orbit Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Orbit Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAbstractOrbitModel(AbstractOrbitModel object) {
 		return null;
 	}
 

@@ -40,22 +40,6 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
-import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
-import ca.gc.asc_csa.apogy.common.images.EImage;
-import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
-import ca.gc.asc_csa.apogy.common.log.EventSeverity;
-import ca.gc.asc_csa.apogy.common.log.Logger;
-import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
-import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent;
-import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
-import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 import org.eclipse.ui.progress.UIJob;
 import org.jfree.chart.ChartMouseEvent;
 import org.jfree.chart.ChartMouseListener;
@@ -74,6 +58,23 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.experimental.chart.swt.ChartComposite;
 import org.jfree.ui.TextAnchor;
+
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 
 public class MapComposite extends Composite 
 {

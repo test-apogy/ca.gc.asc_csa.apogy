@@ -23,9 +23,9 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
@@ -51,6 +51,13 @@ import org.eclipse.emf.ecore.EAttribute;
  * @generated
  */
 public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implements ApogyCoreEnvironmentOrbitPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractOrbitModelEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -225,6 +232,15 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ApogyCoreEnvironmentOrbitPackage.eNS_URI, theApogyCoreEnvironmentOrbitPackage);
 		return theApogyCoreEnvironmentOrbitPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbstractOrbitModel() {
+		return abstractOrbitModelEClass;
 	}
 
 	/**
@@ -606,6 +622,8 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		isCreated = true;
 
 		// Create classes and their features
+		abstractOrbitModelEClass = createEClass(ABSTRACT_ORBIT_MODEL);
+
 		orbitWorksiteEClass = createEClass(ORBIT_WORKSITE);
 		createEReference(orbitWorksiteEClass, ORBIT_WORKSITE__ORBIT_MODEL);
 
@@ -687,7 +705,6 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 
 		// Obtain other dependent packages
 		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
-		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
@@ -710,12 +727,14 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		orbitEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		orbitEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		orbitEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
-		orbitModelEClass.getESuperTypes().add(theApogyCorePackage.getAbstractOrbitModel());
+		orbitModelEClass.getESuperTypes().add(this.getAbstractOrbitModel());
 		orbitModelEClass.getESuperTypes().add(this.getValidityRangeProvider());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(abstractOrbitModelEClass, AbstractOrbitModel.class, "AbstractOrbitModel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(orbitWorksiteEClass, OrbitWorksite.class, "OrbitWorksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrbitWorksite_OrbitModel(), theApogyCorePackage.getAbstractOrbitModel(), null, "orbitModel", null, 0, 1, OrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrbitWorksite_OrbitModel(), this.getAbstractOrbitModel(), null, "orbitModel", null, 0, 1, OrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractFrameEClass, AbstractFrame.class, "AbstractFrame", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

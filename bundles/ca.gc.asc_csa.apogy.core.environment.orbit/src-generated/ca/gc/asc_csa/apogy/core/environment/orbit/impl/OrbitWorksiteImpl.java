@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.common.notify.Notification;
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.impl.WorksiteImpl;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 

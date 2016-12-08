@@ -14,10 +14,6 @@ package ca.gc.asc_csa.apogy.core.environment.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import java.util.Collection;
 import java.util.List;
 
@@ -25,6 +21,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 

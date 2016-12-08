@@ -25,7 +25,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ValidityRangeProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
-import ca.gc.asc_csa.apogy.core.impl.AbstractOrbitModelImpl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;

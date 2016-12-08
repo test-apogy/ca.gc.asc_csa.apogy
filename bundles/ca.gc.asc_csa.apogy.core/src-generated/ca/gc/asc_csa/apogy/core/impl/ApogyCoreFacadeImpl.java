@@ -28,6 +28,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import javax.vecmath.Matrix4d;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -48,26 +49,16 @@ import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
 import ca.gc.asc_csa.apogy.core.PositionedResult;
 import ca.gc.asc_csa.apogy.core.ResultNode;
-import ca.gc.asc_csa.apogy.core.WorksitesList;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
-import ca.gc.asc_csa.apogy.core.invocator.Context;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
-import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
 import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
-import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 
 /**
@@ -174,84 +165,6 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 		}
 
 		return resultNode;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public InvocatorSession createApogySession(boolean createEnvironment, boolean createPrograms,
-			boolean createDataProducts, boolean createTools) {
-		InvocatorSession session = ApogyCoreInvocatorFactory.eINSTANCE.createInvocatorSession();
-		Context context = null;
-
-		if (createEnvironment) {
-			ApogyEnvironment environment = ApogyCoreFactory.eINSTANCE.createApogyEnvironment();
-			environment.setLocalTypesList(ApogyCoreInvocatorFactory.eINSTANCE.createLocalTypesList());
-			environment.setVariablesList(ApogyCoreInvocatorFactory.eINSTANCE.createVariablesList());
-			environment.setContextsList(ApogyCoreInvocatorFactory.eINSTANCE.createContextsList());
-
-			/** Create a default Context */
-			context = ApogyCoreInvocatorFactory.eINSTANCE.createContext();
-			context.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(environment.getContextsList(), context,
-					ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS));
-			environment.getContextsList().getContexts().add(context);
-			environment.setActiveContext(context);
-
-			/** Creates the Worksites List */
-			WorksitesList worksitesList = ApogyCoreFactory.eINSTANCE.createWorksitesList();
-			environment.setWorksitesList(worksitesList);
-
-			/** Creates the Timesource. */
-			ca.gc.asc_csa.apogy.core.TimeSourcesList timeSourcesList = ApogyCoreFactory.eINSTANCE
-					.createTimeSourcesList();
-
-			// Fills in the TimeSource List.
-			timeSourcesList.getTimeSources().addAll(getAllAvaibleTimeSource());
-			environment.setTimeSourcesList(timeSourcesList);
-
-			// Sets the environment time source to the CurrentTimeSource.
-			environment.setActiveTimeSource(getCurrentTimeSource(timeSourcesList.getTimeSources()));
-
-			session.setEnvironment(environment);
-		}
-
-		if (createPrograms) {
-			session.setProgramsList(ApogyCoreInvocatorFactory.eINSTANCE.createProgramsList());
-		}
-
-		if (createDataProducts) {
-			DataProductsListsContainer listsContainer = ApogyCoreInvocatorFactory.eINSTANCE
-					.createDataProductsListsContainer();
-			DataProductsList dataProductsList = ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList();
-			listsContainer.getDataProductsList().add(dataProductsList);
-			session.setDataProductsListContainer(listsContainer);
-
-			OperationCallResultsList operationCallResultsList = ApogyCoreInvocatorFactory.eINSTANCE
-					.createOperationCallResultsList();
-			dataProductsList.setOperationCallResultsList(operationCallResultsList);
-
-			if (context != null) {
-				context.setDataProductsList(dataProductsList);
-			}
-		}
-
-		if (createTools) {
-			ToolsList toolsList = ApogyCoreInvocatorFactory.eINSTANCE.createToolsList();
-			session.setToolsList(toolsList);
-		}
-
-		return session;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public InvocatorSession createApogySession() {
-		return createApogySession(true, true, true, true);
 	}
 
 	/**
@@ -394,10 +307,6 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 				return computeAbsolutePoseMatrix((ApogySystem)arguments.get(0), (Matrix4x4)arguments.get(1));
 			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT:
 				return createResultNode((PositionedResult)arguments.get(0));
-			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
-				return createApogySession((Boolean)arguments.get(0), (Boolean)arguments.get(1), (Boolean)arguments.get(2), (Boolean)arguments.get(3));
-			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION:
-				return createApogySession();
 			case ApogyCorePackage.APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING:
 				return getApogySystem((Environment)arguments.get(0), (String)arguments.get(1));
 			case ApogyCorePackage.APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:

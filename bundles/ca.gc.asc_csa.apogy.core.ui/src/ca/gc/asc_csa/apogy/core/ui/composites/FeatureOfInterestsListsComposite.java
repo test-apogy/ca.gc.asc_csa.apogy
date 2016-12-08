@@ -31,6 +31,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
+
 import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
 

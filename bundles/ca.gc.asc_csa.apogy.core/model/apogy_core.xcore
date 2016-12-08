@@ -46,7 +46,6 @@ import ca.gc.asc_csa.apogy.core.invocator.Type
 import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4
 import ca.gc.asc_csa.apogy.core.invocator.TypeMember
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall
 import ca.gc.asc_csa.apogy.core.invocator.AbstractType
@@ -71,13 +70,6 @@ class ApogyCoreFacade
 {
 	op Matrix4x4 computeAbsolutePoseMatrix(ApogySystem apogySystem, Matrix4x4 relativePose)
 	op ResultNode createResultNode(PositionedResult result)		
-	op InvocatorSession createApogySession(boolean createEnvironment, boolean createPrograms, boolean createDataProducts, boolean createTools)
-	
-	/*
-	 * Create an Apogy session.
-	 * @return Reference to the newly created session.
-	 */
-	op InvocatorSession createApogySession()
 	
 	/*
 	 * Searches and returns the {@link ApogySystem} instance based on the specified fullyQualifiedName.
@@ -336,6 +328,7 @@ class FeatureOfInterestListNode extends AggregateGroupNode
 {
 	refers transient FeatureOfInterestList featureOfInterestList
 }
+
 
 /* -------------------------------------------------------------------------
  * 

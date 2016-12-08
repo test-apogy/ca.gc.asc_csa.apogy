@@ -41,10 +41,4 @@
             invocatorDelegateClass="ca.gc.asc_csa.apogy.core.invocator.ApogyInvocatorDelegate">
       </element>
    </extension>
-   <extension
-         point="ca.gc.asc_csa.apogy.common.converters">
-      <new_element
-            Class="ca.gc.asc_csa.apogy.core.converters.ApogyEnvironmentToTimeSourcesListConverter">
-      </new_element>
-   </extension>
 </plugin>
