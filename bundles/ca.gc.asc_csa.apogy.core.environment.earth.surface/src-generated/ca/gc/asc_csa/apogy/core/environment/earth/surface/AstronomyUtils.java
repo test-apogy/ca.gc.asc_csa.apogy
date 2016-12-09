@@ -296,7 +296,7 @@ public interface AstronomyUtils extends EObject
 	 * Converts Rectangular (x,y,z) Equatorial Coordinates to Equatorial Coordinates
 	 * (Right Ascension and Declination).
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.surface.earth.Point3d" unique="false" equatorialRectangularCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.surface.earth.Point3d" equatorialRectangularCoordinatesUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.earth.surface.Point3d" unique="false" equatorialRectangularCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.earth.surface.Point3d" equatorialRectangularCoordinatesUnique="false"
 	 * @generated
 	 */
 	Point3d convertFromEquatorialRectangularToEclipticRectangular(Point3d equatorialRectangularCoordinates);
@@ -307,7 +307,7 @@ public interface AstronomyUtils extends EObject
 	 * <!-- begin-model-doc -->
 	 * Converts Rectangular (x,y,z) Ecliptic Coordinates to Rectangular (x,y,z) Equatorial Coordinates.
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.surface.earth.Point3d" unique="false" eclipticCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.surface.earth.Point3d" eclipticCoordinatesUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.earth.surface.Point3d" unique="false" eclipticCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.earth.surface.Point3d" eclipticCoordinatesUnique="false"
 	 * @generated
 	 */
 	Point3d convertFromEclipticRectangularToEquatorialRectangular(Point3d eclipticCoordinates);
@@ -318,7 +318,7 @@ public interface AstronomyUtils extends EObject
 	 * <!-- begin-model-doc -->
 	 * Converts Rectangular (x,y,z) Ecliptic Coordinates to Ecliptic Coordinates (longitude, latitude, radius).
 	 * <!-- end-model-doc -->
-	 * @model unique="false" eclipticCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.surface.earth.Point3d" eclipticCoordinatesUnique="false"
+	 * @model unique="false" eclipticCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.earth.surface.Point3d" eclipticCoordinatesUnique="false"
 	 * @generated
 	 */
 	EclipticCoordinates convertFromEclipticRectangularToEclipticCoordinates(Point3d eclipticCoordinates);
@@ -329,7 +329,7 @@ public interface AstronomyUtils extends EObject
 	 * <!-- begin-model-doc -->
 	 * Converts Rectangular (x,y,z) Equatorial Coordinates to Equatorial Coordinates (Right Ascension, Declination).
 	 * <!-- end-model-doc -->
-	 * @model unique="false" equatorialCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.surface.earth.Point3d" equatorialCoordinatesUnique="false"
+	 * @model unique="false" equatorialCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.earth.surface.Point3d" equatorialCoordinatesUnique="false"
 	 * @generated
 	 */
 	EquatorialCoordinates convertFromEquatorialRectangularToEquatorialCoordinates(Point3d equatorialCoordinates);
@@ -344,7 +344,7 @@ public interface AstronomyUtils extends EObject
 	 * - Y points West.
 	 * - Z point toward nadir (up)
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.surface.earth.Point3d" unique="false" horizontalCoordinatesUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.earth.surface.Point3d" unique="false" horizontalCoordinatesUnique="false"
 	 * @generated
 	 */
 	Point3d convertFromHorizontalCoordinatesToHorizontalRectangular(HorizontalCoordinates horizontalCoordinates);
@@ -352,7 +352,7 @@ public interface AstronomyUtils extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.surface.earth.Point3d" unique="false" equatorialCoordinatesUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.earth.surface.Point3d" unique="false" equatorialCoordinatesUnique="false"
 	 * @generated
 	 */
 	Point3d convertFromEquatorialCoordinatesToEquatorialRectangular(EquatorialCoordinates equatorialCoordinates);

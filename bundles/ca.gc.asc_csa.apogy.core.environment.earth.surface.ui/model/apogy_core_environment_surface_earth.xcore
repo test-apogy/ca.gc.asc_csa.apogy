@@ -68,9 +68,10 @@ class MoonPresentation extends NodePresentation
 	
 }
 
+
 // Utilities
 
-class EnvironmentUIUtilities
+class EarthSurfaceUIUtilities
 {
 	op Point3f toPoint3f(Star star)		
 	

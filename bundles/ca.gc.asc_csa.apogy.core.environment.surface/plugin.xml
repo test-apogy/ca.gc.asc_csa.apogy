@@ -30,7 +30,7 @@
             allPopups="true"
             locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="ca.gc.asc_csa.apogy.core.environment.surface.command1"
+               commandId="ca.gc.asc_csa.apogy.core.environment.surface.commands.UpdateImageMapLayerCommand"
                label="Update Image Map Layer"
                style="push">
             <visibleWhen
@@ -48,6 +48,14 @@
             </visibleWhen>
          </command>
       </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.surface.commands.UpdateImageMapLayerCommandHandler"
+            id="ca.gc.asc_csa.apogy.core.environment.surface.commands.UpdateImageMapLayerCommand"
+            name="Update Image Map Layer">
+      </command>
    </extension>
 
 </plugin>

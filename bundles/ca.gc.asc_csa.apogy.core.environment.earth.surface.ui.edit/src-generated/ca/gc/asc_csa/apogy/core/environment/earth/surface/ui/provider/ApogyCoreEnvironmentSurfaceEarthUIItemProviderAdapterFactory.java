@@ -183,26 +183,26 @@ public class ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory extend
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnvironmentUIUtilitiesItemProvider environmentUIUtilitiesItemProvider;
+	protected EarthSurfaceUIUtilitiesItemProvider earthSurfaceUIUtilitiesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEnvironmentUIUtilitiesAdapter() {
-		if (environmentUIUtilitiesItemProvider == null) {
-			environmentUIUtilitiesItemProvider = new EnvironmentUIUtilitiesItemProvider(this);
+	public Adapter createEarthSurfaceUIUtilitiesAdapter() {
+		if (earthSurfaceUIUtilitiesItemProvider == null) {
+			earthSurfaceUIUtilitiesItemProvider = new EarthSurfaceUIUtilitiesItemProvider(this);
 		}
 
-		return environmentUIUtilitiesItemProvider;
+		return earthSurfaceUIUtilitiesItemProvider;
 	}
 
 	/**
@@ -334,7 +334,7 @@ public class ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory extend
 		if (earthSurfaceWorksitePresentationItemProvider != null) earthSurfaceWorksitePresentationItemProvider.dispose();
 		if (earthSkyPresentationItemProvider != null) earthSkyPresentationItemProvider.dispose();
 		if (moonPresentationItemProvider != null) moonPresentationItemProvider.dispose();
-		if (environmentUIUtilitiesItemProvider != null) environmentUIUtilitiesItemProvider.dispose();
+		if (earthSurfaceUIUtilitiesItemProvider != null) earthSurfaceUIUtilitiesItemProvider.dispose();
 	}
 
 	/**
@@ -499,7 +499,7 @@ public class ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory extend
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
+						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createEarthSurfaceUIUtilities()));
 
 				return null;
 			}
@@ -529,7 +529,7 @@ public class ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory extend
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
+						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createEarthSurfaceUIUtilities()));
 
 				return null;
 			}

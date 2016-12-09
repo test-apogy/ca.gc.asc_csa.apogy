@@ -32,6 +32,9 @@
       <Class
             Class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.adapters.EarthSurfaceWorksitePresentationAdapter">
       </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.adapters.MoonPresentationAdapter">
+      </Class>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">

@@ -32,7 +32,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

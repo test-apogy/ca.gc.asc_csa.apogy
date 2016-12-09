@@ -20,7 +20,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated apogy_core_environment_surface_earth -->
       <factory
-            uri="ca.gc.asc_csa.apogy.core.environment.surface.earth"
+            uri="ca.gc.asc_csa.apogy.core.environment.earth.surface"
             class="ca.gc.asc_csa.apogy.core.environment.earth.surface.provider.ApogyEarthSurfaceEnvironmentItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

@@ -36,9 +36,6 @@
             uri="ca.gc.asc_csa.apogy.common.topology.ui"
             class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory$ApogyCommonTopologyUIChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.apogy.core.invocator"
-            class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.apogy.common.topology"
             class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>

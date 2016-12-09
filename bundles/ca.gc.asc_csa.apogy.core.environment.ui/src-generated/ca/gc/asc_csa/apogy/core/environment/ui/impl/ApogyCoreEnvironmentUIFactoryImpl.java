@@ -23,25 +23,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider;
-import ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation;
-import ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation;
-import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
-import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
-import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation;
-import ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapRuler;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList;
-import ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation;
-import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation;
 import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
 import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
 import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
 import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool;
-import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation;
-import ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.plot.XYPlot;
@@ -99,21 +84,6 @@ public class ApogyCoreEnvironmentUIFactoryImpl extends EFactoryImpl implements A
 		switch (eClass.getClassifierID()) {
 			case ApogyCoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION: return createStarFieldPresentation();
 			case ApogyCoreEnvironmentUIPackage.SUN_PRESENTATION: return createSunPresentation();
-			case ApogyCoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION: return createEarthSurfaceWorksitePresentation();
-			case ApogyCoreEnvironmentUIPackage.EARTH_SKY_PRESENTATION: return createEarthSkyPresentation();
-			case ApogyCoreEnvironmentUIPackage.MOON_PRESENTATION: return createMoonPresentation();
-			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION: return createFeatureOfInterestNodePresentation();
-			case ApogyCoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: return createEnvironmentUIUtilities();
-			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE: return createApogyCoreEnvironmentUIFacade();
-			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST: return createMapViewConfigurationList();
-			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION: return createMapViewConfiguration();
-			case ApogyCoreEnvironmentUIPackage.MAP_RULER: return createMapRuler();
-			case ApogyCoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION: return createFeaturesOfInterestMapLayerPresentation();
-			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PICKING_TOOL: return createTrajectoryPickingTool();
-			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER: return createDefaultVariableTrajectoryProvider();
-			case ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION: return createPoseVariableAnnotation();
-			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION: return createVariableTrajectoryAnnotation();
-			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION: return createVehicleVariableAnnotation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -207,167 +177,6 @@ public class ApogyCoreEnvironmentUIFactoryImpl extends EFactoryImpl implements A
   {
 		SunPresentationImpl sunPresentation = new SunPresentationImpl();
 		return sunPresentation;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EarthSurfaceWorksitePresentation createEarthSurfaceWorksitePresentation()
-  {
-		EarthSurfaceWorksitePresentationImpl earthSurfaceWorksitePresentation = new EarthSurfaceWorksitePresentationImpl();
-		return earthSurfaceWorksitePresentation;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EarthSkyPresentation createEarthSkyPresentation()
-  {
-		EarthSkyPresentationImpl earthSkyPresentation = new EarthSkyPresentationImpl();
-		return earthSkyPresentation;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public MoonPresentation createMoonPresentation()
-  {
-		MoonPresentationImpl moonPresentation = new MoonPresentationImpl();
-		return moonPresentation;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FeatureOfInterestNodePresentation createFeatureOfInterestNodePresentation() {
-		FeatureOfInterestNodePresentationImpl featureOfInterestNodePresentation = new FeatureOfInterestNodePresentationImpl();
-		return featureOfInterestNodePresentation;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EnvironmentUIUtilities createEnvironmentUIUtilities() {
-		EnvironmentUIUtilitiesImpl environmentUIUtilities = new EnvironmentUIUtilitiesImpl();
-		return environmentUIUtilities;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ApogyCoreEnvironmentUIFacade createApogyCoreEnvironmentUIFacade() {
-		ApogyCoreEnvironmentUIFacadeImpl apogyCoreEnvironmentUIFacade = new ApogyCoreEnvironmentUIFacadeImpl();
-		return apogyCoreEnvironmentUIFacade;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public MapViewConfigurationList createMapViewConfigurationList()
-  {
-		MapViewConfigurationListImpl mapViewConfigurationList = new MapViewConfigurationListImpl();
-		return mapViewConfigurationList;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public MapViewConfiguration createMapViewConfiguration()
-  {
-		MapViewConfigurationImpl mapViewConfiguration = new MapViewConfigurationImpl();
-		return mapViewConfiguration;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FeaturesOfInterestMapLayerPresentation createFeaturesOfInterestMapLayerPresentation() {
-		FeaturesOfInterestMapLayerPresentationImpl featuresOfInterestMapLayerPresentation = new FeaturesOfInterestMapLayerPresentationImpl();
-		return featuresOfInterestMapLayerPresentation;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public MapRuler createMapRuler()
-  {
-		MapRulerImpl mapRuler = new MapRulerImpl();
-		return mapRuler;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public TrajectoryPickingTool createTrajectoryPickingTool()
-  {
-		TrajectoryPickingToolImpl trajectoryPickingTool = new TrajectoryPickingToolImpl();
-		return trajectoryPickingTool;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public DefaultVariableTrajectoryProvider createDefaultVariableTrajectoryProvider()
-  {
-		DefaultVariableTrajectoryProviderImpl defaultVariableTrajectoryProvider = new DefaultVariableTrajectoryProviderImpl();
-		return defaultVariableTrajectoryProvider;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public PoseVariableAnnotation createPoseVariableAnnotation()
-  {
-		PoseVariableAnnotationImpl poseVariableAnnotation = new PoseVariableAnnotationImpl();
-		return poseVariableAnnotation;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public VariableTrajectoryAnnotation createVariableTrajectoryAnnotation()
-  {
-		VariableTrajectoryAnnotationImpl variableTrajectoryAnnotation = new VariableTrajectoryAnnotationImpl();
-		return variableTrajectoryAnnotation;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public VehicleVariableAnnotation createVehicleVariableAnnotation()
-  {
-		VehicleVariableAnnotationImpl vehicleVariableAnnotation = new VehicleVariableAnnotationImpl();
-		return vehicleVariableAnnotation;
 	}
 
   /**

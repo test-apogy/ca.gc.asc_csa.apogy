@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.environment.earth.surface.ui;singleton:=true
-Bundle-Version: 0.1.0.qualifier
+Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
@@ -25,10 +25,18 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.core.environment.surface;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.images;visibility:=reexport,
  ca.gc.asc_csa.apogy.core.environment.earth.surface;bundle-version="0.1.0";visibility:=reexport,
- ca.gc.asc_csa.apogy.core.environment.surface.ui;bundle-version="0.1.0";visibility:=reexport
+ ca.gc.asc_csa.apogy.core.environment.surface.ui;bundle-version="0.1.0";visibility:=reexport,
+ org.eclipse.core.databinding;bundle-version="1.6.0",
+ org.eclipse.emf.databinding;bundle-version="1.3.0",
+ org.eclipse.emf.databinding.edit;bundle-version="1.3.0",
+ org.eclipse.jface.databinding;bundle-version="1.8.0",
+ ca.gc.asc_csa.apogy.common.databinding;bundle-version="0.5.0",
+ org.eclipse.core.databinding.beans;bundle-version="1.3.100"
 Bundle-ActivationPolicy: lazy
 Export-Package: ca.gc.asc_csa.apogy.core.environment.earth.surface.ui,
  ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.adapters,
+ ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.composites,
+ ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.databindings,
  ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl,
  ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.preferences,
  ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.scene_objects,

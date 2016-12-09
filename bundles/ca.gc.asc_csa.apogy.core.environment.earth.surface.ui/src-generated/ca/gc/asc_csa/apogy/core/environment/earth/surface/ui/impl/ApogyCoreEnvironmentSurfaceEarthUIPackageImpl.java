@@ -28,7 +28,7 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmen
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSkyPresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.MoonPresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
 
@@ -65,7 +65,7 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass environmentUIUtilitiesEClass = null;
+	private EClass earthSurfaceUIUtilitiesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,8 +177,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEnvironmentUIUtilities() {
-		return environmentUIUtilitiesEClass;
+	public EClass getEarthSurfaceUIUtilities() {
+		return earthSurfaceUIUtilitiesEClass;
 	}
 
 	/**
@@ -186,8 +186,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUIUtilities__ToPoint3f__Star() {
-		return environmentUIUtilitiesEClass.getEOperations().get(0);
+	public EOperation getEarthSurfaceUIUtilities__ToPoint3f__Star() {
+		return earthSurfaceUIUtilitiesEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -195,8 +195,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float() {
-		return environmentUIUtilitiesEClass.getEOperations().get(1);
+	public EOperation getEarthSurfaceUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float() {
+		return earthSurfaceUIUtilitiesEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -204,8 +204,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUIUtilities__GetSunLightColor__double() {
-		return environmentUIUtilitiesEClass.getEOperations().get(2);
+	public EOperation getEarthSurfaceUIUtilities__GetSunLightColor__double() {
+		return earthSurfaceUIUtilitiesEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -213,8 +213,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUIUtilities__GetSkyTransparency__double() {
-		return environmentUIUtilitiesEClass.getEOperations().get(3);
+	public EOperation getEarthSurfaceUIUtilities__GetSkyTransparency__double() {
+		return earthSurfaceUIUtilitiesEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -222,8 +222,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUIUtilities__GetSkyColor__double() {
-		return environmentUIUtilitiesEClass.getEOperations().get(4);
+	public EOperation getEarthSurfaceUIUtilities__GetSkyColor__double() {
+		return earthSurfaceUIUtilitiesEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -278,12 +278,12 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 
 		moonPresentationEClass = createEClass(MOON_PRESENTATION);
 
-		environmentUIUtilitiesEClass = createEClass(ENVIRONMENT_UI_UTILITIES);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE);
+		earthSurfaceUIUtilitiesEClass = createEClass(EARTH_SURFACE_UI_UTILITIES);
+		createEOperation(earthSurfaceUIUtilitiesEClass, EARTH_SURFACE_UI_UTILITIES___TO_POINT3F__STAR);
+		createEOperation(earthSurfaceUIUtilitiesEClass, EARTH_SURFACE_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT);
+		createEOperation(earthSurfaceUIUtilitiesEClass, EARTH_SURFACE_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE);
+		createEOperation(earthSurfaceUIUtilitiesEClass, EARTH_SURFACE_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE);
+		createEOperation(earthSurfaceUIUtilitiesEClass, EARTH_SURFACE_UI_UTILITIES___GET_SKY_COLOR__DOUBLE);
 
 		// Create data types
 		color3fEDataType = createEDataType(COLOR3F);
@@ -335,25 +335,25 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 
 		initEClass(moonPresentationEClass, MoonPresentation.class, "MoonPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(environmentUIUtilitiesEClass, EnvironmentUIUtilities.class, "EnvironmentUIUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(earthSurfaceUIUtilitiesEClass, EarthSurfaceUIUtilities.class, "EarthSurfaceUIUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getEnvironmentUIUtilities__ToPoint3f__Star(), this.getPoint3f(), "toPoint3f", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getEarthSurfaceUIUtilities__ToPoint3f__Star(), this.getPoint3f(), "toPoint3f", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreEnvironmentPackage.getStar(), "star", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float(), theEcorePackage.getEFloat(), "getPointSizeForMagnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEarthSurfaceUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float(), theEcorePackage.getEFloat(), "getPointSizeForMagnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitudeRangeMinimum", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitudeRangeMaximum", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "minimumPointSize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "maximumPointSize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUIUtilities__GetSunLightColor__double(), this.getColor3f(), "getSunLightColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEarthSurfaceUIUtilities__GetSunLightColor__double(), this.getColor3f(), "getSunLightColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUIUtilities__GetSkyTransparency__double(), theEcorePackage.getEDouble(), "getSkyTransparency", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEarthSurfaceUIUtilities__GetSkyTransparency__double(), theEcorePackage.getEDouble(), "getSkyTransparency", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUIUtilities__GetSkyColor__double(), this.getColor3f(), "getSkyColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEarthSurfaceUIUtilities__GetSkyColor__double(), this.getColor3f(), "getSkyColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
@@ -414,37 +414,37 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 			 "documentation", "*\nDefines the display properties associated with the Moon in the EarthSky."
 		   });	
 		addAnnotation
-		  (getEnvironmentUIUtilities__GetSunLightColor__double(), 
+		  (getEarthSurfaceUIUtilities__GetSunLightColor__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the sun color for a given altitude above the horizon.\n@param sunAltitude The altitude above the horizon, in radians."
 		   });	
 		addAnnotation
-		  ((getEnvironmentUIUtilities__GetSunLightColor__double()).getEParameters().get(0), 
+		  ((getEarthSurfaceUIUtilities__GetSunLightColor__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
 			 "apogy_units", "rad"
 		   });	
 		addAnnotation
-		  (getEnvironmentUIUtilities__GetSkyTransparency__double(), 
+		  (getEarthSurfaceUIUtilities__GetSkyTransparency__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the transparency value (between no transparency 0 and full transparency 1.0)\nto be used for the blus sky as a function of the sun altitude angle.\n@param sunAltitude The altitude above the horizon, in radians."
 		   });	
 		addAnnotation
-		  ((getEnvironmentUIUtilities__GetSkyTransparency__double()).getEParameters().get(0), 
+		  ((getEarthSurfaceUIUtilities__GetSkyTransparency__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
 			 "apogy_units", "rad"
 		   });	
 		addAnnotation
-		  (getEnvironmentUIUtilities__GetSkyColor__double(), 
+		  (getEarthSurfaceUIUtilities__GetSkyColor__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the sky color for a given altitude above the horizon.\n@param sunAltitude The altitude above the horizon, in radians."
 		   });	
 		addAnnotation
-		  ((getEnvironmentUIUtilities__GetSkyColor__double()).getEParameters().get(0), 
+		  ((getEarthSurfaceUIUtilities__GetSkyColor__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
 			 "apogy_units", "rad"

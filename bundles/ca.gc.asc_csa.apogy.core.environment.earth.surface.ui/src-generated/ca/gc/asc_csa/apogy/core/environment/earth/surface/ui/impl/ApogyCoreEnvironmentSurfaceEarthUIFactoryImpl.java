@@ -27,7 +27,7 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmen
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSkyPresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.MoonPresentation;
 
 /**
@@ -77,7 +77,7 @@ public class ApogyCoreEnvironmentSurfaceEarthUIFactoryImpl extends EFactoryImpl 
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION: return createEarthSurfaceWorksitePresentation();
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SKY_PRESENTATION: return createEarthSkyPresentation();
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.MOON_PRESENTATION: return createMoonPresentation();
-			case ApogyCoreEnvironmentSurfaceEarthUIPackage.ENVIRONMENT_UI_UTILITIES: return createEnvironmentUIUtilities();
+			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_UI_UTILITIES: return createEarthSurfaceUIUtilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -152,9 +152,9 @@ public class ApogyCoreEnvironmentSurfaceEarthUIFactoryImpl extends EFactoryImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvironmentUIUtilities createEnvironmentUIUtilities() {
-		EnvironmentUIUtilitiesImpl environmentUIUtilities = new EnvironmentUIUtilitiesImpl();
-		return environmentUIUtilities;
+	public EarthSurfaceUIUtilities createEarthSurfaceUIUtilities() {
+		EarthSurfaceUIUtilitiesImpl earthSurfaceUIUtilities = new EarthSurfaceUIUtilitiesImpl();
+		return earthSurfaceUIUtilities;
 	}
 
 	/**

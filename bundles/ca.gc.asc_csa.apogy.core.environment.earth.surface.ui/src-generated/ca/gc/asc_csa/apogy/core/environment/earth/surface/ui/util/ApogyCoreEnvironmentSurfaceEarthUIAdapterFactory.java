@@ -22,7 +22,7 @@ import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSkyPresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.MoonPresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksiteSkyPresentation;
@@ -96,8 +96,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIAdapterFactory extends AdapterFac
 				return createMoonPresentationAdapter();
 			}
 			@Override
-			public Adapter caseEnvironmentUIUtilities(EnvironmentUIUtilities object) {
-				return createEnvironmentUIUtilitiesAdapter();
+			public Adapter caseEarthSurfaceUIUtilities(EarthSurfaceUIUtilities object) {
+				return createEarthSurfaceUIUtilitiesAdapter();
 			}
 			@Override
 			public Adapter caseNodePresentation(NodePresentation object) {
@@ -174,16 +174,16 @@ public class ApogyCoreEnvironmentSurfaceEarthUIAdapterFactory extends AdapterFac
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities <em>Environment UI Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities <em>Earth Surface UI Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities
 	 * @generated
 	 */
-	public Adapter createEnvironmentUIUtilitiesAdapter() {
+	public Adapter createEarthSurfaceUIUtilitiesAdapter() {
 		return null;
 	}
 

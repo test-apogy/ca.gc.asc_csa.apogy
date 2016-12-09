@@ -51,7 +51,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyEarthSurfaceEnvironment' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyCoreEnvironment' complianceLevel='6.0' suppressGenModelAnnotations='false' dynamicTemplates='true' templateDirectory='platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates' modelDirectory='/ca.gc.asc_csa.apogy.core.environment.surface.earth/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.environment.surface.earth.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core.environment.surface'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyEarthSurfaceEnvironment' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License v1.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html\n\nContributors:\n    Pierre Allard (Pierre.Allard@canada.ca), \n    Regent L\'Archeveque (Regent.Larcheveque@canada.ca),\n    Sebastien Gemme (Sebastien.Gemme@canada.ca),\n    Canadian Space Agency (CSA) - Initial API and implementation' modelName='ApogyCoreEnvironment' complianceLevel='6.0' suppressGenModelAnnotations='false' dynamicTemplates='true' templateDirectory='platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates' modelDirectory='/ca.gc.asc_csa.apogy.core.environment.earth.surface/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.environment.earth.surface.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core.environment.earth'"
  * @generated
  */
 public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
@@ -61,7 +61,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "earth";
+	String eNAME = "surface";
 
 	/**
 	 * The package namespace URI.
@@ -69,7 +69,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "ca.gc.asc_csa.apogy.core.environment.surface.earth";
+	String eNS_URI = "ca.gc.asc_csa.apogy.core.environment.earth.surface";
 
 	/**
 	 * The package namespace name.
@@ -77,7 +77,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "earth";
+	String eNS_PREFIX = "surface";
 
 	/**
 	 * The singleton instance of the package.

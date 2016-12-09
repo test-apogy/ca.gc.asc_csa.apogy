@@ -21,7 +21,7 @@ import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSkyPresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.MoonPresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksiteSkyPresentation;
@@ -106,9 +106,9 @@ public class ApogyCoreEnvironmentSurfaceEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreEnvironmentSurfaceEarthUIPackage.ENVIRONMENT_UI_UTILITIES: {
-				EnvironmentUIUtilities environmentUIUtilities = (EnvironmentUIUtilities)theEObject;
-				T result = caseEnvironmentUIUtilities(environmentUIUtilities);
+			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_UI_UTILITIES: {
+				EarthSurfaceUIUtilities earthSurfaceUIUtilities = (EarthSurfaceUIUtilities)theEObject;
+				T result = caseEarthSurfaceUIUtilities(earthSurfaceUIUtilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -162,17 +162,17 @@ public class ApogyCoreEnvironmentSurfaceEarthUISwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Environment UI Utilities</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Earth Surface UI Utilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Environment UI Utilities</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Earth Surface UI Utilities</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEnvironmentUIUtilities(EnvironmentUIUtilities object) {
+	public T caseEarthSurfaceUIUtilities(EarthSurfaceUIUtilities object) {
 		return null;
 	}
 

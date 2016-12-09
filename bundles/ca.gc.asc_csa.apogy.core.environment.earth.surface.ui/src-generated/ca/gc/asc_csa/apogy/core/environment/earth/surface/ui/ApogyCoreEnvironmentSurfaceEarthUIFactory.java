@@ -60,13 +60,13 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIFactory extends EFactory {
 	MoonPresentation createMoonPresentation();
 
 	/**
-	 * Returns a new object of class '<em>Environment UI Utilities</em>'.
+	 * Returns a new object of class '<em>Earth Surface UI Utilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Environment UI Utilities</em>'.
+	 * @return a new object of class '<em>Earth Surface UI Utilities</em>'.
 	 * @generated
 	 */
-	EnvironmentUIUtilities createEnvironmentUIUtilities();
+	EarthSurfaceUIUtilities createEarthSurfaceUIUtilities();
 
 	/**
 	 * Returns the package supported by this factory.

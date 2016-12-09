@@ -61,7 +61,7 @@ import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.Activator;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.EarthSurfaceEnvironmentJMEConstants;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.preferences.ApogyEarthSurfaceEnvironmentUIJME3PreferencesConstants;
@@ -660,7 +660,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	private Material createAtmosphereMaterial()
 	{		
 		Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");		
-		ColorRGBA atmosphereColor = JME3Utilities.convertToColorRGBA(EnvironmentUIUtilities.DAY_SKY_COLOR);
+		ColorRGBA atmosphereColor = JME3Utilities.convertToColorRGBA(EarthSurfaceUIUtilities.DAY_SKY_COLOR);
 		mat.setColor("Color", atmosphereColor);				
 		mat.getAdditionalRenderState().setBlendMode(BlendMode.Alpha);				
 		mat.getAdditionalRenderState().setFaceCullMode(FaceCullMode.Off);		
@@ -811,7 +811,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 		
 		if(isSunVisible())
 		{					
-			sunColor = JME3Utilities.convertToColorRGBA(EnvironmentUIUtilities.INSTANCE.getSunLightColor(sunAltitude));
+			sunColor = JME3Utilities.convertToColorRGBA(EarthSurfaceUIUtilities.INSTANCE.getSunLightColor(sunAltitude));
 		}
 		else
 		{
@@ -915,7 +915,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 			
 			if(isMoonVisible())
 			{			
-				moonColor = JME3Utilities.convertToColorRGBA(EnvironmentUIUtilities.INSTANCE.getSunLightColor(moonAltitude));
+				moonColor = JME3Utilities.convertToColorRGBA(EarthSurfaceUIUtilities.INSTANCE.getSunLightColor(moonAltitude));
 			}
 			else
 			{
@@ -959,8 +959,8 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	 * --------------------------------------------------------------------------------------------------------------*/	
 	private void updateAtmosphere()
 	{		
-		float atmosphereTransparency = (float) EnvironmentUIUtilities.INSTANCE.getSkyTransparency(earthSky.getSunHorizontalCoordinates().getAltitude());										
-		Color3f skyColor = EnvironmentUIUtilities.INSTANCE.getSkyColor(earthSky.getSunHorizontalCoordinates().getAltitude());
+		float atmosphereTransparency = (float) EarthSurfaceUIUtilities.INSTANCE.getSkyTransparency(earthSky.getSunHorizontalCoordinates().getAltitude());										
+		Color3f skyColor = EarthSurfaceUIUtilities.INSTANCE.getSkyColor(earthSky.getSunHorizontalCoordinates().getAltitude());
 		ColorRGBA atmosphereColor = new ColorRGBA(skyColor.x, skyColor.y, skyColor.z, 1.0f - atmosphereTransparency);		
 		getAtmosphere().getMaterial().setColor("Color", atmosphereColor);		
 	}

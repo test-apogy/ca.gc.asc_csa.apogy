@@ -601,23 +601,23 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	int MOON_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.EnvironmentUIUtilitiesImpl <em>Environment UI Utilities</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.EarthSurfaceUIUtilitiesImpl <em>Earth Surface UI Utilities</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.EnvironmentUIUtilitiesImpl
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.ApogyCoreEnvironmentSurfaceEarthUIPackageImpl#getEnvironmentUIUtilities()
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.EarthSurfaceUIUtilitiesImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.ApogyCoreEnvironmentSurfaceEarthUIPackageImpl#getEarthSurfaceUIUtilities()
 	 * @generated
 	 */
-	int ENVIRONMENT_UI_UTILITIES = 3;
+	int EARTH_SURFACE_UI_UTILITIES = 3;
 
 	/**
-	 * The number of structural features of the '<em>Environment UI Utilities</em>' class.
+	 * The number of structural features of the '<em>Earth Surface UI Utilities</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_UTILITIES_FEATURE_COUNT = 0;
+	int EARTH_SURFACE_UI_UTILITIES_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>To Point3f</em>' operation.
@@ -626,7 +626,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR = 0;
+	int EARTH_SURFACE_UI_UTILITIES___TO_POINT3F__STAR = 0;
 
 	/**
 	 * The operation id for the '<em>Get Point Size For Magnitude</em>' operation.
@@ -635,7 +635,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT = 1;
+	int EARTH_SURFACE_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT = 1;
 
 	/**
 	 * The operation id for the '<em>Get Sun Light Color</em>' operation.
@@ -644,7 +644,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE = 2;
+	int EARTH_SURFACE_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE = 2;
 
 	/**
 	 * The operation id for the '<em>Get Sky Transparency</em>' operation.
@@ -653,7 +653,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE = 3;
+	int EARTH_SURFACE_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE = 3;
 
 	/**
 	 * The operation id for the '<em>Get Sky Color</em>' operation.
@@ -662,16 +662,16 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = 4;
+	int EARTH_SURFACE_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = 4;
 
 	/**
-	 * The number of operations of the '<em>Environment UI Utilities</em>' class.
+	 * The number of operations of the '<em>Earth Surface UI Utilities</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_UTILITIES_OPERATION_COUNT = 5;
+	int EARTH_SURFACE_UI_UTILITIES_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '<em>Color3f</em>' data type.
@@ -725,64 +725,64 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	EClass getMoonPresentation();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities <em>Environment UI Utilities</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities <em>Earth Surface UI Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Environment UI Utilities</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities
+	 * @return the meta object for class '<em>Earth Surface UI Utilities</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities
 	 * @generated
 	 */
-	EClass getEnvironmentUIUtilities();
+	EClass getEarthSurfaceUIUtilities();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#toPoint3f(ca.gc.asc_csa.apogy.core.environment.Star) <em>To Point3f</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#toPoint3f(ca.gc.asc_csa.apogy.core.environment.Star) <em>To Point3f</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>To Point3f</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#toPoint3f(ca.gc.asc_csa.apogy.core.environment.Star)
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#toPoint3f(ca.gc.asc_csa.apogy.core.environment.Star)
 	 * @generated
 	 */
-	EOperation getEnvironmentUIUtilities__ToPoint3f__Star();
+	EOperation getEarthSurfaceUIUtilities__ToPoint3f__Star();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#getPointSizeForMagnitude(float, float, float, float, float) <em>Get Point Size For Magnitude</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getPointSizeForMagnitude(float, float, float, float, float) <em>Get Point Size For Magnitude</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Point Size For Magnitude</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#getPointSizeForMagnitude(float, float, float, float, float)
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getPointSizeForMagnitude(float, float, float, float, float)
 	 * @generated
 	 */
-	EOperation getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
+	EOperation getEarthSurfaceUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#getSunLightColor(double) <em>Get Sun Light Color</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getSunLightColor(double) <em>Get Sun Light Color</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sun Light Color</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#getSunLightColor(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getSunLightColor(double)
 	 * @generated
 	 */
-	EOperation getEnvironmentUIUtilities__GetSunLightColor__double();
+	EOperation getEarthSurfaceUIUtilities__GetSunLightColor__double();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#getSkyTransparency(double) <em>Get Sky Transparency</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getSkyTransparency(double) <em>Get Sky Transparency</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sky Transparency</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#getSkyTransparency(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getSkyTransparency(double)
 	 * @generated
 	 */
-	EOperation getEnvironmentUIUtilities__GetSkyTransparency__double();
+	EOperation getEarthSurfaceUIUtilities__GetSkyTransparency__double();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#getSkyColor(double) <em>Get Sky Color</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getSkyColor(double) <em>Get Sky Color</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sky Color</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EnvironmentUIUtilities#getSkyColor(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getSkyColor(double)
 	 * @generated
 	 */
-	EOperation getEnvironmentUIUtilities__GetSkyColor__double();
+	EOperation getEarthSurfaceUIUtilities__GetSkyColor__double();
 
 	/**
 	 * Returns the meta object for data type '{@link javax.vecmath.Color3f <em>Color3f</em>}'.
@@ -860,14 +860,14 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 		EClass MOON_PRESENTATION = eINSTANCE.getMoonPresentation();
 
 		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.EnvironmentUIUtilitiesImpl <em>Environment UI Utilities</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.EarthSurfaceUIUtilitiesImpl <em>Earth Surface UI Utilities</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.EnvironmentUIUtilitiesImpl
-		 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.ApogyCoreEnvironmentSurfaceEarthUIPackageImpl#getEnvironmentUIUtilities()
+		 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.EarthSurfaceUIUtilitiesImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.ApogyCoreEnvironmentSurfaceEarthUIPackageImpl#getEarthSurfaceUIUtilities()
 		 * @generated
 		 */
-		EClass ENVIRONMENT_UI_UTILITIES = eINSTANCE.getEnvironmentUIUtilities();
+		EClass EARTH_SURFACE_UI_UTILITIES = eINSTANCE.getEarthSurfaceUIUtilities();
 
 		/**
 		 * The meta object literal for the '<em><b>To Point3f</b></em>' operation.
@@ -875,7 +875,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR = eINSTANCE.getEnvironmentUIUtilities__ToPoint3f__Star();
+		EOperation EARTH_SURFACE_UI_UTILITIES___TO_POINT3F__STAR = eINSTANCE.getEarthSurfaceUIUtilities__ToPoint3f__Star();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Point Size For Magnitude</b></em>' operation.
@@ -883,7 +883,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT = eINSTANCE.getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
+		EOperation EARTH_SURFACE_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT = eINSTANCE.getEarthSurfaceUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Sun Light Color</b></em>' operation.
@@ -891,7 +891,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE = eINSTANCE.getEnvironmentUIUtilities__GetSunLightColor__double();
+		EOperation EARTH_SURFACE_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE = eINSTANCE.getEarthSurfaceUIUtilities__GetSunLightColor__double();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Sky Transparency</b></em>' operation.
@@ -899,7 +899,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE = eINSTANCE.getEnvironmentUIUtilities__GetSkyTransparency__double();
+		EOperation EARTH_SURFACE_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE = eINSTANCE.getEarthSurfaceUIUtilities__GetSkyTransparency__double();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Sky Color</b></em>' operation.
@@ -907,7 +907,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = eINSTANCE.getEnvironmentUIUtilities__GetSkyColor__double();
+		EOperation EARTH_SURFACE_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = eINSTANCE.getEarthSurfaceUIUtilities__GetSkyColor__double();
 
 		/**
 		 * The meta object literal for the '<em>Color3f</em>' data type.

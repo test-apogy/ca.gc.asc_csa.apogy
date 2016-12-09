@@ -941,9 +941,9 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 			 "suppressGenModelAnnotations", "false",
 			 "dynamicTemplates", "true",
 			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
-			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.surface.earth/src-generated",
-			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.surface.earth.edit/src-generated",
-			 "basePackage", "ca.gc.asc_csa.apogy.core.environment.surface"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.earth.surface/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.earth.surface.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.core.environment.earth"
 		   });	
 		addAnnotation
 		  (earthSurfaceWorksiteEClass, 
