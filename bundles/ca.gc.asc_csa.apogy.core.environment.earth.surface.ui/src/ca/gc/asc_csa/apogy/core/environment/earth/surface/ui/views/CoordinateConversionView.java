@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.environment.ui.views;
+package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.views;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -19,10 +19,11 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+
 import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 import ca.gc.asc_csa.apogy.core.Positioned;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.ui.composites.CoordinateConversionComposite;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.composites.CoordinateConversionComposite;
 
 public class CoordinateConversionView extends AbstractView
 {

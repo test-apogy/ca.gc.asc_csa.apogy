@@ -14,9 +14,10 @@ package ca.gc.asc_csa.apogy.core.environment.ui.impl;
  */
 
 import org.eclipse.emf.ecore.EClass;
+
 import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
-import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
 import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
 
 /**
  * <!-- begin-user-doc -->

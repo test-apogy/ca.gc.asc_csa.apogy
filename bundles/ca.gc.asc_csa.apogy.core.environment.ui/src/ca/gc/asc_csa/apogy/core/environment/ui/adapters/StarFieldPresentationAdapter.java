@@ -17,8 +17,8 @@ import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 import ca.gc.asc_csa.apogy.core.environment.StarField;
-import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
 import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
 
 public class StarFieldPresentationAdapter implements NodePresentationAdapter
 {

@@ -11,34 +11,37 @@
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
-package ca.gc.asc_csa.apogy.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.provider;
 
+
+import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.swt.graphics.RGB;
 
-import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
-import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SunPresentationItemProvider extends NodePresentationItemProvider {
+public class SunVector3DToolNodeItemProvider extends NodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SunPresentationItemProvider(AdapterFactory adapterFactory) {
+	public SunVector3DToolNodeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,19 +56,42 @@ public class SunPresentationItemProvider extends NodePresentationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addSunVector3DToolPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This returns SunPresentation.gif.
+	 * This adds a property descriptor for the Sun Vector3 DTool feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSunVector3DToolPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SunVector3DToolNode_sunVector3DTool_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DToolNode_sunVector3DTool_feature", "_UI_SunVector3DToolNode_type"),
+				 ApogyCoreEnvironmentSurfaceEarthUIPackage.Literals.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns SunVector3DToolNode.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SunPresentation"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SunVector3DToolNode"));
 	}
 
 	/**
@@ -76,11 +102,10 @@ public class SunPresentationItemProvider extends NodePresentationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		RGB labelValue = ((SunPresentation)object).getColor();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((SunVector3DToolNode)object).getDescription();
 		return label == null || label.length() == 0 ?
-			getString("_UI_SunPresentation_type") :
-			getString("_UI_SunPresentation_type") + " " + label;
+			getString("_UI_SunVector3DToolNode_type") :
+			getString("_UI_SunVector3DToolNode_type") + " " + label;
 	}
 	
 

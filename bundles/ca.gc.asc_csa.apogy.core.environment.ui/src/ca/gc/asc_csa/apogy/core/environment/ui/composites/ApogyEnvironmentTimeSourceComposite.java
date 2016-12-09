@@ -38,8 +38,8 @@ import ca.gc.asc_csa.apogy.common.databinding.converters.DateToStringConverter;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.AbstractTimeSourceComposite;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 
 public class ApogyEnvironmentTimeSourceComposite extends Composite 
 {
@@ -273,7 +273,7 @@ public class ApogyEnvironmentTimeSourceComposite extends Composite
 					{
 						int featureId = msg.getFeatureID(ApogyEnvironment.class);
 						
-						if(featureId == ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE)
+						if(featureId == ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE)
 						{
 							TimeSource newActiveTimeSource = (TimeSource) msg.getNewValue();
 							setActiveTimeSource(newActiveTimeSource);

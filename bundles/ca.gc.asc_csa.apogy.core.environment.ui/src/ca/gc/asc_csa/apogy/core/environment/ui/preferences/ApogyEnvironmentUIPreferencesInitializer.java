@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.core.environment.ui.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
+
 import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
 
 public class ApogyEnvironmentUIPreferencesInitializer extends AbstractPreferenceInitializer {

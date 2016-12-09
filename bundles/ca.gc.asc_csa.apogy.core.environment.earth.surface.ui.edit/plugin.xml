@@ -36,7 +36,16 @@
             uri="ca.gc.asc_csa.apogy.common.topology.ui"
             class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.provider.ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory$ApogyCommonTopologyUIChildCreationExtender"/>
       <extender
+            uri="ca.gc.asc_csa.apogy.addons"
+            class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.provider.ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory$ApogyAddonsChildCreationExtender"/>
+      <extender
             uri="ca.gc.asc_csa.apogy.common.topology"
             class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.provider.ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.provider.ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.apogy.common.topology.bindings"
+            class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.provider.ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory$ApogyCommonTopologyBindingsChildCreationExtender"/>
    </extension>
 </plugin>

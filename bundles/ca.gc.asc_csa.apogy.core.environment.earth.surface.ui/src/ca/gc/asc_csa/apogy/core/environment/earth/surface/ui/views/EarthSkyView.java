@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.environment.ui.views;
+package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.views;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -18,20 +18,21 @@ import java.util.List;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+
 import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
 import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
-import ca.gc.asc_csa.apogy.core.environment.EarthSky;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
-import ca.gc.asc_csa.apogy.core.environment.ui.composites.EarthSkyComposite;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.composites.EarthSkyComposite;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator;
 
 public class EarthSkyView extends AbstractView
 {		
 	public static final String PART_NAME = "Earth Sky View";
 	private EarthSky earthSky;
 	
-	private GeographicCoordinates marsYardCoordinates = ApogyCoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();
+	private GeographicCoordinates marsYardCoordinates = ApogyEarthSurfaceEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();
 	
 	// Default values are the ones for Mars Yard.
 	public double defaultObserverLongitude =  marsYardCoordinates.getLongitude();

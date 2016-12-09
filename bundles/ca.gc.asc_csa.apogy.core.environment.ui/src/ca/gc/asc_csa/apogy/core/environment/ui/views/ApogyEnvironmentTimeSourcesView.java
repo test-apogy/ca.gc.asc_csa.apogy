@@ -24,14 +24,15 @@ import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
+
 import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
 import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ui.composites.ApogyEnvironmentTimeSourceComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.core.ui.Activator;
-import ca.gc.asc_csa.apogy.core.ui.composites.ApogyEnvironmentTimeSourceComposite;
 
 public class ApogyEnvironmentTimeSourcesView extends AbstractView 
 {

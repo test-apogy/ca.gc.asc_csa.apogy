@@ -29,21 +29,22 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
-import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
+
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
-import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.ui.dialogs.FeatureOfInterestCreationDialog;
+import ca.gc.asc_csa.apogy.core.environment.surface.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.dialogs.FeatureOfInterestCreationDialog;
 
 /**
  * <!-- begin-user-doc -->

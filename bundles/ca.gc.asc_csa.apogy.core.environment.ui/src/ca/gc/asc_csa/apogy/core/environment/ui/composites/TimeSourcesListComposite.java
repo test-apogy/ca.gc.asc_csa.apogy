@@ -28,7 +28,7 @@ import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
 import ca.gc.asc_csa.apogy.common.emf.ui.TimeSourceCompositeProvider;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.AbstractTimeSourceComposite;
-import ca.gc.asc_csa.apogy.core.TimeSourcesList;
+import ca.gc.asc_csa.apogy.core.environment.TimeSourcesList;
 
 public class TimeSourcesListComposite extends Composite 
 {

@@ -13,6 +13,8 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.provider;
 
+import ca.gc.asc_csa.apogy.addons.geometry.paths.provider.ApogyAddonsGeometryPathsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.provider.ApogyAddonsEditPlugin;
 import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
 
 import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
@@ -73,14 +75,16 @@ public final class ApogyCoreEnvironmentUIEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     ApogyCoreSurfaceEnvironmentUIEditPlugin.INSTANCE,
 		     ApogyCommonTopologyUIEditPlugin.INSTANCE,
+		     ApogyAddonsEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
 		     ApogySurfaceEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonImagesEditPlugin.INSTANCE,
 		     ApogyCoreEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
-		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
-		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyAddonsGeometryPathsEditPlugin.INSTANCE,
 		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		     ApogyCommonGeometryDataEditPlugin.INSTANCE,

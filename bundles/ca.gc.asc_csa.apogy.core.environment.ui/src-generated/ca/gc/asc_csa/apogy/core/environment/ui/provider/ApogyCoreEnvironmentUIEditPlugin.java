@@ -13,15 +13,12 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
-import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
-
-import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
-
-import ca.gc.asc_csa.apogy.common.topology.ui.provider.ApogyCommonTopologyUIEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.ApogyCommonTopologyUIEditPlugin;
 
 /**
  * This is the central singleton for the ApogyCoreEnvironmentUI edit plugin.

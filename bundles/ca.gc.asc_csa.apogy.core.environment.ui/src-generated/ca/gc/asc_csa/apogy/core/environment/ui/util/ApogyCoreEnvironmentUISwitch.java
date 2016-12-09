@@ -16,8 +16,11 @@ package ca.gc.asc_csa.apogy.core.environment.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
-import ca.gc.asc_csa.apogy.core.environment.ui.*;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
 
 /**
  * <!-- begin-user-doc -->

@@ -13,12 +13,12 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.ui;
 
-import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
+
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

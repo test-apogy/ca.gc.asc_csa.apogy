@@ -13,6 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl;
 
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.*;
 import javax.vecmath.Color3f;
 import javax.vecmath.Point3f;
 
@@ -77,6 +78,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIFactoryImpl extends EFactoryImpl 
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION: return createEarthSurfaceWorksitePresentation();
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SKY_PRESENTATION: return createEarthSkyPresentation();
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.MOON_PRESENTATION: return createMoonPresentation();
+			case ApogyCoreEnvironmentSurfaceEarthUIPackage.SUN_VECTOR3_DTOOL: return createSunVector3DTool();
+			case ApogyCoreEnvironmentSurfaceEarthUIPackage.SUN_VECTOR3_DTOOL_NODE: return createSunVector3DToolNode();
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_UI_UTILITIES: return createEarthSurfaceUIUtilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -145,6 +148,26 @@ public class ApogyCoreEnvironmentSurfaceEarthUIFactoryImpl extends EFactoryImpl 
 	public MoonPresentation createMoonPresentation() {
 		MoonPresentationImpl moonPresentation = new MoonPresentationImpl();
 		return moonPresentation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SunVector3DTool createSunVector3DTool() {
+		SunVector3DToolImpl sunVector3DTool = new SunVector3DToolImpl();
+		return sunVector3DTool;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SunVector3DToolNode createSunVector3DToolNode() {
+		SunVector3DToolNodeImpl sunVector3DToolNode = new SunVector3DToolNodeImpl();
+		return sunVector3DToolNode;
 	}
 
 	/**
