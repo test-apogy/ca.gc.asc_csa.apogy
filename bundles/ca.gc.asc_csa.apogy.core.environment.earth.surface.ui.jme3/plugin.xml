@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.topology.ui.jme3.jme3Adapter">
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.adapters.EarthSkyNodeJME3Adapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.adapters.EarthSurfaceWorksiteNodeJME3Adapter">
+      </Class>
+   </extension>
+
+</plugin>

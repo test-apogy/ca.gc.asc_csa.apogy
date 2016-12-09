@@ -7,5 +7,17 @@
             class="ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.preferences.ApogyEnvironmentSurfaceUIJME3Initializer">
       </initializer>
    </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.common.topology.ui.jme3.jme3Adapter">
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.adapters.CartesianTriangularMeshMapLayerNodeJME3Adapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.adapters.FeatureOfInterestNodeJME3Adapter">
+      </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.adapters.StarFieldJME3Adapter">
+      </Class>
+   </extension>
 
 </plugin>
