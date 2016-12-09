@@ -19,6 +19,7 @@ import ca.gc.asc_csa.apogy.addons.provider.AbstractTwoPoints3DToolItemProvider;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DTool;
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
 
@@ -38,7 +39,11 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SunVector3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider {
+public class SunVector3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider 
+{
+	public static final String SQUARE_STRING = 	"\u00b2"; 
+	private DecimalFormat sunIntensityFormat = new DecimalFormat("0.0");
+
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -270,14 +275,49 @@ public class SunVector3DToolItemProvider extends AbstractTwoPoints3DToolItemProv
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((SunVector3DTool)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_SunVector3DTool_type") :
-			getString("_UI_SunVector3DTool_type") + " " + label;
+	public String getText(Object object) 
+	{
+		SunVector3DTool sunVector3DTool = (SunVector3DTool) object;
+		String label = null;
+				
+		if(sunVector3DTool.getName() != null && sunVector3DTool.getName().length() > 0)
+		{
+			label = sunVector3DTool.getName();
+		}
+		else
+		{
+			label = getString("_UI_SunVector3DTool_type");
+		}
+				
+		label += " (";
+		String simpleToolText = getSimple3DToolText(sunVector3DTool);
+		if(simpleToolText.length() > 0)
+		{
+			label += simpleToolText + ", ";
+		}		
+		
+		label += sunIntensityFormat.format(sunVector3DTool.getSunIntensity()) + " W/m" + SQUARE_STRING;
+		
+		// Adds lock Status.
+		
+		String lockText = new String();
+		if(sunVector3DTool.isToNodeLock())
+		{
+			lockText = "Locked";
+		}		
+		
+		if(lockText.length() > 0)
+		{
+			label += ", " + lockText;
+		}
+		
+		label += ")";
+		
+		
+		return label;
 	}
 	
 

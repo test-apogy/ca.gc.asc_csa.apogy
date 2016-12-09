@@ -21,16 +21,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
-import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
-import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
-import ca.gc.asc_csa.apogy.addons.SimpleToolList;
-import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
-import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
-import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
-import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
-import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
-import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
 
 /**
@@ -85,8 +75,6 @@ public class ApogyAddonsFactoryImpl extends EFactoryImpl implements ApogyAddonsF
 			case ApogyAddonsPackage.RULER3_DTOOL: return createRuler3DTool();
 			case ApogyAddonsPackage.RULER3D_TOOL_NODE: return createRuler3dToolNode();
 			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL: return createFeatureOfInterestPickingTool();
-			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL: return createSunVector3DTool();
-			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL_NODE: return createSunVector3DToolNode();
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL: return createTrajectoryPickingTool();
 			case ApogyAddonsPackage.TRAJECTORY_PICKING_TOOL_NODE: return createTrajectoryPickingToolNode();
 			case ApogyAddonsPackage.TRAJECTORY3_DTOOL: return createTrajectory3DTool();
@@ -169,26 +157,6 @@ public class ApogyAddonsFactoryImpl extends EFactoryImpl implements ApogyAddonsF
 	public FeatureOfInterestPickingTool createFeatureOfInterestPickingTool() {
 		FeatureOfInterestPickingToolImpl featureOfInterestPickingTool = new FeatureOfInterestPickingToolImpl();
 		return featureOfInterestPickingTool;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SunVector3DTool createSunVector3DTool() {
-		SunVector3DToolImpl sunVector3DTool = new SunVector3DToolImpl();
-		return sunVector3DTool;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SunVector3DToolNode createSunVector3DToolNode() {
-		SunVector3DToolNodeImpl sunVector3DToolNode = new SunVector3DToolNodeImpl();
-		return sunVector3DToolNode;
 	}
 
 		/**

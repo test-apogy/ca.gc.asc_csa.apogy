@@ -207,52 +207,6 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.SunVector3DTool} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SunVector3DToolItemProvider sunVector3DToolItemProvider;
-
-		/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.SunVector3DTool}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSunVector3DToolAdapter() {
-		if (sunVector3DToolItemProvider == null) {
-			sunVector3DToolItemProvider = new SunVector3DToolItemProvider(this);
-		}
-
-		return sunVector3DToolItemProvider;
-	}
-
-		/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.SunVector3DToolNode} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SunVector3DToolNodeItemProvider sunVector3DToolNodeItemProvider;
-
-		/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.SunVector3DToolNode}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSunVector3DToolNodeAdapter() {
-		if (sunVector3DToolNodeItemProvider == null) {
-			sunVector3DToolNodeItemProvider = new SunVector3DToolNodeItemProvider(this);
-		}
-
-		return sunVector3DToolNodeItemProvider;
-	}
-
-		/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -509,8 +463,6 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 		if (ruler3DToolItemProvider != null) ruler3DToolItemProvider.dispose();
 		if (ruler3dToolNodeItemProvider != null) ruler3dToolNodeItemProvider.dispose();
 		if (featureOfInterestPickingToolItemProvider != null) featureOfInterestPickingToolItemProvider.dispose();
-		if (sunVector3DToolItemProvider != null) sunVector3DToolItemProvider.dispose();
-		if (sunVector3DToolNodeItemProvider != null) sunVector3DToolNodeItemProvider.dispose();
 		if (trajectoryPickingToolItemProvider != null) trajectoryPickingToolItemProvider.dispose();
 		if (trajectoryPickingToolNodeItemProvider != null) trajectoryPickingToolNodeItemProvider.dispose();
 		if (trajectory3DToolItemProvider != null) trajectory3DToolItemProvider.dispose();
@@ -679,11 +631,6 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
 
 				newChildDescriptors.add
@@ -796,16 +743,6 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyAddonsFactory.eINSTANCE.createSunVector3DTool()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingTool()));
 
 				newChildDescriptors.add
@@ -861,16 +798,6 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyAddonsFactory.eINSTANCE.createSunVector3DTool()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingTool()));
 
 				newChildDescriptors.add
@@ -907,11 +834,6 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 						 ApogyAddonsFactory.eINSTANCE.createRuler3dToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1012,11 +934,6 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
 
 				newChildDescriptors.add
@@ -1038,11 +955,6 @@ public class ApogyAddonsItemProviderAdapterFactory extends ApogyAddonsAdapterFac
 					(createChildParameter
 						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 ApogyAddonsFactory.eINSTANCE.createRuler3dToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter

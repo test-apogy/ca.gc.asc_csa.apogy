@@ -156,11 +156,6 @@ public class SimpleToolListItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyAddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
-				 ApogyAddonsFactory.eINSTANCE.createSunVector3DTool()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyAddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
 				 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingTool()));
 
 		newChildDescriptors.add

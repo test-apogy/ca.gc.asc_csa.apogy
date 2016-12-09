@@ -17,19 +17,6 @@ import ca.gc.asc_csa.apogy.addons.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import ca.gc.asc_csa.apogy.addons.AbstractTool;
-import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
-import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
-import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
-import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
-import ca.gc.asc_csa.apogy.addons.Simple3DTool;
-import ca.gc.asc_csa.apogy.addons.SimpleTool;
-import ca.gc.asc_csa.apogy.addons.SimpleToolList;
-import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
-import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
-import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
-import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
-import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
@@ -170,25 +157,6 @@ public class ApogyAddonsSwitch<T> extends Switch<T>
 				if (result == null) result = caseAbstractTool(featureOfInterestPickingTool);
 				if (result == null) result = caseNamed(featureOfInterestPickingTool);
 				if (result == null) result = caseDescribed(featureOfInterestPickingTool);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL: {
-				SunVector3DTool sunVector3DTool = (SunVector3DTool)theEObject;
-				T result = caseSunVector3DTool(sunVector3DTool);
-				if (result == null) result = caseAbstractTwoPoints3DTool(sunVector3DTool);
-				if (result == null) result = caseSimple3DTool(sunVector3DTool);
-				if (result == null) result = caseSimpleTool(sunVector3DTool);
-				if (result == null) result = caseAbstractTool(sunVector3DTool);
-				if (result == null) result = caseNamed(sunVector3DTool);
-				if (result == null) result = caseDescribed(sunVector3DTool);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL_NODE: {
-				SunVector3DToolNode sunVector3DToolNode = (SunVector3DToolNode)theEObject;
-				T result = caseSunVector3DToolNode(sunVector3DToolNode);
-				if (result == null) result = caseNode(sunVector3DToolNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -390,36 +358,6 @@ public class ApogyAddonsSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseFeatureOfInterestPickingTool(FeatureOfInterestPickingTool object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sun Vector3 DTool</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sun Vector3 DTool</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSunVector3DTool(SunVector3DTool object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sun Vector3 DTool Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sun Vector3 DTool Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSunVector3DToolNode(SunVector3DToolNode object) {
 		return null;
 	}
 

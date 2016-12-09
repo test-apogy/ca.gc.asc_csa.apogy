@@ -141,11 +141,6 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
 
 		newChildDescriptors.add

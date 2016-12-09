@@ -222,47 +222,6 @@ class FeatureOfInterestPickingTool extends Simple3DTool
 }
 
 /**
- * A 3D tool used to show the direction and intensity of the Sun.
- */
-
-class SunVector3DTool extends AbstractTwoPoints3DTool
-{
-	/* The vector color. */
-	@GenModel(propertyCategory="SUN_VECTOR_PROPERTIES")
-	Color3f vectorColor = "1.0,1.0,0.0"
-		
-	/* Length of the vector. */
-	@GenModel(notify="true", apogy_units = "m", propertyCategory="SUN_VECTOR_PROPERTIES")
-	double vectorLength = "10.0"
-	
-	/* Radius of sphere used as end point to vector. */
-	@GenModel(notify="true", apogy_units = "m", propertyCategory="SUN_VECTOR_PROPERTIES")	
-	double endPointRadius = "0.01"
-	
-	/* The current sun intensity. */
-	@GenModel(notify="true", apogy_units = "W/m*m", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
-	double sunIntensity = "0.0"
-	
-	/* The current day maximum sun intensity. */
-	@GenModel(notify="true", apogy_units = "W/m*m", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
-	double currentDayMaximumSunIntensity = "0.0"
-	
-	/* The current sun intensity. */
-	@GenModel(notify="true", apogy_units = "%", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
-	double currentSunIntensityPercentage = "0.0"
-		
-	/* Topology Node associated with the tool. */
-	@GenModel(notify="true", children="true", property="Readonly", propertyCategory="SUN_VECTOR_PROPERTIES")	
-	refers transient SunVector3DToolNode sunVector3DToolNode opposite sunVector3DTool
-	
-}
-
-class SunVector3DToolNode extends Node
-{	
-	refers transient SunVector3DTool sunVector3DTool opposite sunVector3DToolNode	
-}
-
-/**
  * A 3D tool used to define trajectories by piking point in the 3D world.
  * The tool support the creation of multiple path.
  */

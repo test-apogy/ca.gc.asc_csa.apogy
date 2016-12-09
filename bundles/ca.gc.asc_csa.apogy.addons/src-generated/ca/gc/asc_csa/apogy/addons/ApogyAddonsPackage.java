@@ -1134,350 +1134,6 @@ public interface ApogyAddonsPackage extends EPackage
 	int FEATURE_OF_INTEREST_PICKING_TOOL_OPERATION_COUNT = SIMPLE3_DTOOL_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl <em>Sun Vector3 DTool</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl
-	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSunVector3DTool()
-	 * @generated
-	 */
-	int SUN_VECTOR3_DTOOL = 8;
-
-		/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__NAME = ABSTRACT_TWO_POINTS3_DTOOL__NAME;
-
-		/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__DESCRIPTION = ABSTRACT_TWO_POINTS3_DTOOL__DESCRIPTION;
-
-		/**
-	 * The feature id for the '<em><b>Tool List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__TOOL_LIST = ABSTRACT_TWO_POINTS3_DTOOL__TOOL_LIST;
-
-		/**
-	 * The feature id for the '<em><b>Active</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__ACTIVE = ABSTRACT_TWO_POINTS3_DTOOL__ACTIVE;
-
-		/**
-	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__DISPOSED = ABSTRACT_TWO_POINTS3_DTOOL__DISPOSED;
-
-		/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__VISIBLE = ABSTRACT_TWO_POINTS3_DTOOL__VISIBLE;
-
-		/**
-	 * The feature id for the '<em><b>Root Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__ROOT_NODE = ABSTRACT_TWO_POINTS3_DTOOL__ROOT_NODE;
-
-		/**
-	 * The feature id for the '<em><b>From Absolute Position</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__FROM_ABSOLUTE_POSITION = ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION;
-
-		/**
-	 * The feature id for the '<em><b>From Relative Position</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__FROM_RELATIVE_POSITION = ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION;
-
-		/**
-	 * The feature id for the '<em><b>From Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__FROM_NODE = ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE;
-
-		/**
-	 * The feature id for the '<em><b>From Node Lock</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__FROM_NODE_LOCK = ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK;
-
-		/**
-	 * The feature id for the '<em><b>To Absolute Position</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__TO_ABSOLUTE_POSITION = ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION;
-
-		/**
-	 * The feature id for the '<em><b>To Relative Position</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__TO_RELATIVE_POSITION = ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION;
-
-		/**
-	 * The feature id for the '<em><b>To Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__TO_NODE = ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE;
-
-		/**
-	 * The feature id for the '<em><b>To Node Lock</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__TO_NODE_LOCK = ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK;
-
-		/**
-	 * The feature id for the '<em><b>Distance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__DISTANCE = ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE;
-
-		/**
-	 * The feature id for the '<em><b>Vector Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__VECTOR_COLOR = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 0;
-
-		/**
-	 * The feature id for the '<em><b>Vector Length</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__VECTOR_LENGTH = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 1;
-
-		/**
-	 * The feature id for the '<em><b>End Point Radius</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__END_POINT_RADIUS = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 2;
-
-		/**
-	 * The feature id for the '<em><b>Sun Intensity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__SUN_INTENSITY = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 3;
-
-		/**
-	 * The feature id for the '<em><b>Current Day Maximum Sun Intensity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 4;
-
-		/**
-	 * The feature id for the '<em><b>Current Sun Intensity Percentage</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 5;
-
-		/**
-	 * The feature id for the '<em><b>Sun Vector3 DTool Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 6;
-
-		/**
-	 * The number of structural features of the '<em>Sun Vector3 DTool</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_FEATURE_COUNT = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 7;
-
-		/**
-	 * The operation id for the '<em>Initialise</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL___INITIALISE = ABSTRACT_TWO_POINTS3_DTOOL___INITIALISE;
-
-		/**
-	 * The operation id for the '<em>Dispose</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL___DISPOSE = ABSTRACT_TWO_POINTS3_DTOOL___DISPOSE;
-
-		/**
-	 * The operation id for the '<em>Selection Changed</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL___SELECTION_CHANGED__NODESELECTION = ABSTRACT_TWO_POINTS3_DTOOL___SELECTION_CHANGED__NODESELECTION;
-
-		/**
-	 * The operation id for the '<em>Points Relative Pose Changed</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL___POINTS_RELATIVE_POSE_CHANGED__MATRIX4D = ABSTRACT_TWO_POINTS3_DTOOL___POINTS_RELATIVE_POSE_CHANGED__MATRIX4D;
-
-		/**
-	 * The number of operations of the '<em>Sun Vector3 DTool</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_OPERATION_COUNT = ABSTRACT_TWO_POINTS3_DTOOL_OPERATION_COUNT + 0;
-
-		/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolNodeImpl <em>Sun Vector3 DTool Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolNodeImpl
-	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSunVector3DToolNode()
-	 * @generated
-	 */
-	int SUN_VECTOR3_DTOOL_NODE = 9;
-
-		/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE__PARENT = ApogyCommonTopologyPackage.NODE__PARENT;
-
-		/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE__DESCRIPTION = ApogyCommonTopologyPackage.NODE__DESCRIPTION;
-
-		/**
-	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE__NODE_ID = ApogyCommonTopologyPackage.NODE__NODE_ID;
-
-		/**
-	 * The feature id for the '<em><b>Sun Vector3 DTool</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 0;
-
-		/**
-	 * The number of structural features of the '<em>Sun Vector3 DTool Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_FEATURE_COUNT = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 1;
-
-		/**
-	 * The operation id for the '<em>Accept</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
-
-		/**
-	 * The number of operations of the '<em>Sun Vector3 DTool Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.NODE_OPERATION_COUNT + 0;
-
-		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl <em>Trajectory Picking Tool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1485,7 +1141,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectoryPickingTool()
 	 * @generated
 	 */
-	int TRAJECTORY_PICKING_TOOL = 10;
+	int TRAJECTORY_PICKING_TOOL = 8;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1648,7 +1304,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectoryPickingToolNode()
 	 * @generated
 	 */
-	int TRAJECTORY_PICKING_TOOL_NODE = 11;
+	int TRAJECTORY_PICKING_TOOL_NODE = 9;
 
 		/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1739,7 +1395,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectory3DTool()
 	 * @generated
 	 */
-	int TRAJECTORY3_DTOOL = 12;
+	int TRAJECTORY3_DTOOL = 10;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1920,7 +1576,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectory3DToolNode()
 	 * @generated
 	 */
-	int TRAJECTORY3_DTOOL_NODE = 13;
+	int TRAJECTORY3_DTOOL_NODE = 11;
 
 		/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2011,7 +1667,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getGeometryPlacementAtFeatureOfInterestTool()
 	 * @generated
 	 */
-	int GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = 14;
+	int GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = 12;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2165,7 +1821,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getAbstractURLNodeGeometryPlacementAtFeatureOfInterestTool()
 	 * @generated
 	 */
-	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = 15;
+	int ABSTRACT_URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = 13;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2355,7 +2011,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getURLNodeGeometryPlacementAtFeatureOfInterestTool()
 	 * @generated
 	 */
-	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = 16;
+	int URL_NODE_GEOMETRY_PLACEMENT_AT_FEATURE_OF_INTEREST_TOOL = 14;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2563,7 +2219,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getColor3f()
 	 * @generated
 	 */
-	int COLOR3F = 17;
+	int COLOR3F = 15;
 
 
 		/**
@@ -2574,7 +2230,7 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getNodeSelection()
 	 * @generated
 	 */
-	int NODE_SELECTION = 18;
+	int NODE_SELECTION = 16;
 
 
 		/**
@@ -2949,114 +2605,6 @@ public interface ApogyAddonsPackage extends EPackage
 	 * @generated
 	 */
 	EReference getFeatureOfInterestPickingTool_PickRelativeNormal();
-
-		/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool <em>Sun Vector3 DTool</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sun Vector3 DTool</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool
-	 * @generated
-	 */
-	EClass getSunVector3DTool();
-
-		/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorColor <em>Vector Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Vector Color</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorColor()
-	 * @see #getSunVector3DTool()
-	 * @generated
-	 */
-	EAttribute getSunVector3DTool_VectorColor();
-
-		/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorLength <em>Vector Length</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Vector Length</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorLength()
-	 * @see #getSunVector3DTool()
-	 * @generated
-	 */
-	EAttribute getSunVector3DTool_VectorLength();
-
-		/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getEndPointRadius <em>End Point Radius</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>End Point Radius</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getEndPointRadius()
-	 * @see #getSunVector3DTool()
-	 * @generated
-	 */
-	EAttribute getSunVector3DTool_EndPointRadius();
-
-		/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunIntensity <em>Sun Intensity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Sun Intensity</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunIntensity()
-	 * @see #getSunVector3DTool()
-	 * @generated
-	 */
-	EAttribute getSunVector3DTool_SunIntensity();
-
-		/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity <em>Current Day Maximum Sun Intensity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Current Day Maximum Sun Intensity</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity()
-	 * @see #getSunVector3DTool()
-	 * @generated
-	 */
-	EAttribute getSunVector3DTool_CurrentDayMaximumSunIntensity();
-
-		/**
-	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Current Sun Intensity Percentage</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentSunIntensityPercentage()
-	 * @see #getSunVector3DTool()
-	 * @generated
-	 */
-	EAttribute getSunVector3DTool_CurrentSunIntensityPercentage();
-
-		/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Sun Vector3 DTool Node</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunVector3DToolNode()
-	 * @see #getSunVector3DTool()
-	 * @generated
-	 */
-	EReference getSunVector3DTool_SunVector3DToolNode();
-
-		/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.SunVector3DToolNode <em>Sun Vector3 DTool Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sun Vector3 DTool Node</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DToolNode
-	 * @generated
-	 */
-	EClass getSunVector3DToolNode();
-
-		/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.SunVector3DToolNode#getSunVector3DTool <em>Sun Vector3 DTool</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Sun Vector3 DTool</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DToolNode#getSunVector3DTool()
-	 * @see #getSunVector3DToolNode()
-	 * @generated
-	 */
-	EReference getSunVector3DToolNode_SunVector3DTool();
 
 		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.TrajectoryPickingTool <em>Trajectory Picking Tool</em>}'.
@@ -3783,80 +3331,6 @@ public interface ApogyAddonsPackage extends EPackage
 		 * @generated
 		 */
 		EReference FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL = eINSTANCE.getFeatureOfInterestPickingTool_PickRelativeNormal();
-				/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl <em>Sun Vector3 DTool</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl
-		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSunVector3DTool()
-		 * @generated
-		 */
-		EClass SUN_VECTOR3_DTOOL = eINSTANCE.getSunVector3DTool();
-				/**
-		 * The meta object literal for the '<em><b>Vector Color</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUN_VECTOR3_DTOOL__VECTOR_COLOR = eINSTANCE.getSunVector3DTool_VectorColor();
-				/**
-		 * The meta object literal for the '<em><b>Vector Length</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUN_VECTOR3_DTOOL__VECTOR_LENGTH = eINSTANCE.getSunVector3DTool_VectorLength();
-				/**
-		 * The meta object literal for the '<em><b>End Point Radius</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUN_VECTOR3_DTOOL__END_POINT_RADIUS = eINSTANCE.getSunVector3DTool_EndPointRadius();
-				/**
-		 * The meta object literal for the '<em><b>Sun Intensity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUN_VECTOR3_DTOOL__SUN_INTENSITY = eINSTANCE.getSunVector3DTool_SunIntensity();
-				/**
-		 * The meta object literal for the '<em><b>Current Day Maximum Sun Intensity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY = eINSTANCE.getSunVector3DTool_CurrentDayMaximumSunIntensity();
-				/**
-		 * The meta object literal for the '<em><b>Current Sun Intensity Percentage</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE = eINSTANCE.getSunVector3DTool_CurrentSunIntensityPercentage();
-				/**
-		 * The meta object literal for the '<em><b>Sun Vector3 DTool Node</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE = eINSTANCE.getSunVector3DTool_SunVector3DToolNode();
-				/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolNodeImpl <em>Sun Vector3 DTool Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolNodeImpl
-		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSunVector3DToolNode()
-		 * @generated
-		 */
-		EClass SUN_VECTOR3_DTOOL_NODE = eINSTANCE.getSunVector3DToolNode();
-				/**
-		 * The meta object literal for the '<em><b>Sun Vector3 DTool</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL = eINSTANCE.getSunVector3DToolNode_SunVector3DTool();
 				/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.TrajectoryPickingToolImpl <em>Trajectory Picking Tool</em>}' class.
 		 * <!-- begin-user-doc -->

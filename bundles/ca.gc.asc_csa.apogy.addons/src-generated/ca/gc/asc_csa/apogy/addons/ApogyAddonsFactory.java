@@ -70,24 +70,6 @@ public interface ApogyAddonsFactory extends EFactory
 	FeatureOfInterestPickingTool createFeatureOfInterestPickingTool();
 
 		/**
-	 * Returns a new object of class '<em>Sun Vector3 DTool</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sun Vector3 DTool</em>'.
-	 * @generated
-	 */
-	SunVector3DTool createSunVector3DTool();
-
-		/**
-	 * Returns a new object of class '<em>Sun Vector3 DTool Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sun Vector3 DTool Node</em>'.
-	 * @generated
-	 */
-	SunVector3DToolNode createSunVector3DToolNode();
-
-		/**
 	 * Returns a new object of class '<em>Trajectory Picking Tool</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

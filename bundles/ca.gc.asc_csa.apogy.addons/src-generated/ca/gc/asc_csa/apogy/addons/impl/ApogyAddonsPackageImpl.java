@@ -33,8 +33,6 @@ import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
 import ca.gc.asc_csa.apogy.addons.Simple3DTool;
 import ca.gc.asc_csa.apogy.addons.SimpleTool;
 import ca.gc.asc_csa.apogy.addons.SimpleToolList;
-import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
-import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
@@ -112,20 +110,6 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * @generated
 	 */
 	private EClass featureOfInterestPickingToolEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sunVector3DToolEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sunVector3DToolNodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -647,96 +631,6 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSunVector3DTool() {
-		return sunVector3DToolEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSunVector3DTool_VectorColor() {
-		return (EAttribute)sunVector3DToolEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSunVector3DTool_VectorLength() {
-		return (EAttribute)sunVector3DToolEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSunVector3DTool_EndPointRadius() {
-		return (EAttribute)sunVector3DToolEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSunVector3DTool_SunIntensity() {
-		return (EAttribute)sunVector3DToolEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSunVector3DTool_CurrentDayMaximumSunIntensity() {
-		return (EAttribute)sunVector3DToolEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSunVector3DTool_CurrentSunIntensityPercentage() {
-		return (EAttribute)sunVector3DToolEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSunVector3DTool_SunVector3DToolNode() {
-		return (EReference)sunVector3DToolEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSunVector3DToolNode() {
-		return sunVector3DToolNodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSunVector3DToolNode_SunVector3DTool() {
-		return (EReference)sunVector3DToolNodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTrajectoryPickingTool() {
 		return trajectoryPickingToolEClass;
 	}
@@ -1108,18 +1002,6 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		createEReference(featureOfInterestPickingToolEClass, FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL);
 		createEReference(featureOfInterestPickingToolEClass, FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL);
 
-		sunVector3DToolEClass = createEClass(SUN_VECTOR3_DTOOL);
-		createEAttribute(sunVector3DToolEClass, SUN_VECTOR3_DTOOL__VECTOR_COLOR);
-		createEAttribute(sunVector3DToolEClass, SUN_VECTOR3_DTOOL__VECTOR_LENGTH);
-		createEAttribute(sunVector3DToolEClass, SUN_VECTOR3_DTOOL__END_POINT_RADIUS);
-		createEAttribute(sunVector3DToolEClass, SUN_VECTOR3_DTOOL__SUN_INTENSITY);
-		createEAttribute(sunVector3DToolEClass, SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY);
-		createEAttribute(sunVector3DToolEClass, SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE);
-		createEReference(sunVector3DToolEClass, SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE);
-
-		sunVector3DToolNodeEClass = createEClass(SUN_VECTOR3_DTOOL_NODE);
-		createEReference(sunVector3DToolNodeEClass, SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL);
-
 		trajectoryPickingToolEClass = createEClass(TRAJECTORY_PICKING_TOOL);
 		createEAttribute(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL__ALTITUDE_OFFSET);
 		createEReference(trajectoryPickingToolEClass, TRAJECTORY_PICKING_TOOL__PATHS);
@@ -1209,8 +1091,6 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		ruler3DToolEClass.getESuperTypes().add(this.getAbstractTwoPoints3DTool());
 		ruler3dToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
 		featureOfInterestPickingToolEClass.getESuperTypes().add(this.getSimple3DTool());
-		sunVector3DToolEClass.getESuperTypes().add(this.getAbstractTwoPoints3DTool());
-		sunVector3DToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
 		trajectoryPickingToolEClass.getESuperTypes().add(this.getSimple3DTool());
 		trajectoryPickingToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 		trajectory3DToolEClass.getESuperTypes().add(this.getSimple3DTool());
@@ -1276,18 +1156,6 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 		initEReference(getFeatureOfInterestPickingTool_PickedNode(), theApogyCommonTopologyPackage.getNode(), null, "pickedNode", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeatureOfInterestPickingTool_PickAbsoluteNormal(), theApogyCommonMathPackage.getTuple3d(), null, "pickAbsoluteNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeatureOfInterestPickingTool_PickRelativeNormal(), theApogyCommonMathPackage.getTuple3d(), null, "pickRelativeNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(sunVector3DToolEClass, SunVector3DTool.class, "SunVector3DTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSunVector3DTool_VectorColor(), this.getColor3f(), "vectorColor", "1.0,1.0,0.0", 0, 1, SunVector3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSunVector3DTool_VectorLength(), theEcorePackage.getEDouble(), "vectorLength", "10.0", 0, 1, SunVector3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSunVector3DTool_EndPointRadius(), theEcorePackage.getEDouble(), "endPointRadius", "0.01", 0, 1, SunVector3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSunVector3DTool_SunIntensity(), theEcorePackage.getEDouble(), "sunIntensity", "0.0", 0, 1, SunVector3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSunVector3DTool_CurrentDayMaximumSunIntensity(), theEcorePackage.getEDouble(), "currentDayMaximumSunIntensity", "0.0", 0, 1, SunVector3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSunVector3DTool_CurrentSunIntensityPercentage(), theEcorePackage.getEDouble(), "currentSunIntensityPercentage", "0.0", 0, 1, SunVector3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSunVector3DTool_SunVector3DToolNode(), this.getSunVector3DToolNode(), this.getSunVector3DToolNode_SunVector3DTool(), "sunVector3DToolNode", null, 0, 1, SunVector3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(sunVector3DToolNodeEClass, SunVector3DToolNode.class, "SunVector3DToolNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSunVector3DToolNode_SunVector3DTool(), this.getSunVector3DTool(), this.getSunVector3DTool_SunVector3DToolNode(), "sunVector3DTool", null, 0, 1, SunVector3DToolNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trajectoryPickingToolEClass, TrajectoryPickingTool.class, "TrajectoryPickingTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTrajectoryPickingTool_AltitudeOffset(), theEcorePackage.getEDouble(), "altitudeOffset", "0", 0, 1, TrajectoryPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1643,77 +1511,6 @@ public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsP
 			 "notify", "true",
 			 "children", "false",
 			 "propertyCategory", "PICKED_NODE"
-		   });	
-		addAnnotation
-		  (sunVector3DToolEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "*\nA 3D tool used to show the direction and intensity of the Sun."
-		   });	
-		addAnnotation
-		  (getSunVector3DTool_VectorColor(), 
-		   source, 
-		   new String[] {
-			 "documentation", " The vector color.",
-			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
-		   });	
-		addAnnotation
-		  (getSunVector3DTool_VectorLength(), 
-		   source, 
-		   new String[] {
-			 "documentation", " Length of the vector.",
-			 "notify", "true",
-			 "apogy_units", "m",
-			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
-		   });	
-		addAnnotation
-		  (getSunVector3DTool_EndPointRadius(), 
-		   source, 
-		   new String[] {
-			 "documentation", " Radius of sphere used as end point to vector.",
-			 "notify", "true",
-			 "apogy_units", "m",
-			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
-		   });	
-		addAnnotation
-		  (getSunVector3DTool_SunIntensity(), 
-		   source, 
-		   new String[] {
-			 "documentation", " The current sun intensity.",
-			 "notify", "true",
-			 "apogy_units", "W/m*m",
-			 "property", "Readonly",
-			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
-		   });	
-		addAnnotation
-		  (getSunVector3DTool_CurrentDayMaximumSunIntensity(), 
-		   source, 
-		   new String[] {
-			 "documentation", " The current day maximum sun intensity.",
-			 "notify", "true",
-			 "apogy_units", "W/m*m",
-			 "property", "Readonly",
-			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
-		   });	
-		addAnnotation
-		  (getSunVector3DTool_CurrentSunIntensityPercentage(), 
-		   source, 
-		   new String[] {
-			 "documentation", " The current sun intensity.",
-			 "notify", "true",
-			 "apogy_units", "%",
-			 "property", "Readonly",
-			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
-		   });	
-		addAnnotation
-		  (getSunVector3DTool_SunVector3DToolNode(), 
-		   source, 
-		   new String[] {
-			 "documentation", " Topology Node associated with the tool.",
-			 "notify", "true",
-			 "children", "true",
-			 "property", "Readonly",
-			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
 		   });	
 		addAnnotation
 		  (trajectoryPickingToolEClass, 

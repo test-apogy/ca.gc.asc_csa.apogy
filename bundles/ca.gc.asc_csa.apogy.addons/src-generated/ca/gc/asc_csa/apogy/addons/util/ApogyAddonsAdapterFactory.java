@@ -18,19 +18,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import ca.gc.asc_csa.apogy.addons.AbstractTool;
-import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
-import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
-import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
-import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
-import ca.gc.asc_csa.apogy.addons.Simple3DTool;
-import ca.gc.asc_csa.apogy.addons.SimpleTool;
-import ca.gc.asc_csa.apogy.addons.SimpleToolList;
-import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
-import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
-import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
-import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
-import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
@@ -128,14 +115,6 @@ public class ApogyAddonsAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseFeatureOfInterestPickingTool(FeatureOfInterestPickingTool object) {
 				return createFeatureOfInterestPickingToolAdapter();
-			}
-			@Override
-			public Adapter caseSunVector3DTool(SunVector3DTool object) {
-				return createSunVector3DToolAdapter();
-			}
-			@Override
-			public Adapter caseSunVector3DToolNode(SunVector3DToolNode object) {
-				return createSunVector3DToolNodeAdapter();
 			}
 			@Override
 			public Adapter caseTrajectoryPickingTool(TrajectoryPickingTool object) {
@@ -320,34 +299,6 @@ public class ApogyAddonsAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createFeatureOfInterestPickingToolAdapter() {
-		return null;
-	}
-
-		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool <em>Sun Vector3 DTool</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool
-	 * @generated
-	 */
-	public Adapter createSunVector3DToolAdapter() {
-		return null;
-	}
-
-		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.SunVector3DToolNode <em>Sun Vector3 DTool Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DToolNode
-	 * @generated
-	 */
-	public Adapter createSunVector3DToolNodeAdapter() {
 		return null;
 	}
 
