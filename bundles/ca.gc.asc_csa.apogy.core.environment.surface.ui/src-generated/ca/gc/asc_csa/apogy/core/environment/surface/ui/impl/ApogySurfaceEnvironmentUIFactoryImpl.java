@@ -90,7 +90,7 @@ public class ApogySurfaceEnvironmentUIFactoryImpl extends EFactoryImpl implement
 			case ApogySurfaceEnvironmentUIPackage.MOON_PRESENTATION: return createMoonPresentation();
 			case ApogySurfaceEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION: return createFeatureOfInterestNodePresentation();
 			case ApogySurfaceEnvironmentUIPackage.APOGY_SURFACE_ENVIRONMENT_UI_FACADE: return createApogySurfaceEnvironmentUIFacade();
-			case ApogySurfaceEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: return createEnvironmentUIUtilities();
+			case ApogySurfaceEnvironmentUIPackage.ENVIRONMENT_SURFACE_UI_UTILITIES: return createEnvironmentSurfaceUIUtilities();
 			case ApogySurfaceEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST: return createMapViewConfigurationList();
 			case ApogySurfaceEnvironmentUIPackage.MAP_VIEW_CONFIGURATION: return createMapViewConfiguration();
 			case ApogySurfaceEnvironmentUIPackage.MAP_RULER: return createMapRuler();
@@ -226,9 +226,9 @@ public class ApogySurfaceEnvironmentUIFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvironmentUIUtilities createEnvironmentUIUtilities() {
-		EnvironmentUIUtilitiesImpl environmentUIUtilities = new EnvironmentUIUtilitiesImpl();
-		return environmentUIUtilities;
+	public EnvironmentSurfaceUIUtilities createEnvironmentSurfaceUIUtilities() {
+		EnvironmentSurfaceUIUtilitiesImpl environmentSurfaceUIUtilities = new EnvironmentSurfaceUIUtilitiesImpl();
+		return environmentSurfaceUIUtilities;
 	}
 
 	/**

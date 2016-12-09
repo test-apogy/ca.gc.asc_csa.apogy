@@ -120,9 +120,9 @@ public class ApogySurfaceEnvironmentUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogySurfaceEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: {
-				EnvironmentUIUtilities environmentUIUtilities = (EnvironmentUIUtilities)theEObject;
-				T result = caseEnvironmentUIUtilities(environmentUIUtilities);
+			case ApogySurfaceEnvironmentUIPackage.ENVIRONMENT_SURFACE_UI_UTILITIES: {
+				EnvironmentSurfaceUIUtilities environmentSurfaceUIUtilities = (EnvironmentSurfaceUIUtilities)theEObject;
+				T result = caseEnvironmentSurfaceUIUtilities(environmentSurfaceUIUtilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -339,17 +339,17 @@ public class ApogySurfaceEnvironmentUISwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Environment UI Utilities</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Environment Surface UI Utilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Environment UI Utilities</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Environment Surface UI Utilities</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEnvironmentUIUtilities(EnvironmentUIUtilities object) {
+	public T caseEnvironmentSurfaceUIUtilities(EnvironmentSurfaceUIUtilities object) {
 		return null;
 	}
 

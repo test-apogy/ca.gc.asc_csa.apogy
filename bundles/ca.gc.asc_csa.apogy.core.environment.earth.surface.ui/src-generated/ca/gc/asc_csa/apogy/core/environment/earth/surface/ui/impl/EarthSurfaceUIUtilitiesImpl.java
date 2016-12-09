@@ -16,13 +16,10 @@ package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl;
 import java.lang.reflect.InvocationTargetException;
 
 import javax.vecmath.Color3f;
-import javax.vecmath.Point3f;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import ca.gc.asc_csa.apogy.core.environment.Star;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.AtmosphereUtils;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities;
@@ -63,36 +60,6 @@ public class EarthSurfaceUIUtilitiesImpl extends MinimalEObjectImpl.Container im
 		return ApogyCoreEnvironmentSurfaceEarthUIPackage.Literals.EARTH_SURFACE_UI_UTILITIES;
 	}
 
-	  /**
-	   * <!-- begin-user-doc -->
-	   * <!-- end-user-doc -->
-	   * @generated_NOT
-	   */
-	  public Point3f toPoint3f(Star star)
-	  {
-			float r = 1.0f;
-			float x = r * (float) (Math.cos(star.getEquatorialCoordinates().getDeclination()) * Math.cos(star.getEquatorialCoordinates().getRightAscension()));
-			float y = r * (float) (Math.cos(star.getEquatorialCoordinates().getDeclination()) * Math.sin(star.getEquatorialCoordinates().getRightAscension()));
-			float z = r * (float) Math.sin(star.getEquatorialCoordinates().getDeclination());
-			Point3f p = new Point3f(x, y, z);						
-			return p;
-	  }
-
-	  /**
-	   * <!-- begin-user-doc -->
-	   * <!-- end-user-doc -->
-	   * @generated_NOT
-	   */
-	  public float getPointSizeForMagnitude(float magnitude, float magnitudeRangeMinimum, float magnitudeRangeMaximum, float minimumPointSize, float maximumPointSize)
-	  {
-			float radiusRange = (float) Math.sqrt(Math.pow(POGSON_RATIO, magnitudeRangeMaximum - magnitudeRangeMinimum));
-			
-			float luminosity = (float) Math.pow(POGSON_RATIO, magnitudeRangeMaximum - magnitude);
-			
-			float radius = (float) ((Math.sqrt(luminosity) / radiusRange) * (maximumPointSize - minimumPointSize) + minimumPointSize);
-			
-			return radius;
-	  }
 
 	  /**
 	   * <!-- begin-user-doc -->
@@ -191,10 +158,6 @@ public class EarthSurfaceUIUtilitiesImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_UI_UTILITIES___TO_POINT3F__STAR:
-				return toPoint3f((Star)arguments.get(0));
-			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT:
-				return getPointSizeForMagnitude((Float)arguments.get(0), (Float)arguments.get(1), (Float)arguments.get(2), (Float)arguments.get(3), (Float)arguments.get(4));
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE:
 				return getSunLightColor((Double)arguments.get(0));
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE:

@@ -108,8 +108,8 @@ public class ApogySurfaceEnvironmentUIAdapterFactory extends AdapterFactoryImpl 
 				return createApogySurfaceEnvironmentUIFacadeAdapter();
 			}
 			@Override
-			public Adapter caseEnvironmentUIUtilities(EnvironmentUIUtilities object) {
-				return createEnvironmentUIUtilitiesAdapter();
+			public Adapter caseEnvironmentSurfaceUIUtilities(EnvironmentSurfaceUIUtilities object) {
+				return createEnvironmentSurfaceUIUtilitiesAdapter();
 			}
 			@Override
 			public Adapter caseMapViewConfigurationList(MapViewConfigurationList object) {
@@ -286,16 +286,16 @@ public class ApogySurfaceEnvironmentUIAdapterFactory extends AdapterFactoryImpl 
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentUIUtilities <em>Environment UI Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities <em>Environment Surface UI Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentUIUtilities
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities
 	 * @generated
 	 */
-	public Adapter createEnvironmentUIUtilitiesAdapter() {
+	public Adapter createEnvironmentSurfaceUIUtilitiesAdapter() {
 		return null;
 	}
 

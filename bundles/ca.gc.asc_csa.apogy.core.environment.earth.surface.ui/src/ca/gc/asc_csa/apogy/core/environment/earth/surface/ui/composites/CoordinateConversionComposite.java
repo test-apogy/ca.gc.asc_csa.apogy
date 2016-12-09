@@ -44,9 +44,9 @@ import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 import ca.gc.asc_csa.apogy.core.Positioned;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.databindings.DegreeStringToRadiansConverter;
@@ -191,8 +191,8 @@ public class CoordinateConversionComposite extends Composite
 			IObservableValue txtLatObsVal = WidgetProperties.text(SWT.Modify).observe(txtLat); 
 			
 			IObservableValue modelLatObsVal = (objDomain == null ?
-											   EMFProperties.value(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates) :
-											   EMFEditProperties.value(objDomain, ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates));
+											   EMFProperties.value(ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates) :
+											   EMFEditProperties.value(objDomain, ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates));
 			
 			UpdateValueStrategy txtToModelLatUpdateStrategy = new UpdateValueStrategy();
 			txtToModelLatUpdateStrategy.setConverter(new DegreeStringToRadiansConverter());
@@ -210,8 +210,8 @@ public class CoordinateConversionComposite extends Composite
 			IObservableValue txtLongObsVal = WidgetProperties.text(SWT.Modify).observe(txtLong);
 			
 			IObservableValue modelLongObsVal = (objDomain == null ?
-											    EMFProperties.value(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates) :
-											    EMFEditProperties.value(objDomain, ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates));
+											    EMFProperties.value(ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates) :
+											    EMFEditProperties.value(objDomain, ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates));
 			
 			UpdateValueStrategy txtToModelLongUpdateStrategy = new UpdateValueStrategy();
 			txtToModelLongUpdateStrategy.setConverter(new DegreeStringToRadiansConverter());
@@ -229,8 +229,8 @@ public class CoordinateConversionComposite extends Composite
 			IObservableValue txtElevObsVal = WidgetProperties.text(SWT.Modify).observe(txtElev); 
 			
 			IObservableValue modelElevObsVal = (objDomain == null ?
-												EMFProperties.value(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates) :
-												EMFEditProperties.value(objDomain, ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates));
+												EMFProperties.value(ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates) :
+												EMFEditProperties.value(objDomain, ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates));
 			
 			UpdateValueStrategy txtToModelElevUpdateStrategy = new UpdateValueStrategy();
 			txtToModelElevUpdateStrategy.setConverter(new StringToDoubleConverter());

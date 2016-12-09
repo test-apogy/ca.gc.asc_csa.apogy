@@ -620,31 +620,13 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	int EARTH_SURFACE_UI_UTILITIES_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>To Point3f</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EARTH_SURFACE_UI_UTILITIES___TO_POINT3F__STAR = 0;
-
-	/**
-	 * The operation id for the '<em>Get Point Size For Magnitude</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EARTH_SURFACE_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT = 1;
-
-	/**
 	 * The operation id for the '<em>Get Sun Light Color</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE = 2;
+	int EARTH_SURFACE_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE = 0;
 
 	/**
 	 * The operation id for the '<em>Get Sky Transparency</em>' operation.
@@ -653,7 +635,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE = 3;
+	int EARTH_SURFACE_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE = 1;
 
 	/**
 	 * The operation id for the '<em>Get Sky Color</em>' operation.
@@ -662,7 +644,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = 4;
+	int EARTH_SURFACE_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = 2;
 
 	/**
 	 * The number of operations of the '<em>Earth Surface UI Utilities</em>' class.
@@ -671,7 +653,7 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_UI_UTILITIES_OPERATION_COUNT = 5;
+	int EARTH_SURFACE_UI_UTILITIES_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '<em>Color3f</em>' data type.
@@ -733,26 +715,6 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEarthSurfaceUIUtilities();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#toPoint3f(ca.gc.asc_csa.apogy.core.environment.Star) <em>To Point3f</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>To Point3f</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#toPoint3f(ca.gc.asc_csa.apogy.core.environment.Star)
-	 * @generated
-	 */
-	EOperation getEarthSurfaceUIUtilities__ToPoint3f__Star();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getPointSizeForMagnitude(float, float, float, float, float) <em>Get Point Size For Magnitude</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Point Size For Magnitude</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getPointSizeForMagnitude(float, float, float, float, float)
-	 * @generated
-	 */
-	EOperation getEarthSurfaceUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities#getSunLightColor(double) <em>Get Sun Light Color</em>}' operation.
@@ -868,22 +830,6 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EARTH_SURFACE_UI_UTILITIES = eINSTANCE.getEarthSurfaceUIUtilities();
-
-		/**
-		 * The meta object literal for the '<em><b>To Point3f</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EARTH_SURFACE_UI_UTILITIES___TO_POINT3F__STAR = eINSTANCE.getEarthSurfaceUIUtilities__ToPoint3f__Star();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Point Size For Magnitude</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EARTH_SURFACE_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT = eINSTANCE.getEarthSurfaceUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Sun Light Color</b></em>' operation.

@@ -33,8 +33,8 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
-import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.DateToJulianDayStringConverter;
-import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.DateToSideralTimeStringConverter;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.databindings.DateToJulianDayStringConverter;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.databindings.DateToSideralTimeStringConverter;
 
 public class EarthSkyTimeComposite extends Composite 
 {
@@ -122,7 +122,7 @@ public class EarthSkyTimeComposite extends Composite
 	{
 		DataBindingContext bindingContext = new DataBindingContext();
 		
-		EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getEarthSky().getSurfaceWorksite();
+		EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getEarthSky().getWorksite();
 		if(worksite != null)
 		{
 			GeographicCoordinates geographicCoordinates = worksite.getGeographicalCoordinates();

@@ -14,11 +14,9 @@
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui;
 
 import javax.vecmath.Color3f;
-import javax.vecmath.Point3f;
 
 import org.eclipse.emf.ecore.EObject;
 
-import ca.gc.asc_csa.apogy.core.environment.Star;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl.EarthSurfaceUIUtilitiesImpl;
 
 /**
@@ -35,8 +33,6 @@ public interface EarthSurfaceUIUtilities extends EObject
 {
 	public static EarthSurfaceUIUtilities INSTANCE = EarthSurfaceUIUtilitiesImpl.getInstance();
 	
-	public static final float POGSON_RATIO = (float) Math.pow(100, 0.2);
-
 	public static final double LOWER_SUN_ALTITUDE_FOR_TRANSPARENCY = Math.toRadians(-5.0);
 	public static final double LOWER_SUN_ALTITUDE_TRANSPARENCY = 1.0;
 	public static final double UPPER_SUN_ALTITUDE_FOR_TRANSPARENCY = Math.toRadians(0.0);
@@ -45,22 +41,6 @@ public interface EarthSurfaceUIUtilities extends EObject
 	public static final Color3f DAY_SKY_COLOR = new Color3f(0, 0, 1);
 	public static final Color3f SUNSET_SKY_COLOR = new Color3f(((float)  201 / 255), 0 , 1);
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.Point3f" unique="false" starUnique="false"
-	 * @generated
-	 */
-	Point3f toPoint3f(Star star);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model unique="false" magnitudeUnique="false" magnitudeRangeMinimumUnique="false" magnitudeRangeMaximumUnique="false" minimumPointSizeUnique="false" maximumPointSizeUnique="false"
-	 * @generated
-	 */
-	float getPointSizeForMagnitude(float magnitude, float magnitudeRangeMinimum, float magnitudeRangeMaximum, float minimumPointSize, float maximumPointSize);
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

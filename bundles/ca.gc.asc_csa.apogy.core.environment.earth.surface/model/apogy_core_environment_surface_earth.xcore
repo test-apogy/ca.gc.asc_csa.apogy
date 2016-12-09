@@ -53,6 +53,7 @@ import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates
 import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates
 
+
 // Types
 
 type Point3d wraps javax.vecmath.Point3d
@@ -127,6 +128,7 @@ class EarthSky extends Sky
 	@GenModel(propertyCategory="MOON")
 	refers derived transient HorizontalCoordinates moonHorizontalCoordinates		
 }
+
 
 /* -------------------------------------------------------------------------
  * 

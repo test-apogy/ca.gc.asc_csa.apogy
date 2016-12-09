@@ -110,7 +110,7 @@ public class EarthSkyMoonComposite extends Composite
 	{
 		DataBindingContext bindingContext = new DataBindingContext();
 		
-		EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getEarthSky().getSurfaceWorksite();
+		EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getEarthSky().getWorksite();
 		
 		if(worksite != null)
 		{

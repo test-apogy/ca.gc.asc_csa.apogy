@@ -41,9 +41,9 @@ import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3Scen
 import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
 import ca.gc.asc_csa.apogy.core.environment.Star;
 import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.SurfaceEnvironmentJMEConstants;
 import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
-import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
 import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldSceneObject;
 import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 
@@ -203,14 +203,14 @@ public class StarFieldJME3Object extends DefaultJME3SceneObject<StarField> imple
 	
 	private Mesh getShapeForStars(List<Star> stars, float magnitude)
 	{				
-		float pointSize = EnvironmentUIUtilities.INSTANCE.getPointSizeForMagnitude(magnitude, minMagnitudeLevel, maxMagnitudeLevel, MIN_POINT_SIZE, MAX_POINT_SIZE);
+		float pointSize = EnvironmentSurfaceUIUtilities.INSTANCE.getPointSizeForMagnitude(magnitude, minMagnitudeLevel, maxMagnitudeLevel, MIN_POINT_SIZE, MAX_POINT_SIZE);
 		
 		Vector3f[] vertices = new Vector3f[stars.size()];	
 	
 		for(int i =0; i < stars.size(); i++)
 		{			
 			Star star = stars.get(i);	
-			Point3f p = EnvironmentUIUtilities.INSTANCE.toPoint3f(star);
+			Point3f p = EnvironmentSurfaceUIUtilities.INSTANCE.toPoint3f(star);
 			p.scale((float) SurfaceEnvironmentJMEConstants.CELESTIAL_SPHERE_RADIUS);
 			vertices[i] = new Vector3f(p.x, p.y, p.z);			
 		}

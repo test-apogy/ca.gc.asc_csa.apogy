@@ -27,15 +27,6 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
-import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.AbstractTransformationJME3SceneObject;
-import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
-import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestSceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -48,6 +39,16 @@ import com.jme3.scene.Mesh;
 import com.jme3.scene.Node;
 import com.jme3.scene.control.BillboardControl;
 import com.jme3.util.BufferUtils;
+
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.AbstractTransformationJME3SceneObject;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.scene_objects.FeatureOfInterestSceneObject;
 
 public class FeatureOfInterestNodeJME3Object extends AbstractTransformationJME3SceneObject<FeatureOfInterestNode> implements FeatureOfInterestSceneObject
 {					

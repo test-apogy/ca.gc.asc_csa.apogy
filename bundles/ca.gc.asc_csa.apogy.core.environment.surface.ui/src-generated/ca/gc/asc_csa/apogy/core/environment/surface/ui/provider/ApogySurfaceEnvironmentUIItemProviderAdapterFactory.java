@@ -236,26 +236,26 @@ public class ApogySurfaceEnvironmentUIItemProviderAdapterFactory extends ApogySu
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentUIUtilities} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnvironmentUIUtilitiesItemProvider environmentUIUtilitiesItemProvider;
+	protected EnvironmentSurfaceUIUtilitiesItemProvider environmentSurfaceUIUtilitiesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentUIUtilities}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEnvironmentUIUtilitiesAdapter() {
-		if (environmentUIUtilitiesItemProvider == null) {
-			environmentUIUtilitiesItemProvider = new EnvironmentUIUtilitiesItemProvider(this);
+	public Adapter createEnvironmentSurfaceUIUtilitiesAdapter() {
+		if (environmentSurfaceUIUtilitiesItemProvider == null) {
+			environmentSurfaceUIUtilitiesItemProvider = new EnvironmentSurfaceUIUtilitiesItemProvider(this);
 		}
 
-		return environmentUIUtilitiesItemProvider;
+		return environmentSurfaceUIUtilitiesItemProvider;
 	}
 
 	/**
@@ -596,7 +596,7 @@ public class ApogySurfaceEnvironmentUIItemProviderAdapterFactory extends ApogySu
 		if (moonPresentationItemProvider != null) moonPresentationItemProvider.dispose();
 		if (featureOfInterestNodePresentationItemProvider != null) featureOfInterestNodePresentationItemProvider.dispose();
 		if (apogySurfaceEnvironmentUIFacadeItemProvider != null) apogySurfaceEnvironmentUIFacadeItemProvider.dispose();
-		if (environmentUIUtilitiesItemProvider != null) environmentUIUtilitiesItemProvider.dispose();
+		if (environmentSurfaceUIUtilitiesItemProvider != null) environmentSurfaceUIUtilitiesItemProvider.dispose();
 		if (mapViewConfigurationListItemProvider != null) mapViewConfigurationListItemProvider.dispose();
 		if (mapViewConfigurationItemProvider != null) mapViewConfigurationItemProvider.dispose();
 		if (mapRulerItemProvider != null) mapRulerItemProvider.dispose();
@@ -872,7 +872,7 @@ public class ApogySurfaceEnvironmentUIItemProviderAdapterFactory extends ApogySu
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogySurfaceEnvironmentUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
+						 ApogySurfaceEnvironmentUIFactory.eINSTANCE.createEnvironmentSurfaceUIUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -957,7 +957,7 @@ public class ApogySurfaceEnvironmentUIItemProviderAdapterFactory extends ApogySu
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogySurfaceEnvironmentUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
+						 ApogySurfaceEnvironmentUIFactory.eINSTANCE.createEnvironmentSurfaceUIUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter

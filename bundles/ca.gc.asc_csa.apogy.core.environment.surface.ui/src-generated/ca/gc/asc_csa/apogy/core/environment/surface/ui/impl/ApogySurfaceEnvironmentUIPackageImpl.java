@@ -35,7 +35,7 @@ import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUI
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFactory;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.DefaultVariableTrajectoryProvider;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.FeatureOfInterestNodePresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.FeaturesOfInterestMapLayerPresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation;
@@ -129,7 +129,7 @@ public class ApogySurfaceEnvironmentUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass environmentUIUtilitiesEClass = null;
+	private EClass environmentSurfaceUIUtilitiesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -590,8 +590,8 @@ public class ApogySurfaceEnvironmentUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEnvironmentUIUtilities() {
-		return environmentUIUtilitiesEClass;
+	public EClass getEnvironmentSurfaceUIUtilities() {
+		return environmentSurfaceUIUtilitiesEClass;
 	}
 
 	/**
@@ -599,8 +599,8 @@ public class ApogySurfaceEnvironmentUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUIUtilities__ToPoint3f__Star() {
-		return environmentUIUtilitiesEClass.getEOperations().get(0);
+	public EOperation getEnvironmentSurfaceUIUtilities__ToPoint3f__Star() {
+		return environmentSurfaceUIUtilitiesEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -608,35 +608,8 @@ public class ApogySurfaceEnvironmentUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float() {
-		return environmentUIUtilitiesEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnvironmentUIUtilities__GetSunLightColor__double() {
-		return environmentUIUtilitiesEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnvironmentUIUtilities__GetSkyTransparency__double() {
-		return environmentUIUtilitiesEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnvironmentUIUtilities__GetSkyColor__double() {
-		return environmentUIUtilitiesEClass.getEOperations().get(4);
+	public EOperation getEnvironmentSurfaceUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float() {
+		return environmentSurfaceUIUtilitiesEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1307,12 +1280,9 @@ public class ApogySurfaceEnvironmentUIPackageImpl extends EPackageImpl implement
 		createEOperation(apogySurfaceEnvironmentUIFacadeEClass, APOGY_SURFACE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST);
 		createEOperation(apogySurfaceEnvironmentUIFacadeEClass, APOGY_SURFACE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION);
 
-		environmentUIUtilitiesEClass = createEClass(ENVIRONMENT_UI_UTILITIES);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE);
-		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE);
+		environmentSurfaceUIUtilitiesEClass = createEClass(ENVIRONMENT_SURFACE_UI_UTILITIES);
+		createEOperation(environmentSurfaceUIUtilitiesEClass, ENVIRONMENT_SURFACE_UI_UTILITIES___TO_POINT3F__STAR);
+		createEOperation(environmentSurfaceUIUtilitiesEClass, ENVIRONMENT_SURFACE_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT);
 
 		mapViewConfigurationListEClass = createEClass(MAP_VIEW_CONFIGURATION_LIST);
 		createEReference(mapViewConfigurationListEClass, MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
@@ -1516,26 +1486,17 @@ public class ApogySurfaceEnvironmentUIPackageImpl extends EPackageImpl implement
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		initEClass(environmentUIUtilitiesEClass, EnvironmentUIUtilities.class, "EnvironmentUIUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(environmentSurfaceUIUtilitiesEClass, EnvironmentSurfaceUIUtilities.class, "EnvironmentSurfaceUIUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getEnvironmentUIUtilities__ToPoint3f__Star(), this.getPoint3f(), "toPoint3f", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentSurfaceUIUtilities__ToPoint3f__Star(), this.getPoint3f(), "toPoint3f", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreEnvironmentPackage.getStar(), "star", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float(), theEcorePackage.getEFloat(), "getPointSizeForMagnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentSurfaceUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float(), theEcorePackage.getEFloat(), "getPointSizeForMagnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitudeRangeMinimum", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitudeRangeMaximum", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "minimumPointSize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "maximumPointSize", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getEnvironmentUIUtilities__GetSunLightColor__double(), this.getColor3f(), "getSunLightColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getEnvironmentUIUtilities__GetSkyTransparency__double(), theEcorePackage.getEDouble(), "getSkyTransparency", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getEnvironmentUIUtilities__GetSkyColor__double(), this.getColor3f(), "getSkyColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mapViewConfigurationListEClass, MapViewConfigurationList.class, "MapViewConfigurationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMapViewConfigurationList_MapViewConfigurations(), this.getMapViewConfiguration(), null, "mapViewConfigurations", null, 0, -1, MapViewConfigurationList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1791,42 +1752,6 @@ public class ApogySurfaceEnvironmentUIPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Return the MapViewConfigurationList in the Active Session.\n@return The MapViewConfigurationList in the Active Session, null if none is found."
-		   });	
-		addAnnotation
-		  (getEnvironmentUIUtilities__GetSunLightColor__double(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Return the sun color for a given altitude above the horizon.\n@param sunAltitude The altitude above the horizon, in radians."
-		   });	
-		addAnnotation
-		  ((getEnvironmentUIUtilities__GetSunLightColor__double()).getEParameters().get(0), 
-		   source, 
-		   new String[] {
-			 "apogy_units", "rad"
-		   });	
-		addAnnotation
-		  (getEnvironmentUIUtilities__GetSkyTransparency__double(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Return the transparency value (between no transparency 0 and full transparency 1.0)\nto be used for the blus sky as a function of the sun altitude angle.\n@param sunAltitude The altitude above the horizon, in radians."
-		   });	
-		addAnnotation
-		  ((getEnvironmentUIUtilities__GetSkyTransparency__double()).getEParameters().get(0), 
-		   source, 
-		   new String[] {
-			 "apogy_units", "rad"
-		   });	
-		addAnnotation
-		  (getEnvironmentUIUtilities__GetSkyColor__double(), 
-		   source, 
-		   new String[] {
-			 "documentation", "Return the sky color for a given altitude above the horizon.\n@param sunAltitude The altitude above the horizon, in radians."
-		   });	
-		addAnnotation
-		  ((getEnvironmentUIUtilities__GetSkyColor__double()).getEParameters().get(0), 
-		   source, 
-		   new String[] {
-			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (mapViewConfigurationEClass, 

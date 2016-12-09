@@ -78,13 +78,13 @@ public interface ApogySurfaceEnvironmentUIFactory extends EFactory {
 	ApogySurfaceEnvironmentUIFacade createApogySurfaceEnvironmentUIFacade();
 
 	/**
-	 * Returns a new object of class '<em>Environment UI Utilities</em>'.
+	 * Returns a new object of class '<em>Environment Surface UI Utilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Environment UI Utilities</em>'.
+	 * @return a new object of class '<em>Environment Surface UI Utilities</em>'.
 	 * @generated
 	 */
-	EnvironmentUIUtilities createEnvironmentUIUtilities();
+	EnvironmentSurfaceUIUtilities createEnvironmentSurfaceUIUtilities();
 
 	/**
 	 * Returns a new object of class '<em>Map View Configuration List</em>'.

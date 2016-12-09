@@ -28,7 +28,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
 import ca.gc.asc_csa.apogy.common.databinding.converters.DoubleToStringConverter;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.databindings.RadiansToDegreesStringConverter;
@@ -121,12 +122,12 @@ public class EarthSkyLocationComposite extends Composite
 	{
 		DataBindingContext bindingContext = new DataBindingContext();
 		
-		EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getEarthSky().getSurfaceWorksite();
+		EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getEarthSky().getWorksite();
 		if(worksite != null)
 		{		
 			// Longitude
 			IObservableValue lblLongitudeValueLabel = PojoProperties.value("text").observe(longitudeValueLabel);
-			IObservableValue longitudeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE)).observe(worksite);
+			IObservableValue longitudeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyEarthSurfaceEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE)).observe(worksite);
 			
 			UpdateValueStrategy longitudeValueStrategy = new UpdateValueStrategy();
 			longitudeValueStrategy.setConverter(new RadiansToDegreesStringConverter(new DecimalFormat(LONGITUDE_FORMAT_STRING)));
@@ -135,7 +136,7 @@ public class EarthSkyLocationComposite extends Composite
 	
 			// Latitude
 			IObservableValue lblLatitudeValueLabel = PojoProperties.value("text").observe(latitudeValueLabel);
-			IObservableValue laltitudeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE)).observe(worksite);
+			IObservableValue laltitudeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyEarthSurfaceEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE)).observe(worksite);
 			
 			UpdateValueStrategy latitudeValueStrategy = new UpdateValueStrategy();
 			latitudeValueStrategy.setConverter(new RadiansToDegreesStringConverter(new DecimalFormat(LATITUDE_FORMAT_STRING)));
@@ -144,7 +145,7 @@ public class EarthSkyLocationComposite extends Composite
 
 			// Altitude
 			IObservableValue lblaltitudeValueLabel = PojoProperties.value("text").observe(altitudeValueLabel);
-			IObservableValue altitudeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION)).observe(worksite);
+			IObservableValue altitudeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyEarthSurfaceEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION)).observe(worksite);
 			
 			UpdateValueStrategy altitudeValueStrategy = new UpdateValueStrategy();
 			altitudeValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat(ALTITUDE_FORMAT_STRING)));

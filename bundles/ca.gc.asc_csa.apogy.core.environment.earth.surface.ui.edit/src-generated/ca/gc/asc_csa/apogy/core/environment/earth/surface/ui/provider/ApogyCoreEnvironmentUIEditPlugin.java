@@ -73,11 +73,11 @@ public final class ApogyCoreEnvironmentUIEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     ApogyCoreSurfaceEnvironmentUIEditPlugin.INSTANCE,
 		     ApogyCommonTopologyUIEditPlugin.INSTANCE,
-		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
 		     ApogySurfaceEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonImagesEditPlugin.INSTANCE,
 		     ApogyCoreEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,

@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.surface.ui.scene_objects;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -15,19 +15,9 @@ package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
-public interface EarthSurfaceWorksiteSceneObject extends SceneObject {
-
-	 public void setAxisVisible(boolean newAxisVisible);
+public interface FeatureOfInterestSceneObject extends SceneObject 
+{
+	public void setFlagPoleHeight(float poleHeight);
 	
-	 public void setAxisLength(double newAxisLength);
-	 
-	 public void setAzimuthVisible(boolean newAzimuthVisible);
-	 
-	 public void setElevationLinesVisible(boolean newElevationLinesVisible);
-	 
-	 public void setAzimuthLinesVisible(boolean newAzimuthLinesVisible);
-	 
-	 public void setPlaneVisible(boolean newPlaneVisible);
-	 
-	 public void setPlaneParameters(double newPlaneGridSize, double newPlaneSize);	 	 	
+	public void setFlagVisible(boolean visible);
 }
