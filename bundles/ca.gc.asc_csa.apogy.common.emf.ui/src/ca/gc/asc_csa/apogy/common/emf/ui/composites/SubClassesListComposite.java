@@ -164,14 +164,10 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 	}
 
 	public void setSelectedEClass(EClass eClass){
-		for(TreeItem item : treeViewerSubClasses.getTree().getItems()){
-			if(item == eClass){
+		for (TreeItem item : treeViewerSubClasses.getTree().getItems()) {
+			if (item == eClass) {
 				treeViewerSubClasses.setSelection(new StructuredSelection(eClass));
 			}
-		}
-		if(treeViewerSubClasses.getTree().getItems().length > 0 && treeViewerSubClasses.getSelection().isEmpty()){
-			System.out.println(treeViewerSubClasses.getTree().getItems()[0].getData());
-			treeViewerSubClasses.setSelection(new StructuredSelection(treeViewerSubClasses.getTree().getItems()[0].getData()));
 		}
 	}
 

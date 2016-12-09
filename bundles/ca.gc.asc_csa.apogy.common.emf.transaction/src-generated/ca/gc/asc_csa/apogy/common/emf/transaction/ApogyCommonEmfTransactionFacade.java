@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.common.emf.transaction.impl.ApogyCommonEmfTransactionFacadeImpl;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -85,5 +86,29 @@ public interface ApogyCommonEmfTransactionFacade extends EObject {
 	 * @generated
 	 */
 	void basicSet(EObject owner, EStructuralFeature feature, Object value, int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" valueUnique="false"
+	 * @generated
+	 */
+	void basicAdd(EObject owner, EStructuralFeature feature, Object value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" collectionDataType="ca.gc.asc_csa.apogy.common.emf.transaction.Collection" collectionUnique="false"
+	 * @generated
+	 */
+	void basicAdd(EObject owner, EStructuralFeature feature, Collection<?> collection);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" valueUnique="false"
+	 * @generated
+	 */
+	void basicRemove(EObject owner, EStructuralFeature feature, Object value);
 
 } // ApogyCommonEmfTransactionFacade

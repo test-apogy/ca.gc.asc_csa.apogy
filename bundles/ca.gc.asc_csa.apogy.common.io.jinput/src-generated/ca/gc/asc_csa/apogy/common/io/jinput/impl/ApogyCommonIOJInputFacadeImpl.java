@@ -144,7 +144,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 			Event event = new Event();
 			while (queue.getNextEvent(event));
 		}
-		
+
 		if (selectComponentAdapter == null) {
 			selectComponentAdapter = new AdapterImpl() {
 				@Override
@@ -161,12 +161,13 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 								Event event = new Event();
 
 								while (queue.getNextEvent(event)) {
-									System.out.println(event.getComponent());
 									if (Math.abs(event.getValue()) > 0.5) {
-										ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier, ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME, event.getComponent().getName());
-										ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier, ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME, eController.getName());
-//										eComponentQualifier.setEComponentName(event.getComponent().getName());
-//										eComponentQualifier.setEControllerName(eController.getName());
+										ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier,
+												ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME,
+												event.getComponent().getName());
+										ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier,
+												ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME,
+												eController.getName());
 									}
 								}
 							}

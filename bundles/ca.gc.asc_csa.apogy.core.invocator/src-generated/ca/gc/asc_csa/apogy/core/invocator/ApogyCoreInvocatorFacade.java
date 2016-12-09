@@ -648,4 +648,15 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 */
 	String getAbstractTypeImplementationImplementationName(AbstractTypeImplementation implementation, boolean fullyQualified);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * TODO
+	 * <!-- end-model-doc -->
+	 * @model eOperationUnique="false" operationCallUnique="false"
+	 * @generated
+	 */
+	void setEOperationInitArguments(EOperation eOperation, OperationCall operationCall);
+
 } // ApogyCoreInvocatorFacade

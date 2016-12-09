@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.common.emf.transaction.impl;
 
 import ca.gc.asc_csa.apogy.common.emf.transaction.*;
 
+import java.util.Collection;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -87,6 +88,8 @@ public class ApogyCommonEmfTransactionFactoryImpl extends EFactoryImpl implement
 		switch (eDataType.getClassifierID()) {
 			case ApogyCommonEmfTransactionPackage.TRANSACTIONAL_EDITING_DOMAIN:
 				return createTransactionalEditingDomainFromString(eDataType, initialValue);
+			case ApogyCommonEmfTransactionPackage.COLLECTION:
+				return createCollectionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -102,6 +105,8 @@ public class ApogyCommonEmfTransactionFactoryImpl extends EFactoryImpl implement
 		switch (eDataType.getClassifierID()) {
 			case ApogyCommonEmfTransactionPackage.TRANSACTIONAL_EDITING_DOMAIN:
 				return convertTransactionalEditingDomainToString(eDataType, instanceValue);
+			case ApogyCommonEmfTransactionPackage.COLLECTION:
+				return convertCollectionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -133,6 +138,24 @@ public class ApogyCommonEmfTransactionFactoryImpl extends EFactoryImpl implement
 	 */
 	public String convertTransactionalEditingDomainToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Collection<?> createCollectionFromString(EDataType eDataType, String initialValue) {
+		return (Collection<?>)super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCollectionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
 	}
 
 	/**

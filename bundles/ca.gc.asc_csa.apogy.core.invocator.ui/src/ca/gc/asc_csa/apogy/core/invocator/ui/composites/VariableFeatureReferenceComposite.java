@@ -40,7 +40,6 @@ import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
-import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.databinding.viewers.ViewersObservables;
@@ -281,8 +280,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 
 		this.variables = variables;
 		this.variableFeatureReference = variableFeatureReference;
-		editingDomain = TransactionUtil.getEditingDomain(variableFeatureReference);
-//				AdapterFactoryEditingDomain.getEditingDomainFor(variableFeatureReference);
+		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(variableFeatureReference);
 
 		if (update) {
 			if (m_bindingContext != null) {

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
@@ -170,7 +171,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 	  if(componentQualifier == null)
 	  {
 		  componentQualifier = ApogyCommonIOJInputFactory.eINSTANCE.createEComponentQualifier();
-		  setEComponentQualifier(componentQualifier);
+		  ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER, componentQualifier);
 	  }
 	  return componentQualifier;
   }
@@ -439,10 +440,8 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		  Object value = ApogyCoreProgramsControllersFacade.INSTANCE.createValue(getBindedEDataTypeArgument().getEParameter(), data);
 		  
 		  // Update last value (used for display purposes).
-		  System.out.println("Ressource: " + this.eResource());
-		  
-		  ApogyCoreProgramsControllersFacade.INSTANCE.setControllerValueSourceLastValue(this, value);
-		  
+		  ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__LAST_VALUE, value);
+
 		  return value;
 	  }
 	  else

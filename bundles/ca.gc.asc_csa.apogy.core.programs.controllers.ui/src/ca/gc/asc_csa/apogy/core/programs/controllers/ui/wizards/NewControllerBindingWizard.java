@@ -19,6 +19,7 @@ import java.util.Arrays;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
@@ -135,7 +136,8 @@ public class NewControllerBindingWizard extends Wizard {
 
 	@Override
 	public boolean performFinish() {
-			
+		getControllerBinding().eResource().getResourceSet().getResources().remove(getControllerBinding().eResource());
+		TransactionUtil.disconnectFromEditingDomain(getControllerBinding().eResource());
 		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getControllersConfiguration());
 		
 		/** Check if there is a domain. */

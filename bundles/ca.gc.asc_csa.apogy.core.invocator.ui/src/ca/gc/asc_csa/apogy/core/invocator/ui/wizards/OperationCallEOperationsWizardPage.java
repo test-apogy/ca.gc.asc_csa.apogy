@@ -28,7 +28,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
-import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 
 public class OperationCallEOperationsWizardPage extends WizardPage {
 
@@ -103,7 +102,7 @@ public class OperationCallEOperationsWizardPage extends WizardPage {
 	
 	protected void newSelection() {
 		operationCall.setEOperation(getEOperationsComposite().getSelectedEOperation());
-		ApogyCoreInvocatorUIFacade.INSTANCE.setEOperationInitArguments(getEOperationsComposite().getSelectedEOperation(), getOperationCall());
+		ApogyCoreInvocatorFacade.INSTANCE.setEOperationInitArguments(getEOperationsComposite().getSelectedEOperation(), getOperationCall());
 		validate();
 	}
 	

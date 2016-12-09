@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
+package ca.gc.asc_csa.apogy.common.io.jinput.ui.composites;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -30,6 +30,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
@@ -38,10 +39,10 @@ import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
 public class ControllerSelectionComposite extends Composite {
 
 	final String CLICK_PROMPT = "Click here to bind the controller";
-	
+
 	private Text controllerText;
 	private Text componentText;
-	
+
 	private EComponentQualifier eComponentQualifier;
 
 	private DataBindingContext m_bindingContext;
@@ -57,50 +58,61 @@ public class ControllerSelectionComposite extends Composite {
 	public ControllerSelectionComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new GridLayout(2, false));
-		
+
 		Label controllerLabel = new Label(this, SWT.None);
 		controllerLabel.setText("Controller : ");
 		controllerLabel.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-		
+
 		controllerText = new Text(this, SWT.BORDER);
 		controllerText.setText(CLICK_PROMPT);
 		controllerText.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
 		controllerText.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				ApogyCommonIOJInputFacade.INSTANCE.startSelectComponent(eComponentQualifier);
+				startSelection();
 			}
 		});
-		controllerText.addFocusListener(new FocusAdapter(){
+		controllerText.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusLost(FocusEvent e) {
-				ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier);
-				newSelection(null);
+				stopSelection();
 			}
 		});
-		
+
 		Label componentLabel = new Label(this, SWT.None);
 		componentLabel.setText("Component : ");
 		componentLabel.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-		
+
 		componentText = new Text(this, SWT.BORDER);
 		componentText.setText(CLICK_PROMPT);
 		componentText.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
 		componentText.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				if(!ApogyCommonIOJInputFacade.INSTANCE.isSelectingComponent()){
-					ApogyCommonIOJInputFacade.INSTANCE.startSelectComponent(eComponentQualifier);
-				}
+				startSelection();
 			}
 		});
-		componentText.addFocusListener(new FocusAdapter(){
+		componentText.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusLost(FocusEvent e) {
-				ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier);
-				newSelection(null);
+				stopSelection();
 			}
 		});
+	}
+
+	private void startSelection() {
+		if (!ApogyCommonIOJInputFacade.INSTANCE.isSelectingComponent()) {
+			ApogyCommonIOJInputFacade.INSTANCE.startSelectComponent(eComponentQualifier);
+		}
+		controllerText.setBackground(SWTResourceManager.getColor(SWT.COLOR_YELLOW));
+		componentText.setBackground(SWTResourceManager.getColor(SWT.COLOR_YELLOW));
+	}
+
+	private void stopSelection() {
+		ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier);
+		controllerText.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		componentText.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		newSelection(null);
 	}
 
 	/**
@@ -110,24 +122,26 @@ public class ControllerSelectionComposite extends Composite {
 	 *            Reference to the {@link EComponentQualifier}.
 	 */
 	public void setEComponentQualifier(EComponentQualifier eComponentQualifier) {
-		if(m_bindingContext != null){
+		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 		}
 		this.eComponentQualifier = eComponentQualifier;
-		
-		initDataBindingsCustom();		
+
+		initDataBindingsCustom();
 	}
 
 	protected void newSelection(ISelection selection) {
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	protected DataBindingContext initDataBindingsCustom() {
 		m_bindingContext = new DataBindingContext();
-		
-		IObservableValue<?> observeEComponentQualifierControllerName = EMFProperties.value(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME).observe(eComponentQualifier);
+
+		IObservableValue<?> observeEComponentQualifierControllerName = EMFProperties
+				.value(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME)
+				.observe(eComponentQualifier);
 		IObservableValue<?> observeControllerText = WidgetProperties.text().observe(controllerText);
-		
+
 		m_bindingContext.bindValue(observeControllerText, observeEComponentQualifierControllerName, null,
 				new UpdateValueStrategy().setConverter(new Converter(String.class, String.class) {
 
@@ -137,10 +151,12 @@ public class ControllerSelectionComposite extends Composite {
 						return fromObject == null ? CLICK_PROMPT : fromObject;
 					}
 				}));
-		if(eComponentQualifier.getEControllerName() != null){
+		if (eComponentQualifier.getEControllerName() != null) {
 			controllerText.setText(eComponentQualifier.getEControllerName());
 		}
-		IObservableValue<?> observeEComponentQualifierComponentName = EMFProperties.value(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME).observe(eComponentQualifier);
+		IObservableValue<?> observeEComponentQualifierComponentName = EMFProperties
+				.value(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME)
+				.observe(eComponentQualifier);
 		IObservableValue<?> observeComponentText = WidgetProperties.text().observe(componentText);
 		m_bindingContext.bindValue(observeComponentText, observeEComponentQualifierComponentName, null,
 				new UpdateValueStrategy().setConverter(new Converter(String.class, String.class) {
@@ -151,7 +167,7 @@ public class ControllerSelectionComposite extends Composite {
 						return fromObject == null ? CLICK_PROMPT : fromObject;
 					}
 				}));
-		if(eComponentQualifier.getEComponentName() != null){
+		if (eComponentQualifier.getEComponentName() != null) {
 			controllerText.setText(eComponentQualifier.getEComponentName());
 		}
 		return m_bindingContext;

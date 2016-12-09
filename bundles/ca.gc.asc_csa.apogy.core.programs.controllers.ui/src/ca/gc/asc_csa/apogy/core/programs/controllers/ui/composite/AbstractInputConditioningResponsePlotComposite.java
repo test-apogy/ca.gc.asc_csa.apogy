@@ -23,10 +23,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent;
-import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
-import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
-import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
@@ -38,6 +34,10 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.experimental.chart.swt.ChartComposite;
 import org.jfree.ui.RectangleInsets;
+
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent;
+import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
 
 public class AbstractInputConditioningResponsePlotComposite extends Composite {
 	
